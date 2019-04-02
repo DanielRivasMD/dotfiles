@@ -1,0 +1,39 @@
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Modules, activate the module command
+case "$0" in
+  -sh|sh|*/sh)	modules_shell=sh ;;
+  -ksh|ksh|*/ksh)	modules_shell=ksh ;;
+  -zsh|zsh|*/zsh)	modules_shell=zsh ;;
+  -bash|bash|*/bash)	modules_shell=bash ;;
+esac
+module() { eval `/usr/local/Modules/$MODULE_VERSION/bin/modulecmd $modules_shell $*`; }
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Load profile
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
+fi
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# User specific aliases and functions
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# No duplicates in bash history
+HISTCONTROL=ignorespace:erasedups
+
+#------------------------------------------------------------------------------------------------------------------------------
