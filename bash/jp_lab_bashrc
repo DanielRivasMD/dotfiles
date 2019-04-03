@@ -2,8 +2,8 @@
 #------------------------------------------------------------------------------------------------------------------------------
 
 # Load profile
-if [ -f /Volumes/NOBACKUP/Jern_Group_User_folders/DanielRivas/.jp_lab_bash_profile ]; then
-  . /Volumes/NOBACKUP/Jern_Group_User_folders/DanielRivas/.jp_lab_bash_profile
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
 fi
 
 #------------------------------------------------------------------------------------------------------------------------------
