@@ -1,0 +1,54 @@
+# echo zshrc
+# ==========================
+# ===  General settings  ===
+# ==========================
+
+
+# ==========================
+# ===  Autocompletion		 ===
+# ==========================
+
+# Autocompletion with arrow interphase
+autoload -Uz compinit
+# Dump zcompdump
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+zstyle ':completion:*' menu select
+
+setopt COMPLETE_ALIASES
+zstyle ':completion::complete:*' gain-privileges 1
+
+# ==========================
+# ===  ZSH aliases			 ===
+# ==========================
+
+# Load ZSH aliases
+if [ -f ~/.zaliases ]; then
+  . ~/.zaliases
+fi
+
+# ==========================
+# ===   Prompt           ===
+# ==========================
+
+# # Left prompt
+source ~/.dotfiles/zsh/local_zsh_prompt.sh
+set_prompt
+
+# # Right prompt
+# RPROMPT='%?'
+
+# ==========================
+# ===  Plugins AB        ===
+# ==========================
+
+# Plugins managed by antibody (AB) statically
+# antibody bundle < ~/.dotfiles/zsh/local_zsh_plugins.txt > ~/.dotfiles/zsh/local_zsh_plugins.sh
+source ~/.dotfiles/zsh/local_zsh_plugins.sh
+
+# Plugins managed by antibody (AB) dinamically
+# source <(antibody init)
+# antibody bundle zdharma/fast-syntax-highlighting
+# antibody bundle zsh-users/zsh-autosuggestions
+# antibody bundle zsh-users/zsh-completions
+
+# ==========================
