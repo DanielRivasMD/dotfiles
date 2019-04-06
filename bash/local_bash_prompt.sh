@@ -27,7 +27,7 @@ function set_prompt {
 	if git rev-parse --is-inside-work-tree 2> /dev/null | grep -q 'true'
 	then
 		PS1+="$WHITE["
-		PS1+="$PURPLE$(git rev-parse --abbrev-ref HEAD 2> /dev/null)$RESETCOLOR"
+		PS1+="$YELLOW$(git rev-parse --abbrev-ref HEAD 2> /dev/null)$RESETCOLOR"
 		if [ $(git status --short | wc -l) -gt 0 ]
 		then
 			PS1+="$RED+$(git status --short | awk 'END{print NR}')$RESETCOLOR"

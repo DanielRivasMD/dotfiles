@@ -52,7 +52,7 @@ nmap <leader>w :w!<cr>
 " Ruler
 set ruler
 set number
-set relativenumber!
+set relativenumber
 
 " Search
 set history=1000
@@ -68,6 +68,15 @@ set cmdheight=2
 set wildmenu
 set wildmode=longest,list,full
 
+" Enable delete
+set bs=2
+
+" Disjoint stroke sequence (oposite to 'J')
+nnoremap K i<CR><Esc>
+
+" Highlight toggle
+nmap <leader>n :nohlsearch<CR>
+
 " Automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -79,14 +88,12 @@ autocmd BufWritePre * %s/\s\+$//e
 imap jj <Esc>
 vmap jj <Esc>
 
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
 " Cursor movement
 nnoremap h 10h
 nnoremap j 10j
 nnoremap k 10k
 nnoremap l 10l
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -110,7 +117,15 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+" set expandtab
+
+" Invisibles
+scriptencoding utf-8
+set encoding=utf-8
+if $LANG =~ '\(UTF\|utf\)-\?8' || $LC_CTYPE =~ '\(UTF\|utf\)-\?8'
+  set list
+  set listchars=eol:¬,tab:»–,trail:·,extends:>,precedes:<
+endif
 
 " Be smart when using tabs ;)
 set smarttab
@@ -129,9 +144,43 @@ set wrap "Wrap lines
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Overwriting colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"         cterm-colors
+" NR-16   NR-8    COLOR NAME
+" 0       0       Black
+" 1       4       DarkBlue
+" 2       2       DarkGreen
+" 3       6       DarkCyan
+" 4       1       DarkRed
+" 5       5       DarkMagenta
+" 6       3       Brown, DarkYellow
+" 7       7       LightGray, LightGrey, Gray, Grey
+" 8       0*      DarkGray, DarkGrey
+" 9       4*      Blue, LightBlue
+" 10      2*      Green, LightGreen
+" 11      6*      Cyan, LightCyan
+" 12      1*      Red, LightRed
+" 13      5*      Magenta, LightMagenta
+" 14      3*      Yellow, LightYellow
+" 15      7*      White
 
+" Invisibles
+highlight NonText ctermfg=DarkGray
+highlight SpecialKey ctermfg=DarkGray
 
+" Search
+highlight Search ctermbg=DarkGray ctermfg=Cyan cterm=bold
+
+" Comment
+highlight Comment ctermfg=Gray
+
+" Error
+highlight Error ctermfg=Red ctermbg=White cterm=bold
+highlight ErrorMsg ctermfg=Red ctermbg=White cterm=bold
+
+" Identifier (Link to Funtion)
+highlight Identifier ctermfg=Blue cterm=NONE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
