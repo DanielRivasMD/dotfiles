@@ -1,0 +1,38 @@
+
+# ==========================
+# ===  General aliases	 ===
+# ==========================
+
+# General aliases
+alias l='ls -Gogh --color'
+alias la='ls -AGogh --color'
+alias lr='ls -Goghtr --color'
+alias lar='ls -AGgohtr --color'
+alias ch='history | grep "git commit"'
+alias hg='history | grep'
+alias cdr='cd - &> /dev/null; cd - &> /dev/null'
+
+# ==========================
+
+# Wrapper for cd. Updates PROMPT every time 'cd' is called. Compatible with 'cl'
+function cd() {
+	builtin cd "$@" && set_prompt
+}
+export cd
+
+# Modified version to 'cd' and 'ls -Goghtr'
+function cl() {
+	cd "$@" && lr
+}
+
+# ==========================
+# ===  Uppmax aliases		 ===
+# ==========================
+
+#Uppmax aliases
+alias jsnow='jobinfo -u drivas -M snowy'
+alias jrack='jobinfo -u drivas -M rackham'
+alias sqsnow='squeue -u drivas -M snowy'
+alias sqrack='squeue -u drivas -M rackham'
+
+# ==========================
