@@ -66,7 +66,7 @@ set scrolljump=5
 set showcmd
 set cmdheight=2
 set wildmenu
-set wildmode=longest,list,full
+" set wildmode=longest,list,full
 
 " Enable delete
 set bs=2
@@ -181,6 +181,10 @@ highlight ErrorMsg ctermfg=Red ctermbg=White cterm=bold
 
 " Identifier (Link to Funtion)
 highlight Identifier ctermfg=Blue cterm=NONE
+
+" Tab selector
+highlight WildMenu ctermbg=Black ctermfg=Yellow cterm=underline
+highlight StatusLine ctermbg=Blue ctermfg=Black
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
