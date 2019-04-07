@@ -13,7 +13,7 @@ function set_prompt() {
 	PS1+="%{$fg[cyan]%}%1~%{$reset_color%}"
 
 	# Status Code
-	PS1+='%(?.., %{$fg[red]%}%?%{$reset_color%})'
+	PS1+='%(?.. %{$fg[red]%}%?%{$reset_color%})'
 
 	# Git
 	if git rev-parse --is-inside-work-tree 2> /dev/null | grep -q 'true' ; then
@@ -51,7 +51,7 @@ function set_prompt() {
 		PS1+=' '
 	fi
 
-	PS1+="%{$fg[white]%}$ %{$reset_color%}% "
+	PS1+="%{$fg[white]%}∑ %{$reset_color%}% "
 }
 
 precmd_functions+=set_prompt

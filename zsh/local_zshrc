@@ -17,6 +17,9 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
 
+# Case-insensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # ==========================
 # ===  ZSH aliases			 ===
 # ==========================
@@ -30,20 +33,20 @@ fi
 # ===   Prompt           ===
 # ==========================
 
-# # Left prompt
-source ~/.dotfiles/zsh/local_zsh_prompt.sh
+# Left prompt
+source ~/.dotfiles/zsh/zsh_prompt.sh
 set_prompt
 
-# # Right prompt
-# RPROMPT='%?'
+# Right prompt
+RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
 
 # ==========================
 # ===  Plugins AB        ===
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.dotfiles/zsh/local_zsh_plugins.txt > ~/.dotfiles/zsh/local_zsh_plugins.sh
-source ~/.dotfiles/zsh/local_zsh_plugins.sh
+# antibody bundle < ~/.dotfiles/zsh/zsh_plugins.txt > ~/.dotfiles/zsh/zsh_plugins.sh
+source ~/.dotfiles/zsh/zsh_plugins.sh
 
 # Plugins managed by antibody (AB) dinamically
 # source <(antibody init)
