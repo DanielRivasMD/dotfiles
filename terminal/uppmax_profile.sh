@@ -12,4 +12,3 @@ rsync -zaP \
 	~/.dotfiles \
 	drivas@rackham.uppmax.uu.se:~/
 
-drivas@rackham.uppmax.uu.se:~/.dotfiles/terminal/soft_links.sh
