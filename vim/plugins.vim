@@ -26,6 +26,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jpalardy/vim-slime'
 Plugin 'vim-syntastic/syntastic'
+Bundle 'gabrielelana/vim-markdown'
 " Plugin 'powerline/powerline'
 
 call vundle#end()            " required
