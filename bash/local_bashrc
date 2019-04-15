@@ -5,11 +5,14 @@
 
 
 # ==========================
-# ===  Git completion	   ===
+# ===  Completion			   ===
 # ==========================
 
 # Git-autocompletion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Pandoc autocompletion
+eval "$(pandoc --bash-completion)"
 
 # ==========================
 # ===  SH aliases			   ===
@@ -28,55 +31,12 @@ source ~/.dotfiles/bash/bash_prompt.sh
 set_prompt
 
 # ==========================
-#
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                                    '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                                    '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                                    '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                     .:o.           '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                               `.-/sdmm:            '
-# echo -n -e "\t\t\t\t\t"; echo '                                      `.-:/oosssoo++//:::----........----:/+oyhdmNMMMd-             '
-# echo -n -e "\t\t\t\t\t"; echo '                                   ./ydmNMMMMMMMMMMMMMMMMNNNNNNNNNNNNNNNMMMMMMMMMMMNs`              '
-# echo -n -e "\t\t\t\t\t"; echo '                                 :yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd:                '
-# echo -n -e "\t\t\t\t\t"; echo '                               .yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm+`                 '
-# echo -n -e "\t\t\t\t\t"; echo '                              -mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmo.                   '
-# echo -n -e "\t\t\t\t\t"; echo '                             -NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNd+`                     '
-# echo -n -e "\t\t\t\t\t"; echo '                             dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNms-                        '
-# echo -n -e "\t\t\t\t\t"; echo '                            /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNdo:`                          '
-# echo -n -e "\t\t\t\t\t"; echo '                            +MMMMMMMMMMMMMMMMMNNNNMMMMMMMMMMMMMMNmho:.                              '
-# echo -n -e "\t\t\t\t\t"; echo '                            -MMMMMMMMMMMMMMd+:----:/+oossyysso/:.                              `    '
-# echo -n -e "\t\t\t\t\t"; echo '                        `/   sMMMMMMMMMMMMM.      ``.-::::-.``                             `-+ys    '
-# echo -n -e "\t\t\t\t\t"; echo '                      `/dM    sMMMMMMMMMMMMh`./oydNMMMMMMMMMNdy/.`                     `:ohmMMM-    '
-# echo -n -e "\t\t\t\t\t"; echo '                    `+mMMm     :mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNhs+:.          `./oymMMMMMMMs     '
-# echo -n -e "\t\t\t\t\t"; echo '                `-/omMMMMs       /NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNddhhhhdmMMMMMMMMMMMMh      '
-# echo -n -e "\t\t\t\t\t"; echo '              +dMMMMMMMMMs+++oshmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMMMMy       '
-# echo -n -e "\t\t\t\t\t"; echo '            .mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN/yNMMMMMMMMMMMMMMMMMMMMN/        '
-# echo -n -e "\t\t\t\t\t"; echo '           .NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy `+dMMMMMMMMMMMMMMMMNo`         '
-# echo -n -e "\t\t\t\t\t"; echo '         `/mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd    .+hNMMMMMMMMMNy/`           '
-# echo -n -e "\t\t\t\t\t"; echo '     .:ohNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy       `./ossss+-`              '
-# echo -n -e "\t\t\t\t\t"; echo '    .dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-                                '
-# echo -n -e "\t\t\t\t\t"; echo '     `omMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNhmMMMMMMMMMM+                                 '
-# echo -n -e "\t\t\t\t\t"; echo '       `-oyhhys+-:oyhdddhhhddmMMMMMMMMMMMMMMMMMMMmho:`.NMMMMMMMMN+                                  '
-# echo -n -e "\t\t\t\t\t"; echo '                    ````   ``.hMMMMMMmosyhhyyo+:.`    -MMMMMMMMd-                                   '
-# echo -n -e "\t\t\t\t\t"; echo '                            .yMMMMMMMo                .MMMMMMMs`                                    '
-# echo -n -e "\t\t\t\t\t"; echo '                          `oNMMMMMMMN-                 sMMMMMMy/`                                   '
-# echo -n -e "\t\t\t\t\t"; echo '                        `+mMMMMMMNd+-                  `omMMMMMMy                                   '
-# echo -n -e "\t\t\t\t\t"; echo '                        yMMMMMMmo-`                      .NMMMMMy                                   '
-# echo -n -e "\t\t\t\t\t"; echo '                       .MMMMMMy`                      .:sdMMMMm+`                                   '
-# echo -n -e "\t\t\t\t\t"; echo '                       .MMMMMMm+-                  -ohNMMMMMmo.                                     '
-# echo -n -e "\t\t\t\t\t"; echo '                        oNMMMMMMN:               .hNMMMMMMd+.                                       '
-# echo -n -e "\t\t\t\t\t"; echo '                         -ohmmmmm-               .hmmmmds:`                                         '
-# echo -n -e "\t\t\t\t\t"; echo '                             `..`                  ````                                             '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                                    '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                                    '
-# echo -n -e "\t\t\t\t\t"; echo '                                                                                                    '
 
-# ==========================
-
-echo -n -e "\t\t\t"; echo ''
-echo -n -e "\t\t\t"; echo '   ___  ___   ______ __'
-echo -n -e "\t\t\t"; echo '  / _ )/ _ | / __/ // /'
-echo -n -e "\t\t\t"; echo ' / _  / __ |_\ \/ _  /'
-echo -n -e "\t\t\t"; echo '/____/_/ |_/___/_//_/'
-echo -n -e "\t\t\t"; echo ''
+echo -n -e "\t"; echo ''
+echo -n -e "\t"; echo '   ___  ___   ______ __'
+echo -n -e "\t"; echo '  / _ )/ _ | / __/ // /'
+echo -n -e "\t"; echo ' / _  / __ |_\ \/ _  /'
+echo -n -e "\t"; echo '/____/_/ |_/___/_//_/'
+echo -n -e "\t"; echo ''
 
 # ==========================

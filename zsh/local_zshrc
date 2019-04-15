@@ -20,6 +20,9 @@ zstyle ':completion::complete:*' gain-privileges 1
 # Case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# Pandoc autocompletion
+source ~/.dotfiles/zsh/local_zsh_pandoc_autocompletion.sh
+
 # ==========================
 # ===  ZSH aliases			 ===
 # ==========================
@@ -55,54 +58,12 @@ source ~/.dotfiles/zsh/zsh_plugins.sh
 # antibody bundle zsh-users/zsh-completions
 
 # ==========================
-#
-# echo -n -e "\t\t\t\t\t\t"; echo '                                                            '
-# echo -n -e "\t\t\t\t\t\t"; echo '                     .o`            -`                      '
-# echo -n -e "\t\t\t\t\t\t"; echo '                     .md-         `sm`                      '
-# echo -n -e "\t\t\t\t\t\t"; echo '                     `dNm+       :dNd`                      '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      dNmy       sNmh                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      ymmy       sNNy                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      ommy       smmo                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      +Nmy       smN/                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      :Nmy       yNN:                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      -Nmy       yNm.                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      `NNy       yNm`                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '`-`                   `mmy       yNd                      ` '
-# echo -n -e "\t\t\t\t\t\t"; echo ' `+:       `/.         dmy       yNh          `-        .:` '
-# echo -n -e "\t\t\t\t\t\t"; echo '  `+s-      .ys-       ymy       yNy        .+s.      `++`  '
-# echo -n -e "\t\t\t\t\t\t"; echo '    :hs.     `smy:     sNy       yNo      .ods`     `/y:    '
-# echo -n -e "\t\t\t\t\t\t"; echo '     .ymo.     +h:     +Ny       yN/     .hm+`    `/hy.     '
-# echo -n -e "\t\t\t\t\t\t"; echo '      `omd+`    `      /Ny       hN-      -:     :hm+`      '
-# echo -n -e "\t\t\t\t\t\t"; echo '        /dmh/     ::   .my       hm.   .:      -ymd:        '
-# echo -n -e "\t\t\t\t\t\t"; echo '         -hh/   -sdd/   +y       h+   -dms`   +mmy.         '
-# echo -n -e "\t\t\t\t\t\t"; echo '          ``  `ody-:ho`  :       +   /h+:hh/  `s+`          '
-# echo -n -e "\t\t\t\t\t\t"; echo '             /hh:`  `/o`            /o.  `ods.              '
-# echo -n -e "\t\t\t\t\t\t"; echo '           -yd+`      `:`          --      -hd/             '
-# echo -n -e "\t\t\t\t\t\t"; echo '          `hN/                              `sNo            '
-# echo -n -e "\t\t\t\t\t\t"; echo '           .ym/                             -dh-            '
-# echo -n -e "\t\t\t\t\t\t"; echo '            `sm+`                          /my`             '
-# echo -n -e "\t\t\t\t\t\t"; echo '              +ms`                        omo`              '
-# echo -n -e "\t\t\t\t\t\t"; echo '               /mh`                     `sd/                '
-# echo -n -e "\t\t\t\t\t\t"; echo '                :dh-                   .hd-                 '
-# echo -n -e "\t\t\t\t\t\t"; echo '                 .hd:                 :dy.                  '
-# echo -n -e "\t\t\t\t\t\t"; echo '                  `ym/               /mo`                   '
-# echo -n -e "\t\t\t\t\t\t"; echo '                   `omo`           `om/                     '
-# echo -n -e "\t\t\t\t\t\t"; echo '                     +my`         .yd-                      '
-# echo -n -e "\t\t\t\t\t\t"; echo '                      :mh.       -dh.                       '
-# echo -n -e "\t\t\t\t\t\t"; echo '                       -dd-     :mo`                        '
-# echo -n -e "\t\t\t\t\t\t"; echo '                        .hm:   +m/                          '
-# echo -n -e "\t\t\t\t\t\t"; echo '                         `ym+`sd-                           '
-# echo -n -e "\t\t\t\t\t\t"; echo '                           omdh.                            '
-# echo -n -e "\t\t\t\t\t\t"; echo '                            /s`                             '
-# echo -n -e "\t\t\t\t\t\t"; echo '                                                             '
 
-# ==========================
-
-echo -n -e "\t\t\t"; echo '                 '
-echo -n -e "\t\t\t"; echo '  ____  ______ __'
-echo -n -e "\t\t\t"; echo ' /_  / / __/ // /'
-echo -n -e "\t\t\t"; echo '  / /__\ \/ _  / '
-echo -n -e "\t\t\t"; echo ' /___/___/_//_/  '
-echo -n -e "\t\t\t"; echo '                 '
+echo -n -e "\t"; echo '                 '
+echo -n -e "\t"; echo '  ____  ______ __'
+echo -n -e "\t"; echo ' /_  / / __/ // /'
+echo -n -e "\t"; echo '  / /__\ \/ _  / '
+echo -n -e "\t"; echo ' /___/___/_//_/  '
+echo -n -e "\t"; echo '                 '
 
 # ==========================
