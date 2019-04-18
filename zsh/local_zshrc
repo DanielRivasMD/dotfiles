@@ -53,6 +53,15 @@ set_prompt
 RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
 
 # ==========================
+# ===  Key bindings      ===
+# ==========================
+
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
+
+# ==========================
 # ===  Plugins AB        ===
 # ==========================
 
