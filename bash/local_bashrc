@@ -14,6 +14,9 @@
 # Pandoc autocompletion
 eval "$(pandoc --bash-completion)"
 
+# Fuzzy finder (fzf)
+[ -f ~/.dotfiles/bash/fzf.bash ] && source ~/.dotfiles/bash/fzf.bash
+
 # ==========================
 # ===  SH aliases			   ===
 # ==========================

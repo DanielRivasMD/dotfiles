@@ -23,6 +23,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Pandoc autocompletion
 source ~/.dotfiles/zsh/local_zsh_pandoc_autocompletion.sh
 
+# Fuzzy finder (fzf)
+[ -f ~/.dotfiles/zsh/fzf.zsh ] && source ~/.dotfiles/zsh/fzf.zsh
+
 # ==========================
 # ===  ZSH aliases			 ===
 # ==========================
