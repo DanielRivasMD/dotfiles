@@ -1,4 +1,4 @@
-# echo zshrc
+
 # ==========================
 # ===  General settings  ===
 # ==========================
@@ -42,17 +42,6 @@ SAVEHIST=10000
 setopt appendhistory
 
 # ==========================
-# ===   Prompt           ===
-# ==========================
-
-# Left prompt
-source ~/.dotfiles/zsh/zsh_prompt.sh
-set_prompt
-
-# Right prompt
-RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
-
-# ==========================
 # ===  Key bindings      ===
 # ==========================
 
@@ -74,6 +63,17 @@ source ~/.dotfiles/zsh/zsh_plugins.sh
 # antibody bundle zdharma/fast-syntax-highlighting
 # antibody bundle zsh-users/zsh-autosuggestions
 # antibody bundle zsh-users/zsh-completions
+
+# ==========================
+# ===   Prompt           ===
+# ==========================
+
+# Left prompt
+source ~/.dotfiles/zsh/zsh_prompt.sh
+set_prompt
+
+# Right prompt
+RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
 
 # ==========================
 

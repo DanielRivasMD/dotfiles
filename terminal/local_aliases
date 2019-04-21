@@ -10,7 +10,7 @@ alias lr='ls -Goghtr'
 alias lar='ls -AGgohtr'
 alias ch='history | grep "git commit"'
 alias hg='history | grep'
-alias cdr='cd - &> /dev/null; cd - &> /dev/null'
+alias cdr='cd $(pwd)'
 
 # ==========================
 
