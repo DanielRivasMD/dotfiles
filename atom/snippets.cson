@@ -1,0 +1,96 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+#------------------------------------------------------------------------------------------------------------------------------
+# R snippets
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.source.r':
+  # Creating an iteration through list
+  'iteration through list':
+    'prefix': 'for ls'
+    'body': """for($1 in seq_along($2)){
+
+      which_$3 <- names($2)[$1]
+      $4
+    }"""
+
+  # Creating an iteration through vector
+  'iteration through vector':
+    'prefix': 'for vc'
+    'body': """for($1 in seq_along($2)){
+
+      which_$3 <- $2[$1]
+      $4
+    }"""
+
+  # Creating an iteration through matrix or data.frame
+  'iteration through matrix or data.frame':
+    'prefix': 'for df'
+    'body': """for($1 in 1:dim($2)[$3]){
+
+      which_$4 <- $2[$1]
+      $5
+    }"""
+
+  # ggplotting
+  'ggplotting':
+    'prefix': 'ggplot'
+    'body': """ggplot(data = $1, aes($2, $3)) +
+    $4
+    """
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+# Julia snippets
+#------------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------------------------------------------
+# Go snippets
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.source.go':
+  # Equality sign
+  'assignment call':
+    'prefix': '='
+    'body': ' := $1'
+
+#------------------------------------------------------------------------------------------------------------------------------
+# Rust snippets
+#------------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------------------------------------------
+# Awk snippets
+#------------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------------------------------------------
+# Bash snippets
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.source.shell':
+  # Function bash
+  'function bash':
+    'prefix': 'func'
+    'body': """function $1() {
+      $2
+    }"""
+#------------------------------------------------------------------------------------------------------------------------------

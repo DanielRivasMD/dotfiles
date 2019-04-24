@@ -5,7 +5,14 @@ vim/bundle/
 tmux/plugins/
 
 # atom
-atom/
+atom/.gitignore
+atom/.apm
+atom/.node-gyp
+atom/recovery
+atom/storage
+atom/packages
+atom/blob-store
+atom/compile-cache
 
 # zsh
 zsh/plugins/

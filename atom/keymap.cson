@@ -1,0 +1,140 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:boo
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
+
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.platform-darwin':
+
+# Editor core
+  'shift-alt-cmd-e': 'find-and-replace:replace-all'
+  'shift-cmd-e': 'find-and-replace:show-replace'
+
+  'cmd-enter': 'abort!'
+  'alt-enter': 'abort!'
+
+# Go to line
+  'cmd-;': 'go-to-line:toggle'
+  'ctrl-g': 'abort!'
+
+# Tree view
+  'cmd-\'': 'tree-view:toggle-focus'
+  'ctrl-0': 'abort!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.platform-darwin atom-workspace':
+
+# ToDo
+  'cmd-y': 'todo:toggle'
+
+# Terminal
+  'shift-cmd-C': 'platformio-ide-terminal:focus'
+  'shift-cmd-H': 'platformio-ide-terminal:new'
+  'alt-cmd-f': 'abort!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Go to line
+'.go-to-line':
+  'space': 'core:cancel'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.platform-darwin atom-text-editor':
+
+# Project Switcher
+  'cmd-;': 'unset!'
+  'alt-;': 'project-switcher:toggle'
+
+  # Core Editor
+  'ctrl-alt-]': 'editor:unfold-current-row'
+  'ctrl-alt-[': 'editor:fold-current-row'
+  'shift-ctrl-alt-]': 'editor:unfold-all'
+  'shift-ctrl-alt-[': 'editor:fold-all'
+
+  'alt-cmd-]': 'unset!'
+  'alt-cmd-[': 'unset!'
+  'shift-alt-cmd-]': 'unset!'
+  'shift-alt-cmd-[': 'unset!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+'atom-text-editor':
+
+# Autocomplete-plus
+  'shift-space': 'autocomplete-plus:activate'
+
+  'alt-t': 'unset!'
+  'shift-cmd-C': 'unset!'
+
+# Customized R keys
+  'alt--': 'custom:insert-r_assign'
+  '=': 'custom:insert-r_equal'
+  'alt-=': 'custom:insert-r_equalequal'
+  '+': 'custom:insert-r_plus'
+  '-': 'custom:insert-r_minus'
+  '*': 'custom:insert-r_times'
+  '/': 'custom:insert-r_divide'
+  ',': 'custom:insert-r_comma'
+  'alt-,': 'custom:insert-r_comma_newline'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Autocomplete-plus
+'.autocomplete-active':
+  'space': 'autocomplete-plus:cancel'
+  'enter': 'autocomplete-plus:confirm'
+  'cmd-enter': 'autocomplete-plus:navigate-to-description-more-link'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Vim Insert mode
+'atom-text-editor.vim-mode-plus:not(.normal-mode)':
+  'j j': 'vim-mode-plus:activate-normal-mode'
+  'escape': 'unset!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Vim leader
+'atom-workspace:not(.leader-mode) atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode)':
+  ',': 'leader:enable'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------------------------------------------------

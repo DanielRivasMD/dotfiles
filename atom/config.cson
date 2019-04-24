@@ -1,0 +1,165 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "5b124fa4-6247-46e5-8f3e-bde5e948f60d"
+  "atom-clock":
+    showClockIcon: true
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+  "atom-vlc":
+    compactMode: true
+    password: "vlcrules"
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  "autocomplete-paths":
+    ignoredNames: false
+    maxFileCount: 500
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+    enableAutoActivation: false
+    enableAutoConfirmSingleSuggestion: false
+    maxVisibleSuggestions: 5
+    minimumWordLength: 2
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "language-gfm"
+      "autocomplete"
+      "busy-signal"
+      "linter-rust"
+      "linter"
+      "go-plus"
+      "linter-clang"
+      "linter-flake8"
+      "linter-golinter"
+      "linter-hlint"
+      "linter-javac"
+      "linter-julia"
+      "linter-lintr"
+      "linter-php"
+      "linter-phpcs"
+      "linter-ruby"
+      "linter-scalac"
+      "linter-shellcheck"
+      "linter-spell-javascript"
+      "linter-tidy"
+      "minimap-linter"
+      "linter-ui-default"
+      "vim-mode"
+      "remote-ftp"
+      "project-switcher"
+      "bookmarks"
+      "atom-vlc"
+      "linter-markdown"
+      "tool-bar"
+      "linter-spell-latex"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.in"
+    ]
+    packagesWithKeymapsDisabled: [
+      "autocomplete"
+      "rbox"
+      "autocomplete-plus"
+      "todo"
+    ]
+    packagesWithSnippetsDisabled: [
+      "ide-rust"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  "custom-invisibles":
+    tabChar: "»–––"
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "Monaco"
+    fontSize: 16
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softTabs: false
+    softWrap: true
+    tabType: "hard"
+  "exception-reporting":
+    userId: "7bb576b7-4a68-4896-8ff0-eb7720324c95"
+  "fuzzy-finder":
+    preserveLastSearch: true
+  "highlight-selected": {}
+  "julia-client":
+    firstBoot: false
+    juliaOptions:
+      bootMode: "Basic"
+  "linter-ui-default": {}
+  "markdown-pdf":
+    ghStyle: false
+  "markdown-writer":
+    fileExtension: ".md"
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+  "one-dark-ui": {}
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#00a0ff"
+        magenta: "#ff40ff"
+        red: "#ff0000"
+        yellow: "#ff9300"
+      zBright:
+        brightBlack: "#929292"
+        brightBlue: "#00a0ff"
+        brightMagenta: "#ff40ff"
+        brightYellow: "#ff9300"
+    iconColors:
+      blue: "#00a0ff"
+      magenta: "#ff40ff"
+      orange: "#ff9300"
+      yellow: "#00fdff"
+    style:
+      defaultPanelHeight: "60%"
+      theme: "one-dark"
+    toggles:
+      autoClose: true
+  "relative-numbers":
+    softWrapsCount: false
+  "show-invisibles-plus":
+    placeholders: {}
+  "spell-check":
+    locales: [
+      "en-US"
+    ]
+  "tree-view":
+    autoReveal: true
+    hideIgnoredNames: true
+  "vim-mode-plus":
+    keymapPToPutWithAutoIndent: true
+    keymapSToSelect: true
+    keymapYToYankToLastCharacterOfLine: true
+    startInInsertMode: true
+  welcome:
+    showOnStartup: false
+".md.text":
+  editor:
+    softWrapAtPreferredLineLength: true
+".r.source":
+  editor:
+    autoIndent: true
+    autoIndentOnPaste: false
+    showIndentGuide: true
