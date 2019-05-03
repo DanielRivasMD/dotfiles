@@ -27,7 +27,6 @@
       "autocomplete"
       "vim-mode"
       "bookmarks"
-      "language-gfm"
     ]
     ignoredNames: [
       ".git"
@@ -72,6 +71,8 @@
     userId: "7bb576b7-4a68-4896-8ff0-eb7720324c95"
   "fuzzy-finder":
     preserveLastSearch: true
+  github:
+    showDiffIconGutter: true
   "highlight-selected": {}
   "julia-client":
     firstBoot: false

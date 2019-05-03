@@ -27,37 +27,37 @@
 '.source.r':
   # Creating an iteration through list
   'iteration through list':
-    'prefix': 'for ls'
-    'body': """for($1 in seq_along($2)){
-
-      which_$3 <- names($2)[$1]
-      $4
-    }"""
+  	'prefix': 'for ls'
+  	'body': """for($1 in seq_along($2)){
+  		#
+  		which_$3 <- names($2)[$1]
+  		$4
+  	}"""
 
   # Creating an iteration through vector
   'iteration through vector':
-    'prefix': 'for vc'
-    'body': """for($1 in seq_along($2)){
-
-      which_$3 <- $2[$1]
-      $4
-    }"""
+  	'prefix': 'for vc'
+  	'body': """for($1 in seq_along($2)){
+  		#
+  		which_$3 <- $2[$1]
+  		$4
+  	}"""
 
   # Creating an iteration through matrix or data.frame
   'iteration through matrix or data.frame':
-    'prefix': 'for df'
-    'body': """for($1 in 1:dim($2)[$3]){
-
-      which_$4 <- $2[$1]
-      $5
-    }"""
+  	'prefix': 'for df'
+  	'body': """for($1 in 1:dim($2)[$3]){
+  		#
+  		which_$4 <- $2[$1]
+  		$5
+  	}"""
 
   # ggplotting
   'ggplotting':
-    'prefix': 'ggplot'
-    'body': """ggplot(data = $1, aes($2, $3)) +
-    $4
-    """
+  	'prefix': 'ggplot'
+  	'body': """ggplot(data = $1, aes($2, $3)) +
+  	$4
+  	"""
 
 
 #------------------------------------------------------------------------------------------------------------------------------
@@ -71,8 +71,8 @@
 '.source.go':
   # Equality sign
   'assignment call':
-    'prefix': '='
-    'body': ' := $1'
+  	'prefix': '='
+  	'body': ' := $1'
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ Rust snippets /-----------------------------------------------------------------
@@ -89,8 +89,8 @@
 '.source.shell':
   # Function bash
   'function bash':
-    'prefix': 'func'
-    'body': """function $1() {
-      $2
-    }"""
+  	'prefix': 'func'
+  	'body': """function $1() {
+  		$2
+  	}"""
 #------------------------------------------------------------------------------------------------------------------------------
