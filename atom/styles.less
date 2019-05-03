@@ -39,3 +39,37 @@ atom-text-editor .cursor {
 .atom-clock-icon {
 	color: orange;
 }
+
+// Makes the cursor pulse instead of blink
+atom-text-editor {
+	.cursor {
+		transition: opacity 500ms ease-in-out;
+	}
+}
+
+// Make headings in Markdown bold
+.syntax--markup.syntax--heading {
+	font-weight: bold;
+}
+
+// Makes the bracket matcher highlight more noticeable
+atom-text-editor {
+  .bracket-matcher .region {
+    border-bottom: none;
+    background-color: rgba(169,169,169, 0.4);
+    box-shadow: 0 0 0 rgba(169,169,169, 0.4);
+    animation: pulse 2.3s infinite;
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(169,169,169, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 3px rgba(169,169,169, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(169,169,169, 0.0);
+      }
+    }
+  }
+}

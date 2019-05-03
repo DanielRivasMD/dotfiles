@@ -11,8 +11,10 @@
 #     console.log "Saved! #{editor.getPath()}"
 
 #------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------/ LANGUAGE SPECIFIC SETTINGS /----------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 
-# Custome R keys
+# R
 atom.commands.add 'atom-text-editor[data-grammar="source r"]',
   'custom:insert-r_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' <- ')
@@ -43,5 +45,39 @@ atom.commands.add 'atom-text-editor[data-grammar="source r"]',
 
   'custom:insert-r_pipe': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
+
+#------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+MakePandocFile = (extention, args) ->
+  [pandoc_args,cwd] =  MakePandocArgs(extention,args)
+  spawnchild('pandoc',pandoc_args,cwd)
+
+MakePandocArgs = (extention, args) ->
+  editor = atom.workspace.getActiveTextEditor()
+  from_path = editor.getPath()
+  to_path = from_path.substr(0, from_path.lastIndexOf('.') + 1) + extention;
+  cwd = from_path.substr(0, from_path.lastIndexOf('\\') + 1);
+  fpath = [from_path]
+  pandoc_args = fpath.concat(args, ["-o"],[to_path])
+  [pandoc_args, cwd]
+
+spawnchild = (cmd,args,cwd) ->
+  childProcess = require 'child_process'
+  pandoc = childProcess.spawn cmd,args, {cwd}
+  pandoc.stdout.on 'data', (d) -> console.log('stdout: ' + d);
+  pandoc.stderr.on 'data', (d) -> console.log('stderr: ' + d);
+  pandoc.on 'close', (c) -> console.log('child process exited with code ' + c);
+
+atom.commands.add 'atom-text-editor',
+  'Pandoc:pandoc2HTML': ->
+    args = ['--webtex','-s']
+    MakePandocFile('html',args)
+
+atom.commands.add 'atom-text-editor',
+'Pandoc:pandoc2PDF': ->
+  args = ['--pdf-engine', '-s']
+  MakePandocFile('pdf',args)
 
 #------------------------------------------------------------------------------------------------------------------------------
