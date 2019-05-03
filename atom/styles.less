@@ -1,44 +1,37 @@
 /*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed and saved.
- *
- * Add your own CSS or Less to fully customize Atom.
- * If you are unfamiliar with Less, you can read more about it here:
- * http://lesscss.org
- */
+* Your Stylesheet
+*
+* This stylesheet is loaded when Atom starts up and is reloaded automatically
+* when it is changed and saved.
+*
+* Add your own CSS or Less to fully customize Atom.
+* If you are unfamiliar with Less, you can read more about it here:
+* http://lesscss.org
+*/
 
 
 /*
- * Examples
- * (To see them, uncomment and save)
- */
+* Examples
+* (To see them, uncomment and save)
+*/
 
 // style the background color of the tree view
 .tree-view {
-  // background-color: whitesmoke;
+	// background-color: whitesmoke;
 }
 
 // style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
-  // color: white;
-  // background-color: hsl(180, 24%, 12%);
+	// color: white;
+	// background-color: hsl(180, 24%, 12%);
 }
 
 // style UI elements inside atom-text-editor
 atom-text-editor .cursor {
-  // border-color: whitesmoke;
+	// border-color: whitesmoke;
 }
 
-// Atom Clock
-.atom-clock-time {
-	color: lightblue;
-}
-
-.atom-clock-icon {
-	color: orange;
-}
+// ------------------------------------------------------------------------------------------------------------------------------
 
 // Makes the cursor pulse instead of blink
 atom-text-editor {
@@ -47,6 +40,8 @@ atom-text-editor {
 	}
 }
 
+// ------------------------------------------------------------------------------------------------------------------------------
+
 // Make headings in Markdown bold
 .syntax--markup.syntax--heading {
 	font-weight: bold;
@@ -54,22 +49,154 @@ atom-text-editor {
 
 // Makes the bracket matcher highlight more noticeable
 atom-text-editor {
-  .bracket-matcher .region {
-    border-bottom: none;
-    background-color: rgba(169,169,169, 0.4);
-    box-shadow: 0 0 0 rgba(169,169,169, 0.4);
-    animation: pulse 2.3s infinite;
+	.bracket-matcher .region {
+		border-bottom: none;
+		background-color: rgba(169,169,169, 0.4);
+		box-shadow: 0 0 0 rgba(169,169,169, 0.4);
+		animation: pulse 2.3s infinite;
 
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(169,169,169, 0.4);
-      }
-      70% {
-        box-shadow: 0 0 0 3px rgba(169,169,169, 0.2);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(169,169,169, 0.0);
-      }
-    }
-  }
+		@keyframes pulse {
+			0% {
+				box-shadow: 0 0 0 0 rgba(169,169,169, 0.4);
+			}
+			70% {
+				box-shadow: 0 0 0 3px rgba(169,169,169, 0.2);
+			}
+			100% {
+				box-shadow: 0 0 0 0 rgba(169,169,169, 0.0);
+			}
+		}
+	}
 }
+
+// ------------------------------------------------------------------------------------------------------------------------------
+
+// Status Bar
+.status-bar {
+	// background: black;
+
+// Left
+	.platformio-ide-terminal {
+			.icon.icon-plus {
+				display: none;
+				// color: lightblue;
+			}
+		.list-inline {
+			.pio-terminal-status-icon {
+				color: ivory;
+				background-color: dimgray;
+			}
+		}
+		.icon.icon-x {
+			display: none;
+			color: teal;
+		}
+	}
+
+	.atom-latex-status-bar {
+
+	}
+
+	.file-info {
+		.current-path {
+			color: lightseagreen;
+		}
+	}
+
+	.cursor-position a, {
+		color: steelblue;
+	}
+
+	.selection-count {
+		color: lavender;
+		background-color: darkmagenta;
+	}
+
+	.highlight-selected-status {
+		color: silver;
+		background-color: darkmagenta;
+	}
+
+// Right
+	.line-ending-tile {
+		display: none;
+	}
+
+	.deprecation-cop-status {
+
+	}
+
+	.status-bar-vim-mode-plus-insert {
+		color: white;
+	}
+
+	.status-bar-vim-mode-plus-normal {
+		color: white;
+	}
+	.status-bar-vim-mode-plus-visual {
+		color: white;
+	}
+
+	.encoding-status {
+		display: none;
+	}
+
+	.grammar-status a, {
+		color: teal;
+	}
+
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------
+
+// Github status bar
+.github-branch {
+	color: ivory;
+	.icon-git-branch {
+		color: crimson;
+	}
+}
+
+.github-BranchMenuView {
+	.icon-git-branch::before {
+		color: crimson;
+	}
+}
+
+.github-PushPull {
+	color: ivory;
+	&-icon.icon.icon.icon {
+		color: crimson;
+	}
+}
+
+.github-StatusBarTile {
+	color: ivory;
+	background-color: inherit;
+	border: none;
+	.icon-mark-github {
+		color: crimson;
+	}
+}
+
+.github-ChangedFilesCount {
+	color: ivory;
+	background-color: inherit;
+	border: none;
+	.icon-git-commit {
+		color: crimson;
+	}
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------
+
+// Atom Clock
+.atom-clock-time {
+	color: paleturquoise;
+}
+
+.atom-clock-icon {
+	color: gold;
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------
