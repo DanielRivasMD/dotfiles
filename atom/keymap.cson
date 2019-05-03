@@ -91,30 +91,15 @@
 
 #------------------------------------------------------------------------------------------------------------------------------
 
+# Core Editor
 'atom-text-editor':
-
-# Autocomplete-plus
-  'shift-space': 'autocomplete-plus:activate'
-
   'alt-t': 'unset!'
   'shift-cmd-C': 'unset!'
-
-# Customized R keys
-  'alt--': 'custom:insert-r_assign'
-  '=': 'custom:insert-r_equal'
-  'alt-=': 'custom:insert-r_equalequal'
-  '+': 'custom:insert-r_plus'
-  '-': 'custom:insert-r_minus'
-  '*': 'custom:insert-r_times'
-  '/': 'custom:insert-r_divide'
-  ',': 'custom:insert-r_comma'
-  'alt-,': 'custom:insert-r_comma_newline'
 
 #------------------------------------------------------------------------------------------------------------------------------
 
 # Autocomplete-plus
 '.autocomplete-active':
-  'space': 'autocomplete-plus:cancel'
   'enter': 'autocomplete-plus:confirm'
   'cmd-enter': 'autocomplete-plus:navigate-to-description-more-link'
 
@@ -132,9 +117,20 @@
   ',': 'leader:enable'
 
 #------------------------------------------------------------------------------------------------------------------------------
-
-
+#--------------------------------------------/ LANGUAGE SPECIFIC SETTINGS /----------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
+# R
+'atom-text-editor[data-grammar="source r"]':
+  ',': 'custom:insert-r_comma'
+  'alt-=': 'custom:insert-r_equalequal'
+  'alt--': 'custom:insert-r_assign'
+  'alt-0': 'custom:insert-r_plus'
+  'alt-9': 'custom:insert-r_minus'
+  'alt-8': 'custom:insert-r_times'
+  'alt-7': 'custom:insert-r_divide'
+  'alt-,': 'custom:insert-r_comma_newline'
+  'alt-.': 'custom:insert-r_pipe'
+  'alt-/': 'custom:insert-r_equal'
 
 #------------------------------------------------------------------------------------------------------------------------------
