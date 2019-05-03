@@ -1,0 +1,102 @@
+[
+
+	// General
+	{ 
+		"keys": [","],
+		"command": "insert",
+		"args": {"characters": ", "}
+	},
+	{ 
+		"keys": ["≤"],
+		"command": "insert",
+		"args": {"characters": ",\n"},
+	}, 
+
+	// R
+	{ 
+		"keys": ["alt+-"],
+		"command": "insert",
+		"args": {"characters": " <- "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["alt+="],
+		"command": "insert",
+		"args": {"characters": " == "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["alt+7"],
+		"command": "insert",
+		"args": {"characters": " / "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["alt+0"],
+		"command": "insert",
+		"args": {"characters": " + "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["alt+9"],
+		"command": "insert",
+		"args": {"characters": " - "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["alt+8"],
+		"command": "insert",
+		"args": {"characters": " * "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["÷"],
+		"command": "insert",
+		"args": {"characters": " = "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+	{ 
+		"keys": ["≥"],
+		"command": "insert",
+		"args": {"characters": " %>% "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		] 
+	},
+
+	// Move_by_Paragraph
+	{
+		"keys": ["alt+up"],
+		"command": "move_by_paragraph",
+		"args": {"forward": false}
+	},
+	{
+		"keys": ["alt+down"],
+		"command": "move_by_paragraph",
+		"args": {"forward": true}
+	},
+	{
+		"keys": ["alt+shift+up"],
+		"command": "move_by_paragraph",
+		"args": {"forward": false, "extend": true}
+	},
+	{
+		"keys": ["alt+shift+down"],
+		"command": "move_by_paragraph",
+		"args": {"forward": true, "extend": true}
+	}
+]
