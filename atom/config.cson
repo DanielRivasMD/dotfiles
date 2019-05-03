@@ -18,43 +18,16 @@
   "autocomplete-plus":
     backspaceTriggersAutocomplete: true
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
-    enableAutoActivation: false
     enableAutoConfirmSingleSuggestion: false
     maxVisibleSuggestions: 5
     minimumWordLength: 2
   core:
     automaticallyUpdate: false
     disabledPackages: [
-      "language-gfm"
       "autocomplete"
-      "busy-signal"
-      "linter-rust"
-      "linter"
-      "go-plus"
-      "linter-clang"
-      "linter-flake8"
-      "linter-golinter"
-      "linter-hlint"
-      "linter-javac"
-      "linter-julia"
-      "linter-lintr"
-      "linter-php"
-      "linter-phpcs"
-      "linter-ruby"
-      "linter-scalac"
-      "linter-shellcheck"
-      "linter-spell-javascript"
-      "linter-tidy"
-      "minimap-linter"
-      "linter-ui-default"
       "vim-mode"
-      "remote-ftp"
-      "project-switcher"
       "bookmarks"
-      "atom-vlc"
-      "linter-markdown"
-      "tool-bar"
-      "linter-spell-latex"
+      "language-gfm"
     ]
     ignoredNames: [
       ".git"
@@ -70,9 +43,12 @@
       "rbox"
       "autocomplete-plus"
       "todo"
+      "language-markdown"
     ]
     packagesWithSnippetsDisabled: [
       "ide-rust"
+      "atom-language-r"
+      "rbox"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -101,9 +77,39 @@
     firstBoot: false
     juliaOptions:
       bootMode: "Basic"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 300
   "markdown-pdf":
     ghStyle: false
+  "markdown-preview":
+    grammars: [
+      "source.Rmd"
+      "source.gfm"
+      "source.litcoffee"
+      "text.html.basic"
+      "text.md"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
+  "markdown-preview-plus":
+    extensions: [
+      "markdown"
+      "md"
+      "mdown"
+      "mkd"
+      "mkdown"
+      "ron"
+      "txt"
+      "Rmd"
+    ]
+    grammars: [
+      "source.gfm"
+      "source.litcoffee"
+      "text.html.basic"
+      "text.md"
+      "text.plain"
+      "text.plain.null-grammar source.gfm.rmd"
+    ]
   "markdown-writer":
     fileExtension: ".md"
   minimap:
