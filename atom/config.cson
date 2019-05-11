@@ -60,7 +60,7 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "Monaco"
-    fontSize: 16
+    fontSize: 18
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -85,7 +85,7 @@
     ghStyle: false
   "markdown-preview":
     grammars: [
-      "source.Rmd"
+      "source.gfm.rmd"
       "source.gfm"
       "source.litcoffee"
       "text.html.basic"
@@ -165,6 +165,7 @@
     showOnStartup: false
 ".md.text":
   editor:
+    preferredLineLength: 500
     softWrapAtPreferredLineLength: true
 ".r.source":
   editor:

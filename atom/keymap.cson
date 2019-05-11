@@ -79,7 +79,7 @@
   'cmd-;': 'unset!'
   'alt-;': 'project-switcher:toggle'
 
-  # Core Editor
+# Core Editor
   'ctrl-alt-]': 'editor:unfold-current-row'
   'ctrl-alt-[': 'editor:fold-current-row'
   'shift-ctrl-alt-]': 'editor:unfold-all'
@@ -97,7 +97,7 @@
   'alt-t': 'unset!'
   'shift-cmd-C': 'unset!'
 
-  # Pandoc quick export
+# Pandoc quick export
   'cmd-alt-o h': 'Pandoc:pandoc2HTML'
   'cmd-alt-o p': 'Pandoc:pandoc2PDF'
 
@@ -124,6 +124,19 @@
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ LANGUAGE SPECIFIC SETTINGS /----------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
+
+# R markdown
+'atom-text-editor[data-grammar="source gfm rmd"]':
+  ',': 'custom:insert-r_comma'
+  'alt-=': 'custom:insert-r_equalequal'
+  'alt--': 'custom:insert-r_assign'
+  'alt-0': 'custom:insert-r_plus'
+  'alt-9': 'custom:insert-r_minus'
+  'alt-8': 'custom:insert-r_times'
+  'alt-7': 'custom:insert-r_divide'
+  'alt-,': 'custom:insert-r_comma_newline'
+  'alt-.': 'custom:insert-r_pipe'
+  'alt-/': 'custom:insert-r_equal'
 
 # R
 'atom-text-editor[data-grammar="source r"]':

@@ -14,6 +14,38 @@
 #--------------------------------------------/ LANGUAGE SPECIFIC SETTINGS /----------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
+# R markdown
+atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
+  'custom:insert-r_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' <- ')
+
+  'custom:insert-r_equal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' = ')
+
+  'custom:insert-r_equalequal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' == ')
+
+  'custom:insert-r_plus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' + ')
+
+  'custom:insert-r_minus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' - ')
+
+  'custom:insert-r_times': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' * ')
+
+  'custom:insert-r_divide': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' / ')
+
+  'custom:insert-r_comma': ->
+    atom.workspace.getActiveTextEditor()?.insertText(', ')
+
+  'custom:insert-r_comma_newline': ->
+    atom.workspace.getActiveTextEditor()?.insertText(',\n')
+
+  'custom:insert-r_pipe': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
+
 # R
 atom.commands.add 'atom-text-editor[data-grammar="source r"]',
   'custom:insert-r_assign': ->

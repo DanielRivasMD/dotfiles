@@ -85,19 +85,37 @@
   		$5
   	}"""
 
+#------------------------------------------------------------------------------------------------------------------------------
+
+  # NanoFunctions
+  'slid_win':
+  	'prefix': 'slid_win(f_seq = , f_bin_size = )'
+  	'body': 'slid_win(${1:f_seq}, ${2:f_bin_size})'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
   # ggplotting
   'ggplotting':
   	'prefix': 'ggplot'
-  	'body': """ggplot(data = $1, aes($2, $3)) +
-  	$4
+  	'body': """{
+  		ggplot(
+  			data = $1,
+  			aes(
+  				$2
+  			)
+  		) +
+  		$3
+  	}
   	"""
+
+  #
 
 #------------------------------------------------------------------------------------------------------------------------------
 
 # From R-BOX
   'apply function over marigin {base}':
   	'prefix': 'apply(x, MARGIN, FUN)'
-  	'body': 'apply(${1:x},,)'
+  	'body': 'apply(${1:x}, ${2:MARGIN}, ${3:FUN})'
 
   'apply function over a List or vector {base}':
   	'prefix': 'lapply(x, FUN)'
@@ -160,8 +178,8 @@
   	'body':'cbind(${0:},${1:})'
 
   'create data frames  {base}':
-  	'prefix': 'data.frame(x, y)'
-  	'body': 'data.frame(${1:data},)'
+  	'prefix': 'data.frame(x)'
+  	'body': 'data.frame($1)'
 
   'detach {base}':
   	'prefix': 'detach'
@@ -363,51 +381,51 @@
 
   'combine by row {base}':
   	'prefix':'rbind()'
-  	'body':'rbind(${0:x},${1:})'
+  	'body':'rbind(${1}, ${2:})'
 
   'read csv {utils}':
   	'prefix': 'read.csv(x, file=".csv")'
-  	'body': 'read.csv(${0:x},file=".csv",sep="",header=TRUE,row.names=TRUE,col.names=TRUE)'
+  	'body': 'read.csv(${0:x}, file=".csv", sep="", header=TRUE, row.names=TRUE, col.names=TRUE)'
 
   'read table {utils}':
   	'prefix': 'read.table(x, file=".csv")'
-  	'body': 'read.table(${0:x},file=".csv",sep="",header=TRUE,row.names=TRUE,col.names=TRUE)'
+  	'body': 'read.table(${0:x}, file=".csv", sep="", header=TRUE, row.names=TRUE, col.names=TRUE)'
 
   'read delim {utils}':
-  	'prefix': 'read.delim(x, file=".csv")'
-  	'body': 'read.delim(?,file=".csv",sep="",header=TRUE,row.names=TRUE,col.names=TRUE)'
+  	'prefix': 'read.delim(x, file = ".csv")'
+  	'body': 'read.delim(${1:x}, file = ".csv", sep = "", header = TRUE, row.names = TRUE, col.names = TRUE)'
 
   'remove all everything {base}':
-  	'prefix':'rm(list=ls())'
-  	'body':  'rm(list=ls())'
+  	'prefix':'rm(list = ls())'
+  	'body':  'rm(list = ls())'
 
   'remove objects {base}':
   	'prefix':'rm(x)'
   	'body':  'rm(${0:x})'
 
   'round {base}':
-  	'prefix': 'round(x, digits=0)'
-  	'body': 'round(${0:x},digits=0)'
+  	'prefix': 'round(x, digits = 0)'
+  	'body': 'round(${0:x}, digits = 0)'
 
   'Read R Code from a File {base}':
-  	'prefix':'source(file="")'
-  	'body': 'source(file="")'
+  	'prefix':'source(file = "")'
+  	'body': 'source(file = "$1")'
 
   'sort a vector or factor {base}':
-  	'prefix':'sort(x, decreasing=FALSE)'
-  	'body': 'sort(${0:x},decreasing=FALSE)'
+  	'prefix':'sort(x, decreasing = FALSE)'
+  	'body': 'sort(${0:x},decreasing = FALSE)'
 
   'save {base}':
-  	'prefix': 'save(x, file=".RData") '
-  	'body': 'save(${0:x},file=".RData")'
+  	'prefix': 'save(x, file = ".RData") '
+  	'body': 'save(${0:x}, file = "$1.RData")'
 
   'sample1 {base}':
-  	'prefix': 'sample(x, size,replace=FALSE,prob=NULL)'
-  	'body': 'sample(${1:x},${2:},replace=FALSE,prob=NULL)'
+  	'prefix': 'sample(x, size, replace = FALSE, prob = NULL)'
+  	'body': 'sample(${1:x}, ${2:size}, replace = FALSE, prob = NULL)'
 
   'sample2 {base}':
   	'prefix': 'sample(x, n)'
-  	'body': 'sample(${1:x},${2:?})'
+  	'body': 'sample(${1:x}, ${2:?})'
 
   'difference of sets {base}':
   	'prefix': 'setdiff(x, y)'
