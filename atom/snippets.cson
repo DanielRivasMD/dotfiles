@@ -108,7 +108,17 @@
   	}
   	"""
 
-  #
+  # write.table
+  'writetable {utils}':
+  	'prefix': 'writetable(x)'
+  	'body': """write.table(
+  		$1,
+  		file = "$2",
+  		append = ${3:FALSE},
+  		col.names = ${6:TRUE},
+  		row.names = FALSE,
+  		quote = FALSE
+  	)"""
 
 #------------------------------------------------------------------------------------------------------------------------------
 
@@ -119,11 +129,11 @@
 
   'apply function over a List or vector {base}':
   	'prefix': 'lapply(x, FUN)'
-  	'body': 'lapply(${1:x},)'
+  	'body': 'lapply(${1:x}, ${2:FUN})'
 
   'apply function over a ragged array {base}':
   	'prefix': 'tapply(x, FUN)'
-  	'body': 'tapply(${1:x},)'
+  	'body': 'tapply(${1:x}, ${2:FUN})'
 
   'combine values {base}':
   	'prefix': 'c(x)'
