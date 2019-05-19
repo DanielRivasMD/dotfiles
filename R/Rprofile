@@ -8,7 +8,8 @@ options(max.print = 999)
 options(nwarnings = 99)
 
 # Package loading
-require(SistWrapper, lib.loc = "~/bin/rpack/", quietly = T)
+library(SistWrapper, quietly = T)
+library(RStudioAddIns, quietly = T)
 
 #------------------------------------------------------------------------------------------------------------------------------
 
