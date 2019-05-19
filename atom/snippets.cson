@@ -157,6 +157,23 @@
   	'prefix': 'paste0()'
   	'body': 'paste0($1)'
 
+  'tryCatch {base}':
+  	'prefix': 'tryCatch(expr, ..., finally)'
+  	'body': """tryCatch(
+  		expr = {
+  			$1
+  		},
+  		error = function(f_err){
+  			$2
+  		},
+  		warning = function(f_warn){
+  			$3
+  		},
+  		finally = {
+  			$4
+  		}
+  	)"""
+
 #------------------------------------------------------------------------------------------------------------------------------
 
 # From R-BOX
