@@ -6,69 +6,17 @@
 		"command": "insert",
 		"args": {"characters": ", "}
 	},
-	{
-		"keys": ["≤"],
-		"command": "insert",
-		"args": {"characters": ",\n"},
-	},
 
 	// R
 	{
-		"keys": ["alt+-"],
+		"keys": ["≤"],
 		"command": "insert",
-		"args": {"characters": " <- "},
+		"args": {"characters": " %in% "},
 		"context": [
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
 	},
-	{
-		"keys": ["alt+="],
-		"command": "insert",
-		"args": {"characters": " == "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-	{
-		"keys": ["alt+7"],
-		"command": "insert",
-		"args": {"characters": " / "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-	{
-		"keys": ["alt+0"],
-		"command": "insert",
-		"args": {"characters": " + "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-	{
-		"keys": ["alt+9"],
-		"command": "insert",
-		"args": {"characters": " - "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-	{
-		"keys": ["alt+8"],
-		"command": "insert",
-		"args": {"characters": " * "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-	{
-		"keys": ["÷"],
-		"command": "insert",
-		"args": {"characters": " = "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
+
 	{
 		"keys": ["≥"],
 		"command": "insert",
@@ -77,6 +25,70 @@
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
 	},
+
+	{
+		"keys": ["÷"],
+		"command": "insert",
+		"args": {"characters": " <- "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+="],
+		"command": "insert",
+		"args": {"characters": " == "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+-"],
+		"command": "insert",
+		"args": {"characters": " = "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+0"],
+		"command": "insert",
+		"args": {"characters": " + "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+9"],
+		"command": "insert",
+		"args": {"characters": " - "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+8"],
+		"command": "insert",
+		"args": {"characters": " * "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+7"],
+		"command": "insert",
+		"args": {"characters": " / "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
 
 	// Move_by_Paragraph
 	{

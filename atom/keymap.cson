@@ -127,28 +127,28 @@
 
 # R markdown
 'atom-text-editor[data-grammar="source gfm rmd"]':
-  ',': 'custom:insert-r_comma'
+  'alt-,': 'custom:insert-r_include'
+  'alt-.': 'custom:insert-r_pipe'
+  'alt-/': 'custom:insert-r_assign'
   'alt-=': 'custom:insert-r_equalequal'
-  'alt--': 'custom:insert-r_assign'
+  'alt--': 'custom:insert-r_equal'
   'alt-0': 'custom:insert-r_plus'
   'alt-9': 'custom:insert-r_minus'
   'alt-8': 'custom:insert-r_times'
   'alt-7': 'custom:insert-r_divide'
-  'alt-,': 'custom:insert-r_comma_newline'
-  'alt-.': 'custom:insert-r_pipe'
-  'alt-/': 'custom:insert-r_equal'
+  ',': 'custom:insert-r_comma'
 
 # R
 'atom-text-editor[data-grammar="source r"]':
-  ',': 'custom:insert-r_comma'
+  'alt-,': 'custom:insert-r_include'
+  'alt-.': 'custom:insert-r_pipe'
+  'alt-/': 'custom:insert-r_assign'
   'alt-=': 'custom:insert-r_equalequal'
-  'alt--': 'custom:insert-r_assign'
+  'alt--': 'custom:insert-r_equal'
   'alt-0': 'custom:insert-r_plus'
   'alt-9': 'custom:insert-r_minus'
   'alt-8': 'custom:insert-r_times'
   'alt-7': 'custom:insert-r_divide'
-  'alt-,': 'custom:insert-r_comma_newline'
-  'alt-.': 'custom:insert-r_pipe'
-  'alt-/': 'custom:insert-r_equal'
+  ',': 'custom:insert-r_comma'
 
 #------------------------------------------------------------------------------------------------------------------------------
