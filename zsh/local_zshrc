@@ -3,6 +3,11 @@
 # ===  General settings  ===
 # ==========================
 
+# Launch Bash on Atom
+if [[ $TERM_PROGRAM == platformio-ide-terminal ]]
+then
+	bash -l
+fi
 
 # ==========================
 # ===  Autocompletion		 ===
