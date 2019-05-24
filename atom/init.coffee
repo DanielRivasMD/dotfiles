@@ -46,6 +46,9 @@ atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
   'custom:insert-r_comma': ->
     atom.workspace.getActiveTextEditor()?.insertText(', ')
 
+  'custom:insert-r_tilde': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
+
 # R
 atom.commands.add 'atom-text-editor[data-grammar="source r"]',
   'custom:insert-r_include': ->
@@ -77,6 +80,9 @@ atom.commands.add 'atom-text-editor[data-grammar="source r"]',
 
   'custom:insert-r_comma': ->
     atom.workspace.getActiveTextEditor()?.insertText(', ')
+
+  'custom:insert-r_tilde': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------

@@ -89,6 +89,15 @@
 		]
 	},
 
+	{
+		"keys": ["alt+1"],
+		"command": "insert",
+		"args": {"characters": " ~ "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
 
 	// Move_by_Paragraph
 	{
