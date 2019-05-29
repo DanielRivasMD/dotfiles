@@ -31,6 +31,7 @@
       "julia-client"
       "latexer"
       "ink"
+      "swackets"
     ]
     ignoredNames: [
       ".git"
@@ -52,6 +53,7 @@
       "ide-rust"
       "atom-language-r"
       "rbox"
+      "language-shellscript"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -156,9 +158,13 @@
     locales: [
       "en-US"
     ]
+  swackets: {}
   "tree-view":
     autoReveal: true
     hideIgnoredNames: true
+  "tree-view-git-branch":
+    location: "top"
+    separator: true
   "vim-mode-plus":
     keymapPToPutWithAutoIndent: true
     keymapSToSelect: true
