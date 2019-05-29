@@ -47,12 +47,45 @@
 #------------------------------------------------------------------------------------------------------------------------------
 
 '.source.shell':
-  # Function bash
-  'function bash':
-  	'prefix': 'func'
-  	'body': """function $1() {
-  		$2
+
+  # SH
+  '#!/bin/sh':
+  	'prefix': 'sh'
+  	'body': '#!/bin/sh\n'
+
+  # BASH
+  '#!/bin/bash':
+  	'prefix': 'bash'
+  	'body': '#!/bin/bash\n'
+
+  # Function
+  'function':
+  	'prefix': 'function'
+  	'body': """function ${1:name}(${2:parameter}) {
+  		${3:#statements}
   	}"""
+
+  # For loop
+  'for … done':
+  	'prefix': 'for'
+  	'body': """for (( ${1:i} = ${2:0}; ${1:i} < ${3:x}; ${1:i}++ ));
+  		do
+  			${0:#statements}
+  		done"""
+
+  # If statement
+  'if … fi':
+  	'prefix': 'if'
+  	'body': """if ${2:[[ ${1:condition} ]]}; then\n\t${0:#statements}\nfi"""
+
+  # Case
+  'case … esac':
+  	'prefix': 'case'
+  	'body': """case ${1:word} in
+  		${2:pattern} ) ${3:actions}
+  		$0;;
+  	esac"""
+
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ R snippets /--------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
