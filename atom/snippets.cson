@@ -107,6 +107,7 @@
 
 #--------------------------------------------/ Tidyverse /---------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
+
   'ggplotting':
   	'prefix': 'ggplot'
   	'body': """{
@@ -119,6 +120,10 @@
   		$3
   	}
   	"""
+
+  'convert to tibble {dplyr}':
+  	'prefix': 'as_tibble'
+  	'body': 'as_tibble(${1:?})'
 
   'tibble {dplyr}':
   	'prefix': 'tibble()'
@@ -149,7 +154,7 @@
 
   'iteration through list':
   	'prefix': 'for ls'
-  	'body': """for($1 in seq_along($2)){
+  	'body': """for ( $1 in seq_along($2) ) {
   		#
   		which_$3 <- names($2)[$1]
   		$4
@@ -157,7 +162,7 @@
 
   'iteration through vector':
   	'prefix': 'for vc'
-  	'body': """for($1 in seq_along($2)){
+  	'body': """for ( $1 in seq_along($2) ) {
   		#
   		which_$3 <- $2[$1]
   		$4
@@ -165,7 +170,7 @@
 
   'iteration through matrix or data.frame':
   	'prefix': 'for df'
-  	'body': """for($1 in 1:dim($2)[$3]){
+  	'body': """for ( $1 in 1:dim($2)[$3] ) {
   		#
   		which_$4 <- $2[$1]
   		$5
@@ -176,8 +181,9 @@
   	'body': """write.table(
   		$1,
   		file = "$2",
-  		append = ${3:FALSE},
-  		col.names = ${6:TRUE},
+  		sep = "$3",
+  		append = ${4:FALSE},
+  		col.names = ${5:TRUE},
   		row.names = FALSE,
   		quote = FALSE
   	)"""
@@ -189,6 +195,10 @@
   'paste0 {base}':
   	'prefix': 'paste0()'
   	'body': 'paste0($1)'
+
+  'save {base}':
+  	'prefix': 'save(..., file = ".RData") '
+  	'body': 'save(${1:...}, file = "$2.RData")'
 
   'tryCatch {base}':
   	'prefix': 'tryCatch(expr, ..., finally)'
@@ -309,7 +319,8 @@
   'for Loop {base}':
   	'prefix': 'for'
   	'body': """
-  		for(${1:i} in ${2::}){
+  		for ( ${1:i} in ${2::} ) {
+  			#
   			$3
   		}
   		"""
@@ -512,10 +523,6 @@
   'sort a vector or factor {base}':
   	'prefix':'sort(x, decreasing = FALSE)'
   	'body': 'sort(${0:x},decreasing = FALSE)'
-
-  'save {base}':
-  	'prefix': 'save(x, file = ".RData") '
-  	'body': 'save(${0:x}, file = "$1.RData")'
 
   'sample1 {base}':
   	'prefix': 'sample(x, size, replace = FALSE, prob = NULL)'
