@@ -32,6 +32,7 @@
       "latexer"
       "ink"
       "swackets"
+      "ide-rust"
     ]
     ignoredNames: [
       ".git"
@@ -54,6 +55,7 @@
       "atom-language-r"
       "rbox"
       "language-shellscript"
+      "language-rust"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -75,6 +77,7 @@
     tabType: "hard"
   "exception-reporting":
     userId: "7bb576b7-4a68-4896-8ff0-eb7720324c95"
+  "file-icons": {}
   "fuzzy-finder":
     preserveLastSearch: true
   github:
@@ -172,9 +175,12 @@
     startInInsertMode: true
   welcome:
     showOnStartup: false
+".coffee.source":
+  editor:
+    tabType: "soft"
 ".md.text":
   editor:
-    preferredLineLength: 500
+    preferredLineLength: 100
     softWrapAtPreferredLineLength: true
 ".python.regexp.source":
   editor:
@@ -186,5 +192,11 @@
 ".r.source":
   editor:
     autoIndent: true
-    autoIndentOnPaste: false
+    autoIndentOnPaste: true
     showIndentGuide: true
+".rust.source":
+  editor:
+    autoIndentOnPaste: true
+    preferredLineLength: 100
+    showInvisibles: true
+    tabLength: 2
