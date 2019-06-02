@@ -127,9 +127,12 @@
 
 # R markdown
 'atom-text-editor[data-grammar="source gfm rmd"]':
-  'alt-,': 'custom:insert-r_include'
-  'alt-.': 'custom:insert-r_pipe'
+  'alt-5': 'custom:insert-r_include'
+  'alt-,': 'custom:insert-r_pipe'
+  'alt-4': 'custom:insert-r_pipe_var'
+  'alt-6': 'custom:insert-r_pipe_assign'
   'alt-/': 'custom:insert-r_assign'
+  'alt-.': 'custom:insert-r_right_assign'
   'alt-=': 'custom:insert-r_equalequal'
   'alt--': 'custom:insert-r_equal'
   'alt-0': 'custom:insert-r_plus'
@@ -141,9 +144,12 @@
 
 # R
 'atom-text-editor[data-grammar="source r"]':
-  'alt-,': 'custom:insert-r_include'
-  'alt-.': 'custom:insert-r_pipe'
+  'alt-5': 'custom:insert-r_include'
+  'alt-,': 'custom:insert-r_pipe'
+  'alt-4': 'custom:insert-r_pipe_var'
+  'alt-6': 'custom:insert-r_pipe_assign'
   'alt-/': 'custom:insert-r_assign'
+  'alt-.': 'custom:insert-r_right_assign'
   'alt-=': 'custom:insert-r_equalequal'
   'alt--': 'custom:insert-r_equal'
   'alt-0': 'custom:insert-r_plus'

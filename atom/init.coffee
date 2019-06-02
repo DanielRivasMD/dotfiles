@@ -22,8 +22,17 @@ atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
   'custom:insert-r_pipe': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
 
+  'custom:insert-r_pipe_var': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
+
+  'custom:insert-r_pipe_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
+
   'custom:insert-r_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' <- ')
+
+  'custom:insert-r_right_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
 
   'custom:insert-r_equalequal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' == ')
@@ -57,8 +66,17 @@ atom.commands.add 'atom-text-editor[data-grammar="source r"]',
   'custom:insert-r_pipe': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
 
+  'custom:insert-r_pipe_var': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
+
+  'custom:insert-r_pipe_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
+
   'custom:insert-r_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' <- ')
+
+  'custom:insert-r_right_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
 
   'custom:insert-r_equalequal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' == ')

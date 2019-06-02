@@ -9,7 +9,7 @@
 
 	// R
 	{
-		"keys": ["≤"],
+		"keys": ["alt+5"],
 		"command": "insert",
 		"args": {"characters": " %in% "},
 		"context": [
@@ -18,9 +18,27 @@
 	},
 
 	{
-		"keys": ["≥"],
+		"keys": ["≤"],
 		"command": "insert",
 		"args": {"characters": " %>% "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+4"],
+		"command": "insert",
+		"args": {"characters": " %$% "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+6"],
+		"command": "insert",
+		"args": {"characters": " %<>% "},
 		"context": [
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
@@ -30,6 +48,15 @@
 		"keys": ["÷"],
 		"command": "insert",
 		"args": {"characters": " <- "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["≥"],
+		"command": "insert",
+		"args": {"characters": " -> "},
 		"context": [
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
