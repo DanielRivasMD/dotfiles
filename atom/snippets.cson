@@ -295,45 +295,64 @@
 #------------------------------------------------------------------------------------------------------------------------------
 
   'ggplotting':
-  	'prefix': 'ggplot'
-  	'body': """{
-  		ggplot(
-  			data = $1,
-  			aes(
-  				$2
-  			)
-  		) +
-  		$3
-  	}
-  	"""
+    'prefix': 'ggplot'
+    'body': """{
+    \tggplot(
+    \t\tdata = $1,
+    \t\taes(
+    \t\t\t$2
+    \t\t)
+    \t) +
+    \t$3
+    }
+    """
 
-  'convert to tibble {dplyr}':
-  	'prefix': 'as_tibble'
-  	'body': 'as_tibble(${1:?})'
+  'convert to tibble {tibble}':
+    'prefix': 'as_tibble'
+    'body': 'tibble::as_tibble(${1:?})'
 
-  'tibble {dplyr}':
-  	'prefix': 'tibble()'
-  	'body': 'tibble($1)'
+  'tibble {tibble}':
+    'prefix': 'tibble()'
+    'body': 'tibble::tibble($1)'
+
+  'filter {dplyr}':
+    'prefix': 'filter()'
+    'body': 'dplyr::filter($1)'
 
   'read_delim {readr}':
-  	'prefix': 'read_delim'
-  	'body': """read_delim(
-  		file = $1,
-  		delim = $2,
-  		col_names = $3
-  	)"""
+    'prefix': 'read_delim'
+    'body': """readr::read_delim(
+    \tfile = $1,
+    \tdelim = $2,
+    \tcol_names = $3
+    )"""
 
   'slice {dplyr}':
-  	'prefix': 'slice(.data, ...)'
-  	'body': 'slice(${1:data}, $2)'
+    'prefix': 'slice(.data, ...)'
+    'body': 'dplyr::slice($1)'
 
   'select {dplyr}':
-  	'prefix': 'select(.data, ...)'
-  	'body': 'select(${1:data}, $2)'
+    'prefix': 'select(.data, ...)'
+    'body': 'dplyr::select($1)'
+
+  'pull {dplyr}':
+    'prefix': 'pull(.data, ...)'
+    'body': 'dplyr::pull($1)'
+
+  'mutate {dplyr}':
+    'prefix': 'mutate(.data, ...)'
+    'body': 'dplyr::mutate($1)'
 
   'add_column {tibble}':
-  	'prefix': 'add_column(.data, ..., .before = NULL, .after = NULL)'
-  	'body': 'add_column(${1:data}, $2)'
+    'prefix': 'add_column(.data, ..., .before = NULL, .after = NULL)'
+    'body': 'tibble::add_column($1)'
+
+#--------------------------------------------/ Tidyverse /---------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+  'findOverlaps {IRanges}':
+    'prefix': 'findOverlaps(query, subject)'
+    'body': 'IRanges::findOverlaps(${1:query}, ${2:subject})'
 
 #--------------------------------------------/ Basic R /-----------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
