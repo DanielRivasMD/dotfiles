@@ -178,6 +178,12 @@
 ".coffee.source":
   editor:
     tabType: "soft"
+".css.source":
+  editor:
+    tabType: "soft"
+".json.source":
+  editor:
+    tabType: "soft"
 ".md.text":
   editor:
     preferredLineLength: 100
@@ -200,3 +206,6 @@
     preferredLineLength: 100
     showInvisibles: true
     tabLength: 2
+".shell.source":
+  editor:
+    tabType: "soft"
