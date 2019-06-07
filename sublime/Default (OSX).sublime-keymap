@@ -7,6 +7,18 @@
 		"args": {"characters": ", "}
 	},
 
+	{
+		"keys": ["≤"],
+		"command": "insert",
+		"args": {"characters": " := "}
+	},
+
+	{
+		"keys": ["alt+3"],
+		"command": "insert",
+		"args": {"characters": "```"}
+	},
+
 	// R
 	{
 		"keys": ["alt+5"],
@@ -18,7 +30,7 @@
 	},
 
 	{
-		"keys": ["≤"],
+		"keys": ["≥"],
 		"command": "insert",
 		"args": {"characters": " %>% "},
 		"context": [
@@ -36,9 +48,18 @@
 	},
 
 	{
-		"keys": ["alt+6"],
+		"keys": ["…"],
 		"command": "insert",
 		"args": {"characters": " %<>% "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["alt+6"],
+		"command": "insert",
+		"args": {"characters": " %T>% "},
 		"context": [
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
@@ -54,7 +75,7 @@
 	},
 
 	{
-		"keys": ["≥"],
+		"keys": ["æ"],
 		"command": "insert",
 		"args": {"characters": " -> "},
 		"context": [
@@ -124,7 +145,6 @@
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
 	},
-
 
 	// Move_by_Paragraph
 	{
