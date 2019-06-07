@@ -28,6 +28,9 @@ atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
   'custom:insert-r_pipe_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
 
+  'custom:insert-r_pipe_tee': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
+
   'custom:insert-r_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' <- ')
 
@@ -57,6 +60,17 @@ atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
 
   'custom:insert-r_tilde': ->
     atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
+
+  'custom:insert-go_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' := ')
+
+  'custom:insert-code_start': ->
+    atom.workspace.getActiveTextEditor()?.insertText("```")
+
+# Markdown
+atom.commands.add 'atom-text-editor[data-grammar="text md"]',
+  'custom:insert-code_start': ->
+    atom.workspace.getActiveTextEditor()?.insertText("```")
 
 # R
 atom.commands.add 'atom-text-editor[data-grammar="source r"]',
@@ -72,6 +86,9 @@ atom.commands.add 'atom-text-editor[data-grammar="source r"]',
   'custom:insert-r_pipe_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
 
+  'custom:insert-r_pipe_tee': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
+
   'custom:insert-r_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' <- ')
 
@@ -101,6 +118,17 @@ atom.commands.add 'atom-text-editor[data-grammar="source r"]',
 
   'custom:insert-r_tilde': ->
     atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
+
+  'custom:insert-go_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' := ')
+
+  'custom:insert-package_dev_comment': ->
+    atom.workspace.getActiveTextEditor()?.insertText("#' ")
+
+# Go
+atom.commands.add 'atom-text-editor[data-grammar="source go"]',
+  'custom:insert-go_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' := ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
