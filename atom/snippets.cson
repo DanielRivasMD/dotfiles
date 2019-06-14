@@ -533,9 +533,13 @@
   'function {base}':
     'prefix': 'function'
     'body': """
-    \tfunction(${1:x}){
-    \t${3: return($4)}
-    \t}
+    $1 <- function(
+
+    \t${2:# ARGUMENTS}
+    ) {
+    \t${0:# BODY}
+    \t${3:return($4)}
+    }
     \t"""
 
   'display plot of object {Idisplay}':
