@@ -31,8 +31,9 @@
       "julia-client"
       "latexer"
       "ink"
-      "swackets"
       "ide-rust"
+      "swackets"
+      "tree-view-git-branch"
     ]
     ignoredNames: [
       ".git"
@@ -49,6 +50,9 @@
       "autocomplete-plus"
       "todo"
       "language-markdown"
+      "github"
+      "git-plus"
+      "git-diff"
     ]
     packagesWithSnippetsDisabled: [
       "ide-rust"
@@ -80,6 +84,13 @@
   "file-icons": {}
   "fuzzy-finder":
     preserveLastSearch: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  "git-log":
+    fontScale: 1
+  "git-plus":
+    general:
+      splitPane: "Right"
   github:
     showDiffIconGutter: true
   "highlight-selected": {}
@@ -161,13 +172,17 @@
     locales: [
       "en-US"
     ]
-  swackets: {}
+  swackets:
+    colorParens: true
   "tree-view":
     autoReveal: true
     hideIgnoredNames: true
   "tree-view-git-branch":
     location: "top"
     separator: true
+  "tree-view-git-status":
+    gitFlow: {}
+    showBranchLabel: false
   "vim-mode-plus":
     keymapPToPutWithAutoIndent: true
     keymapSToSelect: true
