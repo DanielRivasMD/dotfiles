@@ -20,4 +20,12 @@ autocmd FileType R,Rmd inoremap ¡ <space>~<space>
 autocmd FileType R,Rmd,go inoremap ≤ <space>:=<space>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <leader>\ :NERDTreeToggle<CR>
+map <leader>' :NERDTreeFocus<CR>
+map <leader>/ :NERDTreeFind
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
