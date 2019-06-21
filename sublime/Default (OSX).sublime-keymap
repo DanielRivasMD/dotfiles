@@ -8,20 +8,110 @@
 	},
 
 	{
-		"keys": ["≤"],
+		"keys": ["÷"],
+		"command": "insert",
+		"args": {"characters": " <- "},
+	},
+
+	{
+		"keys": ["¿"],
+		"command": "insert",
+		"args": {"characters": " <<- "}
+	},
+
+	{
+		"keys": ["æ"],
+		"command": "insert",
+		"args": {"characters": " => "},
+	},
+
+	{
+		"keys": ["Æ"],
+		"command": "insert",
+		"args": {"characters": " -> "},
+	},
+
+	{
+		"keys": ["…"],
 		"command": "insert",
 		"args": {"characters": " := "}
 	},
 
 	{
-		"keys": ["alt+3"],
+		"keys": ["Ú"],
 		"command": "insert",
-		"args": {"characters": "```"}
+		"args": {"characters": " ~ "},
+	},
+
+	{
+		"keys": ["≠"],
+		"command": "insert",
+		"args": {"characters": " == "},
+	},
+
+	{
+		"keys": ["±"],
+		"command": "insert",
+		"args": {"characters": " + "},
+	},
+
+	{
+		"keys": ["–"],
+		"command": "insert",
+		"args": {"characters": " = "},
+	},
+
+	{
+		"keys": ["—"],
+		"command": "insert",
+		"args": {"characters": " - "},
+	},
+
+	{
+		"keys": ["•"],
+		"command": "insert",
+		"args": {"characters": " * "},
+	},
+
+	{
+		"keys": ["°"],
+		"command": "insert",
+		"args": {"characters": " / "},
+	},
+
+	{
+		"keys": ["≤"],
+		"command": "insert",
+		"args": {"characters": " < "},
+	},
+
+	{
+		"keys": ["≥"],
+		"command": "insert",
+		"args": {"characters": " > "},
+	},
+
+	{
+		"keys": ["¯"],
+		"command": "insert",
+		"args": {"characters": " <= "},
+	},
+
+	{
+		"keys": ["˘"],
+		"command": "insert",
+		"args": {"characters": " >= "},
+	},
+
+	{
+		"keys": ["«"],
+		"command": "insert",
+		"args": {"characters": "```"},
 	},
 
 	// R
 	{
-		"keys": ["alt+5"],
+		"keys": ["ﬁ"],
 		"command": "insert",
 		"args": {"characters": " %in% "},
 		"context": [
@@ -30,7 +120,7 @@
 	},
 
 	{
-		"keys": ["≥"],
+		"keys": ["º"],
 		"command": "insert",
 		"args": {"characters": " %>% "},
 		"context": [
@@ -39,16 +129,7 @@
 	},
 
 	{
-		"keys": ["alt+4"],
-		"command": "insert",
-		"args": {"characters": " %$% "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["…"],
+		"keys": ["‚"],
 		"command": "insert",
 		"args": {"characters": " %<>% "},
 		"context": [
@@ -57,90 +138,18 @@
 	},
 
 	{
-		"keys": ["alt+6"],
+		"keys": ["ª"],
+		"command": "insert",
+		"args": {"characters": " %$% "},
+		"context": [
+		{ "key": "selector", "operator": "equal", "operand": "source.r" }
+		]
+	},
+
+	{
+		"keys": ["·"],
 		"command": "insert",
 		"args": {"characters": " %T>% "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["÷"],
-		"command": "insert",
-		"args": {"characters": " <- "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["æ"],
-		"command": "insert",
-		"args": {"characters": " -> "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+="],
-		"command": "insert",
-		"args": {"characters": " == "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+-"],
-		"command": "insert",
-		"args": {"characters": " = "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+0"],
-		"command": "insert",
-		"args": {"characters": " + "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+9"],
-		"command": "insert",
-		"args": {"characters": " - "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+8"],
-		"command": "insert",
-		"args": {"characters": " * "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+7"],
-		"command": "insert",
-		"args": {"characters": " / "},
-		"context": [
-		{ "key": "selector", "operator": "equal", "operand": "source.r" }
-		]
-	},
-
-	{
-		"keys": ["alt+1"],
-		"command": "insert",
-		"args": {"characters": " ~ "},
 		"context": [
 		{ "key": "selector", "operator": "equal", "operand": "source.r" }
 		]
