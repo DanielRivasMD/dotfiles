@@ -25,15 +25,8 @@
     automaticallyUpdate: false
     disabledPackages: [
       "autocomplete"
-      "vim-mode"
       "bookmarks"
       "language-gfm"
-      "julia-client"
-      "latexer"
-      "ink"
-      "ide-rust"
-      "swackets"
-      "tree-view-git-branch"
     ]
     ignoredNames: [
       ".git"
@@ -60,6 +53,7 @@
       "rbox"
       "language-shellscript"
       "language-rust"
+      "language-awk"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -124,12 +118,13 @@
       "Rmd"
     ]
     grammars: [
+      "source.gfm.rmd"
       "source.gfm"
       "source.litcoffee"
       "text.html.basic"
       "text.md"
       "text.plain"
-      "text.plain.null-grammar source.gfm.rmd"
+      "text.plain.null-grammar"
     ]
   "markdown-writer":
     fileExtension: ".md"
@@ -193,12 +188,18 @@
 ".coffee.source":
   editor:
     tabType: "soft"
+".console.julia.source":
+  editor:
+    tabLength: 2
 ".css.source":
   editor:
     tabType: "soft"
 ".json.source":
   editor:
     tabType: "soft"
+".julia.source":
+  editor:
+    tabLength: 2
 ".md.text":
   editor:
     preferredLineLength: 100
@@ -223,4 +224,4 @@
     tabLength: 2
 ".shell.source":
   editor:
-    tabType: "soft"
+    tabType: "hard"
