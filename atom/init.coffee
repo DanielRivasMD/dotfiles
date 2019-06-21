@@ -11,124 +11,108 @@
 #     console.log "Saved! #{editor.getPath()}"
 
 #------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------/ GENERAL KEYBINDINGS /-----------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+atom.commands.add 'atom-text-editor',
+  'custom:insert-comma': ->
+    atom.workspace.getActiveTextEditor()?.insertText(', ')
+  'custom:insert-r_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' <- ')
+  'custom:insert-r_up_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' <<- ')
+  'custom:insert-rust_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' => ')
+  'custom:insert-r_right_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
+  'custom:insert-go_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' := ')
+  'custom:insert-tilde': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
+  'custom:insert-equalequal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' == ')
+  'custom:insert-plus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' + ')
+  'custom:insert-equal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' = ')
+  'custom:insert-minus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' - ')
+  'custom:insert-times': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' * ')
+  'custom:insert-divide': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' / ')
+  'custom:insert-lessthan': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' < ')
+  'custom:insert-morethan': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' > ')
+  'custom:insert-lessequal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' <= ')
+  'custom:insert-moreequal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' >= ')
+
+#------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ LANGUAGE SPECIFIC SETTINGS /----------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
-# R markdown
-atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
-  'custom:insert-r_include': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %in% ')
 
-  'custom:insert-r_pipe': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Awk /-----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 
-  'custom:insert-r_pipe_var': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
 
-  'custom:insert-r_pipe_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Bash /----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 
-  'custom:insert-r_pipe_tee': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
 
-  'custom:insert-r_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' <- ')
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Go /------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 
-  'custom:insert-r_right_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
 
-  'custom:insert-r_equalequal': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' == ')
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Julia /---------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 
-  'custom:insert-r_equal': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' = ')
 
-  'custom:insert-r_plus': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' + ')
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Markdown /------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
 
-  'custom:insert-r_minus': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' - ')
-
-  'custom:insert-r_times': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' * ')
-
-  'custom:insert-r_divide': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' / ')
-
-  'custom:insert-r_comma': ->
-    atom.workspace.getActiveTextEditor()?.insertText(', ')
-
-  'custom:insert-r_tilde': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
-
-  'custom:insert-go_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' := ')
-
-  'custom:insert-code_start': ->
-    atom.workspace.getActiveTextEditor()?.insertText("```")
-
-# Markdown
 atom.commands.add 'atom-text-editor[data-grammar="text md"]',
   'custom:insert-code_start': ->
     atom.workspace.getActiveTextEditor()?.insertText("```")
 
-# R
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ R markdown /----------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
+  'custom:insert-code_start': ->
+    atom.workspace.getActiveTextEditor()?.insertText("```")
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ R /-------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
 atom.commands.add 'atom-text-editor[data-grammar="source r"]',
   'custom:insert-r_include': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %in% ')
-
   'custom:insert-r_pipe': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
-
-  'custom:insert-r_pipe_var': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
-
   'custom:insert-r_pipe_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
-
+  'custom:insert-r_pipe_var': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
   'custom:insert-r_pipe_tee': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
-
-  'custom:insert-r_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' <- ')
-
-  'custom:insert-r_right_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
-
-  'custom:insert-r_equalequal': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' == ')
-
-  'custom:insert-r_equal': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' = ')
-
-  'custom:insert-r_plus': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' + ')
-
-  'custom:insert-r_minus': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' - ')
-
-  'custom:insert-r_times': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' * ')
-
-  'custom:insert-r_divide': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' / ')
-
-  'custom:insert-r_comma': ->
-    atom.workspace.getActiveTextEditor()?.insertText(', ')
-
-  'custom:insert-r_tilde': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
-
-  'custom:insert-go_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' := ')
-
-  'custom:insert-package_dev_comment': ->
+  'custom:insert-r_package_dev_comment': ->
     atom.workspace.getActiveTextEditor()?.insertText("#' ")
 
-# Go
-atom.commands.add 'atom-text-editor[data-grammar="source go"]',
-  'custom:insert-go_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' := ')
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Rust /----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
@@ -155,13 +139,15 @@ spawnchild = (cmd,args,cwd) ->
   pandoc.on 'close', (c) -> console.log('child process exited with code ' + c);
 
 atom.commands.add 'atom-text-editor',
+
   'Pandoc:pandoc2HTML': ->
     args = ['--webtex','-s']
     MakePandocFile('html',args)
 
 atom.commands.add 'atom-text-editor',
-'Pandoc:pandoc2PDF': ->
-  args = ['--pdf-engine', '-s']
-  MakePandocFile('pdf',args)
+
+  'Pandoc:pandoc2PDF': ->
+    args = ['--pdf-engine', '-s']
+    MakePandocFile('pdf',args)
 
 #------------------------------------------------------------------------------------------------------------------------------
