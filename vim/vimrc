@@ -89,12 +89,6 @@ autocmd BufWritePre * %s/\s\+$//e
 imap jj <Esc>
 vmap jj <Esc>
 
-" Cursor movement
-nnoremap h 10h
-nnoremap j 10j
-nnoremap k 10k
-nnoremap l 10l
-
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
