@@ -78,24 +78,20 @@
 '.source.shell':
 
 
-  # SH
   '#!/bin/sh':
     prefix: 'sh'
     body: '#!/bin/sh\n'
 
-  # BASH
   '#!/bin/bash':
     prefix: 'bash'
     body: '#!/bin/bash\n'
 
-  # Function
   'function':
     prefix: 'function'
     body: """function ${1:name}(${2:parameter}) {
     \t${3:#statements}
     }"""
 
-  # For loop
   'for … done':
     prefix: 'for'
     body: """for (( ${1:i} = ${2:0}; ${1:i} < ${3:x}; ${1:i}++ ));
@@ -103,7 +99,6 @@
     \t\t${0:#statements}
     \tdone"""
 
-  # If statement
   'if … fi':
     prefix: 'if'
     body: """if ${2:[[ ${1:condition} ]]};
@@ -111,7 +106,6 @@
     \t${0:#statements}
     fi"""
 
-  # Case
   'case … esac':
     prefix: 'case'
     body: """case ${1:word} in
