@@ -3208,6 +3208,13 @@
 			<key>Text</key>
 			<string>81EC755C-827D-4F91-8307-F69E9FB64D49</string>
 		</dict>
+		<key>0x63-0x80000</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Text</key>
+			<string>awk 'END{print NR}'</string>
+		</dict>
 		<key>0x64-0x80000</key>
 		<dict>
 			<key>Action</key>
@@ -3446,9 +3453,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 74 606 469 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>507 581 928 394 0 0 1680 1050 </string>
+	<string>2342 402 958 451 1680 -30 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1028 0 0 1680 1050 </string>
+	<string>1680 -30 1920 1058 1680 -30 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1680 1028 0 0 1680 1028 </string>
 	<key>New Bookmarks</key>
