@@ -1804,7 +1804,7 @@ end # do
 
 
   'iteration through list':
-    prefix: 'for ls'
+    prefix: 'forls'
     body: """for ( $1 in seq_along($2) ) {
     \t#
     \twhich_$3 <- names($2)[$1]
@@ -1812,7 +1812,7 @@ end # do
     }"""
 
   'iteration through vector':
-    prefix: 'for vc'
+    prefix: 'forvc'
     body: """for ( $1 in seq_along($2) ) {
     \t#
     \twhich_$3 <- $2[$1]
@@ -1820,7 +1820,7 @@ end # do
     }"""
 
   'iteration through matrix or data.frame':
-    prefix: 'for df'
+    prefix: 'fordf'
     body: """for ( $1 in 1:dim($2)[$3] ) {
     \t#
     \twhich_$4 <- $2[$1]
@@ -1828,7 +1828,7 @@ end # do
     }"""
 
   'writetable {utils}':
-    prefix: 'writetable(x)'
+    prefix: 'writetable()'
     body: """write.table(
     \t$1,
     \tfile = "$2",
@@ -1848,11 +1848,11 @@ end # do
     body: 'paste0($1)'
 
   'save {base}':
-    prefix: 'save(..., file = ".RData") '
+    prefix: 'save()'
     body: 'save(${1:...}, file = "$2.RData")'
 
   'tryCatch {base}':
-    prefix: 'tryCatch(expr, ..., finally)'
+    prefix: 'tryCatch()'
     body: """tryCatch(
     \texpr = {
     \t\t$1
@@ -1873,47 +1873,51 @@ end # do
 
 
   'apply function over marigin {base}':
-    prefix: 'apply(x, MARGIN, FUN)'
+    prefix: 'apply()'
     body: 'apply(${1:x}, ${2:MARGIN}, ${3:FUN})'
 
   'apply function over a List or vector {base}':
-    prefix: 'lapply(x, FUN)'
+    prefix: 'lapply()'
     body: 'lapply(${1:x}, ${2:FUN})'
 
   'apply function over a ragged array {base}':
-    prefix: 'tapply(x, FUN)'
+    prefix: 'tapply()'
     body: 'tapply(${1:x}, ${2:FUN})'
 
   'combine values {base}':
-    prefix: 'c(x)'
+    prefix: 'c()'
     body: 'c(${1:})'
 
   'convert to array {base}':
-    prefix: 'as.array'
+    prefix: 'as.array()'
     body: 'as.array(${1:?})'
 
   'convert to data frame {base}':
-    prefix: 'as.data.frame(x)'
+    prefix: 'as.data.frame()'
     body: 'as.data.frame(${1:x})'
 
+  'convert to vector {base}':
+    prefix: 'as.vector()'
+    body: 'as.vector(${1:x})'
+
   'convert to numeric {base}':
-    prefix: 'as.numeric(x)'
+    prefix: 'as.numeric()'
     body: 'as.numeric(${1:x})'
 
   'convert to logical {base}':
-    prefix: 'as.logical(x)'
+    prefix: 'as.logical()'
     body: 'as.logical(${1:?})'
 
   'convert to complex {base}':
-    prefix: 'as.complex(x)'
+    prefix: 'as.complex()'
     body: 'as.complex(${1:x})'
 
   'convert to character {base}':
-    prefix: 'as.character(x)'
+    prefix: 'as.character()'
     body: 'as.character(${1:x})'
 
   'attach data {base}':
-    prefix: 'attach'
+    prefix: 'attach()'
     body: 'attach(${1:data})'
 
   'breaks out loop {base}':
@@ -1921,11 +1925,11 @@ end # do
     body: 'break'
 
   'round to smallest integer {base}':
-    prefix: 'ceiling(x)'
-    body: 'ceiling(x)'
+    prefix: 'ceiling()'
+    body: 'ceiling(${1:x})'
 
   'computes the combinations  {base}':
-    prefix: 'choose(n,k)'
+    prefix: 'choose()'
     body: 'choose(${1:n},${2:k})'
 
   'correlation {base}':
@@ -1937,35 +1941,39 @@ end # do
     body:'cbind(${0:},${1:})'
 
   'create data frames  {base}':
-    prefix: 'data.frame(x)'
+    prefix: 'data.frame()'
     body: 'data.frame($1)'
 
   'detach {base}':
-    prefix: 'detach'
+    prefix: 'detach()'
     body: 'detach(${1:data})'
 
   'lagged of vector {base}':
-    prefix: 'diff(x)'
+    prefix: 'diff()'
     body: 'diff(${1:x})'
 
   'dimension {base}':
-    prefix: 'dim(x)'
+    prefix: 'dim()'
     body: 'dim(${1:x})'
 
   'show files {base}':
-    prefix: 'dir'
+    prefix: 'dir()'
     body: 'dir()'
 
   'empirical cumu. dist. fun. {base}':
-    prefix: 'ecdf(x)'
+    prefix: 'ecdf()'
     body: 'ecdf(${1:x})'
+
+  'TRUE {base}':
+    prefix: 'TRUE'
+    body: 'TRUE'
 
   'FALSE {base}':
     prefix: 'FALSE'
     body: 'FALSE'
 
   'round to largest integer {base}':
-    prefix: 'floor(x)'
+    prefix: 'floor()'
     body: 'floor(${1:x})'
 
   'for Loop {base}':
@@ -1990,7 +1998,7 @@ end # do
     \t"""
 
   'display plot of object {Idisplay}':
-    prefix: 'display'
+    prefix: 'display()'
     body: """
     \tdisplay(${1:x})
     """
@@ -2000,7 +2008,7 @@ end # do
     body:'getwd()'
 
   'help via dispaly {IRdispaly}':
-    prefix: 'help(display(x))'
+    prefix: 'help(display())'
     body: 'help(display(${1:x}))'
 
   'help via {base}':
@@ -2009,12 +2017,12 @@ end # do
 
   'hist {base}':
     prefix: 'histogram'
-    body:'hist(${1:x},freq=FALSE)'
+    body:'hist(${1:x}, freq = FALSE)'
 
 
   'intersetion of sets {base}':
-    prefix: 'intersect(x, y)'
-    body: 'intersect(${1:x},)'
+    prefix: 'intersect()'
+    body: 'intersect(${1:x}, ${2:y})'
 
 
   'if,else if,else {base}':
@@ -2057,38 +2065,38 @@ end # do
   'if [multiline] {base}':
     prefix: 'if0'
     body: """
-    if ( ${1:true} ){
+    if ( ${1:true} ) {
     \t#
     \t$2
     }
     """
 
   'test for mising {base}':
-    prefix: 'is.na(x)'
+    prefix: 'is.na()'
     body: 'is.na(${1:?})'
 
   'test for null {base}':
-    prefix: 'is.null(x)'
+    prefix: 'is.null()'
     body: 'is.null(${1:x})'
 
   'test for array {base}':
-    prefix: 'is.array(x)'
+    prefix: 'is.array()'
     body: 'is.array(${1:x})'
 
   'test for data frame {base}':
-    prefix: 'is.data.frame(x)'
+    prefix: 'is.data.frame()'
     body: 'is.data.frame(${1:?})'
 
   'test for numeric {base}':
-    prefix: 'is.numeric(x)'
+    prefix: 'is.numeric()'
     body: 'is.numeric(${1:x})'
 
   'test for complex {base}':
-    prefix: 'is.complex(x)'
+    prefix: 'is.complex()'
     body: 'is.complex(${1:x})'
 
   'test for character {base}':
-    prefix: 'is.character(x)'
+    prefix: 'is.character()'
     body: 'is.character(${1:x})'
 
   'NULL {base}':
@@ -2096,8 +2104,8 @@ end # do
     body: 'NULL'
 
   'Kolmogorov-Smirnov test {stat}':
-    prefix: 'ks.test(x, y)'
-    body: 'ks.test(${1:x},)'
+    prefix: 'ks.test()'
+    body: 'ks.test(${1:x}, ${2:y})'
 
   'library {base}':
     prefix: "library()"
@@ -2106,15 +2114,15 @@ end # do
     \t"""
 
   'length {base}':
-    prefix: 'length(x)'
+    prefix: 'len()'
     body: 'length(${1:x})'
 
   'mean with trim {base}':
-    prefix: 'mean(x, trim=0,na.rm=FALSE)'
-    body: 'mean(${1:x},trim=0,na.rm=FALSE)'
+    prefix: 'mean()'
+    body: 'mean(${1:x}, trim = 0, na.rm = FALSE)'
 
   'mean {base}':
-    prefix: 'mean(x)'
+    prefix: 'mean()'
     body: 'mean(${1:x})'
 
   'mit NA {stat}':
@@ -2122,27 +2130,27 @@ end # do
     body: 'na.omit(${0:x})'
 
   'number of columns {base}':
-    prefix: 'ncol(x)'
+    prefix: 'ncol()'
     body: 'ncol(${1:x})'
 
   'number of rows {base}':
-    prefix: 'nrow(x)'
+    prefix: 'nrow()'
     body: 'nrow(${1:x})'
 
   'option to resize plot {base}':
-    prefix: 'options(repr.plot.width=4, repr.plot.height=3)'
-    body: 'options(repr.plot.width=4, repr.plot.height=3)'
+    prefix: 'options()'
+    body: 'options(repr.plot.width = 4, repr.plot.height = 3)'
 
   'sample quantile {stats}':
-    prefix: 'quantile(x, probs=)'
-    body: 'quantile(${1:x},probs=)'
+    prefix: 'quantile()'
+    body: 'quantile(${1:x}, probs = ${2})'
 
   'calculayte range {base}':
-    prefix: 'range(x)'
+    prefix: 'range()'
     body: 'range(${1:x})'
 
   'return ranks of values {base}':
-    prefix: 'rank(x)'
+    prefix: 'rank()'
     body: 'rank(${1:x})'
 
   'combine by row {base}':
@@ -2150,67 +2158,88 @@ end # do
     body:'rbind(${1}, ${2:})'
 
   'read csv {utils}':
-    prefix: 'read.csv(x, file=".csv")'
-    body: 'read.csv(${0:x}, file=".csv", sep="", header=TRUE, row.names=TRUE, col.names=TRUE)'
+    prefix: 'read.csv()'
+    body: 'read.csv(
+    \t${0:x},
+    \tfile = ".csv",
+    sep = "",
+    \theader = TRUE,
+    \trow.names = TRUE,
+    \tcol.names = TRUE
+    )'
 
   'read table {utils}':
-    prefix: 'read.table(x, file=".csv")'
-    body: 'read.table(${0:x}, file=".csv", sep="", header=TRUE, row.names=TRUE, col.names=TRUE)'
+    prefix: 'read.table()'
+    body: 'read.table(
+    \t${0:x},
+    \tfile = ".csv",
+    sep = "",
+    \theader = TRUE,
+    \trow.names = TRUE,
+    \tcol.names = TRUE
+    )'
 
   'read delim {utils}':
-    prefix: 'read.delim(x, file = ".csv")'
-    body: 'read.delim(${1:x}, file = ".csv", sep = "", header = TRUE, row.names = TRUE, col.names = TRUE)'
+    prefix: 'read.delim()'
+    body: 'read.delim(
+    \t${1:x},
+    \tfile = ".csv",
+    \tsep = "",
+    \theader = TRUE,
+    \trow.names = TRUE,
+    \tcol.names = TRUE
+    )'
 
   'remove all everything {base}':
-    prefix:'rm(list = ls())'
+    prefix:'rmall()'
     body:  'rm(list = ls())'
 
   'remove objects {base}':
-    prefix:'rm(x)'
+    prefix:'rm()'
     body:  'rm(${0:x})'
 
   'round {base}':
-    prefix: 'round(x, digits = 0)'
+    prefix: 'round()'
     body: 'round(${0:x}, digits = 0)'
 
   'Read R Code from a File {base}':
-    prefix:'source(file = "")'
+    prefix: 'source()'
     body: 'source(file = $1)'
 
   'sort a vector or factor {base}':
-    prefix:'sort(x, decreasing = FALSE)'
+    prefix: 'sort()'
     body: 'sort(${0:x},decreasing = FALSE)'
 
   'sample1 {base}':
-    prefix: 'sample(x, size, replace = FALSE, prob = NULL)'
+    prefix: 'sample()'
     body: 'sample(${1:x}, ${2:size}, replace = FALSE, prob = NULL)'
 
   'sample2 {base}':
-    prefix: 'sample(x, n)'
+    prefix: 'sample()'
     body: 'sample(${1:x}, ${2:?})'
 
   'difference of sets {base}':
-    prefix: 'setdiff(x, y)'
+    prefix: 'setdiff()'
     body: 'setdiff(${1:x},)'
 
   'sequence  {base}':
-    prefix: 'sequence (from,to,by)'
+    prefix: 'sequence()'
     body: 'seq(${1:from},${2:to},${3:by})'
 
   'set working dirc {base}':
-    prefix:'setwd("")'
+    prefix:'setwd()'
     body:'setwd("")'
 
   'compare two sets {base}':
-    prefix: 'setequal(x, y)'
+    prefix: 'setequal()'
     body: 'setequal(${1:x},)'
 
   'rounded as significant value {base}':
-    prefix: 'signif(x, digits=0)'
+    prefix: 'signif()'
     body: 'signif(x, digits=0)'
 
   'sort {base}':
-    prefix: 'sort(x)'
+    prefix: 'sort()'
     body: 'sort(${1:x})'
 
   'return system time {base}':
@@ -2218,39 +2247,35 @@ end # do
     body: 'Sys.time()'
 
   'summary {base}':
-    prefix:'summary(x)'
-    body:'summary(${0:x})'
+    prefix: 'summary()'
+    body: 'summary(${0:x})'
 
   't.test {stats}':
-    prefix:'t.test(x, alternative ="two.sided",mu=0)'
-    body:'t.test(${0:x},alternative ="two.sided",mu=)'
+    prefix: 't.test()'
+    body: 't.test(${0:x},alternative ="two.sided",mu=)'
 
   't.test with details {stats}':
-    prefix:'t.test(x, y=NULL,.....)'
-    body:'t.test(${0:x},y=NULL,alternative =c("two.sided","less","greater"),mu=?,paired=FALSE,var.equal=FALSE,conf.level=0.95 )'
+    prefix: 't.test()'
+    body: 't.test(${0:x},y=NULL,alternative =c("two.sided","less","greater"),mu=?,paired=FALSE,var.equal=FALSE,conf.level=0.95 )'
 
   'return without duplicate {base}':
-    prefix: 'unique(x)'
+    prefix: 'unique()'
     body: 'unique(${1:x})'
 
   'scaling and cetering {base}':
-    prefix: 'scale(x)'
+    prefix: 'scale()'
     body: 'scale(${1:x})'
 
   'build a contingency table {base}':
-    prefix: 'table(x, y)'
+    prefix: 'table()'
     body: 'table(${1:x},)'
-
-  'TRUE {base}':
-    prefix: 'TRUE'
-    body: 'TRUE'
 
   'union of sets {base}':
     prefix: 'union(x, y)'
     body: 'union(${1:x},)'
 
   'variance {stats}':
-    prefix: 'var(x)'
+    prefix: 'var()'
     body: 'var(${1:x})'
 
   'while Loop {base}':
@@ -2261,79 +2286,79 @@ end # do
     \t"""
 
   'write {base}':
-    prefix: 'write(x, file="data")'
+    prefix: 'write()'
     body: 'write(${1:x},file="")'
 
   'write.csv {base}':
-    prefix: 'write.csv(x, file=".csv")'
+    prefix: 'write.csv()'
     body: 'write.csv(${1:x},file=".csv",row.names=TRUE,col.names=TRUE)'
 
   'write.table {base}':
-    prefix: 'write.table(x, file=".csv")'
+    prefix: 'write.table()'
     body: 'write.table(${1:x},file=".csv",row.names=TRUE,col.names=TRUE)'
 
   'log {base}':
-    prefix: 'log(x)'
+    prefix: 'log()'
     body: 'log(${1:x})'
 
   'log with base {base}':
-    prefix: 'logb(x, base=exp(1))'
+    prefix: 'logb()'
     body: 'logb(${1:x},base=exp(1))'
 
   'log10 {base}':
-    prefix: 'log10(x)'
+    prefix: 'log10()'
     body: 'log10(${1:x})'
 
   'exponential {base}':
-    prefix: 'exp(x)'
+    prefix: 'exp()'
     body: 'exp(${1:x})'
 
   'cos {base}':
-    prefix: 'cos(x)'
+    prefix: 'cos()'
     body: 'cos(${1:x})'
 
   'sin {base}':
-    prefix: 'sin(x)'
+    prefix: 'sin()'
     body: 'sin(${1:x})'
 
   'tan {base}':
-    prefix: 'tan(x)'
+    prefix: 'tan()'
     body: 'tan(${1:x})'
 
   'arc-cos {base}':
-    prefix: 'acos(x)'
+    prefix: 'acos()'
     body: 'acos(${1:x})'
 
   'arc-sin {base}':
-    prefix: 'asin(x)'
+    prefix: 'asin()'
     body: 'asin(${1:x})'
 
   'arc-tan {base}':
-    prefix: 'atan(x)'
+    prefix: 'atan()'
     body: 'atan(${1:x})'
 
   'hyperbolic  cos{base}':
-    prefix: 'cosh(x)'
+    prefix: 'cosh()'
     body: 'cosh(${1:x})'
 
   'hyperbolic  sin{base}':
-    prefix: 'sinh(x)'
+    prefix: 'sinh()'
     body: 'sinh(${1:x})'
 
   'hyperbolic  tan{base}':
-    prefix: 'tanh(x)'
+    prefix: 'tanh()'
     body: 'tanh(${1:x})'
 
   'arc cosh {base}':
-    prefix: 'acosh(x)'
+    prefix: 'acosh()'
     body: 'acosh(${1:x})'
 
   'arc-sinh {base}':
-    prefix: 'asinh(x)'
+    prefix: 'asinh()'
     body: 'asinh(${1:x})'
 
   'arc-tanh {base}':
-    prefix: 'atanh(x)'
+    prefix: 'atanh()'
     body: 'atanh(${1:x})'
 
 
