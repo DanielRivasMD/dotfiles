@@ -5,8 +5,9 @@
   "atom-clock":
     showClockIcon: true
   "atom-ide-ui":
-    "atom-ide-code-format":
-      formatOnSave: true
+    "atom-ide-code-format": {}
+    hyperclick:
+      darwinTriggerKeys: "ctrlKey"
   "atom-vlc":
     compactMode: true
     password: "vlcrules"
@@ -24,7 +25,6 @@
   core:
     automaticallyUpdate: false
     disabledPackages: [
-      "autocomplete"
       "bookmarks"
       "language-gfm"
     ]
@@ -46,6 +46,9 @@
       "github"
       "git-plus"
       "git-diff"
+      "go-plus"
+      "autocomplete-haskell"
+      "ide-haskell"
     ]
     packagesWithSnippetsDisabled: [
       "ide-rust"
@@ -94,7 +97,11 @@
       splitPane: "Right"
   github:
     showDiffIconGutter: true
+  "go-plus":
+    panel: {}
   "highlight-selected": {}
+  "ide-rust":
+    rlsDefaultConfig: {}
   "julia-client":
     firstBoot: false
     juliaOptions:
@@ -139,8 +146,12 @@
     plugins:
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+      "lens-mode": true
+      "lens-modeDecorationsZIndex": 0
       linter: true
       linterDecorationsZIndex: 0
   "one-dark-ui": {}
@@ -194,41 +205,54 @@
     showOnStartup: false
 ".coffee.source":
   editor:
+    tabLength: 2
     tabType: "soft"
 ".console.julia.source":
   editor:
     tabLength: 2
 ".css.source":
   editor:
+    tabLength: 2
     tabType: "soft"
+".go.source":
+  editor:
+    tabLength: 2
+    tabType: "hard"
 ".json.source":
   editor:
+    tabLength: 2
     tabType: "soft"
 ".julia.source":
   editor:
     tabLength: 2
+    tabType: "hard"
 ".md.text":
   editor:
     preferredLineLength: 100
     softWrapAtPreferredLineLength: true
 ".python.regexp.source":
   editor:
-    preferredLineLength: 1
+    preferredLineLength: 100
     tabLength: 2
 ".python.source":
   editor:
     tabLength: 2
+    tabType: "hard"
 ".r.source":
   editor:
     autoIndent: true
     autoIndentOnPaste: true
     showIndentGuide: true
+    tabLength: 2
+    tabType: "hard"
 ".rust.source":
   editor:
     autoIndentOnPaste: true
     preferredLineLength: 100
     showInvisibles: true
     tabLength: 2
+    tabType: "hard"
 ".shell.source":
   editor:
+    tabLength: 2
     tabType: "soft"
