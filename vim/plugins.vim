@@ -30,6 +30,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'jpalardy/vim-slime'
 Plugin 'vim-syntastic/syntastic'
 Bundle 'gabrielelana/vim-markdown'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin 'powerline/powerline'
 
 call vundle#end()            " required
@@ -41,6 +42,14 @@ call vundle#end()            " required
 let g:airline_section_y = '%{strftime("%a %d %b %H:%M")}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='ravenpower'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-markdown-preview
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Opera'
+let vim_markdown_preview_pandoc=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

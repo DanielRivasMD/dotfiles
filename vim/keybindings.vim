@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "  => General
-
 inoremap , ,<space>
 inoremap ÷ <space><-<space>
 inoremap ¿ <space><<-<space>
