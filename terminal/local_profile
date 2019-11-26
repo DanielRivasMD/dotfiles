@@ -74,9 +74,11 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # ==========================
-# ===  tre							 ===
+# ===  Commands					 ===
 # ==========================
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+mman() { command man "$@" | more }
 
 # ==========================
