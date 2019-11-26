@@ -4,10 +4,10 @@
 # ==========================
 
 # General aliases
-alias l='ls -Gogh'
-alias la='ls -AGogh'
-alias lr='ls -Goghtr'
-alias lar='ls -AGgohtr'
+alias l='exa --long --header --group'
+alias la='exa --long --header --group --all'
+alias lr='exa --long --header --sort=newest --group'
+alias lar='exa --long --header --sort=newest --group --all'
 alias ch='history | grep "git commit"'
 alias hg='history | grep'
 alias cdr='cd $(pwd)'
@@ -25,7 +25,7 @@ function cd() {
 }
 export cd
 
-# Modified version to 'cd' and 'ls -Goghtr'
+# Modified version to 'cd' and 'lr'
 function cl() {
 	cd "$@" && lr
 }
