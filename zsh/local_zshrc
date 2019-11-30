@@ -84,6 +84,14 @@ set_prompt
 RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
 
 # ==========================
+# ===  Commands					 ===
+# ==========================
+
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+mman() { command man "$@" | more }
+
+# ==========================
 
 echo -n -e "\t"; echo '                 '
 echo -n -e "\t"; echo '  ____  ______ __'
