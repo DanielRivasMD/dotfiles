@@ -57,10 +57,11 @@ PATH=$PATH:$HOME/.cargo/bin
 # ==========================
 
 # PATH settings
-PATH=$PATH:$HOME/bin
-PATH=$PATH:/usr
+PATH=$PATH:$HOME/bin/
+PATH=$PATH:/usr/
 PATH=$PATH:/usr/local/mysql/bin/
 PATH=$PATH:/usr/local/bin/
+PATH=$PATH:/usr/local/sbin/
 
 export GOPATH
 export PATH
