@@ -54,15 +54,30 @@ GOPATH=$HOME/.go/
 PATH=$PATH:$HOME/.cargo/bin
 
 # ==========================
+# ===  Dart Path				 ===
+# ==========================
+
+PATH=$PATH:/usr/local/opt/dart/libexec/
+
+# ==========================
+# ===  MySQL Path			   ===
+# ==========================
+
+PATH=$PATH:/usr/local/mysql/bin/
+
+# ==========================
 # ===  Path						   ===
 # ==========================
 
 # PATH settings
 PATH=$PATH:$HOME/bin/
 PATH=$PATH:/usr/
-PATH=$PATH:/usr/local/mysql/bin/
 PATH=$PATH:/usr/local/bin/
 PATH=$PATH:/usr/local/sbin/
+
+# ==========================
+# ===  Export						 ===
+# ==========================
 
 export GOPATH
 export PATH
