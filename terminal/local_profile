@@ -99,3 +99,11 @@ MANWIDTH=165
 export MANWIDTH
 
 # ==========================
+# ===  Rmarkdown knit		 ===
+# ==========================
+
+function knit() {
+	R -e "rmarkdown::render('$1')"
+}
+
+# ==========================
