@@ -102,6 +102,12 @@ goland() { command open "$@" -a GoLand }
 pycharm() { command open "$@" -a PyCharm }
 
 # ==========================
+# ===  RStudio					 ===
+# ==========================
+
+rstudio() { command open "$@" -a RStudio }
+
+# ==========================
 
 echo -n -e "\t"; echo '                 '
 echo -n -e "\t"; echo '  ____  ______ __'
