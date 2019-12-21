@@ -101,6 +101,8 @@ goland() { command open "$@" -a GoLand }
 
 pycharm() { command open "$@" -a PyCharm }
 
+intellij() { command open "$@" -a IntelliJ\ IDEA\ Ultimate }
+
 # ==========================
 # ===  RStudio					 ===
 # ==========================
