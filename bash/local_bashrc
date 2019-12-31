@@ -42,6 +42,12 @@ source ~/.dotfiles/bash/bash_prompt.sh
 set_prompt
 
 # ==========================
+# ===  Silence warning	 ===
+# ==========================
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# ==========================
 
 echo -n -e "\t"; echo ''
 echo -n -e "\t"; echo '   ___  ___   ______ __'
