@@ -4,19 +4,32 @@
 # ==========================
 
 # General aliases
-alias l='exa --long --header --group'
-alias la='exa --long --header --group --all'
-alias lr='exa --long --header --sort=newest --group'
-alias lar='exa --long --header --sort=newest --group --all'
-alias ch='history | grep "git commit"'
-alias hg='history | grep'
 alias cdr='cd $(pwd)'
+alias c='clear'
 
 # ==========================
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# ==========================
+# ===  Rust Tools				 ===
+# ==========================
+
+# pier
+alias p='pier'
+
+# aliases
+alias als='aliases'
+
+# exa
+alias l='clear && exa --long --group-directories-first --classify --links --git --header --group'
+alias la='clear && exa --long --group-directories-first --classify --links --git --header --group --all'
+alias lr='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group'
+alias lar='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all'
+
+# ==========================
+# ===  Shell functions	 ===
 # ==========================
 
 # Wrapper for cd. Updates PROMPT every time 'cd' is called. Compatible with 'cl'
@@ -29,12 +42,5 @@ export cd
 function cl() {
 	cd "$@" && lr
 }
-
-# ==========================
-# ===  Git aliases		   ===
-# ==========================
-
-# Git aliases
-alias gitgraph='git log --oneline --decorate --all --graph'
 
 # ==========================
