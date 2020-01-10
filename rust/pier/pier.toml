@@ -1,0 +1,94 @@
+[scripts.gai]
+alias = 'gai'
+command = 'clear && git add --interactive'
+tags = ['git']
+
+[scripts.gc]
+alias = 'gc'
+command = 'git commit'
+tags = ['git']
+
+[scripts.gca]
+alias = 'gca'
+command = 'git commit --amend'
+tags = ['git']
+
+[scripts.gg]
+alias = 'gg'
+command = 'clear && git log --oneline --decorate --all --graph -40'
+tags = ['git']
+
+[scripts.gl]
+alias = 'gl'
+command = 'clear && git log --oneline --decorate --all -40'
+tags = ['git']
+
+[scripts.gps]
+alias = 'gps'
+command = 'git push origin master --verbose'
+tags = ['git']
+
+[scripts.gpsf]
+alias = 'gpsf'
+command = 'git push origin master --verbose --force'
+tags = ['git']
+
+[scripts.gr10]
+alias = 'gr10'
+command = 'git rebase --interactive HEAD~10'
+tags = ['git']
+
+[scripts.gr20]
+alias = 'gr20'
+command = 'git rebase --interactive HEAD~20'
+tags = ['git']
+
+[scripts.gr5]
+alias = 'gr5'
+command = 'git rebase --interactive HEAD~5'
+tags = ['git']
+
+[scripts.grc]
+alias = 'grc'
+command = 'clear && git rebase --continue'
+tags = ['git']
+
+[scripts.gs]
+alias = 'gs'
+command = 'clear && git status --short'
+tags = ['git']
+
+[scripts.gsh]
+alias = 'gsh'
+command = 'clear && git stash push && git stash list'
+tags = ['git']
+
+[scripts.gsp]
+alias = 'gsp'
+command = 'clear && git stash pop && git stash list'
+tags = ['git']
+
+[scripts.gss]
+alias = 'gss'
+command = 'clear && git status && source ~/.dotfiles/rust/pier/line_break.sh && git stash list'
+tags = ['git']
+
+[scripts.gsv]
+alias = 'gsv'
+command = 'clear && git status --show-stash --verbose'
+tags = ['git']
+
+[scripts.gsw]
+alias = 'gsw'
+command = 'clear && git stash show'
+tags = ['git']
+
+[scripts.gt]
+alias = 'gt'
+command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate --all -20'
+tags = ['git']
+
+[scripts.l]
+alias = 'l'
+command = 'clear && pier list'
+tags = ['pier']
