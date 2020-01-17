@@ -21,6 +21,8 @@ alias p='pier'
 
 # aliases
 alias als='aliases'
+alias ale='aliases exec ./'
+alias alg='aliases exec ~/'
 
 # exa
 alias l='clear && exa --long --group-directories-first --classify --links --git --header --group'
