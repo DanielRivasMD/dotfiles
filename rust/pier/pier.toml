@@ -1,6 +1,26 @@
+[scripts.al]
+alias = 'al'
+command = 'clear && aliases list'
+tags = ['alias']
+
+[scripts.ald]
+alias = 'ald'
+command = '''clear && echo 'initialized alias directories' && aliases directories'''
+tags = ['alias']
+
+[scripts.alr]
+alias = 'alr'
+command = "aliases rehash && echo 'aliases reloaded'"
+tags = ['alias']
+
 [scripts.gai]
 alias = 'gai'
 command = 'clear && git add --interactive'
+tags = ['git']
+
+[scripts.gb]
+alias = 'gb'
+command = 'git branch'
 tags = ['git']
 
 [scripts.gc]
@@ -21,6 +41,11 @@ tags = ['git']
 [scripts.gl]
 alias = 'gl'
 command = 'clear && git log --oneline --decorate --all -40'
+tags = ['git']
+
+[scripts.glb]
+alias = 'glb'
+command = 'clear && git log --oneline --decorate -40'
 tags = ['git']
 
 [scripts.gps]
@@ -46,6 +71,11 @@ tags = ['git']
 [scripts.gr5]
 alias = 'gr5'
 command = 'git rebase --interactive HEAD~5'
+tags = ['git']
+
+[scripts.gra]
+alias = 'gra'
+command = 'clear && git rebase --abort'
 tags = ['git']
 
 [scripts.grc]
@@ -85,10 +115,15 @@ tags = ['git']
 
 [scripts.gt]
 alias = 'gt'
-command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate --all -20'
+command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate -20'
 tags = ['git']
 
 [scripts.l]
 alias = 'l'
 command = 'clear && pier list'
 tags = ['pier']
+
+[scripts.tree]
+alias = 'tree'
+command = 'clear && tree -h -C -a -L 3 -l -D --dirsfirst --filelimit=10'
+tags = ['tree']
