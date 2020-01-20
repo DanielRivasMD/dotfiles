@@ -10,6 +10,20 @@ then
 fi
 
 # ==========================
+# ===  Plugins AB        ===
+# ==========================
+
+# Plugins managed by antibody (AB) statically
+# antibody bundle < ~/.dotfiles/zsh/zsh_plugins.txt > ~/.dotfiles/zsh/zsh_plugins.sh
+source ~/.dotfiles/zsh/zsh_plugins.sh
+
+# Plugins managed by antibody (AB) dinamically
+# source <(antibody init)
+# antibody bundle zdharma/fast-syntax-highlighting
+# antibody bundle zsh-users/zsh-autosuggestions
+# antibody bundle zsh-users/zsh-completions
+
+# ==========================
 # ===  Autocompletion		 ===
 # ==========================
 
@@ -71,20 +85,6 @@ bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
-
-# ==========================
-# ===  Plugins AB        ===
-# ==========================
-
-# Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.dotfiles/zsh/zsh_plugins.txt > ~/.dotfiles/zsh/zsh_plugins.sh
-source ~/.dotfiles/zsh/zsh_plugins.sh
-
-# Plugins managed by antibody (AB) dinamically
-# source <(antibody init)
-# antibody bundle zdharma/fast-syntax-highlighting
-# antibody bundle zsh-users/zsh-autosuggestions
-# antibody bundle zsh-users/zsh-completions
 
 # ==========================
 # ===  Commands					 ===
