@@ -106,6 +106,8 @@ pycharm() { command open "$@" -a PyCharm }
 
 intellij() { command open "$@" -a IntelliJ\ IDEA\ Ultimate }
 
+webstorm() { command open "$@" -a WebStorm }
+
 # ==========================
 # ===  RStudio					 ===
 # ==========================
