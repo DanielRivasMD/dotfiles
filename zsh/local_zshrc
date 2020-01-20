@@ -32,6 +32,20 @@ source ~/.dotfiles/zsh/local_zsh_pandoc_autocompletion.sh
 [ -f ~/.dotfiles/zsh/fzf.zsh ] && source ~/.dotfiles/zsh/fzf.zsh
 
 # ==========================
+# ===   Prompt           ===
+# ==========================
+
+# Left prompt
+source ~/.dotfiles/zsh/zsh_prompt.sh
+set_prompt
+
+# Right prompt
+RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
+
+# Fossil autocompletion & prompt
+source ~/.dotfiles/zsh/fossil_prompt.sh
+
+# ==========================
 # ===  ZSH aliases			 ===
 # ==========================
 
@@ -71,17 +85,6 @@ source ~/.dotfiles/zsh/zsh_plugins.sh
 # antibody bundle zdharma/fast-syntax-highlighting
 # antibody bundle zsh-users/zsh-autosuggestions
 # antibody bundle zsh-users/zsh-completions
-
-# ==========================
-# ===   Prompt           ===
-# ==========================
-
-# Left prompt
-source ~/.dotfiles/zsh/zsh_prompt.sh
-set_prompt
-
-# Right prompt
-RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
 
 # ==========================
 # ===  Commands					 ===
