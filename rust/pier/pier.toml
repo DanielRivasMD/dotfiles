@@ -48,38 +48,38 @@ alias = 'glb'
 command = 'clear && git log --oneline --decorate -40'
 tags = ['git']
 
-[scripts.gps]
-alias = 'gps'
+[scripts.gpush]
+alias = 'gpush'
 command = 'git push origin master --verbose'
 tags = ['git']
 
-[scripts.gpsf]
-alias = 'gpsf'
+[scripts.gpushf]
+alias = 'gpushf'
 command = 'git push origin master --verbose --force'
 tags = ['git']
 
-[scripts.gr10]
-alias = 'gr10'
+[scripts.greb10]
+alias = 'greb10'
 command = 'git rebase --interactive HEAD~10'
 tags = ['git']
 
-[scripts.gr20]
-alias = 'gr20'
+[scripts.greb20]
+alias = 'greb20'
 command = 'git rebase --interactive HEAD~20'
 tags = ['git']
 
-[scripts.gr5]
-alias = 'gr5'
+[scripts.greb5]
+alias = 'greb5'
 command = 'git rebase --interactive HEAD~5'
 tags = ['git']
 
-[scripts.gra]
+[scripts.greba]
 alias = 'gra'
 command = 'clear && git rebase --abort'
 tags = ['git']
 
-[scripts.grc]
-alias = 'grc'
+[scripts.grebc]
+alias = 'grebc'
 command = 'clear && git rebase --continue'
 tags = ['git']
 
@@ -88,13 +88,13 @@ alias = 'gs'
 command = 'clear && git status --short'
 tags = ['git']
 
-[scripts.gsh]
-alias = 'gsh'
+[scripts.gsth]
+alias = 'gsth'
 command = 'clear && git stash push && git stash list'
 tags = ['git']
 
-[scripts.gsp]
-alias = 'gsp'
+[scripts.gstp]
+alias = 'gstp'
 command = 'clear && git stash pop && git stash list'
 tags = ['git']
 
@@ -125,5 +125,5 @@ tags = ['pier']
 
 [scripts.tree]
 alias = 'tree'
-command = 'clear && tree -h -C -a -L 3 -l -D --dirsfirst --filelimit=10'
+command = "clear && tree -h -C -a -L 3 -l -D --dirsfirst --filelimit=10 -I '.git|.idea'"
 tags = ['tree']
