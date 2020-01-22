@@ -88,6 +88,11 @@ alias = 'gs'
 command = 'clear && git status --short'
 tags = ['git']
 
+[scripts.gss]
+alias = 'gss'
+command = 'clear && git status && source ~/.dotfiles/rust/pier/line_break.sh && git stash list'
+tags = ['git']
+
 [scripts.gsth]
 alias = 'gsth'
 command = 'clear && git stash push && git stash list'
@@ -96,11 +101,6 @@ tags = ['git']
 [scripts.gstp]
 alias = 'gstp'
 command = 'clear && git stash pop && git stash list'
-tags = ['git']
-
-[scripts.gss]
-alias = 'gss'
-command = 'clear && git status && source ~/.dotfiles/rust/pier/line_break.sh && git stash list'
 tags = ['git']
 
 [scripts.gsv]
