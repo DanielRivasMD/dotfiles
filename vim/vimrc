@@ -27,8 +27,26 @@ source ~/.vim/plugins.vim
 source ~/.vim/keybindings.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Leader shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Execute current buffer
+nmap <leader>e :!%:p<CR>
+
+" Write buffer to...
+nmap <leader>w :!cat %:p >
+
+" List directory
+nmap <leader>l :!exa
+
+" Highlight toggle
+nmap <leader>n :nohlsearch<CR>
+
+" Fast saving
+nmap <leader>s :w!<CR>
+
+" Fast quit
+nmap <leader>q :q!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -42,9 +60,6 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -74,9 +89,6 @@ set bs=2
 
 " Disjoint stroke sequence (oposite to 'J')
 nnoremap K i<CR><Esc>
-
-" Highlight toggle
-nmap <leader>n :nohlsearch<CR>
 
 " Automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
