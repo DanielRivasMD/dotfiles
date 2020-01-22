@@ -45,4 +45,9 @@ function cl() {
 	cd "$@" && lr
 }
 
+# Rmarkdown knit
+function knit() {
+	R --slave -e "rmarkdown::render('$1')" > /dev/null
+}
+
 # ==========================
