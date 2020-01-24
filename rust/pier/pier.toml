@@ -18,6 +18,11 @@ alias = 'gai'
 command = 'clear && git add --interactive'
 tags = ['git']
 
+[scripts.gall]
+alias = 'gall'
+command = 'source /Users/Daniel/.dotfiles/rust/pier/git_all_status.sh'
+tags = ['git']
+
 [scripts.gb]
 alias = 'gb'
 command = 'git branch'
@@ -33,6 +38,13 @@ alias = 'gca'
 command = 'git commit --amend'
 tags = ['git']
 
+[scripts.gf]
+alias = 'gf'
+command = '''
+git fetch --verbose
+'''
+tags = ['git']
+
 [scripts.gg]
 alias = 'gg'
 command = 'clear && git log --oneline --decorate --all --graph -40'
@@ -46,6 +58,11 @@ tags = ['git']
 [scripts.glb]
 alias = 'glb'
 command = 'clear && git log --oneline --decorate -40'
+tags = ['git']
+
+[scripts.gpull]
+alias = 'gpull'
+command = 'git pull --verbose'
 tags = ['git']
 
 [scripts.gpush]
