@@ -5,7 +5,9 @@ tags = ['alias']
 
 [scripts.ald]
 alias = 'ald'
-command = '''clear && echo 'initialized alias directories' && aliases directories'''
+command = '''
+clear && aliases directories | awk 'BEGIN{FS=", "; print "initialized alias directories";} {for ( i = 1; i <= NF; i++ ) print $i}' | runiq -
+'''
 tags = ['alias']
 
 [scripts.alr]
@@ -140,7 +142,12 @@ alias = 'l'
 command = 'clear && pier list'
 tags = ['pier']
 
-[scripts.tree]
-alias = 'tree'
+[scripts.todo]
+alias = 'todo'
+command = 'todor --check'
+tags = ['todor']
+
+[scripts.tre]
+alias = 'tre'
 command = "clear && tree -h -C -a -L 3 -l -D --dirsfirst --filelimit=10 -I '.git|.idea'"
 tags = ['tree']
