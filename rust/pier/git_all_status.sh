@@ -1,7 +1,7 @@
 #!/bin/sh
 
 old_dir=$(pwd)
-for i in $( fd --type d --hidden --fixed-strings .git /Users/Daniel/{.dotfiles,bin/Software/FactorDR,Factorem} )
+for i in $( fd --type d --hidden --fixed-strings --ignore-file /Users/Daniel/.dotfiles/rust/pier/.git_all_ignore .git /Users/Daniel/{.dotfiles,bin/Software/FactorDR,Factorem} )
 do
 	j=${i/.git/}
 
