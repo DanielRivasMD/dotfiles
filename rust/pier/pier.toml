@@ -15,126 +15,29 @@ alias = 'alr'
 command = "aliases rehash && echo 'aliases reloaded'"
 tags = ['alias']
 
-[scripts.gai]
-alias = 'gai'
-command = 'clear && git add --interactive'
-tags = ['git']
-
-[scripts.gall]
-alias = 'gall'
-command = 'source /Users/Daniel/.dotfiles/rust/pier/git_all_status.sh'
-tags = ['git']
-
-[scripts.gb]
-alias = 'gb'
-command = 'git branch'
-tags = ['git']
-
-[scripts.gc]
-alias = 'gc'
-command = 'git commit'
-tags = ['git']
-
-[scripts.gca]
-alias = 'gca'
-command = 'git commit --amend'
-tags = ['git']
-
-[scripts.gf]
-alias = 'gf'
-command = '''
-git fetch --verbose
-'''
-tags = ['git']
-
-[scripts.gg]
-alias = 'gg'
-command = 'clear && git log --oneline --decorate --all --graph -40'
-tags = ['git']
-
-[scripts.gl]
-alias = 'gl'
-command = 'clear && git log --oneline --decorate --all -40'
-tags = ['git']
-
-[scripts.glb]
-alias = 'glb'
-command = 'clear && git log --oneline --decorate -40'
-tags = ['git']
-
-[scripts.gpull]
-alias = 'gpull'
-command = 'git pull --verbose'
-tags = ['git']
-
-[scripts.gpush]
-alias = 'gpush'
-command = 'git push origin master --verbose'
-tags = ['git']
-
-[scripts.gpushf]
-alias = 'gpushf'
-command = 'git push origin master --verbose --force'
-tags = ['git']
-
-[scripts.greb10]
-alias = 'greb10'
-command = 'git rebase --interactive HEAD~10'
-tags = ['git']
-
-[scripts.greb20]
-alias = 'greb20'
-command = 'git rebase --interactive HEAD~20'
-tags = ['git']
-
-[scripts.greb5]
-alias = 'greb5'
-command = 'git rebase --interactive HEAD~5'
-tags = ['git']
-
-[scripts.greba]
-alias = 'gra'
-command = 'clear && git rebase --abort'
-tags = ['git']
-
-[scripts.grebc]
-alias = 'grebc'
-command = 'clear && git rebase --continue'
-tags = ['git']
-
-[scripts.gs]
-alias = 'gs'
-command = 'clear && git status --short'
-tags = ['git']
-
-[scripts.gss]
-alias = 'gss'
-command = 'clear && git status && source ~/.dotfiles/rust/pier/line_break.sh && git stash list'
-tags = ['git']
-
-[scripts.gsth]
-alias = 'gsth'
-command = 'clear && git stash push && git stash list'
-tags = ['git']
-
-[scripts.gstp]
-alias = 'gstp'
-command = 'clear && git stash pop && git stash list'
-tags = ['git']
-
-[scripts.gsv]
-alias = 'gsv'
-command = 'clear && git status --show-stash --verbose'
-tags = ['git']
-
-[scripts.gsw]
-alias = 'gsw'
-command = 'clear && git stash show'
-tags = ['git']
-
-[scripts.gt]
-alias = 'gt'
+[scripts.git]
+alias = 'git'
 command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate -20'
+tags = ['git']
+
+[scripts.git0]
+alias = 'git0'
+command = 'clear && source /Users/Daniel/.dotfiles/git/manual_parser.sh functions'
+tags = ['git']
+
+[scripts.git1]
+alias = 'git1'
+command = 'clear && source /Users/Daniel/.dotfiles/git/manual_parser.sh one-letter'
+tags = ['git']
+
+[scripts.git2]
+alias = 'git2'
+command = 'clear && source /Users/Daniel/.dotfiles/git/manual_parser.sh two-letter'
+tags = ['git']
+
+[scripts.globalgit]
+alias = 'globalgit'
+command = 'source /Users/Daniel/.dotfiles/rust/pier/git_all_status.sh'
 tags = ['git']
 
 [scripts.l]

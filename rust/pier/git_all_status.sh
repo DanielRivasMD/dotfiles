@@ -1,5 +1,4 @@
 #!/bin/sh
-# TODO: thinking about it
 
 old_dir=$(pwd)
 for i in $( fd --type d --hidden --fixed-strings .git /Users/Daniel/{.dotfiles,bin/Software/FactorDR,Factorem} )
@@ -8,8 +7,8 @@ do
 
 	# get status
 	cd ${j}
-	local tmp_git_status=$( git status --short )
-	local tmp_git_stash=$( git stash list )
+	tmp_git_status=$( git status --short )
+	tmp_git_stash=$( git stash list )
 	if [[ -z "${tmp_git_status}" && -z "${tmp_git_stash}" ]]
 	then
 		echo ${j} >> /Users/Daniel/.tmp_git_all_status_out_clean
