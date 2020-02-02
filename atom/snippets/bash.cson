@@ -33,23 +33,30 @@
   'for count done':
     prefix: 'forc'
     body: """for (( ${1:i} = ${2:0}; ${1:i} < ${3:x}; ${1:i}++ ));
-    \tdo
-    \t\t${0:#statements}
-    \tdone"""
+    do
+    \t${0:#statements}
+    done"""
 
   'for range done':
     prefix: 'forr'
     body: """for ${1:i} in {$2..$3};
-    \tdo
-    \t\t${0:#statements}
-    \tdone"""
+    do
+    \t${0:#statements}
+    done"""
 
   'for array done':
     prefix: 'fora'
     body: """for ${1:i} in ${2:array[@]};
-    \tdo
-    \t\t${0:#statements}
-    \tdone"""
+    do
+    \t${0:#statements}
+    done"""
+
+  'for command':
+    prefix: 'forcom'
+    body: """for ${1:i} in $(${2:});
+    do
+    \t${0:#statements}
+    done"""
 
   'for read':
     prefix: 'forread'
