@@ -106,11 +106,11 @@ pycharm() { command open "$@" -a PyCharm }
 
 intellij() { command open "$@" -a IntelliJ\ IDEA\ Ultimate }
 
-webstorm() { command open "$@" -a WebStorm }
+wstorm() { command open "$@" -a WebStorm }
 
 mine() { command open "$@" -a RubyMine }
 
-phpstorm() { command open "$@" -a PhpStorm }
+pstorm() { command open "$@" -a PhpStorm }
 
 # ==========================
 # ===  RStudio					 ===
