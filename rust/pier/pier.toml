@@ -74,7 +74,9 @@ tags = ['pier']
 
 [scripts.todo]
 alias = 'todo'
-command = 'todor --check'
+command = '''
+clear && todor --check
+'''
 tags = ['todor']
 
 [scripts.tre]
