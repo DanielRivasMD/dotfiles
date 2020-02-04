@@ -12,7 +12,9 @@ tags = ['alias']
 
 [scripts.alr]
 alias = 'alr'
-command = "aliases rehash && echo 'aliases reloaded'"
+command = '''
+clear && aliases rehash && echo 'aliases reloaded'
+'''
 tags = ['alias']
 
 [scripts.git]
@@ -37,22 +39,24 @@ tags = ['git']
 
 [scripts.globalgit]
 alias = 'globalgit'
-command = 'source /Users/Daniel/.dotfiles/rust/pier/git_all_status.sh'
+command = '''
+clear && source /Users/Daniel/.dotfiles/rust/pier/git_all_status.sh
+'''
 tags = ['git']
 
-[scripts.kastro]
-alias = 'kastro'
-command = 'clear && khal calendar --include-calendar Astronomy'
-tags = ['khal']
-
 [scripts.kal]
-alias = 'khal'
+alias = 'kal'
 command = 'clear && khal calendar --exclude-calendar SuperRugby --exclude-calendar Astronomy'
-tags = ['kal']
+tags = ['khal']
 
 [scripts.kall]
 alias = 'kall'
 command = 'clear && khal calendar'
+tags = ['khal']
+
+[scripts.kastro]
+alias = 'kastro'
+command = 'clear && khal calendar --include-calendar Astronomy'
 tags = ['khal']
 
 [scripts.kls]
@@ -70,7 +74,14 @@ tags = ['khal']
 [scripts.l]
 alias = 'l'
 command = 'clear && pier list'
-tags = ['pier']
+tags = ['alias']
+
+[scripts.ll]
+alias = 'll'
+command = '''
+clear && aliases list && source /Users/Daniel/.dotfiles/rust/pier/double_line_break.sh && pier list
+'''
+tags = ['alias']
 
 [scripts.todo]
 alias = 'todo'
