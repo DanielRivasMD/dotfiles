@@ -17,6 +17,48 @@ clear && aliases rehash && echo 'aliases reloaded'
 '''
 tags = ['alias']
 
+[scripts.exaa]
+alias = 'exaa'
+command = '''
+clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all --time accessed
+'''
+tags = ['exa']
+
+[scripts.exac]
+alias = 'exac'
+command = '''
+clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all --time created
+'''
+tags = ['exa']
+
+[scripts.exal]
+alias = 'exal'
+command = '''
+clear && exa --long --group-directories-first --classify --links --git --header --group
+'''
+tags = ['exa']
+
+[scripts.exala]
+alias = 'exala'
+command = '''
+clear && exa --long --group-directories-first --classify --links --git --header --group --all
+'''
+tags = ['exa']
+
+[scripts.exalar]
+alias = 'exalar'
+command = '''
+clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all
+'''
+tags = ['exa']
+
+[scripts.exalr]
+alias = 'exalr'
+command = '''
+clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group
+'''
+tags = ['exa']
+
 [scripts.git]
 alias = 'git'
 command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate -20'
