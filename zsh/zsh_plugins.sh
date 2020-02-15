@@ -1,1 +1,1 @@
-/Users/Daniel/.dotfiles/zsh/local_zsh_plugins.sh
+/Users/drivas/.dotfiles/zsh/local_zsh_plugins.sh
