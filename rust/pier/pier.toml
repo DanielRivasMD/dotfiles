@@ -1,3 +1,8 @@
+[scripts.".awkPurgeDups"]
+alias = '.awkPurgeDups'
+command = '''awk '!dups[0]++' # purge duplicates'''
+tags = ['annot']
+
 [scripts.al]
 alias = 'al'
 command = 'clear && aliases list'
