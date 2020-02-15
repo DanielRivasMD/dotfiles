@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directory="/Users/Daniel/.dotfiles/git/"
+directory="/Users/drivas/.dotfiles/git/"
 
 if [[ "$1" == "one-letter" ]]
 then

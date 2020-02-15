@@ -1,7 +1,7 @@
 #!/bin/sh
 
 old_dir=$(pwd)
-for i in $( fd --type d --hidden --fixed-strings --ignore-file /Users/Daniel/.dotfiles/rust/pier/.git_all_ignore .git /Users/Daniel/{.dotfiles,bin/Software/FactorDR,Factorem} )
+for i in $( fd --type d --hidden --fixed-strings --ignore-file /Users/drivas/.dotfiles/rust/pier/.git_all_ignore .git /Users/drivas/{.dotfiles,bin/Software/FactorDR,Factorem} )
 do
 	j=${i/.git/}
 
@@ -11,22 +11,22 @@ do
 	tmp_git_stash=$( git stash list )
 	if [[ -z "${tmp_git_status}" && -z "${tmp_git_stash}" ]]
 	then
-		echo ${j} >> /Users/Daniel/.tmp_git_all_status_out_clean
+		echo ${j} >> /Users/drivas/.tmp_git_all_status_out_clean
 	else
-		echo ${j} >> /Users/Daniel/.tmp_git_all_status_out_dirty
-		echo ${tmp_git_status} >> /Users/Daniel/.tmp_git_all_status_out_dirty
-		source /Users/Daniel/.dotfiles/rust/pier/line_break.sh >> /Users/Daniel/.tmp_git_all_status_out_dirty
-		echo ${tmp_git_stash} >> /Users/Daniel/.tmp_git_all_status_out_dirty
-		source /Users/Daniel/.dotfiles/rust/pier/line_break.sh >> /Users/Daniel/.tmp_git_all_status_out_dirty
+		echo ${j} >> /Users/drivas/.tmp_git_all_status_out_dirty
+		echo ${tmp_git_status} >> /Users/drivas/.tmp_git_all_status_out_dirty
+		source /Users/drivas/.dotfiles/rust/pier/line_break.sh >> /Users/drivas/.tmp_git_all_status_out_dirty
+		echo ${tmp_git_stash} >> /Users/drivas/.tmp_git_all_status_out_dirty
+		source /Users/drivas/.dotfiles/rust/pier/line_break.sh >> /Users/drivas/.tmp_git_all_status_out_dirty
 	fi
 
 done
 cd $old_dir
 
 # print clean
-if [[ -e "/Users/Daniel/.tmp_git_all_status_out_clean" ]]
+if [[ -e "/Users/drivas/.tmp_git_all_status_out_clean" ]]
 then
-	source /Users/Daniel/.dotfiles/rust/pier/line_break.sh
+	source /Users/drivas/.dotfiles/rust/pier/line_break.sh
 	awk '
 	function green(s) {
 		printf "\033[0;32m" s "\033[0m "
@@ -47,14 +47,14 @@ then
 	END{
 		print "================================================================================";
 		print "================================================================================";
-	}' /Users/Daniel/.tmp_git_all_status_out_clean
+	}' /Users/drivas/.tmp_git_all_status_out_clean
 fi
-rm /Users/Daniel/.tmp_git_all_status_out_clean
+rm /Users/drivas/.tmp_git_all_status_out_clean
 
 # print dirty
-if [[ -e "/Users/Daniel/.tmp_git_all_status_out_dirty" ]]
+if [[ -e "/Users/drivas/.tmp_git_all_status_out_dirty" ]]
 then
-	source /Users/Daniel/.dotfiles/rust/pier/line_break.sh
+	source /Users/drivas/.dotfiles/rust/pier/line_break.sh
 	awk '
 	function red(s) {
 		printf "\033[1;31m" s "\033[0m "
@@ -107,6 +107,6 @@ then
 	END{
 		print "================================================================================";
 		print "================================================================================";
-	}' /Users/Daniel/.tmp_git_all_status_out_dirty
+	}' /Users/drivas/.tmp_git_all_status_out_dirty
 fi
-rm /Users/Daniel/.tmp_git_all_status_out_dirty
+rm /Users/drivas/.tmp_git_all_status_out_dirty

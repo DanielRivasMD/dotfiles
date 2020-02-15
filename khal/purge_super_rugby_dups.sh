@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set variables
-calDir="/Users/Daniel/.config/khal/calendars/"
+calDir="/Users/drivas/.config/khal/calendars/"
 
 
 # collect data
