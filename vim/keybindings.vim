@@ -42,26 +42,26 @@ autocmd FileType R,Rmd inoremap · <space>%T>%<space>
 " => Rust
 
 " => Horizontal Movement
-inoremap Ó <Esc>I
-inoremap Ò <Esc>A
-nnoremap Ó 0
-nnoremap Ò $
+inoremap <T-S-Left> <Esc>I
+inoremap <T-S-Right> <Esc>A
+nnoremap <T-S-Left> 0
+nnoremap <T-S-Right> $
 
-inoremap ˙ <Esc>Bi
-inoremap ¬ <Esc>Ea
-nnoremap ˙ B
-nnoremap ¬ E
+inoremap <S-Left> <Esc>Bi
+inoremap <S-Right> <Esc>Ea
+nnoremap <S-Left> B
+nnoremap <S-Right> E
 
 " => Vertical Movement
-inoremap Ô <Esc>Gi
-inoremap  <Esc>ggi
-nnoremap Ô G
-nnoremap  gg
+inoremap <T-S-Up> <Esc>ggi
+inoremap <T-S-Down> <Esc>Gi
+nnoremap <T-S-Up> gg
+nnoremap <T-S-Down> G
 
-inoremap ˚ <Esc>{i
-inoremap ∆ <Esc>}i
-nnoremap ˚ {
-nnoremap ∆ }
+inoremap <S-Up> <Esc>{i
+inoremap <S-Down> <Esc>}i
+nnoremap <S-Up> {
+nnoremap <S-Down> }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
