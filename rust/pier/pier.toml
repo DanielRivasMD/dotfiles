@@ -88,7 +88,9 @@ tags = ['git']
 
 [scripts.kal]
 alias = 'kal'
-command = 'clear && khal calendar --exclude-calendar SuperRugby --exclude-calendar Astronomy'
+command = '''
+clear && khal calendar -f "{calendar-color}{start-time}-{end-time} {title}{description-separator}{description} {location}" -d SuperRugby -d Astronomy
+'''
 tags = ['khal']
 
 [scripts.kall]
@@ -96,16 +98,16 @@ alias = 'kall'
 command = 'clear && khal calendar'
 tags = ['khal']
 
+[scripts.kals]
+alias = 'kals'
+command = '''
+clear && khal list -f "{calendar-color}{start-time}-{end-time} {title}{description-separator}{description} {location}" -d SuperRugby -d Astronomy
+'''
+tags = ['khal']
+
 [scripts.kastro]
 alias = 'kastro'
 command = 'clear && khal calendar --include-calendar Astronomy'
-tags = ['khal']
-
-[scripts.kls]
-alias = 'kls'
-command = '''
-clear && khal list --exclude-calendar SuperRugby --exclude-calendar Astronomy
-'''
 tags = ['khal']
 
 [scripts.krugby]
