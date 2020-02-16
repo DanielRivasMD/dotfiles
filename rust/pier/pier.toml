@@ -25,14 +25,14 @@ tags = ['alias']
 [scripts.exaa]
 alias = 'exaa'
 command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all --time accessed
+clear && exa --long --group-directories-first --classify --links --git --header --sort=accessed --group --all --time accessed
 '''
 tags = ['exa']
 
 [scripts.exac]
 alias = 'exac'
 command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all --time created
+clear && exa --long --group-directories-first --classify --links --git --header --sort=created --group --all --time created
 '''
 tags = ['exa']
 
