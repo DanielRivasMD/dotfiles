@@ -69,18 +69,18 @@ alias = 'git'
 command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate -20'
 tags = ['git']
 
-[scripts.git0]
-alias = 'git0'
+[scripts.gt0]
+alias = 'gt0'
 command = 'clear && source /Users/drivas/.dotfiles/git/manual_parser.sh functions'
 tags = ['git']
 
-[scripts.git1]
-alias = 'git1'
+[scripts.gt1]
+alias = 'gt1'
 command = 'clear && source /Users/drivas/.dotfiles/git/manual_parser.sh one-letter'
 tags = ['git']
 
-[scripts.git2]
-alias = 'git2'
+[scripts.gt2]
+alias = 'gt2'
 command = 'clear && source /Users/drivas/.dotfiles/git/manual_parser.sh two-letter'
 tags = ['git']
 
