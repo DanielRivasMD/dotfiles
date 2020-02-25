@@ -17,6 +17,16 @@ clear && aliases rehash && echo 'aliases reloaded'
 '''
 tags = ['alias']
 
+[scripts.chd]
+alias = 'chd'
+command = 'source ${PIER}cheat.sh dirs                                         #list cheat directories'
+tags = ['cheat']
+
+[scripts.ch]
+alias = 'ch'
+command = 'source ${PIER}cheat.sh list                                         #list available cheats'
+tags = ['cheat']
+
 [scripts.exaa]
 alias = 'exaa'
 command = '''
