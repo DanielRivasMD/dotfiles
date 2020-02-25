@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cheat -l | \
+cheat -l "$1" | \
 awk '
 BEGIN{
 
