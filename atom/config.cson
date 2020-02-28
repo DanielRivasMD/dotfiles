@@ -27,6 +27,9 @@
     disabledPackages: [
       "bookmarks"
       "language-gfm"
+      "uber-juno"
+      "julia-client"
+      "ink"
     ]
     ignoredNames: [
       ".git"
@@ -106,6 +109,9 @@
     firstBoot: false
     juliaOptions:
       bootMode: "Basic"
+    uiOptions:
+      enableMenu: true
+      enableToolBar: true
   "linter-ui-default":
     panelHeight: 300
   "markdown-pdf":
@@ -187,6 +193,8 @@
     ]
   swackets:
     colorParens: true
+  "tool-bar":
+    position: "Left"
   "tree-view":
     autoReveal: true
     hideIgnoredNames: true
@@ -196,6 +204,8 @@
   "tree-view-git-status":
     gitFlow: {}
     showBranchLabel: false
+  "uber-juno":
+    disable: true
   "vim-mode-plus":
     keymapPToPutWithAutoIndent: true
     keymapSToSelect: true
