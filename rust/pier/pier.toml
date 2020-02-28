@@ -1,20 +1,16 @@
 [scripts.al]
 alias = 'al'
-command = 'clear && aliases list'
+command = 'source ${PIER}aliases.sh list                                       #list aliases'
 tags = ['alias']
 
 [scripts.ald]
 alias = 'ald'
-command = '''
-clear && aliases directories | awk 'BEGIN{FS=", "; print "initialized alias directories";} {for ( i = 1; i <= NF; i++ ) print $i}' | runiq -
-'''
+command = 'source ${PIER}aliases.sh dirs                                       #list aliases directories'
 tags = ['alias']
 
 [scripts.alr]
 alias = 'alr'
-command = '''
-clear && aliases rehash && echo 'aliases reloaded'
-'''
+command = 'source ${PIER}aliases.sh reload                                     #reload aliases'
 tags = ['alias']
 
 [scripts.chd]
@@ -27,124 +23,147 @@ alias = 'ch'
 command = 'source ${PIER}cheat.sh list                                         #list available cheats'
 tags = ['cheat']
 
+[scripts.cha]
+alias = 'cha'
+command = 'source ${PIER}cheat.sh alfred                                       #list alfred cheats'
+tags = ['cheat']
+
+[scripts.chb]
+alias = 'chb'
+command = 'source ${PIER}cheat.sh bash                                         #list bash cheats'
+tags = ['cheat']
+
+[scripts.chc]
+alias = 'chc'
+command = 'source ${PIER}cheat.sh cli                                          #list cli cheats'
+tags = ['cheat']
+
+[scripts.chg]
+alias = 'chg'
+command = 'source ${PIER}cheat.sh go                                           #list go cheats'
+tags = ['cheat']
+
+[scripts.chj]
+alias = 'chj'
+command = 'source ${PIER}cheat.sh julia                                        #list julia cheats'
+tags = ['cheat']
+
+[scripts.chp]
+alias = 'chp'
+command = 'source ${PIER}cheat.sh python                                       #list python cheats'
+tags = ['cheat']
+
+[scripts.chr]
+alias = 'chr'
+command = 'source ${PIER}cheat.sh R                                            #list R cheats'
+tags = ['cheat']
+
+[scripts.chs]
+alias = 'chs'
+command = 'source ${PIER}cheat.sh rust                                         #list rust cheats'
+tags = ['cheat']
+
 [scripts.exaa]
 alias = 'exaa'
-command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --sort=accessed --group --all --time accessed
-'''
+command = 'source ${PIER}exa.sh accessed                                       #list files by accessed time'
 tags = ['exa']
 
 [scripts.exac]
 alias = 'exac'
-command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --sort=created --group --all --time created
-'''
+command = 'source ${PIER}exa.sh created                                        #list files by created time'
 tags = ['exa']
 
 [scripts.exal]
 alias = 'exal'
-command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --group
-'''
+command = 'source ${PIER}exa.sh list                                           #list files'
 tags = ['exa']
 
 [scripts.exala]
 alias = 'exala'
-command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --group --all
-'''
+command = 'source ${PIER}exa.sh all                                            #list all files'
 tags = ['exa']
 
 [scripts.exalar]
 alias = 'exalar'
-command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all
-'''
+command = 'source ${PIER}exa.sh all_reversed                                   #list all files by modified time'
 tags = ['exa']
 
 [scripts.exalr]
 alias = 'exalr'
-command = '''
-clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group
-'''
+command = 'source ${PIER}exa.sh reversed                                       #list files by modified time'
+tags = ['exa']
+
+[scripts.exabs]
+alias = 'exabs'
+command = 'source ${PIER}exa.sh absolute                                       #list all files witout clusters'
 tags = ['exa']
 
 [scripts.git]
 alias = 'git'
-command = 'clear && git status --show-stash && source ~/.dotfiles/rust/pier/line_break.sh && git log --oneline --decorate -20'
-tags = ['git']
-
-[scripts.gt0]
-alias = 'gt0'
-command = 'clear && source /Users/drivas/.dotfiles/git/manual_parser.sh functions'
-tags = ['git']
-
-[scripts.gt1]
-alias = 'gt1'
-command = 'clear && source /Users/drivas/.dotfiles/git/manual_parser.sh one-letter'
-tags = ['git']
-
-[scripts.gt2]
-alias = 'gt2'
-command = 'clear && source /Users/drivas/.dotfiles/git/manual_parser.sh two-letter'
+command = 'source ${PIER}git.sh                                                #all-round git status'
 tags = ['git']
 
 [scripts.globalgit]
 alias = 'globalgit'
-command = '''
-clear && source /Users/drivas/.dotfiles/rust/pier/git_all_status.sh
-'''
+command = 'source ${PIER}git_all_status.sh                                     #all git repositoris status'
+tags = ['git']
+
+[scripts.gt0]
+alias = 'gt0'
+command = 'source /Users/drivas/.dotfiles/git/manual_parser.sh functions       #one-letter git shortcuts'
+tags = ['git']
+
+[scripts.gt1]
+alias = 'gt1'
+command = 'source /Users/drivas/.dotfiles/git/manual_parser.sh one-letter      #two-letter git shortcuts'
+tags = ['git']
+
+[scripts.gt2]
+alias = 'gt2'
+command = 'source /Users/drivas/.dotfiles/git/manual_parser.sh two-letter      #function git shortcuts'
 tags = ['git']
 
 [scripts.kal]
 alias = 'kal'
-command = '''
-clear && khal calendar -f "{calendar-color}{start-time}-{end-time} {title}{description-separator}{description} {location}" -d SuperRugby -d Astronomy
-'''
+command = 'source ${PIER}kal.sh work                                           #work calendar'
 tags = ['khal']
 
 [scripts.kall]
 alias = 'kall'
-command = 'clear && khal calendar'
+command = 'source ${PIER}kal.sh all                                            #all calendars'
 tags = ['khal']
 
 [scripts.kals]
 alias = 'kals'
-command = '''
-clear && khal list -f "{calendar-color}{start-time}-{end-time} {title}{description-separator}{description} {location}" -d SuperRugby -d Astronomy
-'''
+command = 'source ${PIER}kal.sh list                                           #list calendars'
 tags = ['khal']
 
 [scripts.kastro]
 alias = 'kastro'
-command = 'clear && khal calendar --include-calendar Astronomy'
+command = 'source ${PIER}kal.sh astro                                          #astronomy calendar'
 tags = ['khal']
 
 [scripts.krugby]
 alias = 'krugby'
-command = 'clear && khal calendar --include-calendar SuperRugby'
+command = 'source ${PIER}kal.sh SuperRugby                                     #SuperRugby calendar'
 tags = ['khal']
 
 [scripts.l]
 alias = 'l'
-command = 'clear && pier list'
+command = 'source ${PIER}pier.sh list                                          #list pier commands'
 tags = ['alias']
 
 [scripts.ll]
 alias = 'll'
-command = '''
-clear && aliases list && source /Users/drivas/.dotfiles/rust/pier/double_line_break.sh && pier list
-'''
+command = 'source ${PIER}pier.sh all                                           #list aliases & pier commands'
 tags = ['alias']
 
 [scripts.todo]
 alias = 'todo'
-command = '''
-clear && todor --check
-'''
+command = 'todor --check                                                       #check tags within repository'
 tags = ['todor']
 
 [scripts.tre]
 alias = 'tre'
-command = "clear && tree -h -C -a -L 3 -l -D --dirsfirst --filelimit=10 -I '.git|.idea'"
+command = "source ${PIER}tre.sh                                                #tree structure constrained to 12 items & 3 levels"
 tags = ['tree']
