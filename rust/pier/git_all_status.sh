@@ -1,7 +1,8 @@
 #!/bin/sh
 
+clear
 old_dir=$(pwd)
-for i in $( fd --type d --hidden --fixed-strings --ignore-file /Users/drivas/.dotfiles/rust/pier/.git_all_ignore .git /Users/drivas/{.dotfiles,bin/Software/FactorDR,Factorem} )
+for i in $( fd --type d --hidden --fixed-strings --ignore-file ${PIER}.git_all_ignore .git /Users/drivas/{.dotfiles,bin/Software/FactorDR,Factorem} )
 do
 	j=${i/.git/}
 
@@ -14,10 +15,10 @@ do
 		echo ${j} >> /Users/drivas/.tmp_git_all_status_out_clean
 	else
 		echo ${j} >> /Users/drivas/.tmp_git_all_status_out_dirty
-		echo ${tmp_git_status} >> /Users/drivas/.tmp_git_all_status_out_dirty
-		source /Users/drivas/.dotfiles/rust/pier/line_break.sh >> /Users/drivas/.tmp_git_all_status_out_dirty
+		echo -e ${tmp_git_status} >> /Users/drivas/.tmp_git_all_status_out_dirty
+		source ${PIER}break_single_line.sh >> /Users/drivas/.tmp_git_all_status_out_dirty ${MANWIDTH}
 		echo ${tmp_git_stash} >> /Users/drivas/.tmp_git_all_status_out_dirty
-		source /Users/drivas/.dotfiles/rust/pier/line_break.sh >> /Users/drivas/.tmp_git_all_status_out_dirty
+		source ${PIER}break_single_line.sh >> /Users/drivas/.tmp_git_all_status_out_dirty ${MANWIDTH}
 	fi
 
 done
@@ -26,87 +27,114 @@ cd $old_dir
 # print clean
 if [[ -e "/Users/drivas/.tmp_git_all_status_out_clean" ]]
 then
-	source /Users/drivas/.dotfiles/rust/pier/line_break.sh
+	source ${PIER}break_single_line.sh ${MANWIDTH}
 	awk '
-	function green(s) {
-		printf "\033[0;32m" s "\033[0m "
-	}
-	function cyan(s) {
-		printf "\033[0;36m" s "\033[0m "
-	}
-	{
-		if ( NR == 1 )
-		{
-			print cyan("Updated Repositories");
-			print "================================================================================";
-		}
-	}
-	{
-		print green($0);
-	}
-	END{
-		print "================================================================================";
-		print "================================================================================";
-	}' /Users/drivas/.tmp_git_all_status_out_clean
+  BEGIN{
+
+    # colors
+    red = "\033[1;31m"
+    gray = "\033[1;30m"
+    blue = "\033[1;34m"
+    yellow = "\033[1;33m"
+    cyan = "\033[0;36m"
+    green = "\033[0;32m"
+  }
+
+  {
+    if ( NR == 1 )
+    {
+      printf cyan "Updated Repositories\n";
+      for ( m = 1; m <= 175; m++ )
+      {
+        printf "%s", gray "=";
+      }
+      print ""
+    }
+  }
+  {
+    printf green $0 "\n";
+  }
+  END{
+    for ( m = 1; m <= 175; m++ )
+    {
+      printf "%s", gray "=";
+    }
+    print ""
+
+    for ( m = 1; m <= 175; m++ )
+    {
+      printf "%s", gray "=";
+    }
+    print ""
+
+  }' /Users/drivas/.tmp_git_all_status_out_clean
 fi
 rm /Users/drivas/.tmp_git_all_status_out_clean
 
 # print dirty
 if [[ -e "/Users/drivas/.tmp_git_all_status_out_dirty" ]]
 then
-	source /Users/drivas/.dotfiles/rust/pier/line_break.sh
-	awk '
-	function red(s) {
-		printf "\033[1;31m" s "\033[0m "
-	}
-	function green(s) {
-		printf "\033[0;32m" s "\033[0m "
-	}
-	function blue(s) {
-		printf "\033[1;34m" s "\033[0m "
-	}
-	function cyan(s) {
-		printf "\033[0;36m" s "\033[0m "
-	}
-	function yellow(s) {
-		printf "\033[1;33m" s "\033[0m "
-	}
-	function gray(s) {
-		printf "\033[1;30m" s "\033[0m "
-	}
-	{
-		if ( NR == 1 )
-		{
-			print cyan("Non-updated Repositories");
-			print "================================================================================";
-		}
-	}
-	{
-		if ( $1 ~/^\// )
-		{
-			print green($0)
-		}
-		else if ( $1 ~/^stash/ )
-		{
-			print yellow($0)
-		}
-		else if ( $1 ~/[[:alpha:]]/ )
-		{
-			print blue($0)
-		}
-		else if ( $1 ~/\?/ )
-		{
-			print red($0)
-		}
-		else
-		{
-			print gray($0)
-		}
+  source ${PIER}break_single_line.sh ${MANWIDTH}
+  awk '
+  BEGIN{
 
-	}
-	END{
-		print "================================================================================";
-		print "================================================================================";
-	}' /Users/drivas/.tmp_git_all_status_out_dirty
+    # colors
+    red = "\033[1;31m"
+    gray = "\033[1;30m"
+    blue = "\033[1;34m"
+    yellow = "\033[1;33m"
+    cyan = "\033[0;36m"
+    green = "\033[0;32m"
+  }
+
+  {
+    if ( NR == 1 )
+    {
+      printf cyan "Non-updated Repositories\n";
+      for ( m = 1; m <= 175; m++ )
+      {
+        printf "%s", gray "=";
+      }
+      print ""
+
+    }
+  }
+  {
+    if ( $1 ~/^\// )
+    {
+      printf green $0 "\n";
+    }
+    else if ( $1 ~/^stash/ )
+    {
+      printf yellow $0 "\n";
+    }
+    else if ( $1 ~/[[:alpha:]]/ )
+    {
+      printf blue $0 "\n";
+    }
+    else if ( $1 ~/\?/ )
+    {
+      printf red $0 "\n";
+    }
+    else
+    {
+      printf gray $0 "\n";
+    }
+
+  }
+  END{
+    for ( m = 1; m <= 175; m++ )
+    {
+      printf "%s", gray "=";
+    }
+    print ""
+
+    for ( m = 1; m <= 175; m++ )
+    {
+      printf "%s", gray "=";
+    }
+    print ""
+
+  }' /Users/drivas/.tmp_git_all_status_out_dirty
 fi
 rm /Users/drivas/.tmp_git_all_status_out_dirty
