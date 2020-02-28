@@ -2,6 +2,7 @@
 
 directory="/Users/drivas/.dotfiles/git/"
 
+clear
 if [[ "$1" == "one-letter" ]]
 then
   awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/alias_one_letter
