@@ -13,11 +13,6 @@ alias = 'alr'
 command = 'source ${PIER}aliases.sh reload                                     #reload aliases'
 tags = ['alias']
 
-[scripts.chd]
-alias = 'chd'
-command = 'source ${PIER}cheat.sh dirs                                         #list cheat directories'
-tags = ['cheat']
-
 [scripts.ch]
 alias = 'ch'
 command = 'source ${PIER}cheat.sh list                                         #list available cheats'
@@ -36,6 +31,11 @@ tags = ['cheat']
 [scripts.chc]
 alias = 'chc'
 command = 'source ${PIER}cheat.sh cli                                          #list cli cheats'
+tags = ['cheat']
+
+[scripts.chd]
+alias = 'chd'
+command = 'source ${PIER}cheat.sh dirs                                         #list cheat directories'
 tags = ['cheat']
 
 [scripts.chg]
@@ -68,6 +68,11 @@ alias = 'exaa'
 command = 'source ${PIER}exa.sh accessed                                       #list files by accessed time'
 tags = ['exa']
 
+[scripts.exabs]
+alias = 'exabs'
+command = 'source ${PIER}exa.sh absolute                                       #list all files without clusters'
+tags = ['exa']
+
 [scripts.exac]
 alias = 'exac'
 command = 'source ${PIER}exa.sh created                                        #list files by created time'
@@ -91,11 +96,6 @@ tags = ['exa']
 [scripts.exalr]
 alias = 'exalr'
 command = 'source ${PIER}exa.sh reversed                                       #list files by modified time'
-tags = ['exa']
-
-[scripts.exabs]
-alias = 'exabs'
-command = 'source ${PIER}exa.sh absolute                                       #list all files witout clusters'
 tags = ['exa']
 
 [scripts.git]
@@ -153,17 +153,7 @@ alias = 'l'
 command = 'source ${PIER}pier.sh list                                          #list pier commands'
 tags = ['alias']
 
-[scripts.ll]
-alias = 'll'
-command = 'source ${PIER}pier.sh all                                           #list aliases & pier commands'
-tags = ['alias']
-
-[scripts.todo]
-alias = 'todo'
-command = 'todor --check                                                       #check tags within repository'
-tags = ['todor']
-
 [scripts.tre]
 alias = 'tre'
-command = "source ${PIER}tre.sh                                                #tree structure constrained to 12 items & 3 levels"
+command = 'source ${PIER}tre.sh                                                #tree structure constrained to 12 items & 3 levels'
 tags = ['tree']
