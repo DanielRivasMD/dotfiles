@@ -10,8 +10,8 @@
   # add by patch then commit - looks at each change, and asks if we want to put it in the repo, then commits.
   ac = !"git add --patch; git commit"
 
-  # add by patch - looks at each change, and asks if we want to put it in the repo.
-  ap = !"clear && git add --patch"
+  ## # add by patch - looks at each change, and asks if we want to put it in the repo.
+  ##  ap = !"clear && git add --patch"
 
   # add interactive.
   ai = !"clear && git add --interactive"
