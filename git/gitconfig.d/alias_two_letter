@@ -76,6 +76,12 @@
   # merge but without autocommit, and with a commit even if the merge resolved as a fast-forward.
   me = merge --no-commit --no-ff
 
+  # push to master to origin
+  ps = push origin master --progress
+
+  # push to master to origin by force
+  psf = push origin master --progress --force
+
   # reflog - reference log that manages when tips of branches are updated.
   rl = reflog
 
