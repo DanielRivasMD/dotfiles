@@ -26,7 +26,7 @@ BEGIN{
     # hard-coded spacing
     if ( NR == 2 )
     {
-      $4 = " Command                                                            # Description                                       ";
+      $4 = " Command                                                            # Description                     ";
     }
 
     # keep same spacing
