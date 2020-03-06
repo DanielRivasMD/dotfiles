@@ -63,41 +63,6 @@ alias = 'chs'
 command = 'source ${PIER}cheat.sh rust                                         #list rust cheats'
 tags = ['cheat']
 
-[scripts.exaa]
-alias = 'exaa'
-command = 'source ${PIER}exa.sh accessed                                       #list files by accessed time'
-tags = ['exa']
-
-[scripts.exabs]
-alias = 'exabs'
-command = 'source ${PIER}exa.sh absolute                                       #list all files without clusters'
-tags = ['exa']
-
-[scripts.exac]
-alias = 'exac'
-command = 'source ${PIER}exa.sh created                                        #list files by created time'
-tags = ['exa']
-
-[scripts.exal]
-alias = 'exal'
-command = 'source ${PIER}exa.sh list                                           #list files'
-tags = ['exa']
-
-[scripts.exala]
-alias = 'exala'
-command = 'source ${PIER}exa.sh all                                            #list all files'
-tags = ['exa']
-
-[scripts.exalar]
-alias = 'exalar'
-command = 'source ${PIER}exa.sh all_reversed                                   #list all files by modified time'
-tags = ['exa']
-
-[scripts.exalr]
-alias = 'exalr'
-command = 'source ${PIER}exa.sh reversed                                       #list files by modified time'
-tags = ['exa']
-
 [scripts.git]
 alias = 'git'
 command = 'source ${PIER}git.sh                                                #all-round git status'
@@ -153,7 +118,27 @@ alias = 'l'
 command = 'source ${PIER}pier.sh list                                          #list pier commands'
 tags = ['alias']
 
-[scripts.tre]
-alias = 'tre'
-command = 'source ${PIER}tre.sh                                                #tree structure constrained to 12 items & 3 levels'
-tags = ['tree']
+[scripts.xa]
+alias = 'xa'
+command = 'source ${PIER}exa.sh accessed                                       #list files by accessed time'
+tags = ['exa']
+
+[scripts.xbs]
+alias = 'xbs'
+command = 'source ${PIER}exa.sh absolute                                       #list all files without clusters'
+tags = ['exa']
+
+[scripts.xc]
+alias = 'xc'
+command = 'source ${PIER}exa.sh created                                        #list files by created time'
+tags = ['exa']
+
+[scripts.xd]
+alias = 'xd'
+command = 'source ${PIER}exa.sh dir                                            #list directory tree'
+tags = ['exa']
+
+[scripts.xt]
+alias = 'xt'
+command = 'source ${PIER}exa.sh tree                                           #list file tree'
+tags = ['exa']

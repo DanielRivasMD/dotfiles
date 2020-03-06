@@ -30,18 +30,7 @@ then
     --all \
     --time created
 
-elif [[ "$1" == "list" ]]
-then
-  /usr/local/bin/exa \
-    --long  \
-    --group-directories-first  \
-    --classify  \
-    --links  \
-    --git  \
-    --header  \
-    --group
-
-elif [[ "$1" == "all" ]]
+elif [[ "$1" == "tree" ]]
 then
   /usr/local/bin/exa \
     --long  \
@@ -51,43 +40,24 @@ then
     --git  \
     --header  \
     --group  \
-    --all
+    --all \
+    --tree  \
+    --level 3  \
+    --ignore-glob ".git|.idea"
 
-elif [[ "$1" == "all_reversed" ]]
+elif [[ "$1" == "dir" ]]
 then
   /usr/local/bin/exa \
     --long  \
-    --group-directories-first  \
+    --only-dirs  \
     --classify  \
     --links  \
     --git  \
     --header  \
-    --sort=newest  \
     --group  \
-    --all
-
-elif [[ "$1" == "reversed" ]]
-then
-  /usr/local/bin/exa \
-    --long  \
-    --group-directories-first  \
-    --classify  \
-    --links  \
-    --git  \
-    --header  \
-    --sort=newest  \
-    --group
-
-elif [[ "$1" == "absolute" ]]
-then
-  /usr/local/bin/exa \
-    --long  \
-    --classify  \
-    --links  \
-    --git  \
-    --header  \
-    --sort=newest  \
-    --group \
-    --all
+    --all \
+    --tree  \
+    --level 3  \
+    --ignore-glob ".git|.idea"
 
 fi
