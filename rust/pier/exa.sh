@@ -30,6 +30,18 @@ then
     --all \
     --time created
 
+elif [[ "$1" == "absolute" ]]
+then
+  /usr/local/bin/exa \
+    --long  \
+    --classify  \
+    --links  \
+    --git  \
+    --header  \
+    --sort=newest  \
+    --group \
+    --all
+
 elif [[ "$1" == "tree" ]]
 then
   /usr/local/bin/exa \
