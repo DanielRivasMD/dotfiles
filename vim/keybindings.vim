@@ -3,19 +3,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "  => General
+
 inoremap , ,<space>
-inoremap ÷ <space><-<space>
-inoremap ¿ <space><<-<space>
-inoremap æ <space>=><space>
-inoremap Æ <space>-><space>
-inoremap … <space>:=<space>
-inoremap Ú <space>~<space>
+
+inoremap ∞ <space>~<space>
+
+inoremap = <space>=<space>
 inoremap ≠ <space>==<space>
-inoremap ± <space>+<space>
-inoremap – <space>=<space>
-inoremap — <space>-<space>
+
+inoremap – <space>-<space>
+inoremap º <space>+<space>
+inoremap ª <space>/<space>
 inoremap • <space>*<space>
-inoremap ° <space>/<space>
+
 inoremap ≤ <space><<space>
 inoremap ≥ <space>><space>
 inoremap ¯ <space><=<space>
@@ -27,19 +27,41 @@ inoremap ˘ <space>>=<space>
 
 " => Go
 
+inoremap … <space>:=<space>
+
 " => Julia
 
+inoremap — <space>.-<space>
+inoremap ‚ <space>.+<space>
+inoremap · <space>./<space>
+inoremap ° <space>.*<space>
+
+inoremap “ <space>.<<space>
+inoremap ” <space>.<=<space>
+inoremap ‘ <space>.><space>
+inoremap ’ <space>.>=<space>
+
+inoremap ± <space>===<space>
+
+inoremap Ú <space>\|><space>
+
 " => Markdown
-autocmd FileType Rmd,md inoremap « ```
 
 " => R
-autocmd FileType R,Rmd inoremap ﬁ <space>%in%<space>
-autocmd FileType R,Rmd inoremap º <space>%>%<space>
-autocmd FileType R,Rmd inoremap ‚ <space>%<>%<space>
-autocmd FileType R,Rmd inoremap ª <space>%$%<space>
-autocmd FileType R,Rmd inoremap · <space>%T>%<space>
+
+inoremap ÷ <space><-<space>
+inoremap ¿ <space><<-<space>
+
+inoremap ¶ <space>%>%<space>
+inoremap ‡ <space>%<>%<space>
+inoremap § <space>%$%<space>
+inoremap ﬂ <space>%T>%<space>
+inoremap ﬁ <space>%in%<space>
 
 " => Rust
+
+inoremap æ <space>=><space>
+inoremap Æ <space>-><space>
 
 " => Horizontal Movement
 inoremap <T-S-Left> <Esc>I
