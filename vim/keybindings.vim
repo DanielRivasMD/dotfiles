@@ -17,9 +17,9 @@ inoremap ª <space>/<space>
 inoremap • <space>*<space>
 
 inoremap ≤ <space><<space>
+inoremap “ <space><=<space>
 inoremap ≥ <space>><space>
-inoremap ¯ <space><=<space>
-inoremap ˘ <space>>=<space>
+inoremap ‘ <space>>=<space>
 
 " => Awk
 
@@ -36,9 +36,9 @@ inoremap ‚ <space>.+<space>
 inoremap · <space>./<space>
 inoremap ° <space>.*<space>
 
-inoremap “ <space>.<<space>
+inoremap ¯ <space>.<<space>
 inoremap ” <space>.<=<space>
-inoremap ‘ <space>.><space>
+inoremap ¿ <space>.><space>
 inoremap ’ <space>.>=<space>
 
 inoremap ± <space>===<space>

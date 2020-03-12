@@ -38,10 +38,10 @@ atom.commands.add 'atom-text-editor',
 
   'custom:insert-lessthan': ->
     atom.workspace.getActiveTextEditor()?.insertText(' < ')
-  'custom:insert-morethan': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' > ')
   'custom:insert-lessequal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' <= ')
+  'custom:insert-morethan': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' > ')
   'custom:insert-moreequal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' >= ')
 

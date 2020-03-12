@@ -57,19 +57,19 @@
 	},
 
 	{
-		"keys": ["≥"],
-		"command": "insert",
-		"args": {"characters": " > "},
-	},
-
-	{
-		"keys": ["¯"],
+		"keys": ["“"],
 		"command": "insert",
 		"args": {"characters": " <= "},
 	},
 
 	{
-		"keys": ["˘"],
+	"keys": ["≥"],
+	"command": "insert",
+	"args": {"characters": " > "},
+	},
+
+	{
+		"keys": ["‘"],
 		"command": "insert",
 		"args": {"characters": " >= "},
 	},
@@ -109,7 +109,7 @@
 	},
 
 	{
-		"keys": ["“"],
+		"keys": ["¯"],
 		"command": "insert",
 		"args": {"characters": " .< "}
 	},
@@ -121,7 +121,7 @@
 	},
 
 	{
-		"keys": ["‘"],
+		"keys": ["˘"],
 		"command": "insert",
 		"args": {"characters": " .> "}
 	},

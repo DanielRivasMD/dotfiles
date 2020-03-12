@@ -165,9 +165,9 @@
   'alt-8': 'custom:insert-times'
 
   'alt-,': 'custom:insert-lessthan'
+  'alt-[': 'custom:insert-lessequal'
   'alt-.': 'custom:insert-morethan'
-  'alt-<': 'custom:insert-lessequal'
-  'alt->': 'custom:insert-moreequal'
+  'alt-]': 'custom:insert-moreequal'
 
 #------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------/ Awk /-----------------------------------------------------------------
@@ -194,9 +194,9 @@
   'alt-(': 'custom:insert-divide_broadcast'
   'alt-*': 'custom:insert-times_broadcast'
 
-  'alt-[': 'custom:insert-lessthan_broadcast'
+  'alt-<': 'custom:insert-lessthan_broadcast'
   'alt-{': 'custom:insert-lessequal_broadcast'
-  'alt-]': 'custom:insert-morethan_broadcast'
+  'alt->': 'custom:insert-morethan_broadcast'
   'alt-}': 'custom:insert-moreequal_broadcast'
 
   'alt-+': 'custom:insert-equalequalequal'
