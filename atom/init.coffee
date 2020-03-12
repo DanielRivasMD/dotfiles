@@ -15,32 +15,27 @@
 #------------------------------------------------------------------------------------------------------------------------------
 
 atom.commands.add 'atom-text-editor',
+
   'custom:insert-comma': ->
     atom.workspace.getActiveTextEditor()?.insertText(', ')
-  'custom:insert-r_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' <- ')
-  'custom:insert-r_up_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' <<- ')
-  'custom:insert-rust_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' => ')
-  'custom:insert-r_right_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
-  'custom:insert-go_assign': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' := ')
+
   'custom:insert-tilde': ->
     atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
-  'custom:insert-equalequal': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' == ')
-  'custom:insert-plus': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' + ')
+
   'custom:insert-equal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' = ')
+  'custom:insert-equalequal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' == ')
+
+  'custom:insert-plus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' + ')
   'custom:insert-minus': ->
     atom.workspace.getActiveTextEditor()?.insertText(' - ')
   'custom:insert-times': ->
     atom.workspace.getActiveTextEditor()?.insertText(' * ')
   'custom:insert-divide': ->
     atom.workspace.getActiveTextEditor()?.insertText(' / ')
+
   'custom:insert-lessthan': ->
     atom.workspace.getActiveTextEditor()?.insertText(' < ')
   'custom:insert-morethan': ->
@@ -49,10 +44,6 @@ atom.commands.add 'atom-text-editor',
     atom.workspace.getActiveTextEditor()?.insertText(' <= ')
   'custom:insert-moreequal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' >= ')
-
-#------------------------------------------------------------------------------------------------------------------------------
-#--------------------------------------------/ LANGUAGE SPECIFIC SETTINGS /----------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------------
 
 
 #------------------------------------------------------------------------------------------------------------------------------
@@ -69,50 +60,71 @@ atom.commands.add 'atom-text-editor',
 #------------------------------------------------------/ Go /------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
+  'custom:insert-go_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' := ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------/ Julia /---------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
+
+  'custom:insert-plus_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .+ ')
+  'custom:insert-minus_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .- ')
+  'custom:insert-times_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .* ')
+  'custom:insert-divide_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' ./ ')
+
+  'custom:insert-lessthan_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .< ')
+  'custom:insert-lessequal_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .<= ')
+  'custom:insert-morethan_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .> ')
+  'custom:insert-moreequal_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .>= ')
+
+  'custom:insert-equalequalequal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' === ')
+
+  'custom:insert-julia_pipe': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' |> ')
 
 
 #------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------/ Markdown /------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
-atom.commands.add 'atom-text-editor[data-grammar="text md"]',
-  'custom:insert-code_start': ->
-    atom.workspace.getActiveTextEditor()?.insertText("```")
-
-#------------------------------------------------------------------------------------------------------------------------------
-#------------------------------------------------------/ R markdown /----------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------------
-
-atom.commands.add 'atom-text-editor[data-grammar="source gfm rmd"]',
-  'custom:insert-code_start': ->
-    atom.workspace.getActiveTextEditor()?.insertText("```")
 
 #------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------/ R /-------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
-atom.commands.add 'atom-text-editor[data-grammar="source r"]',
-  'custom:insert-r_include': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %in% ')
-  'custom:insert-r_pipe': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
+  'custom:insert-r_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' <- ')
+  'custom:insert-r_up_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' <<- ')
+
   'custom:insert-r_pipe_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
+  'custom:insert-r_pipe': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
   'custom:insert-r_pipe_var': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
   'custom:insert-r_pipe_tee': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
-  'custom:insert-r_package_dev_comment': ->
-    atom.workspace.getActiveTextEditor()?.insertText("#' ")
+  'custom:insert-r_include': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' %in% ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------/ Rust /----------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------------------
 
+  'custom:insert-rust_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' => ')
+  'custom:insert-r_right_assign': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' -> ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
