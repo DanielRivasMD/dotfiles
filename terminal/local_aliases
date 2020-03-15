@@ -27,6 +27,9 @@ alias la='clear && exa --long --group-directories-first --classify --links --git
 alias lr='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group'
 alias lar='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all'
 
+# broot
+alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
+
 # ==========================
 # ===  Shell functions	 ===
 # ==========================
