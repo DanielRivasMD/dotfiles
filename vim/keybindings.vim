@@ -8,8 +8,8 @@ inoremap , ,<space>
 
 inoremap ∞ <space>~<space>
 
-inoremap = <space>=<space>
-inoremap ≠ <space>==<space>
+inoremap ≠ <space>=<space>
+inoremap « <space>==<space>
 
 inoremap – <space>-<space>
 inoremap º <space>+<space>
@@ -38,10 +38,12 @@ inoremap ° <space>.*<space>
 
 inoremap ¯ <space>.<<space>
 inoremap ” <space>.<=<space>
-inoremap ¿ <space>.><space>
+inoremap ˘ <space>.><space>
 inoremap ’ <space>.>=<space>
 
-inoremap ± <space>===<space>
+inoremap ± <space>.=<space>
+inoremap » <space>.==<space>
+inoremap + <space>===<space>
 
 inoremap Ú <space>\|><space>
 

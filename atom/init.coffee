@@ -85,6 +85,10 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-moreequal_broadcast': ->
     atom.workspace.getActiveTextEditor()?.insertText(' .>= ')
 
+  'custom:insert-equal_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .= ')
+  'custom:insert-equalequal_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .== ')
   'custom:insert-equalequalequal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' === ')
 

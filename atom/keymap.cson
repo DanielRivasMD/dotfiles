@@ -156,8 +156,8 @@
 
   'alt-5': 'custom:insert-tilde'
 
-  '=': 'custom:insert-equal'
-  'alt-=': 'custom:insert-equalequal'
+  'alt-=': 'custom:insert-equal'
+  'alt-\\': 'custom:insert-equalequal'
 
   'alt--': 'custom:insert-minus'
   'alt-0': 'custom:insert-plus'
@@ -199,7 +199,9 @@
   'alt->': 'custom:insert-morethan_broadcast'
   'alt-}': 'custom:insert-moreequal_broadcast'
 
-  'alt-+': 'custom:insert-equalequalequal'
+  'alt-+': 'custom:insert-equal_broadcast'
+  'alt-|': 'custom:insert-equalequal_broadcast'
+  '+': 'custom:insert-equalequalequal'
 
   'alt-:': 'custom:insert-julia_pipe'
 
