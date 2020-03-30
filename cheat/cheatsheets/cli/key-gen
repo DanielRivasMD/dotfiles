@@ -1,0 +1,9 @@
+---
+syntax: bash
+---
+
+# generate key locally
+ssh-keygen -t rsa -b 4096
+
+# transfer key to remote server
+ssh-copy-id REMOTE
