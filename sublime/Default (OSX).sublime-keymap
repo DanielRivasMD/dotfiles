@@ -216,7 +216,7 @@
 
 
 
-	// Move_by_Paragraph
+	// move_by_paragraph
 	{
 		"keys": ["alt+up"],
 		"command": "move_by_paragraph",
@@ -236,5 +236,30 @@
 		"keys": ["alt+shift+down"],
 		"command": "move_by_paragraph",
 		"args": {"forward": true, "extend": true}
+	}, 
+
+
+	// move tab
+	// {
+	// 	"keys": ["super+alt+shift+down"],
+	// 	"command": "move_tab",
+	// 	"args": { "position": "999" }
+	// },
+	// {
+	// 	"keys": ["super+alt+shift+up"],
+	// 	"command": "move_tab",
+	// 	"args": { "position": "0" }
+	// },
+	{
+		"keys": ["ctrl+shift+left"],
+		"command": "move_tab",
+		"args": { "position": "-1" }
+	},
+	{
+		"keys": ["ctrl+shift+right"],
+		"command": "move_tab",
+		"args": { "position": "+1" }
 	}
+
+
 ]
