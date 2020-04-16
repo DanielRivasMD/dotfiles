@@ -1,0 +1,93 @@
+
+# ==========================
+# ===  Uppmax aliases		 ===
+# ==========================
+
+# Load SH aliases
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
+# ==========================
+# ===  Uppmax default		 ===
+# ==========================
+
+# Modules, activate the module command
+case "$0" in
+  -sh|sh|*/sh)	modules_shell=sh ;;
+  -ksh|ksh|*/ksh)	modules_shell=ksh ;;
+  -zsh|zsh|*/zsh)	modules_shell=zsh ;;
+  -bash|bash|*/bash)	modules_shell=bash ;;
+esac
+module() { eval `/usr/local/Modules/$MODULE_VERSION/bin/modulecmd $modules_shell $*`; }
+
+# ==========================
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+# ==========================
+
+# modules are used to manage user environment and software packages
+if [ -f /etc/profile.modules ]
+then
+	. /etc/profile.modules
+# load a default environment
+#	module load sge
+# PGI compilers
+#	module load pgi
+fi
+
+# ==========================
+# ===  General settings  ===
+# ==========================
+
+# No duplicates in bash history
+HISTCONTROL=ignorespace:erasedups
+
+# ==========================
+# ===  Language settings ===
+# ==========================
+
+# Language settings
+LANG=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+export LANGUAGE=en_US
+export LC_ALL=en_US.UTF-8
+
+# ==========================
+# ===  Editor					   ===
+# ==========================
+
+# Editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# ==========================
+# ===  Screen width			 ===
+# ==========================
+
+MANWIDTH=175
+export MANWIDTH
+
+# ==========================
+# ===  SH Prompt			   ===
+# ==========================
+
+source ~/.bash_prompt.sh
+set_prompt
+
+# ==========================
