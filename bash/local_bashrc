@@ -54,6 +54,16 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 eval "$(zoxide init bash)"
 
 # ==========================
+# ===  McFly             ===
+# ==========================
+
+if [[ -r "$(brew --prefix)/opt/mcfly/mcfly.bash" ]]
+then
+  source "$(brew --prefix)/opt/mcfly/mcfly.bash"
+fi
+
+
+# ==========================
 # ===  Rust Tools				 ===
 # ==========================
 
