@@ -124,6 +124,20 @@ pstorm() { command open "$@" -a PhpStorm }
 rstudio() { command open "$@" -a RStudio }
 
 # ==========================
+# ===  zoxide						 ===
+# ==========================
+
+eval "$(zoxide init zsh)"
+
+# ==========================
+# ===  Rust Tools				 ===
+# ==========================
+
+source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+# source "$(navi widget zsh)"
+
+# ==========================
 
 echo -n -e "\t"; echo '                 '
 echo -n -e "\t"; echo '  ____  ______ __'
@@ -133,7 +147,3 @@ echo -n -e "\t"; echo ' /___/___/_//_/  '
 echo -n -e "\t"; echo '                 '
 
 # ==========================
-
-source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
-
-# source "$(navi widget zsh)"

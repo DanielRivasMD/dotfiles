@@ -48,6 +48,18 @@ set_prompt
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # ==========================
+# ===  zoxide						 ===
+# ==========================
+
+eval "$(zoxide init bash)"
+
+# ==========================
+# ===  Rust Tools				 ===
+# ==========================
+
+source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+# ==========================
 
 echo -n -e "\t"; echo ''
 echo -n -e "\t"; echo '   ___  ___   ______ __'
@@ -57,5 +69,3 @@ echo -n -e "\t"; echo '/____/_/ |_/___/_//_/'
 echo -n -e "\t"; echo ''
 
 # ==========================
-
-source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
