@@ -19,22 +19,54 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
-# ==========================
-# ===  General settings  ===
-# ==========================
-
-# Load profile
-if [ -f ~/.bash_profile ]; then
-  . ~/.bash_profile
+# Load General profile
+if [ -f ~/.terminal_profile ]; then
+  . ~/.terminal_profile
 fi
 
 # ==========================
-# ===  General aliases	 ===
+# ===  SH aliases        ===
 # ==========================
 
-# User specific aliases and functions
+# Load SH aliases
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
+fi
+
+# ==========================
+# ===  History           ===
+# ==========================
+
+HISTFILE=~/.bash_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+# ==========================
+# ===  SH Prompt         ===
+# ==========================
+
+source ~/.dotfiles/bash/bash_prompt.sh
+set_prompt
+
+# ==========================
+# ===  Silence warning   ===
+# ==========================
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# ==========================
+# ===  zoxide            ===
+# ==========================
+
+eval "$(zoxide init bash)"
+
+# ==========================
+# ===  McFly             ===
+# ==========================
+
+if [[ -r "/home/drivas/private/software/mcfly/mcfly.bash" ]]
+then
+  source "/home/drivas/private/software/mcfly/mcfly.bash"
 fi
 
 # ==========================

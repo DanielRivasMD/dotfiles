@@ -1,32 +1,11 @@
 
 # ==========================
-# ===  Load settings  	 ===
+# ===  Load settings     ===
 # ==========================
 
-# Load General profile
-if [ -f ~/.terminal_profile ]; then
-	. ~/.terminal_profile
+# Load bash settings
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
 fi
-
-# ==========================
-# ===  General settings  ===
-# ==========================
-
-
-# ==========================
-# ===  SH aliases			   ===
-# ==========================
-
-# Load SH aliases
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
-
-# ==========================
-# ===  SH Prompt			   ===
-# ==========================
-
-source ~/.dotfiles/bash/bash_prompt.sh
-set_prompt
 
 # ==========================

@@ -1,6 +1,6 @@
 
 # ==========================
-# ===  Uppmax aliases		 ===
+# ===  Uppmax aliases    ===
 # ==========================
 
 # Load General aliases
@@ -9,7 +9,7 @@ if [ -f ~/.terminal_aliases ]; then
 fi
 
 # ==========================
-# ===  Uppmax default		 ===
+# ===  Uppmax default    ===
 # ==========================
 
 # Modules, activate the module command
@@ -23,21 +23,14 @@ module() { eval `/usr/local/Modules/$MODULE_VERSION/bin/modulecmd $modules_shell
 
 # ==========================
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
-
-# ==========================
-
 # modules are used to manage user environment and software packages
 if [ -f /etc/profile.modules ]
 then
-	. /etc/profile.modules
+  . /etc/profile.modules
 # load a default environment
-#	module load sge
+# module load sge
 # PGI compilers
-#	module load pgi
+# module load pgi
 fi
 
 # ==========================
@@ -46,7 +39,7 @@ fi
 [[ $- != *i* ]] && return
 
 # ==========================
-# ===  tmux check				 ===
+# ===  tmux check        ===
 # ==========================
 
 # Manage tmux
@@ -54,7 +47,7 @@ module load tmux/2.5
 [ -z "$TMUX" ] && { tmux a || exec tmux new -s Uppmax && exit; }
 
 # ==========================
-# ===  BLAST database		 ===
+# ===  BLAST database    ===
 # ==========================
 
 # BLAST database
@@ -68,19 +61,19 @@ export BLASTDB=/sw/data/uppnex/blast_databases
 HISTCONTROL=ignorespace:erasedups
 
 # ==========================
-# ===  Go Path 				   ===
+# ===  Go Path           ===
 # ==========================
 
 # GOPATH settings
 
 # ==========================
-# ===  Cargo-Rust Path	 ===
+# ===  Cargo-Rust Path   ===
 # ==========================
 
 PATH=$PATH:$HOME/.cargo/bin
 
 # ==========================
-# ===  Path						   ===
+# ===  Path              ===
 # ==========================
 
 # PATH settings
@@ -89,7 +82,7 @@ PATH=$PATH:$HOME/bin
 export PATH
 
 # ==========================
-# ===  Editor					   ===
+# ===  Editor            ===
 # ==========================
 
 # Editor
