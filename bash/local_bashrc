@@ -5,7 +5,7 @@
 
 
 # ==========================
-# ===  Completion			   ===
+# ===  Completion        ===
 # ==========================
 
 # Git-autocompletion
@@ -18,7 +18,7 @@ eval "$(pandoc --bash-completion)"
 [ -f ~/.dotfiles/bash/fzf.bash ] && source ~/.dotfiles/bash/fzf.bash
 
 # ==========================
-# ===  SH aliases			   ===
+# ===  SH aliases        ===
 # ==========================
 
 # Load SH aliases
@@ -27,7 +27,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # ==========================
-# ===  History					 ===
+# ===  History           ===
 # ==========================
 
 HISTFILE=~/.bash_history
@@ -35,20 +35,20 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 # ==========================
-# ===  SH Prompt			   ===
+# ===  SH Prompt         ===
 # ==========================
 
 source ~/.dotfiles/bash/bash_prompt.sh
 set_prompt
 
 # ==========================
-# ===  Silence warning	 ===
+# ===  Silence warning   ===
 # ==========================
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # ==========================
-# ===  zoxide						 ===
+# ===  zoxide            ===
 # ==========================
 
 eval "$(zoxide init bash)"
@@ -61,13 +61,6 @@ if [[ -r "$(brew --prefix)/opt/mcfly/mcfly.bash" ]]
 then
   source "$(brew --prefix)/opt/mcfly/mcfly.bash"
 fi
-
-
-# ==========================
-# ===  Rust Tools				 ===
-# ==========================
-
-source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # ==========================
 

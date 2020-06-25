@@ -1,6 +1,6 @@
 
 # ==========================
-# ===  General aliases	 ===
+# ===  General aliases   ===
 # ==========================
 
 # General aliases
@@ -14,11 +14,11 @@ alias mp='mplayer'
 
 # ==========================
 
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo'ed
 alias sudo='sudo '
 
 # ==========================
-# ===  Rust Tools				 ===
+# ===  Rust toolLinks    ===
 # ==========================
 
 # aliases
@@ -36,23 +36,23 @@ alias lar='clear && exa --long --group-directories-first --classify --links --gi
 alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
 # ==========================
-# ===  Shell functions	 ===
+# ===  Shell functions   ===
 # ==========================
 
 # Wrapper for cd. Updates PROMPT every time 'cd' is called. Compatible with 'cl'
 function cd() {
-	builtin cd "$@" && set_prompt
+  builtin cd "$@" && set_prompt
 }
 export cd
 
 # Modified version to 'cd' and 'lr'
 function cl() {
-	cd "$@" && lr
+  cd "$@" && lr
 }
 
 # Rmarkdown knit
 function knit() {
-	R --slave -e "rmarkdown::render('$1')" > /dev/null
+  R --slave -e "rmarkdown::render('$1')" > /dev/null
 }
 
 # ==========================

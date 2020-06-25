@@ -6,12 +6,12 @@
 # # Launch Bash on Atom
 # if [[ $TERM_PROGRAM == platformio-ide-terminal ]]
 # then
-# 	bash -l
+#   bash -l
 # fi
 
 # Load zsh settings
 if [ -f ~/.zsh_profile ]; then
-	. ~/.zsh_profile
+  . ~/.zsh_profile
 fi
 
 # ==========================
@@ -29,7 +29,7 @@ source ~/.dotfiles/zsh/zsh_plugins.sh
 # antibody bundle zsh-users/zsh-completions
 
 # ==========================
-# ===  Autocompletion		 ===
+# ===  Autocompletion    ===
 # ==========================
 
 # Autocompletion with arrow interphase
@@ -65,7 +65,7 @@ RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%
 source ~/.dotfiles/zsh/fossil_prompt.sh
 
 # ==========================
-# ===  ZSH aliases			 ===
+# ===  ZSH aliases       ===
 # ==========================
 
 # Load ZSH aliases
@@ -74,7 +74,7 @@ if [ -f ~/.zaliases ]; then
 fi
 
 # ==========================
-# ===  History					 ===
+# ===  History           ===
 # ==========================
 
 HISTFILE=~/.zsh_history
@@ -92,7 +92,7 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
 # ==========================
-# ===  Commands					 ===
+# ===  Commands          ===
 # ==========================
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
@@ -100,7 +100,7 @@ tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 mman() { command man "$@" | more }
 
 # ==========================
-# ===  JetBrains				 ===
+# ===  JetBrains         ===
 # ==========================
 
 clion() { command open "$@" -a CLion }
@@ -118,24 +118,16 @@ mine() { command open "$@" -a RubyMine }
 pstorm() { command open "$@" -a PhpStorm }
 
 # ==========================
-# ===  RStudio					 ===
+# ===  RStudio           ===
 # ==========================
 
 rstudio() { command open "$@" -a RStudio }
 
 # ==========================
-# ===  zoxide						 ===
+# ===  zoxide            ===
 # ==========================
 
 eval "$(zoxide init zsh)"
-
-# ==========================
-# ===  Rust Tools				 ===
-# ==========================
-
-source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
-
-# source "$(navi widget zsh)"
 
 # ==========================
 

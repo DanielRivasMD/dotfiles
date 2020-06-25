@@ -1,16 +1,11 @@
-# echo zprofile
+
 # ==========================
-# ===  Load settings	   ===
+# ===  Load settings     ===
 # ==========================
 
 # Load General profile
 if [ -f ~/.terminal_profile ]; then
-	. ~/.terminal_profile
+  . ~/.terminal_profile
 fi
-
-# # Load zsh settings
-# if [ -f ~/.zshrc ]; then
-# 	. ~/.zshrc
-# fi
 
 # ==========================

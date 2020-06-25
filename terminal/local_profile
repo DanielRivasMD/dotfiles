@@ -1,6 +1,6 @@
 
 # ==========================
-# ===  General aliases	 ===
+# ===  General aliases   ===
 # ==========================
 
 # Load General aliases
@@ -41,32 +41,32 @@ export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
 
 # ==========================
-# ===  Go Path 				   ===
+# ===  Go Path           ===
 # ==========================
 
 # GOPATH settings
 GOPATH=$HOME/.go/
 
 # ==========================
-# ===  Cargo-Rust Path	 ===
+# ===  Cargo-Rust Path   ===
 # ==========================
 
 PATH=$PATH:$HOME/.cargo/bin
 
 # ==========================
-# ===  Dart Path				 ===
+# ===  Dart Path         ===
 # ==========================
 
 PATH=$PATH:/usr/local/opt/dart/libexec/
 
 # ==========================
-# ===  MySQL Path			   ===
+# ===  MySQL Path        ===
 # ==========================
 
 PATH=$PATH:/usr/local/mysql/bin/
 
 # ==========================
-# ===  Path						   ===
+# ===  Path              ===
 # ==========================
 
 # PATH settings
@@ -77,14 +77,14 @@ PATH=$PATH:/usr/local/sbin/
 PATH=$PATH:/usr/
 
 # ==========================
-# ===  Export						 ===
+# ===  Export            ===
 # ==========================
 
 export GOPATH
 export PATH
 
 # ==========================
-# ===  Editor					   ===
+# ===  Editor            ===
 # ==========================
 
 # Editor
@@ -92,17 +92,23 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # ==========================
-# ===  Screen width			 ===
+# ===  Screen width      ===
 # ==========================
 
 MANWIDTH=175
 export MANWIDTH
 
 # ==========================
-# ===  Pier							 ===
+# ===  Pier              ===
 # ==========================
 
 PIER="/Users/drivas/.dotfiles/rust/pier/"
 export PIER
+
+# ==========================
+# ===  Broot             ===
+# ==========================
+
+source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # ==========================

@@ -21,20 +21,20 @@ function set_prompt {
   local RESETCOLOR="\[\e[00m\]"
 
   # Directory
-	PS1="$RED> $CYAN\W"
+  PS1="$RED> $CYAN\W"
 
-	# Git
-	if git rev-parse --is-inside-work-tree 2> /dev/null | grep -q 'true'
-	then
-		PS1+="$WHITE["
-		PS1+="$YELLOW$(git rev-parse --abbrev-ref HEAD 2> /dev/null)$RESETCOLOR"
-		if [ $(git status --short | wc -l) -gt 0 ]
-		then
-			PS1+="$RED+$(git status --short | awk 'END{print NR}')$RESETCOLOR"
-		fi
-		PS1+="$WHITE]"
-	fi
+  # Git
+  if git rev-parse --is-inside-work-tree 2> /dev/null | grep -q 'true'
+  then
+    PS1+="$WHITE["
+    PS1+="$YELLOW$(git rev-parse --abbrev-ref HEAD 2> /dev/null)$RESETCOLOR"
+    if [ $(git status --short | wc -l) -gt 0 ]
+    then
+      PS1+="$RED+$(git status --short | awk 'END{print NR}')$RESETCOLOR"
+    fi
+    PS1+="$WHITE]"
+  fi
 
-	# Export prompt
-	PS1+="$WHITE\$ $RESETCOLOR"
+  # Export prompt
+  PS1+="$WHITE\$ $RESETCOLOR"
 }
