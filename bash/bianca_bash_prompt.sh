@@ -21,8 +21,8 @@ function set_prompt {
   local RESETCOLOR="\[\e[00m\]"
 
   # Directory
-	PS1="$RED> $CYAN\W"
+  PS1="$RED> $CYAN\W"
 
-	# Export prompt
-	PS1+="$WHITE\$ $RESETCOLOR"
+  # Export prompt
+  PS1+="$WHITE\$ $RESETCOLOR"
 }
