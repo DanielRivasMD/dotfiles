@@ -1,66 +1,11 @@
-# echo zprofile
+
 # ==========================
-# ===  Load settings	   ===
+# ===  Load settings     ===
 # ==========================
 
 # Load General profile
 if [ -f ~/.terminal_profile ]; then
-	. ~/.terminal_profile
+  . ~/.terminal_profile
 fi
-
-# ==========================
-# ===  General settings  ===
-# ==========================
-
-
-# ==========================
-# ===  Autocompletion		 ===
-# ==========================
-
-# Autocompletion with arrow interphase
-autoload -Uz compinit
-# Dump zcompdump
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-zstyle ':completion:*' menu select
-
-setopt COMPLETE_ALIASES
-zstyle ':completion::complete:*' gain-privileges 1
-
-# Case-insensitive
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# ==========================
-# ===  ZSH aliases			 ===
-# ==========================
-
-# Load ZSH aliases
-if [ -f ~/.zaliases ]; then
-  . ~/.zaliases
-fi
-
-# ==========================
-# ===   Prompt           ===
-# ==========================
-
-# Left prompt
-source ~/.dotfiles/zsh/zsh_prompt.sh
-set_prompt
-
-# Right prompt
-RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
-
-# ==========================
-# ===  Plugins AB        ===
-# ==========================
-
-# Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.dotfiles/zsh/local_zsh_plugins.txt > ~/.dotfiles/zsh/local_zsh_plugins.sh
-source ~/.dotfiles/zsh/local_zsh_plugins.sh
-
-# Plugins managed by antibody (AB) dinamically
-# source <(antibody init)
-# antibody bundle zdharma/fast-syntax-highlighting
-# antibody bundle zsh-users/zsh-autosuggestions
-# antibody bundle zsh-users/zsh-completions
 
 # ==========================
