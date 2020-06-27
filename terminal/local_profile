@@ -112,3 +112,9 @@ export PIER
 source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # ==========================
+# ===  Tree              ===
+# ==========================
+
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+# ==========================
