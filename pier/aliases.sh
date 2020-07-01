@@ -19,7 +19,7 @@ then
     print $i
   }
   ' | \
-  /usr/local/bin/runiq -
+  $(which runiq) -
 
 elif [[ "$1" == "reload" ]]
 then

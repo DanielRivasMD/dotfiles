@@ -4,7 +4,7 @@ clear
 
 if [[ "$1" == "accessed" ]]
 then
-  /usr/local/bin/exa \
+  $(which exa) \
     --long \
     --group-directories-first \
     --classify \
@@ -18,7 +18,7 @@ then
 
 elif [[ "$1" == "created" ]]
 then
-  /usr/local/bin/exa \
+  $(which exa) \
     --long \
     --group-directories-first \
     --classify \
@@ -32,7 +32,7 @@ then
 
 elif [[ "$1" == "absolute" ]]
 then
-  /usr/local/bin/exa \
+  $(which exa) \
     --long  \
     --classify  \
     --links  \
@@ -44,7 +44,7 @@ then
 
 elif [[ "$1" == "tree" ]]
 then
-  /usr/local/bin/exa \
+  $(which exa) \
     --long  \
     --group-directories-first  \
     --classify  \
@@ -59,7 +59,7 @@ then
 
 elif [[ "$1" == "dir" ]]
 then
-  /usr/local/bin/exa \
+  $(which exa) \
     --long  \
     --only-dirs  \
     --classify  \

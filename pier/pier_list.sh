@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/usr/local/bin/pier list | \
+$(which pier) list | \
 awk '
 BEGIN{
   FS = "[|]"
