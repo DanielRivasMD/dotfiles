@@ -1,6 +1,8 @@
 {
-    "Alt-/": "lua:comment.comment",
     "Alt,": "ToggleKeyMenu",
     "Alt-q": "Quit",
-    "Alt-s": "Save,Quit"
+    "Alt-S": "Save,Quit",
+    "Alt-s": "Save",
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment"
 }
