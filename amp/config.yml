@@ -1,0 +1,13 @@
+keymap:
+  normal:
+      ;: "application::switch_to_command_mode"
+      :: "application::switch_to_line_jump_mode"
+      "0": "application::switch_to_jump_mode"
+      "'": "application::switch_to_second_stage_jump_mode"
+      k: "view::scroll_up"
+      j: "view::scroll_down"
+      h: "cursor::move_to_start_of_line"
+      l: "cursor::move_to_end_of_line"
+      f: "application::switch_to_search_mode"
+      g: "cursor::move_to_first_line"
+      G: "cursor::move_to_last_line"
