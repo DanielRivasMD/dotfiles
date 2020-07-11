@@ -11,3 +11,18 @@
   path = .gitconfig.d/github
   path = .gitconfig.d/push
   path = .gitconfig.d/user
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
