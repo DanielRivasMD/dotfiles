@@ -122,6 +122,15 @@ pstorm() { command open "$@" -a PhpStorm }
 rstudio() { command open "$@" -a RStudio }
 
 # ==========================
+# ===  McFly             ===
+# ==========================
+
+if [[ -r "$(brew --prefix)/opt/mcfly/mcfly.zsh" ]]
+then
+  source "$(brew --prefix)/opt/mcfly/mcfly.zsh"
+fi
+
+# ==========================
 # ===  zoxide            ===
 # ==========================
 

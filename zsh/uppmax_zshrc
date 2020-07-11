@@ -106,3 +106,12 @@ mman() { command man "$@" | more }
 eval "$(zoxide init zsh)"
 
 # ==========================
+# ===  McFly             ===
+# ==========================
+
+if [[ -r "/home/drivas/private/software/mcfly/mcfly.zsh" ]]
+then
+  source "/home/drivas/private/software/mcfly/mcfly.zsh"
+fi
+
+# ==========================
