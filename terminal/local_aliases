@@ -1,5 +1,12 @@
 
 # ==========================
+# ===  # Forked patches  ===
+# ==========================
+
+alias aliases='clear && ~/bin/forkedPatch/aliases'
+alias pier='clear && ~/bin/forkedPatch/pier'
+
+# ==========================
 # ===  General aliases   ===
 # ==========================
 
@@ -29,17 +36,19 @@ alias lg='lazygit'
 
 # aliases
 alias als='aliases'
+alias alr='clear && aliases rehash && echo "aliases reloaded"'
+alias ald='clear && aliases directories'
 alias ale='aliases exec ./'
 alias al='aliases exec ~/'
+
+# broot
+alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
 # exa
 alias l='clear && exa --long --group-directories-first --classify --links --git --header --group'
 alias la='clear && exa --long --group-directories-first --classify --links --git --header --group --all'
 alias lr='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group'
 alias lar='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all'
-
-# broot
-alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
 # ==========================
 # ===  Shell functions   ===
