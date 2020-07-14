@@ -93,7 +93,9 @@ alias = 'gt0'
 command = '''
 #!/bin/zsh
 directory="/Users/drivas/.dotfiles/git/"
+source ${PIER}break_single_line.sh ${MANWIDTH}
 awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/functions
+source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'function git shortcuts'
 tags = ['git']
@@ -103,7 +105,9 @@ alias = 'gt1'
 command = '''
 #!/bin/zsh
 directory="/Users/drivas/.dotfiles/git/"
+source ${PIER}break_single_line.sh ${MANWIDTH}
 awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/alias_one_letter
+source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'one-letter git shortcuts'
 tags = ['git']
@@ -113,7 +117,9 @@ alias = 'gt2'
 command = '''
 #!/bin/zsh
 directory="/Users/drivas/.dotfiles/git/"
-  awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/alias_two_letter
+source ${PIER}break_single_line.sh ${MANWIDTH}
+awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/alias_two_letter
+source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'two-letter git shortcuts'
 tags = ['git']

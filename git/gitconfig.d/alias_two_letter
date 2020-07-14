@@ -5,7 +5,7 @@
   #####
 
   ## add just the files in the local directory that are updated.
-  ## au = add --update .
+  ## au = add --update.
 
   # add by patch then commit - looks at each change, and asks if we want to put it in the repo, then commits.
   ac = !"git add --patch; git commit"
@@ -15,6 +15,9 @@
 
   # add interactive.
   ai = !"clear && git add --interactive"
+
+  # add patch.
+  ap = !"clear && git add --patch"
 
   # branch - edit the description
   be = branch --edit-description
