@@ -1,144 +1,283 @@
-[scripts.al]
-alias = 'al'
-command = 'source ${PIER}aliases.sh list                                       #list aliases'
-tags = ['alias']
-
-[scripts.ald]
-alias = 'ald'
-command = 'source ${PIER}aliases.sh dirs                                       #list aliases directories'
-tags = ['alias']
-
-[scripts.alr]
-alias = 'alr'
-command = 'source ${PIER}aliases.sh reload                                     #reload aliases'
+[scripts.cd]
+alias = 'cd'
+command = '''
+#!/bin/zsh
+  cheat -d | \
+  awk '
+  BEGIN{
+    gray = "\033[1;30m"
+    cyan = "\033[0;36m"
+  }
+  {
+    printf "%s ", gray "|";
+    printf "%-30s", cyan $1;
+    printf "%s ", gray "|";
+    printf "%-51s ", $2;
+    printf "%1s\n", "|";
+  }
+  '
+'''
+description = 'list cheat directories'
 tags = ['alias']
 
 [scripts.ch]
 alias = 'ch'
-command = 'source ${PIER}cheat.sh list                                         #list available cheats'
-tags = ['cheat']
+command = '''
+#!/bin/zsh
+cheat -l "$1" | \
+awk '
+BEGIN{
 
-[scripts.cha]
-alias = 'cha'
-command = 'source ${PIER}cheat.sh alfred                                       #list alfred cheats'
-tags = ['cheat']
+  # colors
+  red = "\033[1;31m"
+  gray = "\033[1;30m"
+  blue = "\033[1;34m"
+  yellow = "\033[1;33m"
+  cyan = "\033[0;36m"
+  green = "\033[0;32m"
+}
 
-[scripts.chb]
-alias = 'chb'
-command = 'source ${PIER}cheat.sh bash                                         #list bash cheats'
-tags = ['cheat']
+{
+  if ( NR == 1 )
+  {
 
-[scripts.chc]
-alias = 'chc'
-command = 'source ${PIER}cheat.sh cli                                          #list cli cheats'
-tags = ['cheat']
+    # decompose printf
+    printf "%s ", gray "|";
+    printf "%-40s", blue $1;
+    printf "%s", gray "|";
+    printf "%49s ", blue $3;
+    printf "%s\n", gray "|";
 
-[scripts.chd]
-alias = 'chd'
-command = 'source ${PIER}cheat.sh dirs                                         #list cheat directories'
-tags = ['cheat']
+    for ( m = 1; m <= 80; m++ )
+    {
+      printf "%s", gray "‡";
+    }
+    print ""
+  }
+else
+  {
 
-[scripts.chg]
-alias = 'chg'
-command = 'source ${PIER}cheat.sh go                                           #list go cheats'
-tags = ['cheat']
-
-[scripts.chj]
-alias = 'chj'
-command = 'source ${PIER}cheat.sh julia                                        #list julia cheats'
-tags = ['cheat']
-
-[scripts.chp]
-alias = 'chp'
-command = 'source ${PIER}cheat.sh python                                       #list python cheats'
-tags = ['cheat']
-
-[scripts.chr]
-alias = 'chr'
-command = 'source ${PIER}cheat.sh R                                            #list R cheats'
-tags = ['cheat']
-
-[scripts.chs]
-alias = 'chs'
-command = 'source ${PIER}cheat.sh rust                                         #list rust cheats'
+    # replicate as header
+    printf "%s ", gray "|";
+    printf "%-40s", yellow $1;
+    printf "%s", gray "|";
+    printf "%49s ", cyan $3;
+    printf "%s\n", gray "|";
+  }
+}
+'
+'''
+description = 'list available cheats'
 tags = ['cheat']
 
 [scripts.git]
 alias = 'git'
-command = 'source ${PIER}git.sh                                                #all-round git status'
-tags = ['git']
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
 
-[scripts.globalgit]
-alias = 'globalgit'
-command = 'source ${PIER}git_all_status.sh                                     #all git repositoris status'
+git status --show-stash
+source ${PIER}break_single_line.sh ${MANWIDTH}
+
+git stash list
+source ${PIER}break_double_line.sh ${MANWIDTH}
+
+git lk -20
+source ${PIER}break_single_line.sh ${MANWIDTH}
+'''
+description = 'all-round git status'
 tags = ['git']
 
 [scripts.gt0]
 alias = 'gt0'
-command = 'source /Users/drivas/.dotfiles/git/manual_parser.sh functions       #one-letter git shortcuts'
+command = '''
+#!/bin/zsh
+directory="/Users/drivas/.dotfiles/git/"
+awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/functions
+'''
+description = 'function git shortcuts'
 tags = ['git']
 
 [scripts.gt1]
 alias = 'gt1'
-command = 'source /Users/drivas/.dotfiles/git/manual_parser.sh one-letter      #two-letter git shortcuts'
+command = '''
+#!/bin/zsh
+directory="/Users/drivas/.dotfiles/git/"
+awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/alias_one_letter
+'''
+description = 'one-letter git shortcuts'
 tags = ['git']
 
 [scripts.gt2]
 alias = 'gt2'
-command = 'source /Users/drivas/.dotfiles/git/manual_parser.sh two-letter      #function git shortcuts'
+command = '''
+#!/bin/zsh
+directory="/Users/drivas/.dotfiles/git/"
+  awk -f ${directory}manual_parser.awk ${directory}gitconfig.d/alias_two_letter
+'''
+description = 'two-letter git shortcuts'
 tags = ['git']
 
 [scripts.kal]
 alias = 'kal'
-command = 'source ${PIER}kal.sh work                                           #work calendar'
-tags = ['khal']
-
-[scripts.kall]
-alias = 'kall'
-command = 'source ${PIER}kal.sh all                                            #all calendars'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+khal calendar
+source ${PIER}break_single_line.sh ${MANWIDTH}
+'''
+description = 'all calendars'
 tags = ['khal']
 
 [scripts.kals]
 alias = 'kals'
-command = 'source ${PIER}kal.sh list                                           #list calendars'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+khal list \
+  -f "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
+  -d SuperRugby \
+  -d Astronomy
+source ${PIER}break_single_line.sh ${MANWIDTH}
+'''
+description = 'list calendars'
 tags = ['khal']
 
 [scripts.kastro]
 alias = 'kastro'
-command = 'source ${PIER}kal.sh astro                                          #astronomy calendar'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+khal calendar \
+  --include-calendar Astronomy
+source ${PIER}break_single_line.sh ${MANWIDTH}
+'''
+description = 'astronomy calendar'
+tags = ['khal']
+
+[scripts.kaw]
+alias = 'kaw'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+khal calendar \
+  -f "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
+  -d SuperRugby \
+  -d Astronomy
+source ${PIER}break_single_line.sh ${MANWIDTH}
+'''
+description = 'work calendar'
 tags = ['khal']
 
 [scripts.krugby]
 alias = 'krugby'
-command = 'source ${PIER}kal.sh SuperRugby                                     #SuperRugby calendar'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+khal calendar \
+  --include-calendar SuperRugby
+source ${PIER}break_single_line.sh ${MANWIDTH}
+'''
+description = 'SuperRugby calendar'
 tags = ['khal']
 
-[scripts.l]
-alias = 'l'
-command = 'source ${PIER}pier.sh list                                          #list pier commands'
-tags = ['alias']
 
 [scripts.xa]
 alias = 'xa'
-command = 'source ${PIER}exa.sh accessed                                       #list files by accessed time'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+  $(which exa) \
+    --long \
+    --group-directories-first \
+    --classify \
+    --links \
+    --git \
+    --header \
+    --sort=accessed \
+    --group \
+    --all \
+    --time accessed
+'''
+description = 'list files by accessed time'
 tags = ['exa']
 
 [scripts.xbs]
 alias = 'xbs'
-command = 'source ${PIER}exa.sh absolute                                       #list all files without clusters'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+  $(which exa) \
+    --long  \
+    --classify  \
+    --links  \
+    --git  \
+    --header  \
+    --sort=newest  \
+    --group \
+    --all
+'''
+description = 'list all files without clusters'
 tags = ['exa']
 
 [scripts.xc]
 alias = 'xc'
-command = 'source ${PIER}exa.sh created                                        #list files by created time'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+  $(which exa) \
+    --long \
+    --group-directories-first \
+    --classify \
+    --links \
+    --git \
+    --header \
+    --sort=created \
+    --group \
+    --all \
+    --time created
+'''
+description = 'list files by created time'
 tags = ['exa']
 
 [scripts.xd]
 alias = 'xd'
-command = 'source ${PIER}exa.sh dir                                            #list directory tree'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+  $(which exa) \
+    --long  \
+    --only-dirs  \
+    --classify  \
+    --links  \
+    --git  \
+    --header  \
+    --group  \
+    --all \
+    --tree  \
+    --level 3  \
+    --ignore-glob ".git|.idea"
+'''
+description = 'list directory tree'
 tags = ['exa']
 
 [scripts.xt]
 alias = 'xt'
-command = 'source ${PIER}exa.sh tree                                           #list file tree'
+command = '''
+#!/bin/zsh
+source ${PIER}break_single_line.sh ${MANWIDTH}
+  $(which exa) \
+    --long  \
+    --group-directories-first  \
+    --classify  \
+    --links  \
+    --git  \
+    --header  \
+    --group  \
+    --all \
+    --tree  \
+    --level 3  \
+    --ignore-glob ".git|.idea"
+'''
+description = 'list file tree'
 tags = ['exa']
