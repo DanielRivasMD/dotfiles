@@ -181,6 +181,31 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
 description = 'SuperRugby calendar'
 tags = ['khal']
 
+[scripts.sftpBianca]
+alias = 'sftpBianca'
+command = '''
+sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se
+'''
+description = 'sftp to bianca sens2019016'
+tags = ['remote']
+
+[scripts.sftpUpp]
+alias = 'sftpUpp'
+command = 'sftp drivas@rackham.uppmax.uu.se'
+description = 'sftp to Uppmax Rackham'
+tags = ['remote']
+
+[scripts.sshBianca]
+alias = 'sshBianca'
+command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
+description = 'ssh to bianca sens2019016'
+tags = ['remote']
+
+[scripts.sshUpp]
+alias = 'sshUpp'
+command = 'ssh drivas@rackham.uppmax.uu.se'
+description = 'ssh to Uppmax Rackham'
+tags = ['remote']
 
 [scripts.xa]
 alias = 'xa'
@@ -281,3 +306,5 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'list file tree'
 tags = ['exa']
+
+[default]
