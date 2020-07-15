@@ -36,10 +36,10 @@ alias lg='lazygit'
 
 # aliases
 alias als='aliases'
-alias alr='clear && aliases rehash && echo "aliases reloaded"'
+alias alr='clear && aliases rehash && aliases && echo "aliases reloaded"'
 alias ald='clear && aliases directories'
-alias ale='aliases exec ./'
-alias al='aliases exec ~/'
+alias al='aliases exec ./'
+alias a='aliases exec ~/'
 
 # broot
 alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'

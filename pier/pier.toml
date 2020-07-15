@@ -70,6 +70,12 @@ else
 description = 'list available cheats'
 tags = ['cheat']
 
+[scripts.cpu]
+alias = 'cpu'
+command = 'procs --sortd CPU --watch'
+description = 'watch resources usage CPU-sorted'
+tags = ['shell']
+
 [scripts.git]
 alias = 'git'
 command = '''
@@ -186,6 +192,14 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'SuperRugby calendar'
 tags = ['khal']
+
+[scripts.path]
+alias = 'path'
+command = '''
+echo $PATH | xsv flatten -d ":" -n
+'''
+description = 'display PATH'
+tags = ['shell']
 
 [scripts.sftpBianca]
 alias = 'sftpBianca'
