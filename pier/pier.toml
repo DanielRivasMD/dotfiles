@@ -22,6 +22,31 @@ alias = 'fc'
 command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
 description = 'count files in present address'
 tags = ['shell']
+
+[scripts.t-uppmax]
+alias = 't-uppmax'
+command = 'source ~/.tmux/sessions/Uppmax.sh'
+description = 'three-tab remote anchor [ monitor channel remote ]'
+tags = ['tmux']
+
+[scripts.t-bianca]
+alias = 't-bianca'
+command = 'source ~/.tmux/sessions/Bianca.sh'
+description = 'three-tab remote anchor [ monitor channel remote ]'
+tags = ['tmux']
+
+[scripts.t-dev]
+alias = 't-dev'
+command = 'source ~/.tmux/sessions/Dev.sh'
+description = 'three-tab development [ monitor zsh zsh ]'
+tags = ['tmux']
+
+[scripts.t-repl]
+alias = 'tmux-repl'
+command = 'source ~/.tmux/sessions/REPL.sh'
+description = 'Julia two-tab session [ monitor julia ]'
+tags = ['tmux']
+
 [scripts.cd]
 alias = 'cd'
 command = '''
@@ -225,28 +250,28 @@ echo $PATH | xsv flatten -d ":" -n
 description = 'display PATH'
 tags = ['shell']
 
-[scripts.sftpBianca]
-alias = 'sftpBianca'
+[scripts.sftp-bianca]
+alias = 'sftp-bianca'
 command = '''
 sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se
 '''
 description = 'sftp to bianca sens2019016'
 tags = ['remote']
 
-[scripts.sftpUpp]
-alias = 'sftpUpp'
+[scripts.sftp-uppmax]
+alias = 'sftp-uppmax'
 command = 'sftp drivas@rackham.uppmax.uu.se'
 description = 'sftp to Uppmax Rackham'
 tags = ['remote']
 
-[scripts.sshBianca]
-alias = 'sshBianca'
+[scripts.ssh-bianca]
+alias = 'ssh-bianca'
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to bianca sens2019016'
 tags = ['remote']
 
-[scripts.sshUpp]
-alias = 'sshUpp'
+[scripts.ssh-uppmax]
+alias = 'ssh-uppmax'
 command = 'ssh drivas@rackham.uppmax.uu.se'
 description = 'ssh to Uppmax Rackham'
 tags = ['remote']
