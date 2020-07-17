@@ -42,7 +42,7 @@ description = 'three-tab development [ monitor zsh zsh ]'
 tags = ['tmux']
 
 [scripts.t-repl]
-alias = 'tmux-repl'
+alias = 't-repl'
 command = 'source ~/.tmux/sessions/REPL.sh'
 description = 'Julia two-tab session [ monitor julia ]'
 tags = ['tmux']
