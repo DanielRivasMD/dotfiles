@@ -1,3 +1,27 @@
+
+[scripts.cChrome]
+alias = 'cChrome'
+command = '''for i in $(procs 'Google Chrome' --or chromedriver | awk 'NR > 2 {print $1}' ); do kill $i; done'''
+description = 'stop all Chrome jobs'
+tags = ['shell']
+
+[scripts.cFire]
+alias = 'cFire'
+command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; done'''
+description = 'stop all Firefox jobs'
+tags = ['shell']
+
+[scripts.dc]
+alias = 'dc'
+command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
+description = 'count directories in present address'
+tags = ['shell']
+
+[scripts.fc]
+alias = 'fc'
+command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
+description = 'count files in present address'
+tags = ['shell']
 [scripts.cd]
 alias = 'cd'
 command = '''
