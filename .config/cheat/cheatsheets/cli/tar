@@ -1,0 +1,24 @@
+---
+syntax: bash
+---
+
+# Create a tar archive
+tar -cf archive.tar file1 file2 ... fileN
+
+# Create a tar gzipp'd archive
+tar -zcf archive.tar.gz file1 file2 ... fileN
+
+# Create multi-part tar archives from a directory
+tar cf - /path/to/directory|split -b<max_size_of_part>M - archive.tar
+
+# Extract all files from a tar archive
+tar -xf archive.tar
+
+# Extract all files from a tar gzipped archive
+tar -zxf archive.tar.gz
+
+# Extract one file from a tar archive
+tar -xf archive.tar the_one_file
+
+# Lists all files in a tar archive
+tar -tf archive.tar </max_size_of_part>

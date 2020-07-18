@@ -1,0 +1,243 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:boo
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
+
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+#
+#  .d8888b.  8888888888 88888888888 88888888888 8888888 888b    888  .d8888b.   .d8888b.
+# d88P  Y88b 888            888         888       888   8888b   888 d88P  Y88b d88P  Y88b
+# Y88b.      888            888         888       888   88888b  888 888    888 Y88b.
+#  "Y888b.   8888888        888         888       888   888Y88b 888 888         "Y888b.
+#     "Y88b. 888            888         888       888   888 Y88b888 888  88888     "Y88b.
+#       "888 888            888         888       888   888  Y88888 888    888       "888
+# Y88b  d88P 888            888         888       888   888   Y8888 Y88b  d88P Y88b  d88P
+#  "Y8888P"  8888888888     888         888     8888888 888    Y888  "Y8888P88  "Y8888P"
+#
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.workspace':
+  'ctrl-shift-8': 'github:toggle-github-tab'
+  'ctrl-shift-9': 'github:toggle-git-tab'
+
+'.platform-darwin':
+
+# Editor core
+  'shift-alt-cmd-e': 'find-and-replace:replace-all'
+  'shift-cmd-e': 'find-and-replace:show-replace'
+
+  'cmd-enter': 'abort!'
+  'alt-enter': 'abort!'
+
+# Go to line
+  'cmd-;': 'go-to-line:toggle'
+  'ctrl-g': 'abort!'
+
+# Tree view
+  'cmd-\'': 'tree-view:toggle-focus'
+  'ctrl-0': 'abort!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.platform-darwin atom-workspace':
+
+# ToDo
+  'cmd-y': 'todo:toggle'
+
+# Terminal
+  'shift-cmd-C': 'platformio-ide-terminal:focus'
+  'shift-cmd-H': 'platformio-ide-terminal:new'
+  'alt-cmd-f': 'abort!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Go to line
+'.go-to-line':
+  'space': 'core:cancel'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+'.platform-darwin atom-text-editor':
+
+# Project Switcher
+  'cmd-;': 'unset!'
+  # 'alt-;': 'project-switcher:toggle'
+
+# Core Editor
+  'ctrl-alt-]': 'editor:unfold-current-row'
+  'ctrl-alt-[': 'editor:fold-current-row'
+  'shift-ctrl-alt-]': 'editor:unfold-all'
+  'shift-ctrl-alt-[': 'editor:fold-all'
+
+  'alt-cmd-]': 'unset!'
+  'alt-cmd-[': 'unset!'
+  'shift-alt-cmd-]': 'unset!'
+  'shift-alt-cmd-[': 'unset!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Autocomplete-plus
+'.autocomplete-active':
+  'enter': 'autocomplete-plus:confirm'
+  'cmd-enter': 'autocomplete-plus:navigate-to-description-more-link'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Vim Insert mode
+'atom-text-editor.vim-mode-plus:not(.normal-mode)':
+  'j j': 'vim-mode-plus:activate-normal-mode'
+  'escape': 'unset!'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Vim leader
+'atom-workspace:not(.leader-mode) atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode)':
+  ',': 'leader:enable'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# Core Editor
+'atom-text-editor':
+  'alt-t': 'unset!'
+  'shift-cmd-C': 'unset!'
+
+  # Pandoc quick export
+  'cmd-alt-o h': 'Pandoc:pandoc2HTML'
+  'cmd-alt-o p': 'Pandoc:pandoc2PDF'
+
+#------------------------------------------------------------------------------------------------------------------------------
+#
+# 888    d8P  8888888888 Y88b   d88P 888888b.  8888888 888b    888 8888888b. 8888888 888b    888  .d8888b.   .d8888b.
+# 888   d8P   888         Y88b d88P  888  "88b   888   8888b   888 888  "Y88b  888   8888b   888 d88P  Y88b d88P  Y88b
+# 888  d8P    888          Y88o88P   888  .88P   888   88888b  888 888    888  888   88888b  888 888    888 Y88b.
+# 888d88K     8888888       Y888P    8888888K.   888   888Y88b 888 888    888  888   888Y88b 888 888         "Y888b.
+# 8888888b    888            888     888  "Y88b  888   888 Y88b888 888    888  888   888 Y88b888 888  88888     "Y88b.
+# 888  Y88b   888            888     888    888  888   888  Y88888 888    888  888   888  Y88888 888    888       "888
+# 888   Y88b  888            888     888   d88P  888   888   Y8888 888  .d88P  888   888   Y8888 Y88b  d88P Y88b  d88P
+# 888    Y88b 8888888888     888     8888888P" 8888888 888    Y888 8888888P" 8888888 888    Y888  "Y8888P88  "Y8888P"
+#
+#------------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------/ GENERAL KEYBINDINGS /-----------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+  ',': 'custom:insert-comma'
+
+  'alt-5': 'custom:insert-tilde'
+
+  'alt-=': 'custom:insert-equal'
+  'alt-\\': 'custom:insert-equalequal'
+
+  'alt--': 'custom:insert-minus'
+  'alt-0': 'custom:insert-plus'
+  'alt-9': 'custom:insert-divide'
+  'alt-8': 'custom:insert-times'
+
+  'alt-,': 'custom:insert-lessthan'
+  'alt-[': 'custom:insert-lessequal'
+  'alt-.': 'custom:insert-morethan'
+  'alt-]': 'custom:insert-moreequal'
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Awk /-----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Bash /----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Go /------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+  'alt-;': 'custom:insert-go_assign'
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Julia /---------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+  'alt-_': 'custom:insert-minus_broadcast'
+  'alt-)': 'custom:insert-plus_broadcast'
+  'alt-(': 'custom:insert-divide_broadcast'
+  'alt-*': 'custom:insert-times_broadcast'
+
+  'alt-<': 'custom:insert-lessthan_broadcast'
+  'alt-{': 'custom:insert-lessequal_broadcast'
+  'alt->': 'custom:insert-morethan_broadcast'
+  'alt-}': 'custom:insert-moreequal_broadcast'
+
+  'alt-+': 'custom:insert-equal_broadcast'
+  'alt-|': 'custom:insert-equalequal_broadcast'
+  '+': 'custom:insert-equalequalequal'
+
+  'alt-:': 'custom:insert-julia_pipe'
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Markdown /------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ R /-------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+  'alt-/': 'custom:insert-r_assign'
+  'alt-?': 'custom:insert-r_up_assign'
+
+  'alt-7': 'custom:insert-r_pipe'
+  'alt-&': 'custom:insert-r_pipe_assign'
+  'alt-6': 'custom:insert-r_pipe_var'
+  'alt-^': 'custom:insert-r_pipe_tee'
+  'alt-%': 'custom:insert-r_include'
+
+#------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------/ Rust /----------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------
+
+  'alt-\'': 'custom:insert-rust_assign'
+  'alt-"': 'custom:insert-r_right_assign'
+
+#------------------------------------------------------------------------------------------------------------------------------
+#
+# 8888888888 888b    888 8888888b.
+# 888        8888b   888 888  "Y88b
+# 888        88888b  888 888    888
+# 8888888    888Y88b 888 888    888
+# 888        888 Y88b888 888    888
+# 888        888  Y88888 888    888
+# 888        888   Y8888 888  .d88P
+# 8888888888 888    Y888 8888888P"
+#
+#------------------------------------------------------------------------------------------------------------------------------

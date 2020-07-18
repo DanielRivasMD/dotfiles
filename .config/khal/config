@@ -1,0 +1,73 @@
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
+weeknumbers = left
+
+
+
+[default]
+timedelta = 14d
+highlight_event_days = True
+show_all_days = True
+print_new = event
+
+
+[highlight_days]
+multiple = light magenta
+method = fg
+
+
+
+[calendars]
+
+[[UU]]
+path = /Users/drivas/.config/khal/calendars/UU
+type = calendar
+color = brown
+priority = 15
+
+[[TY]]
+path = /Users/drivas/.config/khal/calendars/TY
+type = calendar
+color = dark green
+priority = 15
+
+[[UdeG]]
+path = /Users/drivas/.config/khal/calendars/UdeG
+type = calendar
+color = dark blue
+priority = 15
+
+[[Personal]]
+path = /Users/drivas/.config/khal/calendars/Personal
+type = calendar
+color = dark magenta
+priority = 9
+
+[[Astronomy]]
+path = /Users/drivas/.config/khal/calendars/Astronomy
+type = calendar
+color = dark cyan
+priority = 7
+
+[[Simona]]
+path = /Users/drivas/.config/khal/calendars/Simona
+type = calendar
+color = dark magenta
+priority = 9
+
+[[SuperRugby]]
+path = /Users/drivas/.config/khal/calendars/SuperRugby
+type = calendar
+color = dark gray
+priority = 8
+
+[[Grant]]
+path = /Users/drivas/.config/khal/calendars/Grant
+type = calendar
+color = dark red
+priority = 8

@@ -1,0 +1,18 @@
+---
+syntax: bash
+---
+
+# purge duplicates
+!dups[0]++
+
+# gsub
+gsub(regexp, replacement [, target])
+
+# split
+split(string, array [, fieldsep [, seps ] ])
+
+# index
+index(in, find)
+
+# substr
+substr(string, start [, length ])

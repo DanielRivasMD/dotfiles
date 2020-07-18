@@ -1,0 +1,78 @@
+
+# ==========================
+# ===  # Forked patches  ===
+# ==========================
+
+alias aliases='clear && ~/bin/forkedPatch/aliases'
+alias pier='clear && ~/bin/forkedPatch/pier'
+
+# ==========================
+# ===  General aliases   ===
+# ==========================
+
+# General aliases
+alias cdr='cd $(pwd)'
+alias c='clear'
+
+# ==========================
+
+# mplayer
+alias mp='mplayer'
+
+# ==========================
+
+# Enable aliases to be sudo'ed
+alias sudo='sudo '
+
+# ==========================
+# ===  Go toolLinks      ===
+# ==========================
+
+# force micro to open on xterm. tmux compatible
+alias micro='TERM=xterm-256color micro'
+alias lg='lazygit'
+
+# ==========================
+# ===  Rust toolLinks    ===
+# ==========================
+
+# aliases
+alias als='aliases'
+alias alr='clear && aliases rehash && aliases && echo "aliases reloaded"'
+alias ald='clear && aliases directories'
+alias al='aliases exec ./'
+alias a='aliases exec ~/'
+
+# broot
+alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
+
+# exa
+alias l='clear && exa --long --group-directories-first --classify --links --git --header --group'
+alias la='clear && exa --long --group-directories-first --classify --links --git --header --group --all'
+alias lr='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group'
+alias lar='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all'
+
+# wordcrab
+alias wc='wordcrab'
+
+# ==========================
+# ===  Shell functions   ===
+# ==========================
+
+# Wrapper for cd. Updates PROMPT every time 'cd' is called. Compatible with 'cl'
+function cd() {
+  builtin cd "$@" && set_prompt
+}
+export cd
+
+# Modified version to 'cd' and 'lr'
+function cl() {
+  cd "$@" && lr
+}
+
+# Rmarkdown knit
+function knit() {
+  R --slave -e "rmarkdown::render('$1')" > /dev/null
+}
+
+# ==========================
