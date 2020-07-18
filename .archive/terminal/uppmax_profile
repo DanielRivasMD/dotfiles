@@ -1,0 +1,98 @@
+
+# ==========================
+# ===  Uppmax aliases    ===
+# ==========================
+
+# Load General aliases
+if [ -f ~/.terminal_aliases ]; then
+  . ~/.terminal_aliases
+fi
+
+# ==========================
+# ===  Uppmax default    ===
+# ==========================
+
+# Modules, activate the module command
+case "$0" in
+  -sh|sh|*/sh)	modules_shell=sh ;;
+  -ksh|ksh|*/ksh)	modules_shell=ksh ;;
+  -zsh|zsh|*/zsh)	modules_shell=zsh ;;
+  -bash|bash|*/bash)	modules_shell=bash ;;
+esac
+module() { eval `/usr/local/Modules/$MODULE_VERSION/bin/modulecmd $modules_shell $*`; }
+
+# ==========================
+
+# modules are used to manage user environment and software packages
+if [ -f /etc/profile.modules ]
+then
+  . /etc/profile.modules
+# load a default environment
+# module load sge
+# PGI compilers
+# module load pgi
+fi
+
+# ==========================
+
+# Check if I am interactive and proceed
+[[ $- != *i* ]] && return
+
+# ==========================
+# ===  tmux check        ===
+# ==========================
+
+# Manage tmux
+module load tmux/2.5
+[ -z "$TMUX" ] && { tmux a || exec tmux new -s Uppmax && exit; }
+
+# # ==========================
+# # ===  BLAST database    ===
+# # ==========================
+#
+# # BLAST database
+# export BLASTDB=/sw/data/uppnex/blast_databases
+
+# ==========================
+# ===  General settings  ===
+# ==========================
+
+# No duplicates in bash history
+HISTCONTROL=ignorespace:erasedups
+
+# ==========================
+# ===  Go Path           ===
+# ==========================
+
+# GOPATH settings
+
+# ==========================
+# ===  Cargo-Rust Path   ===
+# ==========================
+
+PATH=$PATH:$HOME/.cargo/bin
+
+# ==========================
+# ===  Path              ===
+# ==========================
+
+# PATH settings
+PATH=$PATH:$HOME/bin
+
+export PATH
+
+# ==========================
+# ===  Editor            ===
+# ==========================
+
+# Editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# ==========================
+# ===  Tree              ===
+# ==========================
+
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+# ==========================

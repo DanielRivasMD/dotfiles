@@ -1,0 +1,53 @@
+
+# ==========================
+# ===  General aliases   ===
+# ==========================
+
+# General aliases
+alias cdr='cd $(pwd)'
+alias c='clear'
+
+# ==========================
+# ===  Rust toolLinks    ===
+# ==========================
+
+# aliases
+alias als='aliases'
+alias ale='aliases exec ./'
+alias al='aliases exec ~/'
+
+# exa
+alias l='clear && exa --long --group-directories-first --classify --links --header --group'
+alias la='clear && exa --long --group-directories-first --classify --links --header --group --all'
+alias lr='clear && exa --long --group-directories-first --classify --links --header --sort=newest --group'
+alias lar='clear && exa --long --group-directories-first --classify --links --header --sort=newest --group --all'
+
+# broot
+alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
+
+# ==========================
+# ===  Shell functions   ===
+# ==========================
+
+# Wrapper for cd. Updates PROMPT every time 'cd' is called. Compatible with 'cl'
+function cd() {
+  builtin cd "$@" && set_prompt
+}
+export cd
+
+# Modified version to 'cd' and 'ls -Goghtr'
+function cl() {
+  cd "$@" && lr
+}
+
+# ==========================
+# ===  Uppmax aliases    ===
+# ==========================
+
+#Uppmax aliases
+alias jsnow='jobinfo -u drivas -M snowy'
+alias jrack='jobinfo -u drivas -M rackham'
+alias sqsnow='squeue -u drivas -M snowy'
+alias sqrack='squeue -u drivas -M rackham'
+
+# ==========================
