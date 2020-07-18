@@ -25,25 +25,81 @@ tags = ['shell']
 
 [scripts.t-uppmax]
 alias = 't-uppmax'
-command = 'source ~/.tmux/sessions/Uppmax.sh'
+command = '''
+#!/bin/zsh
+tmux new-session \
+  -s 'Uppmax' \
+  -c "$HOME" \
+  -n 'monitor' \; \
+  split-window -v -l 20% \; \
+  send-keys 'pier cpu' C-m \; \
+  select-pane -t 1 \; \
+  new-window -n 'channel' \; \
+  send-keys 'pier sftp-uppmax' C-m \; \
+  new-window -n 'remote' \; \
+  send-keys 'pier ssh-uppmax' C-m \; \
+  select-window -t 1 \;
+'''
 description = 'three-tab remote anchor [ monitor channel remote ]'
 tags = ['tmux']
 
 [scripts.t-bianca]
 alias = 't-bianca'
-command = 'source ~/.tmux/sessions/Bianca.sh'
+command = '''
+#!/bin/zsh
+tmux new-session \
+  -s 'Bianca' \
+  -c "$HOME" \
+  -n 'monitor' \; \
+  split-window -v -l 20% \; \
+  send-keys 'pier cpu' C-m \; \
+  select-pane -t 1 \; \
+  new-window -n 'channel' \; \
+  send-keys 'pier sftp-bianca' C-m \; \
+  new-window -n 'remote' \; \
+  send-keys 'pier ssh-bianca' C-m \; \
+  select-window -t 1 \;
+'''
 description = 'three-tab remote anchor [ monitor channel remote ]'
 tags = ['tmux']
 
 [scripts.t-dev]
 alias = 't-dev'
-command = 'source ~/.tmux/sessions/Dev.sh'
+command = '''
+#!/bin/zsh
+tmux new-session \
+  -s 'Dev' \
+  -c "$HOME" \
+  -n 'monitor' \; \
+  split-window -v -l 20% \; \
+  send-keys 'pier cpu' C-m \; \
+  select-pane -t 1 \; \
+  split-window -h -l 25% -c "/Users/drivas/AncientBackup/Songs" \; \
+  select-pane -t 1 \; \
+  new-window -n 'zsh' \; \
+  send-keys C-m \; \
+  new-window -n 'zsh' \; \
+  send-keys C-m \; \
+  select-window -t 1 \;
+'''
 description = 'three-tab development [ monitor zsh zsh ]'
 tags = ['tmux']
 
 [scripts.t-repl]
 alias = 't-repl'
-command = 'source ~/.tmux/sessions/REPL.sh'
+command = '''
+#!/bin/zsh
+tmux new-session \
+  -s 'Julia' \
+  -c "$HOME" \
+  -n 'monitor' \; \
+  split-window -v -l 20% \; \
+  send-keys 'pier cpu' C-m \; \
+  select-pane -t 1 \; \
+  new-window -n 'julia' \; \
+  send-keys 'Julia' C-m \; \
+  select-window -t 1 \;
+'''
 description = 'Julia two-tab session [ monitor julia ]'
 tags = ['tmux']
 
