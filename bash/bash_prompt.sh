@@ -1,1 +1,0 @@
-/Users/drivas/.dotfiles/bash/local_bash_prompt.sh
