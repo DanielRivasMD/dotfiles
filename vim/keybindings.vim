@@ -66,26 +66,26 @@ inoremap æ <space>=><space>
 inoremap Æ <space>-><space>
 
 " => Horizontal Movement
-inoremap <T-S-Left> <Esc>I
-inoremap <T-S-Right> <Esc>A
-nnoremap <T-S-Left> 0
-nnoremap <T-S-Right> $
+inoremap <M-S-Left> <Esc>I
+inoremap <M-S-Right> <Esc>A
+nnoremap <M-S-Left> 0
+nnoremap <M-S-Right> $
 
-inoremap <S-Left> <Esc>Bi
-inoremap <S-Right> <Esc>Ea
-nnoremap <S-Left> B
-nnoremap <S-Right> E
+inoremap <M-Left> <Esc>Bi
+inoremap <M-Right> <Esc>Ea
+nnoremap <M-Left> B
+nnoremap <M-Right> E
 
 " => Vertical Movement
-inoremap <T-S-Up> <Esc>ggi
-inoremap <T-S-Down> <Esc>Gi
-nnoremap <T-S-Up> gg
-nnoremap <T-S-Down> G
+inoremap <M-S-Up> <Esc>ggi
+inoremap <M-S-Down> <Esc>Gi
+nnoremap <M-S-Up> gg
+nnoremap <M-S-Down> G
 
-inoremap <S-Up> <Esc>{i
-inoremap <S-Down> <Esc>}i
-nnoremap <S-Up> {
-nnoremap <S-Down> }
+inoremap <M-Up> <Esc>{i
+inoremap <M-Down> <Esc>}i
+nnoremap <M-Up> {
+nnoremap <M-Down> }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
