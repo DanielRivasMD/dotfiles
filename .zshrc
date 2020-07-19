@@ -92,10 +92,10 @@ setopt appendhistory
 # ===  Key bindings      ===
 # ==========================
 
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
+bindkey "\x1b[1;3D" backward-word
+bindkey "\x1b[1;3C" forward-word
+bindkey "\x01" beginning-of-line
+bindkey "\x05" end-of-line
 
 # ==========================
 # ===  Commands          ===
