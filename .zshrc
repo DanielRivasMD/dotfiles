@@ -65,6 +65,11 @@ RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%
 # Fossil autocompletion & prompt
 source ~/.archive/zsh/fossil_prompt.sh
 
+# edit line
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 # ==========================
 # ===  ZSH aliases       ===
 # ==========================
