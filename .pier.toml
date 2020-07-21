@@ -188,25 +188,25 @@ command = '''
 source ${PIER}break_single_line.sh ${MANWIDTH}
 
 if [[ $(pwd) == ${HOME} ]]
-then 
+then
 
-  git dot status --show-stash
+  git dot status --short
   source ${PIER}break_single_line.sh ${MANWIDTH}
-  
+
   git dot stash list
   source ${PIER}break_double_line.sh ${MANWIDTH}
-  
+
   git dot lk -20
   source ${PIER}break_single_line.sh ${MANWIDTH}
 
 else
 
-  git status --show-stash
+  git status --short
   source ${PIER}break_single_line.sh ${MANWIDTH}
-  
+
   git stash list
   source ${PIER}break_double_line.sh ${MANWIDTH}
-  
+
   git lk -20
   source ${PIER}break_single_line.sh ${MANWIDTH}
 
@@ -249,7 +249,7 @@ BEGIN{
     }
     if ( NF == 2 ) {
       printf "  %s\n", cyan $2;
-    } else if ( level > 2 || level == 0 ) {   
+    } else if ( level > 2 || level == 0 ) {
       if ( NF > 2) {
         if ( dirArr2[$2] == "" ) {
           printf "  %s\n  ----------\n", yellow $2;
@@ -266,40 +266,21 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
 description = 'list all current files under dotfiles repository'
 tags = ['git']
 
-[scripts.gt0]
-alias = 'gt0'
+[scripts.gt]
+alias = 'gt'
 command = '''
 #!/bin/zsh
 directory="/Users/drivas/.archive/pier/"
-source ${PIER}break_single_line.sh ${MANWIDTH}
-awk -f ${directory}manual_parser_git.awk ${HOME}/.gitconfig.d/functions
-source ${PIER}break_single_line.sh ${MANWIDTH}
+case "$1" in
+1)  bat -l "Git Config" ${HOME}/.gitconfig.d/alias_one_letter
+    ;;
+2)  bat -l "Git Config" ${HOME}/.gitconfig.d/alias_two_letter
+    ;;
+*)  bat -l "Git Config" ${HOME}/.gitconfig.d/functions
+    ;;
+esac
 '''
-description = 'function git shortcuts'
-tags = ['git']
-
-[scripts.gt1]
-alias = 'gt1'
-command = '''
-#!/bin/zsh
-directory="/Users/drivas/.archive/pier/"
-source ${PIER}break_single_line.sh ${MANWIDTH}
-awk -f ${directory}manual_parser_git.awk ${HOME}/.gitconfig.d/alias_one_letter
-source ${PIER}break_single_line.sh ${MANWIDTH}
-'''
-description = 'one-letter git shortcuts'
-tags = ['git']
-
-[scripts.gt2]
-alias = 'gt2'
-command = '''
-#!/bin/zsh
-directory="/Users/drivas/.archive/pier/"
-source ${PIER}break_single_line.sh ${MANWIDTH}
-awk -f ${directory}manual_parser_git.awk ${HOME}/.gitconfig.d/alias_two_letter
-source ${PIER}break_single_line.sh ${MANWIDTH}
-'''
-description = 'two-letter git shortcuts'
+description = 'list git shortcuts'
 tags = ['git']
 
 [scripts.kal]
