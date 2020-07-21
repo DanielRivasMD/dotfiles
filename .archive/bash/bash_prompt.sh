@@ -1,1 +1,0 @@
-local_bash_prompt.sh

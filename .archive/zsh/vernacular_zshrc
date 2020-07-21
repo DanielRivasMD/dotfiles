@@ -46,7 +46,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Pandoc autocompletion
-source ~/.archive/zsh/local_zsh_pandoc_autocompletion.sh
+source ~/.archive/zsh/zsh_pandoc_autocompletion.sh
 
 # Fuzzy finder (fzf)
 [ -f ~/.archive/zsh/fzf.zsh ] && source ~/.archive/zsh/fzf.zsh
@@ -56,7 +56,7 @@ source ~/.archive/zsh/local_zsh_pandoc_autocompletion.sh
 # ==========================
 
 # Left prompt
-source ~/.archive/zsh/zsh_prompt.sh
+source ~/.zsh_prompt.sh
 set_prompt
 
 # Right prompt
@@ -75,8 +75,8 @@ bindkey -M vicmd v edit-command-line
 # ==========================
 
 # Load ZSH aliases
-if [ -f ~/.zaliases ]; then
-  . ~/.zaliases
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
 fi
 
 # ==========================
