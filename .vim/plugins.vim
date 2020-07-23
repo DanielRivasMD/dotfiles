@@ -32,6 +32,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'JuliaEditorSupport/julia-vim'
+Plugin 'ap/vim-css-color'
 " Plugin 'powerline/powerline'
 
 call vundle#end()            " required

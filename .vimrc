@@ -34,7 +34,7 @@ source ~/.vim/keybindings.vim
 nmap <leader>e :!%:p<CR>
 
 " Write buffer to...
-nmap <leader>w :!cat %:p >
+nmap <leader>p :!cat %:p >
 
 " List directory
 nmap <leader>l :!exa
@@ -43,10 +43,14 @@ nmap <leader>l :!exa
 nmap <leader>n :nohlsearch<CR>
 
 " Fast saving
-nmap <leader>s :w!<CR>
+nmap <leader>w :w!<CR>
 
 " Fast quit
 nmap <leader>q :q!
+
+" Fast splits
+nmap <leader>i :wincmd p<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -180,7 +184,7 @@ highlight NonText ctermfg=DarkGray
 highlight SpecialKey ctermfg=DarkGray
 
 " Search
-highlight Search ctermbg=DarkGray ctermfg=Cyan cterm=bold
+highlight Search ctermbg=LightYellow ctermfg=Red cterm=bold
 
 " Comment
 highlight Comment ctermfg=Gray
@@ -198,6 +202,10 @@ highlight Identifier ctermfg=Blue cterm=NONE
 " Tab selector
 highlight WildMenu ctermbg=Black ctermfg=Yellow cterm=underline
 highlight StatusLine ctermbg=Blue ctermfg=Black
+
+" Visual mode
+highlight Visual ctermfg=DarkYellow ctermbg=DarkGray cterm=NONE
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
