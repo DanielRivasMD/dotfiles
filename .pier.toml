@@ -332,6 +332,8 @@ alias = 'xa'
 command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
+if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
+then
   $(which exa) \
     --long \
     --group-directories-first \
@@ -343,7 +345,20 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
     --group \
     --all \
     --time accessed
+else
+  $(which exa) \
+    --long \
+    --group-directories-first \
+    --classify \
+    --links \
+    --header \
+    --sort=accessed \
+    --group \
+    --all \
+    --time accessed
+fi
 '''
+
 description = 'list files by accessed time'
 tags = ['exa']
 
@@ -352,6 +367,8 @@ alias = 'xbs'
 command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
+if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
+then
   $(which exa) \
     --long  \
     --classify  \
@@ -361,6 +378,16 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
     --sort=newest  \
     --group \
     --all
+else
+  $(which exa) \
+    --long  \
+    --classify  \
+    --links  \
+    --header  \
+    --sort=newest  \
+    --group \
+    --all
+fi
 '''
 description = 'list all files without clusters'
 tags = ['exa']
@@ -370,6 +397,8 @@ alias = 'xc'
 command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
+if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
+then
   $(which exa) \
     --long \
     --group-directories-first \
@@ -381,6 +410,18 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
     --group \
     --all \
     --time created
+else
+  $(which exa) \
+    --long \
+    --group-directories-first \
+    --classify \
+    --links \
+    --header \
+    --sort=created \
+    --group \
+    --all \
+    --time created
+fi
 '''
 description = 'list files by created time'
 tags = ['exa']
@@ -390,6 +431,8 @@ alias = 'xd'
 command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
+if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
+then
   $(which exa) \
     --long  \
     --only-dirs  \
@@ -402,6 +445,19 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
     --tree  \
     --level 3  \
     --ignore-glob ".git|.idea"
+else
+  $(which exa) \
+    --long  \
+    --only-dirs  \
+    --classify  \
+    --links  \
+    --header  \
+    --group  \
+    --all \
+    --tree  \
+    --level 3  \
+    --ignore-glob ".git|.idea"
+fi
 '''
 description = 'list directory tree'
 tags = ['exa']
@@ -411,6 +467,8 @@ alias = 'xt'
 command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
+if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
+then
   $(which exa) \
     --long  \
     --group-directories-first  \
@@ -423,6 +481,19 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
     --tree  \
     --level 3  \
     --ignore-glob ".git|.idea"
+else
+  $(which exa) \
+    --long  \
+    --group-directories-first  \
+    --classify  \
+    --links  \
+    --header  \
+    --group  \
+    --all \
+    --tree  \
+    --level 3  \
+    --ignore-glob ".git|.idea"
+fi
 '''
 description = 'list file tree'
 tags = ['exa']
