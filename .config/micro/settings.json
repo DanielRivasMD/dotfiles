@@ -1,10 +1,17 @@
 {
-    "colorscheme": "solarized",
+    "colorscheme": "gotham",
+    "diffgutter": true,
+    "mkparents": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
     "pluginrepos": [],
     "relativeruler": true,
+    "savecursor": true,
+    "statusformatl": "| $(filename) $(modified)($(line),$(col)) $(status.paste) |",
+    "statusformatr": "| ft:$(opt:filetype) | $(opt:encoding) |",
+    "tabmovement": true,
     "tabsize": 2,
-    "tabstospaces": true
+    "tabstospaces": true,
+    "xterm": true
 }
