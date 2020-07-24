@@ -45,7 +45,7 @@ SAVEHIST=1000000
 # ===  SH Prompt         ===
 # ==========================
 
-source ~/.dotfiles/bash/bash_prompt.sh
+source ~/.bash_prompt.sh
 set_prompt
 
 # ==========================
@@ -59,14 +59,5 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # ==========================
 
 eval "$(zoxide init bash)"
-
-# ==========================
-# ===  McFly             ===
-# ==========================
-
-if [[ -r "/home/drivas/private/software/mcfly/mcfly.bash" ]]
-then
-  source "/home/drivas/private/software/mcfly/mcfly.bash"
-fi
 
 # ==========================

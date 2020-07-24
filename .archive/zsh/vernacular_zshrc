@@ -3,12 +3,6 @@
 # ===  General settings  ===
 # ==========================
 
-# # Launch Bash on Atom
-# if [[ $TERM_PROGRAM == platformio-ide-terminal ]]
-# then
-#   bash -l
-# fi
-
 # Load zsh settings
 if [ -f ~/.zsh_profile ]; then
   . ~/.zsh_profile
@@ -19,15 +13,18 @@ fi
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.archive/zsh/zsh_plugins.txt > ~/.archive/zsh/zsh_plugins.sh
-source ~/.archive/zsh/zsh_plugins.sh
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+source ~/.zsh_plugins.sh
 
-# Plugins managed by antibody (AB) dinamically
-# source <(antibody init)
-# antibody bundle zdharma/fast-syntax-highlighting
-# antibody bundle zsh-users/zsh-autosuggestions
-# antibody bundle zsh-users/zsh-completions
-# antibody bundle 'wfxr/forgit'
+
+# # Plugins managed by antibody (AB) dinamically
+# # source <(antibody init)
+# zdharma/fast-syntax-highlighting
+# zsh-users/zsh-autosuggestions
+# zsh-users/zsh-completions
+# wfxr/forgit
+# chrissicool/zsh-256color
+
 
 # ==========================
 # ===  Autocompletion    ===
@@ -64,11 +61,6 @@ RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%
 
 # Fossil autocompletion & prompt
 source ~/.archive/zsh/fossil_prompt.sh
-
-# edit line
-autoload edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
 
 # ==========================
 # ===  ZSH aliases       ===

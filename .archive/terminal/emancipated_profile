@@ -43,22 +43,13 @@ fi
 # ==========================
 
 # Manage tmux
-module load tmux/2.5
-[ -z "$TMUX" ] && { tmux a || exec tmux new -s Uppmax && exit; }
-
-# # ==========================
-# # ===  BLAST database    ===
-# # ==========================
-#
-# # BLAST database
-# export BLASTDB=/sw/data/uppnex/blast_databases
+# module load tmux/2.5
+[ -z "$TMUX" ] && { tmux a || exec tmux new-session -s 'Remote' -n 'interactive' \; send-keys C-m\; new-window -n 'bash'\; send-keys C-m\; new-window -n 'navigator'\; send-keys 'zsh' C-m\; select-window -t 1 && exit; }
 
 # ==========================
 # ===  General settings  ===
 # ==========================
 
-# No duplicates in bash history
-HISTCONTROL=ignorespace:erasedups
 
 # ==========================
 # ===  Go Path           ===
@@ -70,7 +61,7 @@ HISTCONTROL=ignorespace:erasedups
 # ===  Cargo-Rust Path   ===
 # ==========================
 
-PATH=$PATH:$HOME/.cargo/bin
+# PATH=$PATH:$HOME/.cargo/bin
 
 # ==========================
 # ===  Path              ===
@@ -88,6 +79,13 @@ export PATH
 # Editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# ==========================
+# ===  Pier              ===
+# ==========================
+
+PIER="${HOME}/.archive/pier/"
+export PIER
 
 # ==========================
 # ===  Tree              ===

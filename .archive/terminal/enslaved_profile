@@ -9,19 +9,6 @@ if [ -f ~/.terminal_aliases ]; then
 fi
 
 # ==========================
-# ===  Uppmax default    ===
-# ==========================
-
-# Modules, activate the module command
-case "$0" in
-  -sh|sh|*/sh)	modules_shell=sh ;;
-  -ksh|ksh|*/ksh)	modules_shell=ksh ;;
-  -zsh|zsh|*/zsh)	modules_shell=zsh ;;
-  -bash|bash|*/bash)	modules_shell=bash ;;
-esac
-module() { eval `/usr/local/Modules/$MODULE_VERSION/bin/modulecmd $modules_shell $*`; }
-
-# ==========================
 
 # modules are used to manage user environment and software packages
 if [ -f /etc/profile.modules ]
@@ -43,15 +30,21 @@ fi
 # ==========================
 
 # Manage tmux
-# module load tmux/2.5
-[ -z "$TMUX" ] && { tmux a || exec tmux new -s Uppmax && exit; }
+module load tmux/2.5
+[ -z "$TMUX" ] && { tmux a || exec tmux new-session -s 'Remote' -n 'interactive' \; send-keys C-m\; new-window -n 'bash'\; send-keys C-m\; new-window -n 'navigator'\; send-keys 'zsh' C-m\; select-window -t 1 && exit; }
+
+
+# # ==========================
+# # ===  BLAST database    ===
+# # ==========================
+#
+# # BLAST database
+# export BLASTDB=/sw/data/uppnex/blast_databases
 
 # ==========================
 # ===  General settings  ===
 # ==========================
 
-# No duplicates in bash history
-HISTCONTROL=ignorespace:erasedups
 
 # ==========================
 # ===  Go Path           ===
@@ -63,7 +56,7 @@ HISTCONTROL=ignorespace:erasedups
 # ===  Cargo-Rust Path   ===
 # ==========================
 
-# PATH=$PATH:$HOME/.cargo/bin
+PATH=$PATH:$HOME/.cargo/bin
 
 # ==========================
 # ===  Path              ===
@@ -81,6 +74,13 @@ export PATH
 # Editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# ==========================
+# ===  Pier              ===
+# ==========================
+
+PIER="${HOME}/.archive/pier/"
+export PIER
 
 # ==========================
 # ===  Tree              ===
