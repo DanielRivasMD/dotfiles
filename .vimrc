@@ -27,32 +27,6 @@ source ~/.vim/plugins.vim
 source ~/.vim/keybindings.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Leader shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Execute current buffer
-nmap <leader>e :!%:p<CR>
-
-" Write buffer to...
-nmap <leader>p :!cat %:p >
-
-" List directory
-nmap <leader>l :!exa
-
-" Highlight toggle
-nmap <leader>n :nohlsearch<CR>
-
-" Fast saving
-nmap <leader>w :w!<CR>
-
-" Fast quit
-nmap <leader>q :q!
-
-" Fast splits
-nmap <leader>i :wincmd p<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax

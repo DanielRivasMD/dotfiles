@@ -4,67 +4,6 @@
 
 "  => General
 
-inoremap , ,<space>
-
-inoremap ∞ <space>~<space>
-
-inoremap ≠ <space>=<space>
-inoremap « <space>==<space>
-
-inoremap – <space>-<space>
-inoremap º <space>+<space>
-inoremap ª <space>/<space>
-inoremap • <space>*<space>
-
-inoremap ≤ <space><<space>
-inoremap “ <space><=<space>
-inoremap ≥ <space>><space>
-inoremap ‘ <space>>=<space>
-
-" => Awk
-
-" => Bash
-
-" => Go
-
-inoremap … <space>:=<space>
-
-" => Julia
-
-inoremap — <space>.-<space>
-inoremap ‚ <space>.+<space>
-inoremap · <space>./<space>
-inoremap ° <space>.*<space>
-
-inoremap ¯ <space>.<<space>
-inoremap ” <space>.<=<space>
-inoremap ˘ <space>.><space>
-inoremap ’ <space>.>=<space>
-
-inoremap ± <space>.=<space>
-inoremap » <space>.==<space>
-inoremap + <space>===<space>
-
-inoremap Ú <space>\|><space>
-
-" => Markdown
-
-" => R
-
-inoremap ÷ <space><-<space>
-inoremap ¿ <space><<-<space>
-
-inoremap ¶ <space>%>%<space>
-inoremap ‡ <space>%<>%<space>
-inoremap § <space>%$%<space>
-inoremap ﬂ <space>%T>%<space>
-inoremap ﬁ <space>%in%<space>
-
-" => Rust
-
-inoremap æ <space>=><space>
-inoremap Æ <space>-><space>
-
 " => Horizontal Movement
 inoremap <M-S-Left> <Esc>I
 inoremap <M-S-Right> <Esc>A
@@ -86,6 +25,32 @@ inoremap <M-Up> <Esc>{i
 inoremap <M-Down> <Esc>}i
 nnoremap <M-Up> {
 nnoremap <M-Down> }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Leader shortcuts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Execute current buffer
+nmap <leader>e :!%:p<CR>
+
+" Write buffer to...
+nmap <leader>p :!cat %:p >
+
+" List directory
+nmap <leader>l :!exa
+
+" Highlight toggle
+nmap <leader>n :nohlsearch<CR>
+
+" Fast saving
+nmap <leader>w :w!<CR>
+
+" Fast quit
+nmap <leader>q :q!
+
+" Fast splits
+nmap <leader>i :wincmd p<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
