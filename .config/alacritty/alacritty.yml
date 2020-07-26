@@ -621,3 +621,39 @@ key_bindings:
   # - { key: PageDown, mods: Shift,   chars: "\x1b[6;2~"                   }
   # - { key: PageDown, mods: Control, chars: "\x1b[6;5~"                   }
   # - { key: PageDown,                chars: "\x1b[6~"                     }
+
+  # interactive keybindings
+  - { key: Comma,                                chars: ", "                  }
+  - { key: Equals,      mods: Shift,             chars: " === "               }
+  - { key: Slash,       mods: Alt,               chars: " <- "                }
+  - { key: Slash,       mods: Alt|Shift,         chars: " <<- "               }
+  - { key: Period,      mods: Alt,               chars: " > "                 }
+  - { key: Period,      mods: Alt|Shift,         chars: " .> "                }
+  - { key: Comma,       mods: Alt,               chars: " < "                 }
+  - { key: Comma,       mods: Alt|Shift,         chars: " .< "                }
+  - { key: Backslash,   mods: Alt,               chars: " == "                }
+  - { key: Backslash,   mods: Alt|Shift,         chars: " .== "               }
+  - { key: Apostrophe,  mods: Alt,               chars: " => "                }
+  - { key: Apostrophe,  mods: Alt|Shift,         chars: " -> "                }
+  - { key: Semicolon,   mods: Alt|Shift,         chars: " |> "                }
+  - { key: Semicolon,   mods: Alt,               chars: " := "                }
+  - { key: RBracket,    mods: Alt,               chars: " >= "                }
+  - { key: RBracket,    mods: Alt|Shift,         chars: " .>= "               }
+  - { key: LBracket,    mods: Alt,               chars: " <= "                }
+  - { key: LBracket,    mods: Alt|Shift,         chars: " .<= "               }
+  - { key: Equals,      mods: Alt,               chars: " = "                 }
+  - { key: Equals,      mods: Alt|Shift,         chars: " .= "                }
+  - { key: Minus,       mods: Alt,               chars: " - "                 }
+  - { key: Minus,       mods: Alt|Shift,         chars: " .- "                }
+  - { key: Key0,        mods: Alt,               chars: " + "                 }
+  - { key: Key0,        mods: Alt|Shift,         chars: " .+ "                }
+  - { key: Key9,        mods: Alt,               chars: " / "                 }
+  - { key: Key9,        mods: Alt|Shift,         chars: " ./ "                }
+  - { key: Key8,        mods: Alt,               chars: " * "                 }
+  - { key: Key8,        mods: Alt|Shift,         chars: " .* "                }
+  - { key: Key7,        mods: Alt,               chars: " %>% "               }
+  - { key: Key7,        mods: Alt|Shift,         chars: " %<>% "              }
+  - { key: Key6,        mods: Alt,               chars: " %$% "               }
+  - { key: Key6,        mods: Alt|Shift,         chars: " %T>% "              }
+  - { key: Key5,        mods: Alt,               chars: " ~ "                 }
+  - { key: Key5,        mods: Alt|Shift,         chars: " %in% "              }
