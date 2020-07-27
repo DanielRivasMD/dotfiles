@@ -100,7 +100,7 @@ mman() { command man "$@" | more }
 # ===  zoxide            ===
 # ==========================
 
-eval "$(~/.cargo/bin/zoxide init zsh)"
+eval "$(~/bin/zoxide init zsh)"
 
 # ==========================
 # ===  McFly             ===
