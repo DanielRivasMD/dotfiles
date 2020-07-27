@@ -31,7 +31,7 @@ fi
 
 # Manage tmux
 module load tmux/2.5
-[ -z "$TMUX" ] && { tmux a || exec tmux new-session -s 'Remote' -n 'interactive' \; send-keys C-m\; new-window -n 'bash'\; send-keys C-m\; new-window -n 'navigator'\; send-keys 'zsh' C-m\; select-window -t 1 && exit; }
+[ -z "$TMUX" ] && { tmux a || exec /home/drivas/bin/muxed Remote && exit; }
 
 
 # # ==========================
