@@ -21,6 +21,8 @@ case "$0" in
 esac
 module() { eval `/usr/local/Modules/$MODULE_VERSION/bin/modulecmd $modules_shell $*`; }
 
+module load zsh
+
 # ==========================
 
 # modules are used to manage user environment and software packages
