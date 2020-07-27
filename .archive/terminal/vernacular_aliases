@@ -12,6 +12,17 @@ alias pier='clear && ~/bin/forkedPatch/pier'
 
 # General aliases
 alias c='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# ==========================
+
+# increase verbosity
+alias cp="cp -v"
+alias mv="mv -v"
+alias rm="rm -v"
+alias mkd="mkdir -pv"
 
 # ==========================
 
