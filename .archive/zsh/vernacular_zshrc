@@ -34,6 +34,7 @@ source ~/.zsh_plugins.sh
 autoload -Uz compinit
 # Dump zcompdump
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+_comp_options+=(globdots)   # Include hidden files.
 zstyle ':completion:*' menu select
 
 setopt COMPLETE_ALIASES
