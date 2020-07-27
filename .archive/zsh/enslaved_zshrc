@@ -112,3 +112,11 @@ then
 fi
 
 # ==========================
+# ===  editor            ===
+# ==========================
+
+# edit line in vim with ctrl-n:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^n' edit-command-line
+
+# ==========================

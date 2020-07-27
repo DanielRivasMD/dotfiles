@@ -136,6 +136,14 @@ fi
 eval "$(zoxide init zsh)"
 
 # ==========================
+# ===  editor            ===
+# ==========================
+
+# edit line in vim with ctrl-n:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^n' edit-command-line
+
+# ==========================
 
 echo -n -e "\t"; echo '                 '
 echo -n -e "\t"; echo '  ____  ______ __'
