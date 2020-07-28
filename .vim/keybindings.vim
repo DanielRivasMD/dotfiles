@@ -34,7 +34,10 @@ nnoremap <M-Down> }
 nmap <leader>e :!%:p<CR>
 
 " Write buffer to...
-nmap <leader>p :!cat %:p >
+nmap <leader>P :!cat %:p >
+
+" Toggle paste
+nmap <leader>p :set paste
 
 " List directory
 nmap <leader>l :!exa
