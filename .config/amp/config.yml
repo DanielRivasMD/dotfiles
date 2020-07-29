@@ -11,7 +11,6 @@ keymap:
       g: "cursor::move_to_first_line"
       G: "cursor::move_to_last_line"
       R: "buffer::reload"
-      m: "buffer::indent_line"
       S:
         - "buffer::save"
         - "buffer::close"
@@ -29,7 +28,6 @@ keymap:
       R: "buffer::reload"
       ">": buffer::indent_line
       "<": buffer::outdent_line
-      m: "buffer::indent_line"
 
   select_line:
       space: "application::switch_to_jump_mode"
@@ -39,4 +37,5 @@ keymap:
       k: "view::scroll_up"
       j: "view::scroll_down"
       R: "buffer::reload"
-      m: "buffer::indent_line"
+      ">": "buffer::indent_line"
+      "<": buffer::outdent_line
