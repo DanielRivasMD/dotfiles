@@ -113,13 +113,6 @@ export PIER
 source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # ==========================
-# ===  Tmux              ===
-# ==========================
-
-TMUX_PLUGIN_MANAGER_PATH="${HOME}/.archive/ianus/tmux/"
-export TMUX_PLUGIN_MANAGER_PATH
-
-# ==========================
 # ===  Tree              ===
 # ==========================
 
