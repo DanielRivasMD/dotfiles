@@ -15,7 +15,7 @@
 eval "$(pandoc --bash-completion)"
 
 # Fuzzy finder (fzf)
-[ -f ~/.archive/bash/fzf.bash ] && source ~/.archive/bash/fzf.bash
+[ -f ~/.archive/ianus/bash/fzf.bash ] && source ~/.archive/ianus/bash/fzf.bash
 
 # ==========================
 # ===  SH aliases        ===
@@ -38,7 +38,7 @@ SAVEHIST=1000000
 # ===  SH Prompt         ===
 # ==========================
 
-source ~/.bash_prompt.sh
+source ~/.bash_prompt
 set_prompt
 
 # ==========================

@@ -13,8 +13,8 @@ fi
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-source ~/.zsh_plugins.sh
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins
+source ~/.zsh_plugins
 
 
 # # Plugins managed by antibody (AB) dinamically
@@ -54,7 +54,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # ==========================
 
 # Left prompt
-source ~/.zsh_prompt.sh
+source ~/.zsh_prompt
 set_prompt
 
 # Right prompt

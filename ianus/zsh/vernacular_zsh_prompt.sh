@@ -18,7 +18,7 @@ function set_prompt() {
   # Git
   if git rev-parse --is-inside-work-tree 2> /dev/null | grep -q 'true' ; then
     # Git status collector
-    source ~/.archive/zsh/plugins/zsh-git-prompt/zshrc.sh
+    source ~/.archive/ianus/zsh/plugins/zsh-git-prompt/zshrc.sh
     PS1+="$(git_super_status)$reset_color"
 
     # PS1+="%{$fg[blue]%}$(git rev-parse --abbrev-ref HEAD 2> /dev/null)%{$reset_color%}"

@@ -13,8 +13,8 @@ fi
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-source ~/.zsh_plugins.sh
+# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins
+source ~/.zsh_plugins
 
 
 # # Plugins managed by antibody (AB) dinamically
@@ -43,8 +43,8 @@ zstyle ':completion::complete:*' gain-privileges 1
 # Case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# Pandoc autocompletion
-source ~/.archive/zsh/zsh_pandoc_autocompletion.sh
+# # Pandoc autocompletion
+# source ~/.archive/zsh/local_zsh_pandoc_autocompletion.sh
 
 # Fuzzy finder (fzf)
 [ -f ~/.archive/zsh/fzf.zsh ] && source ~/.archive/zsh/fzf.zsh
@@ -54,14 +54,14 @@ source ~/.archive/zsh/zsh_pandoc_autocompletion.sh
 # ==========================
 
 # Left prompt
-source ~/.zsh_prompt.sh
+source ~/.zsh_prompt
 set_prompt
 
 # Right prompt
 RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
 
-# Fossil autocompletion & prompt
-source ~/.archive/zsh/fossil_prompt.sh
+# # Fossil autocompletion & prompt
+# source ~/.archive/zsh/fossil_prompt.sh
 
 # ==========================
 # ===  ZSH aliases       ===
@@ -97,43 +97,19 @@ bindkey "\x05" end-of-line
 mman() { command man "$@" | more }
 
 # ==========================
-# ===  JetBrains         ===
+# ===  zoxide            ===
 # ==========================
 
-clion() { command open "$@" -a CLion }
-
-goland() { command open "$@" -a GoLand }
-
-pycharm() { command open "$@" -a PyCharm }
-
-intellij() { command open "$@" -a IntelliJ\ IDEA }
-
-wstorm() { command open "$@" -a WebStorm }
-
-mine() { command open "$@" -a RubyMine }
-
-pstorm() { command open "$@" -a PhpStorm }
-
-# ==========================
-# ===  RStudio           ===
-# ==========================
-
-rstudio() { command open "$@" -a RStudio }
+eval "$(~/bin/zoxide init zsh)"
 
 # ==========================
 # ===  McFly             ===
 # ==========================
 
-if [[ -r "$(brew --prefix)/opt/mcfly/mcfly.zsh" ]]
+if [[ -r "/home/drivas/private/software/mcfly/mcfly.zsh" ]]
 then
-  source "$(brew --prefix)/opt/mcfly/mcfly.zsh"
+  source "/home/drivas/private/software/mcfly/mcfly.zsh"
 fi
-
-# ==========================
-# ===  zoxide            ===
-# ==========================
-
-eval "$(zoxide init zsh)"
 
 # ==========================
 # ===  editor            ===
@@ -142,14 +118,5 @@ eval "$(zoxide init zsh)"
 # edit line in vim with ctrl-n:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^n' edit-command-line
-
-# ==========================
-
-echo -n -e "\t"; echo '                 '
-echo -n -e "\t"; echo '  ____  ______ __'
-echo -n -e "\t"; echo ' /_  / / __/ // /'
-echo -n -e "\t"; echo '  / /__\ \/ _  / '
-echo -n -e "\t"; echo ' /___/___/_//_/  '
-echo -n -e "\t"; echo '                 '
 
 # ==========================
