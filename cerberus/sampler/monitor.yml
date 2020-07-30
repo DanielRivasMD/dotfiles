@@ -1,0 +1,72 @@
+runcharts:
+  - title: Search engine response time
+    position: [[0, 0], [40, 20]]
+    rate-ms: 500
+    # triggers:
+    #   - title: Latency threshold exceeded
+    #     condition: echo "$prev < 0.8 && $cur > 0.8" |bc -l
+    #     actions:
+    #         terminal-bell: true
+    #         sound: false
+    #         visual: true
+    #         script: 'say alert: ${label} latency exceeded ${cur} second'
+    legend:
+        enabled: true
+        details: true
+    scale: 2
+    items:
+      - label: Google
+        color: 178
+        sample: curl -o /dev/null -s -w '%{time_total}'  https://www.google.com
+      - label: DuckDuckGo
+        sample: curl -o /dev/null -s -w '%{time_total}'  https://duckduckgo.com/
+
+sparklines:
+  - title: CPU usage
+    position: [[0, 20], [40, 10]]
+    rate-ms: 200
+    scale: 0
+    sample: ps -A -o %cpu | awk '{s+=$1} END {print s}'
+  - title: Free memory pages
+    position: [[0, 29], [40, 10]]
+    rate-ms: 200
+    scale: 0
+    sample: memory_pressure | grep 'Pages free' | awk '{print $3}'
+
+barcharts:
+  - title: Local network activity
+    position: [[40, 0], [40, 13]]
+    rate-ms: 500
+    scale: 0
+    items:
+      - label: UDP bytes in
+        sample: nettop -J bytes_in -l 1 -m udp | awk '{sum += $4} END {print sum}'
+      - label: UDP bytes out
+        sample: nettop -J bytes_out -l 1 -m udp | awk '{sum += $4} END {print sum}'
+      - label: TCP bytes in
+        sample: nettop -J bytes_in -l 1 -m tcp | awk '{sum += $4} END {print sum}'
+      - label: TCP bytes out
+        sample: nettop -J bytes_out -l 1 -m tcp | awk '{sum += $4} END {print sum}'
+
+textboxes:
+  - title: Local weather
+    position: [[40, 14], [20, 15]]
+    rate-ms: 10000
+    sample: curl wttr.in?0ATQF
+    border: false
+  - title: Perth
+    position: [[60, 14], [20, 15]]
+    rate-ms: 10000
+    sample: curl wttr.in/perth?0ATQF
+    transform: echo 1
+    border: false
+  - title: Toronto
+    position: [[40, 27], [20, 15]]
+    rate-ms: 10000
+    sample: curl wttr.in/toronto?0ATQF
+    border: false
+  - title: Zurich
+    position: [[60, 27], [20, 15]]
+    rate-ms: 10000
+    sample: curl wttr.in/zurich?0ATQF
+    border: false
