@@ -1,0 +1,52 @@
+targets:
+  ianus:
+    build: |
+      IANUS=${HOME}/.archive/ianus/
+
+      # HOME directories
+      ln -svf ${IANUS}vim ${HOME}/.vim
+
+      # rc files
+      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+
+      # toml files
+      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+
+      # @config
+      ln -svf ${IANUS}amp ${HOME}/.config/
+      ln -svf ${IANUS}micro ${HOME}/.config/
+
+  cerberus:
+    build: |
+      CERBERUS=${HOME}/.archive/cerberus/
+
+      # HOME directories
+      ln -svf ${CERBERUS}atom ${HOME}/.atom
+      ln -svf ${CERBERUS}gitconfig.d ${HOME}/.gitconfig.d
+
+      # rc files
+      ln -svf ${CERBERUS}gem/gemrc ${HOME}/.gemrc
+      ln -svf ${CERBERUS}mplayer/mplayer ${HOME}/.mplayer
+      ln -svf ${CERBERUS}nano/nanorc ${HOME}/.nanorc
+      ln -svf ${CERBERUS}screen/screenrc ${HOME}/.screenrc
+
+      # git files
+      ln -svf ${CERBERUS}git/gitconfig ${HOME}/.gitconfig
+      ln -svf ${CERBERUS}git/gitignore_global ${HOME}/.gitignore_global
+
+      # toml files
+      ln -svf ${CERBERUS}procs/procs.toml ${HOME}/.procs.toml
+
+      # @config
+      ln -svf ${CERBERUS}alacritty ${HOME}/.config/
+      ln -svf ${CERBERUS}cheat ${HOME}/.config/
+      ln -svf ${CERBERUS}khal ${HOME}/.config/
+
+      # @distant
+      ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
+      ln -svf ${CERBERUS}ssh/config ${HOME}/.ssh/
+      ln -svf ${CERBERUS}sublime/* "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/"
+
+  hermes:
+    build: |
+      # tar compress whole directory for shipment
