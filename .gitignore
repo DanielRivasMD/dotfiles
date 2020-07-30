@@ -1,0 +1,48 @@
+################################################################################
+# cerberus
+################################################################################
+
+# atom
+cerberus/atom/.apm
+cerberus/atom/node-gyp
+cerberus/atom/blob-store
+cerberus/atom/compile-cache
+cerberus/atom/git-time-machine
+cerberus/atom/packages
+cerberus/atom/recovery
+cerberus/atom/split-diff
+cerberus/atom/storage
+cerberus/atom/.atom*
+cerberus/atom/.gitignore
+cerberus/atom/snippets.json
+
+# khal
+cerberus/khal/calendars
+cerberus/khal/ics
+
+
+################################################################################
+# ianus
+################################################################################
+
+# amp
+ianus/amp/syntaxes
+ianus/amp/themes
+
+# micro
+ianus/micro/backups
+ianus/micro/buffers
+ianus/micro/plug
+
+# tmux
+ianus/tmux/plugins
+ianus/tmux/resurrect
+ianus/tmux/sidebar
+
+# vim
+ianus/vim/bundle
+
+# zsh
+ianus/zsh/plugins
+
+################################################################################
