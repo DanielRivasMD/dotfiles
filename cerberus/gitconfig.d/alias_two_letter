@@ -123,6 +123,3 @@
 
   # log key - our favorite way to show our key performance indicators, i.e. our most useful summary.
   lk = log --graph --topo-order --abbrev-commit --date=relative --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %C(dim white)%cn%Creset'
-
-  # special shortcut for dotfiles
-  dot = !"git --git-dir=/Users/drivas/.dotfiles/ --work-tree=/Users/drivas"
