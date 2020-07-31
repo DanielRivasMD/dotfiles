@@ -13,8 +13,11 @@ targets:
       ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
 
       # @config
-      ln -svf ${IANUS}amp ${HOME}/.config/
-      ln -svf ${IANUS}micro ${HOME}/.config/
+      ln -svf ${IANUS}amp ${HOME}/.config
+      ln -svf ${IANUS}micro ${HOME}/.config
+
+      # @distant
+      ln -svf ${IANUS}R/rstudio ${HOME}/.r
 
   cerberus:
     build: |
