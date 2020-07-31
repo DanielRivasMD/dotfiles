@@ -33,6 +33,9 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'ap/vim-css-color'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'Yggdroot/indentline'
+Plugin 'godlygeek/tabular'
 " Plugin 'powerline/powerline'
 
 call vundle#end()            " required
