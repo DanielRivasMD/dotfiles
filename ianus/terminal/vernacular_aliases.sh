@@ -31,6 +31,10 @@ alias mp='mplayer'
 
 # ==========================
 
+alias man='man -P most'
+
+# ==========================
+
 # Enable aliases to be sudo'ed
 alias sudo='sudo '
 
