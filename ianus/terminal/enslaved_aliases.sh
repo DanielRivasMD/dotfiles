@@ -18,10 +18,6 @@ alias rm="rm -v"
 alias mkd="mkdir -pv"
 
 # ==========================
-
-alias man='man -P most'
-
-# ==========================
 # ===  Go toolLinks      ===
 # ==========================
 

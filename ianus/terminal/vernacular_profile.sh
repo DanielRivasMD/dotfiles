@@ -103,8 +103,8 @@ export MANWIDTH
 # ===  Pager              ===
 # ==========================
 
-PAGER=bat
-export PAGER
+export PAGER=most
+export BAT_PAGER=less
 
 # ==========================
 # ===  Pier              ===
