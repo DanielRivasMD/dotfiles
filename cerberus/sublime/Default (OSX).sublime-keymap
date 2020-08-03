@@ -236,7 +236,7 @@
 		"keys": ["alt+shift+down"],
 		"command": "move_by_paragraph",
 		"args": {"forward": true, "extend": true}
-	}, 
+	},
 
 
 	// move tab
@@ -259,7 +259,11 @@
 		"keys": ["ctrl+shift+right"],
 		"command": "move_tab",
 		"args": { "position": "+1" }
-	}
+	},
 
+
+	// side bar
+	{ "keys": ["super+\\"], "command": "toggle_side_bar" },
+	{ "keys": ["super+'"], "command": "focus_side_bar" }
 
 ]
