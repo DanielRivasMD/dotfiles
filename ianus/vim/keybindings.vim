@@ -37,7 +37,7 @@ nmap <leader>e :!%:p<CR>
 nmap <leader>P :!cat %:p >
 
 " Toggle paste
-nmap <leader>p :set paste
+nmap <leader>p :set paste!<CR>
 
 " List directory
 nmap <leader>l :!exa
