@@ -624,7 +624,7 @@ key_bindings:
 
   # interactive keybindings
   - { key: Comma,                                chars: ", "                  }
-  - { key: Equals,      mods: Shift,             chars: " === "               }
+  # - { key: Equals,      mods: Shift,             chars: " === "               }
   - { key: Slash,       mods: Alt,               chars: " <- "                }
   - { key: Slash,       mods: Alt|Shift,         chars: " <<- "               }
   - { key: Period,      mods: Alt,               chars: " > "                 }
