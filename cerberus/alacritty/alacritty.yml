@@ -657,3 +657,11 @@ key_bindings:
   - { key: Key6,        mods: Alt|Shift,         chars: " %T>% "              }
   - { key: Key5,        mods: Alt,               chars: " ~ "                 }
   - { key: Key5,        mods: Alt|Shift,         chars: " %in% "              }
+  - { key: Key4,        mods: Alt,               chars: " -= "                }
+  - { key: Key4,        mods: Alt|Shift,         chars: " .-= "               }
+  - { key: Key3,        mods: Alt,               chars: " += "                }
+  - { key: Key3,        mods: Alt|Shift,         chars: " .+= "               }
+  - { key: Key2,        mods: Alt,               chars: " /= "                }
+  - { key: Key2,        mods: Alt|Shift,         chars: " ./= "               }
+  - { key: Key1,        mods: Alt,               chars: " *= "                }
+  - { key: Key1,        mods: Alt|Shift,         chars: " .*= "               }
