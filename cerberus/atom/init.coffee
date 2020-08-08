@@ -92,6 +92,15 @@ atom.commands.add 'atom-text-editor',
 #  'custom:insert-equalequalequal': ->
 #    atom.workspace.getActiveTextEditor()?.insertText(' === ')
 
+  'custom:insert-low_plus_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .+= ')
+  'custom:insert-low_minus_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .-= ')
+  'custom:insert-low_times_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .*= ')
+  'custom:insert-low_divide_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' ./= ')
+
   'custom:insert-julia_pipe': ->
     atom.workspace.getActiveTextEditor()?.insertText(' |> ')
 
@@ -129,6 +138,15 @@ atom.commands.add 'atom-text-editor',
     atom.workspace.getActiveTextEditor()?.insertText(' => ')
   'custom:insert-r_right_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' -> ')
+
+  'custom:insert-low_plus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' += ')
+  'custom:insert-low_minus': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' -= ')
+  'custom:insert-low_times': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' *= ')
+  'custom:insert-low_divide': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' /= ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
