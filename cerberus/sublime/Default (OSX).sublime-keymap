@@ -151,6 +151,30 @@
 //	},
 
 	{
+		"keys": ["›"],
+		"command": "insert",
+		"args": {"characters": " .-= "},
+	},
+
+	{
+		"keys": ["‹"],
+		"command": "insert",
+		"args": {"characters": " .+= "},
+	},
+
+	{
+		"keys": ["€"],
+		"command": "insert",
+		"args": {"characters": " ./= "},
+	},
+
+	{
+		"keys": ["⁄"],
+		"command": "insert",
+		"args": {"characters": " .*= "},
+	},
+
+	{
 		"keys": ["Ú"],
 		"command": "insert",
 		"args": {"characters": " |> "}
@@ -212,6 +236,30 @@
 		"keys": ["Æ"],
 		"command": "insert",
 		"args": {"characters": " -> "},
+	},
+
+	{
+		"keys": ["¢"],
+		"command": "insert",
+		"args": {"characters": " -= "},
+	},
+
+	{
+		"keys": ["£"],
+		"command": "insert",
+		"args": {"characters": " += "},
+	},
+
+	{
+		"keys": ["™"],
+		"command": "insert",
+		"args": {"characters": " /= "},
+	},
+
+	{
+		"keys": ["¡"],
+		"command": "insert",
+		"args": {"characters": " *= "},
 	},
 
 
