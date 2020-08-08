@@ -26,6 +26,15 @@ inoremap <M-Down> <Esc>}i
 nnoremap <M-Up> {
 nnoremap <M-Down> }
 
+
+" Move lines
+inoremap <C-M-Down> <Esc>ddpi
+inoremap <C-M-Up> <Esc>ddkPi
+nnoremap <C-M-Down> ddp
+nnoremap <C-M-Up> ddkP
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
