@@ -132,6 +132,12 @@ set wrap "Wrap lines
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Theme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+colorscheme molokai
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Overwriting colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "         cterm-colors
@@ -153,32 +159,32 @@ set wrap "Wrap lines
 " 14      3*      Yellow, LightYellow
 " 15      7*      White
 
-" Invisibles
-highlight NonText ctermfg=DarkGray
-highlight SpecialKey ctermfg=DarkGray
-
-" Search
-highlight Search ctermbg=LightYellow ctermfg=Red cterm=bold
-
-" Comment
-highlight Comment ctermfg=Gray
-
-" Error
-highlight Error ctermfg=Red ctermbg=White cterm=bold
-highlight ErrorMsg ctermfg=Red ctermbg=White cterm=bold
-
-" Spell checker
-highlight SpellBad ctermfg=DarkRed ctermbg=NONE cterm=NONE
-
-" Identifier (Link to Funtion)
-highlight Identifier ctermfg=Blue cterm=NONE
-
-" Tab selector
-highlight WildMenu ctermbg=Black ctermfg=Yellow cterm=underline
-highlight StatusLine ctermbg=Blue ctermfg=Black
-
-" Visual mode
-highlight Visual ctermfg=DarkYellow ctermbg=DarkGray cterm=NONE
+" " Invisibles
+" highlight NonText ctermfg=DarkGray
+" highlight SpecialKey ctermfg=DarkGray
+"
+" " Search
+" highlight Search ctermbg=LightYellow ctermfg=Red cterm=bold
+"
+" " Comment
+" highlight Comment ctermfg=Gray
+"
+" " Error
+" highlight Error ctermfg=Red ctermbg=White cterm=bold
+" highlight ErrorMsg ctermfg=Red ctermbg=White cterm=bold
+"
+" " Spell checker
+" highlight SpellBad ctermfg=DarkRed ctermbg=NONE cterm=NONE
+"
+" " Identifier (Link to Funtion)
+" highlight Identifier ctermfg=Blue cterm=NONE
+"
+" " Tab selector
+" highlight WildMenu ctermbg=Black ctermfg=Yellow cterm=underline
+" highlight StatusLine ctermbg=Blue ctermfg=Black
+"
+" " Visual mode
+" highlight Visual ctermfg=DarkYellow ctermbg=DarkGray cterm=NONE
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

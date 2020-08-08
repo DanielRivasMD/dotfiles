@@ -37,6 +37,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'Yggdroot/indentline'
 Plugin 'godlygeek/tabular'
 " Plugin 'powerline/powerline'
+Plugin 'tomasr/molokai'
 
 call vundle#end()            " required
 
