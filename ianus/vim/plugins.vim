@@ -36,7 +36,9 @@ Plugin 'ap/vim-css-color'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'Yggdroot/indentline'
 Plugin 'godlygeek/tabular'
-" Plugin 'powerline/powerline'
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'neoclide/coc.nvim'
 Plugin 'tomasr/molokai'
 
 call vundle#end()            " required
@@ -56,6 +58,19 @@ let g:airline_theme='ravenpower'
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Opera'
 let vim_markdown_preview_pandoc=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
