@@ -212,7 +212,19 @@ alias = 'sftp-bianca'
 command = '''
 sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se
 '''
-description = 'sftp to bianca sens2019016'
+description = 'sftp to Bianca sens2019016'
+tags = ['remote']
+
+[scripts.sftp-magnus]
+alias = 'sftp-magnus'
+command = 'sftp drivas@magnus.pawsey.org.au'
+description = 'sftp to Pawsey Magnus'
+tags = ['remote']
+
+[scripts.sftp-topaz]
+alias = 'sftp-topaz'
+command = 'sftp drivas@topaz.pawsey.org.au'
+description = 'sftp to Pawsey Topaz'
 tags = ['remote']
 
 [scripts.sftp-uppmax]
@@ -224,7 +236,19 @@ tags = ['remote']
 [scripts.ssh-bianca]
 alias = 'ssh-bianca'
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
-description = 'ssh to bianca sens2019016'
+description = 'ssh to Bianca sens2019016'
+tags = ['remote']
+
+[scripts.ssh-magnus]
+alias = 'ssh-magnus'
+command = 'ssh drivas@magnus.pawsey.org.au'
+description = 'ssh to Pawsey Magnus'
+tags = ['remote']
+
+[scripts.ssh-topaz]
+alias = 'ssh-topaz'
+command = 'ssh drivas@topaz.pawsey.org.au'
+description = 'ssh to Pawsey Topaz'
 tags = ['remote']
 
 [scripts.ssh-uppmax]
