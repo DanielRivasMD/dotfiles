@@ -312,6 +312,8 @@
 
 	// side bar
 	{ "keys": ["super+\\"], "command": "toggle_side_bar" },
-	{ "keys": ["super+'"], "command": "focus_side_bar" }
+	{ "keys": ["super+'"], "command": "focus_side_bar" },
+
+	{ "keys": ["command+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} }
 
 ]
