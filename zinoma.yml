@@ -49,6 +49,7 @@ targets:
       ln -svf ${CERBERUS}cheat ${HOME}/.config/
       ln -svf ${CERBERUS}khal ${HOME}/.config/
       ln -svf ${CERBERUS}gh/config.yml ${HOME}/.config/gh/
+      ln -svf ${CERBERUS}rstudio ${HOME}/.config/
 
       # @distant
       ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
