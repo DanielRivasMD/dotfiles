@@ -24,7 +24,10 @@ targets:
       CERBERUS=${HOME}/.archive/cerberus/
 
       # HOME directories
+      # purge before linking
+      rm -rf ~/.atom
       ln -svf ${CERBERUS}atom ${HOME}/.atom
+      rm -rf ~/.gitconfig.d
       ln -svf ${CERBERUS}gitconfig.d ${HOME}/.gitconfig.d
 
       # rc files
