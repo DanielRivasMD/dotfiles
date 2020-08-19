@@ -48,6 +48,7 @@ targets:
       ln -svf ${CERBERUS}bottom ${HOME}/.config/
       ln -svf ${CERBERUS}cheat ${HOME}/.config/
       ln -svf ${CERBERUS}khal ${HOME}/.config/
+      ln -svf ${CERBERUS}gh/config.yml ${HOME}/.config/gh/
 
       # @distant
       ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
