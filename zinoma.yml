@@ -45,6 +45,7 @@ targets:
 
       # @config
       ln -svf ${CERBERUS}alacritty ${HOME}/.config/
+      ln -svf ${CERBERUS}bottom ${HOME}/.config/
       ln -svf ${CERBERUS}cheat ${HOME}/.config/
       ln -svf ${CERBERUS}khal ${HOME}/.config/
 
