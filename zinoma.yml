@@ -50,6 +50,7 @@ targets:
       ln -svf ${CERBERUS}khal ${HOME}/.config/
       ln -svf ${CERBERUS}gh/config.yml ${HOME}/.config/gh/
       ln -svf ${CERBERUS}rstudio ${HOME}/.config/
+      ln -svf ${CERBERUS}rustfmt ${HOME}/.config/
 
       # @distant
       ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
