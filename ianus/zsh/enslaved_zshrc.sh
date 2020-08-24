@@ -100,7 +100,13 @@ mman() { command man "$@" | more }
 # ===  zoxide            ===
 # ==========================
 
-eval "$(~/.cargo/bin/zoxide init zsh)"
+if [[ $HOSTNAME == *"bianca"* ]]
+then
+  eval "$(~/bin/zoxide init zsh)"
+elif [[ $HOSTNAME == *"rackham"* ]]
+then
+  eval "$(~/.cargo/bin/zoxide init zsh)"
+fi
 
 # ==========================
 # ===  McFly             ===

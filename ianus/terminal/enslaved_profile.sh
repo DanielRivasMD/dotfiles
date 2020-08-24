@@ -30,7 +30,13 @@ fi
 # ==========================
 
 # Manage tmux
-module load tmux/2.5
+module load tmux
+if [[ $HOSTNAME == *"bianca"* ]]
+then
+  module load zsh
+fi
+
+
 [ -z "$TMUX" ] && { tmux a || exec /home/drivas/bin/muxed Remote && exit; }
 
 

@@ -58,7 +58,13 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # ===  zoxide            ===
 # ==========================
 
-eval "$(~/.cargo/bin/zoxide init bash)"
+if [[ $HOSTNAME == *"bianca"* ]]
+then
+  eval "$(~/bin/zoxide init bash)"
+elif [[ $HOSTNAME == *"rackham"* ]]
+then
+  eval "$(~/.cargo/bin/zoxide init bash)"
+fi
 
 # ==========================
 # ===  McFly             ===
