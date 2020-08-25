@@ -78,7 +78,8 @@ export EDITOR="$VISUAL"
 # ===  Pager              ===
 # ==========================
 
-export PAGER=most
+export PAGER=bat
+export BAT_PAGER=less
 
 # ==========================
 # ===  Pier              ===
