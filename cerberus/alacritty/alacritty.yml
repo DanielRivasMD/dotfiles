@@ -654,8 +654,8 @@ key_bindings:
   # interactive keybindings
   - { key: Comma,                                chars: ", "                  }
   # - { key: Equals,      mods: Shift,             chars: " === "               }
-  - { key: Slash,       mods: Alt,               chars: " <- "                }
-  - { key: Slash,       mods: Alt|Shift,         chars: " <<- "               }
+  - { key: Slash,       mods: Alt,               chars: " |> "                }
+  - { key: Slash,       mods: Alt|Shift,         chars: " .|> "               }
   - { key: Period,      mods: Alt,               chars: " > "                 }
   - { key: Period,      mods: Alt|Shift,         chars: " .> "                }
   - { key: Comma,       mods: Alt,               chars: " < "                 }
@@ -664,8 +664,8 @@ key_bindings:
   - { key: Backslash,   mods: Alt|Shift,         chars: " .== "               }
   - { key: Apostrophe,  mods: Alt,               chars: " => "                }
   - { key: Apostrophe,  mods: Alt|Shift,         chars: " -> "                }
-  - { key: Semicolon,   mods: Alt|Shift,         chars: " |> "                }
-  - { key: Semicolon,   mods: Alt,               chars: " := "                }
+  - { key: Semicolon,   mods: Alt,               chars: " <- "                }
+  - { key: Semicolon,   mods: Alt|Shift,         chars: " := "                }
   - { key: RBracket,    mods: Alt,               chars: " >= "                }
   - { key: RBracket,    mods: Alt|Shift,         chars: " .>= "               }
   - { key: LBracket,    mods: Alt,               chars: " <= "                }

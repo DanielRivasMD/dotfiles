@@ -74,15 +74,11 @@
 		"args": {"characters": " >= "},
 	},
 
-	// Go
-
 	{
 		"keys": ["…"],
 		"command": "insert",
-		"args": {"characters": " := "}
+		"args": {"characters": " <- "}
 	},
-
-	// Julia
 
 	{
 		"keys": ["—"],
@@ -144,12 +140,6 @@
 		"args": {"characters": " .== "}
 	},
 
-//	{
-//		"keys": ["+"],
-//		"command": "insert",
-//		"args": {"characters": " === "}
-//	},
-
 	{
 		"keys": ["›"],
 		"command": "insert",
@@ -177,21 +167,19 @@
 	{
 		"keys": ["Ú"],
 		"command": "insert",
-		"args": {"characters": " |> "}
+		"args": {"characters": " := "}
 	},
-
-	// R
 
 	{
 		"keys": ["÷"],
 		"command": "insert",
-		"args": {"characters": " <- "},
+		"args": {"characters": " |> "},
 	},
 
 	{
 		"keys": ["¿"],
 		"command": "insert",
-		"args": {"characters": " <<- "}
+		"args": {"characters": " .|> "}
 	},
 
 	{
@@ -223,8 +211,6 @@
 		"command": "insert",
 		"args": {"characters": " %in% "}
 	},
-
-	// Rust
 
 	{
 		"keys": ["æ"],
@@ -263,7 +249,6 @@
 	},
 
 
-
 	// move_by_paragraph
 	{
 		"keys": ["alt+up"],
@@ -288,16 +273,6 @@
 
 
 	// move tab
-	// {
-	// 	"keys": ["super+alt+shift+down"],
-	// 	"command": "move_tab",
-	// 	"args": { "position": "999" }
-	// },
-	// {
-	// 	"keys": ["super+alt+shift+up"],
-	// 	"command": "move_tab",
-	// 	"args": { "position": "0" }
-	// },
 	{
 		"keys": ["ctrl+shift+left"],
 		"command": "move_tab",
