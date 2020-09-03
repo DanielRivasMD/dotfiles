@@ -63,6 +63,9 @@ alias lar='clear && exa --long --group-directories-first --classify --links --gi
 # gitui
 alias gt='gitui'
 
+# git-local-ignore
+alias gl='git-local-ignore'
+
 # samesame
 alias ss='samesame'
 
