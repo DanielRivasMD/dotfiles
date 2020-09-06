@@ -25,11 +25,9 @@
   core:
     automaticallyUpdate: false
     disabledPackages: [
+      "background-tips"
       "bookmarks"
       "language-gfm"
-      "uber-juno"
-      "julia-client"
-      "ink"
     ]
     ignoredNames: [
       ".git"
@@ -93,7 +91,7 @@
   "fuzzy-finder":
     preserveLastSearch: true
   "git-diff":
-    showIconsInEditorGutter: true
+    wrapAroundOnMoveToDiff: false
   "git-log":
     fontScale: 1
   "git-plus":
@@ -161,6 +159,8 @@
       "lens-modeDecorationsZIndex": 0
       linter: true
       linterDecorationsZIndex: 0
+  "minimap-git-diff":
+    useGutterDecoration: true
   "one-dark-ui": {}
   "platformio-ide-terminal":
     ansiColors:
