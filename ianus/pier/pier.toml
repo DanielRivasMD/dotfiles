@@ -141,7 +141,8 @@ alias = 'kal'
 command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
-khal calendar
+khal calendar \
+  --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»"
 source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'all calendars'
@@ -153,9 +154,9 @@ command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
 khal list \
-  -f "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
-  -d SuperRugby \
-  -d Astronomy
+  --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
+  --exclude-calendar SuperRugby \
+  --exclude-calendar Astronomy
 source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'list calendars'
@@ -179,9 +180,9 @@ command = '''
 #!/bin/zsh
 source ${PIER}break_single_line.sh ${MANWIDTH}
 khal calendar \
-  -f "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
-  -d SuperRugby \
-  -d Astronomy
+  --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
+  --exclude-calendar SuperRugby \
+  --exclude-calendar Astronomy
 source ${PIER}break_single_line.sh ${MANWIDTH}
 '''
 description = 'work calendar'
