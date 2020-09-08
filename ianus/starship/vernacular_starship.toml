@@ -1,5 +1,6 @@
 
 prompt_order = [
+    "battery",
     "username",
     "hostname",
     "kubernetes",
@@ -44,12 +45,13 @@ threshold = 10
 style = "bold red"
 
 [[battery.display]]                 # "bold yellow" style when capacity is between 10% and 30%
-threshold = 30
+threshold = 50
 style = "bold yellow"
 # threshold                         The upper bound for the display option.
 # style                             The style used if the display option is in use.
 
 [character]                         # The name of the module we are configuring is "character"
+# symbol = "🔭"                        # The "symbol" segment is being set
 symbol = "∑"                        # The "symbol" segment is being set
 # symbol = "❯"                      The symbol used before the text input in the prompt.
 # error_symbol = "✖"                The symbol used before text input if the previous command failed.
@@ -62,7 +64,7 @@ symbol = "∑"                        # The "symbol" segment is being set
 
 [cmd_duration]
 min_time = 500
-prefix = "underwent "
+prefix = ""
 # min_time  2_000                   Shortest duration to show time for (in milliseconds).
 # show_milliseconds false           Show milliseconds in addition to seconds for the duration.
 # prefix    took                    Prefix to display immediately before the command duration.
@@ -117,7 +119,8 @@ symbol = "🐋 "                      # Disable the newline at the start of the 
 
 
 [git_branch]
-symbol = "🌱 "
+symbol = "⽊ "
+# symbol = "🌱 "
 truncation_length = 7
 truncation_symbol = ""
 # symbol    " "                    The symbol used before the branch name of the repo in your current directory.
@@ -129,6 +132,8 @@ truncation_symbol = ""
 
 [git_commit]
 commit_hash_length = 4
+prefix = "["
+suffix = "]"
 # commit_hash_length    7           The length of the displayed git commit hash.
 # prefix    "("                     Prefix to display immediately before git commit.
 # suffix    ")"                     Suffix to display immediately after git commit.
@@ -138,8 +143,8 @@ commit_hash_length = 4
 
 
 [git_state]
-progress_divider = " of "
-cherry_pick = "🍒 PICKING"
+progress_divider = " | "
+# cherry_pick = "🍒 PICKING"
 # rebase    "REBASING"              The text displayed when a rebase is in progress.
 # merge "MERGING"                   The text displayed when a merge is in progress.
 # revert    "REVERTING"             The text displayed when a revert is in progress.
@@ -153,19 +158,70 @@ cherry_pick = "🍒 PICKING"
 
 
 [git_status]
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
-staged.value = "++"
+ahead.value = "⇡"
+ahead.style = "bold blue"
+behind.value = "⇣"
+behind.style = "bold red"
+
+conflicted.value = " «x»"
+conflicted.style = "red"
+conflicted_count.enabled = true
+conflicted_count.style = "white"
+
+diverged.value = " ⇕"
+diverged.style = "red"
+
+untracked = " 🐾"
+# untracked.value = " 🐾"
+# untracked.style = "red"
+untracked_count.enabled = true
+untracked_count.style = "red"
+
+stashed.value = " ◊"
+stashed.style = "yellow"
+stashed_count.enabled = true
+stashed_count.style = "white"
+
+modified.value = " ‹ø›"
+modified.style = "yellow"
+modified_count.enabled = true
+modified_count.style = "white"
+
+staged.value = " ‹+›"
 staged.style = "green"
 staged_count.enabled = true
-staged_count.style = "green"
-renamed = "👅"
-deleted = "🗑"
+staged_count.style = "white"
+
+renamed.value = " »"
+renamed.style = "cyan"
+renamed_count.enabled = true
+renamed_count.style = "white"
+
+deleted.value = " ✖"
+deleted.style = "red"
+deleted_count.enabled = true
+deleted_count.style = "white"
+
+prefix = "["
+suffix = "]"
+style = "bold white"
+
+show_sync_count = true
+
+# conflicted = "🏳"
+# ahead = "🏎💨"
+# behind = "😰"
+# diverged = "😵"
+# untracked = "🤷‍"
+# stashed = "📦"
+# modified = "📝"
+# staged.value = "++"
+# staged.style = "green"
+# staged_count.enabled = true
+# staged_count.style = "green"
+# renamed = "👅"
+# deleted = "🗑"
+
 # conflicted    "="                 This branch has merge conflicts.
 # conflicted_count  link            Show and style the number of conflicts.
 # ahead "⇡"                         This branch is ahead of the branch being tracked.
@@ -193,17 +249,17 @@ deleted = "🗑"
 
 
 [golang]
-symbol = "🏎💨 "
+symbol = "🦦 "
 # symbol    "🐹 "                   The symbol used before displaying the version of Golang.
 # style "bold cyan"                 The style for the module.
 # disabled  false                   Disables the golang module.
 
 
 [hostname]
-ssh_only = false
+ssh_only = true
 prefix = "⟪"
 suffix = "⟫"
-trim_at = ".companyname.com"
+trim_at = ".uu.se"
 disabled = false
 # ssh_only  true                    Only show hostname when connected to an SSH session.
 # prefix    ""                      Prefix to display immediately before the hostname.
@@ -221,8 +277,8 @@ disabled = false
 
 
 [jobs]
-symbol = "+ "
-threshold = 4
+symbol = " 🤖"
+threshold = 3
 # symbol    "✦"                     The symbol used before displaying the number of jobs.
 # threshold 1                       Show number of jobs if exceeded.
 # style "bold blue"                 The style for the module.

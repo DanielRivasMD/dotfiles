@@ -77,6 +77,7 @@ PATH=$PATH:$HOME/bin/cargoTools/
 
 export GOPATH
 export PATH
+export STARSHIP_CONFIG=${IANUS}starship/vernacular_starship.toml
 
 # ==========================
 # ===  Less              ===
