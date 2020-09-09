@@ -29,11 +29,8 @@ prompt_order = [
     "character",
 ]
 
-
 [battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
+disable = true
 # full_symbol   "•"                 The symbol shown when the battery is full.
 # charging_symbol   "⇡"             The symbol shown when the battery is charging.
 # discharging_symbol    "⇣"         The symbol shown when the battery is discharging.
@@ -51,8 +48,8 @@ style = "bold yellow"
 # style                             The style used if the display option is in use.
 
 [character]                         # The name of the module we are configuring is "character"
-# symbol = "🔭"                        # The "symbol" segment is being set
-symbol = "∑"                        # The "symbol" segment is being set
+symbol = "∑"
+# symbol = "∫"                        # The "symbol" segment is being set
 # symbol = "❯"                      The symbol used before the text input in the prompt.
 # error_symbol = "✖"                The symbol used before text input if the previous command failed.
 # use_symbol_for_status = false     Indicate error status by changing the symbol.
@@ -82,6 +79,7 @@ style = "dimmed green"
 
 [directory]
 truncation_length = 2
+prefix = ""
 # truncation_length 3               The number of parent folders that the current directory should be truncated to.
 # truncate_to_repo  true            Whether or not to truncate to the root of the git repo that you're currently in.
 # prefix    "in "                   Prefix to display immediately before the directory.
@@ -119,10 +117,12 @@ symbol = "🐋 "                      # Disable the newline at the start of the 
 
 
 [git_branch]
-symbol = "⽊ "
-# symbol = "🌱 "
+prefix = ""
+symbol.value = "ᚶ "
+symbol.style = "bold red"
 truncation_length = 7
 truncation_symbol = ""
+style = "bold blue"
 # symbol    " "                    The symbol used before the branch name of the repo in your current directory.
 # truncation_length 2^63 - 1        Truncates a git branch to X graphemes
 # truncation_symbol "…"             The symbol used to indicate a branch name was truncated. You can use "" for no symbol
@@ -144,7 +144,6 @@ suffix = "]"
 
 [git_state]
 progress_divider = " | "
-# cherry_pick = "🍒 PICKING"
 # rebase    "REBASING"              The text displayed when a rebase is in progress.
 # merge "MERGING"                   The text displayed when a merge is in progress.
 # revert    "REVERTING"             The text displayed when a revert is in progress.
@@ -163,64 +162,49 @@ ahead.style = "bold blue"
 behind.value = "⇣"
 behind.style = "bold red"
 
-conflicted.value = " «x»"
+conflicted.value = " ᛊ"
 conflicted.style = "red"
 conflicted_count.enabled = true
-conflicted_count.style = "white"
+conflicted_count.style = "red"
 
-diverged.value = " ⇕"
+diverged.value = " ♆"
 diverged.style = "red"
 
-untracked = " 🐾"
-# untracked.value = " 🐾"
-# untracked.style = "red"
+untracked.value = " ≋"
+untracked.style = "red"
 untracked_count.enabled = true
-untracked_count.style = "red"
+untracked_count.style = "bold red"
 
-stashed.value = " ◊"
-stashed.style = "yellow"
+stashed.value = " ⊽"
+stashed.style = "blue"
 stashed_count.enabled = true
-stashed_count.style = "white"
+stashed_count.style = "bold blue"
 
-modified.value = " ‹ø›"
+modified.value = " ♺"
 modified.style = "yellow"
 modified_count.enabled = true
-modified_count.style = "white"
+modified_count.style = "bold yellow"
 
-staged.value = " ‹+›"
-staged.style = "green"
+staged.value = " ⊍"
+staged.style = "cyan"
 staged_count.enabled = true
-staged_count.style = "white"
+staged_count.style = "bold cyan"
 
-renamed.value = " »"
-renamed.style = "cyan"
+renamed.value = " ⇌"
+renamed.style = "yellow"
 renamed_count.enabled = true
-renamed_count.style = "white"
+renamed_count.style = "bold yellow"
 
-deleted.value = " ✖"
+deleted.value = " ≭"
 deleted.style = "red"
 deleted_count.enabled = true
-deleted_count.style = "white"
+deleted_count.style = "bold red"
 
 prefix = "["
 suffix = "]"
 style = "bold white"
 
 show_sync_count = true
-
-# conflicted = "🏳"
-# ahead = "🏎💨"
-# behind = "😰"
-# diverged = "😵"
-# untracked = "🤷‍"
-# stashed = "📦"
-# modified = "📝"
-# staged.value = "++"
-# staged.style = "green"
-# staged_count.enabled = true
-# staged_count.style = "green"
-# renamed = "👅"
-# deleted = "🗑"
 
 # conflicted    "="                 This branch has merge conflicts.
 # conflicted_count  link            Show and style the number of conflicts.
@@ -259,7 +243,7 @@ symbol = "🦦 "
 ssh_only = true
 prefix = "⟪"
 suffix = "⟫"
-trim_at = ".uu.se"
+trim_at = ".uppmax.uu.se"
 disabled = false
 # ssh_only  true                    Only show hostname when connected to an SSH session.
 # prefix    ""                      Prefix to display immediately before the hostname.
@@ -270,14 +254,14 @@ disabled = false
 
 
 [java]
-# symbol = "🌟 "
 # symbol    "☕ "                   The symbol used before displaying the version of Java.
 # style "dimmed red"                The style for the module.
 # disabled  false                   Disables the java module.
 
 
 [jobs]
-symbol = " 🤖"
+symbol = "∫"
+# symbol = " ∑"
 threshold = 3
 # symbol    "✦"                     The symbol used before displaying the number of jobs.
 # threshold 1                       Show number of jobs if exceeded.
@@ -286,7 +270,8 @@ threshold = 3
 
 
 [julia]
-# symbol = "∴ "
+prefix = ""
+symbol.style = "fg:#9C4C9C"
 # symbol    "ஃ "                    The symbol used before displaying the version of Julia.
 # style "bold purple"               The style for the module.
 # disabled  false                   Disables the julia module.
@@ -327,7 +312,9 @@ disabled = true
 
 
 [package]
-# symbol = "🎁 "
+prefix = ""
+style = "bold cyan"
+symbol.style = "red"
 # symbol    "📦 "                   The symbol used before displaying the version the package.
 # style "bold 208"                  The style for the module.
 # display_private   false           Enable displaying version for packages marked as private.
@@ -354,7 +341,11 @@ pyenv_prefix = "foo "
 
 
 [rust]
-symbol = "⚙️ "
+prefix = ""
+symbol.value = "⚙️ "
+symbol.style = "bold red"
+style = "bold cyan"
+# disabled = true
 # symbol    "🦀 "                   The symbol used before displaying the version of Rust.
 # style "bold red"                  The style for the module.
 # disabled  false                   Disables the rust module.
