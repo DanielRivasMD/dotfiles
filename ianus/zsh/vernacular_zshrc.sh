@@ -83,9 +83,12 @@ setopt appendhistory
 
 # ==========================
 # ===  Commands          ===
+# ===  Key bindings      ===
 # ==========================
 
 mman() { command man "$@" | more }
+bindkey "\x1b[1;3D" backward-word
+bindkey "\x1b[1;3C" forward-word
 
 # ==========================
 # ===  JetBrains         ===
