@@ -73,18 +73,3 @@ alias ss='samesame'
 alias wc='wordcrab'
 
 # ==========================
-# ===  Shell functions   ===
-# ==========================
-
-# Wrapper for cd. Updates PROMPT every time 'cd' is called. Compatible with 'cl'
-function cd() {
-  builtin cd "$@" && set_prompt
-}
-export cd
-
-# Rmarkdown knit
-function knit() {
-  R --slave -e "rmarkdown::render('$1')" > /dev/null
-}
-
-# ==========================

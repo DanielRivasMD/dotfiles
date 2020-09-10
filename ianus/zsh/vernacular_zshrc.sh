@@ -29,7 +29,7 @@ eval "$(starship init zsh)"
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins
+# antibody bundle < ${IANUS}zsh/zsh_plugins.txt > ${IANUS}zsh/zsh_plugins
 source ${ZDOTDIR}/zsh_plugins
 
 

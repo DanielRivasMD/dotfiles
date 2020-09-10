@@ -3,22 +3,18 @@
 # ===  General aliases   ===
 # ==========================
 
-# Load General aliases
-if [ -f ~/.terminal_aliases ]; then
-  . ~/.terminal_aliases
+if [ -f ${HOME}/.alias ]; then
+  . ${HOME}/.alias
 fi
 
-# ==========================
-# ===  General settings  ===
-# ==========================
-
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
+export ARCHIVE=${HOME}/.archive/
+export IANUS=${ARCHIVE}ianus/
+export CERBERUS=${ARCHIVE}cerberus/
 
 # ==========================
 # ===  Language settings ===
 # ==========================
 
-# Language settings
 LANG=en_US.UTF-8
 LC_CTYPE="en_US.UTF-8"
 LC_NUMERIC="en_US.UTF-8"
@@ -39,8 +35,7 @@ export LC_ALL=en_US.UTF-8
 # ===  Go Path           ===
 # ==========================
 
-# GOPATH settings
-GOPATH=$HOME/.go/
+export GOPATH=$HOME/.go/
 
 # ==========================
 # ===  Cargo-Rust Path   ===
@@ -75,9 +70,8 @@ PATH=$PATH:$HOME/bin/cargoTools/
 # ===  Export            ===
 # ==========================
 
-export GOPATH
 export PATH
-export STARSHIP_CONFIG=${IANUS}starship/vernacular_starship.toml
+export STARSHIP_CONFIG=${IANUS}starship/starship.toml
 
 # ==========================
 # ===  Less              ===
@@ -97,8 +91,7 @@ export EDITOR="$VISUAL"
 # ===  Screen width      ===
 # ==========================
 
-MANWIDTH=175
-export MANWIDTH
+export MANWIDTH=175
 
 # ==========================
 # ===  Pager              ===
@@ -111,8 +104,7 @@ export BAT_PAGER=less
 # ===  Pier              ===
 # ==========================
 
-PIER="${HOME}/.archive/ianus/pier/"
-export PIER
+export PIER="${HOME}/.archive/ianus/pier/"
 
 # ==========================
 # ===  Broot             ===
@@ -125,5 +117,14 @@ source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
 # ==========================
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+# ==========================
+# ===  Shell functions   ===
+# ==========================
+
+# Rmarkdown knit
+function knit() {
+  R --slave -e "rmarkdown::render('$1')" > /dev/null
+}
 
 # ==========================
