@@ -4,17 +4,33 @@
 # ==========================
 
 # Load zsh settings
-if [ -f ~/.zsh_profile ]; then
-  . ~/.zsh_profile
+if [ -f ~/.profile ]; then
+  . ~/.profile
 fi
+
+ZDOTDIR=${HOME}/.zsh
+
+# ==========================
+# ===  ZSH aliases       ===
+# ==========================
+
+if [ -f ${ZDOTDIR}/zsh_aliases ]; then
+  . ${ZDOTDIR}/zsh_aliases
+fi
+
+# ==========================
+# ===   Prompt           ===
+# ==========================
+
+eval "$(starship init zsh)"
 
 # ==========================
 # ===  Plugins AB        ===
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins
-source ~/.zsh_plugins
+# antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins
+source ${ZDOTDIR}/zsh_plugins
 
 
 # # Plugins managed by antibody (AB) dinamically
@@ -44,49 +60,24 @@ zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Pandoc autocompletion
-source ~/.archive/ianus/zsh/zsh_pandoc_autocompletion.sh
+source ${ZDOTDIR}/zsh_pandoc_autocompletion.sh
 
 # Fuzzy finder (fzf)
-[ -f ~/.archive/ianus/zsh/fzf.zsh ] && source ~/.archive/ianus/zsh/fzf.zsh
-
-# ==========================
-# ===   Prompt           ===
-# ==========================
-
-# Left prompt
-source ~/.zsh_prompt
-set_prompt
-
-# Right prompt
-RPROMPT="¦ %{$fg[yellow]%}%T %{$reset_color%}Ξ %{$fg[blue]%}%! %{$reset_color%}¦"
-
-# Fossil autocompletion & prompt
-source ~/.archive/ianus/zsh/fossil_prompt.sh
-
-# ==========================
-# ===  ZSH aliases       ===
-# ==========================
-
-# Load ZSH aliases
-if [ -f ~/.zsh_aliases ]; then
-  . ~/.zsh_aliases
-fi
+[ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
 
 # ==========================
 # ===  History           ===
 # ==========================
 
-HISTFILE=~/.zsh_history
+HISTFILE=${ZDOTDIR}/zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt appendhistory
 
 # ==========================
-# ===  Commands          ===
 # ===  Key bindings      ===
 # ==========================
 
-mman() { command man "$@" | more }
 bindkey "\x1b[1;3D" backward-word
 bindkey "\x1b[1;3C" forward-word
 
