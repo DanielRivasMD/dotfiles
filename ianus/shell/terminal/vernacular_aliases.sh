@@ -72,4 +72,7 @@ alias ss='samesame'
 # wordcrab
 alias wc='wordcrab'
 
+# zoxide
+alias zz='z -'
+
 # ==========================
