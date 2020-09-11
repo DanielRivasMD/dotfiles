@@ -3,6 +3,25 @@
 # ===  General settings  ===
 # ==========================
 
+BDOTDIR=${HOME}/.bash
+
+# ==========================
+# ===   aliases          ===
+# ==========================
+
+if [ -f ${HOME}/.alias ]; then
+  . ${HOME}/.alias
+fi
+
+if [ -f ${BDOTDIR}/bash_aliases ]; then
+  . ${BDOTDIR}/bash_aliases
+fi
+
+# ==========================
+# ===  Prompt            ===
+# ==========================
+
+eval "$(starship init bash)"
 
 # ==========================
 # ===  Completion        ===
@@ -15,31 +34,15 @@
 eval "$(pandoc --bash-completion)"
 
 # Fuzzy finder (fzf)
-[ -f ~/.archive/ianus/bash/fzf.bash ] && source ~/.archive/ianus/bash/fzf.bash
-
-# ==========================
-# ===  SH aliases        ===
-# ==========================
-
-# Load SH aliases
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
+[ -f ${IANUS}bash/fzf.bash ] && source ${IANUS}bash/fzf.bash
 
 # ==========================
 # ===  History           ===
 # ==========================
 
-HISTFILE=~/.bash_history
+HISTFILE=${BDOTDIR}/bash_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-
-# ==========================
-# ===  SH Prompt         ===
-# ==========================
-
-source ~/.bash_prompt
-set_prompt
 
 # ==========================
 # ===  Silence warning   ===

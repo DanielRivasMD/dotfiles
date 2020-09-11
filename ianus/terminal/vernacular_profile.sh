@@ -3,10 +3,6 @@
 # ===  General aliases   ===
 # ==========================
 
-if [ -f ${HOME}/.alias ]; then
-  . ${HOME}/.alias
-fi
-
 export ARCHIVE=${HOME}/.archive/
 export IANUS=${ARCHIVE}ianus/
 export CERBERUS=${ARCHIVE}cerberus/

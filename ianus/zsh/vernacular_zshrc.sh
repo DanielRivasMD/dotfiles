@@ -11,8 +11,12 @@ fi
 ZDOTDIR=${HOME}/.zsh
 
 # ==========================
-# ===  ZSH aliases       ===
+# ===   aliases          ===
 # ==========================
+
+if [ -f ${HOME}/.alias ]; then
+  . ${HOME}/.alias
+fi
 
 if [ -f ${ZDOTDIR}/zsh_aliases ]; then
   . ${ZDOTDIR}/zsh_aliases
