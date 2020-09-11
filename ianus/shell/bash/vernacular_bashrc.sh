@@ -13,8 +13,8 @@ if [ -f ${HOME}/.alias ]; then
   . ${HOME}/.alias
 fi
 
-if [ -f ${BDOTDIR}/bash_aliases ]; then
-  . ${BDOTDIR}/bash_aliases
+if [ -f ${BDOTDIR}/bash_aliases.sh ]; then
+  . ${BDOTDIR}/bash_aliases.sh
 fi
 
 # ==========================

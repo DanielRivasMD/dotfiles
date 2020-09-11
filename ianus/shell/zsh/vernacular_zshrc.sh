@@ -18,8 +18,8 @@ if [ -f ${HOME}/.alias ]; then
   . ${HOME}/.alias
 fi
 
-if [ -f ${ZDOTDIR}/zsh_aliases ]; then
-  . ${ZDOTDIR}/zsh_aliases
+if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then
+  . ${ZDOTDIR}/zsh_aliases.sh
 fi
 
 # ==========================
@@ -33,8 +33,8 @@ eval "$(starship init zsh)"
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ${IANUS}zsh/zsh_plugins.txt > ${IANUS}zsh/zsh_plugins
-source ${ZDOTDIR}/zsh_plugins
+# antibody bundle < ${IANUS}zsh/zsh_plugins.txt > ${IANUS}zsh/zsh_plugins.sh
+source ${ZDOTDIR}/zsh_plugins.sh
 
 
 # # Plugins managed by antibody (AB) dinamically
