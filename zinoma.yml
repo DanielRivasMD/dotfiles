@@ -1,8 +1,6 @@
 targets:
   ianus:
     build: |
-      IANUS=${HOME}/.archive/ianus/
-
       # HOME directories
       ln -svf ${IANUS}vim ${HOME}/.vim
 
@@ -40,8 +38,6 @@ targets:
 
   cerberus:
     build: |
-      CERBERUS=${HOME}/.archive/cerberus/
-
       # HOME directories
       # purge before linking
       rm -rf ~/.atom
