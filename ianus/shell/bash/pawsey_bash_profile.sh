@@ -37,7 +37,7 @@ eval "$(starship init bash)"
 # ==========================
 
 # Fuzzy finder (fzf)
-[ -f ${IANUS}bash/fzf.bash ] && source ${IANUS}bash/fzf.bash
+[ -f ${IANUS}shell/bash/fzf.bash ] && source ${IANUS}shell/bash/fzf.bash
 
 # ==========================
 # ===  History           ===
