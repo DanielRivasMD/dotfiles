@@ -75,6 +75,8 @@ setopt appendhistory
 
 bindkey "\x1b[1;3D" backward-word
 bindkey "\x1b[1;3C" forward-word
+bindkey "\x01" beginning-of-line
+bindkey "\x05" end-of-line
 
 # ==========================
 # ===  zoxide            ===
