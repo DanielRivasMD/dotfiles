@@ -60,7 +60,7 @@ PATH=$PATH:$HOME/bin
 # ==========================
 
 export PATH
-export STARSHIP_CONFIG=${IANUS}starship/starship.toml
+export STARSHIP_CONFIG=${IANUS}starship/uppmax_starship.toml
 
 # ==========================
 # ===  Less              ===

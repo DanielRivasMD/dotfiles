@@ -67,7 +67,7 @@ PATH=$PATH:$HOME/bin/cargoTools/
 # ==========================
 
 export PATH
-export STARSHIP_CONFIG=${IANUS}starship/starship.toml
+export STARSHIP_CONFIG=${IANUS}starship/vernacular_starship.toml
 
 # ==========================
 # ===  Less              ===
