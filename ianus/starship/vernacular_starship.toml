@@ -248,12 +248,12 @@ style = "bold #95E6CB"
 
 
 [hostname]
+disabled = true
 ssh_only = true
 prefix = "⟪"
 suffix = "⟫"
 trim_at = ".uppmax.uu.se"
 style = "#B452CD"
-disabled = false
 # ssh_only  true                    Only show hostname when connected to an SSH session.
 # prefix    ""                      Prefix to display immediately before the hostname.
 # suffix    ""                      Suffix to display immediately after the hostname.

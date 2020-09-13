@@ -1,6 +1,6 @@
 
 # ==========================
-# ===  Uppmax default		 ===
+# ===  Uppmax default    ===
 # ==========================
 
 # Modules, activate the module command
