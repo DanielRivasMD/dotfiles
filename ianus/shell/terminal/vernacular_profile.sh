@@ -1,6 +1,6 @@
 
 # ==========================
-# ===  General aliases   ===
+# ===  Archives          ===
 # ==========================
 
 export ARCHIVE=${HOME}/.archive/

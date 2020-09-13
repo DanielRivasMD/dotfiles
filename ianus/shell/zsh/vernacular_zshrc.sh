@@ -14,8 +14,8 @@ ZDOTDIR=${HOME}/.zsh
 # ===   aliases          ===
 # ==========================
 
-if [ -f ${IANUS}shell/terminal/.vernacular_aliases.sh ]; then
-  . ${IANUS}shell/terminal/.vernacular_aliases.sh
+if [ -f ${IANUS}shell/terminal/vernacular_aliases.sh ]; then
+  . ${IANUS}shell/terminal/vernacular_aliases.sh
 fi
 
 if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then
@@ -33,7 +33,7 @@ eval "$(starship init zsh)"
 # ==========================
 
 # Plugins managed by antibody (AB) statically
-# antibody bundle < ${IANUS}zsh/zsh_plugins.txt > ${IANUS}zsh/zsh_plugins.sh
+# antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins.sh
 source ${ZDOTDIR}/zsh_plugins.sh
 
 
@@ -128,7 +128,7 @@ eval "$(zoxide init zsh)"
 # ===  editor            ===
 # ==========================
 
-# edit line in vim with ctrl-n:
+# edit line in editor with ctrl-n:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^n' edit-command-line
 
