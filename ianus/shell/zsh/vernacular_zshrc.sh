@@ -4,8 +4,8 @@
 # ==========================
 
 # Load zsh settings
-if [ -f ~/.profile ]; then
-  . ~/.profile
+if [ -f ${HOME}/.profile ]; then
+  . ${HOME}/.profile
 fi
 
 ZDOTDIR=${HOME}/.zsh
@@ -14,8 +14,8 @@ ZDOTDIR=${HOME}/.zsh
 # ===   aliases          ===
 # ==========================
 
-if [ -f ${HOME}/.alias ]; then
-  . ${HOME}/.alias
+if [ -f ${IANUS}shell/terminal/.vernacular_aliases.sh ]; then
+  . ${IANUS}shell/terminal/.vernacular_aliases.sh
 fi
 
 if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then

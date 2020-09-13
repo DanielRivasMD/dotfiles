@@ -100,7 +100,7 @@ export BAT_PAGER=less
 # ===  Pier              ===
 # ==========================
 
-export PIER="${HOME}/.archive/ianus/pier/"
+export PIER="${IANUS}pier/"
 
 # ==========================
 # ===  Broot             ===
