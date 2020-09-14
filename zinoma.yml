@@ -1,16 +1,49 @@
 targets:
-  ianus:
+
+  ################################################################################
+
+  cerberus:
     build: |
+
       # HOME directories
-      ln -svf ${IANUS}vim ${HOME}/.vim
+      # purge before linking
+      rm -rf ${HOME}/.atom
+      ln -svf ${CERBERUS}atom ${HOME}/.atom
+      rm ${HOME}/.gitconfig.d
+      ln -svf ${CERBERUS}gitconfig.d ${HOME}/.gitconfig.d
 
       # rc files
-      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+      ln -svf ${CERBERUS}gem/gemrc ${HOME}/.gemrc
+      ln -svf ${CERBERUS}mplayer/mplayer ${HOME}/.mplayer
+      ln -svf ${CERBERUS}nano/nanorc ${HOME}/.nanorc
+      ln -svf ${CERBERUS}screen/screenrc ${HOME}/.screenrc
+
+      # git files
+      ln -svf ${CERBERUS}git/gitconfig ${HOME}/.gitconfig
+      ln -svf ${CERBERUS}git/gitignore_global ${HOME}/.gitignore_global
 
       # toml files
-      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+      ln -svf ${CERBERUS}procs/procs.toml ${HOME}/.procs.toml
 
       # @config
+      ln -svf ${CERBERUS}alacritty ${HOME}/.config/
+      ln -svf ${CERBERUS}bottom ${HOME}/.config/
+      ln -svf ${CERBERUS}cheat ${HOME}/.config/
+      ln -svf ${CERBERUS}khal ${HOME}/.config/
+      ln -svf ${CERBERUS}gh/config.yml ${HOME}/.config/gh/
+      ln -svf ${CERBERUS}rstudio ${HOME}/.config/
+      ln -svf ${CERBERUS}rustfmt ${HOME}/.config/
+
+      ln -svf ${CERBERUS}rstudio/keybindings ${HOME}/.R/rstudio/
+
+      # @local
+      ln -svf ${CERBERUS}rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/
+
+      # @distant
+      ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
+      ln -svf ${CERBERUS}ssh/config ${HOME}/.ssh/
+      ln -svf ${CERBERUS}sublime/* "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/"
+
       ln -svf ${IANUS}amp ${HOME}/.config
       ln -svf ${IANUS}micro ${HOME}/.config
 
