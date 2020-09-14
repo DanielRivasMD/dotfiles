@@ -40,6 +40,7 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'tomasr/molokai'
+Plugin 'cespare/vim-toml'
 
 call vundle#end()            " required
 
