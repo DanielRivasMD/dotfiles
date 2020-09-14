@@ -187,3 +187,114 @@ targets:
       rsync -azvhP ${IANUS}vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
       rsync -azvhP ${IANUS}vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
 
+################################################################################
+
+  uppmax:
+    build: |
+
+      # vim
+      if [[ -d ${HOME}/.vim ]]
+      then
+        rm ${HOME}/.vim
+      fi
+
+      ln -svf ${IANUS}vim ${HOME}/.vim
+      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+
+      # pier
+      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+
+      # tmux
+      ln -svf ${IANUS}tmux/2.5.tmux.conf ${HOME}/.tmux.conf
+
+      # amp
+      ln -svf ${IANUS}amp ${HOME}/.config
+
+      # micro
+      ln -svf ${IANUS}micro ${HOME}/.config
+
+      # terminal
+      ln -svf ${IANUS}shell/terminal/uppmax_profile.sh ${HOME}/.profile
+
+      # bash
+      if [[ ! -d ${HOME}/.bash ]]
+      then
+        mkdir ${HOME}/.bash
+      fi
+
+      ln -svf ${IANUS}shell/bash/fzf.bash ${HOME}/.bash
+      ln -svf ${IANUS}shell/bash/uppmax_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
+
+      ln -svf ${IANUS}shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile
+      ln -svf ${IANUS}shell/bash/uppmax_bashrc.sh ${HOME}/.bashrc
+
+      # zsh
+      if [[ ! -d ${HOME}/.zsh ]]
+      then
+        mkdir ${HOME}/.zsh
+      fi
+
+      ln -svf ${IANUS}shell/zsh/fzf.zsh ${HOME}/.zsh
+      ln -svf ${IANUS}shell/zsh/uppmax_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
+      ln -svf ${IANUS}shell/zsh/uppmax_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
+      ln -svf ${IANUS}shell/zsh/uppmax_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
+      ln -svf ${IANUS}shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+
+      ln -svf ${IANUS}shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc
+
+################################################################################
+
+  pawsey:
+    build: |
+
+      # vim
+      if [[ -d ${HOME}/.vim ]]
+      then
+        rm ${HOME}/.vim
+      fi
+
+      ln -svf ${IANUS}vim ${HOME}/.vim
+      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+
+      # pier
+      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+
+      # tmux
+      ln -svf ${IANUS}tmux/2.5.tmux.conf ${HOME}/.tmux.conf
+
+      # amp
+      ln -svf ${IANUS}amp ${HOME}/.config
+
+      # micro
+      ln -svf ${IANUS}micro ${HOME}/.config
+
+      # terminal
+      ln -svf ${IANUS}shell/terminal/pawsey_profile.sh ${HOME}/.profile
+
+      # bash
+      if [[ ! -d ${HOME}/.bash ]]
+      then
+        mkdir ${HOME}/.bash
+      fi
+
+      ln -svf ${IANUS}shell/bash/fzf.bash ${HOME}/.bash
+      ln -svf ${IANUS}shell/bash/pawsey_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
+
+      ln -svf ${IANUS}shell/bash/pawsey_bash_profile.sh ${HOME}/.bash_profile
+      ln -svf ${IANUS}shell/bash/pawsey_bashrc.sh ${HOME}/.bashrc
+
+      # zsh
+      if [[ ! -d ${HOME}/.zsh ]]
+      then
+        mkdir ${HOME}/.zsh
+      fi
+
+      ln -svf ${IANUS}shell/zsh/fzf.zsh ${HOME}/.zsh
+      ln -svf ${IANUS}shell/zsh/pawsey_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
+      ln -svf ${IANUS}shell/zsh/pawsey_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
+      ln -svf ${IANUS}shell/zsh/pawsey_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
+      ln -svf ${IANUS}shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+
+      ln -svf ${IANUS}shell/zsh/pawsey_zshrc.sh ${HOME}/.zshrc
+
+################################################################################
