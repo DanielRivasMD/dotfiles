@@ -71,7 +71,7 @@ targets:
       ln -svf ${IANUS}micro ${HOME}/.config
 
       # R
-      ln -svf ${IANUS}R/vernacular_Rprofile ${HOME}/.Rprofile
+      ln -svf ${IANUS}R/vernacular_Rprofile.R ${HOME}/.Rprofile
 
       # terminal
       ln -svf ${IANUS}shell/terminal/vernacular_profile.sh ${HOME}/.profile
@@ -213,6 +213,9 @@ targets:
       # micro
       ln -svf ${IANUS}micro ${HOME}/.config
 
+      # R
+      ln -svf ${IANUS}R/uppmax_Rprofile.R ${HOME}/.Rprofile
+
       # terminal
       ln -svf ${IANUS}shell/terminal/uppmax_profile.sh ${HOME}/.profile
 
@@ -260,13 +263,16 @@ targets:
       ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
 
       # tmux
-      ln -svf ${IANUS}tmux/2.5.tmux.conf ${HOME}/.tmux.conf
+      ln -svf ${IANUS}tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
 
       # amp
       ln -svf ${IANUS}amp ${HOME}/.config
 
       # micro
       ln -svf ${IANUS}micro ${HOME}/.config
+
+      # R
+      ln -svf ${IANUS}R/pawsey_Rprofile.R ${HOME}/.Rprofile
 
       # terminal
       ln -svf ${IANUS}shell/terminal/pawsey_profile.sh ${HOME}/.profile
