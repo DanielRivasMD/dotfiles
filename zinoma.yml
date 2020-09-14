@@ -101,41 +101,89 @@ targets:
 
       ln -svf ${IANUS}shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
 
+################################################################################
+
+  hermesP:
     build: |
-      # HOME directories
-      # purge before linking
-      rm -rf ~/.atom
-      ln -svf ${CERBERUS}atom ${HOME}/.atom
-      rm -rf ~/.gitconfig.d
-      ln -svf ${CERBERUS}gitconfig.d ${HOME}/.gitconfig.d
 
-      # rc files
-      ln -svf ${CERBERUS}gem/gemrc ${HOME}/.gemrc
-      ln -svf ${CERBERUS}mplayer/mplayer ${HOME}/.mplayer
-      ln -svf ${CERBERUS}nano/nanorc ${HOME}/.nanorc
-      ln -svf ${CERBERUS}screen/screenrc ${HOME}/.screenrc
+      REMOTE="drivas@topaz.pawsey.org.au"
 
-      # git files
-      ln -svf ${CERBERUS}git/gitconfig ${HOME}/.gitconfig
-      ln -svf ${CERBERUS}git/gitignore_global ${HOME}/.gitignore_global
+      # zinoma
+      rsync -azvhP ${ARCHIVE}zinoma.yml ${REMOTE}:/home/drivas/.archive/
 
-      # toml files
-      ln -svf ${CERBERUS}procs/procs.toml ${HOME}/.procs.toml
+      # amp
+      rsync -azvhP ${IANUS}amp ${REMOTE}:/home/drivas/.archive/ianus/
 
-      # @config
-      ln -svf ${CERBERUS}alacritty ${HOME}/.config/
-      ln -svf ${CERBERUS}bottom ${HOME}/.config/
-      ln -svf ${CERBERUS}cheat ${HOME}/.config/
-      ln -svf ${CERBERUS}khal ${HOME}/.config/
-      ln -svf ${CERBERUS}gh/config.yml ${HOME}/.config/gh/
-      ln -svf ${CERBERUS}rstudio ${HOME}/.config/
-      ln -svf ${CERBERUS}rustfmt ${HOME}/.config/
+      # micro
+      rsync -azvhP ${IANUS}micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}micro/settings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
 
-      # @distant
-      ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
-      ln -svf ${CERBERUS}ssh/config ${HOME}/.ssh/
-      ln -svf ${CERBERUS}sublime/* "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/"
+      # pier
+      rsync -azvhP ${IANUS}pier ${REMOTE}:/home/drivas/.archive/ianus/
 
-  hermes:
+      # R
+      rsync -azvhP ${IANUS}R ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # screen
+      rsync -azvhP ${IANUS}screen ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # shell
+      rsync -azvhP ${IANUS}shell ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # starship
+      rsync -azvhP ${IANUS}starship ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # tmux
+      rsync -azvhP ${IANUS}tmux ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # vim
+      rsync -azvhP ${IANUS}vim/bundle ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/functions.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/keybindings.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
+
+################################################################################
+
+  hermesU:
     build: |
-      # tar compress whole directory for shipment
+
+      REMOTE="drivas@rackham.uppmax.uu.se"
+
+      # zinoma
+      rsync -azvhP ${ARCHIVE}zinoma.yml ${REMOTE}:/home/drivas/.archive/
+
+      # amp
+      rsync -azvhP ${IANUS}amp ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # micro
+      rsync -azvhP ${IANUS}micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}micro/settings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+
+      # pier
+      rsync -azvhP ${IANUS}pier ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # R
+      rsync -azvhP ${IANUS}R ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # screen
+      rsync -azvhP ${IANUS}screen ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # shell
+      rsync -azvhP ${IANUS}shell ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # starship
+      rsync -azvhP ${IANUS}starship ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # tmux
+      rsync -azvhP ${IANUS}tmux ${REMOTE}:/home/drivas/.archive/ianus/
+
+      # vim
+      rsync -azvhP ${IANUS}vim/bundle ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/functions.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/keybindings.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
+
