@@ -44,22 +44,55 @@ targets:
       ln -svf ${CERBERUS}ssh/config ${HOME}/.ssh/
       ln -svf ${CERBERUS}sublime/* "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/"
 
+################################################################################
+
+  ianus:
+    build: |
+
+      # vim
+      if [[ -d ${HOME}/.vim ]]
+      then
+        rm ${HOME}/.vim
+      fi
+
+      ln -svf ${IANUS}vim ${HOME}/.vim
+      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+
+      # pier
+      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+
+      # tmux
+      ln -svf ${IANUS}tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
+
+      # amp
       ln -svf ${IANUS}amp ${HOME}/.config
+
+      # micro
       ln -svf ${IANUS}micro ${HOME}/.config
 
-      # @distant
-      ln -svf ${IANUS}R/rstudio ${HOME}/.r
+      # R
+      ln -svf ${IANUS}R/vernacular_Rprofile ${HOME}/.Rprofile
 
       # terminal
       ln -svf ${IANUS}shell/terminal/vernacular_profile.sh ${HOME}/.profile
 
       # bash
+      if [[ ! -d ${HOME}/.bash ]]
+      then
+        mkdir ${HOME}/.bash
+      fi
+
       ln -svf ${IANUS}shell/bash/fzf.bash ${HOME}/.bash
       ln -svf ${IANUS}shell/bash/vernacular_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
 
       ln -svf ${IANUS}shell/bash/vernacular_bashrc.sh ${HOME}/.bashrc
 
       # zsh
+      if [[ ! -d ${HOME}/.zsh ]]
+      then
+        mkdir ${HOME}/.zsh
+      fi
+
       ln -svf ${IANUS}shell/zsh/fzf.zsh ${HOME}/.zsh
       ln -svf ${IANUS}shell/zsh/vernacular_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
       ln -svf ${IANUS}shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
@@ -68,7 +101,6 @@ targets:
 
       ln -svf ${IANUS}shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
 
-  cerberus:
     build: |
       # HOME directories
       # purge before linking
