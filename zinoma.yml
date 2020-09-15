@@ -101,6 +101,9 @@ targets:
 
       ln -svf ${IANUS}shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
 
+      # fish
+      ln -svf ${IANUS}shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish
+
 ################################################################################
 
   hermesP:
