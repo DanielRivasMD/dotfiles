@@ -309,4 +309,7 @@ targets:
 
       ln -svf ${IANUS}shell/zsh/pawsey_zshrc.sh ${HOME}/.zshrc
 
+      # fish
+      ln -svf ${IANUS}shell/fish/pawsey_config.fish ${HOME}/.config/fish/config.fish
+
 ################################################################################
