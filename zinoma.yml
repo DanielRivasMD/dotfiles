@@ -248,6 +248,9 @@ targets:
 
       ln -svf ${IANUS}shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc
 
+      # fish
+      ln -svf ${IANUS}shell/fish/uppmax_config.fish ${HOME}/.config/fish/config.fish
+
 ################################################################################
 
   pawsey:
