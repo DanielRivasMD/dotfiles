@@ -41,6 +41,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'tomasr/molokai'
 Plugin 'cespare/vim-toml'
+Plugin 'gmarik/vundle'
+Plugin 'dag/vim-fish'
 
 call vundle#end()            " required
 
