@@ -136,6 +136,12 @@ esac
 description = 'list git shortcuts'
 tags = ['git']
 
+[scripts.godoc]
+alias = 'godoc'
+command = 'godoc -http=localhost:6060'
+description = 'open port for godoc'
+tags = ['go']
+
 [scripts.kal]
 alias = 'kal'
 command = '''
