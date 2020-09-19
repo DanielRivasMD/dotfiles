@@ -19,8 +19,8 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-comma': ->
     atom.workspace.getActiveTextEditor()?.insertText(', ')
 
-  'custom:insert-tilde': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
+  'custom:insert-not_equal': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' != ')
 
   'custom:insert-equal': ->
     atom.workspace.getActiveTextEditor()?.insertText(' = ')
@@ -98,8 +98,8 @@ atom.commands.add 'atom-text-editor',
     atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
   'custom:insert-r_pipe_tee': ->
     atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
-  'custom:insert-r_include': ->
-    atom.workspace.getActiveTextEditor()?.insertText(' %in% ')
+  'custom:insert-not_equal_broadcast': ->
+    atom.workspace.getActiveTextEditor()?.insertText(' .!= ')
 
   'custom:insert-rust_assign': ->
     atom.workspace.getActiveTextEditor()?.insertText(' => ')

@@ -154,7 +154,7 @@
 
   ',': 'custom:insert-comma'
 
-  'alt-5': 'custom:insert-tilde'
+  'alt-5': 'custom:insert-not_equal'
 
   'alt-=': 'custom:insert-equal'
   'alt-\\': 'custom:insert-equalequal'
@@ -198,7 +198,7 @@
   'alt-&': 'custom:insert-r_pipe_assign'
   'alt-6': 'custom:insert-r_pipe_var'
   'alt-^': 'custom:insert-r_pipe_tee'
-  'alt-%': 'custom:insert-r_include'
+  'alt-%': 'custom:insert-not_equal_broadcast'
 
   'alt-\'': 'custom:insert-rust_assign'
   'alt-"': 'custom:insert-r_right_assign'
