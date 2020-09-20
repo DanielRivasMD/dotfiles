@@ -43,6 +43,7 @@ Plugin 'tomasr/molokai'
 Plugin 'cespare/vim-toml'
 Plugin 'gmarik/vundle'
 Plugin 'dag/vim-fish'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()            " required
 
