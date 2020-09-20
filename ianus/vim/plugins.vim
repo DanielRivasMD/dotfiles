@@ -44,6 +44,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'gmarik/vundle'
 Plugin 'dag/vim-fish'
 Plugin 'mhinz/vim-startify'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()            " required
 
