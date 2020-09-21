@@ -214,54 +214,34 @@ echo $PATH | xsv flatten -d ":" -n
 description = 'display PATH'
 tags = ['shell']
 
-[scripts.sftp-bianca]
-alias = 'sftp-bianca'
-command = '''
-sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se
-'''
+[scripts.bianca-sftp]
+alias = 'bianca-sftp'
+command = 'sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2019016'
 tags = ['remote']
 
-[scripts.sftp-magnus]
-alias = 'sftp-magnus'
+[scripts.bianca-ssh]
+alias = 'bianca-ssh'
+command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
+description = 'ssh to Bianca sens2019016'
+tags = ['remote'] 
+
+[scripts.magnus-sftp]
+alias = 'magnus-sftp'
 command = 'sftp drivas@magnus.pawsey.org.au'
 description = 'sftp to Pawsey Magnus'
 tags = ['remote']
 
-[scripts.sftp-topaz]
-alias = 'sftp-topaz'
+[scripts.topaz-sftp]
+alias = 'topaz-sftp'
 command = 'sftp drivas@topaz.pawsey.org.au'
 description = 'sftp to Pawsey Topaz'
 tags = ['remote']
 
-[scripts.sftp-uppmax]
-alias = 'sftp-uppmax'
+[scripts.uppmax-sftp]
+alias = 'uppmax-sftp'
 command = 'sftp drivas@rackham.uppmax.uu.se'
 description = 'sftp to Uppmax Rackham'
-tags = ['remote']
-
-[scripts.ssh-bianca]
-alias = 'ssh-bianca'
-command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2019016'
-tags = ['remote']
-
-[scripts.ssh-magnus]
-alias = 'ssh-magnus'
-command = 'ssh drivas@magnus.pawsey.org.au'
-description = 'ssh to Pawsey Magnus'
-tags = ['remote']
-
-[scripts.ssh-topaz]
-alias = 'ssh-topaz'
-command = 'ssh drivas@topaz.pawsey.org.au'
-description = 'ssh to Pawsey Topaz'
-tags = ['remote']
-
-[scripts.ssh-uppmax]
-alias = 'ssh-uppmax'
-command = 'ssh drivas@rackham.uppmax.uu.se'
-description = 'ssh to Uppmax Rackham'
 tags = ['remote']
 
 [scripts.xa]
