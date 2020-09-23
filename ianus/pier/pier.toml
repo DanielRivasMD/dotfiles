@@ -209,9 +209,19 @@ tags = ['khal']
 [scripts.path]
 alias = 'path'
 command = '''
+source ${PIER}break_single_line.sh ${MANWIDTH}
 echo $PATH | xsv flatten -d ":" -n
 '''
 description = 'display PATH'
+tags = ['shell']
+
+[scripts.gopath]
+alias = 'gopath'
+command = '''
+source ${PIER}break_single_line.sh ${MANWIDTH}
+echo $GOPATH | xsv flatten -d ":" -n
+'''
+description = 'display GOPATH'
 tags = ['shell']
 
 [scripts.bianca-sftp]
