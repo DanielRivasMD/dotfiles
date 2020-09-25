@@ -4,13 +4,11 @@
       _analyticsUserId: "5b124fa4-6247-46e5-8f3e-bde5e948f60d"
   "atom-clock":
     showClockIcon: true
-  "atom-ide-ui":
-    "atom-ide-code-format": {}
-    hyperclick:
-      darwinTriggerKeys: "ctrlKey"
-  "atom-vlc":
-    compactMode: true
-    password: "vlcrules"
+  "atom-material-ui":
+    tabs:
+      compactTabs: true
+    ui:
+      panelContrast: true
   autocomplete:
     includeCompletionsFromAllBuffers: true
   "autocomplete-paths":
@@ -26,7 +24,6 @@
     automaticallyUpdate: false
     disabledPackages: [
       "background-tips"
-      "bookmarks"
       "language-gfm"
     ]
     ignoredNames: [
@@ -45,15 +42,11 @@
       "todo"
       "language-markdown"
       "github"
-      "git-plus"
       "git-diff"
-      "go-plus"
       "autocomplete-haskell"
-      "ide-haskell"
       "modular-snippets"
     ]
     packagesWithSnippetsDisabled: [
-      "ide-rust"
       "atom-language-r"
       "rbox"
       "language-shellscript"
@@ -65,20 +58,18 @@
       "language-haskell"
       "language-scala"
       "snippets"
-      "javascript-snippets"
     ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "solarized-dark-syntax"
+      "spacegray-atom-dark-syntax"
     ]
-  "custom-invisibles":
-    tabChar: "»–––"
   editor:
     autoIndentOnPaste: false
     fontFamily: "Monaco"
     fontSize: 16
-    invisibles: {}
+    invisibles:
+      tab: "—"
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
@@ -98,9 +89,8 @@
     general:
       splitPane: "Right"
   github:
-    showDiffIconGutter: true
-  "go-plus":
     panel: {}
+    showDiffIconGutter: true
   "highlight-selected": {}
   "ide-rust":
     rlsDefaultConfig: {}
@@ -149,6 +139,10 @@
     fileExtension: ".md"
   minimap:
     plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
@@ -159,31 +153,14 @@
       "lens-modeDecorationsZIndex": 0
       linter: true
       linterDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
   "minimap-git-diff":
     useGutterDecoration: true
-  "one-dark-ui": {}
-  "platformio-ide-terminal":
-    ansiColors:
-      normal:
-        blue: "#00a0ff"
-        magenta: "#ff40ff"
-        red: "#ff0000"
-        yellow: "#ff9300"
-      zBright:
-        brightBlack: "#929292"
-        brightBlue: "#00a0ff"
-        brightMagenta: "#ff40ff"
-        brightYellow: "#ff9300"
-    iconColors:
-      blue: "#00a0ff"
-      magenta: "#ff40ff"
-      orange: "#ff9300"
-      yellow: "#00fdff"
-    style:
-      defaultPanelHeight: "60%"
-      theme: "one-dark"
-    toggles:
-      autoClose: true
+  "one-dark-ui":
+    stickyHeaders: true
   "relative-numbers":
     showAbsoluteNumbersInInsertMode: false
     softWrapsCount: false
@@ -209,22 +186,12 @@
   "tree-view-git-status":
     gitFlow: {}
     showBranchLabel: false
-  "uber-juno":
-    disable: true
-  "vim-mode-plus":
-    keymapPToPutWithAutoIndent: true
-    keymapSToSelect: true
-    keymapYToYankToLastCharacterOfLine: true
-    startInInsertMode: true
   welcome:
     showOnStartup: false
 ".coffee.source":
   editor:
     tabLength: 2
     tabType: "soft"
-".console.julia.source":
-  editor:
-    tabLength: 2
 ".css.source":
   editor:
     tabLength: 2
@@ -232,10 +199,11 @@
 ".fish.source":
   editor:
     autoIndentOnPaste: true
+    tabType: "soft"
 ".go.source":
   editor:
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
 ".json.source":
   editor:
     tabLength: 2
@@ -243,7 +211,7 @@
 ".julia.source":
   editor:
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
 ".md.text":
   editor:
     preferredLineLength: 100
@@ -255,21 +223,21 @@
 ".python.source":
   editor:
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
 ".r.source":
   editor:
     autoIndent: true
     autoIndentOnPaste: true
     showIndentGuide: true
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
 ".rust.source":
   editor:
     autoIndentOnPaste: true
     preferredLineLength: 100
     showInvisibles: true
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
 ".shell.source":
   editor:
     tabLength: 2
