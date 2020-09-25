@@ -69,18 +69,6 @@
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-'.platform-darwin atom-workspace':
-
-# ToDo
-  'cmd-y': 'todo:toggle'
-
-# Terminal
-  'shift-cmd-C': 'platformio-ide-terminal:focus'
-  'shift-cmd-H': 'platformio-ide-terminal:new'
-  'alt-cmd-f': 'abort!'
-
-#------------------------------------------------------------------------------------------------------------------------------
-
 # Go to line
 '.go-to-line':
   'space': 'core:cancel'
@@ -89,50 +77,33 @@
 
 '.platform-darwin atom-text-editor':
 
-# Project Switcher
-  'cmd-;': 'unset!'
-  # 'alt-;': 'project-switcher:toggle'
-
 # Core Editor
   'ctrl-alt-]': 'editor:unfold-current-row'
   'ctrl-alt-[': 'editor:fold-current-row'
   'shift-ctrl-alt-]': 'editor:unfold-all'
   'shift-ctrl-alt-[': 'editor:fold-all'
 
-  'alt-cmd-]': 'unset!'
-  'alt-cmd-[': 'unset!'
   'shift-alt-cmd-]': 'unset!'
   'shift-alt-cmd-[': 'unset!'
 
 # autoindent selection
-  'ctrl-cmd-i': 'editor:auto-indent'
+  'alt-cmd-;': 'editor:auto-indent'
 
-#------------------------------------------------------------------------------------------------------------------------------
+# tabs & spaces
+  'alt-cmd-]': 'whitespace:convert-spaces-to-tabs'
+  'alt-cmd-[': 'whitespace:convert-tabs-to-spaces'
 
-# Autocomplete-plus
+# autocompletion
 '.autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
-  'cmd-enter': 'autocomplete-plus:navigate-to-description-more-link'
-
-#------------------------------------------------------------------------------------------------------------------------------
-
-# Vim Insert mode
-'atom-text-editor.vim-mode-plus:not(.normal-mode)':
-  'j j': 'vim-mode-plus:activate-normal-mode'
-  'escape': 'unset!'
-
-#------------------------------------------------------------------------------------------------------------------------------
-
-# Vim leader
-'atom-workspace:not(.leader-mode) atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode)':
-  ',': 'leader:enable'
+  'space': 'autocomplete-plus:cancel'
+  'tab': 'abort!'
 
 #------------------------------------------------------------------------------------------------------------------------------
 
 # Core Editor
 'atom-text-editor':
   'alt-t': 'unset!'
-  'shift-cmd-C': 'unset!'
 
   # Pandoc quick export
   'cmd-alt-o h': 'Pandoc:pandoc2HTML'
