@@ -42,7 +42,10 @@ targets:
       # @distant
       ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
       ln -svf ${CERBERUS}ssh/config ${HOME}/.ssh/
-      ln -svf ${CERBERUS}sublime/* "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/"
+      ln -svf "${CERBERUS}sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+      ln -svf "${CERBERUS}sublime/Package Control.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+      ln -svf "${CERBERUS}sublime/Preferences.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+      ln -svf "${CERBERUS}sublime/trailing_spaces.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings"
 
 ################################################################################
 
