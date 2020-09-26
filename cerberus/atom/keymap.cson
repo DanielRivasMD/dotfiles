@@ -46,6 +46,22 @@
 #
 #------------------------------------------------------------------------------------------------------------------------------
 
+'body':
+
+  'ctrl-q -': 'pane:split-up-and-copy-active-item' # Atom Specific
+  'ctrl-q _': 'pane:split-down-and-copy-active-item' # Atom Specific
+  'ctrl-q \\': 'pane:split-left-and-copy-active-item' # Atom Specific
+  'ctrl-q |': 'pane:split-right-and-copy-active-item' # Atom Specific
+  'ctrl-q x': 'pane:close' # Atom Specific
+  'ctrl-q shift-X': 'pane:close-other-items' # Atom Specific
+
+  'ctrl-q [': 'window:focus-previous-pane'
+  'ctrl-q ]': 'window:focus-next-pane'
+  'ctrl-q up': 'window:focus-pane-above'
+  'ctrl-q down': 'window:focus-pane-below'
+  'ctrl-q left': 'window:focus-pane-on-left'
+  'ctrl-q right': 'window:focus-pane-on-right'
+
 '.workspace':
   'ctrl-shift-8': 'github:toggle-github-tab'
   'ctrl-shift-9': 'github:toggle-git-tab'
