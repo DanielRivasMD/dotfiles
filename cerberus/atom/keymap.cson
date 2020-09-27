@@ -85,12 +85,6 @@
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# Go to line
-'.go-to-line':
-  'space': 'core:cancel'
-
-#------------------------------------------------------------------------------------------------------------------------------
-
 '.platform-darwin atom-text-editor':
 
 # Core Editor
@@ -106,14 +100,13 @@
   'alt-cmd-;': 'editor:auto-indent'
 
 # tabs & spaces
-  'alt-cmd-]': 'whitespace:convert-spaces-to-tabs'
-  'alt-cmd-[': 'whitespace:convert-tabs-to-spaces'
+  'alt-cmd-,': 'whitespace:convert-spaces-to-tabs'
+  'alt-cmd-.': 'whitespace:convert-tabs-to-spaces'
 
 # autocompletion
 '.autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
-  'space': 'autocomplete-plus:cancel'
-  'tab': 'abort!'
+  'escape': 'autocomplete-plus:cancel'
 
 #------------------------------------------------------------------------------------------------------------------------------
 
@@ -144,59 +137,47 @@
 
   ',': 'custom:insert-comma'
 
-  'alt-5': 'custom:insert-not_equal'
-
-  'alt-=': 'custom:insert-equal'
-  'alt-\\': 'custom:insert-equalequal'
-
-  'alt--': 'custom:insert-minus'
-  'alt-0': 'custom:insert-plus'
-  'alt-9': 'custom:insert-divide'
-  'alt-8': 'custom:insert-times'
-
-  'alt-,': 'custom:insert-lessthan'
-  'alt-[': 'custom:insert-lessequal'
-  'alt-.': 'custom:insert-morethan'
-  'alt-]': 'custom:insert-moreequal'
-
-  'alt-:': 'custom:insert-go_assign'
-
-  'alt-_': 'custom:insert-minus_broadcast'
-  'alt-)': 'custom:insert-plus_broadcast'
-  'alt-(': 'custom:insert-divide_broadcast'
-  'alt-*': 'custom:insert-times_broadcast'
-
-  'alt-<': 'custom:insert-lessthan_broadcast'
-  'alt-{': 'custom:insert-lessequal_broadcast'
-  'alt->': 'custom:insert-morethan_broadcast'
-  'alt-}': 'custom:insert-moreequal_broadcast'
-
-  'alt-+': 'custom:insert-equal_broadcast'
-  'alt-|': 'custom:insert-equalequal_broadcast'
-
-  'alt-$': 'custom:insert-low_minus_broadcast'
-  'alt-#': 'custom:insert-low_plus_broadcast'
-  'alt-@': 'custom:insert-low_divide_broadcast'
-  'alt-!': 'custom:insert-low_times_broadcast'
-
-  'alt-/': 'custom:insert-julia_pipe'
-  'alt-?': 'custom:insert-julia_pipe_broadcast'
-
-  'alt-;': 'custom:insert-r_assign'
-
-  'alt-7': 'custom:insert-r_pipe'
-  'alt-&': 'custom:insert-r_pipe_assign'
-  'alt-6': 'custom:insert-r_pipe_var'
-  'alt-^': 'custom:insert-r_pipe_tee'
-  'alt-%': 'custom:insert-not_equal_broadcast'
-
-  'alt-\'': 'custom:insert-rust_assign'
-  'alt-"': 'custom:insert-r_right_assign'
-
-  'alt-4': 'custom:insert-low_minus'
-  'alt-3': 'custom:insert-low_plus'
-  'alt-2': 'custom:insert-low_divide'
   'alt-1': 'custom:insert-low_times'
+  'alt-2': 'custom:insert-low_divide'
+  'alt-3': 'custom:insert-low_plus'
+  'alt-4': 'custom:insert-low_minus'
+  'alt-5': 'custom:insert-not_equal'
+  'alt-6': 'custom:insert-r_pipe_var'
+  'alt-7': 'custom:insert-r_pipe'
+  'alt-8': 'custom:insert-times'
+  'alt-9': 'custom:insert-divide'
+  'alt-0': 'custom:insert-plus'
+  'alt--': 'custom:insert-minus'
+  'alt-=': 'custom:insert-equal'
+  'alt-[': 'custom:insert-lessequal'
+  'alt-]': 'custom:insert-moreequal'
+  'alt-;': 'custom:insert-r_assign'
+  'alt-\'': 'custom:insert-rust_assign'
+  'alt-\\': 'custom:insert-equalequal'
+  'alt-,': 'custom:insert-lessthan'
+  'alt-.': 'custom:insert-morethan'
+  'alt-/': 'custom:insert-julia_pipe'
+
+  'alt-!': 'custom:insert-low_times_broadcast'
+  'alt-@': 'custom:insert-low_divide_broadcast'
+  'alt-#': 'custom:insert-low_plus_broadcast'
+  'alt-$': 'custom:insert-low_minus_broadcast'
+  'alt-%': 'custom:insert-not_equal_broadcast'
+  'alt-^': 'custom:insert-r_pipe_tee'
+  'alt-&': 'custom:insert-r_pipe_assign'
+  'alt-*': 'custom:insert-times_broadcast'
+  'alt-(': 'custom:insert-divide_broadcast'
+  'alt-)': 'custom:insert-plus_broadcast'
+  'alt-_': 'custom:insert-minus_broadcast'
+  'alt-+': 'custom:insert-equal_broadcast'
+  'alt-{': 'custom:insert-lessequal_broadcast'
+  'alt-}': 'custom:insert-moreequal_broadcast'
+  'alt-:': 'custom:insert-go_assign'
+  'alt-"': 'custom:insert-r_right_assign'
+  'alt-|': 'custom:insert-equalequal_broadcast'
+  'alt-<': 'custom:insert-lessthan_broadcast'
+  'alt->': 'custom:insert-morethan_broadcast'
+  'alt-?': 'custom:insert-julia_pipe_broadcast'
 
 #------------------------------------------------------------------------------------------------------------------------------
 #
