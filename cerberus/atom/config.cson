@@ -1,63 +1,111 @@
 "*":
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
+    defaultInputValue: "Project root"
+    fuzzyMatch: true
   "atom-beautify":
+    bash:
+      beautify_on_save: true
+    coffeescript:
+      beautify_on_save: true
+    css: {}
     general:
-      _analyticsUserId: "5b124fa4-6247-46e5-8f3e-bde5e948f60d"
+      _analyticsUserId: "0c336756-a4c6-46e3-a3c2-b9ba5591b0f3"
+    go:
+      beautify_on_save: true
+    haskell:
+      beautify_on_save: true
+    html:
+      beautify_on_save: true
+    java:
+      beautify_on_save: true
+    js:
+      beautify_on_save: true
+    json: {}
+    less:
+      beautify_on_save: true
+    markdown:
+      beautify_on_save: true
+    perl:
+      beautify_on_save: true
+    python:
+      beautify_on_save: true
+    r:
+      beautify_on_save: true
+    rust:
+      beautify_on_save: true
+    sql:
+      beautify_on_save: true
+    typescript:
+      beautify_on_save: true
+    yaml:
+      beautify_on_save: true
   "atom-clock":
+    rightClickToClipboard: false
     showClockIcon: true
-  "atom-material-ui":
-    tabs:
-      compactTabs: true
-    ui:
-      panelContrast: true
-  autocomplete:
-    includeCompletionsFromAllBuffers: true
-  "autocomplete-paths":
-    ignoredNames: false
-    maxFileCount: 500
   "autocomplete-plus":
-    backspaceTriggersAutocomplete: true
-    confirmCompletion: "tab always, enter when suggestion explicitly selected"
-    enableAutoConfirmSingleSuggestion: false
-    maxVisibleSuggestions: 5
-    minimumWordLength: 2
+    confirmCompletion: "enter"
+    moveToCancel: true
+  autosave:
+    enabled: true
+  "bracket-colorizer":
+    alternate_different: true
   core:
+    audioBeep: false
     automaticallyUpdate: false
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
     disabledPackages: [
-      "background-tips"
       "language-gfm"
-    ]
-    ignoredNames: [
-      ".git"
-      ".hg"
-      ".svn"
-      ".DS_Store"
-      "._*"
-      "Thumbs.db"
-      "desktop.in"
+      "package-generator"
+      "open-on-github"
+      "background-tips"
     ]
     packagesWithKeymapsDisabled: [
-      "autocomplete"
+      "highlight-selected"
+      "latex"
       "rbox"
       "autocomplete-plus"
-      "todo"
-      "language-markdown"
-      "github"
       "git-diff"
-      "autocomplete-haskell"
-      "modular-snippets"
+      "bookmarks"
+      "atom-beautify"
+      "minimap"
+      "snippets"
     ]
     packagesWithSnippetsDisabled: [
-      "atom-language-r"
-      "rbox"
-      "language-shellscript"
-      "language-rust"
+      "highlight-nanorc"
       "language-awk"
-      "language-coffee-script"
-      "language-go"
-      "language-julia"
+      "language-fish-shell"
       "language-haskell"
+      "language-julia"
+      "language-latex"
+      "language-rust"
       "language-scala"
-      "snippets"
+      "rbox"
+      "language-c"
+      "language-clojure"
+      "language-coffee-script"
+      "language-csharp"
+      "language-css"
+      "language-git"
+      "language-go"
+      "language-html"
+      "language-java"
+      "language-javascript"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-property-list"
+      "language-python"
+      "language-ruby"
+      "language-ruby-on-rails"
+      "language-sass"
+      "language-shellscript"
+      "language-text"
+      "language-todo"
+      "language-typescript"
+      "language-xml"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -65,79 +113,24 @@
       "spacegray-atom-dark-syntax"
     ]
   editor:
-    autoIndentOnPaste: false
-    fontFamily: "Monaco"
     fontSize: 16
     invisibles:
       tab: "—"
+    preferredLineLength: 135
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softTabs: false
     softWrap: true
-    tabType: "soft"
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
-    userId: "7bb576b7-4a68-4896-8ff0-eb7720324c95"
-  "file-icons": {}
-  "fuzzy-finder":
-    preserveLastSearch: true
-  "git-diff":
-    wrapAroundOnMoveToDiff: false
-  "git-log":
-    fontScale: 1
-  "git-plus":
-    general:
-      splitPane: "Right"
-  github:
-    panel: {}
-    showDiffIconGutter: true
-  "highlight-selected": {}
-  "ide-rust":
-    rlsDefaultConfig: {}
-  "julia-client":
-    firstBoot: false
-    juliaOptions:
-      bootMode: "Basic"
-    uiOptions:
-      enableMenu: true
-      enableToolBar: true
-  "linter-ui-default":
-    panelHeight: 300
-  "markdown-pdf":
-    ghStyle: false
-  "markdown-preview":
-    grammars: [
-      "source.gfm.rmd"
-      "source.gfm"
-      "source.litcoffee"
-      "text.html.basic"
-      "text.md"
-      "text.plain"
-      "text.plain.null-grammar"
-    ]
-  "markdown-preview-plus":
-    extensions: [
-      "markdown"
-      "md"
-      "mdown"
-      "mkd"
-      "mkdown"
-      "ron"
-      "txt"
-      "Rmd"
-    ]
-    grammars: [
-      "source.gfm.rmd"
-      "source.gfm"
-      "source.litcoffee"
-      "text.html.basic"
-      "text.md"
-      "text.plain"
-      "text.plain.null-grammar"
-    ]
-  "markdown-writer":
-    fileExtension: ".md"
+    userId: "145fd7e9-aad6-4072-a20a-d2a321d2327f"
+  "file-icons":
+    onChanges: true
+  jumpy:
+    fontSize: 1
+    highContrast: true
   minimap:
+    moveCursorOnMinimapClick: true
     plugins:
       bookmarks: true
       bookmarksDecorationsZIndex: 0
@@ -151,96 +144,45 @@
       "highlight-selectedDecorationsZIndex": 0
       "lens-mode": true
       "lens-modeDecorationsZIndex": 0
-      linter: true
-      linterDecorationsZIndex: 0
       pigments: true
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
   "minimap-git-diff":
     useGutterDecoration: true
+  "minimap-selection": {}
   "one-dark-ui":
     stickyHeaders: true
-  "relative-numbers":
-    showAbsoluteNumbersInInsertMode: false
-    softWrapsCount: false
-  "seti-syntax":
-    dynamicColor: false
-    themeColor: "Steel"
-  "show-invisibles-plus":
-    placeholders: {}
-  "spell-check":
-    locales: [
-      "en-US"
-    ]
-  swackets:
-    colorParens: true
-  "tool-bar":
-    position: "Left"
   "tree-view":
+    alwaysOpenExisting: true
     autoReveal: true
-    hideIgnoredNames: true
-  "tree-view-git-branch":
-    location: "top"
-    separator: true
-  "tree-view-git-status":
-    gitFlow: {}
-    showBranchLabel: false
   welcome:
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
-".coffee.source":
+".console.julia.source":
   editor:
     tabLength: 2
-    tabType: "soft"
-".css.source":
+".git-commit.text":
   editor:
-    tabLength: 2
-    tabType: "soft"
-".fish.source":
-  editor:
-    autoIndentOnPaste: true
-    tabType: "soft"
-".go.source":
-  editor:
-    tabLength: 2
-    tabType: "soft"
-".json.source":
-  editor:
-    tabLength: 2
-    tabType: "soft"
+    preferredLineLength: 135
 ".julia.source":
   editor:
     tabLength: 2
-    tabType: "soft"
-".md.text":
-  editor:
-    preferredLineLength: 100
-    softWrapAtPreferredLineLength: true
 ".python.regexp.source":
   editor:
-    preferredLineLength: 100
     tabLength: 2
 ".python.source":
   editor:
     tabLength: 2
-    tabType: "soft"
-".r.source":
-  editor:
-    autoIndent: true
-    autoIndentOnPaste: true
-    showIndentGuide: true
-    tabLength: 2
-    tabType: "soft"
 ".rust.source":
   editor:
-    autoIndentOnPaste: true
-    preferredLineLength: 100
-    showInvisibles: true
+    preferredLineLength: 135
     tabLength: 2
-    tabType: "soft"
-".shell.source":
+".source.vim-snippet":
+  editor:
+    tabType: "auto"
+".text.vim-help":
   editor:
     tabLength: 2
-    tabType: "soft"
+    tabType: "auto"
