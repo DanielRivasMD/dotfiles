@@ -45,4 +45,10 @@
 	{ "key": "shift-alt-.",							"command": "type",															"args": {"text": " .> "}, },
 	{ "key": "shift-alt-/",							"command": "type",															"args": {"text": " .|> "}, },
 
+	// move_by_paragraph
+	{ "key": "alt-up", 									"command": "spaceBlockJumper.moveUp" },
+	{ "key": "alt-down", 								"command": "spaceBlockJumper.moveDown" },
+	{ "key": "shift-alt-up", 						"command": "spaceBlockJumper.selectUp" },
+	{ "key": "shift-alt-down", 					"command": "spaceBlockJumper.selectDown" }
+
 ]
