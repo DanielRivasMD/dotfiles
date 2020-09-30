@@ -27,6 +27,6 @@ khal new \
   DATE {today, tomorrow, 2020-08-31} \
   TIME {10:00 11:00} \
   SUMMARY :: DESCRIPTION \
-  --calendar CALENDAR {UU, TY, UdeG, Personal, Astronomy, Simona, SuperRugby, Grant} \
+  --calendar CALENDAR {UU, TY, UG, UNAM, Personal, Astronomy, Simona, SuperRugby, Grant} \
   --categories \
   --location
