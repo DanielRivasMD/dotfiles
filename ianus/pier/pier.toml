@@ -11,6 +11,12 @@ command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; d
 description = 'stop all Firefox jobs'
 tags = ['shell']
 
+[scripts.cAtom]
+alias = 'cAtom'
+command = '''for i in $(procs Atom | awk 'NR > 2 {print $1}' ); do kill $i; done'''
+description = 'stop all Atom jobs'
+tags = ['shell']
+
 [scripts.dc]
 alias = 'dc'
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
@@ -234,7 +240,7 @@ tags = ['remote']
 alias = 'bianca-ssh'
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2019016'
-tags = ['remote'] 
+tags = ['remote']
 
 [scripts.magnus-sftp]
 alias = 'magnus-sftp'
