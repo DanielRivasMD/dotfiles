@@ -13,23 +13,37 @@ const NanoKeys = Dict{Any,Any}(
 )
 
 ################################################################################
+
+# init call
 atreplinit() do repl
 
-  try
-    @eval using OhMyREPL
-  catch e
-    @warn "error while importing OhMyREPL" e
-  end
+  # only on interactive
+  if isinteractive()
+
     ################################################################################
 
     repl.interface = REPL.setup_interface(repl; extra_repl_keymap = NanoKeys)
 
     ################################################################################
 
-  try
-    @eval using Pipe
-  catch e
-    @warn "error while importing Pipe" e
+    try
+      @eval using OhMyREPL
+    catch e
+      @warn "error while importing OhMyREPL" e
+    end
+
+    ################################################################################
+
+    try
+      @eval using Pipe
+    catch e
+      @warn "error while importing Pipe" e
+    end
+
+    ################################################################################
+
   end
 
 end
+
+################################################################################
