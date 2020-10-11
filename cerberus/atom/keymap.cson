@@ -151,12 +151,12 @@
   'alt-=': 'custom:insert-equal'
   'alt-[': 'custom:insert-lessequal'
   'alt-]': 'custom:insert-moreequal'
-  'alt-;': 'custom:insert-r_assign'
+  'alt-;': 'custom:insert-julia_pipe'
   'alt-\'': 'custom:insert-rust_assign'
   'alt-\\': 'custom:insert-equalequal'
   'alt-,': 'custom:insert-lessthan'
   'alt-.': 'custom:insert-morethan'
-  'alt-/': 'custom:insert-julia_pipe'
+  'alt-/': 'custom:insert-r_assign'
 
   'alt-!': 'custom:insert-low_times_broadcast'
   'alt-@': 'custom:insert-low_divide_broadcast'
@@ -172,12 +172,12 @@
   'alt-+': 'custom:insert-equal_broadcast'
   'alt-{': 'custom:insert-lessequal_broadcast'
   'alt-}': 'custom:insert-moreequal_broadcast'
-  'alt-:': 'custom:insert-go_assign'
+  'alt-:': 'custom:insert-julia_pipe_broadcast'
   'alt-"': 'custom:insert-r_right_assign'
   'alt-|': 'custom:insert-equalequal_broadcast'
   'alt-<': 'custom:insert-lessthan_broadcast'
   'alt->': 'custom:insert-morethan_broadcast'
-  'alt-?': 'custom:insert-julia_pipe_broadcast'
+  'alt-?': 'custom:insert-go_assign'
 
 #------------------------------------------------------------------------------------------------------------------------------
 #
