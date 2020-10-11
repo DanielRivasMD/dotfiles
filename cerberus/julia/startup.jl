@@ -1,3 +1,18 @@
+################################################################################
+
+import REPL
+import REPL.LineEdit
+
+################################################################################
+
+const NanoKeys = Dict{Any,Any}(
+  # move one word left
+  "\x1b[1;3D" => "\eb",
+  # move one word right
+  "\x1b[1;3C" => "\ef",
+)
+
+################################################################################
 atreplinit() do repl
 
   try
@@ -5,6 +20,11 @@ atreplinit() do repl
   catch e
     @warn "error while importing OhMyREPL" e
   end
+    ################################################################################
+
+    repl.interface = REPL.setup_interface(repl; extra_repl_keymap = NanoKeys)
+
+    ################################################################################
 
   try
     @eval using Pipe
