@@ -14,8 +14,8 @@ ZDOTDIR=${HOME}/.zsh
 # ===   aliases          ===
 # ==========================
 
-if [ -f ${IANUS}shell/terminal/vernacular_aliases.sh ]; then
-  . ${IANUS}shell/terminal/vernacular_aliases.sh
+if [ -f ${IANUS}/shell/terminal/vernacular_aliases.sh ]; then
+  . ${IANUS}/shell/terminal/vernacular_aliases.sh
 fi
 
 if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then

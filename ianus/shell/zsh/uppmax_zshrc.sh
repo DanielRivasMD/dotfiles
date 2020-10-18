@@ -9,8 +9,8 @@ ZDOTDIR=${HOME}/.zsh
 # ===   aliases          ===
 # ==========================
 
-if [ -f ${IANUS}shell/terminal/uppmax_aliases.sh ]; then
-  . ${IANUS}shell/terminal/uppmax_aliases.sh
+if [ -f ${IANUS}/shell/terminal/uppmax_aliases.sh ]; then
+  . ${IANUS}/shell/terminal/uppmax_aliases.sh
 fi
 
 if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then

@@ -9,8 +9,8 @@ BDOTDIR=${HOME}/.bash
 # ===   aliases          ===
 # ==========================
 
-if [ -f ${IANUS}shell/terminal/vernacular_aliases.sh ]; then
-  . ${IANUS}shell/terminal/vernacular_aliases.sh
+if [ -f ${IANUS}/shell/terminal/vernacular_aliases.sh ]; then
+  . ${IANUS}/shell/terminal/vernacular_aliases.sh
 fi
 
 if [ -f ${BDOTDIR}/bash_aliases.sh ]; then
@@ -34,7 +34,7 @@ eval "$(starship init bash)"
 eval "$(pandoc --bash-completion)"
 
 # Fuzzy finder (fzf)
-[ -f ${IANUS}shell/bash/fzf.bash ] && source ${IANUS}shell/bash/fzf.bash
+[ -f ${IANUS}/shell/bash/fzf.bash ] && source ${IANUS}/shell/bash/fzf.bash
 
 # ==========================
 # ===  History           ===

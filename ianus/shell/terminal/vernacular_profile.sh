@@ -4,8 +4,8 @@
 # ==========================
 
 export ARCHIVE=${HOME}/.archive
-export IANUS=${ARCHIVE}ianus
-export CERBERUS=${ARCHIVE}cerberus
+export IANUS=${ARCHIVE}/ianus
+export CERBERUS=${ARCHIVE}/cerberus
 
 # ==========================
 # ===  Language settings ===
@@ -68,7 +68,7 @@ PATH=$PATH:$HOME/bin/toolLinks/
 # ==========================
 
 export PATH
-export STARSHIP_CONFIG=${IANUS}starship/vernacular_starship.toml
+export STARSHIP_CONFIG=${IANUS}/starship/vernacular_starship.toml
 
 # ==========================
 # ===  Less              ===
@@ -101,7 +101,7 @@ export BAT_PAGER=less
 # ===  Pier              ===
 # ==========================
 
-export PIER="${IANUS}pier/"
+export PIER="${IANUS}/pier/"
 
 # ==========================
 # ===  Broot             ===
