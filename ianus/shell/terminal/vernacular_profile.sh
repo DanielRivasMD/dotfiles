@@ -3,9 +3,9 @@
 # ===  Archives          ===
 # ==========================
 
-export ARCHIVE=${HOME}/.archive/
-export IANUS=${ARCHIVE}ianus/
-export CERBERUS=${ARCHIVE}cerberus/
+export ARCHIVE=${HOME}/.archive
+export IANUS=${ARCHIVE}ianus
+export CERBERUS=${ARCHIVE}cerberus
 
 # ==========================
 # ===  Language settings ===

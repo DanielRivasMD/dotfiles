@@ -8,45 +8,45 @@ targets:
       # HOME directories
       # purge before linking
       rm -rf ${HOME}/.atom
-      ln -svf ${CERBERUS}atom ${HOME}/.atom
+      ln -svf ${CERBERUS}/atom ${HOME}/.atom
       rm ${HOME}/.gitconfig.d
-      ln -svf ${CERBERUS}gitconfig.d ${HOME}/.gitconfig.d
+      ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d
 
       # rc files
-      ln -svf ${CERBERUS}gem/gemrc ${HOME}/.gemrc
-      ln -svf ${CERBERUS}mplayer/mplayer ${HOME}/.mplayer
-      ln -svf ${CERBERUS}nano/nanorc ${HOME}/.nanorc
       ln -svf ${CERBERUS}screen/screenrc ${HOME}/.screenrc
+      ln -svf ${CERBERUS}/gem/gemrc ${HOME}/.gemrc
+      ln -svf ${CERBERUS}/mplayer/mplayer ${HOME}/.mplayer
+      ln -svf ${CERBERUS}/nano/nanorc ${HOME}/.nanorc
 
       # git files
-      ln -svf ${CERBERUS}git/gitconfig ${HOME}/.gitconfig
-      ln -svf ${CERBERUS}git/gitignore_global ${HOME}/.gitignore_global
+      ln -svf ${CERBERUS}/git/gitconfig ${HOME}/.gitconfig
+      ln -svf ${CERBERUS}/git/gitignore_global ${HOME}/.gitignore_global
 
       # toml files
-      ln -svf ${CERBERUS}procs/procs.toml ${HOME}/.procs.toml
+      ln -svf ${CERBERUS}/procs/procs.toml ${HOME}/.procs.toml
 
       # @config
-      ln -svf ${CERBERUS}alacritty ${HOME}/.config/
-      ln -svf ${CERBERUS}bottom ${HOME}/.config/
-      ln -svf ${CERBERUS}cheat ${HOME}/.config/
-      ln -svf ${CERBERUS}khal ${HOME}/.config/
-      ln -svf ${CERBERUS}gh/config.yml ${HOME}/.config/gh/
-      ln -svf ${CERBERUS}rstudio ${HOME}/.config/
-      ln -svf ${CERBERUS}rustfmt ${HOME}/.config/
+      ln -svf ${CERBERUS}/alacritty ${HOME}/.config/
+      ln -svf ${CERBERUS}/bottom ${HOME}/.config/
+      ln -svf ${CERBERUS}/cheat ${HOME}/.config/
+      ln -svf ${CERBERUS}/khal ${HOME}/.config/
+      ln -svf ${CERBERUS}/gh/config.yml ${HOME}/.config/gh/
+      ln -svf ${CERBERUS}/rstudio ${HOME}/.config/
+      ln -svf ${CERBERUS}/rustfmt ${HOME}/.config/
 
-      ln -svf ${CERBERUS}rstudio/keybindings ${HOME}/.R/rstudio/
+      ln -svf ${CERBERUS}/rstudio/keybindings ${HOME}/.R/rstudio/
 
       # @local
-      ln -svf ${CERBERUS}rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/
+      ln -svf ${CERBERUS}/rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/
 
       # @distant
-      ln -svf ${CERBERUS}julia/startup.jl ${HOME}/.julia/config/
-      ln -svf ${CERBERUS}ssh/config ${HOME}/.ssh/
-      ln -svf "${CERBERUS}sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
-      ln -svf "${CERBERUS}sublime/Package Control.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
-      ln -svf "${CERBERUS}sublime/Preferences.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-      ln -svf "${CERBERUS}sublime/trailing_spaces.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings"
-      ln -svf ${CERBERUS}code/* "/Users/drivas/Library/Application Support/Code/User/"
+      ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/
+      ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/
+      ln -svf "${CERBERUS}/sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+      ln -svf "${CERBERUS}/sublime/Package Control.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+      ln -svf "${CERBERUS}/sublime/Preferences.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+      ln -svf "${CERBERUS}/sublime/trailing_spaces.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings"
+      ln -svf ${CERBERUS}/code/* "/Users/drivas/Library/Application Support/Code/User/"
 
 ################################################################################
 
@@ -59,26 +59,26 @@ targets:
         rm ${HOME}/.vim
       fi
 
-      ln -svf ${IANUS}vim ${HOME}/.vim
-      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+      ln -svf ${IANUS}/vim ${HOME}/.vim
+      ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
 
       # pier
-      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+      ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml
 
       # tmux
-      ln -svf ${IANUS}tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
+      ln -svf ${IANUS}/tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
 
       # amp
-      ln -svf ${IANUS}amp ${HOME}/.config
+      ln -svf ${IANUS}/amp ${HOME}/.config
 
       # micro
-      ln -svf ${IANUS}micro ${HOME}/.config
+      ln -svf ${IANUS}/micro ${HOME}/.config
 
       # R
-      ln -svf ${IANUS}R/vernacular_Rprofile.R ${HOME}/.Rprofile
+      ln -svf ${IANUS}/R/vernacular_Rprofile.R ${HOME}/.Rprofile
 
       # terminal
-      ln -svf ${IANUS}shell/terminal/vernacular_profile.sh ${HOME}/.profile
+      ln -svf ${IANUS}/shell/terminal/vernacular_profile.sh ${HOME}/.profile
 
       # bash
       if [[ ! -d ${HOME}/.bash ]]
@@ -86,10 +86,10 @@ targets:
         mkdir ${HOME}/.bash
       fi
 
-      ln -svf ${IANUS}shell/bash/fzf.bash ${HOME}/.bash
-      ln -svf ${IANUS}shell/bash/vernacular_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
+      ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash
+      ln -svf ${IANUS}/shell/bash/vernacular_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
 
-      ln -svf ${IANUS}shell/bash/vernacular_bashrc.sh ${HOME}/.bashrc
+      ln -svf ${IANUS}/shell/bash/vernacular_bashrc.sh ${HOME}/.bashrc
 
       # zsh
       if [[ ! -d ${HOME}/.zsh ]]
@@ -97,16 +97,16 @@ targets:
         mkdir ${HOME}/.zsh
       fi
 
-      ln -svf ${IANUS}shell/zsh/fzf.zsh ${HOME}/.zsh
-      ln -svf ${IANUS}shell/zsh/vernacular_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
-      ln -svf ${IANUS}shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
-      ln -svf ${IANUS}shell/zsh/vernacular_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
-      ln -svf ${IANUS}shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/vernacular_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
+      ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
+      ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
+      ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
 
-      ln -svf ${IANUS}shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
+      ln -svf ${IANUS}/shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
 
       # fish
-      ln -svf ${IANUS}shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish
+      ln -svf ${IANUS}/shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish
 
 ################################################################################
 
@@ -116,40 +116,40 @@ targets:
       REMOTE="drivas@topaz.pawsey.org.au"
 
       # zinoma
-      rsync -azvhP ${ARCHIVE}zinoma.yml ${REMOTE}:/home/drivas/.archive/
+      rsync -azvhP ${ARCHIVE}/zinoma.yml ${REMOTE}:/home/drivas/.archive/
 
       # amp
-      rsync -azvhP ${IANUS}amp ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/amp ${REMOTE}:/home/drivas/.archive/ianus/
 
       # micro
-      rsync -azvhP ${IANUS}micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
-      rsync -azvhP ${IANUS}micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
-      rsync -azvhP ${IANUS}micro/settings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}/micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}/micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}/micro/settings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
 
       # pier
-      rsync -azvhP ${IANUS}pier ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/pier ${REMOTE}:/home/drivas/.archive/ianus/
 
       # R
-      rsync -azvhP ${IANUS}R ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/R ${REMOTE}:/home/drivas/.archive/ianus/
 
       # screen
-      rsync -azvhP ${IANUS}screen ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/screen ${REMOTE}:/home/drivas/.archive/ianus/
 
       # shell
-      rsync -azvhP ${IANUS}shell ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/shell ${REMOTE}:/home/drivas/.archive/ianus/
 
       # starship
-      rsync -azvhP ${IANUS}starship ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/starship ${REMOTE}:/home/drivas/.archive/ianus/
 
       # tmux
-      rsync -azvhP ${IANUS}tmux ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/tmux ${REMOTE}:/home/drivas/.archive/ianus/
 
       # vim
-      rsync -azvhP ${IANUS}vim/bundle ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/functions.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/keybindings.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/bundle ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/functions.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/keybindings.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
 
 ################################################################################
 
@@ -159,40 +159,40 @@ targets:
       REMOTE="drivas@rackham.uppmax.uu.se"
 
       # zinoma
-      rsync -azvhP ${ARCHIVE}zinoma.yml ${REMOTE}:/home/drivas/.archive/
+      rsync -azvhP ${ARCHIVE}/zinoma.yml ${REMOTE}:/home/drivas/.archive/
 
       # amp
-      rsync -azvhP ${IANUS}amp ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/amp ${REMOTE}:/home/drivas/.archive/ianus/
 
       # micro
-      rsync -azvhP ${IANUS}micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
-      rsync -azvhP ${IANUS}micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
-      rsync -azvhP ${IANUS}micro/settings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}/micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}/micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
+      rsync -azvhP ${IANUS}/micro/settings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
 
       # pier
-      rsync -azvhP ${IANUS}pier ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/pier ${REMOTE}:/home/drivas/.archive/ianus/
 
       # R
-      rsync -azvhP ${IANUS}R ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/R ${REMOTE}:/home/drivas/.archive/ianus/
 
       # screen
-      rsync -azvhP ${IANUS}screen ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/screen ${REMOTE}:/home/drivas/.archive/ianus/
 
       # shell
-      rsync -azvhP ${IANUS}shell ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/shell ${REMOTE}:/home/drivas/.archive/ianus/
 
       # starship
-      rsync -azvhP ${IANUS}starship ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/starship ${REMOTE}:/home/drivas/.archive/ianus/
 
       # tmux
-      rsync -azvhP ${IANUS}tmux ${REMOTE}:/home/drivas/.archive/ianus/
+      rsync -azvhP ${IANUS}/tmux ${REMOTE}:/home/drivas/.archive/ianus/
 
       # vim
-      rsync -azvhP ${IANUS}vim/bundle ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/functions.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/keybindings.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
-      rsync -azvhP ${IANUS}vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/bundle ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/functions.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/keybindings.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/plugins.vim ${REMOTE}:/home/drivas/.archive/ianus/vim/
+      rsync -azvhP ${IANUS}/vim/vimrc ${REMOTE}:/home/drivas/.archive/ianus/vim/
 
 ################################################################################
 
@@ -205,26 +205,26 @@ targets:
         rm ${HOME}/.vim
       fi
 
-      ln -svf ${IANUS}vim ${HOME}/.vim
-      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+      ln -svf ${IANUS}/vim ${HOME}/.vim
+      ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
 
       # pier
-      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+      ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml
 
       # tmux
-      ln -svf ${IANUS}tmux/2.5.tmux.conf ${HOME}/.tmux.conf
+      ln -svf ${IANUS}/tmux/2.5.tmux.conf ${HOME}/.tmux.conf
 
       # amp
-      ln -svf ${IANUS}amp ${HOME}/.config
+      ln -svf ${IANUS}/amp ${HOME}/.config
 
       # micro
-      ln -svf ${IANUS}micro ${HOME}/.config
+      ln -svf ${IANUS}/micro ${HOME}/.config
 
       # R
-      ln -svf ${IANUS}R/uppmax_Rprofile.R ${HOME}/.Rprofile
+      ln -svf ${IANUS}/R/uppmax_Rprofile.R ${HOME}/.Rprofile
 
       # terminal
-      ln -svf ${IANUS}shell/terminal/uppmax_profile.sh ${HOME}/.profile
+      ln -svf ${IANUS}/shell/terminal/uppmax_profile.sh ${HOME}/.profile
 
       # bash
       if [[ ! -d ${HOME}/.bash ]]
@@ -232,11 +232,11 @@ targets:
         mkdir ${HOME}/.bash
       fi
 
-      ln -svf ${IANUS}shell/bash/fzf.bash ${HOME}/.bash
-      ln -svf ${IANUS}shell/bash/uppmax_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
+      ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash
+      ln -svf ${IANUS}/shell/bash/uppmax_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
 
-      ln -svf ${IANUS}shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile
-      ln -svf ${IANUS}shell/bash/uppmax_bashrc.sh ${HOME}/.bashrc
+      ln -svf ${IANUS}/shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile
+      ln -svf ${IANUS}/shell/bash/uppmax_bashrc.sh ${HOME}/.bashrc
 
       # zsh
       if [[ ! -d ${HOME}/.zsh ]]
@@ -244,16 +244,16 @@ targets:
         mkdir ${HOME}/.zsh
       fi
 
-      ln -svf ${IANUS}shell/zsh/fzf.zsh ${HOME}/.zsh
-      ln -svf ${IANUS}shell/zsh/uppmax_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
-      ln -svf ${IANUS}shell/zsh/uppmax_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
-      ln -svf ${IANUS}shell/zsh/uppmax_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
-      ln -svf ${IANUS}shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/uppmax_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
+      ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
+      ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
+      ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
 
-      ln -svf ${IANUS}shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc
+      ln -svf ${IANUS}/shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc
 
       # fish
-      ln -svf ${IANUS}shell/fish/uppmax_config.fish ${HOME}/.config/fish/config.fish
+      ln -svf ${IANUS}/shell/fish/uppmax_config.fish ${HOME}/.config/fish/config.fish
 
 ################################################################################
 
@@ -266,26 +266,26 @@ targets:
         rm ${HOME}/.vim
       fi
 
-      ln -svf ${IANUS}vim ${HOME}/.vim
-      ln -svf ${IANUS}vim/vimrc ${HOME}/.vimrc
+      ln -svf ${IANUS}/vim ${HOME}/.vim
+      ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
 
       # pier
-      ln -svf ${IANUS}pier/pier.toml ${HOME}/.pier.toml
+      ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml
 
       # tmux
-      ln -svf ${IANUS}tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
+      ln -svf ${IANUS}/tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
 
       # amp
-      ln -svf ${IANUS}amp ${HOME}/.config
+      ln -svf ${IANUS}/amp ${HOME}/.config
 
       # micro
-      ln -svf ${IANUS}micro ${HOME}/.config
+      ln -svf ${IANUS}/micro ${HOME}/.config
 
       # R
-      ln -svf ${IANUS}R/pawsey_Rprofile.R ${HOME}/.Rprofile
+      ln -svf ${IANUS}/R/pawsey_Rprofile.R ${HOME}/.Rprofile
 
       # terminal
-      ln -svf ${IANUS}shell/terminal/pawsey_profile.sh ${HOME}/.profile
+      ln -svf ${IANUS}/shell/terminal/pawsey_profile.sh ${HOME}/.profile
 
       # bash
       if [[ ! -d ${HOME}/.bash ]]
@@ -293,11 +293,11 @@ targets:
         mkdir ${HOME}/.bash
       fi
 
-      ln -svf ${IANUS}shell/bash/fzf.bash ${HOME}/.bash
-      ln -svf ${IANUS}shell/bash/pawsey_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
+      ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash
+      ln -svf ${IANUS}/shell/bash/pawsey_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
 
-      ln -svf ${IANUS}shell/bash/pawsey_bash_profile.sh ${HOME}/.bash_profile
-      ln -svf ${IANUS}shell/bash/pawsey_bashrc.sh ${HOME}/.bashrc
+      ln -svf ${IANUS}/shell/bash/pawsey_bash_profile.sh ${HOME}/.bash_profile
+      ln -svf ${IANUS}/shell/bash/pawsey_bashrc.sh ${HOME}/.bashrc
 
       # zsh
       if [[ ! -d ${HOME}/.zsh ]]
@@ -305,15 +305,15 @@ targets:
         mkdir ${HOME}/.zsh
       fi
 
-      ln -svf ${IANUS}shell/zsh/fzf.zsh ${HOME}/.zsh
-      ln -svf ${IANUS}shell/zsh/pawsey_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
-      ln -svf ${IANUS}shell/zsh/pawsey_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
-      ln -svf ${IANUS}shell/zsh/pawsey_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
-      ln -svf ${IANUS}shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/pawsey_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
+      ln -svf ${IANUS}/shell/zsh/pawsey_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
+      ln -svf ${IANUS}/shell/zsh/pawsey_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
+      ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
 
-      ln -svf ${IANUS}shell/zsh/pawsey_zshrc.sh ${HOME}/.zshrc
+      ln -svf ${IANUS}/shell/zsh/pawsey_zshrc.sh ${HOME}/.zshrc
 
       # fish
-      ln -svf ${IANUS}shell/fish/pawsey_config.fish ${HOME}/.config/fish/config.fish
+      ln -svf ${IANUS}/shell/fish/pawsey_config.fish ${HOME}/.config/fish/config.fish
 
 ################################################################################
