@@ -5,11 +5,19 @@ targets:
   cerberus:
     build:   |
 
-      # HOME directories
       # purge before linking
-      rm -rf ${HOME}/.atom
+
+      # HOME directories
+      if [[ -d ${HOME}/.atom ]]
+      then
+        rm -rf ${HOME}/.atom
+      fi
       ln -svf ${CERBERUS}/atom ${HOME}/.atom
-      rm ${HOME}/.gitconfig.d
+
+      if [[ -d ${HOME}/.gitconfig.d ]]
+      then
+        rm ${HOME}/.gitconfig.d
+      fi
       ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d
 
       # rc files
@@ -52,11 +60,26 @@ targets:
   ianus:
     build:   |
 
+      # purge before linking
+
       # vim
       if [[ -d ${HOME}/.vim ]]
       then
         rm ${HOME}/.vim
       fi
+
+      # R
+      if [[ -d ${HOME}/.Renviron.d ]]
+      then
+        rm -rf ${HOME}/.Renviron.d
+      fi
+      ln -svf ${IANUS}/R/Renviron.d ${HOME}/.Renviron.d
+
+      if [[ -d ${HOME}/.Rprofile.d ]]
+      then
+        rm -rf ${HOME}/.Rprofile.d
+      fi
+      ln -svf ${IANUS}/R/Rprofile.d ${HOME}/.Rprofile.d
 
       ln -svf ${IANUS}/vim ${HOME}/.vim
       ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
