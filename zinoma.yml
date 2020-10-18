@@ -13,7 +13,6 @@ targets:
       ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d
 
       # rc files
-      ln -svf ${CERBERUS}screen/screenrc ${HOME}/.screenrc
       ln -svf ${CERBERUS}/gem/gemrc ${HOME}/.gemrc
       ln -svf ${CERBERUS}/mplayer/mplayer ${HOME}/.mplayer
       ln -svf ${CERBERUS}/nano/nanorc ${HOME}/.nanorc
@@ -76,6 +75,9 @@ targets:
 
       # R
       ln -svf ${IANUS}/R/vernacular_Rprofile.R ${HOME}/.Rprofile
+
+      # screen
+      ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc
 
       # terminal
       ln -svf ${IANUS}/shell/terminal/vernacular_profile.sh ${HOME}/.profile
