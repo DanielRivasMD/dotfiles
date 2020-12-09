@@ -85,6 +85,15 @@
 
 #------------------------------------------------------------------------------------------------------------------------------
 
+# Advanced Open file
+'.platform-darwin atom-workspace':
+  'alt-cmd-n': 'advanced-open-file:toggle'
+
+'.advanced-open-file atom-text-editor':
+  'tab': 'advanced-open-file:autocomplete'
+  'up': 'advanced-open-file:move-cursor-up'
+  'down': 'advanced-open-file:move-cursor-down'
+
 '.platform-darwin atom-text-editor':
 
 # Core Editor
