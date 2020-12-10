@@ -1,24 +1,28 @@
 ################################################################################
 
-import REPL
-import REPL.LineEdit
-
-################################################################################
-
-const NanoKeys = Dict{Any,Any}(
-  # move one word left
-  "\x1b[1;3D" => "\eb",
-  # move one word right
-  "\x1b[1;3C" => "\ef",
-)
-
-################################################################################
-
 # init call
 atreplinit() do repl
 
   # only on interactive
   if isinteractive()
+
+    ################################################################################
+
+    @eval const NanoKeys = Dict{Any,Any}(
+      # move one word left
+      "\x1b[1;3D" => "\eb",
+      # move one word right
+      "\x1b[1;3C" => "\ef",
+    )
+
+    ################################################################################
+
+    try
+      @eval import REPL
+      @eval import REPL.LineEdit
+    catch
+      @warn "error while importing REPL"
+    end
 
     ################################################################################
 
