@@ -65,8 +65,10 @@ targets:
       # vim
       if [[ -d ${HOME}/.vim ]]
       then
-        rm ${HOME}/.vim
+        rm -rf ${HOME}/.vim
       fi
+      ln -svf ${IANUS}/vim ${HOME}/.vim
+      ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
 
       # R
       if [[ -d ${HOME}/.Renviron.d ]]
@@ -80,9 +82,6 @@ targets:
         rm -rf ${HOME}/.Rprofile.d
       fi
       ln -svf ${IANUS}/R/Rprofile.d ${HOME}/.Rprofile.d
-
-      ln -svf ${IANUS}/vim ${HOME}/.vim
-      ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
 
       # pier
       ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml
