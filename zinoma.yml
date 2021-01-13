@@ -101,6 +101,9 @@ targets:
       # screen
       ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc
 
+      # starship
+      ln -svf ${IANUS}/starship ${HOME}/.config
+
       # terminal
       ln -svf ${IANUS}/shell/terminal/vernacular_profile.sh ${HOME}/.profile
 
