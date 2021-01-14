@@ -20,15 +20,15 @@ map P openCopiedURLInNewTab
 map gu goUp
 map gU goToRoot
 
-" modes
-map i enterInsertMode
-map v enterVisualMode
-map V enterVisualLineMode
+" " modes
+" map i enterInsertMode
+" map v enterVisualMode
+" map V enterVisualLineMode
 
 " links
 map gi focusInput
-map f LinkHints.activateMode
-map F LinkHints.activateModeToOpenInNewTab
+map z LinkHints.activateMode
+map Z LinkHints.activateModeToOpenInNewTab
 map yf LinkHints.activateModeToCopyLinkUrl
 
 " marks
