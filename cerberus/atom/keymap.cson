@@ -96,6 +96,11 @@
 
 '.platform-darwin atom-text-editor':
 
+# Symbols view
+  'cmd-r': 'symbols-view:toggle-file-symbols'
+  'cmd-alt-down': 'symbols-view:go-to-declaration'
+  'cmd-alt-up': 'symbols-view:retu'
+
 # Core Editor
   'ctrl-alt-]': 'editor:unfold-current-row'
   'ctrl-alt-[': 'editor:fold-current-row'
