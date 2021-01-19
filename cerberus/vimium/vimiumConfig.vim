@@ -10,13 +10,15 @@ map l scrollRight
 map gg scrollToTop
 map G scrollToBottom
 map d scrollPageDown
+map D scrollFullPageDown
 map u scrollPageUp
+map U scrollFullPageUp
 map r reload
 
 " URL
 map yy copyCurrentUrl
-map p openCopiedURLInCurrentTab
-map P openCopiedURLInNewTab
+map p openCopiedUrlInCurrentTab
+map ; openCopiedUrlInNewTab
 map gu goUp
 map gU goToRoot
 
@@ -32,7 +34,7 @@ map Z LinkHints.activateModeToOpenInNewTab
 map yf LinkHints.activateModeToCopyLinkUrl
 
 " marks
-map m Marks.activateCreateMode
+map M Marks.activateCreateMode
 map ` Marks.activateGotoMode
 
 " vomnibar
@@ -46,27 +48,32 @@ map gE Vomnibar.activateEditUrlInNewTab
 
 " find
 map / enterFindMode
-map n performFind
-map N performBackwardsFind
+map m performFind
+map n performBackwardsFind
 
 " history
-map J goBack
-map K goForward
+map H goBack
+map L goForward
 
 " tab manipulation
 map t createTab
-" map J previousTab
-" map K nextTab
+map J previousTab
+map K nextTab
 map ' visitPreviousTab
-map H firstTab
-map L lastTab
+map yj firstTab
+map yk lastTab
 map yt duplicateTab
-map x removeTab
-map X restoreTab
-map W moveTabToNewWindow
+map yp togglePinTab
+map ym toggleMuteTab
+map yx removeTab
+map yH closeTabsOnLeft
+map yL closeTabsOnRight
+map yr restoreTab
+map yX closeOtherTabs
+map yw moveTabToNewWindow
 map <c-left> moveTabLeft
 map <c-right> moveTabRight
 
 " help
-map  ? showHelp
-map gs toogleViewSource
+map ? showHelp
+map ys toggleViewSource
