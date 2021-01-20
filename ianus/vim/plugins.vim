@@ -45,6 +45,8 @@ Plugin 'gmarik/vundle'
 Plugin 'dag/vim-fish'
 Plugin 'mhinz/vim-startify'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'liuchengxu/vim-which-key'
 
 call vundle#end()            " required
 
