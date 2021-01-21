@@ -1,6 +1,12 @@
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " reset mappings
 unmapAll
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " navigation
 map j scrollDown
@@ -15,6 +21,9 @@ map u scrollPageUp
 map U scrollFullPageUp
 map r reload
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " URL
 map yy copyCurrentUrl
 map p openCopiedUrlInCurrentTab
@@ -22,10 +31,16 @@ map ; openCopiedUrlInNewTab
 map gu goUp
 map gU goToRoot
 
-" " modes
-" map i enterInsertMode
-" map v enterVisualMode
-" map V enterVisualLineMode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" modes
+map I enterInsertMode
+map v enterVisualMode
+map V enterVisualLineMode
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " links
 map gi focusInput
@@ -33,9 +48,15 @@ map z LinkHints.activateMode
 map Z LinkHints.activateModeToOpenInNewTab
 map yf LinkHints.activateModeToCopyLinkUrl
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " marks
 map M Marks.activateCreateMode
 map ` Marks.activateGotoMode
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vomnibar
 map o Vomnibar.activate
@@ -46,14 +67,23 @@ map T Vomnibar.activateTabSelection
 map ge Vomnibar.activateEditUrl
 map gE Vomnibar.activateEditUrlInNewTab
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " find
 map / enterFindMode
 map m performFind
 map n performBackwardsFind
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " history
 map H goBack
 map L goForward
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
 map t createTab
@@ -74,6 +104,12 @@ map yw moveTabToNewWindow
 map <c-left> moveTabLeft
 map <c-right> moveTabRight
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " help
 map ? showHelp
 map ys toggleViewSource
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
