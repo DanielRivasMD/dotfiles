@@ -37,6 +37,7 @@ targets:
       ln -svf ${CERBERUS}/bottom ${HOME}/.config/
       ln -svf ${CERBERUS}/cheat ${HOME}/.config/
       ln -svf ${CERBERUS}/karabiner ${HOME}/.config/
+      ln -svf ${HOME}/Factorem/Forked/preview-vim/preview-vim.json ${CERBERUS}/karabiner/assets/complex_modifications
       ln -svf ${CERBERUS}/khal ${HOME}/.config/
       ln -svf ${CERBERUS}/gh/config.yml ${HOME}/.config/gh/
       ln -svf ${CERBERUS}/rstudio ${HOME}/.config/
