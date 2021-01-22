@@ -22,17 +22,17 @@
       beautify_on_save: true
     js:
       beautify_on_save: true
-    json: {}
+    json:
+      beautify_on_save: true
     less:
       beautify_on_save: true
     markdown:
       beautify_on_save: true
-    perl:
-      beautify_on_save: true
+      default_beautifier: "Prettier"
+    perl: {}
     python:
       beautify_on_save: true
-    r:
-      beautify_on_save: true
+    r: {}
     rust:
       beautify_on_save: true
     sql:
@@ -61,6 +61,13 @@
       "package-generator"
       "open-on-github"
       "background-tips"
+      "linter-lintr"
+      "linter-julia"
+      "linter-clang"
+      "linter-golinter"
+      "linter-rust"
+      "linter-ui-default"
+      "linter-jsonlint"
     ]
     packagesWithKeymapsDisabled: [
       "highlight-selected"
@@ -72,6 +79,7 @@
       "atom-beautify"
       "minimap"
       "snippets"
+      "symbols-view"
       "advanced-open-file"
     ]
     packagesWithSnippetsDisabled: [
@@ -130,6 +138,10 @@
   jumpy:
     fontSize: 1
     highContrast: true
+  "linter-julia": {}
+  "linter-ui-default":
+    panelHeight: 300
+    showPanel: true
   minimap:
     moveCursorOnMinimapClick: true
     plugins:
