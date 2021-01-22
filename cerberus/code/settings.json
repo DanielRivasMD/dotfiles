@@ -1,0 +1,53 @@
+{
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "julia.enableTelemetry": true,
+    "workbench.list.horizontalScrolling": true,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "julia.format.indent": 2,
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.iconTheme": "file-icons",
+    "screencastMode.mouseIndicatorColor": "#303030",
+
+
+    // StatusBar color:
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#303030",
+        "statusBar.noFolderBackground": "#222225",
+        "statusBar.debuggingBackground": "#511f1f"
+    },
+
+    "editor.cursorBlinking": "phase",
+    "editor.cursorWidth": 2,
+    "editor.fontFamily": "Monaco",
+    "editor.minimap.scale": 2,
+    "terminal.external.osxExec": "",
+    "julia.enableCrashReporter": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.fontSize": 14,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrapColumn": 135,
+    "editor.wordWrap": "on",
+
+    "go.lintTool": "gometalinter",
+    "go.lintFlags": [
+        "--disable-all",
+        "--enable=golint",
+        "--exclude=exported (const|type|method|function) [\\w.]+ should have comment (\\(or a comment on this block\\) )?or be unexported",
+        "--exclude=don't use ALL_CAPS in Go names; use CamelCase",
+        "--exclude=(func|const|struct field|) \\w+ should be \\w+"
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "breadcrumbs.enabled": true,
+    "editor.renderControlCharacters": false,
+    "C_Cpp.default.browse.path": [],
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
+    "C_Cpp.updateChannel": "Insiders",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "editor.accessibilitySupport": "off"
+}
