@@ -1,0 +1,231 @@
+#compdef samtools
+
+################################################
+# SAMtools commands and options are based on ver. 0.1.18
+# http://samtools.sourceforge.net/samtools.shtml
+#
+# Edited by yag_ays 2011.10.25
+################################################
+
+_samtools() {
+    _arguments -s '*::samtools subcommand:_samtools_command'
+}
+
+(( $+functions[_samtools_command()] )) || _samtools_command()
+ {
+    _samtoolscmds=(
+      "view:SAM<->BAM conversion"
+      "sort:sort alignment file"
+      "mpileup:multi-way pileup"
+      "depth:compute the depth"
+      "faidx:index/extract FASTA"
+      "tview:text alignment viewer"
+      "index:index alignment"
+      "idxstats:BAM index stats (r595 or later)"
+      "fixmate:fix mate information"
+      "flagstat:simple stats"
+      "calmd:recalculate MD/NM tags and '=' bases"
+      "merge:merge sorted alignments"
+      "rmdup:remove PCR duplicates"
+      "reheader:replace BAM header"
+      "cat:concatenate BAMs"
+      "targetcut:cut fosmid regions (for fosmid pool only)"
+      "phase:phase heterozygotes"
+     )
+
+    if (( CURRENT == 1 )); then
+        # Display samtools commands.
+        _describe -t commands 'samtools command' _samtoolscmds || compadd "$@"
+    else
+        local curcontext="${curcontext}"
+
+        # Get command name if inputted command is included in `_samtoolscmds`;
+        # otherwise empty value
+        cmd="${_samtoolscmds[(r)$words[1]:*]%%:*}"
+
+        if [[ -n $cmd ]]; then
+            curcontext="${curcontext%:*:*}:samtools-${cmd}:"
+            _call_function ret _samtools_$cmd || _message "no more arguments"
+        else
+            _message "unknown samtools command: $words[1]"
+        fi
+        return ret
+    fi
+}
+
+_samtools "$@"
+
+
+(( $+functions[_samtools_view] )) || _samtools_view()
+{
+    _arguments -s \
+        "-b[Output in the BAM format.]" \
+	"-f[Only output alignments with all bits in INT present in the FLAG field. INT can be in hex in the format of /^0x\[0-9A-F\]+/ \[0\]]:Input reqFlag" \
+	"-F[Skip alignments with bits present in INT \[0\]]:Input skipFlag" \
+	"-h[Include the header in the output.]" \
+	"-H[Output the header only.]" \
+	"-l[Only output reads in library STR \[null\]]:Input library:" \
+	"-o[Output file \[stdout\]]:Input output:_files" \
+	"-q[Skip alignments with MAPQ smaller than INT \[0\]]:Input minMapQ:" \
+	"-r[Only output reads in read group STR \[null\]]:Input readGroup" \
+	"-R[Output reads in read groups listed in FILE \[null\]]:Input rgFile:_files" \
+	"-S[Input is in SAM. If @SQ header lines are absent, the -'t' option is required.]" \
+	"-c[Instead of printing the alignments, only count them and print the total number. All filter options, such as -'f', -'F' and -'q' , are taken into account.]" \
+	"-t[This file is TAB-delimited. Each line must contain the reference name and the length of the reference, one line for each distinct reference; additional fields are ignored. This file\
+ also defines the order of the reference sequences in sorting. If you run samtools faidx <ref.fa>', the resultant index file <ref.fa>.fai can be used as this <in.ref_list> file.]:Input in.refList:_files" \
+        "-u[Output uncompressed BAM. This option saves time spent on compression/decomprssion and is thus preferred when the output is piped to another samtools command.]" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_tview] )) || _samtools_tview()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_mpileup] )) || _samtools_mpileup()
+{
+    _arguments -s \
+        "-6[Assume the quality is in the Illumina 1.3+ encoding. -A Do not skip anomalous read pairs in variant calling.]" \
+        "-B[Disable probabilistic realignment for the computation of base alignment quality (BAQ). BAQ is the Phred-scaled probability of a read base being misaligned. Applying this option greatly helps to reduce false SNPs caused by misalignments.]" \
+        "-b[List of input BAM files, one file per line \[null\]]:Input file:_files" \
+        "-C[Coefficient for downgrading mapping quality for reads containing excessive mismatches. Given a read with a phred-scaled probability q of being generated from the mapped position, the new mapping quality is about sqrt((INT-q)/INT)*INT. A zero value disables this functionality; if enabled, the recommended value for BWA is 50. \[0\]]:Input capQcoef:" \
+        "-d[At a position, read maximally INT reads per input BAM. \[250\]]:Input INT:" \
+        "-E[Extended BAQ computation. This option helps sensitivity especially for MNPs, but may hurt specificity a little bit.]" \
+        "-f[The faidx-indexed reference file in the FASTA format. The file can be optionally compressed by razip. \[null\]]:Input in.fa:_files" \
+        "-l[BED or position list file containing a list of regions or sites where pileup or BCF should be generated \[null\]]:Input list:_files" \
+        "-q[Minimum mapping quality for an alignment to be used \[0\]]:Input minMapQ:" \
+        "-Q[Minimum base quality for a base to be considered \[13\]]:Input minBaseQ:" \
+        "-r[Only generate pileup in region STR \[all sites\]]:Input reg:" \
+        "-D[Output per-sample read depth]" \
+        "-g[Compute genotype likelihoods and output them in the binary call format (BCF).]" \
+        "-S[Output per-sample Phred-scaled strand bias P-value]" \
+        "-u[Similar to -g except that the output is uncompressed BCF, which is preferred for piping.]" \
+        "-e[Phred-scaled gap extension sequencing error probability. Reducing INT leads to longer indels. \[20\]]:Input INT:" \
+        "-h[Coefficient for modeling homopolymer errors. Given an l-long homopolymer run, the sequencing error of an indel of size s is modeled as INT*s/l. \[100\]]:Input INT:" \
+        "-I[Do not perform INDEL calling]" \
+        "-L[Skip INDEL calling if the average per-sample depth is above INT. \[250\]]:Input INT:" \
+        "-o[Phred-scaled gap open sequencing error probability. Reducing INT leads to more indel calls. \[40\]]:Input INT:" \
+        "-P[Comma dilimited list of platforms (determined by @RG-PL) from which indel candidates are obtained. It is recommended to collect indel candidates from sequencing technologies that have low indel error rate such as ILLUMINA. \[all\]]:Input STR:" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_reheader] )) || _samtools_reheader()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_cat] )) || _samtools_cat()
+{
+    _arguments -s \
+        "-h[header.sam]:Input file:_files" \
+        "-o[out.bam]:Input file:_files" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_sort] )) || _samtools_sort()
+{
+    _arguments -s \
+        "-o[Output the final alignment to the standard output.]" \
+        "-n[Sort by read names rather than by chromosomal coordinates]" \
+        "-m[Approximately the maximum required memory. \[500000000\]]:Input maxMem:" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_merge] )) || _samtools_merge()
+{
+    _arguments -s \
+        "-l[Use zlib compression level 1 to comrpess the output]" \
+        "-f[Force to overwrite the output file if present.]" \
+        "-h[se the lines of FILE as '@' headers to be copied to out.bam, replacing any header lines that would otherwise be copied from in1.bam. (FILE is actually in SAM format, though any alignment records it may contain are ignored.)]:Input inh.sam:_files" \
+        "-n[The input alignments are sorted by read names rather than by chromosomal coordinates]" \
+        "-R[Merge files in the specified region indicated by STR \[null\]]:Input reg:" \
+        "-r[Attach an RG tag to each alignment. The tag value is inferred from file names.]" \
+        "-u[Uncompressed BAM output]" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_index] )) || _samtools_index()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_idxstats] )) || _samtools_idxstats()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_faidx] )) || _samtools_faidx()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_fixmate] )) || _samtools_fixmate()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_rmdup] )) || _samtools_rmdup()
+{
+    _arguments -s \
+        "-s[Remove duplicate for single-end reads. By default, the command works for paired-end reads only.]" \
+        "-S[Treat paired-end reads and single-end reads.]" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_calmd] )) || _samtools_calmd()
+{
+    _arguments -s \
+        "-A[When used jointly with -r this option overwrites the original base quality.]" \
+        "-e[Convert a the read base to = if it is identical to the aligned reference base. Indel caller does not support the = bases at the moment.]" \
+        "-u[Output uncompressed BAM]" \
+        "-b[Output compressed BAM]" \
+        "-s[The input is SAM with header lines]" \
+        "-C[Coefficient to cap mapping quality of poorly mapped reads. See the pileup command for details. \[0\]]:Input capQcoef:" \
+        "-r[Compute the BQ tag (without -A) or cap base quality by BAQ (with -A).]" \
+        "-E[Extended BAQ calculation. This option trades specificity for sensitivity, though the effect is minor.]" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_targetcut] )) || _samtools_targetcut()
+{
+    _arguments -s \
+        "-Q[minBaseQ]" \
+        "-i[inPenalty]" \
+        "-0[em0]" \
+        "-1[em1]" \
+        "-2[em2]" \
+        "-f[ref]" \
+	'*:file:_files'
+}
+
+(( $+functions[_samtools_phase] )) || _samtools_phase()
+{
+    _arguments -s \
+        "-A[Drop reads with ambiguous phase.]" \
+        "-b[Prefix of BAM output. When this option is in use, phase-0 reads will be saved in file STR.0.bam and phase-1 reads in STR.1.bam. Phase unknown reads will be randomly allocated to one of the two files. Chimeric reads with switch errors will be saved in STR.chimeric.bam. \[null\]]:Input prefix:" \
+        "-F[Do not attempt to fix chimeric reads.]" \
+        "-k[Maximum length for local phasing. \[13\]]:Input len:" \
+        "-q[Minimum Phred-scaled LOD to call a heterozygote. \[40\]]:Input minLOD:" \
+        "-Q[Minimum base quality to be used in het calling. \[13\]]:minBaseQ:" \
+	'*:file:_files'
+}
+
+
+(( $+functions[_samtools_depth] )) || _samtools_depth()
+{
+    _arguments -s \
+	'*:file:_files'
+}
+
+
+(( $+functions[_samtools_flagstat] )) || _samtools_flagstat()
+{
+    _arguments -s \
+	'*:file:_files'
+}
