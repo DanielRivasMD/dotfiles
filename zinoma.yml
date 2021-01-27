@@ -91,9 +91,6 @@ targets:
       # tmux
       ln -svf ${IANUS}/tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
 
-      # amp
-      ln -svf ${IANUS}/amp ${HOME}/.config
-
       # micro
       ln -svf ${IANUS}/micro ${HOME}/.config
 
@@ -147,9 +144,6 @@ targets:
       # zinoma
       rsync -azvhP ${ARCHIVE}/zinoma.yml ${REMOTE}:/home/drivas/.archive/
 
-      # amp
-      rsync -azvhP ${IANUS}/amp ${REMOTE}:/home/drivas/.archive/ianus/
-
       # micro
       rsync -azvhP ${IANUS}/micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
       rsync -azvhP ${IANUS}/micro/bindings.json ${REMOTE}:/home/drivas/.archive/ianus/micro/
@@ -189,9 +183,6 @@ targets:
 
       # zinoma
       rsync -azvhP ${ARCHIVE}/zinoma.yml ${REMOTE}:/home/drivas/.archive/
-
-      # amp
-      rsync -azvhP ${IANUS}/amp ${REMOTE}:/home/drivas/.archive/ianus/
 
       # micro
       rsync -azvhP ${IANUS}/micro/plug ${REMOTE}:/home/drivas/.archive/ianus/micro/
@@ -242,9 +233,6 @@ targets:
 
       # tmux
       ln -svf ${IANUS}/tmux/2.5.tmux.conf ${HOME}/.tmux.conf
-
-      # amp
-      ln -svf ${IANUS}/amp ${HOME}/.config
 
       # micro
       ln -svf ${IANUS}/micro ${HOME}/.config
@@ -303,9 +291,6 @@ targets:
 
       # tmux
       ln -svf ${IANUS}/tmux/3.1b.tmux.conf ${HOME}/.tmux.conf
-
-      # amp
-      ln -svf ${IANUS}/amp ${HOME}/.config
 
       # micro
       ln -svf ${IANUS}/micro ${HOME}/.config
