@@ -221,6 +221,15 @@ echo $PATH | xsv flatten -d ":" -n
 description = 'display PATH'
 tags = ['shell']
 
+[scripts.fpath]
+alias = 'fpath'
+command = '''
+source ${PIER}break_single_line.sh ${MANWIDTH}
+echo $FPATH | xsv flatten -d ":" -n
+'''
+description = 'display fpath'
+tags = ['shell']
+
 [scripts.gopath]
 alias = 'gopath'
 command = '''
