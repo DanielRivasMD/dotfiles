@@ -86,24 +86,6 @@ bindkey "\x1b[1;3D" backward-word
 bindkey "\x1b[1;3C" forward-word
 
 # ==========================
-# ===  JetBrains         ===
-# ==========================
-
-clion() { command open "$@" -a CLion }
-
-goland() { command open "$@" -a GoLand }
-
-pycharm() { command open "$@" -a PyCharm }
-
-intellij() { command open "$@" -a IntelliJ\ IDEA }
-
-wstorm() { command open "$@" -a WebStorm }
-
-mine() { command open "$@" -a RubyMine }
-
-pstorm() { command open "$@" -a PhpStorm }
-
-# ==========================
 # ===  RStudio           ===
 # ==========================
 
