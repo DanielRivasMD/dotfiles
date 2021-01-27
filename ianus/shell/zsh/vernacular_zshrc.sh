@@ -50,6 +50,9 @@ source ${ZDOTDIR}/zsh_plugins.sh
 # ===  Autocompletion    ===
 # ==========================
 
+# add custom zsh completion path
+fpath=($HOME/.config/zsh_completion $fpath)
+
 # Autocompletion with arrow interphase
 autoload -Uz compinit
 # Dump zcompdump
