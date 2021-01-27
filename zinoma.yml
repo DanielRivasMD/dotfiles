@@ -128,6 +128,7 @@ targets:
       ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
       ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
       ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion
 
       ln -svf ${IANUS}/shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
 
@@ -266,6 +267,7 @@ targets:
       ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
       ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
       ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion
 
       ln -svf ${IANUS}/shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc
 
@@ -324,6 +326,7 @@ targets:
       ln -svf ${IANUS}/shell/zsh/pawsey_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
       ln -svf ${IANUS}/shell/zsh/pawsey_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
       ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
+      ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion
 
       ln -svf ${IANUS}/shell/zsh/pawsey_zshrc.sh ${HOME}/.zshrc
 
