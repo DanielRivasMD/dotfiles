@@ -1,4 +1,10 @@
 
+[scripts.archive]
+alias = 'archive'
+command = '''rga "$1" | awk 'BEGIN{FS=":"} {print $1}' | runiq -'''
+description = 'search the archive for pattern'
+tags = ['shell']
+
 [scripts.cChrome]
 alias = 'cChrome'
 command = '''for i in $(procs 'Google Chrome' --or chromedriver | awk 'NR > 2 {print $1}' ); do kill $i; done'''
