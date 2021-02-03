@@ -22,8 +22,7 @@
       beautify_on_save: true
     js:
       beautify_on_save: true
-    json:
-      beautify_on_save: true
+    json: {}
     less:
       beautify_on_save: true
     markdown:
@@ -81,6 +80,8 @@
       "snippets"
       "symbols-view"
       "advanced-open-file"
+      "atom-keyboard-macros"
+      "clipboard-history"
     ]
     packagesWithSnippetsDisabled: [
       "highlight-nanorc"
