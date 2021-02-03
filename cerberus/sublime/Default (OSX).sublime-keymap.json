@@ -66,4 +66,45 @@
   { "keys": ["ctrl+shift+\\"],        "command": "new_pane", },
   { "keys": ["ctrl+x"],               "command": "close_pane", },
 
+  // move on groups
+  { "keys": ["ctrl+left"],            "command": "focus_neighboring_group",           "args": {"forward": false}, },
+  { "keys": ["ctrl+right"],           "command": "focus_neighboring_group", },
+  { "keys": ["ctrl+down"],            "command": "move_to_neighboring_group",         "args": {"forward": false}, },
+  { "keys": ["ctrl+up"],              "command": "move_to_neighboring_group", },
+
+  // paste from history
+  { "keys": ["ctrl+p"],               "command": "paste_from_history", },
+
+  // case control
+  { "keys": ["ctrl+u"],               "command": "upper_case", },
+  { "keys": ["ctrl+l"],               "command": "lower_case", },
+
+  // marks
+  { "keys": ["ctrl+n"],               "command": "set_mark", },
+  { "keys": ["ctrl+z"],               "command": "select_to_mark", },
+  { "keys": ["ctrl+v"],               "command": "delete_to_mark", },
+  { "keys": ["ctrl+b"],               "command": "swap_with_mark", },
+  { "keys": ["ctrl+c"],               "command": "clear_bookmarks",                   "args": {"name": "mark"}, },
+
+  { "keys": ["ctrl+y"],               "command": "yank", },
+
+  // folding
+  { "keys": ["alt+command+ctrl+]"],   "command": "unfold_all" },
+  { "keys": ["alt+command+ctrl+["],   "command": "fold_by_level",                     "args": {"level": 1} },
+  { "keys": ["ctrl+q", "1"],          "command": "fold_by_level",                     "args": {"level": 2}, },
+  { "keys": ["ctrl+q", "2"],          "command": "fold_by_level",                     "args": {"level": 3}, },
+  { "keys": ["ctrl+q", "3"],          "command": "fold_by_level",                     "args": {"level": 4}, },
+  { "keys": ["ctrl+q", "4"],          "command": "fold_by_level",                     "args": {"level": 5}, },
+  { "keys": ["ctrl+q", "5"],          "command": "fold_by_level",                     "args": {"level": 6}, },
+  { "keys": ["ctrl+q", "6"],          "command": "fold_by_level",                     "args": {"level": 7}, },
+  { "keys": ["ctrl+q", "7"],          "command": "fold_by_level",                     "args": {"level": 8}, },
+  { "keys": ["ctrl+q", "8"],          "command": "fold_by_level",                     "args": {"level": 9}, },
+  { "keys": ["ctrl+q", "0"],          "command": "fold_tag_attributes", },
+
+  // macro
+  { "keys": ["ctrl+."],               "command": "toggle_record_macro", },
+  { "keys": ["ctrl+shift+."],         "command": "run_macro", }
+
+  // git gutter
+
 ]
