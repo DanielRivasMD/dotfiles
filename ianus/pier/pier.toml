@@ -243,7 +243,7 @@ source ${PIER}break_single_line.sh ${MANWIDTH}
 echo $GOPATH | xsv flatten -d ":" -n
 '''
 description = 'display GOPATH'
-tags = ['shell']
+tags = ['go']
 
 [scripts.bianca-sftp]
 alias = 'bianca-sftp'
@@ -445,5 +445,11 @@ fi
 '''
 description = 'list file tree'
 tags = ['exa']
+
+[scripts.rustfmt]
+alias = 'rustfmt'
+command = 'cp -v ${PIER}rustfmt.toml $(pwd)'
+description = 'collect a template of rustfmt'
+tags = ['rust']
 
 [default]
