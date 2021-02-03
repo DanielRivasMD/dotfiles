@@ -48,19 +48,19 @@
 
 'body':
 
-  'ctrl-q -': 'pane:split-up-and-copy-active-item' # Atom Specific
-  'ctrl-q _': 'pane:split-down-and-copy-active-item' # Atom Specific
-  'ctrl-q \\': 'pane:split-left-and-copy-active-item' # Atom Specific
-  'ctrl-q |': 'pane:split-right-and-copy-active-item' # Atom Specific
-  'ctrl-q x': 'pane:close' # Atom Specific
-  'ctrl-q shift-X': 'pane:close-other-items' # Atom Specific
+  # split panes
+  'ctrl--': 'pane:split-down-and-copy-active-item' # atom specific
+  'ctrl-\\': 'pane:split-right-and-copy-active-item' # atom specific
+  'ctrl-x': 'pane:close' # atom specific
 
-  'ctrl-q [': 'window:focus-previous-pane'
-  'ctrl-q ]': 'window:focus-next-pane'
-  'ctrl-q up': 'window:focus-pane-above'
-  'ctrl-q down': 'window:focus-pane-below'
-  'ctrl-q left': 'window:focus-pane-on-left'
-  'ctrl-q right': 'window:focus-pane-on-right'
+  'ctrl-[': 'window:focus-previous-pane'
+  'ctrl-]': 'window:focus-next-pane'
+  'ctrl-up': 'window:focus-pane-above'
+  'ctrl-down': 'window:focus-pane-below'
+  'ctrl-left': 'window:focus-pane-on-left'
+  'ctrl-right': 'window:focus-pane-on-right'
+
+  'alt-cmd-h': 'abort!'
 
 '.workspace':
   'ctrl-shift-8': 'github:toggle-github-tab'
@@ -68,24 +68,24 @@
 
 '.platform-darwin':
 
-# Editor core
+# editor core
   'shift-alt-cmd-e': 'find-and-replace:replace-all'
   'shift-cmd-e': 'find-and-replace:show-replace'
 
   'cmd-enter': 'abort!'
   'alt-enter': 'abort!'
 
-# Go to line
+# go to line
   'cmd-;': 'go-to-line:toggle'
   'ctrl-g': 'abort!'
 
-# Tree view
+# tree view
   'cmd-\'': 'tree-view:toggle-focus'
   'ctrl-0': 'abort!'
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# Advanced Open file
+# advanced open file
 '.platform-darwin atom-workspace':
   'alt-cmd-n': 'advanced-open-file:toggle'
 
@@ -96,24 +96,42 @@
 
 '.platform-darwin atom-text-editor':
 
-# Symbols view
+  # paste history
+  'cmd-c': 'clipboard-history:copy'
+  'ctrl-p': 'clipboard-history:paste'
+
+  # symbols view
   'cmd-r': 'symbols-view:toggle-file-symbols'
   'cmd-alt-down': 'symbols-view:go-to-declaration'
   'cmd-alt-up': 'symbols-view:retu'
 
-# Core Editor
+  # core editor
   'ctrl-alt-]': 'editor:unfold-current-row'
   'ctrl-alt-[': 'editor:fold-current-row'
-  'shift-ctrl-alt-]': 'editor:unfold-all'
-  'shift-ctrl-alt-[': 'editor:fold-all'
+  'cmd-ctrl-alt-]': 'editor:unfold-all'
+  'cmd-ctrl-alt-[': 'editor:fold-all'
+
+  'ctrl-q 1': 'editor:fold-at-indent-level-2'
+  'ctrl-q 2': 'editor:fold-at-indent-level-3'
+  'ctrl-q 3': 'editor:fold-at-indent-level-4'
+  'ctrl-q 4': 'editor:fold-at-indent-level-5'
+  'ctrl-q 5': 'editor:fold-at-indent-level-6'
+  'ctrl-q 6': 'editor:fold-at-indent-level-7'
+  'ctrl-q 7': 'editor:fold-at-indent-level-8'
+  'ctrl-q 8': 'editor:fold-at-indent-level-9'
 
   'shift-alt-cmd-]': 'unset!'
   'shift-alt-cmd-[': 'unset!'
 
-# autoindent selection
-  'alt-cmd-;': 'editor:auto-indent'
+  # autoindent selection
+  'shift-alt-i': 'editor:indent-selected-rows'
+  'shift-alt-o': 'editor:outdent-selected-rows'
+  'shift-alt-p': 'editor:auto-indent'
 
-# tabs & spaces
+  'cmd-[': 'abort!'
+  'cmd-]': 'abort!'
+
+  # tabs & spaces
   'alt-cmd-,': 'whitespace:convert-spaces-to-tabs'
   'alt-cmd-.': 'whitespace:convert-tabs-to-spaces'
 
@@ -124,13 +142,26 @@
 
 #------------------------------------------------------------------------------------------------------------------------------
 
+'atom-workspace':
+
+  # macros
+  'ctrl-.': 'atom-keyboard-macros:start_kbd_macro'
+  'ctrl->': 'atom-keyboard-macros:end_kbd_macro'
+  'ctrl-/': 'atom-keyboard-macros:call_last_kbd_macro'
+
+#------------------------------------------------------------------------------------------------------------------------------
+
 # Core Editor
 'atom-text-editor':
   'alt-t': 'unset!'
 
+  # case control
+  'ctrl-u': 'editor:upper-case'
+  'ctrl-l': 'editor:lower-case'
+
   # Pandoc quick export
-  'cmd-alt-o h': 'Pandoc:pandoc2HTML'
-  'cmd-alt-o p': 'Pandoc:pandoc2PDF'
+  'cmd-alt-h': 'Pandoc:pandoc2HTML'
+  'cmd-alt-p': 'Pandoc:pandoc2PDF'
 
 #------------------------------------------------------------------------------------------------------------------------------
 #
