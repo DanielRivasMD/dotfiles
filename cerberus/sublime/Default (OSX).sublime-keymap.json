@@ -103,6 +103,10 @@
 
   // macro
   { "keys": ["ctrl+."],               "command": "toggle_record_macro", },
-  { "keys": ["ctrl+shift+."],         "command": "run_macro", }
+  { "keys": ["ctrl+shift+."],         "command": "run_macro", },
+
+  // indent
+  { "keys": ["shift+alt+i"], "command": "indent" },
+  { "keys": ["shift+alt+o"], "command": "unindent" }
 
 ]
