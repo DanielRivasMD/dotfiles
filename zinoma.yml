@@ -56,6 +56,7 @@ targets:
       ln -svf "${CERBERUS}/sublime/Preferences.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
       ln -svf "${CERBERUS}/sublime/trailing_spaces.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings"
       ln -svf "${CERBERUS}/sublime/RustEnhanced.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/RustEnhanced.sublime-settings"
+      ln -svf "${CERBERUS}/sublime/RustFmt.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/RustFmt.sublime-settings"
       ln -svf "${CERBERUS}/sublime/GitGutter.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings"
       ln -svf ${CERBERUS}/code/* "/Users/drivas/Library/Application Support/Code/User/"
 
