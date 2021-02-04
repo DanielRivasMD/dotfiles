@@ -183,6 +183,7 @@ hermesUppmax:
 
   # tmux
   @ rsync -azvhP ${IANUS}/tmux {{RemoteUppmax}}:/home/drivas/.archive/ianus/
+  @ rsync -azvhP ${HOME}/.tmux {{RemoteUppmax}}:/home/drivas/
 
   # vim
   @ rsync -azvhP ${IANUS}/vim/bundle {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/
