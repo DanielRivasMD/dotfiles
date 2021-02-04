@@ -53,14 +53,22 @@
   'ctrl-\\': 'pane:split-right-and-copy-active-item' # atom specific
   'ctrl-x': 'pane:close' # atom specific
 
-  'ctrl-[': 'window:focus-previous-pane'
-  'ctrl-]': 'window:focus-next-pane'
+  'ctrl-space': 'window:focus-previous-pane'
   'ctrl-up': 'window:focus-pane-above'
   'ctrl-down': 'window:focus-pane-below'
   'ctrl-left': 'window:focus-pane-on-left'
   'ctrl-right': 'window:focus-pane-on-right'
 
   'alt-cmd-h': 'abort!'
+
+'atom-workspace atom-text-editor:not([mini])':
+
+  # move lines
+  'atl-k': 'editor:move-line-up'
+  'alt-j': 'editor:move-line-down'
+
+  'ctrl-cmd-up': 'unset!'
+  'ctrl-cmd-down': 'unset!'
 
 '.workspace':
   'ctrl-shift-8': 'github:toggle-github-tab'

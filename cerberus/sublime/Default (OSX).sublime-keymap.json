@@ -63,14 +63,21 @@
   { "keys": ["command+;"],            "command": "show_overlay",                      "args": {"overlay": "goto", "text": ":"}, },
 
   // split editor
-  { "keys": ["ctrl+shift+\\"],        "command": "new_pane", },
+  { "keys": ["ctrl+\\"],              "command": "new_pane", },
   { "keys": ["ctrl+x"],               "command": "close_pane", },
+
+  // move lines
+  { "keys": ["alt+k"],                "command": "swap_line_up", },
+  { "keys": ["alt+j"],                "command": "swap_line_down", },
 
   // move on groups
   { "keys": ["ctrl+left"],            "command": "focus_neighboring_group",           "args": {"forward": false}, },
   { "keys": ["ctrl+right"],           "command": "focus_neighboring_group", },
   { "keys": ["ctrl+down"],            "command": "move_to_neighboring_group",         "args": {"forward": false}, },
   { "keys": ["ctrl+up"],              "command": "move_to_neighboring_group", },
+
+  // jump
+  { "keys": ["ctrl+space"],            "command": "prev_modification", },
 
   // paste from history
   { "keys": ["ctrl+p"],               "command": "paste_from_history", },
@@ -109,8 +116,7 @@
   { "keys": ["shift+alt+i"],          "command": "indent", },
   { "keys": ["shift+alt+o"],          "command": "unindent", },
 
-  // rustfmt
-  { "keys": ["ctrl+,"],               "command": "rust_fmt_format_buffer",            "context": [
-    {"key": "selector", "operator": "equal", "operand": "source.rust"}], },
+  // git gutter
+  { "keys": ["ctrl+g"],               "command": "git_gutter_blame", }
 
 ]
