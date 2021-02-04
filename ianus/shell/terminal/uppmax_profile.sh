@@ -7,10 +7,10 @@
 if [ -f /etc/profile.modules ]
 then
   . /etc/profile.modules
-# load a default environment
-# module load sge
-# PGI compilers
-# module load pgi
+  # load a default environment
+  # module load sge
+  # PGI compilers
+  # module load pgi
 fi
 
 # ==========================
