@@ -57,7 +57,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # ===  zoxide            ===
 # ==========================
 
-eval "$(~/.cargo/bin/zoxide init bash)"
+eval "$(zoxide init bash)"
 
 # ==========================
 # ===  McFly             ===

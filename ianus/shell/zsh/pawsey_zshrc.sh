@@ -89,7 +89,7 @@ bindkey "\x05" end-of-line
 # ===  zoxide            ===
 # ==========================
 
-eval "$(~/.cargo/bin/zoxide init zsh)"
+eval "$(zoxide init zsh)"
 
 # ==========================
 # ===  McFly             ===
