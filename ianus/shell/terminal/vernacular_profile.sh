@@ -94,7 +94,7 @@ export MANWIDTH=175
 # ===  Pager              ===
 # ==========================
 
-export PAGER=most
+export PAGER=bat
 export BAT_PAGER=less
 
 # ==========================

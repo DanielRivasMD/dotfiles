@@ -51,6 +51,9 @@ alias ald='clear && aliases directories'
 alias al='aliases exec ./'
 alias a='aliases exec ~/'
 
+# bat
+alias man=batman
+
 # broot
 alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
