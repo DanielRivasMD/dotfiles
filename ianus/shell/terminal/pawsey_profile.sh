@@ -3,14 +3,15 @@
 # ===  Pawsey default    ===
 # ==========================
 
+# patch for screen C-q
+stty -ixon
+
 # ==========================
 # ===  Archives          ===
 # ==========================
 
 export ARCHIVE=${HOME}/.archive/
 export IANUS=${ARCHIVE}ianus/
-export CERBERUS=${ARCHIVE}cerberus/
-
 
 # # ==========================
 # # ===  BLAST database    ===

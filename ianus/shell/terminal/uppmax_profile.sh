@@ -3,6 +3,9 @@
 # ===  Uppmax default    ===
 # ==========================
 
+# patch for screen C-q
+stty -ixon
+
 # modules are used to manage user environment and software packages
 if [ -f /etc/profile.modules ]
 then
@@ -19,7 +22,6 @@ fi
 
 export ARCHIVE=${HOME}/.archive/
 export IANUS=${ARCHIVE}ianus/
-export CERBERUS=${ARCHIVE}cerberus/
 
 # ==========================
 # ===  tmux check        ===
