@@ -11,14 +11,6 @@ export ARCHIVE=${HOME}/.archive/
 export IANUS=${ARCHIVE}ianus/
 export CERBERUS=${ARCHIVE}cerberus/
 
-# ==========================
-# ===  tmux check        ===
-# ==========================
-
-# TODO: install tmux
-# # Manage tmux
-# module load tmux
-# [ -z "$TMUX" ] && { tmux a || exec /home/drivas/bin/muxed Remote && exit; }
 
 # # ==========================
 # # ===  BLAST database    ===
@@ -33,11 +25,11 @@ export CERBERUS=${ARCHIVE}cerberus/
 
 export GOPATH=$HOME/.go/
 
-# ==========================
-# ===  Cargo-Rust Path   ===
-# ==========================
-
-PATH=$PATH:$HOME/.cargo/bin
+# # ==========================
+# # ===  Cargo-Rust Path   ===
+# # ==========================
+#
+# PATH=$PATH:$HOME/.cargo/bin
 
 # ==========================
 # ===  Path              ===
@@ -64,7 +56,7 @@ export LESSHISTFILE="-"
 # ==========================
 
 # Editor
-export VISUAL=vim
+export VISUAL=micro
 export EDITOR="$VISUAL"
 
 # ==========================
