@@ -98,9 +98,9 @@ rstudio() { command open "$@" -a RStudio }
 # ===  McFly             ===
 # ==========================
 
-if [[ -r "$(brew --prefix)/opt/mcfly/mcfly.zsh" ]]
+if [[ -r "${HOME}/Factorem/Observatory/mcfly/mcfly.zsh" ]]
 then
-  source "$(brew --prefix)/opt/mcfly/mcfly.zsh"
+  source "${HOME}/Factorem/Observatory/mcfly/mcfly.zsh"
 fi
 
 # ==========================

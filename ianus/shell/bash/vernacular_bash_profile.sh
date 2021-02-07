@@ -60,9 +60,9 @@ eval "$(zoxide init bash)"
 # ===  McFly             ===
 # ==========================
 
-if [[ -r "$(brew --prefix)/opt/mcfly/mcfly.bash" ]]
+if [[ -r "${HOME}/Factorem/Observatory/mcfly/mcfly.bash" ]]
 then
-  source "$(brew --prefix)/opt/mcfly/mcfly.bash"
+  source "${HOME}/Factorem/Observatory/mcfly/mcfly.bash"
 fi
 
 # ==========================
