@@ -4,7 +4,9 @@
 # ==========================
 
 alias aliases='clear && ~/bin/forkedPatch/aliases'
+alias copo='~/bin/forkedPatch/copo'
 alias pier='clear && ~/bin/forkedPatch/pier'
+alias rip='clear && ~/bin/forkedPatch/rip'
 
 # ==========================
 # ===  General aliases   ===
