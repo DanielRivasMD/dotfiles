@@ -70,6 +70,9 @@
   { "keys": ["alt+k"],                "command": "swap_line_up", },
   { "keys": ["alt+j"],                "command": "swap_line_down", },
 
+  { "keys": ["ctrl+super+up"],        "command": "exec",                              "args": {"kill": true}, },
+  { "keys": ["ctrl+super+down"],      "command": "exec",                              "args": {"kill": true}, },
+
   // move on groups
   { "keys": ["ctrl+left"],            "command": "focus_neighboring_group",           "args": {"forward": false}, },
   { "keys": ["ctrl+right"],           "command": "focus_neighboring_group", },
