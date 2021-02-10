@@ -40,6 +40,7 @@ alias sudo='sudo '
 # ===  Go toolLinks      ===
 # ==========================
 
+alias f='fillin'
 alias lg='lazygit'
 
 # ==========================
