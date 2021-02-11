@@ -39,7 +39,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'neoclide/coc.nvim'
-Plugin 'tomasr/molokai'
 Plugin 'cespare/vim-toml'
 Plugin 'gmarik/vundle'
 Plugin 'dag/vim-fish'
@@ -47,12 +46,20 @@ Plugin 'mhinz/vim-startify'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'liuchengxu/vim-which-key'
+Plugin 'tomasr/molokai'                         " molokai theme
 
 call vundle#end()            " required
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-airline
+" => molokai
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:rehash256 = 1
+let g:molokai_original = 1
+colorscheme molokai
+
 
 let g:airline_section_y = '%{strftime("%a %d %b %H:%M")}'
 let g:airline#extensions#tabline#enabled = 1
