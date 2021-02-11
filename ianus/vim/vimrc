@@ -41,8 +41,21 @@ autocmd BufRead,BufNewFile *.jl :set filetype=julia
 filetype plugin on
 filetype indent on
 
+" having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" give more space for displaying messages.
+set cmdheight=2
+
 " set to auto read when a file is changed from the outside
 set autoread
+
+" ignore binary files
+set wildignore+=*.a,*.o
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_Store,.git
+set wildignore+=*.doc,*.docx,*.ppt,*.pptx
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -72,6 +85,9 @@ set bs=2
 
 " automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
+
+" autowrite for debugging
+set autowrite
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

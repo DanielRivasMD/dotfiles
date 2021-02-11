@@ -9,9 +9,6 @@ filetype off                  " required
 " => Vundle manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" " Fuzzy Finder
-" set rtp+=/usr/local/opt/fzf
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

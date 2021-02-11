@@ -91,6 +91,7 @@ imap UU <Esc>U
 " undo from insert mode
 imap uu <Esc>u
 
+" errors
 
 " " execute current buffer
 " nmap <leader>e :!%:p<CR>
