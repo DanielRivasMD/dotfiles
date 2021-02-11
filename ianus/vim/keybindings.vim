@@ -1,76 +1,87 @@
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"  => General
+" sections:
+"
+"    -> movement
+"    -> splits and tabbed files
+"    -> miscellaneous
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" => Horizontal Movement
-inoremap <M-S-Left> <Esc>I
-inoremap <M-S-Right> <Esc>A
-nnoremap <M-S-Left> 0
-nnoremap <M-S-Right> $
-
-inoremap <M-Left> <Esc>Bi
-inoremap <M-Right> <Esc>Ea
-nnoremap <M-Left> B
-nnoremap <M-Right> E
-
-" => Vertical Movement
-inoremap <M-S-Up> <Esc>ggi
-inoremap <M-S-Down> <Esc>Gi
-nnoremap <M-S-Up> gg
-nnoremap <M-S-Down> G
-
-inoremap <M-Up> <Esc>{i
-inoremap <M-Down> <Esc>}i
-nnoremap <M-Up> {
-nnoremap <M-Down> }
-
-
-" Move lines
-inoremap <C-M-Down> <Esc>ddpi
-inoremap <C-M-Up> <Esc>ddkPi
-nnoremap <C-M-Down> ddp
-nnoremap <C-M-Up> ddkP
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Leader shortcuts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  => movement
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Execute current buffer
-nmap <leader>e :!%:p<CR>
+" => horizontal movement
+imap <M-S-Left> <Esc>I
+imap <M-S-Right> <Esc>A
+nmap <M-S-Left> 0
+nmap <M-S-Right> $
 
-" Write buffer to...
-nmap <leader>P :!cat %:p >
+imap <M-Left> <Esc>Bi
+imap <M-Right> <Esc>Ea
+nmap <M-Left> B
+nmap <M-Right> E
 
-" Toggle paste
-nmap <leader>p :set paste!<CR>
+" => vertical movement
+imap <M-S-Up> <Esc>ggi
+imap <M-S-Down> <Esc>Gi
+nmap <M-S-Up> gg
+nmap <M-S-Down> G
+imap <M-Up> <Esc>{i
+imap <M-Down> <Esc>}i
+nmap <M-Up> {
+nmap <M-Down> }
 
-" List directory
-nmap <leader>l :!exa
 
-" Highlight toggle
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => leader shortcuts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => miscellaneous
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
 nmap <leader>n :nohlsearch<CR>
 
-" Fast saving
-nmap <leader>w :w!<CR>
+" " execute current buffer
+" nmap <leader>e :!%:p<CR>
 
-" Fast quit
-nmap <leader>q :q!
+" write buffer to...
+nmap <leader>C :!cat %:p >
 
 " Fast splits
 nmap <leader>i :wincmd p<CR>
+" toggle paste
+nmap <leader>v :set paste!<CR>
 
+" list directory
+" highlight toggle
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fast saving
+nmap <leader>w :w!<CR>
 
 map <leader>\ :NERDTreeToggle<CR>
 map <leader>' :NERDTreeFocus<CR>
 map <leader>/ :NERDTreeFind
+" fast quit
+nmap <leader>q :q!
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

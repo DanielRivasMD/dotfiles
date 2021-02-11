@@ -2,23 +2,24 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Sections:
-"    -> Load Plugins & Functions
+" sections:
+"    -> load plugins & functions
 "
-"    -> General
-"    -> Editing mappings
-"    -> Visual mode related
-"    -> Files and backups
-"    -> Text, tab and indent related
+"    -> general
+"    -> visual mode related
+"    -> files and backups
+"    -> text, tab and indent related
+"    -> splits and tabbed files
+"    -> overwriting colors
 "
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Load Plugins & Functions
+" => load plugins & functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" With a map leader it's possible to do extra key combinations
+" with a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = "\<space>"
 
@@ -27,31 +28,32 @@ source ~/.vim/plugins.vim
 source ~/.vim/keybindings.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" => general
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax
+
+" enable syntax
 syntax on
 
-" Explicitly identify julia files
+" explicitly identify julia files
 autocmd BufRead,BufNewFile *.jl :set filetype=julia
 
-" Enable filetype plugins
+" enable filetype plugins
 filetype plugin on
 filetype indent on
 
-" Set to auto read when a file is changed from the outside
+" set to auto read when a file is changed from the outside
 set autoread
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 " command W w !sudo tee % > /dev/null
 
-" Ruler
+" ruler
 set ruler
 set number
 set relativenumber
 
-" Search
+" search
 set history=1000
 set hlsearch
 set showmatch
@@ -65,18 +67,18 @@ set cmdheight=2
 set wildmenu
 " set wildmode=longest,list,full
 
-" Enable delete
+" enable delete
 set bs=2
 
 " Disjoint stroke sequence (oposite to 'J')
 nnoremap K i<CR><Esc>
 
-" Automatically deletes all trailing whitespace on save.
+" automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
+" => visual mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Exit insert mode with jj
 imap jj <Esc>
@@ -89,27 +91,27 @@ nnoremap l 10l
 
 
 """"""""""""""""""""""""""""""
-" => Visual mode related
 """"""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+" " visual mode pressing * or # searches for the current selection
+" " super useful! from an idea by Michael Naumann
+" vmap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+" vmap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
+" => files, backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+
+" turn backup off, since most stuff is in svn, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
+" => text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
+" use spaces instead of tabs
 set expandtab
 
 " Invisibles
@@ -120,30 +122,31 @@ if $LANG =~ '\(UTF\|utf\)-\?8' || $LC_CTYPE =~ '\(UTF\|utf\)-\?8'
   set listchars=eol:¬,tab:»–,trail:·,extends:>,precedes:<
 endif
 
-" Be smart when using tabs ;)
+" be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
-" Linebreak on 500 characters
+" linebreak on 500 characters
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+set ai "auto indent
+set si "smart indent
+set wrap "wrap lines
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
+" => splits and tabbed files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme molokai
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Overwriting colors
+" => overwriting colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "         cterm-colors
 " NR-16   NR-8    COLOR NAME
@@ -164,31 +167,31 @@ colorscheme molokai
 " 14      3*      Yellow, LightYellow
 " 15      7*      White
 
-" " Invisibles
+" " invisibles
 " highlight NonText ctermfg=DarkGray
 " highlight SpecialKey ctermfg=DarkGray
 "
-" " Search
+" " search
 " highlight Search ctermbg=LightYellow ctermfg=Red cterm=bold
 "
-" " Comment
+" " comment
 " highlight Comment ctermfg=Gray
 "
-" " Error
+" " error
 " highlight Error ctermfg=Red ctermbg=White cterm=bold
 " highlight ErrorMsg ctermfg=Red ctermbg=White cterm=bold
 "
-" " Spell checker
+" " spell checker
 " highlight SpellBad ctermfg=DarkRed ctermbg=NONE cterm=NONE
 "
-" " Identifier (Link to Funtion)
+" " identifier (link to funtion)
 " highlight Identifier ctermfg=Blue cterm=NONE
 "
-" " Tab selector
+" " tab selector
 " highlight WildMenu ctermbg=Black ctermfg=Yellow cterm=underline
 " highlight StatusLine ctermbg=Blue ctermfg=Black
 "
-" " Visual mode
+" " visual mode
 " highlight Visual ctermfg=DarkYellow ctermbg=DarkGray cterm=NONE
 
 
@@ -209,6 +212,7 @@ endif
 
 " fuzzy finder
 set rtp+=/usr/local/opt/fzf
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

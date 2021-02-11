@@ -6,7 +6,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle Manager
+" => Vundle manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " " Fuzzy Finder

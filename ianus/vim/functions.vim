@@ -2,29 +2,30 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Movement between tabs OR buffers
-nnoremap L :call MyNext()<CR>
-nnoremap H :call MyPrev()<CR>
+" movement between tabs or buffers
+nmap L :call MyNext()<CR>
+nmap H :call MyPrev()<CR>
+" nmap C :call ClearRegisters()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" MyNext() and MyPrev(): Movement between tabs OR buffers
+" MyNext() and MyPrev(): movement between tabs or buffers
 function! MyNext()
   if exists( '*tabpagenr' ) && tabpagenr('$') != 1
-    " Tab support && tabs open
+    " tab support && tabs open
     normal gt
   else
-    " No tab support, or no tabs open
+    " no tab support, or no tabs open
     execute ":bnext"
   endif
 endfunction
 
 function! MyPrev()
   if exists( '*tabpagenr' ) && tabpagenr('$') != '1'
-    " Tab support && tabs open
+    " tab support && tabs open
     normal gT
   else
-    " No tab support, or no tabs open
+    " no tab support, or no tabs open
     execute ":bprev"
   endif
 endfunction
@@ -32,7 +33,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Delete all registers
+" delete all registers
 function! ClearRegisters()
    redir => l:register_out
    silent register
