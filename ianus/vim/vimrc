@@ -80,18 +80,7 @@ autocmd BufWritePre * %s/\s\+$//e
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => visual mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Exit insert mode with jj
-imap jj <Esc>
-vmap jj <Esc>
 
-nnoremap j 10j
-nnoremap k 10k
-nnoremap h 10h
-nnoremap l 10l
-
-
-""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""
 " " visual mode pressing * or # searches for the current selection
 " " super useful! from an idea by Michael Naumann
 " vmap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
@@ -144,6 +133,11 @@ set wrap "wrap lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme molokai
+set splitbelow splitright
+
+" removes pipes | that act as seperators on splits
+set fillchars+=vert:\
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => overwriting colors

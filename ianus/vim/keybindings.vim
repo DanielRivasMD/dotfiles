@@ -42,19 +42,41 @@ nmap <M-Down> }
 " => leader shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" fast split vertical
+nmap <leader>\ :vsplit<CR>
 
+" fast split horizontal
+nmap <leader>- :split<CR>
 
+" remap splits navigation to just c + hjkl
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" change 2 split windows from vert to horiz or horiz to vert
+map <leader>o\ <C-w>t<C-w>H
+map <leader>o- <C-w>t<C-w>K
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => miscellaneous
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" exit insert mode with jj
+imap jj <Esc>
+vmap jj <Esc>
 
+" enter to next line
+nmap <CR> o
 
+" remap undo
+nmap U :redo<CR>
+imap UU <Esc>U
 
+" undo from insert mode
+imap uu <Esc>u
 
-nmap <leader>n :nohlsearch<CR>
 
 " " execute current buffer
 " nmap <leader>e :!%:p<CR>
@@ -62,13 +84,15 @@ nmap <leader>n :nohlsearch<CR>
 " write buffer to...
 nmap <leader>C :!cat %:p >
 
-" Fast splits
-nmap <leader>i :wincmd p<CR>
 " toggle paste
 nmap <leader>v :set paste!<CR>
 
 " list directory
+nmap <leader>l :!ls
+nmap <leader>la :!ls -a
+
 " highlight toggle
+nmap <leader>? :nohlsearch<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
