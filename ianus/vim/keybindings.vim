@@ -20,22 +20,36 @@ imap <M-S-Left> <Esc>I
 imap <M-S-Right> <Esc>A
 nmap <M-S-Left> 0
 nmap <M-S-Right> $
+vmap <M-S-Left> 0
+vmap <M-S-Right> $
 
 imap <M-Left> <Esc>Bi
 imap <M-Right> <Esc>Ea
 nmap <M-Left> B
 nmap <M-Right> E
+vmap <M-Left> B
+vmap <M-Right> E
 
 " => vertical movement
 imap <M-S-Up> <Esc>ggi
 imap <M-S-Down> <Esc>Gi
 nmap <M-S-Up> gg
 nmap <M-S-Down> G
+vmap <M-S-Up> gg
+vmap <M-S-Down> G
+
 imap <M-Up> <Esc>{i
 imap <M-Down> <Esc>}i
 nmap <M-Up> {
 nmap <M-Down> }
+vmap <M-Up> {
+vmap <M-Down> }
 
+" move lines
+nmap J ddp
+nmap K ddkP
+"vmap J ddp
+"vmap K ddkP
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

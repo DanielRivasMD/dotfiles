@@ -70,9 +70,6 @@ set wildmenu
 " enable delete
 set bs=2
 
-" Disjoint stroke sequence (oposite to 'J')
-nnoremap K i<CR><Esc>
-
 " automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
 
