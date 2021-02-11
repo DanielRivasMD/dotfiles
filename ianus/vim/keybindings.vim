@@ -108,15 +108,9 @@ nmap <leader>la :!ls -a
 " highlight toggle
 nmap <leader>? :nohlsearch<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fast saving
 nmap <leader>w :w!<CR>
 
-map <leader>\ :NERDTreeToggle<CR>
-map <leader>' :NERDTreeFocus<CR>
-map <leader>/ :NERDTreeFind
 " fast quit
 nmap <leader>q :q!
 

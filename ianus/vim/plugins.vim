@@ -18,7 +18,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/goyo.vim'
@@ -47,6 +46,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'tomasr/molokai'                         " molokai theme
+Plugin 'scrooloose/nerdtree'                    " toogle file tree
 
 call vundle#end()            " required
 
@@ -72,6 +72,15 @@ let g:airline_theme='ravenpower'
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Opera'
 let vim_markdown_preview_pandoc=1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <leader>' :NERDTreeToggle<CR>
+map <leader>" :NERDTreeFocus<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
