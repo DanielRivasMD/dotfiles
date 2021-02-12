@@ -61,6 +61,9 @@ ianus:
   @ if [[ -d ${HOME}/.vim ]]; then rm -rf ${HOME}/.vim; fi
   @ ln -svf ${IANUS}/vim ${HOME}/.vim
   @ ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
+  if [[ ! -d ${HOME}/.vim ]]; then mkd -p ${HOME}.vim; fi                       # create physical .vim directory @ HOME
+  if [[ -d ${HOME}/.vim/bundle ]]; then rm -rf ${HOME}/.vim/bundle; fi          # remove bundle to avoid recursive path
+  ln -svf ${IANUS}/vim/bundle ${HOME}/.vim/bundle                               # link only bundles
 
   # R
   @ if [[ -d ${HOME}/.Renviron.d ]]; then rm -rf ${HOME}/.Renviron.d; fi
