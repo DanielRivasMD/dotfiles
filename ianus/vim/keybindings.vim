@@ -115,6 +115,12 @@ nmap <leader>w :w!<CR>
 " fast quit
 nmap <leader>q :q!
 
+" fast close buffer
+nmap <leader>x :bdelete<CR>
+
+" registers
+nmap <leader>p :registers<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
