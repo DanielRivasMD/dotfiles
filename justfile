@@ -2,54 +2,58 @@
 ################################################################################
 
 # link Cerberus archive
-cerberus:
-  # purge before linking
-  # HOME directories
-  @ if [[ -d ${HOME}/.atom ]]; then rm -rf ${HOME}/.atom; fi
-  @ ln -svf ${CERBERUS}/atom ${HOME}/.atom
+@ Cerberus:
+  # HOME
+  if [[ -d ${HOME}/.atom ]]; then rm -rf ${HOME}/.atom; fi                       # purge before linking
+  ln -svf ${CERBERUS}/atom ${HOME}/.atom                                         # atom
 
-  @ if [[ -d ${HOME}/.gitconfig.d ]]; then rm ${HOME}/.gitconfig.d; fi
-  @ ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d
+  if [[ -d ${HOME}/.gitconfig.d ]]; then rm ${HOME}/.gitconfig.d; fi             # purge before linking
+  ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d                           # gitconfig directory
 
   # rc files
-  @ ln -svf ${CERBERUS}/gem/gemrc ${HOME}/.gemrc
-  @ ln -svf ${CERBERUS}/mplayer/mplayer ${HOME}/.mplayer
-  @ ln -svf ${CERBERUS}/nano/nanorc ${HOME}/.nanorc
+  ln -svf ${CERBERUS}/gem/gemrc ${HOME}/.gemrc                                   # gemrc
+  ln -svf ${CERBERUS}/mplayer/mplayer ${HOME}/.mplayer                           # mplayer
+  ln -svf ${CERBERUS}/nano/nanorc ${HOME}/.nanorc                                # nanorc
 
   # git files
-  @ ln -svf ${CERBERUS}/git/gitconfig ${HOME}/.gitconfig
-  @ ln -svf ${CERBERUS}/git/gitignore_global ${HOME}/.gitignore_global
+  ln -svf ${CERBERUS}/git/gitconfig ${HOME}/.gitconfig                           # gitconfig
+  ln -svf ${CERBERUS}/git/gitignore_global ${HOME}/.gitignore_global             # gitignore_global
 
   # toml files
-  @ ln -svf ${CERBERUS}/procs/procs.toml ${HOME}/.procs.toml
+  ln -svf ${CERBERUS}/procs/procs.toml ${HOME}/.procs.toml                       # procs
 
-  # @config
-  @ ln -svf ${CERBERUS}/alacritty ${HOME}/.config/
-  @ ln -svf ${CERBERUS}/bottom ${HOME}/.config/
-  @ ln -svf ${CERBERUS}/cheat ${HOME}/.config/
-  @ ln -svf ${CERBERUS}/karabiner ${HOME}/.config/
-  @ ln -svf ${HOME}/Factorem/Forked/preview-vim/preview-vim.json ${CERBERUS}/karabiner/assets/complex_modifications
-  @ ln -svf ${CERBERUS}/khal ${HOME}/.config/
-  @ ln -svf ${CERBERUS}/gh/config.yml ${HOME}/.config/gh/
-  @ ln -svf ${CERBERUS}/rstudio ${HOME}/.config/
-  @ ln -svf ${CERBERUS}/rustfmt ${HOME}/.config/
+  # config
+  ln -svf ${CERBERUS}/alacritty ${HOME}/.config/                                 # alacritty
+  ln -svf ${CERBERUS}/bottom ${HOME}/.config/                                    # bottom
+  ln -svf ${CERBERUS}/cheat ${HOME}/.config/                                     # cheat
+  ln -svf ${CERBERUS}/karabiner ${HOME}/.config/                                 # karabiner
+  ln -svf ${CERBERUS}/khal ${HOME}/.config/                                      # khal
+  ln -svf ${CERBERUS}/gh/config.yml ${HOME}/.config/gh/                          # gh
+  ln -svf ${CERBERUS}/rstudio ${HOME}/.config/                                   # rstudio
+  ln -svf ${CERBERUS}/rstudio/keybindings ${HOME}/.R/rstudio/                    # rstudio keybindings
+  ln -svf ${CERBERUS}/rustfmt ${HOME}/.config/                                   # rustfmt
 
-  @ ln -svf ${CERBERUS}/rstudio/keybindings ${HOME}/.R/rstudio/
+  # local
+  ln -svf ${CERBERUS}/rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/ # rstudio
 
-  # @local
-  @ ln -svf ${CERBERUS}/rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/
+  # distant
+  ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/                    # julia startup
+  ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/                                   # ssh config
 
-  # @distant
-  @ ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/
-  @ ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/
-  @ ln -svf "${CERBERUS}/sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
-  @ ln -svf "${CERBERUS}/sublime/Package Control.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
-  @ ln -svf "${CERBERUS}/sublime/Preferences.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-  @ ln -svf "${CERBERUS}/sublime/trailing_spaces.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings"
-  @ ln -svf "${CERBERUS}/sublime/RustEnhanced.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/RustEnhanced.sublime-settings"
-  @ ln -svf "${CERBERUS}/sublime/RustFmt.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/RustFmt.sublime-settings"
-  @ ln -svf "${CERBERUS}/sublime/GitGutter.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings"
-  @ ln -svf ${CERBERUS}/code/* "/Users/drivas/Library/Application Support/Code/User/"
+  # sublime
+  ln -svf "${CERBERUS}/sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+  ln -svf "${CERBERUS}/sublime/Package Control.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+  ln -svf "${CERBERUS}/sublime/Preferences.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+  ln -svf "${CERBERUS}/sublime/trailing_spaces.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings"
+  ln -svf "${CERBERUS}/sublime/RustEnhanced.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/RustEnhanced.sublime-settings"
+  ln -svf "${CERBERUS}/sublime/RustFmt.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/RustFmt.sublime-settings"
+  ln -svf "${CERBERUS}/sublime/GitGutter.sublime-settings.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings"
+
+  # code
+  ln -svf ${CERBERUS}/code/* "/Users/drivas/Library/Application Support/Code/User/"
+
+  # @forked
+  ln -svf ${HOME}/Factorem/Forked/preview-vim/preview-vim.json ${CERBERUS}/karabiner/assets/complex_modifications
 
 ################################################################################
 
