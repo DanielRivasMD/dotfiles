@@ -160,52 +160,47 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
 
 ################################################################################
 
-# link archives @ Uppmax
-Uppmax:
+# link archives Uppmax
+@ Uppmax:
   # vim
-  @ if [[ -d ${HOME}/.vim ]]; then rm ${HOME}/.vim; fi
+  if [[ ! -d ${HOME}/.vim ]]; then mkd -p ${HOME}.vim; fi                          # create physical .vim directory @HOME
+  if [[ -d ${HOME}/.vim/bundle ]]; then rm -rf ${HOME}/.vim/bundle; fi             # purge before linking
+  ln -svf ${IANUS}/vim/bundle ${HOME}/.vim/bundle                                  # link only bundles
+  ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc                                        # vimrc
 
-  @ ln -svf ${IANUS}/vim ${HOME}/.vim
-  @ ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
+  # @HOME
+  ln -svf ${IANUS}/R/Rprofile.d ${HOME}/.Rprofile.d                                # rprofile directory
+  ln -svf ${IANUS}/R/uppmax_Rprofile.R ${HOME}/.Rprofile                           # rprofile
+  ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml                               # pier
+  ln -svf ${IANUS}/tmux/2.5.tmux.conf ${HOME}/.tmux.conf                           # tmux 2.5
+  ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc                               # screen
 
-  # pier
-  @ ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml
+  # @config
+  ln -svf ${IANUS}/micro ${HOME}/.config                                           # micro directory
+  ln -svf ${IANUS}/starship ${HOME}/.config                                        # starship directory
 
-  # tmux
-  @ ln -svf ${IANUS}/tmux/2.5.tmux.conf ${HOME}/.tmux.conf
-
-  # micro
-  @ ln -svf ${IANUS}/micro ${HOME}/.config
-
-  # R
-  @ ln -svf ${IANUS}/R/uppmax_Rprofile.R ${HOME}/.Rprofile
-
-  # terminal
-  @ ln -svf ${IANUS}/shell/terminal/uppmax_profile.sh ${HOME}/.profile
+  # shell
+  ln -svf ${IANUS}/shell/terminal/uppmax_profile.sh ${HOME}/.profile               # terminal profile
 
   # bash
-  @ if [[ ! -d ${HOME}/.bash ]]; then mkdir ${HOME}/.bash; fi
-
-  @ ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash
-  @ ln -svf ${IANUS}/shell/bash/uppmax_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
-
-  @ ln -svf ${IANUS}/shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile
-  @ ln -svf ${IANUS}/shell/bash/uppmax_bashrc.sh ${HOME}/.bashrc
+  if [[ ! -d ${HOME}/.bash ]]; then mkdir ${HOME}/.bash; fi                        # purge before linking
+  ln -svf ${IANUS}/shell/bash/uppmax_bashrc.sh ${HOME}/.bashrc                     # bashrc
+  ln -svf ${IANUS}/shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile
+  ln -svf ${IANUS}/shell/bash/uppmax_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh # bash aliases
+  ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash                               # fzf bash
 
   # zsh
-  @ if [[ ! -d ${HOME}/.zsh ]]; then mkdir ${HOME}/.zsh; fi
-
-  @ ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh
-  @ ln -svf ${IANUS}/shell/zsh/uppmax_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
-  @ ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
-  @ ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
-  @ ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
-  @ ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion
-
-  @ ln -svf ${IANUS}/shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc
+  if [[ ! -d ${HOME}/.zsh ]]; then mkdir ${HOME}/.zsh; fi                          # purge before linking
+  ln -svf ${IANUS}/shell/zsh/uppmax_zshrc.sh ${HOME}/.zshrc                        # zshrc
+  ln -svf ${IANUS}/shell/zsh/uppmax_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh     # zsh aliases
+  ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh                                  # fzf zsh
+  ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh     # zsh plugins
+  ln -svf ${IANUS}/shell/zsh/uppmax_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt   # zsh plugins
+  ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh             # zsh completion
+  ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion             # zsh completion
 
   # fish
-  @ ln -svf ${IANUS}/shell/fish/uppmax_config.fish ${HOME}/.config/fish/config.fish
+  ln -svf ${IANUS}/shell/fish/uppmax_config.fish ${HOME}/.config/fish/config.fish  # fish config
 
 ################################################################################
 
