@@ -58,67 +58,50 @@
 ################################################################################
 
 # link Ianus archive
-ianus:
-  # purge before linking
-
+@ Ianus:
   # vim
-  @ if [[ -d ${HOME}/.vim ]]; then rm -rf ${HOME}/.vim; fi
-  @ ln -svf ${IANUS}/vim ${HOME}/.vim
-  @ ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc
-  if [[ ! -d ${HOME}/.vim ]]; then mkd -p ${HOME}.vim; fi                       # create physical .vim directory @ HOME
-  if [[ -d ${HOME}/.vim/bundle ]]; then rm -rf ${HOME}/.vim/bundle; fi          # remove bundle to avoid recursive path
-  ln -svf ${IANUS}/vim/bundle ${HOME}/.vim/bundle                               # link only bundles
+  if [[ ! -d ${HOME}/.vim ]]; then mkd -p ${HOME}.vim; fi                              # create physical .vim directory @HOME
+  if [[ -d ${HOME}/.vim/bundle ]]; then rm -rf ${HOME}/.vim/bundle; fi                 # purge before linking
+  ln -svf ${IANUS}/vim/bundle ${HOME}/.vim/bundle                                      # link only bundles
+  ln -svf ${IANUS}/vim/vimrc ${HOME}/.vimrc                                            # vimrc
 
   # R
-  @ if [[ -d ${HOME}/.Renviron.d ]]; then rm -rf ${HOME}/.Renviron.d; fi
-  @ ln -svf ${IANUS}/R/Renviron.d ${HOME}/.Renviron.d
+  if [[ -d ${HOME}/.Renviron.d ]]; then rm -rf ${HOME}/.Renviron.d; fi                 # purge before linking
+  ln -svf ${IANUS}/R/Renviron.d ${HOME}/.Renviron.d                                    # renviron directory
+  if [[ -d ${HOME}/.Rprofile.d ]]; then rm -rf ${HOME}/.Rprofile.d; fi                 # purge before linking
+  ln -svf ${IANUS}/R/Rprofile.d ${HOME}/.Rprofile.d                                    # rprofile directory
+  ln -svf ${IANUS}/R/vernacular_Rprofile.R ${HOME}/.Rprofile                           # rprofile
 
-  @ if [[ -d ${HOME}/.Rprofile.d ]]; then rm -rf ${HOME}/.Rprofile.d; fi
-  @ ln -svf ${IANUS}/R/Rprofile.d ${HOME}/.Rprofile.d
+  # @HOME
+  ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml                                   # pier
+  ln -svf ${IANUS}/tmux/3.1c.tmux.conf ${HOME}/.tmux.conf                              # tumx 3.1c
+  ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc                                   # screen
 
-  # pier
-  @ ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml
+  # @config
+  ln -svf ${IANUS}/micro ${HOME}/.config                                               # micro directory
+  ln -svf ${IANUS}/starship ${HOME}/.config                                            # starship directory
 
-  # tmux
-  @ ln -svf ${IANUS}/tmux/3.1c.tmux.conf ${HOME}/.tmux.conf
-
-  # micro
-  @ ln -svf ${IANUS}/micro ${HOME}/.config
-
-  # R
-  @ ln -svf ${IANUS}/R/vernacular_Rprofile.R ${HOME}/.Rprofile
-
-  # screen
-  @ ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc
-
-  # starship
-  @ ln -svf ${IANUS}/starship ${HOME}/.config
-
-  # terminal
-  @ ln -svf ${IANUS}/shell/terminal/vernacular_profile.sh ${HOME}/.profile
+  # shell
+  ln -svf ${IANUS}/shell/terminal/vernacular_profile.sh ${HOME}/.profile               # terminal profile
 
   # bash
-  @ if [[ ! -d ${HOME}/.bash ]]; then mkdir ${HOME}/.bash; fi
-
-  @ ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash
-  @ ln -svf ${IANUS}/shell/bash/vernacular_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh
-
-  @ ln -svf ${IANUS}/shell/bash/vernacular_bashrc.sh ${HOME}/.bashrc
+  if [[ ! -d ${HOME}/.bash ]]; then mkdir ${HOME}/.bash; fi                            # purge before linking
+  ln -svf ${IANUS}/shell/bash/vernacular_bashrc.sh ${HOME}/.bashrc                     # bashrc
+  ln -svf ${IANUS}/shell/bash/vernacular_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh # bash aliases
+  ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash                                   # fzf bash
 
   # zsh
-  @ if [[ ! -d ${HOME}/.zsh ]]; then mkdir ${HOME}/.zsh; fi
-
-  @ ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh
-  @ ln -svf ${IANUS}/shell/zsh/vernacular_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh
-  @ ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh
-  @ ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt
-  @ ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh
-  @ ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion
-
-  @ ln -svf ${IANUS}/shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc
+  if [[ ! -d ${HOME}/.zsh ]]; then mkdir ${HOME}/.zsh; fi                              # purge before linking
+  ln -svf ${IANUS}/shell/zsh/vernacular_zshrc.sh ${HOME}/.zshrc                        # zshrc
+  ln -svf ${IANUS}/shell/zsh/vernacular_zsh_aliases.sh ${HOME}/.zsh/zsh_aliases.sh     # zsh aliases
+  ln -svf ${IANUS}/shell/zsh/fzf.zsh ${HOME}/.zsh                                      # fzf zsh
+  ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh     # zsh plugins
+  ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt   # zsh plugins
+  ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh                 # zsh completion
+  ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion                 # zsh completion
 
   # fish
-  @ ln -svf ${IANUS}/shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish
+  ln -svf ${IANUS}/shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish  # fish config
 
 ################################################################################
 
