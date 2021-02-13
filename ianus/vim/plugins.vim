@@ -14,157 +14,74 @@ set rtp+=~/.archive/ianus/vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'airblade/vim-gitgutter'
-Plugin 'kshenoy/vim-signature'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'jpalardy/vim-slime'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'gabrielelana/vim-markdown'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'Yggdroot/indentline'
-Plugin 'godlygeek/tabular'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'neoclide/coc.nvim'
-Plugin 'cespare/vim-toml'
-Plugin 'dag/vim-fish'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'liuchengxu/vim-which-key'
 Plugin 'VundleVim/Vundle.vim'                   " Plugin manager
 Plugin 'tomasr/molokai'                         " molokai theme
 Plugin 'mhinz/vim-startify'                     " start page
 Plugin 'ap/vim-css-color'                       " colorized color text
 Plugin 'vim-airline/vim-airline'                " status bar
 Plugin 'vim-airline/vim-airline-themes'         " status bar theme
+Plugin 'ryanoasis/vim-devicons'                 " icons
 Plugin 'scrooloose/nerdtree'                    " toogle file tree
 Plugin 'Xuyuanp/nerdtree-git-plugin'            " git status on file tree
+Plugin 'airblade/vim-gitgutter'                 " git gutter
+Plugin 'tpope/vim-fugitive'                     " git commands
+Plugin 'kshenoy/vim-signature'                  " marks gutter
+Plugin 'Yggdroot/indentline'                    " show indentation
+Plugin 'terryma/vim-multiple-cursors'           " multicursors
+Plugin 'preservim/nerdcommenter'                " commentator
+Plugin 'godlygeek/tabular'                      " text align
+Plugin 'neoclide/coc.nvim'                      " code completion
+Plugin 'AndrewRadev/splitjoin.vim'              " single line vs multi line code
+Plugin 'ctrlpvim/ctrlp.vim'                     " fuzzy finder
+Plugin 'easymotion/vim-easymotion'              " visual movement
+Plugin 'liuchengxu/vim-which-key'               " keys
+Plugin 'vim-syntastic/syntastic'                " multi syntax
+Plugin 'rust-lang/rust.vim'                     " Rust
+Plugin 'racer-rust/vim-racer'                   " racer support
+Plugin 'fatih/vim-go'                           " Go
+Plugin 'SirVer/ultisnips'                       " snipe engine
+Plugin 'JuliaEditorSupport/julia-vim'           " Julia
+Plugin 'dag/vim-fish'                           " Fish
+Plugin 'cespare/vim-toml'                       " Toml
+Plugin 'gabrielelana/vim-markdown'              " Markdown
+Plugin 'JamshedVesuna/vim-markdown-preview'     " quick preview on Opera
+
+" Plugin 'jpalardy/vim-slime'
 
 call vundle#end()            " required
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => molokai
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:rehash256 = 1
-let g:molokai_original = 1
-colorscheme molokai
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-startify
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" display NERDTree bookmarks as a separate list
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" read ~/.NERDTreeBookmarks file and takes its second column
-function! s:nerdtreeBookmarks()
-  let bookmarks = systemlist("cut -d' ' -f 2- ~/.NERDTreeBookmarks")
-  let bookmarks = bookmarks[0:-2] " Slices an empty last line
-  return map(bookmarks, "{'line': v:val, 'path': v:val}")
-endfunction
-
-let g:startify_lists = [
-\ { 'type': function('s:nerdtreeBookmarks'), 'header': ['   NERDTree Bookmarks']}
-\]
-
-" show modified and untracked git files
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" returns all modified files of the current git repo
-" `2>/dev/null` makes the command fail quietly, so that when we are not
-" in a git repo, the list will be empty
-function! s:gitModified()
-    let files = systemlist('git ls-files -m 2>/dev/null')
-    return map(files, "{'line': v:val, 'path': v:val}")
-endfunction
-
-" same as above, but show untracked files, honouring .gitignore
-function! s:gitUntracked()
-    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
-    return map(files, "{'line': v:val, 'path': v:val}")
-endfunction
-
-let g:startify_lists = [
-\ { 'type': 'files',     'header': ['   MRU']            },
-\ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-\ { 'type': 'sessions',  'header': ['   Sessions']       },
-\ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-\ { 'type': function('s:gitModified'),  'header': ['   git modified']},
-\ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
-\ { 'type': 'commands',  'header': ['   Commands']       },
-\ ]
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-css-color
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" no config
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:airline_section_y = '%{strftime("%a %d %b %H:%M")}'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='ravenpower'
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-markdown-preview
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Opera'
-let vim_markdown_preview_pandoc=1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-map <leader>' :NERDTreeToggle<CR>
-map <leader>" :NERDTreeFocus<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree-git-plugin
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-\ 'Modified'  :'Δ',
-\ 'Staged'    :'Ω',
-\ 'Untracked' :'θ',
-\ 'Renamed'   :'⇌',
-\ 'Unmerged'  :'═',
-\ 'Deleted'   :'χ',
-\ 'Dirty'     :'✗',
-\ 'Ignored'   :'Φ',
-\ 'Clean'     :'✔︎',
-\ 'Unknown'   :'?',
-\ }
-
-let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
-let g:NERDTreeGitStatusConcealBrackets = 1 " default: 0
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-toml
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" syntax only
+" sourcing
+source ~/.archive/ianus/vim/plugins/molokai.vim
+source ~/.archive/ianus/vim/plugins/startify.vim
+source ~/.archive/ianus/vim/plugins/startify.vim
+source ~/.archive/ianus/vim/plugins/vim-css-color.vim
+source ~/.archive/ianus/vim/plugins/vim-airline.vim
+source ~/.archive/ianus/vim/plugins/vim-airline-themes.vim
+source ~/.archive/ianus/vim/plugins/vim-devicons.vim
+source ~/.archive/ianus/vim/plugins/nerdtree.vim
+source ~/.archive/ianus/vim/plugins/nerdtree-git-plugin.vim
+source ~/.archive/ianus/vim/plugins/vim-gitgutter.vim
+source ~/.archive/ianus/vim/plugins/vim-signature.vim
+source ~/.archive/ianus/vim/plugins/indentline.vim
+source ~/.archive/ianus/vim/plugins/vim-multiple-cursors.vim
+source ~/.archive/ianus/vim/plugins/nerdcommenter.vim
+source ~/.archive/ianus/vim/plugins/tabular.vim
+source ~/.archive/ianus/vim/plugins/coc.nvim.vim
+source ~/.archive/ianus/vim/plugins/splitjoin.vim
+source ~/.archive/ianus/vim/plugins/ctrlp.vim
+source ~/.archive/ianus/vim/plugins/vim-easymotion.vim
+source ~/.archive/ianus/vim/plugins/vim-which-key.vim
+source ~/.archive/ianus/vim/plugins/syntastic.vim
+source ~/.archive/ianus/vim/plugins/rust.vim
+source ~/.archive/ianus/vim/plugins/vim-go.vim
+source ~/.archive/ianus/vim/plugins/ultisnips.vim
+source ~/.archive/ianus/vim/plugins/julia-vim.vim
+source ~/.archive/ianus/vim/plugins/vim-fish.vim
+source ~/.archive/ianus/vim/plugins/vim-toml.vim
+source ~/.archive/ianus/vim/plugins/vim-markdown.vim
+source ~/.archive/ianus/vim/plugins/vim-markdown-preview.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
