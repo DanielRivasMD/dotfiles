@@ -108,79 +108,55 @@
 RemotePawsey := "drivas@topaz.pawsey.org.au"
 
 # deliver archives to Pawsey
-hermesPawsey:
+@ hermesPawsey:
   # justfile
-  @ rsync -azvhP ${ARCHIVE}/justfile {{RemotePawsey}}:/home/drivas/.archive/
+  rsync -azvhP ${ARCHIVE}/justfile {{RemotePawsey}}:/home/drivas/.archive/                      # justfile
 
-  # micro
-  @ rsync -azvhP ${IANUS}/micro/plug {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/
-  @ rsync -azvhP ${IANUS}/micro/bindings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/
-  @ rsync -azvhP ${IANUS}/micro/settings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/
+  # directory
+  rsync -azvhP ${IANUS}/pier {{RemotePawsey}}:/home/drivas/.archive/ianus/                      # pier
+  rsync -azvhP ${IANUS}/R {{RemotePawsey}}:/home/drivas/.archive/ianus/                         # r
+  rsync -azvhP ${IANUS}/screen {{RemotePawsey}}:/home/drivas/.archive/ianus/                    # screen
+  rsync -azvhP ${IANUS}/shell {{RemotePawsey}}:/home/drivas/.archive/ianus/                     # shell
+  rsync -azvhP ${IANUS}/starship {{RemotePawsey}}:/home/drivas/.archive/ianus/                  # starship
+  rsync -azvhP ${IANUS}/micro/plug {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/          # micro plugins
+  rsync -azvhP ${IANUS}/micro/bindings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro bindings
+  rsync -azvhP ${IANUS}/micro/settings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro settdirectory
 
-  # pier
-  @ rsync -azvhP ${IANUS}/pier {{RemotePawsey}}:/home/drivas/.archive/ianus/
-
-  # R
-  @ rsync -azvhP ${IANUS}/R {{RemotePawsey}}:/home/drivas/.archive/ianus/
-
-  # screen
-  @ rsync -azvhP ${IANUS}/screen {{RemotePawsey}}:/home/drivas/.archive/ianus/
-
-  # shell
-  @ rsync -azvhP ${IANUS}/shell {{RemotePawsey}}:/home/drivas/.archive/ianus/
-
-  # starship
-  @ rsync -azvhP ${IANUS}/starship {{RemotePawsey}}:/home/drivas/.archive/ianus/
-
-  # tmux
-  @ rsync -azvhP ${IANUS}/tmux {{RemotePawsey}}:/home/drivas/.archive/ianus/
-
-  # vim
-  @ rsync -azvhP ${IANUS}/vim/bundle {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/functions.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/keybindings.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/plugins.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/vimrc {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # TODO: create a vim version to deploy remotely
+  # # vim
+  # rsync -azvhP ${IANUS}/vim/bundle {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/functions.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/keybindings.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/plugins.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/vimrc {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
 
 ################################################################################
 
 RemoteUppmax := "drivas@rackham.uppmax.uu.se"
 
 # deliver archives to Uppmax
-hermesUppmax:
+@ hermesUppmax:
   # justfile
-  @ rsync -azvhP ${ARCHIVE}/justfile {{RemoteUppmax}}:/home/drivas/.archive/
+  rsync -azvhP ${ARCHIVE}/justfile {{RemoteUppmax}}:/home/drivas/.archive/                      # justfile
 
-  # micro
-  @ rsync -azvhP ${IANUS}/micro/plug {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/
-  @ rsync -azvhP ${IANUS}/micro/bindings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/
-  @ rsync -azvhP ${IANUS}/micro/settings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/
+  # directory
+  rsync -azvhP ${IANUS}/pier {{RemoteUppmax}}:/home/drivas/.archive/ianus/                      # pier
+  rsync -azvhP ${IANUS}/R {{RemoteUppmax}}:/home/drivas/.archive/ianus/                         # r
+  rsync -azvhP ${IANUS}/screen {{RemoteUppmax}}:/home/drivas/.archive/ianus/                    # screen
+  rsync -azvhP ${IANUS}/shell {{RemoteUppmax}}:/home/drivas/.archive/ianus/                     # shell
+  rsync -azvhP ${IANUS}/starship {{RemoteUppmax}}:/home/drivas/.archive/ianus/                  # starship
+  rsync -azvhP ${IANUS}/tmux {{RemoteUppmax}}:/home/drivas/.archive/ianus/                      # tmux
+  rsync -azvhP ${IANUS}/micro/plug {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/          # micro plugins
+  rsync -azvhP ${IANUS}/micro/bindings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/ # micro bindings
+  rsync -azvhP ${IANUS}/micro/settings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/ # micro settings
 
-  # pier
-  @ rsync -azvhP ${IANUS}/pier {{RemoteUppmax}}:/home/drivas/.archive/ianus/
-
-  # R
-  @ rsync -azvhP ${IANUS}/R {{RemoteUppmax}}:/home/drivas/.archive/ianus/
-
-  # screen
-  @ rsync -azvhP ${IANUS}/screen {{RemoteUppmax}}:/home/drivas/.archive/ianus/
-
-  # shell
-  @ rsync -azvhP ${IANUS}/shell {{RemoteUppmax}}:/home/drivas/.archive/ianus/
-
-  # starship
-  @ rsync -azvhP ${IANUS}/starship {{RemoteUppmax}}:/home/drivas/.archive/ianus/
-
-  # tmux
-  @ rsync -azvhP ${IANUS}/tmux {{RemoteUppmax}}:/home/drivas/.archive/ianus/
-  @ rsync -azvhP ${HOME}/.tmux {{RemoteUppmax}}:/home/drivas/
-
-  # vim
-  @ rsync -azvhP ${IANUS}/vim/bundle {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/functions.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/keybindings.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/plugins.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/
-  @ rsync -azvhP ${IANUS}/vim/vimrc {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/
+  # TODO: create a vim version to deploy remotely
+  # # vim
+  # rsync -azvhP ${IANUS}/vim/bundle {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/            # vim bundle
+  # rsync -azvhP ${IANUS}/vim/functions.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/     # vim functions
+  # rsync -azvhP ${IANUS}/vim/keybindings.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/   # vim keybindings
+  # rsync -azvhP ${IANUS}/vim/plugins.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/       # vim plugins
+  # rsync -azvhP ${IANUS}/vim/vimrc {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/             # vimrc
 
 ################################################################################
 
