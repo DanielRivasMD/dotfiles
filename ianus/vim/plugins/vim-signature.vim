@@ -2,6 +2,10 @@
 " => vim-signature
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" mapping
+nmap <leader>SS :SignatureToggleSigns<CR>
+nmap <leader>SL :SignatureListBufferMarks<CR>
+
 " default mapping
 " mx           toggle mark 'x' and display it in the leftmost column
 " dmx          remove mark 'x' where x is a-za-z
