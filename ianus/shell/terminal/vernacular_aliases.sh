@@ -13,7 +13,6 @@ alias rip='clear && ~/bin/forkedPatch/rip'
 # ==========================
 
 # General aliases
-alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -58,7 +57,7 @@ alias a='aliases exec ~/'
 alias man=batman
 
 # broot
-alias brf='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
+alias br='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
 # exa
 alias l='clear && exa --long --group-directories-first --classify --links --git --header --group'
