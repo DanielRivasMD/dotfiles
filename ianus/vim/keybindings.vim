@@ -51,6 +51,9 @@ nmap K ddkP
 "vmap J ddp
 "vmap K ddkP
 
+" duplicate line
+nmap M yyp
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => leader shortcuts
