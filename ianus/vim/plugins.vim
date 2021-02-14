@@ -54,8 +54,7 @@ call vundle#end()            " required
 
 " sourcing
 source ~/.archive/ianus/vim/plugins/molokai.vim
-source ~/.archive/ianus/vim/plugins/startify.vim
-source ~/.archive/ianus/vim/plugins/startify.vim
+source ~/.archive/ianus/vim/plugins/vim-startify.vim
 source ~/.archive/ianus/vim/plugins/vim-css-color.vim
 source ~/.archive/ianus/vim/plugins/vim-airline.vim
 source ~/.archive/ianus/vim/plugins/vim-airline-themes.vim
