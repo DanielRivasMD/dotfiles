@@ -30,9 +30,11 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 
 nmap <leader>/ :call NERDComment("n", "Toggle")<CR>
-nmap <leader>/. :call NERDComment("n", "Yank")<CR>
+nmap <leader>/y :call NERDComment("n", "Yank")<CR>
 nmap <leader>// :call NERDComment("n", "Append")<CR>
-nmap <leader>/; :call NERDComment("n", "Yank")<CR>p
+nmap <leader>/d :call NERDComment("n", "Yank")<CR>p
+nmap <leader>/c :call NERDComment("n", "Comment")<CR>
+nmap <leader>/u :call NERDComment("n", "Uncomment")<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
