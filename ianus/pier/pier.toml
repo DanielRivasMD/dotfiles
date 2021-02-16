@@ -117,16 +117,16 @@ tags = ['shell']
 alias = 'git'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 
 git status --short
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 
 git stash list
-source ${PIER}break_double_line.sh ${MANWIDTH}
+source ${PIER}break_double_line.sh $(( ${MANWIDTH} - 10 ))
 
 git lk -10
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 '''
 description = 'all-round git status'
 tags = ['git']
@@ -158,10 +158,10 @@ tags = ['go']
 alias = 'kal'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 khal calendar \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»"
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 '''
 description = 'all calendars'
 tags = ['khal']
@@ -170,12 +170,12 @@ tags = ['khal']
 alias = 'kals'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 khal list \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
   --exclude-calendar SuperRugby \
   --exclude-calendar Astronomy
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 '''
 description = 'list calendars'
 tags = ['khal']
@@ -184,10 +184,10 @@ tags = ['khal']
 alias = 'kastro'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 khal calendar \
   --include-calendar Astronomy
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 '''
 description = 'astronomy calendar'
 tags = ['khal']
@@ -196,12 +196,12 @@ tags = ['khal']
 alias = 'kaw'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 khal calendar \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
   --exclude-calendar SuperRugby \
   --exclude-calendar Astronomy
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 '''
 description = 'work calendar'
 tags = ['khal']
@@ -210,10 +210,10 @@ tags = ['khal']
 alias = 'krugby'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 khal calendar \
   --include-calendar SuperRugby
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 '''
 description = 'SuperRugby calendar'
 tags = ['khal']
@@ -221,7 +221,7 @@ tags = ['khal']
 [scripts.path]
 alias = 'path'
 command = '''
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 echo $PATH | xsv flatten -d ":" -n
 '''
 description = 'display PATH'
@@ -230,7 +230,7 @@ tags = ['shell']
 [scripts.fpath]
 alias = 'fpath'
 command = '''
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 echo $FPATH | xsv flatten -d ":" -n
 '''
 description = 'display fpath'
@@ -239,7 +239,7 @@ tags = ['shell']
 [scripts.gopath]
 alias = 'gopath'
 command = '''
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 echo $GOPATH | xsv flatten -d ":" -n
 '''
 description = 'display GOPATH'
@@ -279,7 +279,7 @@ tags = ['remote']
 alias = 'xa'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
 then
   $(which exa) \
@@ -314,7 +314,7 @@ tags = ['exa']
 alias = 'xbs'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
 then
   $(which exa) \
@@ -344,7 +344,7 @@ tags = ['exa']
 alias = 'xc'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
 then
   $(which exa) \
@@ -378,7 +378,7 @@ tags = ['exa']
 alias = 'xd'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
 then
   $(which exa) \
@@ -414,7 +414,7 @@ tags = ['exa']
 alias = 'xt'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh ${MANWIDTH}
+source ${PIER}break_single_line.sh $(( ${MANWIDTH} - 10 ))
 if [[ $HOST == "BMC-02ZX3JYMD6N" ]];
 then
   $(which exa) \
