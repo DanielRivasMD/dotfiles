@@ -43,7 +43,7 @@ let g:ctrlp_prompt_mappings = {
 \ 'CreateNewFile()':      ['<c-n>'],
 \ 'MarkToOpen()':         ['<c-a>'],
 \ 'OpenMulti()':          ['<c-o>'],
-\ 'PrtExit()':            ['<esc>', 'c-c'],
+\ 'PrtExit()':            ['<esc>'],
 \ }
 
 
