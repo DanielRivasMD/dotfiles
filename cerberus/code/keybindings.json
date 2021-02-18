@@ -46,17 +46,131 @@
 	{ "key": "shift-alt-/",							"command": "type",															"args": {"text": " := "}, },
 
 	// move_by_paragraph
-	{ "key": "alt-up", 									"command": "spaceBlockJumper.moveUp" },
-	{ "key": "alt-down", 								"command": "spaceBlockJumper.moveDown" },
-	{ "key": "shift-alt-up", 						"command": "spaceBlockJumper.selectUp" },
-	{ "key": "shift-alt-down",					"command": "spaceBlockJumper.selectDown" },
+	{ "key": "alt-up", 									"command": "spaceBlockJumper.moveUp", },
+	{ "key": "alt-down", 								"command": "spaceBlockJumper.moveDown", },
+	{ "key": "shift-alt-up", 						"command": "spaceBlockJumper.selectUp", },
+	{ "key": "shift-alt-down",					"command": "spaceBlockJumper.selectDown", },
 
 	// selection
-	{ "key": "cmd+d",										"command": "editor.action.addSelectionToNextFindMatch",	"when": "editorFocus" },
-	{ "key": "shift+cmd+d",							"command": "geeebe.duplicateText",											"when": "editorTextFocus" },
+	{ "key": "cmd+d",										"command": "editor.action.addSelectionToNextFindMatch",	"when": "editorFocus", },
+	{ "key": "shift+cmd+d",							"command": "geeebe.duplicateText",											"when": "editorTextFocus", },
 
 	// swap tabs
-	{ "key": "ctrl+shift+left",					"command": "workbench.action.moveEditorLeftInGroup" },
-	{ "key": "ctrl+shift+right",				"command": "workbench.action.moveEditorRightInGroup" },
+	{ "key": "ctrl+shift+left",					"command": "workbench.action.moveEditorLeftInGroup", },
+	{ "key": "ctrl+shift+right", 				"command": "workbench.action.moveEditorRightInGroup", },
+
+	// editor layout
+	{ "key": "alt+cmd+1", 							"command": "workbench.action.editorLayoutSingle", },
+	{ "key": "alt+cmd+2", 							"command": "workbench.action.editorLayoutTwoColumns", },
+	{ "key": "alt+cmd+3", 							"command": "workbench.action.editorLayoutThreeColumns", },
+	{ "key": "shift+alt+cmd+2", 				"command": "workbench.action.editorLayoutTwoRows", },
+	{ "key": "shift+alt+cmd+3", 				"command": "workbench.action.editorLayoutThreeRows", },
+	{
+		"key": "alt+cmd+5",
+		"command": "workbench.action.editorLayoutTwoByTwoGrid",
+	},
+	{
+		"key": "shift+alt+i",
+		"command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+'",
+		"command": "editor.togglequotes"
+	},
+	{
+		"key": "cmd+'",
+		"command": "-editor.togglequotes"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "editor.action.jumpToBracket",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+cmd+\\",
+		"command": "-editor.action.jumpToBracket",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+i",
+		"command": "editor.action.indentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+]",
+		"command": "-editor.action.indentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "editor.action.outdentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+[",
+		"command": "-editor.action.outdentLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+j",
+		"command": "editor.action.moveLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+down",
+		"command": "-editor.action.moveLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+k",
+		"command": "editor.action.moveLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+up",
+		"command": "-editor.action.moveLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+t",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "cmd+p",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "cmd+'",
+		"command": "workbench.files.action.focusFilesExplorer"
+	},
+	{
+		"key": "ctrl+shift+k",
+		"command": "editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+cmd+k",
+		"command": "-editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+;",
+		"command": "workbench.action.gotoLine"
+	},
+	{
+		"key": "ctrl+g",
+		"command": "-workbench.action.gotoLine"
+	},
+	{
+		"key": "alt+cmd+down",
+		"command": "editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "f12",
+		"command": "-editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	}
 
 ]
