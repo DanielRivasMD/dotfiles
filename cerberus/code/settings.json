@@ -32,22 +32,48 @@
     "editor.wordWrapColumn": 135,
     "editor.wordWrap": "on",
 
-    "go.lintTool": "gometalinter",
-    "go.lintFlags": [
-        "--disable-all",
-        "--enable=golint",
-        "--exclude=exported (const|type|method|function) [\\w.]+ should have comment (\\(or a comment on this block\\) )?or be unexported",
-        "--exclude=don't use ALL_CAPS in Go names; use CamelCase",
-        "--exclude=(func|const|struct field|) \\w+ should be \\w+"
+    "editor.codeActionOnSave": null,
+    "go.testOnSave": true,
+    "go.lintOnSave": "package",
+    "go.formatTool": "goimports",
+    "go.testFlags": [
+        "-v"
     ],
+    "go.autocompleteUnimportedPackages": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionOnSave": {
+            "source.organizeImports": true
+        },
+    },
+
+
     "todo-tree.tree.showScanModeButton": false,
     "breadcrumbs.enabled": true,
-    "editor.renderControlCharacters": false,
+    "editor.renderControlCharacters": true,
     "C_Cpp.default.browse.path": [],
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
     "C_Cpp.updateChannel": "Insiders",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
-    "editor.accessibilitySupport": "off"
+    "editor.accessibilitySupport": "off",
+    "timeline.excludeSources": [
+        "git-history"
+    ],
+    "workbench.activityBar.visible": true,
+    "yaml.schemas": {
+        "file:///Users/drivas/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+
+    "atlascode.jira.jqlList": [
+        {
+            "id": "6476d447-afb9-40cc-9481-075768055cbe",
+            "enabled": true,
+            "name": "My methority Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "7c5212b0-03db-4812-b9c1-cb0130a00dfa",
+            "monitor": true
+        }
+    ]
 }
