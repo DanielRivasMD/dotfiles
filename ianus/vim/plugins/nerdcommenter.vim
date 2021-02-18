@@ -35,6 +35,7 @@ nmap <leader>// :call NERDComment("n", "Append")<CR>
 nmap <leader>/d :call NERDComment("n", "Yank")<CR>p
 nmap <leader>/c :call NERDComment("n", "Comment")<CR>
 nmap <leader>/u :call NERDComment("n", "Uncomment")<CR>
+nmap <leader>/l :call NERDComment("n", "Comment")<CR><space>aTODO:<space>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
