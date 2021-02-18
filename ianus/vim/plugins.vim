@@ -27,7 +27,8 @@ Plugin 'airblade/vim-gitgutter'                 " git gutter
 Plugin 'tpope/vim-fugitive'                     " git commands
 Plugin 'kshenoy/vim-signature'                  " marks gutter
 Plugin 'Yggdroot/indentline'                    " show indentation
-Plugin 'terryma/vim-multiple-cursors'           " multicursors
+" Plugin 'terryma/vim-multiple-cursors'         " multicursors [deprecated]
+Plugin 'mg979/vim-visual-multi', {'branch': 'master'}   " multicursors
 Plugin 'preservim/nerdcommenter'                " commentator
 Plugin 'godlygeek/tabular'                      " text align
 Plugin 'neoclide/coc.nvim'                      " code completion
