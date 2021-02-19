@@ -29,13 +29,22 @@ let g:NERDTrimTrailingWhitespace = 1
 " enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
+" mappings
 nmap <leader>/ :call NERDComment("n", "Toggle")<CR>
 nmap <leader>/y :call NERDComment("n", "Yank")<CR>
 nmap <leader>// :call NERDComment("n", "Append")<CR>
-nmap <leader>/d :call NERDComment("n", "Yank")<CR>p
+nmap <leader>/d :call NERDComment("n", "Yank")<CR>P
 nmap <leader>/c :call NERDComment("n", "Comment")<CR>
 nmap <leader>/u :call NERDComment("n", "Uncomment")<CR>
-nmap <leader>/l :call NERDComment("n", "Comment")<CR><space>aTODO:<space>
+nmap <leader>/l :call NERDComment("n", "Append")<CR><space>aTODO:<space>
+
+vmap <leader>/ :call NERDComment("n", "Toggle")<CR>
+vmap <leader>/y :call NERDComment("n", "Yank")<CR>
+vmap <leader>// :call NERDComment("n", "Append")<CR>
+vmap <leader>/d :call NERDComment("n", "Yank")<CR>P
+vmap <leader>/c :call NERDComment("n", "Comment")<CR>
+vmap <leader>/u :call NERDComment("n", "Uncomment")<CR>
+vmap <leader>/l :call NERDComment("n", "Append")<CR><space>aTODO:<space>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
