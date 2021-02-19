@@ -41,6 +41,9 @@ autocmd BufRead,BufNewFile *.jl :set filetype=julia
 filetype plugin on
 filetype indent on
 
+" disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
