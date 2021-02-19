@@ -56,7 +56,7 @@ nmap M yyp
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => leader shortcuts
+" => splits and tabbed files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " fast split vertical
@@ -80,12 +80,14 @@ map <leader>o- <C-w>t<C-w>K
 " => miscellaneous
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" system clipboard
+imap <C-v> <ESC>"+pa
+nmap <C-c> "+yy
+vmap <C-c> "+y
+
 " exit insert mode with jj
 imap jj <Esc>
 vmap jj <Esc>
-
-" enter to next line
-nmap <CR> o
 
 " remap undo
 nmap U :redo<CR>
@@ -93,11 +95,6 @@ imap UU <Esc>U
 
 " undo from insert mode
 imap uu <Esc>u
-
-" errors
-
-" " execute current buffer
-" nmap <leader>e :!%:p<CR>
 
 " write buffer to...
 nmap <leader>C :!cat %:p >
