@@ -78,7 +78,7 @@
   # @HOME
   ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml                                   # pier
   ln -svf ${IANUS}/tmux/3.1c.tmux.conf ${HOME}/.tmux.conf                              # tumx 3.1c
-  ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc                                   # screen
+  ln -svf ${IANUS}/screen/4.08.00.screenrc ${HOME}/.screenrc                           # screen
 
   # @config
   ln -svf ${IANUS}/micro ${HOME}/.config                                               # micro directory

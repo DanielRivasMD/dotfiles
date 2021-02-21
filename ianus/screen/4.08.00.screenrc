@@ -1,0 +1,71 @@
+################################################################################
+# control
+################################################################################
+
+# overload C-q
+escape ^Qq
+
+################################################################################
+# general
+################################################################################
+
+# color tmux compatible
+term screen-256color
+
+# no welcome message
+startup_message       off             # default: on
+
+# the following two lines give a two-line status, with the current window highlighted
+hardstatus alwayslastline
+hardstatus string "%{=b dy}%D, %d. %M '%y %{=b dw}%c:%s %{=b dy}{ %{= dg}${USER}@%{= dr}%H %{=b dy}} %{=b d2}%l %{=b dy}%u %{=b dy} %={ %?%{= dc}%-Lw%?%{+b dy}(%{-b r}%n:%t%{+b dy})%?(%u)%?%{-dc}%?%{= dc}%+Lw%? %{=b dy}}"
+
+################################################################################
+# mappings
+################################################################################
+
+# kill session
+bind Q quit
+
+# kill window
+bind X kill
+
+# kill region
+bind x remove
+
+# list windows
+bind w windowlist -b
+
+# rename window
+bind r title
+
+# displays
+bind s displays
+
+# vertical split
+bindkey "^\" split -v
+
+# horizontal split
+bindkey "^_" split
+
+# switch windows
+bindkey "^[[1;7D" prev
+bindkey "^[[1;7C" next
+
+# pane movement
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5B" focus down
+
+################################################################################
+# session launcher
+################################################################################
+
+# # default windows
+# screen -t Shell1  1 zsh
+# screen -t Shell2  2 zsh
+# screen -t Julia  3 julia
+# screen -t Media   4 zsh
+#
+################################################################################
+
