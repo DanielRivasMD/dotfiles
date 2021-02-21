@@ -4,42 +4,44 @@
 # link Cerberus archive
 @ Cerberus:
   # HOME
-  if [[ -d ${HOME}/.atom ]]; then rm -rf ${HOME}/.atom; fi                       # purge before linking
-  ln -svf ${CERBERUS}/atom ${HOME}/.atom                                         # atom
+  if [[ -d ${HOME}/.atom ]]; then rm -rf ${HOME}/.atom; fi                                   # purge before linking
+  ln -svf ${CERBERUS}/atom ${HOME}/.atom                                                     # atom
 
-  if [[ -d ${HOME}/.gitconfig.d ]]; then rm ${HOME}/.gitconfig.d; fi             # purge before linking
-  ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d                           # gitconfig directory
+  if [[ -d ${HOME}/.gitconfig.d ]]; then rm ${HOME}/.gitconfig.d; fi                         # purge before linking
+  ln -svf ${CERBERUS}/gitconfig.d ${HOME}/.gitconfig.d                                       # gitconfig directory
 
   # rc files
-  ln -svf ${CERBERUS}/gem/gemrc ${HOME}/.gemrc                                   # gemrc
-  ln -svf ${CERBERUS}/mplayer/mplayer ${HOME}/.mplayer                           # mplayer
-  ln -svf ${CERBERUS}/nano/nanorc ${HOME}/.nanorc                                # nanorc
+  ln -svf ${CERBERUS}/gem/gemrc ${HOME}/.gemrc                                               # gemrc
+  ln -svf ${CERBERUS}/mplayer/mplayer ${HOME}/.mplayer                                       # mplayer
+  ln -svf ${CERBERUS}/nano/nanorc ${HOME}/.nanorc                                            # nanorc
 
   # git files
-  ln -svf ${CERBERUS}/git/gitconfig ${HOME}/.gitconfig                           # gitconfig
-  ln -svf ${CERBERUS}/git/gitignore_global ${HOME}/.gitignore_global             # gitignore_global
+  ln -svf ${CERBERUS}/git/gitconfig ${HOME}/.gitconfig                                       # gitconfig
+  ln -svf ${CERBERUS}/git/gitignore_global ${HOME}/.gitignore_global                         # gitignore_global
 
   # toml files
-  ln -svf ${CERBERUS}/procs/procs.toml ${HOME}/.procs.toml                       # procs
+  ln -svf ${CERBERUS}/procs/procs.toml ${HOME}/.procs.toml                                   # procs
 
   # config
-  ln -svf ${CERBERUS}/alacritty ${HOME}/.config/                                 # alacritty
-  ln -svf ${CERBERUS}/bottom ${HOME}/.config/                                    # bottom
-  ln -svf ${CERBERUS}/cheat ${HOME}/.config/                                     # cheat
-  ln -svf ${CERBERUS}/karabiner ${HOME}/.config/                                 # karabiner
-  ln -svf ${CERBERUS}/khal ${HOME}/.config/                                      # khal
-  ln -svf ${CERBERUS}/gh/config.yml ${HOME}/.config/gh/                          # gh
-  ln -svf ${CERBERUS}/rstudio ${HOME}/.config/                                   # rstudio
-  ln -svf ${CERBERUS}/rstudio/keybindings ${HOME}/.R/rstudio/                    # rstudio keybindings
-  ln -svf ${CERBERUS}/rustfmt ${HOME}/.config/                                   # rustfmt
+  ln -svf ${CERBERUS}/alacritty ${HOME}/.config/                                             # alacritty
+  ln -svf ${CERBERUS}/bottom ${HOME}/.config/                                                # bottom
+  # TODO: split Go cheats
+  ln -svf ${CERBERUS}/cheat ${HOME}/.config/                                                 # cheat
+  ln -svf ${CERBERUS}/karabiner ${HOME}/.config/                                             # karabiner
+  ln -svf ${CERBERUS}/khal ${HOME}/.config/                                                  # khal
+  ln -svf ${CERBERUS}/gh/config.yml ${HOME}/.config/gh/                                      # gh
+  ln -svf ${CERBERUS}/rstudio ${HOME}/.config/                                               # rstudio
+  ln -svf ${CERBERUS}/rstudio/keybindings ${HOME}/.R/rstudio/                                # rstudio keybindings
+  ln -svf ${CERBERUS}/rustfmt ${HOME}/.config/                                               # rustfmt
 
   # local
-  ln -svf ${CERBERUS}/rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/ # rstudio
+  ln -svf ${CERBERUS}/rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/             # rstudio
 
   # distant
-  ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/                    # julia startup
-  ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/                                   # ssh config
-  ln -svf ${CERBERUS}/gitui "/Users/drivas/Library/Application Support/gitui"    # gitui config directory
+  ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/                                # julia startup
+  ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/                                               # ssh config
+  ln -svf ${CERBERUS}/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/" # broot config
+  ln -svf ${CERBERUS}/gitui "/Users/drivas/Library/Application Support/gitui"                # gitui config directory
 
   # sublime
   ln -svf "${CERBERUS}/sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
