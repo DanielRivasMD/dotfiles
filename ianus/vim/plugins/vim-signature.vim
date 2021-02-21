@@ -3,8 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " mapping
-nmap <leader>SS :SignatureToggleSigns<CR>
-nmap <leader>SL :SignatureListBufferMarks<CR>
+nmap m? :SignatureToggleSigns<CR>
 
 " default mapping
 " mx           toggle mark 'x' and display it in the leftmost column
