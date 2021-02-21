@@ -219,7 +219,7 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
   ln -svf ${IANUS}/R/Rprofile.d ${HOME}/.Rprofile.d                                # rprofile directory
   ln -svf ${IANUS}/R/pawsey_Rprofile.R ${HOME}/.Rprofile                           # rprofile
   ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml                               # pier
-  ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc                               # screen
+  ln -svf ${IANUS}/screen/4.01.00.screenrc ${HOME}/.screenrc                       # screen
 
   # @config
   ln -svf ${IANUS}/micro ${HOME}/.config                                           # micro directory
