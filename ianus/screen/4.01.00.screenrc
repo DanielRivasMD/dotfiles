@@ -61,7 +61,7 @@ bindkey "^[[1;5B" focus down
 # session launcher
 ################################################################################
 
-# default windows Pawsey
+# default windows
 screen -t inter   1 zsh
 screen -t devel   2 zsh
 screen -t editor  3 zsh

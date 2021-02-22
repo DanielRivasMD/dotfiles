@@ -1,6 +1,11 @@
 
 ################################################################################
 
+_default:
+  @just --list
+
+################################################################################
+
 # link Cerberus archive
 @ Cerberus:
   # HOME
@@ -108,33 +113,6 @@
 
 ################################################################################
 
-RemotePawsey := "drivas@topaz.pawsey.org.au"
-
-# deliver archives to Pawsey
-@ hermesPawsey:
-  # justfile
-  rsync -azvhP ${ARCHIVE}/justfile {{RemotePawsey}}:/home/drivas/.archive/                      # justfile
-
-  # directory
-  rsync -azvhP ${IANUS}/pier {{RemotePawsey}}:/home/drivas/.archive/ianus/                      # pier
-  rsync -azvhP ${IANUS}/R {{RemotePawsey}}:/home/drivas/.archive/ianus/                         # r
-  rsync -azvhP ${IANUS}/screen {{RemotePawsey}}:/home/drivas/.archive/ianus/                    # screen
-  rsync -azvhP ${IANUS}/shell {{RemotePawsey}}:/home/drivas/.archive/ianus/                     # shell
-  rsync -azvhP ${IANUS}/starship {{RemotePawsey}}:/home/drivas/.archive/ianus/                  # starship
-  rsync -azvhP ${IANUS}/micro/plug {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/          # micro plugins
-  rsync -azvhP ${IANUS}/micro/bindings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro bindings
-  rsync -azvhP ${IANUS}/micro/settings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro settdirectory
-
-  # TODO: create a vim version to deploy remotely
-  # # vim
-  # rsync -azvhP ${IANUS}/vim/bundle {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP ${IANUS}/vim/functions.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP ${IANUS}/vim/keybindings.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP ${IANUS}/vim/plugins.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP ${IANUS}/vim/vimrc {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-
-################################################################################
-
 RemoteUppmax := "drivas@rackham.uppmax.uu.se"
 
 # deliver archives to Uppmax
@@ -163,6 +141,33 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
 
 ################################################################################
 
+RemotePawsey := "drivas@topaz.pawsey.org.au"
+
+# deliver archives to Pawsey
+@ hermesPawsey:
+  # justfile
+  rsync -azvhP ${ARCHIVE}/justfile {{RemotePawsey}}:/home/drivas/.archive/                      # justfile
+
+  # directory
+  rsync -azvhP ${IANUS}/pier {{RemotePawsey}}:/home/drivas/.archive/ianus/                      # pier
+  rsync -azvhP ${IANUS}/R {{RemotePawsey}}:/home/drivas/.archive/ianus/                         # r
+  rsync -azvhP ${IANUS}/screen {{RemotePawsey}}:/home/drivas/.archive/ianus/                    # screen
+  rsync -azvhP ${IANUS}/shell {{RemotePawsey}}:/home/drivas/.archive/ianus/                     # shell
+  rsync -azvhP ${IANUS}/starship {{RemotePawsey}}:/home/drivas/.archive/ianus/                  # starship
+  rsync -azvhP ${IANUS}/micro/plug {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/          # micro plugins
+  rsync -azvhP ${IANUS}/micro/bindings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro bindings
+  rsync -azvhP ${IANUS}/micro/settings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro settdirectory
+
+  # TODO: create a vim version to deploy remotely
+  # # vim
+  # rsync -azvhP ${IANUS}/vim/bundle {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/functions.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/keybindings.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/plugins.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+  # rsync -azvhP ${IANUS}/vim/vimrc {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
+
+################################################################################
+
 # link archives Uppmax
 @ Uppmax:
   # vim
@@ -176,7 +181,7 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
   ln -svf ${IANUS}/R/uppmax_Rprofile.R ${HOME}/.Rprofile                           # rprofile
   ln -svf ${IANUS}/pier/pier.toml ${HOME}/.pier.toml                               # pier
   ln -svf ${IANUS}/tmux/2.5.tmux.conf ${HOME}/.tmux.conf                           # tmux 2.5
-  ln -svf ${IANUS}/screen/screenrc ${HOME}/.screenrc                               # screen
+  ln -svf ${IANUS}/screen/4.01.00.screenrc ${HOME}/.screenrc                       # screen
 
   # @config
   ln -svf ${IANUS}/micro ${HOME}/.config                                           # micro directory
@@ -188,7 +193,7 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
   # bash
   if [[ ! -d ${HOME}/.bash ]]; then mkdir ${HOME}/.bash; fi                        # purge before linking
   ln -svf ${IANUS}/shell/bash/uppmax_bashrc.sh ${HOME}/.bashrc                     # bashrc
-  ln -svf ${IANUS}/shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile
+  ln -svf ${IANUS}/shell/bash/uppmax_bash_profile.sh ${HOME}/.bash_profile         # bash profile
   ln -svf ${IANUS}/shell/bash/uppmax_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh # bash aliases
   ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash                               # fzf bash
 
@@ -231,7 +236,7 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
   # bash
   if [[ ! -d ${HOME}/.bash ]]; then mkdir ${HOME}/.bash; fi                        # purge before linking
   ln -svf ${IANUS}/shell/bash/pawsey_bashrc.sh ${HOME}/.bashrc                     # bashrc
-  ln -svf ${IANUS}/shell/bash/pawsey_bash_profile.sh ${HOME}/.bash_profile
+  ln -svf ${IANUS}/shell/bash/pawsey_bash_profile.sh ${HOME}/.bash_profile         # bash profile
   ln -svf ${IANUS}/shell/bash/pawsey_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh # bash aliases
   ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash                               # fzf bash
 
@@ -245,7 +250,7 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
   ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh             # zsh completion
   ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion             # zsh completion
 
-  # fish
-  ln -svf ${IANUS}/shell/fish/pawsey_config.fish ${HOME}/.config/fish/config.fish  # fish config
+  # # fish
+  # ln -svf ${IANUS}/shell/fish/pawsey_config.fish ${HOME}/.config/fish/config.fish  # fish config
 
 ################################################################################
