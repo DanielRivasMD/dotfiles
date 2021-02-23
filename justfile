@@ -106,7 +106,6 @@ _default:
   ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.sh ${HOME}/.zsh/zsh_plugins.sh     # zsh plugins
   ln -svf ${IANUS}/shell/zsh/vernacular_zsh_plugins.txt ${HOME}/.zsh/zsh_plugins.txt   # zsh plugins
   ln -svf ${IANUS}/shell/zsh/zsh_pandoc_autocompletion.sh ${HOME}/.zsh                 # zsh completion
-  ln -svf ${IANUS}/shell/zsh/completion ${HOME}/.config/zsh_completion                 # zsh completion
 
   # fish
   ln -svf ${IANUS}/shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish  # fish config
