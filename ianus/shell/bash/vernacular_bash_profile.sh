@@ -51,6 +51,12 @@ SAVEHIST=1000000
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # ==========================
+# ===  navi              ===
+# ==========================
+
+eval "$(navi widget bash)"
+
+# ==========================
 # ===  zoxide            ===
 # ==========================
 
