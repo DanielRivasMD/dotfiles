@@ -149,6 +149,9 @@ set wrap "wrap lines
 
 set splitbelow splitright
 
+" patch vertical splits
+set diffopt+=vertical
+
 " removes pipes | that act as seperators on splits
 set fillchars+=vert:\
 
