@@ -63,6 +63,7 @@ source ~/.archive/ianus/vim/plugins/vim-devicons.vim
 source ~/.archive/ianus/vim/plugins/nerdtree.vim
 source ~/.archive/ianus/vim/plugins/nerdtree-git-plugin.vim
 source ~/.archive/ianus/vim/plugins/vim-gitgutter.vim
+source ~/.archive/ianus/vim/plugins/vim-fugitive.vim
 source ~/.archive/ianus/vim/plugins/vim-signature.vim
 source ~/.archive/ianus/vim/plugins/indentline.vim
 source ~/.archive/ianus/vim/plugins/vim-multiple-cursors.vim

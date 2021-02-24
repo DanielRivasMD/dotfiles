@@ -1,13 +1,15 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-gitgutter
+" => vim-fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " mappings
-nmap gh <Plug>(GitGutterStageHunk)
-nmap gl <Plug>(GitGutterUndoHunk)
-nmap gm <Plug>(GitGutterPreviewHunk)
-nmap gj <Plug>(GitGutterNextHunk)
-nmap gk <Plug>(GitGutterPrevHunk)
+nmap gd  :Gdiffsplit!<CR>
+nmap gf[ :diffget //2<CR>
+nmap gf] :diffget //3<CR>
+nmap gu  :diffupdate<CR>
+nmap gp  :diffput<CR>
+nmap go  :only<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
