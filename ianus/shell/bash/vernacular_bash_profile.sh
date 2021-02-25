@@ -54,7 +54,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # ===  navi              ===
 # ==========================
 
-eval "$(navi widget bash)"
+if [ -f ${BDOTDIR}/bash_navi_patch.sh ]; then
+  . ${BDOTDIR}/bash_navi_patch.sh
+fi
 
 # ==========================
 # ===  zoxide            ===

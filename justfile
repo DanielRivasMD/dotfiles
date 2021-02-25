@@ -97,6 +97,7 @@ _default:
   ln -svf ${IANUS}/shell/bash/vernacular_bashrc.sh ${HOME}/.bashrc                     # bashrc
   ln -svf ${IANUS}/shell/bash/vernacular_bash_aliases.sh ${HOME}/.bash/bash_aliases.sh # bash aliases
   ln -svf ${IANUS}/shell/bash/fzf.bash ${HOME}/.bash                                   # fzf bash
+  ln -svf ${IANUS}/shell/bash/bash_navi_patch.sh ${HOME}/.bash                         # bash navi patch
 
   # zsh
   if [[ ! -d ${HOME}/.zsh ]]; then mkdir ${HOME}/.zsh; fi                              # purge before linking
