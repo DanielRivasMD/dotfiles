@@ -112,6 +112,9 @@ _default:
   # fish
   ln -svf ${IANUS}/shell/fish/vernacular_config.fish ${HOME}/.config/fish/config.fish  # fish config
 
+  # nushell
+  ln -svf ${IANUS}/shell/nushell/* "/Users/drivas/Library/Application Support/org.nushell.nu/"
+
 ################################################################################
 
 RemoteUppmax := "drivas@rackham.uppmax.uu.se"
