@@ -107,7 +107,9 @@ fi
 # ===  navi              ===
 # ==========================
 
-eval "$(navi widget zsh)"
+if [ -f ${ZDOTDIR}/zsh_navi_patch.sh ]; then
+  . ${ZDOTDIR}/zsh_navi_patch.sh
+fi
 
 # ==========================
 # ===  zoxide            ===
@@ -121,7 +123,7 @@ eval "$(zoxide init zsh)"
 
 # edit line in editor with ctrl-n:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^n' edit-command-line
+bindkey '^b' edit-command-line
 
 # ==========================
 
