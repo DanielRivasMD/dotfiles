@@ -30,7 +30,9 @@ end
 # ===  navi              ===
 # ==========================
 
-navi widget fish | source
+if [ -f $IANUS/shell/fish/fish_navi_patch.fish ]
+  source $IANUS/shell/fish/fish_navi_patch.fish
+end
 
 # ==========================
 # ===  zoxide            ===
