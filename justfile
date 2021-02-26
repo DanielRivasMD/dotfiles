@@ -46,7 +46,14 @@ _default:
   ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/                                # julia startup
   ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/                                               # ssh config
   ln -svf ${CERBERUS}/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/" # broot config
+
+  # purge before linking
+  if [[ -d "/Users/drivas/Library/Application Support/gitui" ]]; then rm -rf "/Users/drivas/Library/Application Support/gitui"; fi
   ln -svf ${CERBERUS}/gitui "/Users/drivas/Library/Application Support/gitui"                # gitui config directory
+
+  # purge before linking
+  if [[ -d "/Users/drivas/Library/Application Support/navi/cheats/drivas" ]]; then rm -rf "/Users/drivas/Library/Application Support/navi/cheats/drivas"; fi
+  ln -svf ${CERBERUS}/navi "/Users/drivas/Library/Application Support/navi/cheats/drivas"    # navi cheats directory
 
   # sublime
   ln -svf "${CERBERUS}/sublime/Default (OSX).sublime-keymap.json" "/Users/drivas/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
