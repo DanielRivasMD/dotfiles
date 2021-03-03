@@ -95,6 +95,7 @@ _default:
   # @config
   ln -svf ${IANUS}/micro ${HOME}/.config                                               # micro directory
   ln -svf ${IANUS}/starship ${HOME}/.config                                            # starship directory
+  ln -svf ${IANUS}/lsd ${HOME}/.config                                                 # lsd directory
 
   # shell
   ln -svf ${IANUS}/shell/terminal/vernacular_profile.sh ${HOME}/.profile               # terminal profile
