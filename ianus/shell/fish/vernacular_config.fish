@@ -21,8 +21,8 @@ starship init fish | source
 # ===  McFly             ===
 # ==========================
 
-if test -r "/usr/local/opt/mcfly/mcfly.fish"
-  source "/usr/local/opt/mcfly/mcfly.fish"
+if test -r "$HOME/Factorem/Observatory/mcfly/mcfly.fish"
+  source "$HOME/Factorem/Observatory/mcfly/mcfly.fish"
   mcfly_key_bindings
 end
 
