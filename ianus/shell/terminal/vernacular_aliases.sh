@@ -3,7 +3,6 @@
 # ===  # Forked patches  ===
 # ==========================
 
-alias aliases='clear && ~/bin/forkedPatch/aliases'
 alias copo='~/bin/forkedPatch/copo'
 alias pier='~/bin/forkedPatch/pier'
 alias rip='~/bin/forkedPatch/rip'
@@ -46,13 +45,6 @@ alias lg='lazygit'
 # ==========================
 # ===  Rust toolLinks    ===
 # ==========================
-
-# aliases
-alias als='aliases'
-alias alr='clear && aliases rehash && aliases && echo "aliases reloaded"'
-alias ald='clear && aliases directories'
-alias al='aliases exec ./'
-alias a='aliases exec ~/'
 
 # bat
 alias man=batman
