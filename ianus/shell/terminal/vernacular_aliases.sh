@@ -5,9 +5,9 @@
 
 alias aliases='clear && ~/bin/forkedPatch/aliases'
 alias copo='~/bin/forkedPatch/copo'
-alias pier='clear && ~/bin/forkedPatch/pier'
-alias rip='clear && ~/bin/forkedPatch/rip'
-alias git-local-ignore='clear && ~/bin/forkedPatch/git-local-ignore'
+alias pier='~/bin/forkedPatch/pier'
+alias rip='~/bin/forkedPatch/rip'
+alias git-local-ignore='~/bin/forkedPatch/git-local-ignore'
 
 # ==========================
 # ===  General aliases   ===
