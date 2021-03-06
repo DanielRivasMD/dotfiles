@@ -3,7 +3,7 @@
 # with `ls`. It affects the "color"->"when", "sorting"->"dir-grouping", "date"
 # and "icons"->"when" options.
 # Possible values: false, true
-classic: false
+classic:        false
 
 # == Blocks ==
 # This specifies the columns and their order when using the long and the tree
@@ -11,9 +11,9 @@ classic: false
 # Possible values: permission, user, group, size, size_value, date, name, inode
 blocks:
   - permission
+  - size
   - user
   - group
-  - size
   - date
   - name
 
@@ -23,73 +23,73 @@ color:
   # When to colorize the output.
   # When "classic" is set, this is set to "never".
   # Possible values: never, auto, always
-  when: auto
+  when:         auto
 
 # == Date ==
 # This specifies the date format for the date column. The freeform format
 # accepts an strftime like string.
 # When "classic" is set, this is set to "date".
 # Possible values: date, relative, +<date_format>
-date: date
+date:           relative
 
 # == Dereference ==
 # Whether to dereference symbolic links.
 # Possible values: false, true
-dereference: false
+dereference:    false
 
 # == Display ==
 # What items to display. Do not specify this for the default behavior.
 # Possible values: all, almost-all, directory-only
-# display: all
+# display:      all
 
 # == Icons ==
 icons:
   # When to use icons.
   # When "classic" is set, this is set to "never".
   # Possible values: always, auto, never
-  when: auto
+  when:         auto
   # Which icon theme to use.
   # Possible values: fancy, unicode
-  theme: fancy
+  theme:        fancy
 
 # == Ignore Globs ==
 # A list of globs to ignore when listing.
 # ignore-globs:
-#   - .git
+  # - .git
 
 # == Indicators ==
 # Whether to add indicator characters to certain listed files.
 # Possible values: false, true
-indicators: false
+indicators:     false
 
 # == Layout ==
 # Which layout to use. "oneline" might be a bit confusing here and should be
 # called "one-per-line". It might be changed in the future.
 # Possible values: grid, tree, oneline
-layout: grid
+layout:         grid
 
 # == Recursion ==
 recursion:
   # Whether to enable recursion.
   # Possible values: false, true
-  enabled: false
+  enabled:      false
   # How deep the recursion should go. This has to be a positive integer. Leave
   # it unspecified for (virtually) infinite.
-  # depth: 3
+  depth:        2
 
 # == Size ==
 # Specifies the format of the size column.
 # Possible values: default, short, bytes
-size: default
+size:           default
 
 # == Sorting ==
 sorting:
   # Specify what to sort by.
   # Possible values: extension, name, time, size, version
-  column: name
+  column:       name
   # Whether to reverse the sorting.
   # Possible values: false, true
-  reverse: false
+  reverse:      false
   # Whether to group directories together and where.
   # When "classic" is set, this is set to "none".
   # Possible values: first, last, none
@@ -98,13 +98,13 @@ sorting:
 # == No Symlink ==
 # Whether to omit showing symlink targets
 # Possible values: false, true
-no-symlink: false
+no-symlink:     false
 
 # == Total size ==
 # Whether to display the total size of directories.
 # Possible values: false, true
-total-size: false
+total-size:     false
 
 # == Symlink arrow ==
 # Specifies how the symlink arrow display, chars in both ascii and utf8
-symlink-arrow: ⇒
+symlink-arrow:  ->
