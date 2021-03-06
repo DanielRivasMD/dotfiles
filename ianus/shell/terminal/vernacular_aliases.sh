@@ -61,10 +61,24 @@ alias man=batman
 alias br='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
 # exa
-alias l='clear && exa --long --group-directories-first --classify --links --git --header --group'
-alias la='clear && exa --long --group-directories-first --classify --links --git --header --group --all'
-alias lr='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group'
-alias lar='clear && exa --long --group-directories-first --classify --links --git --header --sort=newest --group --all'
+alias lx='exa --long --classify --links --git --header --group --icons'
+alias lxa='lx --all'
+alias lxr='lx --sort=newest'
+
+alias lxar='lxa --sort=newest'
+alias lxsa='lxa --sort=accessed --time accessed'
+alias lxsc='lxa --sort=created --time created'
+
+alias lxg='lx --group-directories-first'
+alias lxga='lxg --all'
+alias lxgr='lxg --sort=newest'
+
+alias lxgar='lxga --sort=newest'
+alias lxgsa='lxga --sort=accessed --time accessed'
+alias lxgsc='lxga --sort=created --time created'
+
+alias lxt='lxa --tree --level 2 --ignore-glob ".git" --group-directories-first'
+alias lxd='lxa --tree --level 2 --ignore-glob ".git" --only-dirs'
 
 # gitui
 alias gt='gitui'
