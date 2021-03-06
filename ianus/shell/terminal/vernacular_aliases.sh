@@ -86,6 +86,27 @@ alias gt='gitui'
 # git-local-ignore
 alias gl='git-local-ignore'
 
+# lsd
+alias l='lsd --long --classify --inode'
+alias lr='l --reverse --timesort'
+alias lss='l --reverse --sizesort'
+
+alias la='l --almost-all'
+alias lar='la --reverse --timesort'
+alias las='la --reverse --sizesort'
+
+alias ls='l --recursive'
+alias lsr='ls --reverse --timesort'
+
+alias lsa='ls --almost-all'
+alias lsar='lsa --reverse --timesort'
+
+alias lt='l --group-dirs=first --tree'
+alias lta='lt --almost-all'
+
+alias le='l --extensionsort'
+alias lea='le --almost-all'
+
 # samesame
 alias ss='samesame'
 
