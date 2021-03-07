@@ -46,13 +46,41 @@ vmap <M-Up> {
 vmap <M-Down> }
 
 " move lines
-nmap J ddp
-nmap K ddkP
-"vmap J ddp
-"vmap K ddkP
+nmap JJ ddp
+nmap KK ddkP
+imap JJ <Esc>ddpi
+imap KK <Esc>ddkPi
+
+imap vv <Esc>V
+vmap kk <Esc>ggVG
+
+" horizontal selection
+imap <S-Left> <Esc>vB
+imap <C-S-Left> <Esc>v0
+nmap <S-Left> vB
+nmap <C-S-Left> v0
+vmap <S-Left> B
+vmap <C-S-Left> 0
+
+imap <S-Right> <Esc>vE
+imap <C-S-Right> <Esc>v$
+nmap <S-Right> vE
+nmap <C-S-Right> v$
+vmap <S-Right> E
+vmap <C-S-Right> $
+
+" vertical selection
+imap <S-Down> <Esc>v}
+nmap <S-Down> v}
+vmap <S-Down> }
+
+imap <S-Up> <Esc>v{
+nmap <S-Up> v{
+vmap <S-Up> {
 
 " duplicate line
-nmap M yyp
+nmap kk yyp
+imap kk <Esc>yypi
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
