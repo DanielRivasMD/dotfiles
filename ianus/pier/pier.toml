@@ -5,6 +5,30 @@ command = '''rga "$1" | awk 'BEGIN{FS=":"} {print $1}' | runiq -'''
 description = 'search the archive for pattern'
 tags = ['shell']
 
+[scripts.atheme-reset]
+alias = 'atheme-reset'
+command = 'git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/alacritty/alacritty.yml'
+description = 'reset alacritty to most recent commit'
+tags = ['']
+
+[scripts.bianca-sftp]
+alias = 'bianca-sftp'
+command = 'sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se'
+description = 'sftp to Bianca sens2019016'
+tags = ['remote']
+
+[scripts.bianca-ssh]
+alias = 'bianca-ssh'
+command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
+description = 'ssh to Bianca sens2019016'
+tags = ['remote']
+
+[scripts.cAtom]
+alias = 'cAtom'
+command = '''for i in $(procs Atom | awk 'NR > 2 {print $1}' ); do kill $i; done'''
+description = 'stop all Atom jobs'
+tags = ['shell']
+
 [scripts.cChrome]
 alias = 'cChrome'
 command = '''for i in $(procs 'Google Chrome' --or chromedriver | awk 'NR > 2 {print $1}' ); do kill $i; done'''
@@ -17,10 +41,16 @@ command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; d
 description = 'stop all Firefox jobs'
 tags = ['shell']
 
-[scripts.cAtom]
-alias = 'cAtom'
-command = '''for i in $(procs Atom | awk 'NR > 2 {print $1}' ); do kill $i; done'''
-description = 'stop all Atom jobs'
+[scripts.cheat-julia]
+alias = 'cheat-julia'
+command = 'open ~/Documents/Bahlam/Biblo/Cheat_sheet/Julia/julia-cheat.html'
+description = 'visualize julia cheatsheet'
+tags = ['']
+
+[scripts.cpu]
+alias = 'cpu'
+command = 'procs --sortd CPU --watch'
+description = 'watch resources usage CPU-sorted'
 tags = ['shell']
 
 [scripts.dc]
@@ -35,10 +65,13 @@ command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
 description = 'count files in present address'
 tags = ['shell']
 
-[scripts.cpu]
-alias = 'cpu'
-command = 'procs --sortd CPU --watch'
-description = 'watch resources usage CPU-sorted'
+[scripts.fpath]
+alias = 'fpath'
+command = '''
+source ${PIER}break_single_line.sh  $COLUMNS
+echo $FPATH | xsv flatten -d ":" -n
+'''
+description = 'display fpath'
 tags = ['shell']
 
 [scripts.git]
@@ -59,6 +92,27 @@ source ${PIER}break_single_line.sh  $COLUMNS
 description = 'all-round git status'
 tags = ['git']
 
+[scripts.gitmd]
+alias = 'gitmd'
+command = 'vim /Users/drivas/Factorem/WebSurf/Archive/Notes/github.md'
+description = 'edit awesome git list'
+tags = ['']
+
+[scripts.godoc]
+alias = 'godoc'
+command = 'godoc -http=localhost:6060; open http://localhost:6060 -a Opera'
+description = 'open port for godoc'
+tags = ['go']
+
+[scripts.gopath]
+alias = 'gopath'
+command = '''
+source ${PIER}break_single_line.sh  $COLUMNS
+echo $GOPATH | xsv flatten -d ":" -n
+'''
+description = 'display GOPATH'
+tags = ['go']
+
 [scripts.gt]
 alias = 'gt'
 command = '''
@@ -76,11 +130,11 @@ esac
 description = 'list git shortcuts'
 tags = ['git']
 
-[scripts.godoc]
-alias = 'godoc'
-command = 'godoc -http=localhost:6060; open http://localhost:6060 -a Opera'
-description = 'open port for godoc'
-tags = ['go']
+[scripts.julia]
+alias = 'julia'
+command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
+description = 'edit julia awesome list'
+tags = ['']
 
 [scripts.kal]
 alias = 'kal'
@@ -134,6 +188,18 @@ source ${PIER}break_single_line.sh  $COLUMNS
 description = 'work calendar'
 tags = ['khal']
 
+[scripts.kedit]
+alias = 'kedit'
+command = 'micro ${ARCHIVE}/cerberus/khal/khalNew.sh'
+description = 'edit khal-endar event'
+tags = ['khal']
+
+[scripts.knew]
+alias = 'knew'
+command = 'source ${ARCHIVE}/cerberus/khal/khalNew.sh & git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/khal/khalNew.sh'
+description = 'add khal-endar event'
+tags = ['khal']
+
 [scripts.krugby]
 alias = 'krugby'
 command = '''
@@ -146,6 +212,24 @@ source ${PIER}break_single_line.sh  $COLUMNS
 description = 'SuperRugby calendar'
 tags = ['khal']
 
+[scripts.magnus-sftp]
+alias = 'magnus-sftp'
+command = 'sftp drivas@magnus.pawsey.org.au'
+description = 'sftp to Pawsey Magnus'
+tags = ['remote']
+
+[scripts.mdgit]
+alias = 'mdgit'
+command = 'mdcat /Users/drivas/Factorem/WebSurf/Archive/Notes/github.md | bat -p'
+description = 'print awesome git list'
+tags = ['']
+
+[scripts.mdjulia]
+alias = 'mdjulia'
+command = 'mdcat /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md | bat -p'
+description = 'print awesome julia list'
+tags = ['']
+
 [scripts.path]
 alias = 'path'
 command = '''
@@ -155,41 +239,23 @@ echo $PATH | xsv flatten -d ":" -n
 description = 'display PATH'
 tags = ['shell']
 
-[scripts.fpath]
-alias = 'fpath'
-command = '''
-source ${PIER}break_single_line.sh  $COLUMNS
-echo $FPATH | xsv flatten -d ":" -n
-'''
-description = 'display fpath'
-tags = ['shell']
+[scripts.pier]
+alias = 'pier'
+command = 'bat ~/.pier.toml'
+description = 'print pier.toml'
+tags = ['']
 
-[scripts.gopath]
-alias = 'gopath'
-command = '''
-source ${PIER}break_single_line.sh  $COLUMNS
-echo $GOPATH | xsv flatten -d ":" -n
-'''
-description = 'display GOPATH'
-tags = ['go']
+[scripts.rustfmt]
+alias = 'rustfmt'
+command = 'cp -v ${PIER}rustfmt.toml $(pwd)'
+description = 'collect a template of rustfmt'
+tags = ['rust']
 
-[scripts.bianca-sftp]
-alias = 'bianca-sftp'
-command = 'sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se'
-description = 'sftp to Bianca sens2019016'
-tags = ['remote']
-
-[scripts.bianca-ssh]
-alias = 'bianca-ssh'
-command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2019016'
-tags = ['remote']
-
-[scripts.magnus-sftp]
-alias = 'magnus-sftp'
-command = 'sftp drivas@magnus.pawsey.org.au'
-description = 'sftp to Pawsey Magnus'
-tags = ['remote']
+[scripts.sample]
+alias = 'sample'
+command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
+description = 'use sample'
+tags = ['']
 
 [scripts.topaz-sftp]
 alias = 'topaz-sftp'
@@ -202,11 +268,5 @@ alias = 'uppmax-sftp'
 command = 'sftp drivas@rackham.uppmax.uu.se'
 description = 'sftp to Uppmax Rackham'
 tags = ['remote']
-
-[scripts.rustfmt]
-alias = 'rustfmt'
-command = 'cp -v ${PIER}rustfmt.toml $(pwd)'
-description = 'collect a template of rustfmt'
-tags = ['rust']
 
 [default]
