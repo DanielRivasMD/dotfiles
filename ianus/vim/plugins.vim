@@ -76,6 +76,7 @@ source ~/.archive/ianus/vim/plugins/vim-easymotion.vim
 source ~/.archive/ianus/vim/plugins/vim-which-key.vim
 source ~/.archive/ianus/vim/plugins/syntastic.vim
 source ~/.archive/ianus/vim/plugins/rust.vim
+source ~/.archive/ianus/vim/plugins/vim-racer.vim
 source ~/.archive/ianus/vim/plugins/vim-go.vim
 source ~/.archive/ianus/vim/plugins/ultisnips.vim
 source ~/.archive/ianus/vim/plugins/julia-vim.vim
