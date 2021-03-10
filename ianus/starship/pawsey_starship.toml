@@ -1,412 +1,135 @@
 
-prompt_order = [
-    "battery",
-    "username",
-    "hostname",
-    "kubernetes",
-    "directory",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-    "hg_branch",
-    "docker_context",
-    "package",
-    "golang",
-    "java",
-    "julia",
-    "python",
-    "ruby",
-    "rust",
-    "conda",
-    "memory_usage",
-    "env_var",
-    "cmd_duration",
-    "custom",
-    "line_break",
-    "jobs",
-    "time",
-    "character",
-]
+################################################################################
+
+format                       = "$all"
 
 [battery]
-disabled = true
-# full_symbol   "•"                 The symbol shown when the battery is full.
-# charging_symbol   "⇡"             The symbol shown when the battery is charging.
-# discharging_symbol    "⇣"         The symbol shown when the battery is discharging.
-# display   link                    Display threshold and style for the module.
-# disabled  false                   Disables the battery module.
+disabled                     = true
 
 [[battery.display]]
-threshold = 10
-style = "bold #FF1919"
+threshold                    = 10
+style                        = "bold #B22222"
 
-[[battery.display]]                 # "bold yellow" style when capacity is between 10% and 30%
-threshold = 50
-style = "bold #FFC125"
-# threshold                         The upper bound for the display option.
-# style                             The style used if the display option is in use.
+[[battery.display]]
+threshold                    = 50
+style                        = "bold #FFC125"
 
-[character]                         # The name of the module we are configuring is "character"
-symbol = "∑"
-style_success = "#6693B6"
-style_failure = "#FF1919"
-# symbol = "∫"                        # The "symbol" segment is being set
-# symbol = "❯"                      The symbol used before the text input in the prompt.
-# error_symbol = "✖"                The symbol used before text input if the previous command failed.
-# use_symbol_for_status = false     Indicate error status by changing the symbol.
-# vicmd_symbol = "❮"                The symbol used before the text input in the prompt if shell is in vim normal mode.
-# style_success = "bold green"      The style used if the last command was successful.
-# style_failure = "bold red"        The style used if the last command failed.
-# disabled = false                  Disables the character module
-
+[character]
+success_symbol               = "[∑](bold #1874CD)"
+error_symbol                 = "[χ](bold #8B0000)"
+vicmd_symbol                 = "[❮](bold #C2D94C)"
 
 [cmd_duration]
-min_time = 500
-prefix = ""
-style = "bold #FFC125"
-# min_time  2_000                   Shortest duration to show time for (in milliseconds).
-# show_milliseconds false           Show milliseconds in addition to seconds for the duration.
-# prefix    took                    Prefix to display immediately before the command duration.
-# style "bold yellow"               The style for the module.
-# disabled  false                   Disables the cmd_duration module.
-
+min_time                     = 200
+style                        = "bold #FFC125"
+format                       = "[$duration]($style) "
 
 [conda]
-style = "#4EA24E"
-# truncation_length 1               The number of directories the environment path should be truncated to, if the environment was created via conda create -p [path]. 0 means no truncation. Also see the directory module.
-# symbol    "C "                    The symbol used before the environment name.
-# style "bold green"                The style for the module.
-# disabled  false                   Disables the conda module.
-
+style                        = "#4EA24E"
 
 [directory]
-truncation_length = 2
-prefix = ""
-style = "#00CED1"
-# truncation_length 3               The number of parent folders that the current directory should be truncated to.
-# truncate_to_repo  true            Whether or not to truncate to the root of the git repo that you're currently in.
-# prefix    "in "                   Prefix to display immediately before the directory.
-# style "bold cyan"                 The style for the module.
-# disabled  false                   Disables the directory module.
-
-# [directory.substitutions]
-# "/Volumes/network/path" = "/net"
-# "src/com/long/java/path" = "mypath"
-
-# advanced
-# substitutions                     A table of substitutions to be made to the path.
-# fish_style_pwd_dir_length 0       The number of characters to use when applying fish shell pwd path logic.
-# use_logical_path  true            Displays the logical path provided by the shell (PWD) instead of the path from the OS.
-
+truncation_length            = 2
+truncate_to_repo             = true
+style                        = "#00CED1"
 
 [docker_context]
-symbol = "🐋 "                      # Disable the newline at the start of the prompt
-style = "bold #1874CD"
-# symbol    "🐳 "                   The symbol used before displaying the Docker context .
-# only_with_files   false           Only show when there's a docker-compose.yml or Dockerfile in the current directory.
-# style "bold blue"                 The style for the module.
-# disabled  true                    Disables the docker_context module.
+symbol                       = "🐋"
+style                        = "bold #1874CD"
 
-
-# [env_var]
-# variable = "SHELL"
-# default = "unknown shell"
-# # symbol                          The symbol used before displaying the variable value.
-# # variable                        The environment variable to be displayed.
-# # default                         The default value to be displayed when the selected variable is not defined.
-# # prefix  ""                      Prefix to display immediately before the variable value.
-# # suffix  ""                      Suffix to display immediately after the variable value.
-# # style   "dimmed bold black"     The style for the module.
-# # disabled    false               Disables the env_var module.
-
+[env_var]
+disabled                     = true
+variable                     = "STARSHIP_SHELL"
+default                      = "unknown shell"
+style                        = "bold #778899"
+format                       = "[$env_value]($style) "
 
 [git_branch]
-disabled = true
-prefix = ""
-symbol.value = "ᚶ "
-symbol.style = "bold #FF1919"
-truncation_length = 7
-truncation_symbol = ""
-style = "#4EA24E"
-# symbol    " "                    The symbol used before the branch name of the repo in your current directory.
-# truncation_length 2^63 - 1        Truncates a git branch to X graphemes
-# truncation_symbol "…"             The symbol used to indicate a branch name was truncated. You can use "" for no symbol
-# style "bold purple"               The style for the module.
-# disabled  false                   Disables the git_branch module.
-
+symbol                       = "[ᚶ](bold #778899)"
+truncation_length            = 7
+truncation_symbol            = ""
+style                        = "#4EA24E"
+format                       = "[$symbol $branch]($style) "
 
 [git_commit]
-disabled = true
-commit_hash_length = 4
-prefix = "["
-suffix = "]"
-style = "bold #4EA24E"
-# commit_hash_length    7           The length of the displayed git commit hash.
-# prefix    "("                     Prefix to display immediately before git commit.
-# suffix    ")"                     Suffix to display immediately after git commit.
-# style "bold green"                The style for the module.
-# only_detached true                Only show git commit hash when in detached HEAD state
-# disabled  false                   Disables the git_commit module.
-
+commit_hash_length           = 4
+style                        = "bold #4EA24E"
+format                       = '[\($hash\)]($style) '
 
 [git_state]
-disabled = true
-progress_divider = " | "
-style = "bold #FFC125"
-# rebase    "REBASING"              The text displayed when a rebase is in progress.
-# merge "MERGING"                   The text displayed when a merge is in progress.
-# revert    "REVERTING"             The text displayed when a revert is in progress.
-# cherry_pick   "CHERRY-PICKING"    The text displayed when a cherry-pick is in progress.
-# bisect    "BISECTING"             The text displayed when a bisect is in progress.
-# am    "AM"                        The text displayed when an apply-mailbox (git am) is in progress.
-# am_or_rebase  "AM/REBASE"         The text displayed when an ambiguous apply-mailbox or rebase is in progress.
-# progress_divider  "/"             The symbol or text which will separate the current and total progress amounts. (e.g., " of ", for "3 of 10")
-# style "bold yellow"               The style for the module.
-# disabled  false                   Disables the git_state module.
-
+progress_divider             = " | "
+style                        = "bold #FFC125"
 
 [git_status]
-disabled = true
-ahead.value = "⇡"
-ahead.style = "bold #1874CD"
-behind.value = "⇣"
-behind.style = "bold #FF1919"
+ahead                        = " [⇡](#1874CD)[${count}](#bebebe)"
+behind                       = " [⇣](#8B0000)[${count}](#bebebe)"
+diverged                     = " [Ψ](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#8B0000)[${behind_count}](#bebebe)"
+conflicted                   = " [ᛊ](#8B0000)[${count}](#bebebe)"
+untracked                    = " [θ](#8B0000)[${count}](#bebebe)"
+stashed                      = " [Λ](#1874CD)[${count}](#bebebe)"
+modified                     = " [Δ](#FFC125)[${count}](#bebebe)"
+staged                       = " [Ω](#95E6CB)[${count}](#bebebe)"
+renamed                      = " [⇌](#FFC125)[${count}](#bebebe)"
+deleted                      = " [χ](#8B0000)[${count}](#bebebe)"
 
-conflicted.value = " ᛊ"
-conflicted.style = "#FF1919"
-conflicted_count.enabled = true
-conflicted_count.style = "bold #bebebe"
-
-diverged.value = " ♆"
-diverged.style = "#FF1919"
-
-untracked.value = " ≋"
-untracked.style = "#FF1919"
-untracked_count.enabled = true
-untracked_count.style = "bold #bebebe"
-
-stashed.value = " ⊽"
-stashed.style = "#1874CD"
-stashed_count.enabled = true
-stashed_count.style = "bold #bebebe"
-
-modified.value = " ♺"
-modified.style = "#FFC125"
-modified_count.enabled = true
-modified_count.style = "bold #bebebe"
-
-staged.value = " ⊍"
-staged.style = "#95E6CB"
-staged_count.enabled = true
-staged_count.style = "bold #bebebe"
-
-renamed.value = " ⇌"
-renamed.style = "#FFC125"
-renamed_count.enabled = true
-renamed_count.style = "bold #bebebe"
-
-deleted.value = " ≭"
-deleted.style = "#FF1919"
-deleted_count.enabled = true
-deleted_count.style = "bold #bebebe"
-
-prefix = "["
-suffix = "]"
-style = "bold #bebebe"
-
-show_sync_count = true
-
-# conflicted    "="                 This branch has merge conflicts.
-# conflicted_count  link            Show and style the number of conflicts.
-# ahead "⇡"                         This branch is ahead of the branch being tracked.
-# behind    "⇣"                     This branch is behind of the branch being tracked.
-# diverged  "⇕"                     This branch has diverged from the branch being tracked.
-# untracked "?"                     There are untracked files in the working directory.
-# untracked_count   link            Show and style the number of untracked files.
-# stashed   "$"                     A stash exists for the local repository.
-# stashed_count link                Show and style the number of stashes.
-# modified  "!"                     There are file modifications in the working directory.
-# modified_count    link            Show and style the number of modified files.
-# staged    "+"                     A new file has been added to the staging area.
-# staged_count  link                Show and style the number of files staged files.
-# renamed   "»"                     A renamed file has been added to the staging area.
-# renamed_count link                Show and style the number of renamed files.
-# deleted   "✘"                     A file's deletion has been added to the staging area.
-# deleted_count link                Show and style the number of deleted files.
-# show_sync_count   false           Show ahead/behind count of the branch being tracked.
-# prefix    [                       Prefix to display immediately before git status.
-# suffix    ]                       Suffix to display immediately after git status.
-# style "bold red"                  The style for the module.
-# disabled  false                   Disables the git_status module.
-
-# style                             Optionally style the count differently than the module
-
+style                        = "bold #bebebe"
+format                       = '([\[$ahead_behind$all_status\]]($style) )'
 
 [golang]
-symbol = "🦦 "
-style = "bold #95E6CB"
-# symbol    "🐹 "                   The symbol used before displaying the version of Golang.
-# style "bold cyan"                 The style for the module.
-# disabled  false                   Disables the golang module.
-
+symbol                       = "🦥"
+style                        = "bold #95E6CB"
+format                       = "[$symbol](#9C4C9C) [$version]($style) "
 
 [hostname]
-ssh_only = true
-prefix = "⟪"
-suffix = "⟫"
-trim_at = ".org.au"
-style = "#B452CD"
-disabled = false
-# ssh_only  true                    Only show hostname when connected to an SSH session.
-# prefix    ""                      Prefix to display immediately before the hostname.
-# suffix    ""                      Suffix to display immediately after the hostname.
-# trim_at   "."                     String that the hostname is cut off at, after the first match. "." will stop after the first dot. "" will disable any truncation
-# style "bold dimmed green"         The style for the module.
-# disabled  false                   Disables the hostname module.
-
+disabled                     = true
+ssh_only                     = true
+style                        = "#B452CD"
+format                       = "⟪[$hostname]($style)⟫"
 
 [java]
-# symbol    "☕ "                   The symbol used before displaying the version of Java.
-# style "dimmed red"                The style for the module.
-# disabled  false                   Disables the java module.
-
+symbol                       = "☕"
 
 [jobs]
-symbol = "∫"
-# symbol = " ∑"
-threshold = 3
-style = "#5F9EA0"
-# symbol    "✦"                     The symbol used before displaying the number of jobs.
-# threshold 1                       Show number of jobs if exceeded.
-# style "bold blue"                 The style for the module.
-# disabled  false                   Disables the jobs module.
-
+symbol                       = "∫"
+threshold                    = 3
+style                        = "#5F9EA0"
 
 [julia]
-prefix = ""
-symbol.style = "#9C4C9C"
-style = "#95E6CB"
-# symbol    "ஃ "                    The symbol used before displaying the version of Julia.
-# style "bold purple"               The style for the module.
-# disabled  false                   Disables the julia module.
-
+style                        = "#95E6CB"
+symbol                       = "ஃ"
+format                       = "[$symbol](#9C4C9C) [$version]($style) "
 
 [kubernetes]
-symbol = "⛵ "
-style = "dimmed #4EA24E"
-disabled = false
+symbol                       = "⛵"
+style                        = "dimmed #4EA24E"
+disabled                     = false
 [kubernetes.context_aliases]
-"dev.local.cluster.k8s" = "dev"
-# symbol    "☸ "                    The symbol used before displaying the Cluster info.
-# context_aliases                   Table of context aliases to display
-# style "bold blue"                 The style for the module.
-# disabled  true                    Disables the kubernetes module
-
+"dev.local.cluster.k8s"      = "dev"
 
 [line_break]
-disabled = true
-# disabled  false                   Disables the line_break module, making the prompt a single line.
-
+disabled                     = true
 
 [memory_usage]
-# disabled = false
-# show_percentage = true
-# show_swap = true
-# threshold = -1
-# symbol = " "
-# separator = "/"
-# style = "bold dimmed green"
-# # show_percentage false           Display memory usage as a percentage of the available memory.
-# # show_swap   true                Display swap usage if total swap is non-zero.
-# # threshold   75                  Hide the memory usage unless it exceeds this percentage.
-# # symbol  "🐏 "                   The symbol used before displaying the memory usage.
-# # separator   " | "               The symbol or text that will seperate the ram and swap usage.
-# # style   "bold dimmed white"     The style for the module.
-# # disabled    true                Disables the memory_usage module.
-
 
 [package]
-prefix = ""
-style = "#95E6CB"
-symbol.style = "#FF1919"
-# symbol    "📦 "                   The symbol used before displaying the version the package.
-# style "bold 208"                  The style for the module.
-# display_private   false           Enable displaying version for packages marked as private.
-# disabled  false                   Disables the package module.
-
+style                        = "#95E6CB"
+symbol                       = "📦"
+format                       = "$symbol [$version]($style) "
 
 [python]
-# symbol = "👾 "
-pyenv_version_name = true
-pyenv_prefix = "foo "
-# symbol    "🐍 "                   The symbol used before displaying the version of Python.
-# pyenv_version_name    false       Use pyenv to get Python version
-# pyenv_prefix  "pyenv "            Prefix before pyenv version display (default display is pyenv MY_VERSION)
-# scan_for_pyfiles  true            If false, Python files in the current directory will not show this module.
-# style "bold yellow"               The style for the module.
-# disabled  false                   Disables the python module.
-
+symbol                       = "🐍"
+pyenv_version_name           = true
+pyenv_prefix                 = ""
 
 [ruby]
-# symbol = "🔺 "
-# symbol    "💎 "                   The symbol used before displaying the version of Ruby.
-# style "bold red"                  The style for the module.
-# disabled  false                   Disables the ruby module.
-
 
 [rust]
-prefix = ""
-symbol.value = "⚙️ "
-symbol.style = "#CD6600"
-style = "#95E6CB"
-# disabled = true
-# symbol    "🦀 "                   The symbol used before displaying the version of Rust.
-# style "bold red"                  The style for the module.
-# disabled  false                   Disables the rust module.
-
+symbol                       = "⚙️"
+style                        = "#95E6CB"
+format                       = "[$symbol](#CD6600) [$version]($style) "
 
 [time]
-# disabled = false
-# format = "🕙[ %T ]"
-# utc_time_offset = "-5"
-# time_range = "10:00:00-14:00:00"
-# # use_12hr  false                 Enables 12 hour formatting.
-# # format    see below             The chrono format string
-# # used to format the time.
-# # style "bold yellow"             The style for the module time.
-# # utc_time_offset   "local"       Sets the UTC offset to use. Range from -24 < x < 24. Allows floats to accommodate 30/45 minute timezone offsets.
-# # disabled  true                  Disables the time module.
-# # time_range    "-"               Sets the time range during which the module will be shown. Times must be specified in 24-hours format
-
 
 [username]
-disabled = true
-# style_root    "bold red"          The style used when the user is root.
-# style_user    "bold yellow"       The style used for non-root users.
-# show_always   false               Always shows the username module.
-# disabled  false                   Disables the username module.
+disabled                     = true
 
-# [custom.foo]
-# command = "echo foo"  # shows output of command
-# files = ["foo"]       # can specify filters
-# when = """ test "$HOME" == "$PWD" """
-# prefix = " transcending "
-#
-# [custom.time]
-# command = "time /T"
-# files = ["*.pst"]
-# prefix = "transcending "
-# shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
-# # command                         The command whose output should be printed.
-# # when                            A shell command used as a condition to show the module. The module will be shown if the command returns a 0 status code.
-# # shell   See below
-# # description "<custom module>"   The description of the module that is shown when running starship explain.
-# # files   []                      The files that will be searched in the working directory for a match.
-# # directories []                  The directories that will be searched in the working directory for a match.
-# # extensions  []                  The extensions that will be searched in the working directory for a match.
-# # symbol  ""                      The symbol used before displaying the command output.
-# # style   "bold green"            The style for the module.
-# # prefix  ""                      Prefix to display immediately before the command output.
-# # suffix  ""                      Suffix to display immediately after the command output.
-# # disabled    false               Disables this custom module.
+################################################################################

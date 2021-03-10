@@ -1,184 +1,135 @@
 
 ################################################################################
 
-format = "$all"
+format                       = "$all"
 
-################################################################################
 [battery]
-disabled = true
+disabled                     = true
 
 [[battery.display]]
-threshold = 10
-style = "bold #B22222"
+threshold                    = 10
+style                        = "bold #B22222"
 
 [[battery.display]]
-threshold = 50
-style = "bold #FFC125"
-
-################################################################################
+threshold                    = 50
+style                        = "bold #FFC125"
 
 [character]
-success_symbol = "[∑](bold #6693B6)"
-error_symbol = "[χ](bold #8B0000)"
-vicmd_symbol = "[❮](bold #C2D94C)"
-
-################################################################################
+success_symbol               = "[∑](bold #1874CD)"
+error_symbol                 = "[χ](bold #8B0000)"
+vicmd_symbol                 = "[❮](bold #C2D94C)"
 
 [cmd_duration]
-min_time = 200
-style = "bold #FFC125"
-format = "[$duration]($style) "
-
-################################################################################
+min_time                     = 200
+style                        = "bold #FFC125"
+format                       = "[$duration]($style) "
 
 [conda]
-style = "#4EA24E"
-
-################################################################################
+style                        = "#4EA24E"
 
 [directory]
-truncation_length = 2
-truncate_to_repo = true
-style = "#00CED1"
-
-################################################################################
+truncation_length            = 2
+truncate_to_repo             = true
+style                        = "#00CED1"
 
 [docker_context]
-symbol = "🐋"
-style = "bold #1874CD"
-
-################################################################################
+symbol                       = "🐋"
+style                        = "bold #1874CD"
 
 [env_var]
-disabled = true
-variable = "STARSHIP_SHELL"
-default = "unknown shell"
-style = "bold #778899"
-format = "[$env_value]($style) "
-
-################################################################################
+disabled                     = true
+variable                     = "STARSHIP_SHELL"
+default                      = "unknown shell"
+style                        = "bold #778899"
+format                       = "[$env_value]($style) "
 
 [git_branch]
-symbol = "[ᚶ](bold #778899)"
-truncation_length = 7
-truncation_symbol = ""
-style = "#4EA24E"
-format = "[$symbol $branch]($style) "
-
-################################################################################
+symbol                       = "[ᚶ](bold #778899)"
+truncation_length            = 7
+truncation_symbol            = ""
+style                        = "#4EA24E"
+format                       = "[$symbol $branch]($style) "
 
 [git_commit]
-commit_hash_length = 4
-style = "bold #4EA24E"
-format = '[\($hash\)]($style) '
-
-################################################################################
+commit_hash_length           = 4
+style                        = "bold #4EA24E"
+format                       = '[\($hash\)]($style) '
 
 [git_state]
-progress_divider = " | "
-style = "bold #FFC125"
-
-################################################################################
+progress_divider             = " | "
+style                        = "bold #FFC125"
 
 [git_status]
-ahead = " [⇡](#1874CD)[${count}](#bebebe)"
-behind = " [⇣](#B22222)[${count}](#bebebe)"
-diverged = " [Ψ](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#B22222)[${behind_count}](#bebebe)"
-conflicted = " [Ξ](#B22222)[${count}](#bebebe)"
-untracked = " [θ](#B22222)[${count}](#bebebe)"
-stashed = " [Λ](#1874CD)[${count}](#bebebe)"
-modified = " [Δ](#FFC125)[${count}](#bebebe)"
-staged = " [Ω](#95E6CB)[${count}](#bebebe)"
-renamed = " [⇌](#FFC125)[${count}](#bebebe)"
-deleted = " [χ](#B22222)[${count}](#bebebe)"
+ahead                        = " [⇡](#1874CD)[${count}](#bebebe)"
+behind                       = " [⇣](#8B0000)[${count}](#bebebe)"
+diverged                     = " [Ψ](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#8B0000)[${behind_count}](#bebebe)"
+conflicted                   = " [ᛊ](#8B0000)[${count}](#bebebe)"
+untracked                    = " [θ](#8B0000)[${count}](#bebebe)"
+stashed                      = " [Λ](#1874CD)[${count}](#bebebe)"
+modified                     = " [Δ](#FFC125)[${count}](#bebebe)"
+staged                       = " [Ω](#95E6CB)[${count}](#bebebe)"
+renamed                      = " [⇌](#FFC125)[${count}](#bebebe)"
+deleted                      = " [χ](#8B0000)[${count}](#bebebe)"
 
-style = "bold #bebebe"
-format = '([\[$ahead_behind$all_status\]]($style) )'
-
-################################################################################
+style                        = "bold #bebebe"
+format                       = '([\[$ahead_behind$all_status\]]($style) )'
 
 [golang]
-symbol = "🦥"
-style = "bold #95E6CB"
-format = "[$symbol](#9C4C9C) [$version]($style) "
-
-################################################################################
+symbol                       = "🦥"
+style                        = "bold #95E6CB"
+format                       = "[$symbol](#9C4C9C) [$version]($style) "
 
 [hostname]
-disabled = true
-ssh_only = true
-style = "#B452CD"
-format = "⟪[$hostname]($style)⟫"
-
-#################################################################################
+disabled                     = true
+ssh_only                     = true
+style                        = "#B452CD"
+format                       = "⟪[$hostname]($style)⟫"
 
 [java]
-symbol = "☕"
-
-################################################################################
+symbol                       = "☕"
 
 [jobs]
-symbol = "∫"
-threshold = 3
-style = "#5F9EA0"
-
-################################################################################
+symbol                       = "∫"
+threshold                    = 3
+style                        = "#5F9EA0"
 
 [julia]
-style = "#95E6CB"
-symbol = "ஃ"
-format = "[$symbol](#9C4C9C) [$version]($style) "
-
-################################################################################
+style                        = "#95E6CB"
+symbol                       = "ஃ"
+format                       = "[$symbol](#9C4C9C) [$version]($style) "
 
 [kubernetes]
-symbol = "⛵"
-style = "dimmed #4EA24E"
-disabled = false
+symbol                       = "⛵"
+style                        = "dimmed #4EA24E"
+disabled                     = false
 [kubernetes.context_aliases]
-"dev.local.cluster.k8s" = "dev"
-
-################################################################################
+"dev.local.cluster.k8s"      = "dev"
 
 [line_break]
-disabled = true
-
-################################################################################
+disabled                     = true
 
 [memory_usage]
 
-################################################################################
-
 [package]
-style = "#95E6CB"
-symbol = "📦"
-format = "$symbol [$version]($style) "
-
-################################################################################
+style                        = "#95E6CB"
+symbol                       = "📦"
+format                       = "$symbol [$version]($style) "
 
 [python]
-symbol = "🐍"
-pyenv_version_name = true
-pyenv_prefix = ""
-
-################################################################################
+symbol                       = "🐍"
+pyenv_version_name           = true
+pyenv_prefix                 = ""
 
 [ruby]
 
-################################################################################
-
 [rust]
-symbol = "⚙️"
-style = "#95E6CB"
-format = "[$symbol](#CD6600) [$version]($style) "
-
-################################################################################
+symbol                       = "⚙️"
+style                        = "#95E6CB"
+format                       = "[$symbol](#CD6600) [$version]($style) "
 
 [time]
 
-################################################################################
-
 [username]
-disabled = true
+disabled                     = true
 
 ################################################################################
