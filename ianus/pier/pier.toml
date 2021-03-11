@@ -1,10 +1,3 @@
-
-[scripts.archive]
-alias = 'archive'
-command = '''rga "$1" | awk 'BEGIN{FS=":"} {print $1}' | runiq -'''
-description = 'search the archive for pattern'
-tags = ['shell']
-
 [scripts.atheme-reset]
 alias = 'atheme-reset'
 command = 'git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/alacritty/alacritty.yml'
