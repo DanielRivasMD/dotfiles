@@ -79,7 +79,7 @@ alias gt='gitui'
 alias gl='git-local-ignore'
 
 # lsd
-alias l='lsd --long --classify --inode'
+alias l='lsd --long --classify'
 alias lr='l --reverse --timesort'
 alias lss='l --reverse --sizesort'
 
