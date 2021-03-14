@@ -2,10 +2,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" movement between tabs or buffers
-nmap L :call MyNext()<CR>
-nmap H :call MyPrev()<CR>
-" nmap C :call ClearRegisters()<CR>
+" " movement between tabs or buffers
+" nmap L :call MyNext()<CR>
+" nmap H :call MyPrev()<CR>
+" " nmap C :call ClearRegisters()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
