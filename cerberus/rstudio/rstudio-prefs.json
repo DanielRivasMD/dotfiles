@@ -8,6 +8,7 @@
         ],
         "tabSet1": [
             "History",
+            "Tutorial",
             "Presentation"
         ],
         "tabSet2": [
@@ -28,7 +29,9 @@
     "font_size_points": 14,
     "editor_theme": "Cobalt",
     "default_project_location": "~",
-    "pdf_previewer": "rstudio",
     "wrap_tab_navigation": false,
-    "reuse_sessions_for_project_links": true
+    "reuse_sessions_for_project_links": true,
+    "show_terminal_tab": false,
+    "jobs_tab_visibility": "closed",
+    "posix_terminal_shell": "zsh"
 }
