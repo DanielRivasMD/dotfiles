@@ -41,6 +41,7 @@ alias sudo='sudo '
 
 alias f='fillin'
 alias lg='lazygit'
+alias lzd='lazydocker'
 
 # ==========================
 # ===  Rust toolLinks    ===
