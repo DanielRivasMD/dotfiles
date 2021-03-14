@@ -6,13 +6,11 @@
 env:
   TERM:                             xterm-256color
   WINIT_X11_SCALE_FACTOR:           "1.0"
-#
 # This value is used to set the `$TERM` environment variable for
 # each instance of Alacritty. If it is not present, alacritty will
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
 # TERM:                             xterm-256color
-
 window:
   # Window dimensions (changes require restart)
   #
@@ -43,7 +41,6 @@ window:
   #     - transparent:              Title bar, transparent background and title bar buttons
   #     - buttonless:               Title bar, transparent background, but no title bar buttons
   decorations:                      full
-
   # When true, alacritty starts maximized.
   # startup_mode:                   Maximized
 
@@ -55,7 +52,6 @@ scrolling:
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   multiplier:                       3
-
   # Faux Scrolling
   #
   # The `faux_multiplier` setting controls the number of lines the terminal
@@ -72,7 +68,6 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
@@ -84,8 +79,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family:                        "Hack Nerd Font" # Monaco
-
+    family:                         "Hack Nerd Font" # Monaco
     # The `style` can be specified to pick a specific face.
     #style:                         Regular
 
@@ -96,7 +90,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:                        "Hack Nerd Font" # Inconsolata
+    family:                         "Hack Nerd Font" # Inconsolata
 
     # The `style` can be specified to pick a specific face.
     style:                          Bold
@@ -108,7 +102,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:                       "Hack Nerd Font" #  Menlo
+    family:                         "Hack Nerd Font" #  Menlo
 
     # The `style` can be specified to pick a specific face.
     style:                          Italic
@@ -147,7 +141,6 @@ font:
 
   # Display the time it takes to redraw each frame.
   #render_timer:                    false
-
   # Keep the log file after quitting Alacritty.
   debug:
     persistent_logging:             false
@@ -195,35 +188,34 @@ draw_bold_text_with_bright_colors:  true
 #     - { index: 19, color:         "0x586e75" }
 #     - { index: 20, color:         "0x839496" }
 #     - { index: 21, color:         "0xeee8d5" }
-
 # Ayu-Dark theme
 colors:
   # Default colors
   primary:
-    background:                     '#0A0E14'
-    foreground:                     '#B3B1AD'
+    background:                     '#10100E'
+    foreground:                     '#C6C6C4'
 
   # Normal colors
   normal:
-    black:                          '#01060E'
-    red:                            '#EA6C73'
-    green:                          '#91B362'
-    yellow:                         '#F9AF4F'
-    blue:                           '#53BDFA'
-    magenta:                        '#FAE994'
-    cyan:                           '#90E1C6'
-    white:                          '#C7C7C7'
+    black:                          '#10100E'
+    red:                            '#C40233'
+    green:                          '#009F6B'
+    yellow:                         '#FFD700'
+    blue:                           '#0087BD'
+    magenta:                        '#9A4EAE'
+    cyan:                           '#20B2AA'
+    white:                          '#C6C6C4'
 
   # Bright colors
   bright:
-    black:                          '#686868'
-    red:                            '#F07178'
-    green:                          '#C2D94C'
-    yellow:                         '#FFB454'
-    blue:                           '#59C2FF'
-    magenta:                        '#FFEE99'
-    cyan:                           '#95E6CB'
-    white:                          '#FFFFFF'
+    black:                          '#696969'
+    red:                            '#FF2400'
+    green:                          '#03C03C'
+    yellow:                         '#FDFF00'
+    blue:                           '#007FFF'
+    magenta:                        '#FF1493'
+    cyan:                           '#00CCCC'
+    white:                          '#FFFAFA'
 
 # Visual Bell
 #
@@ -300,7 +292,6 @@ mouse:
     #   - (Linux) xdg-open
     #   - (Windows) explorer
     #launcher:                      xdg-open
-
     # URL modifiers
     #
     # These are the modifiers that need to be held down for opening URLs when clicking
@@ -344,7 +335,6 @@ live_config_reload:                 true
 #  program:                         /bin/bash
 #  args:
 #    - --login
-
 # Windows 10 ConPTY backend (Windows only)
 #
 # This will enable better color support and may resolve other issues,
@@ -358,7 +348,6 @@ enable_experimental_conpty_backend: false
 
 # Send ESC (\x1b) before characters when alt is pressed.
 alt_send_esc:                       true
-
 
 # Key bindings
 #
@@ -445,9 +434,9 @@ alt_send_esc:                       true
 #   - AppCursor
 #   - ~AppKeypad
 #   - AppKeypad
-
 key_bindings:
 
+  # TODO:                           add scrolling keys on keyboard
   # (macOS only)
   - { key: Key0,        mods: Command,           action: ResetFontSize         }
   - { key: Equals,      mods: Command,           action: IncreaseFontSize      }
