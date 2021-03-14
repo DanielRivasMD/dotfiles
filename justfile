@@ -39,6 +39,7 @@ _default:
   ln -svf ${CERBERUS}/rstudio/keybindings ${HOME}/.R/rstudio/                                # rstudio keybindings
   ln -svf ${CERBERUS}/rustfmt ${HOME}/.config/                                               # rustfmt
   ln -svf ${CERBERUS}/nvim ${HOME}/.config                                                   # nvim directory
+  ln -svf ${CERBERUS}/ranger ${HOME}/.config                                                 # ranger directory
 
   # local
   ln -svf ${CERBERUS}/rstudio/rstudio-desktop.json ${HOME}/.local/share/rstudio/             # rstudio
