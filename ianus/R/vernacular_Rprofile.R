@@ -1,7 +1,7 @@
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# Base R
+# base R
 options(prompt = "> ")
 options(stringsAsFactors = F)
 options(max.print = 999)
@@ -9,9 +9,16 @@ options(nwarnings = 99)
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# Package loading
-library(SistWrapper, quietly = T)
-library(RStudioAddIns, quietly = T)
+# package loading
+tryCatch(
+  require(RStudioAddIns, quietly = T),
+  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
+)
+
+tryCatch(
+  require(SistWrapper, quietly = T),
+  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
+)
 
 #------------------------------------------------------------------------------------------------------------------------------
 
@@ -21,7 +28,7 @@ options(browser = "/usr/bin/open -a '/Applications/Opera.app'")
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# Override q() to avoid save workspace prompt
+# override q() to avoid save workspace prompt
 utils::assignInNamespace(
   "q",
   function(save = "no", status = 0, runLast = TRUE)
@@ -36,8 +43,15 @@ utils::assignInNamespace(
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# dplyr (Tibble)
+# dplyr (tibble)
 # Show all columns
 options(dplyr.width = Inf)
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+# tryCatch(
+  # startup::startup(),
+  # error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
+# )
 
 #------------------------------------------------------------------------------------------------------------------------------
