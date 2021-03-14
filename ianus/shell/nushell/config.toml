@@ -1,19 +1,24 @@
-filesize_format = "B" # can be b, kb, kib, mb, mib, gb, gib, etc
+filesize_format = "mb" # can be b, kb, kib, mb, mib, gb, gib, etc
 filesize_metric = true # true => (KB, MB, GB), false => (KiB, MiB, GiB)
 skip_welcome_message = false # Note to nushell developer: This is expected to be false, when testing nushell itself
 disable_table_indexes = false
 nonzero_exit_errors = true
+
+#  TODO: add alias
 startup = [
-    "alias la = ls --long",
+    "alias l = ls --long",
+    "alias la = ls --long --all",
+    "alias ld = ls --long --all --du",
     "def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}",
     "def nuver [] {version | pivot key value}",
     ]
+#  TODO: get executables into path
 table_mode = "other" # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
-plugin_dirs = ["D:\\Src\\GitHub\\nu-plugin-lib\\samples\\Nu.Plugin.Len\\bin\\Debug\\netcoreapp3.1"]
+# plugin_dirs = ["D:\\Src\\GitHub\\nu-plugin-lib\\samples\\Nu.Plugin.Len\\bin\\Debug\\netcoreapp3.1"]
 pivot_mode = "auto" # auto, always, never
 ctrlc_exit = false
 complete_from_path = true
-rm_always_trash = true
+rm_always_trash = false
 prompt = "echo $(starship prompt)"
 # prompt = "build-string $(ansi gb) $(pwd) $(ansi reset) '(' $(ansi cb) $(do -i { git rev-parse --abbrev-ref HEAD } | str trim ) $(ansi reset) ')' $(ansi yb) $(date format '%m/%d/%Y %I:%M:%S%.3f %p' ) $(ansi reset) '> ' "
 
@@ -65,15 +70,15 @@ history_ignore_space = false
 completion_type = "circular" # circular, list, fuzzy
 completion_prompt_limit = 100
 keyseq_timeout_ms = 500 # ms
-edit_mode = "emacs" # vi, emacs
+edit_mode = "vi" # vi, emacs
 auto_add_history = true
-bell_style = "audible" # audible, none, visible
+bell_style = "none" # audible, none, visible
 color_mode = "enabled" # enabled, forced, disabled
-tab_stop = 4
+tab_stop = 2
 
 [textview]
 term_width = "default" # "default" or a number
-tab_width = 4
+tab_width = 2
 colored_output = true
 true_color = true
 header = true
