@@ -2,6 +2,16 @@
 " => vim-startify
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:startify_custom_header = [
+        \ '        _   ___    ________          __   ',
+        \ '       / | / / |  / / ____/___  ____/ /__ ',
+        \ '      /  |/ /| | / / /   / __ \/ __  / _ \',
+        \ '     / /|  / | |/ / /___/ /_/ / /_/ /  __/',
+        \ '    /_/ |_/  |___/\____/\____/\__,_/\___/ ',
+        \]
+
+let g:startify_session_dir = '~/.vim/session'
+
 " display NERDTree bookmarks as a separate list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " read ~/.NERDTreeBookmarks file and takes its second column
@@ -41,5 +51,27 @@ let g:startify_lists = [
 \ { 'type': 'commands',  'header': ['   Commands']       },
 \ ]
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:startify_session_autoload = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_fortune_use_unicode = 1
+let g:startify_session_persistence = 1
+
+let g:webdevicons_enable_startify = 1
+
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+
+let g:startify_bookmarks = [
+\ { 'g': '/Users/drivas/Factorem/WebSurf/Archive/Notes/github.md' },
+\ { 'k': '/Users/drivas/.archive/cerberus/khal/khalNew.sh' },
+\ { 'z': '~/.zshrc' },
+\ ]
+
+let g:startify_enable_special = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
