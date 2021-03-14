@@ -45,15 +45,6 @@ nmap <M-Down> }
 vmap <M-Up> {
 vmap <M-Down> }
 
-" move lines
-nmap JJ ddp
-nmap KK ddkP
-imap JJ <Esc>ddpi
-imap KK <Esc>ddkPi
-
-imap vv <Esc>V
-vmap kk <Esc>ggVG
-
 " horizontal selection
 imap <S-Left> <Esc>vB
 imap <C-S-Left> <Esc>v0
@@ -77,6 +68,15 @@ vmap <S-Down> }
 imap <S-Up> <Esc>v{
 nmap <S-Up> v{
 vmap <S-Up> {
+
+" move lines
+nmap J ddp
+nmap K ddkP
+imap <C-j> <Esc>ddpi
+imap <C-k> <Esc>ddkPi
+
+imap <C-l> <Esc>V
+vmap <C-a> <Esc>ggVG
 
 " duplicate line
 nmap kk yyp
@@ -146,9 +146,26 @@ nmap <leader>q :q!
 " fast close buffer
 nmap <leader>x :bdelete<CR>
 
+" save & exit
+nmap <leader>s :wq!<CR>
+
 " registers
 nmap <leader>p :registers<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" TAB in general mode will move to text buffer
+nnoremap <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <S-TAB> :bprevious<CR>
+
+" " Alternate way to save
+" nnoremap <C-w> :w<CR>
+" " Alternate way to quit
+" nnoremap <C-s> :wq<CR>
+"
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
