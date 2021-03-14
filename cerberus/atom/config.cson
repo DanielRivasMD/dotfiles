@@ -1,4 +1,7 @@
 "*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
   "advanced-open-file":
     createDirectories: true
     createFileInstantly: true
@@ -43,7 +46,10 @@
   "atom-clock":
     rightClickToClipboard: false
     showClockIcon: true
+  "atom-toolbar":
+    visible: false
   "autocomplete-plus":
+    autoActivationDelay: 500
     confirmCompletion: "enter"
     moveToCancel: true
   autosave:
@@ -67,7 +73,10 @@
       "linter-rust"
       "linter-ui-default"
       "linter-jsonlint"
+      "dart"
+      "atom-toolbar"
     ]
+    followSymlinks: false
     packagesWithKeymapsDisabled: [
       "highlight-selected"
       "latex"
@@ -82,6 +91,7 @@
       "advanced-open-file"
       "atom-keyboard-macros"
       "clipboard-history"
+      "dart"
     ]
     packagesWithSnippetsDisabled: [
       "highlight-nanorc"
