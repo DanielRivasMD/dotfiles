@@ -17,15 +17,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'                   " Plugin manager
 Plugin 'tomasr/molokai'                         " molokai theme
 Plugin 'mhinz/vim-startify'                     " start page
-Plugin 'ap/vim-css-color'                       " colorized color text
+" Plugin 'ap/vim-css-color'                       " colorized color text
 Plugin 'vim-airline/vim-airline'                " status bar
 Plugin 'vim-airline/vim-airline-themes'         " status bar theme
 Plugin 'ryanoasis/vim-devicons'                 " icons
 Plugin 'scrooloose/nerdtree'                    " toogle file tree
 Plugin 'Xuyuanp/nerdtree-git-plugin'            " git status on file tree
-Plugin 'airblade/vim-gitgutter'                 " git gutter
-Plugin 'tpope/vim-fugitive'                     " git commands
-Plugin 'kshenoy/vim-signature'                  " marks gutter
+" Plugin 'airblade/vim-gitgutter'                 " git gutter
+" Plugin 'tpope/vim-fugitive'                     " git commands
+" Plugin 'kshenoy/vim-signature'                  " marks gutter
 Plugin 'Yggdroot/indentline'                    " show indentation
 " Plugin 'terryma/vim-multiple-cursors'         " multicursors [deprecated]
 Plugin 'mg979/vim-visual-multi', {'branch': 'master'}   " multicursors
@@ -54,36 +54,36 @@ call vundle#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " sourcing
-source ~/.archive/ianus/vim/plugins/molokai.vim
-source ~/.archive/ianus/vim/plugins/vim-startify.vim
-source ~/.archive/ianus/vim/plugins/vim-css-color.vim
-source ~/.archive/ianus/vim/plugins/vim-airline.vim
-source ~/.archive/ianus/vim/plugins/vim-airline-themes.vim
-source ~/.archive/ianus/vim/plugins/vim-devicons.vim
-source ~/.archive/ianus/vim/plugins/nerdtree.vim
-source ~/.archive/ianus/vim/plugins/nerdtree-git-plugin.vim
-source ~/.archive/ianus/vim/plugins/vim-gitgutter.vim
-source ~/.archive/ianus/vim/plugins/vim-fugitive.vim
-source ~/.archive/ianus/vim/plugins/vim-signature.vim
-source ~/.archive/ianus/vim/plugins/indentline.vim
-source ~/.archive/ianus/vim/plugins/vim-multiple-cursors.vim
-source ~/.archive/ianus/vim/plugins/nerdcommenter.vim
-source ~/.archive/ianus/vim/plugins/tabular.vim
-source ~/.archive/ianus/vim/plugins/coc.nvim.vim
-source ~/.archive/ianus/vim/plugins/splitjoin.vim
-source ~/.archive/ianus/vim/plugins/ctrlp.vim
-source ~/.archive/ianus/vim/plugins/vim-easymotion.vim
-source ~/.archive/ianus/vim/plugins/vim-which-key.vim
-source ~/.archive/ianus/vim/plugins/syntastic.vim
-source ~/.archive/ianus/vim/plugins/rust.vim
-source ~/.archive/ianus/vim/plugins/vim-racer.vim
-source ~/.archive/ianus/vim/plugins/vim-go.vim
-source ~/.archive/ianus/vim/plugins/ultisnips.vim
-source ~/.archive/ianus/vim/plugins/julia-vim.vim
-source ~/.archive/ianus/vim/plugins/vim-fish.vim
-source ~/.archive/ianus/vim/plugins/vim-toml.vim
-source ~/.archive/ianus/vim/plugins/vim-markdown.vim
-source ~/.archive/ianus/vim/plugins/vim-markdown-preview.vim
+source $HOME/.archive/ianus/vim/plugins/molokai.vim
+source $HOME/.archive/ianus/vim/plugins/vim-startify.vim
+source $HOME/.archive/ianus/vim/plugins/vim-css-color.vim
+source $HOME/.archive/ianus/vim/plugins/vim-airline.vim
+source $HOME/.archive/ianus/vim/plugins/vim-airline-themes.vim
+source $HOME/.archive/ianus/vim/plugins/vim-devicons.vim
+source $HOME/.archive/ianus/vim/plugins/nerdtree.vim
+source $HOME/.archive/ianus/vim/plugins/nerdtree-git-plugin.vim
+source $HOME/.archive/ianus/vim/plugins/vim-gitgutter.vim
+source $HOME/.archive/ianus/vim/plugins/vim-fugitive.vim
+source $HOME/.archive/ianus/vim/plugins/vim-signature.vim
+source $HOME/.archive/ianus/vim/plugins/indentline.vim
+source $HOME/.archive/ianus/vim/plugins/vim-multiple-cursors.vim
+source $HOME/.archive/ianus/vim/plugins/nerdcommenter.vim
+source $HOME/.archive/ianus/vim/plugins/tabular.vim
+source $HOME/.archive/ianus/vim/plugins/coc.nvim.vim
+source $HOME/.archive/ianus/vim/plugins/splitjoin.vim
+source $HOME/.archive/ianus/vim/plugins/ctrlp.vim
+source $HOME/.archive/ianus/vim/plugins/vim-easymotion.vim
+source $HOME/.archive/ianus/vim/plugins/vim-which-key.vim
+source $HOME/.archive/ianus/vim/plugins/syntastic.vim
+source $HOME/.archive/ianus/vim/plugins/rust.vim
+source $HOME/.archive/ianus/vim/plugins/vim-racer.vim
+source $HOME/.archive/ianus/vim/plugins/vim-go.vim
+source $HOME/.archive/ianus/vim/plugins/ultisnips.vim
+source $HOME/.archive/ianus/vim/plugins/julia-vim.vim
+source $HOME/.archive/ianus/vim/plugins/vim-fish.vim
+source $HOME/.archive/ianus/vim/plugins/vim-toml.vim
+source $HOME/.archive/ianus/vim/plugins/vim-markdown.vim
+source $HOME/.archive/ianus/vim/plugins/vim-markdown-preview.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
