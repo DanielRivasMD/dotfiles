@@ -40,12 +40,15 @@ alias sudo='sudo '
 # ==========================
 
 alias f='fillin'
-alias lg='lazygit'
+alias lzg='lazygit'
 alias lzd='lazydocker'
 
 # ==========================
 # ===  Rust toolLinks    ===
 # ==========================
+
+# lazycli
+alias lzc='lazycli'
 
 # bat
 alias man=batman

@@ -30,7 +30,6 @@ _default:
   # config
   ln -svf ${CERBERUS}/alacritty ${HOME}/.config/                                             # alacritty
   ln -svf ${CERBERUS}/bottom ${HOME}/.config/                                                # bottom
-  # TODO: split Go cheats
   ln -svf ${CERBERUS}/cheat ${HOME}/.config/                                                 # cheat
   ln -svf ${CERBERUS}/karabiner ${HOME}/.config/                                             # karabiner
   ln -svf ${CERBERUS}/khal ${HOME}/.config/                                                  # khal
@@ -48,6 +47,7 @@ _default:
   ln -svf ${CERBERUS}/julia/startup.jl ${HOME}/.julia/config/                                # julia startup
   ln -svf ${CERBERUS}/ssh/config ${HOME}/.ssh/                                               # ssh config
   ln -svf ${CERBERUS}/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/" # broot config
+  ln -svf ${CERBERUS}/lazycli/config.yml "/Users/drivas/Library/Application Support/lazycli/" # lazycli config
 
   # purge before linking
   if [[ -d "/Users/drivas/Library/Application Support/gitui" ]]; then rm -rf "/Users/drivas/Library/Application Support/gitui"; fi
