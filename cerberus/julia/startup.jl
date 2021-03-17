@@ -54,6 +54,14 @@ atreplinit() do repl
 
     ################################################################################
 
+    try
+      @eval using Debugger
+    catch e
+      @warn "Error initializing Debugger" exception = (e, catch_backtrace())
+    end
+
+    ################################################################################
+
   end
 
 end
