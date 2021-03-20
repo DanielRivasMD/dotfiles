@@ -76,12 +76,6 @@ _default:
 
 # link Ianus archive
 @ Ianus:
-  # vim
-  if [[ ! -d $HOME/.vim ]]; then mkd -p $HOME.vim; fi                              # create physical .vim directory @HOME
-  if [[ -d $HOME/.vim/bundle ]]; then rm -rf $HOME/.vim/bundle; fi                 # purge before linking
-  ln -svf $IANUS/vim/bundle $HOME/.vim/bundle                                      # link only bundles
-  ln -svf $IANUS/vim/vimrc $HOME/.vimrc                                            # vimrc
-
   # R
   if [[ -d $HOME/.Renviron.d ]]; then rm -rf $HOME/.Renviron.d; fi                 # purge before linking
   ln -svf $IANUS/R/Renviron.d $HOME/.Renviron.d                                    # renviron directory
@@ -145,14 +139,6 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
   rsync -azvhP $IANUS/micro/bindings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/ # micro bindings
   rsync -azvhP $IANUS/micro/settings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/ # micro settings
 
-  # TODO: create a vim version to deploy remotely
-  # # vim
-  # rsync -azvhP $IANUS/vim/bundle {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/            # vim bundle
-  # rsync -azvhP $IANUS/vim/functions.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/     # vim functions
-  # rsync -azvhP $IANUS/vim/keybindings.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/   # vim keybindings
-  # rsync -azvhP $IANUS/vim/plugins.vim {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/       # vim plugins
-  # rsync -azvhP $IANUS/vim/vimrc {{RemoteUppmax}}:/home/drivas/.archive/ianus/vim/             # vimrc
-
 ################################################################################
 
 RemotePawsey := "drivas@topaz.pawsey.org.au"
@@ -172,24 +158,10 @@ RemotePawsey := "drivas@topaz.pawsey.org.au"
   rsync -azvhP $IANUS/micro/bindings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro bindings
   rsync -azvhP $IANUS/micro/settings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro settdirectory
 
-  # TODO: create a vim version to deploy remotely
-  # # vim
-  # rsync -azvhP $IANUS/vim/bundle {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP $IANUS/vim/functions.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP $IANUS/vim/keybindings.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP $IANUS/vim/plugins.vim {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-  # rsync -azvhP $IANUS/vim/vimrc {{RemotePawsey}}:/home/drivas/.archive/ianus/vim/
-
 ################################################################################
 
 # link archives Uppmax
 @ Uppmax:
-  # vim
-  if [[ ! -d $HOME/.vim ]]; then mkd -p $HOME.vim; fi                          # create physical .vim directory @HOME
-  if [[ -d $HOME/.vim/bundle ]]; then rm -rf $HOME/.vim/bundle; fi             # purge before linking
-  ln -svf $IANUS/vim/bundle $HOME/.vim/bundle                                  # link only bundles
-  ln -svf $IANUS/vim/vimrc $HOME/.vimrc                                        # vimrc
-
   # @HOME
   ln -svf $IANUS/R/Rprofile.d $HOME/.Rprofile.d                                # rprofile directory
   ln -svf $IANUS/R/uppmax_Rprofile.R $HOME/.Rprofile                           # rprofile
@@ -228,12 +200,6 @@ RemotePawsey := "drivas@topaz.pawsey.org.au"
 
 # link archives Pawsey
 @ Pawsey:
-  # # vim
-  # if [[ ! -d $HOME/.vim ]]; then mkd -p $HOME.vim; fi                          # create physical .vim directory @HOME
-  # if [[ -d $HOME/.vim/bundle ]]; then rm -rf $HOME/.vim/bundle; fi             # purge before linking
-  # ln -svf $IANUS/vim/bundle $HOME/.vim/bundle                                  # link only bundles
-  # ln -svf $IANUS/vim/vimrc $HOME/.vimrc                                        # vimrc
-
   # @HOME
   ln -svf $IANUS/R/Rprofile.d $HOME/.Rprofile.d                                # rprofile directory
   ln -svf $IANUS/R/pawsey_Rprofile.R $HOME/.Rprofile                           # rprofile
