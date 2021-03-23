@@ -94,9 +94,33 @@ map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')                         
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')                     -- implementation
 map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')                     -- signature
 map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    -- symbol
+
+-- telescope
+map('n', 'tt', ':Telescope ')
+map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
+map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
+map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
+
+map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')      -- treesitter
+map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
+map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')     -- ripgrep all files
+
+map('n', 'gs', '<cmd>lua require(\'telescope.builtin\').git_status()<CR>')      -- git status
+map('n', 'gc', '<cmd>lua require(\'telescope.builtin\').git_commits()<CR>')     -- git commits
+map('n', 'gb', '<cmd>lua require(\'telescope.builtin\').git_branches()<CR>')    -- git branches
+map('n', 'gv', '<cmd>lua require(\'telescope.builtin\').git_bcommits()<CR>')    -- git branch preview
+
+map('n', '<C-m>', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')        -- marks
+map('n', '<C-p>', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')    -- registers
+map('n', 'tk', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')         -- keymaps
+map('n', 'tm', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       -- man pages
+map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
+
 -- barbar
 map('n', '<TAB>', ':BufferNext<CR>')                                            -- next tab
 map('n', '<S-TAB>', ':BufferPrevious<CR>')                                      -- previous tab
 map('n', '<C-]>', ':BufferMoveNext<CR>')                                        -- move next tab
 map('n', '<C-[>', ':BufferMovePrevious<CR>')                                    -- move previous tab
+
+map('n', '<C-f>', ':FZF<CR>')                                                   -- fuzzy finder
 
