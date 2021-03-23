@@ -94,3 +94,9 @@ map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')                         
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')                     -- implementation
 map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')                     -- signature
 map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    -- symbol
+-- barbar
+map('n', '<TAB>', ':BufferNext<CR>')                                            -- next tab
+map('n', '<S-TAB>', ':BufferPrevious<CR>')                                      -- previous tab
+map('n', '<C-]>', ':BufferMoveNext<CR>')                                        -- move next tab
+map('n', '<C-[>', ':BufferMovePrevious<CR>')                                    -- move previous tab
+
