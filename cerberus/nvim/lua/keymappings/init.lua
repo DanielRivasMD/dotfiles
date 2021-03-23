@@ -1,5 +1,4 @@
 
-
 -------------------- mappings ------------------------------
 
 map('n', '<Space>', '<NOP>')
@@ -76,18 +75,22 @@ map('v', '<S-Down>', '}')
 map('x', 'K', ':move \'<-2<CR>gv-gv\'')
 map('x', 'J', ':move \'>+1<CR>gv-gv\'')
 
+-- move lines normal mode
+map('n', 'J', 'ddp')
+map('n', 'K', 'ddkP')
+
 -- duplicate line
-map('i', 'kk', '<ESC>yypi')
-map('n', 'kk', 'yyp')
+map('i', '<C-d>', '<ESC>yypi')
+map('n', '<C-d>', 'yyp')
 
 -- lsp
-map('n', 'gk,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
-map('n', 'gj;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-map('n', 'gl', '<cmd>lua vim.lsp.buf.hover()<CR>')
-map('n', 'gf', '<cmd>lua vim.lsp.buf.rename()<CR>')
-map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-map('n', 'gs', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
+map('n', 'gk,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')                  -- previous diagnostic
+map('n', 'gj;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')                  -- next diagnostic
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')                         -- definition
+map('n', 'ge', '<cmd>lua vim.lsp.buf.declaration()<CR>')                        -- declaration
+map('n', 'gf', '<cmd>lua vim.lsp.buf.hover()<CR>')                              -- hover
+map('n', 'gl', '<cmd>lua vim.lsp.buf.rename()<CR>')                             -- rename
+map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')                         -- references
+map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')                     -- implementation
+map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')                     -- signature
+map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    -- symbol
