@@ -17,3 +17,5 @@ require('plugins.telescope')   -- TODO: customize
 
 -- vimscript
 vim.cmd('source /Users/drivas/.config/nvim/vimscript/whichkey/init.vim')   -- which key
+vim.cmd('source /Users/drivas/.config/nvim/vimscript/vim-go/init.vim')     -- vim go
+
