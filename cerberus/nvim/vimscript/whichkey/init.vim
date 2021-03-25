@@ -91,7 +91,7 @@ vmap <leader>ct :call NERDComment("n", "Append")<CR><space>TODO:<space>
  let g:which_key_map.g = {
    \ 'name' : '+Git',
    \ 'a' : [':Git add %'   , 'add current file'],
-   \ 'c' : [':Git commit'  , 'add current file'],
+   \ 'c' : [':Git commit'  , 'add commit'],
    \ 'd' : [':Gdiffsplit!' , 'diff'],
    \ '[' : [':diffget //2' , 'get left'],
    \ ']' : [':diffget //3' , 'get right'],
