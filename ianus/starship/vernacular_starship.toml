@@ -6,24 +6,24 @@ format                                       = '$all'
 add_newline                                  = false
 
 [character]
-success_symbol                               = '[∑](bold #1874CD)'
-error_symbol                                 = '[χ](bold #8B0000)'
-vicmd_symbol                                 = '[❮](bold #C2D94C)'
+success_symbol                               = ' [∑](bold #1874CD)'
+error_symbol                                 = ' [χ](bold #8B0000)'
+vicmd_symbol                                 = ' [❮](bold #C2D94C)'
 
 [cmd_duration]
 min_time                                     = 50
-format                                       = '[$duration](bold #FFC125) '
+format                                       = ' [$duration](bold #FFC125)'
 
 [directory]
 truncation_length                            = 2
 truncate_to_repo                             = true
-style                                        = '#00CED1'
+format                                       = '[$path](#00CED1)'
 
 [env_var]
 disabled                                     = true
 variable                                     = 'STARSHIP_SHELL'
 default                                      = 'unknown shell'
-format                                       = '[$env_value](bold #778899) '
+format                                       = ' [$env_value](bold #778899)'
 
 [hostname]
 disabled                                     = true
@@ -39,17 +39,17 @@ style                                        = '#00CED1'
 disabled                                     = true
 
 [package]
-format                                       = '[](#95E6CB)  [$version](#acacac) '
+format                                       = ' [](#95E6CB)  [$version](#acacac)'
 
 [status]
-format                                       = '[$status](#8B0000) '
+format                                       = ' [$status](#8B0000)'
 disabled                                     = false
 
 ################################################################################
 
 [shell]
-bash_indicator = 'β '
-fish_indicator = 'φ '
+bash_indicator = ' β'
+fish_indicator = ' φ'
 zsh_indicator = ''
 format = '[$indicator](#4EA24E)'
 disabled = false
@@ -59,14 +59,14 @@ disabled = false
 [git_branch]
 truncation_length                            = 7
 truncation_symbol                            = ''
-format                                       = '[[](bold #778899) $branch](#4EA24E) '
+format                                       = ' [[](bold #778899) $branch](#4EA24E) '
 
 [git_commit]
 commit_hash_length                           = 4
-format                                       = '[($hash)()](bold #4EA24E) '
+format                                       = ' [($hash)()](bold #4EA24E) '
 
 [git_state]
-progress_divider                             = '| '
+progress_divider                             = '|'
 style                                        = 'bold #FFC125'
 
 [git_status]
@@ -81,34 +81,34 @@ staged                                       = ' [Ω](#95E6CB)[${count}](#bebebe
 renamed                                      = ' [⇌](#FFC125)[${count}](#bebebe)'
 deleted                                      = ' [χ](#8B0000)[${count}](#bebebe)'
 
-format                                       = '([\[$ahead_behind$all_status\]](bold #bebebe)) '
+format                                       = '([\[$ahead_behind$all_status \]](bold #bebebe))'
 
 ################################################################################
 
 [docker_context]
-format                                       = '[ $context](bold #1874CD) '
+format                                       = ' [ $context](bold #1874CD)'
 
 [golang]
-format                                       = '[ﳑ](#00CED1) [$version](bold #acacac) '
+format                                       = ' [ﳑ](#00CED1) [$version](bold #acacac)'
 
 [julia]
-format                                       = '[ஃ](#9C4C9C) [$version](bold #acacac) '
+format                                       = ' [ஃ](#9C4C9C) [$version](bold #acacac)'
 
 [kubernetes]
+format                                       = ' [☸](#00CED1) [$version](bold #acacac)'
 disabled                                     = false
-format                                       = '[☸](#00CED1) [$version](bold #acacac) '
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s'                      = 'dev'
 
 [lua]
-format                                       = '[](#708090) [$version](#acacac) '
+format                                       = ' [](#708090) [$version](#acacac)'
 
 [python]
 pyenv_version_name                           = true
 pyenv_prefix                                 = ''
-format                                       = '[](#228B22) '
+format                                       = ' [](#228B22)'
 
 [rust]
-format                                       = '[⚙️](#CD6600) [$version](#acacac) '
+format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
 
 ################################################################################
