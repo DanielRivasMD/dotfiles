@@ -52,7 +52,7 @@ paq {'junegunn/fzf.vim'}
 paq {'preservim/nerdcommenter'}
 paq {'godlygeek/tabular'}
 
---paq {'easymotion/vim-easymotion'}
+paq {'easymotion/vim-easymotion'}
 
 --     -- -- Easily Create Gists
 --     -- use 'mattn/vim-gist'
