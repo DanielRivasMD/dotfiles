@@ -2,6 +2,9 @@
 " => vim-easymotion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" keep cursor shape
+autocmd OptionSet guicursor noautocmd set guicursor=
+
 " disable default mappings
 let g:EasyMotion_do_mapping = 0
 
