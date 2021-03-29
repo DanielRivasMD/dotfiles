@@ -20,15 +20,15 @@ truncate_to_repo                             = true
 format                                       = '[$path](#00CED1)'
 
 [env_var]
-disabled                                     = true
 variable                                     = 'STARSHIP_SHELL'
 default                                      = 'unknown shell'
 format                                       = ' [$env_value](bold #778899)'
+disabled                                     = true
 
 [hostname]
-disabled                                     = true
 ssh_only                                     = true
 format                                       = '⟪[$hostname](#B452CD)⟫'
+disabled                                     = false
 
 [jobs]
 symbol                                       = '∫'
@@ -44,6 +44,9 @@ format                                       = ' [](#95E6CB)  [$version](#aca
 [status]
 format                                       = ' [$status](#8B0000)'
 disabled                                     = false
+
+[username]
+disabled                                     = true
 
 ################################################################################
 
