@@ -83,20 +83,7 @@
   { "keys": ["ctrl+space"],            "command": "prev_modification", },
 
   // paste from history
-  { "keys": ["ctrl+p"],               "command": "paste_from_history", },
-
-  // case control
-  { "keys": ["ctrl+u"],               "command": "upper_case", },
-  { "keys": ["ctrl+l"],               "command": "lower_case", },
-
-  // marks
-  { "keys": ["ctrl+n"],               "command": "set_mark", },
-  { "keys": ["ctrl+z"],               "command": "select_to_mark", },
-  { "keys": ["ctrl+v"],               "command": "delete_to_mark", },
-  { "keys": ["ctrl+b"],               "command": "swap_with_mark", },
-  { "keys": ["ctrl+c"],               "command": "clear_bookmarks",                   "args": {"name": "mark"}, },
-
-  { "keys": ["ctrl+y"],               "command": "yank", },
+  { "keys": ["alt+command+p"],               "command": "paste_from_history", },
 
   // folding
   { "keys": ["alt+command+ctrl+]"],   "command": "unfold_all" },
@@ -116,8 +103,8 @@
   { "keys": ["ctrl+shift+."],         "command": "run_macro", },
 
   // indent
-  { "keys": ["shift+alt+i"],          "command": "indent", },
-  { "keys": ["shift+alt+o"],          "command": "unindent", },
+  { "keys": ["cmd+]"],                "command": "indent", },
+  { "keys": ["cmd+["],                "command": "unindent", },
 
   // git gutter
   { "keys": ["ctrl+g"],               "command": "git_gutter_blame", }
