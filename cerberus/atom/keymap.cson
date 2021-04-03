@@ -49,9 +49,9 @@
 'body':
 
   # split panes
-  'ctrl--': 'pane:split-down-and-copy-active-item' # atom specific
-  'ctrl-\\': 'pane:split-right-and-copy-active-item' # atom specific
-  'ctrl-x': 'pane:close' # atom specific
+  'ctrl--': 'pane:split-down-and-copy-active-item'
+  'ctrl-\\': 'pane:split-right-and-copy-active-item'
+  'ctrl-x': 'pane:close'
 
   'ctrl-space': 'window:focus-previous-pane'
   'ctrl-up': 'window:focus-pane-above'
@@ -70,10 +70,6 @@
   'ctrl-cmd-up': 'unset!'
   'ctrl-cmd-down': 'unset!'
 
-'.workspace':
-  'ctrl-shift-8': 'github:toggle-github-tab'
-  'ctrl-shift-9': 'github:toggle-git-tab'
-
 '.platform-darwin':
 
 # editor core
@@ -91,7 +87,7 @@
   'cmd-\'': 'tree-view:toggle-focus'
   'ctrl-0': 'abort!'
 
-#------------------------------------------------------------------------------------------------------------------------------
+  'cmd-p': 'unset!'
 
 # advanced open file
 '.platform-darwin atom-workspace':
@@ -106,12 +102,7 @@
 
   # paste history
   'cmd-c': 'clipboard-history:copy'
-  'ctrl-p': 'clipboard-history:paste'
-
-  # symbols view
-  'cmd-r': 'symbols-view:toggle-file-symbols'
-  'cmd-alt-down': 'symbols-view:go-to-declaration'
-  'cmd-alt-up': 'symbols-view:retu'
+  'cmd-alt-p': 'clipboard-history:paste'
 
   # core editor
   'ctrl-alt-]': 'editor:unfold-current-row'
@@ -131,45 +122,16 @@
   'shift-alt-cmd-]': 'unset!'
   'shift-alt-cmd-[': 'unset!'
 
-  # autoindent selection
-  'shift-alt-i': 'editor:indent-selected-rows'
-  'shift-alt-o': 'editor:outdent-selected-rows'
-  'shift-alt-p': 'editor:auto-indent'
-
-  'cmd-[': 'abort!'
-  'cmd-]': 'abort!'
-
-  # tabs & spaces
-  'alt-cmd-,': 'whitespace:convert-spaces-to-tabs'
-  'alt-cmd-.': 'whitespace:convert-tabs-to-spaces'
-
 # autocompletion
 '.autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
   'escape': 'autocomplete-plus:cancel'
 
-#------------------------------------------------------------------------------------------------------------------------------
-
-'atom-workspace':
-
-  # macros
-  'ctrl-.': 'atom-keyboard-macros:start_kbd_macro'
-  'ctrl->': 'atom-keyboard-macros:end_kbd_macro'
-  'ctrl-/': 'atom-keyboard-macros:call_last_kbd_macro'
-
-#------------------------------------------------------------------------------------------------------------------------------
-
 # Core Editor
 'atom-text-editor':
   'alt-t': 'unset!'
 
-  # case control
-  'ctrl-u': 'editor:upper-case'
-  'ctrl-l': 'editor:lower-case'
-
-  # Pandoc quick export
-  'cmd-alt-h': 'Pandoc:pandoc2HTML'
-  'cmd-alt-p': 'Pandoc:pandoc2PDF'
+# TODO: matching bracket
 
 #------------------------------------------------------------------------------------------------------------------------------
 #
