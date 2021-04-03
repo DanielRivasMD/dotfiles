@@ -1,5 +1,6 @@
 {
-    "editor.fontSize": 18,
+    "window.zoomLevel": 1,
+    "editor.fontSize": 16,
     "editor.tabSize": 2,
     "julia.enableTelemetry": true,
     "workbench.list.horizontalScrolling": true,
@@ -27,7 +28,7 @@
     "julia.enableCrashReporter": false,
     "terminal.integrated.shell.osx": "/bin/zsh",
     "workbench.startupEditor": "newUntitledFile",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 16,
     "editor.renderWhitespace": "all",
     "editor.wordWrapColumn": 135,
     "editor.wordWrap": "on",
@@ -49,7 +50,6 @@
 
 
     "todo-tree.tree.showScanModeButton": false,
-    "breadcrumbs.enabled": true,
     "editor.renderControlCharacters": true,
     "C_Cpp.default.browse.path": [],
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
@@ -63,7 +63,7 @@
     ],
     "workbench.activityBar.visible": true,
     "yaml.schemas": {
-        "file:///Users/drivas/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/drivas/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
 
     "atlascode.jira.jqlList": [
@@ -75,5 +75,20 @@
             "siteId": "7c5212b0-03db-4812-b9c1-cb0130a00dfa",
             "monitor": true
         }
-    ]
+    ],
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "outline.problems.colors": false,
+    "outline.problems.badges": false,
+    "problems.decorations.enabled": false,
+    "customizeUI.titleBar": "regular",
+    "customizeUI.activityBar": "wide"
 }
