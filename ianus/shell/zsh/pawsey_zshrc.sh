@@ -106,6 +106,6 @@ fi
 
 # edit line in editor with ctrl-n:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^n' edit-command-line
+bindkey '^b' edit-command-line
 
 # ==========================
