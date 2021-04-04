@@ -123,4 +123,3 @@ map('n', '<C-]>', ':BufferMoveNext<CR>')                                        
 map('n', '<C-[>', ':BufferMovePrevious<CR>')                                    -- move previous tab
 
 map('n', '<C-f>', ':FZF<CR>')                                                   -- fuzzy finder
-

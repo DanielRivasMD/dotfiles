@@ -120,6 +120,8 @@ _default:
   ln -svf $IANUS/shell/nushell/* "/Users/drivas/Library/Application Support/org.nushell.nu/"
 
 ################################################################################
+# Hermes
+################################################################################
 
 RemoteUppmax := "drivas@rackham.uppmax.uu.se"
 
