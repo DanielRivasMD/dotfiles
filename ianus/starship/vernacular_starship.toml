@@ -5,6 +5,11 @@ format                                       = '$all'
 
 add_newline                                  = false
 
+command_timeout                              = 3000
+
+[battery]
+disable                                      = true
+
 [character]
 success_symbol                               = ' [∑](bold #1874CD)'
 error_symbol                                 = ' [χ](bold #8B0000)'
@@ -115,3 +120,4 @@ format                                       = ' [](#228B22)'
 format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
 
 ################################################################################
+
