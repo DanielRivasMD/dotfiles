@@ -110,8 +110,8 @@ map('n', 'gc', '<cmd>lua require(\'telescope.builtin\').git_commits()<CR>')     
 map('n', 'gb', '<cmd>lua require(\'telescope.builtin\').git_branches()<CR>')    -- git branches
 map('n', 'gv', '<cmd>lua require(\'telescope.builtin\').git_bcommits()<CR>')    -- git branch preview
 
-map('n', 'tm', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')        -- marks
-map('n', 'tp', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')    -- registers
+map('n', 'tm', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')           -- marks
+map('n', 'tp', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')       -- registers
 map('n', 'tk', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')         -- keymaps
 map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       -- man pages
 map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands

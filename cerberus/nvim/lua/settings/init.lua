@@ -31,7 +31,5 @@ opt('o', 'clipboard', "unnamedplus")                          -- Copy paste betw
 opt('o', 'guifont', "JetBrainsMono\\ Nerd\\ Font\\ Mono:h18")
 
 
-cmd('set formatoptions-=cro')                                 -- Stop newline continution of comments
 cmd('set guicursor=')                                         -- patch cursor change
 
--- cmd 'autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o'

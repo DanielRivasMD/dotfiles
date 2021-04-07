@@ -19,3 +19,4 @@ let g:EasyMotion_keys = get(g:,
   \ 'EasyMotion_keys', 'asdghklqwertyuiopzxcvbnmfj')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
