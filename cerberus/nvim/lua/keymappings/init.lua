@@ -76,6 +76,8 @@ map('x', 'K', ':move \'<-2<CR>gv-gv\'')
 map('x', 'J', ':move \'>+1<CR>gv-gv\'')
 
 -- move lines normal mode
+map('i', '<M-j>', '<ESC>ddpi')
+map('i', '<M-k>', '<ESC>ddkPi')
 map('n', 'J', 'ddp')
 map('n', 'K', 'ddkP')
 
