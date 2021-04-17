@@ -2,6 +2,9 @@
 " automatically deletes trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" use rustfmt on save
+let g:rustfmt_autosave = 1
+
 " enable filetype plugins
 filetype plugin on
 filetype indent on
