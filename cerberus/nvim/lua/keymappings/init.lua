@@ -4,10 +4,6 @@
 map('n', '<Space>', '<NOP>')
 vim.g.mapleader = ' '
 
--- <Tab> to navigate the completion menu
-map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
-map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
-
 -- no hl
 map('n', '<Leader>h', ':set hlsearch!<CR>')
 
@@ -129,3 +125,4 @@ map('n', '<C-]>', ':BufferMoveNext<CR>')                                        
 map('n', '<C-[>', ':BufferMovePrevious<CR>')                                    -- move previous tab
 
 map('n', '<C-f>', ':FZF<CR>')                                                   -- fuzzy finder
+
