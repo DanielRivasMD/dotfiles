@@ -71,6 +71,10 @@ map('n', '<S-Down>', 'v}')
 map('v', '<S-Up>', '{')
 map('v', '<S-Down>', '}')
 
+map('i', '<C-l>', '<ESC>0v$')
+map('n', '<C-l>', '0v$')
+map('v', '<C-l>', '<ESC>0v$')
+
 -- move selected line / block of text in visual mode
 map('x', 'K', ':move \'<-2<CR>gv-gv\'')
 map('x', 'J', ':move \'>+1<CR>gv-gv\'')
