@@ -54,6 +54,8 @@ paq {'godlygeek/tabular'}
 
 paq {'easymotion/vim-easymotion'}
 
+paq {'jpalardy/vim-slime'}
+
 --     -- -- Easily Create Gists
 --     -- use 'mattn/vim-gist'
 --     -- use 'mattn/webapi-vim'
