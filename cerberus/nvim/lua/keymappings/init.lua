@@ -31,23 +31,25 @@ map('i', 'UU', '<ESC>U')
 -- undo
 map('i', 'uu', '<ESC>u')
 
--- movement
+-- movement begin / end line
 map('i', '<C-a>', '<ESC>I')
 map('i', '<C-e>', '<ESC>A')
 map('n', '<C-a>', '0')
 map('n', '<C-e>', '$')
 
+-- movement word
 map('i', '<M-Left>', '<ESC>Bi')
 map('i', '<M-Right>', '<ESC>Ea')
 map('n', '<M-Left>', 'B')
 map('n', '<M-Right>', 'E')
 
+-- movement paragraph
 map('i', '<M-Up>', '<ESC>{i')
 map('i', '<M-Down>', '<ESC>}i')
 map('n', '<M-Up>', '{')
 map('n', '<M-Down>', '}')
 
--- selection
+-- select word
 map('i', '<S-Left>', '<ESC>vB')
 map('i', '<S-Right>', '<ESC>vE')
 map('n', '<S-Left>', 'vB')
@@ -55,6 +57,7 @@ map('n', '<S-Right>', 'vE')
 map('v', '<S-Left>', 'B')
 map('v', '<S-Right>', 'E')
 
+-- select to begin / end line
 map('i', '<M-S-Left>', '<ESC>v0')
 map('i', '<M-S-Right>', '<ESC>v$')
 map('n', '<M-S-Left>', 'v0')
@@ -62,6 +65,7 @@ map('n', '<M-S-Right>', 'v$')
 map('v', '<M-S-Left>', '0')
 map('v', '<M-S-Right>', '$')
 
+-- select line from cursor
 map('i', '<S-Up>', '<ESC>vk')
 map('i', '<S-Down>', '<ESC>vj')
 map('n', '<S-Up>', 'vk')
@@ -69,6 +73,7 @@ map('n', '<S-Down>', 'vj')
 map('v', '<S-Up>', 'k')
 map('v', '<S-Down>', 'j')
 
+-- select paragraph
 map('i', '<M-S-Up>', '<ESC>v{')
 map('i', '<M-S-Down>', '<ESC>v}')
 map('n', '<M-S-Up>', 'v{')
@@ -76,9 +81,10 @@ map('n', '<M-S-Down>', 'v}')
 map('v', '<M-S-Up>', '{')
 map('v', '<M-S-Down>', '}')
 
-map('i', '<C-l>', '<ESC>0v$')
-map('n', '<C-l>', '0v$')
-map('v', '<C-l>', '<ESC>0v$')
+-- select line
+map('i', '<C-g>', '<ESC>0v$')
+map('n', '<C-g>', '0v$')
+map('v', '<C-g>', '<ESC>0v$')
 
 -- move selected line / block of text in visual mode
 map('x', 'K', ':move \'<-2<CR>gv-gv\'')

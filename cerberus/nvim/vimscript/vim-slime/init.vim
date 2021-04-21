@@ -5,6 +5,6 @@ let g:slime_dont_ask_default = 1                                                
 
 let g:slime_no_mappings = 1                                                       " do not use default mappings
 
-xmap <C-h> <Plug>SlimeRegionSend
-nmap <C-h> <Plug>SlimeParagraphSend
+xmap <C-n> <Plug>SlimeRegionSend
+nmap <C-n> <Plug>SlimeParagraphSend
 
