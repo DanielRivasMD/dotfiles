@@ -100,6 +100,13 @@ map('n', 'K', 'ddkP')
 map('i', '<C-d>', '<ESC>yypi')
 map('n', '<C-d>', 'yyp')
 
+-- auto pairs
+map('i', '\'', '\'\'<Left>')
+map('i', '"', '""<Left>')
+map('i', '(', '()<Left>')
+map('i', '[', '[]<Left>')
+map('i', '{', '{}<Left>')
+
 -- lsp
 map('n', 'gk,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')                  -- previous diagnostic
 map('n', 'gj;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')                  -- next diagnostic
