@@ -74,8 +74,8 @@ commit_hash_length                           = 4
 format                                       = ' [($hash)()](bold #4EA24E) '
 
 [git_state]
-progress_divider                             = '|'
-style                                        = 'bold #FFC125'
+# progress_divider                             = '|'
+# style                                        = 'bold #FFC125'
 
 [git_status]
 ahead                                        = ' [⇡](#1874CD)[${count}](#bebebe)'
