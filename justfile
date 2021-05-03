@@ -232,6 +232,30 @@ RemotePawsey := "drivas@topaz.pawsey.org.au"
   ln -svf $IANUS/shell/zsh/zsh_pandoc_autocompletion.sh $HOME/.zsh             # zsh completion
   ln -svf $IANUS/shell/zsh/completion $HOME/.config/zsh_completion             # zsh completion
 
+  # link executables
+  ln -svf /scratch/pawsey0263/drivas/software/bat-v0.18.0-x86_64-unknown-linux-musl/bat bin
+  ln -svf /scratch/pawsey0263/drivas/software/diamond/diamond bin
+  ln -svf /scratch/pawsey0263/drivas/software/exa/exa bin
+  ln -svf /scratch/pawsey0263/drivas/software/fd-v8.2.1-x86_64-unknown-linux-musl/fd bin
+  ln -svf /scratch/pawsey0263/drivas/software/micro/micro bin
+  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/makeblastdb bin
+  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/blastn bin
+  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/blastp bin
+  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/blastx bin
+  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/tblastn bin
+  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/tblastx bin
+  ln -svf /scratch/pawsey0263/drivas/software/pier/pier bin
+  ln -svf /scratch/pawsey0263/drivas/software/ripgrep-12.1.1-x86_64-unknown-linux-musl/rg bin
+  ln -svf /scratch/pawsey0263/drivas/software/runiq/runiq bin
+  ln -svf /scratch/pawsey0263/drivas/software/ruplacer/ruplacer bin
+  ln -svf /scratch/pawsey0263/drivas/software/samesame/samesame bin
+  ln -svf /scratch/pawsey0263/drivas/software/sd/sd bin
+  ln -svf /scratch/pawsey0263/drivas/software/starship/starship bin
+  ln -svf /scratch/pawsey0263/drivas/software/wordcrab/wordcrab bin
+  ln -svf /scratch/pawsey0263/drivas/software/xcp/xcp bin
+  ln -svf /scratch/pawsey0263/drivas/software/xsv/xsv bin
+  ln -svf /scratch/pawsey0263/drivas/software/zoxide/zoxide bin
+
   # # fish
   # ln -svf $IANUS/shell/fish/pawsey_config.fish $HOME/.config/fish/config.fish  # fish config
 
