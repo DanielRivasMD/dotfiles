@@ -3,10 +3,8 @@
 # ===  # Forked patches  ===
 # ==========================
 
-alias copo='~/bin/forkedPatch/copo'
 alias pier='~/bin/forkedPatch/pier'
 alias rip='~/bin/forkedPatch/rip'
-alias git-local-ignore='~/bin/forkedPatch/git-local-ignore'
 
 # ==========================
 # ===  General aliases   ===
