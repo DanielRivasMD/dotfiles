@@ -14,7 +14,7 @@ vim.g.startify_fortune_use_unicode = 1
 vim.g.startify_session_persistence = 1
 
 vim.api.nvim_exec(
-  'let startify_bookmarks = [ { \'G\': \'/Users/drivas/Factorem/WebSurf/Archive/Notes/github.md\' }, { \'K\': \'/Users/drivas/.archive/cerberus/khal/khalNew.sh\' }, { \'Z\': \'~/.zshrc\' },]',
+  'let startify_bookmarks = [ { \'G\': \'/Users/drivas/Factorem/WebSurf/Archive/Notes/github.md\' }, { \'K\': \'/Users/drivas/.archive/cerberus/khal/khalNew.sh\' }, { \'Z\': \'/Users/drivas/.archive/ianus/shell/zsh/vernacular_zshrc.sh\' },]',
   true)
 
 vim.api.nvim_exec(
