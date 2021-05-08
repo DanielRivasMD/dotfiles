@@ -1,6 +1,6 @@
 {
     "window.zoomLevel": 1,
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "editor.tabSize": 2,
     "julia.enableTelemetry": true,
     "workbench.list.horizontalScrolling": true,
@@ -8,7 +8,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
     "julia.format.indent": 2,
-    "workbench.colorTheme": "Solarized Dark",
     "workbench.iconTheme": "file-icons",
     "screencastMode.mouseIndicatorColor": "#303030",
 
@@ -90,5 +89,12 @@
     "outline.problems.badges": false,
     "problems.decorations.enabled": false,
     "customizeUI.titleBar": "regular",
-    "customizeUI.activityBar": "wide"
+    "customizeUI.activityBar": "wide",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.colorTheme": "Tokyo Night"
 }
