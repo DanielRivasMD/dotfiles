@@ -8,7 +8,7 @@ paq {'savq/paq-nvim', opt = true}       -- paq-nvim manages itself
 
 paq {'ayu-theme/ayu-vim'}               -- theme
 paq {'mhinz/vim-startify'}              -- start page
-paq {'glepnir/galaxyline.nvim'}         -- status bar TODO: customize
+paq {'glepnir/galaxyline.nvim'}         -- status bar
 paq {'romgrk/barbar.nvim'}              -- tabs
 paq {'kyazdani42/nvim-tree.lua'}        -- tree
 
@@ -17,9 +17,12 @@ paq {'ryanoasis/vim-devicons'}          -- devicons
 
 paq {'rust-lang/rust.vim'}
 paq {'racer-rust/vim-racer'}
+--paq {'rust-analyzer/rust-analyzer'}
 paq {'fatih/vim-go'}
 
 paq {'neovim/nvim-lspconfig'}           -- lsp
+
+paq {'alexaandru/nvim-lspupdate'}       -- lsp manager
 
 paq {'nvim-treesitter/nvim-treesitter'} -- treesitter
 
@@ -41,6 +44,7 @@ paq {'Yggdroot/indentline'}
 
 paq {'JuliaEditorSupport/julia-vim'}
 paq {'neovim/nvim-lsp'}
+paq {'kdheepak/JuliaFormatter.vim'}
 
 paq {'prabirshrestha/async.vim'}
 paq {'prabirshrestha/asyncomplete.vim'}
