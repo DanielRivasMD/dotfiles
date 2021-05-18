@@ -64,7 +64,7 @@ atreplinit() do repl
 
     # julia specific environmental variables
     ENV["PAGER"] = "less";
-    ENV["EDITOR"] = "subl";
+    ENV["VISUAL"] = "subl";
 
     ################################################################################
 
