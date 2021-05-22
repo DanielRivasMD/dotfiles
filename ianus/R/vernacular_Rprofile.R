@@ -11,6 +11,11 @@ options(nwarnings = 99)
 
 # package loading
 tryCatch(
+  require(colorout, quietly = T),
+  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
+)
+
+tryCatch(
   require(RStudioAddIns, quietly = T),
   error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
 )
