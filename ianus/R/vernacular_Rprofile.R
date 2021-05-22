@@ -54,9 +54,9 @@ options(dplyr.width = Inf)
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# tryCatch(
-  # startup::startup(),
-  # error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
-# )
+tryCatch(
+  startup::startup(),
+  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
+)
 
 #------------------------------------------------------------------------------------------------------------------------------
