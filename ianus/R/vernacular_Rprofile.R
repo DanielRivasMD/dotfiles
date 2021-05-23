@@ -1,48 +1,48 @@
-
-#------------------------------------------------------------------------------------------------------------------------------
+################################################################################
 
 # base R
-options(prompt = "> ")
+options(prompt = '> ')
 options(stringsAsFactors = F)
 options(max.print = 999)
 options(nwarnings = 99)
 options(max.print = 100)
 options(editor = 'subl')
 
-#------------------------------------------------------------------------------------------------------------------------------
+# dplyr (tibble)
+options(dplyr.width = Inf)      # Show all columns
 
-#------------------------------------------------------------------------------------------------------------------------------
+################################################################################
 
 # open help in Opera
-options(help_type = "html")
-options(browser = "/usr/bin/open -a '/Applications/Opera.app'")
+options(help_type = 'html')
+options(browser = '/usr/bin/open -a "/Applications/Opera.app"')
 
-#------------------------------------------------------------------------------------------------------------------------------
+################################################################################
 
 # override q() to avoid save workspace prompt
 utils::assignInNamespace(
-  "q",
-  function(save = "no", status = 0, runLast = TRUE)
+  'q',
+  function(save = 'no', status = 0, runLast = TRUE)
   {
     .Internal(quit(save, status, runLast))
   },
-  "base"
+  'base'
 )
 
-#------------------------------------------------------------------------------------------------------------------------------
+utils::assignInNamespace(
+  'quit',
+  function(save = 'yes', status = 0, runLast = TRUE)
+  {
+    .Internal(quit(save, status, runLast))
+  },
+  'base'
+)
 
-
-#------------------------------------------------------------------------------------------------------------------------------
-
-# dplyr (tibble)
-# Show all columns
-options(dplyr.width = Inf)
-
-#------------------------------------------------------------------------------------------------------------------------------
+################################################################################
 
 tryCatch(
   startup::startup(),
-  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
+  error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 
-#------------------------------------------------------------------------------------------------------------------------------
+################################################################################
