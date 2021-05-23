@@ -11,22 +11,6 @@ options(editor = 'subl')
 
 #------------------------------------------------------------------------------------------------------------------------------
 
-# package loading
-tryCatch(
-  require(colorout, quietly = T),
-  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
-)
-
-tryCatch(
-  require(RStudioAddIns, quietly = T),
-  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
-)
-
-tryCatch(
-  require(SistWrapper, quietly = T),
-  error = function(ex) message(".Rprofile error: ", conditionMessage(ex))
-)
-
 #------------------------------------------------------------------------------------------------------------------------------
 
 # open help in Opera
