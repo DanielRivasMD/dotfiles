@@ -46,7 +46,8 @@ _default:
   # distant
   ln -svf $CERBERUS/julia/startup.jl $HOME/.julia/config/                                                                                                    # julia startup
   ln -svf $CERBERUS/ssh/config $HOME/.ssh/                                                                                                                   # ssh config
-  ln -svf $CERBERUS/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/"                                                                   # broot config
+  ln -svf $CERBERUS/broot/conf.hjson "/Users/drivas/Library/Application Support/org.dystroy.broot/"                                                          # broot config
+  #ln -svf $CERBERUS/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/"                                                                   # broot config
   ln -svf $CERBERUS/lazycli/config.yml "/Users/drivas/Library/Application Support/lazycli/"                                                                  # lazycli config
 
   # purge before linking
