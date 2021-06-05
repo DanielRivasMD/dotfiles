@@ -18,13 +18,13 @@ atom.commands.add 'atom-text-editor',
 
   'custom:insert-comma': -> atom.workspace.getActiveTextEditor()?.insertText(', ')
 
-  'custom:insert-low_times': -> atom.workspace.getActiveTextEditor()?.insertText(' *= ')
-  'custom:insert-low_divide': -> atom.workspace.getActiveTextEditor()?.insertText(' /= ')
+  'custom:insert-not_equal': -> atom.workspace.getActiveTextEditor()?.insertText(' != ')
   'custom:insert-low_plus': -> atom.workspace.getActiveTextEditor()?.insertText(' += ')
   'custom:insert-low_minus': -> atom.workspace.getActiveTextEditor()?.insertText(' -= ')
-  'custom:insert-not_equal': -> atom.workspace.getActiveTextEditor()?.insertText(' != ')
   'custom:insert-r_pipe_var': -> atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
   'custom:insert-r_pipe': -> atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
+  'custom:insert-julia_subtype': -> atom.workspace.getActiveTextEditor()?.insertText(' <: ')
+  'custom:insert-and': -> atom.workspace.getActiveTextEditor()?.insertText(' & ')
   'custom:insert-times': -> atom.workspace.getActiveTextEditor()?.insertText(' * ')
   'custom:insert-divide': -> atom.workspace.getActiveTextEditor()?.insertText(' / ')
   'custom:insert-plus': -> atom.workspace.getActiveTextEditor()?.insertText(' + ')
@@ -38,14 +38,15 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-lessthan': -> atom.workspace.getActiveTextEditor()?.insertText(' < ')
   'custom:insert-morethan': -> atom.workspace.getActiveTextEditor()?.insertText(' > ')
   'custom:insert-julia_pipe': -> atom.workspace.getActiveTextEditor()?.insertText(' |> ')
+  'custom:insert-doublemore': -> atom.workspace.getActiveTextEditor()?.insertText(' >> ')
 
-  'custom:insert-low_times_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .*= ')
-  'custom:insert-low_divide_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' ./= ')
-  'custom:insert-low_plus_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .+= ')
-  'custom:insert-low_minus_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .-= ')
   'custom:insert-not_equal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .!= ')
+  'custom:insert-low_times': -> atom.workspace.getActiveTextEditor()?.insertText(' *= ')
+  'custom:insert-low_divide': -> atom.workspace.getActiveTextEditor()?.insertText(' /= ')
   'custom:insert-r_pipe_tee': -> atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
   'custom:insert-r_pipe_assign': -> atom.workspace.getActiveTextEditor()?.insertText(' %<>% ')
+  'custom:insert-julia_supertype': -> atom.workspace.getActiveTextEditor()?.insertText(' >: ')
+  'custom:insert-or': -> atom.workspace.getActiveTextEditor()?.insertText(' | ')
   'custom:insert-times_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .* ')
   'custom:insert-divide_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' ./ ')
   'custom:insert-plus_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .+ ')
@@ -59,6 +60,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-lessthan_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .< ')
   'custom:insert-morethan_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .> ')
   'custom:insert-julia_pipe_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .|> ')
+  'custom:insert-doubleless': -> atom.workspace.getActiveTextEditor()?.insertText(' << ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
