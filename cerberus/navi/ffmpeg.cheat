@@ -1,0 +1,10 @@
+% ffmpeg
+
+# Transform to other format
+ffmpeg -i <file>.<input> <file>.<output>
+
+# Copy cut duration
+ffmpeg -i <input> -vcodec copy -ss <stime> -t <duration> <output>
+
+# Copy cut timestamp
+ffmpeg -i <input> -vcodec copy -ss <stime> -to <etime> <output>
