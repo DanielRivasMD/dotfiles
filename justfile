@@ -39,6 +39,7 @@ _default:
   ln -svf $CERBERUS/rustfmt $HOME/.config/                                                                                                                   # rustfmt
   ln -svf $CERBERUS/nvim $HOME/.config                                                                                                                       # nvim directory
   ln -svf $CERBERUS/ranger $HOME/.config                                                                                                                     # ranger directory
+  ln -svf $CERBERUS/gitui $HOME/.config                                                                                                                     # ranger directory
 
   # local
   ln -svf $CERBERUS/rstudio/rstudio-desktop.json $HOME/.local/share/rstudio/                                                                                 # rstudio
@@ -49,10 +50,6 @@ _default:
   ln -svf $CERBERUS/broot/conf.hjson "/Users/drivas/Library/Application Support/org.dystroy.broot/"                                                          # broot config
   #ln -svf $CERBERUS/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/"                                                                   # broot config
   ln -svf $CERBERUS/lazycli/config.yml "/Users/drivas/Library/Application Support/lazycli/"                                                                  # lazycli config
-
-  # purge before linking
-  if [[ -d "/Users/drivas/Library/Application Support/gitui" ]]; then rm -rf "/Users/drivas/Library/Application Support/gitui"; fi
-  ln -svf $CERBERUS/gitui "/Users/drivas/Library/Application Support/gitui"                                                                                  # gitui config directory
 
   # purge before linking
   if [[ -d "/Users/drivas/Library/Application Support/navi/cheats/drivas" ]]; then rm -rf "/Users/drivas/Library/Application Support/navi/cheats/drivas"; fi
