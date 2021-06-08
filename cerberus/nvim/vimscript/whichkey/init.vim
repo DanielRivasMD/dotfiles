@@ -92,13 +92,16 @@ vmap <leader>cb :call NERDComment("n", "Append")<CR><space>BUG:<space>
 " git
  let g:which_key_map.g = {
    \ 'name' : '+Git',
-   \ 'a' : [':Git add %'   , 'add current file'],
-   \ 'c' : [':Git commit'  , 'add commit'],
-   \ 'd' : [':Gvdiffsplit!' , 'diff'],
-   \ '[' : [':diffget //2' , 'get left'],
-   \ ']' : [':diffget //3' , 'get right'],
-   \ 'u' : [':diffupdate'  , 'diff update'],
-   \ 'p' : [':diffput'     , 'diff put'],
+   \ 'a' : [':Git add %'            ,  'add current file'],
+   \ 'A' : [':Git commit ---ammend' ,  'add commit ammed'],
+   \ 'c' : [':Git commit'           ,  'add commit'],
+   \ 'd' : [':Gvdiffsplit!'         ,  'diff'],
+   \ '[' : [':diffget //2'          ,  'get left'],
+   \ ']' : [':diffget //3'          ,  'get right'],
+   \ 'u' : [':diffupdate'           ,  'diff update'],
+   \ 'p' : [':Git ps'               ,  'push remote'],
+   \ 'P' : [':diffput'              ,  'diff put'],
+   \ 's' : [':Gstatus'              ,  'status'],
  \ }
 
 nmap <leader>gh <Plug>(GitGutterStageHunk)
