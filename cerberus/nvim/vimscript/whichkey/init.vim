@@ -94,7 +94,7 @@ vmap <leader>cb :call NERDComment("n", "Append")<CR><space>BUG:<space>
    \ 'name' : '+Git',
    \ 'a' : [':Git add %'   , 'add current file'],
    \ 'c' : [':Git commit'  , 'add commit'],
-   \ 'd' : [':Gdiffsplit!' , 'diff'],
+   \ 'd' : [':Gvdiffsplit!' , 'diff'],
    \ '[' : [':diffget //2' , 'get left'],
    \ ']' : [':diffget //3' , 'get right'],
    \ 'u' : [':diffupdate'  , 'diff update'],
