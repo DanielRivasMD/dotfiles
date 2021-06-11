@@ -88,11 +88,8 @@
     "problems.decorations.enabled": false,
     "customizeUI.titleBar": "regular",
     "customizeUI.activityBar": "wide",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "workbench.colorTheme": "Cobalt2"
 }
