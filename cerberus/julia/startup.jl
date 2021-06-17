@@ -39,6 +39,14 @@ atreplinit() do repl
     ################################################################################
 
     try
+      @eval using Chain
+    catch e
+      @warn "error while importing Chain" e
+    end
+
+     ################################################################################
+
+    try
       @eval using Pipe
     catch e
       @warn "error while importing Pipe" e
