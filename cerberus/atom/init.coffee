@@ -39,8 +39,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-lessthan': -> atom.workspace.getActiveTextEditor()?.insertText(' < ')
   'custom:insert-morethan': -> atom.workspace.getActiveTextEditor()?.insertText(' > ')
   'custom:insert-r_assign': -> atom.workspace.getActiveTextEditor()?.insertText(' <- ')
-  'custom:insert-triple_apostrophe': -> atom.workspace.getActiveTextEditor()?.insertText('```')
-  'custom:insert-julia_enter': -> atom.workspace.getActiveTextEditor()?.insertText('@enter ')
+  'custom:insert-julia_test': -> atom.workspace.getActiveTextEditor()?.insertText('@test ')
 
   'custom:insert-not_equal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .!= ')
   'custom:insert-equalequal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .== ')
@@ -61,8 +60,8 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-lessthan_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .< ')
   'custom:insert-morethan_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .> ')
   'custom:insert-go_assign': -> atom.workspace.getActiveTextEditor()?.insertText(' := ')
-  'custom:insert-tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
   'custom:insert-julia_info': -> atom.workspace.getActiveTextEditor()?.insertText('@info ')
+  'custom:insert-julia_chain': -> atom.workspace.getActiveTextEditor()?.insertText('@chain ')
 
   'custom:insert-not_equal_math': -> atom.workspace.getActiveTextEditor()?.insertText(' ∉ ')
   'custom:insert-sqrt_math': -> atom.workspace.getActiveTextEditor()?.insertText(' √ ')
@@ -71,6 +70,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-double_plus': -> atom.workspace.getActiveTextEditor()?.insertText(' ++ ')
   'custom:insert-double_minus': -> atom.workspace.getActiveTextEditor()?.insertText(' -- ')
   'custom:insert-equal_math': -> atom.workspace.getActiveTextEditor()?.insertText(' ∈ ')
+  'custom:insert-rust_doc': -> atom.workspace.getActiveTextEditor()?.insertText('//! ')
   'custom:insert-julia_subtype': -> atom.workspace.getActiveTextEditor()?.insertText(' <: ')
   'custom:insert-julia_supertype': -> atom.workspace.getActiveTextEditor()?.insertText(' >: ')
   'custom:insert-triple_divide': -> atom.workspace.getActiveTextEditor()?.insertText('/// ')
@@ -84,6 +84,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-doubleless': -> atom.workspace.getActiveTextEditor()?.insertText(' << ')
   'custom:insert-doublemore': -> atom.workspace.getActiveTextEditor()?.insertText(' >> ')
   'custom:insert-r_assign_up': -> atom.workspace.getActiveTextEditor()?.insertText(' <<- ')
+  'custom:insert-triple_apostrophe': -> atom.workspace.getActiveTextEditor()?.insertText('```')
 
   'custom:insert-not_equalequal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .!== ')
   'custom:insert-triple_equal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .=== ')
@@ -94,6 +95,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-tripleless': -> atom.workspace.getActiveTextEditor()?.insertText(' <<< ')
   'custom:insert-triplemore': -> atom.workspace.getActiveTextEditor()?.insertText(' >>> ')
   'custom:insert-r_right_assign_up': -> atom.workspace.getActiveTextEditor()?.insertText(' ->> ')
+  'custom:insert-tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
