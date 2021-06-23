@@ -16,9 +16,9 @@
                 },
                 "rules": [
                     {
-                        "description": "Change caps_lock to control+option+shift.",
                         "manipulators": [
                             {
+                                "description": "Change caps_lock to command+control+option+shift.",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -31,8 +31,32 @@
                                     {
                                         "key_code": "left_shift",
                                         "modifiers": [
+                                            "right_command",
                                             "left_control",
-                                            "left_option",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change rigth_option to control+command",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": [
                                             "left_command"
                                         ]
                                     }
