@@ -1106,7 +1106,7 @@ key_bindings:
 # - { key: RBracket,    mods: Control,                chars: ""                }
   - { key: Semicolon,   mods: Control,                chars: "  "              }
   - { key: Apostrophe,  mods: Control,                chars: "  "              }
-# - { key: Backslash,   mods: Control,                chars: ""                }
+  - { key: Backslash,   mods: Control,                chars: "//! "            }
   - { key: Comma,       mods: Control,                chars: " <: "            }
   - { key: Period,      mods: Control,                chars: " >: "            }
   - { key: Slash,       mods: Control,                chars: "  "              }
@@ -1162,7 +1162,7 @@ key_bindings:
   - { key: A,           mods: Control|Command,        chars: "α"               }
   - { key: B,           mods: Control|Command,        chars: "β"               }
   - { key: C,           mods: Control|Command,        chars: "ψ"               }
-  - { key: W,           mods: Control|Command,        chars: "δ"               }
+  - { key: D,           mods: Control|Command,        chars: "δ"               }
   - { key: E,           mods: Control|Command,        chars: "ϵ"               }
   - { key: F,           mods: Control|Command,        chars: "φ"               }
   - { key: G,           mods: Control|Command,        chars: "γ"               }
@@ -1187,7 +1187,7 @@ key_bindings:
   - { key: A,           mods: Control|Command|Shift,  chars: "Α"               }
   - { key: B,           mods: Control|Command|Shift,  chars: "Β"               }
   - { key: C,           mods: Control|Command|Shift,  chars: "Ψ"               }
-  - { key: W,           mods: Control|Command|Shift,  chars: "Δ"               }
+  - { key: D,           mods: Control|Command|Shift,  chars: "Δ"               }
   - { key: E,           mods: Control|Command|Shift,  chars: "Ε"               }
   - { key: F,           mods: Control|Command|Shift,  chars: "Φ"               }
   - { key: G,           mods: Control|Command|Shift,  chars: "Γ"               }
