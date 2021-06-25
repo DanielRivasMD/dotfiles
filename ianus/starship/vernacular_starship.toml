@@ -116,8 +116,12 @@ pyenv_version_name                           = true
 pyenv_prefix                                 = ''
 format                                       = ' [](#228B22)'
 
+[rlang]
+format                                       = ' [®](#708090) [$version](#acacac)'
+detect_files                                 = [".R"]
+detect_folders                               = [".Rproj.user"]
+
 [rust]
 format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
 
 ################################################################################
-
