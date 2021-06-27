@@ -91,6 +91,10 @@
       "atom-keyboard-macros"
       "clipboard-history"
       "dart"
+      "move-panes"
+      "bracket-matcher"
+      "toggle-quotes"
+      "keybinding-cheatsheet"
     ]
     packagesWithSnippetsDisabled: [
       "highlight-nanorc"
@@ -146,7 +150,6 @@
     onChanges: true
   jumpy:
     fontSize: 1
-    highContrast: true
   "linter-julia": {}
   "linter-ui-default":
     panelHeight: 300

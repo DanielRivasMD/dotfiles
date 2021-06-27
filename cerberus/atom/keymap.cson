@@ -46,92 +46,209 @@
 #
 #------------------------------------------------------------------------------------------------------------------------------
 
+################################################################################
+
 'body':
 
-  # split panes
-  'ctrl--': 'pane:split-down-and-copy-active-item'
-  'ctrl-\\': 'pane:split-right-and-copy-active-item'
-  'ctrl-x': 'pane:close'
+  # unsets
+  'alt-cmd-h': 'abort!'
 
-  'ctrl-space': 'window:focus-previous-pane'
+  'ctrl-alt-]': 'pane:move-item-right'
+  'ctrl-alt-[': 'pane:move-item-left'
+
+  # split panes
+  'ctrl-q =': 'pane:split-right-and-copy-active-item'
+  'ctrl-q -': 'pane:split-down-and-copy-active-item'
+
+  # close pane
+  'shift-alt-q': 'pane:close'
+  'ctrl-q shift-x': 'pane:close'
+
+  # close tab
+  'alt-q': 'core:close'
+  'ctrl-q x': 'core:close'
+
+  # new pane
+  'shift-alt-t': 'application:new-file'
+  'ctrl-q shift-c': 'application:new-file'
+
+  # move to pane
+  'alt-h': 'pane:show-previous-item'
+  'alt-ctrl-left': 'pane:show-previous-item'
+
+  'alt-l': 'pane:show-next-item'
+  'alt-ctrl-right': 'pane:show-next-item'
+
+  # 'ctrl-space': 'window:focus-previous-pane'
   'ctrl-up': 'window:focus-pane-above'
   'ctrl-down': 'window:focus-pane-below'
   'ctrl-left': 'window:focus-pane-on-left'
   'ctrl-right': 'window:focus-pane-on-right'
 
-  'alt-cmd-h': 'abort!'
+  # do / redo
+  'shift-alt-z': 'core:redo'
+  'alt-z': 'core:undo'
+
+################################################################################
 
 'atom-workspace atom-text-editor:not([mini])':
 
-  # move lines
-  'alt-k': 'editor:move-line-up'
-  'alt-j': 'editor:move-line-down'
-
+  # unsets
   'ctrl-cmd-up': 'unset!'
   'ctrl-cmd-down': 'unset!'
 
+  # comment
+  'shift-alt-c': 'editor:toggle-line-comments'
+
+  # duplicate line
+  'shift-alt-d': 'editor:duplicate-lines'
+
+  # move lines
+  'shift-alt-k': 'editor:move-line-up'
+  'shift-alt-j': 'editor:move-line-down'
+
+  # indentation
+  'shift-alt-i': 'editor:indent-selected-rows'
+  'shift-alt-o': 'editor:outdent-selected-rows'
+
+  # cut line
+  'shift-alt-x': 'editor:delete-line'
+
+  # spawn cursor
+  'alt-k': 'editor:add-selection-above'
+  'alt-j': 'editor:add-selection-below'
+
+################################################################################
+
 '.platform-darwin':
 
-# editor core
+  # unsets
+  'cmd-enter': 'abort!'
+  'alt-enter': 'abort!'
+  'ctrl-g': 'abort!'
+  'ctrl-0': 'abort!'
+  'cmd-p': 'unset!'
+
+  # project find regex
+  'shift-ctrl-r': 'project-find:show'
+  'ctrl-r': 'find-and-replace:show'
+
+  # project find file
+  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+
+  # editor core
   'shift-alt-cmd-e': 'find-and-replace:replace-all'
   'shift-cmd-e': 'find-and-replace:show-replace'
 
-  'cmd-enter': 'abort!'
-  'alt-enter': 'abort!'
+  # tree view
+  'ctrl-q t': 'tree-view:toggle'
 
-# go to line
-  'cmd-;': 'go-to-line:toggle'
-  'ctrl-g': 'abort!'
+  # open buffer
+  'alt-t': 'fuzzy-finder:toggle-buffer-finder'
 
-# tree view
-  'cmd-\'': 'tree-view:toggle-focus'
-  'ctrl-0': 'abort!'
+  # go to line
+  'shift-alt-f': 'go-to-line:toggle'
 
-  'cmd-p': 'unset!'
+################################################################################
 
-# advanced open file
 '.platform-darwin atom-workspace':
-  'alt-cmd-n': 'advanced-open-file:toggle'
+
+  # advanced open file
+  'alt-o': 'advanced-open-file:toggle'
+  'ctrl-q c': 'advanced-open-file:toggle'
+
+  # skip multicursor
+  'alt-e': 'find-and-replace:select-skip'
+
+  # toggle quotes
+  'ctrl-q "': 'toggle-quotes:toggle'
+
+################################################################################
 
 '.advanced-open-file atom-text-editor':
   'tab': 'advanced-open-file:autocomplete'
   'up': 'advanced-open-file:move-cursor-up'
   'down': 'advanced-open-file:move-cursor-down'
 
+################################################################################
+
 '.platform-darwin atom-text-editor':
 
-  # paste history
-  'cmd-c': 'clipboard-history:copy'
-  'cmd-alt-p': 'clipboard-history:paste'
-
-  # core editor
-  'ctrl-alt-]': 'editor:unfold-current-row'
-  'ctrl-alt-[': 'editor:fold-current-row'
-  'cmd-ctrl-alt-]': 'editor:unfold-all'
-  'cmd-ctrl-alt-[': 'editor:fold-all'
-
-  'ctrl-q 1': 'editor:fold-at-indent-level-2'
-  'ctrl-q 2': 'editor:fold-at-indent-level-3'
-  'ctrl-q 3': 'editor:fold-at-indent-level-4'
-  'ctrl-q 4': 'editor:fold-at-indent-level-5'
-  'ctrl-q 5': 'editor:fold-at-indent-level-6'
-  'ctrl-q 6': 'editor:fold-at-indent-level-7'
-  'ctrl-q 7': 'editor:fold-at-indent-level-8'
-  'ctrl-q 8': 'editor:fold-at-indent-level-9'
-
+  # unsets
   'shift-alt-cmd-]': 'unset!'
   'shift-alt-cmd-[': 'unset!'
+
+  # paste history
+  'alt-c': 'clipboard-history:copy'
+  'alt-v': 'clipboard-history:paste'
+
+  # folding
+  'cmd-ctrl-alt-]': 'editor:unfold-current-row'
+  'cmd-ctrl-alt-[': 'editor:fold-current-row'
+  'cmd-ctrl-alt-}': 'editor:unfold-all'
+  'cmd-ctrl-alt-{': 'editor:fold-all'
+
+  'cmd-ctrl-alt-1': 'editor:fold-at-indent-level-1'
+  'cmd-ctrl-alt-2': 'editor:fold-at-indent-level-2'
+  'cmd-ctrl-alt-3': 'editor:fold-at-indent-level-3'
+  'cmd-ctrl-alt-4': 'editor:fold-at-indent-level-4'
+  'cmd-ctrl-alt-5': 'editor:fold-at-indent-level-5'
+  'cmd-ctrl-alt-6': 'editor:fold-at-indent-level-6'
+  'cmd-ctrl-alt-7': 'editor:fold-at-indent-level-7'
+  'cmd-ctrl-alt-8': 'editor:fold-at-indent-level-8'
+
+  # find
+  'shift-alt-n': 'find-and-replace:find-previous'
+  'alt-n': 'find-and-replace:find-next'
+
+  # spawn multicursor
+  'alt-d': 'find-and-replace:select-next'
+  'alt-u': 'find-and-replace:select-undo'
+
+  'shift-alt-p': 'bracket-matcher:select-inside-brackets'
+
+################################################################################
 
 # autocompletion
 '.autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
   'escape': 'autocomplete-plus:cancel'
 
+################################################################################
+
 # Core Editor
 'atom-text-editor':
-  'alt-t': 'unset!'
 
-# TODO: matching bracket
+  # unsets
+  'ctrl-t': 'unset!'
+  'alt-t': 'unset!'
+  'ctrl-alt-left': 'unset!'
+  'ctrl-alt-right': 'unset!'
+  'alt-h': 'unset!'
+
+  # select all
+  'shift-alt-a': 'core:select-all'
+
+  # select line
+  'shift-alt-l': 'editor:select-line'
+
+  # matching bracket
+  'alt-p': 'bracket-matcher:go-to-matching-bracket'
+
+################################################################################
+
+'atom-workspace':
+
+  # move panes
+  'ctrl-shift-right': 'move-panes:move-right'
+  'ctrl-shift-left': 'move-panes:move-left'
+
+  # cheatsheet menu
+  'ctrl-q \'': 'keybinding-cheatsheet:toggle'
+
+################################################################################
+
+# TODO: add macros
 
 #------------------------------------------------------------------------------------------------------------------------------
 #
