@@ -62,34 +62,34 @@
   # save
   'alt-w': 'core:save'
 
-  # move panes
+  # move tabs
   'ctrl-alt-]': 'pane:move-item-right'
   'ctrl-alt-[': 'pane:move-item-left'
 
-  # split panes
+  # split editor
   'ctrl-q =': 'pane:split-right-and-copy-active-item'
   'ctrl-q -': 'pane:split-down-and-copy-active-item'
-
-  # close pane
-  'shift-alt-q': 'pane:close'
-  'ctrl-q shift-x': 'pane:close'
 
   # close tab
   'alt-q': 'core:close'
   'ctrl-q x': 'core:close'
 
+  # close pane
+  'shift-alt-q': 'pane:close'
+  'ctrl-q shift-x': 'pane:close'
+
   # new pane
   'shift-alt-t': 'application:new-file'
   'ctrl-q shift-c': 'application:new-file'
 
-  # move to pane
+  # move to tab
   'alt-h': 'pane:show-previous-item'
   'alt-ctrl-left': 'pane:show-previous-item'
 
   'alt-l': 'pane:show-next-item'
   'alt-ctrl-right': 'pane:show-next-item'
 
-  # 'ctrl-space': 'window:focus-previous-pane'
+  # move to pane
   'ctrl-up': 'window:focus-pane-above'
   'ctrl-down': 'window:focus-pane-below'
   'ctrl-left': 'window:focus-pane-on-left'
@@ -101,39 +101,25 @@
 
 ################################################################################
 
-'atom-workspace atom-text-editor:not([mini])':
+# Core Editor
+'atom-text-editor':
 
   # unsets
-  'ctrl-cmd-up': 'unset!'
-  'ctrl-cmd-down': 'unset!'
-  'cmd-[': 'unset!'
-  'cmd-]': 'unset!'
-  'cmd-d': 'unset!'
-  'shift-cmd-d': 'unset!'
-  'ctrl-shift-up': 'unset!'
-  'ctrl-shift-down': 'unset!'
-  'ctrl-shift-k': 'unset!'
+  'ctrl-t': 'unset!'
+  'alt-t': 'unset!'
+  'ctrl-alt-left': 'unset!'
+  'ctrl-alt-right': 'unset!'
+  'alt-h': 'unset!'
+  'cmd-a': 'unset!'
 
-  # comment
-  'shift-alt-c': 'editor:toggle-line-comments'
+  # select all
+  'shift-alt-a': 'core:select-all'
 
-  # duplicate line
-  'shift-alt-d': 'editor:duplicate-lines'
+  # select line
+  'shift-alt-l': 'editor:select-line'
 
-  # move lines
-  'shift-alt-k': 'editor:move-line-up'
-  'shift-alt-j': 'editor:move-line-down'
-
-  # indentation
-  'shift-alt-i': 'editor:indent-selected-rows'
-  'shift-alt-o': 'editor:outdent-selected-rows'
-
-  # cut line
-  'shift-alt-x': 'editor:delete-line'
-
-  # spawn cursor
-  'alt-k': 'editor:add-selection-above'
-  'alt-j': 'editor:add-selection-below'
+  # matching bracket
+  'alt-p': 'bracket-matcher:go-to-matching-bracket'
 
 ################################################################################
 
@@ -188,13 +174,6 @@
 
 ################################################################################
 
-'.advanced-open-file atom-text-editor':
-  'tab': 'advanced-open-file:autocomplete'
-  'up': 'advanced-open-file:move-cursor-up'
-  'down': 'advanced-open-file:move-cursor-down'
-
-################################################################################
-
 '.platform-darwin atom-text-editor':
 
   # unsets
@@ -228,9 +207,55 @@
 
   # spawn multicursor
   'alt-d': 'find-and-replace:select-next'
+
+  # stop multicursor
   'alt-u': 'find-and-replace:select-undo'
 
+  # select brackets
   'shift-alt-p': 'bracket-matcher:select-inside-brackets'
+
+################################################################################
+
+'atom-workspace atom-text-editor:not([mini])':
+
+  # unsets
+  'ctrl-cmd-up': 'unset!'
+  'ctrl-cmd-down': 'unset!'
+  'cmd-[': 'unset!'
+  'cmd-]': 'unset!'
+  'cmd-d': 'unset!'
+  'shift-cmd-d': 'unset!'
+  'ctrl-shift-up': 'unset!'
+  'ctrl-shift-down': 'unset!'
+  'ctrl-shift-k': 'unset!'
+
+  # comment
+  'shift-alt-c': 'editor:toggle-line-comments'
+
+  # duplicate line
+  'shift-alt-d': 'editor:duplicate-lines'
+
+  # move lines
+  'shift-alt-k': 'editor:move-line-up'
+  'shift-alt-j': 'editor:move-line-down'
+
+  # indentation
+  'shift-alt-i': 'editor:indent-selected-rows'
+  'shift-alt-o': 'editor:outdent-selected-rows'
+
+  # cut line
+  'shift-alt-x': 'editor:delete-line'
+
+  # spawn cursor
+  'alt-k': 'editor:add-selection-above'
+  'alt-j': 'editor:add-selection-below'
+
+################################################################################
+
+'.advanced-open-file atom-text-editor':
+  'tab': 'advanced-open-file:autocomplete'
+  'up': 'advanced-open-file:move-cursor-up'
+  'down': 'advanced-open-file:move-cursor-down'
 
 ################################################################################
 
@@ -238,28 +263,6 @@
 '.autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
   'escape': 'autocomplete-plus:cancel'
-
-################################################################################
-
-# Core Editor
-'atom-text-editor':
-
-  # unsets
-  'ctrl-t': 'unset!'
-  'alt-t': 'unset!'
-  'ctrl-alt-left': 'unset!'
-  'ctrl-alt-right': 'unset!'
-  'alt-h': 'unset!'
-  'cmd-a': 'unset!'
-
-  # select all
-  'shift-alt-a': 'core:select-all'
-
-  # select line
-  'shift-alt-l': 'editor:select-line'
-
-  # matching bracket
-  'alt-p': 'bracket-matcher:go-to-matching-bracket'
 
 ################################################################################
 
