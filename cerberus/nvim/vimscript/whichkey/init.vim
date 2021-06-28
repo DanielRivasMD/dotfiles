@@ -42,17 +42,15 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 
 " splits
-let g:which_key_map['\'] = [ ':vsplit'      , 'vertical split' ]
+let g:which_key_map['='] = [ ':vsplit'      , 'vertical split' ]
 let g:which_key_map['-'] = [ ':split'       , 'horizontal split' ]
-let g:which_key_map['|'] = [ '<C-w>t<C-w>H' , 'change vertical split' ]
+let g:which_key_map['+'] = [ '<C-w>t<C-w>H' , 'change vertical split' ]
 let g:which_key_map['_'] = [ '<C-w>t<C-w>K' , 'change horizontal split' ]
 let g:which_key_map['o'] = [ ':only'        , 'one window' ]
-let g:which_key_map['v'] = [ ':set paste!'  , 'toggle paste mode' ]
 let g:which_key_map['h'] = [ ':nohlsearch'  , 'highlight toggle' ]
 let g:which_key_map['w'] = [ ':w!'          , 'save' ]
-"let g:which_key_map['q'] = [ ':q!'         , 'quit' ]
 let g:which_key_map['s'] = [ ':wq!'         , 'save & exit' ]
-let g:which_key_map['p'] = [ ':registers'   , 'registers' ]
+let g:which_key_map['v'] = [ ':registers'   , 'registers' ]
 let g:which_key_map['x'] = [ ':bdelete'     , 'close buffer' ]
 let g:which_key_map['S'] = [ ':Startify'    , 'Startify' ]
 
