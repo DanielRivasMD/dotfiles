@@ -52,7 +52,17 @@
 
   # unsets
   'alt-cmd-h': 'abort!'
+  'cmd-alt-left': 'unset!'
+  'cmd-alt-right': 'unset!'
+  'cmd-w': 'unset!'
+  'cmd-n': 'unset!'
+  'cmd-z': 'unset!'
+  'shift-cmd-z': 'unset!'
 
+  # save
+  'alt-w': 'core:save'
+
+  # move panes
   'ctrl-alt-]': 'pane:move-item-right'
   'ctrl-alt-[': 'pane:move-item-left'
 
@@ -96,6 +106,13 @@
   # unsets
   'ctrl-cmd-up': 'unset!'
   'ctrl-cmd-down': 'unset!'
+  'cmd-[': 'unset!'
+  'cmd-]': 'unset!'
+  'cmd-d': 'unset!'
+  'shift-cmd-d': 'unset!'
+  'ctrl-shift-up': 'unset!'
+  'ctrl-shift-down': 'unset!'
+  'ctrl-shift-k': 'unset!'
 
   # comment
   'shift-alt-c': 'editor:toggle-line-comments'
@@ -128,6 +145,9 @@
   'ctrl-g': 'abort!'
   'ctrl-0': 'abort!'
   'cmd-p': 'unset!'
+  'cmd-t': 'unset!'
+  'cmd-f': 'unset!'
+  'shift-cmd-f': 'unset!'
 
   # project find regex
   'shift-ctrl-r': 'project-find:show'
@@ -153,6 +173,9 @@
 
 '.platform-darwin atom-workspace':
 
+  # unsets
+  'cmd-g': 'unset!'
+
   # advanced open file
   'alt-o': 'advanced-open-file:toggle'
   'ctrl-q c': 'advanced-open-file:toggle'
@@ -177,6 +200,8 @@
   # unsets
   'shift-alt-cmd-]': 'unset!'
   'shift-alt-cmd-[': 'unset!'
+  'cmd-g': 'unset!'
+  'shift-cmd-g': 'unset!'
 
   # paste history
   'alt-c': 'clipboard-history:copy'
@@ -225,6 +250,7 @@
   'ctrl-alt-left': 'unset!'
   'ctrl-alt-right': 'unset!'
   'alt-h': 'unset!'
+  'cmd-a': 'unset!'
 
   # select all
   'shift-alt-a': 'core:select-all'
