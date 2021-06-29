@@ -56,8 +56,6 @@
   'cmd-alt-right': 'unset!'
   'cmd-w': 'unset!'
   'cmd-n': 'unset!'
-  'cmd-z': 'unset!'
-  'shift-cmd-z': 'unset!'
 
   # save
   'alt-w': 'core:save'
@@ -110,7 +108,6 @@
   'ctrl-alt-left': 'unset!'
   'ctrl-alt-right': 'unset!'
   'alt-h': 'unset!'
-  'cmd-a': 'unset!'
 
   # select all
   'shift-alt-a': 'core:select-all'
@@ -132,8 +129,6 @@
   'ctrl-0': 'abort!'
   'cmd-p': 'unset!'
   'cmd-t': 'unset!'
-  'cmd-f': 'unset!'
-  'shift-cmd-f': 'unset!'
 
   # project find regex
   'shift-ctrl-r': 'project-find:show'
@@ -147,7 +142,9 @@
   'shift-cmd-e': 'find-and-replace:show-replace'
 
   # tree view
-  'ctrl-q t': 'tree-view:toggle'
+  'ctrl-q \\': 'tree-view:toggle'
+  'ctrl-q |': 'tree-view:toggle-focus'
+  'cmd-|': 'tree-view:toggle-focus'
 
   # open buffer
   'alt-t': 'fuzzy-finder:toggle-buffer-finder'
