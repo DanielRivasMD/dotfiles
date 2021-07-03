@@ -12,7 +12,7 @@ opt('o', 'mouse', "a")                                        -- Enable your mou
 opt('o', 'splitbelow', true)                                  -- Horizontal splits will automatically be below
 opt('o', 'termguicolors', true)
 opt('o', 'splitright', true)                                  -- Vertical splits will automatically be to the right
-opt('o', 't_Co', "256")                                       -- Support 256 colors
+-- opt('o', 't_Co', "256")                                       -- Support 256 colors
 opt('o', 'conceallevel', 0)                                   -- So that I can see `` in markdown files
 cmd('set ts=2')                                               -- Insert 2 spaces for a tab
 cmd('set sw=2')                                               -- Change the number of space characters inserted for indentation
@@ -30,6 +30,4 @@ opt('o', 'timeoutlen', 500)                                   -- By default time
 opt('o', 'clipboard', "unnamedplus")                          -- Copy paste between vim and everything else
 opt('o', 'guifont', "JetBrainsMono\\ Nerd\\ Font\\ Mono:h18")
 
-
 cmd('set guicursor=')                                         -- patch cursor change
-
