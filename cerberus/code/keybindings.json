@@ -1,230 +1,346 @@
 // Place your key bindings in this file to override the defaults
 [
 
-	{ "key": ",",										"command": "type",		"args": {"text": ", "}},
+	{ "key": ",",												 "command": "type",											 "args": {"text": ", "}},
 
-	{ "key": "alt-1",								"command": "type",		"args": {"text": " != "}},
-	{ "key": "alt-2",								"command": "type",		"args": {"text": " == "}},
-	{ "key": "alt-3",								"command": "type",		"args": {"text": "  "}},
-	{ "key": "alt-4",								"command": "type",		"args": {"text": " %$% "}},
-	{ "key": "alt-5",								"command": "type",		"args": {"text": " %>% "}},
-	{ "key": "alt-6",								"command": "type",		"args": {"text": " ^ "}},
-	{ "key": "alt-7",								"command": "type",		"args": {"text": " & "}},
-	{ "key": "alt-8",								"command": "type",		"args": {"text": " * "}},
-	{ "key": "alt-9",								"command": "type",		"args": {"text": " / "}},
-	{ "key": "alt-0",								"command": "type",		"args": {"text": " + "}},
-	{ "key": "alt--",								"command": "type",		"args": {"text": " - "}},
-	{ "key": "alt-=",								"command": "type",		"args": {"text": "  "}},
-	{ "key": "alt-[",								"command": "type",		"args": {"text": " <= "}},
-	{ "key": "alt-]",								"command": "type",		"args": {"text": " >= "}},
-	{ "key": "alt-;",								"command": "type",		"args": {"text": " |> "}},
-	{ "key": "alt-'",								"command": "type",		"args": {"text": " => "}},
-	{ "key": "alt-\\",							"command": "type",		"args": {"text": " | "}},
-	{ "key": "alt-,",								"command": "type",		"args": {"text": " < "}},
-	{ "key": "alt-.",								"command": "type",		"args": {"text": " > "}},
-	{ "key": "alt-/",								"command": "type",		"args": {"text": " <- "}},
-// 	{ "key": "alt-`",								"command": "type",		"args": {"text": ""}},
-	{ "key": "alt-tab",							"command": "type",		"args": {"text": " = "}},
+	{ "key": "alt-1",										 "command": "type",											 "args": {"text": " != "}},
+	{ "key": "alt-2",										 "command": "type",											 "args": {"text": "@info "}},
+	{ "key": "alt-3",										 "command": "type",											 "args": {"text": " TODO: "}},
+	{ "key": "alt-4",										 "command": "type",											 "args": {"text": " %$% "}},
+	{ "key": "alt-5",										 "command": "type",											 "args": {"text": " %>% "}},
+	{ "key": "alt-6",										 "command": "type",											 "args": {"text": " ^ "}},
+	{ "key": "alt-7",										 "command": "type",											 "args": {"text": " & "}},
+	{ "key": "alt-8",										 "command": "type",											 "args": {"text": " * "}},
+	{ "key": "alt-9",										 "command": "type",											 "args": {"text": " / "}},
+	{ "key": "alt-0",										 "command": "type",											 "args": {"text": " + "}},
+	{ "key": "alt--",										 "command": "type",											 "args": {"text": " - "}},
+	{ "key": "alt-=",										 "command": "type",											 "args": {"text": " == "}},
+	{ "key": "alt-[",										 "command": "type",											 "args": {"text": " <= "}},
+	{ "key": "alt-]",										 "command": "type",											 "args": {"text": " >= "}},
+	{ "key": "alt-;",										 "command": "type",											 "args": {"text": " |> "}},
+	{ "key": "alt-'",										 "command": "type",											 "args": {"text": " => "}},
+	{ "key": "alt-\\",									 "command": "type",											 "args": {"text": " | "}},
+	{ "key": "alt-,",										 "command": "type",											 "args": {"text": " < "}},
+	{ "key": "alt-.",										 "command": "type",											 "args": {"text": " > "}},
+	{ "key": "alt-/",										 "command": "type",											 "args": {"text": " <- "}},
+// 	{ "key": "alt-`",										 "command": "type",											 "args": {"text": ""}},
+	{ "key": "alt-tab",									 "command": "type",											 "args": {"text": " = "}},
 
-	{ "key": "shift-alt-1",					"command": "type",		"args": {"text": " .!= "}},
-	{ "key": "shift-alt-2",					"command": "type",		"args": {"text": " .== "}},
-	{ "key": "shift-alt-3",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "shift-alt-4",					"command": "type",		"args": {"text": " %T>% "}},
-	{ "key": "shift-alt-5",					"command": "type",		"args": {"text": " %<>% "}},
-	{ "key": "shift-alt-6",					"command": "type",		"args": {"text": " .^ "}},
-	{ "key": "shift-alt-7",					"command": "type",		"args": {"text": " && "}},
-	{ "key": "shift-alt-8",					"command": "type",		"args": {"text": " .* "}},
-	{ "key": "shift-alt-9",					"command": "type",		"args": {"text": " ./ "}},
-	{ "key": "shift-alt-0",					"command": "type",		"args": {"text": " .+ "}},
-	{ "key": "shift-alt--",					"command": "type",		"args": {"text": " .- "}},
-	{ "key": "shift-alt-=",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "shift-alt-[",					"command": "type",		"args": {"text": " .<= "}},
-	{ "key": "shift-alt-]",					"command": "type",		"args": {"text": " .>= "}},
-	{ "key": "shift-alt-;",					"command": "type",		"args": {"text": " .|> "}},
-	{ "key": "shift-alt-'",					"command": "type",		"args": {"text": " -> "}},
-	{ "key": "shift-alt-\\",				"command": "type",		"args": {"text": " || "}},
-	{ "key": "shift-alt-,",					"command": "type",		"args": {"text": " .< "}},
-	{ "key": "shift-alt-.",					"command": "type",		"args": {"text": " .> "}},
-	{ "key": "shift-alt-/",					"command": "type",		"args": {"text": " := "}},
-//	{ "key": "shift-alt-`",					"command": "type",		"args": {"text": ""}},
-	{ "key": "shift-alt-tab",				"command": "type",		"args": {"text": " .= "}},
+	{ "key": "shift-alt-1",							 "command": "type",											 "args": {"text": " .!= "}},
+	{ "key": "shift-alt-2",							 "command": "type",											 "args": {"text": "@debug "}},
+	{ "key": "shift-alt-3",							 "command": "type",											 "args": {"text": " FIX: "}},
+	{ "key": "shift-alt-4",							 "command": "type",											 "args": {"text": " %T>% "}},
+	{ "key": "shift-alt-5",							 "command": "type",											 "args": {"text": " %<>% "}},
+	{ "key": "shift-alt-6",							 "command": "type",											 "args": {"text": " .^ "}},
+	{ "key": "shift-alt-7",							 "command": "type",											 "args": {"text": " && "}},
+	{ "key": "shift-alt-8",							 "command": "type",											 "args": {"text": " .* "}},
+	{ "key": "shift-alt-9",							 "command": "type",											 "args": {"text": " ./ "}},
+	{ "key": "shift-alt-0",							 "command": "type",											 "args": {"text": " .+ "}},
+	{ "key": "shift-alt--",							 "command": "type",											 "args": {"text": " .- "}},
+	{ "key": "shift-alt-=",							 "command": "type",											 "args": {"text": " .== "}},
+	{ "key": "shift-alt-[",							 "command": "type",											 "args": {"text": " .<= "}},
+	{ "key": "shift-alt-]",							 "command": "type",											 "args": {"text": " .>= "}},
+	{ "key": "shift-alt-;",							 "command": "type",											 "args": {"text": " .|> "}},
+	{ "key": "shift-alt-'",							 "command": "type",											 "args": {"text": " -> "}},
+	{ "key": "shift-alt-\\",						 "command": "type",											 "args": {"text": " || "}},
+	{ "key": "shift-alt-,",							 "command": "type",											 "args": {"text": " .< "}},
+	{ "key": "shift-alt-.",							 "command": "type",											 "args": {"text": " .> "}},
+	{ "key": "shift-alt-/",							 "command": "type",											 "args": {"text": " := "}},
+//	{ "key": "shift-alt-`",							 "command": "type",											 "args": {"text": ""}},
+	{ "key": "shift-alt-tab",						 "command": "type",											 "args": {"text": " .= "}},
 
-	{ "key": "ctrl-1",							"command": "type",		"args": {"text": " ∉ "}},
-	{ "key": "ctrl-2",							"command": "type",		"args": {"text": " ∈ "}},
-	{ "key": "ctrl-3",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-4",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-5",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-6",							"command": "type",		"args": {"text": " √ "}},
-	{ "key": "ctrl-7",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-8",							"command": "type",		"args": {"text": " ** "}},
-	{ "key": "ctrl-9",							"command": "type",		"args": {"text": " // "}},
-	{ "key": "ctrl-0",							"command": "type",		"args": {"text": " ++ "}},
-	{ "key": "ctrl--",							"command": "type",		"args": {"text": " -- "}},
-	{ "key": "ctrl-=",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-[",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-]",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-;",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-'",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-\\",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-,",							"command": "type",		"args": {"text": " <: "}},
-	{ "key": "ctrl-.",							"command": "type",		"args": {"text": " >: "}},
-	{ "key": "ctrl-/",							"command": "type",		"args": {"text": "  "}},
-	{ "key": "ctrl-`",							"command": "type",		"args": {"text": "```"}},
-	{ "key": "ctrl-tab",						"command": "type",		"args": {"text": " ~ "}},
+	{ "key": "ctrl-1",									 "command": "type",											 "args": {"text": " ∉ "}},
+	{ "key": "ctrl-2",									 "command": "type",											 "args": {"text": "@chain "}},
+	{ "key": "ctrl-3",									 "command": "type",											 "args": {"text": " IDEA: "}},
+	{ "key": "ctrl-4",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-5",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-6",									 "command": "type",											 "args": {"text": " √ "}},
+	{ "key": "ctrl-7",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-8",									 "command": "type",											 "args": {"text": " ** "}},
+	{ "key": "ctrl-9",									 "command": "type",											 "args": {"text": " // "}},
+	{ "key": "ctrl-0",									 "command": "type",											 "args": {"text": " ++ "}},
+	{ "key": "ctrl--",									 "command": "type",											 "args": {"text": " -- "}},
+	{ "key": "ctrl-=",									 "command": "type",											 "args": {"text": " ∈ "}},
+	{ "key": "ctrl-[",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-]",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-;",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-'",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-\\",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-,",									 "command": "type",											 "args": {"text": " <: "}},
+	{ "key": "ctrl-.",									 "command": "type",											 "args": {"text": " >: "}},
+	{ "key": "ctrl-/",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-`",									 "command": "type",											 "args": {"text": "```"}},
+	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": " ~ "}},
 
-	{ "key": "cmd-ctrl-1",					"command": "type",		"args": {"text": " !== "}},
-	{ "key": "cmd-ctrl-2",					"command": "type",		"args": {"text": " === "}},
-	{ "key": "cmd-ctrl-3",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-4",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-5",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-6",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-7",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-8",					"command": "type",		"args": {"text": " *= "}},
-	{ "key": "cmd-ctrl-9",					"command": "type",		"args": {"text": " /= "}},
-	{ "key": "cmd-ctrl-0",					"command": "type",		"args": {"text": " += "}},
-	{ "key": "cmd-ctrl--",					"command": "type",		"args": {"text": " -= "}},
-	{ "key": "cmd-ctrl-=",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-[",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-]",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-;",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-'",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-\\",					"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-,",					"command": "type",		"args": {"text": " << "}},
-	{ "key": "cmd-ctrl-.",					"command": "type",		"args": {"text": " >> "}},
-	{ "key": "cmd-ctrl-/",					"command": "type",		"args": {"text": " <<- "}},
-	{ "key": "cmd-ctrl-`",					"command": "type",		"args": {"text": "/// "}},
-	{ "key": "cmd-ctrl-tab",				"command": "type",		"args": {"text": "@chain "}},
+	{ "key": "cmd-ctrl-1",							 "command": "type",											 "args": {"text": " !== "}},
+	{ "key": "cmd-ctrl-2",							 "command": "type",											 "args": {"text": "@eval "}},
+	{ "key": "cmd-ctrl-3",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-4",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-5",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-6",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-7",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-8",							 "command": "type",											 "args": {"text": " *= "}},
+	{ "key": "cmd-ctrl-9",							 "command": "type",											 "args": {"text": " /= "}},
+	{ "key": "cmd-ctrl-0",							 "command": "type",											 "args": {"text": " += "}},
+	{ "key": "cmd-ctrl--",							 "command": "type",											 "args": {"text": " -= "}},
+	{ "key": "cmd-ctrl-=",							 "command": "type",											 "args": {"text": " === "}},
+	{ "key": "cmd-ctrl-[",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-]",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-;",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-'",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-\\",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-,",							 "command": "type",											 "args": {"text": " << "}},
+	{ "key": "cmd-ctrl-.",							 "command": "type",											 "args": {"text": " >> "}},
+	{ "key": "cmd-ctrl-/",							 "command": "type",											 "args": {"text": " <<- "}},
+	{ "key": "cmd-ctrl-`",							 "command": "type",											 "args": {"text": "/// "}},
+	{ "key": "cmd-ctrl-tab",						 "command": "type",											 "args": {"text": "  "}},
 
-	{ "key": "cmd-ctrl-shift-1",		"command": "type",		"args": {"text": " .!== "}},
-	{ "key": "cmd-ctrl-shift-2",		"command": "type",		"args": {"text": " .=== "}},
-	{ "key": "cmd-ctrl-shift-3",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-4",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-5",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-6",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-7",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-8",		"command": "type",		"args": {"text": " .*= "}},
-	{ "key": "cmd-ctrl-shift-9",		"command": "type",		"args": {"text": " ./= "}},
-	{ "key": "cmd-ctrl-shift-0",		"command": "type",		"args": {"text": " .+= "}},
-	{ "key": "cmd-ctrl-shift--",		"command": "type",		"args": {"text": " .-= "}},
-	{ "key": "cmd-ctrl-shift-=",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-[",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-]",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-;",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-'",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-\\",		"command": "type",		"args": {"text": "  "}},
-	{ "key": "cmd-ctrl-shift-,",		"command": "type",		"args": {"text": " <<< "}},
-	{ "key": "cmd-ctrl-shift-.",		"command": "type",		"args": {"text": " >>> "}},
-	{ "key": "cmd-ctrl-shift-/",		"command": "type",		"args": {"text": " ->> "}},
-	{ "key": "cmd-ctrl-shift-`",		"command": "type",		"args": {"text": "//! "}},
-	{ "key": "cmd-ctrl-shift-tab",	"command": "type",		"args": {"text": "@info "}},
+	{ "key": "cmd-ctrl-shift-1",				 "command": "type",											 "args": {"text": " .!== "}},
+	{ "key": "cmd-ctrl-shift-2",				 "command": "type",											 "args": {"text": "@test "}},
+	{ "key": "cmd-ctrl-shift-3",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-4",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-5",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-6",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-7",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-8",				 "command": "type",											 "args": {"text": " .*= "}},
+	{ "key": "cmd-ctrl-shift-9",				 "command": "type",											 "args": {"text": " ./= "}},
+	{ "key": "cmd-ctrl-shift-0",				 "command": "type",											 "args": {"text": " .+= "}},
+	{ "key": "cmd-ctrl-shift--",				 "command": "type",											 "args": {"text": " .-= "}},
+	{ "key": "cmd-ctrl-shift-=",				 "command": "type",											 "args": {"text": " .=== "}},
+	{ "key": "cmd-ctrl-shift-[",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-]",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-;",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-'",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-\\",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "cmd-ctrl-shift-,",				 "command": "type",											 "args": {"text": " <<< "}},
+	{ "key": "cmd-ctrl-shift-.",				 "command": "type",											 "args": {"text": " >>> "}},
+	{ "key": "cmd-ctrl-shift-/",				 "command": "type",											 "args": {"text": " ->> "}},
+	{ "key": "cmd-ctrl-shift-`",				 "command": "type",											 "args": {"text": "//! "}},
+	{ "key": "cmd-ctrl-shift-tab",			 "command": "type",											 "args": {"text": " "}},
 
-	{ "key": "cmd-ctrl-a",					"command": "type",		"args": {"text": "α"}},
-	{ "key": "cmd-ctrl-b",					"command": "type",		"args": {"text": "β"}},
-	{ "key": "cmd-ctrl-c",					"command": "type",		"args": {"text": "ψ"}},
-	{ "key": "cmd-ctrl-d",					"command": "type",		"args": {"text": "δ"}},
-	{ "key": "cmd-ctrl-e",					"command": "type",		"args": {"text": "ε"}},
-	{ "key": "cmd-ctrl-f",					"command": "type",		"args": {"text": "φ"}},
-	{ "key": "cmd-ctrl-g",					"command": "type",		"args": {"text": "γ"}},
-	{ "key": "cmd-ctrl-h",					"command": "type",		"args": {"text": "η"}},
-	{ "key": "cmd-ctrl-i",					"command": "type",		"args": {"text": "ι"}},
-	{ "key": "cmd-ctrl-j",					"command": "type",		"args": {"text": "ξ"}},
-	{ "key": "cmd-ctrl-k",					"command": "type",		"args": {"text": "κ"}},
-	{ "key": "cmd-ctrl-l",					"command": "type",		"args": {"text": "λ"}},
-	{ "key": "cmd-ctrl-m",					"command": "type",		"args": {"text": "μ"}},
-	{ "key": "cmd-ctrl-n",					"command": "type",		"args": {"text": "ν"}},
-	{ "key": "cmd-ctrl-o",					"command": "type",		"args": {"text": "ο"}},
-	{ "key": "cmd-ctrl-p",					"command": "type",		"args": {"text": "π"}},
-	{ "key": "cmd-ctrl-r",					"command": "type",		"args": {"text": "ρ"}},
-	{ "key": "cmd-ctrl-s",					"command": "type",		"args": {"text": "σ"}},
-	{ "key": "cmd-ctrl-t",					"command": "type",		"args": {"text": "τ"}},
-	{ "key": "cmd-ctrl-u",					"command": "type",		"args": {"text": "θ"}},
-	{ "key": "cmd-ctrl-v",					"command": "type",		"args": {"text": "ω"}},
-	{ "key": "cmd-ctrl-x",					"command": "type",		"args": {"text": "χ"}},
-	{ "key": "cmd-ctrl-y",					"command": "type",		"args": {"text": "υ"}},
-	{ "key": "cmd-ctrl-z",					"command": "type",		"args": {"text": "ζ"}},
+	{ "key": "cmd-ctrl-a",							 "command": "type",											 "args": {"text": "α"}},
+	{ "key": "cmd-ctrl-b",							 "command": "type",											 "args": {"text": "β"}},
+	{ "key": "cmd-ctrl-c",							 "command": "type",											 "args": {"text": "ψ"}},
+	{ "key": "cmd-ctrl-d",							 "command": "type",											 "args": {"text": "δ"}},
+	{ "key": "cmd-ctrl-e",							 "command": "type",											 "args": {"text": "ε"}},
+	{ "key": "cmd-ctrl-f",							 "command": "type",											 "args": {"text": "φ"}},
+	{ "key": "cmd-ctrl-g",							 "command": "type",											 "args": {"text": "γ"}},
+	{ "key": "cmd-ctrl-h",							 "command": "type",											 "args": {"text": "η"}},
+	{ "key": "cmd-ctrl-i",							 "command": "type",											 "args": {"text": "ι"}},
+	{ "key": "cmd-ctrl-j",							 "command": "type",											 "args": {"text": "ξ"}},
+	{ "key": "cmd-ctrl-k",							 "command": "type",											 "args": {"text": "κ"}},
+	{ "key": "cmd-ctrl-l",							 "command": "type",											 "args": {"text": "λ"}},
+	{ "key": "cmd-ctrl-m",							 "command": "type",											 "args": {"text": "μ"}},
+	{ "key": "cmd-ctrl-n",							 "command": "type",											 "args": {"text": "ν"}},
+	{ "key": "cmd-ctrl-o",							 "command": "type",											 "args": {"text": "ο"}},
+	{ "key": "cmd-ctrl-p",							 "command": "type",											 "args": {"text": "π"}},
+	{ "key": "cmd-ctrl-r",							 "command": "type",											 "args": {"text": "ρ"}},
+	{ "key": "cmd-ctrl-s",							 "command": "type",											 "args": {"text": "σ"}},
+	{ "key": "cmd-ctrl-t",							 "command": "type",											 "args": {"text": "τ"}},
+	{ "key": "cmd-ctrl-u",							 "command": "type",											 "args": {"text": "θ"}},
+	{ "key": "cmd-ctrl-v",							 "command": "type",											 "args": {"text": "ω"}},
+	{ "key": "cmd-ctrl-x",							 "command": "type",											 "args": {"text": "χ"}},
+	{ "key": "cmd-ctrl-y",							 "command": "type",											 "args": {"text": "υ"}},
+	{ "key": "cmd-ctrl-z",							 "command": "type",											 "args": {"text": "ζ"}},
 
-	{ "key": "cmd-ctrl-shift-a",		"command": "type",		"args": {"text": "Α"}},
-	{ "key": "cmd-ctrl-shift-b",		"command": "type",		"args": {"text": "Β"}},
-	{ "key": "cmd-ctrl-shift-c",		"command": "type",		"args": {"text": "Ψ"}},
-	{ "key": "cmd-ctrl-shift-d",		"command": "type",		"args": {"text": "Δ"}},
-	{ "key": "cmd-ctrl-shift-e",		"command": "type",		"args": {"text": "Ε"}},
-	{ "key": "cmd-ctrl-shift-f",		"command": "type",		"args": {"text": "Φ"}},
-	{ "key": "cmd-ctrl-shift-g",		"command": "type",		"args": {"text": "Γ"}},
-	{ "key": "cmd-ctrl-shift-h",		"command": "type",		"args": {"text": "Η"}},
-	{ "key": "cmd-ctrl-shift-i",		"command": "type",		"args": {"text": "Ι"}},
-	{ "key": "cmd-ctrl-shift-j",		"command": "type",		"args": {"text": "Ξ"}},
-	{ "key": "cmd-ctrl-shift-k",		"command": "type",		"args": {"text": "Κ"}},
-	{ "key": "cmd-ctrl-shift-l",		"command": "type",		"args": {"text": "Λ"}},
-	{ "key": "cmd-ctrl-shift-m",		"command": "type",		"args": {"text": "Μ"}},
-	{ "key": "cmd-ctrl-shift-n",		"command": "type",		"args": {"text": "Ν"}},
-	{ "key": "cmd-ctrl-shift-o",		"command": "type",		"args": {"text": "Ο"}},
-	{ "key": "cmd-ctrl-shift-p",		"command": "type",		"args": {"text": "Π"}},
-	{ "key": "cmd-ctrl-shift-r",		"command": "type",		"args": {"text": "Ρ"}},
-	{ "key": "cmd-ctrl-shift-s",		"command": "type",		"args": {"text": "Σ"}},
-	{ "key": "cmd-ctrl-shift-t",		"command": "type",		"args": {"text": "Τ"}},
-	{ "key": "cmd-ctrl-shift-u",		"command": "type",		"args": {"text": "Θ"}},
-	{ "key": "cmd-ctrl-shift-v",		"command": "type",		"args": {"text": "Ω"}},
-	{ "key": "cmd-ctrl-shift-x",		"command": "type",		"args": {"text": "Χ"}},
-	{ "key": "cmd-ctrl-shift-y",		"command": "type",		"args": {"text": "Υ"}},
-	{ "key": "cmd-ctrl-shift-z",		"command": "type",		"args": {"text": "Ζ"}},
-
-	// move_by_paragraph
-	{ "key": "alt-up", 									"command": "spaceBlockJumper.moveUp"},
-	{ "key": "alt-down", 								"command": "spaceBlockJumper.moveDown"},
-	{ "key": "shift-alt-up", 						"command": "spaceBlockJumper.selectUp"},
-	{ "key": "shift-alt-down",					"command": "spaceBlockJumper.selectDown"},
-
-	// selection
-	{ "key": "cmd+d",										"command": "editor.action.addSelectionToNextFindMatch",	"when": "editorFocus"},
-	{ "key": "shift+cmd+d",							"command": "geeebe.duplicateText",											"when": "editorTextFocus"},
-
-	// swap tabs
-	{ "key": "ctrl+shift+left",					"command": "workbench.action.moveEditorLeftInGroup"},
-	{ "key": "ctrl+shift+right", 				"command": "workbench.action.moveEditorRightInGroup"},
+	{ "key": "cmd-ctrl-shift-a",				 "command": "type",											 "args": {"text": "Α"}},
+	{ "key": "cmd-ctrl-shift-b",				 "command": "type",											 "args": {"text": "Β"}},
+	{ "key": "cmd-ctrl-shift-c",				 "command": "type",											 "args": {"text": "Ψ"}},
+	{ "key": "cmd-ctrl-shift-d",				 "command": "type",											 "args": {"text": "Δ"}},
+	{ "key": "cmd-ctrl-shift-e",				 "command": "type",											 "args": {"text": "Ε"}},
+	{ "key": "cmd-ctrl-shift-f",				 "command": "type",											 "args": {"text": "Φ"}},
+	{ "key": "cmd-ctrl-shift-g",				 "command": "type",											 "args": {"text": "Γ"}},
+	{ "key": "cmd-ctrl-shift-h",				 "command": "type",											 "args": {"text": "Η"}},
+	{ "key": "cmd-ctrl-shift-i",				 "command": "type",											 "args": {"text": "Ι"}},
+	{ "key": "cmd-ctrl-shift-j",				 "command": "type",											 "args": {"text": "Ξ"}},
+	{ "key": "cmd-ctrl-shift-k",				 "command": "type",											 "args": {"text": "Κ"}},
+	{ "key": "cmd-ctrl-shift-l",				 "command": "type",											 "args": {"text": "Λ"}},
+	{ "key": "cmd-ctrl-shift-m",				 "command": "type",											 "args": {"text": "Μ"}},
+	{ "key": "cmd-ctrl-shift-n",				 "command": "type",											 "args": {"text": "Ν"}},
+	{ "key": "cmd-ctrl-shift-o",				 "command": "type",											 "args": {"text": "Ο"}},
+	{ "key": "cmd-ctrl-shift-p",				 "command": "type",											 "args": {"text": "Π"}},
+	{ "key": "cmd-ctrl-shift-r",				 "command": "type",											 "args": {"text": "Ρ"}},
+	{ "key": "cmd-ctrl-shift-s",				 "command": "type",											 "args": {"text": "Σ"}},
+	{ "key": "cmd-ctrl-shift-t",				 "command": "type",											 "args": {"text": "Τ"}},
+	{ "key": "cmd-ctrl-shift-u",				 "command": "type",											 "args": {"text": "Θ"}},
+	{ "key": "cmd-ctrl-shift-v",				 "command": "type",											 "args": {"text": "Ω"}},
+	{ "key": "cmd-ctrl-shift-x",				 "command": "type",											 "args": {"text": "Χ"}},
+	{ "key": "cmd-ctrl-shift-y",				 "command": "type",											 "args": {"text": "Υ"}},
+	{ "key": "cmd-ctrl-shift-z",				 "command": "type",											 "args": {"text": "Ζ"}},
 
 	// editor layout
-	{ "key": "alt+cmd+1", 							"command": "workbench.action.editorLayoutSingle"},
-	{ "key": "alt+cmd+2", 							"command": "workbench.action.editorLayoutTwoColumns"},
-	{ "key": "alt+cmd+3", 							"command": "workbench.action.editorLayoutThreeColumns"},
-	{ "key": "shift+alt+cmd+2", 				"command": "workbench.action.editorLayoutTwoRows"},
-	{ "key": "shift+alt+cmd+3", 				"command": "workbench.action.editorLayoutThreeRows"},
-	{ "key": "alt+cmd+5",								"command": "workbench.action.editorLayoutTwoByTwoGrid"},
-	{ "key": "shift+alt+i",							"command": "-editor.action.insertCursorAtEndOfEachLineSelected", "when": "editorTextFocus"},
+	{ "key": "alt+cmd+1", 							 "command": "workbench.action.editorLayoutSingle"},
+	{ "key": "alt+cmd+2", 							 "command": "workbench.action.editorLayoutTwoColumns"},
+	{ "key": "alt+cmd+3", 							 "command": "workbench.action.editorLayoutThreeColumns"},
+	{ "key": "shift+alt+cmd+2", 				 "command": "workbench.action.editorLayoutTwoRows"},
+	{ "key": "shift+alt+cmd+3", 				 "command": "workbench.action.editorLayoutThreeRows"},
+	{ "key": "alt+cmd+5",								 "command": "workbench.action.editorLayoutTwoByTwoGrid"},
+	{ "key": "shift+alt+i",							 "command": "-editor.action.insertCursorAtEndOfEachLineSelected", "when": "editorTextFocus"},
 
-	{ "key": "shift+cmd+'",								"command": "editor.togglequotes"},
-	{ "key": "cmd+'",										"command": "-editor.togglequotes"},
+	// move by paragraph
+	{ "key": "alt-up", 									 "command": "spaceBlockJumper.moveUp"},
+	{ "key": "alt-down", 								 "command": "spaceBlockJumper.moveDown"},
+	{ "key": "shift-alt-up", 						 "command": "spaceBlockJumper.selectUp"},
+	{ "key": "shift-alt-down",					 "command": "spaceBlockJumper.selectDown"},
 
-	// TODO: matching bracket
-	{ "key": "shift+ctrl+p",						"command": "editor.action.jumpToBracket", "when": "editorTextFocus"},
-	{ "key": "shift+cmd+\\",						"command": "-editor.action.jumpToBracket", "when": "editorTextFocus"},
+	// save
+	{ "key": "alt+w", "command": "workbench.action.files.save"},
+	{ "key": "cmd+s", "command": "workbench.action.files.save"},
+
+	// move tabs
+	{ "key": "ctrl+alt+[",							 "command": "workbench.action.moveEditorLeftInGroup"},
+	{ "key": "ctrl+alt+]", 							 "command": "workbench.action.moveEditorRightInGroup"},
+
+	// split editor
+	{ "key": "ctrl+q =", "command": "workbench.action.splitEditorRight"},
+	{ "key": "ctrl+q -", "command": "workbench.action.splitEditorDown"},
+
+	// close tab
+
+
+	// close pane
+
+	// new pane
+	{ "key": "shift+alt+t", "command": "workbench.action.files.newUntitledFile"},
+	{ "key": "ctrl+q shift+c", "command": "workbench.action.files.newUntitledFile"},
+	{ "key": "cmd+n", "command": "-workbench.action.files.newUntitledFile"},
+
+	// move to tab
+	{ "key": "alt+h", "command": "-gitlens.showQuickFileHistory",	"when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"},
+	{ "key": "alt+h", "command": "-git.viewFileHistory"},
+	{ "key": "alt+cmd+left", "command": "-workbench.action.terminal.focusPreviousPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "alt+cmd+left", "command": "-workbench.action.previousEditor"},
+
+	{ "key": "alt+h", "command": "workbench.action.terminal.focusPreviousPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "alt+h", "command": "workbench.action.previousEditor"},
+	{ "key": "ctrl+alt+left", "command": "workbench.action.terminal.focusPreviousPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "ctrl+alt+left", "command": "workbench.action.previousEditor"},
+
+	{ "key": "alt+cmd+right", "command": "-workbench.action.terminal.focusNextPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "alt+cmd+right", "command": "-workbench.action.nextEditor"},
+
+	{ "key": "alt+l", "command": "workbench.action.terminal.focusNextPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "alt+l", "command": "workbench.action.nextEditor"},
+	{ "key": "ctrl+alt+right", "command": "workbench.action.terminal.focusNextPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "ctrl+alt+right", "command": "workbench.action.nextEditor"},
+
+	// move to pane
+	{ "key": "ctrl+right",							 "command": "workbench.action.focusRightGroup"},
+	{ "key": "cmd+k cmd+right",					 "command": "-workbench.action.focusRightGroup"},
+	{ "key": "ctrl+left",								 "command": "workbench.action.focusLeftGroup"},
+	{ "key": "cmd+k cmd+left",					 "command": "-workbench.action.focusLeftGroup"},
+
+	// do / redo
+	{ "key": "shift+alt+z", "command": "redo"},
+	// { "key": "shift+cmd+z", "command": "-redo"},
+	{ "key": "alt+z", "command": "undo"},
+	// { "key": "cmd+z", "command": "-undo"},
+
+	// select all
+	{ "key": "shift+alt+a", "command": "editor.action.selectAll"},
+	// { "key": "cmd+a", "command": "-editor.action.selectAll"},
+
+	// select line
+	{ "key": "shift+alt+l", "command": "expandLineSelection",	"when": "textInputFocus"},
+	{ "key": "cmd+l", "command": "-expandLineSelection",	"when": "textInputFocus"},
+
+	// matching bracket
+
+	// project find regex
+	{
+		"key": "ctrl+shift+r",
+		"command": "workbench.action.findInFiles"
+	},
+	// {
+	// 	"key": "shift+cmd+f",
+	// 	"command": "-workbench.action.findInFiles"
+	// },
+
+	{
+		"key": "ctrl+r",
+		"command": "actions.find",
+		"when": "editorFocus || editorIsOpen"
+	},
+	// {
+	// 	"key": "cmd+f",
+	// 	"command": "-actions.find",
+	// 	"when": "editorFocus || editorIsOpen"
+	// },
+
+	// project find file
+	{ "key": "ctrl+t",									 "command": "workbench.action.quickOpen"},
+	{ "key": "cmd+p",										 "command": "-workbench.action.quickOpen"},
+
+	// editor core
+	// tree view
+	{ "key": "cmd+'",																					 "command": "workbench.files.action.focusFilesExplorer"},
+	{ "key": "ctrl+q t",																				 "command": "workbench.action.toggleSidebarVisibility" },
+	{ "key": "cmd+b",																					 "command": "-workbench.action.toggleSidebarVisibility" },
+
+	// open buffer
+	// go to line
+	{ "key": "cmd+;",																					 "command": "workbench.action.gotoLine"},
+	{ "key": "ctrl+g",																				 "command": "-workbench.action.gotoLine"},
+
+	// advanced open file
+	// skip multicursor
+	// toggle quotes
+	{ "key": "ctrl+q shift+'",																			 "command": "editor.togglequotes"},
+	{ "key": "cmd+'",																					 "command": "-editor.togglequotes"},
+
+	// paste history
+	// folding
+	// find
+
+	// spawn multicursor
+	{ "key": "alt+d",																					 "command": "editor.action.addSelectionToNextFindMatch",	"when": "editorFocus"},
+
+	// select brackets
+	{ "key": "alt+p",																	 "command": "editor.action.jumpToBracket", "when": "editorTextFocus"},
+	{ "key": "shift+cmd+\\",																	 "command": "-editor.action.jumpToBracket", "when": "editorTextFocus"},
+
+	// comment
+
+	// duplicate line
+	{ "key": "shift+alt+d",																		 "command": "geeebe.duplicateText",											"when": "editorTextFocus"},
 
 	// move lines
-	{ "key": "alt+j",										"command": "editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly"},
-	{ "key": "alt+down",								"command": "-editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly"},
-	{ "key": "alt+k",										"command": "editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly"},
-	{ "key": "alt+up",									"command": "-editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly"},
+	{ "key": "shift+alt+j",																					 "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly"},
+	{ "key": "alt+down",																			 "command": "-editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly"},
+	{ "key": "shift+alt+k",																					 "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly"},
+	{ "key": "alt+up",																				 "command": "-editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly"},
 
-	// open files
-	{ "key": "cmd+t",										"command": "workbench.action.quickOpen"},
-	{ "key": "cmd+p",										"command": "-workbench.action.quickOpen"},
+	// indentation
+	// cut line
 
-	// explorer focus
-	{ "key": "cmd+'",										"command": "workbench.files.action.focusFilesExplorer"},
-	{ "key": "cmd+\\",									"command": "workbench.action.toggleSidebarVisibility" },
-	{ "key": "cmd+b",										"command": "-workbench.action.toggleSidebarVisibility" },
+	// spawn cursor
+	{ "key": "alt+j",																 "command": "editor.action.insertCursorBelow", "when": "editorTextFocus"},
+	{ "key": "alt+cmd+down",													 "command": "-editor.action.insertCursorBelow",		"when": "editorTextFocus"},
+	{ "key": "alt+k",																 "command": "editor.action.insertCursorAbove", "when": "editorTextFocus"},
+	{ "key": "alt+cmd+up",													 "command": "-editor.action.insertCursorAbove",		"when": "editorTextFocus"},
 
-	// TODO: delete lines
-	{ "key": "ctrl+shift+k",						"command": "editor.action.deleteLines", "when": "textInputFocus && !editorReadonly"},
-	{ "key": "shift+cmd+k",							"command": "-editor.action.deleteLines", "when": "textInputFocus && !editorReadonly"},
+	// move panes
+	// macros
+	// jump
+	// git gutter
 
-	// go to line
-	{ "key": "cmd+;",										"command": "workbench.action.gotoLine"},
-	{ "key": "ctrl+g",									"command": "-workbench.action.gotoLine"},
+	// cheatsheet menu
 
-	// TODO: definition
-	{ "key": "alt+cmd+down",						"command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"},
-	{ "key": "f12",											"command": "-editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"},
-	{ "key": "ctrl+shift+down",					"command": "editor.action.insertCursorBelow", "when": "editorTextFocus"},
-	{ "key": "alt+cmd+down",						"command": "-editor.action.insertCursorBelow", "when": "editorTextFocus"}
+
+
+
+
+	// definition
+	{ "key": "alt+cmd+down",																	 "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"},
+	{ "key": "f12", "command": "-editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"},
+
+
+	{ "key": "alt+q", "command": "workbench.action.closeWindow", "when": "!editorIsOpen && !multipleEditorGroups"},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+
 
 ]
