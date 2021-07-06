@@ -299,8 +299,8 @@
   { "keys": ["alt+j"],                 "command": "select_lines",              "args": {"forward": true}},
 
   // move panes
-  { "keys": ["ctrl+alt+."],      "command": "move_to_neighboring_group"},
-  { "keys": ["ctrl+alt+,"],       "command": "move_to_neighboring_group", "args": {"forward": false}},
+  { "keys": ["ctrl+q", "right"],      "command": "move_to_neighboring_group"},
+  { "keys": ["ctrl+q", "left"],       "command": "move_to_neighboring_group", "args": {"forward": false}},
 
   // macros
   { "keys": ["shift+alt+m"],           "command": "toggle_record_macro"},

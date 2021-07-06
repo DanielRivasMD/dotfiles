@@ -263,8 +263,8 @@
 'atom-workspace':
 
   # move panes
-  'ctrl-alt-.': 'move-panes:move-right'
-  'ctrl-alt-,': 'move-panes:move-left'
+  'ctrl-q right': 'move-panes:move-right'
+  'ctrl-q left': 'move-panes:move-left'
 
   # cheatsheet menu
   'ctrl-q \'': 'keybinding-cheatsheet:toggle'
