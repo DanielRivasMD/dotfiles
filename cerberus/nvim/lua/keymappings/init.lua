@@ -8,7 +8,7 @@ vim.g.mapleader = ' '
 map('n', '<Leader>h', ':set hlsearch!<CR>')
 
 -- explorer
-map('n', '<Leader>e', ':NvimTreeToggle<CR>')
+map('n', '<Leader>t', ':NvimTreeToggle<CR>')
 
 -- window movement
 map('n', '<C-h>', '<C-w>h')
