@@ -47,7 +47,7 @@ atreplinit() do repl
      ################################################################################
 
     try
-      @eval using Pipe
+      @eval import Pipe: @pipe
     catch e
       @warn "error while importing Pipe" e
     end
