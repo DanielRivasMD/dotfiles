@@ -39,7 +39,7 @@ atreplinit() do repl
     ################################################################################
 
     try
-      @eval using Chain
+      @eval import Chain: @chain
     catch e
       @warn "error while importing Chain" e
     end
