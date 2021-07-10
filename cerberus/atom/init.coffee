@@ -81,7 +81,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-double_or': -> atom.workspace.getActiveTextEditor()?.insertText(' || ')
   'custom:insert-julia_subtype': -> atom.workspace.getActiveTextEditor()?.insertText(' <: ')
   'custom:insert-julia_supertype': -> atom.workspace.getActiveTextEditor()?.insertText(' >: ')
-  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText(' where ')
+  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
   'custom:insert-triple_apostrophe': -> atom.workspace.getActiveTextEditor()?.insertText('```')
   'custom:insert-low_double_dot': -> atom.workspace.getActiveTextEditor()?.insertText(' ..= ')
 
