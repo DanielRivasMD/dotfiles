@@ -85,12 +85,6 @@ source ${PIER}break_single_line.sh  $COLUMNS
 description = 'all-round git status'
 tags = ['git']
 
-[scripts.gitmd]
-alias = 'gitmd'
-command = 'vim /Users/drivas/Factorem/WebSurf/Archive/Notes/github.md'
-description = 'edit awesome git list'
-tags = ['']
-
 [scripts.godoc]
 alias = 'godoc'
 command = 'godoc -http=localhost:6060; open http://localhost:6060 -a Opera'
@@ -210,18 +204,6 @@ alias = 'magnus-sftp'
 command = 'sftp drivas@magnus.pawsey.org.au'
 description = 'sftp to Pawsey Magnus'
 tags = ['remote']
-
-[scripts.mdgit]
-alias = 'mdgit'
-command = 'mdcat /Users/drivas/Factorem/WebSurf/Archive/Notes/github.md | bat -p'
-description = 'print awesome git list'
-tags = ['']
-
-[scripts.mdjulia]
-alias = 'mdjulia'
-command = 'mdcat /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md | bat -p'
-description = 'print awesome julia list'
-tags = ['']
 
 [scripts.path]
 alias = 'path'
