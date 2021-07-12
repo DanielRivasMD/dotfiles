@@ -52,11 +52,13 @@ let g:which_key_map['w'] = [ ':w!'          , 'save' ]
 let g:which_key_map['s'] = [ ':wq!'         , 'save & exit' ]
 let g:which_key_map['v'] = [ ':registers'   , 'registers' ]
 let g:which_key_map['x'] = [ ':bdelete'     , 'close buffer' ]
-let g:which_key_map['S'] = [ ':Startify'    , 'Startify' ]
+let g:which_key_map['s'] = [ ':Startify'    , 'Startify' ]
 
 " write buffer to...
-nmap <leader>C :!cat %:p ><space>
+nmap <leader>W :!cat %:p ><space>
+vmap <leader>W :!cat %:p ><space>
 
+" quite
 nmap <leader>q :q!
 vmap <leader>q :q!
 
@@ -80,11 +82,11 @@ let g:which_key_map.c = {
 
 nmap <leader>cd :call NERDComment("n", "Yank")<CR>P
 nmap <leader>ct :call NERDComment("n", "Append")<CR><space>TODO:<space>
-nmap <leader>cb :call NERDComment("n", "Append")<CR><space>BUG:<space>
+nmap <leader>cb :call NERDComment("n", "Append")<CR><space>FIX:<space>
 
 vmap <leader>cd :call NERDComment("n", "Yank")<CR>P
 vmap <leader>ct :call NERDComment("n", "Append")<CR><space>TODO:<space>
-vmap <leader>cb :call NERDComment("n", "Append")<CR><space>BUG:<space>
+vmap <leader>cb :call NERDComment("n", "Append")<CR><space>FIX:<space>
 
 
 " git
