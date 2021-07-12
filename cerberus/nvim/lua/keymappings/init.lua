@@ -16,6 +16,11 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
+map('n', '<C-Left>', '<C-w>h')
+map('n', '<C-Down>', '<C-w>j')
+map('n', '<C-Up>', '<C-w>k')
+map('n', '<C-Right>', '<C-w>l')
+
 -- indenting
 map('v', '<', '<gv')
 map('v', '>', '>gv')
@@ -141,10 +146,13 @@ map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       
 map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
 
 -- barbar
-map('n', '<TAB>', ':BufferNext<CR>')                                            -- next tab
-map('n', '<S-TAB>', ':BufferPrevious<CR>')                                      -- previous tab
-map('n', '<C-]>', ':BufferMoveNext<CR>')                                        -- move next tab
-map('n', '<C-[>', ':BufferMovePrevious<CR>')                                    -- move previous tab
+map('n', '<M-h>', ':BufferNext<CR>')                                            -- next tab
+map('n', '<M-l>', ':BufferPrevious<CR>')                                        -- previous tab
+
+map('n', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
+map('n', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
+
+map('n', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
+map('n', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
 
 map('n', '<C-f>', ':FZF<CR>')                                                   -- fuzzy finder
-
