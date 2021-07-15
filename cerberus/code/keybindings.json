@@ -327,7 +327,7 @@
 
 	// comment
 	{ "key": "shift+alt+c", 						 "command": "editor.action.commentLine", "when": "editorTextFocus && !editorReadonly"},
-	{ "key": "cmd+/", 									 "command": "-editor.action.commentLine", "when": "editorTextFocus && !editorReadonly"},
+	{ "key": "cmd+/", 									 "command": "editor.action.commentLine", "when": "editorTextFocus && !editorReadonly"},
 
 	// duplicate line
 	{ "key": "shift+alt+d",							 "command": "geeebe.duplicateText", "when": "editorTextFocus"},
