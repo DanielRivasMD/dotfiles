@@ -72,6 +72,12 @@
         ),
     ),
     exit: (
+        code: Char('c'),
+        modifiers: (
+            bits: 2,
+        ),
+    ),
+    quit: (
         code: Char('q'),
         modifiers: (
             bits: 0,
@@ -355,6 +361,12 @@
     ),
     abort_merge: (
         code: Char('M'),
+        modifiers: (
+            bits: 1,
+        ),
+    ),
+    undo_commit: (
+        code: Char('U'),
         modifiers: (
             bits: 1,
         ),
