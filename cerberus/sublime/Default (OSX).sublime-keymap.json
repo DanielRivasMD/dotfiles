@@ -50,7 +50,7 @@
   { "keys": ["alt+shift+tab"],         "command": "insert",                    "args": {"characters": " .= "}},
 
   { "keys": ["ctrl+1"],                "command": "insert",                    "args": {"characters": " ∉ "}},
-  { "keys": ["ctrl+2"],                "command": "insert",                    "args": {"characters": " @ "}},
+  { "keys": ["ctrl+2"],                "command": "insert",                    "args": {"characters": "where "}},
   { "keys": ["ctrl+3"],                "command": "insert",                    "args": {"characters": " \\\\ "}},
   { "keys": ["ctrl+4"],                "command": "insert",                    "args": {"characters": " $ "}},
   { "keys": ["ctrl+5"],                "command": "insert",                    "args": {"characters": " ~ "}},
@@ -68,9 +68,9 @@
   { "keys": ["ctrl+\\"],               "command": "insert",                    "args": {"characters": " || "}},
   { "keys": ["ctrl+,"],                "command": "insert",                    "args": {"characters": " <: "}},
   { "keys": ["ctrl+."],                "command": "insert",                    "args": {"characters": " >: "}},
-  { "keys": ["ctrl+/"],                "command": "insert",                    "args": {"characters": " ..= "}},
+  { "keys": ["ctrl+/"],                "command": "insert",                    "args": {"characters": "<>"}},
   { "keys": ["ctrl+`"],                "command": "insert",                    "args": {"characters": "```"}},
-  { "keys": ["ctrl+tab"],              "command": "insert",                    "args": {"characters": "where "}},
+  { "keys": ["ctrl+tab"],              "command": "insert",                    "args": {"characters": "..="}},
 
   { "keys": ["command+ctrl+1"],        "command": "insert",                    "args": {"characters": " !== "}},
   { "keys": ["command+ctrl+2"],        "command": "insert",                    "args": {"characters": "@chain "}},

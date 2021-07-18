@@ -50,7 +50,7 @@
 	{ "key": "shift-alt-tab",						 "command": "type",											 "args": {"text": " .= "}},
 
 	{ "key": "ctrl-1",									 "command": "type",											 "args": {"text": " ∉ "}},
-	{ "key": "ctrl-2",									 "command": "type",											 "args": {"text": " @ "}},
+	{ "key": "ctrl-2",									 "command": "type",											 "args": {"text": "where "}},
 	{ "key": "ctrl-3",									 "command": "type",											 "args": {"text": " \\\\ "}},
 	{ "key": "ctrl-4",									 "command": "type",											 "args": {"text": " $ "}},
 	{ "key": "ctrl-5",									 "command": "type",											 "args": {"text": " ~ "}},
@@ -68,9 +68,9 @@
 	{ "key": "ctrl-\\",									 "command": "type",											 "args": {"text": " || "}},
 	{ "key": "ctrl-,",									 "command": "type",											 "args": {"text": " <: "}},
 	{ "key": "ctrl-.",									 "command": "type",											 "args": {"text": " >: "}},
-	{ "key": "ctrl-/",									 "command": "type",											 "args": {"text": " ..= "}},
+	{ "key": "ctrl-/",									 "command": "type",											 "args": {"text": "<>"}},
 	{ "key": "ctrl-`",									 "command": "type",											 "args": {"text": "```"}},
-	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": "where "}},
+	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": "..="}},
 
 	{ "key": "cmd-ctrl-1",							 "command": "type",											 "args": {"text": " !== "}},
 	{ "key": "cmd-ctrl-2",							 "command": "type",											 "args": {"text": "@chain "}},

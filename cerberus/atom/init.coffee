@@ -65,7 +65,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-equal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .= ')
 
   'custom:insert-not_equal_math': -> atom.workspace.getActiveTextEditor()?.insertText(' ∉ ')
-  'custom:insert-arroba': -> atom.workspace.getActiveTextEditor()?.insertText(' @ ')
+  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
   'custom:insert-double_backslash': -> atom.workspace.getActiveTextEditor()?.insertText(' \\\\ ')
   'custom:insert-dollar': -> atom.workspace.getActiveTextEditor()?.insertText(' $ ')
   'custom:insert-tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
@@ -81,9 +81,9 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-double_or': -> atom.workspace.getActiveTextEditor()?.insertText(' || ')
   'custom:insert-julia_subtype': -> atom.workspace.getActiveTextEditor()?.insertText(' <: ')
   'custom:insert-julia_supertype': -> atom.workspace.getActiveTextEditor()?.insertText(' >: ')
-  'custom:insert-low_double_dot': -> atom.workspace.getActiveTextEditor()?.insertText(' ..= ')
+  'custom:insert-angle_brackets': -> atom.workspace.getActiveTextEditor()?.insertText('<>')
   'custom:insert-triple_apostrophe': -> atom.workspace.getActiveTextEditor()?.insertText('```')
-  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
+  'custom:insert-low_double_dot': -> atom.workspace.getActiveTextEditor()?.insertText('..=')
 
   'custom:insert-not_equalequal': -> atom.workspace.getActiveTextEditor()?.insertText(' !== ')
   'custom:insert-julia_chain': -> atom.workspace.getActiveTextEditor()?.insertText('@chain ')

@@ -340,7 +340,7 @@
   'shift-alt-tab': 'custom:insert-equal_broadcast'
 
   'ctrl-1': 'custom:insert-not_equal_math'
-  'ctrl-2': 'custom:insert-arroba'
+  'ctrl-2': 'custom:insert-where'
   'ctrl-3': 'custom:insert-double_backslash'
   'ctrl-4': 'custom:insert-dollar'
   'ctrl-5': 'custom:insert-tilde'
@@ -358,9 +358,9 @@
   'ctrl-\\': 'custom:insert-double_or'
   'ctrl-,': 'custom:insert-julia_subtype'
   'ctrl-.': 'custom:insert-julia_supertype'
-  'ctrl-/': 'custom:insert-low_double_dot'
+  'ctrl-/': 'custom:insert-angle_brackets'
   'ctrl-`': 'custom:insert-triple_apostrophe'
-  'ctrl-tab': 'custom:insert-where'
+  'ctrl-tab': 'custom:insert-low_double_dot'
 
   'cmd-ctrl-1': 'custom:insert-not_equalequal'
   'cmd-ctrl-2': 'custom:insert-julia_chain'

@@ -1091,7 +1091,7 @@ key_bindings:
   - { key: Tab,         mods: Alt|Shift,              chars: " .= "            }
 
   - { key: Key1,        mods: Control,                chars: " ∉ "             }
-  - { key: Key2,        mods: Control,                chars: " @ "             }
+  - { key: Key2,        mods: Control,                chars: "where "          }
   - { key: Key3,        mods: Control,                chars: " \\\\ "          }
   - { key: Key4,        mods: Control,                chars: " $ "             }
   - { key: Key5,        mods: Control,                chars: " ~ "             }
@@ -1109,9 +1109,9 @@ key_bindings:
   - { key: Backslash,   mods: Control,                chars: " || "            }
   - { key: Comma,       mods: Control,                chars: " <: "            }
   - { key: Period,      mods: Control,                chars: " >: "            }
-  - { key: Slash,       mods: Control,                chars: " ..= "           }
+  - { key: Slash,       mods: Control,                chars: "<>"              }
   - { key: Grave,       mods: Control,                chars: "```"             }
-  - { key: Tab,         mods: Control,                chars: "where "          }
+  - { key: Tab,         mods: Control,                chars: "..="             }
 
   - { key: Key1,        mods: Control|Command,        chars: " !== "           }
   - { key: Key2,        mods: Control|Command,        chars: "@pipe "          }
