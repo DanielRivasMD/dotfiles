@@ -50,7 +50,7 @@
   { "keys": ["alt+shift+tab"],         "command": "insert",                    "args": {"characters": " .= "}},
 
   { "keys": ["ctrl+1"],                "command": "insert",                    "args": {"characters": " ∉ "}},
-  { "keys": ["ctrl+2"],                "command": "insert",                    "args": {"characters": "where "}},
+  { "keys": ["ctrl+2"],                "command": "insert",                    "args": {"characters": " @ "}},
   { "keys": ["ctrl+3"],                "command": "insert",                    "args": {"characters": " \\\\ "}},
   { "keys": ["ctrl+4"],                "command": "insert",                    "args": {"characters": " $ "}},
   { "keys": ["ctrl+5"],                "command": "insert",                    "args": {"characters": " ~ "}},
@@ -168,7 +168,7 @@
   { "keys": ["command+ctrl+shift+x"],  "command": "insert",                    "args": {"characters": "Χ"}},
   { "keys": ["command+ctrl+shift+y"],  "command": "insert",                    "args": {"characters": "Υ"}},
   { "keys": ["command+ctrl+shift+z"],  "command": "insert",                    "args": {"characters": "Ζ"}},
-  { "keys": ["command+ctrl+shift+w"],  "command": "insert",                    "args": {"characters": "FIX: "}},
+  { "keys": ["command+ctrl+shift+w"],  "command": "insert",                    "args": {"characters": "where "}},
 
   // move by paragraph
   { "keys": ["alt+up"],                "command": "move_by_paragraph",         "args": {"forward": false}},

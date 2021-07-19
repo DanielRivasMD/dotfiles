@@ -65,7 +65,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-equal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .= ')
 
   'custom:insert-not_equal_math': -> atom.workspace.getActiveTextEditor()?.insertText(' ∉ ')
-  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
+  'custom:insert-aroba': -> atom.workspace.getActiveTextEditor()?.insertText(' @ ')
   'custom:insert-double_backslash': -> atom.workspace.getActiveTextEditor()?.insertText(' \\\\ ')
   'custom:insert-dollar': -> atom.workspace.getActiveTextEditor()?.insertText(' $ ')
   'custom:insert-tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
@@ -175,7 +175,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-greek_capital_x': -> atom.workspace.getActiveTextEditor()?.insertText('Χ')
   'custom:insert-greek_capital_y': -> atom.workspace.getActiveTextEditor()?.insertText('Υ')
   'custom:insert-greek_capital_z': -> atom.workspace.getActiveTextEditor()?.insertText('Ζ')
-  'custom:insert-fix': -> atom.workspace.getActiveTextEditor()?.insertText('FIX: ')
+  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------
