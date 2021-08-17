@@ -24,6 +24,18 @@
     prefix: 'allow!'
     body: '#![allow(${1:lint})]'
 
+  'assert!':
+    prefix: 'assert!'
+    body: 'assert!($1)'
+
+  'assert_eq!':
+    prefix: 'assert_eq!'
+    body: 'assert_eq!($1, $2)'
+
+  'assert_ne!':
+    prefix: 'assert_ne!'
+    body: 'assert_ne!($1, $2)'
+
   'deny':
     prefix: 'deny'
     body: '#[deny(${1:lint})]'
@@ -105,7 +117,22 @@
     prefix: 'macro'
     body: '''
     macro_rules! ${1:macro_name} {
-    \t($2) => ($3);
+    \t($2) => {$3};
+    }
+    '''
+
+  'macro test':
+    prefix: 'macro test'
+    body: '''
+    macro_rules! ${1:macro_name} {
+    \t( $function: ident;
+    \t\t$${2}
+    \t) => {
+    \t\t#[test]
+    \t\tfn $function() {
+    \t\t\tunimplemented!()
+    \t\t}
+    \t};
     }
     '''
 
