@@ -104,6 +104,7 @@ map('n', 'K', 'ddkP')
 -- duplicate line
 map('i', '<C-d>', '<ESC>yypi')
 map('n', '<C-d>', 'yyp')
+map('v', '<C-d>', 'yyp')
 
 -- auto pairs
 map('i', '\'', '\'\'<Left>')
