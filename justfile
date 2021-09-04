@@ -45,6 +45,7 @@ print:
   ln -svf $CERBERUS/nvim $HOME/.config                                                                                                                       # nvim directory
   ln -svf $CERBERUS/ranger $HOME/.config                                                                                                                     # ranger directory
   ln -svf $CERBERUS/gitui $HOME/.config                                                                                                                     # ranger directory
+  ln -svf $CERBERUS/zellij $HOME/.config                                                                                                                     # ranger directory
 
   # local
   ln -svf $CERBERUS/rstudio/rstudio-desktop.json $HOME/.local/share/rstudio/                                                                                 # rstudio
