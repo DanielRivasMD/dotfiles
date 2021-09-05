@@ -76,6 +76,8 @@ PATH=$PATH:$HOME/bin/toolLinks/
 
 export PATH
 export STARSHIP_CONFIG=${IANUS}/starship/vernacular_starship.toml
+export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
+export ZELLIJ_CONFIG_FILE=${ZELLIJ_CONFIG_DIR}/config.yml
 
 # ==========================
 # ===  Less              ===
