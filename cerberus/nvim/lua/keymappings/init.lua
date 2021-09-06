@@ -10,20 +10,15 @@ map('n', '<Leader>h', ':set hlsearch!<CR>')
 -- explorer
 map('n', '<Leader>t', ':NvimTreeToggle<CR>')
 
--- window movement
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
-
+---- window movement
 map('n', '<C-Left>', '<C-w>h')
 map('n', '<C-Down>', '<C-w>j')
 map('n', '<C-Up>', '<C-w>k')
 map('n', '<C-Right>', '<C-w>l')
 
 -- indenting
-map('v', '<', '<gv')
-map('v', '>', '>gv')
+map('v', '<M-O>', '<gv')
+map('v', '<M-I>', '>gv')
 
 -- escape
 map('i', 'jj', '<ESC>')
@@ -35,6 +30,14 @@ map('i', 'UU', '<ESC>U')
 
 -- undo
 map('i', 'uu', '<ESC>u')
+
+-- movement begin / end file
+map('i', '<M-g>', '<ESC>ggI')
+map('n', '<M-g>', 'gg')
+map('v', '<M-g>', 'gg')
+map('i', '<M-G>', '<ESC>GI')
+map('n', '<M-G>', 'G')
+map('v', '<M-G>', 'G')
 
 -- movement begin / end line
 map('i', '<C-a>', '<ESC>I')
@@ -53,6 +56,11 @@ map('i', '<M-Up>', '<ESC>{i')
 map('i', '<M-Down>', '<ESC>}i')
 map('n', '<M-Up>', '{')
 map('n', '<M-Down>', '}')
+
+-- movement to line
+map('i', '<M-F>', '<ESC>:')
+map('n', '<M-F>', ':')
+map('v', '<M-F>', ':')
 
 -- select word
 map('i', '<S-Left>', '<ESC>vB')
@@ -87,24 +95,24 @@ map('v', '<M-S-Up>', '{')
 map('v', '<M-S-Down>', '}')
 
 -- select line
-map('i', '<C-g>', '<ESC>0v$')
-map('n', '<C-g>', '0v$')
-map('v', '<C-g>', '<ESC>0v$')
+map('i', '<M-L>', '<ESC>0v$')
+map('n', '<M-L>', '0v$')
+map('v', '<M-L>', '<ESC>0v$')
 
 -- move selected line / block of text in visual mode
-map('x', 'K', ':move \'<-2<CR>gv-gv\'')
-map('x', 'J', ':move \'>+1<CR>gv-gv\'')
+map('x', '<M-K>', ':move \'<-2<CR>gv-gv\'')
+map('x', '<M-J>', ':move \'>+1<CR>gv-gv\'')
 
 -- move lines normal mode
-map('i', '<M-j>', '<ESC>ddpi')
-map('i', '<M-k>', '<ESC>ddkPi')
-map('n', 'J', 'ddp')
-map('n', 'K', 'ddkP')
+map('i', '<M-J>', '<ESC>ddpi')
+map('i', '<M-K>', '<ESC>ddkPi')
+map('n', '<M-J>', 'ddp')
+map('n', '<M-K>', 'ddkP')
 
 -- duplicate line
-map('i', '<C-d>', '<ESC>yypi')
-map('n', '<C-d>', 'yyp')
-map('v', '<C-d>', 'yyp')
+map('i', '<M-D>', '<ESC>yypi')
+map('n', '<M-D>', 'yyp')
+map('v', '<M-D>', 'yyp')
 
 -- auto pairs
 map('i', '\'', '\'\'<Left>')
@@ -127,12 +135,15 @@ map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    
 
 -- telescope
 map('n', 'tt', ':Telescope ')
-map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
-map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
-map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
+map('n', '<M-T>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
+map('n', '<M-Y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
+map('n', '<M-B>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
+map('n', '<M-M>', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')        -- marks
+map('n', '<M-V>', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')    -- registers
+map('n', '<M-H>', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')      -- keymaps
 
 map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')      -- treesitter
-map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
+map('n', '<M-R>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
 map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')     -- ripgrep all files
 
 map('n', 'gs', '<cmd>lua require(\'telescope.builtin\').git_status()<CR>')      -- git status
@@ -147,13 +158,10 @@ map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       
 map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
 
 -- barbar
-map('n', '<M-h>', ':BufferNext<CR>')                                            -- next tab
-map('n', '<M-l>', ':BufferPrevious<CR>')                                        -- previous tab
-
 map('n', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
 map('n', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
 
 map('n', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
 map('n', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
 
-map('n', '<C-f>', ':FZF<CR>')                                                   -- fuzzy finder
+map('n', '<C-r>', ':FZF<CR>')                                                   -- fuzzy finder
