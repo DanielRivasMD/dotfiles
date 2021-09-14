@@ -86,7 +86,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-low_double_dot': -> atom.workspace.getActiveTextEditor()?.insertText('..=')
 
   'custom:insert-not_equalequal': -> atom.workspace.getActiveTextEditor()?.insertText(' !== ')
-  'custom:insert-julia_chain': -> atom.workspace.getActiveTextEditor()?.insertText('@chain ')
+  'custom:insert-julia_pipe': -> atom.workspace.getActiveTextEditor()?.insertText('@pipe ')
   'custom:insert-low_backslash': -> atom.workspace.getActiveTextEditor()?.insertText(' \\= ')
   'custom:insert-r_pipe_var': -> atom.workspace.getActiveTextEditor()?.insertText(' %$% ')
   'custom:insert-low_percent': -> atom.workspace.getActiveTextEditor()?.insertText(' %= ')
@@ -106,7 +106,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-double_dot': -> atom.workspace.getActiveTextEditor()?.insertText('..')
 
   'custom:insert-not_equalequal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .!== ')
-  'custom:insert-julia_test': -> atom.workspace.getActiveTextEditor()?.insertText('@test ')
+  'custom:insert-julia_chain': -> atom.workspace.getActiveTextEditor()?.insertText('@chain ')
   'custom:insert-low_backslash_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .\\= ')
   'custom:insert-r_pipe_tee': -> atom.workspace.getActiveTextEditor()?.insertText(' %T>% ')
   'custom:insert-low_percent_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .%= ')
