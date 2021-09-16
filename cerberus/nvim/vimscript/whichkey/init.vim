@@ -47,18 +47,24 @@ let g:which_key_map['-'] = [ ':split'       , 'horizontal split' ]
 let g:which_key_map['+'] = [ '<C-w>t<C-w>H' , 'change vertical split' ]
 let g:which_key_map['_'] = [ '<C-w>t<C-w>K' , 'change horizontal split' ]
 let g:which_key_map['o'] = [ ':only'        , 'one window' ]
+
 let g:which_key_map['h'] = [ ':nohlsearch'  , 'highlight toggle' ]
 let g:which_key_map['w'] = [ ':w!'          , 'save' ]
 let g:which_key_map['s'] = [ ':wq!'         , 'save & exit' ]
-let g:which_key_map['v'] = [ ':registers'   , 'registers' ]
 let g:which_key_map['x'] = [ ':bdelete'     , 'close buffer' ]
 let g:which_key_map['s'] = [ ':Startify'    , 'Startify' ]
+
+" telescope
+let g:which_key_map['m'] = [ ':Telescope marks'     , 'marks' ]
+let g:which_key_map['v'] = [ ':Telescope registers' , 'registers' ]
+let g:which_key_map['H'] = [ ':Telescope keymaps'   , 'keymaps' ]
+
 
 " write buffer to...
 nmap <leader>W :!cat %:p ><space>
 vmap <leader>W :!cat %:p ><space>
 
-" quite
+" quit
 nmap <leader>q :q!
 vmap <leader>q :q!
 

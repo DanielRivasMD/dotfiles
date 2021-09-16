@@ -1,4 +1,3 @@
-
 -------------------- mappings ------------------------------
 
 map('n', '<Space>', '<NOP>')
@@ -112,7 +111,10 @@ map('n', '<M-K>', 'ddkP')
 -- duplicate line
 map('i', '<M-D>', '<ESC>yypi')
 map('n', '<M-D>', 'yyp')
-map('v', '<M-D>', 'yyp')
+
+-- delete line
+map('i', '<M-X>', '<ESC>ddI')
+map('n', '<M-X>', 'dd')
 
 -- auto pairs
 map('i', '\'', '\'\'<Left>')
@@ -135,15 +137,12 @@ map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    
 
 -- telescope
 map('n', 'tt', ':Telescope ')
-map('n', '<M-T>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
-map('n', '<M-Y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
-map('n', '<M-B>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
-map('n', '<M-M>', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')        -- marks
-map('n', '<M-V>', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')    -- registers
-map('n', '<M-H>', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')      -- keymaps
+map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
+map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
+map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
 
 map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')      -- treesitter
-map('n', '<M-R>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
+map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
 map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')     -- ripgrep all files
 
 map('n', 'gs', '<cmd>lua require(\'telescope.builtin\').git_status()<CR>')      -- git status
@@ -152,8 +151,8 @@ map('n', 'gb', '<cmd>lua require(\'telescope.builtin\').git_branches()<CR>')    
 map('n', 'gv', '<cmd>lua require(\'telescope.builtin\').git_bcommits()<CR>')    -- git branch preview
 
 map('n', 'tm', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')           -- marks
-map('n', 'tp', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')       -- registers
-map('n', 'tk', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')         -- keymaps
+map('n', 'tv', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')       -- registers
+map('n', 'tH', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')         -- keymaps
 map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       -- man pages
 map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
 
@@ -164,4 +163,5 @@ map('n', '<C-M-Left>', ':BufferPrevious<CR>')                                   
 map('n', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
 map('n', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
 
-map('n', '<C-r>', ':FZF<CR>')                                                   -- fuzzy finder
+-- fuzzy finder
+map('n', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
