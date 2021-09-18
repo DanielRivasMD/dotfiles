@@ -73,9 +73,11 @@ vmap <leader>q :q!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+" comment
 let g:which_key_map['/'] = [ ':call NERDComment("n", "Toggle")', 'comment' ]
 
-vmap <leader>/ :call NERDComment("n", "Toggle")<CR>
+" comment visual
+vmap <leader>/ <plug>NERDCommenterToggle
 
 " comments
 let g:which_key_map.c = {

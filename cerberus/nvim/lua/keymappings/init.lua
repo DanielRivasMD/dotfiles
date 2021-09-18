@@ -10,10 +10,21 @@ map('n', '<Leader>h', ':set hlsearch!<CR>')
 map('n', '<Leader>t', ':NvimTreeToggle<CR>')
 
 ---- window movement
+map('i', '<C-Left>', '<C-w>h')
 map('n', '<C-Left>', '<C-w>h')
+map('v', '<C-Left>', '<C-w>h')
+
+map('i', '<C-Down>', '<C-w>j')
 map('n', '<C-Down>', '<C-w>j')
+map('v', '<C-Down>', '<C-w>j')
+
+map('i', '<C-Up>', '<C-w>k')
 map('n', '<C-Up>', '<C-w>k')
+map('v', '<C-Up>', '<C-w>k')
+
+map('i', '<C-Right>', '<C-w>l')
 map('n', '<C-Right>', '<C-w>l')
+map('v', '<C-Right>', '<C-w>l')
 
 -- indenting
 map('v', '<M-O>', '<gv')
@@ -24,37 +35,49 @@ map('i', 'jj', '<ESC>')
 map('v', 'jj', '<ESC>')
 
 -- redo
-map('n', 'U', ':redo<CR>')
 map('i', 'UU', '<ESC>U')
+map('n', 'U', ':redo<CR>')
+map('v', 'UU', '<ESC>U')
 
 -- undo
 map('i', 'uu', '<ESC>u')
+map('v', 'uu', '<ESC>uv')
 
 -- movement begin / end file
 map('i', '<M-g>', '<ESC>ggI')
 map('n', '<M-g>', 'gg')
 map('v', '<M-g>', 'gg')
+
 map('i', '<M-G>', '<ESC>GI')
 map('n', '<M-G>', 'G')
 map('v', '<M-G>', 'G')
 
 -- movement begin / end line
 map('i', '<C-a>', '<ESC>I')
-map('i', '<C-e>', '<ESC>A')
 map('n', '<C-a>', '0')
+map('v', '<C-a>', '0')
+
+map('i', '<C-e>', '<ESC>A')
 map('n', '<C-e>', '$')
+map('v', '<C-e>', '$')
 
 -- movement word
 map('i', '<M-Left>', '<ESC>Bi')
-map('i', '<M-Right>', '<ESC>Ea')
 map('n', '<M-Left>', 'B')
+map('v', '<M-Left>', 'B')
+
+map('i', '<M-Right>', '<ESC>Ea')
 map('n', '<M-Right>', 'E')
+map('v', '<M-Right>', 'E')
 
 -- movement paragraph
 map('i', '<M-Up>', '<ESC>{i')
-map('i', '<M-Down>', '<ESC>}i')
 map('n', '<M-Up>', '{')
+map('v', '<M-Up>', '{')
+
+map('i', '<M-Down>', '<ESC>}i')
 map('n', '<M-Down>', '}')
+map('v', '<M-Down>', '}')
 
 -- movement to line
 map('i', '<M-F>', '<ESC>:')
@@ -63,34 +86,38 @@ map('v', '<M-F>', ':')
 
 -- select word
 map('i', '<S-Left>', '<ESC>vB')
-map('i', '<S-Right>', '<ESC>vE')
 map('n', '<S-Left>', 'vB')
-map('n', '<S-Right>', 'vE')
 map('v', '<S-Left>', 'B')
+
+map('i', '<S-Right>', '<ESC>vE')
+map('n', '<S-Right>', 'vE')
 map('v', '<S-Right>', 'E')
 
 -- select to begin / end line
 map('i', '<M-S-Left>', '<ESC>v0')
-map('i', '<M-S-Right>', '<ESC>v$')
 map('n', '<M-S-Left>', 'v0')
-map('n', '<M-S-Right>', 'v$')
 map('v', '<M-S-Left>', '0')
+
+map('i', '<M-S-Right>', '<ESC>v$')
+map('n', '<M-S-Right>', 'v$')
 map('v', '<M-S-Right>', '$')
 
 -- select line from cursor
 map('i', '<S-Up>', '<ESC>vk')
-map('i', '<S-Down>', '<ESC>vj')
 map('n', '<S-Up>', 'vk')
-map('n', '<S-Down>', 'vj')
 map('v', '<S-Up>', 'k')
+
+map('i', '<S-Down>', '<ESC>vj')
+map('n', '<S-Down>', 'vj')
 map('v', '<S-Down>', 'j')
 
 -- select paragraph
 map('i', '<M-S-Up>', '<ESC>v{')
-map('i', '<M-S-Down>', '<ESC>v}')
 map('n', '<M-S-Up>', 'v{')
-map('n', '<M-S-Down>', 'v}')
 map('v', '<M-S-Up>', '{')
+
+map('i', '<M-S-Down>', '<ESC>v}')
+map('n', '<M-S-Down>', 'v}')
 map('v', '<M-S-Down>', '}')
 
 -- select line
@@ -98,23 +125,24 @@ map('i', '<M-L>', '<ESC>0v$')
 map('n', '<M-L>', '0v$')
 map('v', '<M-L>', '<ESC>0v$')
 
--- move selected line / block of text in visual mode
-map('x', '<M-K>', ':move \'<-2<CR>gv-gv\'')
-map('x', '<M-J>', ':move \'>+1<CR>gv-gv\'')
-
 -- move lines normal mode
 map('i', '<M-J>', '<ESC>ddpi')
-map('i', '<M-K>', '<ESC>ddkPi')
 map('n', '<M-J>', 'ddp')
+map('v', '<M-J>', 'Vdpv')
+
+map('i', '<M-K>', '<ESC>ddkPi')
 map('n', '<M-K>', 'ddkP')
+map('v', '<M-K>', 'VdkPv')
 
 -- duplicate line
 map('i', '<M-D>', '<ESC>yypi')
 map('n', '<M-D>', 'yyp')
+map('v', '<M-D>', 'Vypv')
 
 -- delete line
 map('i', '<M-X>', '<ESC>ddI')
 map('n', '<M-X>', 'dd')
+map('v', '<M-X>', 'Vdv')
 
 -- auto pairs
 map('i', '\'', '\'\'<Left>')
@@ -137,12 +165,24 @@ map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    
 
 -- telescope
 map('n', 'tt', ':Telescope ')
+
+map('i', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
 map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
+map('v', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
+
+map('i', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
 map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
+map('v', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
+
+map('i', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
 map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
+map('v', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
+
+map('i', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
+map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
+map('v', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
 
 map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')      -- treesitter
-map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
 map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')     -- ripgrep all files
 
 map('n', 'gs', '<cmd>lua require(\'telescope.builtin\').git_status()<CR>')      -- git status
@@ -157,11 +197,33 @@ map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       
 map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
 
 -- barbar
+map('i', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
 map('n', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
-map('n', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
+map('v', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
 
+map('i', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
+map('n', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
+map('v', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
+
+map('i', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
 map('n', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
+map('v', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
+
+map('i', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
 map('n', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
+map('v', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
 
 -- fuzzy finder
+map('i', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
 map('n', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
+map('v', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
+
+-- comment
+map('i', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')
+map('n', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')
+map('v', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')
+
+-- quit
+map('i', '<M-q>', '<ESC>:q<CR>')
+map('n', '<M-q>', ':q<CR>')
+map('v', '<M-q>', ':q<CR>')
