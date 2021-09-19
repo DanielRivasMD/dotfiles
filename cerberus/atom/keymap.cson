@@ -182,19 +182,10 @@
   'alt-v': 'clipboard-history:paste'
 
   # folding
-  'cmd-ctrl-alt-]': 'editor:unfold-current-row'
-  'cmd-ctrl-alt-[': 'editor:fold-current-row'
-  'cmd-ctrl-alt-}': 'editor:unfold-all'
-  'cmd-ctrl-alt-{': 'editor:fold-all'
-
-  'cmd-ctrl-alt-1': 'editor:fold-at-indent-level-1'
-  'cmd-ctrl-alt-2': 'editor:fold-at-indent-level-2'
-  'cmd-ctrl-alt-3': 'editor:fold-at-indent-level-3'
-  'cmd-ctrl-alt-4': 'editor:fold-at-indent-level-4'
-  'cmd-ctrl-alt-5': 'editor:fold-at-indent-level-5'
-  'cmd-ctrl-alt-6': 'editor:fold-at-indent-level-6'
-  'cmd-ctrl-alt-7': 'editor:fold-at-indent-level-7'
-  'cmd-ctrl-alt-8': 'editor:fold-at-indent-level-8'
+  'ctrl-]': 'editor:unfold-current-row'
+  'ctrl-[': 'editor:fold-current-row'
+  'ctrl-}': 'editor:unfold-all'
+  'ctrl-{': 'editor:fold-all'
 
   # find
   'shift-alt-n': 'find-and-replace:find-previous'
@@ -376,8 +367,8 @@
   'ctrl-)': 'custom:insert-empty'
   'ctrl-_': 'custom:insert-empty'
   'ctrl-+': 'custom:insert-equal_math'
-  'ctrl-{': 'custom:insert-empty'
-  'ctrl-}': 'custom:insert-empty'
+  # 'ctrl-{': 'custom:insert-empty'
+  # 'ctrl-}': 'custom:insert-empty'
   'ctrl-:': 'custom:insert-empty'
   'ctrl-"': 'custom:insert-triple_doublequote'
   'ctrl-|': 'custom:insert-empty'
