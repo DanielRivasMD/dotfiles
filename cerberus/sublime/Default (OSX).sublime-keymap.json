@@ -62,8 +62,11 @@
 
   // tree view
   { "keys": ["ctrl+q", "\\"],          "command": "toggle_side_bar"},
+  { "keys": ["ctrl+q", "t"],          "command": "toggle_side_bar"},
   { "keys": ["command+\\"],            "command": "toggle_side_bar"},
+
   { "keys": ["ctrl+q", "|"],           "command": "focus_side_bar"},
+  { "keys": ["ctrl+q", "T"],           "command": "focus_side_bar"},
   { "keys": ["command+|"],             "command": "focus_side_bar"},
 
   // open buffer

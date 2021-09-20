@@ -140,7 +140,10 @@
 
   # tree view
   'ctrl-q \\': 'tree-view:toggle'
+  'ctrl-q t': 'tree-view:toggle'
+
   'ctrl-q |': 'tree-view:toggle-focus'
+  'ctrl-q T': 'tree-view:toggle-focus'
   'cmd-|': 'tree-view:toggle-focus'
 
   # open buffer

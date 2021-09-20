@@ -97,9 +97,22 @@
 
 
 	// tree view
-	{ "key": "shift+cmd+\\",						 "command": "workbench.files.action.focusFilesExplorer"},
+	{ "key": "cmd+\\",									 "command": "workbench.action.toggleSidebarVisibility" },
 	{ "key": "ctrl+q t",								 "command": "workbench.action.toggleSidebarVisibility" },
+	{ "key": "ctrl+q \\",								 "command": "workbench.action.toggleSidebarVisibility" },
+
+	{ "key": "shift+cmd+\\",						 "command": "workbench.files.action.focusFilesExplorer"},
+	{ "key": "ctrl+q shift+t",					 "command": "workbench.files.action.focusFilesExplorer"},
+	{ "key": "ctrl+q shift+\\",					 "command": "workbench.files.action.focusFilesExplorer"},
+
+	{ "key": "shift+cmd+\\",						 "command": "workbench.view.explorer",	"when": "viewContainer.workbench.view.explorer.enabled"},
+
 	{ "key": "cmd+b",										 "command": "-workbench.action.toggleSidebarVisibility" },
+	{ "key": "shift+cmd+e",							 "command": "-workbench.view.explorer",	"when": "viewContainer.workbench.view.explorer.enabled"},
+	{ "key": "cmd+\\", 									 "command": "-workbench.action.terminal.split", "when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "cmd+\\", 									 "command": "-workbench.action.splitEditor"},
+	{ "key": "cmd+0", 									 "command": "-workbench.action.focusSideBar"},
+	{ "key": "cmd+k e", 								 "command": "-workbench.files.action.focusOpenEditorsView", "when": "workbench.explorer.openEditorsView.active"},
 
 	// open buffer
 
@@ -192,14 +205,6 @@
 	// definition
 	{ "key": "alt+cmd+down",						 "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"},
 	{ "key": "f12", 										 "command": "-editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"},
-
-	// side bar
-	{ "key": "cmd+\\", 									 "command": "-workbench.action.terminal.split", "when": "terminalFocus && terminalProcessSupported"},
-	{ "key": "cmd+\\", 									 "command": "-workbench.action.splitEditor"},
-	{ "key": "ctrl+q shift+t", 					 "command": "workbench.action.focusSideBar"},
-	{ "key": "cmd+0", 									 "command": "-workbench.action.focusSideBar"},
-	{ "key": "cmd+\\", 									 "command": "workbench.files.action.focusOpenEditorsView", "when": "workbench.explorer.openEditorsView.active"},
-	{ "key": "cmd+k e", 								 "command": "-workbench.files.action.focusOpenEditorsView", "when": "workbench.explorer.openEditorsView.active"},
 
 	// keybindings
 
