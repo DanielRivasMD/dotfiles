@@ -9,7 +9,7 @@ map('n', '<Leader>h', ':set hlsearch!<CR>')
 -- explorer
 map('n', '<Leader>t', ':NvimTreeToggle<CR>')
 
----- window movement
+-- window movement
 map('i', '<C-Left>', '<C-w>h')
 map('n', '<C-Left>', '<C-w>h')
 map('v', '<C-Left>', '<C-w>h')
@@ -151,7 +151,9 @@ map('i', '(', '()<Left>')
 map('i', '[', '[]<Left>')
 map('i', '{', '{}<Left>')
 
+--------------------------------------------------
 -- lsp
+--------------------------------------------------
 map('n', 'gk,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')                  -- previous diagnostic
 map('n', 'gj;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')                  -- next diagnostic
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')                         -- definition
@@ -163,28 +165,38 @@ map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')                     
 map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')                     -- signature
 map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    -- symbol
 
+--------------------------------------------------
 -- telescope
+--------------------------------------------------
 map('n', 'tt', ':Telescope ')
 
-map('i', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
-map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
-map('v', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')   -- files
+-- files
+map('i', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
+map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
+map('v', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
 
-map('i', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
-map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
-map('v', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>') -- file browser
+-- file browser
+map('i', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
+map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
+map('v', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
 
-map('i', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
-map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
-map('v', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')      -- buffers
+-- buffers
+map('i', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
+map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
+map('v', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
 
-map('i', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
-map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
-map('v', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')    -- ripgrep git files
+-- ripgrep git files
+map('i', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
+map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
+map('v', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
 
-map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')      -- treesitter
-map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')     -- ripgrep all files
+-- treesitter
+map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')
 
+-- ripgrep all files
+map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')
+
+-- git
 map('n', 'gs', '<cmd>lua require(\'telescope.builtin\').git_status()<CR>')      -- git status
 map('n', 'gc', '<cmd>lua require(\'telescope.builtin\').git_commits()<CR>')     -- git commits
 map('n', 'gb', '<cmd>lua require(\'telescope.builtin\').git_branches()<CR>')    -- git branches
@@ -196,27 +208,35 @@ map('n', 'tH', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')         
 map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       -- man pages
 map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
 
+--------------------------------------------------
 -- barbar
-map('i', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
-map('n', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
-map('v', '<C-M-Right>', ':BufferNext<CR>')                                      -- next tab
+--------------------------------------------------
+-- next tab
+map('i', '<C-M-Right>', ':BufferNext<CR>')
+map('n', '<C-M-Right>', ':BufferNext<CR>')
+map('v', '<C-M-Right>', ':BufferNext<CR>')
 
-map('i', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
-map('n', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
-map('v', '<C-M-Left>', ':BufferPrevious<CR>')                                   -- previous tab
+-- previous tab
+map('i', '<C-M-Left>', ':BufferPrevious<CR>')
+map('n', '<C-M-Left>', ':BufferPrevious<CR>')
+map('v', '<C-M-Left>', ':BufferPrevious<CR>')
 
-map('i', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
-map('n', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
-map('v', '<C-M-]>', ':BufferMoveNext<CR>')                                      -- move next tab
+-- move next tab
+map('i', '<C-M-]>', ':BufferMoveNext<CR>')
+map('n', '<C-M-]>', ':BufferMoveNext<CR>')
+map('v', '<C-M-]>', ':BufferMoveNext<CR>')
 
-map('i', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
-map('n', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
-map('v', '<C-M-[>', ':BufferMovePrevious<CR>')                                  -- move previous tab
+-- move previous tab
+map('i', '<C-M-[>', ':BufferMovePrevious<CR>')
+map('n', '<C-M-[>', ':BufferMovePrevious<CR>')
+map('v', '<C-M-[>', ':BufferMovePrevious<CR>')
 
+--------------------------------------------------
 -- fuzzy finder
-map('i', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
-map('n', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
-map('v', '<M-r>', ':FZF<CR>')                                                   -- fuzzy finder
+--------------------------------------------------
+map('i', '<M-r>', ':FZF<CR>')
+map('n', '<M-r>', ':FZF<CR>')
+map('v', '<M-r>', ':FZF<CR>')
 
 -- comment
 map('i', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')

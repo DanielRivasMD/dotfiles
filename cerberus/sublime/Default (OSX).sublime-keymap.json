@@ -62,12 +62,12 @@
 
   // tree view
   { "keys": ["ctrl+q", "\\"],          "command": "toggle_side_bar"},
-  { "keys": ["ctrl+q", "t"],          "command": "toggle_side_bar"},
+  { "keys": ["ctrl+q", "t"],           "command": "toggle_side_bar"},
   { "keys": ["command+\\"],            "command": "toggle_side_bar"},
 
-  { "keys": ["ctrl+q", "|"],           "command": "focus_side_bar"},
-  { "keys": ["ctrl+q", "T"],           "command": "focus_side_bar"},
-  { "keys": ["command+|"],             "command": "focus_side_bar"},
+  { "keys": ["ctrl+q", "shift+\\"],    "command": "focus_side_bar"},
+  { "keys": ["ctrl+q", "shift+t"],     "command": "focus_side_bar"},
+  { "keys": ["command+shift+\\"],      "command": "focus_side_bar"},
 
   // open buffer
 
@@ -141,8 +141,6 @@
   // keybindings
 
   { "keys": [","],                     "command": "insert",                    "args": {"characters": ", "}},
-
-  { "keys": ["shift+tab"],             "command": "insert",                    "args": {"characters": "  "}},
 
   { "keys": ["alt+1"],                 "command": "insert",                    "args": {"characters": " != "}},
   { "keys": ["alt+2"],                 "command": "insert",                    "args": {"characters": "@info "}},
