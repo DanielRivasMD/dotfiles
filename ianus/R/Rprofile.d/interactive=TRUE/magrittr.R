@@ -1,7 +1,7 @@
 ################################################################################
 
 tryCatch(
-  require(SistWrapper, quietly = TRUE),
+  require(magrittr, quietly = TRUE),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 

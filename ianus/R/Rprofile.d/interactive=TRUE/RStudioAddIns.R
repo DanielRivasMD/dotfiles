@@ -2,7 +2,7 @@
 
 if ( .Platform$GUI == 'RStudio' ) {
   tryCatch(
-    require(RStudioAddIns, quietly = T),
+    require(RStudioAddIns, quietly = TRUE),
     error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
   )
 }

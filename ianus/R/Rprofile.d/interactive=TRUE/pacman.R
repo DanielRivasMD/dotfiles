@@ -1,7 +1,7 @@
 ################################################################################
 
 tryCatch(
-  require(SistWrapper, quietly = TRUE),
+  require(pacman, quietly = TRUE),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 
