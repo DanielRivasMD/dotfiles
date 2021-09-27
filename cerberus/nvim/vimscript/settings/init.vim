@@ -20,3 +20,5 @@ if $LANG =~ '\(UTF\|utf\)-\?8' || $LC_CTYPE =~ '\(UTF\|utf\)-\?8'
   set listchars=eol:¬,tab:»–,trail:·,extends:>,precedes:<
 endif
 
+autocmd FileType TelescopePrompt call deoplete#custom#buffer_option('auto_complete', v:false)
+
