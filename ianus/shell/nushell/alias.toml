@@ -1,0 +1,9 @@
+# ls
+alias l = ls --long
+alias la = ls --long --all
+alias ld = ls --long --all --du
+
+# nu functions
+def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}
+def nuver [] {version | pivot key value}
+
