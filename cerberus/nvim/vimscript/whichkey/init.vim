@@ -52,6 +52,7 @@ let g:which_key_map['w'] = [ ':w!'          , 'save' ]
 let g:which_key_map['s'] = [ ':wq!'         , 'save & exit' ]
 let g:which_key_map['x'] = [ ':bdelete'     , 'close buffer' ]
 let g:which_key_map['s'] = [ ':Startify'    , 'Startify' ]
+let g:which_key_map['S'] = [ ':SlimeConfig' , 'SlimeConfig']
 
 " telescope
 let g:which_key_map['m'] = [ ':Telescope marks'     , 'marks' ]
