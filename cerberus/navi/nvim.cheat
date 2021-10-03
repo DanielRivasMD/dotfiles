@@ -1,0 +1,10 @@
+% nvim
+
+# Restore neovim session
+nvim -S <nvim_session>
+
+% nvim, fillin
+
+# Restore neovim session fillin wrapper
+fillin nvim -S {{nvim_session}}
+
