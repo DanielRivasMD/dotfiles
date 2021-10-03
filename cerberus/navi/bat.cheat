@@ -1,0 +1,22 @@
+% bat
+
+# Print file
+bat <file>
+
+# Print file without wrapping
+bat --wrap never <file>
+
+# Copy file content to clipboard
+bat <file> | cb
+
+% bat, fillin
+
+# Print file fillin wrapper
+fillin bat {{file}}
+
+# Print file without wrapping fillin wrapper
+fillin bat --wrap never {{file}}
+
+# Copy file content to clipboard fillin wrapper
+fillin bat {{file}} | cb
+
