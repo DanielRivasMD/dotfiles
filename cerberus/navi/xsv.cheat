@@ -1,0 +1,21 @@
+% xsv
+
+# Print CSV as table
+xsv table <csv>
+
+# Select CSV column
+xsv select <col> <csv>
+
+# Print CSV headers
+xsv headers <csv>
+
+% xsv, fillin
+
+# Print CSV as table fillin wrapper
+fillin xsv table {{csv}}
+
+# Select CSV column fillin wrapper
+fillin xsv select {{col}} {{csv}}
+
+# Print CSV headers fillin wrapper
+fillin xsv headers {{csv}}
