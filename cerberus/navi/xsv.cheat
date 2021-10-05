@@ -11,11 +11,11 @@ xsv headers <csv>
 
 % xsv, fillin
 
-# Print CSV as table fillin wrapper
+# Print CSV as table fillin
 fillin xsv table {{csv}}
 
-# Select CSV column fillin wrapper
+# Select CSV column fillin
 fillin xsv select {{col}} {{csv}}
 
-# Print CSV headers fillin wrapper
+# Print SV headers fillin
 fillin xsv headers {{csv}}

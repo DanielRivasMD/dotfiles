@@ -11,12 +11,11 @@ bat <file> | cb
 
 % bat, fillin
 
-# Print file fillin wrapper
+# Print file fillin
 fillin bat {{file}}
 
-# Print file without wrapping fillin wrapper
+# Print file without wrapping fillin
 fillin bat --wrap never {{file}}
 
-# Copy file content to clipboard fillin wrapper
+# Copy file content to clipboard fillin
 fillin bat {{file}} | cb
-

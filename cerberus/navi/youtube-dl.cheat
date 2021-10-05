@@ -8,8 +8,8 @@ youtube-dl --extract-audio '<playlistURL>' --yes-playlist
 
 % youtube-dl, fillin
 
-# Extract audio from YouTube video fillin wrapper
+# Extract audio from YouTube video fillin
 fillin youtube-dl --extract-audio {{videoURL}} --output {{output}}.mp4
 
-# Extract audio from YouTube playlist fillin wrapper
+# Extract audio from YouTube playlist fillin
 fillin youtube-dl --extract-audio {{playlistURL}} --yes-playlist
