@@ -59,6 +59,29 @@ let g:which_key_map['m'] = [ ':Telescope marks'     , 'marks' ]
 let g:which_key_map['v'] = [ ':Telescope registers' , 'registers' ]
 let g:which_key_map['H'] = [ ':Telescope keymaps'   , 'keymaps' ]
 
+" patch
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" files
+imap <C-t> <ESC>:Telescope find_files<CR>
+nmap <C-t> :Telescope find_files<CR>
+vmap <C-t> :Telescope find_files<CR>
+
+" file browser
+imap <C-y> <ESC>:Telescope file_browser<CR>
+nmap <C-y> :Telescope file_browser<CR>
+vmap <C-y> :Telescope file_browser<CR>
+
+" buffers
+imap <C-b> <ESC>:Telescope buffers<CR>
+nmap <C-b> :Telescope buffers<CR>
+vmap <C-b> :Telescope buffers<CR>
+
+" ripgrep git files
+imap <C-r> <ESC>:Telescope live_grep<CR>
+nmap <C-r> :Telescope live_grep<CR>
+vmap <C-r> :Telescope live_grep<CR>
+
 
 " write buffer to...
 nmap <leader>W :!cat %:p ><space>

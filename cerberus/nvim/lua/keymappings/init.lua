@@ -170,25 +170,25 @@ map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    
 --------------------------------------------------
 map('n', 'tt', ':Telescope ')
 
--- files
-map('i', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
-map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
-map('v', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
+-- -- files
+-- map('i', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
+-- map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
+-- map('v', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
 
--- file browser
-map('i', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
-map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
-map('v', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
+-- -- file browser
+-- map('i', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
+-- map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
+-- map('v', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
 
--- buffers
-map('i', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
-map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
-map('v', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
+-- -- buffers
+-- map('i', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
+-- map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
+-- map('v', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
 
--- ripgrep git files
-map('i', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
-map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
-map('v', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
+-- -- ripgrep git files
+-- map('i', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
+-- map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
+-- map('v', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
 
 -- treesitter
 map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')
