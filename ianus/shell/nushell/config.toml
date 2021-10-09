@@ -4,9 +4,11 @@ skip_welcome_message = false # Note to nushell developer: This is expected to be
 disable_table_indexes = false
 nonzero_exit_errors = true
 
+
 startup = [
   "source ~/.archive/ianus/shell/nushell/init.toml",
   "source ~/.archive/ianus/shell/nushell/alias.toml",
+  "source ~/.archive/ianus/shell/nushell/zoxide.toml",
 ]
 prompt = "starship_prompt"
 
