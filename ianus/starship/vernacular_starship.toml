@@ -37,7 +37,8 @@ disabled                                     = false
 
 [jobs]
 symbol                                       = '∫'
-threshold                                    = 3
+number_threshold                             = 3
+symbol_threshold                             = 3
 style                                        = '#00CED1'
 
 [line_break]
@@ -58,6 +59,7 @@ disabled                                     = true
 [shell]
 bash_indicator = ' β'
 fish_indicator = ' φ'
+unknown_indicator = ' η'
 zsh_indicator = ''
 format = '[$indicator](#4EA24E)'
 disabled = false
