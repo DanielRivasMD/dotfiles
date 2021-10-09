@@ -3,7 +3,24 @@ alias l = ls --long
 alias la = ls --long --all
 alias ld = ls --long --all --du
 
+# cd
+alias .. = cd ..
+alias ... = cd ../..
+alias .... = cd ../../..
+
+# go tools
+alias f = fillin
+alias lzg = lazygit
+alias lzd = lazydocker
+
+# rust tools
+alias br = broot --dates --sizes --permissions --hidden --show-gitignored --show-git-info
+alias gt = gitui
+alias gl = git-local-ignore
+alias ss = samesame
+alias wc = wordcrab
+alias zz = z -
+
 # nu functions
 def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}
 def nuver [] {version | pivot key value}
-
