@@ -15,39 +15,12 @@
 # Common From https://github.com/kkawakam/rustyline#actions
 ##########################################################
 
-# Control Backspace, delete 1 word at a time
+# Delete character under cursor
 - key:
-    Backspace:
-  modifiers:
-    CTRL:
+    Delete:
   binding:
     Kill:
-      BackwardWord:
-        repeat: 1
-        word: Big
-
-# Alt Backspace, delete 1 word at a time
-- key:
-    Backspace:
-  modifiers:
-    ALT:
-  binding:
-    Kill:
-      BackwardWord:
-        repeat: 1
-        word: Big
-
-# Move cursor to the beginning of line
-- key:
-    Home:
-  binding:
-    Move: BeginningOfLine
-
-# Move cursor to end of line
-- key:
-    End:
-  binding:
-    Move: EndOfLine
+      ForwardChar: 1
 
 # Move cursor one character left
 - key:
@@ -63,6 +36,45 @@
     Move:
       ForwardChar: 1
 
+# Move cursor to the beginning of line
+- key:
+    Char: A
+  modifiers:
+    CTRL:
+  binding:
+    Move: BeginningOfLine
+
+# Move cursor to end of line
+- key:
+    Char: E
+  modifiers:
+    CTRL:
+  binding:
+    Move: EndOfLine
+
+# Move cursor one word backward
+- key:
+    Left:
+  modifiers:
+    ALT:
+  binding:
+    Move:
+      BackwardWord:
+        repeat: 1
+        word: Big
+
+# Move cursor one word forward
+- key:
+    Right:
+  modifiers:
+    ALT:
+  binding:
+    Move:
+      ForwardWord:
+        repeat: 1
+        at: Start
+        word: Big
+
 # Complete Hint
 - key:
     Right:
@@ -70,55 +82,22 @@
     SHIFT:
   binding:
     CompleteHint:
+
+# New line for multilines commands
 - key:
-    Char: F
+    Enter:
+  modifiers:
+    ALT:
+  binding:
+    Newline:
+
+# Reverse Search history (Ctrl-S forward, Ctrl-G cancel)
+- key:
+    Char: R
   modifiers:
     CTRL:
   binding:
-    CompleteHint:
-
-# Interrupt/Cancel edition
-- key:
-    Char: C
-  modifiers:
-    CTRL:
-  binding:
-    Interrupt:
-
-# (if line is not empty) Delete character under cursor
-- key:
-    Char: D
-  modifiers:
-    CTRL:
-  binding:
-    EndOfFile:
-
-# Delete character under cursor
-- key:
-    Delete:
-  binding:
-    Kill:
-      ForwardChar: 1
-
-# Finish the line entry
-- key:
-    Char: J
-  modifiers:
-    CTRL:
-  binding:
-    AcceptLine:
-- key:
-    Char: M
-  modifiers:
-    CTRL:
-  binding:
-    AcceptLine:
-
-# This makes multiline editing stop working since Enter accepts a line
-# - key:
-#     Enter:
-#   binding:
-#     AcceptLine:
+    ReverseSearchHistory:
 
 # Next match from history
 - key:
@@ -132,30 +111,6 @@
   binding:
     LineUpOrPreviousHistory: 1
 
-# Reverse Search history (Ctrl-S forward, Ctrl-G cancel)
-- key:
-    Char: R
-  modifiers:
-    CTRL:
-  binding:
-    ReverseSearchHistory:
-
-# Forward Search history (Ctrl-R backward, Ctrl-G cancel)
-- key:
-    Char: S
-  modifiers:
-    CTRL:
-  binding:
-    ForwardSearchHistory:
-
-# Transpose previous character with current character
-- key:
-    Char: T
-  modifiers:
-    CTRL:
-  binding:
-    TransposeChars:
-
 # Delete from start of line to cursor
 - key:
     Char: U
@@ -164,19 +119,13 @@
   binding:
     Kill: BeginningOfLine
 
-# Insert any special character without performing its associated action (#65)
+# Delete from start of line to cursor
 - key:
-    Char: Q
+    Char: K
   modifiers:
     CTRL:
   binding:
-    QuotedInsert:
-- key:
-    Char: V
-  modifiers:
-    CTRL:
-  binding:
-    QuotedInsert:
+    Kill: EndOfLine
 
 # Delete word leading up to cursor (using white space as a word boundary)
 - key:
@@ -199,6 +148,14 @@
       repeat: 1
       anchor: Before
 
+# Interrupt/Cancel edition
+- key:
+    Char: C
+  modifiers:
+    CTRL:
+  binding:
+    Interrupt:
+
 # Suspend (Unix only)
 - key:
     Char: Z
@@ -207,19 +164,12 @@
   binding:
     Suspend:
 
-# Undo
-- key:
-    Char: "_"
-  modifiers:
-    CTRL:
-  binding:
-    Undo: 1
-
 # KeyPress::UnknownEscSeq => Cmd::Noop,
 - key:
     UnknownEscSeq:
   binding:
     Noop:
+
 ##########################################################
 # Possible options for key:
 ##########################################################
