@@ -9,6 +9,9 @@ bat --wrap never <file>
 # Copy file content to clipboard
 bat <file> | cb
 
+# Print without decorations
+bat --plain <file>
+
 % bat, fillin
 
 # Print file fillin
@@ -19,3 +22,6 @@ fillin bat --wrap never {{file}}
 
 # Copy file content to clipboard fillin
 fillin bat {{file}} | cb
+
+# Print without decorations fillin
+fillin bat --plain {{file}}
