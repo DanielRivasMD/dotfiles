@@ -1,3 +1,4 @@
+
 filesize_format = "B" # can be b, kb, kib, mb, mib, gb, gib, etc
 filesize_metric = true # true => (KB, MB, GB), false => (KiB, MiB, GiB)
 skip_welcome_message = false # Note to nushell developer: This is expected to be false, when testing nushell itself
@@ -12,12 +13,14 @@ startup = [
 ]
 prompt = "starship_prompt"
 
+
 table_mode = "other" # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
 # plugin_dirs = ["D:\\Src\\GitHub\\nu-plugin-lib\\samples\\Nu.Plugin.Len\\bin\\Debug\\netcoreapp3.1"]
 pivot_mode = "auto" # auto, always, never
 ctrlc_exit = false
 complete_from_path = true
 rm_always_trash = false
+
 
 # for each of the options in the color_config section, you are able to set
 # the color alone or with one of the following attributes.
@@ -38,6 +41,7 @@ rm_always_trash = false
 # reverse    r
 # abbreviated: green bold = gb, red underline = ru, blue dimmed = ud
 # or verbose: green_bold, red_underline, blue_dimmed
+
 
 [color_config]
 primitive_int = "green"
@@ -60,6 +64,7 @@ header_bold = true
 index_color = "rd"
 leading_trailing_space_bg = "white"
 
+
 [line_editor]
 max_history_size = 100000
 history_duplicates = "ignoreconsecutive" # alwaysadd,ignoreconsecutive
@@ -72,6 +77,7 @@ auto_add_history = true
 bell_style = "none" # audible, none, visible
 color_mode = "enabled" # enabled, forced, disabled
 tab_stop = 2
+
 
 [textview]
 term_width = "default" # "default" or a number
@@ -88,6 +94,7 @@ use_italics = true
 paging_mode = "QuitIfOneScreen" # Always, QuitIfOneScreen, Never
 pager = "less"
 theme = "TwoDark"
+
 
 # To add path and env do this
 # > config set path $nu.path
