@@ -7,7 +7,7 @@ _default:
 
 # print justfile
 print:
-  bat justfile --language make
+  bat .justfile --language make
 
 #################################################################################
 
