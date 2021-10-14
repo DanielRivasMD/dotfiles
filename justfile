@@ -142,20 +142,30 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 ################################################################################
 
 # deliver archives to Uppmax
-@ hermesUppmax:
-  # justfile
-  rsync -azvhP $ARCHIVE/justfile {{RemoteUppmax}}:/home/drivas/.archive/                      # justfile
-
+@ HermesUppmax:
   # directory
-  rsync -azvhP $IANUS/pier {{RemoteUppmax}}:/home/drivas/.archive/ianus/                      # pier
-  rsync -azvhP $IANUS/R {{RemoteUppmax}}:/home/drivas/.archive/ianus/                         # r
-  rsync -azvhP $IANUS/screen {{RemoteUppmax}}:/home/drivas/.archive/ianus/                    # screen
-  rsync -azvhP $IANUS/shell {{RemoteUppmax}}:/home/drivas/.archive/ianus/                     # shell
-  rsync -azvhP $IANUS/starship {{RemoteUppmax}}:/home/drivas/.archive/ianus/                  # starship
-  rsync -azvhP $IANUS/tmux {{RemoteUppmax}}:/home/drivas/.archive/ianus/                      # tmux
-  rsync -azvhP $IANUS/micro/plug {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/          # micro plugins
-  rsync -azvhP $IANUS/micro/bindings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/ # micro bindings
-  rsync -azvhP $IANUS/micro/settings.json {{RemoteUppmax}}:/home/drivas/.archive/ianus/micro/ # micro settings
+  rsync -azvhP {{_ianus}}/pier {{_uppmaxID}}:{{_ianusRemote}}/                      # pier
+  rsync -azvhP {{_ianus}}/R {{_uppmaxID}}:{{_ianusRemote}}/                         # r
+  rsync -azvhP {{_ianus}}/screen {{_uppmaxID}}:{{_ianusRemote}}/                    # screen
+  rsync -azvhP {{_ianus}}/shell {{_uppmaxID}}:{{_ianusRemote}}/                     # shell
+  rsync -azvhP {{_ianus}}/starship {{_uppmaxID}}:{{_ianusRemote}}/                  # starship
+  rsync -azvhP {{_ianus}}/tmux {{_uppmaxID}}:{{_ianusRemote}}/                      # tmux
+  rsync -azvhP {{_ianus}}/micro/plug {{_uppmaxID}}:{{_ianusRemote}}/micro/          # micro plugins
+  rsync -azvhP {{_ianus}}/micro/bindings.json {{_uppmaxID}}:{{_ianusRemote}}/micro/ # micro bindings
+  rsync -azvhP {{_ianus}}/micro/settings.json {{_uppmaxID}}:{{_ianusRemote}}/micro/ # micro settings
+
+  # remote bin
+  rsync -azvhPX {{_remoteBin}}/bin/bat {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/diamond {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/exa {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/fd {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/lsd {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/micro {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/rg {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/starship {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  # rsync -azvhPX {{_remoteBin}}/bin/xcp {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/xsv {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/zoxide {{_pawseyID}}:{{_softwareUppmax}}/bin/
 
 ################################################################################
 
