@@ -199,40 +199,40 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 ################################################################################
 
 # link archives Uppmax
-@ Uppmax:
+@ HephaestusUppmax:
   # @HOME
-  ln -svf $IANUS/R/Rprofile.d $HOME/.Rprofile.d                                # rprofile directory
-  ln -svf $IANUS/R/uppmax_Rprofile.R $HOME/.Rprofile                           # rprofile
-  ln -svf $IANUS/pier/pier.toml $HOME/.pier.toml                               # pier
-  ln -svf $IANUS/tmux/2.5.tmux.conf $HOME/.tmux.conf                           # tmux 2.5
-  ln -svf $IANUS/screen/4.01.00.screenrc $HOME/.screenrc                       # screen
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/R/Rprofile.d {{_HOMEremote}}/.Rprofile.d                           # rprofile directory
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/R/uppmax_Rprofile.R {{_HOMEremote}}/.Rprofile                      # rprofile
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/pier/pier.toml {{_HOMEremote}}/.pier.toml                          # pier
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/tmux/2.5.tmux.conf {{_HOMEremote}}/.tmux.conf                      # tmux 2.5
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/screen/4.01.00.screenrc {{_HOMEremote}}/.screenrc                  # screen
 
   # @config
-  ln -svf $IANUS/micro $HOME/.config                                           # micro directory
-  ln -svf $IANUS/starship $HOME/.config                                        # starship directory
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/micro {{_HOMEremote}}/.config                                      # micro directory
+  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/starship {{_HOMEremote}}/.config                                   # starship directory
 
   # shell
-  ln -svf $IANUS/shell/terminal/uppmax_profile.sh $HOME/.profile               # terminal profile
+  ssh {{_uppmaxID}} ln -svf {{_terminalRemote}}/uppmax_profile.sh {{_HOMEremote}}/.profile                      # terminal profile
 
   # bash
-  if [[ ! -d $HOME/.bash ]]; then mkdir $HOME/.bash; fi                        # purge before linking
-  ln -svf $IANUS/shell/bash/uppmax_bashrc.sh $HOME/.bashrc                     # bashrc
-  ln -svf $IANUS/shell/bash/uppmax_bash_profile.sh $HOME/.bash_profile         # bash profile
-  ln -svf $IANUS/shell/bash/uppmax_bash_aliases.sh $HOME/.bash/bash_aliases.sh # bash aliases
-  ln -svf $IANUS/shell/bash/fzf.bash $HOME/.bash                               # fzf bash
+  ssh {{_uppmaxID}} if [[ ! -d {{_HOMEremote}}/.bash ]]; then ssh {{_uppmaxID}} mkdir {{_HOMEremote}}/.bash; fi # purge before linking
+  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/uppmax_bashrc.sh {{_HOMEremote}}/.bashrc                           # bashrc
+  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/uppmax_bash_profile.sh {{_HOMEremote}}/.bash_profile               # bash profile
+  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/uppmax_bash_aliases.sh {{_HOMEremote}}/.bash/bash_aliases.sh       # bash aliases
+  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/fzf.bash {{_HOMEremote}}/.bash                                     # fzf bash
 
   # zsh
-  if [[ ! -d $HOME/.zsh ]]; then mkdir $HOME/.zsh; fi                          # purge before linking
-  ln -svf $IANUS/shell/zsh/uppmax_zshrc.sh $HOME/.zshrc                        # zshrc
-  ln -svf $IANUS/shell/zsh/uppmax_zsh_aliases.sh $HOME/.zsh/zsh_aliases.sh     # zsh aliases
-  ln -svf $IANUS/shell/zsh/fzf.zsh $HOME/.zsh                                  # fzf zsh
-  ln -svf $IANUS/shell/zsh/uppmax_zsh_plugins.sh $HOME/.zsh/zsh_plugins.sh     # zsh plugins
-  ln -svf $IANUS/shell/zsh/uppmax_zsh_plugins.txt $HOME/.zsh/zsh_plugins.txt   # zsh plugins
-  ln -svf $IANUS/shell/zsh/zsh_pandoc_autocompletion.sh $HOME/.zsh             # zsh completion
-  ln -svf $IANUS/shell/zsh/completion $HOME/.config/zsh_completion             # zsh completion
+  ssh {{_uppmaxID}} "if [[ ! -d {{_HOMEremote}}/.zsh ]]; then ssh {{_uppmaxID}} mkdir {{_HOMEremote}}/.zsh; fi" # purge before linking
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zshrc.sh {{_HOMEremote}}/.zshrc                               # zshrc
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zsh_aliases.sh {{_HOMEremote}}/.zsh/zsh_aliases.sh            # zsh aliases
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/fzf.zsh {{_HOMEremote}}/.zsh                                         # fzf zsh
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zsh_plugins.sh {{_HOMEremote}}/.zsh/zsh_plugins.sh            # zsh plugins
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zsh_plugins.txt {{_HOMEremote}}/.zsh/zsh_plugins.txt          # zsh plugins
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/zsh_pandoc_autocompletion.sh {{_HOMEremote}}/.zsh                    # zsh completion
+  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/completion {{_HOMEremote}}/.config/zsh_completion                    # zsh completion
 
   # fish
-  ln -svf $IANUS/shell/fish/uppmax_config.fish $HOME/.config/fish/config.fish  # fish config
+  ssh {{_uppmaxID}} ln -svf {{_fishRemote}}/uppmax_config.fish {{_HOMEremote}}/.config/fish/config.fish         # fish config
 
 ################################################################################
 
