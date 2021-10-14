@@ -163,17 +163,30 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 # deliver archives to Pawsey
 @ hermesPawsey:
   # justfile
-  rsync -azvhP $ARCHIVE/justfile {{RemotePawsey}}:/home/drivas/.archive/                      # justfile
+  rsync -azvhP $ARCHIVE/justfile {{PawseyID}}:/home/drivas/.archive/                      # justfile
 
   # directory
-  rsync -azvhP $IANUS/pier {{RemotePawsey}}:/home/drivas/.archive/ianus/                      # pier
-  rsync -azvhP $IANUS/R {{RemotePawsey}}:/home/drivas/.archive/ianus/                         # r
-  rsync -azvhP $IANUS/screen {{RemotePawsey}}:/home/drivas/.archive/ianus/                    # screen
-  rsync -azvhP $IANUS/shell {{RemotePawsey}}:/home/drivas/.archive/ianus/                     # shell
-  rsync -azvhP $IANUS/starship {{RemotePawsey}}:/home/drivas/.archive/ianus/                  # starship
-  rsync -azvhP $IANUS/micro/plug {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/          # micro plugins
-  rsync -azvhP $IANUS/micro/bindings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro bindings
-  rsync -azvhP $IANUS/micro/settings.json {{RemotePawsey}}:/home/drivas/.archive/ianus/micro/ # micro settdirectory
+  rsync -azvhP $IANUS/pier {{PawseyID}}:{{IanusRemote}}/                      # pier
+  rsync -azvhP $IANUS/R {{PawseyID}}:{{IanusRemote}}/                         # r
+  rsync -azvhP $IANUS/screen {{PawseyID}}:{{IanusRemote}}/                    # screen
+  rsync -azvhP $IANUS/shell {{PawseyID}}:{{IanusRemote}}/                     # shell
+  rsync -azvhP $IANUS/starship {{PawseyID}}:{{IanusRemote}}/                  # starship
+  rsync -azvhP $IANUS/micro/plug {{PawseyID}}:{{IanusRemote}}/micro/          # micro plugins
+  rsync -azvhP $IANUS/micro/bindings.json {{PawseyID}}:{{IanusRemote}}/micro/ # micro bindings
+  rsync -azvhP $IANUS/micro/settings.json {{PawseyID}}:{{IanusRemote}}/micro/ # micro settdirectory
+
+  # remote bin
+  rsync -azvhPX {{RemoteBin}}/bat {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/diamond {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/exa {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/fd {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/lsd {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/micro {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/rg {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/starship {{PawseyID}}:{{SoftwarePawsey}}/
+  # rsync -azvhPX {{RemoteBin}}/xcp {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/xsv {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/zoxide {{PawseyID}}:{{SoftwarePawsey}}/
 
 ################################################################################
 
