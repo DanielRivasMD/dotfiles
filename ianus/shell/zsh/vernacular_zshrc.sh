@@ -78,6 +78,14 @@ compdef _mplayer mp
 compdef _git-local-ignore gl
 
 # exa
+compdef _exa l
+compdef _exa la
+compdef _exa lr
+
+compdef _exa lar
+compdef _exa lsa
+compdef _exa lsc
+
 compdef _exa lg
 compdef _exa lga
 compdef _exa lgr
@@ -86,37 +94,29 @@ compdef _exa lgar
 compdef _exa lgsa
 compdef _exa lgsc
 
-compdef _exa lgg
-compdef _exa lgga
-compdef _exa lggr
-
-compdef _exa lggar
-compdef _exa lggsa
-compdef _exa lggsc
-
-compdef _exa lgt
-compdef _exa lgd
+compdef _exa lt
+compdef _exa ld
 
 # # lsd
-# compdef _lsd l
-# compdef _lsd lr
-# compdef _lsd lss
-#
-# compdef _lsd la
-# compdef _lsd lar
-# compdef _lsd las
-#
 # compdef _lsd ls
 # compdef _lsd lsr
+# compdef _lsd lsss
 #
 # compdef _lsd lsa
 # compdef _lsd lsar
+# compdef _lsd lsas
 #
-# compdef _lsd lt
-# compdef _lsd lta
+# compdef _lsd lss
+# compdef _lsd lssr
 #
-# compdef _lsd le
-# compdef _lsd lea
+# compdef _lsd lssa
+# compdef _lsd lssar
+#
+# compdef _lsd lst
+# compdef _lsd lsta
+#
+# compdef _lsd lse
+# compdef _lsd lsea
 
 
 # ==========================
