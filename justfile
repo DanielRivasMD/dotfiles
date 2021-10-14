@@ -12,7 +12,7 @@ print:
 #################################################################################
 
 # declarations
-IanusHOME := "/home/drivas"
+HOMERemote := "/home/drivas"
 IanusRemote := "/home/drivas/.archive/ianus"
 RemoteBin := "$HOME/Factorem/RemoteBin"
 
@@ -160,10 +160,7 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 ################################################################################
 
 # deliver archives to Pawsey
-@ hermesPawsey:
-  # justfile
-  rsync -azvhP $ARCHIVE/justfile {{PawseyID}}:/home/drivas/.archive/                      # justfile
-
+@ HermesPawsey:
   # directory
   rsync -azvhP $IANUS/pier {{PawseyID}}:{{IanusRemote}}/                      # pier
   rsync -azvhP $IANUS/R {{PawseyID}}:{{IanusRemote}}/                         # r
@@ -175,17 +172,17 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
   rsync -azvhP $IANUS/micro/settings.json {{PawseyID}}:{{IanusRemote}}/micro/ # micro settdirectory
 
   # remote bin
-  rsync -azvhPX {{RemoteBin}}/bat {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/diamond {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/exa {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/fd {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/lsd {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/micro {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/rg {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/starship {{PawseyID}}:{{SoftwarePawsey}}/
-  # rsync -azvhPX {{RemoteBin}}/xcp {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/xsv {{PawseyID}}:{{SoftwarePawsey}}/
-  rsync -azvhPX {{RemoteBin}}/zoxide {{PawseyID}}:{{SoftwarePawsey}}/
+  rsync -azvhPX {{RemoteBin}}/bin/bat {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/diamond {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/exa {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/fd {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/lsd {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/micro {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/rg {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/starship {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  # rsync -azvhPX {{RemoteBin}}/bin/xcp {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/xsv {{PawseyID}}:{{SoftwarePawsey}}/bin/
+  rsync -azvhPX {{RemoteBin}}/bin/zoxide {{PawseyID}}:{{SoftwarePawsey}}/bin/
 
 ################################################################################
 # Hephaestus
@@ -230,56 +227,39 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 ################################################################################
 
 # link archives Pawsey
-@ hephaestusPawsey:
+@ HephaestusPawsey:
   # @HOME
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/R/Rprofile.d {{IanusHOME}}/.Rprofile.d                                # rprofile directory
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/R/pawsey_Rprofile.R {{IanusHOME}}/.Rprofile                           # rprofile
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/screen/4.01.00.screenrc {{IanusHOME}}/.screenrc                       # screen
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/R/Rprofile.d {{HOMERemote}}/.Rprofile.d                                # rprofile directory
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/R/pawsey_Rprofile.R {{HOMERemote}}/.Rprofile                           # rprofile
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/screen/4.01.00.screenrc {{HOMERemote}}/.screenrc                       # screen
 
   # @config
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/micro {{IanusHOME}}/.config                                           # micro directory
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/starship {{IanusHOME}}/.config                                        # starship directory
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/micro {{HOMERemote}}/.config                                           # micro directory
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/starship {{HOMERemote}}/.config                                        # starship directory
 
   # shell
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/terminal/pawsey_profile.sh {{IanusHOME}}/.profile               # terminal profile
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/terminal/pawsey_profile.sh {{HOMERemote}}/.profile               # terminal profile
 
   # bash
-  ssh {{PawseyID}} "if [[ ! -d {{IanusHOME}}/.bash ]]; then ssh {{PawseyID}} mkdir {{IanusHOME}}/.bash; fi"      # purge before linking
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bashrc.sh {{IanusHOME}}/.bashrc                     # bashrc
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bash_profile.sh {{IanusHOME}}/.bash_profile         # bash profile
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bash_aliases.sh {{IanusHOME}}/.bash/bash_aliases.sh # bash aliases
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/fzf.bash {{IanusHOME}}/.bash                               # fzf bash
+  ssh {{PawseyID}} "if [[ ! -d {{HOMERemote}}/.bash ]]; then ssh {{PawseyID}} mkdir {{HOMERemote}}/.bash; fi"     # purge before linking
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bashrc.sh {{HOMERemote}}/.bashrc                     # bashrc
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bash_profile.sh {{HOMERemote}}/.bash_profile         # bash profile
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bash_aliases.sh {{HOMERemote}}/.bash/bash_aliases.sh # bash aliases
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/fzf.bash {{HOMERemote}}/.bash                               # fzf bash
 
   # zsh
-  ssh {{PawseyID}} "if [[ ! -d {{IanusHOME}}/.zsh ]]; then ssh {{PawseyID}} mkdir {{IanusHOME}}/.zsh; fi"        # purge before linking
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zshrc.sh {{IanusHOME}}/.zshrc                        # zshrc
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_aliases.sh {{IanusHOME}}/.zsh/zsh_aliases.sh     # zsh aliases
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/fzf.zsh {{IanusHOME}}/.zsh                                  # fzf zsh
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_plugins.sh {{IanusHOME}}/.zsh/zsh_plugins.sh     # zsh plugins
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_plugins.txt {{IanusHOME}}/.zsh/zsh_plugins.txt   # zsh plugins
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/zsh_pandoc_autocompletion.sh {{IanusHOME}}/.zsh             # zsh completion
-  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/completion {{IanusHOME}}/.config/zsh_completion             # zsh completion
+  ssh {{PawseyID}} "if [[ ! -d {{HOMERemote}}/.zsh ]]; then ssh {{PawseyID}} mkdir {{HOMERemote}}/.zsh; fi"       # purge before linking
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zshrc.sh {{HOMERemote}}/.zshrc                        # zshrc
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_aliases.sh {{HOMERemote}}/.zsh/zsh_aliases.sh     # zsh aliases
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/fzf.zsh {{HOMERemote}}/.zsh                                  # fzf zsh
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_plugins.sh {{HOMERemote}}/.zsh/zsh_plugins.sh     # zsh plugins
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_plugins.txt {{HOMERemote}}/.zsh/zsh_plugins.txt   # zsh plugins
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/zsh_pandoc_autocompletion.sh {{HOMERemote}}/.zsh             # zsh completion
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/completion {{HOMERemote}}/.config/zsh_completion             # zsh completion
 
   # link executables
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/bat bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/diamond bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/exa bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/fd bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/lsd bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/micro bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/rg bin
-  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/runiq/runiq bin
-  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/ruplacer/ruplacer bin
-  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/samesame/samesame bin
-  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/sd/sd bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/starship bin
-  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/wordcrab/wordcrab bin
-  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/xcp bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/xsv bin
-  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/zoxide bin
-
-  # # fish
-  # ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/fish/pawsey_config.fish {{IanusHOME}}/.config/fish/config.fish  # fish config
+  ssh {{PawseyID}} "if [[ ! -d {{HOMERemote}}/bin ]]; then ssh {{PawseyID}} rm -rf {{HOMERemote}}/bin; fi"        # purge before linking
+  ssh {{PawseyID}} ln -svf {{SoftwarePawsey}}/bin {{HOMERemote}}/bin
 
 ################################################################################
 # Zaqar
