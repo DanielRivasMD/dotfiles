@@ -32,12 +32,13 @@ disabled                                     = true
 
 [hostname]
 ssh_only                                     = true
-format                                       = '⟪[$hostname](#B452CD)⟫'
+format                                       = '⟪[$hostname](#B452CD)⟫ '
 disabled                                     = false
 
 [jobs]
 symbol                                       = '∫'
-threshold                                    = 3
+number_threshold                             = 3
+symbol_threshold                             = 3
 style                                        = '#00CED1'
 
 [line_break]
@@ -58,6 +59,7 @@ disabled                                     = true
 [shell]
 bash_indicator = ' β'
 fish_indicator = ' φ'
+unknown_indicator = ' η'
 zsh_indicator = ''
 format = '[$indicator](#4EA24E)'
 disabled = false
@@ -74,8 +76,8 @@ commit_hash_length                           = 4
 format                                       = ' [($hash)()](bold #4EA24E) '
 
 [git_state]
-progress_divider                             = '|'
-style                                        = 'bold #FFC125'
+# progress_divider                             = '|'
+# style                                        = 'bold #FFC125'
 
 [git_status]
 ahead                                        = ' [⇡](#1874CD)[${count}](#bebebe)'
@@ -116,8 +118,12 @@ pyenv_version_name                           = true
 pyenv_prefix                                 = ''
 format                                       = ' [](#228B22)'
 
+[rlang]
+format                                       = ' [®](#708090) [$version](#acacac)'
+detect_files                                 = [".R"]
+detect_folders                               = [".Rproj.user"]
+
 [rust]
 format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
 
 ################################################################################
-
