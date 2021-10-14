@@ -159,7 +159,6 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 
 ################################################################################
 
-
 # deliver archives to Pawsey
 @ hermesPawsey:
   # justfile
@@ -188,6 +187,8 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
   rsync -azvhPX {{RemoteBin}}/xsv {{PawseyID}}:{{SoftwarePawsey}}/
   rsync -azvhPX {{RemoteBin}}/zoxide {{PawseyID}}:{{SoftwarePawsey}}/
 
+################################################################################
+# Hephaestus
 ################################################################################
 
 # link archives Uppmax
@@ -229,63 +230,56 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 ################################################################################
 
 # link archives Pawsey
-@ Pawsey:
+@ hephaestusPawsey:
   # @HOME
-  ln -svf $IANUS/R/Rprofile.d $HOME/.Rprofile.d                                # rprofile directory
-  ln -svf $IANUS/R/pawsey_Rprofile.R $HOME/.Rprofile                           # rprofile
-  ln -svf $IANUS/pier/pier.toml $HOME/.pier.toml                               # pier
-  ln -svf $IANUS/screen/4.01.00.screenrc $HOME/.screenrc                       # screen
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/R/Rprofile.d {{IanusHOME}}/.Rprofile.d                                # rprofile directory
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/R/pawsey_Rprofile.R {{IanusHOME}}/.Rprofile                           # rprofile
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/screen/4.01.00.screenrc {{IanusHOME}}/.screenrc                       # screen
 
   # @config
-  ln -svf $IANUS/micro $HOME/.config                                           # micro directory
-  ln -svf $IANUS/starship $HOME/.config                                        # starship directory
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/micro {{IanusHOME}}/.config                                           # micro directory
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/starship {{IanusHOME}}/.config                                        # starship directory
 
   # shell
-  ln -svf $IANUS/shell/terminal/pawsey_profile.sh $HOME/.profile               # terminal profile
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/terminal/pawsey_profile.sh {{IanusHOME}}/.profile               # terminal profile
 
   # bash
-  if [[ ! -d $HOME/.bash ]]; then mkdir $HOME/.bash; fi                        # purge before linking
-  ln -svf $IANUS/shell/bash/pawsey_bashrc.sh $HOME/.bashrc                     # bashrc
-  ln -svf $IANUS/shell/bash/pawsey_bash_profile.sh $HOME/.bash_profile         # bash profile
-  ln -svf $IANUS/shell/bash/pawsey_bash_aliases.sh $HOME/.bash/bash_aliases.sh # bash aliases
-  ln -svf $IANUS/shell/bash/fzf.bash $HOME/.bash                               # fzf bash
+  ssh {{PawseyID}} "if [[ ! -d {{IanusHOME}}/.bash ]]; then ssh {{PawseyID}} mkdir {{IanusHOME}}/.bash; fi"      # purge before linking
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bashrc.sh {{IanusHOME}}/.bashrc                     # bashrc
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bash_profile.sh {{IanusHOME}}/.bash_profile         # bash profile
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/pawsey_bash_aliases.sh {{IanusHOME}}/.bash/bash_aliases.sh # bash aliases
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/bash/fzf.bash {{IanusHOME}}/.bash                               # fzf bash
 
   # zsh
-  if [[ ! -d $HOME/.zsh ]]; then mkdir $HOME/.zsh; fi                          # purge before linking
-  ln -svf $IANUS/shell/zsh/pawsey_zshrc.sh $HOME/.zshrc                        # zshrc
-  ln -svf $IANUS/shell/zsh/pawsey_zsh_aliases.sh $HOME/.zsh/zsh_aliases.sh     # zsh aliases
-  ln -svf $IANUS/shell/zsh/fzf.zsh $HOME/.zsh                                  # fzf zsh
-  ln -svf $IANUS/shell/zsh/pawsey_zsh_plugins.sh $HOME/.zsh/zsh_plugins.sh     # zsh plugins
-  ln -svf $IANUS/shell/zsh/pawsey_zsh_plugins.txt $HOME/.zsh/zsh_plugins.txt   # zsh plugins
-  ln -svf $IANUS/shell/zsh/zsh_pandoc_autocompletion.sh $HOME/.zsh             # zsh completion
-  ln -svf $IANUS/shell/zsh/completion $HOME/.config/zsh_completion             # zsh completion
+  ssh {{PawseyID}} "if [[ ! -d {{IanusHOME}}/.zsh ]]; then ssh {{PawseyID}} mkdir {{IanusHOME}}/.zsh; fi"        # purge before linking
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zshrc.sh {{IanusHOME}}/.zshrc                        # zshrc
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_aliases.sh {{IanusHOME}}/.zsh/zsh_aliases.sh     # zsh aliases
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/fzf.zsh {{IanusHOME}}/.zsh                                  # fzf zsh
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_plugins.sh {{IanusHOME}}/.zsh/zsh_plugins.sh     # zsh plugins
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/pawsey_zsh_plugins.txt {{IanusHOME}}/.zsh/zsh_plugins.txt   # zsh plugins
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/zsh_pandoc_autocompletion.sh {{IanusHOME}}/.zsh             # zsh completion
+  ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/zsh/completion {{IanusHOME}}/.config/zsh_completion             # zsh completion
 
   # link executables
-  ln -svf /scratch/pawsey0263/drivas/software/bat-v0.18.0-x86_64-unknown-linux-musl/bat bin
-  ln -svf /scratch/pawsey0263/drivas/software/diamond/diamond bin
-  ln -svf /scratch/pawsey0263/drivas/software/exa/exa bin
-  ln -svf /scratch/pawsey0263/drivas/software/fd-v8.2.1-x86_64-unknown-linux-musl/fd bin
-  ln -svf /scratch/pawsey0263/drivas/software/micro/micro bin
-  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/makeblastdb bin
-  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/blastn bin
-  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/blastp bin
-  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/blastx bin
-  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/tblastn bin
-  ln -svf /scratch/pawsey0263/drivas/software/ncbi-blast-2.10.1+/bin/tblastx bin
-  ln -svf /scratch/pawsey0263/drivas/software/pier/pier bin
-  ln -svf /scratch/pawsey0263/drivas/software/ripgrep-12.1.1-x86_64-unknown-linux-musl/rg bin
-  ln -svf /scratch/pawsey0263/drivas/software/runiq/runiq bin
-  ln -svf /scratch/pawsey0263/drivas/software/ruplacer/ruplacer bin
-  ln -svf /scratch/pawsey0263/drivas/software/samesame/samesame bin
-  ln -svf /scratch/pawsey0263/drivas/software/sd/sd bin
-  ln -svf /scratch/pawsey0263/drivas/software/starship/starship bin
-  ln -svf /scratch/pawsey0263/drivas/software/wordcrab/wordcrab bin
-  ln -svf /scratch/pawsey0263/drivas/software/xcp/xcp bin
-  ln -svf /scratch/pawsey0263/drivas/software/xsv/xsv bin
-  ln -svf /scratch/pawsey0263/drivas/software/zoxide/zoxide bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/bat bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/diamond bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/exa bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/fd bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/lsd bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/micro bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/rg bin
+  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/runiq/runiq bin
+  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/ruplacer/ruplacer bin
+  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/samesame/samesame bin
+  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/sd/sd bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/starship bin
+  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/wordcrab/wordcrab bin
+  # ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/xcp bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/xsv bin
+  ssh {{PawseyID}} ln -svf /scratch/pawsey0263/drivas/software/zoxide bin
 
   # # fish
-  # ln -svf $IANUS/shell/fish/pawsey_config.fish $HOME/.config/fish/config.fish  # fish config
+  # ssh {{PawseyID}} ln -svf {{IanusRemote}}/shell/fish/pawsey_config.fish {{IanusHOME}}/.config/fish/config.fish  # fish config
 
 ################################################################################
 # Zaqar
