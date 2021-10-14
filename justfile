@@ -266,52 +266,65 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
 ################################################################################
 
 # download cluster executables
-@ zaqarBin:
+@ ZaqarBin:
+  # create directories
+  if [[ ! -d {{RemoteBin}} ]]; then mkdir -p {{RemoteBin}}; fi
+  if [[ ! -d {{RemoteBin}}/bin ]]; then mkdir -p {{RemoteBin}}/bin; fi
+  if [[ ! -d {{RemoteBin}}/download ]]; then mkdir -p {{RemoteBin}}/download; fi
+
   # bat
   wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
-  mv {{RemoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl/bat {{RemoteBin}}/
+  mv {{RemoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl/bat {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl
 
   # diamond
   wget https://github.com/bbuchfink/diamond/releases/download/v2.0.12/diamond-linux64.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/diamond-linux64.tar.gz --directory {{RemoteBin}}/
+  mv {{RemoteBin}}/diamond {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/diamond-linux64.tar.gz {{RemoteBin}}/download/
 
   # exa
   wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-musl-v0.10.1.zip --directory-prefix {{RemoteBin}}/
   unzip -o {{RemoteBin}}/exa-linux-x86_64-musl-v0.10.1.zip -d {{RemoteBin}}/
-  mv {{RemoteBin}}/bin/exa {{RemoteBin}}/
-  rm -rf {{RemoteBin}}/bin
+  mv {{RemoteBin}}/exa-linux-x86_64-musl-v0.10.1.zip {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/completions
   rm -rf {{RemoteBin}}/man
 
   # fd
   wget https://github.com/sharkdp/fd/releases/download/v8.2.1/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
-  mv {{RemoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl/fd {{RemoteBin}}/
+  mv {{RemoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl/fd {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl
 
   # lsd
   wget https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
-  mv {{RemoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl/lsd {{RemoteBin}}/
+  mv {{RemoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl/lsd {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl
 
   # micro
   wget https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux-arm64.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/micro-2.0.10-linux-arm64.tar.gz --directory {{RemoteBin}}/
-  mv {{RemoteBin}}/micro-2.0.10/micro {{RemoteBin}}/
+  mv {{RemoteBin}}/micro-2.0.10/micro {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/micro-2.0.10-linux-arm64.tar.gz {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/micro-2.0.10
 
   # ripgrep
   wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
-  mv {{RemoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl/rg {{RemoteBin}}/
+  mv {{RemoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl/rg {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl
 
   # starship
   wget https://github.com/starship/starship/releases/download/v0.58.0/starship-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/starship-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
+  mv {{RemoteBin}}/starship {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/starship-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
 
   # xcp
   # wget https://github.com/tarka/xcp/archive/refs/tags/v0.9.0.tar.gz --directory-prefix {{RemoteBin}}/
@@ -319,11 +332,14 @@ UppmaxID := "drivas@rackham.uppmax.uu.se"
   # xsv
   wget https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
+  mv {{RemoteBin}}/xsv {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
 
   # zoxide
   wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.7.6/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{RemoteBin}}/
   tar -xvf {{RemoteBin}}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz --directory {{RemoteBin}}/
-  mv {{RemoteBin}}/zoxide-x86_64-unknown-linux-musl/zoxide {{RemoteBin}}/
+  mv {{RemoteBin}}/zoxide-x86_64-unknown-linux-musl/zoxide {{RemoteBin}}/bin/
+  mv {{RemoteBin}}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz {{RemoteBin}}/download/
   rm -rf {{RemoteBin}}/zoxide-x86_64-unknown-linux-musl
 
 ################################################################################
