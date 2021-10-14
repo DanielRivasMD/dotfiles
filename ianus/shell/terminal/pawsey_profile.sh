@@ -10,8 +10,8 @@ stty -ixon
 # ===  Archives          ===
 # ==========================
 
-export ARCHIVE=${HOME}/.archive/
-export IANUS=${ARCHIVE}ianus/
+export ARCHIVE=${HOME}/.archive
+export IANUS=${ARCHIVE}/ianus
 
 # # ==========================
 # # ===  BLAST database    ===
@@ -44,7 +44,7 @@ PATH=$PATH:$HOME/bin
 # ==========================
 
 export PATH
-export STARSHIP_CONFIG=${IANUS}starship/pawsey_starship.toml
+export STARSHIP_CONFIG=${IANUS}/starship/pawsey_starship.toml
 
 # ==========================
 # ===  Less              ===
@@ -77,7 +77,7 @@ export BAT_PAGER=less
 # ===  Pier              ===
 # ==========================
 
-export PIER="${IANUS}pier/"
+export PIER="${IANUS}/pier/"
 
 # ==========================
 # ===  Tree              ===
