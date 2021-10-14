@@ -11,6 +11,20 @@ print:
 
 #################################################################################
 
+# declarations
+IanusHOME := "/home/drivas"
+IanusRemote := "/home/drivas/.archive/ianus"
+RemoteBin := "$HOME/Factorem/RemoteBin"
+
+# Pawsey
+PawseyID := "drivas@topaz.pawsey.org.au"
+SoftwarePawsey := "/scratch/pawsey0263/drivas/software"
+
+# Uppmax
+UppmaxID := "drivas@rackham.uppmax.uu.se"
+
+#################################################################################
+
 # link Cerberus archive
 @ Cerberus:
   # HOME
@@ -54,7 +68,7 @@ print:
   ln -svf $CERBERUS/julia/startup.jl $HOME/.julia/config/                                                                                                    # julia startup
   ln -svf $CERBERUS/ssh/config $HOME/.ssh/                                                                                                                   # ssh config
   ln -svf $CERBERUS/broot/conf.hjson "/Users/drivas/Library/Application Support/org.dystroy.broot/"                                                          # broot config
-  #ln -svf $CERBERUS/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/"                                                                   # broot config
+  # ln -svf $CERBERUS/broot/conf.toml "/Users/drivas/Library/Preferences/org.dystroy.broot/"                                                                   # broot config
   ln -svf $CERBERUS/lazycli/config.yml "/Users/drivas/Library/Application Support/lazycli/"                                                                  # lazycli config
 
   # purge before linking
@@ -127,8 +141,6 @@ print:
 # Hermes
 ################################################################################
 
-RemoteUppmax := "drivas@rackham.uppmax.uu.se"
-
 # deliver archives to Uppmax
 @ hermesUppmax:
   # justfile
@@ -147,7 +159,6 @@ RemoteUppmax := "drivas@rackham.uppmax.uu.se"
 
 ################################################################################
 
-RemotePawsey := "drivas@topaz.pawsey.org.au"
 
 # deliver archives to Pawsey
 @ hermesPawsey:
