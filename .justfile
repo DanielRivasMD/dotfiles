@@ -50,7 +50,7 @@ _nushell := _shell + '/nushell'
 _nushellConf := _appSuport + '/org.nushell.nu/'
 
 # remote
-_remoteBin := '{{_home}}/Factorem/_remoteBin'
+_remoteBin := _home + '/Factorem/RemoteBin'
 _HOMEremote := '/home/drivas'
 _ianusRemote := _HOMEremote + '/.archive/ianus'
 _shellRemote := _ianusRemote + '/shell'
@@ -199,7 +199,7 @@ _softwareUppmax := ''
   rsync -azvhP {{_ianus}}/micro/settings.json {{_uppmaxID}}:{{_ianusRemote}}/micro/ # micro settings
 
   # remote bin
-  rsync -azvhPX {{_remoteBin}}/bin/bat {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  rsync -azvhPX {{_remoteBin}}/bin/bat {{_pawseyID}}:{{_softwareUppmax}}/
   rsync -azvhPX {{_remoteBin}}/bin/diamond {{_pawseyID}}:{{_softwareUppmax}}/bin/
   rsync -azvhPX {{_remoteBin}}/bin/exa {{_pawseyID}}:{{_softwareUppmax}}/bin/
   rsync -azvhPX {{_remoteBin}}/bin/fd {{_pawseyID}}:{{_softwareUppmax}}/bin/
@@ -361,10 +361,10 @@ _softwareUppmax := ''
   rm -rf {{_remoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl
 
   # micro
-  wget https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux-arm64.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/micro-2.0.10-linux-arm64.tar.gz --directory {{_remoteBin}}/
+  wget https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux64.tar.gz --directory-prefix {{_remoteBin}}/
+  tar -xvf {{_remoteBin}}/micro-2.0.10-linux64.tar.gz --directory {{_remoteBin}}/
   mv {{_remoteBin}}/micro-2.0.10/micro {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/micro-2.0.10-linux-arm64.tar.gz {{_remoteBin}}/download/
+  mv {{_remoteBin}}/micro-2.0.10-linux64.tar.gz {{_remoteBin}}/download/
   rm -rf {{_remoteBin}}/micro-2.0.10
 
   # ripgrep
