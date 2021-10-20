@@ -11,389 +11,387 @@ print:
 
 #################################################################################
 
-# declarations
-_home := '$HOME'
-_archive := _home + '/.archive'
-_cerberus := _archive + '/cerberus'
-_ianus := _archive + '/ianus'
-_appSuport := _home + '"/Library/Application Support/"'
-
-# cerberus
-_brootConf := _appSuport + '"/org.dystroy.broot/"'
-_codeConf := _appSuport + '/Code/User/'
-_lazycliConf := _appSuport + "/lazycli/"
-_naviConf := _appSuport + '/navi/cheats/drivas'
-
-_sublime := _appSuport + '"Sublime Text 3/Packages/User"'
-_sublKeymapOrigin := _sublime + '"/Default (OSX).sublime-keymap"'
-_sublKeymapTarget := _cerberus + '"/sublime/Default (OSX).sublime-keymap.json"'
-_sublPackageOrigin := _sublime + '"/Package Control.sublime-settings"'
-_sublPackageTarget := _cerberus + '"/sublime/Package Control.sublime-settings.json"'
-_sublSettingOrigin := _sublime + '"/Preferences.sublime-settings"'
-_sublSettingTarget := _cerberus + '"/sublime/Preferences.sublime-settings.json"'
-_sublTrailOrigin := _sublime + '"/trailing_spaces.sublime-settings"'
-_sublTrailTarget := _cerberus + '"/sublime/trailing_spaces.sublime-settings.json"'
-_sublRustOrigin := _sublime + '"/RustEnhanced.sublime-settings"'
-_sublRustTarget := _cerberus + '"/sublime/RustEnhanced.sublime-settings.json"'
-_sublRfmtOrigin := _sublime + '"/RustFmt.sublime-settings"'
-_sublRfmtTarget := _cerberus + '"/sublime/RustFmt.sublime-settings.json"'
-_sublGitOrigin := _sublime + '"/GitGutter.sublime-settings"'
-_sublGitTarget := _cerberus + '"/sublime/GitGutter.sublime-settings.json"'
-
-# ianus
-_shell := _ianus + '/shell'
-_terminal := _shell + '/terminal'
-_bash := _shell + '/bash'
-_fish := _shell + '/fish'
-_zsh := _shell + '/zsh'
-_nushell := _shell + '/nushell'
-_nushellConf := _appSuport + '/org.nushell.nu/'
-
-# remote
-_remoteBin := _home + '/Factorem/RemoteBin'
-_HOMEremote := '/home/drivas'
-_ianusRemote := _HOMEremote + '/.archive/ianus'
-_shellRemote := _ianusRemote + '/shell'
-_terminalRemote := _shellRemote + '/terminal'
-_bashRemote := _shellRemote + '/bash'
-_fishRemote := _shellRemote + '/fish'
-_zshRemote := _shellRemote + '/zsh'
-
-# Pawsey
-_pawseyID := 'drivas@topaz.pawsey.org.au'
-_softwarePawsey := '/scratch/pawsey0263/drivas/software'
-
-# Uppmax
-_uppmaxID := 'drivas@rackham.uppmax.uu.se'
-_softwareUppmax := ''
-
-#################################################################################
-
 # link Cerberus archive
-@ Cerberus:
-  # HOME
-  if [[ -d {{_home}}/.atom ]]; then rm -rf {{_home}}/.atom; fi                        # purge before linking
-  ln -svf {{_cerberus}}/atom {{_home}}/.atom                                          # atom
+Cerberus:
+  #!/bin/bash
+  set -euo pipefail
 
-  if [[ -d {{_home}}/.gitconfig.d ]]; then rm {{_home}}/.gitconfig.d; fi              # purge before linking
-  ln -svf {{_cerberus}}/gitconfig.d {{_home}}/.gitconfig.d                            # gitconfig directory
+  # declarations
+  source .just.sh
+
+  if [[ -d "${home}/.atom" ]]; then rm -rf "${home}/.atom"; fi                        # purge before linking
+  ln -svf "${cerberus}/atom" "${home}/.atom"                                          # atom
+
+  if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi              # purge before linking
+  ln -svf "${cerberus}/gitconfig.d" "${home}/.gitconfig.d"                            # gitconfig directory
 
   # rc files
-  ln -svf {{_cerberus}}/gem/gemrc {{_home}}/.gemrc                                    # gemrc
-  ln -svf {{_cerberus}}/mplayer/mplayer {{_home}}/.mplayer                            # mplayer
-  ln -svf {{_cerberus}}/nano/nanorc {{_home}}/.nanorc                                 # nanorc
+  ln -svf "${cerberus}/gem/gemrc" "${home}/.gemrc"                                    # gemrc
+  ln -svf "${cerberus}/mplayer/mplayer" "${home}/.mplayer"                            # mplayer
+  ln -svf "${cerberus}/nano/nanorc" "${home}/.nanorc"                                 # nanorc
 
   # git files
-  ln -svf {{_cerberus}}/git/gitconfig {{_home}}/.gitconfig                            # gitconfig
-  ln -svf {{_cerberus}}/git/gitignore_global {{_home}}/.gitignore_global              # gitignore_global
+  ln -svf "${cerberus}/git/gitconfig" "${home}/.gitconfig"                            # gitconfig
+  ln -svf "${cerberus}/git/gitignore_global" "${home}/.gitignore_global"              # gitignore_global
 
   # toml files
-  ln -svf {{_cerberus}}/procs/procs.toml {{_home}}/.procs.toml                        # procs
+  ln -svf "${cerberus}/procs/procs.toml" "${home}/.procs.toml"                        # procs
 
-  # config
-  ln -svf {{_cerberus}}/alacritty {{_home}}/.config/                                  # alacritty
-  ln -svf {{_cerberus}}/bottom {{_home}}/.config/                                     # bottom
-  ln -svf {{_cerberus}}/cheat {{_home}}/.config/                                      # cheat
-  ln -svf {{_cerberus}}/karabiner {{_home}}/.config/                                  # karabiner
-  ln -svf {{_cerberus}}/khal {{_home}}/.config/                                       # khal
-  ln -svf {{_cerberus}}/gh/config.yml {{_home}}/.config/gh/                           # gh
-  ln -svf {{_cerberus}}/rstudio {{_home}}/.config/                                    # rstudio
-  ln -svf {{_cerberus}}/rstudio/keybindings {{_home}}/.R/rstudio/                     # rstudio keybindings
-  ln -svf {{_cerberus}}/rustfmt {{_home}}/.config/                                    # rustfmt
-  ln -svf {{_cerberus}}/nvim {{_home}}/.config                                        # nvim directory
-  ln -svf {{_cerberus}}/ranger {{_home}}/.config                                      # ranger directory
-  ln -svf {{_cerberus}}/gitui {{_home}}/.config                                       # ranger directory
-  ln -svf {{_cerberus}}/zellij {{_home}}/.config                                      # ranger directory
+  # config files
+  ln -svf "${cerberus}/alacritty" "${home}/.config/"                                  # alacritty
+  ln -svf "${cerberus}/bottom" "${home}/.config/"                                     # bottom
+  ln -svf "${cerberus}/cheat" "${home}/.config/"                                      # cheat
+  ln -svf "${cerberus}/karabiner" "${home}/.config/"                                  # karabiner
+  ln -svf "${cerberus}/khal" "${home}/.config/"                                       # khal
+  ln -svf "${cerberus}/gh/config.yml" "${home}/.config/gh/"                           # gh
+  ln -svf "${cerberus}/rstudio" "${home}/.config/"                                    # rstudio
+  ln -svf "${cerberus}/rstudio/keybindings" "${home}/.R/rstudio/"                     # rstudio keybindings
+  ln -svf "${cerberus}/rustfmt" "${home}/.config/"                                    # rustfmt
+
+  # config directories
+  ln -svf "${cerberus}/nvim" "${home}/.config"                                        # nvim directory
+  ln -svf "${cerberus}/ranger" "${home}/.config"                                      # ranger directory
+  ln -svf "${cerberus}/gitui" "${home}/.config"                                       # ranger directory
+  ln -svf "${cerberus}/zellij" "${home}/.config"                                      # ranger directory
 
   # local
-  ln -svf {{_cerberus}}/rstudio/rstudio-desktop.json {{_home}}/.local/share/rstudio/  # rstudio
+  ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${home}/.local/share/rstudio/"  # rstudio
 
   # code
-  ln -svf {{_cerberus}}/code/* {{_codeConf}}
+  ln -svf "${cerberus}/code/keybindings.json" "${codeConf}/"                          # code keybindings
+  ln -svf "${cerberus}/code/settings.json" "${codeConf}/"                             # code settings
 
   # distant
-  ln -svf {{_cerberus}}/julia/startup.jl {{_home}}/.julia/config/                     # julia startup
-  ln -svf {{_cerberus}}/ssh/config {{_home}}/.ssh/                                    # ssh config
-  ln -svf {{_cerberus}}/broot/conf.hjson {{_brootConf}}                               # broot config
-  ln -svf {{_cerberus}}/lazycli/config.yml {{_lazycliConf}}                           # lazycli config
+  ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"                     # julia startup
+  ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                                    # ssh config
+  ln -svf "${cerberus}/broot/conf.hjson" "${brootConf}/"                              # broot config
+  ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                          # lazycli config
 
   # purge before linking
-  if [[ -d {{_naviConf}} ]]; then rm -rf {{_naviConf}}; fi
-  ln -svf {{_cerberus}}/navi {{_naviConf}}                                            # navi cheats directory
+  if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
+  ln -svf "${cerberus}/navi" "${naviConf}"                                            # navi cheats directory
 
   # sublime
-  ln -svf {{_sublKeymapTarget}} {{_sublKeymapOrigin}}
-  ln -svf {{_sublPackageTarget}} {{_sublPackageOrigin}}
-  ln -svf {{_sublSettingTarget}} {{_sublSettingOrigin}}
-  ln -svf {{_sublTrailTarget}} {{_sublTrailOrigin}}
-  ln -svf {{_sublRustTarget}} {{_sublRustOrigin}}
-  ln -svf {{_sublRfmtTarget}} {{_sublRfmtOrigin}}
-  ln -svf {{_sublGitTarget}} {{_sublGitOrigin}}
+  ln -svf "${sublKeymapTarget}" "${sublKeymapOrigin}"
+  ln -svf "${sublPackageTarget}" "${sublPackageOrigin}"
+  ln -svf "${sublSettingTarget}" "${sublSettingOrigin}"
+  ln -svf "${sublTrailTarget}" "${sublTrailOrigin}"
+  ln -svf "${sublRustTarget}" "${sublRustOrigin}"
+  ln -svf "${sublRfmtTarget}" "${sublRfmtOrigin}"
+  ln -svf "${sublGitTarget}" "${sublGitOrigin}"
 
   # @forked
-  ln -svf {{_home}}/Factorem/Forked/preview-vim/preview-vim.json {{_cerberus}}/karabiner/assets/complex_modifications
+  ln -svf "${home}/Factorem/Forked/preview-vim/preview-vim.json" "${cerberus}/karabiner/assets/complex_modifications"
 
 ################################################################################
 
 # link Ianus archive
-@ Ianus:
+Ianus:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
   # R
-  if [[ -d {{_home}}/.Renviron.d ]]; then rm -rf {{_home}}/.Renviron.d; fi      # purge before linking
-  ln -svf {{_ianus}}/R/Renviron.d {{_home}}/.Renviron.d                         # renviron directory
-  if [[ -d {{_home}}/.Rprofile.d ]]; then rm -rf {{_home}}/.Rprofile.d; fi      # purge before linking
-  ln -svf {{_ianus}}/R/Rprofile.d {{_home}}/.Rprofile.d                         # rprofile directory
-  ln -svf {{_ianus}}/R/vernacular_Rprofile.R {{_home}}/.Rprofile                # rprofile
+  if [[ -d "${home}/.Renviron.d" ]]; then rm -rf "${home}/.Renviron.d"; fi      # purge before linking
+  ln -svf "${ianus}/R/Renviron.d" "${home}/.Renviron.d"                         # renviron directory
+  if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi      # purge before linking
+  ln -svf "${ianus}/R/Rprofile.d" "${home}/.Rprofile.d"                         # rprofile directory
+  ln -svf "${ianus}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                # rprofile
 
   # @HOME
-  ln -svf {{_ianus}}/pier/pier.toml {{_home}}/.pier.toml                        # pier
-  ln -svf {{_ianus}}/tmux/3.1c.tmux.conf {{_home}}/.tmux.conf                   # tumx 3.1c
-  ln -svf {{_ianus}}/screen/4.08.00.screenrc {{_home}}/.screenrc                # screen
+  ln -svf "${ianus}/pier/pier.toml" "${home}/.pier.toml"                        # pier
+  ln -svf "${ianus}/tmux/3.1c.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.1c
+  ln -svf "${ianus}/screen/4.08.00.screenrc" "${home}/.screenrc"                # screen
 
   # @config
-  ln -svf {{_ianus}}/micro {{_home}}/.config                                    # micro directory
-  ln -svf {{_ianus}}/starship {{_home}}/.config                                 # starship directory
-  ln -svf {{_ianus}}/lsd {{_home}}/.config                                      # lsd directory
+  ln -svf "${ianus}/micro" "${home}/.config"                                    # micro directory
+  ln -svf "${ianus}/starship" "${home}/.config"                                 # starship directory
+  ln -svf "${ianus}/lsd" "${home}/.config"                                      # lsd directory
 
   # shell
-  ln -svf {{_terminal}}/vernacular_profile.sh {{_home}}/.profile                # terminal profile
+  ln -svf "${terminal}/vernacular_profile.sh" "${home}/.profile"                # terminal profile
 
   # bash
-  if [[ ! -d {{_home}}/.bash ]]; then mkdir {{_home}}/.bash; fi                 # purge before linking
-  ln -svf {{_bash}}/vernacular_bashrc.sh {{_home}}/.bashrc                      # bashrc
-  ln -svf {{_bash}}/vernacular_bash_aliases.sh {{_home}}/.bash/bash_aliases.sh  # bash aliases
-  ln -svf {{_bash}}/fzf.bash {{_home}}/.bash                                    # fzf bash
-  ln -svf {{_bash}}/bash_navi_patch.sh {{_home}}/.bash                          # bash navi patch
+  if [[ ! -d "${home}/.bash" ]]; then mkdir "${home}/.bash"; fi                 # purge before linking
+  ln -svf "${bash}/vernacular_bashrc.sh" "${home}/.bashrc"                      # bashrc
+  ln -svf "${bash}/vernacular_bash_aliases.sh" "${home}/.bash/bash_aliases.sh"  # bash aliases
+  ln -svf "${bash}/fzf.bash" "${home}/.bash"                                    # fzf bash
+  ln -svf "${bash}/bash_navi_patch.sh" "${home}/.bash"                          # bash navi patch
 
   # zsh
-  if [[ ! -d {{_home}}/.zsh ]]; then mkdir {{_home}}/.zsh; fi                   # purge before linking
-  ln -svf {{_zsh}}/vernacular_zshrc.sh {{_home}}/.zshrc                         # zshrc
-  ln -svf {{_zsh}}/vernacular_zsh_aliases.sh {{_home}}/.zsh/zsh_aliases.sh      # zsh aliases
-  ln -svf {{_zsh}}/fzf.zsh {{_home}}/.zsh                                       # fzf zsh
-  ln -svf {{_zsh}}/vernacular_zsh_plugins.sh {{_home}}/.zsh/zsh_plugins.sh      # zsh plugins
-  ln -svf {{_zsh}}/vernacular_zsh_plugins.txt {{_home}}/.zsh/zsh_plugins.txt    # zsh plugins
-  ln -svf {{_zsh}}/zsh_pandoc_autocompletion.sh {{_home}}/.zsh                  # zsh completion
-  ln -svf {{_zsh}}/zsh_just_patch.sh {{_home}}/.zsh                             # zsh just patch
-  ln -svf {{_zsh}}/zsh_navi_patch.sh {{_home}}/.zsh                             # zsh navi patch
+  if [[ ! -d "${home}/.zsh" ]]; then mkdir "${home}/.zsh"; fi                   # purge before linking
+  ln -svf "${zsh}/vernacular_zshrc.sh" "${home}/.zshrc"                         # zshrc
+  ln -svf "${zsh}/vernacular_zsh_aliases.sh" "${home}/.zsh/zsh_aliases.sh"      # zsh aliases
+  ln -svf "${zsh}/fzf.zsh" "${home}/.zsh"                                       # fzf zsh
+  ln -svf "${zsh}/vernacular_zsh_plugins.sh" "${home}/.zsh/zsh_plugins.sh"      # zsh plugins
+  ln -svf "${zsh}/vernacular_zsh_plugins.txt" "${home}/.zsh/zsh_plugins.txt"    # zsh plugins
+  ln -svf "${zsh}/zsh_pandoc_autocompletion.sh" "${home}/.zsh"                  # zsh completion
+  ln -svf "${zsh}/zsh_just_patch.sh" "${home}/.zsh"                             # zsh just patch
+  ln -svf "${zsh}/zsh_navi_patch.sh" "${home}/.zsh"                             # zsh navi patch
 
   # fish
-  ln -svf {{_fish}}/vernacular_config.fish {{_home}}/.config/fish/config.fish   # fish config
+  ln -svf "${fish}/vernacular_config.fish" "${home}/.config/fish/config.fish"   # fish config
 
   # nushell
-  ln -svf {{_nushell}}/* {{_nushellConf}}                                       # nushell config
+  ln -svf "${nushell}/*" "${nushellConf}"                                       # nushell config
 
 ################################################################################
-# Hermes
+# Mercury
 ################################################################################
 
 # deliver archives to Uppmax
-@ HermesUppmax:
-  # directory
-  rsync -azvhP {{_ianus}}/pier {{_uppmaxID}}:{{_ianusRemote}}/                      # pier
-  rsync -azvhP {{_ianus}}/R {{_uppmaxID}}:{{_ianusRemote}}/                         # r
-  rsync -azvhP {{_ianus}}/screen {{_uppmaxID}}:{{_ianusRemote}}/                    # screen
-  rsync -azvhP {{_ianus}}/shell {{_uppmaxID}}:{{_ianusRemote}}/                     # shell
-  rsync -azvhP {{_ianus}}/starship {{_uppmaxID}}:{{_ianusRemote}}/                  # starship
-  rsync -azvhP {{_ianus}}/tmux {{_uppmaxID}}:{{_ianusRemote}}/                      # tmux
-  rsync -azvhP {{_ianus}}/micro/plug {{_uppmaxID}}:{{_ianusRemote}}/micro/          # micro plugins
-  rsync -azvhP {{_ianus}}/micro/bindings.json {{_uppmaxID}}:{{_ianusRemote}}/micro/ # micro bindings
-  rsync -azvhP {{_ianus}}/micro/settings.json {{_uppmaxID}}:{{_ianusRemote}}/micro/ # micro settings
+MercuryUppmax:
+  #!/bin/bash
+  set -euo pipefail
 
-  # remote bin
-  rsync -azvhPX {{_remoteBin}}/bin/bat {{_pawseyID}}:{{_softwareUppmax}}/
-  rsync -azvhPX {{_remoteBin}}/bin/diamond {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/exa {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/fd {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/lsd {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/micro {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/rg {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/starship {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  # rsync -azvhPX {{_remoteBin}}/bin/xcp {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/xsv {{_pawseyID}}:{{_softwareUppmax}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/zoxide {{_pawseyID}}:{{_softwareUppmax}}/bin/
+  #declarations
+  source .just.sh
+
+  # directory
+  rsync -azvhP "${ianus}/pier" "${uppmaxID}:${ianusRemote}/"                      # pier
+  rsync -azvhP "${ianus}/R" "${uppmaxID}:${ianusRemote}/"                         # r
+  rsync -azvhP "${ianus}/screen" "${uppmaxID}:${ianusRemote}/"                    # screen
+  rsync -azvhP "${ianus}/shell" "${uppmaxID}:${ianusRemote}/"                     # shell
+  rsync -azvhP "${ianus}/starship" "${uppmaxID}:${ianusRemote}/"                  # starship
+  rsync -azvhP "${ianus}/tmux" "${uppmaxID}:${ianusRemote}/"                      # tmux
+  rsync -azvhP "${ianus}/micro/plug" "${uppmaxID}:${ianusRemote}/micro/"          # micro plugins
+  rsync -azvhP "${ianus}/micro/bindings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro bindings
+  rsync -azvhP "${ianus}/micro/settings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro settings
+
+  #   TODO: define softwareUppmax
+  #   # remote bin
+  #   rsync -azvhPX "${remoteBin}/bin/bat" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/diamond" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/exa" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/fd" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/lsd" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/micro" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/rg" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/starship" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   # rsync -azvhPX "${remoteBin}/bin/xcp" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/xsv" "${uppmaxID}:${softwareUppmax}/bin/"
+  #   rsync -azvhPX "${remoteBin}/bin/zoxide" "${uppmaxID}:${softwareUppmax}/bin/"
 
 ################################################################################
 
 # deliver archives to Pawsey
-@ HermesPawsey:
+MercuryPawsey:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
   # directory
-  rsync -azvhP {{_ianus}}/pier {{_pawseyID}}:{{_ianusRemote}}/                      # pier
-  rsync -azvhP {{_ianus}}/R {{_pawseyID}}:{{_ianusRemote}}/                         # r
-  rsync -azvhP {{_ianus}}/screen {{_pawseyID}}:{{_ianusRemote}}/                    # screen
-  rsync -azvhP {{_ianus}}/shell {{_pawseyID}}:{{_ianusRemote}}/                     # shell
-  rsync -azvhP {{_ianus}}/starship {{_pawseyID}}:{{_ianusRemote}}/                  # starship
-  rsync -azvhP {{_ianus}}/micro/plug {{_pawseyID}}:{{_ianusRemote}}/micro/          # micro plugins
-  rsync -azvhP {{_ianus}}/micro/bindings.json {{_pawseyID}}:{{_ianusRemote}}/micro/ # micro bindings
-  rsync -azvhP {{_ianus}}/micro/settings.json {{_pawseyID}}:{{_ianusRemote}}/micro/ # micro settdirectory
+  rsync -azvhP "${ianus}/pier" "${pawseyID}:${ianusRemote}/"                      # pier
+  rsync -azvhP "${ianus}/R" "${pawseyID}:${ianusRemote}/"                         # r
+  rsync -azvhP "${ianus}/screen" "${pawseyID}:${ianusRemote}/"                    # screen
+  rsync -azvhP "${ianus}/shell" "${pawseyID}:${ianusRemote}/"                     # shell
+  rsync -azvhP "${ianus}/starship" "${pawseyID}:${ianusRemote}/"                  # starship
+  rsync -azvhP "${ianus}/micro/plug" "${pawseyID}:${ianusRemote}/micro/"          # micro plugins
+  rsync -azvhP "${ianus}/micro/bindings.json" "${pawseyID}:${ianusRemote}/micro/" # micro bindings
+  rsync -azvhP "${ianus}/micro/settings.json" "${pawseyID}:${ianusRemote}/micro/" # micro settings
 
   # remote bin
-  rsync -azvhPX {{_remoteBin}}/bin/bat {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/diamond {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/exa {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/fd {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/lsd {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/micro {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/rg {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/starship {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  # rsync -azvhPX {{_remoteBin}}/bin/xcp {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/xsv {{_pawseyID}}:{{_softwarePawsey}}/bin/
-  rsync -azvhPX {{_remoteBin}}/bin/zoxide {{_pawseyID}}:{{_softwarePawsey}}/bin/
+  rsync -azvhPX "${remoteBin}/bin/bat" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/diamond" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/exa" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/fd" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/lsd" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/micro" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/rg" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/starship" "${pawseyID}:${softwarePawsey}/bin/"
+  # rsync -azvhPX "${remoteBin}/bin/xcp" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/xsv" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/zoxide" "${pawseyID}:${softwarePawsey}/bin/"
 
 ################################################################################
-# Hephaestus
+# Vulcano
 ################################################################################
 
 # link archives Uppmax
-@ HephaestusUppmax:
+VulcanoUppmax:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
   # @HOME
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/R/Rprofile.d {{_HOMEremote}}/.Rprofile.d                           # rprofile directory
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/R/uppmax_Rprofile.R {{_HOMEremote}}/.Rprofile                      # rprofile
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/pier/pier.toml {{_HOMEremote}}/.pier.toml                          # pier
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/tmux/2.5.tmux.conf {{_HOMEremote}}/.tmux.conf                      # tmux 2.5
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/screen/4.01.00.screenrc {{_HOMEremote}}/.screenrc                  # screen
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/R/Rprofile.d" "${homeRemote}/.Rprofile.d"                           # rprofile directory
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/R/uppmax_Rprofile.R" "${homeRemote}/.Rprofile"                      # rprofile
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/pier/pier.toml" "${homeRemote}/.pier.toml"                          # pier
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/tmux/2.5.tmux.conf" "${homeRemote}/.tmux.conf"                      # tmux 2.5
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/screen/4.01.00.screenrc" "${homeRemote}/.screenrc"                  # screen
 
   # @config
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/micro {{_HOMEremote}}/.config                                      # micro directory
-  ssh {{_uppmaxID}} ln -svf {{_ianusRemote}}/starship {{_HOMEremote}}/.config                                   # starship directory
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/micro" "${homeRemote}/.config"                                      # micro directory
+  ssh ${uppmaxID} ln -svf "${ianusRemote}/starship" "${homeRemote}/.config"                                   # starship directory
 
   # shell
-  ssh {{_uppmaxID}} ln -svf {{_terminalRemote}}/uppmax_profile.sh {{_HOMEremote}}/.profile                      # terminal profile
+  ssh ${uppmaxID} ln -svf "${terminalRemote}/uppmax_profile.sh" "${homeRemote}/.profile"                      # terminal profile
 
   # bash
-  ssh {{_uppmaxID}} if [[ ! -d {{_HOMEremote}}/.bash ]]; then ssh {{_uppmaxID}} mkdir {{_HOMEremote}}/.bash; fi # purge before linking
-  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/uppmax_bashrc.sh {{_HOMEremote}}/.bashrc                           # bashrc
-  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/uppmax_bash_profile.sh {{_HOMEremote}}/.bash_profile               # bash profile
-  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/uppmax_bash_aliases.sh {{_HOMEremote}}/.bash/bash_aliases.sh       # bash aliases
-  ssh {{_uppmaxID}} ln -svf _{{_bashRemote}}/fzf.bash {{_HOMEremote}}/.bash                                     # fzf bash
+  ssh ${uppmaxID} "if [[ ! -d ${homeRemote}/.bash ]]; then ssh ${uppmaxID} mkdir ${homeRemote}/.bash; fi"     # purge before linking
+  ssh ${uppmaxID} ln -svf "${bashRemote}/uppmax_bashrc.sh" "${homeRemote}/.bashrc"                            # bashrc
+  ssh ${uppmaxID} ln -svf "${bashRemote}/uppmax_bash_profile.sh" "${homeRemote}/.bash_profile"                # bash profile
+  ssh ${uppmaxID} ln -svf "${bashRemote}/uppmax_bash_aliases.sh" "${homeRemote}/.bash/bash_aliases.sh"        # bash aliases
+  ssh ${uppmaxID} ln -svf "${bashRemote}/fzf.bash" "${homeRemote}/.bash"                                      # fzf bash
 
   # zsh
-  ssh {{_uppmaxID}} "if [[ ! -d {{_HOMEremote}}/.zsh ]]; then ssh {{_uppmaxID}} mkdir {{_HOMEremote}}/.zsh; fi" # purge before linking
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zshrc.sh {{_HOMEremote}}/.zshrc                               # zshrc
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zsh_aliases.sh {{_HOMEremote}}/.zsh/zsh_aliases.sh            # zsh aliases
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/fzf.zsh {{_HOMEremote}}/.zsh                                         # fzf zsh
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zsh_plugins.sh {{_HOMEremote}}/.zsh/zsh_plugins.sh            # zsh plugins
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/uppmax_zsh_plugins.txt {{_HOMEremote}}/.zsh/zsh_plugins.txt          # zsh plugins
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/zsh_pandoc_autocompletion.sh {{_HOMEremote}}/.zsh                    # zsh completion
-  ssh {{_uppmaxID}} ln -svf {{_zshRemote}}/completion {{_HOMEremote}}/.config/zsh_completion                    # zsh completion
+  ssh ${uppmaxID} "if [[ ! -d ${homeRemote}/.zsh ]]; then ssh ${uppmaxID} mkdir ${homeRemote}/.zsh; fi"       # purge before linking
+  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zshrc.sh" "${homeRemote}/.zshrc"                               # zshrc
+  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"            # zsh aliases
+  ssh ${uppmaxID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                         # fzf zsh
+  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_plugins.sh" "${homeRemote}/.zsh/zsh_plugins.sh"            # zsh plugins
+  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"          # zsh plugins
+  ssh ${uppmaxID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                    # zsh completion
+  ssh ${uppmaxID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                    # zsh completion
 
   # fish
-  ssh {{_uppmaxID}} ln -svf {{_fishRemote}}/uppmax_config.fish {{_HOMEremote}}/.config/fish/config.fish         # fish config
+  ssh ${uppmaxID} ln -svf "${fishRemote}/uppmax_config.fish" "${homeRemote}/.config/fish/config.fish"         # fish config
 
 ################################################################################
 
 # link archives Pawsey
-@ HephaestusPawsey:
+VulcanoPawsey:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
   # @HOME
-  ssh {{_pawseyID}} ln -svf {{_ianusRemote}}/R/Rprofile.d {{_HOMEremote}}/.Rprofile.d                            # rprofile directory
-  ssh {{_pawseyID}} ln -svf {{_ianusRemote}}/R/pawsey_Rprofile.R {{_HOMEremote}}/.Rprofile                       # rprofile
-  ssh {{_pawseyID}} ln -svf {{_ianusRemote}}/screen/4.01.00.screenrc {{_HOMEremote}}/.screenrc                   # screen
+  ssh ${pawseyID} ln -svf "${ianusRemote}/R/Rprofile.d" "${homeRemote}/.Rprofile.d"                            # rprofile directory
+  ssh ${pawseyID} ln -svf "${ianusRemote}/R/pawsey_Rprofile.R" "${homeRemote}/.Rprofile"                       # rprofile
+  ssh ${pawseyID} ln -svf "${ianusRemote}/screen/4.01.00.screenrc" "${homeRemote}/.screenrc"                   # screen
 
   # @config
-  ssh {{_pawseyID}} ln -svf {{_ianusRemote}}/micro {{_HOMEremote}}/.config                                       # micro directory
-  ssh {{_pawseyID}} ln -svf {{_ianusRemote}}/starship {{_HOMEremote}}/.config                                    # starship directory
+  ssh ${pawseyID} ln -svf "${ianusRemote}/micro" "${homeRemote}/.config"                                       # micro directory
+  ssh ${pawseyID} ln -svf "${ianusRemote}/starship" "${homeRemote}/.config"                                    # starship directory
 
   # shell
-  ssh {{_pawseyID}} ln -svf {{_terminalRemote}}/pawsey_profile.sh {{_HOMEremote}}/.profile                       # terminal profile
+  ssh ${pawseyID} ln -svf "${terminalRemote}/pawsey_profile.sh" "${homeRemote}/.profile"                       # terminal profile
 
   # bash
-  ssh {{_pawseyID}} "if [[ ! -d {{_HOMEremote}}/.bash ]]; then ssh {{_pawseyID}} mkdir {{_HOMEremote}}/.bash; fi" # purge before linking
-  ssh {{_pawseyID}} ln -svf _{{_bashRemote}}/pawsey_bashrc.sh {{_HOMEremote}}/.bashrc                             # bashrc
-  ssh {{_pawseyID}} ln -svf _{{_bashRemote}}/pawsey_bash_profile.sh {{_HOMEremote}}/.bash_profile                 # bash profile
-  ssh {{_pawseyID}} ln -svf _{{_bashRemote}}/pawsey_bash_aliases.sh {{_HOMEremote}}/.bash/bash_aliases.sh         # bash aliases
-  ssh {{_pawseyID}} ln -svf _{{_bashRemote}}/fzf.bash {{_HOMEremote}}/.bash                                       # fzf bash
+  ssh ${pawseyID} "if [[ ! -d ${homeRemote}/.bash ]]; then ssh ${pawseyID} mkdir ${homeRemote}/.bash; fi"      # purge before linking
+  ssh ${pawseyID} ln -svf "${bashRemote}/pawsey_bashrc.sh" "${homeRemote}/.bashrc"                             # bashrc
+  ssh ${pawseyID} ln -svf "${bashRemote}/pawsey_bash_profile.sh" "${homeRemote}/.bash_profile"                 # bash profile
+  ssh ${pawseyID} ln -svf "${bashRemote}/pawsey_bash_aliases.sh" "${homeRemote}/.bash/bash_aliases.sh"         # bash aliases
+  ssh ${pawseyID} ln -svf "${bashRemote}/fzf.bash" "${homeRemote}/.bash"                                       # fzf bash
 
   # zsh
-  ssh {{_pawseyID}} "if [[ ! -d {{_HOMEremote}}/.zsh ]]; then ssh {{_pawseyID}} mkdir {{_HOMEremote}}/.zsh; fi"   # purge before linking
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/pawsey_zshrc.sh {{_HOMEremote}}/.zshrc                                # zshrc
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/pawsey_zsh_aliases.sh {{_HOMEremote}}/.zsh/zsh_aliases.sh             # zsh aliases
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/fzf.zsh {{_HOMEremote}}/.zsh                                          # fzf zsh
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/pawsey_zsh_plugins.sh {{_HOMEremote}}/.zsh/zsh_plugins.sh             # zsh plugins
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/pawsey_zsh_plugins.txt {{_HOMEremote}}/.zsh/zsh_plugins.txt           # zsh plugins
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/zsh_pandoc_autocompletion.sh {{_HOMEremote}}/.zsh                     # zsh completion
-  ssh {{_pawseyID}} ln -svf {{_zshRemote}}/completion {{_HOMEremote}}/.config/zsh_completion                     # zsh completion
+  ssh ${pawseyID} "if [[ ! -d ${homeRemote}/.zsh ]]; then ssh ${pawseyID} mkdir ${homeRemote}/.zsh; fi"        # purge before linking
+  ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zshrc.sh" "${homeRemote}/.zshrc"                                # zshrc
+  ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"             # zsh aliases
+  ssh ${pawseyID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                          # fzf zsh
+  ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zsh_plugins.sh" "${homeRemote}/.zsh/zsh_plugins.sh"             # zsh plugins
+  ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"           # zsh plugins
+  ssh ${pawseyID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                     # zsh completion
+  ssh ${pawseyID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                     # zsh completion
 
   # link executables
-  ssh {{_pawseyID}} "if [[ ! -d {{_HOMEremote}}/bin ]]; then ssh {{_pawseyID}} rm -rf {{_HOMEremote}}/bin; fi"    # purge before linking
-  ssh {{_pawseyID}} ln -svf {{_softwarePawsey}}/bin {{_HOMEremote}}/bin
+  ssh ${pawseyID} "if [[ ! -d ${homeRemote}/bin ]]; then ssh ${pawseyID} rm -rf ${homeRemote}/bin; fi"         # purge before linking
+  ssh ${pawseyID} ln -svf "${softwarePawsey}/bin" "${homeRemote}/bin"
 
 ################################################################################
-# Zaqar
+# Hadur
 ################################################################################
 
 # download cluster executables
-@ ZaqarBin:
+Hadur:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
   # create directories
-  if [[ ! -d {{_remoteBin}} ]]; then mkdir -p {{_remoteBin}}; fi
-  if [[ ! -d {{_remoteBin}}/bin ]]; then mkdir -p {{_remoteBin}}/bin; fi
-  if [[ ! -d {{_remoteBin}}/download ]]; then mkdir -p {{_remoteBin}}/download; fi
+  if [[ ! -d "${remoteBin}" ]]; then mkdir -p "${remoteBin}"; fi
+  if [[ ! -d "${remoteBin}/bin" ]]; then mkdir -p "${remoteBin}/bin"; fi
+  if [[ ! -d "${remoteBin}/download" ]]; then mkdir -p "${remoteBin}/download"; fi
 
   # bat
-  wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl/bat {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/bat-v0.18.3-x86_64-unknown-linux-musl
+  wget "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl/bat" "${remoteBin}/bin/"
+  mv "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl"
 
   # diamond
-  wget https://github.com/bbuchfink/diamond/releases/download/v2.0.12/diamond-linux64.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/diamond-linux64.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/diamond {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/diamond-linux64.tar.gz {{_remoteBin}}/download/
+  wget "https://github.com/bbuchfink/diamond/releases/download/v2.0.12/diamond-linux64.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/diamond-linux64.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/diamond" "${remoteBin}/bin/"
+  mv "${remoteBin}/diamond-linux64.tar.gz" "${remoteBin}/download/"
 
   # exa
-  wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-musl-v0.10.1.zip --directory-prefix {{_remoteBin}}/
-  unzip -o {{_remoteBin}}/exa-linux-x86_64-musl-v0.10.1.zip -d {{_remoteBin}}/
-  mv {{_remoteBin}}/exa-linux-x86_64-musl-v0.10.1.zip {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/completions
-  rm -rf {{_remoteBin}}/man
+  wget "https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-musl-v0.10.1.zip" --directory-prefix "${remoteBin}/"
+  unzip -o "${remoteBin}/exa-linux-x86_64-musl-v0.10.1.zip" -d "${remoteBin}/"
+  mv "${remoteBin}/exa-linux-x86_64-musl-v0.10.1.zip" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/completions"
+  rm -rf "${remoteBin}/man"
 
   # fd
-  wget https://github.com/sharkdp/fd/releases/download/v8.2.1/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl/fd {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/fd-v8.2.1-x86_64-unknown-linux-musl
+  wget "https://github.com/sharkdp/fd/releases/download/v8.2.1/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl/fd" "${remoteBin}/bin/"
+  mv "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl"
 
   # lsd
-  wget https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl/lsd {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/lsd-0.20.1-x86_64-unknown-linux-musl
+  wget "https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl/lsd" "${remoteBin}/bin/"
+  mv "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl"
 
   # micro
-  wget https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux64.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/micro-2.0.10-linux64.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/micro-2.0.10/micro {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/micro-2.0.10-linux64.tar.gz {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/micro-2.0.10
+  wget "https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux64.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/micro-2.0.10-linux64.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/micro-2.0.10/micro" "${remoteBin}/bin/"
+  mv "${remoteBin}/micro-2.0.10-linux64.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/micro-2.0.10"
 
   # ripgrep
-  wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl/rg {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/ripgrep-13.0.0-x86_64-unknown-linux-musl
+  wget "https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/ripgrep-13.0.0-x86_64-unknown-linux-musl/rg" "${remoteBin}/bin/"
+  mv "${remoteBin}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/ripgrep-13.0.0-x86_64-unknown-linux-musl"
 
   # starship
-  wget https://github.com/starship/starship/releases/download/v0.58.0/starship-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/starship-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/starship {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/starship-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
+  wget "https://github.com/starship/starship/releases/download/v0.58.0/starship-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/starship-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/starship" "${remoteBin}/bin/"
+  mv "${remoteBin}/starship-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
 
   # xcp
-  # wget https://github.com/tarka/xcp/archive/refs/tags/v0.9.0.tar.gz --directory-prefix {{_remoteBin}}/
+  # "wget https://github.com/tarka/xcp/archive/refs/tags/v0.9.0.tar.gz" --directory-prefix "${remoteBin}/"
 
   # xsv
-  wget https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/xsv {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
+  wget "https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/xsv" "${remoteBin}/bin/"
+  mv "${remoteBin}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
 
   # zoxide
-  wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.7.6/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz --directory-prefix {{_remoteBin}}/
-  tar -xvf {{_remoteBin}}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz --directory {{_remoteBin}}/
-  mv {{_remoteBin}}/zoxide-x86_64-unknown-linux-musl/zoxide {{_remoteBin}}/bin/
-  mv {{_remoteBin}}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz {{_remoteBin}}/download/
-  rm -rf {{_remoteBin}}/zoxide-x86_64-unknown-linux-musl
+  wget "https://github.com/ajeetdsouza/zoxide/releases/download/v0.7.6/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/zoxide-x86_64-unknown-linux-musl/zoxide" "${remoteBin}/bin/"
+  mv "${remoteBin}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/zoxide-x86_64-unknown-linux-musl"
 
 ################################################################################
+
+# aliases
+
+# transfer & link configuration Uppmax
+Uppmax: MercuryUppmax && VulcanoUppmax
+
+# transfer & link configuration Pawsey
+Pawsey: MercuryPawsey && VulcanoPawsey
+
+#################################################################################
+
