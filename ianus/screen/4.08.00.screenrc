@@ -42,10 +42,10 @@ bind r title
 bind s displays
 
 # vertical split
-bindkey "^\" split -v
+bind = split -v
 
 # horizontal split
-bindkey "^_" split
+bind - split
 
 # switch windows
 bindkey "^[[1;7D" prev

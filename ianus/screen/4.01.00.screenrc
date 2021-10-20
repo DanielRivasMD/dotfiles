@@ -42,10 +42,10 @@ bind r title
 bind s displays
 
 # vertical split
-bindkey "^\" split -v
+bind = split -v
 
 # horizontal split
-bindkey "^_" split
+bind - split
 
 # switch windows
 bindkey "^[[1;7D" prev
@@ -62,9 +62,9 @@ bindkey "^[[1;5B" focus down
 ################################################################################
 
 # default windows
-screen -t inter   1 zsh
-screen -t devel   2 zsh
-screen -t editor  3 zsh
+screen -t inter 1 zsh
+screen -t dev   2 zsh
+screen -t data  3 zsh
 
 ################################################################################
 
