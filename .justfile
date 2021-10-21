@@ -10,6 +10,8 @@ print:
   bat .justfile --language make
 
 #################################################################################
+# Cerberus
+#################################################################################
 
 # link Cerberus archive
 Cerberus:
@@ -81,8 +83,10 @@ Cerberus:
   ln -svf "${sublGitTarget}" "${sublGitOrigin}"
 
   # @forked
-  ln -svf "${home}/Factorem/Forked/preview-vim/preview-vim.json" "${cerberus}/karabiner/assets/complex_modifications"
+  ln -svf "${forked}/preview-vim/preview-vim.json" "${cerberus}/karabiner/assets/complex_modifications"
 
+################################################################################
+# Ianus
 ################################################################################
 
 # link Ianus archive
@@ -135,7 +139,7 @@ Ianus:
   ln -svf "${fish}/vernacular_config.fish" "${home}/.config/fish/config.fish"   # fish config
 
   # nushell
-  ln -svf "${nushell}/*" "${nushellConf}"                                       # nushell config
+  ln -svf "${nushell}/"* "${nushellConf}/"                                      # nushell config
 
 ################################################################################
 # Mercury
@@ -160,19 +164,8 @@ MercuryUppmax:
   rsync -azvhP "${ianus}/micro/bindings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro bindings
   rsync -azvhP "${ianus}/micro/settings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro settings
 
-  #   TODO: define softwareUppmax
-  #   # remote bin
-  #   rsync -azvhPX "${remoteBin}/bin/bat" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/diamond" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/exa" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/fd" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/lsd" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/micro" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/rg" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/starship" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   # rsync -azvhPX "${remoteBin}/bin/xcp" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/xsv" "${uppmaxID}:${softwareUppmax}/bin/"
-  #   rsync -azvhPX "${remoteBin}/bin/zoxide" "${uppmaxID}:${softwareUppmax}/bin/"
+  # TODO: define softwareUppmax
+  # # remote bin
 
 ################################################################################
 
@@ -195,17 +188,7 @@ MercuryPawsey:
   rsync -azvhP "${ianus}/micro/settings.json" "${pawseyID}:${ianusRemote}/micro/" # micro settings
 
   # remote bin
-  rsync -azvhPX "${remoteBin}/bin/bat" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/diamond" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/exa" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/fd" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/lsd" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/micro" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/rg" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/starship" "${pawseyID}:${softwarePawsey}/bin/"
-  # rsync -azvhPX "${remoteBin}/bin/xcp" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/xsv" "${pawseyID}:${softwarePawsey}/bin/"
-  rsync -azvhPX "${remoteBin}/bin/zoxide" "${pawseyID}:${softwarePawsey}/bin/"
+  rsync -azvhPX "${remoteBin}/bin/"* "${pawseyID}:${softwarePawsey}/bin/"
 
 ################################################################################
 # Vulcano
@@ -354,6 +337,14 @@ Hadur:
   mv "${remoteBin}/micro-2.0.10-linux64.tar.gz" "${remoteBin}/download/"
   rm -rf "${remoteBin}/micro-2.0.10"
 
+  #   # nushell
+  #   wget "https://github.com/nushell/nushell/releases/download/0.38.0/nu_0_38_0_linux.tar.gz" --directory-prefix "${remoteBin}/"
+  #   tar -xvf "${remoteBin}/nu_0_38_0_linux.tar.gz" --directory "${remoteBin}/"
+  #   mv -v "${remoteBin}/nu_0_38_0_linux/nushell-0.38.0/"nu* "${remoteBin}/bin/"
+  #   mv -v "${remoteBin}/nu_0_38_0_linux/nushell-0.38.0/libssl.so.1.1" "${remoteBin}/bin/"
+  #   mv "${remoteBin}/nu_0_38_0_linux.tar.gz" "${remoteBin}/download/"
+  #   rm -rf "${remoteBin}/nu_0_38_0_linux"
+
   # ripgrep
   wget "https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
   tar -xvf "${remoteBin}/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
@@ -384,8 +375,8 @@ Hadur:
   rm -rf "${remoteBin}/zoxide-x86_64-unknown-linux-musl"
 
 ################################################################################
-
-# aliases
+# compose protocols
+################################################################################
 
 # transfer & link configuration Uppmax
 Uppmax: MercuryUppmax && VulcanoUppmax

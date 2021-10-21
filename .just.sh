@@ -8,6 +8,7 @@ home="${HOME}"
 archive="${home}/.archive"
 cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
+forked="${home}/Factorem/Forked"
 
 #################################################################################
 
@@ -44,7 +45,7 @@ bash="${shell}/bash"
 fish="${shell}/fish"
 zsh="${shell}/zsh"
 nushell="${shell}/nushell"
-nushellConf="${appSuport}/org.nushell.nu/"
+nushellConf="${appSuport}/org.nushell.nu"
 
 #################################################################################
 
