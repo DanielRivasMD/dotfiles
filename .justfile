@@ -323,6 +323,17 @@ Hadur:
   mv "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
   rm -rf "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl"
 
+  # just
+  wget "https://github.com/casey/just/releases/download/0.10.2/just-0.10.2-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/just-0.10.2-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/just" "${remoteBin}/bin/"
+  mv "${remoteBin}/just-0.10.2-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/Cargo"*
+  rm -rf "${remoteBin}/GRAMMAR.md"
+  rm -rf "${remoteBin}/just.1"
+  rm -rf "${remoteBin}/LICENSE"
+  rm -rf "${remoteBin}/README.adoc"
+
   # lsd
   wget "https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
   tar -xvf "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
