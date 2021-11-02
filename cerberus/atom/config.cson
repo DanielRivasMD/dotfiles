@@ -45,6 +45,12 @@
   "atom-clock":
     rightClickToClipboard: false
     showClockIcon: true
+  "atom-latex":
+    build_after_save: false
+    clean_after_build: true
+    delayed_minimap_refresh: true
+    hide_log_if_success: true
+    save_on_build: true
   "atom-toolbar":
     visible: false
   "autocomplete-plus":
@@ -94,6 +100,7 @@
       "bracket-matcher"
       "toggle-quotes"
       "keybinding-cheatsheet"
+      "atom-latex"
     ]
     packagesWithSnippetsDisabled: [
       "highlight-nanorc"
@@ -184,6 +191,9 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+".bibtex.text":
+  editor:
+    tabType: "soft"
 ".console.julia.source":
   editor:
     tabLength: 2
@@ -193,6 +203,9 @@
 ".julia.source":
   editor:
     tabLength: 2
+".plain.text":
+  editor:
+    tabType: "soft"
 ".python.regexp.source":
   editor:
     tabLength: 2
