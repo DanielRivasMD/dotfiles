@@ -9,11 +9,11 @@ archive="${home}/.archive"
 cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
 forked="${home}/Factorem/Forked"
+appSuport="${home}/Library/Application Support"
 
 #################################################################################
 
 # cerberus
-appSuport="${home}/Library/Application Support"
 brootConf="${appSuport}/org.dystroy.broot"
 codeConf="${appSuport}/Code/User"
 lazycliConf="${appSuport}/lazycli"
