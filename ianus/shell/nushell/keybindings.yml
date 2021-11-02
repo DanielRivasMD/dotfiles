@@ -91,6 +91,30 @@
   binding:
     Newline:
 
+# Clear screen
+- key:
+    Char: L
+  modifiers:
+    CTRL:
+  binding:
+    ClearScreen:
+
+# Navi
+- key:
+    Char: N
+  modifiers:
+    CTRL:
+  binding:
+    Insert: [1, "navi"]
+
+# Just
+- key:
+    Char: J
+  modifiers:
+    CTRL:
+  binding:
+    Insert: [1, "just --choose"]
+
 # Reverse Search history (Ctrl-S forward, Ctrl-G cancel)
 - key:
     Char: R
