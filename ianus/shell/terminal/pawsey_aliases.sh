@@ -79,7 +79,8 @@ alias lsea='lse --almost-all'
 # ===  Pawsey aliases    ===
 # ==========================
 
-alias smag='squeue -u drivas -M magnus'
-alias stop='squeue -u drivas -M topaz'
+alias smagnus='squeue -u drivas -M magnus'
+alias stopaz='squeue -u drivas -M topaz'
+alias szeus='squeue -u drivas -M zeus'
 
 # ==========================

@@ -66,6 +66,9 @@ alias gt='gitui'
 # git-local-ignore
 alias gl='git-local-ignore'
 
+# hgrep
+alias hg='hgrep'
+
 # samesame
 alias ss='samesame'
 
@@ -98,17 +101,19 @@ alias ld='la --tree --level 2 --ignore-glob ".git" --only-dirs'
 # lsd
 alias ls='lsd --long --classify'
 alias lsr='ls --reverse --timesort'
-alias lss='ls --reverse --sizesort'
+alias lsz='ls --reverse --sizesort'
 
 alias lsa='ls --almost-all'
 alias lsar='lsa --reverse --timesort'
-alias lsas='lsa --reverse --sizesort'
+alias lsaz='lsa --reverse --sizesort'
 
 alias lss='ls --recursive'
 alias lssr='lss --reverse --timesort'
+alias lssz='lss --reverse --sizesort'
 
 alias lssa='lss --almost-all'
 alias lssar='lssa --reverse --timesort'
+alias lssaz='lssa --reverse --sizesort'
 
 alias lst='ls --group-dirs=first --tree'
 alias lsta='lst --almost-all'
