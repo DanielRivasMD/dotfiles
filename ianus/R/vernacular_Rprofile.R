@@ -5,7 +5,6 @@ options(prompt = '> ')
 options(stringsAsFactors = F)
 options(max.print = 999)
 options(nwarnings = 99)
-options(max.print = 100)
 options(editor = 'subl')
 
 # dplyr (tibble)
