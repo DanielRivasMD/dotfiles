@@ -1219,7 +1219,7 @@ key_bindings:
   - { key: Equals,      mods: Control|Command|Shift,  chars: " .=== "          }
   - { key: LBracket,    mods: Control|Command|Shift,  chars: "  "              }
   - { key: RBracket,    mods: Control|Command|Shift,  chars: "  "              }
-  - { key: Semicolon,   mods: Control|Command|Shift,  chars: "where "          }
+  - { key: Semicolon,   mods: Control|Command|Shift,  chars: "  "              }
   - { key: Apostrophe,  mods: Control|Command|Shift,  chars: "\"\"\""          }
   - { key: Backslash,   mods: Control|Command|Shift,  chars: " .|= "           }
   - { key: Comma,       mods: Control|Command|Shift,  chars: " <<< "           }
@@ -1252,7 +1252,7 @@ key_bindings:
   - { key: X,           mods: Control|Command,        chars: "χ"               }
   - { key: Y,           mods: Control|Command,        chars: "υ"               }
   - { key: Z,           mods: Control|Command,        chars: "ζ"               }
-  - { key: W,           mods: Control|Command,        chars: "TODO: "          }
+  - { key: W,           mods: Control|Command,        chars: "where "          }
 
   - { key: A,           mods: Control|Command|Shift,  chars: "Α"               }
   - { key: B,           mods: Control|Command|Shift,  chars: "Β"               }
@@ -1278,4 +1278,4 @@ key_bindings:
   - { key: X,           mods: Control|Command|Shift,  chars: "Χ"               }
   - { key: Y,           mods: Control|Command|Shift,  chars: "Υ"               }
   - { key: Z,           mods: Control|Command|Shift,  chars: "Ζ"               }
-  - { key: W,           mods: Control|Command|Shift,  chars: "BUG: "           }
+  - { key: W,           mods: Control|Command|Shift,  chars: "TODO: "          }

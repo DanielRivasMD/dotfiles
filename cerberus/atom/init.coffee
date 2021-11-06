@@ -193,7 +193,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-triple_equal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .=== ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
-  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
+  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-triple_doublequote': -> atom.workspace.getActiveTextEditor()?.insertText('"""')
   'custom:insert-low_or_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .|= ')
   'custom:insert-tripleless': -> atom.workspace.getActiveTextEditor()?.insertText(' <<< ')
@@ -226,7 +226,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-greek_x': -> atom.workspace.getActiveTextEditor()?.insertText('χ')
   'custom:insert-greek_y': -> atom.workspace.getActiveTextEditor()?.insertText('υ')
   'custom:insert-greek_z': -> atom.workspace.getActiveTextEditor()?.insertText('ζ')
-  'custom:insert-todo': -> atom.workspace.getActiveTextEditor()?.insertText('TODO: ')
+  'custom:insert-where': -> atom.workspace.getActiveTextEditor()?.insertText('where ')
 
   'custom:insert-greek_capital_a': -> atom.workspace.getActiveTextEditor()?.insertText('Α')
   'custom:insert-greek_capital_b': -> atom.workspace.getActiveTextEditor()?.insertText('Β')
@@ -252,7 +252,8 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-greek_capital_x': -> atom.workspace.getActiveTextEditor()?.insertText('Χ')
   'custom:insert-greek_capital_y': -> atom.workspace.getActiveTextEditor()?.insertText('Υ')
   'custom:insert-greek_capital_z': -> atom.workspace.getActiveTextEditor()?.insertText('Ζ')
-  'custom:insert-bug': -> atom.workspace.getActiveTextEditor()?.insertText('BUG: ')
+  'custom:insert-todo': -> atom.workspace.getActiveTextEditor()?.insertText('TODO: ')
+  # 'custom:insert-bug': -> atom.workspace.getActiveTextEditor()?.insertText('BUG: ')
 
 #------------------------------------------------------------------------------------------------------------------------------
 #--------------------------------------------/ PANDOC EXPORTS /----------------------------------------------------------------

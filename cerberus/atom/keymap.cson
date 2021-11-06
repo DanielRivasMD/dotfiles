@@ -255,6 +255,13 @@
 
 ################################################################################
 
+'atom-text-editor[data-grammar~="latex"]':
+  'alt-cmd-b': 'atom-latex:build'
+  'alt-cmd-c': 'atom-latex:clean'
+  'alt-cmd-v': 'atom-latex:toggle-panel'
+
+################################################################################
+
 'atom-workspace':
 
   # move panes
@@ -263,13 +270,6 @@
 
   # cheatsheet menu
   'ctrl-q \'': 'keybinding-cheatsheet:toggle'
-
-################################################################################
-
-'atom-text-editor[data-grammar~="latex"]':
-  'alt-cmd-b': 'atom-latex:build'
-  'alt-cmd-c': 'atom-latex:clean'
-  'alt-cmd-v': 'atom-latex:toggle-panel'
 
 ################################################################################
 # TODO: add macros
@@ -468,7 +468,7 @@
   'cmd-ctrl-+': 'custom:insert-triple_equal_broadcast'
   'cmd-ctrl-{': 'custom:insert-empty'
   'cmd-ctrl-}': 'custom:insert-empty'
-  'cmd-ctrl-:': 'custom:insert-where'
+  'cmd-ctrl-:': 'custom:insert-empty'
   'cmd-ctrl-"': 'custom:insert-triple_doublequote'
   'cmd-ctrl-|': 'custom:insert-low_or_broadcast'
   'cmd-ctrl-<': 'custom:insert-tripleless'
@@ -501,7 +501,7 @@
   'cmd-ctrl-x': 'custom:insert-greek_x'
   'cmd-ctrl-y': 'custom:insert-greek_y'
   'cmd-ctrl-z': 'custom:insert-greek_z'
-  'cmd-ctrl-w': 'custom:insert-todo'
+  'cmd-ctrl-w': 'custom:insert-where'
 
   'cmd-ctrl-A': 'custom:insert-greek_capital_a'
   'cmd-ctrl-B': 'custom:insert-greek_capital_b'
@@ -527,7 +527,7 @@
   'cmd-ctrl-X': 'custom:insert-greek_capital_x'
   'cmd-ctrl-Y': 'custom:insert-greek_capital_y'
   'cmd-ctrl-Z': 'custom:insert-greek_capital_z'
-  'cmd-ctrl-W': 'custom:insert-bug'
+  'cmd-ctrl-W': 'custom:insert-todo'
 
 #------------------------------------------------------------------------------------------------------------------------------
 #

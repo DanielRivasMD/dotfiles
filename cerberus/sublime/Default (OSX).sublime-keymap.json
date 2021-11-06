@@ -316,7 +316,7 @@
   { "keys": ["command+ctrl+shift+="],  "command": "insert",                    "args": {"characters": " .=== "}},
   { "keys": ["command+ctrl+shift+["],  "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["command+ctrl+shift+]"],  "command": "insert",                    "args": {"characters": "  "}},
-  { "keys": ["command+ctrl+shift+;"],  "command": "insert",                    "args": {"characters": "where "}},
+  { "keys": ["command+ctrl+shift+;"],  "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["command+ctrl+shift+'"],  "command": "insert",                    "args": {"characters": "\"\"\""}},
   { "keys": ["command+ctrl+shift+\\"], "command": "insert",                    "args": {"characters": " .|= "}},
   { "keys": ["command+ctrl+shift+,"],  "command": "insert",                    "args": {"characters": " <<< "}},
@@ -349,7 +349,7 @@
   { "keys": ["command+ctrl+x"],        "command": "insert",                    "args": {"characters": "χ"}},
   { "keys": ["command+ctrl+y"],        "command": "insert",                    "args": {"characters": "υ"}},
   { "keys": ["command+ctrl+z"],        "command": "insert",                    "args": {"characters": "ζ"}},
-  { "keys": ["command+ctrl+w"],        "command": "insert",                    "args": {"characters": "TODO: "}},
+  { "keys": ["command+ctrl+w"],        "command": "insert",                    "args": {"characters": "where "}},
 
   { "keys": ["command+ctrl+shift+a"],  "command": "insert",                    "args": {"characters": "Α"}},
   { "keys": ["command+ctrl+shift+b"],  "command": "insert",                    "args": {"characters": "Β"}},
@@ -375,6 +375,6 @@
   { "keys": ["command+ctrl+shift+x"],  "command": "insert",                    "args": {"characters": "Χ"}},
   { "keys": ["command+ctrl+shift+y"],  "command": "insert",                    "args": {"characters": "Υ"}},
   { "keys": ["command+ctrl+shift+z"],  "command": "insert",                    "args": {"characters": "Ζ"}},
-  { "keys": ["command+ctrl+shift+w"],  "command": "insert",                    "args": {"characters": "BUG: "}}
+  { "keys": ["command+ctrl+shift+w"],  "command": "insert",                    "args": {"characters": "TODO: "}}
 
 ]
