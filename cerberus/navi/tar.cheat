@@ -1,9 +1,8 @@
 % tar
 
-# Decompress tarball
-tar -xvf <tarball>
-
-% tar, fillin
-
-# Decompress tarball fillin
+# Expand tarball
 fillin tar -xvf {{tarball}}
+
+# Decompress tarball
+fillin tar -zxvf {{tarball}}
+

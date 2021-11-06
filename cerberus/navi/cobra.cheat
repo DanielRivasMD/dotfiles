@@ -1,20 +1,9 @@
 % cobra
 
 # Create app
-cobra init <app_name>
-
-# Add command
-cobra add <command> --author <author_email> --license <license>
-
-# Add subcommand
-cobra add <subcommand> --parent <command> --author <author_email> --license <license>
-
-% cobra, fillin
-
-# Create app fillin
 fillin cobra init {{app_name}}
 
-# Add command fillin
+# Add command
 fillin cobra add {{command}} --author {{author_email}} --license {{license}}
 
 # Add subcommand

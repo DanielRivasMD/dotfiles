@@ -1,27 +1,13 @@
 % bat
 
 # Print file
-bat <file>
-
-# Print file without wrapping
-bat --wrap never <file>
-
-# Copy file content to clipboard
-bat <file> | cb
-
-# Print without decorations
-bat --plain <file>
-
-% bat, fillin
-
-# Print file fillin
 fillin bat {{file}}
 
-# Print file without wrapping fillin
+# Print file without wrapping
 fillin bat --wrap never {{file}}
 
-# Copy file content to clipboard fillin
+# Copy file content to clipboard
 fillin bat {{file}} | cb
 
-# Print without decorations fillin
+# Print without decorations
 fillin bat --plain {{file}}
