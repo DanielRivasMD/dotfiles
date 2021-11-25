@@ -2,7 +2,7 @@
 
 # base R
 options(prompt = '> ')
-options(stringsAsFactors = F)
+# options(stringsAsFactors = FALSE)
 options(max.print = 999)
 options(nwarnings = 99)
 options(editor = 'subl')
@@ -28,6 +28,7 @@ utils::assignInNamespace(
   'base'
 )
 
+# use quit() to save workspace
 utils::assignInNamespace(
   'quit',
   function(save = 'yes', status = 0, runLast = TRUE)
@@ -39,6 +40,18 @@ utils::assignInNamespace(
 
 ################################################################################
 
+# default repo
+local(
+  {
+    r <- getOption("repos")
+    r["CRAN"] <- "http://cran.r-project.org"
+    options(repos = r)
+  }
+)
+
+################################################################################
+
+# launch startup
 tryCatch(
   startup::startup(),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))

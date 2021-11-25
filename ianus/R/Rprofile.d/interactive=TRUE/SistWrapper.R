@@ -1,7 +1,7 @@
 ################################################################################
 
 tryCatch(
-  require(SistWrapper, quietly = TRUE),
+  suppressMessages(require(SistWrapper)),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 
