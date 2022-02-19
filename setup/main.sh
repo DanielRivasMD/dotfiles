@@ -6,15 +6,22 @@
 ################################################################################
 
 # install formualae
-while read item
-do
-  brew install ${item}
-done < setup/brew_formulae.txt
+brew install --formualae $(cat setup/brew_formulae.txt)
 
 # install casks
+brew install --casks $(cat setup/brew_casks.txt)
+
+################################################################################
+
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+################################################################################
+
+# install rust binaries
 while read item
 do
-  brew install --cask ${item}
-done < setup/brew_casks.txt
+  cargo install ${item}
+done < setup/cargo.txt
 
 ################################################################################
