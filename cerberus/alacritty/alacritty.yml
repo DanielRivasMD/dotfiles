@@ -1111,11 +1111,11 @@ key_bindings:
   - { key: Period,      mods: Control,                chars: " %>% "           }
 # - { key: Slash,       mods: Control,                chars: ""                }
   - { key: Grave,       mods: Control,                chars: " ~ "             }
-  - { key: Tab,         mods: Control,                chars: "  "              }
+  - { key: Tab,         mods: Control,                chars: ", "              }
 
   - { key: Key1,        mods: Control|Shift,          chars: "@debug "         }
   - { key: Key2,        mods: Control|Shift,          chars: "@chain "         }
-  - { key: Key3,        mods: Control|Shift,          chars: "#[]"             }
+  - { key: Key3,        mods: Control|Shift,          chars: "  "              }
   - { key: Key4,        mods: Control|Shift,          chars: "@eval "          }
   - { key: Key5,        mods: Control|Shift,          chars: " %ni% "          }
   - { key: Key6,        mods: Control|Shift,          chars: "@test "          }
@@ -1147,12 +1147,12 @@ key_bindings:
   - { key: Key9,        mods: Alt|Control|Command,    chars: "  "              }
   - { key: Key0,        mods: Alt|Control|Command,    chars: "  "              }
   - { key: Minus,       mods: Alt|Control|Command,    chars: "  "              }
-  - { key: Equals,      mods: Alt|Control|Command,    chars: "..="             }
+  - { key: Equals,      mods: Alt|Control|Command,    chars: "  "              }
   - { key: LBracket,    mods: Alt|Control|Command,    chars: "  "              }
   - { key: RBracket,    mods: Alt|Control|Command,    chars: "  "              }
   - { key: Semicolon,   mods: Alt|Control|Command,    chars: "::"              }
   - { key: Apostrophe,  mods: Alt|Control|Command,    chars: " ->> "           }
-  - { key: Backslash,   mods: Alt|Control|Command,    chars: "  "              }
+  - { key: Backslash,   mods: Alt|Control|Command,    chars: "#[]"             }
   - { key: Comma,       mods: Alt|Control|Command,    chars: " <: "            }
   - { key: Period,      mods: Alt|Control|Command,    chars: " >: "            }
   - { key: Slash,       mods: Alt|Control|Command,    chars: " <<- "           }
@@ -1173,7 +1173,7 @@ key_bindings:
   - { key: Equals,      mods: Alt|Control|Command|Shift,    chars: " ∈ "       }
   - { key: LBracket,    mods: Alt|Control|Command|Shift,    chars: "  "        }
   - { key: RBracket,    mods: Alt|Control|Command|Shift,    chars: "  "        }
-  - { key: Semicolon,   mods: Alt|Control|Command|Shift,    chars: ", "        }
+  - { key: Semicolon,   mods: Alt|Control|Command|Shift,    chars: "  "        }
   - { key: Apostrophe,  mods: Alt|Control|Command|Shift,    chars: "  "        }
   - { key: Backslash,   mods: Alt|Control|Command|Shift,    chars: "  "        }
 # - { key: Comma,       mods: Alt|Control|Command|Shift,    chars: ""          }
@@ -1196,7 +1196,7 @@ key_bindings:
   - { key: Equals,      mods: Control|Command,        chars: " === "           }
   - { key: LBracket,    mods: Control|Command,        chars: " <<= "           }
   - { key: RBracket,    mods: Control|Command,        chars: " >>= "           }
-  - { key: Semicolon,   mods: Control|Command,        chars: "  "              }
+  - { key: Semicolon,   mods: Control|Command,        chars: "..="             }
   - { key: Apostrophe,  mods: Control|Command,        chars: "'''"             }
   - { key: Backslash,   mods: Control|Command,        chars: " |= "            }
   - { key: Comma,       mods: Control|Command,        chars: " << "            }
