@@ -108,7 +108,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-r_pipe_right_plus': -> atom.workspace.getActiveTextEditor()?.insertText(' %+>% ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-equal_tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' =~ ')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-colon': -> atom.workspace.getActiveTextEditor()?.insertText(': ')
 
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')

@@ -28,7 +28,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  # background_opacity:                 0.8
+  # background_opacity:             0.8
   opacity:                          0.8
 
   # Window dimensions (changes require restart)
@@ -187,8 +187,8 @@ font:
 # colors:
 #   # Default colors
 #   primary:
-#    background:                      '#1d1f21'
-#    foreground:                      '#c5c8c6'
+#    background:                    '#1d1f21'
+#    foreground:                    '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -1134,7 +1134,7 @@ key_bindings:
   - { key: Period,      mods: Control|Shift,          chars: " %+>% "          }
   - { key: Slash,       mods: Control|Shift,          chars: "  "              }
   - { key: Grave,       mods: Control|Shift,          chars: " =~ "            }
-  - { key: Tab,         mods: Control|Shift,          chars: "  "              }
+  - { key: Tab,         mods: Control|Shift,          chars: ": "              }
 
   - { key: Key1,        mods: Alt|Control|Command,    chars: "  "              }
   - { key: Key2,        mods: Alt|Control|Command,    chars: "  "              }
