@@ -1,0 +1,41 @@
+keymap:
+  normal:
+      space: "application::switch_to_jump_mode"
+      enter: "application::switch_to_second_stage_jump_mode"
+      ;: "application::switch_to_command_mode"
+      :: "application::switch_to_line_jump_mode"
+      k: "view::scroll_up"
+      j: "view::scroll_down"
+      h: "cursor::move_to_start_of_line"
+      l: "cursor::move_to_end_of_line"
+      g: "cursor::move_to_first_line"
+      G: "cursor::move_to_last_line"
+      R: "buffer::reload"
+      S:
+        - "buffer::save"
+        - "buffer::close"
+      f: "application::switch_to_open_mode"
+
+  select:
+      space: "application::switch_to_jump_mode"
+      enter: "application::switch_to_second_stage_jump_mode"
+      ;: "application::switch_to_command_mode"
+      :: "application::switch_to_line_jump_mode"
+      h: "cursor::move_to_start_of_line"
+      l: "cursor::move_to_end_of_line"
+      k: "view::scroll_up"
+      j: "view::scroll_down"
+      R: "buffer::reload"
+      ">": buffer::indent_line
+      "<": buffer::outdent_line
+
+  select_line:
+      space: "application::switch_to_jump_mode"
+      enter: "application::switch_to_second_stage_jump_mode"
+      ;: "application::switch_to_command_mode"
+      :: "application::switch_to_line_jump_mode"
+      k: "view::scroll_up"
+      j: "view::scroll_down"
+      R: "buffer::reload"
+      ">": "buffer::indent_line"
+      "<": buffer::outdent_line
