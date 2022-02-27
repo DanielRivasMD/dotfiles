@@ -1,249 +1,280 @@
--------------------- mappings ------------------------------
+--------------------------------------------------
 
-map('n', '<Space>', '<NOP>')
+local opts = { noremap = true, silent = true }
+
+local term_opts = { silent = true }
+
+-- shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+-- remap space as leader key
+keymap('', '<Space>', '<Nop>', opts)
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- modes
+--   normal_mode = 'n',
+--   insert_mode = 'i',
+--   visual_mode = 'v',
+--   visual_block_mode = 'x',
+--   term_mode = 't',
+--   command_mode = 'c',
+
+--------------------------------------------------
 
 -- no hl
-map('n', '<Leader>h', ':set hlsearch!<CR>')
+keymap('n', '<Leader>h', ':set hlsearch!<CR>', opts)
 
 -- explorer
-map('n', '<Leader>t', ':NvimTreeToggle<CR>')
+keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', opts)
 
 -- window movement
-map('i', '<C-Left>', '<C-w>h')
-map('n', '<C-Left>', '<C-w>h')
-map('v', '<C-Left>', '<C-w>h')
+keymap('i', '<C-Left>', '<C-w>h', opts)
+keymap('n', '<C-Left>', '<C-w>h', opts)
+keymap('v', '<C-Left>', '<C-w>h', opts)
 
-map('i', '<C-Down>', '<C-w>j')
-map('n', '<C-Down>', '<C-w>j')
-map('v', '<C-Down>', '<C-w>j')
+keymap('i', '<C-Down>', '<C-w>j', opts)
+keymap('n', '<C-Down>', '<C-w>j', opts)
+keymap('v', '<C-Down>', '<C-w>j', opts)
 
-map('i', '<C-Up>', '<C-w>k')
-map('n', '<C-Up>', '<C-w>k')
-map('v', '<C-Up>', '<C-w>k')
+keymap('i', '<C-Up>', '<C-w>k', opts)
+keymap('n', '<C-Up>', '<C-w>k', opts)
+keymap('v', '<C-Up>', '<C-w>k', opts)
 
-map('i', '<C-Right>', '<C-w>l')
-map('n', '<C-Right>', '<C-w>l')
-map('v', '<C-Right>', '<C-w>l')
+keymap('i', '<C-Right>', '<C-w>l', opts)
+keymap('n', '<C-Right>', '<C-w>l', opts)
+keymap('v', '<C-Right>', '<C-w>l', opts)
+
+-- pasting
+keymap('v', 'p', '"_dP', opts)
 
 -- indenting
-map('v', '<M-O>', '<gv')
-map('v', '<M-I>', '>gv')
+keymap('v', '<M-O>', '<gv', opts)
+keymap('v', '<M-I>', '>gv', opts)
 
 -- escape
-map('i', 'jj', '<ESC>')
-map('v', 'jj', '<ESC>')
+keymap('i', 'jj', '<ESC>', opts)
+keymap('v', 'jj', '<ESC>', opts)
 
 -- redo
-map('i', 'UU', '<ESC>U')
-map('n', 'U', ':redo<CR>')
-map('v', 'UU', '<ESC>U')
+keymap('i', 'UU', '<ESC>U', opts)
+keymap('n', 'U', ':redo<CR>', opts)
+keymap('v', 'UU', '<ESC>U', opts)
 
 -- undo
-map('i', 'uu', '<ESC>u')
-map('v', 'uu', '<ESC>uv')
+keymap('i', 'uu', '<ESC>u', opts)
+keymap('v', 'uu', '<ESC>uv', opts)
 
 -- movement begin / end file
-map('i', '<M-g>', '<ESC>ggI')
-map('n', '<M-g>', 'gg')
-map('v', '<M-g>', 'gg')
+keymap('i', '<M-g>', '<ESC>ggI', opts)
+keymap('n', '<M-g>', 'gg', opts)
+keymap('v', '<M-g>', 'gg', opts)
 
-map('i', '<M-G>', '<ESC>GI')
-map('n', '<M-G>', 'G')
-map('v', '<M-G>', 'G')
+keymap('i', '<M-G>', '<ESC>GI', opts)
+keymap('n', '<M-G>', 'G', opts)
+keymap('v', '<M-G>', 'G', opts)
 
 -- movement begin / end line
-map('i', '<C-a>', '<ESC>I')
-map('n', '<C-a>', '0')
-map('v', '<C-a>', '0')
+keymap('i', '<C-a>', '<ESC>I', opts)
+keymap('n', '<C-a>', '0', opts)
+keymap('v', '<C-a>', '0', opts)
 
-map('i', '<C-e>', '<ESC>A')
-map('n', '<C-e>', '$')
-map('v', '<C-e>', '$')
+keymap('i', '<C-e>', '<ESC>A', opts)
+keymap('n', '<C-e>', '$', opts)
+keymap('v', '<C-e>', '$', opts)
 
 -- movement word
-map('i', '<M-Left>', '<ESC>Bi')
-map('n', '<M-Left>', 'B')
-map('v', '<M-Left>', 'B')
+keymap('i', '<M-Left>', '<ESC>Bi', opts)
+keymap('n', '<M-Left>', 'B', opts)
+keymap('v', '<M-Left>', 'B', opts)
 
-map('i', '<M-Right>', '<ESC>Ea')
-map('n', '<M-Right>', 'E')
-map('v', '<M-Right>', 'E')
+keymap('i', '<M-Right>', '<ESC>Ea', opts)
+keymap('n', '<M-Right>', 'E', opts)
+keymap('v', '<M-Right>', 'E', opts)
 
 -- movement paragraph
-map('i', '<M-Up>', '<ESC>{i')
-map('n', '<M-Up>', '{')
-map('v', '<M-Up>', '{')
+keymap('i', '<M-Up>', '<ESC>{i', opts)
+keymap('n', '<M-Up>', '{', opts)
+keymap('v', '<M-Up>', '{', opts)
 
-map('i', '<M-Down>', '<ESC>}i')
-map('n', '<M-Down>', '}')
-map('v', '<M-Down>', '}')
+keymap('i', '<M-Down>', '<ESC>}i', opts)
+keymap('n', '<M-Down>', '}', opts)
+keymap('v', '<M-Down>', '}', opts)
 
 -- movement to line
-map('i', '<M-F>', '<ESC>:')
-map('n', '<M-F>', ':')
-map('v', '<M-F>', ':')
+keymap('i', '<M-F>', '<ESC>:', opts)
+keymap('n', '<M-F>', ':', opts)
+keymap('v', '<M-F>', ':', opts)
 
 -- select word
-map('i', '<S-Left>', '<ESC>vB')
-map('n', '<S-Left>', 'vB')
-map('v', '<S-Left>', 'B')
+keymap('i', '<S-Left>', '<ESC>vB', opts)
+keymap('n', '<S-Left>', 'vB', opts)
+keymap('v', '<S-Left>', 'B', opts)
 
-map('i', '<S-Right>', '<ESC>vE')
-map('n', '<S-Right>', 'vE')
-map('v', '<S-Right>', 'E')
+keymap('i', '<S-Right>', '<ESC>vE', opts)
+keymap('n', '<S-Right>', 'vE', opts)
+keymap('v', '<S-Right>', 'E', opts)
 
 -- select to begin / end line
-map('i', '<M-S-Left>', '<ESC>v0')
-map('n', '<M-S-Left>', 'v0')
-map('v', '<M-S-Left>', '0')
+keymap('i', '<M-S-Left>', '<ESC>v0', opts)
+keymap('n', '<M-S-Left>', 'v0', opts)
+keymap('v', '<M-S-Left>', '0', opts)
 
-map('i', '<M-S-Right>', '<ESC>v$')
-map('n', '<M-S-Right>', 'v$')
-map('v', '<M-S-Right>', '$')
+keymap('i', '<M-S-Right>', '<ESC>v$', opts)
+keymap('n', '<M-S-Right>', 'v$', opts)
+keymap('v', '<M-S-Right>', '$', opts)
 
 -- select line from cursor
-map('i', '<S-Up>', '<ESC>vk')
-map('n', '<S-Up>', 'vk')
-map('v', '<S-Up>', 'k')
+keymap('i', '<S-Up>', '<ESC>vk', opts)
+keymap('n', '<S-Up>', 'vk', opts)
+keymap('v', '<S-Up>', 'k', opts)
 
-map('i', '<S-Down>', '<ESC>vj')
-map('n', '<S-Down>', 'vj')
-map('v', '<S-Down>', 'j')
+keymap('i', '<S-Down>', '<ESC>vj', opts)
+keymap('n', '<S-Down>', 'vj', opts)
+keymap('v', '<S-Down>', 'j', opts)
 
 -- select paragraph
-map('i', '<M-S-Up>', '<ESC>v{')
-map('n', '<M-S-Up>', 'v{')
-map('v', '<M-S-Up>', '{')
+keymap('i', '<M-S-Up>', '<ESC>v{', opts)
+keymap('n', '<M-S-Up>', 'v{', opts)
+keymap('v', '<M-S-Up>', '{', opts)
 
-map('i', '<M-S-Down>', '<ESC>v}')
-map('n', '<M-S-Down>', 'v}')
-map('v', '<M-S-Down>', '}')
+keymap('i', '<M-S-Down>', '<ESC>v}', opts)
+keymap('n', '<M-S-Down>', 'v}', opts)
+keymap('v', '<M-S-Down>', '}', opts)
 
 -- select line
-map('i', '<M-L>', '<ESC>0v$')
-map('n', '<M-L>', '0v$')
-map('v', '<M-L>', '<ESC>0v$')
+keymap('i', '<M-L>', '<ESC>0v$', opts)
+keymap('n', '<M-L>', '0v$', opts)
+keymap('v', '<M-L>', '<ESC>0v$', opts)
 
 -- move lines normal mode
-map('i', '<M-J>', '<ESC>ddpi')
-map('n', '<M-J>', 'ddp')
-map('v', '<M-J>', 'Vdpv')
+keymap('i', '<M-J>', '<ESC>:m .+1<CR>==i', opts)
+keymap('n', '<M-J>', ':m .+1<CR>==', opts)
+keymap('v', '<M-j>', ':m .+1<CR>==', opts)
 
-map('i', '<M-K>', '<ESC>ddkPi')
-map('n', '<M-K>', 'ddkP')
-map('v', '<M-K>', 'VdkPv')
+keymap('i', '<M-K>', '<ESC>:m .-2<CR>==i', opts)
+keymap('n', '<M-K>', ':m .-2<CR>==', opts)
+keymap('v', '<M-k>', ':m .-2<CR>==', opts)
+
+-- move lines visual mode
+keymap("x", "<M-J>", ":move '>+1<CR>gv-gv", opts)
+keymap('x', '<M-K>', ":move '<-2<CR>gv-gv", opts)
 
 -- duplicate line
-map('i', '<M-D>', '<ESC>yypi')
-map('n', '<M-D>', 'yyp')
-map('v', '<M-D>', 'Vypv')
+keymap('i', '<M-D>', '<ESC>yypi', opts)
+keymap('n', '<M-D>', 'yyp', opts)
+keymap('v', '<M-D>', 'Vypv', opts)
 
 -- delete line
-map('i', '<M-X>', '<ESC>ddI')
-map('n', '<M-X>', 'dd')
-map('v', '<M-X>', 'Vdv')
+keymap('i', '<M-X>', '<ESC>ddI', opts)
+keymap('n', '<M-X>', 'dd', opts)
+keymap('v', '<M-X>', 'Vdv', opts)
 
 -- auto pairs
-map('i', '\'', '\'\'<Left>')
-map('i', '"', '""<Left>')
-map('i', '(', '()<Left>')
-map('i', '[', '[]<Left>')
-map('i', '{', '{}<Left>')
+keymap('i', '\'', '\'\'<Left>', opts)
+keymap('i', '"', '""<Left>', opts)
+keymap('i', '(', '()<Left>', opts)
+keymap('i', '[', '[]<Left>', opts)
+keymap('i', '{', '{}<Left>', opts)
 
 --------------------------------------------------
 -- lsp
 --------------------------------------------------
-map('n', 'gk,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')                  -- previous diagnostic
-map('n', 'gj;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')                  -- next diagnostic
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')                         -- definition
-map('n', 'ge', '<cmd>lua vim.lsp.buf.declaration()<CR>')                        -- declaration
-map('n', 'gf', '<cmd>lua vim.lsp.buf.hover()<CR>')                              -- hover
-map('n', 'gl', '<cmd>lua vim.lsp.buf.rename()<CR>')                             -- rename
-map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')                         -- references
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')                     -- implementation
-map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>')                     -- signature
-map('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')                    -- symbol
+
+-- keymap('n', 'gk,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', optsc)                  -- previous diagnosti
+-- keymap('n', 'gj;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', optsc)                  -- next diagnosti
+-- keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', optsn)                         -- definitio
+-- keymap('n', 'ge', '<cmd>lua vim.lsp.buf.declaration()<CR>', optsn)                        -- declaratio
+-- keymap('n', 'gf', '<cmd>lua vim.lsp.buf.hover()<CR>', optsr)                              -- hove
+-- keymap('n', 'gl', '<cmd>lua vim.lsp.buf.rename()<CR>', optse)                             -- renam
+-- keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', optss)                         -- reference
+-- keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', optsn)                     -- implementatio
+-- keymap('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', optse)                     -- signatur
+-- keymap('n', 'gy', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', optsl)                    -- symbo
 
 --------------------------------------------------
 -- telescope
 --------------------------------------------------
-map('n', 'tt', ':Telescope ')
+
+keymap('n', 'tt', ':Telescope ', opts)
 
 -- -- files
--- map('i', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
--- map('n', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
--- map('v', '<C-t>', '<cmd>lua require(\'telescope.builtin\').find_files()<CR>')
+keymap('i', '<C-t>', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+keymap('n', '<C-t>', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+keymap('v', '<C-t>', "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
 
--- -- file browser
--- map('i', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
--- map('n', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
--- map('v', '<C-y>', '<cmd>lua require(\'telescope.builtin\').file_browser()<CR>')
+-- file browser
+keymap('i', '<C-y>', "<cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
+keymap('n', '<C-y>', "<cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
+keymap('v', '<C-y>', "<cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
 
--- -- buffers
--- map('i', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
--- map('n', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
--- map('v', '<C-b>', '<cmd>lua require(\'telescope.builtin\').buffers()<CR>')
+-- buffers
+keymap('i', '<C-b>', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+keymap('n', '<C-b>', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+keymap('v', '<C-b>', "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 
--- -- ripgrep git files
--- map('i', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
--- map('n', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
--- map('v', '<C-r>', '<cmd>lua require(\'telescope.builtin\').live_grep()<CR>')
+-- ripgrep git files
+keymap('i', '<C-r>', "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
+keymap('n', '<C-r>', "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
+keymap('v', '<C-r>', "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 
 -- treesitter
-map('n', 'ty', '<cmd>lua require(\'telescope.builtin\').treesitter()<CR>')
+keymap('n', 'ty', "<cmd>lua require('telescope.builtin').treesitter()<CR>", opts)
 
 -- ripgrep all files
-map('n', 'tr', '<cmd>lua require(\'telescope.builtin\').grep_string()<CR>')
+keymap('n', 'tr', "<cmd>lua require('telescope.builtin').grep_string()<CR>", opts)
 
 -- git
-map('n', 'gs', '<cmd>lua require(\'telescope.builtin\').git_status()<CR>')      -- git status
-map('n', 'gc', '<cmd>lua require(\'telescope.builtin\').git_commits()<CR>')     -- git commits
-map('n', 'gb', '<cmd>lua require(\'telescope.builtin\').git_branches()<CR>')    -- git branches
-map('n', 'gv', '<cmd>lua require(\'telescope.builtin\').git_bcommits()<CR>')    -- git branch preview
+keymap('n', 'gs', "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)      -- git statu, optss
+keymap('n', 'gc', "<cmd>lua require('telescope.builtin').git_commits()<CR>", opts)     -- git commit, optss
+keymap('n', 'gb', "<cmd>lua require('telescope.builtin').git_branches()<CR>", opts)    -- git branche, optss
+keymap('n', 'gv', "<cmd>lua require('telescope.builtin').git_bcommits()<CR>", opts)    -- git branch previe, optsw
 
-map('n', 'tm', '<cmd>lua require(\'telescope.builtin\').marks()<CR>')           -- marks
-map('n', 'tv', '<cmd>lua require(\'telescope.builtin\').registers()<CR>')       -- registers
-map('n', 'tH', '<cmd>lua require(\'telescope.builtin\').keymaps()<CR>')         -- keymaps
-map('n', 'tn', '<cmd>lua require(\'telescope.builtin\').man_pages()<CR>')       -- man pages
-map('n', 'tc', '<cmd>lua require(\'telescope.builtin\').commands()<CR>')        -- commands
+keymap('n', 'tm', "<cmd>lua require('telescope.builtin').marks()<CR>", opts)           -- mark, optss
+keymap('n', 'tv', "<cmd>lua require('telescope.builtin').registers()<CR>", opts)       -- register, optss
+keymap('n', 'tH', "<cmd>lua require('telescope.builtin').keymaps()<CR>", opts)         -- keymap, optss
+keymap('n', 'tn', "<cmd>lua require('telescope.builtin').man_pages()<CR>", opts)       -- man page, optss
+keymap('n', 'tc', "<cmd>lua require('telescope.builtin').commands()<CR>", opts)        -- command, optss
 
 --------------------------------------------------
 -- barbar
 --------------------------------------------------
+
 -- next tab
-map('i', '<C-M-Right>', ':BufferNext<CR>')
-map('n', '<C-M-Right>', ':BufferNext<CR>')
-map('v', '<C-M-Right>', ':BufferNext<CR>')
+keymap('i', '<C-M-Right>', ':BufferNext<CR>', opts)
+keymap('n', '<C-M-Right>', ':BufferNext<CR>', opts)
+keymap('v', '<C-M-Right>', ':BufferNext<CR>', opts)
 
 -- previous tab
-map('i', '<C-M-Left>', ':BufferPrevious<CR>')
-map('n', '<C-M-Left>', ':BufferPrevious<CR>')
-map('v', '<C-M-Left>', ':BufferPrevious<CR>')
+keymap('i', '<C-M-Left>', ':BufferPrevious<CR>', opts)
+keymap('n', '<C-M-Left>', ':BufferPrevious<CR>', opts)
+keymap('v', '<C-M-Left>', ':BufferPrevious<CR>', opts)
 
 -- move next tab
-map('i', '<C-M-]>', ':BufferMoveNext<CR>')
-map('n', '<C-M-]>', ':BufferMoveNext<CR>')
-map('v', '<C-M-]>', ':BufferMoveNext<CR>')
+keymap('i', '<C-M-]>', ':BufferMoveNext<CR>', opts)
+keymap('n', '<C-M-]>', ':BufferMoveNext<CR>', opts)
+keymap('v', '<C-M-]>', ':BufferMoveNext<CR>', opts)
 
 -- move previous tab
-map('i', '<C-M-[>', ':BufferMovePrevious<CR>')
-map('n', '<C-M-[>', ':BufferMovePrevious<CR>')
-map('v', '<C-M-[>', ':BufferMovePrevious<CR>')
+keymap('i', '<C-M-[>', ':BufferMovePrevious<CR>', opts)
+keymap('n', '<C-M-[>', ':BufferMovePrevious<CR>', opts)
+keymap('v', '<C-M-[>', ':BufferMovePrevious<CR>', opts)
 
 --------------------------------------------------
 -- fuzzy finder
 --------------------------------------------------
-map('i', '<M-r>', ':FZF<CR>')
-map('n', '<M-r>', ':FZF<CR>')
-map('v', '<M-r>', ':FZF<CR>')
+keymap('i', '<M-r>', ':FZF<CR>', opts)
+keymap('n', '<M-r>', ':FZF<CR>', opts)
+keymap('v', '<M-r>', ':FZF<CR>', opts)
 
 -- comment
-map('i', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')
-map('n', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')
-map('v', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>')
+keymap('i', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>', opts)
+keymap('n', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>', opts)
+keymap('v', '<M-C>', ':call nerdcommenter#Comment("n", "Toggle")<CR>', opts)
 
 -- quit
-map('i', '<M-q>', '<ESC>:q<CR>')
-map('n', '<M-q>', ':q<CR>')
-map('v', '<M-q>', ':q<CR>')
+keymap('i', '<M-q>', '<ESC>:q<CR>', opts)
+keymap('n', '<M-q>', ':q<CR>', opts)
+keymap('v', '<M-q>', ':q<CR>', opts)
+
+--------------------------------------------------
