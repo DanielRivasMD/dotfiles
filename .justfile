@@ -53,8 +53,8 @@ Cerberus:
   # config directories
   ln -svf "${cerberus}/nvim" "${home}/.config"                                        # nvim directory
   ln -svf "${cerberus}/ranger" "${home}/.config"                                      # ranger directory
-  ln -svf "${cerberus}/gitui" "${home}/.config"                                       # ranger directory
-  ln -svf "${cerberus}/zellij" "${home}/.config"                                      # ranger directory
+  ln -svf "${cerberus}/gitui" "${home}/.config"                                       # gitui directory
+  ln -svf "${cerberus}/zellij" "${home}/.config"                                      # zellij directory
 
   # local
   ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${home}/.local/share/rstudio/"  # rstudio
@@ -66,7 +66,7 @@ Cerberus:
   # distant
   ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"                     # julia startup
   ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                                    # ssh config
-  ln -svf "${cerberus}/broot/conf.hjson" "${brootConf}/"                              # broot config
+  ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                               # broot config
   ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                          # lazycli config
 
   # purge before linking

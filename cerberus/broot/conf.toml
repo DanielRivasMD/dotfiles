@@ -33,7 +33,6 @@ default_flags = ""
 #
 [[verbs]]
 invocation = "edit"
-key = "F2"
 shortcut = "e"
 execution = "$EDITOR {file}"
 
@@ -59,6 +58,47 @@ execution = "git diff {file}"
 name = "view"
 invocation = "view"
 execution = "$PAGER {file}"
+leave_broot = false
+
+
+[[verbs]]
+key = "alt-f"
+execution = ":toggle_files"
+
+[[verbs]]
+key = "alt-g"
+execution = ":toggle_hidden"
+
+[[verbs]]
+key = "alt-k"
+internal = ":select_first"
+
+[[verbs]]
+key = "alt-j"
+internal = ":select_last"
+
+[[verbs]]
+key = "right"
+apply_to = "file"
+internal = "open_preview {file}"
+leave_broot = false
+
+[[verbs]]
+key = "left"
+apply_to = "file"
+internal = "close_preview {file}"
+leave_broot = false
+
+[[verbs]]
+invocation = "panel_left"
+key = "alt-h"
+internal = "panel_left"
+
+[[verbs]]
+invocation = "panel_right"
+key = "alt-l"
+internal = "panel_right"
+
 
 # If you uncomment the two next shortcuts, the left
 # and right arrow keys will be used to go to the parent
