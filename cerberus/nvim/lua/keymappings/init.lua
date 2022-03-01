@@ -245,10 +245,18 @@ keymap('i', '<C-M-Right>', ':BufferNext<CR>', opts)
 keymap('n', '<C-M-Right>', ':BufferNext<CR>', opts)
 keymap('v', '<C-M-Right>', ':BufferNext<CR>', opts)
 
+keymap('i', '<M-l>', ':BufferNext<CR>', opts)
+keymap('n', '<M-l>', ':BufferNext<CR>', opts)
+keymap('v', '<M-l>', ':BufferNext<CR>', opts)
+
 -- previous tab
 keymap('i', '<C-M-Left>', ':BufferPrevious<CR>', opts)
 keymap('n', '<C-M-Left>', ':BufferPrevious<CR>', opts)
 keymap('v', '<C-M-Left>', ':BufferPrevious<CR>', opts)
+
+keymap('i', '<M-h>', ':BufferPrevious<CR>', opts)
+keymap('n', '<M-h>', ':BufferPrevious<CR>', opts)
+keymap('v', '<M-h>', ':BufferPrevious<CR>', opts)
 
 -- move next tab
 keymap('i', '<C-M-]>', ':BufferMoveNext<CR>', opts)
