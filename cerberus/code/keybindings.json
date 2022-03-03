@@ -198,8 +198,8 @@
 
 
 	// jump
-	{ "key": "shift+enter",							 "command": "extension.jumpy-word"},
-	// { "key": "escape",										 "command": "extension.jumpy-exit"},
+	{ "key": "shift+enter",							 "command": "jump-extension.jump-to-the-start-of-a-word", "when": "editorTextFocus"},
+	{ "key": "alt+q alt+q",							 "command": "-jump-extension.jump-to-the-start-of-a-word", "when": "editorTextFocus"},
 
 	// git gutter
 
