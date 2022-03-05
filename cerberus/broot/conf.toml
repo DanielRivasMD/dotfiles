@@ -34,8 +34,8 @@ execution = "git diff {file}"
 
 [[verbs]]
 invocation = "view"
+key = "alt-a"
 execution = "$PAGER {file}"
-leave_broot = false
 
 [[verbs]]
 invocation = "toggle_files"
@@ -68,6 +68,18 @@ internal = ":select_last"
 description = "go to bottom of the list"
 
 [[verbs]]
+invocation = "page_up"
+key = "alt-Up"
+internal = ":page_up"
+description = "go to page up"
+
+[[verbs]]
+invocation = "page_down"
+key = "alt-Down"
+internal = ":page_down"
+description = "go to page down"
+
+[[verbs]]
 invocation = "open_preview"
 key = "right"
 apply_to = "file"
@@ -94,6 +106,24 @@ invocation = "panel_right"
 key = "alt-l"
 internal = "panel_right"
 description = "select right panel"
+
+[[verbs]]
+invocation = "refresh"
+key = "alt-s"
+internal = "refresh"
+description = "refresh tree"
+
+[[verbs]]
+invocation = "next_match"
+key = "alt-m"
+internal = ":next_match"
+description = "go to next match"
+
+[[verbs]]
+invocation = "previous_match"
+key = "alt-n"
+internal = ":previous_match"
+description = "go to previous match"
 
 
 ###############################################################

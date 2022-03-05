@@ -1,3 +1,5 @@
+//////////////////////////////////////////////////
+
 (
 
     // exit
@@ -5,9 +7,11 @@
     exit_popup: Some(( code: Char('q'), modifiers: ( bits: 0, ), )),
 
     // workspace
-    home: Some(( code: Char('g'), modifiers: ( bits: 0, ), )),
-    end: Some(( code: Char('G'), modifiers: ( bits: 1, ), )),
+    home: Some(( code: Char('<'), modifiers: ( bits: 0, ), )),
+    end: Some(( code: Char('>'), modifiers: ( bits: 0, ), )),
     page_down: Some(( code: Char('j'), modifiers: ( bits: 0, ), )),
     page_up: Some(( code: Char('k'), modifiers: ( bits: 0, ), )),
 
 )
+
+//////////////////////////////////////////////////
