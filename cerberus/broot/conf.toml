@@ -14,29 +14,65 @@ default_flags = ""
 
 # config
 [[verbs]]
-invocation = "edit"
-shortcut = "e"
-execution = "$EDITOR {file}"
+invocation = "quit"
+key = "shift-alt-q"
+execution = ":quit"
+description = "quite broot"
 
 [[verbs]]
-invocation = "quit"
-key = "ctrl-c"
-execution = ":quit"
+invocation = "back"
+key = "alt-q"
+internal = "back"
+description = "revert to the previous state"
+
+[[verbs]]
+invocation = "refresh"
+key = "shift-alt-R"
+internal = "refresh"
+description = "refresh tree"
+
+# file
+[[verbs]]
+invocation = "edit"
+key = "alt-e"
+shortcut = "e"
+execution = "$EDITOR {file}"
+description = "open file with `micro` editor"
+
+[[verbs]]
+invocation = "amp"
+key = "shift-alt-e"
+shortcut = "amp"
+execution = "amp {file}"
+description = "open file with `amp` editor"
 
 [[verbs]]
 invocation = "create {subpath}"
+key = "alt-c"
+shortcut = "create"
 execution = "$EDITOR {directory}/{subpath}"
+description = "create file with editor"
+
+# search
+[[verbs]]
+invocation = "total_search"
+key = "alt-r"
+internal = ":total_search"
+description = "search again but on all children"
 
 [[verbs]]
-invocation = "git_diff"
-shortcut = "gd"
-execution = "git diff {file}"
+invocation = "next_match"
+key = "alt-n"
+internal = ":next_match"
+description = "go to next match"
 
 [[verbs]]
-invocation = "view"
-key = "alt-a"
-execution = "$PAGER {file}"
+invocation = "previous_match"
+key = "shift-alt-n"
+internal = ":previous_match"
+description = "go to previous match"
 
+# view
 [[verbs]]
 invocation = "toggle_files"
 key = "alt-f"
@@ -46,24 +82,72 @@ description = "toggle files"
 [[verbs]]
 invocation = "toggle_hidden"
 key = "alt-d"
+shortcut = "d"
 execution = ":toggle_hidden"
 description = "toggle hidden"
 
+# pager
+[[verbs]]
+invocation = "bat"
+key = "alt-b"
+shortcut = "bat"
+external = "bat {file}"
+description = "open file with `bat`"
+
+[[verbs]]
+invocation = "mdcat"
+key = "alt-m"
+shortcut = "mdcat"
+external = "mdcat {file}"
+description = "open file with `mdcat`"
+
+[[verbs]]
+invocation = "jless"
+key = "alt-j"
+shortcut = "jless"
+external = "jless {file}"
+description = "open file with `jless`"
+
+# git
+[[verbs]]
+invocation = "toggle_git_ignore"
+key = "shift-alt-d"
+shortcut = "gi"
+internal = "toggle_git_ignore"
+description = "toggle git ignore"
+
+# stage
 [[verbs]]
 invocation = "toggle_stage"
-key = "alt-g"
+key = "alt-s"
+shortcut = "ts"
 execution = ":toggle_stage"
 description = "toggle stage"
 
 [[verbs]]
+invocation = "toggle_staging_area"
+key = "shift-alt-s"
+shortcut = "tsa"
+execution = ":toggle_staging_area"
+description = "toggle staging area"
+
+[[verbs]]
+invocation = "clear_stage"
+key = "alt-l"
+shortcut = "cls"
+execution = ":clear_stage"
+description = "clear stage area"
+
+# move
+[[verbs]]
 invocation = "select_first"
-key = "alt-k"
+key = "alt-g"
 internal = ":select_first"
 description = "go to top of the list"
 
 [[verbs]]
 invocation = "select_last"
-key = "alt-j"
+key = "shift-alt-g"
 internal = ":select_last"
 description = "go to bottom of the list"
 
@@ -79,6 +163,7 @@ key = "alt-Down"
 internal = ":page_down"
 description = "go to page down"
 
+# panel
 [[verbs]]
 invocation = "open_preview"
 key = "right"
@@ -97,33 +182,15 @@ description = "close display"
 
 [[verbs]]
 invocation = "panel_left"
-key = "alt-h"
+key = "alt-Left"
 internal = "panel_left"
 description = "select left panel"
 
 [[verbs]]
 invocation = "panel_right"
-key = "alt-l"
+key = "alt-Right"
 internal = "panel_right"
 description = "select right panel"
-
-[[verbs]]
-invocation = "refresh"
-key = "alt-s"
-internal = "refresh"
-description = "refresh tree"
-
-[[verbs]]
-invocation = "next_match"
-key = "alt-m"
-internal = ":next_match"
-description = "go to next match"
-
-[[verbs]]
-invocation = "previous_match"
-key = "alt-n"
-internal = ":previous_match"
-description = "go to previous match"
 
 
 ###############################################################
