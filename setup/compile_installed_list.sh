@@ -20,3 +20,12 @@ cargo-install-update install-update --list | \
   sort > ${HOME}/.archive/setup/cargo.txt
 
 ################################################################################
+
+# golang binaries
+gup export
+
+# relocate & link
+mv ${HOME}/.config/gup/gup.conf ${HOME}/.archive/setup/golang_binaries.txt
+ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
+
+################################################################################

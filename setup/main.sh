@@ -34,8 +34,8 @@ brew install --cask docker
 
 ################################################################################
 
-# install formualae
-brew install --formualae $(cat setup/brew_formulae.txt)
+# install formulae
+brew install --formulae $(cat setup/brew_formulae.txt)
 
 # install casks
 brew install --casks $(cat setup/brew_casks.txt)
@@ -52,5 +52,19 @@ while read item
 do
   cargo install ${item}
 done < setup/cargo.txt
+
+################################################################################
+
+# install golang update
+go install github.com/nao1215/gup@latest
+
+################################################################################
+
+# link
+mkdir -p ${HOME}/.config/gup
+ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
+
+# install golang binaries
+gup import
 
 ################################################################################
