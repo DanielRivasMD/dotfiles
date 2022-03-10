@@ -42,7 +42,7 @@ description = "open file with `micro` editor"
 [[verbs]]
 invocation = "amp"
 key = "shift-alt-e"
-shortcut = "amp"
+shortcut = "a"
 execution = "amp {file}"
 description = "open file with `amp` editor"
 
@@ -140,6 +140,12 @@ description = "clear stage area"
 
 # move
 [[verbs]]
+invocation = "cd"
+key = "enter"
+execution = ":cd"
+description = "open directory and quit"
+
+[[verbs]]
 invocation = "select_first"
 key = "alt-g"
 internal = ":select_first"
@@ -164,6 +170,13 @@ internal = ":page_down"
 description = "go to page down"
 
 # panel
+[[verbs]]
+invocation = "toggle_preview"
+key = "alt-Enter"
+internal = "toggle_preview"
+leave_broot = false
+description = "open / close preview panel"
+
 [[verbs]]
 invocation = "open_preview"
 key = "right"
