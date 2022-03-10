@@ -188,6 +188,22 @@
   binding:
     Suspend:
 
+# next shell
+- key:
+    Down
+  modifiers:
+    ALT:
+  binding:
+    Insert: [1, "n"]
+
+# previous shell
+- key:
+    Up
+  modifiers:
+    ALT:
+  binding:
+    Insert: [1, "p"]
+
 # KeyPress::UnknownEscSeq => Cmd::Noop,
 - key:
     UnknownEscSeq:
