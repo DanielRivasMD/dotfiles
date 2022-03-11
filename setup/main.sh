@@ -68,3 +68,9 @@ ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
 gup import
 
 ################################################################################
+
+# # install R packages
+# R CMD INSTALL colorout_1.2-1.tar.gz
+# R CMD INSTALL SystWrapper_2.0.tar.gz
+
+################################################################################
