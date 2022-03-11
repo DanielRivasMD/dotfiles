@@ -97,6 +97,9 @@
     "go.toolsManagement.autoUpdate": true,
     "explorer.confirmDragAndDrop": false,
     "bracketPairColorizer.depreciation-notice": false,
-    "files.associations": { ".justfile": "makefile" }
+    "files.associations": {
+        ".justfile": "makefile",
+        "*.nu": "shellscript"
+    }
 
 }
