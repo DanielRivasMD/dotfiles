@@ -1,4 +1,4 @@
--------------------- PLUGINS ---------------------
+--------------------------------------------------
 
 require 'paq' {
 
@@ -29,6 +29,9 @@ require 'paq' {
   'airblade/vim-gitgutter';
   'tpope/vim-fugitive';
   'kshenoy/vim-signature';
+
+  -- gitui
+  'aspeddro/gitui.nvim';
 
   -- rust
   'rust-lang/rust.vim';
