@@ -1,7 +1,12 @@
+################################################################################
 
 # forked patches
 alias pier = /Users/drivas/bin/forkedPatch/pier
 alias rip = /Users/drivas/bin/forkedPatch/rip
+
+# open command
+alias nuopen = open
+alias open = ^open
 
 # ls
 alias ln = ls --long
@@ -73,6 +78,8 @@ alias lsta = lsd --long --classify --group-dirs=first --tree --almost-all
 alias lse = lsd --long --classify --extensionsort
 alias lsea = lsd --long --classify --extensionsort --almost-all
 
-# nu functions
-def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}
-def nuver [] {version | pivot key value}
+# # nu functions
+# def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}
+# def nuver [] {version | pivot key value}
+
+################################################################################
