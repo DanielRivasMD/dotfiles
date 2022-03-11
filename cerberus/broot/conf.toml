@@ -48,8 +48,7 @@ description = "open file with `amp` editor"
 
 [[verbs]]
 invocation = "create {subpath}"
-key = "alt-c"
-shortcut = "create"
+shortcut = "c"
 execution = "$EDITOR {directory}/{subpath}"
 description = "create file with editor"
 
@@ -111,7 +110,6 @@ description = "open file with `jless`"
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
-key = "shift-alt-d"
 shortcut = "gi"
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
@@ -139,11 +137,6 @@ execution = ":clear_stage"
 description = "clear stage area"
 
 # move
-[[verbs]]
-invocation = "cd"
-key = "enter"
-execution = ":cd"
-description = "open directory and quit"
 
 [[verbs]]
 invocation = "select_first"
@@ -172,7 +165,7 @@ description = "go to page down"
 # panel
 [[verbs]]
 invocation = "toggle_preview"
-key = "alt-Enter"
+key = "tab"
 internal = "toggle_preview"
 leave_broot = false
 description = "open / close preview panel"
