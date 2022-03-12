@@ -15,7 +15,7 @@ appSuport="${home}/Library/Application Support"
 #################################################################################
 
 # cerberus
-brootConf="${appSuport}/org.dystroy.broot"
+brootConf="${home}/.config/broot"
 codeConf="${appSuport}/Code/User"
 lazycliConf="${appSuport}/lazycli"
 naviConf="${appSuport}/navi/cheats/drivas"

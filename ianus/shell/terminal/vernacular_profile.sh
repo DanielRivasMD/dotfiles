@@ -116,7 +116,7 @@ export PIER="${IANUS}/pier/"
 # ===  Broot             ===
 # ==========================
 
-source /Users/drivas/Library/Preferences/org.dystroy.broot/launcher/bash/br
+source ${HOME}/.config/broot/launcher/bash/br
 
 # ==========================
 # ===  Tree              ===

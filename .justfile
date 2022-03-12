@@ -66,8 +66,11 @@ Cerberus:
   # distant
   ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"                     # julia startup
   ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                                    # ssh config
-  ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                               # broot config
   ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                          # lazycli config
+
+  # force use toml config
+  if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi
+  ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                               # broot config
 
   # purge before linking
   if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
