@@ -29,3 +29,8 @@ mv ${HOME}/.config/gup/gup.conf ${HOME}/.archive/setup/golang_binaries.txt
 ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
 
 ################################################################################
+
+# atom packages
+apm list --json > ${HOME}/.archive/setup/atom.json
+
+################################################################################
