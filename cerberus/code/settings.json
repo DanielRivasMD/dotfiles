@@ -100,6 +100,9 @@
     "files.associations": {
         ".justfile": "makefile",
         "*.nu": "shellscript"
-    }
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onBuilt"
 
 }
