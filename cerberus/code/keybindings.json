@@ -121,9 +121,9 @@
 	{ "key": "shift+alt+f",							 "command": "workbench.action.gotoLine"},
 	{ "key": "ctrl+g",									 "command": "-workbench.action.gotoLine"},
 
-	// advanced open file
-	{ "key": "ctrl+q c",								 "command": "extension.advancedNewFile"},
-	{ "key": "alt+cmd+n",								 "command": "-extension.advancedNewFile"},
+	// advanced open file / simple new file
+	{ "key": "ctrl+q c",								 "command": "extension.simpleNewFile"},
+	{ "key": "alt+cmd+n",								 "command": "-extension.simpleNewFile"},
 
 	// skip multicursor
 
