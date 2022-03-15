@@ -69,8 +69,8 @@ gup import
 
 ################################################################################
 
-# # install R packages
-# R CMD INSTALL colorout_1.2-1.tar.gz
-# R CMD INSTALL SystWrapper_2.0.tar.gz
+# install R packages
+R CMD INSTALL /Users/drivas/bin/Rpack/colorout_1.2-1.tar.gz
+R CMD INSTALL /Users/drivas/bin/Rpack/SystWrapper_2.0.tar.gz
 
 ################################################################################
