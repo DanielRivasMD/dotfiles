@@ -1,13 +1,13 @@
 {
     "Alt-/": "lua:comment.comment",
     "Alt-A": "SelectAll",
-    "Alt-B": "VSplit",
+    "Alt-B": "",
     "Alt-C": "lua:comment.comment",
     "Alt-D": "DuplicateLine",
     "Alt-E": "ShellMode",
     "Alt-F": "JumpLine",
     "Alt-G": "CursorEnd",
-    "Alt-H": "NextSplit",
+    "Alt-H": "HSplit",
     "Alt-I": "IndentSelection",
     "Alt-J": "MoveLinesDown",
     "Alt-K": "MoveLinesUp",
@@ -20,7 +20,8 @@
     "Alt-R": "Find",
     "Alt-S": "Save,QuitAll",
     "Alt-T": "AddTab",
-    "Alt-U": "RemoveAllMultiCursors",
+    "Alt-V": "VSplit",
+    "Alt-U": "",
     "Alt-W": "lua:wc.wordCount",
     "Alt-X": "CutLine",
     "Alt-Y": "CopyLine",
@@ -64,6 +65,6 @@
     "CtrlUnderscore": "lua:comment.comment",
     "Delete": "Delete",
     "F5": "lua:wc.wordCount",
-    "MouseRight": "MouseMultiCursor"
+    "MouseRight": "MouseMultiCursor",
     "CtrlSpace": "NextSplit",
 }
