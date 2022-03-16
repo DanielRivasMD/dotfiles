@@ -8,28 +8,6 @@ atreplinit() do repl
 
     ################################################################################
 
-    @eval const NanoKeys = Dict{Any,Any}(
-      # move one word left
-      "\x1b[1;3D" => "\eb",
-      # move one word right
-      "\x1b[1;3C" => "\ef",
-    )
-
-    ################################################################################
-
-    try
-      @eval import REPL
-      @eval import REPL.LineEdit
-    catch
-      @warn "error while importing REPL"
-    end
-
-    ################################################################################
-
-    repl.interface = REPL.setup_interface(repl; extra_repl_keymap = NanoKeys)
-
-    ################################################################################
-
     try
       @eval using OhMyREPL
     catch e
