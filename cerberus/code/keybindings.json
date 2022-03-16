@@ -126,6 +126,7 @@
 	{ "key": "alt+cmd+n",								 "command": "-extension.simpleNewFile"},
 
 	// skip multicursor
+	{ "key": "alt+y",										 "command": "editor.action.moveSelectionToNextFindMatch", "when": "editorFocus"},
 
 
 	// toggle quotes

@@ -79,7 +79,7 @@
   { "keys": ["ctrl+q", "c"],           "command": "advanced_new_file_new"},
 
   // skip multicursor
-  { "keys": ["alt+e"],                 "command": "find_under_expand_skip" },
+  { "keys": ["alt+y"],                 "command": "find_under_expand_skip" },
 
   // toggle quotes
 
@@ -126,7 +126,7 @@
 
   // move panes
   { "keys": ["ctrl+q", "right"],      "command": "move_to_neighboring_group"},
-  { "keys": ["ctrl+q", "left"],       "command": "move_to_neighboring_group", "args": {"forward": false}},
+  { "keys": ["ctrl+q", "left"],       "command": "move_to_neighboring_group",  "args": {"forward": false}},
 
   // macros
   { "keys": ["shift+alt+m"],           "command": "toggle_record_macro"},
