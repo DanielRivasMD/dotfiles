@@ -906,16 +906,16 @@ key_bindings:
   - { key: Delete,                               chars: "\x1b[3~"              }
   - { key: Left,        mods: Shift,             chars: "\x1b[1;2D"            }
   - { key: Left,        mods: Control,           chars: "\x1b[1;5D"            }
-  - { key: Left,        mods: Alt,               chars: "\x1b[1;3D"            }
+  - { key: Left,        mods: Alt,               chars: "\x1bb"                }
   - { key: Left,        mods: Command,           chars: "\x01"                 }
-  - { key: Left,        mods: Alt|Command,       chars: "\x1bb"                }
+  - { key: Left,        mods: Shift|Command,     chars: "\x1b[1;3D"            }
   - { key: Left,        mode: ~AppCursor,        chars: "\x1b[D",              }
   - { key: Left,        mode: AppCursor,         chars: "\x1bOD",              }
   - { key: Right,       mods: Shift,             chars: "\x1b[1;2C"            }
   - { key: Right,       mods: Control,           chars: "\x1b[1;5C"            }
-  - { key: Right,       mods: Alt,               chars: "\x1b[1;3C"            }
+  - { key: Right,       mods: Alt,               chars: "\x1bf"                }
   - { key: Right,       mods: Command,           chars: "\x05"                 }
-  - { key: Right,       mods: Alt|Command,       chars: "\x1bf"                }
+  - { key: Right,       mods: Shift|Command,     chars: "\x1b[1;3C"            }
   - { key: Right,       mode: ~AppCursor,        chars: "\x1b[C",              }
   - { key: Right,       mode: AppCursor,         chars: "\x1bOC",              }
   - { key: Up,          mods: Shift,             chars: "\x1b[1;2A"            }
