@@ -1093,9 +1093,9 @@ key_bindings:
   - { key: Key1,        mods: Control,                chars: "@info "          }
   - { key: Key2,        mods: Control,                chars: "@pipe "          }
   - { key: Key3,        mods: Control,                chars: " \\\\ "          }
-  - { key: Key4,        mods: Control,                chars: "  "              }
+  - { key: Key4,        mods: Control,                chars: "@rput "          }
   - { key: Key5,        mods: Control,                chars: " %in% "          }
-  - { key: Key6,        mods: Control,                chars: "  "              }
+  - { key: Key6,        mods: Control,                chars: "@test "          }
   - { key: Key7,        mods: Control,                chars: " && "            }
   - { key: Key8,        mods: Control,                chars: " ** "            }
   - { key: Key9,        mods: Control,                chars: " // "            }
@@ -1115,10 +1115,10 @@ key_bindings:
 
   - { key: Key1,        mods: Control|Shift,          chars: "@debug "         }
   - { key: Key2,        mods: Control|Shift,          chars: "@chain "         }
-  - { key: Key3,        mods: Control|Shift,          chars: "  "              }
-  - { key: Key4,        mods: Control|Shift,          chars: "@eval "          }
+  - { key: Key3,        mods: Control|Shift,          chars: "@eval "          }
+  - { key: Key4,        mods: Control|Shift,          chars: "@rget "          }
   - { key: Key5,        mods: Control|Shift,          chars: " %ni% "          }
-  - { key: Key6,        mods: Control|Shift,          chars: "@test "          }
+  - { key: Key6,        mods: Control|Shift,          chars: "@testset "       }
   - { key: Key7,        mods: Control|Shift,          chars: "@less "          }
   - { key: Key8,        mods: Control|Shift,          chars: "@edit "          }
   - { key: Key9,        mods: Control|Shift,          chars: "@view "          }
