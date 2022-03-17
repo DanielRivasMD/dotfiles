@@ -16,7 +16,7 @@ default_flags = ""
 [[verbs]]
 invocation = "quit"
 key = "shift-alt-q"
-execution = ":quit"
+internal = "quit"
 description = "quite broot"
 
 [[verbs]]
@@ -27,7 +27,7 @@ description = "revert to the previous state"
 
 [[verbs]]
 invocation = "refresh"
-key = "shift-alt-R"
+key = "shift-alt-r"
 internal = "refresh"
 description = "refresh tree"
 
@@ -36,75 +36,87 @@ description = "refresh tree"
 invocation = "edit"
 key = "alt-e"
 shortcut = "e"
-execution = "$EDITOR {file}"
+execution = "subl {file}"
+description = "open file with `subl` editor"
+
+[[verbs]]
+invocation = "micro"
+key = "alt-m"
+shortcut = "m"
+execution = "micro {file}"
+leave_broot = false
 description = "open file with `micro` editor"
 
 [[verbs]]
 invocation = "amp"
-key = "shift-alt-e"
+key = "alt-a"
 shortcut = "a"
 execution = "amp {file}"
+leave_broot = false
 description = "open file with `amp` editor"
 
 [[verbs]]
 invocation = "create {subpath}"
 shortcut = "c"
-execution = "$EDITOR {directory}/{subpath}"
-description = "create file with editor"
+execution = "touch {directory}/{subpath}"
+description = "create file"
 
 # search
 [[verbs]]
 invocation = "total_search"
 key = "alt-r"
-internal = ":total_search"
+internal = "total_search"
 description = "search again but on all children"
 
 [[verbs]]
 invocation = "next_match"
 key = "alt-n"
-internal = ":next_match"
+internal = "next_match"
 description = "go to next match"
 
 [[verbs]]
 invocation = "previous_match"
 key = "shift-alt-n"
-internal = ":previous_match"
+internal = "previous_match"
 description = "go to previous match"
 
 # view
 [[verbs]]
 invocation = "toggle_files"
-key = "alt-f"
-execution = ":toggle_files"
+key = "shift-alt-f"
+internal = ":toggle_files"
 description = "toggle files"
 
 [[verbs]]
 invocation = "toggle_hidden"
-key = "alt-d"
+key = "shift-alt-d"
 shortcut = "d"
-execution = ":toggle_hidden"
+internal = "toggle_hidden"
 description = "toggle hidden"
 
 # pager
 [[verbs]]
 invocation = "bat"
-key = "alt-b"
+key = "shift-alt-b"
 shortcut = "bat"
 external = "bat {file}"
+leave_broot = false
 description = "open file with `bat`"
 
 [[verbs]]
 invocation = "mdcat"
-key = "alt-m"
+key = "shift-alt-m"
 shortcut = "mdcat"
-external = "mdcat {file}"
+external = "mdcat -p {file}"
+leave_broot = false
 description = "open file with `mdcat`"
 
 [[verbs]]
 invocation = "jless"
-key = "alt-j"
+key = "shift-alt-j"
 shortcut = "jless"
 external = "jless {file}"
+leave_broot = false
 description = "open file with `jless`"
 
 # git
@@ -119,47 +131,46 @@ description = "toggle git ignore"
 invocation = "toggle_stage"
 key = "alt-s"
 shortcut = "ts"
-execution = ":toggle_stage"
+internal = "toggle_stage"
 description = "toggle stage"
 
 [[verbs]]
 invocation = "toggle_staging_area"
 key = "shift-alt-s"
 shortcut = "tsa"
-execution = ":toggle_staging_area"
+internal = "toggle_staging_area"
 description = "toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
-key = "alt-l"
+key = "shift-alt-l"
 shortcut = "cls"
-execution = ":clear_stage"
+internal = "clear_stage"
 description = "clear stage area"
 
 # move
-
 [[verbs]]
 invocation = "select_first"
 key = "alt-g"
-internal = ":select_first"
+internal = "select_first"
 description = "go to top of the list"
 
 [[verbs]]
 invocation = "select_last"
 key = "shift-alt-g"
-internal = ":select_last"
+internal = "select_last"
 description = "go to bottom of the list"
 
 [[verbs]]
 invocation = "page_up"
 key = "alt-Up"
-internal = ":page_up"
+internal = "page_up"
 description = "go to page up"
 
 [[verbs]]
 invocation = "page_down"
 key = "alt-Down"
-internal = ":page_down"
+internal = "page_down"
 description = "go to page down"
 
 # panel
@@ -167,7 +178,6 @@ description = "go to page down"
 invocation = "toggle_preview"
 key = "tab"
 internal = "toggle_preview"
-leave_broot = false
 description = "open / close preview panel"
 
 [[verbs]]
@@ -188,13 +198,13 @@ description = "close display"
 
 [[verbs]]
 invocation = "panel_left"
-key = "alt-Left"
+key = "alt-b"
 internal = "panel_left"
 description = "select left panel"
 
 [[verbs]]
 invocation = "panel_right"
-key = "alt-Right"
+key = "alt-f"
 internal = "panel_right"
 description = "select right panel"
 
