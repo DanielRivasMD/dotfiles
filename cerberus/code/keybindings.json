@@ -286,7 +286,7 @@
 	{ "key": "ctrl-.",									 "command": "type",											 "args": {"text": " %>% "}},
 //	{ "key": "ctrl-/",									 "command": "type",											 "args": {"text": ""}},
 	{ "key": "ctrl-`",									 "command": "type",											 "args": {"text": " ~ "}},
-	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": ", "}},
+	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": " -"}},
 
 	{ "key": "ctrl-shift-1",						 "command": "type",											 "args": {"text": "@debug "}},
 	{ "key": "ctrl-shift-2",						 "command": "type",											 "args": {"text": "@chain "}},
@@ -309,7 +309,7 @@
 	{ "key": "ctrl-shift-.",						 "command": "type",											 "args": {"text": " %+>% "}},
 	{ "key": "ctrl-shift-/",						 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-shift-`",						 "command": "type",											 "args": {"text": " =~ "}},
-	{ "key": "ctrl-shift-tab",					 "command": "type",											 "args": {"text": ": "}},
+	{ "key": "ctrl-shift-tab",					 "command": "type",											 "args": {"text": " --"}},
 
 	{ "key": "alt-cmd-ctrl-1",					 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "alt-cmd-ctrl-2",					 "command": "type",											 "args": {"text": "  "}},
@@ -332,7 +332,7 @@
 	{ "key": "alt-cmd-ctrl-.",					 "command": "type",											 "args": {"text": " >: "}},
 	{ "key": "alt-cmd-ctrl-/",					 "command": "type",											 "args": {"text": " <<- "}},
 	{ "key": "alt-cmd-ctrl-`",					 "command": "type",											 "args": {"text": "  "}},
-	{ "key": "alt-cmd-ctrl-tab",				 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "alt-cmd-ctrl-tab",				 "command": "type",											 "args": {"text": ": "}},
 
 	{ "key": "alt-cmd-ctrl-shift-1",		 "command": "type",											 "args": {"text": " ∉ "}},
 	{ "key": "alt-cmd-ctrl-shift-2",		 "command": "type",											 "args": {"text": "  "}},
@@ -355,7 +355,7 @@
 //	{ "key": "alt-cmd-ctrl-shift-.",		 "command": "type",											 "args": {"text": ""}},
 //	{ "key": "alt-cmd-ctrl-shift-/",		 "command": "type",											 "args": {"text": ""}},
 	{ "key": "alt-cmd-ctrl-shift-`",		 "command": "type",											 "args": {"text": "  "}},
-	{ "key": "alt-cmd-ctrl-shift-tab",	 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "alt-cmd-ctrl-shift-tab",	 "command": "type",											 "args": {"text": ", "}},
 
 	{ "key": "cmd-ctrl-1",							 "command": "type",											 "args": {"text": " !== "}},
 	{ "key": "cmd-ctrl-2",							 "command": "type",											 "args": {"text": "  "}},
