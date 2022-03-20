@@ -896,15 +896,103 @@ key_bindings:
   - { key: Minus,       mods: Command,           action: DecreaseFontSize      }
   - { key: K,           mods: Command,           action: ClearHistory          }
   - { key: K,           mods: Command,           chars: "\x0c"                 }
+  # # shortcuts for tmux. the leader key is ctrl-q (0x11)
+  # reload config
+  # find pane
+  # tree
+  # focus tree
+  # kill pane
+  # zoom
+  # detach session
+  # mark pane
+  # display pane
+  # choose buffer
+  # copy mode
+  # copy line
+  # copy path
+  # new window
+  # new window from scratch
+  # next pane
+  # previous pane
+  # swap next pane
+  # swap previous pane
+
+  # reload config
+  - { key: Comma,        mods: Command,       chars: "\x11,"                       }
+
+  # new window
+  - { key: T,        mods: Command,       chars: "\x11t"                       }
+  - { key: T,        mods: Command|Shift,       chars: "\x11T"                       }
+
+  # rename sessions
+  - { key: R,        mods: Command,       chars: "\x11r"                       }
+  - { key: R,        mods: Command|Shift,       chars: "\x11R"                       }
+
+  # split panes
+  - { key: Equals,        mods: Command,       chars: "\x11="                       }
+  - { key: Minus,        mods: Command,       chars: "\x11-"                       }
+
+  # resize panes
+  - { key: Equals,        mods: Command|Shift,       chars: "\x11+"                       }
+  - { key: Minus,        mods: Command|Shift,       chars: "\x11_"                       }
+  - { key: Period,        mods: Command|Shift,       chars: "\x11>"                       }
+  - { key: Comma,        mods: Command|Shift,       chars: "\x11<"                       }
+  - { key: LBracket,        mods: Command|Shift,       chars: "\x11{"                       }
+
+  # move window
+  - { key: RBracket,        mods: Command|Shift,       chars: "\x11}"                       }
+
+  # break panes
+  - { key: RBracket,        mods: Command,       chars: "\x11]"                       }
+
+  # join marked panes
+  - { key: LBracket,        mods: Command,       chars: "\x11["                       }
+
+  # select windows
+  - { key: Right,        mods: Command|Alt,       chars: "\x11n"                       }
+  - { key: Left,        mods: Command|Alt,       chars: "\x11p"                       }
+
+  # TODO: update
+  # swap windows
+  - { key: Right,        mods: Command|Control,       chars: "\x11N"                       }
+  - { key: Left,        mods: Command|Control,       chars: "\x11P"                       }
+
+  # TODO: update
+  # # select last window
+  # - { key: Left,        mods: Command|Control,       chars: "\x11P"                       }
+
+  # kill pane / window / session
+  - { key: X,        mods: Command,       chars: "\x11x"                       }
+  - { key: X,        mods: Command|Shift,       chars: "\x11X"                       }
+
+  - { key: W,        mods: Command,       chars: "\x11x"                       }
+
+  # detacth from session
+  - { key: D,        mods: Command,       chars: "\x11d"                       }
+
+  # choose buffer
   - { key: V,           mods: Command,           action: Paste                 }
   - { key: C,           mods: Command,           action: Copy                  }
   - { key: H,           mods: Command,           action: Hide                  }
+  - { key: V,        mods: Command|Shift, chars: "\x11V"                       }
+
+  # mark pane
+  - { key: M,        mods: Command,       chars: "\x11m"                        }
+
+  # menu
+  - { key: M,        mods: Command|Shift,       chars: "\x11M"                       }
+
+  # copy mode
+  - { key: C,        mods: Command,       chars: "\x11c" } # copy mode
+  - { key: C,        mods: Command|Shift,       chars: "\x11y" } # copy line
+
   - { key: Q,           mods: Command,           action: Quit                  }
   - { key: Q,           mods: Control,           chars: "\x11"                 }
 
   - { key: Paste,                                action: Paste                 }
   - { key: Copy,                                 action: Copy                  }
   - { key: Insert,      mods: Shift,             action: PasteSelection        }
+
   - { key: Tab,         mods: Shift,             chars: "\x1b[Z"               }
   - { key: Back,                                 chars: "\x7f"                 }
   - { key: Back,        mods: Alt,               chars: "\x1b\x7f"             }
