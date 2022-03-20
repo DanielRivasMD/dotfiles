@@ -358,7 +358,7 @@
   'ctrl-.': 'custom:insert-r_pipe_right'
   # 'ctrl-/': 'custom:insert-empty'
   'ctrl-`': 'custom:insert-tilde'
-  'ctrl-tab': 'custom:insert-single_dash'
+  'ctrl-tab': 'custom:insert-empty'
 
   'ctrl-!': 'custom:insert-julia_mcdebug'
   'ctrl-@': 'custom:insert-julia_mcchain'
@@ -381,7 +381,7 @@
   'ctrl->': 'custom:insert-r_pipe_right_plus'
   'ctrl-?': 'custom:insert-empty'
   'ctrl-~': 'custom:insert-equal_tilde'
-  'shift-ctrl-tab': 'custom:insert-double_dash'
+  'shift-ctrl-tab': 'custom:insert-empty'
 
   'alt-cmd-ctrl-1': 'custom:insert-empty'
   'alt-cmd-ctrl-2': 'custom:insert-empty'
@@ -450,7 +450,7 @@
   'cmd-ctrl-.': 'custom:insert-doublemore'
   'cmd-ctrl-/': 'custom:insert-triple_divide'
   'cmd-ctrl-`': 'custom:insert-triple_apostrophe'
-  'cmd-ctrl-tab': 'custom:insert-empty'
+  'cmd-ctrl-tab': 'custom:insert-single_dash'
 
   'cmd-ctrl-!': 'custom:insert-not_equalequal_broadcast'
   'cmd-ctrl-@': 'custom:insert-empty'
@@ -473,7 +473,7 @@
   'cmd-ctrl->': 'custom:insert-triplemore'
   'cmd-ctrl-?': 'custom:insert-rust_doc'
   'cmd-ctrl-~': 'custom:insert-empty'
-  'shift-cmd-ctrl-tab': 'custom:insert-empty'
+  'shift-cmd-ctrl-tab': 'custom:insert-double_dash'
 
   'cmd-ctrl-a': 'custom:insert-greek_a'
   'cmd-ctrl-b': 'custom:insert-greek_b'

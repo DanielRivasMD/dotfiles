@@ -85,7 +85,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-r_pipe_right': -> atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
   # # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
-  'custom:insert-single_dash': -> atom.workspace.getActiveTextEditor()?.insertText(' -')
+  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
 
   'custom:insert-julia_mcdebug': -> atom.workspace.getActiveTextEditor()?.insertText('@debug ')
   'custom:insert-julia_mcchain': -> atom.workspace.getActiveTextEditor()?.insertText('@chain ')
@@ -108,7 +108,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-r_pipe_right_plus': -> atom.workspace.getActiveTextEditor()?.insertText(' %+>% ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-equal_tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' =~ ')
-  'custom:insert-double_dash': -> atom.workspace.getActiveTextEditor()?.insertText(' --')
+  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
 
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
@@ -177,7 +177,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-doublemore': -> atom.workspace.getActiveTextEditor()?.insertText(' >> ')
   'custom:insert-triple_divide': -> atom.workspace.getActiveTextEditor()?.insertText('/// ')
   'custom:insert-triple_apostrophe': -> atom.workspace.getActiveTextEditor()?.insertText('```')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-single_dash': -> atom.workspace.getActiveTextEditor()?.insertText(' -')
 
   'custom:insert-not_equalequal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .!== ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
@@ -200,7 +200,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-triplemore': -> atom.workspace.getActiveTextEditor()?.insertText(' >>> ')
   'custom:insert-rust_doc': -> atom.workspace.getActiveTextEditor()?.insertText('//! ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-double_dash': -> atom.workspace.getActiveTextEditor()?.insertText(' --')
 
   'custom:insert-greek_a': -> atom.workspace.getActiveTextEditor()?.insertText('α')
   'custom:insert-greek_b': -> atom.workspace.getActiveTextEditor()?.insertText('β')
