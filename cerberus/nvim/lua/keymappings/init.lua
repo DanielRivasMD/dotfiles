@@ -84,13 +84,13 @@ keymap('n', '<C-e>', '$', opts)
 keymap('v', '<C-e>', '$', opts)
 
 -- movement word
-keymap('i', '<M-Left>', '<ESC>Bi', opts)
-keymap('n', '<M-Left>', 'B', opts)
-keymap('v', '<M-Left>', 'B', opts)
+keymap('i', '<M-b>', '<ESC>Bi', opts)
+keymap('n', '<M-b>', 'B', opts)
+keymap('v', '<M-b>', 'B', opts)
 
-keymap('i', '<M-Right>', '<ESC>Ea', opts)
-keymap('n', '<M-Right>', 'E', opts)
-keymap('v', '<M-Right>', 'E', opts)
+keymap('i', '<M-f>', '<ESC>Ea', opts)
+keymap('n', '<M-f>', 'E', opts)
+keymap('v', '<M-f>', 'E', opts)
 
 -- movement paragraph
 keymap('i', '<M-Up>', '<ESC>{i', opts)
