@@ -123,6 +123,12 @@ command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
 description = 'edit julia awesome list'
 tags = ['']
 
+[scripts.jdev]
+alias = 'jdev'
+command = '''
+julia -i --project --startup no --eval 'include("/Users/drivas/.archive/cerberus/julia/development.jl")'
+'''
+
 [scripts.kal]
 alias = 'kal'
 command = '''
