@@ -14,61 +14,60 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-env:
-  TERM:                             xterm-256color
-  WINIT_X11_SCALE_FACTOR:           "1.0"
-# This value is used to set the `$TERM` environment variable for
-# each instance of Alacritty. If it is not present, alacritty will
-# check the local terminfo database and use `alacritty` if it is
-# available, otherwise `xterm-256color` is used.
-# TERM:                             xterm-256color
-window:
-
-  # Background opacity
+#env:
+  # TERM variable
   #
-  # Window opacity as a floating point number from `0.0` to `1.0`.
-  # The value `0.0` is completely transparent and `1.0` is opaque.
-  # background_opacity:             0.8
-  opacity:                          0.8
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  #TERM:                              alacritty
 
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
   dimensions:
-    columns:                        0
-    lines:                          0
+    columns:                          0
+    lines:                            0
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
   #position:
-  #  x:                             0
-  #  y:                             0
+  #  x:                                 0
+  #  y:                                 0
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x:                              2
-    y:                              2
+    x:                                0
+    y:                                0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding:                  false
+  dynamic_padding:                    false
 
   # Window decorations
   #
   # Values for `decorations`:
-  #     - full:                     Borders and title bar
-  #     - none:                     Neither borders nor title bar
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
   #
   # Values for `decorations` (macOS only):
-  #     - transparent:              Title bar, transparent background and title bar buttons
-  #     - buttonless:               Title bar, transparent background and no title bar buttons
-  decorations:                      full
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background and no title bar buttons
+  decorations:                        buttonless
+
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity:                            0.6
 
   # Startup Mode (changes require restart)
   #
@@ -79,86 +78,71 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode:                     Maximized
+  startup_mode:                       Maximized
 
   # Window title
-  #title:                           Alacritty
+  #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  #dynamic_title:                   true
+  #dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
     # Application instance name
-    #instance:                      Alacritty
+    #instance: Alacritty
     # General application class
-    #general:                       Alacritty
+    #general: Alacritty
 
   # GTK theme variant (Linux/BSD only)
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark`
   # and `light`. Set this to `None` to use the default theme variant.
-  #gtk_theme_variant:               None
+  #gtk_theme_variant: None
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history:                          10000
+  history:                            0
 
   # Scrolling distance multiplier.
-  multiplier:                       3
+  multiplier:                         3
 
 # Font configuration
 font:
   # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family:                         "Hack Nerd Font"
-
+    family:                           "Hack Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    #style:                         Regular
+    #style: Regular
 
   # Bold font face
   bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family:                         "Hack Nerd Font"
+    family:                           "Hack Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    style:                          Bold
+    #style: Bold
 
   # Italic font face
   italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family:                         "Hack Nerd Font"
+    family:                           "Hack Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    style:                          Italic
+    #style: Italic
 
   # Bold italic font face
-  bold_italic:
+  #bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:                         "Hack Nerd Font"
+    #family: monospace
 
     # The `style` can be specified to pick a specific face.
-    style:                          Bold Italic
+    #style: Bold Italic
 
-  # Point size
-  size:                             18.0
+  # Point size of the font
+  size:                               18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -178,26 +162,33 @@ font:
   #
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
-  #use_thin_strokes:                true
+  #use_thin_strokes: true
+
+  # Use built-in font for box drawing characters.
+  #
+  # If `true`, Alacritty will use a custom built-in font for box drawing
+  # characters (Unicode points 2500 - 259f).
+  #
+  #builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# # Colors (Tomorrow Night)
+# Colors (Tomorrow Night)
 # colors:
-#   # Default colors
+#   Default colors
 #   primary:
-#    background:                    '#1d1f21'
-#    foreground:                    '#c5c8c6'
+#     background:                       '#1d1f21'
+#     foreground:                       '#c5c8c6'
 
     # Bright and dim foreground colors
-    #
+    #s
     # The dimmed foreground color is calculated automatically if it is not
     # present. If the bright foreground color is not set, or
     # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
     # color will be used.
-    #dim_foreground:                '#828482'
-    #bright_foreground:             '#eaeaea'
+    #dim_foreground:                    '#828482'
+    #bright_foreground:                 '#eaeaea'
 
   # Cursor colors
   #
@@ -206,8 +197,8 @@ font:
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   #cursor:
-  #  text:                          CellBackground
-  #  cursor:                        CellForeground
+  #  text:                              CellBackground
+  #  cursor:                            CellForeground
 
   # Vi mode cursor colors
   #
@@ -216,8 +207,8 @@ font:
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   #vi_mode_cursor:
-  #  text:                          CellBackground
-  #  cursor:                        CellForeground
+  #  text:                              CellBackground
+  #  cursor:                            CellForeground
 
   # Search colors
   #
@@ -226,15 +217,15 @@ font:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
     #matches:
-    #  foreground:                  '#000000'
-    #  background:                  '#ffffff'
+    #  foreground:                      '#000000'
+    #  background:                      '#ffffff'
     #focused_match:
-    #  foreground:                  '#ffffff'
-    #  background:                  '#000000'
+    #  foreground:                      '#ffffff'
+    #  background:                      '#000000'
 
     #bar:
-    #  background:                  '#c5c8c6'
-    #  foreground:                  '#1d1f21'
+    #  background:                      '#c5c8c6'
+    #  foreground:                      '#1d1f21'
 
   # Keyboard regex hints
   #hints:
@@ -243,16 +234,16 @@ font:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
     #start:
-    #  foreground:                  '#1d1f21'
-    #  background:                  '#e9ff5e'
+    #  foreground:                      '#1d1f21'
+    #  background:                      '#e9ff5e'
 
     # All characters after the first one in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
     #end:
-    #  foreground:                  '#e9ff5e'
-    #  background:                  '#1d1f21'
+    #  foreground:                      '#e9ff5e'
+    #  background:                      '#1d1f21'
 
   # Line indicator
   #
@@ -261,8 +252,8 @@ font:
   #
   # By default, these will use the opposing primary color.
   #line_indicator:
-  #  foreground:                    None
-  #  background:                    None
+  #  foreground:                        None
+  #  background:                        None
 
   # Selection colors
   #
@@ -271,73 +262,73 @@ font:
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   #selection:
-  #  text:                          CellBackground
-  #  background:                    CellForeground
+  #  text:                              CellBackground
+  #  background:                        CellForeground
   #
   # # Normal colors
   # normal:
-  #  black:                         '#1d1f21'
-  #  red:                           '#cc6666'
-  #  green:                         '#b5bd68'
-  #  yellow:                        '#f0c674'
-  #  blue:                          '#81a2be'
-  #  magenta:                       '#b294bb'
-  #  cyan:                          '#8abeb7'
-  #  white:                         '#c5c8c6'
+  #  black:                             '#1d1f21'
+  #  red:                               '#cc6666'
+  #  green:                             '#b5bd68'
+  #  yellow:                            '#f0c674'
+  #  blue:                              '#81a2be'
+  #  magenta:                           '#b294bb'
+  #  cyan:                              '#8abeb7'
+  #  white:                             '#c5c8c6'
   #
   # # Bright colors
   # bright:
-  #  black:                         '#666666'
-  #  red:                           '#d54e53'
-  #  green:                         '#b9ca4a'
-  #  yellow:                        '#e7c547'
-  #  blue:                          '#7aa6da'
-  #  magenta:                       '#c397d8'
-  #  cyan:                          '#70c0b1'
-  #  white:                         '#eaeaea'
+  #  black:                             '#666666'
+  #  red:                               '#d54e53'
+  #  green:                             '#b9ca4a'
+  #  yellow:                            '#e7c547'
+  #  blue:                              '#7aa6da'
+  #  magenta:                           '#c397d8'
+  #  cyan:                              '#70c0b1'
+  #  white:                             '#eaeaea'
 
 # Ayu-Dark theme
 colors:
   # Default colors
   primary:
-    background:                     '#10100E'
-    foreground:                     '#C6C6C4'
+    background:                       '#10100E'
+    foreground:                       '#C6C6C4'
 
   # Normal colors
   normal:
-    black:                          '#10100E'
-    red:                            '#C40233'
-    green:                          '#009F6B'
-    yellow:                         '#FFD700'
-    blue:                           '#0087BD'
-    magenta:                        '#9A4EAE'
-    cyan:                           '#20B2AA'
-    white:                          '#C6C6C4'
+    black:                            '#10100E'
+    red:                              '#C40233'
+    green:                            '#009F6B'
+    yellow:                           '#FFD700'
+    blue:                             '#0087BD'
+    magenta:                          '#9A4EAE'
+    cyan:                             '#20B2AA'
+    white:                            '#C6C6C4'
 
   # Bright colors
   bright:
-    black:                          '#696969'
-    red:                            '#FF2400'
-    green:                          '#03C03C'
-    yellow:                         '#FDFF00'
-    blue:                           '#007FFF'
-    magenta:                        '#FF1493'
-    cyan:                           '#00CCCC'
-    white:                          '#FFFAFA'
+    black:                            '#696969'
+    red:                              '#FF2400'
+    green:                            '#03C03C'
+    yellow:                           '#FDFF00'
+    blue:                             '#007FFF'
+    magenta:                          '#FF1493'
+    cyan:                             '#00CCCC'
+    white:                            '#FFFAFA'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
   #dim:
-  #  black:                         '#131415'
-  #  red:                           '#864343'
-  #  green:                         '#777c44'
-  #  yellow:                        '#9e824c'
-  #  blue:                          '#556a7d'
-  #  magenta:                       '#75617b'
-  #  cyan:                          '#5b7d78'
-  #  white:                         '#828482'
+  #  black:                             '#131415'
+  #  red:                               '#864343'
+  #  green:                             '#777c44'
+  #  yellow:                            '#9e824c'
+  #  blue:                              '#556a7d'
+  #  magenta:                           '#75617b'
+  #  cyan:                              '#5b7d78'
+  #  white:                             '#828482'
 
   # Indexed Colors
   #
@@ -345,9 +336,9 @@ colors:
   # When these are not set, they're filled with sensible defaults.
   #
   # Example:
-  #   `- { index: 16, color:        '#ff00ff' }`
+  #   `- { index: 16, color:            '#ff00ff' }`
   #
-  #indexed_colors:                  []
+  #indexed_colors:                      []
 
 # Bell
 #
@@ -368,35 +359,35 @@ colors:
   #   - EaseOutExpo
   #   - EaseOutCirc
   #   - Linear
-  #animation:                       EaseOutExpo
+  #animation: EaseOutExpo
 
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
-  #duration:                        0
+  #duration: 0
 
   # Visual bell animation color.
-  #color:                           '#ffffff'
+  #color: '#ffffff'
 
   # Bell Command
   #
   # This program is executed whenever the bell is rung.
   #
-  # When set to `command:           None`, no command will be executed.
+  # When set to `command: None`, no command will be executed.
   #
   # Example:
   #   command:
-  #     program:                    notify-send
-  #     args:                       ["Hello, World!"]
+  #     program: notify-send
+  #     args: ["Hello, World!"]
   #
-  #command:                         None
+  #command: None
 
 #selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
-  #semantic_escape_chars:           ",│`|:\"' ()[]{}<>\t"
+  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard:               false
+  #save_to_clipboard: false
 
 cursor:
   # Cursor style
@@ -407,16 +398,16 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape:                          Underline
+    shape:                            Underline
 
     # Cursor blinking state
     #
     # Values for `blinking`:
-    #   - Never:                    Prevent the cursor from ever blinking
-    #   - Off:                      Disable blinking by default
-    #   - On:                       Enable blinking by default
-    #   - Always:                   Force the cursor to always blink
-    #blinking:                      Off
+    #   - Never:                      Prevent the cursor from ever blinking
+    #   - Off:                        Disable blinking by default
+    #   - On:                         Enable blinking by default
+    #   - Always:                     Force the cursor to always blink
+    #blinking:                          Off
 
   # Vi mode cursor style
   #
@@ -424,21 +415,21 @@ cursor:
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style:                   None
+  #vi_mode_style:                       None
 
   # Cursor blinking interval in milliseconds.
-  #blink_interval:                  750
+  #blink_interval:                      750
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow:                true
+  #unfocused_hollow:                    true
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  #thickness:                       0.15
+  #thickness:                           0.15
 
 # Live config reload (changes require restart)
-#live_config_reload:                true
+#live_config_reload:                    true
 
 # Shell
 #
@@ -451,7 +442,7 @@ cursor:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #shell:
-#  program:                         /bin/bash
+#  program: /bin/bash
 #  args:
 #    - --login
 
@@ -459,10 +450,13 @@ cursor:
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
-#working_directory:                 None
+#working_directory:                     None
 
 # Send ESC (\x1b) before characters when alt is pressed.
-#alt_send_esc:                      true
+#alt_send_esc:                          true
+
+# Offer IPC using `alacritty msg` (unix only)
+#ipc_socket:                            true
 
 #mouse:
   # Click settings
@@ -470,11 +464,11 @@ cursor:
   # The `double_click` and `triple_click` settings control the time
   # alacritty should wait for accepting multiple clicks as one double
   # or triple click.
-  #double_click: { threshold:       300 }
-  #triple_click: { threshold:       300 }
+  #double_click: { threshold:           300 }
+  #triple_click: { threshold:           300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing:                false
+  #hide_when_typing:                    false
 
 # Regex hints
 #
@@ -482,15 +476,15 @@ cursor:
 # and pipe it to other applications.
 #hints:
   # Keys used for the hint labels.
-  #alphabet:                        "jfkdls;ahgurieowpq"
+  #alphabet:                            "jfkdls;ahgurieowpq"
 
   # List with all available hints
   #
   # Each hint must have a `regex` and either an `action` or a `command` field.
   # The fields `mouse`, `binding` and `post_processing` are optional.
   #
-  # The fields `command`, `binding.key`, `binding.mods` and `mouse.mods` accept
-  # the same values as they do in the `key_bindings` section.
+  # The fields `command`, `binding.key`, `binding.mods`, `binding.mode` and
+  # `mouse.mods` accept the same values as they do in the `key_bindings` section.
   #
   # The `mouse.enabled` field controls if the hint should be underlined while
   # the mouse with all `mouse.mods` keys held or the vi mode cursor is above it.
@@ -509,16 +503,16 @@ cursor:
   #   - MoveViModeCursor
   #       Move the vi mode cursor to the beginning of the hint.
   #enabled:
-  # - regex:                        "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+  # - regex:                            "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
   #           [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
-  #   command:                      xdg-open
-  #   post_processing:              true
+  #   command:                          xdg-open
+  #   post_processing:                  strue
   #   mouse:
-  #     enabled:                    true
-  #     mods:                       None
+  #     enabled:                        true
+  #     mods:                           None
   #   binding:
-  #     key:                        U
-  #     mods:                       Control|Shift
+  #     key:                            U
+  #     mods:                           Control|Shift
 
 # Mouse bindings
 #
@@ -538,13 +532,20 @@ cursor:
 #   - Right
 #   - Numeric identifier such as `5`
 #
-# - `action` (see key bindings)
+# - `action` (see key bindings for actions not exclusive to mouse mode)
+#
+# - Mouse exclusive actions:
+#
+#   - ExpandSelection
+#       Expand the selection to the current mouse cursor location.
 #
 # And optionally:
 #
 # - `mods` (see key bindings)
 #mouse_bindings:
-#  - { mouse: Middle, action:       PasteSelection }
+#  - { mouse: Right,                 action: ExpandSelection }
+#  - { mouse: Right,  mods: Control, action: ExpandSelection }
+#  - { mouse: Middle, mode: ~Vi,     action: PasteSelection  }
 
 # Key bindings
 #
@@ -555,7 +556,7 @@ cursor:
 #
 # Each key binding will specify a:
 #
-# - `key`:                          Identifier of the key pressed
+# - `key`: Identifier of the key pressed
 #
 #    - A-Z
 #    - F1-F24
@@ -573,7 +574,7 @@ cursor:
 #
 # Then exactly one of:
 #
-# - `chars`:                        Send a byte sequence to the running application
+# - `chars`: Send a byte sequence to the running application
 #
 #    The `chars` field writes the specified string to the terminal. This makes
 #    it possible to pass escape sequences. To find escape codes for bindings
@@ -582,7 +583,7 @@ cursor:
 #    to keys. It is therefore required to update the terminfo when changing an
 #    escape sequence.
 #
-# - `action`:                       Execute a predefined action
+# - `action`: Execute a predefined action
 #
 #   - ToggleViMode
 #   - SearchForward
@@ -613,6 +614,8 @@ cursor:
 #   - ToggleFullscreen
 #   - SpawnNewInstance
 #       Spawn a new instance of Alacritty.
+#   - CreateNewWindow
+#       Create a new Alacritty window from the current process.
 #   - ClearLogNotice
 #       Clear Alacritty's UI warning and error notice.
 #   - ClearSelection
@@ -708,7 +711,7 @@ cursor:
 #   - PasteSelection
 #       Paste from the selection buffer.
 #
-# - `command`:                      Fork and execute a specified command plus arguments
+# - `command`: Fork and execute a specified command plus arguments
 #
 #    The `command` field must be a map containing a `program` string and an
 #    `args` array of command line parameter strings. For example:
@@ -716,7 +719,7 @@ cursor:
 #
 # And optionally:
 #
-# - `mods`:                         Key modifiers to filter binding actions
+# - `mods`: Key modifiers to filter binding actions
 #
 #    - Command
 #    - Control
@@ -726,10 +729,10 @@ cursor:
 #    - Alt
 #
 #    Multiple `mods` can be combined using `|` like this:
-#       `mods:                      Control|Shift`.
+#       `mods: Control|Shift`.
 #    Whitespace and capitalization are relevant and must match the example.
 #
-# - `mode`:                         Indicate a binding for only specific terminal reported modes
+# - `mode`: Indicate a binding for only specific terminal reported modes
 #
 #    This is mainly used to send applications the correct escape sequences
 #    when in different modes.
@@ -761,11 +764,11 @@ cursor:
   #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
 
   # Vi Mode
-  #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
+  #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
   #- { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
-  #- { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
   #- { key: I,                           mode: Vi|~Search, action: ToggleViMode            }
+  #- { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
   #- { key: C,      mods: Control,       mode: Vi|~Search, action: ToggleViMode            }
   #- { key: Y,      mods: Control,       mode: Vi|~Search, action: ScrollLineUp            }
   #- { key: E,      mods: Control,       mode: Vi|~Search, action: ScrollLineDown          }
@@ -863,10 +866,10 @@ cursor:
 
 #debug:
   # Display the time it takes to redraw each frame.
-  #render_timer:                    false
+  #render_timer:                        false
 
   # Keep the log file after quitting Alacritty.
-  #persistent_logging:              false
+  #persistent_logging:                  false
 
   # Log level
   #
@@ -877,10 +880,13 @@ cursor:
   #   - Info
   #   - Debug
   #   - Trace
-  #log_level:                       Warn
+  #log_level:                           Warn
 
   # Print all received window events.
-  #print_events:                    false
+  #print_events:                        false
+
+  # Highlight window damage information.
+  #highlight_damage:                    false
 
 key_bindings:
 
