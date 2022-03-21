@@ -910,7 +910,7 @@ key_bindings:
   - { key: Minus,           mods: Command,                          chars: "\x11-"      }
 
   # resize panes
-  - { key: Space,           mods: Command|Shift,                    chars: "\x11z"      }
+  - { key: Space,           mods: Control|Alt,                      chars: "\x11z"      }
   - { key: Equals,          mods: Command|Shift,                    chars: "\x11+"      }
   - { key: Minus,           mods: Command|Shift,                    chars: "\x11_"      }
   - { key: Period,          mods: Command|Shift,                    chars: "\x11>"      }
@@ -936,6 +936,7 @@ key_bindings:
 
   # select last window
   - { key: Space,           mods: Shift,                            chars: "\x11l"      }
+  - { key: Space,           mods: Command|Alt,                      chars: "\x11L"      }
 
   # kill pane / window / session
   - { key: X,               mods: Command,                          chars: "\x11x"      }
@@ -949,14 +950,26 @@ key_bindings:
   - { key: V,               mods: Command|Shift,                    chars: "\x11V"      }
 
   # mark pane
-  - { key: Period,          mods: Command,                          chars: "\x11."      }
+  - { key: Space,           mods: Command|Shift,                    chars: "\x11M"      }
 
   # menu
-  - { key: Space,           mods: Command|Alt,                      chars: "\x11M"      }
+  - { key: Period,          mods: Command,                          chars: "\x11."      }
 
   # copy mode
   - { key: C,               mods: Command,                          chars: "\x11c"      }
   - { key: C,               mods: Command|Shift,                    chars: "\x11y"      }
+
+  # choose session
+  - { key: S,               mods: Command,                          chars: "\x11s"      }
+
+  # choose window
+  - { key: A,               mods: Command,                          chars: "\x11a"      }
+
+  # rotate window
+  - { key: W,               mods: Command,                          chars: "\x11w"      }
+
+  # command prompt
+  - { key: Semicolon,       mods: Command,                          chars: "\x11:"      }
 
   ################################################################################
   # system OSX
