@@ -67,6 +67,7 @@ Cerberus:
   ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"                     # julia startup
   ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                                    # ssh config
   ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                          # lazycli config
+  ln -svf "${cerberus}/lazygit/config.yml" "${lazygitConf}/"                          # lazygit config
 
   # force use toml config
   if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi

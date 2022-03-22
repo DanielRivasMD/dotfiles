@@ -18,6 +18,7 @@ appSuport="${home}/Library/Application Support"
 brootConf="${home}/.config/broot"
 codeConf="${appSuport}/Code/User"
 lazycliConf="${appSuport}/lazycli"
+lazygitConf="${appSuport}/jesseduffield/lazygit"
 naviConf="${appSuport}/navi/cheats/drivas"
 
 # distant
