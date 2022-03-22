@@ -2,7 +2,7 @@
 alias = 'atheme-reset'
 command = 'git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/alacritty/alacritty.yml'
 description = 'reset alacritty to most recent commit'
-tags = ['']
+tags = ['rust']
 
 [scripts.bianca-sftp]
 alias = 'bianca-sftp'
@@ -34,11 +34,23 @@ command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; d
 description = 'stop all Firefox jobs'
 tags = ['shell']
 
+[scripts.cgls]
+alias = 'cgls'
+command = 'cargo-install-update install-update --list'
+description = 'list cargo binaries & updates'
+tags = ['rust']
+
+[scripts.cgup]
+alias = 'cgup'
+command = 'cargo-install-update install-update --all'
+description = 'update cargo binaries'
+tags = ['rust']
+
 [scripts.cheat-julia]
 alias = 'cheat-julia'
 command = 'open ~/Documents/Bahlam/Biblo/Cheat_sheet/Julia/julia-cheat.html'
 description = 'visualize julia cheatsheet'
-tags = ['']
+tags = ['julia']
 
 [scripts.cpu]
 alias = 'cpu'
@@ -117,17 +129,18 @@ esac
 description = 'list git shortcuts'
 tags = ['git']
 
-[scripts.julia]
-alias = 'julia'
-command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
-description = 'edit julia awesome list'
-tags = ['']
-
 [scripts.jdev]
 alias = 'jdev'
 command = '''
 julia -i --project --startup no --eval 'include("/Users/drivas/.archive/cerberus/julia/development.jl")'
 '''
+tags = ['julia']
+
+[scripts.julia]
+alias = 'julia'
+command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
+description = 'edit julia awesome list'
+tags = ['julia']
 
 [scripts.kal]
 alias = 'kal'
@@ -224,7 +237,7 @@ tags = ['shell']
 alias = 'pier'
 command = 'bat ~/.pier.toml'
 description = 'print pier.toml'
-tags = ['']
+tags = ['rust']
 
 [scripts.rustfmt]
 alias = 'rustfmt'
@@ -236,7 +249,7 @@ tags = ['rust']
 alias = 'sample'
 command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
 description = 'use sample'
-tags = ['']
+tags = ['go']
 
 [scripts.topaz-sftp]
 alias = 'topaz-sftp'
