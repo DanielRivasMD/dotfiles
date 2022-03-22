@@ -134,6 +134,7 @@
 
   // jump
   { "keys": ["ctrl+space"],            "command": "prev_modification"},
+  { "keys": ["shift+enter"],           "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
 
   // git gutter
   { "keys": ["ctrl+g"],                "command": "git_gutter_blame"},
