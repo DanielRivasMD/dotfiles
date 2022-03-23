@@ -37,6 +37,7 @@ invocation = "edit"
 key = "alt-e"
 shortcut = "e"
 execution = "subl {file}"
+leave_broot = false
 description = "open file with `subl` editor"
 
 [[verbs]]
@@ -100,7 +101,7 @@ description = "toggle hidden"
 invocation = "bat"
 key = "shift-alt-b"
 shortcut = "bat"
-external = "bat {file}"
+external = "bat --paging always {file}"
 leave_broot = false
 description = "open file with `bat`"
 
@@ -108,7 +109,7 @@ description = "open file with `bat`"
 invocation = "mdcat"
 key = "shift-alt-m"
 shortcut = "mdcat"
-external = "mdcat -p {file}"
+external = "mdcat --paginate {file}"
 leave_broot = false
 description = "open file with `mdcat`"
 
@@ -124,7 +125,7 @@ description = "open file with `jless`"
 invocation = "print_to_copy"
 key = "alt-c"
 shortcut = "print_to_copy"
-external = "bat --plain {file}"
+external = "bat --paging always --plain {file}"
 leave_broot = false
 description = "open file with `bat` to copy"
 
