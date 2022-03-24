@@ -70,13 +70,24 @@ let $config = {
     }
 
     {
-      name: change_dir_with_fzf
-      modifier: NONE
-      keycode: f1
+      name: cargo_check
+      modifier: none
+      keycode: f11
       mode: emacs
       event: {
         send: executehostcommand,
-        cmd: "echo uno"
+        cmd: "echo \"\n\tcargo check\n\"; cargo check"
+      }
+    }
+
+    {
+      name: cargo_test
+      modifier: none
+      keycode: f12
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "echo \"\n\tcargo test\n\"; cargo test --no-run"
       }
     }
 

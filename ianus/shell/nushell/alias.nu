@@ -1,5 +1,7 @@
 ################################################################################
 
+# TODO: update aliases to avoid collisions
+
 # forked patches
 alias pier = /Users/drivas/bin/forkedPatch/pier
 alias rip = /Users/drivas/bin/forkedPatch/rip
@@ -55,28 +57,28 @@ alias lgac = exa --long --classify --links --git --header --group --icons --grou
 alias lt = exa --long --classify --links --git --header --group --icons --all --tree --level 2 --ignore-glob ".git" --group-directories-first
 alias ld = exa --long --classify --links --git --header --group --icons --all --tree --level 2 --ignore-glob ".git" --only-dirs
 
-# lsd
-alias ls = lsd --long --classify
-alias lsr = lsd --long --classify --reverse --timesort
-alias lsz = lsd --long --classify --reverse --sizesort
+# # lsd
+# alias ls = lsd --long --classify
+# alias lsr = lsd --long --classify --reverse --timesort
+# alias lsz = lsd --long --classify --reverse --sizesort
 
-alias lsa = lsd --long --classify --almost-all
-alias lsar = lsd --long --classify --almost-all --reverse --timesort
-alias lsaz = lsd --long --classify --almost-all --reverse --sizesort
+# alias lsa = lsd --long --classify --almost-all
+# alias lsar = lsd --long --classify --almost-all --reverse --timesort
+# alias lsaz = lsd --long --classify --almost-all --reverse --sizesort
 
-alias lss = lsd --long --classify --recursive
-alias lssr = lsd --long --classify --recursive --reverse --timesort
-alias lssz = lsd --long --classify --recursive --reverse --sizesort
+# alias lss = lsd --long --classify --recursive
+# alias lssr = lsd --long --classify --recursive --reverse --timesort
+# alias lssz = lsd --long --classify --recursive --reverse --sizesort
 
-alias lssa = lsd --long --classify --recursive --almost-all
-alias lssar = lsd --long --classify --recursive --almost-all --reverse --timesort
-alias lssaz = lsd --long --classify --recursive --almost-all --reverse --sizesort
+# alias lssa = lsd --long --classify --recursive --almost-all
+# alias lssar = lsd --long --classify --recursive --almost-all --reverse --timesort
+# alias lssaz = lsd --long --classify --recursive --almost-all --reverse --sizesort
 
-alias lst = lsd --long --classify --group-dirs=first --tree
-alias lsta = lsd --long --classify --group-dirs=first --tree --almost-all
+# alias lst = lsd --long --classify --group-dirs=first --tree
+# alias lsta = lsd --long --classify --group-dirs=first --tree --almost-all
 
-alias lse = lsd --long --classify --extensionsort
-alias lsea = lsd --long --classify --extensionsort --almost-all
+# alias lse = lsd --long --classify --extensionsort
+# alias lsea = lsd --long --classify --extensionsort --almost-all
 
 # # nu functions
 # def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}
