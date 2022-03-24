@@ -79,16 +79,16 @@ map n performBackwardsFind
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " history
-map H goBack
-map L goForward
+map J goBack
+map K goForward
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
 map t createTab
-map J previousTab
-map K nextTab
+map H previousTab
+map L nextTab
 map ' visitPreviousTab
 map yj firstTab
 map yk lastTab
