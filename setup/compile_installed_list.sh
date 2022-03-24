@@ -31,6 +31,6 @@ ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
 ################################################################################
 
 # atom packages
-apm list --json > ${HOME}/.archive/setup/atom.json
+apm list --bare --installed > ${HOME}/.archive/setup/atom_installed.txt
 
 ################################################################################
