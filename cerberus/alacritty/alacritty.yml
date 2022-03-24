@@ -894,6 +894,7 @@ key_bindings:
   # shortcuts for tmux. the leader key is ctrl-q (0x11)
   ################################################################################
 
+  # TODO: update tab movements
   # reload config
   - { key: Comma,           mods: Command,                          chars: "\x11,"      }
 
@@ -927,8 +928,8 @@ key_bindings:
   - { key: LBracket,        mods: Command,                          chars: "\x11["      }
 
   # select windows
-  - { key: Right,           mods: Command|Alt,                      chars: "\x11n"      }
-  - { key: Left,            mods: Command|Alt,                      chars: "\x11p"      }
+  - { key: Period,          mods: Command|Alt,                      chars: "\x11n"      }
+  - { key: Comma,           mods: Command|Alt,                      chars: "\x11p"      }
 
   # swap windows
   - { key: RBracket,        mods: Command|Alt,                      chars: "\x11N"      }
@@ -941,7 +942,7 @@ key_bindings:
   # kill pane / window / session
   - { key: X,               mods: Command,                          chars: "\x11x"      }
   - { key: X,               mods: Command|Shift,                    chars: "\x11X"      }
-  - { key: Q,               mods: Command|Shift,                    chars: "\x11Q"      }
+  # - { key: Q,               mods: Command|Shift,                    chars: "\x11Q"      }
 
   # detacth from session
   - { key: D,               mods: Command,                          chars: "\x11d"      }
@@ -1110,8 +1111,8 @@ key_bindings:
   - { key: Key8,            mods: Command,                          chars: "\x1b[19~"   }
   - { key: Key9,            mods: Command,                          chars: "\x1b[20~"   }
   - { key: Key0,            mods: Command,                          chars: "\x1b[21~"   }
-  # - { key: Minus,           mods: Command,                          chars: "\x1b[23~"   }
-  # - { key: Equals,          mods: Command,                          chars: "\x1b[24~"   }
+  - { key: Minus,           mods: Command|Alt,                      chars: "\x1b[23~"   }
+  - { key: Equals,          mods: Command|Alt,                      chars: "\x1b[24~"   }
 
   # - { key: F1,              mods: Shift,                            chars: "\x1b[1;2P"  }
   # - { key: F2,              mods: Shift,                            chars: "\x1b[1;2Q"  }
@@ -1136,8 +1137,8 @@ key_bindings:
   - { key: Key8,            mods: Command|Shift,                    chars: "\x1b[19;2~" }
   - { key: Key9,            mods: Command|Shift,                    chars: "\x1b[20;2~" }
   - { key: Key0,            mods: Command|Shift,                    chars: "\x1b[21;2~" }
-  - { key: Minus,           mods: Command|Shift,                    chars: "\x1b[23;2~" }
-  - { key: Equals,          mods: Command|Shift,                    chars: "\x1b[24;2~" }
+  # - { key: Minus,           mods: Command|Shift,                    chars: "\x1b[23;2~" }
+  # - { key: Equals,          mods: Command|Shift,                    chars: "\x1b[24;2~" }
 
   # - { key: F1,              mods: Control,                          chars: "\x1b[1;5P"  }
   # - { key: F2,              mods: Control,                          chars: "\x1b[1;5Q"  }
