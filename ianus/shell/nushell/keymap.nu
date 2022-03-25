@@ -70,24 +70,35 @@ let $config = {
     }
 
     {
-      name: cargo_check
-      modifier: none
-      keycode: f11
-      mode: emacs
-      event: {
-        send: executehostcommand,
-        cmd: "echo \"\n\tcargo check\n\"; cargo check"
-      }
-    }
-
-    {
-      name: cargo_test
+      name: list_shells
       modifier: none
       keycode: f12
       mode: emacs
       event: {
         send: executehostcommand,
-        cmd: "echo \"\n\tcargo test\n\"; cargo test --no-run"
+        cmd: "shells"
+      }
+    }
+
+    {
+      name: previous_dir
+      modifier: shift
+      keycode: f11
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "p"
+      }
+    }
+
+    {
+      name: next_dir
+      modifier: shift
+      keycode: f12
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "n"
       }
     }
 
