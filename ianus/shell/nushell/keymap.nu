@@ -51,7 +51,7 @@ let $config = {
 
     {
       name: move_word_right
-      modifier: ALT
+      modifier: alt
       keycode: char_f
       mode: emacs
       event: {
@@ -61,7 +61,7 @@ let $config = {
 
     {
       name: move_word_left
-      modifier: ALT
+      modifier: alt
       keycode: char_b
       mode: emacs
       event: {
@@ -99,6 +99,28 @@ let $config = {
       event: {
         send: executehostcommand,
         cmd: "n"
+      }
+    }
+
+    {
+      name: cargo_check
+      modifier: control
+      keycode: f1
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "echo \"\n\tcargo check\n\"; cargo check"
+      }
+    }
+
+    {
+      name: cargo_test
+      modifier: control
+      keycode: f2
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "echo \"\n\tcargo test\n\"; cargo test --no-run"
       }
     }
 
