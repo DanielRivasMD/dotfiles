@@ -33,7 +33,7 @@ bind X kill
 bind x remove
 
 # list windows
-bind w windowlist -b
+bind a windowlist -b
 
 # rename window
 bind r title
@@ -48,8 +48,8 @@ bind = split -v
 bind - split
 
 # switch windows
-bindkey "^[[1;7D" prev
-bindkey "^[[1;7C" next
+bindkey "^Qp" prev
+bindkey "^Qn" next
 
 # pane movement
 bindkey "^[[1;5D" focus left
