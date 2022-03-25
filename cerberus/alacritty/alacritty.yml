@@ -894,7 +894,9 @@ key_bindings:
   # shortcuts for tmux. the leader key is ctrl-q (0x11)
   ################################################################################
 
-  # TODO: update tab movements
+  # select other clients
+  - { key: Space,           mods: Control|Command|Alt,              chars: "\x11\x11"   }
+
   # reload config
   - { key: Comma,           mods: Command,                          chars: "\x11,"      }
 
@@ -1110,9 +1112,9 @@ key_bindings:
   - { key: Key7,            mods: Command,                          chars: "\x1b[18~"   }
   - { key: Key8,            mods: Command,                          chars: "\x1b[19~"   }
   - { key: Key9,            mods: Command,                          chars: "\x1b[20~"   }
-  - { key: Key0,            mods: Command,                          chars: "\x1b[21~"   }
-  - { key: Minus,           mods: Command|Alt,                      chars: "\x1b[23~"   }
-  - { key: Equals,          mods: Command|Alt,                      chars: "\x1b[24~"   }
+  # - { key: Key0,            mods: Command,                          chars: "\x1b[21~"   }
+  # - { key: Minus,           mods: Command,                          chars: "\x1b[23~"   }
+  - { key: Slash,          mods: Control|Alt,                       chars: "\x1b[24~"   }
 
   # - { key: F1,              mods: Shift,                            chars: "\x1b[1;2P"  }
   # - { key: F2,              mods: Shift,                            chars: "\x1b[1;2Q"  }
@@ -1137,6 +1139,9 @@ key_bindings:
   - { key: Key8,            mods: Command|Shift,                    chars: "\x1b[19;2~" }
   - { key: Key9,            mods: Command|Shift,                    chars: "\x1b[20;2~" }
   - { key: Key0,            mods: Command|Shift,                    chars: "\x1b[21;2~" }
+  - { key: Comma,           mods: Control|Alt,                      chars: "\x1b[23;2~"   }
+  - { key: Period,          mods: Control|Alt,                      chars: "\x1b[24;2~"   }
+
   # - { key: Minus,           mods: Command|Shift,                    chars: "\x1b[23;2~" }
   # - { key: Equals,          mods: Command|Shift,                    chars: "\x1b[24;2~" }
 
