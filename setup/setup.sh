@@ -34,6 +34,9 @@ brew install ts
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 
+brew tap gaborcsardi/rim
+brew install --cask rim
+
 brew install --cask julia
 brew install --cask docker
 
