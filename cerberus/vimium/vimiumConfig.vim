@@ -11,31 +11,33 @@ unmapAll
 " navigation
 map j scrollDown
 map k scrollUp
+map J scrollFullPageDown
+map K scrollFullPageUp
+map <a-down> scrollFullPageDown
+map <a-up> scrollFullPageUp
 map h scrollLeft
 map l scrollRight
-map gg scrollToTop
 map G scrollToBottom
-map d scrollPageDown
-map D scrollFullPageDown
-map u scrollPageUp
-map U scrollFullPageUp
+map gg scrollToTop
+map <m-down> scrollToBottom
+map <m-up> scrollToTop
 map r reload
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " URL
-map yy copyCurrentUrl
+map y copyCurrentUrl
 map p openCopiedUrlInCurrentTab
-map ; openCopiedUrlInNewTab
-map gu goUp
-map gU goToRoot
+map P openCopiedUrlInNewTab
+map q goUp
+map Q goToRoot
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " modes
-map I enterInsertMode
+map <a-i> enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
 
@@ -43,16 +45,16 @@ map V enterVisualLineMode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " links
-map gi focusInput
+map <space> focusInput
 map z LinkHints.activateMode
 map Z LinkHints.activateModeToOpenInNewTab
-map yf LinkHints.activateModeToCopyLinkUrl
+map Y LinkHints.activateModeToCopyLinkUrl
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " marks
-map M Marks.activateCreateMode
+map <a-m> Marks.activateCreateMode
 map ` Marks.activateGotoMode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -63,53 +65,55 @@ map o Vomnibar.activate
 map O Vomnibar.activateInNewTab
 map b Vomnibar.activateBookmarks
 map B Vomnibar.activateBookmarksInNewTab
-map T Vomnibar.activateTabSelection
-map ge Vomnibar.activateEditUrl
-map gE Vomnibar.activateEditUrlInNewTab
+map e Vomnibar.activateEditUrl
+map E Vomnibar.activateEditUrlInNewTab
+map S Vomnibar.activateTabSelection
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " find
-map / enterFindMode
-map m performFind
-map n performBackwardsFind
+map <a-r> enterFindMode
+map <a-n> performFind
+map <a-N> performBackwardsFind
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " history
-map J goBack
-map K goForward
+map u goBack
+map U goForward
+map <a-left> goBack
+map <a-right> goForward
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
-map t createTab
-map H previousTab
-map L nextTab
-map ' visitPreviousTab
-map yj firstTab
-map yk lastTab
-map yt duplicateTab
-map yp togglePinTab
-map ym toggleMuteTab
-map yx removeTab
-map yH closeTabsOnLeft
-map yL closeTabsOnRight
-map yr restoreTab
-map yX closeOtherTabs
-map yw moveTabToNewWindow
-map <c-left> moveTabLeft
-map <c-right> moveTabRight
+map T createTab
+map <a-m-left> previousTab
+map <a-m-right> nextTab
+map <c-left> previousTab
+map <c-right> nextTab
+map <a-m-space> visitPreviousTab
+map <c-space> visitPreviousTab
+map <a-d> duplicateTab
+map <a-p> togglePinTab
+map m toggleMuteTab
+map x removeTab
+map R restoreTab
+map w moveTabToNewWindow
+map <c-a-[> moveTabLeft
+map <c-a-]> moveTabRight
+map <a-m-[> moveTabLeft
+map <a-m-]> moveTabRight
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " help
 map ? showHelp
-map ys toggleViewSource
+map s toggleViewSource
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
