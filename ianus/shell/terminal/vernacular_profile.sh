@@ -105,6 +105,7 @@ export MANWIDTH=175
 
 export PAGER=bat
 export BAT_PAGER=less
+export RCOLUMNS=$COLUMNS
 
 # ==========================
 # ===  Pier              ===

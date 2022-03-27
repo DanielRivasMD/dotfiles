@@ -40,6 +40,11 @@ utils::assignInNamespace(
 
 ################################################################################
 
+# expand to match columns
+SystWrapper::wideScreen(Sys.getenv('RCOLUMNS'))
+
+################################################################################
+
 # default repo
 local(
   {
