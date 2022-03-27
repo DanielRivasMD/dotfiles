@@ -13,7 +13,7 @@ escape ^Qq
 term screen-256color
 
 # no welcome message
-startup_message       off             # default: on
+startup_message off                                                             # default: on
 
 # the following two lines give a two-line status, with the current window highlighted
 hardstatus alwayslastline
@@ -67,4 +67,3 @@ screen -t dev   2 zsh
 screen -t data  3 zsh
 
 ################################################################################
-
