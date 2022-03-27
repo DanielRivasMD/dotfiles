@@ -79,46 +79,46 @@ alias wc='wordcrab'
 alias zz='z -'
 
 # exa
-alias l='exa --long --classify --links --git --header --group --icons'
-alias la='l --all'
-alias lr='l --sort=newest'
+alias e='exa --long --classify --links --git --header --group --icons'
+alias ea='e --all'
+alias er='e --sort=newest'
 
-alias lar='la --sort=newest'
-alias las='la --sort=accessed --time accessed'
-alias lac='la --sort=created --time created'
+alias ear='ea --sort=newest'
+alias eas='ea --sort=accessed --time accessed'
+alias eac='ea --sort=created --time created'
 
-alias lg='l --group-directories-first'
-alias lga='lg --all'
-alias lgr='lg --sort=newest'
+alias eg='e --group-directories-first'
+alias ega='eg --all'
+alias egr='eg --sort=newest'
 
-alias lgar='lga --sort=newest'
-alias lgas='lga --sort=accessed --time accessed'
-alias lgac='lga --sort=created --time created'
+alias egar='ega --sort=newest'
+alias egas='ega --sort=accessed --time accessed'
+alias egac='ega --sort=created --time created'
 
-alias lt='la --tree --level 2 --ignore-glob ".git" --group-directories-first'
-alias ld='la --tree --level 2 --ignore-glob ".git" --only-dirs'
+alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
+alias ed='ea --tree --level 2 --ignore-glob ".git" --only-dirs'
 
 # lsd
-alias ls='lsd --long --classify'
-alias lsr='ls --reverse --timesort'
-alias lsz='ls --reverse --sizesort'
+alias l='lsd --long --classify'
+alias lr='l --reverse --timesort'
+alias lz='l --reverse --sizesort'
 
-alias lsa='ls --almost-all'
-alias lsar='lsa --reverse --timesort'
-alias lsaz='lsa --reverse --sizesort'
+alias la='l --almost-all'
+alias lar='la --reverse --timesort'
+alias laz='la --reverse --sizesort'
 
-alias lss='ls --recursive'
-alias lssr='lss --reverse --timesort'
-alias lssz='lss --reverse --sizesort'
+alias lh='l --recursive'
+alias lhr='lh --reverse --timesort'
+alias lhz='lh --reverse --sizesort'
 
-alias lssa='lss --almost-all'
-alias lssar='lssa --reverse --timesort'
-alias lssaz='lssa --reverse --sizesort'
+alias lha='lh --almost-all'
+alias lhar='lha --reverse --timesort'
+alias lhaz='lha --reverse --sizesort'
 
-alias lst='ls --group-dirs=first --tree'
-alias lsta='lst --almost-all'
+alias lt='l --group-dirs=first --tree'
+alias lta='lt --almost-all'
 
-alias lse='ls --extensionsort'
-alias lsea='lse --almost-all'
+alias le='l --extensionsort'
+alias lea='le --almost-all'
 
 # ==========================

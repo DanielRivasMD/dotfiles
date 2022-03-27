@@ -1,7 +1,5 @@
 ################################################################################
 
-# TODO: update aliases to avoid collisions
-
 # forked patches
 alias pier = /Users/drivas/bin/forkedPatch/pier
 alias rip = /Users/drivas/bin/forkedPatch/rip
@@ -11,9 +9,9 @@ alias nuopen = open
 alias open = ^open
 
 # ls
-alias ln = ls --long
-alias lna = ls --long --all
-alias lnd = ls --long --all --du
+alias ll = ls --long
+alias lla = ls --long --all
+alias lld = ls --long --all --du
 
 # cd
 alias .. = cd ..
@@ -38,47 +36,47 @@ alias wc = wordcrab
 alias zz = cd -
 
 # exa
-alias l = exa --long --classify --links --git --header --group --icons
-alias la = exa --long --classify --links --git --header --group --icons --all
-alias lr = exa --long --classify --links --git --header --group --icons --sort=newest
+alias e = exa --long --classify --links --git --header --group --icons
+alias ea = exa --long --classify --links --git --header --group --icons --all
+alias er = exa --long --classify --links --git --header --group --icons --sort=newest
 
-alias lar = exa --long --classify --links --git --header --group --icons --all --sort=newest
-alias las = exa --long --classify --links --git --header --group --icons --all --sort=accessed --time accessed
-alias lac = exa --long --classify --links --git --header --group --icons --all --sort=created --time created
+alias ear = exa --long --classify --links --git --header --group --icons --all --sort=newest
+alias eas = exa --long --classify --links --git --header --group --icons --all --sort=accessed --time accessed
+alias eac = exa --long --classify --links --git --header --group --icons --all --sort=created --time created
 
-alias lg = exa --long --classify --links --git --header --group --icons --group-directories-first
-alias lga = exa --long --classify --links --git --header --group --icons --group-directories-first --all
-alias lgr = exa --long --classify --links --git --header --group --icons --group-directories-first --sort=newest
+alias eg = exa --long --classify --links --git --header --group --icons --group-directories-first
+alias ega = exa --long --classify --links --git --header --group --icons --group-directories-first --all
+alias egr = exa --long --classify --links --git --header --group --icons --group-directories-first --sort=newest
 
-alias lgar = exa --long --classify --links --git --header --group --icons --group-directories-first --all --sort=newest
-alias lgas = exa --long --classify --links --git --header --group --icons --group-directories-first --all --sort=accessed --time accessed
-alias lgac = exa --long --classify --links --git --header --group --icons --group-directories-first --all --sort=created --time created
+alias egar = exa --long --classify --links --git --header --group --icons --group-directories-first --all --sort=newest
+alias egas = exa --long --classify --links --git --header --group --icons --group-directories-first --all --sort=accessed --time accessed
+alias egac = exa --long --classify --links --git --header --group --icons --group-directories-first --all --sort=created --time created
 
-alias lt = exa --long --classify --links --git --header --group --icons --all --tree --level 2 --ignore-glob ".git" --group-directories-first
-alias ld = exa --long --classify --links --git --header --group --icons --all --tree --level 2 --ignore-glob ".git" --only-dirs
+alias et = exa --long --classify --links --git --header --group --icons --all --tree --level 2 --ignore-glob ".git" --group-directories-first
+alias ed = exa --long --classify --links --git --header --group --icons --all --tree --level 2 --ignore-glob ".git" --only-dirs
 
-# # lsd
-# alias ls = lsd --long --classify
-# alias lsr = lsd --long --classify --reverse --timesort
-# alias lsz = lsd --long --classify --reverse --sizesort
+# lsd
+alias l = lsd --long --classify
+alias lr = lsd --long --classify --reverse --timesort
+alias lz = lsd --long --classify --reverse --sizesort
 
-# alias lsa = lsd --long --classify --almost-all
-# alias lsar = lsd --long --classify --almost-all --reverse --timesort
-# alias lsaz = lsd --long --classify --almost-all --reverse --sizesort
+alias la = lsd --long --classify --almost-all
+alias lar = lsd --long --classify --almost-all --reverse --timesort
+alias laz = lsd --long --classify --almost-all --reverse --sizesort
 
-# alias lss = lsd --long --classify --recursive
-# alias lssr = lsd --long --classify --recursive --reverse --timesort
-# alias lssz = lsd --long --classify --recursive --reverse --sizesort
+alias lh = lsd --long --classify --recursive
+alias lhr = lsd --long --classify --recursive --reverse --timesort
+alias lhz = lsd --long --classify --recursive --reverse --sizesort
 
-# alias lssa = lsd --long --classify --recursive --almost-all
-# alias lssar = lsd --long --classify --recursive --almost-all --reverse --timesort
-# alias lssaz = lsd --long --classify --recursive --almost-all --reverse --sizesort
+alias lha = lsd --long --classify --recursive --almost-all
+alias lhar = lsd --long --classify --recursive --almost-all --reverse --timesort
+alias lhaz = lsd --long --classify --recursive --almost-all --reverse --sizesort
 
-# alias lst = lsd --long --classify --group-dirs=first --tree
-# alias lsta = lsd --long --classify --group-dirs=first --tree --almost-all
+alias lt = lsd --long --classify --group-dirs=first --tree
+alias lta = lsd --long --classify --group-dirs=first --tree --almost-all
 
-# alias lse = lsd --long --classify --extensionsort
-# alias lsea = lsd --long --classify --extensionsort --almost-all
+alias le = lsd --long --classify --extensionsort
+alias lea = lsd --long --classify --extensionsort --almost-all
 
 # # nu functions
 # def nudown [] {fetch https://api.github.com/repos/nushell/nushell/releases | get assets | select name download_count}
