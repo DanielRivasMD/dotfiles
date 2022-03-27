@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -46,16 +45,19 @@ map V enterVisualLineMode
 
 " links
 map <space> focusInput
-map z LinkHints.activateMode
-map Z LinkHints.activateModeToOpenInNewTab
-map Y LinkHints.activateModeToCopyLinkUrl
+map <enter> LinkHints.activateMode
+map <a-enter> LinkHints.activateModeToOpenInNewTab
+map <m-enter> LinkHints.activateModeToOpenInNewForegroundTab
+map <a-m-enter> LinkHints.activateModeWithQueue
+map <c-enter> LinkHints.activateModeToCopyLinkUrl
+map <c-a-enter> LinkHints.activateModeToDownloadLink
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " marks
 map <a-m> Marks.activateCreateMode
-map ` Marks.activateGotoMode
+map ' Marks.activateGotoMode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -83,6 +85,8 @@ map <a-N> performBackwardsFind
 " history
 map u goBack
 map U goForward
+map H goBack
+map L goForward
 map <a-left> goBack
 map <a-right> goForward
 
@@ -95,6 +99,8 @@ map <a-m-left> previousTab
 map <a-m-right> nextTab
 map <c-left> previousTab
 map <c-right> nextTab
+map <c-a-left> firstTab
+map <c-a-right> lastTab
 map <a-m-space> visitPreviousTab
 map <c-space> visitPreviousTab
 map <a-d> duplicateTab
