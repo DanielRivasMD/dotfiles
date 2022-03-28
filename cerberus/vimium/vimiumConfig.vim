@@ -37,6 +37,7 @@ map Q goToRoot
 
 " modes
 map <a-i> enterInsertMode
+map <c-i> enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
 
@@ -57,6 +58,7 @@ map <c-a-enter> LinkHints.activateModeToDownloadLink
 
 " marks
 map <a-m> Marks.activateCreateMode
+map <c-m> Marks.activateCreateMode
 map ' Marks.activateGotoMode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,7 +71,7 @@ map b Vomnibar.activateBookmarks
 map B Vomnibar.activateBookmarksInNewTab
 map e Vomnibar.activateEditUrl
 map E Vomnibar.activateEditUrlInNewTab
-map S Vomnibar.activateTabSelection
+map s Vomnibar.activateTabSelection
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -78,6 +80,9 @@ map S Vomnibar.activateTabSelection
 map <a-r> enterFindMode
 map <a-n> performFind
 map <a-N> performBackwardsFind
+map <a-m-r> enterFindMode
+map <a-m-n> performFind
+map <a-m-N> performBackwardsFind
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,8 +110,11 @@ map <a-m-space> visitPreviousTab
 map <c-space> visitPreviousTab
 map <a-d> duplicateTab
 map <a-p> togglePinTab
+map <c-d> duplicateTab
+map <c-p> togglePinTab
 map m toggleMuteTab
 map x removeTab
+map <a-q> removeTab
 map R restoreTab
 map w moveTabToNewWindow
 map <c-a-[> moveTabLeft
@@ -119,7 +127,7 @@ map <a-m-]> moveTabRight
 
 " help
 map ? showHelp
-map s toggleViewSource
+map S toggleViewSource
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
