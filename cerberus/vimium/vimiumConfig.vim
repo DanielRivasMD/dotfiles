@@ -36,7 +36,6 @@ map Q goToRoot
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " modes
-map <a-i> enterInsertMode
 map <c-i> enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
@@ -57,8 +56,8 @@ map <c-a-enter> LinkHints.activateModeToDownloadLink
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " marks
-map <a-m> Marks.activateCreateMode
 map <c-m> Marks.activateCreateMode
+map \ Marks.activateCreateMode
 map ' Marks.activateGotoMode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,12 +76,9 @@ map s Vomnibar.activateTabSelection
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " find
-map <a-r> enterFindMode
-map <a-n> performFind
-map <a-N> performBackwardsFind
-map <a-m-r> enterFindMode
-map <a-m-n> performFind
-map <a-m-N> performBackwardsFind
+map / enterFindMode
+map . performFind
+map , performBackwardsFind
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,22 +88,20 @@ map u goBack
 map U goForward
 map H goBack
 map L goForward
-map <a-left> goBack
-map <a-right> goForward
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
 map T createTab
+map ; createTab
 map <a-m-left> previousTab
 map <a-m-right> nextTab
-map <c-left> previousTab
-map <c-right> nextTab
-map <c-a-left> firstTab
-map <c-a-right> lastTab
+map <a-,> previousTab
+map <a-.> nextTab
+map <c-left> firstTab
+map <c-right> lastTab
 map <a-m-space> visitPreviousTab
-map <c-space> visitPreviousTab
 map <a-d> duplicateTab
 map <a-p> togglePinTab
 map <c-d> duplicateTab
@@ -115,12 +109,10 @@ map <c-p> togglePinTab
 map m toggleMuteTab
 map x removeTab
 map <a-q> removeTab
-map R restoreTab
+map z restoreTab
 map w moveTabToNewWindow
-map <c-a-[> moveTabLeft
-map <c-a-]> moveTabRight
-map <a-m-[> moveTabLeft
-map <a-m-]> moveTabRight
+map [ moveTabLeft
+map ] moveTabRight
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
