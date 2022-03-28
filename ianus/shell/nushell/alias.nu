@@ -4,9 +4,9 @@
 alias pier = /Users/drivas/bin/forkedPatch/pier
 alias rip = /Users/drivas/bin/forkedPatch/rip
 
-# open command
-alias nuopen = open
-alias open = ^open
+# # open command
+# alias nuopen = open
+# alias open = ^open
 
 # ls
 alias ll = ls --long
