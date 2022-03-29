@@ -1,7 +1,6 @@
-
-# ==========================
-# ===  General settings  ===
-# ==========================
+################################################################################
+# General settings
+################################################################################
 
 # Load zsh settings
 if [ -f ${HOME}/.profile ]; then
@@ -10,9 +9,9 @@ fi
 
 ZDOTDIR=${HOME}/.zsh
 
-# ==========================
-# ===   aliases          ===
-# ==========================
+################################################################################
+#  aliases
+################################################################################
 
 if [ -f ${IANUS}/shell/terminal/vernacular_aliases.sh ]; then
   . ${IANUS}/shell/terminal/vernacular_aliases.sh
@@ -22,15 +21,15 @@ if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then
   . ${ZDOTDIR}/zsh_aliases.sh
 fi
 
-# ==========================
-# ===   Prompt           ===
-# ==========================
+################################################################################
+#  Prompt
+################################################################################
 
 eval "$(starship init zsh)"
 
-# ==========================
-# ===  Plugins AB        ===
-# ==========================
+################################################################################
+#  Plugins AB
+################################################################################
 
 # Plugins managed by antibody (AB) statically
 # antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins.sh
@@ -46,9 +45,9 @@ source ${ZDOTDIR}/zsh_plugins.sh
 # chrissicool/zsh-256color
 
 
-# ==========================
-# ===  Autocompletion    ===
-# ==========================
+################################################################################
+#  Autocompletion
+################################################################################
 
 # add custom zsh completion path
 fpath=($HOME/.config/zsh_completion $fpath)
@@ -78,109 +77,119 @@ compdef _mplayer mp
 compdef _git-local-ignore gl
 
 # exa
-compdef _exa l
-compdef _exa la
-compdef _exa lr
+compdef _exa e
+compdef _exa ea
+compdef _exa er
 
-compdef _exa lar
-compdef _exa lsa
-compdef _exa lsc
+compdef _exa ear
+compdef _exa esa
+compdef _exa esc
 
-compdef _exa lg
-compdef _exa lga
-compdef _exa lgr
+compdef _exa eg
+compdef _exa ega
+compdef _exa egr
 
-compdef _exa lgar
-compdef _exa lgsa
-compdef _exa lgsc
+compdef _exa egar
+compdef _exa egsa
+compdef _exa egsc
 
-compdef _exa lt
-compdef _exa ld
+compdef _exa et
+compdef _exa ed
 
-# # lsd
-# compdef _lsd ls
-# compdef _lsd lsr
-# compdef _lsd lsss
-#
-# compdef _lsd lsa
-# compdef _lsd lsar
-# compdef _lsd lsas
-#
-# compdef _lsd lss
-# compdef _lsd lssr
-#
-# compdef _lsd lssa
-# compdef _lsd lssar
-#
-# compdef _lsd lst
-# compdef _lsd lsta
-#
-# compdef _lsd lse
-# compdef _lsd lsea
+# lsd
+compdef _lsd l
+compdef _lsd lr
+compdef _lsd lz
+
+compdef _lsd la
+compdef _lsd lar
+compdef _lsd laz
+
+compdef _lsd lh
+compdef _lsd lhr
+compdef _lsd lhz
+
+compdef _lsd lha
+compdef _lsd lhar
+compdef _lsd lhaz
+
+compdef _lsd lt
+compdef _lsd lta
+
+compdef _lsd le
+compdef _lsd lea
 
 
-# ==========================
-# ===  History           ===
-# ==========================
+################################################################################
+# History
+################################################################################
 
 HISTFILE=${ZDOTDIR}/zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt appendhistory
 
-# ==========================
-# ===  Key bindings      ===
-# ==========================
+################################################################################
+# Key bindings
+################################################################################
 
-bindkey "\x1b[1;3D" backward-word
-bindkey "\x1b[1;3C" forward-word
+# bindkey "\x1b[1;3D" backward-word
+# bindkey "\x1b[1;3C" forward-word
 
-# ==========================
-# ===  RStudio           ===
-# ==========================
+################################################################################
+# RStudio
+################################################################################
 
 rstudio() { command open "$@" -a RStudio }
 
-# ==========================
-# ===  McFly             ===
-# ==========================
+################################################################################
+# McFly
+################################################################################
 
 if [[ -r "${HOME}/Factorem/Observatory/mcfly/mcfly.zsh" ]]
 then
   source "${HOME}/Factorem/Observatory/mcfly/mcfly.zsh"
 fi
 
-# ==========================
-# ===  just              ===
-# ==========================
+################################################################################
+# broot
+################################################################################
+
+if [ -f ${ZDOTDIR}/zsh_broot_patch.sh ]; then
+  . ${ZDOTDIR}/zsh_broot_patch.sh
+fi
+
+################################################################################
+# just
+################################################################################
 
 if [ -f ${ZDOTDIR}/zsh_just_patch.sh ]; then
   . ${ZDOTDIR}/zsh_just_patch.sh
 fi
 
-# ==========================
-# ===  navi              ===
-# ==========================
+################################################################################
+# navi
+################################################################################
 
 if [ -f ${ZDOTDIR}/zsh_navi_patch.sh ]; then
   . ${ZDOTDIR}/zsh_navi_patch.sh
 fi
 
-# ==========================
-# ===  zoxide            ===
-# ==========================
+################################################################################
+# zoxide
+################################################################################
 
 eval "$(zoxide init zsh)"
 
-# ==========================
-# ===  editor            ===
-# ==========================
+################################################################################
+# editor
+################################################################################
 
 # edit line in editor with ctrl-n:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^b' edit-command-line
+bindkey '^h' edit-command-line
 
-# ==========================
+################################################################################
 
 echo -n -e "\t"; echo '                 '
 echo -n -e "\t"; echo '  ____  ______ __'
@@ -189,4 +198,4 @@ echo -n -e "\t"; echo '  / /__\ \/ _  / '
 echo -n -e "\t"; echo ' /___/___/_//_/  '
 echo -n -e "\t"; echo '                 '
 
-# ==========================
+################################################################################
