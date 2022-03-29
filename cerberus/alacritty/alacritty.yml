@@ -1,3 +1,5 @@
+################################################################################
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
@@ -989,6 +991,7 @@ key_bindings:
   ################################################################################
   # system OSX
   ################################################################################
+
   - { key: Q,               mods: Command,                          action: Quit        }
   - { key: Q,               mods: Control,                          chars: "\x11"       }
   - { key: V,               mods: Command,                          action: Paste       }
@@ -1034,6 +1037,7 @@ key_bindings:
   ################################################################################
   # alphabet
   ################################################################################
+
   - { key: A,               mods: Alt,                              chars: "\x1ba"      }
   - { key: B,               mods: Alt,                              chars: "\x1bb"      }
   - { key: C,               mods: Alt,                              chars: "\x1bc"      }
@@ -1090,6 +1094,7 @@ key_bindings:
   ################################################################################
   # function keys
   ################################################################################
+
   # - { key: F1,                                                      chars: "\x1bOP"     }
   # - { key: F2,                                                      chars: "\x1bOQ"     }
   # - { key: F3,                                                      chars: "\x1bOR"     }
@@ -1139,8 +1144,8 @@ key_bindings:
   - { key: Key8,            mods: Command|Shift,                    chars: "\x1b[19;2~" }
   - { key: Key9,            mods: Command|Shift,                    chars: "\x1b[20;2~" }
   - { key: Key0,            mods: Command|Shift,                    chars: "\x1b[21;2~" }
-  - { key: Comma,           mods: Control|Alt,                      chars: "\x1b[23;2~"   }
-  - { key: Period,          mods: Control|Alt,                      chars: "\x1b[24;2~"   }
+  - { key: Comma,           mods: Control|Alt,                      chars: "\x1b[23;2~" }
+  - { key: Period,          mods: Control|Alt,                      chars: "\x1b[24;2~" }
 
   # - { key: Minus,           mods: Command|Shift,                    chars: "\x1b[23;2~" }
   # - { key: Equals,          mods: Command|Shift,                    chars: "\x1b[24;2~" }
@@ -1226,6 +1231,7 @@ key_bindings:
   ################################################################################
   # interactive keybindings
   ################################################################################
+
   - { key: Key1,            mods: Alt,                              chars: " != "       }
   - { key: Key2,            mods: Alt,                              chars: " @ "        }
   - { key: Key3,            mods: Alt,                              chars: " \\ "       }
@@ -1293,7 +1299,7 @@ key_bindings:
   - { key: Period,          mods: Control,                          chars: " %>% "      }
   # - { key: Slash,           mods: Control,                          chars: ""           }
   - { key: Grave,           mods: Control,                          chars: " ~ "        }
-  - { key: Tab,             mods: Control,                          chars: "  "         }
+  - { key: Tab,             mods: Control,                          chars: "; "         }
 
   - { key: Key1,            mods: Control|Shift,                    chars: "@debug "    }
   - { key: Key2,            mods: Control|Shift,                    chars: "@chain "    }
@@ -1310,13 +1316,13 @@ key_bindings:
   # - { key: LBracket,        mods: Control|Shift,                    chars: ""           }
   # - { key: RBracket,        mods: Control|Shift,                    chars: ""           }
   - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "     }
-  - { key: Apostrophe,      mods: Control|Shift,                    chars: "<>"         }
+  - { key: Apostrophe,      mods: Control|Shift,                    chars: "::<>"       }
   - { key: Backslash,       mods: Control|Shift,                    chars: "  "         }
   - { key: Comma,           mods: Control|Shift,                    chars: " %<+% "     }
   - { key: Period,          mods: Control|Shift,                    chars: " %+>% "     }
   - { key: Slash,           mods: Control|Shift,                    chars: "  "         }
   - { key: Grave,           mods: Control|Shift,                    chars: " =~ "       }
-  - { key: Tab,             mods: Control|Shift,                    chars: "  "         }
+  - { key: Tab,             mods: Control|Shift,                    chars: ": "         }
 
   - { key: Key1,            mods: Alt|Control|Command,              chars: "  "         }
   - { key: Key2,            mods: Alt|Control|Command,              chars: "  "         }
@@ -1339,7 +1345,7 @@ key_bindings:
   - { key: Period,          mods: Alt|Control|Command,              chars: " >: "       }
   - { key: Slash,           mods: Alt|Control|Command,              chars: " <<- "      }
   - { key: Grave,           mods: Alt|Control|Command,              chars: "  "         }
-  - { key: Tab,             mods: Alt|Control|Command,              chars: ": "         }
+  - { key: Tab,             mods: Alt|Control|Command,              chars: "  "         }
 
   - { key: Key1,            mods: Alt|Control|Command|Shift,        chars: " ∉ "        }
   - { key: Key2,            mods: Alt|Control|Command|Shift,        chars: "  "         }
@@ -1461,3 +1467,5 @@ key_bindings:
   - { key: Y,               mods: Control|Command|Shift,            chars: "Υ"          }
   - { key: Z,               mods: Control|Command|Shift,            chars: "Ζ"          }
   - { key: W,               mods: Control|Command|Shift,            chars: "TODO: "     }
+
+  ################################################################################
