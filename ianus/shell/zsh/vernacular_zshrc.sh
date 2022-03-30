@@ -155,9 +155,9 @@ fi
 # broot
 ################################################################################
 
-if [ -f ${ZDOTDIR}/zsh_broot_patch.sh ]; then
-  . ${ZDOTDIR}/zsh_broot_patch.sh
-fi
+# if [ -f ${ZDOTDIR}/zsh_broot_patch.sh ]; then
+#   . ${ZDOTDIR}/zsh_broot_patch.sh
+# fi
 
 ################################################################################
 # just

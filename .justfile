@@ -148,6 +148,7 @@ Ianus:
   ln -svf "${zsh}/vernacular_zsh_plugins.sh" "${home}/.zsh/zsh_plugins.sh"      # zsh plugins
   ln -svf "${zsh}/vernacular_zsh_plugins.txt" "${home}/.zsh/zsh_plugins.txt"    # zsh plugins
   ln -svf "${zsh}/zsh_pandoc_autocompletion.sh" "${home}/.zsh"                  # zsh completion
+  ln -svf "${zsh}/zsh_broot_patch.sh" "${home}/.zsh"                            # zsh broot patch
   ln -svf "${zsh}/zsh_just_patch.sh" "${home}/.zsh"                             # zsh just patch
   ln -svf "${zsh}/zsh_navi_patch.sh" "${home}/.zsh"                             # zsh navi patch
 
@@ -415,4 +416,3 @@ Uppmax: MercuryUppmax && VulcanoUppmax
 Pawsey: MercuryPawsey && VulcanoPawsey
 
 #################################################################################
-
