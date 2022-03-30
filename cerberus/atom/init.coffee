@@ -85,7 +85,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-r_pipe_right': -> atom.workspace.getActiveTextEditor()?.insertText(' %>% ')
   # # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' ~ ')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-semicolon': -> atom.workspace.getActiveTextEditor()?.insertText('; ')
 
   'custom:insert-julia_mcdebug': -> atom.workspace.getActiveTextEditor()?.insertText('@debug ')
   'custom:insert-julia_mcchain': -> atom.workspace.getActiveTextEditor()?.insertText('@chain ')
@@ -108,7 +108,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-r_pipe_right_plus': -> atom.workspace.getActiveTextEditor()?.insertText(' %+>% ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-equal_tilde': -> atom.workspace.getActiveTextEditor()?.insertText(' =~ ')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-colon': -> atom.workspace.getActiveTextEditor()?.insertText(': ')
 
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
@@ -131,7 +131,7 @@ atom.commands.add 'atom-text-editor',
   'custom:insert-julia_supertype': -> atom.workspace.getActiveTextEditor()?.insertText(' >: ')
   'custom:insert-r_assign_up': -> atom.workspace.getActiveTextEditor()?.insertText(' <<- ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
-  'custom:insert-colon': -> atom.workspace.getActiveTextEditor()?.insertText(': ')
+  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
 
   'custom:insert-not_equal_math': -> atom.workspace.getActiveTextEditor()?.insertText(' ∉ ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')

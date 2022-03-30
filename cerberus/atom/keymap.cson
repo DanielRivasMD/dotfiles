@@ -358,7 +358,7 @@
   'ctrl-.': 'custom:insert-r_pipe_right'
   # 'ctrl-/': 'custom:insert-empty'
   'ctrl-`': 'custom:insert-tilde'
-  'ctrl-tab': 'custom:insert-empty'
+  'ctrl-tab': 'custom:insert-semicolon'
 
   'ctrl-!': 'custom:insert-julia_mcdebug'
   'ctrl-@': 'custom:insert-julia_mcchain'
@@ -381,7 +381,7 @@
   'ctrl->': 'custom:insert-r_pipe_right_plus'
   'ctrl-?': 'custom:insert-empty'
   'ctrl-~': 'custom:insert-equal_tilde'
-  'shift-ctrl-tab': 'custom:insert-empty'
+  'shift-ctrl-tab': 'custom:insert-colon'
 
   'alt-cmd-ctrl-1': 'custom:insert-empty'
   'alt-cmd-ctrl-2': 'custom:insert-empty'
@@ -404,7 +404,7 @@
   'alt-cmd-ctrl-.': 'custom:insert-julia_supertype'
   'alt-cmd-ctrl-/': 'custom:insert-r_assign_up'
   'alt-cmd-ctrl-`': 'custom:insert-empty'
-  'alt-cmd-ctrl-tab': 'custom:insert-colon'
+  'alt-cmd-ctrl-tab': 'custom:insert-empty'
 
   'alt-cmd-ctrl-!': 'custom:insert-not_equal_math'
   'alt-cmd-ctrl-@': 'custom:insert-empty'

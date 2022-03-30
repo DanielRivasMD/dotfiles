@@ -207,7 +207,7 @@
   { "keys": ["ctrl+."],                "command": "insert",                    "args": {"characters": " %>% "}},
 //  { "keys": ["ctrl+/"],                "command": "insert",                    "args": {"characters": ""}},
   { "keys": ["ctrl+`"],                "command": "insert",                    "args": {"characters": " ~ "}},
-  { "keys": ["ctrl+tab"],              "command": "insert",                    "args": {"characters": "  "}},
+  { "keys": ["ctrl+tab"],              "command": "insert",                    "args": {"characters": "; "}},
 
   { "keys": ["ctrl+shift+1"],          "command": "insert",                    "args": {"characters": "@debug "}},
   { "keys": ["ctrl+shift+2"],          "command": "insert",                    "args": {"characters": "@chain "}},
@@ -230,7 +230,7 @@
   { "keys": ["ctrl+shift+."],          "command": "insert",                    "args": {"characters": " %+>% "}},
   { "keys": ["ctrl+shift+/"],          "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["ctrl+shift+`"],          "command": "insert",                    "args": {"characters": " =~ "}},
-  { "keys": ["ctrl+shift+tab"],        "command": "insert",                    "args": {"characters": "  "}},
+  { "keys": ["ctrl+shift+tab"],        "command": "insert",                    "args": {"characters": ": "}},
 
   { "keys": ["alt+command+ctrl+1"],    "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["alt+command+ctrl+2"],    "command": "insert",                    "args": {"characters": "  "}},
@@ -253,7 +253,7 @@
   { "keys": ["alt+command+ctrl+."],    "command": "insert",                    "args": {"characters": " >: "}},
   { "keys": ["alt+command+ctrl+/"],    "command": "insert",                    "args": {"characters": " <<- "}},
   { "keys": ["alt+command+ctrl+`"],    "command": "insert",                    "args": {"characters": "  "}},
-  { "keys": ["alt+command+ctrl+tab"],  "command": "insert",                    "args": {"characters": ": "}},
+  { "keys": ["alt+command+ctrl+tab"],  "command": "insert",                    "args": {"characters": "  "}},
 
   { "keys": ["alt+command+ctrl+shift+1"],    "command": "insert",                    "args": {"characters": " ∉ "}},
   { "keys": ["alt+command+ctrl+shift+2"],    "command": "insert",                    "args": {"characters": "  "}},
