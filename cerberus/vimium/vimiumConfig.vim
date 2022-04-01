@@ -17,7 +17,7 @@ map <a-up> scrollFullPageUp
 map h scrollLeft
 map l scrollRight
 map G scrollToBottom
-map gg scrollToTop
+map g scrollToTop
 map <m-down> scrollToBottom
 map <m-up> scrollToTop
 map r reload
@@ -56,9 +56,8 @@ map <c-a-enter> LinkHints.activateModeToDownloadLink
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " marks
-map <c-m> Marks.activateCreateMode
-map \ Marks.activateCreateMode
-map ' Marks.activateGotoMode
+map | Marks.activateCreateMode
+map " Marks.activateGotoMode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,8 +76,8 @@ map s Vomnibar.activateTabSelection
 
 " find
 map / enterFindMode
-map . performFind
-map , performBackwardsFind
+map n performFind
+map N performBackwardsFind
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,15 +96,14 @@ map T createTab
 map ; createTab
 map <a-m-left> previousTab
 map <a-m-right> nextTab
-map <a-,> previousTab
-map <a-.> nextTab
+map , previousTab
+map . nextTab
 map <c-left> firstTab
 map <c-right> lastTab
 map <a-m-space> visitPreviousTab
-map <a-d> duplicateTab
-map <a-p> togglePinTab
-map <c-d> duplicateTab
-map <c-p> togglePinTab
+map ' visitPreviousTab
+map d duplicateTab
+map \ togglePinTab
 map m toggleMuteTab
 map x removeTab
 map <a-q> removeTab
