@@ -903,8 +903,8 @@ key_bindings:
   - { key: Comma,           mods: Command,                          chars: "\x11,"      }
 
   # new window
-  - { key: T,               mods: Command,                          chars: "\x11t"      }
-  - { key: T,               mods: Command|Shift,                    chars: "\x11T"      }
+  - { key: Semicolon,       mods: Command,                          chars: "\x11;"      }
+  - { key: Semicolon,       mods: Command|Shift,                    chars: "\x11:"      }
 
   # rename sessions
   - { key: R,               mods: Command,                          chars: "\x11r"      }
@@ -915,12 +915,14 @@ key_bindings:
   - { key: Minus,           mods: Command,                          chars: "\x11-"      }
 
   # resize panes
-  - { key: Space,           mods: Control|Alt,                      chars: "\x11z"      }
   - { key: Equals,          mods: Command|Shift,                    chars: "\x11+"      }
   - { key: Minus,           mods: Command|Shift,                    chars: "\x11_"      }
   - { key: Period,          mods: Command|Shift,                    chars: "\x11>"      }
   - { key: Comma,           mods: Command|Shift,                    chars: "\x11<"      }
   - { key: LBracket,        mods: Command|Shift,                    chars: "\x11{"      }
+
+  # zoom
+  - { key: Space,           mods: Control|Alt,                      chars: "\x11z"      }
 
   # move window
   - { key: RBracket,        mods: Command|Shift,                    chars: "\x11}"      }
@@ -973,8 +975,8 @@ key_bindings:
   # rotate window
   - { key: W,               mods: Command,                          chars: "\x11w"      }
 
-  # command prompt
-  - { key: Semicolon,       mods: Command,                          chars: "\x11:"      }
+  # find window
+  - { key: T,               mods: Command,                          chars: "\x11t"      }
 
   # select tabs
   - { key: Key1,            mods: Command|Alt,                      chars: "\x111"      }
