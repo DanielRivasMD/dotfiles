@@ -1,4 +1,4 @@
-################################################################################
+####################################################################################################
 
 def create_right_prompt [] {
     let time_segment = ([
@@ -8,7 +8,7 @@ def create_right_prompt [] {
     $time_segment
 }
 
-################################################################################
+####################################################################################################
 
 # Use nushell functions to define your right and left prompt
 # let-env PROMPT_COMMAND = { create_left_prompt }
@@ -16,7 +16,7 @@ let-env STARSHIP_SHELL = ""
 let-env PROMPT_COMMAND = { starship prompt --cmd-duration $env.CMD_DURATION_MS --status $env.LAST_EXIT_CODE }
 let-env PROMPT_COMMAND_RIGHT = { create_right_prompt }
 
-################################################################################
+####################################################################################################
 
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
@@ -26,7 +26,7 @@ let-env PROMPT_INDICATOR_VI_INSERT = ""
 let-env PROMPT_INDICATOR_VI_NORMAL = "〉"
 let-env PROMPT_MULTILINE_INDICATOR = "::: "
 
-################################################################################
+####################################################################################################
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
@@ -42,7 +42,7 @@ let-env ENV_CONVERSIONS = {
   }
 }
 
-################################################################################
+####################################################################################################
 
 # Directories to search for scripts when calling source or use
 #
@@ -58,4 +58,4 @@ let-env NU_PLUGIN_DIRS = [
   ($nu.config-path | path dirname | path join 'plugins')
 ]
 
-################################################################################
+####################################################################################################

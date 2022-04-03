@@ -1,3 +1,4 @@
+####################################################################################################
 
 # This is a default config file for bottom.  All of the settings are commented
 # out by default; if you wish to change them uncomment and modify as you see
@@ -62,7 +63,7 @@
 # Remove space in tables
 #hide_table_gap = false
 
-##########################################################
+####################################################################################################
 
 # These are all the components that support custom theming.  Note that colour support
 # will, at the end of the day, depend on terminal support - for example, the
@@ -114,7 +115,7 @@
 # Represents the colours of the battery based on charge
 #battery_colors = ["red", "yellow", "yellow", "green", "green", "green"]
 
-##########################################################
+####################################################################################################
 
 # Layout - layouts follow a pattern like this:
 # [[row]] represents a row in the application.
@@ -147,3 +148,5 @@
 #  [[row.child]]
 #    type="proc"
 #    default=true
+
+####################################################################################################

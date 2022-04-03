@@ -1,5 +1,7 @@
 #!/bin/bash
 
+####################################################################################################
+
 # Usage: khal new [OPTIONS] [START [END | DELTA] [TIMEZONE] [SUMMARY] [::
 #                 DESCRIPTION]]
 #
@@ -30,3 +32,5 @@ khal new \
   --calendar CALENDAR {UU, TY, UG, UNAM, Personal, Astronomy, Simona, SuperRugby, Grant} \
   --categories \
   --location
+
+####################################################################################################

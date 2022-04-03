@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-#################################################################################
+####################################################################################################
 
 # home
 home="${HOME}"
@@ -12,7 +12,7 @@ forked="${home}/Factorem/Forked"
 observatory="${home}/Factorem/Observatory"
 appSuport="${home}/Library/Application Support"
 
-#################################################################################
+####################################################################################################
 
 # cerberus
 brootConf="${home}/.config/broot"
@@ -38,7 +38,7 @@ sublRfmtTarget="${cerberus}/sublime/RustFmt.sublime-settings.json"
 sublGitOrigin="${sublime}/GitGutter.sublime-settings"
 sublGitTarget="${cerberus}/sublime/GitGutter.sublime-settings.json"
 
-#################################################################################
+####################################################################################################
 
 # ianus
 shell="${ianus}/shell"
@@ -49,7 +49,7 @@ zsh="${shell}/zsh"
 nushell="${shell}/nushell"
 nushellConf="${appSuport}/nushell"
 
-#################################################################################
+####################################################################################################
 
 # remote
 remoteBin="${home}/Factorem/RemoteBin"
@@ -69,4 +69,4 @@ softwarePawsey="/scratch/pawsey0263/drivas/software"
 uppmaxID="drivas@rackham.uppmax.uu.se"
 softwareUppmax=""
 
-#################################################################################
+####################################################################################################

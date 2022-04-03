@@ -1,5 +1,7 @@
 #!/bin/bash
 
+####################################################################################################
+
 # set variables
 calDir="/Users/drivas/.config/khal/calendars/"
 
@@ -17,3 +19,5 @@ rm -v $( awk -F, 'arr[$1]++{print $2}' ${calDir}SRfixtures.dat )
 # clean up
 rm -v ${calDir}SRfixtures.dat
 cd - > /dev/null
+
+####################################################################################################
