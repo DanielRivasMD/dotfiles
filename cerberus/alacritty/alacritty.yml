@@ -963,8 +963,9 @@ key_bindings:
   - { key: Period,          mods: Command,                          chars: "\x11."      }
 
   # copy mode
-  - { key: C,               mods: Command,                          chars: "\x11c"      }
-  - { key: C,               mods: Command|Shift,                    chars: "\x11y"      }
+  - { key: Key0,            mods: Command,                          chars: "\x11c"      }
+  - { key: C,               mods: Command,                          chars: "\x11y"      }
+  - { key: C,               mods: Command|Shift,                    chars: "\x11Y"      }
 
   # choose session
   - { key: S,               mods: Command,                          chars: "\x11s"      }
@@ -1119,9 +1120,9 @@ key_bindings:
   - { key: Key7,            mods: Command,                          chars: "\x1b[18~"   }
   - { key: Key8,            mods: Command,                          chars: "\x1b[19~"   }
   - { key: Key9,            mods: Command,                          chars: "\x1b[20~"   }
-  # - { key: Key0,            mods: Command,                          chars: "\x1b[21~"   }
-  # - { key: Minus,           mods: Command,                          chars: "\x1b[23~"   }
-  - { key: Slash,          mods: Control|Alt,                       chars: "\x1b[24~"   }
+  # - { key: F10,             mods: Command,                          chars: "\x1b[21~"   }
+  # - { key: F11,             mods: Command,                          chars: "\x1b[23~"   }
+  - { key: Slash,           mods: Control|Alt,                      chars: "\x1b[24~"   }
 
   # - { key: F1,              mods: Shift,                            chars: "\x1b[1;2P"  }
   # - { key: F2,              mods: Shift,                            chars: "\x1b[1;2Q"  }
@@ -1148,9 +1149,6 @@ key_bindings:
   - { key: Key0,            mods: Command|Shift,                    chars: "\x1b[21;2~" }
   - { key: Comma,           mods: Control|Alt,                      chars: "\x1b[23;2~" }
   - { key: Period,          mods: Control|Alt,                      chars: "\x1b[24;2~" }
-
-  # - { key: Minus,           mods: Command|Shift,                    chars: "\x1b[23;2~" }
-  # - { key: Equals,          mods: Command|Shift,                    chars: "\x1b[24;2~" }
 
   # - { key: F1,              mods: Control,                          chars: "\x1b[1;5P"  }
   # - { key: F2,              mods: Control,                          chars: "\x1b[1;5Q"  }
@@ -1309,20 +1307,20 @@ key_bindings:
   - { key: Key4,            mods: Control|Shift,                    chars: "@rget "     }
   - { key: Key5,            mods: Control|Shift,                    chars: " %ni% "     }
   - { key: Key6,            mods: Control|Shift,                    chars: "@testset "  }
-  - { key: Key7,            mods: Control|Shift,                    chars: "@less "     }
-  - { key: Key8,            mods: Control|Shift,                    chars: "@edit "     }
-  - { key: Key9,            mods: Control|Shift,                    chars: "@view "     }
-  - { key: Key0,            mods: Control|Shift,                    chars: "@time "     }
+  - { key: Key7,            mods: Control|Shift,                    chars: "@macroexpand "}
+  - { key: Key8,            mods: Control|Shift,                    chars: "@ "         }
+  - { key: Key9,            mods: Control|Shift,                    chars: "@time "     }
+  - { key: Key0,            mods: Control|Shift,                    chars: "@show "     }
   - { key: Minus,           mods: Control|Shift,                    chars: "@which "    }
   - { key: Equals,          mods: Control|Shift,                    chars: " .== "      }
   # - { key: LBracket,        mods: Control|Shift,                    chars: ""           }
   # - { key: RBracket,        mods: Control|Shift,                    chars: ""           }
   - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "     }
   - { key: Apostrophe,      mods: Control|Shift,                    chars: "::<>"       }
-  - { key: Backslash,       mods: Control|Shift,                    chars: "  "         }
+  - { key: Backslash,       mods: Control|Shift,                    chars: "@less "     }
   - { key: Comma,           mods: Control|Shift,                    chars: " %<+% "     }
   - { key: Period,          mods: Control|Shift,                    chars: " %+>% "     }
-  - { key: Slash,           mods: Control|Shift,                    chars: "  "         }
+  - { key: Slash,           mods: Control|Shift,                    chars: "@edit "     }
   - { key: Grave,           mods: Control|Shift,                    chars: " =~ "       }
   - { key: Tab,             mods: Control|Shift,                    chars: ": "         }
 
