@@ -120,7 +120,29 @@ let $config = {
       mode: emacs
       event: {
         send: executehostcommand,
-        cmd: "echo \"\n\tcargo test\n\"; cargo test --no-run"
+        cmd: "echo \"\n\tcargo test\n\"; cargo nextest run"
+      }
+    }
+
+    {
+      name: julia_project
+      modifier: control
+      keycode: f4
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "julia --project"
+      }
+    }
+
+    {
+      name: julia_dev
+      modifier: control
+      keycode: f5
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "julia -i --project --startup no --eval \"include(\"/Users/drivas/.archive/cerberus/julia/development.jl\")\""
       }
     }
 
@@ -128,7 +150,7 @@ let $config = {
       name: completion_menu
       modifier: none
       keycode: tab
-      mode: emacs # Options: emacs vi_normal vi_insert
+      mode: emacs                                           # Options: emacs vi_normal vi_insert
       event: {
         until: [
           { send: menu name: completion_menu }
@@ -141,7 +163,7 @@ let $config = {
       name: completion_previous
       modifier: shift
       keycode: backtab
-      mode: [emacs, vi_normal, vi_insert] # Note: You can add the same keybinding to all modes by using a list
+      mode: [emacs, vi_normal, vi_insert]                   # Note: You can add the same keybinding to all modes by using a list
       event: { send: menuprevious }
     }
 

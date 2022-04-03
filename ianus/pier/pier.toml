@@ -129,13 +129,6 @@ esac
 description = 'list git shortcuts'
 tags = ['git']
 
-[scripts.jdev]
-alias = 'jdev'
-command = '''
-julia -i --project --startup no --eval 'include("/Users/drivas/.archive/cerberus/julia/development.jl")'
-'''
-tags = ['julia']
-
 [scripts.julia]
 alias = 'julia'
 command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
