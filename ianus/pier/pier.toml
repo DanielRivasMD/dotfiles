@@ -232,12 +232,6 @@ command = 'bat ~/.pier.toml'
 description = 'print pier.toml'
 tags = ['rust']
 
-[scripts.rustfmt]
-alias = 'rustfmt'
-command = 'cp -v ${PIER}rustfmt.toml $(pwd)'
-description = 'collect a template of rustfmt'
-tags = ['rust']
-
 [scripts.sample]
 alias = 'sample'
 command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
