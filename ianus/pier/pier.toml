@@ -34,14 +34,14 @@ command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; d
 description = 'stop all Firefox jobs'
 tags = ['shell']
 
-[scripts.cgls]
-alias = 'cgls'
+[scripts.cargo-ls]
+alias = 'cargo-ls'
 command = 'cargo-install-update install-update --list'
 description = 'list cargo binaries & updates'
 tags = ['rust']
 
-[scripts.cgup]
-alias = 'cgup'
+[scripts.cargo-up]
+alias = 'cargo-up'
 command = 'cargo-install-update install-update --all'
 description = 'update cargo binaries'
 tags = ['rust']
