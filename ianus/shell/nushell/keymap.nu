@@ -103,50 +103,6 @@ let $config = {
     }
 
     {
-      name: cargo_check
-      modifier: control
-      keycode: f1
-      mode: emacs
-      event: {
-        send: executehostcommand,
-        cmd: "echo \"\n\tcargo check\n\"; cargo check"
-      }
-    }
-
-    {
-      name: cargo_test
-      modifier: control
-      keycode: f2
-      mode: emacs
-      event: {
-        send: executehostcommand,
-        cmd: "echo \"\n\tcargo test\n\"; cargo nextest run"
-      }
-    }
-
-    {
-      name: julia_project
-      modifier: control
-      keycode: f4
-      mode: emacs
-      event: {
-        send: executehostcommand,
-        cmd: "julia --project"
-      }
-    }
-
-    {
-      name: julia_dev
-      modifier: control
-      keycode: f5
-      mode: emacs
-      event: {
-        send: executehostcommand,
-        cmd: "julia -i --project --startup no --eval \"include(\"/Users/drivas/.archive/cerberus/julia/development.jl\")\""
-      }
-    }
-
-    {
       name: completion_menu
       modifier: none
       keycode: tab
