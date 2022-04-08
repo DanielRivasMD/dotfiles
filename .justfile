@@ -128,7 +128,7 @@ Ianus:
 
   # @HOME
   ln -svf "${ianus}/pier/pier.toml" "${home}/.pier.toml"                        # pier
-  ln -svf "${ianus}/tmux/3.1c.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.1c
+  ln -svf "${ianus}/tmux/3.2a.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.2a
   ln -svf "${ianus}/screen/4.08.00.screenrc" "${home}/.screenrc"                # screen
 
   # @config
