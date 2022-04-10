@@ -50,7 +50,7 @@ map <a-enter> LinkHints.activateModeToOpenInNewTab
 map <m-enter> LinkHints.activateModeToOpenInNewForegroundTab
 map <a-m-enter> LinkHints.activateModeWithQueue
 map <c-enter> LinkHints.activateModeToCopyLinkUrl
-map <c-a-enter> LinkHints.activateModeToDownloadLink
+map <c-m-enter> LinkHints.activateModeToDownloadLink
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
