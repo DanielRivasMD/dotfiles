@@ -46,9 +46,9 @@ map V enterVisualLineMode
 " links
 map <space> focusInput
 map <enter> LinkHints.activateMode
-map <a-enter> LinkHints.activateModeToOpenInNewTab
-map <m-enter> LinkHints.activateModeToOpenInNewForegroundTab
-map <a-m-enter> LinkHints.activateModeWithQueue
+map <m-enter> LinkHints.activateModeToOpenInNewTab
+map <a-enter> LinkHints.activateModeToOpenInNewForegroundTab
+map <c-a-m-enter> LinkHints.activateModeWithQueue
 map <c-enter> LinkHints.activateModeToCopyLinkUrl
 map <c-m-enter> LinkHints.activateModeToDownloadLink
 
