@@ -130,7 +130,7 @@
   { "keys": ["ctrl+g"],                 "command": "git_gutter_blame"},
 
   // keybindings
-  { "keys": ["alt+1"],                  "command": "insert",                    "args": {"characters": " != "}},
+  { "keys": ["alt+1"],                  "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["alt+2"],                  "command": "insert",                    "args": {"characters": " @ "}},
   { "keys": ["alt+3"],                  "command": "insert",                    "args": {"characters": " \\ "}},
   { "keys": ["alt+4"],                  "command": "insert",                    "args": {"characters": " $ "}},
@@ -153,7 +153,7 @@
 //  { "keys": ["alt+`"],                  "command": "insert",                    "args": {"characters": ""}},
   { "keys": ["alt+tab"],                "command": "insert",                    "args": {"characters": ".."}},
 
-  { "keys": ["alt+shift+1"],            "command": "insert",                    "args": {"characters": " .!= "}},
+  { "keys": ["alt+shift+1"],            "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["alt+shift+2"],            "command": "insert",                    "args": {"characters": " .@ "}},
   { "keys": ["alt+shift+3"],            "command": "insert",                    "args": {"characters": " .\\ "}},
   { "keys": ["alt+shift+4"],            "command": "insert",                    "args": {"characters": " .$ "}},
@@ -176,7 +176,7 @@
 //  { "keys": ["alt+shift+`"],            "command": "insert",                    "args": {"characters": ""}},
   { "keys": ["alt+shift+tab"],          "command": "insert",                    "args": {"characters": "..."}},
 
-  { "keys": ["ctrl+1"],                 "command": "insert",                    "args": {"characters": "  "}},
+  { "keys": ["ctrl+1"],                 "command": "insert",                    "args": {"characters": " != "}},
   { "keys": ["ctrl+2"],                 "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["ctrl+3"],                 "command": "insert",                    "args": {"characters": " \\\\ "}},
   { "keys": ["ctrl+4"],                 "command": "insert",                    "args": {"characters": "  "}},
@@ -199,7 +199,7 @@
   { "keys": ["ctrl+`"],                 "command": "insert",                    "args": {"characters": " ~ "}},
   { "keys": ["ctrl+tab"],               "command": "insert",                    "args": {"characters": "; "}},
 
-  { "keys": ["ctrl+shift+1"],           "command": "insert",                    "args": {"characters": "  "}},
+  { "keys": ["ctrl+shift+1"],           "command": "insert",                    "args": {"characters": " .!= "}},
   { "keys": ["ctrl+shift+2"],           "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["ctrl+shift+3"],           "command": "insert",                    "args": {"characters": "  "}},
   { "keys": ["ctrl+shift+4"],           "command": "insert",                    "args": {"characters": "  "}},

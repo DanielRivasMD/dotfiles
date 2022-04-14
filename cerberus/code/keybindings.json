@@ -214,7 +214,7 @@
   { "key": "up",											 "command": "-selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
 
 	// keybindings
-	{ "key": "alt-1",										 "command": "type",											 "args": {"text": " != "}},
+	{ "key": "alt-1",										 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "alt-2",										 "command": "type",											 "args": {"text": " @ "}},
 	{ "key": "alt-3",										 "command": "type",											 "args": {"text": " \\ "}},
 	{ "key": "alt-4",										 "command": "type",											 "args": {"text": " $ "}},
@@ -237,7 +237,7 @@
 //		{ "key": "alt-`",										 "command": "type",											 "args": {"text": ""}},
 	{ "key": "alt-tab",									 "command": "type",											 "args": {"text": ".."}},
 
-	{ "key": "shift-alt-1",							 "command": "type",											 "args": {"text": " .!= "}},
+	{ "key": "shift-alt-1",							 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "shift-alt-2",							 "command": "type",											 "args": {"text": " .@ "}},
 	{ "key": "shift-alt-3",							 "command": "type",											 "args": {"text": " .\\ "}},
 	{ "key": "shift-alt-4",							 "command": "type",											 "args": {"text": " .$ "}},
@@ -260,7 +260,7 @@
 //	{ "key": "shift-alt-`",							 "command": "type",											 "args": {"text": ""}},
 	{ "key": "shift-alt-tab",						 "command": "type",											 "args": {"text": "..."}},
 
-	{ "key": "ctrl-1",									 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-1",									 "command": "type",											 "args": {"text": " != "}},
 	{ "key": "ctrl-2",									 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-3",									 "command": "type",											 "args": {"text": " \\\\ "}},
 	{ "key": "ctrl-4",									 "command": "type",											 "args": {"text": "  "}},
@@ -283,7 +283,7 @@
 	{ "key": "ctrl-`",									 "command": "type",											 "args": {"text": " ~ "}},
 	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": "; "}},
 
-	{ "key": "ctrl-shift-1",						 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "ctrl-shift-1",						 "command": "type",											 "args": {"text": " .!= "}},
 	{ "key": "ctrl-shift-2",						 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-shift-3",						 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-shift-4",						 "command": "type",											 "args": {"text": "  "}},

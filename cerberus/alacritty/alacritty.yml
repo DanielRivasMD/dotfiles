@@ -1232,7 +1232,7 @@ key_bindings:
   # interactive keybindings
   ####################################################################################################
 
-  - { key: Key1,            mods: Alt,                              chars: " != "       }
+  - { key: Key1,            mods: Alt,                              chars: "  "         }
   - { key: Key2,            mods: Alt,                              chars: " @ "        }
   - { key: Key3,            mods: Alt,                              chars: " \\ "       }
   - { key: Key4,            mods: Alt,                              chars: " $ "        }
@@ -1255,7 +1255,7 @@ key_bindings:
   # - { key: Grave,           mods: Alt,                              chars: ""           }
   - { key: Tab,             mods: Alt,                              chars: ".."         }
 
-  - { key: Key1,            mods: Alt|Shift,                        chars: " .!= "      }
+  - { key: Key1,            mods: Alt|Shift,                        chars: "  "         }
   - { key: Key2,            mods: Alt|Shift,                        chars: " .@ "       }
   - { key: Key3,            mods: Alt|Shift,                        chars: " .\\ "      }
   - { key: Key4,            mods: Alt|Shift,                        chars: " .$ "       }
@@ -1278,7 +1278,7 @@ key_bindings:
   - { key: Grave,           mods: Alt|Shift,                        chars: "@enter "    }
   - { key: Tab,             mods: Alt|Shift,                        chars: "..."        }
 
-  - { key: Key1,            mods: Control,                          chars: "  "         }
+  - { key: Key1,            mods: Control,                          chars: " != "       }
   - { key: Key2,            mods: Control,                          chars: "  "         }
   - { key: Key3,            mods: Control,                          chars: " \\\\ "     }
   - { key: Key4,            mods: Control,                          chars: "  "         }
@@ -1301,7 +1301,7 @@ key_bindings:
   - { key: Grave,           mods: Control,                          chars: " ~ "        }
   - { key: Tab,             mods: Control,                          chars: "; "         }
 
-  - { key: Key1,            mods: Control|Shift,                    chars: "  "         }
+  - { key: Key1,            mods: Control|Shift,                    chars: " .!= "      }
   - { key: Key2,            mods: Control|Shift,                    chars: "  "         }
   - { key: Key3,            mods: Control|Shift,                    chars: "  "         }
   - { key: Key4,            mods: Control|Shift,                    chars: "  "         }
