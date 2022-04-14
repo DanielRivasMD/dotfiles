@@ -1232,7 +1232,7 @@ key_bindings:
   # interactive keybindings
   ####################################################################################################
 
-  - { key: Key1,            mods: Alt,                              chars: "  "         }
+  - { key: Key1,            mods: Alt,                              chars: " =~ "       }
   - { key: Key2,            mods: Alt,                              chars: " @ "        }
   - { key: Key3,            mods: Alt,                              chars: " \\ "       }
   - { key: Key4,            mods: Alt,                              chars: " $ "        }
@@ -1255,7 +1255,7 @@ key_bindings:
   # - { key: Grave,           mods: Alt,                              chars: ""           }
   - { key: Tab,             mods: Alt,                              chars: ".."         }
 
-  - { key: Key1,            mods: Alt|Shift,                        chars: "  "         }
+  - { key: Key1,            mods: Alt|Shift,                        chars: " !~ "       }
   - { key: Key2,            mods: Alt|Shift,                        chars: " .@ "       }
   - { key: Key3,            mods: Alt|Shift,                        chars: " .\\ "      }
   - { key: Key4,            mods: Alt|Shift,                        chars: " .$ "       }
@@ -1298,7 +1298,7 @@ key_bindings:
   - { key: Comma,           mods: Control,                          chars: " %<% "      }
   - { key: Period,          mods: Control,                          chars: " %>% "      }
   # - { key: Slash,           mods: Control,                          chars: ""           }
-  - { key: Grave,           mods: Control,                          chars: " ~ "        }
+  - { key: Grave,           mods: Control,                          chars: "  "         }
   - { key: Tab,             mods: Control,                          chars: "; "         }
 
   - { key: Key1,            mods: Control|Shift,                    chars: " .!= "      }
@@ -1316,12 +1316,12 @@ key_bindings:
   # - { key: LBracket,        mods: Control|Shift,                    chars: ""           }
   # - { key: RBracket,        mods: Control|Shift,                    chars: ""           }
   - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "     }
-  - { key: Apostrophe,      mods: Control|Shift,                    chars: "::<>"       }
+  - { key: Apostrophe,      mods: Control|Shift,                    chars: "  "         }
   - { key: Backslash,       mods: Control|Shift,                    chars: "  "         }
   - { key: Comma,           mods: Control|Shift,                    chars: " %<+% "     }
   - { key: Period,          mods: Control|Shift,                    chars: " %+>% "     }
-  - { key: Slash,           mods: Control|Shift,                    chars: "  "         }
-  - { key: Grave,           mods: Control|Shift,                    chars: " !~ "       }
+  - { key: Slash,           mods: Control|Shift,                    chars: " ~ "        }
+  - { key: Grave,           mods: Control|Shift,                    chars: "  "         }
   - { key: Tab,             mods: Control|Shift,                    chars: ": "         }
 
   - { key: Key1,            mods: Alt|Control|Command,              chars: "  "         }
@@ -1384,7 +1384,7 @@ key_bindings:
   - { key: Equals,          mods: Control|Command,                  chars: " === "      }
   - { key: LBracket,        mods: Control|Command,                  chars: " <<= "      }
   - { key: RBracket,        mods: Control|Command,                  chars: " >>= "      }
-  - { key: Semicolon,       mods: Control|Command,                  chars: " =~ "       }
+  - { key: Semicolon,       mods: Control|Command,                  chars: "::<>"       }
   - { key: Apostrophe,      mods: Control|Command,                  chars: "'''"        }
   - { key: Backslash,       mods: Control|Command,                  chars: " |= "       }
   - { key: Comma,           mods: Control|Command,                  chars: " << "       }

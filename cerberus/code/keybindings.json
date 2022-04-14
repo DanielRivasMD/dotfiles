@@ -214,7 +214,7 @@
   { "key": "up",											 "command": "-selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
 
 	// keybindings
-	{ "key": "alt-1",										 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "alt-1",										 "command": "type",											 "args": {"text": " =~ "}},
 	{ "key": "alt-2",										 "command": "type",											 "args": {"text": " @ "}},
 	{ "key": "alt-3",										 "command": "type",											 "args": {"text": " \\ "}},
 	{ "key": "alt-4",										 "command": "type",											 "args": {"text": " $ "}},
@@ -237,7 +237,7 @@
 //		{ "key": "alt-`",										 "command": "type",											 "args": {"text": ""}},
 	{ "key": "alt-tab",									 "command": "type",											 "args": {"text": ".."}},
 
-	{ "key": "shift-alt-1",							 "command": "type",											 "args": {"text": "  "}},
+	{ "key": "shift-alt-1",							 "command": "type",											 "args": {"text": " !~ "}},
 	{ "key": "shift-alt-2",							 "command": "type",											 "args": {"text": " .@ "}},
 	{ "key": "shift-alt-3",							 "command": "type",											 "args": {"text": " .\\ "}},
 	{ "key": "shift-alt-4",							 "command": "type",											 "args": {"text": " .$ "}},
@@ -280,7 +280,7 @@
 	{ "key": "ctrl-,",									 "command": "type",											 "args": {"text": " %<% "}},
 	{ "key": "ctrl-.",									 "command": "type",											 "args": {"text": " %>% "}},
 //	{ "key": "ctrl-/",									 "command": "type",											 "args": {"text": ""}},
-	{ "key": "ctrl-`",									 "command": "type",											 "args": {"text": " ~ "}},
+	{ "key": "ctrl-`",									 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-tab",								 "command": "type",											 "args": {"text": "; "}},
 
 	{ "key": "ctrl-shift-1",						 "command": "type",											 "args": {"text": " .!= "}},
@@ -298,12 +298,12 @@
 //	{ "key": "ctrl-shift-[",						 "command": "type",											 "args": {"text": ""}},
 //	{ "key": "ctrl-shift-]",						 "command": "type",											 "args": {"text": ""}},
 	{ "key": "ctrl-shift-;",						 "command": "type",											 "args": {"text": " %T>% "}},
-	{ "key": "ctrl-shift-'",						 "command": "type",											 "args": {"text": "::<>"}},
+	{ "key": "ctrl-shift-'",						 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-shift-\\",						 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-shift-,",						 "command": "type",											 "args": {"text": " %<+% "}},
 	{ "key": "ctrl-shift-.",						 "command": "type",											 "args": {"text": " %+>% "}},
-	{ "key": "ctrl-shift-/",						 "command": "type",											 "args": {"text": "  "}},
-	{ "key": "ctrl-shift-`",						 "command": "type",											 "args": {"text": " !~ "}},
+	{ "key": "ctrl-shift-/",						 "command": "type",											 "args": {"text": " ~ "}},
+	{ "key": "ctrl-shift-`",						 "command": "type",											 "args": {"text": "  "}},
 	{ "key": "ctrl-shift-tab",					 "command": "type",											 "args": {"text": ": "}},
 
 	{ "key": "alt-cmd-ctrl-1",					 "command": "type",											 "args": {"text": "  "}},
@@ -366,7 +366,7 @@
 	{ "key": "cmd-ctrl-=",							 "command": "type",											 "args": {"text": " === "}},
 	{ "key": "cmd-ctrl-[",							 "command": "type",											 "args": {"text": " <<= "}},
 	{ "key": "cmd-ctrl-]",							 "command": "type",											 "args": {"text": " >>= "}},
-	{ "key": "cmd-ctrl-;",							 "command": "type",											 "args": {"text": " =~ "}},
+	{ "key": "cmd-ctrl-;",							 "command": "type",											 "args": {"text": "::<>"}},
 	{ "key": "cmd-ctrl-'",							 "command": "type",											 "args": {"text": "'''"}},
 	{ "key": "cmd-ctrl-\\",							 "command": "type",											 "args": {"text": " |= "}},
 	{ "key": "cmd-ctrl-,",							 "command": "type",											 "args": {"text": " << "}},
