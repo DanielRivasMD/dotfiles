@@ -16,6 +16,8 @@ map <a-down> scrollFullPageDown
 map <a-up> scrollFullPageUp
 map h scrollLeft
 map l scrollRight
+map H scrollToLeft
+map L scrollToRight
 map G scrollToBottom
 map g scrollToTop
 map <m-down> scrollToBottom
@@ -36,7 +38,7 @@ map Q goToRoot
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " modes
-map <c-i> enterInsertMode
+map I enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
 
@@ -92,14 +94,11 @@ map L goForward
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
-map T createTab
 map ; createTab
-map <a-m-left> previousTab
-map <a-m-right> nextTab
 map , previousTab
 map . nextTab
-map <c-left> firstTab
-map <c-right> lastTab
+map { firstTab
+map } lastTab
 map <a-m-space> visitPreviousTab
 map ' visitPreviousTab
 map d duplicateTab
