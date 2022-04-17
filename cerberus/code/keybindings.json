@@ -36,13 +36,13 @@
 	{ "key": "cmd+n",											"command": "-workbench.action.files.newUntitledFile"},
 
 	// move to tab
-	{ "key": "alt+h",											"command": "-gitlens.showQuickFileHistory",	"when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"},
+	{ "key": "alt+h",											"command": "-gitlens.showQuickFileHistory", "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"},
 	{ "key": "alt+h",											"command": "-git.viewFileHistory"},
 
-	{ "key": "ctrl+alt+left",							"command": "workbench.action.terminal.focusPreviousPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "ctrl+alt+left",							"command": "workbench.action.terminal.focusPreviousPane", "when": "terminalFocus && terminalProcessSupported"},
 	{ "key": "ctrl+alt+left",							"command": "workbench.action.previousEditor"},
 
-	{ "key": "ctrl+alt+right",						"command": "workbench.action.terminal.focusNextPane",	"when": "terminalFocus && terminalProcessSupported"},
+	{ "key": "ctrl+alt+right",						"command": "workbench.action.terminal.focusNextPane", "when": "terminalFocus && terminalProcessSupported"},
 	{ "key": "ctrl+alt+right",						"command": "workbench.action.nextEditor"},
 
 	// move to pane
@@ -59,8 +59,8 @@
 	{ "key": "shift+alt+a",								"command": "editor.action.selectAll"},
 
 	// select line
-	{ "key": "shift+alt+l",								"command": "expandLineSelection",	"when": "textInputFocus"},
-	{ "key": "cmd+l",											"command": "-expandLineSelection",	"when": "textInputFocus"},
+	{ "key": "shift+alt+l",								"command": "expandLineSelection", "when": "textInputFocus"},
+	{ "key": "cmd+l",											"command": "-expandLineSelection", "when": "textInputFocus"},
 
 	// matching bracket
 	{ "key": "shift+alt+p",								"command": "editor.action.selectToBracket"},
@@ -84,10 +84,10 @@
 
 	{ "key": "shift+cmd+\\",							"command": "workbench.files.action.focusFilesExplorer"},
 
-	{ "key": "shift+cmd+\\",							"command": "workbench.view.explorer",	"when": "viewContainer.workbench.view.explorer.enabled"},
+	{ "key": "shift+cmd+\\",							"command": "workbench.view.explorer", "when": "viewContainer.workbench.view.explorer.enabled"},
 
 	{ "key": "cmd+b",											"command": "-workbench.action.toggleSidebarVisibility" },
-	{ "key": "shift+cmd+e",								"command": "-workbench.view.explorer",	"when": "viewContainer.workbench.view.explorer.enabled"},
+	{ "key": "shift+cmd+e",								"command": "-workbench.view.explorer", "when": "viewContainer.workbench.view.explorer.enabled"},
 	{ "key": "cmd+\\",										"command": "-workbench.action.terminal.split", "when": "terminalFocus && terminalProcessSupported"},
 	{ "key": "cmd+\\",										"command": "-workbench.action.splitEditor"},
 	{ "key": "cmd+0",											"command": "-workbench.action.focusSideBar"},
@@ -107,22 +107,24 @@
 	// skip multicursor
 	{ "key": "alt+y",											"command": "editor.action.moveSelectionToNextFindMatch", "when": "editorFocus"},
 
+	{ "key": "alt+z",											"command": "cursorUndo", "when": "textInputFocus"},
+	{ "key": "cmd+u",											"command": "-cursorUndo", "when": "textInputFocus"},
+
 	// toggle quotes
-	{ "key": "ctrl+q shift+'",						"command": "editor.togglequotes"},
-	{ "key": "cmd+'",											"command": "-editor.togglequotes"},
+	{ "key": "shift+cmd+'",								"command": "editor.togglequotes"},
 
 	// paste history
 
 
 	// folding
-	{ "key": "ctrl+[",										"command": "editor.fold",				 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "alt+cmd+[",									"command": "-editor.fold",				 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "ctrl+shift+[",							"command": "editor.foldAll",			 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "cmd+k cmd+0",								"command": "-editor.foldAll",		 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "ctrl+]",										"command": "editor.unfold",			 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "alt+cmd+]",									"command": "-editor.unfold",			 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "ctrl+shift+]",							"command": "editor.unfoldAll",		 "when": "editorTextFocus && foldingEnabled"},
-	{ "key": "cmd+k cmd+j",								"command": "-editor.unfoldAll",	 "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "ctrl+[",										"command": "editor.fold", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "alt+cmd+[",									"command": "-editor.fold", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "ctrl+shift+[",							"command": "editor.foldAll", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "cmd+k cmd+0",								"command": "-editor.foldAll", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "ctrl+]",										"command": "editor.unfold", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "alt+cmd+]",									"command": "-editor.unfold", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "ctrl+shift+]",							"command": "editor.unfoldAll", "when": "editorTextFocus && foldingEnabled"},
+	{ "key": "cmd+k cmd+j",								"command": "-editor.unfoldAll", "when": "editorTextFocus && foldingEnabled"},
 
 	// find
 	{ "key": "ctrl+r",										"command": "editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen"},
@@ -132,7 +134,7 @@
 	{ "key": "shift+cmd+h",								"command": "-workbench.action.replaceInFiles"},
 
 	// spawn multicursor
-	{ "key": "alt+d",											"command": "editor.action.addSelectionToNextFindMatch",	"when": "editorFocus"},
+	{ "key": "alt+d",											"command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus"},
 
 	// select brackets
 	{ "key": "alt+p",											"command": "editor.action.jumpToBracket", "when": "editorTextFocus"},
