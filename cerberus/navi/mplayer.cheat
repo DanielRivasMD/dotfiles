@@ -1,4 +1,4 @@
 % mplayer
 
 # Play at low volume
-fillin mplayer -volume 10 {{song}}
+fillin mplayer -volume 10 -shuffle {{song}}
