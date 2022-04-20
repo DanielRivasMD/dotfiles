@@ -198,6 +198,10 @@
 	{ "key": "shift+tab",									"command": "selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
   { "key": "up",												"command": "-selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
 
+	// word wrap
+	{ "key": "ctrl+alt+cmd+w",						"command": "editor.action.toggleWordWrap"},
+	{ "key": "alt+z",											"command": "-editor.action.toggleWordWrap"},
+
 	// keybindings
 	{ "key": "alt-1",											"command": "type",											"args": {"text": " =~ "}},
 	{ "key": "alt-2",											"command": "type",											"args": {"text": " @ "}},
