@@ -10,6 +10,7 @@
     destroyEmptyPanes: false
     packagesWithKeymapsDisabled: [
       "move-panes"
+      "keybinding-cheatsheet"
     ]
     telemetryConsent: "limited"
   editor:
@@ -24,6 +25,7 @@
   jumpy:
     fontSize: 1
     useHomingBeaconEffectOnJumps: false
+  "keybinding-cheatsheet": {}
   minimap:
     plugins:
       "git-diff": true

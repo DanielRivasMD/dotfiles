@@ -52,40 +52,29 @@
 
   # unsets
   'alt-cmd-h': 'abort!'
-  'cmd-alt-left': 'unset!'
-  'cmd-alt-right': 'unset!'
-  'cmd-w': 'unset!'
   'cmd-n': 'unset!'
 
   # save
   'alt-w': 'core:save'
 
   # move tabs
-  'ctrl-alt-]': 'pane:move-item-right'
-  'ctrl-alt-[': 'pane:move-item-left'
+  'cmd-alt-]': 'pane:move-item-right'
+  'cmd-alt-[': 'pane:move-item-left'
 
   # split editor
-  'ctrl-q =': 'pane:split-right-and-copy-active-item'
-  'ctrl-q -': 'pane:split-down-and-copy-active-item'
+  'cmd-=': 'pane:split-right-and-copy-active-item'
+  'cmd--': 'pane:split-down-and-copy-active-item'
 
   # close tab
   'alt-q': 'core:close'
-  'ctrl-q x': 'core:close'
 
   # close pane
   'shift-alt-q': 'pane:close'
-  'ctrl-q shift-x': 'pane:close'
 
   # new pane
-  'shift-alt-t': 'application:new-file'
-  'ctrl-q shift-c': 'application:new-file'
+  'cmd-:': 'application:new-file'
 
   # move to tab
-  'alt-h': 'pane:show-previous-item'
-  'alt-ctrl-left': 'pane:show-previous-item'
-
-  'alt-l': 'pane:show-next-item'
-  'alt-ctrl-right': 'pane:show-next-item'
 
   # move to pane
   'ctrl-up': 'window:focus-pane-above'
@@ -94,8 +83,8 @@
   'ctrl-right': 'window:focus-pane-on-right'
 
   # do / redo
-  'shift-alt-z': 'core:redo'
-  'alt-z': 'core:undo'
+  'ctrl-u': 'core:undo'
+  'shift-ctrl-u': 'core:redo'
 
 ################################################################################
 
@@ -109,6 +98,7 @@
   'ctrl-alt-right': 'unset!'
   'alt-h': 'unset!'
   'alt-shift-f': 'unset!'
+  'shift-ctrl-u': 'unset!'
 
   # select all
   'shift-alt-a': 'core:select-all'
@@ -139,11 +129,6 @@
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
 
   # tree view
-  'ctrl-q \\': 'tree-view:toggle'
-  'ctrl-q t': 'tree-view:toggle'
-
-  'ctrl-q |': 'tree-view:toggle-focus'
-  'ctrl-q T': 'tree-view:toggle-focus'
   'cmd-|': 'tree-view:toggle-focus'
 
   # open buffer
@@ -160,14 +145,13 @@
   'cmd-g': 'unset!'
 
   # advanced open file
-  'alt-o': 'advanced-open-file:toggle'
-  'ctrl-q c': 'advanced-open-file:toggle'
+  'cmd-;': 'advanced-open-file:toggle'
 
   # skip multicursor
   'alt-y': 'find-and-replace:select-skip'
 
   # toggle quotes
-  'ctrl-q "': 'toggle-quotes:toggle'
+  'cmd-"': 'toggle-quotes:toggle'
 
 ################################################################################
 
@@ -217,6 +201,8 @@
   'ctrl-shift-up': 'unset!'
   'ctrl-shift-down': 'unset!'
   'ctrl-shift-k': 'unset!'
+  'cmd-alt-]': 'unset!'
+  'cmd-alt-[': 'unset!'
 
   # comment
   'shift-alt-c': 'editor:toggle-line-comments'
@@ -265,11 +251,11 @@
 'atom-workspace':
 
   # move panes
-  'ctrl-q right': 'move-panes:move-right'
-  'ctrl-q left': 'move-panes:move-left'
+  'ctrl-alt-right': 'move-panes:move-right'
+  'ctrl-alt-left': 'move-panes:move-left'
 
   # cheatsheet menu
-  'ctrl-q \'': 'keybinding-cheatsheet:toggle'
+  'cmd-\'': 'keybinding-cheatsheet:toggle'
 
 ################################################################################
 # TODO: add macros
