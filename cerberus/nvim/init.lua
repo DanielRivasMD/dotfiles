@@ -1,3 +1,4 @@
+----------------------------------------------------------------------------------------------------
 
 -- lsp
 require('lsp')
@@ -17,9 +18,13 @@ require('plugins.telescope')
 
 require('gitui')
 
+----------------------------------------------------------------------------------------------------
+
 -- vimscript
 vim.cmd('source /Users/drivas/.config/nvim/vimscript/whichkey/init.vim')       -- which key
 vim.cmd('source /Users/drivas/.config/nvim/vimscript/vim-go/init.vim')         -- vim go
 vim.cmd('source /Users/drivas/.config/nvim/vimscript/vim-easymotion/init.vim') -- vim easymotion
 vim.cmd('source /Users/drivas/.config/nvim/vimscript/vim-slime/init.vim')      -- vim slime
 vim.cmd('source /Users/drivas/.config/nvim/vimscript/settings/init.vim')       -- settings vimscript
+
+----------------------------------------------------------------------------------------------------

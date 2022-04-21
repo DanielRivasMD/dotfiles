@@ -1,3 +1,4 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:slime_target = "tmux"                                                       " use vim slime with tmux
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}  " send to last pane
@@ -8,3 +9,4 @@ let g:slime_no_mappings = 1                                                     
 xmap <C-n> <Plug>SlimeRegionSend
 nmap <C-n> <Plug>SlimeParagraphSend
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

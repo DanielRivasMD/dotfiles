@@ -1,3 +1,4 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " automatically deletes trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -22,3 +23,4 @@ endif
 
 autocmd FileType TelescopePrompt call deoplete#custom#buffer_option('auto_complete', v:false)
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
