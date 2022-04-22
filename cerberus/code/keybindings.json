@@ -52,8 +52,8 @@
 	{ "key": "cmd+k cmd+left",						"command": "-workbench.action.focusLeftGroup"},
 
 	// do / redo
-	{ "key": "ctrl+shift+u",								"command": "redo"},
-	{ "key": "ctrl+u",											"command": "undo"},
+	{ "key": "shift+alt+u",								"command": "redo"},
+	{ "key": "alt+u",											"command": "undo"},
 
 	// select all
 	{ "key": "shift+alt+a",								"command": "editor.action.selectAll"},
@@ -66,10 +66,8 @@
 	{ "key": "shift+alt+p",								"command": "editor.action.selectToBracket"},
 
 	// project find regex
-	{ "key": "ctrl+shift+r",							"command": "workbench.action.findInFiles"},
 	{ "key": "shift+cmd+f",								"command": "-workbench.action.findInFiles"},
 
-	{ "key": "ctrl+r",										"command": "actions.find", "when": "editorFocus || editorIsOpen"},
 	{ "key": "cmd+f",											"command": "-actions.find", "when": "editorFocus || editorIsOpen"},
 
 	// project find file
@@ -201,6 +199,14 @@
 	// word wrap
 	{ "key": "ctrl+alt+cmd+w",						"command": "editor.action.toggleWordWrap"},
 	{ "key": "alt+z",											"command": "-editor.action.toggleWordWrap"},
+
+	// suggestions
+	{ "key": "shift+space",								"command": "editor.action.triggerSuggest", "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"},
+	{ "key": "ctrl+space",								"command": "-editor.action.triggerSuggest", "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"},
+
+	{ "key": "ctrl+shift+alt+cmd+space",	"command": "toggleSuggestionDetails", "when": "suggestWidgetVisible && textInputFocus"},
+	{ "key": "ctrl+alt+space",						"command": "-toggleSuggestionDetails", "when": "suggestWidgetVisible && textInputFocus"},
+
 
 	// keybindings
 	{ "key": "alt-1",											"command": "type",											"args": {"text": " ~ "}},
