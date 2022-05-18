@@ -1233,10 +1233,10 @@ key_bindings:
   # interactive keybindings
   ####################################################################################################
 
-  - { key: Key1,            mods: Alt,                              chars: " ~ "          }
+  - { key: Key1,            mods: Alt,                              chars: " $ "          }
   - { key: Key2,            mods: Alt,                              chars: " @ "          }
   - { key: Key3,            mods: Alt,                              chars: " \\ "         }
-  - { key: Key4,            mods: Alt,                              chars: " $ "          }
+  - { key: Key4,            mods: Alt,                              chars: " ~ "          }
   - { key: Key5,            mods: Alt,                              chars: " % "          }
   - { key: Key6,            mods: Alt,                              chars: " ^ "          }
   - { key: Key7,            mods: Alt,                              chars: " & "          }
@@ -1256,10 +1256,10 @@ key_bindings:
   # - { key: Grave,           mods: Alt,                              chars: ""             }
   - { key: Tab,             mods: Alt,                              chars: ".."           }
 
-  - { key: Key1,            mods: Alt|Shift,                        chars: " =~ "         }
+  - { key: Key1,            mods: Alt|Shift,                        chars: " .$ "         }
   - { key: Key2,            mods: Alt|Shift,                        chars: " .@ "         }
   - { key: Key3,            mods: Alt|Shift,                        chars: " .\\ "        }
-  - { key: Key4,            mods: Alt|Shift,                        chars: " .$ "         }
+  - { key: Key4,            mods: Alt|Shift,                        chars: " ∈ "          }
   - { key: Key5,            mods: Alt|Shift,                        chars: " .% "         }
   - { key: Key6,            mods: Alt|Shift,                        chars: " .^ "         }
   - { key: Key7,            mods: Alt|Shift,                        chars: " .& "         }
@@ -1280,11 +1280,11 @@ key_bindings:
   - { key: Tab,             mods: Alt|Shift,                        chars: "..."          }
 
   - { key: Key1,            mods: Control,                          chars: " != "         }
-  - { key: Key2,            mods: Control,                          chars: "  "           }
+  - { key: Key2,            mods: Control,                          chars: "  "         }
   - { key: Key3,            mods: Control,                          chars: " \\\\ "       }
-  - { key: Key4,            mods: Control,                          chars: "  "           }
+  - { key: Key4,            mods: Control,                          chars: " =~ "           }
   - { key: Key5,            mods: Control,                          chars: " %in% "       }
-  - { key: Key6,            mods: Control,                          chars: "  "           }
+  - { key: Key6,            mods: Control,                          chars: "#[]"          }
   - { key: Key7,            mods: Control,                          chars: " && "         }
   - { key: Key8,            mods: Control,                          chars: " ** "         }
   - { key: Key9,            mods: Control,                          chars: " // "         }
@@ -1305,9 +1305,9 @@ key_bindings:
   - { key: Key1,            mods: Control|Shift,                    chars: " .!= "        }
   - { key: Key2,            mods: Control|Shift,                    chars: "  "           }
   - { key: Key3,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Key4,            mods: Control|Shift,                    chars: "  "           }
+  - { key: Key4,            mods: Control|Shift,                    chars: " !~ "         }
   - { key: Key5,            mods: Control|Shift,                    chars: " %ni% "       }
-  - { key: Key6,            mods: Control|Shift,                    chars: "  "           }
+  - { key: Key6,            mods: Control|Shift,                    chars: " √ "          }
   - { key: Key7,            mods: Control|Shift,                    chars: "  "           }
   - { key: Key8,            mods: Control|Shift,                    chars: "  "           }
   - { key: Key9,            mods: Control|Shift,                    chars: "  "           }
@@ -1325,9 +1325,9 @@ key_bindings:
   - { key: Grave,           mods: Control|Shift,                    chars: "@rget "       }
   - { key: Tab,             mods: Control|Shift,                    chars: ". "           }
 
-  - { key: Key1,            mods: Alt|Control|Command,              chars: " !~ "         }
+  - { key: Key1,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Key2,            mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Key3,            mods: Alt|Control|Command,              chars: "#[]"          }
+  - { key: Key3,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Key4,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Key5,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Key6,            mods: Alt|Control|Command,              chars: "  "           }
@@ -1336,7 +1336,7 @@ key_bindings:
   - { key: Key9,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Key0,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Minus,           mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Equals,          mods: Alt|Control|Command,              chars: " ∈ "          }
+  - { key: Equals,          mods: Alt|Control|Command,              chars: "  "           }
   - { key: LBracket,        mods: Alt|Control|Command,              chars: "@info "       }
   - { key: RBracket,        mods: Alt|Control|Command,              chars: "@pipe "       }
   - { key: Semicolon,       mods: Alt|Control|Command,              chars: "@which "      }
@@ -1414,8 +1414,34 @@ key_bindings:
   - { key: Comma,           mods: Control|Command|Shift,            chars: " <<< "        }
   - { key: Period,          mods: Control|Command|Shift,            chars: " >>> "        }
   - { key: Slash,           mods: Control|Command|Shift,            chars: "//! "         }
-  - { key: Grave,           mods: Control|Command|Shift,            chars: "@time "    }
+  - { key: Grave,           mods: Control|Command|Shift,            chars: "@time "       }
   - { key: Tab,             mods: Control|Command|Shift,            chars: " --"          }
+
+  - { key: A,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: B,               mods: Alt|Control|Command,              chars: "ß"            }
+  - { key: C,               mods: Alt|Control|Command,              chars: "ç"            }
+  - { key: D,               mods: Alt|Control|Command,              chars: "∇"            }
+  - { key: E,               mods: Alt|Control|Command,              chars: "з"            }
+  - { key: F,               mods: Alt|Control|Command,              chars: "ƒ"            }
+  - { key: G,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: H,               mods: Alt|Control|Command,              chars: "ϕ"            }
+  - { key: I,               mods: Alt|Control|Command,              chars: "и"            }
+  - { key: J,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: K,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: L,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: M,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: N,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: O,               mods: Alt|Control|Command,              chars: "ø"            }
+  - { key: P,               mods: Alt|Control|Command,              chars: "п"            }
+  - { key: R,               mods: Alt|Control|Command,              chars: "я"            }
+  - { key: S,               mods: Alt|Control|Command,              chars: "∫"            }
+  - { key: T,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: U,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: V,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: X,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: Y,               mods: Alt|Control|Command,              chars: "ʒ"            }
+  - { key: Z,               mods: Alt|Control|Command,              chars: " "            }
+  - { key: W,               mods: Alt|Control|Command,              chars: "ш"            }
 
   - { key: A,               mods: Control|Command,                  chars: "α"            }
   - { key: B,               mods: Control|Command,                  chars: "β"            }
