@@ -922,7 +922,7 @@ key_bindings:
   - { key: LBracket,        mods: Command|Shift,                    chars: "\x11{"        }
 
   # zoom
-  - { key: Space,           mods: Control|Alt,                      chars: "\x11z"        }
+  - { key: Space,           mods: Alt|Control|Command|Shift,        chars: "\x11z"        }
 
   # move window
   - { key: RBracket,        mods: Command|Shift,                    chars: "\x11}"        }
@@ -942,8 +942,8 @@ key_bindings:
   - { key: LBracket,        mods: Command|Alt,                      chars: "\x11P"        }
 
   # select last window
-  - { key: Space,           mods: Alt|Control|Command|Shift,        chars: "\x11l"        }
-  - { key: Space,           mods: Command|Alt,                      chars: "\x11L"        }
+  - { key: Space,           mods: Control|Alt,                      chars: "\x11l"        }
+  - { key: Space,           mods: Command,                          chars: "\x11L"        }
 
   # kill pane / window / session
   - { key: X,               mods: Command,                          chars: "\x11x"        }
@@ -980,16 +980,16 @@ key_bindings:
   - { key: T,               mods: Command,                          chars: "\x11t"        }
 
   # select tabs
-  - { key: Key1,            mods: Command|Alt,                      chars: "\x111"        }
-  - { key: Key2,            mods: Command|Alt,                      chars: "\x112"        }
-  - { key: Key3,            mods: Command|Alt,                      chars: "\x113"        }
-  - { key: Key4,            mods: Command|Alt,                      chars: "\x114"        }
-  - { key: Key5,            mods: Command|Alt,                      chars: "\x115"        }
-  - { key: Key6,            mods: Command|Alt,                      chars: "\x116"        }
-  - { key: Key7,            mods: Command|Alt,                      chars: "\x117"        }
-  - { key: Key8,            mods: Command|Alt,                      chars: "\x118"        }
-  - { key: Key9,            mods: Command|Alt,                      chars: "\x119"        }
-  - { key: Key0,            mods: Command|Alt,                      chars: "\x110"        }
+  - { key: Key1,            mods: Command,                          chars: "\x111"        }
+  - { key: Key2,            mods: Command,                          chars: "\x112"        }
+  - { key: Key3,            mods: Command,                          chars: "\x113"        }
+  - { key: Key4,            mods: Command,                          chars: "\x114"        }
+  - { key: Key5,            mods: Command,                          chars: "\x115"        }
+  - { key: Key6,            mods: Command,                          chars: "\x116"        }
+  - { key: Key7,            mods: Command,                          chars: "\x117"        }
+  - { key: Key8,            mods: Command,                          chars: "\x118"        }
+  - { key: Key9,            mods: Command,                          chars: "\x119"        }
+  - { key: Key0,            mods: Command,                          chars: "\x110"        }
 
   ####################################################################################################
   # system OSX
