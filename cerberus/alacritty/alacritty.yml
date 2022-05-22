@@ -943,7 +943,7 @@ key_bindings:
 
   # select last window
   - { key: Space,           mods: Control|Alt,                      chars: "\x11l"        }
-  - { key: Space,           mods: Command,                          chars: "\x11L"        }
+  - { key: Space,           mods: Command|Alt,                      chars: "\x11L"        }
 
   # kill pane / window / session
   - { key: X,               mods: Command,                          chars: "\x11x"        }
@@ -1112,15 +1112,15 @@ key_bindings:
   # - { key: F11,                                                     chars: "\x1b[23~"     }
   # - { key: F12,                                                     chars: "\x1b[24~"     }
 
-  - { key: Key1,            mods: Command,                          chars: "\x1bOP"       }
-  - { key: Key2,            mods: Command,                          chars: "\x1bOQ"       }
-  - { key: Key3,            mods: Command,                          chars: "\x1bOR"       }
-  - { key: Key4,            mods: Command,                          chars: "\x1bOS"       }
-  - { key: Key5,            mods: Command,                          chars: "\x1b[15~"     }
-  - { key: Key6,            mods: Command,                          chars: "\x1b[17~"     }
-  - { key: Key7,            mods: Command,                          chars: "\x1b[18~"     }
-  - { key: Key8,            mods: Command,                          chars: "\x1b[19~"     }
-  - { key: Key9,            mods: Command,                          chars: "\x1b[20~"     }
+  - { key: Key1,            mods: Command|Alt,                      chars: "\x1bOP"       }
+  - { key: Key2,            mods: Command|Alt,                      chars: "\x1bOQ"       }
+  - { key: Key3,            mods: Command|Alt,                      chars: "\x1bOR"       }
+  - { key: Key4,            mods: Command|Alt,                      chars: "\x1bOS"       }
+  - { key: Key5,            mods: Command|Alt,                      chars: "\x1b[15~"     }
+  - { key: Key6,            mods: Command|Alt,                      chars: "\x1b[17~"     }
+  - { key: Key7,            mods: Command|Alt,                      chars: "\x1b[18~"     }
+  - { key: Key8,            mods: Command|Alt,                      chars: "\x1b[19~"     }
+  - { key: Key9,            mods: Command|Alt,                      chars: "\x1b[20~"     }
   # - { key: F10,             mods: Command,                          chars: "\x1b[21~"     }
   # - { key: F11,             mods: Command,                          chars: "\x1b[23~"     }
   - { key: Slash,           mods: Command|Alt,                      chars: "\x1b[24~"     }
