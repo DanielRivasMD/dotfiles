@@ -59,6 +59,9 @@ alias man=batman
 # broot
 alias br='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
 
+# gfold
+alias gf='~/.cargo/bin/gfold'
+
 # gitui
 alias gt='gitui'
 
