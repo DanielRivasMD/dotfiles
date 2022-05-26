@@ -197,7 +197,7 @@
   { "key": "up",												"command": "-selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
 
 	// word wrap
-	{ "key": "ctrl+alt+cmd+w",						"command": "editor.action.toggleWordWrap"},
+	{ "key": "shift+alt+w",								"command": "editor.action.toggleWordWrap"},
 	{ "key": "alt+z",											"command": "-editor.action.toggleWordWrap"},
 
 	// suggestions
