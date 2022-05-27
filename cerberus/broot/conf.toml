@@ -106,14 +106,6 @@ leave_broot = false
 description = "open file with `bat`"
 
 [[verbs]]
-invocation = "xsv"
-key = "shift-alt-x"
-shortcut = "xsv"
-external = "xsv table {file}"
-leave_broot = true
-description = "open file with `xsv`"
-
-[[verbs]]
 invocation = "mdcat"
 key = "shift-alt-m"
 shortcut = "mdcat"
@@ -132,10 +124,26 @@ description = "open file with `jless`"
 [[verbs]]
 invocation = "print_to_copy"
 key = "alt-c"
-shortcut = "print_to_copy"
+shortcut = "pc"
 external = "bat --paging always --plain {file}"
 leave_broot = false
 description = "open file with `bat` to copy"
+
+[[verbs]]
+invocation = "hck"
+key = "shift-alt-k"
+shortcut = "hck"
+external = "hck {file}"
+leave_broot = true
+description = "open file with `hck`"
+
+[[verbs]]
+invocation = "xsv"
+key = "shift-alt-x"
+shortcut = "xsv"
+external = "xsv table {file}"
+leave_broot = true
+description = "open file with `xsv`"
 
 # git
 [[verbs]]
