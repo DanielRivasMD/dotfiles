@@ -160,6 +160,35 @@ shortcut = "gi"
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
 
+# sort
+[[verbs]]
+invocation = "sort_by_type"
+key = "shift-alt-t"
+shortcut = "st"
+internal = "sort_by_type"
+description = "sort by type"
+
+[[verbs]]
+invocation = "sort_by_size"
+key = "shift-alt-u"
+shortcut = "ss"
+internal = "sort_by_size"
+description = "sort by size"
+
+[[verbs]]
+invocation = "sort_by_date"
+key = "shift-alt-y"
+shortcut = "sd"
+internal = "sort_by_date"
+description = "sort by date"
+
+[[verbs]]
+invocation = "sort_by_count"
+key = "shift-alt-c"
+shortcut = "sc"
+internal = "sort_by_count"
+description = "sort by count"
+
 # stage
 [[verbs]]
 invocation = "toggle_stage"
