@@ -156,9 +156,17 @@ description = "print tree and leaves broot"
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
+key = "shift-alt-i"
 shortcut = "gi"
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
+
+[[verbs]]
+invocation = "toggle_git_status"
+key = "shift-alt-o"
+shortcut = "gs"
+internal = "toggle_git_status"
+description = "toggle git status"
 
 # sort
 [[verbs]]
