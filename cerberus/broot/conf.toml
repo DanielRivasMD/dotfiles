@@ -251,6 +251,12 @@ key = "alt-Down"
 internal = "page_down"
 description = "go to page down"
 
+[[verbs]]
+invocation = "root_up"
+key = "shift-alt-z"
+internal = "root_up"
+description = "move tree root up"
+
 # panel
 [[verbs]]
 invocation = "toggle_preview"
@@ -338,5 +344,6 @@ help_headers = "rgb(181, 137, 0) none"                                          
 help_table_border = "none none"                                                         # default default
 preview_title = "gray(20) rgb(0, 43, 54)"
 staging_area_title = "gray(22) rgb(0, 43, 54)"
+
 
 ####################################################################################################
