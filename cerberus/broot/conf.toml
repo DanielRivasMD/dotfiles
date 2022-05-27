@@ -145,6 +145,14 @@ external = "xsv table {file}"
 leave_broot = true
 description = "open file with `xsv`"
 
+# print
+[[verbs]]
+invocation = "print_tree"
+key = "shift-alt-v"
+shortcut = "pt"
+internal = "print_tree"
+description = "print tree and leaves broot"
+
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
