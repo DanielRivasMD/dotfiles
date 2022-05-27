@@ -214,10 +214,17 @@ description = "toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
-key = "shift-alt-l"
+key = "shift-alt-e"
 shortcut = "cls"
 internal = "clear_stage"
 description = "clear stage area"
+
+[[verbs]]
+invocation = "stage_all_files"
+key = "shift-alt-a"
+shortcut = "saf"
+internal = "stage_all_files"
+description = "stage all matching files"
 
 # move
 [[verbs]]
