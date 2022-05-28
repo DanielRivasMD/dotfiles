@@ -945,10 +945,9 @@ key_bindings:
   - { key: Space,           mods: Control|Alt,                      chars: "\x11l"        }
   - { key: Space,           mods: Command|Alt,                      chars: "\x11L"        }
 
-  # kill pane / window / session
+  # kill
   - { key: X,               mods: Command,                          chars: "\x11x"        }
   - { key: X,               mods: Command|Shift,                    chars: "\x11X"        }
-  # - { key: Q,               mods: Command|Shift,                    chars: "\x11Q"        }
 
   # detached from session
   - { key: D,               mods: Command,                          chars: "\x11d"        }
@@ -1316,7 +1315,7 @@ key_bindings:
   - { key: Equals,          mods: Control|Shift,                    chars: " .== "        }
   # - { key: LBracket,        mods: Control|Shift,                    chars: ""             }
   # - { key: RBracket,        mods: Control|Shift,                    chars: ""             }
-  - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "        }
+  - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "       }
   - { key: Apostrophe,      mods: Control|Shift,                    chars: " %<>% "       }
   - { key: Backslash,       mods: Control|Shift,                    chars: " .|| "        }
   - { key: Comma,           mods: Control|Shift,                    chars: " %<+% "       }
