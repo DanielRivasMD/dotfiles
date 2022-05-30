@@ -5,3 +5,36 @@ fillin bartib start --description {{description}} --project {{project}}
 
 # Stop
 fillin bartib stop
+
+# Projects
+fillin bartib projects
+
+# List today
+fillin bartib list --today
+
+# List yesterday
+fillin bartib list --yesterday
+
+# List current week
+fillin bartib list --current_week
+
+# List last week
+fillin bartib list --last_week
+
+# List project
+fillin bartib list --project {{project}}
+
+# Report today
+fillin bartib report --today
+
+# Report yesterday
+fillin bartib report --yesterday
+
+# Report current week
+fillin bartib report --current_week
+
+# Report last week
+fillin bartib report --last_week
+
+# Report project
+fillin bartib report --project {{project}}
