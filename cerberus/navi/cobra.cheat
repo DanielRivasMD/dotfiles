@@ -1,7 +1,7 @@
 % cobra
 
 # Create app
-fillin cobra init {{app_name}}
+fillin cobra init --pkg-name {{app_name}} --author {{author_email}} --license {{license}}
 
 # Add command
 fillin cobra add {{command}} --author {{author_email}} --license {{license}}
