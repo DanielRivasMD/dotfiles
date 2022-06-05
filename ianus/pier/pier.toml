@@ -85,7 +85,7 @@ tags = ['shell']
 [scripts.fpath]
 alias = 'fpath'
 command = '''
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 echo $FPATH | xsv flatten -d ":" -n
 '''
 description = 'display fpath'
@@ -95,16 +95,16 @@ tags = ['shell']
 alias = 'git'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh $COLUMNS
+source ${PIER}/break_single_line.sh $COLUMNS
 
 git status --short
-source ${PIER}break_single_line.sh $COLUMNS
+source ${PIER}/break_single_line.sh $COLUMNS
 
 git stash list
-source ${PIER}break_double_line.sh $COLUMNS
+source ${PIER}/break_double_line.sh $COLUMNS
 
 git lk -10
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'all-round git status'
 tags = ['git']
@@ -118,8 +118,9 @@ tags = ['go']
 [scripts.gopath]
 alias = 'gopath'
 command = '''
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 echo $GOPATH | xsv flatten -d ":" -n
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'display GOPATH'
 tags = ['go']
@@ -151,10 +152,10 @@ tags = ['julia']
 alias = 'kal'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»"
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'all calendars'
 tags = ['khal']
@@ -163,12 +164,12 @@ tags = ['khal']
 alias = 'kals'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 khal list \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
   --exclude-calendar SuperRugby \
   --exclude-calendar Astronomy
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'list calendars'
 tags = ['khal']
@@ -177,10 +178,10 @@ tags = ['khal']
 alias = 'kastro'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --include-calendar Astronomy
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'astronomy calendar'
 tags = ['khal']
@@ -189,12 +190,12 @@ tags = ['khal']
 alias = 'kaw'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
   --exclude-calendar SuperRugby \
   --exclude-calendar Astronomy
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'work calendar'
 tags = ['khal']
@@ -215,10 +216,10 @@ tags = ['khal']
 alias = 'krugby'
 command = '''
 #!/bin/zsh
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --include-calendar SuperRugby
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'SuperRugby calendar'
 tags = ['khal']
@@ -232,8 +233,9 @@ tags = ['remote']
 [scripts.path]
 alias = 'path'
 command = '''
-source ${PIER}break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh  $COLUMNS
 echo $PATH | xsv flatten -d ":" -n
+source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'display PATH'
 tags = ['shell']
