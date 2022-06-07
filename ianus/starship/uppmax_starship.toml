@@ -1,134 +1,131 @@
 ####################################################################################################
 
-format                       = "$all"
+format                                       = '$all'
+
+add_newline                                  = false
+
+command_timeout                              = 3000
 
 [battery]
-disabled                     = true
-
-[[battery.display]]
-threshold                    = 10
-style                        = "bold #B22222"
-
-[[battery.display]]
-threshold                    = 50
-style                        = "bold #FFC125"
+disabled                                     = true
 
 [character]
-success_symbol               = "[∑](bold #1874CD)"
-error_symbol                 = "[χ](bold #8B0000)"
-vicmd_symbol                 = "[❮](bold #C2D94C)"
+success_symbol                               = ' [∑](bold #1874CD)'
+error_symbol                                 = ' [χ](bold #8B0000)'
+vicmd_symbol                                 = ' [❮](bold #C2D94C)'
 
 [cmd_duration]
-min_time                     = 200
-style                        = "bold #FFC125"
-format                       = "[$duration]($style) "
-
-[conda]
-style                        = "#4EA24E"
+min_time                                     = 50
+format                                       = ' [$duration](bold #FFC125)'
 
 [directory]
-truncation_length            = 2
-truncate_to_repo             = true
-style                        = "#00CED1"
-
-[docker_context]
-symbol                       = "🐋"
-style                        = "bold #1874CD"
+truncation_length                            = 2
+truncate_to_repo                             = true
+format                                       = '[$path](#00CED1)'
 
 [env_var]
-disabled                     = true
-variable                     = "STARSHIP_SHELL"
-default                      = "unknown shell"
-style                        = "bold #778899"
-format                       = "[$env_value]($style) "
-
-[git_branch]
-symbol                       = "[ᚶ](bold #778899)"
-truncation_length            = 7
-truncation_symbol            = ""
-style                        = "#4EA24E"
-format                       = "[$symbol $branch]($style) "
-
-[git_commit]
-commit_hash_length           = 4
-style                        = "bold #4EA24E"
-format                       = '[\($hash\)]($style) '
-
-[git_state]
-progress_divider             = " | "
-style                        = "bold #FFC125"
-
-[git_status]
-ahead                        = " [⇡](#1874CD)[${count}](#bebebe)"
-behind                       = " [⇣](#8B0000)[${count}](#bebebe)"
-diverged                     = " [Ψ](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#8B0000)[${behind_count}](#bebebe)"
-conflicted                   = " [ᛊ](#8B0000)[${count}](#bebebe)"
-untracked                    = " [θ](#8B0000)[${count}](#bebebe)"
-stashed                      = " [Λ](#1874CD)[${count}](#bebebe)"
-modified                     = " [Δ](#FFC125)[${count}](#bebebe)"
-staged                       = " [Ω](#95E6CB)[${count}](#bebebe)"
-renamed                      = " [⇌](#FFC125)[${count}](#bebebe)"
-deleted                      = " [χ](#8B0000)[${count}](#bebebe)"
-
-style                        = "bold #bebebe"
-format                       = '([\[$ahead_behind$all_status\]]($style) )'
-
-[golang]
-symbol                       = "🦥"
-style                        = "bold #95E6CB"
-format                       = "[$symbol](#9C4C9C) [$version]($style) "
+variable                                     = 'STARSHIP_SHELL'
+default                                      = 'unknown shell'
+format                                       = ' [$env_value](bold #778899)'
+disabled                                     = true
 
 [hostname]
-disabled                     = true
-ssh_only                     = true
-style                        = "#B452CD"
-format                       = "⟪[$hostname]($style)⟫"
-
-[java]
-symbol                       = "☕"
+ssh_only                                     = true
+format                                       = '⟪[$hostname](#B452CD)⟫ '
+disabled                                     = false
 
 [jobs]
-symbol                       = "∫"
-threshold                    = 3
-style                        = "#5F9EA0"
-
-[julia]
-style                        = "#95E6CB"
-symbol                       = "ஃ"
-format                       = "[$symbol](#9C4C9C) [$version]($style) "
-
-[kubernetes]
-symbol                       = "⛵"
-style                        = "dimmed #4EA24E"
-disabled                     = false
-[kubernetes.context_aliases]
-"dev.local.cluster.k8s"      = "dev"
+symbol                                       = '∫'
+number_threshold                             = 3
+symbol_threshold                             = 3
+style                                        = '#00CED1'
 
 [line_break]
-disabled                     = true
-
-[memory_usage]
+disabled                                     = true
 
 [package]
-style                        = "#95E6CB"
-symbol                       = "📦"
-format                       = "$symbol [$version]($style) "
+format                                       = ' [](#95E6CB)  [$version](#acacac)'
 
-[python]
-symbol                       = "🐍"
-pyenv_version_name           = true
-pyenv_prefix                 = ""
-
-[ruby]
-
-[rust]
-symbol                       = "⚙️"
-style                        = "#95E6CB"
-format                       = "[$symbol](#CD6600) [$version]($style) "
-
-[time]
+[status]
+format                                       = ' [$status](#8B0000)'
+disabled                                     = false
 
 [username]
-disabled                     = true
+disabled                                     = true
+
+####################################################################################################
+
+[shell]
+bash_indicator = ' β'
+fish_indicator = ' φ'
+unknown_indicator = ' η'
+zsh_indicator = ''
+format = '[$indicator](#4EA24E)'
+disabled = false
+
+####################################################################################################
+
+[git_branch]
+truncation_length                            = 7
+truncation_symbol                            = ''
+format                                       = ' [[](bold #778899) $branch](#4EA24E) '
+
+[git_commit]
+commit_hash_length                           = 4
+format                                       = ' [($hash)()](bold #4EA24E) '
+
+[git_state]
+# progress_divider                             = '|'
+# style                                        = 'bold #FFC125'
+
+[git_status]
+ahead                                        = ' [⇡](#1874CD)[${count}](#bebebe)'
+behind                                       = ' [⇣](#8B0000)[${count}](#bebebe)'
+diverged                                     = ' [](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#8B0000)[${behind_count}](#bebebe)'
+conflicted                                   = ' [](#8B0000)[${count}](#bebebe)'
+untracked                                    = ' [θ](#8B0000)[${count}](#bebebe)'
+stashed                                      = ' [Λ](#1874CD)[${count}](#bebebe)'
+modified                                     = ' [Δ](#FFC125)[${count}](#bebebe)'
+staged                                       = ' [Ω](#95E6CB)[${count}](#bebebe)'
+renamed                                      = ' [⇌](#FFC125)[${count}](#bebebe)'
+deleted                                      = ' [χ](#8B0000)[${count}](#bebebe)'
+
+format                                       = '([\[$ahead_behind$all_status \]](bold #bebebe))'
+
+####################################################################################################
+
+[docker_context]
+format                                       = ' [ $context](bold #1874CD)'
+
+[golang]
+format                                       = ' [ﳑ](#00CED1) [$version](bold #acacac)'
+
+[julia]
+format                                       = ' [ஃ](#9C4C9C) [$version](bold #acacac)'
+
+[kubernetes]
+format                                       = ' [☸](#00CED1) [$version](bold #acacac)'
+disabled                                     = false
+[kubernetes.context_aliases]
+'dev.local.cluster.k8s'                      = 'dev'
+
+[lua]
+format                                       = ' [](#708090) [$version](#acacac)'
+
+[perl]
+format                                       = ' [🐪](#acacac) [$version](bold #acacac)'
+
+[python]
+pyenv_version_name                           = true
+pyenv_prefix                                 = ''
+format                                       = ' [](#228B22)'
+
+[rlang]
+format                                       = ' [®](#708090) [$version](#acacac)'
+detect_files                                 = [".R"]
+detect_folders                               = [".Rproj.user"]
+
+[rust]
+format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
 
 ####################################################################################################
