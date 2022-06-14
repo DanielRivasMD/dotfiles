@@ -336,7 +336,7 @@ Hadur:
   rm -rf "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl"
 
   # diamond
-  wget "https://github.com/bbuchfink/diamond/releases/download/v2.0.12/diamond-linux64.tar.gz" --directory-prefix "${remoteBin}/"
+  wget "https://github.com/bbuchfink/diamond/releases/download/v2.0.15/diamond-linux64.tar.gz" --directory-prefix "${remoteBin}/"
   tar -xvf "${remoteBin}/diamond-linux64.tar.gz" --directory "${remoteBin}/"
   mv "${remoteBin}/diamond" "${remoteBin}/bin/"
   mv "${remoteBin}/diamond-linux64.tar.gz" "${remoteBin}/download/"
