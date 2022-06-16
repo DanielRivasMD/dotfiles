@@ -47,6 +47,9 @@ bind = split -v
 # horizontal split
 bind - split
 
+# new screen
+bind ; screen
+
 # switch windows
 bindkey "^Qp" prev
 bindkey "^Qn" next
