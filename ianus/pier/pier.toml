@@ -4,44 +4,44 @@ command = 'git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHI
 description = 'reset alacritty to most recent commit'
 tags = ['rust']
 
-[scripts.biancaImg-sftp]
-alias = 'biancaImg-sftp'
+[scripts.bianca-sftp-im]
+alias = 'bianca-sftp-im'
 command = 'sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2019016'
 tags = ['remote']
 
-[scripts.biancaImg-ssh]
-alias = 'biancaImg-ssh'
+[scripts.bianca-ssh-im]
+alias = 'bianca-ssh-im'
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2019016'
 tags = ['remote']
 
-[scripts.biancaAI-sftp]
-alias = 'biancaAI-sftp'
+[scripts.bianca-sftp-ai]
+alias = 'bianca-sftp-ai'
 command = 'sftp -q drivas-sens2022521@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2022521'
 tags = ['remote']
 
-[scripts.biancaAI-ssh]
-alias = 'biancaAI-ssh'
+[scripts.bianca-ssh-ai]
+alias = 'bianca-ssh-ai'
 command = 'ssh drivas-sens2022521@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2022521'
 tags = ['remote']
 
-[scripts.cAtom]
-alias = 'cAtom'
+[scripts.clean-atom]
+alias = 'clean-atom'
 command = '''for i in $(procs Atom | awk 'NR > 2 {print $1}' ); do kill $i; done'''
 description = 'stop all Atom jobs'
 tags = ['shell']
 
-[scripts.cChrome]
-alias = 'cChrome'
+[scripts.clean-chrome]
+alias = 'clean-chrome'
 command = '''for i in $(procs 'Google Chrome' --or chromedriver | awk 'NR > 2 {print $1}' ); do kill $i; done'''
 description = 'stop all Chrome jobs'
 tags = ['shell']
 
-[scripts.cFire]
-alias = 'cFire'
+[scripts.clean-fire]
+alias = 'clean-fire'
 command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; done'''
 description = 'stop all Firefox jobs'
 tags = ['shell']
@@ -70,14 +70,14 @@ command = 'procs --sortd CPU --watch'
 description = 'watch resources usage CPU-sorted'
 tags = ['shell']
 
-[scripts.dc]
-alias = 'dc'
+[scripts.dir-count]
+alias = 'dir-count'
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
 description = 'count directories in present address'
 tags = ['shell']
 
-[scripts.fc]
-alias = 'fc'
+[scripts.file-count]
+alias = 'file-count'
 command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
 description = 'count files in present address'
 tags = ['shell']
