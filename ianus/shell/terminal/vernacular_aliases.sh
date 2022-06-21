@@ -57,7 +57,7 @@ alias lzc='lazycli'
 alias man=batman
 
 # broot
-alias br='br --dates --sizes --permissions --hidden --show-gitignored --show-git-info'
+alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-info'
 
 # gfold
 alias gf='~/.cargo/bin/gfold'
