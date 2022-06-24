@@ -68,6 +68,7 @@ PATH=$PATH:${GOPATH}bin/
 PATH=$PATH:$HOME/bin/cargoTools/
 PATH=$PATH:$HOME/bin/goTools/
 PATH=$PATH:$HOME/bin/toolLinks/
+PATH=$PATH:$HOME/bin/phylip/
 
 ####################################################################################################
 #  Export
