@@ -10,40 +10,40 @@ atreplinit() do repl
 
     try
       @eval using OhMyREPL
-    catch e
-      @warn "error while importing OhMyREPL" e
+    catch ε
+      @warn "error while importing OhMyREPL" ε
     end
 
     ####################################################################################################
 
     try
       @eval import Chain: @chain
-    catch e
-      @warn "error while importing Chain" e
+    catch ε
+      @warn "error while importing Chain" ε
     end
 
      ####################################################################################################
 
     try
       @eval import Pipe: @pipe
-    catch e
-      @warn "error while importing Pipe" e
+    catch ε
+      @warn "error while importing Pipe" ε
     end
 
     ####################################################################################################
 
     try
       @eval using Revise
-    catch e
-      @warn "Error initializing Revise" exception = (e, catch_backtrace())
+    catch ε
+      @warn "Error initializing Revise" exception = (ε, catch_backtrace())
     end
 
     ####################################################################################################
 
     try
       @eval using Debugger
-    catch e
-      @warn "Error initializing Debugger" exception = (e, catch_backtrace())
+    catch ε
+      @warn "Error initializing Debugger" exception = (ε, catch_backtrace())
     end
 
     ####################################################################################################
