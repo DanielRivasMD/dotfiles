@@ -37,6 +37,7 @@ export GOPATH=$HOME/.go/
 
 # PATH settings
 PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/bin/satsuma2
 
 ####################################################################################################
 # Export
