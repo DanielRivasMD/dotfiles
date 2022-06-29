@@ -1280,21 +1280,21 @@ key_bindings:
 
   - { key: Key1,            mods: Control,                          chars: " != "         }
   - { key: Key2,            mods: Control,                          chars: "  "           }
-  - { key: Key3,            mods: Control,                          chars: " \\\\ "       }
+  - { key: Key3,            mods: Control,                          chars: " \\= "        }
   - { key: Key4,            mods: Control,                          chars: "  "           }
-  - { key: Key5,            mods: Control,                          chars: " %in% "       }
-  - { key: Key6,            mods: Control,                          chars: "  "           }
-  - { key: Key7,            mods: Control,                          chars: " && "         }
-  - { key: Key8,            mods: Control,                          chars: " ** "         }
-  - { key: Key9,            mods: Control,                          chars: " // "         }
-  - { key: Key0,            mods: Control,                          chars: " ++ "         }
-  - { key: Minus,           mods: Control,                          chars: " -- "         }
+  - { key: Key5,            mods: Control,                          chars: " %= "         }
+  - { key: Key6,            mods: Control,                          chars: " ^= "         }
+  - { key: Key7,            mods: Control,                          chars: " &= "         }
+  - { key: Key8,            mods: Control,                          chars: " *= "         }
+  - { key: Key9,            mods: Control,                          chars: " /= "         }
+  - { key: Key0,            mods: Control,                          chars: " += "         }
+  - { key: Minus,           mods: Control,                          chars: " -= "         }
   - { key: Equals,          mods: Control,                          chars: " == "         }
   # - { key: LBracket,        mods: Control,                          chars: ""             }
   # - { key: RBracket,        mods: Control,                          chars: ""             }
   - { key: Semicolon,       mods: Control,                          chars: " %$% "        }
   - { key: Apostrophe,      mods: Control,                          chars: "```"          }
-  - { key: Backslash,       mods: Control,                          chars: " || "         }
+  - { key: Backslash,       mods: Control,                          chars: " |= "         }
   - { key: Comma,           mods: Control,                          chars: " %<% "        }
   - { key: Period,          mods: Control,                          chars: " %>% "        }
   # - { key: Slash,           mods: Control,                          chars: ""             }
@@ -1303,21 +1303,21 @@ key_bindings:
 
   - { key: Key1,            mods: Control|Shift,                    chars: " .!= "        }
   - { key: Key2,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Key3,            mods: Control|Shift,                    chars: "  "           }
+  - { key: Key3,            mods: Control|Shift,                    chars: " .\\= "       }
   - { key: Key4,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Key5,            mods: Control|Shift,                    chars: " %ni% "       }
-  - { key: Key6,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Key7,            mods: Control|Shift,                    chars: " .&& "        }
-  - { key: Key8,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Key9,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Key0,            mods: Control|Shift,                    chars: "  "           }
-  - { key: Minus,           mods: Control|Shift,                    chars: "  "           }
+  - { key: Key5,            mods: Control|Shift,                    chars: " .%= "        }
+  - { key: Key6,            mods: Control|Shift,                    chars: " .^= "        }
+  - { key: Key7,            mods: Control|Shift,                    chars: " .&= "        }
+  - { key: Key8,            mods: Control|Shift,                    chars: " .*= "        }
+  - { key: Key9,            mods: Control|Shift,                    chars: " ./= "        }
+  - { key: Key0,            mods: Control|Shift,                    chars: " .+= "        }
+  - { key: Minus,           mods: Control|Shift,                    chars: " .-= "        }
   - { key: Equals,          mods: Control|Shift,                    chars: " .== "        }
   # - { key: LBracket,        mods: Control|Shift,                    chars: ""             }
   # - { key: RBracket,        mods: Control|Shift,                    chars: ""             }
   - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "       }
   - { key: Apostrophe,      mods: Control|Shift,                    chars: " %<>% "       }
-  - { key: Backslash,       mods: Control|Shift,                    chars: " .|| "        }
+  - { key: Backslash,       mods: Control|Shift,                    chars: " .|= "        }
   - { key: Comma,           mods: Control|Shift,                    chars: " %<+% "       }
   - { key: Period,          mods: Control|Shift,                    chars: " %+>% "       }
   - { key: Slash,           mods: Control|Shift,                    chars: " %!>% "       }
@@ -1372,21 +1372,21 @@ key_bindings:
 
   - { key: Key1,            mods: Control|Command,                  chars: " !== "        }
   - { key: Key2,            mods: Control|Command,                  chars: "  "           }
-  - { key: Key3,            mods: Control|Command,                  chars: " \\= "        }
+  - { key: Key3,            mods: Control|Command,                  chars: " \\\\ "       }
   - { key: Key4,            mods: Control|Command,                  chars: "  "           }
-  - { key: Key5,            mods: Control|Command,                  chars: " %= "         }
-  - { key: Key6,            mods: Control|Command,                  chars: " ^= "         }
-  - { key: Key7,            mods: Control|Command,                  chars: " &= "         }
-  - { key: Key8,            mods: Control|Command,                  chars: " *= "         }
-  - { key: Key9,            mods: Control|Command,                  chars: " /= "         }
-  - { key: Key0,            mods: Control|Command,                  chars: " += "         }
-  - { key: Minus,           mods: Control|Command,                  chars: " -= "         }
+  - { key: Key5,            mods: Control|Command,                  chars: " %in% "       }
+  - { key: Key6,            mods: Control|Command,                  chars: "  "           }
+  - { key: Key7,            mods: Control|Command,                  chars: " && "         }
+  - { key: Key8,            mods: Control|Command,                  chars: " ** "         }
+  - { key: Key9,            mods: Control|Command,                  chars: " // "         }
+  - { key: Key0,            mods: Control|Command,                  chars: " ++ "         }
+  - { key: Minus,           mods: Control|Command,                  chars: " -- "         }
   - { key: Equals,          mods: Control|Command,                  chars: " === "        }
   - { key: LBracket,        mods: Control|Command,                  chars: " <<= "        }
   - { key: RBracket,        mods: Control|Command,                  chars: " >>= "        }
   - { key: Semicolon,       mods: Control|Command,                  chars: "::"           }
   - { key: Apostrophe,      mods: Control|Command,                  chars: "'''"          }
-  - { key: Backslash,       mods: Control|Command,                  chars: " |= "         }
+  - { key: Backslash,       mods: Control|Command,                  chars: " || "         }
   - { key: Comma,           mods: Control|Command,                  chars: " << "         }
   - { key: Period,          mods: Control|Command,                  chars: " >> "         }
   - { key: Slash,           mods: Control|Command,                  chars: "/// "         }
@@ -1395,21 +1395,21 @@ key_bindings:
 
   - { key: Key1,            mods: Control|Command|Shift,            chars: " .!== "       }
   - { key: Key2,            mods: Control|Command|Shift,            chars: "  "           }
-  - { key: Key3,            mods: Control|Command|Shift,            chars: " .\\= "       }
+  - { key: Key3,            mods: Control|Command|Shift,            chars: "  "           }
   - { key: Key4,            mods: Control|Command|Shift,            chars: "  "           }
-  - { key: Key5,            mods: Control|Command|Shift,            chars: " .%= "        }
-  - { key: Key6,            mods: Control|Command|Shift,            chars: " .^= "        }
-  - { key: Key7,            mods: Control|Command|Shift,            chars: " .&= "        }
-  - { key: Key8,            mods: Control|Command|Shift,            chars: " .*= "        }
-  - { key: Key9,            mods: Control|Command|Shift,            chars: " ./= "        }
-  - { key: Key0,            mods: Control|Command|Shift,            chars: " .+= "        }
-  - { key: Minus,           mods: Control|Command|Shift,            chars: " .-= "        }
+  - { key: Key5,            mods: Control|Command|Shift,            chars: " %ni% "       }
+  - { key: Key6,            mods: Control|Command|Shift,            chars: "  "           }
+  - { key: Key7,            mods: Control|Command|Shift,            chars: " .&& "        }
+  - { key: Key8,            mods: Control|Command|Shift,            chars: "  "           }
+  - { key: Key9,            mods: Control|Command|Shift,            chars: "  "           }
+  - { key: Key0,            mods: Control|Command|Shift,            chars: "  "           }
+  - { key: Minus,           mods: Control|Command|Shift,            chars: "  "           }
   - { key: Equals,          mods: Control|Command|Shift,            chars: " .=== "       }
   - { key: LBracket,        mods: Control|Command|Shift,            chars: "@cmd "        }
   - { key: RBracket,        mods: Control|Command|Shift,            chars: "@macroexpand "}
   - { key: Semicolon,       mods: Control|Command|Shift,            chars: "::<>"         }
   - { key: Apostrophe,      mods: Control|Command|Shift,            chars: "\"\"\""       }
-  - { key: Backslash,       mods: Control|Command|Shift,            chars: " .|= "        }
+  - { key: Backslash,       mods: Control|Command|Shift,            chars: " .|| "        }
   - { key: Comma,           mods: Control|Command|Shift,            chars: " <<< "        }
   - { key: Period,          mods: Control|Command|Shift,            chars: " >>> "        }
   - { key: Slash,           mods: Control|Command|Shift,            chars: "//! "         }
@@ -1430,9 +1430,9 @@ key_bindings:
   - { key: L,               mods: Alt|Control|Command,              chars: "ł"            }
   - { key: M,               mods: Alt|Control|Command,              chars: "ɱ"            }
   - { key: N,               mods: Alt|Control|Command,              chars: "ŋ"            }
-  - { key: O,               mods: Alt|Control|Command,              chars: "å"            }
+  - { key: O,               mods: Alt|Control|Command,              chars: "ø"            }
   - { key: P,               mods: Alt|Control|Command,              chars: "п"            }
-  - { key: Q,               mods: Alt|Control|Command,              chars: "ø"            }
+  - { key: Q,               mods: Alt|Control|Command,              chars: "DOC: "        }
   - { key: R,               mods: Alt|Control|Command,              chars: "я"            }
   - { key: S,               mods: Alt|Control|Command,              chars: "ϛ"            }
   - { key: T,               mods: Alt|Control|Command,              chars: "þ"            }
