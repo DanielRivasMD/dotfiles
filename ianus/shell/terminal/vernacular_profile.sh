@@ -12,6 +12,7 @@ stty -ixon
 export ARCHIVE=${HOME}/.archive
 export IANUS=${ARCHIVE}/ianus
 export CERBERUS=${ARCHIVE}/cerberus
+export TMUX_SESSION=${IANUS}/tmux/session
 
 ####################################################################################################
 #  Language settings
