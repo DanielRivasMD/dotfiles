@@ -1,3 +1,5 @@
+####################################################################################################
+
 # Your keymap
 #
 # Atom keymaps work similarly to style sheets. Just as style sheets use
@@ -33,7 +35,7 @@
 
 
 
-#------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################
 #
 #  .d8888b.  8888888888 88888888888 88888888888 8888888 888b    888  .d8888b.   .d8888b.
 # d88P  Y88b 888            888         888       888   8888b   888 d88P  Y88b d88P  Y88b
@@ -44,9 +46,7 @@
 # Y88b  d88P 888            888         888       888   888   Y8888 Y88b  d88P Y88b  d88P
 #  "Y8888P"  8888888888     888         888     8888888 888    Y888  "Y8888P88  "Y8888P"
 #
-#------------------------------------------------------------------------------------------------------------------------------
-
-################################################################################
+####################################################################################################
 
 'body':
 
@@ -86,7 +86,7 @@
   'ctrl-u': 'core:undo'
   'shift-ctrl-u': 'core:redo'
 
-################################################################################
+####################################################################################################
 
 # Core Editor
 'atom-text-editor':
@@ -109,7 +109,7 @@
   # matching bracket
   'alt-p': 'bracket-matcher:go-to-matching-bracket'
 
-################################################################################
+####################################################################################################
 
 '.platform-darwin':
 
@@ -137,7 +137,7 @@
   # go to line
   'shift-alt-f': 'go-to-line:toggle'
 
-################################################################################
+####################################################################################################
 
 '.platform-darwin atom-workspace':
 
@@ -153,7 +153,7 @@
   # toggle quotes
   'cmd-"': 'toggle-quotes:toggle'
 
-################################################################################
+####################################################################################################
 
 '.platform-darwin atom-text-editor':
 
@@ -187,7 +187,7 @@
   # select brackets
   'shift-alt-p': 'bracket-matcher:select-inside-brackets'
 
-################################################################################
+####################################################################################################
 
 'atom-workspace atom-text-editor:not([mini])':
 
@@ -225,28 +225,28 @@
   'alt-k': 'editor:add-selection-above'
   'alt-j': 'editor:add-selection-below'
 
-################################################################################
+####################################################################################################
 
 '.advanced-open-file atom-text-editor':
   'tab': 'advanced-open-file:autocomplete'
   'up': 'advanced-open-file:move-cursor-up'
   'down': 'advanced-open-file:move-cursor-down'
 
-################################################################################
+####################################################################################################
 
 # autocompletion
 '.autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
   'escape': 'autocomplete-plus:cancel'
 
-################################################################################
+####################################################################################################
 
 'atom-text-editor[data-grammar~="latex"]':
   'alt-cmd-b': 'atom-latex:build-here'
   'alt-cmd-c': 'atom-latex:clean'
   'alt-cmd-v': 'atom-latex:toggle-panel'
 
-################################################################################
+####################################################################################################
 
 'atom-workspace':
 
@@ -257,10 +257,7 @@
   # cheatsheet menu
   'cmd-\'': 'keybinding-cheatsheet:toggle'
 
-################################################################################
-# TODO: add macros
-
-#------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################
 #
 # 888    d8P  8888888888 Y88b   d88P 888888b.  8888888 888b    888 8888888b. 8888888 888b    888  .d8888b.   .d8888b.
 # 888   d8P   888         Y88b d88P  888  "88b   888   8888b   888 888  "Y88b  888   8888b   888 d88P  Y88b d88P  Y88b
@@ -271,13 +268,13 @@
 # 888   Y88b  888            888     888   d88P  888   888   Y8888 888  .d88P  888   888   Y8888 Y88b  d88P Y88b  d88P
 # 888    Y88b 8888888888     888     8888888P" 8888888 888    Y888 8888888P" 8888888 888    Y888  "Y8888P88  "Y8888P"
 #
-#------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################
 
-#------------------------------------------------------------------------------------------------------------------------------
-#--------------------------------------------/ GENERAL KEYBINDINGS /-----------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################
+#######################################/ GENERAL KEYBINDINGS /######################################
+####################################################################################################
 
-  'alt-1': 'custom:insert-not_equal'
+  'alt-1': 'custom:insert-tilde'
   'alt-2': 'custom:insert-aroba'
   'alt-3': 'custom:insert-backslash'
   'alt-4': 'custom:insert-dollar'
@@ -300,7 +297,7 @@
   # 'alt-`': 'custom:insert-empty'
   'alt-tab': 'custom:insert-double_dot'
 
-  'alt-!': 'custom:insert-not_equal_broadcast'
+  'alt-!': 'custom:insert-equal_tilde'
   'alt-@': 'custom:insert-aroba_broadcast'
   'alt-#': 'custom:insert-backslash_broadcast'
   'alt-$': 'custom:insert-dollar_broadcast'
@@ -323,143 +320,170 @@
   # 'alt-~': 'custom:insert-empty'
   'shift-alt-tab': 'custom:insert-triple_dot'
 
-  'ctrl-1': 'custom:insert-julia_mcinfo'
-  'ctrl-2': 'custom:insert-julia_mcpipe'
-  'ctrl-3': 'custom:insert-double_backslash'
-  'ctrl-4': 'custom:insert-julia_mcrput'
-  'ctrl-5': 'custom:insert-in'
-  'ctrl-6': 'custom:insert-julia_mctest'
-  'ctrl-7': 'custom:insert-double_and'
-  'ctrl-8': 'custom:insert-double_times'
-  'ctrl-9': 'custom:insert-double_divide'
-  'ctrl-0': 'custom:insert-double_plus'
-  'ctrl--': 'custom:insert-double_minus'
+  'ctrl-1': 'custom:insert-not_equal'
+  'ctrl-2': 'custom:insert-empty'
+  'ctrl-3': 'custom:insert-low_backslash'
+  'ctrl-4': 'custom:insert-empty'
+  'ctrl-5': 'custom:insert-low_percent'
+  'ctrl-6': 'custom:insert-low_exponent'
+  'ctrl-7': 'custom:insert-low_and'
+  'ctrl-8': 'custom:insert-low_times'
+  'ctrl-9': 'custom:insert-low_divide'
+  'ctrl-0': 'custom:insert-low_plus'
+  'ctrl--': 'custom:insert-low_minus'
   'ctrl-=': 'custom:insert-equalequal'
   # 'ctrl-[': 'custom:insert-empty'
   # 'ctrl-]': 'custom:insert-empty'
   'ctrl-;': 'custom:insert-r_pipe_var'
-  'ctrl-\'': 'custom:insert-r_pipe_assign'
-  'ctrl-\\': 'custom:insert-double_or'
+  'ctrl-\'': 'custom:insert-triple_apostrophe'
+  'ctrl-\\': 'custom:insert-low_or'
   'ctrl-,': 'custom:insert-r_pipe_left'
   'ctrl-.': 'custom:insert-r_pipe_right'
   # 'ctrl-/': 'custom:insert-empty'
-  'ctrl-`': 'custom:insert-tilde'
-  'ctrl-tab': 'custom:insert-semicolon'
+  'ctrl-`': 'custom:insert-julia_mcrput'
+  'ctrl-tab': 'custom:insert-comma'
 
-  'ctrl-!': 'custom:insert-julia_mcdebug'
-  'ctrl-@': 'custom:insert-julia_mcchain'
-  'ctrl-#': 'custom:insert-julia_mceval'
-  'ctrl-$': 'custom:insert-julia_mcrget'
-  'ctrl-%': 'custom:insert-ni'
-  'ctrl-^': 'custom:insert-julia_mctestset'
-  'ctrl-&': 'custom:insert-julia_mcless'
-  'ctrl-*': 'custom:insert-julia_mcedit'
-  'ctrl-(': 'custom:insert-julia_mcview'
-  'ctrl-)': 'custom:insert-julia_mctime'
-  'ctrl-_': 'custom:insert-julia_mcwhich'
+  'ctrl-!': 'custom:insert-not_equal_broadcast'
+  'ctrl-@': 'custom:insert-empty'
+  'ctrl-#': 'custom:insert-low_backslash_broadcast'
+  'ctrl-$': 'custom:insert-empty'
+  'ctrl-%': 'custom:insert-low_percent_broadcast'
+  'ctrl-^': 'custom:insert-low_exponent_broadcast'
+  'ctrl-&': 'custom:insert-low_and_broadcast'
+  'ctrl-*': 'custom:insert-low_times_broadcast'
+  'ctrl-(': 'custom:insert-low_divide_broadcast'
+  'ctrl-)': 'custom:insert-low_plus_broadcast'
+  'ctrl-_': 'custom:insert-low_minus_broadcast'
   'ctrl-+': 'custom:insert-equalequal_broadcast'
   # 'ctrl-{': 'custom:insert-empty'
   # 'ctrl-}': 'custom:insert-empty'
   'ctrl-:': 'custom:insert-r_pipe_tee'
-  'ctrl-"': 'custom:insert-angle_brackets'
-  'ctrl-|': 'custom:insert-empty'
+  'ctrl-"': 'custom:insert-r_pipe_assign'
+  'ctrl-|': 'custom:insert-low_or_broadcast'
   'ctrl-<': 'custom:insert-r_pipe_left_plus'
   'ctrl->': 'custom:insert-r_pipe_right_plus'
-  'ctrl-?': 'custom:insert-empty'
-  'ctrl-~': 'custom:insert-equal_tilde'
-  'shift-ctrl-tab': 'custom:insert-colon'
+  'ctrl-?': 'custom:insert-r_pipe_right_not'
+  'ctrl-~': 'custom:insert-julia_mcrget'
+  'shift-ctrl-tab': 'custom:insert-low_double_dot'
 
-  'alt-cmd-ctrl-1': 'custom:insert-empty'
+  'alt-cmd-ctrl-1': 'custom:insert-not_tilde'
   'alt-cmd-ctrl-2': 'custom:insert-empty'
-  'alt-cmd-ctrl-3': 'custom:insert-empty'
+  'alt-cmd-ctrl-3': 'custom:insert-rust_derive'
   'alt-cmd-ctrl-4': 'custom:insert-empty'
   'alt-cmd-ctrl-5': 'custom:insert-empty'
-  'alt-cmd-ctrl-6': 'custom:insert-empty'
+  'alt-cmd-ctrl-6': 'custom:insert-sqrt_math'
   'alt-cmd-ctrl-7': 'custom:insert-empty'
   'alt-cmd-ctrl-8': 'custom:insert-empty'
   'alt-cmd-ctrl-9': 'custom:insert-empty'
   'alt-cmd-ctrl-0': 'custom:insert-empty'
   'alt-cmd-ctrl--': 'custom:insert-empty'
   'alt-cmd-ctrl-=': 'custom:insert-empty'
-  'alt-cmd-ctrl-[': 'custom:insert-empty'
-  'alt-cmd-ctrl-]': 'custom:insert-empty'
-  'alt-cmd-ctrl-;': 'custom:insert-double_colon'
+  'alt-cmd-ctrl-[': 'custom:insert-julia_mcinfo'
+  'alt-cmd-ctrl-]': 'custom:insert-julia_mcpipe'
+  'alt-cmd-ctrl-;': 'custom:insert-julia_mcwhich'
   'alt-cmd-ctrl-\'': 'custom:insert-r_right_assign_up'
-  'alt-cmd-ctrl-\\': 'custom:insert-rust_derive'
+  'alt-cmd-ctrl-\\': 'custom:insert-julia_mctest'
   'alt-cmd-ctrl-,': 'custom:insert-julia_subtype'
   'alt-cmd-ctrl-.': 'custom:insert-julia_supertype'
   'alt-cmd-ctrl-/': 'custom:insert-r_assign_up'
-  'alt-cmd-ctrl-`': 'custom:insert-empty'
-  'alt-cmd-ctrl-tab': 'custom:insert-empty'
+  'alt-cmd-ctrl-`': 'custom:insert-julia_mcedit'
+  'alt-cmd-ctrl-tab': 'custom:insert-semicolon'
 
-  'alt-cmd-ctrl-!': 'custom:insert-not_equal_math'
-  'alt-cmd-ctrl-@': 'custom:insert-empty'
-  'alt-cmd-ctrl-#': 'custom:insert-empty'
-  'alt-cmd-ctrl-$': 'custom:insert-empty'
-  'alt-cmd-ctrl-%': 'custom:insert-empty'
-  'alt-cmd-ctrl-^': 'custom:insert-sqrt_math'
-  'alt-cmd-ctrl-&': 'custom:insert-empty'
-  'alt-cmd-ctrl-*': 'custom:insert-empty'
-  'alt-cmd-ctrl-(': 'custom:insert-empty'
-  'alt-cmd-ctrl-)': 'custom:insert-empty'
-  'alt-cmd-ctrl-_': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-!': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-@': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-#': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-$': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-%': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-^': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-&': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-*': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-(': 'custom:insert-empty'
+  # 'alt-cmd-ctrl-)': 'custom:insert-empty'
+  'alt-cmd-ctrl-_': 'custom:insert-multiply'
   'alt-cmd-ctrl-+': 'custom:insert-equal_math'
-  'alt-cmd-ctrl-{': 'custom:insert-empty'
-  'alt-cmd-ctrl-}': 'custom:insert-empty'
-  'alt-cmd-ctrl-:': 'custom:insert-empty'
-  'alt-cmd-ctrl-"': 'custom:insert-empty'
-  'alt-cmd-ctrl-|': 'custom:insert-empty'
+  'alt-cmd-ctrl-{': 'custom:insert-julia_mcdebug'
+  'alt-cmd-ctrl-}': 'custom:insert-julia_mcchain'
+  'alt-cmd-ctrl-:': 'custom:insert-julia_mceval'
+  'alt-cmd-ctrl-"': 'custom:insert-julia_mcenum'
+  'alt-cmd-ctrl-|': 'custom:insert-julia_mctestset'
   # 'alt-cmd-ctrl-<': 'custom:insert-empty'
   # 'alt-cmd-ctrl->': 'custom:insert-empty'
   # 'alt-cmd-ctrl-?': 'custom:insert-empty'
-  'alt-cmd-ctrl-~': 'custom:insert-empty'
-  'shift-alt-cmd-ctrl-tab': 'custom:insert-comma'
+  'alt-cmd-ctrl-~': 'custom:insert-julia_mcless'
+  'shift-alt-cmd-ctrl-tab': 'custom:insert-colon'
 
   'cmd-ctrl-1': 'custom:insert-not_equalequal'
   'cmd-ctrl-2': 'custom:insert-empty'
-  'cmd-ctrl-3': 'custom:insert-low_backslash'
+  'cmd-ctrl-3': 'custom:insert-double_backslash'
   'cmd-ctrl-4': 'custom:insert-empty'
-  'cmd-ctrl-5': 'custom:insert-low_percent'
-  'cmd-ctrl-6': 'custom:insert-low_exponent'
-  'cmd-ctrl-7': 'custom:insert-low_and'
-  'cmd-ctrl-8': 'custom:insert-low_times'
-  'cmd-ctrl-9': 'custom:insert-low_divide'
-  'cmd-ctrl-0': 'custom:insert-low_plus'
-  'cmd-ctrl--': 'custom:insert-low_minus'
+  'cmd-ctrl-5': 'custom:insert-in'
+  'cmd-ctrl-6': 'custom:insert-empty'
+  'cmd-ctrl-7': 'custom:insert-double_and'
+  'cmd-ctrl-8': 'custom:insert-double_times'
+  'cmd-ctrl-9': 'custom:insert-double_divide'
+  'cmd-ctrl-0': 'custom:insert-double_plus'
+  'cmd-ctrl--': 'custom:insert-double_minus'
   'cmd-ctrl-=': 'custom:insert-triple_equal'
   'cmd-ctrl-[': 'custom:insert-rust_left_assign'
   'cmd-ctrl-]': 'custom:insert-rust_rigth_assign'
-  'cmd-ctrl-;': 'custom:insert-low_double_dot'
+  'cmd-ctrl-;': 'custom:insert-double_colon'
   'cmd-ctrl-\'': 'custom:insert-triple_singlequote'
-  'cmd-ctrl-\\': 'custom:insert-low_or'
+  'cmd-ctrl-\\': 'custom:insert-double_or'
   'cmd-ctrl-,': 'custom:insert-doubleless'
   'cmd-ctrl-.': 'custom:insert-doublemore'
   'cmd-ctrl-/': 'custom:insert-triple_divide'
-  'cmd-ctrl-`': 'custom:insert-triple_apostrophe'
+  'cmd-ctrl-`': 'custom:insert-julia_mcshow'
   'cmd-ctrl-tab': 'custom:insert-single_dash'
 
   'cmd-ctrl-!': 'custom:insert-not_equalequal_broadcast'
   'cmd-ctrl-@': 'custom:insert-empty'
-  'cmd-ctrl-#': 'custom:insert-low_backslash_broadcast'
+  'cmd-ctrl-#': 'custom:insert-empty'
   'cmd-ctrl-$': 'custom:insert-empty'
-  'cmd-ctrl-%': 'custom:insert-low_percent_broadcast'
-  'cmd-ctrl-^': 'custom:insert-low_exponent_broadcast'
-  'cmd-ctrl-&': 'custom:insert-low_and_broadcast'
-  'cmd-ctrl-*': 'custom:insert-low_times_broadcast'
-  'cmd-ctrl-(': 'custom:insert-low_divide_broadcast'
-  'cmd-ctrl-)': 'custom:insert-low_plus_broadcast'
-  'cmd-ctrl-_': 'custom:insert-low_minus_broadcast'
+  'cmd-ctrl-%': 'custom:insert-ni'
+  'cmd-ctrl-^': 'custom:insert-empty'
+  'cmd-ctrl-&': 'custom:insert-double_and_broadcast'
+  'cmd-ctrl-*': 'custom:insert-empty'
+  'cmd-ctrl-(': 'custom:insert-empty'
+  'cmd-ctrl-)': 'custom:insert-empty'
+  'cmd-ctrl-_': 'custom:insert-empty'
   'cmd-ctrl-+': 'custom:insert-triple_equal_broadcast'
-  'cmd-ctrl-{': 'custom:insert-empty'
-  'cmd-ctrl-}': 'custom:insert-empty'
-  'cmd-ctrl-:': 'custom:insert-empty'
+  'cmd-ctrl-{': 'custom:insert-julia_mccmd'
+  'cmd-ctrl-}': 'custom:insert-julia_mcmacroexpand'
+  'cmd-ctrl-:': 'custom:insert-angle_brackets'
   'cmd-ctrl-"': 'custom:insert-triple_doublequote'
-  'cmd-ctrl-|': 'custom:insert-low_or_broadcast'
+  'cmd-ctrl-|': 'custom:insert-double_or_broadcast'
   'cmd-ctrl-<': 'custom:insert-tripleless'
   'cmd-ctrl->': 'custom:insert-triplemore'
   'cmd-ctrl-?': 'custom:insert-rust_doc'
-  'cmd-ctrl-~': 'custom:insert-empty'
+  'cmd-ctrl-~': 'custom:insert-julia_mctime'
   'shift-cmd-ctrl-tab': 'custom:insert-double_dash'
+
+  'alt-cmd-ctrl-a': 'custom:insert-symbol_a'
+  'alt-cmd-ctrl-b': 'custom:insert-symbol_b'
+  'alt-cmd-ctrl-c': 'custom:insert-symbol_c'
+  'alt-cmd-ctrl-d': 'custom:insert-symbol_d'
+  'alt-cmd-ctrl-e': 'custom:insert-symbol_e'
+  'alt-cmd-ctrl-f': 'custom:insert-symbol_f'
+  'alt-cmd-ctrl-g': 'custom:insert-symbol_g'
+  'alt-cmd-ctrl-h': 'custom:insert-symbol_h'
+  'alt-cmd-ctrl-i': 'custom:insert-symbol_i'
+  'alt-cmd-ctrl-j': 'custom:insert-symbol_j'
+  'alt-cmd-ctrl-k': 'custom:insert-symbol_k'
+  'alt-cmd-ctrl-l': 'custom:insert-symbol_l'
+  'alt-cmd-ctrl-m': 'custom:insert-symbol_m'
+  'alt-cmd-ctrl-n': 'custom:insert-symbol_n'
+  'alt-cmd-ctrl-o': 'custom:insert-symbol_o'
+  'alt-cmd-ctrl-p': 'custom:insert-symbol_p'
+  'alt-cmd-ctrl-q': 'custom:insert-doc'
+  'alt-cmd-ctrl-r': 'custom:insert-symbol_r'
+  'alt-cmd-ctrl-s': 'custom:insert-symbol_s'
+  'alt-cmd-ctrl-t': 'custom:insert-symbol_t'
+  'alt-cmd-ctrl-u': 'custom:insert-symbol_u'
+  'alt-cmd-ctrl-v': 'custom:insert-symbol_v'
+  'alt-cmd-ctrl-x': 'custom:insert-symbol_x'
+  'alt-cmd-ctrl-y': 'custom:insert-symbol_y'
+  'alt-cmd-ctrl-z': 'custom:insert-symbol_z'
+  'alt-cmd-ctrl-w': 'custom:insert-symbol_w'
 
   'cmd-ctrl-a': 'custom:insert-greek_a'
   'cmd-ctrl-b': 'custom:insert-greek_b'
@@ -477,6 +501,7 @@
   'cmd-ctrl-n': 'custom:insert-greek_n'
   'cmd-ctrl-o': 'custom:insert-greek_o'
   'cmd-ctrl-p': 'custom:insert-greek_p'
+  # 'cmd-ctrl-q': 'custom:insert-empty'
   'cmd-ctrl-r': 'custom:insert-greek_r'
   'cmd-ctrl-s': 'custom:insert-greek_s'
   'cmd-ctrl-t': 'custom:insert-greek_t'
@@ -503,6 +528,7 @@
   'cmd-ctrl-N': 'custom:insert-greek_capital_n'
   'cmd-ctrl-O': 'custom:insert-greek_capital_o'
   'cmd-ctrl-P': 'custom:insert-greek_capital_p'
+  'cmd-ctrl-Q': 'custom:insert-bug'
   'cmd-ctrl-R': 'custom:insert-greek_capital_r'
   'cmd-ctrl-S': 'custom:insert-greek_capital_s'
   'cmd-ctrl-T': 'custom:insert-greek_capital_t'
@@ -513,7 +539,7 @@
   'cmd-ctrl-Z': 'custom:insert-greek_capital_z'
   'cmd-ctrl-W': 'custom:insert-todo'
 
-#------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################
 #
 # 8888888888 888b    888 8888888b.
 # 888        8888b   888 888  "Y88b
@@ -524,4 +550,4 @@
 # 888        888   Y8888 888  .d88P
 # 8888888888 888    Y888 8888888P"
 #
-#------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################
