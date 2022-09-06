@@ -91,6 +91,10 @@
 	{ "key": "cmd+0",											"command": "-workbench.action.focusSideBar"},
 	{ "key": "cmd+k e",										"command": "-workbench.files.action.focusOpenEditorsView", "when": "workbench.explorer.openEditorsView.active"},
 
+	// focus
+	{ "key": "shift+cmd+]",								"command": "outline.focus"},
+	{ "key": "shift+cmd+[",								"command": "todo-tree-view.focus"},
+
 	// open buffer
 
 
