@@ -57,9 +57,6 @@
         "language-julia.interrupt"
     ],
     "editor.accessibilitySupport": "off",
-    "timeline.excludeSources": [
-        "git-history"
-    ],
     "workbench.activityBar.visible": true,
     "yaml.schemas": {
         "file:///Users/drivas/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
@@ -90,7 +87,7 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "workbench.colorTheme": "Cobalt2",
+    "workbench.colorTheme": "Default Dark+",
     "redhat.telemetry.enabled": true,
     "julia.symbolCacheDownload": true,
     "go.toolsManagement.autoUpdate": true,
@@ -106,6 +103,7 @@
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "explorer.confirmDelete": false,
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.editor.focusRecentEditorAfterClose": false
 
 }
