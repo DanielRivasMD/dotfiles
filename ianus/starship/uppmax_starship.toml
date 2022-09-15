@@ -35,9 +35,10 @@ format                                       = '⟪[$hostname](#B452CD)⟫ '
 disabled                                     = false
 
 [jobs]
-symbol                                       = '∫'
-number_threshold                             = 3
-symbol_threshold                             = 3
+symbol                                       = ' ∫'
+number_threshold                             = 2
+symbol_threshold                             = 1
+format                                       = "[$symbol $number]($style)"
 style                                        = '#00CED1'
 
 [line_break]
