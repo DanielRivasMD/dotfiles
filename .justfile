@@ -380,13 +380,6 @@ Hadur:
   mv "${remoteBin}/micro-2.0.10-linux64.tar.gz" "${remoteBin}/download/"
   rm -rf "${remoteBin}/micro-2.0.10"
 
-  #   # nushell
-  #   wget "https://github.com/nushell/nushell/releases/download/0.38.0/nu_0_38_0_linux.tar.gz" --directory-prefix "${remoteBin}/"
-  #   tar -xvf "${remoteBin}/nu_0_38_0_linux.tar.gz" --directory "${remoteBin}/"
-  #   mv -v "${remoteBin}/nu_0_38_0_linux/nushell-0.38.0/"nu* "${remoteBin}/bin/"
-  #   mv -v "${remoteBin}/nu_0_38_0_linux/nushell-0.38.0/libssl.so.1.1" "${remoteBin}/bin/"
-  #   mv "${remoteBin}/nu_0_38_0_linux.tar.gz" "${remoteBin}/download/"
-  #   rm -rf "${remoteBin}/nu_0_38_0_linux"
 
   # ripgrep
   wget "https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
