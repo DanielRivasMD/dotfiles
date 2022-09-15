@@ -401,9 +401,6 @@ Hadur:
   mv "${remoteBin}/starship" "${remoteBin}/bin/"
   mv "${remoteBin}/starship-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
 
-  # xcp
-  # "wget https://github.com/tarka/xcp/archive/refs/tags/v0.9.0.tar.gz" --directory-prefix "${remoteBin}/"
-
   # xsv
   wget "https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
   tar -xvf "${remoteBin}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
