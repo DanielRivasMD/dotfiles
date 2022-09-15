@@ -329,11 +329,11 @@ Hadur:
   if [[ ! -d "${remoteBin}/download" ]]; then mkdir -p "${remoteBin}/download"; fi
 
   # bat
-  wget "https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
-  tar -xvf "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
-  mv "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl/bat" "${remoteBin}/bin/"
-  mv "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
-  rm -rf "${remoteBin}/bat-v0.18.3-x86_64-unknown-linux-musl"
+  wget "https://github.com/sharkdp/bat/releases/download/v0.22.1/bat-v0.22.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/bat-v0.22.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/bat-v0.22.1-x86_64-unknown-linux-musl/bat" "${remoteBin}/bin/"
+  mv "${remoteBin}/bat-v0.22.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/bat-v0.22.1-x86_64-unknown-linux-musl"
 
   # diamond
   wget "https://github.com/bbuchfink/diamond/releases/download/v2.0.15/diamond-linux64.tar.gz" --directory-prefix "${remoteBin}/"
@@ -349,17 +349,17 @@ Hadur:
   rm -rf "${remoteBin}/man"
 
   # fd
-  wget "https://github.com/sharkdp/fd/releases/download/v8.2.1/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
-  tar -xvf "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
-  mv "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl/fd" "${remoteBin}/bin/"
-  mv "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
-  rm -rf "${remoteBin}/fd-v8.2.1-x86_64-unknown-linux-musl"
+  wget "https://github.com/sharkdp/fd/releases/download/v8.4.0/fd-v8.4.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/fd-v8.4.0-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/fd-v8.4.0-x86_64-unknown-linux-musl/fd" "${remoteBin}/bin/"
+  mv "${remoteBin}/fd-v8.4.0-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/fd-v8.4.0-x86_64-unknown-linux-musl"
 
   # just
-  wget "https://github.com/casey/just/releases/download/0.10.2/just-0.10.2-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
-  tar -xvf "${remoteBin}/just-0.10.2-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  wget "https://github.com/casey/just/releases/download/1.5.0/just-1.5.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/just-1.5.0-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
   mv "${remoteBin}/just" "${remoteBin}/bin/"
-  mv "${remoteBin}/just-0.10.2-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  mv "${remoteBin}/just-1.5.0-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
   rm -rf "${remoteBin}/Cargo"*
   rm -rf "${remoteBin}/GRAMMAR.md"
   rm -rf "${remoteBin}/just.1"
@@ -367,19 +367,18 @@ Hadur:
   rm -rf "${remoteBin}/README.adoc"
 
   # lsd
-  wget "https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
-  tar -xvf "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
-  mv "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl/lsd" "${remoteBin}/bin/"
-  mv "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
-  rm -rf "${remoteBin}/lsd-0.20.1-x86_64-unknown-linux-musl"
+  wget "https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-0.23.1-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/lsd-0.23.1-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/lsd-0.23.1-x86_64-unknown-linux-musl/lsd" "${remoteBin}/bin/"
+  mv "${remoteBin}/lsd-0.23.1-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/lsd-0.23.1-x86_64-unknown-linux-musl"
 
   # micro
-  wget "https://github.com/zyedidia/micro/releases/download/v2.0.10/micro-2.0.10-linux64.tar.gz" --directory-prefix "${remoteBin}/"
-  tar -xvf "${remoteBin}/micro-2.0.10-linux64.tar.gz" --directory "${remoteBin}/"
-  mv "${remoteBin}/micro-2.0.10/micro" "${remoteBin}/bin/"
-  mv "${remoteBin}/micro-2.0.10-linux64.tar.gz" "${remoteBin}/download/"
-  rm -rf "${remoteBin}/micro-2.0.10"
-
+  wget "https://github.com/zyedidia/micro/releases/download/v2.0.11/micro-2.0.11-linux64.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/micro-2.0.11-linux64.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/micro-2.0.11/micro" "${remoteBin}/bin/"
+  mv "${remoteBin}/micro-2.0.11-linux64.tar.gz" "${remoteBin}/download/"
+  rm -rf "${remoteBin}/micro-2.0.11"
 
   # ripgrep
   wget "https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
@@ -389,7 +388,7 @@ Hadur:
   rm -rf "${remoteBin}/ripgrep-13.0.0-x86_64-unknown-linux-musl"
 
   # starship
-  wget "https://github.com/starship/starship/releases/download/v0.58.0/starship-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  wget "https://github.com/starship/starship/releases/download/v1.10.3/starship-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
   tar -xvf "${remoteBin}/starship-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
   mv "${remoteBin}/starship" "${remoteBin}/bin/"
   mv "${remoteBin}/starship-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
@@ -401,11 +400,14 @@ Hadur:
   mv "${remoteBin}/xsv-0.13.0-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
 
   # zoxide
-  wget "https://github.com/ajeetdsouza/zoxide/releases/download/v0.7.6/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
-  tar -xvf "${remoteBin}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
-  mv "${remoteBin}/zoxide-x86_64-unknown-linux-musl/zoxide" "${remoteBin}/bin/"
-  mv "${remoteBin}/zoxide-v0.7.6-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
+  wget "https://github.com/ajeetdsouza/zoxide/releases/download/v0.8.3/zoxide-0.8.3-x86_64-unknown-linux-musl.tar.gz" --directory-prefix "${remoteBin}/"
+  tar -xvf "${remoteBin}/zoxide-0.8.3-x86_64-unknown-linux-musl.tar.gz" --directory "${remoteBin}/"
+  mv "${remoteBin}/zoxide" "${remoteBin}/bin/"
+  mv "${remoteBin}/zoxide-0.8.3-x86_64-unknown-linux-musl.tar.gz" "${remoteBin}/download/"
   rm -rf "${remoteBin}/zoxide-x86_64-unknown-linux-musl"
+  rm -rf "${remoteBin}/CHANGELOG.md"
+  rm -rf "${remoteBin}/LICENSE"
+  rm -rf "${remoteBin}/README.md"
 
 ####################################################################################################
 # compose protocols
