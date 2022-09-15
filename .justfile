@@ -25,6 +25,8 @@ _default:
 # Cerberus
 ####################################################################################################
 
+# TODO: udpate Cerberus legend
+
 # link Cerberus archive
 Cerberus:
   #!/bin/bash
@@ -117,6 +119,8 @@ Cerberus:
 # Ianus
 ####################################################################################################
 
+# TODO: udpate Ianus legend
+
 # link Ianus archive
 Ianus:
   #!/bin/bash
@@ -177,8 +181,10 @@ Ianus:
 # Mercury
 ####################################################################################################
 
+# TODO: udpate Mercury legend
+
 # deliver archives to Uppmax
-MercuryUppmax:
+Mercury-uppmax:
   #!/bin/bash
   set -euo pipefail
 
@@ -196,13 +202,13 @@ MercuryUppmax:
   rsync -azvhP "${ianus}/micro/bindings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro bindings
   rsync -azvhP "${ianus}/micro/settings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro settings
 
-  # TODO: define softwareUppmax
-  # # remote bin
+  # remote bin
+  rsync -azvhPX "${remoteBin}/bin/"* "${uppmaxID}:${homeRemote}/bin/"
 
 ####################################################################################################
 
 # deliver archives to Pawsey
-MercuryPawsey:
+Mercury-pawsey:
   #!/bin/bash
   set -euo pipefail
 
@@ -226,8 +232,10 @@ MercuryPawsey:
 # Vulcano
 ####################################################################################################
 
+# TODO: udpate Vulcano legend
+
 # link archives Uppmax
-VulcanoUppmax:
+Vulcano-uppmax:
   #!/bin/bash
   set -euo pipefail
 
@@ -271,7 +279,7 @@ VulcanoUppmax:
 ####################################################################################################
 
 # link archives Pawsey
-VulcanoPawsey:
+Vulcano-pawsey:
   #!/bin/bash
   set -euo pipefail
 
@@ -314,6 +322,8 @@ VulcanoPawsey:
 ####################################################################################################
 # Hadur
 ####################################################################################################
+
+# TODO: udpate Hadur legend
 
 # download cluster executables
 Hadur:
@@ -414,9 +424,9 @@ Hadur:
 ####################################################################################################
 
 # transfer & link configuration Uppmax
-Uppmax: MercuryUppmax && VulcanoUppmax
+Uppmax: Mercury-uppmax && Vulcano-uppmax
 
 # transfer & link configuration Pawsey
-Pawsey: MercuryPawsey && VulcanoPawsey
+Pawsey: Mercury-pawsey && Vulcano-pawsey
 
 ####################################################################################################
