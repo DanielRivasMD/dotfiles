@@ -8,8 +8,8 @@ home="${HOME}"
 archive="${home}/.archive"
 cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
-forked="${home}/Factorem/Forked"
-observatory="${home}/Factorem/Observatory"
+forked="${home}/Forked"
+observatory="${home}/Observatory"
 appSuport="${home}/Library/Application Support"
 
 ####################################################################################################
@@ -52,7 +52,7 @@ nushellConf="${appSuport}/nushell"
 ####################################################################################################
 
 # remote
-remoteBin="${home}/Factorem/RemoteBin"
+remoteBin="${home}/RemoteBin"
 homeRemote="/home/drivas"
 ianusRemote="${homeRemote}/.archive/ianus"
 shellRemote="${ianusRemote}/shell"
