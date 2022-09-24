@@ -61,12 +61,14 @@ bashRemote="${shellRemote}/bash"
 fishRemote="${shellRemote}/fish"
 zshRemote="${shellRemote}/zsh"
 
+# Uppmax
+uppmaxID="drivas@rackham.uppmax.uu.se"
+
 # Pawsey
 pawseyID="drivas@topaz.pawsey.org.au"
 softwarePawsey="/scratch/pawsey0263/drivas/software"
 
-# Uppmax
-uppmaxID="drivas@rackham.uppmax.uu.se"
-softwareUppmax=""
+# Ulam
+ulamID="drivas@ulam.icm.uu.se"
 
 ####################################################################################################
