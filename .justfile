@@ -296,7 +296,6 @@ Vulcano-uppmax:
   ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zshrc.sh" "${homeRemote}/.zshrc"                               # zshrc
   ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"            # zsh aliases
   ssh ${uppmaxID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                         # fzf zsh
-  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_plugins.sh" "${homeRemote}/.zsh/zsh_plugins.sh"            # zsh plugins
   ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"          # zsh plugins
   ssh ${uppmaxID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                    # zsh completion
   ssh ${uppmaxID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                    # zsh completion
@@ -338,7 +337,6 @@ Vulcano-pawsey:
   ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zshrc.sh" "${homeRemote}/.zshrc"                                # zshrc
   ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"             # zsh aliases
   ssh ${pawseyID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                          # fzf zsh
-  ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zsh_plugins.sh" "${homeRemote}/.zsh/zsh_plugins.sh"             # zsh plugins
   ssh ${pawseyID} ln -svf "${zshRemote}/pawsey_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"           # zsh plugins
   ssh ${pawseyID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                     # zsh completion
   ssh ${pawseyID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                     # zsh completion
@@ -381,7 +379,6 @@ Vulcano-icm_ulam:
   ssh ${ulamID} ln -svf "${zshRemote}/ulam_zshrc.sh" "${homeRemote}/.zshrc"                                # zshrc
   ssh ${ulamID} ln -svf "${zshRemote}/ulam_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"             # zsh aliases
   ssh ${ulamID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                        # fzf zsh
-  ssh ${ulamID} ln -svf "${zshRemote}/ulam_zsh_plugins.sh" "${homeRemote}/.zsh/zsh_plugins.sh"             # zsh plugins
   ssh ${ulamID} ln -svf "${zshRemote}/ulam_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"           # zsh plugins
   ssh ${ulamID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                   # zsh completion
   ssh ${ulamID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                   # zsh completion
