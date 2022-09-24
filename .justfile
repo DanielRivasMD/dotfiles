@@ -185,6 +185,10 @@ Mercury-uppmax:
   #declarations
   source .just.sh
 
+  # create directories
+  ssh ${uppmaxID} "if [[ ! -d ${ianusRemote} ]]; then mkdir -p ${ianusRemote}; fi"
+  ssh ${uppmaxID} "if [[ ! -d ${homeRemote}/bin ]]; then mkdir -p ${homeRemote}/bin; fi"
+
   # directory
   rsync -azvhP "${ianus}/pier" "${uppmaxID}:${ianusRemote}/"                      # pier
   rsync -azvhP "${ianus}/R" "${uppmaxID}:${ianusRemote}/"                         # r
@@ -208,6 +212,9 @@ Mercury-pawsey:
 
   # declarations
   source .just.sh
+
+  # create directories
+  ssh ${pawseyID} "if [[ ! -d ${ianusRemote} ]]; then mkdir -p ${ianusRemote}; fi"
 
   # directory
   rsync -azvhP "${ianus}/pier" "${pawseyID}:${ianusRemote}/"                      # pier
@@ -484,10 +491,10 @@ Hadur:
 ####################################################################################################
 
 # transfer & link configuration Uppmax
-Uppmax: Mercury-uppmax && Vulcano-uppmax
+Deploy-Uppmax: Mercury-uppmax && Vulcano-uppmax
 
 # transfer & link configuration Pawsey
-Pawsey: Mercury-pawsey && Vulcano-pawsey
+Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
 
 # transfer & link configuration Ulam
 Deploy-ICM_Ulam: Mercury-icm_ulam && Vulcano-icm_ulam
