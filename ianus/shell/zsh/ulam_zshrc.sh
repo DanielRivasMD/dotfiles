@@ -33,7 +33,7 @@ source ${ZDOTDIR}/zsh_plugins.sh
 
 # # Plugins managed by antibody (AB) dinamically
 # # source <(antibody init)
-# zdharma/fast-syntax-highlighting
+# zdharma-continuum/fast-syntax-highlighting
 # zsh-users/zsh-autosuggestions
 # zsh-users/zsh-completions
 # wfxr/forgit
