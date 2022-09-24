@@ -223,6 +223,33 @@ Mercury-pawsey:
   rsync -azvhPX "${remoteBin}/bin/"* "${pawseyID}:${softwarePawsey}/bin/"
 
 ####################################################################################################
+
+# deliver archives to Ulam
+Mercury-icm_ulam:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
+  # create directories
+  ssh ${ulamID} "if [[ ! -d ${ianusRemote} ]]; then mkdir -p ${ianusRemote}; fi"
+  ssh ${ulamID} "if [[ ! -d ${homeRemote}/bin ]]; then mkdir -p ${homeRemote}/bin; fi"
+
+  # directory
+  rsync -azvhP "${ianus}/pier" "${ulamID}:${ianusRemote}/"                      # pier
+  rsync -azvhP "${ianus}/R" "${ulamID}:${ianusRemote}/"                         # r
+  rsync -azvhP "${ianus}/screen" "${ulamID}:${ianusRemote}/"                    # screen
+  rsync -azvhP "${ianus}/shell" "${ulamID}:${ianusRemote}/"                     # shell
+  rsync -azvhP "${ianus}/starship" "${ulamID}:${ianusRemote}/"                  # starship
+  rsync -azvhP "${ianus}/micro/plug" "${ulamID}:${ianusRemote}/micro/"          # micro plugins
+  rsync -azvhP "${ianus}/micro/bindings.json" "${ulamID}:${ianusRemote}/micro/" # micro bindings
+  rsync -azvhP "${ianus}/micro/settings.json" "${ulamID}:${ianusRemote}/micro/" # micro settings
+
+  # remote bin
+  rsync -azvhPX "${remoteBin}/bin/"* "${ulamID}:${homeRemote}/bin/"
+
+####################################################################################################
 # Vulcano
 ####################################################################################################
 
@@ -312,6 +339,45 @@ Vulcano-pawsey:
   # link executables
   ssh ${pawseyID} "if [[ ! -d ${homeRemote}/bin ]]; then ssh ${pawseyID} rm -rf ${homeRemote}/bin; fi"         # purge before linking
   ssh ${pawseyID} ln -svf "${softwarePawsey}/bin" "${homeRemote}/bin"
+
+####################################################################################################
+
+# link archives Ulam
+Vulcano-icm_ulam:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
+  # @HOME
+  ssh ${ulamID} ln -svf "${ianusRemote}/R/Rprofile.d" "${homeRemote}/.Rprofile.d"                          # rprofile directory
+  ssh ${ulamID} ln -svf "${ianusRemote}/R/ulam_Rprofile.R" "${homeRemote}/.Rprofile"                       # rprofile
+  ssh ${ulamID} ln -svf "${ianusRemote}/screen/4.01.00.screenrc" "${homeRemote}/.screenrc"                 # screen
+
+  # @config
+  ssh ${ulamID} ln -svf "${ianusRemote}/micro" "${homeRemote}/.config"                                     # micro directory
+  ssh ${ulamID} ln -svf "${ianusRemote}/starship" "${homeRemote}/.config"                                  # starship directory
+
+  # shell
+  ssh ${ulamID} ln -svf "${terminalRemote}/ulam_profile.sh" "${homeRemote}/.profile"                       # terminal profile
+
+  # bash
+  ssh ${ulamID} "if [[ ! -d ${homeRemote}/.bash ]]; then mkdir ${homeRemote}/.bash; fi"                    # purge before linking
+  ssh ${ulamID} ln -svf "${bashRemote}/ulam_bashrc.sh" "${homeRemote}/.bashrc"                             # bashrc
+  ssh ${ulamID} ln -svf "${bashRemote}/ulam_bash_profile.sh" "${homeRemote}/.bash_profile"                 # bash profile
+  ssh ${ulamID} ln -svf "${bashRemote}/ulam_bash_aliases.sh" "${homeRemote}/.bash/bash_aliases.sh"         # bash aliases
+  ssh ${ulamID} ln -svf "${bashRemote}/fzf.bash" "${homeRemote}/.bash"                                     # fzf bash
+
+  # zsh
+  ssh ${ulamID} "if [[ ! -d ${homeRemote}/.zsh ]]; then mkdir ${homeRemote}/.zsh; fi"                      # purge before linking
+  ssh ${ulamID} ln -svf "${zshRemote}/ulam_zshrc.sh" "${homeRemote}/.zshrc"                                # zshrc
+  ssh ${ulamID} ln -svf "${zshRemote}/ulam_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"             # zsh aliases
+  ssh ${ulamID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                        # fzf zsh
+  ssh ${ulamID} ln -svf "${zshRemote}/ulam_zsh_plugins.sh" "${homeRemote}/.zsh/zsh_plugins.sh"             # zsh plugins
+  ssh ${ulamID} ln -svf "${zshRemote}/ulam_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"           # zsh plugins
+  ssh ${ulamID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                   # zsh completion
+  ssh ${ulamID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                   # zsh completion
 
 ####################################################################################################
 # Hadur
@@ -422,5 +488,8 @@ Uppmax: Mercury-uppmax && Vulcano-uppmax
 
 # transfer & link configuration Pawsey
 Pawsey: Mercury-pawsey && Vulcano-pawsey
+
+# transfer & link configuration Ulam
+Deploy-ICM_Ulam: Mercury-icm_ulam && Vulcano-icm_ulam
 
 ####################################################################################################
