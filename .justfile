@@ -185,6 +185,7 @@ Ianus:
   ln -svf "${fish}/vernacular_config.fish" "${home}/.config/fish/config.fish"   # fish config
 
   # nushell
+  ln -svf "${nushell}/env.nu" "${nushellConf}/"                                 # nushell env
   ln -svf "${nushell}/config.nu" "${nushellConf}/"                              # nushell config
 
   # amp
