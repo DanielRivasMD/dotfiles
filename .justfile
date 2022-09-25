@@ -19,10 +19,14 @@ _default:
 # Cerberus
 ####################################################################################################
 
-# TODO: udpate Cerberus legend
+# In Greek mythology, Cerberus (/ˈsɜːrbərəs/; Greek: Κέρβερος Kérberos [ˈkerberos]), often referred to as the hound of Hades, is a multi-headed dog that guards the gates of the Underworld to prevent the dead from leaving.
+# He was the offspring of the monsters Echidna and Typhon, and was usually described as having three heads, a serpent for a tail, and snakes protruding from multiple parts of his body.
+# Cerberus is primarily known for his capture by Heracles, the last of Heracles' twelve labours.
+
+####################################################################################################
 
 # link Cerberus archive
-Cerberus:
+Kerberus:
   #!/bin/bash
   set -euo pipefail
 
@@ -113,7 +117,22 @@ Cerberus:
 # Ianus
 ####################################################################################################
 
-# TODO: udpate Ianus legend
+# In ancient Roman religion and myth, Janus (/ˈdʒeɪnəs/ JAY-nəs; Latin: Ianus [ˈi̯aːnʊs]) is the god of beginnings, gates, transitions, time, duality, doorways, passages, frames, and endings.
+# He is usually depicted as having two faces.
+# The month of January is named for Janus (Ianuarius).
+# According to ancient Roman farmers' almanacs, Juno was mistaken as the tutelary deity of the month of January; but, Juno is the tutelary deity of the month of June.
+
+# Janus presided over the beginning and ending of conflict, and hence war and peace.
+# The gates of a building in Rome named after him (not a temple, as it is often called, but an open enclosure with gates at each end) were opened in time of war, and closed to mark the arrival of peace.
+# As a god of transitions, he had functions pertaining to birth and to journeys and exchange, and in his association with Portunus, a similar harbor and gateway god, he was concerned with travelling, trading and shipping.
+
+# Janus had no flamen or specialised priest (sacerdos) assigned to him, but the King of the Sacred Rites (rex sacrorum) himself carried out his ceremonies.
+# Janus had a ubiquitous presence in religious ceremonies throughout the year.
+# As such, Janus was ritually invoked at the beginning of each ceremony, regardless of the main deity honored on any particular occasion.
+
+# The ancient Greeks had no equivalent to Janus, whom the Romans claimed as distinctively their own.
+
+####################################################################################################
 
 # link Ianus archive
 Ianus:
@@ -175,7 +194,15 @@ Ianus:
 # Mercury
 ####################################################################################################
 
-# TODO: udpate Mercury legend
+# Mercury (/ˈmɜːrkjʊri/; Latin: Mercurius [mɛrˈkʊrijʊs]) is a major god in Roman religion and mythology, being one of the 12 Dii Consentes within the ancient Roman pantheon.
+# He is the god of financial gain, commerce, eloquence, messages, communication (including divination), travelers, boundaries, luck, trickery, and thieves; he also serves as the guide of souls to the underworld.
+
+# In Roman mythology, he was considered to be either the son of Maia, one of the seven daughters of the Titan Atlas, and Jupiter, or of Caelus and Dies.
+# In his earliest forms, he appears to have been related to the Etruscan deity Turms; both gods share characteristics with the Greek god Hermes.
+# He is often depicted holding the caduceus in his left hand.
+# Similar to his Greek equivalent Hermes, he was awarded a magic wand by Apollo, which later turned into the caduceus, the staff with intertwined snakes.
+
+####################################################################################################
 
 # deliver archives to Uppmax
 Mercury-uppmax:
@@ -260,7 +287,27 @@ Mercury-icm_ulam:
 # Vulcano
 ####################################################################################################
 
-# TODO: udpate Vulcano legend
+# The Ancient Greeks named this island Therasía (Θηρασία) and Thérmessa (Θέρμεσσα, source of heat).
+# The island appeared in their myths as the private foundry of the Olympian god Hephaestus, the patron of blacksmiths.
+# Their myths noted two more of his foundries, at Etna and Olympus.
+# Strabo also mentions Thermessa as sacred place of Hephaestus (ἱερὰ Ἡφαίστου), but it is not certain whether this was a third name for the island, or merely an adjective.
+
+# Similarly, the Romans believed that Vulcano was the chimney of their god Vulcan's workshop and, therefore, named the island after him.
+# According to the Roman myths, the island had grown due to his periodic clearing of cinders and ashes from his forge.
+# They also explained earthquakes that either preceded or accompanied the explosions of ash as being due to Vulcan making weapons for their god Mars for his armies to wage war.[8]
+
+# Hephaestus (/hɪˈfiːstəs, hɪˈfɛstəs/; eight spellings; Greek: Ἥφαιστος, translit.
+# Hḗphaistos) is the Greek god of blacksmiths, metalworking, carpenters, craftsmen, artisans, sculptors, metallurgy, fire (compare, however, with Hestia), and volcanoes.
+# Hephaestus's Roman counterpart is Vulcan.
+# In Greek mythology, Hephaestus was either the son of Zeus and Hera or he was Hera's parthenogenous child.
+# He was cast off Mount Olympus by his mother Hera because of his lameness, the result of a congenital impairment; or in another account, by Zeus for protecting Hera from his advances (in which case his lameness would have been the result of his fall rather than the reason for it).
+
+# As a smithing god, Hephaestus made all the weapons of the gods in Olympus.
+# He served as the blacksmith of the gods, and was worshipped in the manufacturing and industrial centres of Greece, particularly Athens.
+# The cult of Hephaestus was based in Lemnos.
+# Hephaestus's symbols are a smith's hammer, anvil, and a pair of tongs.
+
+####################################################################################################
 
 # link archives Uppmax
 Vulcano-uppmax:
@@ -387,7 +434,16 @@ Vulcano-icm_ulam:
 # Hadur
 ####################################################################################################
 
-# TODO: udpate Hadur legend
+# Hadúr, or Hodúr in old Hungarian, short for Hadak Ura, meaning "warlord" or "lord of the armies" in Hungarian, was the god of fire, later became a war god in the religion of the early Hungarians (Magyars).
+# In Hungarian mythology, he was the third son of Arany Atyácska (Golden Father) and Hajnal Anyácska (Dawn Mother), the main god and goddess.
+# He had many siblings, including his two brothers: Napkirály (King Sun) and Szélkirály (King Wind).
+# In Heaven, on the top of the World Tree on the first level there was the castle of Arany Atyácska, and Napkirály's Golden Forest below it, and Szélkirály's Silver Forest below it, and Hadúr's Copper Forest was the third.
+# There he lived as a blacksmith of the gods.
+# He is thought to be a great man with long hair and with armour and weapons made of pure copper, since copper was his sacred metal.
+# He supposedly made the legendary sword, Sword of God (Isten kardja) which was discovered by Attila the Hun and secured his rule.
+# It was customary for the Magyars to sacrifice white stallions to him before a battle.
+
+####################################################################################################
 
 # download cluster executables
 Hadur:
