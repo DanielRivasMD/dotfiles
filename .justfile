@@ -197,33 +197,57 @@ Ianus:
   source .just.sh
 
   # R
+  echo ''
+  echo 'Linking R config'
+  echo '===================================================================================================='
   if [[ -d "${home}/.Renviron.d" ]]; then rm -rf "${home}/.Renviron.d"; fi      # purge before linking
   ln -svf "${ianus}/R/Renviron.d" "${home}/.Renviron.d"                         # renviron directory
   if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi      # purge before linking
   ln -svf "${ianus}/R/Rprofile.d" "${home}/.Rprofile.d"                         # rprofile directory
   ln -svf "${ianus}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                # rprofile
+  echo '===================================================================================================='
+  echo '===================================================================================================='
 
   # @HOME
+  echo ''
+  echo 'Linking config @HOME'
+  echo '===================================================================================================='
   ln -svf "${ianus}/pier/pier.toml" "${home}/.pier.toml"                        # pier
   ln -svf "${ianus}/tmux/3.2a.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.2a
   ln -svf "${ianus}/screen/4.08.00.screenrc" "${home}/.screenrc"                # screen
+  echo '===================================================================================================='
 
   # @config
+  echo ''
+  echo 'Linking config @config'
+  echo '===================================================================================================='
   ln -svf "${ianus}/micro" "${home}/.config"                                    # micro directory
   ln -svf "${ianus}/starship" "${home}/.config"                                 # starship directory
   ln -svf "${ianus}/lsd" "${home}/.config"                                      # lsd directory
+  echo '===================================================================================================='
 
   # shell
+  echo ''
+  echo 'Linking terminal profile'
+  echo '===================================================================================================='
   ln -svf "${terminal}/vernacular_profile.sh" "${home}/.profile"                # terminal profile
+  echo '===================================================================================================='
 
   # bash
+  echo ''
+  echo 'Linking bash profile'
+  echo '===================================================================================================='
   if [[ ! -d "${home}/.bash" ]]; then mkdir "${home}/.bash"; fi                 # purge before linking
   ln -svf "${bash}/vernacular_bashrc.sh" "${home}/.bashrc"                      # bashrc
   ln -svf "${bash}/vernacular_bash_aliases.sh" "${home}/.bash/bash_aliases.sh"  # bash aliases
   ln -svf "${bash}/fzf.bash" "${home}/.bash"                                    # fzf bash
   ln -svf "${bash}/bash_navi_patch.sh" "${home}/.bash"                          # bash navi patch
+  echo '===================================================================================================='
 
   # zsh
+  echo ''
+  echo 'Linking zsh profile'
+  echo '===================================================================================================='
   if [[ ! -d "${home}/.zsh" ]]; then mkdir "${home}/.zsh"; fi                   # purge before linking
   ln -svf "${zsh}/vernacular_zshrc.sh" "${home}/.zshrc"                         # zshrc
   ln -svf "${zsh}/vernacular_zsh_aliases.sh" "${home}/.zsh/zsh_aliases.sh"      # zsh aliases
@@ -234,16 +258,29 @@ Ianus:
   ln -svf "${zsh}/zsh_broot_patch.sh" "${home}/.zsh"                            # zsh broot patch
   ln -svf "${zsh}/zsh_just_patch.sh" "${home}/.zsh"                             # zsh just patch
   ln -svf "${zsh}/zsh_navi_patch.sh" "${home}/.zsh"                             # zsh navi patch
+  echo '===================================================================================================='
 
   # fish
+  echo ''
+  echo 'Linking fish profile'
+  echo '===================================================================================================='
   ln -svf "${fish}/vernacular_config.fish" "${home}/.config/fish/config.fish"   # fish config
+  echo '===================================================================================================='
 
   # nushell
+  echo ''
+  echo 'Linking nushell profile'
+  echo '===================================================================================================='
   ln -svf "${nushell}/env.nu" "${nushellConf}/"                                 # nushell env
   ln -svf "${nushell}/config.nu" "${nushellConf}/"                              # nushell config
+  echo '===================================================================================================='
 
   # amp
+  echo ''
+  echo 'Linking amp config'
+  echo '===================================================================================================='
   ln -svf "${ianus}/amp" "${appSuport}"                                         # amp config
+  echo '===================================================================================================='
 
 ####################################################################################################
 # Mercury
@@ -598,13 +635,13 @@ Hadur:
 # compose protocols
 ####################################################################################################
 
-# transfer & link configuration Uppmax
+# deliver & link configuration Uppmax
 Deploy-Uppmax: Mercury-uppmax && Vulcano-uppmax
 
-# transfer & link configuration Pawsey
+# deliver & link configuration Pawsey
 Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
 
-# transfer & link configuration Ulam
+# deliver & link configuration Ulam
 Deploy-ICM_Ulam: Mercury-icm_ulam && Vulcano-icm_ulam
 
 ####################################################################################################
