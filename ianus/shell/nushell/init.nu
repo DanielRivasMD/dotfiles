@@ -1,4 +1,18 @@
 ####################################################################################################
+# Nushell Environment Config File
+####################################################################################################
+
+# def create_left_prompt [] {
+#     let path_segment = if (is-admin) {
+#         $"(ansi red_bold)($env.PWD)"
+#     } else {
+#         $"(ansi green_bold)($env.PWD)"
+#     }
+
+#     $path_segment
+# }
+
+####################################################################################################
 
 def create_right_prompt [] {
   let time_segment = ([
@@ -57,5 +71,10 @@ let-env NU_LIB_DIRS = [
 let-env NU_PLUGIN_DIRS = [
   ($nu.config-path | path dirname | path join 'plugins')
 ]
+
+####################################################################################################
+
+# To add entries to PATH (on Windows you might use Path), you can use the following pattern:
+# let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
 ####################################################################################################
