@@ -17,6 +17,7 @@ alias lld = ls --long --all --du
 alias .. = cd ..
 alias ... = cd ../..
 alias .... = cd ../../..
+alias c = clear
 
 # lua tools
 alias vim = nvim
