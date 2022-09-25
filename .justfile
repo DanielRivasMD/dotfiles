@@ -26,32 +26,57 @@ _default:
 ####################################################################################################
 
 # link Cerberus archive
-Kerberus:
+Cerberus:
   #!/bin/bash
   set -euo pipefail
 
   # declarations
   source .just.sh
 
+  # atom
+  echo ''
+  echo 'Linking Atom'
+  echo '===================================================================================================='
   if [[ -d "${home}/.atom" ]]; then rm -rf "${home}/.atom"; fi                        # purge before linking
   ln -svf "${cerberus}/atom" "${home}/.atom"                                          # atom
+  echo '===================================================================================================='
 
+  # gitconfig
+  echo ''
+  echo 'Linking git config directory'
+  echo '===================================================================================================='
   if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi              # purge before linking
   ln -svf "${cerberus}/gitconfig.d" "${home}/.gitconfig.d"                            # gitconfig directory
+  echo '===================================================================================================='
+
+  # git files
+  echo ''
+  echo 'Linking git config files'
+  echo '===================================================================================================='
+  ln -svf "${cerberus}/git/gitconfig" "${home}/.gitconfig"                            # gitconfig
+  ln -svf "${cerberus}/git/gitignore_global" "${home}/.gitignore_global"              # gitignore_global
+  echo '===================================================================================================='
 
   # rc files
+  echo ''
+  echo 'Linking rc config'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/gem/gemrc" "${home}/.gemrc"                                    # gemrc
   ln -svf "${cerberus}/mplayer/mplayer" "${home}/.mplayer"                            # mplayer
   ln -svf "${cerberus}/nano/nanorc" "${home}/.nanorc"                                 # nanorc
-
-  # git files
-  ln -svf "${cerberus}/git/gitconfig" "${home}/.gitconfig"                            # gitconfig
-  ln -svf "${cerberus}/git/gitignore_global" "${home}/.gitignore_global"              # gitignore_global
+  echo '===================================================================================================='
 
   # toml files
+  echo ''
+  echo 'Linking toml config'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/procs/procs.toml" "${home}/.procs.toml"                        # procs
+  echo '===================================================================================================='
 
   # config files
+  echo ''
+  echo 'Linking config @config'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/alacritty" "${home}/.config/"                                  # alacritty
   ln -svf "${cerberus}/bottom" "${home}/.config/"                                     # bottom
   ln -svf "${cerberus}/cheat" "${home}/.config/"                                      # cheat
@@ -61,35 +86,63 @@ Kerberus:
   ln -svf "${cerberus}/rstudio" "${home}/.config/"                                    # rstudio
   ln -svf "${cerberus}/rstudio/keybindings" "${home}/.R/rstudio/"                     # rstudio keybindings
   ln -svf "${cerberus}/rustfmt" "${home}/.config/"                                    # rustfmt
+  echo '===================================================================================================='
 
   # config directories
+  echo ''
+  echo 'Linking config dirs @config'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/nvim" "${home}/.config"                                        # nvim directory
   ln -svf "${cerberus}/ranger" "${home}/.config"                                      # ranger directory
   ln -svf "${cerberus}/gitui" "${home}/.config"                                       # gitui directory
   ln -svf "${cerberus}/zellij" "${home}/.config"                                      # zellij directory
+  echo '===================================================================================================='
 
   # local
+  echo ''
+  echo 'Linking Rstudio config'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${home}/.local/share/rstudio/"  # rstudio
+  echo '===================================================================================================='
 
   # code
+  echo ''
+  echo 'Linking Code config'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/code/keybindings.json" "${codeConf}/"                          # code keybindings
   ln -svf "${cerberus}/code/settings.json" "${codeConf}/"                             # code settings
+  echo '===================================================================================================='
 
   # distant
+  echo ''
+  echo 'Linking config @distant locations'
+  echo '===================================================================================================='
   ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"                     # julia startup
   ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                                    # ssh config
   ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                          # lazycli config
   ln -svf "${cerberus}/lazygit/config.yml" "${lazygitConf}/"                          # lazygit config
+  echo '===================================================================================================='
 
   # force use toml config
+  echo ''
+  echo 'Linking broot config'
+  echo '===================================================================================================='
   if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi
   ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                               # broot config
+  echo '===================================================================================================='
 
   # purge before linking
+  echo ''
+  echo 'Linking navi config'
+  echo '===================================================================================================='
   if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
   ln -svf "${cerberus}/navi" "${naviConf}"                                            # navi cheats directory
+  echo '===================================================================================================='
 
   # sublime
+  echo ''
+  echo 'Linking Sublime config'
+  echo '===================================================================================================='
   ln -svf "${sublKeymapTarget}" "${sublKeymapOrigin}"
   ln -svf "${sublPackageTarget}" "${sublPackageOrigin}"
   ln -svf "${sublSettingTarget}" "${sublSettingOrigin}"
@@ -97,6 +150,7 @@ Kerberus:
   ln -svf "${sublRustTarget}" "${sublRustOrigin}"
   ln -svf "${sublRfmtTarget}" "${sublRfmtOrigin}"
   ln -svf "${sublGitTarget}" "${sublGitOrigin}"
+  echo '===================================================================================================='
 
   # # @forked
   # ln -svf "${forked}/preview-vim/preview-vim.json" "${cerberus}/karabiner/assets/complex_modifications"
