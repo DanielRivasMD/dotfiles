@@ -900,7 +900,7 @@ key_bindings:
   - { key: Space,           mods: Alt|Control|Command,              chars: "\x11q"        }
 
   # reload config
-  - { key: Comma,           mods: Command,                          chars: "\x11,"        }
+  - { key: Grave,           mods: Command,                          chars: "\x11,"        }
 
   # new window
   - { key: Semicolon,       mods: Command,                          chars: "\x11;"        }
@@ -962,7 +962,7 @@ key_bindings:
   - { key: Period,          mods: Command,                          chars: "\x11."        }
 
   # copy mode
-  - { key: Grave,           mods: Command,                          chars: "\x11c"        }
+  - { key: Comma,           mods: Command,                          chars: "\x11c"        }
   - { key: C,               mods: Command,                          chars: "\x11y"        }
   - { key: C,               mods: Command|Shift,                    chars: "\x11Y"        }
 
