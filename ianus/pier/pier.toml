@@ -28,6 +28,18 @@ command = 'ssh drivas-sens2022521@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2022521'
 tags = ['remote']
 
+[scripts.bianca-sftp-ca]
+alias = 'bianca-sftp-ca'
+command = 'sftp -q drivas-sens2022593@bianca-sftp.uppmax.uu.se'
+description = 'sftp to Bianca sens2022593'
+tags = ['remote']
+
+[scripts.bianca-ssh-ca]
+alias = 'bianca-ssh-ca'
+command = 'ssh drivas-sens2022593@bianca.uppmax.uu.se'
+description = 'ssh to Bianca sens2022593'
+tags = ['remote']
+
 [scripts.clean-atom]
 alias = 'clean-atom'
 command = '''for i in $(procs Atom | awk 'NR > 2 {print $1}' ); do kill $i; done'''
