@@ -177,6 +177,11 @@
 	{ "key": "ctrl+alt+left",							"command": "workbench.action.moveEditorToPreviousGroup"},
 	{ "key": "ctrl+cmd+left",							"command": "-workbench.action.moveEditorToPreviousGroup"},
 
+	{ "key": "ctrl+up",										"command": "workbench.action.focusAboveGroup"},
+	{ "key": "cmd+k cmd+up",							"command": "-workbench.action.focusAboveGroup"},
+	{ "key": "ctrl+down",									"command": "workbench.action.focusBelowGroup"},
+	{ "key": "cmd+k cmd+down",						"command": "-workbench.action.focusBelowGroup"},
+
 	// macros
 
 
