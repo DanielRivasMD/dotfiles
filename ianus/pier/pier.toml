@@ -1,3 +1,9 @@
+[scripts.alacritty]
+alias = 'alacritty'
+command = 'micro ${CERBERUS}/alacritty/alacritty.yml'
+description = 'open alacritty config with micro'
+tags = ['config']
+
 [scripts.atheme-reset]
 alias = 'atheme-reset'
 command = 'git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/alacritty/alacritty.yml'
