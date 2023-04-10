@@ -248,6 +248,12 @@ command = 'sftp drivas@magnus.pawsey.org.au'
 description = 'sftp to Pawsey Magnus'
 tags = ['remote']
 
+[scripts.micro]
+alias = 'micro'
+command = 'micro ${IANUS}/micro/bindings.json'
+description = 'open micro config with micro'
+tags = ['shell']
+
 [scripts.path]
 alias = 'path'
 command = '''
