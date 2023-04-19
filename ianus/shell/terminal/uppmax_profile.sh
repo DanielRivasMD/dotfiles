@@ -28,7 +28,8 @@ export IANUS=${ARCHIVE}ianus/
 
 # Manage tmux
 module load tmux
-[ -z "$TMUX" ] && { tmux a || exec /home/drivas/bin/muxed Remote && exit; }
+tmux
+# [ -z "$TMUX" ] && { tmux a || exec /home/drivas/bin/muxed Remote && exit; }
 
 # ####################################################################################################
 # # BLAST database
