@@ -12,7 +12,7 @@ tags = ['rust']
 
 [scripts.bianca-sftp-im]
 alias = 'bianca-sftp-im'
-command = 'sftp -q drivas-sens2019016@bianca-sftp.uppmax.uu.se'
+command = 'sftp -qr drivas-sens2019016@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2019016'
 tags = ['remote']
 
@@ -24,7 +24,7 @@ tags = ['remote']
 
 [scripts.bianca-sftp-ai]
 alias = 'bianca-sftp-ai'
-command = 'sftp -q drivas-sens2022521@bianca-sftp.uppmax.uu.se'
+command = 'sftp -qr drivas-sens2022521@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2022521'
 tags = ['remote']
 
@@ -36,7 +36,7 @@ tags = ['remote']
 
 [scripts.bianca-sftp-ca]
 alias = 'bianca-sftp-ca'
-command = 'sftp -q drivas-sens2022593@bianca-sftp.uppmax.uu.se'
+command = 'sftp -qr drivas-sens2022593@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2022593'
 tags = ['remote']
 
