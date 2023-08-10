@@ -78,6 +78,7 @@ Cerberus:
   echo 'Linking config @config'
   echo '===================================================================================================='
   ln -svf "${cerberus}/alacritty" "${home}/.config/"                                  # alacritty
+  rm -rf "${home}/.config/atuin" && ln -sv "${cerberus}/atuin" "${home}/.config/"     # atuin
   ln -svf "${cerberus}/bottom" "${home}/.config/"                                     # bottom
   ln -svf "${cerberus}/cheat" "${home}/.config/"                                      # cheat
   ln -svf "${cerberus}/karabiner" "${home}/.config/"                                  # karabiner
