@@ -71,54 +71,6 @@ source ${ZDOTDIR}/zsh_pandoc_autocompletion.sh
 # Fuzzy finder (fzf)
 [ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
 
-# alias completions
-compdef _mkdir mkd
-compdef _mplayer mp
-compdef _git-local-ignore gl
-
-# exa
-compdef _exa e
-compdef _exa ea
-compdef _exa er
-
-compdef _exa ear
-compdef _exa esa
-compdef _exa esc
-
-compdef _exa eg
-compdef _exa ega
-compdef _exa egr
-
-compdef _exa egar
-compdef _exa egsa
-compdef _exa egsc
-
-compdef _exa et
-compdef _exa ed
-
-# lsd
-compdef _lsd l
-compdef _lsd lr
-compdef _lsd lz
-
-compdef _lsd la
-compdef _lsd lar
-compdef _lsd laz
-
-compdef _lsd lh
-compdef _lsd lhr
-compdef _lsd lhz
-
-compdef _lsd lha
-compdef _lsd lhar
-compdef _lsd lhaz
-
-compdef _lsd lt
-compdef _lsd lta
-
-compdef _lsd le
-compdef _lsd lea
-
 
 ####################################################################################################
 # History
