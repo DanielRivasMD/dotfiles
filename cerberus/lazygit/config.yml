@@ -67,7 +67,7 @@ git:
 ####################################################################################################
 os:
     editCommand: '' # see 'Configuring File Editing' section
-    editCommandTemplate: '{{editor}} {{filename}}'
+    edit,EditAtLine: '{{editor}} {{filename}}'
     openCommand: ''
 ####################################################################################################
 refresher:
