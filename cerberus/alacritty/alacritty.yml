@@ -1004,37 +1004,42 @@ key_bindings:
   - { key: Back,            mods: Alt,                              chars: "\x1b\x7f"     }
   - { key: Delete,                                                  chars: "\x1b[3~"      }
   - { key: Left,            mods: Shift,                            chars: "\x1b[1;2D"    }
-  - { key: Left,            mods: Control,                          chars: "\x1b[1;5D"    }
-  - { key: Left,            mods: Alt,                              chars: "\x1bb"        }
-  # - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    }
+  - { key: Left,            mods: Control,                          chars: "\x1b[1;5D"    } # original
+  # - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    } # original
   - { key: Left,            mods: Command,                          chars: "\x01"         }
-  - { key: Left,            mods: Shift|Command,                    chars: "\x1b[1;3D"    }
-  # - { key: Left,            mods: Alt|Command,                      chars: "\x1bb"        }
+  - { key: Left,            mods: Alt|Command,                      chars: "\x1bb"        } # original
   - { key: Left,            mode: ~AppCursor,                       chars: "\x1b[D",      }
   - { key: Left,            mode: AppCursor,                        chars: "\x1bOD",      }
   - { key: Right,           mods: Shift,                            chars: "\x1b[1;2C"    }
-  - { key: Right,           mods: Control,                          chars: "\x1b[1;5C"    }
-  - { key: Right,           mods: Alt,                              chars: "\x1bf"        }
-  # - { key: Right,           mods: Alt,                              chars: "\x1b[1;3C"    }
+  - { key: Right,           mods: Control,                          chars: "\x1b[1;5C"    } # original
+  # - { key: Right,           mods: Alt,                              chars: "\x1b[1;3C"    } # original
   - { key: Right,           mods: Command,                          chars: "\x05"         }
-  - { key: Right,           mods: Shift|Command,                    chars: "\x1b[1;3C"    }
-  # - { key: Right,           mods: Alt|Command,                      chars: "\x1bf"        }
+  - { key: Right,           mods: Alt|Command,                      chars: "\x1bf"        } # original
   - { key: Right,           mode: ~AppCursor,                       chars: "\x1b[C",      }
   - { key: Right,           mode: AppCursor,                        chars: "\x1bOC",      }
   - { key: Up,              mods: Shift,                            chars: "\x1b[1;2A"    }
-  - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"    }
-  - { key: Up,              mods: Alt,                              chars: "\x1b[1;3A"    }
+  - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"    } # original
+  - { key: Up,              mods: Alt,                              chars: "\x1b[1;3A"    } # original
   - { key: Up,              mods: Command,                          chars: "\x1bg"        }
   - { key: Up,              mods: Command|Shift,                    chars: "\x1bg"        }
   - { key: Up,              mode: ~AppCursor,                       chars: "\x1b[A",      }
   - { key: Up,              mode: AppCursor,                        chars: "\x1bOA",      }
   - { key: Down,            mods: Shift,                            chars: "\x1b[1;2B"    }
-  - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    }
-  - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    }
+  - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    } # original
+  - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    } # original
   - { key: Down,            mods: Command,                          chars: "\x1bG"        }
   - { key: Down,            mods: Command|Shift,                    chars: "\x1bG"        }
   - { key: Down,            mode: ~AppCursor,                       chars: "\x1b[B",      }
   - { key: Down,            mode: AppCursor,                        chars: "\x1bOB",      }
+
+  - { key: Left,            mods: Alt,                              chars: "\x1bb"        } # backward motion
+  # - { key: Left,            mods: Control,                          chars: "\x1b[1;3D"    } # Left Alt
+  - { key: Right,           mods: Alt,                              chars: "\x1bf"        } # forward motion
+  # - { key: Right,           mods: Control,                          chars: "\x1b[1;3C"    } # Right Alt
+  # - { key: Up,              mods: Alt,                              chars: "\x1b[1;5A"    } # Up Control
+  # - { key: Up,              mods: Control,                          chars: "\x1b[1;3A"    } # Up Alt
+  # - { key: Down,            mods: Alt,                              chars: "\x1b[1;5B"    } # Down Control
+  # - { key: Down,            mods: Control,                          chars: "\x1b[1;3B"    } # Down Alt
 
   ####################################################################################################
   # alphabet
