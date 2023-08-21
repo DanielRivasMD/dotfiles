@@ -116,7 +116,7 @@ atom.commands.add 'atom-text-editor',
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-rust_derive': -> atom.workspace.getActiveTextEditor()?.insertText('#[]')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-modulus': -> atom.workspace.getActiveTextEditor()?.insertText(' %% ')
   'custom:insert-sqrt_math': -> atom.workspace.getActiveTextEditor()?.insertText(' √ ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
