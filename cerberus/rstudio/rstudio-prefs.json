@@ -20,10 +20,13 @@
             "Help",
             "Build",
             "VCS",
-            "Viewer"
+            "Viewer",
+            "Presentations"
         ],
+        "hiddenTabSet": [],
         "console_left_on_top": false,
-        "console_right_on_top": true
+        "console_right_on_top": true,
+        "additional_source_columns": 0
     },
     "show_margin": false,
     "font_size_points": 14,
@@ -33,5 +36,9 @@
     "reuse_sessions_for_project_links": true,
     "show_terminal_tab": false,
     "jobs_tab_visibility": "closed",
-    "posix_terminal_shell": "zsh"
+    "posix_terminal_shell": "zsh",
+    "save_workspace": "never",
+    "load_workspace": false,
+    "initial_working_directory": "~",
+    "always_save_history": false
 }
