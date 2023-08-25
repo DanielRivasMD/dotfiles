@@ -92,7 +92,36 @@ setopt appendhistory
 # RStudio
 ####################################################################################################
 
-rstudio() { command open "$@" -a RStudio }
+rstudio () {
+  if [ -z "$1" ] ; then
+    dir="."
+  else
+    dir="$1"
+  fi
+  cmd="proj <- list.files('$dir', pattern = '*.Rproj$', full.names = TRUE); if (length(proj) > 0) { system(paste0('open -na RStudio ', proj[1])) } else { dir = sub('.*/', '', getwd());
+    cat('
+
+Version: 1.0
+
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+
+AutoAppendNewline: Yes
+StripTrailingWhitespace: Yes
+
+',
+    file = paste0(dir, '.Rproj')); system(paste0('open -na RStudio ', dir, '.Rproj'))}"
+  Rscript -e $cmd
+}
 
 ####################################################################################################
 # McFly
