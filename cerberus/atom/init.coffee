@@ -183,7 +183,7 @@ atom.commands.add 'atom-text-editor',
 
   'custom:insert-not_equalequal_broadcast': -> atom.workspace.getActiveTextEditor()?.insertText(' .!== ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
-  # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
+  'custom:insert-r_doc': -> atom.workspace.getActiveTextEditor()?.insertText('#\' ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
   'custom:insert-ni': -> atom.workspace.getActiveTextEditor()?.insertText(' %ni% ')
   # 'custom:insert-empty': -> atom.workspace.getActiveTextEditor()?.insertText('  ')
