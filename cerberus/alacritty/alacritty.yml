@@ -1335,12 +1335,12 @@ key_bindings:
   - { key: Key4,            mods: Alt|Control|Command,              chars: "  "           }
   - { key: Key5,            mods: Alt|Control|Command,              chars: " %% "         }
   - { key: Key6,            mods: Alt|Control|Command,              chars: " √ "          }
-  - { key: Key7,            mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Key8,            mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Key9,            mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Key0,            mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Minus,           mods: Alt|Control|Command,              chars: "  "           }
-  - { key: Equals,          mods: Alt|Control|Command,              chars: "  "           }
+  - { key: Key7,            mods: Alt|Control|Command,              chars: "@param"       }
+  - { key: Key8,            mods: Alt|Control|Command,              chars: "@return"      }
+  - { key: Key9,            mods: Alt|Control|Command,              chars: "@importFrom"  }
+  - { key: Key0,            mods: Alt|Control|Command,              chars: "@examples"    }
+  - { key: Minus,           mods: Alt|Control|Command,              chars: "@rdname"      }
+  - { key: Equals,          mods: Alt|Control|Command,              chars: "@export"      }
   - { key: LBracket,        mods: Alt|Control|Command,              chars: "@info "       }
   - { key: RBracket,        mods: Alt|Control|Command,              chars: "@pipe "       }
   - { key: Semicolon,       mods: Alt|Control|Command,              chars: "@which "      }
