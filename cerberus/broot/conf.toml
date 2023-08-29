@@ -14,6 +14,17 @@ default_flags = ""
 
 # config
 [[verbs]]
+key = "shift-down"
+cmd = ":cd"
+description = "go into directory"
+
+[[verbs]]
+invocation = "root_up"
+key = "shift-up"
+internal = "root_up"
+description = "move tree root up"
+
+[[verbs]]
 invocation = "quit"
 key = "shift-alt-q"
 internal = "quit"
@@ -79,6 +90,18 @@ description = "go to next match"
 [[verbs]]
 invocation = "previous_match"
 key = "shift-alt-n"
+internal = "previous_match"
+description = "go to previous match"
+
+[[verbs]]
+invocation = "next_match"
+key = "shift-right"
+internal = "next_match"
+description = "go to next match"
+
+[[verbs]]
+invocation = "previous_match"
+key = "shift-left"
 internal = "previous_match"
 description = "go to previous match"
 
@@ -241,21 +264,15 @@ description = "go to bottom of the list"
 
 [[verbs]]
 invocation = "page_up"
-key = "alt-Up"
+key = "alt-up"
 internal = "page_up"
 description = "go to page up"
 
 [[verbs]]
 invocation = "page_down"
-key = "alt-Down"
+key = "alt-down"
 internal = "page_down"
 description = "go to page down"
-
-[[verbs]]
-invocation = "root_up"
-key = "shift-alt-z"
-internal = "root_up"
-description = "move tree root up"
 
 # panel
 [[verbs]]
