@@ -34,7 +34,7 @@ map Q goToRoot
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " modes
-map I enterInsertMode
+map ` enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
 
