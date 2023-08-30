@@ -40,5 +40,14 @@
     "save_workspace": "never",
     "load_workspace": false,
     "initial_working_directory": "~",
-    "always_save_history": false
+    "always_save_history": false,
+    "use_secure_download": false,
+    "cran_mirror": {
+        "name": "Global (CDN)",
+        "host": "RStudio",
+        "url": "http://cran.rstudio.com/",
+        "secondary": "",
+        "country": "us"
+    },
+    "terminal_track_environment": false
 }
