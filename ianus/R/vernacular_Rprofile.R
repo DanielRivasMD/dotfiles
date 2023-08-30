@@ -14,7 +14,7 @@ options(dplyr.width = Inf)      # Show all columns
 
 # open help in Opera
 options(help_type = 'html')
-options(browser = '/usr/bin/open -a "/Applications/Opera.app"')
+options(browser = '/usr/bin/open -a "/Applications/Firefox.app"')
 
 ####################################################################################################
 
