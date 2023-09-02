@@ -258,6 +258,18 @@
   'cmd-\'': 'keybinding-cheatsheet:toggle'
 
 ####################################################################################################
+
+'atom-workspace atom-text-editor:not(.mini), .tree-view':
+  'alt-enter': 'jumpy:toggle'
+
+'atom-workspace atom-text-editor.jumpy-jump-mode.jumpy-more-specific1.jumpy-more-specific2, .tree-view.jumpy-jump-mode.jumpy-more-specific1.jumpy-more-specific2':
+  'backspace': 'jumpy:reset'
+  'enter': 'jumpy:clear'
+  'space': 'jumpy:clear'
+  'escape': 'jumpy:clear'
+  'alt-enter': 'jumpy:clear'
+
+####################################################################################################
 #
 # 888    d8P  8888888888 Y88b   d88P 888888b.  8888888 888b    888 8888888b. 8888888 888b    888  .d8888b.   .d8888b.
 # 888   d8P   888         Y88b d88P  888  "88b   888   8888b   888 888  "Y88b  888   8888b   888 d88P  Y88b d88P  Y88b
