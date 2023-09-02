@@ -72,9 +72,6 @@
 
   // toggle quotes
 
-  // paste history
-  { "keys": ["command+shift+v"],        "command": "paste_from_history"},
-
   // folding
   { "keys": ["ctrl+["],                 "command": "fold"},
   { "keys": ["ctrl+]"],                 "command": "unfold"},
@@ -122,11 +119,8 @@
   { "keys": ["alt+m"],                  "command": "run_macro"},
 
   // jump
-  { "keys": ["ctrl+space"],             "command": "prev_modification"},
-  { "keys": ["shift+enter"],            "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
-
-  // git gutter
-  { "keys": ["ctrl+g"],                 "command": "git_gutter_blame"},
+  { "keys": ["alt+space"],              "command": "prev_modification"},
+  { "keys": ["alt+enter"],              "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
 
   // keybindings
   { "keys": ["alt+1"],                  "command": "insert",                    "args": {"characters": " ~ "            }},
