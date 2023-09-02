@@ -123,9 +123,6 @@
 	// toggle quotes
 	{ "key": "shift+cmd+'",								"command": "editor.togglequotes"},
 
-	// paste history
-
-
 	// folding
 	{ "key": "ctrl+[",										"command": "editor.fold", "when": "editorTextFocus && foldingEnabled"},
 	{ "key": "ctrl+shift+[",							"command": "editor.foldAll", "when": "editorTextFocus && foldingEnabled"},
