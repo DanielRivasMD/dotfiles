@@ -164,10 +164,6 @@
   'shift-cmd-g': 'unset!'
   'ctrl-cmd-g': 'unset!'
 
-  # paste history
-  'alt-c': 'clipboard-history:copy'
-  'alt-v': 'clipboard-history:paste'
-
   # folding
   'ctrl-]': 'editor:unfold-current-row'
   'ctrl-[': 'editor:fold-current-row'
@@ -182,7 +178,7 @@
   'alt-d': 'find-and-replace:select-next'
 
   # stop multicursor
-  'alt-u': 'find-and-replace:select-undo'
+  'alt-z': 'find-and-replace:select-undo'
 
   # select brackets
   'shift-alt-p': 'bracket-matcher:select-inside-brackets'
@@ -242,9 +238,9 @@
 ####################################################################################################
 
 'atom-text-editor[data-grammar~="latex"]':
-  'alt-cmd-b': 'atom-latex:build-here'
-  'alt-cmd-c': 'atom-latex:clean'
-  'alt-cmd-v': 'atom-latex:toggle-panel'
+  'cmd-enter': 'atom-latex:build-here'
+  'shift-cmd-enter': 'atom-latex:clean'
+  'alt-cmd-\'': 'atom-latex:toggle-panel'
 
 ####################################################################################################
 
