@@ -952,9 +952,6 @@ key_bindings:
   # detached from session
   - { key: D,               mods: Command,                          chars: "\x11d"        }
 
-  # choose buffer
-  - { key: V,               mods: Command|Shift,                    chars: "\x11V"        }
-
   # mark pane
   - { key: Space,           mods: Command|Shift,                    chars: "\x11M"        }
 
