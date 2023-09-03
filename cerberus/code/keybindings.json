@@ -236,6 +236,10 @@
 
 	{ "key": "ctrl+alt+space",						"command": "-toggleSuggestionDetails", "when": "suggestWidgetVisible && textInputFocus"},
 
+	// command palatte
+	{ "key": "alt+space",									"command": "workbench.action.showCommands"},
+
+	{ "key": "shift+cmd+p",								"command": "-workbench.action.showCommands"},
 
 	// keybindings
 	{ "key": "alt-1",											"command": "type",											"args": {"text": " ~ "									}},
