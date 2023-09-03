@@ -122,6 +122,8 @@
   { "keys": ["alt+space"],              "command": "prev_modification"},
   { "keys": ["alt+enter"],              "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
 
+  { "keys": ["alt+space"],              "command": "show_overlay", "args": {"overlay": "command_palette"} },
+
   // keybindings
   { "keys": ["alt+1"],                  "command": "insert",                    "args": {"characters": " ~ "            }},
   { "keys": ["alt+2"],                  "command": "insert",                    "args": {"characters": " @ "            }},
