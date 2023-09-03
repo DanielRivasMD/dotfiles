@@ -959,9 +959,8 @@ key_bindings:
   - { key: Period,          mods: Command,                          chars: "\x11."        }
 
   # copy mode
-  - { key: Comma,           mods: Command,                          chars: "\x11c"        }
+  - { key: Space,           mods: Alt,                              chars: "\x11c"        }
   - { key: C,               mods: Command,                          chars: "\x11y"        }
-  - { key: C,               mods: Command|Shift,                    chars: "\x11Y"        }
 
   # choose session
   - { key: S,               mods: Command,                          chars: "\x11s"        }
