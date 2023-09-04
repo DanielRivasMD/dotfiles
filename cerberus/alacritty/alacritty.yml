@@ -900,7 +900,7 @@ key_bindings:
   - { key: Space,           mods: Alt|Control|Command,              chars: "\x11q"        }
 
   # reload config
-  - { key: Grave,           mods: Command,                          chars: "\x11,"        }
+  - { key: Grave,           mods: Command|Shift,                    chars: "\x11,"        }
 
   # new window
   - { key: Semicolon,       mods: Command,                          chars: "\x11;"        }
