@@ -119,7 +119,7 @@
   { "keys": ["alt+m"],                  "command": "run_macro"},
 
   // jump
-  { "keys": ["alt+space"],              "command": "prev_modification"},
+  { "keys": ["shift+space"],            "command": "prev_modification"},
   { "keys": ["alt+enter"],              "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
 
   { "keys": ["alt+space"],              "command": "show_overlay", "args": {"overlay": "command_palette"} },
