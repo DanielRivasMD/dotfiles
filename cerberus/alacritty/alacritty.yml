@@ -896,11 +896,14 @@ key_bindings:
   # shortcuts for tmux. the leader key is ctrl-q (0x11)
   ####################################################################################################
 
+  # menu
+  - { key: Space,           mods: Alt,                              chars: "\x11."        } # bind . display-menu -T
+
   # select other clients
   - { key: Space,           mods: Alt|Control|Command,              chars: "\x11q"        } # bind q switch-client -l
 
   # reload config
-  - { key: Grave,           mods: Command|Shift,                    chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
+  - { key: Comma,           mods: Command,                          chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
 
   # new window
   - { key: Semicolon,       mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
@@ -953,14 +956,7 @@ key_bindings:
   - { key: D,               mods: Command,                          chars: "\x11d"        } # bind d detach
 
   # mark pane
-  - { key: Space,           mods: Command|Shift,                    chars: "\x11M"        } # bind M select-pane -m
-
-  # menu
-  - { key: Period,          mods: Command,                          chars: "\x11."        } # bind . display-menu -T
-
-  # copy mode
-  - { key: Space,           mods: Alt,                              chars: "\x11c"        } # bind c copy-mode
-  - { key: C,               mods: Command,                          chars: "\x11y"        } #
+  - { key: Period,          mods: Command,                          chars: "\x11M"        } # bind M select-pane -m
 
   # choose session
   - { key: S,               mods: Command,                          chars: "\x11s"        } # bind s choose-tree -s
@@ -973,6 +969,10 @@ key_bindings:
 
   # find window
   - { key: T,               mods: Command,                          chars: "\x11t"        } # bind t command-prompt -T "find-window '%%'"
+
+  # copy mode
+  - { key: Space,           mods: Command,                          chars: "\x11c"        } # bind c copy-mode
+  - { key: C,               mods: Command,                          chars: "\x11y"        } #
 
   # select tabs
   - { key: Key1,            mods: Command,                          chars: "\x111"        }
