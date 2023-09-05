@@ -902,8 +902,33 @@ key_bindings:
   # select other clients
   - { key: Space,           mods: Alt|Control|Command,              chars: "\x11q"        } # bind q switch-client -l
 
-  # reload config
-  - { key: Comma,           mods: Command,                          chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
+  # choose session
+  - { key: S,               mods: Command,                          chars: "\x11s"        } # bind s choose-tree -s
+
+  # choose window
+  - { key: A,               mods: Command,                          chars: "\x11a"        } # bind a choose-tree -w
+
+  # detached from session
+  - { key: D,               mods: Command,                          chars: "\x11d"        } # bind d detach
+
+  # kill
+  - { key: X,               mods: Command,                          chars: "\x11x"        } # bind x kill-pane
+  - { key: X,               mods: Command|Shift,                    chars: "\x11X"        } # bind X kill-window
+
+  # move window
+  - { key: RBracket,        mods: Command|Shift,                    chars: "\x11}"        } # bind '}' command-prompt -T "move-window -t '%%'"
+
+  # break panes
+  - { key: RBracket,        mods: Command,                          chars: "\x11]"        } # bind ] break-pane
+
+  # mark pane
+  - { key: Period,          mods: Command,                          chars: "\x11M"        } # bind M select-pane -m
+
+  # join marked panes
+  - { key: LBracket,        mods: Command,                          chars: "\x11["        } # bind [ join-pane -h
+
+  # find window
+  - { key: T,               mods: Command,                          chars: "\x11t"        } # bind t command-prompt -T "find-window '%%'"
 
   # new window
   - { key: Semicolon,       mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
@@ -924,51 +949,26 @@ key_bindings:
   - { key: Comma,           mods: Command|Shift,                    chars: "\x11<"        } # bind < select-layout main-vertical
   - { key: LBracket,        mods: Command|Shift,                    chars: "\x11{"        } # bind '{' select-layout tiled
 
+  # rotate window
+  - { key: W,               mods: Command,                          chars: "\x11w"        } # bind w rotate-window
+
   # zoom
   - { key: Space,           mods: Alt|Control|Command|Shift,        chars: "\x11z"        } # bind z resize-pane -Z
 
-  # move window
-  - { key: RBracket,        mods: Command|Shift,                    chars: "\x11}"        } # bind '}' command-prompt -T "move-window -t '%%'"
-
-  # break panes
-  - { key: RBracket,        mods: Command,                          chars: "\x11]"        } # bind ] break-pane
-
-  # join marked panes
-  - { key: LBracket,        mods: Command,                          chars: "\x11["        } # bind [ join-pane -h
+  # reload config
+  - { key: Comma,           mods: Command,                          chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
 
   # select windows
   - { key: Right,           mods: Command|Alt,                      chars: "\x11n"        } # bind p previous-window
   - { key: Left,            mods: Command|Alt,                      chars: "\x11p"        } # bind n next-window
 
-  # swap windows
-  - { key: LBracket,        mods: Command|Alt,                      chars: "\x11P"        } # bind P swap-window -t -1\; select-window -t -1
-  - { key: RBracket,        mods: Command|Alt,                      chars: "\x11N"        } # bind N swap-window -t +1\; select-window -t +1
-
   # select last window
   - { key: Space,           mods: Control|Alt,                      chars: "\x11l"        } # bind l last-pane\; resize-pane -Z
   - { key: Space,           mods: Command|Alt,                      chars: "\x11L"        } # bind L last-window
 
-  # kill
-  - { key: X,               mods: Command,                          chars: "\x11x"        } # bind x kill-pane
-  - { key: X,               mods: Command|Shift,                    chars: "\x11X"        } # bind X kill-window
-
-  # detached from session
-  - { key: D,               mods: Command,                          chars: "\x11d"        } # bind d detach
-
-  # mark pane
-  - { key: Period,          mods: Command,                          chars: "\x11M"        } # bind M select-pane -m
-
-  # choose session
-  - { key: S,               mods: Command,                          chars: "\x11s"        } # bind s choose-tree -s
-
-  # choose window
-  - { key: A,               mods: Command,                          chars: "\x11a"        } # bind a choose-tree -w
-
-  # rotate window
-  - { key: W,               mods: Command,                          chars: "\x11w"        } # bind w rotate-window
-
-  # find window
-  - { key: T,               mods: Command,                          chars: "\x11t"        } # bind t command-prompt -T "find-window '%%'"
+  # swap windows
+  - { key: LBracket,        mods: Command|Alt,                      chars: "\x11P"        } # bind P swap-window -t -1\; select-window -t -1
+  - { key: RBracket,        mods: Command|Alt,                      chars: "\x11N"        } # bind N swap-window -t +1\; select-window -t +1
 
   # copy mode
   - { key: Space,           mods: Command,                          chars: "\x11c"        } # bind c copy-mode
