@@ -915,9 +915,6 @@ key_bindings:
   - { key: X,               mods: Command,                          chars: "\x11x"        } # bind x kill-pane
   - { key: X,               mods: Command|Shift,                    chars: "\x11X"        } # bind X kill-window
 
-  # move window
-  - { key: RBracket,        mods: Command|Shift,                    chars: "\x11}"        } # bind '}' command-prompt -T "move-window -t '%%'"
-
   # break panes
   - { key: RBracket,        mods: Command,                          chars: "\x11]"        } # bind ] break-pane
 
@@ -926,9 +923,6 @@ key_bindings:
 
   # join marked panes
   - { key: LBracket,        mods: Command,                          chars: "\x11["        } # bind [ join-pane -h
-
-  # find window
-  - { key: T,               mods: Command,                          chars: "\x11t"        } # bind t command-prompt -T "find-window '%%'"
 
   # new window
   - { key: Semicolon,       mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
@@ -947,7 +941,7 @@ key_bindings:
   - { key: Minus,           mods: Command|Shift,                    chars: "\x11_"        } # bind _ select-layout even-vertical
   - { key: Period,          mods: Command|Shift,                    chars: "\x11>"        } # bind > select-layout main-horizontal
   - { key: Comma,           mods: Command|Shift,                    chars: "\x11<"        } # bind < select-layout main-vertical
-  - { key: LBracket,        mods: Command|Shift,                    chars: "\x11{"        } # bind '{' select-layout tiled
+  - { key: Slash,           mods: Command|Shift,                    chars: "\x11?"        } # bind '?' select-layout tiled
 
   # rotate window
   - { key: W,               mods: Command,                          chars: "\x11w"        } # bind w rotate-window
