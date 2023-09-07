@@ -48,6 +48,7 @@ map <c-space> LinkHints.activateModeToCopyLinkUrl
 map <c-a-m-space> LinkHints.activateModeWithQueue
 
 map <m-enter> LinkHints.activateMode
+map <c-m-enter> LinkHints.activateMode
 
 map <a-enter> LinkHints.activateModeToOpenInNewTab
 map <c-a-m-enter> LinkHints.activateModeToOpenInNewForegroundTab
