@@ -270,6 +270,12 @@ command = 'bat ~/.pier.toml'
 description = 'print pier.toml'
 tags = ['rust']
 
+[scripts.pwd]
+alias = 'pwd'
+command = 'pwd | tr -d "\n" | cb'
+description = 'copy pwd without new line'
+tags = ['shell']
+
 [scripts.sample]
 alias = 'sample'
 command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
