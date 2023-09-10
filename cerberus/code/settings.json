@@ -1,45 +1,109 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// settings
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 {
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // terminal
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     "terminal.integrated.tabs.enabled": false,
+    "terminal.external.osxExec": "",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 18,
+
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // editor
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     "editor.fontSize": 18,
     "editor.tabSize": 2,
-    "julia.enableTelemetry": true,
-    "workbench.list.horizontalScrolling": true,
-    "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "julia.format.indent": 2,
-    "workbench.iconTheme": "file-icons",
-    "screencastMode.mouseIndicatorColor": "#303030",
-
-
-    // StatusBar color:
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#303030",
-        "statusBar.noFolderBackground": "#222225",
-        "statusBar.debuggingBackground": "#511f1f"
-    },
-
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 2,
     "editor.fontFamily": "Hack Nerd Font",
     "editor.minimap.scale": 2,
-    "terminal.external.osxExec": "",
-    "julia.enableCrashReporter": false,
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "workbench.startupEditor": "newUntitledFile",
-    "terminal.integrated.fontSize": 16,
     "editor.renderWhitespace": "all",
     "editor.wordWrapColumn": 135,
-
     "editor.codeActionOnSave": null,
+    "editor.renderControlCharacters": true,
+    "editor.accessibilitySupport": "off",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // todo tree
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text",
+        "opacity": 50,
+        "gutterIcon": true
+    },
+
+    "todo-tree.general.tags": [
+        "BUG",
+        "FIX",
+        "TODO",
+        "DOC",
+        "IDEA"
+    ],
+
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "foreground": "green",
+            "icon": "gear",
+        },
+        "BUG": {
+            "foreground": "yellow",
+            "icon": "bug",
+        },
+        "IDEA": {
+            "foreground": "magenta",
+            "icon": "trophy",
+        },
+        "FIX": {
+            "foreground": "red",
+            "icon": "tools",
+        },
+        "DOC": {
+            "foreground": "skyblue",
+            "icon": "database",
+        },
+    },
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // julia
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "julia.format.indent": 2,
+    "julia.enableTelemetry": true,
+    "julia.enableCrashReporter": false,
+    "julia.symbolCacheDownload": true,
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // golang
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "go.toolsManagement.autoUpdate": true,
+
     "go.testOnSave": true,
     "go.lintOnSave": "package",
     "go.formatTool": "goimports",
+    "go.autocompleteUnimportedPackages": true,
+
     "go.testFlags": [
         "-v"
     ],
-    "go.autocompleteUnimportedPackages": true,
+
     "[go]": {
         "editor.formatOnSave": true,
         "editor.codeActionOnSave": {
@@ -47,17 +111,75 @@
         },
     },
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // c++
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    "todo-tree.tree.showScanModeButton": false,
-    "editor.renderControlCharacters": true,
     "C_Cpp.default.browse.path": [],
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
     "C_Cpp.updateChannel": "Insiders",
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ],
-    "editor.accessibilitySupport": "off",
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // latex
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // "latex-workshop.latex.autoClean.run": "never",
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // statusbar & theme
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#303030",
+        "statusBar.noFolderBackground": "#222225",
+        "statusBar.debuggingBackground": "#511f1f"
+    },
+
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "file-icons",
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // miscellaneous
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.list.horizontalScrolling": true,
     "workbench.activityBar.visible": true,
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+
+    "problems.decorations.enabled": false,
+    "outline.problems.colors": false,
+    "outline.problems.badges": false,
+
+    "customizeUI.titleBar": "regular",
+    "customizeUI.activityBar": "wide",
+
+    "atomKeymap.promptV3Features": true,
+
+    "screencastMode.mouseIndicatorColor": "#303030",
+
+    "redhat.telemetry.enabled": true,
+
+    "vsicons.dontShowNewVersionMessage": true,
+
+    "bracketPairColorizer.depreciation-notice": false,
+
+    "files.associations": {
+        ".justfile": "just",
+        "*.nu": "shellscript"
+    },
+
+    "[just]": {},
+
     "yaml.schemas": {
         "file:///Users/drivas/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
@@ -72,39 +194,9 @@
             "monitor": true
         }
     ],
-    "todo-tree.general.tags": [
-        "BUG",
-        "FIX",
-        "TODO",
-        "DOC"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "outline.problems.colors": false,
-    "outline.problems.badges": false,
-    "problems.decorations.enabled": false,
-    "customizeUI.titleBar": "regular",
-    "customizeUI.activityBar": "wide",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "workbench.colorTheme": "Default Dark+",
-    "redhat.telemetry.enabled": true,
-    "julia.symbolCacheDownload": true,
-    "go.toolsManagement.autoUpdate": true,
-    "explorer.confirmDragAndDrop": false,
-    "bracketPairColorizer.depreciation-notice": false,
-    "files.associations": {
-        ".justfile": "just",
-        "*.nu": "shellscript"
-    },
-    "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.autoBuild.run": "never",
-    // "latex-workshop.latex.autoClean.run": "never",
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "explorer.confirmDelete": false,
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.editor.focusRecentEditorAfterClose": false,
-    "[just]": {}
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////

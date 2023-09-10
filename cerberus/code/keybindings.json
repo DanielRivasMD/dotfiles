@@ -695,10 +695,11 @@
 
 	// sidebar
 	{ "key": "ctrl+alt+[",								"command": "workbench.action.toggleSidebarVisibility"},
-	{ "key": "ctrl+alt+\\",								"command": "workbench.files.action.focusFilesExplorer"},
 	{ "key": "ctrl+alt+]",								"command": "workbench.action.toggleAuxiliaryBar"},
-	{ "key": "ctrl+alt+;",									"command": "outline.focus"},
-	{ "key": "ctrl+alt+'",									"command": "todo-tree-view.focus"},
+	{ "key": "ctrl+alt+;",								"command": "outline.focus"},
+	{ "key": "ctrl+alt+'",								"command": "todo-tree-view.focus"},
+	{ "key": "ctrl+alt+\\",								"command": "workbench.files.action.focusFilesExplorer"},
+	{ "key": "ctrl+alt+\\",								"command": "workbench.view.explorer", "when": "viewContainer.workbench.view.explorer.enabled"},
 
 	// open buffer
 
@@ -1050,3 +1051,5 @@
 	{ "key": "cmd-ctrl-shift-w",					"command": "type",											"args": {"text": "TODO: "								}}
 
 ]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
