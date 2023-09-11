@@ -18,7 +18,7 @@ tmux send-keys "cd /Users/drivas/Factorem/CNStumorRisk" C-m
 
 # create a new window
 tmux new-window -t $session:3 -n check
-tmux send-keys "cd Users/drivas/Factorem" C-m
+tmux send-keys "cd /Users/drivas/Factorem" C-m
 
 # return to main window
 tmux select-window -t $session:1
