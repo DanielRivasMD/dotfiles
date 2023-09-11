@@ -32,22 +32,6 @@ $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
 # the prompt indicators are environmental variables that represent
 # the state of the prompt
 # let-env PROMPT_INDICATOR = "〉"
-
-####################################################################################################
-
-# specifies how environment variables are:
-# - converted from a string to a value on Nushell startup (from_string)
-# - converted from a value back to a string when running extrnal commands (to_string)
-let-env ENV_CONVERSIONS = {
-  "PATH": {
-    from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | str collect (char esep) }
-  }
-  "Path": {
-    from_string: { |s| $s | split row (char esep) }
-    to_string: { |v| $v | str collect (char esep) }
-  }
-}
 $env.PROMPT_INDICATOR = ""
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = "〉"
@@ -68,10 +52,5 @@ $env.NU_LIB_DIRS = [
 $env.NU_PLUGIN_DIRS = [
   ($nu.config-path | path dirname | path join 'plugins')
 ]
-
-####################################################################################################
-
-# To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
 ####################################################################################################
