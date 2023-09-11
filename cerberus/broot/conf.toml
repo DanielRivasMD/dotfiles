@@ -15,15 +15,16 @@ default_flags = ""
 # config
 [[verbs]]
 invocation = "open_leave"
-key = "enter"
+key = "ctrl-space"
 cmd = ":cd"
 # internal = "open_leave"
 description = "go into directory"
 
 [[verbs]]
-invocation = "open_stay"
+invocation = "open_leave"
 key = "shift-down"
-internal = "open_stay"
+cmd = ":cd"
+# internal = "open_leave"
 description = "open file or directory according to OS (stay in broot)"
 
 [[verbs]]
