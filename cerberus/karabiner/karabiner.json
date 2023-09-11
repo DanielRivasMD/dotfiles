@@ -684,11 +684,71 @@
             "simple_modifications": [
                 {
                     "from": {
+                        "key_code": "end"
+                    },
+                    "to": [
+                        {
+                            "key_code": "volume_decrement"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "home"
+                    },
+                    "to": [
+                        {
+                            "key_code": "volume_increment"
+                        }
+                    ]
+                },
+                {
+                    "from": {
                         "key_code": "non_us_backslash"
                     },
                     "to": [
                         {
                             "consumer_key_code": "al_terminal_lock_or_screensaver"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "page_down"
+                    },
+                    "to": [
+                        {
+                            "key_code": "display_brightness_decrement"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "page_up"
+                    },
+                    "to": [
+                        {
+                            "key_code": "display_brightness_increment"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "right_shift"
+                    },
+                    "to": [
+                        {
+                            "key_code": "keypad_num_lock"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "volume_increment"
+                    },
+                    "to": [
+                        {
+                            "key_code": "mute"
                         }
                     ]
                 }
