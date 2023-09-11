@@ -1,9 +1,7 @@
 ####################################################################################################
 
 # The default config record. This is where much of your global configuration is setup.
-let $config = {
-
-  ####################################################################################################
+$env.config = {
 
   keybindings: [
 
@@ -30,7 +28,7 @@ let $config = {
     {
       name: list_shells
       modifier: none
-      keycode: f12
+      keycode: "char_÷"
       mode: emacs
       event: {
         send: executehostcommand,
@@ -40,8 +38,8 @@ let $config = {
 
     {
       name: previous_dir
-      modifier: shift
-      keycode: f11
+      modifier: none
+      keycode: "char_≤"
       mode: emacs
       event: {
         send: executehostcommand,
@@ -51,8 +49,8 @@ let $config = {
 
     {
       name: next_dir
-      modifier: shift
-      keycode: f12
+      modifier: none
+      keycode: "char_≥"
       mode: emacs
       event: {
         send: executehostcommand,
