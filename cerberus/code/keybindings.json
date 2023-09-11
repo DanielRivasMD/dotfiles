@@ -609,7 +609,7 @@
 	{ "key": "ctrl+alt+enter",						"command": "workbench.actions.view.problems", "when": "workbench.panel.markers.view.active"},
 	{ "key": "cmd+space",									"command": "workbench.action.gotoSymbol"},
 	{ "key": "ctrl+shift+space",					"command": "workbench.action.showAllSymbols"},
-	{ "key": "alt+z",											"command": "workbench.action.reopenClosedEditor"},
+	{ "key": "ctrl+z",										"command": "workbench.action.reopenClosedEditor"},
 	{ "key": "alt+cmd+down",							"command": "workbench.action.editor.nextChange"},
 	{ "key": "alt+cmd+up",								"command": "workbench.action.editor.previousChange"},
 	{ "key": "alt+cmd+space",							"command": "workbench.action.openPreviousEditorFromHistory"},
@@ -633,6 +633,7 @@
 	{ "key": "shift+f11",									"command": "references-view.findReferences", "when": "editorHasReferenceProvider"},
 	{ "key": "tab",												"command": "toggleExplainMode", "when": "suggestWidgetVisible"},
 	{ "key": "ctrl+space",								"command": "hideSuggestWidget", "when": "suggestWidgetVisible && textInputFocus"},
+	{ "key": "alt+z",											"command": "cursorUndo", "when": "textInputFocus"},
 
 	// editor layout
 	{ "key": "shift+alt+z",								"command": "workbench.action.editorLayoutSingle"},
