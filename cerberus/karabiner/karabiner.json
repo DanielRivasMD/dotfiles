@@ -398,7 +398,18 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": [],
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "volume_increment"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "mute"
+                                }
+                            ]
+                        }
+                    ],
                     "treat_as_built_in_keyboard": false
                 },
                 {
@@ -739,16 +750,6 @@
                     "to": [
                         {
                             "key_code": "keypad_num_lock"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "volume_increment"
-                    },
-                    "to": [
-                        {
-                            "key_code": "mute"
                         }
                     ]
                 }
