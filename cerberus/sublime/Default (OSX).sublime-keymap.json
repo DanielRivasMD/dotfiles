@@ -1,17 +1,23 @@
 [
 
+  { "keys": ["f11"],                    "command": "goto_reference" },
+  { "keys": ["shift+f11"],              "command": "goto_reference", "args": {"side_by_side": true, "clear_to_right": true} },
+
+  { "keys": ["f12"],                    "command": "goto_definition" },
+  { "keys": ["shift+f12"],              "command": "goto_definition", "args": {"side_by_side": true, "clear_to_right": true} },
+
   // move by paragraph
-  { "keys": ["alt+up"],                 "command": "move_by_paragraph",         "args": {"forward": false}},
-  { "keys": ["alt+down"],               "command": "move_by_paragraph",         "args": {"forward": true}},
-  { "keys": ["alt+shift+up"],           "command": "move_by_paragraph",         "args": {"forward": false, "extend": true}},
-  { "keys": ["alt+shift+down"],         "command": "move_by_paragraph",         "args": {"forward": true, "extend": true}},
+  { "keys": ["alt+up"],                 "command": "move_by_paragraph", "args": {"forward": false}},
+  { "keys": ["alt+down"],               "command": "move_by_paragraph", "args": {"forward": true}},
+  { "keys": ["shift+alt+up"],           "command": "move_by_paragraph", "args": {"forward": false, "extend": true}},
+  { "keys": ["shift+alt+down"],         "command": "move_by_paragraph", "args": {"forward": true, "extend": true}},
 
   // save
-  { "keys": ["alt+w"],                  "command": "save",                      "args": { "async": true }},
+  { "keys": ["alt+w"],                  "command": "save", "args": { "async": true }},
 
   // move tabs
-  { "keys": ["command+alt+["],          "command": "move_tab",                  "args": { "position": "-1" }},
-  { "keys": ["command+alt+]"],          "command": "move_tab",                  "args": { "position": "+1" }},
+  { "keys": ["command+alt+["],          "command": "move_tab", "args": { "position": "-1" }},
+  { "keys": ["command+alt+]"],          "command": "move_tab", "args": { "position": "+1" }},
 
   // split editor
   { "keys": ["command+="],              "command": "new_pane"},
@@ -19,78 +25,67 @@
   // close tab
   { "keys": ["alt+q"],                  "command": "close"},
 
-  // close pane
-  { "keys": ["shift+alt+x"],            "command": "close_pane"},
-
   // new pane
   { "keys": ["command+:"],              "command": "new_file"},
+  { "keys": ["command+;"],              "command": "advanced_new_file_new"},
 
   // move to tab
   { "keys": ["alt+command+right"],      "command": "next_view"},
-
   { "keys": ["alt+command+left"],       "command": "prev_view"},
 
   // move to pane
-  { "keys": ["ctrl+left"],              "command": "focus_neighboring_group",   "args": {"forward": false}},
+  { "keys": ["ctrl+left"],              "command": "focus_neighboring_group", "args": {"forward": false}},
   { "keys": ["ctrl+right"],             "command": "focus_neighboring_group"},
 
   // do / redo
-  { "keys": ["command+u"],              "command": "undo"},
-  { "keys": ["command+shift+u"],        "command": "redo"},
+  { "keys": ["shift+alt+o"],            "command": "redo"},
+  { "keys": ["alt+o"],                  "command": "undo"},
 
   // select all
-  { "keys": ["alt+shift+a"],            "command": "select_all"},
+  { "keys": ["shift+alt+a"],            "command": "select_all"},
 
   // select line
-  { "keys": ["alt+shift+l"],            "command": "expand_selection",          "args": {"to": "line"}},
+  { "keys": ["shift+alt+l"],            "command": "expand_selection", "args": {"to": "line"}},
 
   // matching bracket
-  { "keys": ["alt+p"],                  "command": "move_to",                   "args": {"to": "brackets"}},
+  { "keys": ["alt+p"],                  "command": "move_to", "args": {"to": "brackets"}},
 
   // project find regex
-  { "keys": ["ctrl+shift+r"],           "command": "show_panel",                "args": {"panel": "find_in_files"}},
-  { "keys": ["ctrl+r"],                 "command": "show_panel",                "args": {"panel": "find", "reverse": false}},
+  { "keys": ["ctrl+r"],                 "command": "show_panel", "args": {"panel": "find", "reverse": false}},
+  { "keys": ["ctrl+shift+r"],           "command": "show_panel", "args": {"panel": "find_in_files"}},
 
   // project find file
-  { "keys": ["ctrl+t"],                 "command": "show_overlay",              "args": {"overlay": "goto", "show_files": true}},
+  { "keys": ["ctrl+t"],                 "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}},
 
   // tree view
-  { "keys": ["command+\\"],             "command": "toggle_side_bar"},
-
-  { "keys": ["command+shift+\\"],       "command": "focus_side_bar"},
-
-  // open buffer
+  { "keys": ["ctrl+alt+["],             "command": "toggle_side_bar"},
+  { "keys": ["ctrl+alt+\\"],            "command": "focus_side_bar"},
 
   // go to line
-  { "keys": ["shift+alt+f"],            "command": "show_overlay",              "args": {"overlay": "goto", "text": ":"}},
-
-  // advanced open file
-  { "keys": ["command+;"],              "command": "advanced_new_file_new"},
-
-  // skip multicursor
-  { "keys": ["alt+y"],                  "command": "find_under_expand_skip" },
-
-  // toggle quotes
+  { "keys": ["shift+alt+f"],            "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
 
   // folding
   { "keys": ["ctrl+["],                 "command": "fold"},
   { "keys": ["ctrl+]"],                 "command": "unfold"},
-
-  { "keys": ["ctrl+shift+["],           "command": "fold_by_level",             "args": {"level": 1}},
+  { "keys": ["ctrl+shift+["],           "command": "fold_by_level", "args": {"level": 1}},
   { "keys": ["ctrl+shift+]"],           "command": "unfold_all"},
 
   // find
-  { "keys": ["shift+alt+n"],            "command": "find_prev"},
-  { "keys": ["alt+n"],                  "command": "find_next"},
+  { "keys": ["alt+h"],                  "command": "find_prev"},
+  { "keys": ["alt+l"],                  "command": "find_next"},
 
   // spawn multicursor
   { "keys": ["alt+d"],                  "command": "find_under_expand"},
+  { "keys": ["alt+a"],                  "command": "find_all_under" },
+
+  // skip multicursor
+  { "keys": ["alt+y"],                  "command": "find_under_expand_skip" },
 
   // select brackets
-  { "keys": ["alt+shift+p"],            "command": "expand_selection",          "args": {"to": "brackets"}},
+  { "keys": ["shift+alt+p"],            "command": "expand_selection", "args": {"to": "brackets"}},
 
   // comment
-  { "keys": ["shift+alt+c"],            "command": "toggle_comment",            "args": { "block": false }},
+  { "keys": ["shift+alt+c"],            "command": "toggle_comment", "args": { "block": false }},
 
   // duplicate line
   { "keys": ["shift+alt+d"],            "command": "duplicate_line" },
@@ -101,27 +96,36 @@
 
   // indentation
   { "keys": ["shift+alt+i"],            "command": "indent"},
-  { "keys": ["shift+alt+o"],            "command": "unindent"},
+  { "keys": ["shift+alt+u"],            "command": "unindent"},
 
   // cut line
-  { "keys": ["shift+alt+x"],            "command": "run_macro_file",            "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}},
+  { "keys": ["shift+alt+x"],            "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}},
 
   // spawn cursor
-  { "keys": ["alt+k"],                  "command": "select_lines",              "args": {"forward": false}},
-  { "keys": ["alt+j"],                  "command": "select_lines",              "args": {"forward": true}},
+  { "keys": ["alt+k"],                  "command": "select_lines", "args": {"forward": false}},
+  { "keys": ["alt+j"],                  "command": "select_lines", "args": {"forward": true}},
 
   // move panes
   { "keys": ["ctrl+alt+right"],         "command": "move_to_neighboring_group"},
-  { "keys": ["ctrl+alt+left"],          "command": "move_to_neighboring_group",  "args": {"forward": false}},
+  { "keys": ["ctrl+alt+left"],          "command": "move_to_neighboring_group", "args": {"forward": false}},
 
   // macros
-  { "keys": ["shift+alt+m"],            "command": "toggle_record_macro"},
-  { "keys": ["alt+m"],                  "command": "run_macro"},
+  { "keys": ["f6"],                     "command": "toggle_record_macro"},
+  { "keys": ["f7"],                     "command": "run_macro"},
+
+  { "keys": ["shift+alt+z"],            "command": "set_layout", "args": {"cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]]}},
+  { "keys": ["shift+alt+v"],            "command": "set_layout", "args": {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}},
+  { "keys": ["shift+alt+h"],            "command": "set_layout", "args": {"cols": [0.0, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]}},
+  { "keys": ["shift+command+["],        "command": "set_layout", "args": {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [0, 1, 1, 2], [1, 1, 2, 2]]}},
+
+  // word wrap
+  { "keys": ["shift+alt+w"],            "command": "wrap_lines" },
 
   // jump
-  { "keys": ["shift+space"],            "command": "prev_modification"},
+  { "keys": ["alt+command+ctrl+space"], "command": "prev_modification"},
   { "keys": ["alt+enter"],              "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
 
+  // command palette
   { "keys": ["alt+space"],              "command": "show_overlay", "args": {"overlay": "command_palette"} },
 
   // keybindings
@@ -148,28 +152,28 @@
 //  { "keys": ["alt+`"],                  "command": "insert",                    "args": {"characters": ""               }},
   { "keys": ["alt+tab"],                "command": "insert",                    "args": {"characters": ".."             }},
 
-  { "keys": ["alt+shift+1"],            "command": "insert",                    "args": {"characters": " =~ "           }},
-  { "keys": ["alt+shift+2"],            "command": "insert",                    "args": {"characters": " .@ "           }},
-  { "keys": ["alt+shift+3"],            "command": "insert",                    "args": {"characters": " .\\ "          }},
-  { "keys": ["alt+shift+4"],            "command": "insert",                    "args": {"characters": " .$ "           }},
-  { "keys": ["alt+shift+5"],            "command": "insert",                    "args": {"characters": " .% "           }},
-  { "keys": ["alt+shift+6"],            "command": "insert",                    "args": {"characters": " .^ "           }},
-  { "keys": ["alt+shift+7"],            "command": "insert",                    "args": {"characters": " .& "           }},
-  { "keys": ["alt+shift+8"],            "command": "insert",                    "args": {"characters": " .* "           }},
-  { "keys": ["alt+shift+9"],            "command": "insert",                    "args": {"characters": " ./ "           }},
-  { "keys": ["alt+shift+0"],            "command": "insert",                    "args": {"characters": " .+ "           }},
-  { "keys": ["alt+shift+-"],            "command": "insert",                    "args": {"characters": " .- "           }},
-  { "keys": ["alt+shift+="],            "command": "insert",                    "args": {"characters": " .= "           }},
-  { "keys": ["alt+shift+["],            "command": "insert",                    "args": {"characters": " .<= "          }},
-  { "keys": ["alt+shift+]"],            "command": "insert",                    "args": {"characters": " .>= "          }},
-  { "keys": ["alt+shift+;"],            "command": "insert",                    "args": {"characters": " .|> "          }},
-  { "keys": ["alt+shift+'"],            "command": "insert",                    "args": {"characters": " => "           }},
-  { "keys": ["alt+shift+\\"],           "command": "insert",                    "args": {"characters": " .| "           }},
-  { "keys": ["alt+shift+,"],            "command": "insert",                    "args": {"characters": " .< "           }},
-  { "keys": ["alt+shift+."],            "command": "insert",                    "args": {"characters": " .> "           }},
-  { "keys": ["alt+shift+/"],            "command": "insert",                    "args": {"characters": " := "           }},
-//  { "keys": ["alt+shift+`"],            "command": "insert",                    "args": {"characters": ""               }},
-  { "keys": ["alt+shift+tab"],          "command": "insert",                    "args": {"characters": "..."            }},
+  { "keys": ["shift+alt+1"],            "command": "insert",                    "args": {"characters": " =~ "           }},
+  { "keys": ["shift+alt+2"],            "command": "insert",                    "args": {"characters": " .@ "           }},
+  { "keys": ["shift+alt+3"],            "command": "insert",                    "args": {"characters": " .\\ "          }},
+  { "keys": ["shift+alt+4"],            "command": "insert",                    "args": {"characters": " .$ "           }},
+  { "keys": ["shift+alt+5"],            "command": "insert",                    "args": {"characters": " .% "           }},
+  { "keys": ["shift+alt+6"],            "command": "insert",                    "args": {"characters": " .^ "           }},
+  { "keys": ["shift+alt+7"],            "command": "insert",                    "args": {"characters": " .& "           }},
+  { "keys": ["shift+alt+8"],            "command": "insert",                    "args": {"characters": " .* "           }},
+  { "keys": ["shift+alt+9"],            "command": "insert",                    "args": {"characters": " ./ "           }},
+  { "keys": ["shift+alt+0"],            "command": "insert",                    "args": {"characters": " .+ "           }},
+  { "keys": ["shift+alt+-"],            "command": "insert",                    "args": {"characters": " .- "           }},
+  { "keys": ["shift+alt+="],            "command": "insert",                    "args": {"characters": " .= "           }},
+  { "keys": ["shift+alt+["],            "command": "insert",                    "args": {"characters": " .<= "          }},
+  { "keys": ["shift+alt+]"],            "command": "insert",                    "args": {"characters": " .>= "          }},
+  { "keys": ["shift+alt+;"],            "command": "insert",                    "args": {"characters": " .|> "          }},
+  { "keys": ["shift+alt+'"],            "command": "insert",                    "args": {"characters": " => "           }},
+  { "keys": ["shift+alt+\\"],           "command": "insert",                    "args": {"characters": " .| "           }},
+  { "keys": ["shift+alt+,"],            "command": "insert",                    "args": {"characters": " .< "           }},
+  { "keys": ["shift+alt+."],            "command": "insert",                    "args": {"characters": " .> "           }},
+  { "keys": ["shift+alt+/"],            "command": "insert",                    "args": {"characters": " := "           }},
+//  { "keys": ["shift+alt+`"],            "command": "insert",                    "args": {"characters": ""               }},
+  { "keys": ["shift+alt+tab"],          "command": "insert",                    "args": {"characters": "..."            }},
 
   { "keys": ["ctrl+1"],                 "command": "insert",                    "args": {"characters": " != "           }},
   { "keys": ["ctrl+2"],                 "command": "insert",                    "args": {"characters": "  "             }},
