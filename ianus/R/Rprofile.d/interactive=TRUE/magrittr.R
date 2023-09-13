@@ -1,7 +1,7 @@
 ####################################################################################################
 
 tryCatch(
-  require(magrittr, quietly = TRUE),
+  suppressMessages(require(magrittr)),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 

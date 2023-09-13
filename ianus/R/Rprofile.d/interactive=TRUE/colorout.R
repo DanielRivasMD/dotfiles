@@ -1,7 +1,7 @@
 ####################################################################################################
 
 tryCatch(
-  require(colorout, quietly = TRUE),
+  suppressMessages(require(colorout)),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 

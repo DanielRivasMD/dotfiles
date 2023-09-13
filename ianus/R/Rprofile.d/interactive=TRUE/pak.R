@@ -1,7 +1,7 @@
 ####################################################################################################
 
 tryCatch(
-  require(pak, quietly = TRUE),
+  suppressMessages(require(pak)),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 
