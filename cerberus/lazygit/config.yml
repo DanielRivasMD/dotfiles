@@ -93,7 +93,6 @@ notARepository: 'prompt' # one of: 'prompt' | 'create' | 'skip'
 promptToReturnFromSubprocess: true # display confirmation when subprocess terminates
 ####################################################################################################
 
-# TODO: update keybindings
 keybinding:
     universal:
         quit: 'q'
@@ -105,19 +104,19 @@ keybinding:
         nextItem: '<down>' # go one line down
         prevPage: ',' # go to next page in list
         nextPage: '.' # go to previous page in list
-        gotoTop: '<' # go to top of list
-        gotoBottom: '>' # go to bottom of list
+        gotoTop: 'g' # go to top of list
+        gotoBottom: 'G' # go to bottom of list
         scrollLeft: 'H' # scroll left within list view
         scrollRight: 'L' # scroll right within list view
         prevBlock: '<left>' # goto the previous block / panel
         nextBlock: '<right>' # goto the next block / panel
         jumpToBlock: ['1', '2', '3', '4', '5'] # goto the Nth block / panel
-        nextMatch: 'n'
-        prevMatch: 'N'
+        nextMatch: 'l'
+        prevMatch: 'h'
         optionMenu: '?' # show help menu
         select: '<space>'
         goInto: '<enter>'
-        openRecentRepos: '<c-r>'
+        openRecentRepos: 't'
         confirm: '<enter>'
         remove: 'd'
         new: 'n'
@@ -126,24 +125,24 @@ keybinding:
         scrollUpMain: 'k' # main panel scroll up
         scrollDownMain: 'j' # main panel scroll down
         executeCustomCommand: ':'
-        createRebaseOptionsMenu: 'm'
+        createRebaseOptionsMenu: 'M'
         pushFiles: 'P'
         pullFiles: 'p'
         refresh: 'R'
         createPatchOptionsMenu: '<c-p>'
         nextTab: ']'
         prevTab: '['
-        nextScreenMode: '+'
-        prevScreenMode: '_'
-        undo: 'z'
-        redo: 'Z'
+        nextScreenMode: '='
+        prevScreenMode: '-'
+        undo: 'o'
+        redo: 'O'
         filteringMenu: '<c-s>'
-        diffingMenu: 'W'
-        copyToClipboard: '<c-o>'
+        diffingMenu: 'w'
+        copyToClipboard: 'y'
         submitEditorText: '<enter>'
-        appendNewline: '<a-enter>'
+        appendNewline: 'm'
         extrasMenu: '@'
-        toggleWhitespaceInDiffView: '<c-w>'
+        toggleWhitespaceInDiffView: 'W'
         increaseContextInDiffView: '}'
         decreaseContextInDiffView: '{'
     status:
@@ -151,7 +150,7 @@ keybinding:
         recentRepos: '<enter>'
     files:
         commitChanges: 'c'
-        commitChangesWithoutHook: 'w' # commit changes without pre-commit hook
+        commitChangesWithoutHook: 'T' # commit changes without pre-commit hook
         amendLastCommit: 'A'
         commitChangesWithEditor: 'C'
         ignoreFile: 'i'
@@ -161,43 +160,43 @@ keybinding:
         toggleStagedAll: 'a' # stage/unstage all
         viewResetOptions: 'D'
         fetch: 'f'
-        toggleTreeView: '`'
+        toggleTreeView: '\'
     branches:
-        createPullRequest: 'o'
-        viewPullRequestOptions: 'O'
+        createPullRequest: 's'
+        viewPullRequestOptions: 'S'
         checkoutBranchByName: 'c'
-        forceCheckoutBranch: 'F'
+        forceCheckoutBranch: 'C'
         rebaseBranch: 'r'
-        mergeIntoCurrentBranch: 'M'
+        mergeIntoCurrentBranch: 'm'
         viewGitFlowOptions: 'i'
-        fastForward: 'f' # fast-forward this branch from its upstream
-        pushTag: 'P'
+        fastForward: 'F' # fast-forward this branch from its upstream
+        pushTag: 'T'
         setUpstream: 'u' # set as upstream of checked-out branch
         fetchRemote: 'f'
     commits:
         squashDown: 's'
         renameCommit: 'r'
         renameCommitWithEditor: 'R'
-        viewResetOptions: 'g'
+        viewResetOptions: 'i'
         markCommitAsFixup: 'f'
         createFixupCommit: 'F' # create fixup commit for this commit
         squashAboveCommits: 'S'
         moveDownCommit: '<c-j>' # move commit down one
         moveUpCommit: '<c-k>' # move commit up one
         amendToCommit: 'A'
-        pickCommit: 'p' # pick commit (when mid-rebase)
+        pickCommit: 'e' # pick commit (when mid-rebase)
         revertCommit: 't'
         cherryPickCopy: 'c'
         cherryPickCopyRange: 'C'
         pasteCommits: 'v'
         tagCommit: 'T'
         checkoutCommit: '<space>'
-        resetCherryPick: '<c-R>'
-        copyCommitMessageToClipboard: '<c-y>'
-        openLogMenu: '<c-l>'
+        resetCherryPick: 'E'
+        copyCommitMessageToClipboard: 'y'
+        openLogMenu: 'm'
         viewBisectOptions: 'b'
     stash:
-        popStash: 'g'
+        popStash: 's'
     commitFiles:
         checkoutCommitFile: 'c'
     main:
