@@ -613,7 +613,6 @@
 	{ "key": "alt+cmd+down",							"command": "workbench.action.editor.nextChange"},
 	{ "key": "alt+cmd+up",								"command": "workbench.action.editor.previousChange"},
 	{ "key": "alt+cmd+space",							"command": "workbench.action.openPreviousEditorFromHistory"},
-	{ "key": "ctrl+alt+space",						"command": "workbench.action.quickOpenView"},
 	{ "key": "ctrl+alt+/",								"command": "workbench.view.extensions", "when": "viewContainer.workbench.view.extensions.enabled"},
 	{ "key": "ctrl+alt+.",								"command": "workbench.view.scm", "when": "workbench.scm.active"},
 	{ "key": "shift+space",								"command": "editor.action.showDefinitionPreviewHover"},
@@ -661,22 +660,16 @@
 	// close tab
 	{ "key": "alt+q",											"command": "workbench.action.closeActiveEditor"},
 
-	// close pane
-
-
 	// new pane
 	{ "key": "cmd+shift+;",								"command": "workbench.action.files.newUntitledFile"},
-
-
-	// move to tab
 
 	// move to pane
 	{ "key": "ctrl+right",								"command": "workbench.action.focusRightGroup"},
 	{ "key": "ctrl+left",									"command": "workbench.action.focusLeftGroup"},
 
 	// do / redo
-	{ "key": "shift+alt+u",								"command": "redo"},
-	{ "key": "alt+u",											"command": "undo"},
+	{ "key": "shift+alt+o",								"command": "redo"},
+	{ "key": "alt+o",											"command": "undo"},
 
 	// select all
 	{ "key": "shift+alt+a",								"command": "editor.action.selectAll"},
@@ -687,13 +680,8 @@
 	// matching bracket
 	{ "key": "shift+alt+p",								"command": "editor.action.selectToBracket"},
 
-	// project find regex
-
 	// project find file
 	{ "key": "ctrl+t",										"command": "workbench.action.quickOpen"},
-
-	// editor core
-
 
 	// sidebar
 	{ "key": "ctrl+alt+[",								"command": "workbench.action.toggleSidebarVisibility"},
@@ -703,17 +691,11 @@
 	{ "key": "ctrl+alt+\\",								"command": "workbench.files.action.focusFilesExplorer"},
 	{ "key": "ctrl+alt+\\",								"command": "workbench.view.explorer", "when": "viewContainer.workbench.view.explorer.enabled"},
 
-	// open buffer
-
-
 	// go to line
 	{ "key": "shift+alt+f",								"command": "workbench.action.gotoLine"},
 
 	// advanced open file / simple new file
 	{ "key": "cmd+;",											"command": "extension.simpleNewFile"},
-
-	// skip multicursor
-	{ "key": "alt+y",											"command": "editor.action.moveSelectionToNextFindMatch", "when": "editorFocus"},
 
 	// toggle quotes
 	{ "key": "shift+cmd+'",								"command": "editor.togglequotes"},
@@ -731,6 +713,7 @@
 	// spawn multicursor
 	{ "key": "alt+d",											"command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus"},
 	{ "key": "alt+a",											"command": "editor.action.selectHighlights", "when": "editorFocus"},
+	{ "key": "alt+y",											"command": "editor.action.moveSelectionToNextFindMatch", "when": "editorFocus"},
 
 	// select brackets
 	{ "key": "alt+p",											"command": "editor.action.jumpToBracket", "when": "editorTextFocus"},
@@ -747,7 +730,7 @@
 
 	// indentation
 	{ "key": "shift+alt+i",								"command": "editor.action.indentLines", "when": "editorTextFocus && !editorReadonly"},
-	{ "key": "shift+alt+o",								"command": "editor.action.outdentLines", "when": "editorTextFocus && !editorReadonly"},
+	{ "key": "shift+alt+u",								"command": "editor.action.outdentLines", "when": "editorTextFocus && !editorReadonly"},
 
 	// cut line
 	{ "key": "shift+alt+x",								"command": "editor.action.deleteLines", "when": "textInputFocus && !editorReadonly"},
@@ -762,23 +745,8 @@
 	{ "key": "ctrl+up",										"command": "workbench.action.focusAboveGroup"},
 	{ "key": "ctrl+down",									"command": "workbench.action.focusBelowGroup"},
 
-	// macros
-
-
 	// jump
 	{ "key": "alt+enter",									"command": "jump-extension.jump-to-the-start-of-a-word", "when": "editorTextFocus"},
-
-	// git gutter
-
-
-	// cheatsheet menu
-
-
-	// definition
-
-	// rename
-
-	// cycle on suggestions
 
 	// word wrap
 	{ "key": "shift+alt+w",								"command": "editor.action.toggleWordWrap"},
