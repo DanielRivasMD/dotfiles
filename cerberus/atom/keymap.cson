@@ -83,8 +83,8 @@
   'ctrl-right': 'window:focus-pane-on-right'
 
   # do / redo
-  'ctrl-u': 'core:undo'
-  'shift-ctrl-u': 'core:redo'
+  'alt-o': 'core:undo'
+  'shift-alt-o': 'core:redo'
 
 ####################################################################################################
 
@@ -129,13 +129,17 @@
   'ctrl-t': 'fuzzy-finder:toggle-file-finder'
 
   # tree view
-  'cmd-|': 'tree-view:toggle-focus'
+  'ctrl-alt-\\': 'tree-view:toggle-focus'
+  'ctrl-alt-[': 'tree-view:toggle'
 
   # open buffer
   'alt-t': 'fuzzy-finder:toggle-buffer-finder'
 
   # go to line
   'shift-alt-f': 'go-to-line:toggle'
+
+'.tree-view':
+  'ctrl-alt-[': 'unset!'
 
 ####################################################################################################
 
@@ -171,8 +175,8 @@
   'ctrl-{': 'editor:fold-all'
 
   # find
-  'shift-alt-n': 'find-and-replace:find-previous'
-  'alt-n': 'find-and-replace:find-next'
+  'alt-h': 'find-and-replace:find-previous'
+  'alt-l': 'find-and-replace:find-next'
 
   # spawn multicursor
   'alt-d': 'find-and-replace:select-next'
@@ -212,7 +216,7 @@
 
   # indentation
   'shift-alt-i': 'editor:indent-selected-rows'
-  'shift-alt-o': 'editor:outdent-selected-rows'
+  'shift-alt-u': 'editor:outdent-selected-rows'
 
   # cut line
   'shift-alt-x': 'editor:delete-line'
