@@ -599,20 +599,24 @@
 	{ "key": "shift+escape",							"command": "-hideSuggestWidget", "when": "suggestWidgetVisible && textInputFocus"},
 	{ "key": "cmd+i",											"command": "-focusSuggestion", "when": "suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"},
 	{ "key": "alt+j alt+w",								"command": "-REPLVariables.focus"},
+	{ "key": "f12",												"command": "-editor.gotoNextSymbolFromResult", "when": "hasSymbols"},
+	{ "key": "f12",												"command": "-goToNextReference", "when": "inReferenceSearchEditor || referenceSearchVisible"},
+	{ "key": "f5",												"command": "-debug.openView", "when": "!debuggersAvailable"},
+	{ "key": "f4",												"command": "-goToNextReference", "when": "inReferenceSearchEditor || referenceSearchVisible"},
+	{ "key": "f3",												"command": "-list.find", "when": "listFocus && listSupportsFind"},
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	// set custom bindings
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	{ "key": "alt+space",									"command": "workbench.action.showCommands"},
-	{ "key": "ctrl+alt+cmd+space",				"command": "workbench.action.navigateToLastEditLocation"},
-	{ "key": "ctrl+alt+enter",						"command": "workbench.actions.view.problems", "when": "workbench.panel.markers.view.active"},
+	{ "key": "ctrl+alt+cmd+space",				"command": "workbench.action.navigatePreviousInEditLocations"},
+	{ "key": "ctrl+alt+space",						"command": "workbench.actions.view.problems", "when": "workbench.panel.markers.view.active"},
 	{ "key": "cmd+space",									"command": "workbench.action.gotoSymbol"},
 	{ "key": "ctrl+shift+space",					"command": "workbench.action.showAllSymbols"},
 	{ "key": "ctrl+z",										"command": "workbench.action.reopenClosedEditor"},
 	{ "key": "alt+cmd+down",							"command": "workbench.action.editor.nextChange"},
 	{ "key": "alt+cmd+up",								"command": "workbench.action.editor.previousChange"},
-	{ "key": "alt+cmd+space",							"command": "workbench.action.openPreviousEditorFromHistory"},
 	{ "key": "ctrl+alt+/",								"command": "workbench.view.extensions", "when": "viewContainer.workbench.view.extensions.enabled"},
 	{ "key": "ctrl+alt+.",								"command": "workbench.view.scm", "when": "workbench.scm.active"},
 	{ "key": "shift+space",								"command": "editor.action.showDefinitionPreviewHover"},
