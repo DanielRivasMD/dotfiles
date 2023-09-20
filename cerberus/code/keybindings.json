@@ -620,21 +620,21 @@
 	{ "key": "ctrl+alt+/",								"command": "workbench.view.extensions", "when": "viewContainer.workbench.view.extensions.enabled"},
 	{ "key": "ctrl+alt+.",								"command": "workbench.view.scm", "when": "workbench.scm.active"},
 	{ "key": "shift+space",								"command": "editor.action.showDefinitionPreviewHover"},
-	{ "key": "shift+f12",									"command": "editor.action.revealDefinitionAside"},
 	{ "key": "f12",												"command": "editor.action.peekDefinition"},
+	{ "key": "shift+f12",									"command": "editor.action.revealDefinitionAside"},
 	{ "key": "f11",												"command": "editor.action.referenceSearch.trigger"},
+	{ "key": "shift+f11",									"command": "references-view.findReferences", "when": "editorHasReferenceProvider"},
 	{ "key": "f10",												"command": "editor.action.rename"},
 	{ "key": "ctrl+alt+down",							"command": "editor.action.marker.nextInFiles"},
 	{ "key": "ctrl+alt+up",								"command": "editor.action.marker.prevInFiles"},
-	{ "key": "alt+cmd+.",									"command": "search.action.focusNextSearchResult", "when": "hasSearchResult || inSearchEditor"},
-	{ "key": "alt+cmd+,",									"command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult || inSearchEditor"},
+	{ "key": "alt+l",											"command": "search.action.focusNextSearchResult", "when": "hasSearchResult || inSearchEditor"},
+	{ "key": "alt+h",											"command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult || inSearchEditor"},
 
 	{ "key": "space",											"command": "renameFile", "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"},
 	{ "key": "enter",											"command": "filesExplorer.openFilePreserveFocus", "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"},
 	{ "key": "ctrl+u",										"command": "deleteAllLeft", "when": "textInputFocus && !editorReadonly"},
 	{ "key": "cmd+enter",									"command": "latex-workshop.build", "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$|^pweave$/"},
 	{ "key": "alt+cmd+v",									"command": "markdown.showPreview", "when": "!notebookEditorFocused && editorLangId == 'markdown'"},
-	{ "key": "shift+f11",									"command": "references-view.findReferences", "when": "editorHasReferenceProvider"},
 	{ "key": "tab",												"command": "toggleExplainMode", "when": "suggestWidgetVisible"},
 	{ "key": "ctrl+space",								"command": "hideSuggestWidget", "when": "suggestWidgetVisible && textInputFocus"},
 	{ "key": "alt+z",											"command": "cursorUndo", "when": "textInputFocus"},
@@ -686,7 +686,7 @@
 	{ "key": "shift+alt+p",								"command": "editor.action.selectToBracket"},
 
 	// project find file
-	{ "key": "ctrl+t",										"command": "workbench.action.quickOpen"},
+	{ "key": "alt+t",											"command": "workbench.action.quickOpen"},
 
 	// sidebar
 	{ "key": "ctrl+alt+[",								"command": "workbench.action.toggleSidebarVisibility"},
@@ -697,7 +697,7 @@
 	{ "key": "ctrl+alt+\\",								"command": "workbench.view.explorer", "when": "viewContainer.workbench.view.explorer.enabled"},
 
 	// go to line
-	{ "key": "shift+alt+f",								"command": "workbench.action.gotoLine"},
+	{ "key": "alt+m",											"command": "workbench.action.gotoLine"},
 
 	// advanced open file / simple new file
 	{ "key": "cmd+;",											"command": "extension.simpleNewFile"},
@@ -712,8 +712,8 @@
 	{ "key": "ctrl+shift+]",							"command": "editor.unfoldAll", "when": "editorTextFocus && foldingEnabled"},
 
 	// find
-	{ "key": "ctrl+r",										"command": "editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen"},
-	{ "key": "ctrl+shift+r",							"command": "workbench.action.replaceInFiles"},
+	{ "key": "alt+r",											"command": "editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen"},
+	{ "key": "shift+alt+r",								"command": "workbench.action.replaceInFiles"},
 
 	// spawn multicursor
 	{ "key": "alt+d",											"command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus"},

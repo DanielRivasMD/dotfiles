@@ -74,8 +74,6 @@
   # new pane
   'cmd-:': 'application:new-file'
 
-  # move to tab
-
   # move to pane
   'ctrl-up': 'window:focus-pane-above'
   'ctrl-down': 'window:focus-pane-below'
@@ -122,21 +120,18 @@
   'cmd-t': 'unset!'
 
   # project find regex
-  'shift-ctrl-r': 'project-find:show'
-  'ctrl-r': 'find-and-replace:show'
+  'alt-r': 'find-and-replace:show'
+  'shift-alt-r': 'project-find:show'
 
   # project find file
-  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+  'alt-t': 'fuzzy-finder:toggle-file-finder'
 
   # tree view
   'ctrl-alt-\\': 'tree-view:toggle-focus'
   'ctrl-alt-[': 'tree-view:toggle'
 
-  # open buffer
-  'alt-t': 'fuzzy-finder:toggle-buffer-finder'
-
   # go to line
-  'shift-alt-f': 'go-to-line:toggle'
+  'alt-m': 'go-to-line:toggle'
 
 '.tree-view':
   'ctrl-alt-[': 'unset!'

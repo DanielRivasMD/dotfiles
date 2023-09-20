@@ -1,5 +1,7 @@
 [
 
+  { "keys": ["ctrl+z"],                 "command": "reopen_last_file", "args": {"source": "window"}  },
+
   { "keys": ["f11"],                    "command": "goto_reference" },
   { "keys": ["shift+f11"],              "command": "goto_reference", "args": {"side_by_side": true, "clear_to_right": true} },
 
@@ -51,18 +53,18 @@
   { "keys": ["alt+p"],                  "command": "move_to", "args": {"to": "brackets"}},
 
   // project find regex
-  { "keys": ["ctrl+r"],                 "command": "show_panel", "args": {"panel": "find", "reverse": false}},
-  { "keys": ["ctrl+shift+r"],           "command": "show_panel", "args": {"panel": "find_in_files"}},
+  { "keys": ["alt+f"],                 "command": "show_panel", "args": {"panel": "find", "reverse": false}},
+  { "keys": ["shift+alt+f"],           "command": "show_panel", "args": {"panel": "find_in_files"}},
 
   // project find file
-  { "keys": ["ctrl+t"],                 "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}},
+  { "keys": ["alt+t"],                  "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}},
 
   // tree view
   { "keys": ["ctrl+alt+["],             "command": "toggle_side_bar"},
   { "keys": ["ctrl+alt+\\"],            "command": "focus_side_bar"},
 
   // go to line
-  { "keys": ["shift+alt+f"],            "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
+  { "keys": ["alt+m"],                  "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
 
   // folding
   { "keys": ["ctrl+["],                 "command": "fold"},
@@ -110,9 +112,10 @@
   { "keys": ["ctrl+alt+left"],          "command": "move_to_neighboring_group", "args": {"forward": false}},
 
   // macros
-  { "keys": ["f6"],                     "command": "toggle_record_macro"},
-  { "keys": ["f7"],                     "command": "run_macro"},
+  { "keys": ["alt+r"],                  "command": "toggle_record_macro"},
+  { "keys": ["shift+alt+r"],            "command": "run_macro"},
 
+  // layout
   { "keys": ["shift+alt+z"],            "command": "set_layout", "args": {"cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]]}},
   { "keys": ["shift+alt+v"],            "command": "set_layout", "args": {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}},
   { "keys": ["shift+alt+h"],            "command": "set_layout", "args": {"cols": [0.0, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]}},
