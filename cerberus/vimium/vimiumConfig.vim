@@ -12,10 +12,8 @@ map J scrollFullPageDown
 map K scrollFullPageUp
 map <a-down> scrollFullPageDown
 map <a-up> scrollFullPageUp
-map h scrollLeft
-map l scrollRight
-map H scrollToLeft
-map L scrollToRight
+map H scrollLeft
+map L scrollRight
 map G scrollToBottom
 map g scrollToTop
 map <m-down> scrollToBottom
@@ -74,16 +72,14 @@ map s Vomnibar.activateTabSelection
 
 " find
 map / enterFindMode
-map n performFind
-map N performBackwardsFind
+map l performFind
+map h performBackwardsFind
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " history
 map u goBack
 map U goForward
-map H goBack
-map L goForward
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
