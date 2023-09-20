@@ -45,82 +45,82 @@ Cerberus:
   echo ''
   echo 'Linking git config directory'
   echo '===================================================================================================='
-  if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi              # purge before linking
-  ln -svf "${cerberus}/gitconfig.d" "${home}/.gitconfig.d"                            # gitconfig directory
+  if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi        # purge before linking
+  ln -svf "${cerberus}/gitconfig.d" "${home}/.gitconfig.d"                      # gitconfig directory
   echo '===================================================================================================='
 
   # git files
   echo ''
   echo 'Linking git config files'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/git/gitconfig" "${home}/.gitconfig"                            # gitconfig
-  ln -svf "${cerberus}/git/gitignore_global" "${home}/.gitignore_global"              # gitignore_global
+  ln -svf "${cerberus}/git/gitconfig" "${home}/.gitconfig"                      # gitconfig
+  ln -svf "${cerberus}/git/gitignore_global" "${home}/.gitignore_global"        # gitignore_global
   echo '===================================================================================================='
 
   # rc files
   echo ''
   echo 'Linking rc config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/gem/gemrc" "${home}/.gemrc"                                    # gemrc
-  ln -svf "${cerberus}/mplayer/mplayer" "${home}/.mplayer"                            # mplayer
-  ln -svf "${cerberus}/nano/nanorc" "${home}/.nanorc"                                 # nanorc
+  ln -svf "${cerberus}/gem/gemrc" "${home}/.gemrc"                              # gemrc
+  ln -svf "${cerberus}/mplayer/mplayer" "${home}/.mplayer"                      # mplayer
+  ln -svf "${cerberus}/nano/nanorc" "${home}/.nanorc"                           # nanorc
   echo '===================================================================================================='
 
   # toml files
   echo ''
   echo 'Linking toml config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/procs/procs.toml" "${home}/.procs.toml"                        # procs
+  ln -svf "${cerberus}/procs/procs.toml" "${home}/.procs.toml"                  # procs
   echo '===================================================================================================='
 
   # config files
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/alacritty" "${home}/.config/"                                  # alacritty
-  rm -rf "${home}/.config/atuin" && ln -sv "${cerberus}/atuin" "${home}/.config/"     # atuin
-  ln -svf "${cerberus}/bottom" "${home}/.config/"                                     # bottom
-  ln -svf "${cerberus}/cheat" "${home}/.config/"                                      # cheat
-  ln -svf "${cerberus}/karabiner" "${home}/.config/"                                  # karabiner
-  ln -svf "${cerberus}/khal" "${home}/.config/"                                       # khal
-  ln -svf "${cerberus}/gh/config.yml" "${home}/.config/gh/"                           # gh
-  ln -svf "${cerberus}/rstudio" "${home}/.config/"                                    # rstudio
-  ln -svf "${cerberus}/rstudio/keybindings" "${home}/.R/rstudio/"                     # rstudio keybindings
-  ln -svf "${cerberus}/rustfmt" "${home}/.config/"                                    # rustfmt
+  ln -svf "${cerberus}/alacritty" "${config}/"                                  # alacritty
+  rm -rf "${config}/atuin" && ln -sv "${cerberus}/atuin" "${config}/"           # atuin
+  ln -svf "${cerberus}/bottom" "${config}/"                                     # bottom
+  ln -svf "${cerberus}/cheat" "${config}/"                                      # cheat
+  ln -svf "${cerberus}/karabiner" "${config}/"                                  # karabiner
+  ln -svf "${cerberus}/khal" "${config}/"                                       # khal
+  ln -svf "${cerberus}/gh/config.yml" "${config}/gh/"                           # gh
+  ln -svf "${cerberus}/rstudio" "${config}/"                                    # rstudio
+  ln -svf "${cerberus}/rstudio/keybindings" "${home}/.R/rstudio/"               # rstudio keybindings
+  ln -svf "${cerberus}/rustfmt" "${config}/"                                    # rustfmt
   echo '===================================================================================================='
 
   # config directories
   echo ''
   echo 'Linking config dirs @config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/ranger" "${home}/.config"                                      # ranger directory
-  ln -svf "${cerberus}/gitui" "${home}/.config"                                       # gitui directory
-  ln -svf "${cerberus}/zellij" "${home}/.config"                                      # zellij directory
+  ln -svf "${cerberus}/ranger" "${config}"                                      # ranger directory
+  ln -svf "${cerberus}/gitui" "${config}"                                       # gitui directory
+  ln -svf "${cerberus}/zellij" "${config}"                                      # zellij directory
   echo '===================================================================================================='
 
   # local
   echo ''
   echo 'Linking Rstudio config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${home}/.local/share/rstudio/"  # rstudio
+  ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${home}/.local/share/rstudio/" # rstudio
   echo '===================================================================================================='
 
   # code
   echo ''
   echo 'Linking Code config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/code/keybindings.json" "${codeConf}/"                          # code keybindings
-  ln -svf "${cerberus}/code/settings.json" "${codeConf}/"                             # code settings
+  ln -svf "${cerberus}/code/keybindings.json" "${codeConf}/"                    # code keybindings
+  ln -svf "${cerberus}/code/settings.json" "${codeConf}/"                       # code settings
   echo '===================================================================================================='
 
   # distant
   echo ''
   echo 'Linking config @distant locations'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"                     # julia startup
-  ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                                    # ssh config
-  ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                          # lazycli config
-  ln -svf "${cerberus}/lazygit/config.yml" "${lazygitConf}/"                          # lazygit config
+  ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"               # julia startup
+  ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                              # ssh config
+  ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                    # lazycli config
+  ln -svf "${cerberus}/lazygit/config.yml" "${lazygitConf}/"                    # lazygit config
   echo '===================================================================================================='
 
   # force use toml config
@@ -128,7 +128,7 @@ Cerberus:
   echo 'Linking broot config'
   echo '===================================================================================================='
   if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi
-  ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                               # broot config
+  ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                         # broot config
   echo '===================================================================================================='
 
   # purge before linking
@@ -136,7 +136,7 @@ Cerberus:
   echo 'Linking navi config'
   echo '===================================================================================================='
   if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
-  ln -svf "${cerberus}/navi" "${naviConf}"                                            # navi cheats directory
+  ln -svf "${cerberus}/navi" "${naviConf}"                                      # navi cheats directory
   echo '===================================================================================================='
 
   # sublime
@@ -209,9 +209,9 @@ Ianus:
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  ln -svf "${ianus}/micro" "${home}/.config"                                    # micro directory
-  ln -svf "${ianus}/starship" "${home}/.config"                                 # starship directory
-  ln -svf "${ianus}/lsd" "${home}/.config"                                      # lsd directory
+  ln -svf "${ianus}/micro" "${config}"                                          # micro directory
+  ln -svf "${ianus}/starship" "${config}"                                       # starship directory
+  ln -svf "${ianus}/lsd" "${config}"                                            # lsd directory
   echo '===================================================================================================='
 
   # shell
@@ -252,7 +252,7 @@ Ianus:
   echo ''
   echo 'Linking fish profile'
   echo '===================================================================================================='
-  ln -svf "${fish}/vernacular_config.fish" "${home}/.config/fish/config.fish"   # fish config
+  ln -svf "${fish}/vernacular_config.fish" "${config}/fish/config.fish"         # fish config
   echo '===================================================================================================='
 
   # nushell

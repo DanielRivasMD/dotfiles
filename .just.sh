@@ -5,6 +5,7 @@ set -euo pipefail
 
 # home
 home="${HOME}"
+config="${home}/.config"
 archive="${home}/.archive"
 cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
