@@ -623,6 +623,7 @@
 	{ "key": "shift+f12",									"command": "editor.action.revealDefinitionAside"},
 	{ "key": "f12",												"command": "editor.action.peekDefinition"},
 	{ "key": "f11",												"command": "editor.action.referenceSearch.trigger"},
+	{ "key": "f10",												"command": "editor.action.rename"},
 	{ "key": "ctrl+alt+down",							"command": "editor.action.marker.nextInFiles"},
 	{ "key": "ctrl+alt+up",								"command": "editor.action.marker.prevInFiles"},
 	{ "key": "alt+cmd+.",									"command": "search.action.focusNextSearchResult", "when": "hasSearchResult || inSearchEditor"},

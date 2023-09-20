@@ -175,7 +175,8 @@
 
     "files.associations": {
         ".justfile": "just",
-        "*.nu": "shellscript"
+        "*.nu": "shellscript",
+        "*.justfile": "just"
     },
 
     "[just]": {},
@@ -198,6 +199,7 @@
     "gitlens.advanced.messages": {
         "suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true
     },
+    "rust-analyzer.check.overrideCommand": null,
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
