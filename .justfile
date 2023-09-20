@@ -153,20 +153,8 @@ Cerberus:
   ln -svf "${sublGitTarget}" "${sublGitOrigin}"
   echo '===================================================================================================='
 
-  # # @forked
-  # ln -svf "${forked}/preview-vim/preview-vim.json" "${cerberus}/karabiner/assets/complex_modifications"
-
-  # # @forked
-  # ln -svf "${forked}/amber/target/release/ambr" "${home}/bin/cargoTools/"
-  # ln -svf "${forked}/amber/target/release/ambs" "${home}/bin/cargoTools/"
-  # ln -svf "${forked}/cb/target/release/cli" "${home}/bin/cargoTools/cb"
-
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
   # ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
-
-  # # @observatory
-  # ln -svf "${observatory}/toggit/target/release/toggit" "${home}/bin/cargoTools/"
-  # ln -svf "${observatory}/nushell/target/release/nu" "${home}/bin/cargoTools/"
 
 ####################################################################################################
 # Ianus
