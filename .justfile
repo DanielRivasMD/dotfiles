@@ -86,7 +86,6 @@ Cerberus:
   ln -svf "${cerberus}/gh/config.yml" "${config}/gh/"                           # gh
   ln -svf "${cerberus}/rstudio" "${config}/"                                    # rstudio
   ln -svf "${cerberus}/rstudio/keybindings" "${home}/.R/rstudio/"               # rstudio keybindings
-  ln -svf "${cerberus}/rustfmt" "${config}/"                                    # rustfmt
   echo '===================================================================================================='
 
   # config directories
@@ -102,7 +101,7 @@ Cerberus:
   echo ''
   echo 'Linking Rstudio config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${home}/.local/share/rstudio/" # rstudio
+  ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${localShare}/rstudio/"   # rstudio
   echo '===================================================================================================='
 
   # code
@@ -193,7 +192,6 @@ Ianus:
   if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi      # purge before linking
   ln -svf "${ianus}/R/Rprofile.d" "${home}/.Rprofile.d"                         # rprofile directory
   ln -svf "${ianus}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                # rprofile
-  echo '===================================================================================================='
   echo '===================================================================================================='
 
   # @HOME

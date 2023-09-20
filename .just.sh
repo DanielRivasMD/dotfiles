@@ -12,6 +12,7 @@ ianus="${archive}/ianus"
 forked="${home}/Forked"
 observatory="${home}/Observatory"
 appSuport="${home}/Library/Application Support"
+localShare="${home}/.local/share"
 
 ####################################################################################################
 
