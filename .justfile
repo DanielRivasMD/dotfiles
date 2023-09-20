@@ -93,7 +93,6 @@ Cerberus:
   echo ''
   echo 'Linking config dirs @config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/nvim" "${home}/.config"                                        # nvim directory
   ln -svf "${cerberus}/ranger" "${home}/.config"                                      # ranger directory
   ln -svf "${cerberus}/gitui" "${home}/.config"                                       # gitui directory
   ln -svf "${cerberus}/zellij" "${home}/.config"                                      # zellij directory
@@ -264,11 +263,8 @@ Ianus:
   ln -svf "${nushell}/config.nu" "${nushellConf}/"                              # nushell config
   echo '===================================================================================================='
 
-  # amp
   echo ''
-  echo 'Linking amp config'
   echo '===================================================================================================='
-  ln -svf "${ianus}/amp" "${appSuport}"                                         # amp config
   echo '===================================================================================================='
 
 ####################################################################################################
