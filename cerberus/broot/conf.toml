@@ -51,7 +51,7 @@ description = "refresh tree"
 # file
 [[verbs]]
 invocation = "edit"
-key = "alt-e"
+key = "shift-alt-e"
 shortcut = "e"
 execution = "subl {file}"
 leave_broot = false
@@ -59,19 +59,19 @@ description = "open file with `subl` editor"
 
 [[verbs]]
 invocation = "micro"
-key = "alt-m"
+key = "shift-alt-m"
 shortcut = "m"
 execution = "micro {file}"
 leave_broot = false
 description = "open file with `micro` editor"
 
 [[verbs]]
-invocation = "amp"
-key = "alt-a"
-shortcut = "a"
-execution = "amp {file}"
+invocation = "helix"
+key = "shift-alt-h"
+shortcut = "h"
+execution = "hx {file}"
 leave_broot = false
-description = "open file with `amp` editor"
+description = "open file with `helix` editor"
 
 [[verbs]]
 invocation = "create {subpath}"
@@ -89,13 +89,13 @@ description = "search again but on all children"
 
 [[verbs]]
 invocation = "next_match"
-key = "alt-n"
+key = "alt-l"
 internal = "next_match"
 description = "go to next match"
 
 [[verbs]]
 invocation = "previous_match"
-key = "shift-alt-n"
+key = "alt-h"
 internal = "previous_match"
 description = "go to previous match"
 
@@ -114,13 +114,13 @@ description = "go to previous match"
 # view
 [[verbs]]
 invocation = "toggle_files"
-key = "shift-alt-f"
+key = "alt-f"
 internal = ":toggle_files"
 description = "toggle files"
 
 [[verbs]]
 invocation = "toggle_hidden"
-key = "shift-alt-d"
+key = "alt-d"
 shortcut = "d"
 internal = "toggle_hidden"
 description = "toggle hidden"
@@ -152,7 +152,7 @@ description = "open file with `jless`"
 
 [[verbs]]
 invocation = "print_to_copy"
-key = "alt-c"
+key = "shift-alt-c"
 shortcut = "pc"
 external = "bat --paging always --plain {file}"
 leave_broot = false
@@ -185,14 +185,14 @@ description = "print tree and leaves broot"
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
-key = "shift-alt-i"
+key = "alt-i"
 shortcut = "gi"
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
 
 [[verbs]]
 invocation = "toggle_git_status"
-key = "shift-alt-u"
+key = "alt-v"
 shortcut = "gs"
 internal = "toggle_git_status"
 description = "toggle git status"
@@ -200,28 +200,28 @@ description = "toggle git status"
 # sort
 [[verbs]]
 invocation = "sort_by_type"
-key = "shift-alt-t"
+key = "alt-t"
 shortcut = "st"
 internal = "sort_by_type"
 description = "sort by type"
 
 [[verbs]]
 invocation = "sort_by_size"
-key = "shift-alt-w"
+key = "alt-w"
 shortcut = "ss"
 internal = "sort_by_size"
 description = "sort by size"
 
 [[verbs]]
 invocation = "sort_by_date"
-key = "shift-alt-y"
+key = "alt-y"
 shortcut = "sd"
 internal = "sort_by_date"
 description = "sort by date"
 
 [[verbs]]
 invocation = "sort_by_count"
-key = "shift-alt-c"
+key = "alt-c"
 shortcut = "sc"
 internal = "sort_by_count"
 description = "sort by count"
@@ -243,14 +243,14 @@ description = "toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
-key = "shift-alt-e"
+key = "shift-alt-l"
 shortcut = "cls"
 internal = "clear_stage"
 description = "clear stage area"
 
 [[verbs]]
 invocation = "stage_all_files"
-key = "shift-alt-a"
+key = "alt-a"
 shortcut = "saf"
 internal = "stage_all_files"
 description = "stage all matching files"
@@ -305,13 +305,13 @@ description = "close display"
 
 [[verbs]]
 invocation = "panel_left"
-key = "alt-b"
+key = "alt-left"
 internal = "panel_left"
 description = "select left panel"
 
 [[verbs]]
 invocation = "panel_right"
-key = "alt-f"
+key = "alt-right"
 internal = "panel_right"
 description = "select right panel"
 
