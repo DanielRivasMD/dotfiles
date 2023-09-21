@@ -20,13 +20,14 @@ cmd = ":cd"
 description = "go into directory"
 
 [[verbs]]
-key = "shift-down"
+key = "ctrl-e"
 external = "command open {file}"
+leave_broot = false
 description = "open file or directory according to OS (stay in broot)"
 
 [[verbs]]
 invocation = "root_up"
-key = "shift-up"
+key = "ctrl-a"
 internal = "root_up"
 description = "move tree root up"
 
@@ -44,7 +45,7 @@ description = "revert to the previous state"
 
 [[verbs]]
 invocation = "refresh"
-key = "shift-alt-r"
+key = "alt-r"
 internal = "refresh"
 description = "refresh tree"
 
@@ -83,7 +84,7 @@ description = "create file"
 # search
 [[verbs]]
 invocation = "total_search"
-key = "alt-r"
+key = "alt-f"
 internal = "total_search"
 description = "search again but on all children"
 
@@ -99,36 +100,23 @@ key = "alt-h"
 internal = "previous_match"
 description = "go to previous match"
 
-[[verbs]]
-invocation = "next_match"
-key = "shift-right"
-internal = "next_match"
-description = "go to next match"
-
-[[verbs]]
-invocation = "previous_match"
-key = "shift-left"
-internal = "previous_match"
-description = "go to previous match"
-
 # view
 [[verbs]]
 invocation = "toggle_files"
-key = "alt-f"
+key = "shift-alt-f"
 internal = ":toggle_files"
 description = "toggle files"
 
 [[verbs]]
 invocation = "toggle_hidden"
-key = "alt-d"
-shortcut = "d"
+key = "shift-alt-h"
 internal = "toggle_hidden"
 description = "toggle hidden"
 
 # pager
 [[verbs]]
 invocation = "bat"
-key = "shift-alt-b"
+key = "alt-b"
 shortcut = "bat"
 external = "bat --paging always {file}"
 leave_broot = false
@@ -136,7 +124,7 @@ description = "open file with `bat`"
 
 [[verbs]]
 invocation = "mdcat"
-key = "shift-alt-m"
+key = "alt-m"
 shortcut = "mdcat"
 external = "mdcat --paginate {file}"
 leave_broot = false
@@ -144,7 +132,7 @@ description = "open file with `mdcat`"
 
 [[verbs]]
 invocation = "jless"
-key = "shift-alt-j"
+key = "alt-j"
 shortcut = "jless"
 external = "jless {file}"
 leave_broot = false
@@ -152,7 +140,7 @@ description = "open file with `jless`"
 
 [[verbs]]
 invocation = "print_to_copy"
-key = "shift-alt-c"
+key = "alt-y"
 shortcut = "pc"
 external = "bat --paging always --plain {file}"
 leave_broot = false
@@ -160,7 +148,7 @@ description = "open file with `bat` to copy"
 
 [[verbs]]
 invocation = "hck"
-key = "shift-alt-k"
+key = "alt-k"
 shortcut = "hck"
 external = "hck {file}"
 leave_broot = true
@@ -168,7 +156,7 @@ description = "open file with `hck`"
 
 [[verbs]]
 invocation = "xsv"
-key = "shift-alt-x"
+key = "alt-x"
 shortcut = "xsv"
 external = "xsv table {file}"
 leave_broot = true
@@ -177,7 +165,7 @@ description = "open file with `xsv`"
 # print
 [[verbs]]
 invocation = "print_tree"
-key = "shift-alt-v"
+key = "alt-p"
 shortcut = "pt"
 internal = "print_tree"
 description = "print tree and leaves broot"
@@ -185,14 +173,14 @@ description = "print tree and leaves broot"
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
-key = "alt-i"
+key = "shift-alt-i"
 shortcut = "gi"
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
 
 [[verbs]]
 invocation = "toggle_git_status"
-key = "alt-v"
+key = "shift-alt-v"
 shortcut = "gs"
 internal = "toggle_git_status"
 description = "toggle git status"
@@ -200,28 +188,28 @@ description = "toggle git status"
 # sort
 [[verbs]]
 invocation = "sort_by_type"
-key = "alt-t"
+key = "shift-alt-t"
 shortcut = "st"
 internal = "sort_by_type"
 description = "sort by type"
 
 [[verbs]]
 invocation = "sort_by_size"
-key = "alt-w"
+key = "shift-alt-s"
 shortcut = "ss"
 internal = "sort_by_size"
 description = "sort by size"
 
 [[verbs]]
 invocation = "sort_by_date"
-key = "alt-y"
+key = "shift-alt-d"
 shortcut = "sd"
 internal = "sort_by_date"
 description = "sort by date"
 
 [[verbs]]
 invocation = "sort_by_count"
-key = "alt-c"
+key = "shift-alt-c"
 shortcut = "sc"
 internal = "sort_by_count"
 description = "sort by count"
@@ -236,14 +224,21 @@ description = "toggle stage"
 
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "shift-alt-s"
+key = "alt-t"
 shortcut = "tsa"
 internal = "toggle_staging_area"
 description = "toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
-key = "shift-alt-l"
+key = "alt-c"
+shortcut = "cls"
+internal = "clear_stage"
+description = "clear stage area"
+
+[[verbs]]
+invocation = "clear_stage"
+key = "ctrl-l"
 shortcut = "cls"
 internal = "clear_stage"
 description = "clear stage area"
