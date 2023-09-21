@@ -712,8 +712,8 @@
 	{ "key": "ctrl+shift+]",							"command": "editor.unfoldAll", "when": "editorTextFocus && foldingEnabled"},
 
 	// find
-	{ "key": "alt+r",											"command": "editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen"},
-	{ "key": "shift+alt+r",								"command": "workbench.action.replaceInFiles"},
+	{ "key": "alt+f",											"command": "editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen"},
+	{ "key": "shift+alt+f",								"command": "workbench.action.replaceInFiles"},
 
 	// spawn multicursor
 	{ "key": "alt+d",											"command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus"},
