@@ -15,21 +15,21 @@ default_flags = ""
 # config
 [[verbs]]
 invocation = "open_leave"
-key = "ctrl-space"
+key = "ctrl-x"                # mapped -> enter alt
 cmd = ":cd"
-description = "go into directory"
-
-[[verbs]]
-key = "ctrl-e"
-external = "command open {file}"
-leave_broot = false
-description = "open file or directory according to OS (stay in broot)"
+description = "go into directory -> `alt-enter`"
 
 [[verbs]]
 invocation = "root_up"
-key = "ctrl-a"
+key = "ctrl-a"                # mapped -> cmd left
 internal = "root_up"
-description = "move tree root up"
+description = "move tree root up -> `cmd left`"
+
+[[verbs]]
+key = "ctrl-e"                # mapped -> cmd right
+external = "command open {file}"
+leave_broot = false
+description = "open according to OS -> `cmd right`"
 
 [[verbs]]
 invocation = "quit"
@@ -84,9 +84,9 @@ description = "create file"
 # search
 [[verbs]]
 invocation = "total_search"
-key = "alt-f"
+key = "ctrl-f"                # mapped -> alt-f
 internal = "total_search"
-description = "search again but on all children"
+description = "search again but on all children -> `alt-f`"
 
 [[verbs]]
 invocation = "next_match"
@@ -109,18 +109,18 @@ description = "toggle files"
 
 [[verbs]]
 invocation = "toggle_hidden"
-key = "shift-alt-h"
+key = "shift-alt-d"
 internal = "toggle_hidden"
 description = "toggle hidden"
 
 # pager
 [[verbs]]
 invocation = "bat"
-key = "alt-b"
+key = "ctrl-b"                # mapped -> alt-b
 shortcut = "bat"
 external = "bat --paging always {file}"
 leave_broot = false
-description = "open file with `bat`"
+description = "open file with `bat` -> `alt-b`"
 
 [[verbs]]
 invocation = "mdcat"
@@ -195,14 +195,14 @@ description = "sort by type"
 
 [[verbs]]
 invocation = "sort_by_size"
-key = "shift-alt-s"
+key = "shift-alt-z"
 shortcut = "ss"
 internal = "sort_by_size"
 description = "sort by size"
 
 [[verbs]]
 invocation = "sort_by_date"
-key = "shift-alt-d"
+key = "shift-alt-y"
 shortcut = "sd"
 internal = "sort_by_date"
 description = "sort by date"
@@ -237,13 +237,6 @@ internal = "clear_stage"
 description = "clear stage area"
 
 [[verbs]]
-invocation = "clear_stage"
-key = "ctrl-l"
-shortcut = "cls"
-internal = "clear_stage"
-description = "clear stage area"
-
-[[verbs]]
 invocation = "stage_all_files"
 key = "alt-a"
 shortcut = "saf"
@@ -253,13 +246,13 @@ description = "stage all matching files"
 # move
 [[verbs]]
 invocation = "select_first"
-key = "alt-g"
+key = "alt-g"                 # mapped -> `cmd-up`
 internal = "select_first"
 description = "go to top of the list"
 
 [[verbs]]
 invocation = "select_last"
-key = "shift-alt-g"
+key = "shift-alt-g"           # mapped -> `cmd-down`
 internal = "select_last"
 description = "go to bottom of the list"
 
@@ -300,15 +293,15 @@ description = "close display"
 
 [[verbs]]
 invocation = "panel_left"
-key = "alt-left"
+key = "alt-b"                 # mapped -> alt left
 internal = "panel_left"
-description = "select left panel"
+description = "select left panel -> `alt-left`"
 
 [[verbs]]
 invocation = "panel_right"
-key = "alt-right"
+key = "alt-f"                 # mapped -> alt right
 internal = "panel_right"
-description = "select right panel"
+description = "select right panel -> `alt-right`"
 
 
 ####################################################################################################
