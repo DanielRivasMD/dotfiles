@@ -303,6 +303,27 @@ key = "alt-f"                 # mapped -> alt right
 internal = "panel_right"
 description = "select right panel -> `alt-right`"
 
+# patch not-responding after atuin
+[[verbs]]
+key = "shift-down"
+internal = ":line_down"
+
+[[verbs]]
+key = "shift-up"
+internal = ":line_up"
+
+[[verbs]]
+invocation = "open_preview"
+key = "shift-right"
+apply_to = "file"
+internal = "open_preview {file}"
+
+[[verbs]]
+invocation = "close_preview"
+key = "shift-left"
+apply_to = "file"
+internal = "close_preview {file}"
+
 
 ####################################################################################################
 
