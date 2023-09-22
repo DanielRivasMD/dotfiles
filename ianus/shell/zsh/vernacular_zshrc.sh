@@ -35,7 +35,6 @@ eval "$(starship init zsh)"
 # antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins.sh
 source ${ZDOTDIR}/zsh_plugins.sh
 
-
 # # Plugins managed by antibody (AB) dinamically
 # # source <(antibody init)
 # zdharma/fast-syntax-highlighting
@@ -43,7 +42,6 @@ source ${ZDOTDIR}/zsh_plugins.sh
 # zsh-users/zsh-completions
 # wfxr/forgit
 # chrissicool/zsh-256color
-
 
 ####################################################################################################
 #  Autocompletion
@@ -71,7 +69,6 @@ source ${ZDOTDIR}/zsh_pandoc_autocompletion.sh
 # Fuzzy finder (fzf)
 [ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
 
-
 ####################################################################################################
 # History
 ####################################################################################################
@@ -80,13 +77,6 @@ HISTFILE=${ZDOTDIR}/zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt appendhistory
-
-####################################################################################################
-# Key bindings
-####################################################################################################
-
-bindkey "\x1b[1;3D" backward-word
-bindkey "\x1b[1;3C" forward-word
 
 ####################################################################################################
 # RStudio
@@ -140,8 +130,6 @@ fi
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
 
-bindkey '^s' _atuin_search_widget
-
 ####################################################################################################
 # broot
 ####################################################################################################
@@ -178,7 +166,34 @@ eval "$(zoxide init zsh)"
 
 # edit line in editor with ctrl-h:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^h' edit-command-line
+
+####################################################################################################
+# Key bindings
+####################################################################################################
+
+# movement
+bindkey "\x1b[1;3D" backward-word
+bindkey "\x1b[1;3C" forward-word
+
+# atuin
+bindkey '^s' _atuin_search_widget
+
+# just
+bindkey '^j' _call_just
+
+# navi
+bindkey '^n' _call_navi
+
+# command edit
+bindkey '^x' edit-command-line
+
+# unbind
+bindkey -r "^B"
+bindkey -r "^F"
+bindkey -r "^G"
+bindkey -r "^H"
+bindkey -r "^O"
+bindkey -r "^P"
 
 ####################################################################################################
 
