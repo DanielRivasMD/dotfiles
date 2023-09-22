@@ -33,15 +33,9 @@ description = "open according to OS -> `cmd right`"
 
 [[verbs]]
 invocation = "quit"
-key = "shift-alt-q"
+key = "alt-q"
 internal = "quit"
 description = "quit broot"
-
-[[verbs]]
-invocation = "back"
-key = "alt-q"
-internal = "back"
-description = "revert to the previous state"
 
 [[verbs]]
 invocation = "refresh"
@@ -52,7 +46,7 @@ description = "refresh tree"
 # file
 [[verbs]]
 invocation = "edit"
-key = "shift-alt-e"
+key = "ctrl-s"                # mapped -> cmd right
 shortcut = "e"
 execution = "subl {file}"
 leave_broot = false
@@ -60,7 +54,7 @@ description = "open file with `subl` editor"
 
 [[verbs]]
 invocation = "micro"
-key = "shift-alt-m"
+key = "ctrl-n"                # mapped -> cmd right
 shortcut = "m"
 execution = "micro {file}"
 leave_broot = false
@@ -68,7 +62,7 @@ description = "open file with `micro` editor"
 
 [[verbs]]
 invocation = "helix"
-key = "shift-alt-h"
+key = "ctrl-j"                # mapped -> cmd right
 shortcut = "h"
 execution = "hx {file}"
 leave_broot = false
@@ -119,7 +113,7 @@ invocation = "bat"
 key = "ctrl-b"                # mapped -> alt-b
 shortcut = "bat"
 external = "bat --paging always {file}"
-leave_broot = false
+leave_broot = true
 description = "open file with `bat` -> `alt-b`"
 
 [[verbs]]
@@ -127,7 +121,7 @@ invocation = "mdcat"
 key = "alt-m"
 shortcut = "mdcat"
 external = "mdcat --paginate {file}"
-leave_broot = false
+leave_broot = true
 description = "open file with `mdcat`"
 
 [[verbs]]
@@ -135,16 +129,8 @@ invocation = "jless"
 key = "alt-j"
 shortcut = "jless"
 external = "jless {file}"
-leave_broot = false
+leave_broot = true
 description = "open file with `jless`"
-
-[[verbs]]
-invocation = "print_to_copy"
-key = "alt-y"
-shortcut = "pc"
-external = "bat --paging always --plain {file}"
-leave_broot = false
-description = "open file with `bat` to copy"
 
 [[verbs]]
 invocation = "hck"
@@ -162,11 +148,17 @@ external = "xsv table {file}"
 leave_broot = true
 description = "open file with `xsv`"
 
+[[verbs]]
+invocation = "print_to_copy"
+key = "alt-y"
+external = "bat --paging always --plain {file}"
+leave_broot = true
+description = "open file with `bat` to copy"
+
 # print
 [[verbs]]
 invocation = "print_tree"
 key = "alt-p"
-shortcut = "pt"
 internal = "print_tree"
 description = "print tree and leaves broot"
 
@@ -174,43 +166,31 @@ description = "print tree and leaves broot"
 [[verbs]]
 invocation = "toggle_git_ignore"
 key = "shift-alt-i"
-shortcut = "gi"
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
-
-[[verbs]]
-invocation = "toggle_git_status"
-key = "shift-alt-v"
-shortcut = "gs"
-internal = "toggle_git_status"
-description = "toggle git status"
 
 # sort
 [[verbs]]
 invocation = "sort_by_type"
 key = "shift-alt-t"
-shortcut = "st"
 internal = "sort_by_type"
 description = "sort by type"
 
 [[verbs]]
 invocation = "sort_by_size"
 key = "shift-alt-z"
-shortcut = "ss"
 internal = "sort_by_size"
 description = "sort by size"
 
 [[verbs]]
 invocation = "sort_by_date"
 key = "shift-alt-y"
-shortcut = "sd"
 internal = "sort_by_date"
 description = "sort by date"
 
 [[verbs]]
 invocation = "sort_by_count"
 key = "shift-alt-c"
-shortcut = "sc"
 internal = "sort_by_count"
 description = "sort by count"
 
@@ -218,28 +198,24 @@ description = "sort by count"
 [[verbs]]
 invocation = "toggle_stage"
 key = "alt-s"
-shortcut = "ts"
 internal = "toggle_stage"
 description = "toggle stage"
 
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "alt-t"
-shortcut = "tsa"
+key = "ctrl-space"
 internal = "toggle_staging_area"
 description = "toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
-key = "alt-c"
-shortcut = "cls"
+key = "alt-z"
 internal = "clear_stage"
 description = "clear stage area"
 
 [[verbs]]
 invocation = "stage_all_files"
 key = "alt-a"
-shortcut = "saf"
 internal = "stage_all_files"
 description = "stage all matching files"
 
