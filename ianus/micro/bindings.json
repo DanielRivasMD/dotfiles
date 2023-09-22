@@ -12,8 +12,8 @@
     "Alt-J": "MoveLinesDown",
     "Alt-K": "MoveLinesUp",
     "Alt-L": "SelectLine",
-    "Alt-M": "NextTab",
-    "Alt-N": "PreviousTab",
+    "Alt-M": "",
+    "Alt-N": "",
     "Alt-O": "Redo",
     "Alt-P": "",
     "Alt-Q": "QuitAll",
@@ -27,34 +27,34 @@
     "Alt-Y": "CopyLine",
     "Alt-Z": "Unsplit",
     "Alt-a": "lua:snippets.Accept",
-    "Alt-b": "CommandMode",
+    "Alt-b": "WordLeft",                // mapped -> Alt Left
     "Alt-c": "Copy",
     "Alt-d": "SpawnMultiCursor",
-    "Alt-e": "None",                    // accent
-    "Alt-f": "FindLiteral",
+    "Alt-e": "None",                    // disabled => accent
+    "Alt-f": "WordRight",               // mapped -> Alt Right
     "Alt-g": "CursorStart",
     "Alt-h": "FindPrevious",
-    "Alt-i": "None",                    // accent
+    "Alt-i": "None",                    // disabled => accent
     "Alt-j": "SpawnMultiCursorDown",
     "Alt-k": "SpawnMultiCursorUp",
     "Alt-l": "FindNext",
     "Alt-m": "JumpLine",
-    "Alt-n": "None",                    // accent
+    "Alt-n": "None",                    // disabled => accent
     "Alt-o": "Undo",
     "Alt-p": "JumpToMatchingBrace",
     "Alt-q": "Quit",
     "Alt-r": "ToggleMacro",
     "Alt-s": "Save,Quit",
     "Alt-t": "OpenFile",
-    "Alt-u": "None",                    // accent
+    "Alt-u": "None",                    // disabled => accent
     "Alt-v": "Paste",
     "Alt-w": "Save",
     "Alt-x": "Cut",
     "Alt-y": "SkipMultiCursor",
     "Alt-z": "RemoveMultiCursor",
     "AltDown": "ParagraphNext",
-    "AltLeft": "WordLeft",
-    "AltRight": "WordRight",
+    "AltLeft": "SelectToStartOfLine",   // mapped -> `shift-cmd-left`
+    "AltRight": "SelectToEndOfLine",    // mapped -> `shift-cmd-right`
     "AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight",
     "AltShiftLeft": "SelectWordLeft",
     "AltShiftRight": "SelectWordRight",
@@ -65,13 +65,20 @@
     "Ctrl-u": "SelectToStartOfLine,Delete",
     "Ctrl-k": "SelectToEndOfLine,Delete",
     "Ctrl-w": "DeleteWordLeft",
-    "Ctrl-f": "DeleteWordRight",
-    "CtrlDown": "",
-    "CtrlLeft": "",
-    "CtrlRight": "",
+    "Ctrl-b": "CommandMode",            // mapped -> `alt-b`
+    "Ctrl-f": "FindLiteral",            // mapped -> `alt-f`
+    "Ctrl-g": "None",
+    "Ctrl-h": "None",
+    "Ctrl-o": "PreviousTab",            // mapped -> `alt-cmd-comma`
+    "Ctrl-p": "NextTab",                // mapped -> `alt-cmd-period`
+    "Ctrl-v": "None",                   // mapped -> `alt-cmd-slash`
+    "Ctrl-x": "None",                   // mapped -> `enter-alt`
+    "CtrlDown": "None",                 // disabled => collision Alacritty
+    "CtrlLeft": "None",                 // disabled => collision Alacritty
+    "CtrlRight": "None",                // disabled => collision Alacritty
     "CtrlSpace": "NextSplit",
     "CtrlUnderscore": "lua:comment.comment",
-    "CtrlUp": "",
+    "CtrlUp": "None",                   // disabled => collision Alacritty
     "Delete": "Delete",
     "F5": "lua:wc.wordCount",
     "MouseRight": "MouseMultiCursor"
