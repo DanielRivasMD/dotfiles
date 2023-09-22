@@ -994,44 +994,59 @@ key_bindings:
   - { key: Back,            mods: Alt,                              chars: "\x1b\x7f"     }
   - { key: Delete,                                                  chars: "\x1b[3~"      }
   - { key: Left,            mods: Shift,                            chars: "\x1b[1;2D"    }
-  - { key: Left,            mods: Control,                          chars: "\x1b[1;5D"    } # original
-  - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    } # original
-  - { key: Left,            mods: Command,                          chars: "\x01"         }
-  - { key: Left,            mods: Alt|Command,                      chars: "\x1bb"        } # original
+  - { key: Left,            mods: Control,                          chars: "\x1b[1;5D"    }
+  # - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    } # original
   - { key: Left,            mode: ~AppCursor,                       chars: "\x1b[D",      }
   - { key: Left,            mode: AppCursor,                        chars: "\x1bOD",      }
   - { key: Right,           mods: Shift,                            chars: "\x1b[1;2C"    }
-  - { key: Right,           mods: Control,                          chars: "\x1b[1;5C"    } # original
-  - { key: Right,           mods: Alt,                              chars: "\x1b[1;3C"    } # original
-  - { key: Right,           mods: Command,                          chars: "\x05"         }
-  - { key: Right,           mods: Alt|Command,                      chars: "\x1bf"        } # original
+  - { key: Right,           mods: Control,                          chars: "\x1b[1;5C"    }
+  # - { key: Right,           mods: Alt,                              chars: "\x1b[1;3C"    } # original
   - { key: Right,           mode: ~AppCursor,                       chars: "\x1b[C",      }
   - { key: Right,           mode: AppCursor,                        chars: "\x1bOC",      }
   - { key: Up,              mods: Shift,                            chars: "\x1b[1;2A"    }
-  - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"    } # original
-  - { key: Up,              mods: Alt,                              chars: "\x1b[1;3A"    } # original
-  - { key: Up,              mods: Command,                          chars: "\x1bg"        }
-  - { key: Up,              mods: Command|Shift,                    chars: "\x1bg"        }
+  - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"    }
+  - { key: Up,              mods: Alt,                              chars: "\x1b[1;3A"    }
   - { key: Up,              mode: ~AppCursor,                       chars: "\x1b[A",      }
   - { key: Up,              mode: AppCursor,                        chars: "\x1bOA",      }
   - { key: Down,            mods: Shift,                            chars: "\x1b[1;2B"    }
-  - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    } # original
-  - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    } # original
-  - { key: Down,            mods: Command,                          chars: "\x1bG"        }
-  - { key: Down,            mods: Command|Shift,                    chars: "\x1bG"        }
+  - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    }
+  - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    }
   - { key: Down,            mode: ~AppCursor,                       chars: "\x1b[B",      }
   - { key: Down,            mode: AppCursor,                        chars: "\x1bOB",      }
+
+  # remapped movement
+  - { key: Left,            mods: Alt,                              chars: "\x1bb"        } # mapped -> Alt B
+  - { key: Right,           mods: Alt,                              chars: "\x1bf"        } # mapped -> Alt F
+  - { key: Left,            mods: Command,                          chars: "\x01"         } # mapped -> Ctrl A
+  - { key: Right,           mods: Command,                          chars: "\x05"         } # mapped -> Ctrl E
+  - { key: Left,            mods: Shift|Command,                    chars: "\x1b[1;3D"    } # mapped -> Alt Left
+  - { key: Right,           mods: Shift|Command,                    chars: "\x1b[1;3C"    } # mapped -> Alt Right
+  - { key: Up,              mods: Command,                          chars: "\x1bg"        } # mapped -> Alt g
+  - { key: Down,            mods: Command,                          chars: "\x1bG"        } # mapped -> Alt G
+
+  # remapped controls
+  - { key: B,               mods: Alt,                              chars: "\x02"         } # mapped -> Ctrl B
+  - { key: F,               mods: Alt,                              chars: "\x06"         } # mapped -> Ctrl F
+  - { key: Comma,           mods: Command|Alt,                      chars: "\x0F"         } # mapped -> Ctrl O
+  - { key: Period,          mods: Command|Alt,                      chars: "\x10"         } # mapped -> Ctrl P
+  - { key: Slash,           mods: Command|Alt,                      chars: "\x16"         } # mapped -> Ctrl V
+  - { key: Return,          mods: Alt,                              chars: "\x18"         } # mapped -> Ctrl X
+
+  # rust tools
+  - { key: Semicolon,       mods: Command|Alt,                      chars: "\x13"         } # mapped -> Ctrl S
+  - { key: Apostrophe,      mods: Command|Alt,                      chars: "\x0E"         } # mapped -> Ctrl N
+  - { key: Backslash,       mods: Command|Alt,                      chars: "\x0A"         } # mapped -> Ctrl J
 
   ####################################################################################################
   # alphabet
   ####################################################################################################
 
   - { key: A,               mods: Alt,                              chars: "\x1ba"        }
-  - { key: B,               mods: Alt,                              chars: "\x1bb"        }
+  # - { key: B,               mods: Alt,                              chars: "\x1bb"        } # original
   - { key: C,               mods: Alt,                              chars: "\x1bc"        }
   - { key: D,               mods: Alt,                              chars: "\x1bd"        }
   - { key: E,               mods: Alt,                              chars: "\x1be"        }
-  - { key: F,               mods: Alt,                              chars: "\x1bf"        }
+  # - { key: F,               mods: Alt,                              chars: "\x1bf"        } # original
   - { key: G,               mods: Alt,                              chars: "\x1bg"        }
   - { key: H,               mods: Alt,                              chars: "\x1bh"        }
   - { key: I,               mods: Alt,                              chars: "\x1bi"        }
