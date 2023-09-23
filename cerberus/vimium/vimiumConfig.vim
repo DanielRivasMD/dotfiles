@@ -60,8 +60,8 @@ map " Marks.activateGotoMode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vomnibar
-map o Vomnibar.activate
-map O Vomnibar.activateInNewTab
+map u Vomnibar.activate
+map U Vomnibar.activateInNewTab
 map b Vomnibar.activateBookmarks
 map B Vomnibar.activateBookmarksInNewTab
 map e Vomnibar.activateEditUrl
@@ -78,8 +78,8 @@ map h performBackwardsFind
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " history
-map u goBack
-map U goForward
+map o goBack
+map O goForward
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -87,8 +87,8 @@ map U goForward
 map ; createTab
 map , previousTab
 map . nextTab
-map { firstTab
-map } lastTab
+map <c-,> firstTab
+map <c-.> lastTab
 map <a-m-space> visitPreviousTab
 map ' visitPreviousTab
 map d duplicateTab
