@@ -610,10 +610,10 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	{ "key": "alt+space",									"command": "workbench.action.showCommands"},
-	{ "key": "ctrl+alt+cmd+space",				"command": "workbench.action.navigatePreviousInEditLocations"},
+	{ "key": "alt+cmd+space",							"command": "workbench.action.navigatePreviousInEditLocations"},
 	{ "key": "ctrl+alt+space",						"command": "workbench.actions.view.problems", "when": "workbench.panel.markers.view.active"},
-	{ "key": "cmd+space",									"command": "workbench.action.gotoSymbol"},
-	{ "key": "ctrl+shift+space",					"command": "workbench.action.showAllSymbols"},
+	{ "key": "ctrl+alt+cmd+space",				"command": "workbench.action.gotoSymbol"},
+	{ "key": "cmd+shift+space",						"command": "workbench.action.showAllSymbols"},
 	{ "key": "ctrl+z",										"command": "workbench.action.reopenClosedEditor"},
 	{ "key": "alt+cmd+down",							"command": "workbench.action.editor.nextChange"},
 	{ "key": "alt+cmd+up",								"command": "workbench.action.editor.previousChange"},
@@ -686,7 +686,7 @@
 	{ "key": "shift+alt+p",								"command": "editor.action.selectToBracket"},
 
 	// project find file
-	{ "key": "alt+t",											"command": "workbench.action.quickOpen"},
+	{ "key": "cmd+space",									"command": "workbench.action.quickOpen"},
 
 	// sidebar
 	{ "key": "ctrl+alt+[",								"command": "workbench.action.toggleSidebarVisibility"},
