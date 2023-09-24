@@ -57,7 +57,7 @@
   { "keys": ["shift+alt+f"],           "command": "show_panel", "args": {"panel": "find_in_files"}},
 
   // project find file
-  { "keys": ["alt+t"],                  "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}},
+  { "keys": ["command+space"],          "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}},
 
   // tree view
   { "keys": ["ctrl+alt+["],             "command": "toggle_side_bar"},
@@ -125,7 +125,7 @@
   { "keys": ["shift+alt+w"],            "command": "wrap_lines" },
 
   // jump
-  { "keys": ["alt+command+ctrl+space"], "command": "prev_modification"},
+  { "keys": ["alt+command+space"],      "command": "prev_modification"},
   { "keys": ["alt+enter"],              "command": "jumpy", "context": [{ "key": "panel_has_focus", "operand": false }] },
 
   // command palette
