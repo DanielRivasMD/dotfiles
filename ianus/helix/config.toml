@@ -1,13 +1,63 @@
-theme = "onedark"
+####################################################################################################
+# theme
+####################################################################################################
+
+# theme = "adwaita-dark"
+# theme = "base16_transparent"
+# theme = "dark_plus"
+# theme = "fleet_dark"
+theme = "github_dark"
+# theme = "molokai"
+# theme = "snazzy"
+
+####################################################################################################
 
 [editor]
 line-number = "relative"
 mouse = false
 
+####################################################################################################
+
 [editor.cursor-shape]
 insert = "bar"
-normal = "block"
-select = "underline"
+normal = "underline"
+select = "block"
+
+####################################################################################################
 
 [editor.file-picker]
 hidden = false
+
+####################################################################################################
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+"A-w" = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+C-o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
+a = "move_char_left" # Maps the 'a' key to the move_char_left command
+w = "move_line_up" # Maps the 'w' key move_line_up
+"C-S-esc" = "extend_line" # Maps Ctrl-Shift-Escape to extend_line
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+
+[keys.insert]
+"A-x" = "normal_mode"     # Maps Alt-X to enter normal mode
+j = { j = "normal_mode" } # Maps `jk` to exit insert mode
+
+# [keys.normal.g]
+# a = "code_action" # Maps `ga` to show possible code actions
+
+# invert `j` and `k` in view mode
+[keys.normal.z]
+j = "scroll_up"
+k = "scroll_down"
+
+####################################################################################################
+
+# create a new minor mode bound to `+`
+[keys.normal."+"]
+j = ":run-shell-command just show"
+c = ":run-shell-command cargo build"
+t = ":run-shell-command cargo test"
+
+####################################################################################################
