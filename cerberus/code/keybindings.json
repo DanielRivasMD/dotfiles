@@ -697,7 +697,7 @@
 	{ "key": "ctrl+alt+\\",								"command": "workbench.view.explorer", "when": "viewContainer.workbench.view.explorer.enabled"},
 
 	// go to line
-	{ "key": "alt+m",											"command": "workbench.action.gotoLine"},
+	{ "key": "ctrl+enter",								"command": "workbench.action.gotoLine"},
 
 	// advanced open file / simple new file
 	{ "key": "cmd+;",											"command": "extension.simpleNewFile"},

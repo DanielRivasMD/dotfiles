@@ -64,7 +64,7 @@
   { "keys": ["ctrl+alt+\\"],            "command": "focus_side_bar"},
 
   // go to line
-  { "keys": ["alt+m"],                  "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
+  { "keys": ["ctrl+enter"],             "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
 
   // folding
   { "keys": ["ctrl+["],                 "command": "fold"},
