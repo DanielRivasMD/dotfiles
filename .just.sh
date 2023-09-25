@@ -70,7 +70,4 @@ uppmaxID="drivas@rackham.uppmax.uu.se"
 pawseyID="drivas@topaz.pawsey.org.au"
 softwarePawsey="/scratch/pawsey0263/drivas/software"
 
-# Ulam
-ulamID="drivas@ulam.icm.uu.se"
-
 ####################################################################################################
