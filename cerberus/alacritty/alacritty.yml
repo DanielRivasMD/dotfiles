@@ -957,7 +957,8 @@ key_bindings:
   - { key: Left,            mods: Command|Alt,                      chars: "\x11p"        } # bind n next-window
 
   # select last window
-  - { key: Space,           mods: Control|Alt,                      chars: "\x11l"        } # bind l last-pane\; resize-pane -Z
+  - { key: Space,           mods: Control,                          chars: "\x11o"        } # bind l last-pane
+  - { key: Space,           mods: Control|Alt,                      chars: "\x11O"        } # bind l last-pane\; resize-pane -Z
   - { key: Space,           mods: Command|Alt,                      chars: "\x11L"        } # bind L last-window
 
   # swap windows
@@ -967,6 +968,11 @@ key_bindings:
   # copy mode
   - { key: Space,           mods: Command,                          chars: "\x11c"        } # bind c copy-mode
   - { key: C,               mods: Command,                          chars: "\x11y"        } #
+
+  - { key: Left,            mods: Alt|Control|Command,              chars: "\x11h"        } #
+  - { key: Right,           mods: Alt|Control|Command,              chars: "\x11l"        } #
+  - { key: Up,              mods: Alt|Control|Command,              chars: "\x11k"        } #
+  - { key: Down,            mods: Alt|Control|Command,              chars: "\x11j"        } #
 
   # select tabs
   - { key: Key1,            mods: Command,                          chars: "\x111"        }
