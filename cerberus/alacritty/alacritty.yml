@@ -1032,6 +1032,20 @@ key_bindings:
   - { key: Slash,           mods: Command|Alt,                      chars: "\x16"         } # mapped -> Ctrl V
   - { key: Return,          mods: Alt,                              chars: "\x18"         } # mapped -> Ctrl X
 
+  # remapped control function keys
+  - { key: Return,          mods: Alt|Shift,                        chars: "\x1b[1;5P"    } # mapped -> Ctrl F1
+  - { key: Return,          mods: Control,                          chars: "\x1b[1;5Q"    } # mapped -> Ctrl F2
+  - { key: Return,          mods: Control|Shift,                    chars: "\x1b[1;5R"    } # mapped -> Ctrl F3
+  - { key: Return,          mods: Command,                          chars: "\x1b[1;5S"    } # mapped -> Ctrl F4
+  - { key: Return,          mods: Command|Shift,                    chars: "\x1b[15;5~"   } # mapped -> Ctrl F5
+  - { key: Return,          mods: Alt|Control,                      chars: "\x1b[17;5~"   } # mapped -> Ctrl F6
+  - { key: Return,          mods: Control|Command,                  chars: "\x1b[18;5~"   } # mapped -> Ctrl F7
+  - { key: Return,          mods: Alt|Control|Command,              chars: "\x1b[19;5~"   } # mapped -> Ctrl F8
+  - { key: Return,          mods: Shift,                            chars: "\x1b[20;5~"   } # mapped -> Ctrl F9
+  - { key: Space,           mods: Shift,                            chars: "\x1b[21;5~"   } # mapped -> Ctrl F10
+  - { key: Space,           mods: Alt|Shift,                        chars: "\x1b[23;5~"   } # mapped -> Ctrl F11
+  - { key: Space,           mods: Control|Shift,                    chars: "\x1b[24;5~"   } # mapped -> Ctrl F12
+
   # rust tools
   - { key: Semicolon,       mods: Command|Alt,                      chars: "\x13"         } # mapped -> Ctrl S
   - { key: Apostrophe,      mods: Command|Alt,                      chars: "\x0E"         } # mapped -> Ctrl N
