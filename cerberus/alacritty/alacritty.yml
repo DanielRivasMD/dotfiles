@@ -925,8 +925,8 @@ key_bindings:
   - { key: LBracket,        mods: Command,                          chars: "\x11["        } # bind [ join-pane -h
 
   # new window
-  - { key: Semicolon,       mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
-  - { key: Semicolon,       mods: Command|Shift,                    chars: "\x11:"        } # bind : new-window
+  - { key: Slash,           mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
+  - { key: Slash,           mods: Command|Shift,                    chars: "\x11:"        } # bind : new-window
 
   # rename sessions
   - { key: R,               mods: Command,                          chars: "\x11r"        } # bind r command-prompt -I "#{window_name}" "rename-window '%%'"
@@ -941,7 +941,7 @@ key_bindings:
   - { key: Minus,           mods: Command|Shift,                    chars: "\x11_"        } # bind _ select-layout even-vertical
   - { key: Period,          mods: Command|Shift,                    chars: "\x11>"        } # bind > select-layout main-horizontal
   - { key: Comma,           mods: Command|Shift,                    chars: "\x11<"        } # bind < select-layout main-vertical
-  - { key: Slash,           mods: Command|Shift,                    chars: "\x11?"        } # bind '?' select-layout tiled
+  - { key: Semicolon,       mods: Command|Shift,                    chars: "\x11?"        } # bind '?' select-layout tiled
 
   # rotate window
   - { key: W,               mods: Command,                          chars: "\x11w"        } # bind w rotate-window
@@ -1036,21 +1036,23 @@ key_bindings:
   - { key: Comma,           mods: Command|Alt,                      chars: "\x0F"         } # mapped -> Ctrl O
   - { key: Period,          mods: Command|Alt,                      chars: "\x10"         } # mapped -> Ctrl P
   - { key: Slash,           mods: Command|Alt,                      chars: "\x16"         } # mapped -> Ctrl V
-  - { key: Return,          mods: Alt,                              chars: "\x18"         } # mapped -> Ctrl X
+  - { key: Return,          mods: Control,                          chars: "\x12"         } # mapped -> Ctrl R
+  - { key: Return,          mods: Alt,                              chars: "\x14"         } # mapped -> Ctrl T
+  - { key: Return,          mods: Command,                          chars: "\x18"         } # mapped -> Ctrl X
 
   # remapped control function keys
-  - { key: Return,          mods: Alt|Shift,                        chars: "\x1b[1;5P"    } # mapped -> Ctrl F1
-  - { key: Return,          mods: Control,                          chars: "\x1b[1;5Q"    } # mapped -> Ctrl F2
+  - { key: Return,          mods: Shift,                            chars: "\x1b[1;5P"    } # mapped -> Ctrl F1
+  - { key: Return,          mods: Alt|Shift,                        chars: "\x1b[1;5Q"    } # mapped -> Ctrl F2
   - { key: Return,          mods: Control|Shift,                    chars: "\x1b[1;5R"    } # mapped -> Ctrl F3
-  - { key: Return,          mods: Command,                          chars: "\x1b[1;5S"    } # mapped -> Ctrl F4
-  - { key: Return,          mods: Command|Shift,                    chars: "\x1b[15;5~"   } # mapped -> Ctrl F5
-  - { key: Return,          mods: Alt|Control,                      chars: "\x1b[17;5~"   } # mapped -> Ctrl F6
+  - { key: Return,          mods: Command|Shift,                    chars: "\x1b[1;5S"    } # mapped -> Ctrl F4
+  - { key: Return,          mods: Alt|Control,                      chars: "\x1b[15;5~"   } # mapped -> Ctrl F5
+  - { key: Return,          mods: Alt|Command,                      chars: "\x1b[17;5~"   } # mapped -> Ctrl F6
   - { key: Return,          mods: Control|Command,                  chars: "\x1b[18;5~"   } # mapped -> Ctrl F7
   - { key: Return,          mods: Alt|Control|Command,              chars: "\x1b[19;5~"   } # mapped -> Ctrl F8
-  - { key: Return,          mods: Shift,                            chars: "\x1b[20;5~"   } # mapped -> Ctrl F9
-  - { key: Space,           mods: Shift,                            chars: "\x1b[21;5~"   } # mapped -> Ctrl F10
-  - { key: Space,           mods: Alt|Shift,                        chars: "\x1b[23;5~"   } # mapped -> Ctrl F11
-  - { key: Space,           mods: Control|Shift,                    chars: "\x1b[24;5~"   } # mapped -> Ctrl F12
+  - { key: Space,           mods: Shift,                            chars: "\x1b[20;5~"   } # mapped -> Ctrl F9
+  - { key: Semicolon,       mods: Command,                          chars: "\x1b[21;5~"   } # mapped -> Ctrl F10
+  - { key: Apostrophe,      mods: Command,                          chars: "\x1b[23;5~"   } # mapped -> Ctrl F11
+  - { key: Backslash,       mods: Command,                          chars: "\x1b[24;5~"   } # mapped -> Ctrl F12
 
   # rust tools
   - { key: Semicolon,       mods: Command|Alt,                      chars: "\x13"         } # mapped -> Ctrl S
