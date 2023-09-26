@@ -6,7 +6,7 @@
     "Alt-D": "DuplicateLine",
     "Alt-E": "",
     "Alt-F": "Find",
-    "Alt-G": "CursorEnd",
+    "Alt-G": "CursorEnd",               // mapped -> `cmd-down`
     "Alt-H": "HSplit",
     "Alt-I": "IndentSelection",
     "Alt-J": "MoveLinesDown",
@@ -27,18 +27,18 @@
     "Alt-Y": "CopyLine",
     "Alt-Z": "Unsplit",
     "Alt-a": "lua:snippets.Accept",
-    "Alt-b": "WordLeft",                // mapped -> Alt Left
+    "Alt-b": "WordLeft",                // mapped -> `alt-left`
     "Alt-c": "Copy",
     "Alt-d": "SpawnMultiCursor",
     "Alt-e": "None",                    // disabled => accent
-    "Alt-f": "WordRight",               // mapped -> Alt Right
-    "Alt-g": "CursorStart",
+    "Alt-f": "WordRight",               // mapped -> `alt-right`
+    "Alt-g": "CursorStart",             // mapped -> `cmd-up`
     "Alt-h": "FindPrevious",
     "Alt-i": "None",                    // disabled => accent
     "Alt-j": "SpawnMultiCursorDown",
     "Alt-k": "SpawnMultiCursorUp",
     "Alt-l": "FindNext",
-    "Alt-m": "JumpLine",
+    "Alt-m": "",
     "Alt-n": "None",                    // disabled => accent
     "Alt-o": "Undo",
     "Alt-p": "JumpToMatchingBrace",
@@ -60,8 +60,8 @@
     "AltShiftRight": "SelectWordRight",
     "AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight",
     "AltUp": "ParagraphPrevious",
-    "Ctrl-a": "StartOfLine",
-    "Ctrl-e": "EndOfLine",
+    "Ctrl-a": "StartOfLine",            // mapped ->
+    "Ctrl-e": "EndOfLine",              // mapped ->
     "Ctrl-u": "SelectToStartOfLine,Delete",
     "Ctrl-k": "SelectToEndOfLine,Delete",
     "Ctrl-w": "DeleteWordLeft",
@@ -73,13 +73,13 @@
     "Ctrl-p": "NextTab",                // mapped -> `alt-cmd-period`
     "Ctrl-v": "None",                   // mapped -> `alt-cmd-slash`
     "Ctrl-x": "None",                   // mapped -> `enter-alt`
-    "CtrlDown": "None",                 // disabled => collision Alacritty
-    "CtrlLeft": "None",                 // disabled => collision Alacritty
-    "CtrlRight": "None",                // disabled => collision Alacritty
-    "CtrlSpace": "NextSplit",
+    "CtrlDown": "DiffNext",
+    "CtrlLeft": "PreviousSplit",
+    "CtrlRight": "NextSplit",
+    "CtrlSpace": "None",                // disabled => collision Alacritty
     "CtrlUnderscore": "lua:comment.comment",
-    "CtrlUp": "None",                   // disabled => collision Alacritty
+    "CtrlUp": "DiffPrevious",
     "Delete": "Delete",
+    "MouseRight": "MouseMultiCursor",
     "F5": "lua:wc.wordCount",
-    "MouseRight": "MouseMultiCursor"
 }
