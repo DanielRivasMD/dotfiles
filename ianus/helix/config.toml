@@ -115,6 +115,9 @@ C-space = ["no_op"]  # None                // disabled => collision Alacritty
 # C-underscore = [""]  # lua:comment.comment
 C-up = ["jump_view_up"]  # DiffPrevious
 
+A-F5 = ["increment"]
+A-F6 = ["decrement"]
+
 # Delete": "Delete
 # MouseRight": "MouseMultiCursor
 # "F1": "None
