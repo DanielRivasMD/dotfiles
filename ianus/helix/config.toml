@@ -153,11 +153,11 @@ A-F6 = ["decrement"]
 
 # "A-w" = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
 # C-o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
-a = "move_char_left" # Maps the 'a' key to the move_char_left command
-w = "move_line_up" # Maps the 'w' key move_line_up
-"C-S-esc" = "extend_line" # Maps Ctrl-Shift-Escape to extend_line
-g = { a = "code_action" } # Maps `ga` to show possible code actions
-"ret" = ["open_below", "normal_mode"]  # Maps the enter key to open_below then re-enter normal mode
+# a = "move_char_left" # Maps the 'a' key to the move_char_left command
+# w = "move_line_up" # Maps the 'w' key move_line_up
+# "C-S-esc" = "extend_line" # Maps Ctrl-Shift-Escape to extend_line
+# g = { a = "code_action" } # Maps `ga` to show possible code actions
+# "ret" = ["open_below", "normal_mode"]  # Maps the enter key to open_below then re-enter normal mode
 
 # c-v = ""
 
@@ -178,6 +178,92 @@ C-space = "completion"
 
 # [keys.normal.g]
 # a = "code_action" # Maps `ga` to show possible code actions
+
+A-A = ["select_all"]  # SelectAll
+# A-B = [""]  # ShellMode
+A-C = ["toggle_comments"]  # lua:comment.comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]  # DuplicateLine
+# A-E = [""]  #
+A-F = ["rsearch"]  # Find
+A-G = ["goto_last_line"]  # CursorEnd               // mapped -> `cmd-down`
+A-H = [":hsplit-new"]  # HSplit
+A-I = ["indent"]  # IndentSelection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]  # MoveLinesDown
+A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "paste_before"]  # MoveLinesUp
+A-L = ["extend_line_below"]  # SelectLine
+# A-M = [""]  #
+# A-N = [""]  #
+A-O = ["later"]  # Redo
+# A-P = [""]  #
+A-Q = [":quit-all"]  # QuitAll
+A-R = ["replay_macro"]  # PlayMacro
+A-S = [":write-quit-all"]  # Save,QuitAll
+A-T = ["file_picker"]  # AddTab,OpenFile
+A-U = ["unindent"]  # OutdentSelection
+A-V = [":vsplit-new"]  # VSplit
+# A-W = [""]  # lua:wc.wordCount
+A-X = ["extend_to_line_bounds", "delete_selection"]  # CutLine
+A-Y = ["extend_to_line_bounds", "yank"]  # CopyLine
+A-Z = ["wonly"]  # Unsplit
+
+# A-a = [""]  # lua:snippets.Accept
+A-b = ["move_prev_word_start"]  # WordLeft                // mapped -> `alt-left`
+A-c = ["yank_joined_to_clipboard"]  # Copy
+# A-d = [""]  # SpawnMultiCursor
+A-e = ["no_op"]  # None                    // disabled => accent
+A-f = ["move_next_word_end"]  # WordRight               // mapped -> `alt-right`
+A-g = ["goto_file_start"]  # CursorStart             // mapped -> `cmd-up`
+A-h = ["search_prev"]  # FindPrevious
+A-i = ["no_op"]  # None                    // disabled => accent
+A-j = ["copy_selection_on_next_line"]  # SpawnMultiCursorDown
+A-k = ["copy_selection_on_prev_line"]  # SpawnMultiCursorUp
+A-l = ["search_next"]  # FindNext
+# A-m = [""]
+A-n = ["no_op"]  # None                    // disabled => accent
+A-o = ["earlier"]  # Undo
+A-p = ["match_brackets"]  # JumpToMatchingBrace
+A-q = [":quit"]  # Quit
+A-r = ["record_macro"]  # ToggleMacro
+A-s = [":write-quit"]  # Save,Quit
+# A-t = [""]
+A-u = ["no_op"]  # None                    // disabled => accent
+A-v = ["paste_after"]  # Paste
+A-w = [":write"]  # Save
+A-x = ["delete_selection"]  # Cut
+# A-y = [""]  # SkipMultiCursor
+# A-z = [""]  # RemoveMultiCursor
+
+A-down = ["goto_next_paragraph"]  # ParagraphNext
+# A-left = [""]  # SelectToStartOfLine",   // mapped -> `shift-cmd-left`
+# A-right = [""]  # SelectToEndOfLine",    // mapped -> `shift-cmd-right`
+# AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight
+# AltShiftLeft": "SelectWordLeft
+# AltShiftRight": "SelectWordRight
+# AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight
+A-up = ["goto_prev_paragraph"]  # ParagraphPrevious
+
+C-a = ["goto_line_start"]  # StartOfLine            // mapped ->
+C-e = ["goto_line_end"]  # EndOfLine              // mapped ->
+# C-u = [""]  # SelectToStartOfLine,Delete
+# C-k = [""]  # SelectToEndOfLine,Delete
+# C-w = [""]  # DeleteWordLeft
+C-b = ["command_mode"]  # CommandMode            // mapped -> `alt-b`
+C-f = ["search"]  # FindLiteral            // mapped -> `alt-f`
+C-g = ["no_op"]  # None
+C-h = ["no_op"]  # None
+C-o = ["goto_previous_buffer"]  # PreviousTab            // mapped -> `alt-cmd-comma`
+C-p = ["goto_next_buffer"]  # NextTab                // mapped -> `alt-cmd-period`
+C-v = ["no_op"]  # None                   // mapped -> `alt-cmd-slash`
+C-x = ["no_op"]  # None                   // mapped -> `enter-alt`
+C-down = ["jump_view_down"]  # DiffNext
+C-left = ["jump_view_left"]  # PreviousSplit
+C-right = ["jump_view_right"]  # NextSplit
+# C-space = ["no_op"]  # None                // disabled => collision Alacritty
+# C-underscore = [""]  # lua:comment.comment
+C-up = ["jump_view_up"]  # DiffPrevious
+
+A-F5 = ["increment"]
+A-F6 = ["decrement"]
 
 # invert `j` and `k` in view mode
 [keys.normal.z]
