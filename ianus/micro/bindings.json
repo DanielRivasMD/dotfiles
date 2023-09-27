@@ -60,23 +60,36 @@
     "AltShiftRight": "SelectWordRight",
     "AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight",
     "AltUp": "ParagraphPrevious",
-    "Ctrl-a": "StartOfLine",            // mapped ->
-    "Ctrl-e": "EndOfLine",              // mapped ->
-    "Ctrl-u": "SelectToStartOfLine,Delete",
-    "Ctrl-k": "SelectToEndOfLine,Delete",
-    "Ctrl-w": "DeleteWordLeft",
+    "Ctrl-a": "StartOfLine",            // mapped -> `cmd-left`
     "Ctrl-b": "CommandMode",            // mapped -> `alt-b`
+    // "Ctrl-c": "None",
+    // "Ctrl-d": "None",
+    "Ctrl-e": "EndOfLine",              // mapped -> `cmd-right`
     "Ctrl-f": "FindLiteral",            // mapped -> `alt-f`
-    "Ctrl-g": "None",
-    "Ctrl-h": "None",
-    "Ctrl-o": "PreviousTab",            // mapped -> `alt-cmd-comma`
-    "Ctrl-p": "NextTab",                // mapped -> `alt-cmd-period`
-    "Ctrl-v": "None",                   // mapped -> `alt-cmd-slash`
-    "Ctrl-x": "None",                   // mapped -> `enter-alt`
+    // "Ctrl-g": "None",                // mapped -> `alt-ctrl-[`
+    // "Ctrl-h": "None",                // mapped -> `alt-ctrl-]`
+    // "Ctrl-i": "None",
+    // "Ctrl-j": "None",                // mapped -> `alt-ctrl-\`
+    "Ctrl-k": "SelectToEndOfLine,Delete",
+    // "Ctrl-l": "None",
+    // "Ctrl-m": "None",
+    // "Ctrl-n": "None",                // mapped -> `alt-ctrl-'`
+    "Ctrl-o": "PreviousTab",            // mapped -> `alt-ctrl-,`
+    "Ctrl-p": "NextTab",                // mapped -> `alt-ctrl-.`
+    // "Ctrl-q": "None",
+    // "Ctrl-r": "None",                // mapped -> `ctrl-enter`
+    "Ctrl-s": "JumpLine",               // mapped -> `alt-enter`
+    // "Ctrl-t": "None",                // mapped -> `cmd-enter`
+    "Ctrl-u": "SelectToStartOfLine,Delete",
+    // "Ctrl-v": "None",                // mapped -> `alt-ctrl-/`
+    "Ctrl-w": "DeleteWordLeft",
+    // "Ctrl-x": "None",                // mapped -> `alt-ctrl-;`
+    // "Ctrl-y": "None",
+    // "Ctrl-z": "None",
     "CtrlDown": "DiffNext",
     "CtrlLeft": "PreviousSplit",
     "CtrlRight": "NextSplit",
-    "CtrlSpace": "None",                // disabled => collision Alacritty
+    "CtrlSpace": "Autocomplete",
     "CtrlUnderscore": "lua:comment.comment",
     "CtrlUp": "DiffPrevious",
     "Delete": "Delete",
