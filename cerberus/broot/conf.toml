@@ -15,18 +15,18 @@ default_flags = ""
 # config
 [[verbs]]
 invocation = "open_leave"
-key = "ctrl-x"                # mapped -> enter alt
+key = "ctrl-s"                          # mapped -> `cmd-enter`
 cmd = ":cd"
 description = "go into directory -> `alt-enter`"
 
 [[verbs]]
 invocation = "root_up"
-key = "ctrl-a"                # mapped -> cmd left
+key = "ctrl-r"                          # mapped -> `ctrl-enter`
 internal = "root_up"
 description = "move tree root up -> `cmd left`"
 
 [[verbs]]
-key = "ctrl-e"                # mapped -> cmd right
+key = "ctrl-t"                          # mapped -> `cmd-enter`
 external = "command open {file}"
 leave_broot = false
 description = "open according to OS -> `cmd right`"
@@ -46,24 +46,21 @@ description = "refresh tree"
 # file
 [[verbs]]
 invocation = "edit"
-key = "ctrl-s"                # mapped -> cmd right
-shortcut = "e"
+key = "ctrl-x"                          # mapped -> `cmd-,`
 execution = "subl {file}"
 leave_broot = false
 description = "open file with `subl` editor"
 
 [[verbs]]
 invocation = "micro"
-key = "ctrl-n"                # mapped -> cmd right
-shortcut = "m"
+key = "ctrl-n"                          # mapped -> `cmd-.`
 execution = "micro {file}"
 leave_broot = false
 description = "open file with `micro` editor"
 
 [[verbs]]
 invocation = "helix"
-key = "ctrl-j"                # mapped -> cmd right
-shortcut = "h"
+key = "ctrl-j"                          # mapped -> `cmd-/`
 execution = "hx {file}"
 leave_broot = false
 description = "open file with `helix` editor"
@@ -78,7 +75,7 @@ description = "create file"
 # search
 [[verbs]]
 invocation = "total_search"
-key = "ctrl-f"                # mapped -> alt-f
+key = "ctrl-f"                          # mapped -> `alt-f`
 internal = "total_search"
 description = "search again but on all children -> `alt-f`"
 
@@ -110,8 +107,7 @@ description = "toggle hidden"
 # pager
 [[verbs]]
 invocation = "bat"
-key = "ctrl-b"                # mapped -> alt-b
-shortcut = "bat"
+key = "ctrl-b"                          # mapped -> `alt-b`
 external = "bat --paging always {file}"
 leave_broot = true
 description = "open file with `bat` -> `alt-b`"
@@ -119,7 +115,6 @@ description = "open file with `bat` -> `alt-b`"
 [[verbs]]
 invocation = "mdcat"
 key = "alt-m"
-shortcut = "mdcat"
 external = "mdcat --paginate {file}"
 leave_broot = true
 description = "open file with `mdcat`"
@@ -127,7 +122,6 @@ description = "open file with `mdcat`"
 [[verbs]]
 invocation = "jless"
 key = "alt-j"
-shortcut = "jless"
 external = "jless {file}"
 leave_broot = true
 description = "open file with `jless`"
@@ -135,7 +129,6 @@ description = "open file with `jless`"
 [[verbs]]
 invocation = "hck"
 key = "alt-k"
-shortcut = "hck"
 external = "hck {file}"
 leave_broot = true
 description = "open file with `hck`"
@@ -143,14 +136,13 @@ description = "open file with `hck`"
 [[verbs]]
 invocation = "xsv"
 key = "alt-x"
-shortcut = "xsv"
 external = "xsv table {file}"
 leave_broot = true
 description = "open file with `xsv`"
 
 [[verbs]]
 invocation = "print_to_copy"
-key = "alt-y"
+key = "alt-c"
 external = "bat --paging always --plain {file}"
 leave_broot = true
 description = "open file with `bat` to copy"
@@ -158,14 +150,14 @@ description = "open file with `bat` to copy"
 # print
 [[verbs]]
 invocation = "print_tree"
-key = "alt-p"
+key = "ctrl-h"                          # mapped -> `cmd-\` 
 internal = "print_tree"
 description = "print tree and leaves broot"
 
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
-key = "shift-alt-i"
+key = "ctrl-g"                          # mapped -> `cmd-'`
 internal = "toggle_git_ignore"
 description = "toggle git ignore"
 
@@ -222,13 +214,13 @@ description = "stage all matching files"
 # move
 [[verbs]]
 invocation = "select_first"
-key = "alt-g"                 # mapped -> `cmd-up`
+key = "alt-g"                           # mapped -> `cmd-up`
 internal = "select_first"
 description = "go to top of the list"
 
 [[verbs]]
 invocation = "select_last"
-key = "shift-alt-g"           # mapped -> `cmd-down`
+key = "shift-alt-g"                     # mapped -> `cmd-down`
 internal = "select_last"
 description = "go to bottom of the list"
 
@@ -269,13 +261,13 @@ description = "close display"
 
 [[verbs]]
 invocation = "panel_left"
-key = "alt-b"                 # mapped -> alt left
+key = "alt-b"                           # mapped -> `alt-left`
 internal = "panel_left"
 description = "select left panel -> `alt-left`"
 
 [[verbs]]
 invocation = "panel_right"
-key = "alt-f"                 # mapped -> alt right
+key = "alt-f"                           # mapped -> `alt-right`
 internal = "panel_right"
 description = "select right panel -> `alt-right`"
 
