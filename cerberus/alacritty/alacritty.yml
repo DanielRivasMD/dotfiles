@@ -1293,7 +1293,7 @@ key_bindings:
   - { key: Space,           mods: Alt|Control|Command,              chars: "\x11o"        } # bind l last-pane
   # - { key: Space,           mods: Alt|Control|Shift,                chars: ""             } #
   # - { key: Space,           mods: Alt|Command|Shift,                chars: ""             } #
-  # - { key: Space,           mods: Control|Command|Shift,            chars: ""             } #
+  - { key: Space,           mods: Control|Command|Shift,            chars: "\x11M"        } # bind M select-pane -m
   - { key: Space,           mods: Alt|Control|Command|Shift,        chars: "\x11z"        } # bind z resize-pane -Z
 
   # - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    } # original
@@ -1565,11 +1565,11 @@ key_bindings:
   - { key: LBracket,        mods: Command,                          chars: "\x11["        } # bind [ join-pane -h
   - { key: RBracket,        mods: Command,                          chars: "\x11]"        } # bind ] break-pane
   - { key: Semicolon,       mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
-  - { key: Apostrophe,      mods: Command,                          chars: ""             } #
-  - { key: Backslash,       mods: Command,                          chars: ""             } #
-  - { key: Comma,           mods: Command,                          chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
-  - { key: Period,          mods: Command,                          chars: "\x11M"        } # bind M select-pane -m
-  # - { key: Slash,           mods: Command,                          chars: ""             } #
+  - { key: Apostrophe,      mods: Command,                          chars: "\x07"         } # mapped -> Ctrl G
+  - { key: Backslash,       mods: Command,                          chars: "\x08"         } # mapped -> Ctrl H
+  - { key: Comma,           mods: Command,                          chars: "\x18"         } # mapped -> Ctrl X
+  - { key: Period,          mods: Command,                          chars: "\x0E"         } # mapped -> Ctrl N
+  - { key: Slash,           mods: Command,                          chars: "\x0A"         } # mapped -> Ctrl J
 
   # - { key: Key0,            mods: Command|Shift,                    chars: ""             } #
   # - { key: Key1,            mods: Command|Shift,                    chars: ""             } #
@@ -1589,7 +1589,7 @@ key_bindings:
   - { key: Semicolon,       mods: Command|Shift,                    chars: "\x11:"        } # bind : new-window
   # - { key: Apostrophe,      mods: Command|Shift,                    chars: ""             } #
   # - { key: Backslash,       mods: Command|Shift,                    chars: ""             } #
-  # - { key: Comma,           mods: Command|Shift,                    chars: ""             } #
+  - { key: Comma,           mods: Command|Shift,                    chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
   # - { key: Period,          mods: Command|Shift,                    chars: ""             } #
   # - { key: Slash,           mods: Command|Shift,                    chars: ""             } #
 
@@ -1606,14 +1606,14 @@ key_bindings:
   # - { key: Key0,            mods: Alt|Control,                      chars: ""             } #
   # - { key: Minus,           mods: Alt|Control,                      chars: ""             } #
   # - { key: Equals,          mods: Alt|Control,                      chars: ""             } #
-  - { key: LBracket,        mods: Alt|Control,                      chars: "\x07"         } # mapped -> Ctrl G
-  - { key: RBracket,        mods: Alt|Control,                      chars: "\x08"         } # mapped -> Ctrl H
-  - { key: Semicolon,       mods: Alt|Control,                      chars: "\x18"         } # mapped -> Ctrl X
-  - { key: Apostrophe,      mods: Alt|Control,                      chars: "\x0E"         } # mapped -> Ctrl N
-  - { key: Backslash,       mods: Alt|Control,                      chars: "\x0A"         } # mapped -> Ctrl J
-  - { key: Comma,           mods: Alt|Control,                      chars: "\x0F"         } # mapped -> Ctrl O
-  - { key: Period,          mods: Alt|Control,                      chars: "\x10"         } # mapped -> Ctrl P
-  - { key: Slash,           mods: Alt|Control,                      chars: "\x16"         } # mapped -> Ctrl V
+  # - { key: LBracket,        mods: Alt|Control,                      chars: ""             } #
+  # - { key: RBracket,        mods: Alt|Control,                      chars: ""             } #
+  # - { key: Semicolon,       mods: Alt|Control,                      chars: ""             } #
+  # - { key: Apostrophe,      mods: Alt|Control,                      chars: ""             } #
+  # - { key: Backslash,       mods: Alt|Control,                      chars: ""             } #
+  # - { key: Comma,           mods: Alt|Control,                      chars: ""             } #
+  # - { key: Period,          mods: Alt|Control,                      chars: ""             } #
+  # - { key: Slash,           mods: Alt|Control,                      chars: ""             } #
 
   # - { key: Key0,            mods: Alt|Command,                      chars: ""             } #
   # - { key: Key1,            mods: Alt|Command,                      chars: ""             } #
@@ -1633,8 +1633,8 @@ key_bindings:
   # - { key: Semicolon,       mods: Alt|Command,                      chars: ""             } #
   # - { key: Apostrophe,      mods: Alt|Command,                      chars: ""             } #
   # - { key: Backslash,       mods: Alt|Command,                      chars: ""             } #
-  # - { key: Comma,           mods: Alt|Command,                      chars: ""             } #
-  # - { key: Period,          mods: Alt|Command,                      chars: ""             } #
-  # - { key: Slash,           mods: Alt|Command,                      chars: ""             } #
+  - { key: Comma,           mods: Alt|Command,                      chars: "\x0F"         } # mapped -> Ctrl O
+  - { key: Period,          mods: Alt|Command,                      chars: "\x10"         } # mapped -> Ctrl P
+  - { key: Slash,           mods: Alt|Command,                      chars: "\x16"         } # mapped -> Ctrl V
 
 ####################################################################################################
