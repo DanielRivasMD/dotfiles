@@ -61,7 +61,7 @@ A-Z = ["wonly"]  # Unsplit
 
 # A-a = [""]  # lua:snippets.Accept
 A-b = ["move_prev_word_start"]  # WordLeft                // mapped -> `alt-left`
-A-c = ["yank"]  # Copy
+A-c = ["yank_joined_to_clipboard"]  # Copy
 # A-d = [""]  # SpawnMultiCursor
 A-e = ["no_op"]  # None                    // disabled => accent
 A-f = ["move_next_word_end"]  # WordRight               // mapped -> `alt-right`
