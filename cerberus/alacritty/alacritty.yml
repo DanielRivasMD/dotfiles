@@ -978,7 +978,7 @@ key_bindings:
   # - { key: A,               mods: Control,                          chars: ""             } # move to start of line
   # - { key: B,               mods: Control,                          chars: ""             } # backward move
   # - { key: C,               mods: Control,                          chars: ""             } # cancel job
-  # - { key: D,               mods: Control,                          chars: ""             } #
+  # - { key: D,               mods: Control,                          chars: ""             } # kill interactive
   # - { key: E,               mods: Control,                          chars: ""             } # move to end of line
   # - { key: F,               mods: Control,                          chars: ""             } # forward move
   # - { key: G,               mods: Control,                          chars: ""             } #
@@ -1187,7 +1187,7 @@ key_bindings:
   # - { key: U,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
   # - { key: V,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
   # - { key: W,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
-  # - { key: X,               mods: Alt|Control|Command|Shift,        chars: ""             } #
+  - { key: X,               mods: Alt|Control|Command|Shift,        chars: "\x1b[20;5~"   } # mapped -> Ctrl F9
   # - { key: Y,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
   # - { key: Z,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
 
@@ -1208,18 +1208,18 @@ key_bindings:
   - { key: F11,                                                     chars: "\x1b[23~"     }
   - { key: F12,                                                     chars: "\x1b[24~"     }
 
-  - { key: F1,              mods: Alt,                              chars: "\x1b[1;6P"    }
-  - { key: F2,              mods: Alt,                              chars: "\x1b[1;6Q"    }
-  - { key: F3,              mods: Alt,                              chars: "\x1b[1;6R"    }
-  - { key: F4,              mods: Alt,                              chars: "\x1b[1;6S"    }
-  - { key: F5,              mods: Alt,                              chars: "\x1b[15;6~"   }
-  - { key: F6,              mods: Alt,                              chars: "\x1b[17;6~"   }
-  - { key: F7,              mods: Alt,                              chars: "\x1b[18;6~"   }
-  - { key: F8,              mods: Alt,                              chars: "\x1b[19;6~"   }
-  - { key: F9,              mods: Alt,                              chars: "\x1b[20;6~"   }
-  - { key: F10,             mods: Alt,                              chars: "\x1b[21;6~"   }
-  - { key: F11,             mods: Alt,                              chars: "\x1b[23;6~"   }
-  - { key: F12,             mods: Alt,                              chars: "\x1b[24;6~"   }
+  - { key: F1,              mods: Alt,                              chars: "\x1b[1;3P"    }
+  - { key: F2,              mods: Alt,                              chars: "\x1b[1;3Q"    }
+  - { key: F3,              mods: Alt,                              chars: "\x1b[1;3R"    }
+  - { key: F4,              mods: Alt,                              chars: "\x1b[1;3S"    }
+  - { key: F5,              mods: Alt,                              chars: "\x1b[15;3~"   }
+  - { key: F6,              mods: Alt,                              chars: "\x1b[17;3~"   }
+  - { key: F7,              mods: Alt,                              chars: "\x1b[18;3~"   }
+  - { key: F8,              mods: Alt,                              chars: "\x1b[19;3~"   }
+  - { key: F9,              mods: Alt,                              chars: "\x1b[20;3~"   }
+  - { key: F10,             mods: Alt,                              chars: "\x1b[21;3~"   }
+  - { key: F11,             mods: Alt,                              chars: "\x1b[23;3~"   }
+  - { key: F12,             mods: Alt,                              chars: "\x1b[24;3~"   }
 
   - { key: F1,              mods: Control,                          chars: "\x1b[1;5P"    }
   - { key: F2,              mods: Control,                          chars: "\x1b[1;5Q"    }
@@ -1234,19 +1234,6 @@ key_bindings:
   - { key: F11,             mods: Control,                          chars: "\x1b[23;5~"   }
   - { key: F12,             mods: Control,                          chars: "\x1b[24;5~"   }
 
-  - { key: F1,              mods: Command,                          chars: "\x1b[1;3P"    }
-  - { key: F2,              mods: Command,                          chars: "\x1b[1;3Q"    }
-  - { key: F3,              mods: Command,                          chars: "\x1b[1;3R"    }
-  - { key: F4,              mods: Command,                          chars: "\x1b[1;3S"    }
-  - { key: F5,              mods: Command,                          chars: "\x1b[15;3~"   }
-  - { key: F6,              mods: Command,                          chars: "\x1b[17;3~"   }
-  - { key: F7,              mods: Command,                          chars: "\x1b[18;3~"   }
-  - { key: F8,              mods: Command,                          chars: "\x1b[19;3~"   }
-  - { key: F9,              mods: Command,                          chars: "\x1b[20;3~"   }
-  - { key: F10,             mods: Command,                          chars: "\x1b[21;3~"   }
-  - { key: F11,             mods: Command,                          chars: "\x1b[23;3~"   }
-  - { key: F12,             mods: Command,                          chars: "\x1b[24;3~"   }
-
   - { key: F1,              mods: Shift,                            chars: "\x1b[1;2P"    }
   - { key: F2,              mods: Shift,                            chars: "\x1b[1;2Q"    }
   - { key: F3,              mods: Shift,                            chars: "\x1b[1;2R"    }
@@ -1260,13 +1247,26 @@ key_bindings:
   - { key: F11,             mods: Shift,                            chars: "\x1b[23;2~"   }
   - { key: F12,             mods: Shift,                            chars: "\x1b[24;2~"   }
 
+  # - { key: F1,              mods: Control|Shift,                    chars: "\x1b[1;6P"    }
+  # - { key: F2,              mods: Control|Shift,                    chars: "\x1b[1;6Q"    }
+  # - { key: F3,              mods: Control|Shift,                    chars: "\x1b[1;6R"    }
+  # - { key: F4,              mods: Control|Shift,                    chars: "\x1b[1;6S"    }
+  # - { key: F5,              mods: Control|Shift,                    chars: "\x1b[15;6~"   }
+  # - { key: F6,              mods: Control|Shift,                    chars: "\x1b[17;6~"   }
+  # - { key: F7,              mods: Control|Shift,                    chars: "\x1b[18;6~"   }
+  # - { key: F8,              mods: Control|Shift,                    chars: "\x1b[19;6~"   }
+  # - { key: F9,              mods: Control|Shift,                    chars: "\x1b[20;6~"   }
+  # - { key: F10,             mods: Control|Shift,                    chars: "\x1b[21;6~"   }
+  # - { key: F11,             mods: Control|Shift,                    chars: "\x1b[23;6~"   }
+  # - { key: F12,             mods: Control|Shift,                    chars: "\x1b[24;6~"   }
+
   ####################################################################################################
   # shortcuts for tmux. the leader key is ctrl-q (0x11)
   ####################################################################################################
 
-  - { key: Return,          mods: Alt,                              chars: "\x14"         } # mapped -> Ctrl T
+  - { key: Return,          mods: Alt,                              chars: "\x13"         } # mapped -> Ctrl S
   - { key: Return,          mods: Control,                          chars: "\x12"         } # mapped -> Ctrl R
-  - { key: Return,          mods: Command,                          chars: "\x18"         } # mapped -> Ctrl X
+  - { key: Return,          mods: Command,                          chars: "\x14"         } # mapped -> Ctrl T
   - { key: Return,          mods: Shift,                            chars: "\x1b[1;5P"    } # mapped -> Ctrl F1
   - { key: Return,          mods: Alt|Control,                      chars: "\x1b[15;5~"   } # mapped -> Ctrl F5
   - { key: Return,          mods: Alt|Command,                      chars: "\x1b[17;5~"   } # mapped -> Ctrl F6
@@ -1275,25 +1275,25 @@ key_bindings:
   - { key: Return,          mods: Control|Shift,                    chars: "\x1b[1;5R"    } # mapped -> Ctrl F3
   - { key: Return,          mods: Command|Shift,                    chars: "\x1b[1;5S"    } # mapped -> Ctrl F4
   - { key: Return,          mods: Alt|Control|Command,              chars: "\x1b[19;5~"   } # mapped -> Ctrl F8
-  - { key: Return,          mods: Alt|Control|Shift,                chars: ""             } #
-  - { key: Return,          mods: Alt|Command|Shift,                chars: ""             } #
-  - { key: Return,          mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: Return,          mods: Alt|Control|Shift,                chars: ""             } #
+  # - { key: Return,          mods: Alt|Command|Shift,                chars: ""             } #
+  # - { key: Return,          mods: Control|Command|Shift,            chars: ""             } # collision system settings
   # - { key: Return,          mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
 
   - { key: Space,           mods: Alt,                              chars: "\x11."        } # bind . display-menu -T
-  - { key: Space,           mods: Control,                          chars: "\x11o"        } # bind l last-pane
-  - { key: Space,           mods: Command,                          chars: "\x11c"        } # bind c copy-mode
-  - { key: Space,           mods: Shift,                            chars: "\x1b[20;5~"   } # mapped -> Ctrl F9
+  # - { key: Space,           mods: Control,                          chars: ""             } # direct bound
+  - { key: Space,           mods: Command,                          chars: "\x1b[20;5~"   } # mapped -> Ctrl F9
+  - { key: Space,           mods: Shift,                            chars: "\x11c"        } # bind c copy-mode
   - { key: Space,           mods: Alt|Control,                      chars: "\x11O"        } # bind l last-pane\; resize-pane -Z
   - { key: Space,           mods: Alt|Command,                      chars: "\x11L"        } # bind L last-window
-  - { key: Space,           mods: Alt|Shift,                        chars: ""             } #
-  # - { key: Space,           mods: Control|Command,                  chars: ""             } # collision system settings
-  - { key: Space,           mods: Control|Shift,                    chars: ""             } #
-  - { key: Space,           mods: Command|Shift,                    chars: ""             } #
-  - { key: Space,           mods: Alt|Control|Command,              chars: "\x11q"        } # bind q switch-client -l
-  - { key: Space,           mods: Alt|Control|Shift,                chars: ""             } #
-  - { key: Space,           mods: Alt|Command|Shift,                chars: ""             } #
-  - { key: Space,           mods: Control|Command|Shift,            chars: ""             } #
+  - { key: Space,           mods: Alt|Shift,                        chars: "\x1b[21;5~"   } # mapped -> Ctrl F10
+  - { key: Space,           mods: Control|Command,                  chars: "\x1b[23;5~"   } # mapped -> Ctrl F11
+  - { key: Space,           mods: Control|Shift,                    chars: "\x1b[24;5~"   } # mapped -> Ctrl F12
+  - { key: Space,           mods: Command|Shift,                    chars: "\x11q"        } # bind q switch-client -l
+  - { key: Space,           mods: Alt|Control|Command,              chars: "\x11o"        } # bind l last-pane
+  # - { key: Space,           mods: Alt|Control|Shift,                chars: ""             } #
+  # - { key: Space,           mods: Alt|Command|Shift,                chars: ""             } #
+  # - { key: Space,           mods: Control|Command|Shift,            chars: ""             } #
   - { key: Space,           mods: Alt|Control|Command|Shift,        chars: "\x11z"        } # bind z resize-pane -Z
 
   # - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    } # original
@@ -1335,32 +1335,32 @@ key_bindings:
   - { key: Up,              mods: Command,                          chars: "\x1bg"        } # mapped -> Alt g
   - { key: Up,              mods: Shift,                            chars: "\x1b[1;2A"    } #
   # - { key: Up,              mods: Alt|Control,                      chars: ""             } #
-  # - { key: Up,              mods: Alt|Command,                      chars: ""             } #
+  - { key: Up,              mods: Alt|Command,                      chars: "\x1b[1;3P"    } # mapped -> Alt F1
   # - { key: Up,              mods: Alt|Shift,                        chars: ""             } #
-  # - { key: Up,              mods: Control|Command,                  chars: ""             } #
+  - { key: Up,              mods: Control|Command,                  chars: "\x1b[1;3R"    } # mapped -> Alt F3
   # - { key: Up,              mods: Control|Shift,                    chars: ""             } #
   # - { key: Up,              mods: Command|Shift,                    chars: ""             } #
   - { key: Up,              mods: Alt|Control|Command,              chars: "\x11k"        } #
   # - { key: Up,              mods: Alt|Control|Shift,                chars: ""             } #
   # - { key: Up,              mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Up,              mods: Control|Command|Shift,            chars: ""             } #
-  # - { key: Up,              mods: Alt|Control|Command|Shift,        chars: ""             } #
+  - { key: Up,              mods: Alt|Control|Command|Shift,        chars: "\x1b[15;3~"   } # mapped -> Alt F5
 
   - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    } #
   - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    } #
   - { key: Down,            mods: Command,                          chars: "\x1bG"        } # mapped -> Alt G
   - { key: Down,            mods: Shift,                            chars: "\x1b[1;2B"    } #
   # - { key: Down,            mods: Alt|Control,                      chars: ""             } #
-  # - { key: Down,            mods: Alt|Command,                      chars: ""             } #
+  - { key: Down,            mods: Alt|Command,                      chars: "\x1b[1;3Q"    } # mapped -> Alt F2
   # - { key: Down,            mods: Alt|Shift,                        chars: ""             } #
-  # - { key: Down,            mods: Control|Command,                  chars: ""             } #
+  - { key: Down,            mods: Control|Command,                  chars: "\x1b[1;3S"    } # mapped -> Alt F4
   # - { key: Down,            mods: Control|Shift,                    chars: ""             } #
   # - { key: Down,            mods: Command|Shift,                    chars: ""             } #
   - { key: Down,            mods: Alt|Control|Command,              chars: "\x11j"        } #
   # - { key: Down,            mods: Alt|Control|Shift,                chars: ""             } #
   # - { key: Down,            mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Down,            mods: Control|Command|Shift,            chars: ""             } #
-  # - { key: Down,            mods: Alt|Control|Command|Shift,        chars: ""             } #
+  - { key: Down,            mods: Alt|Control|Command|Shift,        chars: "\x1b[17;3~"   } # mapped -> Alt F6
 
   ####################################################################################################
   # interactive keybindings
@@ -1413,9 +1413,9 @@ key_bindings:
   - { key: Tab,             mods: Alt|Shift,                        chars: "..."          } #
 
   - { key: Key1,            mods: Control,                          chars: " != "         } #
-  - { key: Key2,            mods: Control,                          chars: "  "           } #
+  # - { key: Key2,            mods: Control,                          chars: "  "           } #
   - { key: Key3,            mods: Control,                          chars: " \\= "        } #
-  - { key: Key4,            mods: Control,                          chars: "  "           } #
+  # - { key: Key4,            mods: Control,                          chars: "  "           } #
   - { key: Key5,            mods: Control,                          chars: " %= "         } #
   - { key: Key6,            mods: Control,                          chars: " ^= "         } #
   - { key: Key7,            mods: Control,                          chars: " &= "         } #
@@ -1424,8 +1424,8 @@ key_bindings:
   - { key: Key0,            mods: Control,                          chars: " += "         } #
   - { key: Minus,           mods: Control,                          chars: " -= "         } #
   - { key: Equals,          mods: Control,                          chars: " == "         } #
-  # - { key: LBracket,        mods: Control,                          chars: ""             } # collision tmux
-  # - { key: RBracket,        mods: Control,                          chars: ""             } # collision tmux
+  # - { key: LBracket,        mods: Control,                          chars: "  "           } #
+  # - { key: RBracket,        mods: Control,                          chars: "  "           } #
   - { key: Semicolon,       mods: Control,                          chars: " %$% "        } #
   - { key: Apostrophe,      mods: Control,                          chars: "```"          } #
   - { key: Backslash,       mods: Control,                          chars: " |= "         } #
@@ -1436,9 +1436,9 @@ key_bindings:
   - { key: Tab,             mods: Control,                          chars: ", "           } #
 
   - { key: Key1,            mods: Control|Shift,                    chars: " .!= "        } #
-  - { key: Key2,            mods: Control|Shift,                    chars: "  "           } #
+  # - { key: Key2,            mods: Control|Shift,                    chars: "  "           } #
   - { key: Key3,            mods: Control|Shift,                    chars: " .\\= "       } #
-  - { key: Key4,            mods: Control|Shift,                    chars: "  "           } #
+  # - { key: Key4,            mods: Control|Shift,                    chars: "  "           } #
   - { key: Key5,            mods: Control|Shift,                    chars: " .%= "        } #
   - { key: Key6,            mods: Control|Shift,                    chars: " .^= "        } #
   - { key: Key7,            mods: Control|Shift,                    chars: " .&= "        } #
@@ -1447,8 +1447,8 @@ key_bindings:
   - { key: Key0,            mods: Control|Shift,                    chars: " .+= "        } #
   - { key: Minus,           mods: Control|Shift,                    chars: " .-= "        } #
   - { key: Equals,          mods: Control|Shift,                    chars: " .== "        } #
-  # - { key: LBracket,        mods: Control|Shift,                    chars: ""             } # collision tmux
-  # - { key: RBracket,        mods: Control|Shift,                    chars: ""             } # collision tmux
+  # - { key: LBracket,        mods: Control|Shift,                    chars: "  "           } #
+  # - { key: RBracket,        mods: Control|Shift,                    chars: "  "           } #
   - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "       } #
   - { key: Apostrophe,      mods: Control|Shift,                    chars: " %<>% "       } #
   - { key: Backslash,       mods: Control|Shift,                    chars: " .|= "        } #
@@ -1459,9 +1459,9 @@ key_bindings:
   - { key: Tab,             mods: Control|Shift,                    chars: "..="          } #
 
   - { key: Key1,            mods: Alt|Control|Command,              chars: " !~ "         } #
-  - { key: Key2,            mods: Alt|Control|Command,              chars: "  "           } #
+  # - { key: Key2,            mods: Alt|Control|Command,              chars: "  "           } #
   - { key: Key3,            mods: Alt|Control|Command,              chars: "#[]"          } #
-  - { key: Key4,            mods: Alt|Control|Command,              chars: "  "           } #
+  # - { key: Key4,            mods: Alt|Control|Command,              chars: "  "           } #
   - { key: Key5,            mods: Alt|Control|Command,              chars: " %% "         } #
   - { key: Key6,            mods: Alt|Control|Command,              chars: " √ "          } #
   - { key: Key7,            mods: Alt|Control|Command,              chars: "@param"       } #
@@ -1490,7 +1490,7 @@ key_bindings:
   # - { key: Key7,            mods: Alt|Control|Command|Shift,        chars: "  "           } #
   # - { key: Key8,            mods: Alt|Control|Command|Shift,        chars: "  "           } #
   # - { key: Key9,            mods: Alt|Control|Command|Shift,        chars: "  "           } #
-  # - { key: Key0,            mods: Alt|Control|Command|Shift,        chars: "  "           } #
+  # - { key: Key0,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
   - { key: Minus,           mods: Alt|Control|Command|Shift,        chars: " ∘ "          } #
   - { key: Equals,          mods: Alt|Control|Command|Shift,        chars: " ∈ "          } #
   - { key: LBracket,        mods: Alt|Control|Command|Shift,        chars: "@debug "      } #
@@ -1505,11 +1505,11 @@ key_bindings:
   - { key: Tab,             mods: Alt|Control|Command|Shift,        chars: ": "           } #
 
   - { key: Key1,            mods: Control|Command,                  chars: " !== "        } #
-  - { key: Key2,            mods: Control|Command,                  chars: "  "           } #
+  # - { key: Key2,            mods: Control|Command,                  chars: "  "           } #
   - { key: Key3,            mods: Control|Command,                  chars: " \\\\ "       } #
-  - { key: Key4,            mods: Control|Command,                  chars: "  "           } #
+  # - { key: Key4,            mods: Control|Command,                  chars: "  "           } #
   - { key: Key5,            mods: Control|Command,                  chars: " %in% "       } #
-  - { key: Key6,            mods: Control|Command,                  chars: "  "           } #
+  # - { key: Key6,            mods: Control|Command,                  chars: "  "           } #
   - { key: Key7,            mods: Control|Command,                  chars: " && "         } #
   - { key: Key8,            mods: Control|Command,                  chars: " ** "         } #
   - { key: Key9,            mods: Control|Command,                  chars: " // "         } #
@@ -1528,16 +1528,16 @@ key_bindings:
   - { key: Tab,             mods: Control|Command,                  chars: " -"           } #
 
   - { key: Key1,            mods: Control|Command|Shift,            chars: " .!== "       } #
-  - { key: Key2,            mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Key2,            mods: Control|Command|Shift,            chars: "  "           } #
   - { key: Key3,            mods: Control|Command|Shift,            chars: "#' "          } #
-  - { key: Key4,            mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Key4,            mods: Control|Command|Shift,            chars: "  "           } #
   - { key: Key5,            mods: Control|Command|Shift,            chars: " %ni% "       } #
-  - { key: Key6,            mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Key6,            mods: Control|Command|Shift,            chars: "  "           } #
   - { key: Key7,            mods: Control|Command|Shift,            chars: " .&& "        } #
-  - { key: Key8,            mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Key9,            mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Key0,            mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Minus,           mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Key8,            mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Key9,            mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Key0,            mods: Control|Command|Shift,            chars: "  "           } #
+  # - { key: Minus,           mods: Control|Command|Shift,            chars: "  "           } #
   - { key: Equals,          mods: Control|Command|Shift,            chars: " .=== "       } #
   - { key: LBracket,        mods: Control|Command|Shift,            chars: "@cmd "        } #
   - { key: RBracket,        mods: Control|Command|Shift,            chars: "@macroexpand "}
@@ -1564,12 +1564,12 @@ key_bindings:
   - { key: Equals,          mods: Command,                          chars: "\x11="        } # bind = split-window -h -c "#{pane_current_path}"
   - { key: LBracket,        mods: Command,                          chars: "\x11["        } # bind [ join-pane -h
   - { key: RBracket,        mods: Command,                          chars: "\x11]"        } # bind ] break-pane
-  - { key: Semicolon,       mods: Command,                          chars: "\x1b[21;5~"   } # mapped -> Ctrl F10
-  - { key: Apostrophe,      mods: Command,                          chars: "\x1b[23;5~"   } # mapped -> Ctrl F11
-  - { key: Backslash,       mods: Command,                          chars: "\x1b[24;5~"   } # mapped -> Ctrl F12
+  - { key: Semicolon,       mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
+  - { key: Apostrophe,      mods: Command,                          chars: ""             } #
+  - { key: Backslash,       mods: Command,                          chars: ""             } #
   - { key: Comma,           mods: Command,                          chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
   - { key: Period,          mods: Command,                          chars: "\x11M"        } # bind M select-pane -m
-  - { key: Slash,           mods: Command,                          chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
+  # - { key: Slash,           mods: Command,                          chars: ""             } #
 
   # - { key: Key0,            mods: Command|Shift,                    chars: ""             } #
   # - { key: Key1,            mods: Command|Shift,                    chars: ""             } #
@@ -1581,17 +1581,17 @@ key_bindings:
   # - { key: Key7,            mods: Command|Shift,                    chars: ""             } #
   # - { key: Key8,            mods: Command|Shift,                    chars: ""             } #
   # - { key: Key9,            mods: Command|Shift,                    chars: ""             } #
-  # - { key: Key0,            mods: Command|Shift,                    chars: ""             } #
+  - { key: Key0,            mods: Command|Shift,                    chars: "\x11S"        } # set -g @remote-toggle-key S
   - { key: Minus,           mods: Command|Shift,                    chars: "\x11_"        } # bind _ select-layout even-vertical
   - { key: Equals,          mods: Command|Shift,                    chars: "\x11+"        } # bind - split-window -v -c "#{pane_current_path}"
-  # - { key: LBracket,        mods: Command|Shift,                    chars: ""             } #
-  # - { key: RBracket,        mods: Command|Shift,                    chars: ""             } #
-  # - { key: Semicolon,       mods: Command|Shift,                    chars: ""             } #
+  - { key: LBracket,        mods: Command|Shift,                    chars: "\x11<"        } # bind < select-layout main-vertical
+  - { key: RBracket,        mods: Command|Shift,                    chars: "\x11>"        } # bind > select-layout main-horizontal
+  - { key: Semicolon,       mods: Command|Shift,                    chars: "\x11:"        } # bind : new-window
   # - { key: Apostrophe,      mods: Command|Shift,                    chars: ""             } #
   # - { key: Backslash,       mods: Command|Shift,                    chars: ""             } #
-  - { key: Comma,           mods: Command|Shift,                    chars: "\x11<"        } # bind < select-layout main-vertical
-  - { key: Period,          mods: Command|Shift,                    chars: "\x11>"        } # bind > select-layout main-horizontal
-  - { key: Slash,           mods: Command|Shift,                    chars: "\x11:"        } # bind : new-window
+  # - { key: Comma,           mods: Command|Shift,                    chars: ""             } #
+  # - { key: Period,          mods: Command|Shift,                    chars: ""             } #
+  # - { key: Slash,           mods: Command|Shift,                    chars: ""             } #
 
   # - { key: Key0,            mods: Alt|Control,                      chars: ""             } #
   # - { key: Key1,            mods: Alt|Control,                      chars: ""             } #
@@ -1606,14 +1606,14 @@ key_bindings:
   # - { key: Key0,            mods: Alt|Control,                      chars: ""             } #
   # - { key: Minus,           mods: Alt|Control,                      chars: ""             } #
   # - { key: Equals,          mods: Alt|Control,                      chars: ""             } #
-  # - { key: LBracket,        mods: Alt|Control,                      chars: ""             } #
-  # - { key: RBracket,        mods: Alt|Control,                      chars: ""             } #
-  # - { key: Semicolon,       mods: Alt|Control,                      chars: ""             } #
-  # - { key: Apostrophe,      mods: Alt|Control,                      chars: ""             } #
-  # - { key: Backslash,       mods: Alt|Control,                      chars: ""             } #
-  # - { key: Comma,           mods: Alt|Control,                      chars: ""             } #
-  # - { key: Period,          mods: Alt|Control,                      chars: ""             } #
-  # - { key: Slash,           mods: Alt|Control,                      chars: ""             } #
+  - { key: LBracket,        mods: Alt|Control,                      chars: "\x07"         } # mapped -> Ctrl G
+  - { key: RBracket,        mods: Alt|Control,                      chars: "\x08"         } # mapped -> Ctrl H
+  - { key: Semicolon,       mods: Alt|Control,                      chars: "\x18"         } # mapped -> Ctrl X
+  - { key: Apostrophe,      mods: Alt|Control,                      chars: "\x0E"         } # mapped -> Ctrl N
+  - { key: Backslash,       mods: Alt|Control,                      chars: "\x0A"         } # mapped -> Ctrl J
+  - { key: Comma,           mods: Alt|Control,                      chars: "\x0F"         } # mapped -> Ctrl O
+  - { key: Period,          mods: Alt|Control,                      chars: "\x10"         } # mapped -> Ctrl P
+  - { key: Slash,           mods: Alt|Control,                      chars: "\x16"         } # mapped -> Ctrl V
 
   # - { key: Key0,            mods: Alt|Command,                      chars: ""             } #
   # - { key: Key1,            mods: Alt|Command,                      chars: ""             } #
@@ -1630,11 +1630,11 @@ key_bindings:
   # - { key: Equals,          mods: Alt|Command,                      chars: ""             } #
   - { key: LBracket,        mods: Alt|Command,                      chars: "\x11P"        } # bind P swap-window -t -1\; select-window -t -1
   - { key: RBracket,        mods: Alt|Command,                      chars: "\x11N"        } # bind N swap-window -t +1\; select-window -t +1
-  - { key: Semicolon,       mods: Alt|Command,                      chars: "\x13"         } # mapped -> Ctrl S
-  - { key: Apostrophe,      mods: Alt|Command,                      chars: "\x0E"         } # mapped -> Ctrl N
-  - { key: Backslash,       mods: Alt|Command,                      chars: "\x0A"         } # mapped -> Ctrl J
-  - { key: Comma,           mods: Alt|Command,                      chars: "\x0F"         } # mapped -> Ctrl O
-  - { key: Period,          mods: Alt|Command,                      chars: "\x10"         } # mapped -> Ctrl P
-  - { key: Slash,           mods: Alt|Command,                      chars: "\x16"         } # mapped -> Ctrl V
+  # - { key: Semicolon,       mods: Alt|Command,                      chars: ""             } #
+  # - { key: Apostrophe,      mods: Alt|Command,                      chars: ""             } #
+  # - { key: Backslash,       mods: Alt|Command,                      chars: ""             } #
+  # - { key: Comma,           mods: Alt|Command,                      chars: ""             } #
+  # - { key: Period,          mods: Alt|Command,                      chars: ""             } #
+  # - { key: Slash,           mods: Alt|Command,                      chars: ""             } #
 
 ####################################################################################################
