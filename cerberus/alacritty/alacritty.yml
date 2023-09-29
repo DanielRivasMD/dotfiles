@@ -1318,101 +1318,89 @@ key_bindings:
   # shortcuts for tmux. the leader key is ctrl-q (0x11)
   ####################################################################################################
 
-  - { key: Return,          mods: Alt,                              chars: "\x13"         } # mapped -> Ctrl S
-  - { key: Return,          mods: Control,                          chars: "\x12"         } # mapped -> Ctrl R
-  - { key: Return,          mods: Command,                          chars: "\x14"         } # mapped -> Ctrl T
   - { key: Return,          mods: Shift,                            chars: "\x18"         } # mapped -> Ctrl X
+  - { key: Return,          mods: Alt,                              chars: "\x13"         } # mapped -> Ctrl S
+  # - { key: Return,          mods: Alt|Shift,                        chars: ""             } #
+  - { key: Return,          mods: Control,                          chars: "\x12"         } # mapped -> Ctrl R
+  # - { key: Return,          mods: Control|Shift,                    chars: ""             } #
+  - { key: Return,          mods: Command,                          chars: "\x14"         } # mapped -> Ctrl T
+  # - { key: Return,          mods: Command|Shift,                    chars: ""             } #
   - { key: Return,          mods: Alt|Control,                      chars: "\x0E"         } # mapped -> Ctrl N
   - { key: Return,          mods: Alt|Command,                      chars: "\x0A"         } # mapped -> Ctrl J
-  # - { key: Return,          mods: Alt|Shift,                        chars: ""             } #
   - { key: Return,          mods: Control|Command,                  chars: "\x07"         } # mapped -> Ctrl G
-  # - { key: Return,          mods: Control|Shift,                    chars: ""             } #
-  # - { key: Return,          mods: Command|Shift,                    chars: ""             } #
   - { key: Return,          mods: Alt|Control|Command,              chars: "\x08"         } # mapped -> Ctrl H
-  # - { key: Return,          mods: Alt|Control|Shift,                chars: ""             } #
-  # - { key: Return,          mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Return,          mods: Control|Command|Shift,            chars: ""             } # collision system settings
   # - { key: Return,          mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
 
-  - { key: Space,           mods: Alt,                              chars: "\x11."        } # bind . display-menu -T
-  # - { key: Space,           mods: Control,                          chars: ""             } # direct bound
-  # - { key: Space,           mods: Command,                          chars: ""             } #
   - { key: Space,           mods: Shift,                            chars: "\x11c"        } # bind c copy-mode
+  - { key: Space,           mods: Alt,                              chars: "\x11."        } # bind . display-menu -T
+  - { key: Space,           mods: Alt|Shift,                        chars: "\x11S"        } # set -g @remote-toggle-key S
+  # - { key: Space,           mods: Control,                          chars: ""             } # direct bound
+  - { key: Space,           mods: Control|Shift,                    chars: "\x11M"        } # bind M select-pane -m
+  # - { key: Space,           mods: Command,                          chars: ""             } #
+  - { key: Space,           mods: Command|Shift,                    chars: "\x11q"        } # bind q switch-client -l
   - { key: Space,           mods: Alt|Control,                      chars: "\x11O"        } # bind l last-pane\; resize-pane -Z
   - { key: Space,           mods: Alt|Command,                      chars: "\x11L"        } # bind L last-window
-  - { key: Space,           mods: Alt|Shift,                        chars: "\x11S"        } # set -g @remote-toggle-key S
   # - { key: Space,           mods: Control|Command,                  chars: ""             } #
-  - { key: Space,           mods: Control|Shift,                    chars: "\x11M"        } # bind M select-pane -m
-  - { key: Space,           mods: Command|Shift,                    chars: "\x11q"        } # bind q switch-client -l
   - { key: Space,           mods: Alt|Control|Command,              chars: "\x11o"        } # bind l last-pane
-  # - { key: Space,           mods: Alt|Control|Shift,                chars: ""             } #
-  # - { key: Space,           mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Space,           mods: Control|Command|Shift,            chars: ""             } #
   - { key: Space,           mods: Alt|Control|Command|Shift,        chars: "\x11z"        } # bind z resize-pane -Z
 
+  - { key: Left,            mods: Shift,                            chars: "\x1b[1;2D"    } #
   # - { key: Left,            mods: Alt,                              chars: "\x1b[1;3D"    } # original
   - { key: Left,            mods: Alt,                              chars: "\x1bb"        } # mapped -> Alt B
+  # - { key: Left,            mods: Alt|Shift,                        chars: ""             } #
   - { key: Left,            mods: Control,                          chars: "\x1b[1;5D"    } #
+  # - { key: Left,            mods: Control|Shift,                    chars: ""             } #
   - { key: Left,            mods: Command,                          chars: "\x01"         } # mapped -> Ctrl A
-  - { key: Left,            mods: Shift,                            chars: "\x1b[1;2D"    } #
+  - { key: Left,            mods: Command|Shift,                    chars: "\x1b[1;3D"    } # mapped -> Alt Left
   # - { key: Left,            mods: Alt|Control,                      chars: ""             } #
   - { key: Left,            mods: Alt|Command,                      chars: "\x11p"        } # bind n next-window
-  # - { key: Left,            mods: Alt|Shift,                        chars: ""             } #
   # - { key: Left,            mods: Control|Command,                  chars: ""             } #
-  # - { key: Left,            mods: Control|Shift,                    chars: ""             } #
-  - { key: Left,            mods: Command|Shift,                    chars: "\x1b[1;3D"    } # mapped -> Alt Left
   - { key: Left,            mods: Alt|Control|Command,              chars: "\x11h"        } #
-  # - { key: Left,            mods: Alt|Control|Shift,                chars: ""             } #
-  # - { key: Left,            mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Left,            mods: Control|Command|Shift,            chars: ""             } #
   # - { key: Left,            mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
 
+  - { key: Right,           mods: Shift,                            chars: "\x1b[1;2C"    } #
   # - { key: Right,           mods: Alt,                              chars: "\x1b[1;3C"    } # original
   - { key: Right,           mods: Alt,                              chars: "\x1bf"        } # mapped -> Alt F
+  # - { key: Right,           mods: Alt|Shift,                        chars: ""             } #
   - { key: Right,           mods: Control,                          chars: "\x1b[1;5C"    } #
+  # - { key: Right,           mods: Control|Shift,                    chars: ""             } #
   - { key: Right,           mods: Command,                          chars: "\x05"         } # mapped -> Ctrl E
-  - { key: Right,           mods: Shift,                            chars: "\x1b[1;2C"    } #
+  - { key: Right,           mods: Command|Shift,                    chars: "\x1b[1;3C"    } # mapped -> Alt Right
   # - { key: Right,           mods: Alt|Control,                      chars: ""             } #
   - { key: Right,           mods: Alt|Command,                      chars: "\x11n"        } # bind p previous-window
-  # - { key: Right,           mods: Alt|Shift,                        chars: ""             } #
   # - { key: Right,           mods: Control|Command,                  chars: ""             } #
-  # - { key: Right,           mods: Control|Shift,                    chars: ""             } #
-  - { key: Right,           mods: Command|Shift,                    chars: "\x1b[1;3C"    } # mapped -> Alt Right
   - { key: Right,           mods: Alt|Control|Command,              chars: "\x11l"        } #
-  # - { key: Right,           mods: Alt|Control|Shift,                chars: ""             } #
-  # - { key: Right,           mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Right,           mods: Control|Command|Shift,            chars: ""             } #
   # - { key: Right,           mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
 
-  - { key: Up,              mods: Alt,                              chars: "\x1b[1;3A"    } #
-  - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"    } #
-  - { key: Up,              mods: Command,                          chars: "\x1bg"        } # mapped -> Alt g
   - { key: Up,              mods: Shift,                            chars: "\x1b[1;2A"    } #
+  - { key: Up,              mods: Alt,                              chars: "\x1b[1;3A"    } #
+  # - { key: Up,              mods: Alt|Shift,                        chars: ""             } #
+  - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"    } #
+  # - { key: Up,              mods: Control|Shift,                    chars: ""             } #
+  - { key: Up,              mods: Command,                          chars: "\x1bg"        } # mapped -> Alt g
+  # - { key: Up,              mods: Command|Shift,                    chars: ""             } #
   # - { key: Up,              mods: Alt|Control,                      chars: ""             } #
   - { key: Up,              mods: Alt|Command,                      chars: "\x1b[1;3P"    } # mapped -> Alt F1
-  # - { key: Up,              mods: Alt|Shift,                        chars: ""             } #
   - { key: Up,              mods: Control|Command,                  chars: "\x1b[1;3R"    } # mapped -> Alt F3
-  # - { key: Up,              mods: Control|Shift,                    chars: ""             } #
-  # - { key: Up,              mods: Command|Shift,                    chars: ""             } #
   - { key: Up,              mods: Alt|Control|Command,              chars: "\x11k"        } #
-  # - { key: Up,              mods: Alt|Control|Shift,                chars: ""             } #
-  # - { key: Up,              mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Up,              mods: Control|Command|Shift,            chars: ""             } #
   - { key: Up,              mods: Alt|Control|Command|Shift,        chars: "\x1b[15;3~"   } # mapped -> Alt F5
 
-  - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    } #
-  - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    } #
-  - { key: Down,            mods: Command,                          chars: "\x1bG"        } # mapped -> Alt G
   - { key: Down,            mods: Shift,                            chars: "\x1b[1;2B"    } #
+  - { key: Down,            mods: Alt,                              chars: "\x1b[1;3B"    } #
+  # - { key: Down,            mods: Alt|Shift,                        chars: ""             } #
+  - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"    } #
+  # - { key: Down,            mods: Control|Shift,                    chars: ""             } #
+  - { key: Down,            mods: Command,                          chars: "\x1bG"        } # mapped -> Alt G
+  # - { key: Down,            mods: Command|Shift,                    chars: ""             } #
   # - { key: Down,            mods: Alt|Control,                      chars: ""             } #
   - { key: Down,            mods: Alt|Command,                      chars: "\x1b[1;3Q"    } # mapped -> Alt F2
-  # - { key: Down,            mods: Alt|Shift,                        chars: ""             } #
   - { key: Down,            mods: Control|Command,                  chars: "\x1b[1;3S"    } # mapped -> Alt F4
-  # - { key: Down,            mods: Control|Shift,                    chars: ""             } #
-  # - { key: Down,            mods: Command|Shift,                    chars: ""             } #
   - { key: Down,            mods: Alt|Control|Command,              chars: "\x11j"        } #
-  # - { key: Down,            mods: Alt|Control|Shift,                chars: ""             } #
-  # - { key: Down,            mods: Alt|Command|Shift,                chars: ""             } #
   # - { key: Down,            mods: Control|Command|Shift,            chars: ""             } #
   - { key: Down,            mods: Alt|Control|Command|Shift,        chars: "\x1b[17;3~"   } # mapped -> Alt F6
 
