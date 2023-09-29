@@ -66,32 +66,32 @@
     // "Ctrl-d": "None",
     "Ctrl-e": "EndOfLine",              // mapped -> `cmd-right`
     "Ctrl-f": "FindLiteral",            // mapped -> `alt-f`
-    // "Ctrl-g": "None",                // mapped -> `alt-ctrl-[`
-    // "Ctrl-h": "None",                // mapped -> `alt-ctrl-]`
+    // "Ctrl-g": "None",                // mapped -> `ctrl-cmd-enter`
+    // "Ctrl-h": "None",                // mapped -> `alt-ctrl-cmd-enter`
     // "Ctrl-i": "None",
-    // "Ctrl-j": "None",                // mapped -> `alt-ctrl-\`
+    // "Ctrl-j": "None",                // mapped -> `alt-cmd-enter`
     "Ctrl-k": "SelectToEndOfLine,Delete",
     // "Ctrl-l": "None",
     // "Ctrl-m": "None",
-    // "Ctrl-n": "None",                // mapped -> `alt-ctrl-'`
-    "Ctrl-o": "PreviousTab",            // mapped -> `alt-ctrl-,`
-    "Ctrl-p": "NextTab",                // mapped -> `alt-ctrl-.`
+    // "Ctrl-n": "None",                // mapped -> `alt-ctrl-enter`
+    "Ctrl-o": "PreviousTab",            // mapped -> `alt-cmd-,`
+    "Ctrl-p": "NextTab",                // mapped -> `alt-cmd-.`
     // "Ctrl-q": "None",
     // "Ctrl-r": "None",                // mapped -> `ctrl-enter`
     "Ctrl-s": "JumpLine",               // mapped -> `alt-enter`
     // "Ctrl-t": "None",                // mapped -> `cmd-enter`
     "Ctrl-u": "SelectToStartOfLine,Delete",
-    // "Ctrl-v": "None",                // mapped -> `alt-ctrl-/`
+    // "Ctrl-v": "None",                // mapped -> `alt-cmd-/`
     "Ctrl-w": "DeleteWordLeft",
-    // "Ctrl-x": "None",                // mapped -> `alt-ctrl-;`
+    // "Ctrl-x": "None",                // mapped -> `shift-enter`
     // "Ctrl-y": "None",
     // "Ctrl-z": "None",
-    "CtrlDown": "DiffNext",
+    "CtrlDown": "None",
     "CtrlLeft": "PreviousSplit",
     "CtrlRight": "NextSplit",
     "CtrlSpace": "Autocomplete",
     "CtrlUnderscore": "lua:comment.comment",
-    "CtrlUp": "DiffPrevious",
+    "CtrlUp": "None",
     "Delete": "Delete",
     "MouseRight": "MouseMultiCursor",
     "F1": "None",
@@ -118,16 +118,16 @@
     "Alt-F10": "None",                  // mapped -> ``
     "Alt-F11": "None",                  // mapped -> ``
     "Alt-F12": "None",                  // mapped -> ``
-    "Ctrl-F1": "None",                  // mapped -> `shift-enter`
-    "Ctrl-F2": "None",                  // mapped -> `alt-shift-enter`
-    "Ctrl-F3": "None",                  // mapped -> `ctrl-shift-enter`
-    "Ctrl-F4": "None",                  // mapped -> `cmd-shift-enter`
-    "Ctrl-F5": "None",                  // mapped -> `alt-ctrl-enter`
-    "Ctrl-F6": "None",                  // mapped -> `alt-cmd-enter`
-    "Ctrl-F7": "None",                  // mapped -> `ctrl-cmd-enter`
-    "Ctrl-F8": "None",                  // mapped -> `alt-ctrl-cmd-enter`
-    "Ctrl-F9": "None",                  // mapped -> `ctrl-[`
-    "Ctrl-F10": "None",                 // mapped -> `ctrl-]`
-    "Ctrl-F11": "None",                 // mapped -> `ctrl-shift-[`
-    "Ctrl-F12": "None"                  // mapped -> `ctrl-shift-]`
+    "Ctrl-F1": "None",                  // mapped -> ``
+    "Ctrl-F2": "None",                  // mapped -> ``
+    "Ctrl-F3": "None",                  // mapped -> ``
+    "Ctrl-F4": "None",                  // mapped -> ``
+    "Ctrl-F5": "None",                  // mapped -> ``
+    "Ctrl-F6": "None",                  // mapped -> ``
+    "Ctrl-F7": "None",                  // mapped -> ``
+    "Ctrl-F8": "None",                  // mapped -> ``
+    "Ctrl-F9": "None",                  // mapped -> ``
+    "Ctrl-F10": "None",                 // mapped -> ``
+    "Ctrl-F11": "None",                 // mapped -> ``
+    "Ctrl-F12": "None"                  // mapped -> ``
 }
