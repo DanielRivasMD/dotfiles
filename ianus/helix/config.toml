@@ -90,8 +90,8 @@ A-x = ["delete_selection"]  # Cut
 # A-z = [""]  # RemoveMultiCursor
 
 A-down = ["goto_next_paragraph"]  # ParagraphNext
-# A-left = [""]  # SelectToStartOfLine",   // mapped -> `shift-cmd-left`
-# A-right = [""]  # SelectToEndOfLine",    // mapped -> `shift-cmd-right`
+A-left = ["select_mode", "goto_line_start"]  # SelectToStartOfLine",   // mapped -> `shift-cmd-left`
+A-right = ["select_mode", "goto_line_end"]  # SelectToEndOfLine",    // mapped -> `shift-cmd-right`
 # AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight
 # AltShiftLeft": "SelectWordLeft
 # AltShiftRight": "SelectWordRight
