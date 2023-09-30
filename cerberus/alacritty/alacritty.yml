@@ -1109,6 +1109,7 @@ key_bindings:
   - { key: X,               mods: Alt|Control,                      chars: "@examples"    } #
   - { key: Y,               mods: Alt|Control,                      chars: "@importFrom"  } #
   - { key: Z,               mods: Alt|Control,                      chars: "@export"      } #
+
   # - { key: A,               mods: Alt|Command,                      chars: ""             } #
   # - { key: B,               mods: Alt|Command,                      chars: ""             } #
   # - { key: C,               mods: Alt|Command,                      chars: ""             } #
@@ -1137,102 +1138,58 @@ key_bindings:
   # - { key: Z,               mods: Alt|Command,                      chars: ""             } #
 
   - { key: A,               mods: Control|Command,                  chars: "\x11a"        } # bind a choose-tree -w
-  # - { key: A,               mods: Control|Command,                  chars: "α"            } #
-  - { key: B,               mods: Control|Command,                  chars: "β"            } #
-  - { key: C,               mods: Control|Command,                  chars: "ψ"            } #
+  # - { key: B,               mods: Control|Command,                  chars: ""             } #
+  # - { key: C,               mods: Control|Command,                  chars: ""             } #
   - { key: D,               mods: Control|Command,                  chars: "\x11d"        } # bind d detach
-  # - { key: D,               mods: Control|Command,                  chars: "δ"            } #
-  - { key: E,               mods: Control|Command,                  chars: "ϵ"            } #
-  - { key: F,               mods: Control|Command,                  chars: "φ"            } #
-  - { key: G,               mods: Control|Command,                  chars: "γ"            } #
+  # - { key: E,               mods: Control|Command,                  chars: ""             } #
+  # - { key: F,               mods: Control|Command,                  chars: ""             } #
+  # - { key: G,               mods: Control|Command,                  chars: ""             } #
   - { key: H,               mods: Control|Command,                  chars: "\x11-"        } # bind - split-window -v -c "#{pane_current_path}"
-  # - { key: H,               mods: Control|Command,                  chars: "η"            } #
-  - { key: I,               mods: Control|Command,                  chars: "ι"            } #
+  # - { key: I,               mods: Control|Command,                  chars: ""             } #
   - { key: J,               mods: Control|Command,                  chars: "\x11["        } # bind [ join-pane -h
-  # - { key: J,               mods: Control|Command,                  chars: "ξ"            } #
   - { key: K,               mods: Control|Command,                  chars: "\x11]"        } # bind ] break-pane
-  # - { key: K,               mods: Control|Command,                  chars: "κ"            } #
-  - { key: L,               mods: Control|Command,                  chars: "λ"            } #
-  - { key: M,               mods: Control|Command,                  chars: "μ"            } #
+  # - { key: L,               mods: Control|Command,                  chars: ""             } #
+  # - { key: M,               mods: Control|Command,                  chars: ""             } #
   - { key: N,               mods: Control|Command,                  chars: "\x11;"        } # bind \; new-window -c "#{pane_current_path}"
-  # - { key: N,               mods: Control|Command,                  chars: "ν"            } #
-  - { key: O,               mods: Control|Command,                  chars: "ο"            } #
-  - { key: P,               mods: Control|Command,                  chars: "π"            } #
-  # - { key: Q,               mods: Control|Command,                  chars: ""             } # collision system settings
+  # - { key: O,               mods: Control|Command,                  chars: ""             } #
+  # - { key: P,               mods: Control|Command,                  chars: ""             } #
+  # - { key: Q,               mods: Control|Command,                  chars: ""             } # collision system sett ngs
   - { key: R,               mods: Control|Command,                  chars: "\x11r"        } # bind r command-prompt -I "#{window_name}" "rename-window '%%'"
-  # - { key: R,               mods: Control|Command,                  chars: "ρ"            } #
   - { key: S,               mods: Control|Command,                  chars: "\x11s"        } # bind s choose-tree -s
-  # - { key: S,               mods: Control|Command,                  chars: "σ"            } #
-  - { key: T,               mods: Control|Command,                  chars: "τ"            } #
-  - { key: U,               mods: Control|Command,                  chars: "θ"            } #
+  # - { key: T,               mods: Control|Command,                  chars: ""             } #
+  # - { key: U,               mods: Control|Command,                  chars: ""             } #
   - { key: V,               mods: Control|Command,                  chars: "\x11="        } # bind = split-window -h -c "#{pane_current_path}"
-  # - { key: V,               mods: Control|Command,                  chars: "ω"            } #
   - { key: W,               mods: Control|Command,                  chars: "\x11w"        } # bind w rotate-window
-  # - { key: W,               mods: Control|Command,                  chars: "where "       } #
   - { key: X,               mods: Control|Command,                  chars: "\x11x"        } # bind x kill-pane
-  # - { key: X,               mods: Control|Command,                  chars: "χ"            } #
   - { key: Y,               mods: Control|Command,                  chars: "\x11y"        } # tmux copy line
-  # - { key: Y,               mods: Control|Command,                  chars: "υ"            } #
-  - { key: Z,               mods: Control|Command,                  chars: "ζ"            } #
+  # - { key: Z,               mods: Control|Command,                  chars: ""             } #
 
-  - { key: A,               mods: Control|Command|Shift,            chars: "Α"            } #
-  - { key: B,               mods: Control|Command|Shift,            chars: "Β"            } #
-  - { key: C,               mods: Control|Command|Shift,            chars: "Ψ"            } #
-  - { key: D,               mods: Control|Command|Shift,            chars: "Δ"            } #
-  - { key: E,               mods: Control|Command|Shift,            chars: "Ε"            } #
-  - { key: F,               mods: Control|Command|Shift,            chars: "Φ"            } #
-  - { key: G,               mods: Control|Command|Shift,            chars: "Γ"            } #
+  # - { key: A,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: B,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: C,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: D,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: E,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: F,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: G,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: H,               mods: Control|Command|Shift,            chars: "\x11_"        } # bind _ select-layout even-vertical
-  # - { key: H,               mods: Control|Command|Shift,            chars: "Η"            } #
-  - { key: I,               mods: Control|Command|Shift,            chars: "Ι"            } #
+  # - { key: I,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: J,               mods: Control|Command|Shift,            chars: "\x11<"        } # bind < select-layout main-vertical
-  # - { key: J,               mods: Control|Command|Shift,            chars: "Ξ"            } #
   - { key: K,               mods: Control|Command|Shift,            chars: "\x11>"        } # bind > select-layout main-horizontal
-  # - { key: K,               mods: Control|Command|Shift,            chars: "Κ"            } #
-  - { key: L,               mods: Control|Command|Shift,            chars: "Λ"            } #
-  - { key: M,               mods: Control|Command|Shift,            chars: "Μ"            } #
+  # - { key: L,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: M,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: N,               mods: Control|Command|Shift,            chars: "\x11:"        } # bind : new-window
-  # - { key: N,               mods: Control|Command|Shift,            chars: "Ν"            } #
-  - { key: O,               mods: Control|Command|Shift,            chars: "Ο"            } #
-  - { key: P,               mods: Control|Command|Shift,            chars: "Π"            } #
-  - { key: Q,               mods: Control|Command|Shift,            chars: "BUG: "        } #
+  # - { key: O,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: P,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: Q,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: R,               mods: Control|Command|Shift,            chars: "\x11R"        } # bind R command-prompt -I "#{session_name}" "rename-session '%%'"
-  - { key: S,               mods: Control|Command|Shift,            chars: "Σ"            } #
-  - { key: T,               mods: Control|Command|Shift,            chars: "Τ"            } #
-  - { key: U,               mods: Control|Command|Shift,            chars: "Θ"            } #
+  # - { key: S,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: T,               mods: Control|Command|Shift,            chars: ""             } #
+  # - { key: U,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: V,               mods: Control|Command|Shift,            chars: "\x11+"        } # bind - split-window -v -c "#{pane_current_path}"
-  # - { key: V,               mods: Control|Command|Shift,            chars: "Ω"            } #
-  - { key: W,               mods: Control|Command|Shift,            chars: "TODO: "       } #
+  # - { key: W,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: X,               mods: Control|Command|Shift,            chars: "\x11X"        } # bind X kill-window
-  - { key: Y,               mods: Control|Command|Shift,            chars: "Υ"            } #
+  # - { key: Y,               mods: Control|Command|Shift,            chars: ""             } #
   - { key: Z,               mods: Control|Command|Shift,            chars: "\x11?"        } # bind '?' select-layout tiled
-
-  - { key: A,               mods: Alt|Control|Command,              chars: "ɒ"            } #
-  - { key: B,               mods: Alt|Control|Command,              chars: "ß"            } #
-  - { key: C,               mods: Alt|Control|Command,              chars: "ç"            } #
-  - { key: D,               mods: Alt|Control|Command,              chars: "∇"            } #
-  - { key: E,               mods: Alt|Control|Command,              chars: "з"            } #
-  - { key: F,               mods: Alt|Control|Command,              chars: "ƒ"            } #
-  - { key: G,               mods: Alt|Control|Command,              chars: "ɣ"            } #
-  - { key: H,               mods: Alt|Control|Command,              chars: "ϕ"            } #
-  - { key: I,               mods: Alt|Control|Command,              chars: "и"            } #
-  - { key: J,               mods: Alt|Control|Command,              chars: "ʌ"            } #
-  - { key: K,               mods: Alt|Control|Command,              chars: "ϙ"            } #
-  - { key: L,               mods: Alt|Control|Command,              chars: "ł"            } #
-  - { key: M,               mods: Alt|Control|Command,              chars: "ɱ"            } #
-  - { key: N,               mods: Alt|Control|Command,              chars: "ŋ"            } #
-  - { key: O,               mods: Alt|Control|Command,              chars: "ø"            } #
-  - { key: P,               mods: Alt|Control|Command,              chars: "п"            } #
-  - { key: Q,               mods: Alt|Control|Command,              chars: "DOC: "        } #
-  - { key: R,               mods: Alt|Control|Command,              chars: "я"            } #
-  - { key: S,               mods: Alt|Control|Command,              chars: "ϛ"            } #
-  - { key: T,               mods: Alt|Control|Command,              chars: "þ"            } #
-  - { key: U,               mods: Alt|Control|Command,              chars: "ϑ"            } #
-  - { key: V,               mods: Alt|Control|Command,              chars: "ϖ"            } #
-  - { key: W,               mods: Alt|Control|Command,              chars: "ʍ"            } #
-  - { key: X,               mods: Alt|Control|Command,              chars: "∫"            } #
-  - { key: Y,               mods: Alt|Control|Command,              chars: "ʒ"            } #
-  - { key: Z,               mods: Alt|Control|Command,              chars: "ϟ"            } #
 
   # - { key: A,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
   # - { key: B,               mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
