@@ -1046,33 +1046,6 @@ key_bindings:
   - { key: O,               mods: Command,                          chars: "ο"            } #
   - { key: P,               mods: Command,                          chars: "π"            } #
   - { key: Q,               mods: Command,                          action: Quit          } #
-
-  # - { key: A,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: B,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: C,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: D,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: E,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: F,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: G,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: H,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: I,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: J,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: K,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: L,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: M,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: N,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: O,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: P,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: Q,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: R,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: S,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: T,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: U,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: V,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: W,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: X,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: Y,               mods: Alt|Control,                      chars: ""             } #
-  # - { key: Z,               mods: Alt|Control,                      chars: ""             } #
   - { key: R,               mods: Command,                          chars: "ρ"            } #
   - { key: S,               mods: Command,                          chars: "σ"            } #
   - { key: T,               mods: Command,                          chars: "τ"            } #
@@ -1109,6 +1082,33 @@ key_bindings:
   - { key: X,               mods: Command|Shift,                    chars: "Δ"            } #
   - { key: Y,               mods: Command|Shift,                    chars: "Λ"            } #
   - { key: Z,               mods: Command|Shift,                    chars: "∫"            } #
+
+  - { key: A,               mods: Alt|Control,                      chars: "@edit "       } #
+  - { key: B,               mods: Alt|Control,                      chars: "@rdname"      } #
+  - { key: C,               mods: Alt|Control,                      chars: "@cmd"         } #
+  - { key: D,               mods: Alt|Control,                      chars: "@debug "      } #
+  - { key: E,               mods: Alt|Control,                      chars: "@enter "      } #
+  - { key: F,               mods: Alt|Control,                      chars: "@param"       } #
+  - { key: G,               mods: Alt|Control,                      chars: ""             } #
+  - { key: H,               mods: Alt|Control,                      chars: "@chain "      } #
+  - { key: I,               mods: Alt|Control,                      chars: "@info "       } #
+  - { key: J,               mods: Alt|Control,                      chars: "@rput "       } #
+  - { key: K,               mods: Alt|Control,                      chars: "@rget "       } #
+  - { key: L,               mods: Alt|Control,                      chars: "@less "       } #
+  - { key: M,               mods: Alt|Control,                      chars: "@macroexpand "} #
+  - { key: N,               mods: Alt|Control,                      chars: "@enum "       } #
+  - { key: O,               mods: Alt|Control,                      chars: "@test "       } #
+  - { key: P,               mods: Alt|Control,                      chars: "@pipe "       } #
+  - { key: Q,               mods: Alt|Control,                      chars: "@testset "    } #
+  - { key: R,               mods: Alt|Control,                      chars: "@return"      } #
+  - { key: S,               mods: Alt|Control,                      chars: "@show "       } #
+  - { key: T,               mods: Alt|Control,                      chars: "@time "       } #
+  - { key: U,               mods: Alt|Control,                      chars: ""             } #
+  - { key: V,               mods: Alt|Control,                      chars: "@eval "       } #
+  - { key: W,               mods: Alt|Control,                      chars: "@which "      } #
+  - { key: X,               mods: Alt|Control,                      chars: "@examples"    } #
+  - { key: Y,               mods: Alt|Control,                      chars: "@importFrom"  } #
+  - { key: Z,               mods: Alt|Control,                      chars: "@export"      } #
   # - { key: A,               mods: Alt|Command,                      chars: ""             } #
   # - { key: B,               mods: Alt|Command,                      chars: ""             } #
   # - { key: C,               mods: Alt|Command,                      chars: ""             } #
