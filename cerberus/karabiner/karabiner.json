@@ -17,6 +17,59 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
+
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change home to command+option+shift.",
+                                "from": {
+                                    "key_code": "home",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "right_command",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change end to control+option+shift.",
+                                "from": {
+                                    "key_code": "end",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
                     {
                         "manipulators": [
                             {
@@ -43,6 +96,7 @@
                             }
                         ]
                     },
+
                     {
                         "description": "Change rigth_option to control+command",
                         "manipulators": [
@@ -398,18 +452,7 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": [
-                        {
-                            "from": {
-                                "key_code": "volume_increment"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "mute"
-                                }
-                            ]
-                        }
-                    ],
+                    "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 },
                 {
@@ -695,37 +738,17 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "end"
+                        "key_code": "0"
                     },
                     "to": [
                         {
-                            "key_code": "volume_decrement"
+                            "key_code": "grave_accent_and_tilde"
                         }
                     ]
                 },
                 {
                     "from": {
-                        "key_code": "home"
-                    },
-                    "to": [
-                        {
-                            "key_code": "volume_increment"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "non_us_backslash"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "al_terminal_lock_or_screensaver"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "page_down"
+                        "key_code": "keypad_slash"
                     },
                     "to": [
                         {
@@ -735,7 +758,7 @@
                 },
                 {
                     "from": {
-                        "key_code": "page_up"
+                        "key_code": "keypad_asterisk"
                     },
                     "to": [
                         {
@@ -745,7 +768,57 @@
                 },
                 {
                     "from": {
-                        "key_code": "right_option"
+                        "key_code": "keypad_hyphen"
+                    },
+                    "to": [
+                        {
+                            "key_code": "mute"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "keypad_plus"
+                    },
+                    "to": [
+                        {
+                            "key_code": "volume_increment"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "keypad_enter"
+                    },
+                    "to": [
+                        {
+                            "key_code": "volume_decrement"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "non_us_backslash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "0"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "keypad_num_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "non_us_backslash"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "grave_accent_and_tilde"
                     },
                     "to": [
                         {
