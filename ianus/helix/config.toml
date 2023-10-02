@@ -21,6 +21,7 @@ bufferline = "always"
 
 ####################################################################################################
 
+# cursor shape
 [editor.cursor-shape]
 insert = "bar"
 normal = "underline"
@@ -28,247 +29,471 @@ select = "block"
 
 ####################################################################################################
 
+# file picker
 [editor.file-picker]
 hidden = false
 
 ####################################################################################################
 
-# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+# normal mode
 [keys.normal]
-A-A = ["select_all"]  # SelectAll
-# A-B = [""]  # ShellMode
-A-C = ["toggle_comments"]  # lua:comment.comment
-A-D = ["extend_to_line_bounds", "yank", "paste_after"]  # DuplicateLine
-# A-E = [""]  #
-A-F = ["rsearch"]  # Find
-A-G = ["goto_last_line"]  # CursorEnd               // mapped -> `cmd-down`
-A-H = [":hsplit-new"]  # HSplit
-A-I = ["indent"]  # IndentSelection
-A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]  # MoveLinesDown
-A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "paste_before"]  # MoveLinesUp
-A-L = ["extend_line_below"]  # SelectLine
-# A-M = [""]  #
-# A-N = [""]  #
-A-O = ["later"]  # Redo
-# A-P = [""]  #
-A-Q = [":quit-all"]  # QuitAll
-A-R = ["replay_macro"]  # PlayMacro
-A-S = [":write-quit-all"]  # Save,QuitAll
-A-T = ["file_picker"]  # AddTab,OpenFile
-A-U = ["unindent"]  # OutdentSelection
-A-V = [":vsplit-new"]  # VSplit
-# A-W = [""]  # lua:wc.wordCount
-A-X = ["extend_to_line_bounds", "delete_selection"]  # CutLine
-A-Y = ["extend_to_line_bounds", "yank"]  # CopyLine
-A-Z = ["wonly"]  # Unsplit
 
-# A-a = [""]  # lua:snippets.Accept
-A-b = ["move_prev_word_start"]  # WordLeft                // mapped -> `alt-left`
-A-c = ["yank_joined_to_clipboard"]  # Copy
-# A-d = [""]  # SpawnMultiCursor
-A-e = ["no_op"]  # None                    // disabled => accent
-A-f = ["move_next_word_end"]  # WordRight               // mapped -> `alt-right`
-A-g = ["goto_file_start"]  # CursorStart             // mapped -> `cmd-up`
-A-h = ["search_prev"]  # FindPrevious
-A-i = ["no_op"]  # None                    // disabled => accent
-A-j = ["copy_selection_on_next_line"]  # SpawnMultiCursorDown
-A-k = ["copy_selection_on_prev_line"]  # SpawnMultiCursorUp
-A-l = ["search_next"]  # FindNext
-# A-m = [""]
-A-n = ["no_op"]  # None                    // disabled => accent
-A-o = ["earlier"]  # Undo
-A-p = ["match_brackets"]  # JumpToMatchingBrace
-A-q = [":quit"]  # Quit
-A-r = ["record_macro"]  # ToggleMacro
-A-s = [":write-quit"]  # Save,Quit
-# A-t = [""]
-A-u = ["no_op"]  # None                    // disabled => accent
-A-v = ["paste_after"]  # Paste
-A-w = [":write"]  # Save
-A-x = ["delete_selection"]  # Cut
-# A-y = [""]  # SkipMultiCursor
-# A-z = [""]  # RemoveMultiCursor
+# remapped undo / redo
+o = ["undo"]                                                                                        #
+O = ["redo"]                                                                                        #
+u = ["no_op"]                                                                                       #
+U = ["no_op"]                                                                                       #
 
-A-down = ["goto_next_paragraph"]  # ParagraphNext
-A-left = ["select_mode", "goto_line_start"]  # SelectToStartOfLine",   // mapped -> `shift-cmd-left`
-A-right = ["select_mode", "goto_line_end"]  # SelectToEndOfLine",    // mapped -> `shift-cmd-right`
-# AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight
-# AltShiftLeft": "SelectWordLeft
-# AltShiftRight": "SelectWordRight
-# AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight
-A-up = ["goto_prev_paragraph"]  # ParagraphPrevious
+# escape multi cursor
+esc = ["keep_primary_selection"]                                                                 #
 
-C-a = ["goto_line_start"]  # StartOfLine            // mapped ->
-C-e = ["goto_line_end"]  # EndOfLine              // mapped ->
-# C-u = [""]  # SelectToStartOfLine,Delete
-# C-k = [""]  # SelectToEndOfLine,Delete
-# C-w = [""]  # DeleteWordLeft
-C-b = ["command_mode"]  # CommandMode            // mapped -> `alt-b`
-C-f = ["search"]  # FindLiteral            // mapped -> `alt-f`
-C-g = ["no_op"]  # None
-C-h = ["no_op"]  # None
-C-o = ["goto_previous_buffer"]  # PreviousTab            // mapped -> `alt-cmd-comma`
-C-p = ["goto_next_buffer"]  # NextTab                // mapped -> `alt-cmd-period`
-C-v = ["no_op"]  # None                   // mapped -> `alt-cmd-slash`
-C-x = ["no_op"]  # None                   // mapped -> `enter-alt`
-C-down = ["jump_view_down"]  # DiffNext
-C-left = ["jump_view_left"]  # PreviousSplit
-C-right = ["jump_view_right"]  # NextSplit
-C-space = ["no_op"]  # None                // disabled => collision Alacritty
-# C-underscore = [""]  # lua:comment.comment
-C-up = ["jump_view_up"]  # DiffPrevious
+C-s = ["insert_mode"]                                                                               #  mapped -> `alt-enter`
+C-space = ["completion"]
 
-A-F5 = ["increment"]
-A-F6 = ["decrement"]
+A-A = ["select_all"]                                                                                # select all
+A-B = ["shell_pipe"]                                                                                # shell mode
+A-C = ["toggle_comments"]                                                                           # toggle comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
+# A-E = [""]                                                                                          #
+A-F = ["rsearch"]                                                                                   # find
+A-G = ["goto_last_line"]                                                                            # cursor end                  # mapped -> `cmd-down`
+A-H = [":hsplit-new"]                                                                               # horizontal split
+A-I = ["indent"]                                                                                    # indent selection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
+A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "paste_before"]          # move lines up
+A-L = ["extend_line_below"]                                                                         # select line
+# A-M = [""]                                                                                          #
+# A-N = [""]                                                                                          #
+A-O = ["later"]                                                                                     # redo
+# A-P = [""]                                                                                        #
+A-Q = [":quit-all"]                                                                                 # quit all
+A-R = ["replay_macro"]                                                                              # play macro
+A-S = [":write-quit-all"]                                                                           # save & quit all
+# A-T = ["file_picker"]                                                                               #
+A-U = ["unindent"]                                                                                  # outdent selection
+A-V = [":vsplit-new"]                                                                               # vertical split
+# A-W = [""]                                                                                          #
+A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
+A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
+A-Z = ["wonly"]                                                                                     # unsplit
 
-# Delete": "Delete
-# MouseRight": "MouseMultiCursor
-# "F1": "None
-# F2 = ["goto_line"]
-# "F3": "None
-# "F4": "None
-# "F5": "lua:wc.wordCount
-# "F6": "None
-# "F7": "None
-# "F8": "None
-# "F9": "None
-# "F10": "None
-# "F11": "None
-# "F12": "None
+# A-a = [""]                                                                                          #
+A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
+A-c = ["yank_joined_to_clipboard"]                                                                  # copy
+A-d = ["select_next_sibling"]                                                                       # spawn multi cursor
+# A-e = ["no_op"]                                                                                     # none                      # disabled => accent
+A-f = ["move_next_word_end"]                                                                        # word right                  # mapped -> `alt-right`
+A-g = ["goto_file_start"]                                                                           # cursor start                # mapped -> `cmd-up`
+A-h = ["search_prev"]                                                                               # find previous
+A-i = ["no_op"]                                                                                     # none                        # disabled => accent
+A-j = ["copy_selection_on_next_line"]                                                               # spawn multi cursor down
+A-k = ["copy_selection_on_prev_line"]                                                               # spawn multi cursor up
+A-l = ["search_next"]                                                                               # find next
+# A-m = [""]                                                                                          #
+# A-n = ["no_op"]                                                                                     # none                      # disabled => accent
+A-o = ["earlier"]                                                                                   # undo
+A-p = ["match_brackets"]                                                                            # jump to matching brace
+A-q = [":quit"]                                                                                     # quit
+A-r = ["record_macro"]                                                                              # toggle macro
+A-s = [":write-quit"]                                                                               # save & quit
+# A-t = [""]                                                                                          #
+# A-u = ["no_op"]                                                                                     # none                      # disabled => accent
+A-v = ["paste_after"]                                                                               # paste
+A-w = [":write"]                                                                                    # save
+A-x = ["delete_selection"]                                                                          # cut
+# A-y = [""]                                                                                          # skip multi cursor
+# A-z = [""]                                                                                          # remove multi cursor
 
-# C-F1 = [""]  # None
-# C-F2 = [":goto"]  # JumpLine              // mapped -> `enter-ctrl`
-# C-F3 = [""]  # None
-# C-F4 = [""]  # None
-# C-F5 = [""]  # None
-# C-F6 = [""]  # None
-# C-F7 = [""]  # None
-# C-F8 = [""]  # None
-# C-F9 = [""]  # None
-# C-F10 = [""]  # "None
-# C-F11 = [""]  # "Autocomplete         // mapped -> `shift-space`
-# C-F12 = [""]  # "None"
+C-a = ["goto_line_start"]                                                                           # start of line               # mapped ->
+C-b = ["command_mode"]                                                                              # command mode                # mapped -> `alt-b`
+# C-c = [""]                                                                                          # none
+# C-d = [""]                                                                                          # none
+C-e = ["goto_line_end"]                                                                             # end of line                 # mapped ->
+C-f = ["search"]                                                                                    # find literal                # mapped -> `alt-f`
+# C-g = ["no_op"]                                                                                     # none
+# C-h = ["no_op"]                                                                                     # none
+# C-i = ["no_op"]                                                                                     # none
+# C-j = ["no_op"]                                                                                     # none
+# C-k = [""]                                                                                        # SelectToEndOfLine,Delete
+# C-l = ["no_op"]                                                                                     # none
+# C-m = ["no_op"]                                                                                     # none
+# C-n = ["no_op"]                                                                                     # none
+C-o = ["goto_previous_buffer"]                                                                      # previous tab                # mapped -> `alt-cmd-comma`
+C-p = ["goto_next_buffer"]                                                                          # next tab                    # mapped -> `alt-cmd-period`
+# C-q = ["no_op"]                                                                                     # none
+# C-r = ["no_op"]                                                                                     # none
+# C-s = ["no_op"]                                                                                     # none
+# C-t = ["no_op"]                                                                                     # none
+# C-u = [""]                                                                                        # SelectToStartOfLine,Delete
+# C-v = ["no_op"]                                                                                     # none                      # mapped -> `alt-cmd-slash`
+# C-w = [""]                                                                                        # DeleteWordLeft
+# C-x = ["no_op"]                                                                                     # none                      # mapped -> `enter-alt`
+# C-y = ["no_op"]                                                                                     # none
+# C-z = ["no_op"]                                                                                     # none
 
+A-down = ["goto_next_paragraph"]                                                                    # paragraph next
+A-up = ["goto_prev_paragraph"]                                                                      # paragraph previous
+A-left = ["select_mode", "goto_line_start"]                                                         # select to start of line     # mapped -> `shift-cmd-left`
+A-right = ["select_mode", "goto_line_end"]                                                          # select to end of line       # mapped -> `shift-cmd-right`
 
+A-S-down = ["select_mode", "goto_next_paragraph"]                                                   # paragraph next
+A-S-up = ["select_mode", "goto_prev_paragraph"]                                                     # paragraph previous
+A-S-left = ["select_mode", "move_prev_word_start"]                                                  # select word left
+A-S-right = ["select_mode", "move_next_word_end"]                                                   # select word right
 
-# "A-w" = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
-# C-o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
-# a = "move_char_left" # Maps the 'a' key to the move_char_left command
-# w = "move_line_up" # Maps the 'w' key move_line_up
-# "C-S-esc" = "extend_line" # Maps Ctrl-Shift-Escape to extend_line
-# g = { a = "code_action" } # Maps `ga` to show possible code actions
-# "ret" = ["open_below", "normal_mode"]  # Maps the enter key to open_below then re-enter normal mode
+C-down = ["jump_view_down"]                                                                         #
+C-up = ["jump_view_up"]                                                                             #
+C-left = ["jump_view_left"]                                                                         # previous split
+C-right = ["jump_view_right"]                                                                       # next split
+# C-space = ["no_op"]                                                                                 # none
 
-# c-v = ""
+# F1 = [""]                                                                                         #
+# F2 = [""]                                                                                         #
+# F3 = [""]                                                                                         #
+# F4 = [""]                                                                                         #
+# F5 = [""]                                                                                         #
+# F6 = [""]                                                                                         #
+# F7 = [""]                                                                                         #
+# F8 = [""]                                                                                         #
+# F9 = [""]                                                                                         #
+# F10 = [""]                                                                                        #
+# F11 = [""]                                                                                        #
+# F12 = [""]                                                                                        #
 
-# A-down = "page_down"
-# A-up = "page_up"
-# C-F1 = "move_next_word_end"
+A-F1 = ["goto_prev_change"]                                                                         #
+A-F2 = ["goto_next_change"]                                                                         #
+# A-F3 = [""]                                                                                       #
+# A-F4 = [""]                                                                                       #
+A-F5 = ["increment"]                                                                                #
+A-F6 = ["decrement"]                                                                                #
+# A-F7 = [""]                                                                                       #
+# A-F8 = [""]                                                                                       #
+# A-F9 = [""]                                                                                       #
+# A-F10 = [""]                                                                                      #
+# A-F11 = [""]                                                                                      #
+# A-F12 = [""]                                                                                      #
 
-# C-o = ["goto_previous_buffer"]
-# C-p = ["goto_next_buffer"]
+# C-F1 = [""]                                                                                       #
+# C-F2 = [""]                                                                                       #
+# C-F3 = [""]                                                                                       #
+# C-F4 = [""]                                                                                       #
+# C-F5 = [""]                                                                                       #
+# C-F6 = [""]                                                                                       #
+# C-F7 = [""]                                                                                       #
+# C-F8 = [""]                                                                                       #
+# C-F9 = [""]                                                                                       #
+# C-F10 = [""]                                                                                      #
+# C-F11 = [""]                                                                                      #
+# C-F12 = [""]                                                                                      #
 
-# A-V = ["vsplit"]
-# A-H = ["hsplit"]
+# return
+"ret" = ["open_below"]
 
+####################################################################################################
+
+# insert mode
 [keys.insert]
-# "A-x" = "normal_mode"     # Maps Alt-X to enter normal mode
-j = { j = "normal_mode" } # Maps `jk` to exit insert mode
+
+# remapped undo / redo
+o = ["undo"]                                                                                        #
+O = ["redo"]                                                                                        #
+u = ["no_op"]                                                                                       #
+U = ["no_op"]                                                                                       #
+
+# escape multi cursor
+esc = ["keep_primary_selection"]                                                                 #
+
+C-s = "normal_mode"                                                                                 #  mapped -> `alt-enter`
 C-space = "completion"
 
-# [keys.normal.g]
-# a = "code_action" # Maps `ga` to show possible code actions
+A-A = ["select_all"]                                                                                # select all
+A-B = ["shell_pipe"]                                                                                # shell mode
+A-C = ["toggle_comments"]                                                                           # toggle comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
+# A-E = [""]                                                                                          #
+A-F = ["rsearch"]                                                                                   # find
+A-G = ["goto_last_line"]                                                                            # cursor end                  # mapped -> `cmd-down`
+A-H = [":hsplit-new"]                                                                               # horizontal split
+A-I = ["indent"]                                                                                    # indent selection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
+A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "paste_before"]          # move lines up
+A-L = ["extend_line_below"]                                                                         # select line
+# A-M = [""]                                                                                          #
+# A-N = [""]                                                                                          #
+A-O = ["later"]                                                                                     # redo
+# A-P = [""]                                                                                        #
+A-Q = [":quit-all"]                                                                                 # quit all
+A-R = ["replay_macro"]                                                                              # play macro
+A-S = [":write-quit-all"]                                                                           # save & quit all
+# A-T = ["file_picker"]                                                                               #
+A-U = ["unindent"]                                                                                  # outdent selection
+A-V = [":vsplit-new"]                                                                               # vertical split
+# A-W = [""]                                                                                          #
+A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
+A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
+A-Z = ["wonly"]                                                                                     # unsplit
 
-A-A = ["select_all"]  # SelectAll
-# A-B = [""]  # ShellMode
-A-C = ["toggle_comments"]  # lua:comment.comment
-A-D = ["extend_to_line_bounds", "yank", "paste_after"]  # DuplicateLine
-# A-E = [""]  #
-A-F = ["rsearch"]  # Find
-A-G = ["goto_last_line"]  # CursorEnd               // mapped -> `cmd-down`
-A-H = [":hsplit-new"]  # HSplit
-A-I = ["indent"]  # IndentSelection
-A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]  # MoveLinesDown
-A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "paste_before"]  # MoveLinesUp
-A-L = ["extend_line_below"]  # SelectLine
-# A-M = [""]  #
-# A-N = [""]  #
-A-O = ["later"]  # Redo
-# A-P = [""]  #
-A-Q = [":quit-all"]  # QuitAll
-A-R = ["replay_macro"]  # PlayMacro
-A-S = [":write-quit-all"]  # Save,QuitAll
-A-T = ["file_picker"]  # AddTab,OpenFile
-A-U = ["unindent"]  # OutdentSelection
-A-V = [":vsplit-new"]  # VSplit
-# A-W = [""]  # lua:wc.wordCount
-A-X = ["extend_to_line_bounds", "delete_selection"]  # CutLine
-A-Y = ["extend_to_line_bounds", "yank"]  # CopyLine
-A-Z = ["wonly"]  # Unsplit
+# A-a = [""]                                                                                          #
+A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
+A-c = ["yank_joined_to_clipboard"]                                                                  # copy
+A-d = ["select_next_sibling"]                                                                       # spawn multi cursor
+# A-e = ["no_op"]                                                                                     # none                      # disabled => accent
+A-f = ["move_next_word_end"]                                                                        # word right                  # mapped -> `alt-right`
+A-g = ["goto_file_start"]                                                                           # cursor start                # mapped -> `cmd-up`
+A-h = ["search_prev"]                                                                               # find previous
+A-i = ["no_op"]                                                                                     # none                        # disabled => accent
+A-j = ["copy_selection_on_next_line"]                                                               # spawn multi cursor down
+A-k = ["copy_selection_on_prev_line"]                                                               # spawn multi cursor up
+A-l = ["search_next"]                                                                               # find next
+# A-m = [""]                                                                                          #
+# A-n = ["no_op"]                                                                                     # none                      # disabled => accent
+A-o = ["earlier"]                                                                                   # undo
+A-p = ["match_brackets"]                                                                            # jump to matching brace
+A-q = [":quit"]                                                                                     # quit
+A-r = ["record_macro"]                                                                              # toggle macro
+A-s = [":write-quit"]                                                                               # save & quit
+# A-t = [""]                                                                                          #
+# A-u = ["no_op"]                                                                                     # none                      # disabled => accent
+A-v = ["paste_after"]                                                                               # paste
+A-w = [":write"]                                                                                    # save
+A-x = ["delete_selection"]                                                                          # cut
+# A-y = [""]                                                                                          # skip multi cursor
+# A-z = [""]                                                                                          # remove multi cursor
 
-# A-a = [""]  # lua:snippets.Accept
-A-b = ["move_prev_word_start"]  # WordLeft                // mapped -> `alt-left`
-A-c = ["yank_joined_to_clipboard"]  # Copy
-# A-d = [""]  # SpawnMultiCursor
-A-e = ["no_op"]  # None                    // disabled => accent
-A-f = ["move_next_word_end"]  # WordRight               // mapped -> `alt-right`
-A-g = ["goto_file_start"]  # CursorStart             // mapped -> `cmd-up`
-A-h = ["search_prev"]  # FindPrevious
-A-i = ["no_op"]  # None                    // disabled => accent
-A-j = ["copy_selection_on_next_line"]  # SpawnMultiCursorDown
-A-k = ["copy_selection_on_prev_line"]  # SpawnMultiCursorUp
-A-l = ["search_next"]  # FindNext
-# A-m = [""]
-A-n = ["no_op"]  # None                    // disabled => accent
-A-o = ["earlier"]  # Undo
-A-p = ["match_brackets"]  # JumpToMatchingBrace
-A-q = [":quit"]  # Quit
-A-r = ["record_macro"]  # ToggleMacro
-A-s = [":write-quit"]  # Save,Quit
-# A-t = [""]
-A-u = ["no_op"]  # None                    // disabled => accent
-A-v = ["paste_after"]  # Paste
-A-w = [":write"]  # Save
-A-x = ["delete_selection"]  # Cut
-# A-y = [""]  # SkipMultiCursor
-# A-z = [""]  # RemoveMultiCursor
+C-a = ["goto_line_start"]                                                                           # start of line               # mapped ->
+C-b = ["command_mode"]                                                                              # command mode                # mapped -> `alt-b`
+# C-c = [""]                                                                                          # none
+# C-d = [""]                                                                                          # none
+C-e = ["goto_line_end"]                                                                             # end of line                 # mapped ->
+C-f = ["search"]                                                                                    # find literal                # mapped -> `alt-f`
+# C-g = ["no_op"]                                                                                     # none
+# C-h = ["no_op"]                                                                                     # none
+# C-i = ["no_op"]                                                                                     # none
+# C-j = ["no_op"]                                                                                     # none
+# C-k = [""]                                                                                        # SelectToEndOfLine,Delete
+# C-l = ["no_op"]                                                                                     # none
+# C-m = ["no_op"]                                                                                     # none
+# C-n = ["no_op"]                                                                                     # none
+C-o = ["goto_previous_buffer"]                                                                      # previous tab                # mapped -> `alt-cmd-comma`
+C-p = ["goto_next_buffer"]                                                                          # next tab                    # mapped -> `alt-cmd-period`
+# C-q = ["no_op"]                                                                                     # none
+# C-r = ["no_op"]                                                                                     # none
+# C-s = ["no_op"]                                                                                     # none
+# C-t = ["no_op"]                                                                                     # none
+# C-u = [""]                                                                                        # SelectToStartOfLine,Delete
+# C-v = ["no_op"]                                                                                     # none                      # mapped -> `alt-cmd-slash`
+# C-w = [""]                                                                                        # DeleteWordLeft
+# C-x = ["no_op"]                                                                                     # none                      # mapped -> `enter-alt`
+# C-y = ["no_op"]                                                                                     # none
+# C-z = ["no_op"]                                                                                     # none
 
-A-down = ["goto_next_paragraph"]  # ParagraphNext
-# A-left = [""]  # SelectToStartOfLine",   // mapped -> `shift-cmd-left`
-# A-right = [""]  # SelectToEndOfLine",    // mapped -> `shift-cmd-right`
-# AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight
-# AltShiftLeft": "SelectWordLeft
-# AltShiftRight": "SelectWordRight
-# AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight
-A-up = ["goto_prev_paragraph"]  # ParagraphPrevious
+A-down = ["goto_next_paragraph"]                                                                    # paragraph next
+A-up = ["goto_prev_paragraph"]                                                                      # paragraph previous
+A-left = ["select_mode", "goto_line_start"]                                                         # select to start of line     # mapped -> `shift-cmd-left`
+A-right = ["select_mode", "goto_line_end"]                                                          # select to end of line       # mapped -> `shift-cmd-right`
 
-C-a = ["goto_line_start"]  # StartOfLine            // mapped ->
-C-e = ["goto_line_end"]  # EndOfLine              // mapped ->
-# C-u = [""]  # SelectToStartOfLine,Delete
-# C-k = [""]  # SelectToEndOfLine,Delete
-# C-w = [""]  # DeleteWordLeft
-C-b = ["command_mode"]  # CommandMode            // mapped -> `alt-b`
-C-f = ["search"]  # FindLiteral            // mapped -> `alt-f`
-C-g = ["no_op"]  # None
-C-h = ["no_op"]  # None
-C-o = ["goto_previous_buffer"]  # PreviousTab            // mapped -> `alt-cmd-comma`
-C-p = ["goto_next_buffer"]  # NextTab                // mapped -> `alt-cmd-period`
-C-v = ["no_op"]  # None                   // mapped -> `alt-cmd-slash`
-C-x = ["no_op"]  # None                   // mapped -> `enter-alt`
-C-down = ["jump_view_down"]  # DiffNext
-C-left = ["jump_view_left"]  # PreviousSplit
-C-right = ["jump_view_right"]  # NextSplit
-# C-space = ["no_op"]  # None                // disabled => collision Alacritty
-# C-underscore = [""]  # lua:comment.comment
-C-up = ["jump_view_up"]  # DiffPrevious
+A-S-down = ["select_mode", "goto_next_paragraph"]                                                   # paragraph next
+A-S-up = ["select_mode", "goto_prev_paragraph"]                                                     # paragraph previous
+A-S-left = ["select_mode", "move_prev_word_start"]                                                  # select word left
+A-S-right = ["select_mode", "move_next_word_end"]                                                   # select word right
 
-A-F5 = ["increment"]
-A-F6 = ["decrement"]
+C-down = ["jump_view_down"]                                                                         #
+C-up = ["jump_view_up"]                                                                             #
+C-left = ["jump_view_left"]                                                                         # previous split
+C-right = ["jump_view_right"]                                                                       # next split
+# C-space = ["no_op"]                                                                                 # none
 
-# invert `j` and `k` in view mode
-[keys.normal.z]
-j = "scroll_up"
-k = "scroll_down"
+# F1 = [""]                                                                                         #
+# F2 = [""]                                                                                         #
+# F3 = [""]                                                                                         #
+# F4 = [""]                                                                                         #
+# F5 = [""]                                                                                         #
+# F6 = [""]                                                                                         #
+# F7 = [""]                                                                                         #
+# F8 = [""]                                                                                         #
+# F9 = [""]                                                                                         #
+# F10 = [""]                                                                                        #
+# F11 = [""]                                                                                        #
+# F12 = [""]                                                                                        #
+
+A-F1 = ["goto_prev_change"]                                                                         #
+A-F2 = ["goto_next_change"]                                                                         #
+# A-F3 = [""]                                                                                       #
+# A-F4 = [""]                                                                                       #
+A-F5 = ["increment"]                                                                                #
+A-F6 = ["decrement"]                                                                                #
+# A-F7 = [""]                                                                                       #
+# A-F8 = [""]                                                                                       #
+# A-F9 = [""]                                                                                       #
+# A-F10 = [""]                                                                                      #
+# A-F11 = [""]                                                                                      #
+# A-F12 = [""]                                                                                      #
+
+# C-F1 = [""]                                                                                       #
+# C-F2 = [""]                                                                                       #
+# C-F3 = [""]                                                                                       #
+# C-F4 = [""]                                                                                       #
+# C-F5 = [""]                                                                                       #
+# C-F6 = [""]                                                                                       #
+# C-F7 = [""]                                                                                       #
+# C-F8 = [""]                                                                                       #
+# C-F9 = [""]                                                                                       #
+# C-F10 = [""]                                                                                      #
+# C-F11 = [""]                                                                                      #
+# C-F12 = [""]                                                                                      #
+
+####################################################################################################
+
+# select mode
+[keys.select]
+
+# remapped undo / redo
+o = ["undo"]                                                                                        #
+O = ["redo"]                                                                                        #
+u = ["no_op"]                                                                                       #
+U = ["no_op"]                                                                                       #
+
+# escape multi cursor
+esc = ["keep_primary_selection"]                                                                 #
+
+C-s = "normal_mode"                                                                                 #  mapped -> `alt-enter`
+C-space = "completion"
+
+A-A = ["select_all"]                                                                                # select all
+A-B = ["shell_pipe"]                                                                                # shell mode
+A-C = ["toggle_comments"]                                                                           # toggle comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
+# A-E = [""]                                                                                          #
+A-F = ["rsearch"]                                                                                   # find
+A-G = ["goto_last_line"]                                                                            # cursor end                  # mapped -> `cmd-down`
+A-H = [":hsplit-new"]                                                                               # horizontal split
+A-I = ["indent"]                                                                                    # indent selection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
+A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "paste_before"]          # move lines up
+A-L = ["extend_line_below"]                                                                         # select line
+# A-M = [""]                                                                                          #
+# A-N = [""]                                                                                          #
+A-O = ["later"]                                                                                     # redo
+# A-P = [""]                                                                                        #
+A-Q = [":quit-all"]                                                                                 # quit all
+A-R = ["replay_macro"]                                                                              # play macro
+A-S = [":write-quit-all"]                                                                           # save & quit all
+# A-T = ["file_picker"]                                                                               #
+A-U = ["unindent"]                                                                                  # outdent selection
+A-V = [":vsplit-new"]                                                                               # vertical split
+# A-W = [""]                                                                                          #
+A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
+A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
+A-Z = ["wonly"]                                                                                     # unsplit
+
+# A-a = [""]                                                                                          #
+A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
+A-c = ["yank_joined_to_clipboard"]                                                                  # copy
+A-d = ["select_next_sibling"]                                                                       # spawn multi cursor
+# A-e = ["no_op"]                                                                                     # none                      # disabled => accent
+A-f = ["move_next_word_end"]                                                                        # word right                  # mapped -> `alt-right`
+A-g = ["goto_file_start"]                                                                           # cursor start                # mapped -> `cmd-up`
+A-h = ["search_prev"]                                                                               # find previous
+A-i = ["no_op"]                                                                                     # none                        # disabled => accent
+A-j = ["copy_selection_on_next_line"]                                                               # spawn multi cursor down
+A-k = ["copy_selection_on_prev_line"]                                                               # spawn multi cursor up
+A-l = ["search_next"]                                                                               # find next
+# A-m = [""]                                                                                          #
+# A-n = ["no_op"]                                                                                     # none                      # disabled => accent
+A-o = ["earlier"]                                                                                   # undo
+A-p = ["match_brackets"]                                                                            # jump to matching brace
+A-q = [":quit"]                                                                                     # quit
+A-r = ["record_macro"]                                                                              # toggle macro
+A-s = [":write-quit"]                                                                               # save & quit
+# A-t = [""]                                                                                          #
+# A-u = ["no_op"]                                                                                     # none                      # disabled => accent
+A-v = ["paste_after"]                                                                               # paste
+A-w = [":write"]                                                                                    # save
+A-x = ["delete_selection"]                                                                          # cut
+# A-y = [""]                                                                                          # skip multi cursor
+# A-z = [""]                                                                                          # remove multi cursor
+
+C-a = ["goto_line_start"]                                                                           # start of line               # mapped ->
+C-b = ["command_mode"]                                                                              # command mode                # mapped -> `alt-b`
+# C-c = [""]                                                                                          # none
+# C-d = [""]                                                                                          # none
+C-e = ["goto_line_end"]                                                                             # end of line                 # mapped ->
+C-f = ["search"]                                                                                    # find literal                # mapped -> `alt-f`
+# C-g = ["no_op"]                                                                                     # none
+# C-h = ["no_op"]                                                                                     # none
+# C-i = ["no_op"]                                                                                     # none
+# C-j = ["no_op"]                                                                                     # none
+# C-k = [""]                                                                                        # SelectToEndOfLine,Delete
+# C-l = ["no_op"]                                                                                     # none
+# C-m = ["no_op"]                                                                                     # none
+# C-n = ["no_op"]                                                                                     # none
+C-o = ["goto_previous_buffer"]                                                                      # previous tab                # mapped -> `alt-cmd-comma`
+C-p = ["goto_next_buffer"]                                                                          # next tab                    # mapped -> `alt-cmd-period`
+# C-q = ["no_op"]                                                                                     # none
+# C-r = ["no_op"]                                                                                     # none
+# C-s = ["no_op"]                                                                                     # none
+# C-t = ["no_op"]                                                                                     # none
+# C-u = [""]                                                                                        # SelectToStartOfLine,Delete
+# C-v = ["no_op"]                                                                                     # none                      # mapped -> `alt-cmd-slash`
+# C-w = [""]                                                                                        # DeleteWordLeft
+# C-x = ["no_op"]                                                                                     # none                      # mapped -> `enter-alt`
+# C-y = ["no_op"]                                                                                     # none
+# C-z = ["no_op"]                                                                                     # none
+
+A-down = ["goto_next_paragraph"]                                                                    # paragraph next
+A-up = ["goto_prev_paragraph"]                                                                      # paragraph previous
+A-left = ["select_mode", "goto_line_start"]                                                         # select to start of line     # mapped -> `shift-cmd-left`
+A-right = ["select_mode", "goto_line_end"]                                                          # select to end of line       # mapped -> `shift-cmd-right`
+
+A-S-down = ["select_mode", "goto_next_paragraph"]                                                   # paragraph next
+A-S-up = ["select_mode", "goto_prev_paragraph"]                                                     # paragraph previous
+A-S-left = ["select_mode", "move_prev_word_start"]                                                  # select word left
+A-S-right = ["select_mode", "move_next_word_end"]                                                   # select word right
+
+C-down = ["jump_view_down"]                                                                         #
+C-up = ["jump_view_up"]                                                                             #
+C-left = ["jump_view_left"]                                                                         # previous split
+C-right = ["jump_view_right"]                                                                       # next split
+# C-space = ["no_op"]                                                                                 # none
+
+# F1 = [""]                                                                                         #
+# F2 = [""]                                                                                         #
+# F3 = [""]                                                                                         #
+# F4 = [""]                                                                                         #
+# F5 = [""]                                                                                         #
+# F6 = [""]                                                                                         #
+# F7 = [""]                                                                                         #
+# F8 = [""]                                                                                         #
+# F9 = [""]                                                                                         #
+# F10 = [""]                                                                                        #
+# F11 = [""]                                                                                        #
+# F12 = [""]                                                                                        #
+
+A-F1 = ["goto_prev_change"]                                                                         #
+A-F2 = ["goto_next_change"]                                                                         #
+# A-F3 = [""]                                                                                       #
+# A-F4 = [""]                                                                                       #
+A-F5 = ["increment"]                                                                                #
+A-F6 = ["decrement"]                                                                                #
+# A-F7 = [""]                                                                                       #
+# A-F8 = [""]                                                                                       #
+# A-F9 = [""]                                                                                       #
+# A-F10 = [""]                                                                                      #
+# A-F11 = [""]                                                                                      #
+# A-F12 = [""]                                                                                      #
+
+# C-F1 = [""]                                                                                       #
+# C-F2 = [""]                                                                                       #
+# C-F3 = [""]                                                                                       #
+# C-F4 = [""]                                                                                       #
+# C-F5 = [""]                                                                                       #
+# C-F6 = [""]                                                                                       #
+# C-F7 = [""]                                                                                       #
+# C-F8 = [""]                                                                                       #
+# C-F9 = [""]                                                                                       #
+# C-F10 = [""]                                                                                      #
+# C-F11 = [""]                                                                                      #
+# C-F12 = [""]                                                                                      #
 
 ####################################################################################################
 
