@@ -1462,98 +1462,99 @@ key_bindings:
   # interactive keybindings
   ####################################################################################################
 
-  - { key: Key1,            mods: Alt,                              chars: " ~ "          } #
+  - { key: Key0,            mods: Alt,                              chars: " ~ "          } #
+  - { key: Key1,            mods: Alt,                              chars: " ! "          } #
   - { key: Key2,            mods: Alt,                              chars: " @ "          } #
   - { key: Key3,            mods: Alt,                              chars: " \\ "         } #
   - { key: Key4,            mods: Alt,                              chars: " $ "          } #
   - { key: Key5,            mods: Alt,                              chars: " % "          } #
   - { key: Key6,            mods: Alt,                              chars: " ^ "          } #
   - { key: Key7,            mods: Alt,                              chars: " & "          } #
-  - { key: Key8,            mods: Alt,                              chars: " * "          } #
-  - { key: Key9,            mods: Alt,                              chars: " / "          } #
-  - { key: Key0,            mods: Alt,                              chars: " + "          } #
-  - { key: Minus,           mods: Alt,                              chars: " - "          } #
-  - { key: Equals,          mods: Alt,                              chars: " = "          } #
-  - { key: LBracket,        mods: Alt,                              chars: " <= "         } #
-  - { key: RBracket,        mods: Alt,                              chars: " >= "         } #
-  - { key: Semicolon,       mods: Alt,                              chars: " |> "         } #
-  - { key: Apostrophe,      mods: Alt,                              chars: " -> "         } #
-  - { key: Backslash,       mods: Alt,                              chars: " | "          } #
+  - { key: Key8,            mods: Alt,                              chars: " | "          } #
+  - { key: Key9,            mods: Alt,                              chars: " |> "          } #
+  # - { key: Grave,           mods: Alt,                              chars: ""             } # collision system settings
+  - { key: Minus,           mods: Alt,                              chars: " <- "           } #
+  - { key: Equals,          mods: Alt,                              chars: " -> "          } #
+  - { key: LBracket,        mods: Alt,                              chars: " - "          } #
+  - { key: RBracket,        mods: Alt,                              chars: " + "          } #
+  - { key: Semicolon,       mods: Alt,                              chars: " = "         } #
+  - { key: Apostrophe,      mods: Alt,                              chars: " * "         } #
+  - { key: Backslash,       mods: Alt,                              chars: " / "          } #
   - { key: Comma,           mods: Alt,                              chars: " < "          } #
   - { key: Period,          mods: Alt,                              chars: " > "          } #
-  - { key: Slash,           mods: Alt,                              chars: " <- "         } #
-  # - { key: Grave,           mods: Alt,                              chars: ""             } # collision system settings
+  - { key: Slash,           mods: Alt,                              chars: " %in% "         } #
   - { key: Tab,             mods: Alt,                              chars: ".."           } #
 
-  - { key: Key1,            mods: Alt|Shift,                        chars: " =~ "         } #
+  - { key: Key0,            mods: Alt|Shift,                        chars: " .~ "         } #
+  - { key: Key1,            mods: Alt|Shift,                        chars: " .! "         } #
   - { key: Key2,            mods: Alt|Shift,                        chars: " .@ "         } #
   - { key: Key3,            mods: Alt|Shift,                        chars: " .\\ "        } #
   - { key: Key4,            mods: Alt|Shift,                        chars: " .$ "         } #
   - { key: Key5,            mods: Alt|Shift,                        chars: " .% "         } #
   - { key: Key6,            mods: Alt|Shift,                        chars: " .^ "         } #
   - { key: Key7,            mods: Alt|Shift,                        chars: " .& "         } #
-  - { key: Key8,            mods: Alt|Shift,                        chars: " .* "         } #
-  - { key: Key9,            mods: Alt|Shift,                        chars: " ./ "         } #
-  - { key: Key0,            mods: Alt|Shift,                        chars: " .+ "         } #
-  - { key: Minus,           mods: Alt|Shift,                        chars: " .- "         } #
-  - { key: Equals,          mods: Alt|Shift,                        chars: " .= "         } #
-  - { key: LBracket,        mods: Alt|Shift,                        chars: " .<= "        } #
-  - { key: RBracket,        mods: Alt|Shift,                        chars: " .>= "        } #
-  - { key: Semicolon,       mods: Alt|Shift,                        chars: " .|> "        } #
-  - { key: Apostrophe,      mods: Alt|Shift,                        chars: " => "         } #
-  - { key: Backslash,       mods: Alt|Shift,                        chars: " .| "         } #
+  - { key: Key8,            mods: Alt|Shift,                        chars: " .| "         } #
+  - { key: Key9,            mods: Alt|Shift,                        chars: " .|> "         } #
+  # - { key: Grave,           mods: Alt|Shift,                        chars: "  "           } #
+  - { key: Minus,           mods: Alt|Shift,                        chars: " := "         } #
+  - { key: Equals,          mods: Alt|Shift,                        chars: " => "         } #
+  - { key: LBracket,        mods: Alt|Shift,                        chars: " .- "         } #
+  - { key: RBracket,        mods: Alt|Shift,                        chars: " .+ "         } #
+  - { key: Semicolon,       mods: Alt|Shift,                        chars: " .= "        } #
+  - { key: Apostrophe,      mods: Alt|Shift,                        chars: " .* "         } #
+  - { key: Backslash,       mods: Alt|Shift,                        chars: " ./ "         } #
   - { key: Comma,           mods: Alt|Shift,                        chars: " .< "         } #
   - { key: Period,          mods: Alt|Shift,                        chars: " .> "         } #
-  - { key: Slash,           mods: Alt|Shift,                        chars: " := "         } #
-  # - { key: Grave,           mods: Alt|Shift,                        chars: "  "           } #
+  - { key: Slash,           mods: Alt|Shift,                        chars: " %ni% "         } #
   - { key: Tab,             mods: Alt|Shift,                        chars: "..."          } #
 
+  - { key: Key0,            mods: Control,                          chars: " =~ "         } #
   - { key: Key1,            mods: Control,                          chars: " != "         } #
-  # - { key: Key2,            mods: Control,                          chars: "  "           } #
+  - { key: Key2,            mods: Control,                          chars: "  "           } #
   - { key: Key3,            mods: Control,                          chars: " \\= "        } #
-  # - { key: Key4,            mods: Control,                          chars: "  "           } #
+  - { key: Key4,            mods: Control,                          chars: " %$% "           } #
   - { key: Key5,            mods: Control,                          chars: " %= "         } #
   - { key: Key6,            mods: Control,                          chars: " ^= "         } #
   - { key: Key7,            mods: Control,                          chars: " &= "         } #
-  - { key: Key8,            mods: Control,                          chars: " *= "         } #
-  - { key: Key9,            mods: Control,                          chars: " /= "         } #
-  - { key: Key0,            mods: Control,                          chars: " += "         } #
-  - { key: Minus,           mods: Control,                          chars: " -= "         } #
-  - { key: Equals,          mods: Control,                          chars: " == "         } #
-  # - { key: LBracket,        mods: Control,                          chars: "  "           } #
-  # - { key: RBracket,        mods: Control,                          chars: "  "           } #
-  - { key: Semicolon,       mods: Control,                          chars: " %$% "        } #
-  - { key: Apostrophe,      mods: Control,                          chars: " %<>% "       } #
-  - { key: Backslash,       mods: Control,                          chars: " |= "         } #
-  - { key: Comma,           mods: Control,                          chars: " %<% "        } #
-  - { key: Period,          mods: Control,                          chars: " %>% "        } #
+  - { key: Key8,            mods: Control,                          chars: " |= "         } #
+  - { key: Key9,            mods: Control,                          chars: "  "         } #
+  - { key: Grave,           mods: Control,                          chars: " %<>% "           } #
+  - { key: Minus,           mods: Control,                          chars: " %<% "         } #
+  - { key: Equals,          mods: Control,                          chars: " %>% "         } #
+  - { key: LBracket,        mods: Control,                          chars: " -= "         } #
+  - { key: RBracket,        mods: Control,                          chars: " += "         } #
+  - { key: Semicolon,       mods: Control,                          chars: " == "        } #
+  - { key: Apostrophe,      mods: Control,                          chars: " *= "       } #
+  - { key: Backslash,       mods: Control,                          chars: " /= "         } #
+  - { key: Comma,           mods: Control,                          chars: " <= "        } #
+  - { key: Period,          mods: Control,                          chars: " >= "        } #
   # - { key: Slash,           mods: Control,                          chars: ""             } # collision system settings
-  # - { key: Grave,           mods: Control,                          chars: "  "           } #
   - { key: Tab,             mods: Control,                          chars: ", "           } #
 
+  - { key: Key0,            mods: Control|Shift,                    chars: "  "        } #
   - { key: Key1,            mods: Control|Shift,                    chars: " .!= "        } #
-  # - { key: Key2,            mods: Control|Shift,                    chars: "  "           } #
+  - { key: Key2,            mods: Control|Shift,                    chars: "  "           } #
   - { key: Key3,            mods: Control|Shift,                    chars: " .\\= "       } #
-  # - { key: Key4,            mods: Control|Shift,                    chars: "  "           } #
+  - { key: Key4,            mods: Control|Shift,                    chars: " %T>% "           } #
   - { key: Key5,            mods: Control|Shift,                    chars: " .%= "        } #
   - { key: Key6,            mods: Control|Shift,                    chars: " .^= "        } #
   - { key: Key7,            mods: Control|Shift,                    chars: " .&= "        } #
-  - { key: Key8,            mods: Control|Shift,                    chars: " .*= "        } #
-  - { key: Key9,            mods: Control|Shift,                    chars: " ./= "        } #
-  - { key: Key0,            mods: Control|Shift,                    chars: " .+= "        } #
-  - { key: Minus,           mods: Control|Shift,                    chars: " .-= "        } #
-  - { key: Equals,          mods: Control|Shift,                    chars: " .== "        } #
-  # - { key: LBracket,        mods: Control|Shift,                    chars: "  "           } #
-  # - { key: RBracket,        mods: Control|Shift,                    chars: "  "           } #
-  - { key: Semicolon,       mods: Control|Shift,                    chars: " %T>% "       } #
-  # - { key: Apostrophe,      mods: Control|Shift,                    chars: "  "           } #
-  - { key: Backslash,       mods: Control|Shift,                    chars: " .|= "        } #
-  - { key: Comma,           mods: Control|Shift,                    chars: " %<+% "       } #
-  - { key: Period,          mods: Control|Shift,                    chars: " %+>% "       } #
-  - { key: Slash,           mods: Control|Shift,                    chars: " %!>% "       } #
-  # - { key: Grave,           mods: Control|Shift,                    chars: "  "           } #
+  - { key: Key8,            mods: Control|Shift,                    chars: " .|= "        } #
+  - { key: Key9,            mods: Control|Shift,                    chars: "  "        } #
+  - { key: Grave,           mods: Control|Shift,                    chars: " %!>% "           } #
+  - { key: Minus,           mods: Control|Shift,                    chars: " %<+% "        } #
+  - { key: Equals,          mods: Control|Shift,                    chars: " %+>% "        } #
+  - { key: LBracket,        mods: Control|Shift,                    chars: " .-= "        } #
+  - { key: RBracket,        mods: Control|Shift,                    chars: " .+= "        } #
+  - { key: Semicolon,       mods: Control|Shift,                    chars: " .== "       } #
+  - { key: Apostrophe,      mods: Control|Shift,                    chars: " .* "           } #
+  - { key: Backslash,       mods: Control|Shift,                    chars: " ./ "        } #
+  - { key: Comma,           mods: Control|Shift,                    chars: " .<= "       } #
+  - { key: Period,          mods: Control|Shift,                    chars: " .>= "       } #
+  - { key: Slash,           mods: Control|Shift,                    chars: "  "       } #
   - { key: Tab,             mods: Control|Shift,                    chars: "..="          } #
 
+  # - { key: Key0,            mods: Command,                          chars: "  "           } #
   # - { key: Key1,            mods: Command,                          chars: "  "           } #
   # - { key: Key2,            mods: Command,                          chars: "  "           } #
   # - { key: Key3,            mods: Command,                          chars: "  "           } #
@@ -1563,7 +1564,6 @@ key_bindings:
   # - { key: Key7,            mods: Command,                          chars: "  "           } #
   # - { key: Key8,            mods: Command,                          chars: "  "           } #
   # - { key: Key9,            mods: Command,                          chars: "  "           } #
-  # - { key: Key0,            mods: Command,                          chars: "  "           } #
   # - { key: Minus,           mods: Command,                          chars: "  "           } #
   # - { key: Equals,          mods: Command,                          chars: "  "           } #
   # - { key: LBracket,        mods: Command,                          chars: "  "           } #
@@ -1571,7 +1571,7 @@ key_bindings:
   # - { key: Semicolon,       mods: Command,                          chars: "  "           } #
   # - { key: Apostrophe,      mods: Command,                          chars: "  "           } #
   # - { key: Backslash,       mods: Command,                          chars: "  "           } #
-  - { key: Comma,           mods: Command,                          chars: "\x11,"        } # bind , source-file ~/.tmux.conf \; display "Config reloaded"
+  # - { key: Comma,           mods: Command,                          chars: "  "           } #
   # - { key: Period,          mods: Command,                          chars: "  "           } #
   # - { key: Slash,           mods: Command,                          chars: "  "           } #
 
@@ -1619,6 +1619,7 @@ key_bindings:
   # - { key: Period,          mods: Alt|Control,                      chars: "  "           } #
   # - { key: Slash,           mods: Alt|Control,                      chars: "  "           } #
 
+  - { key: Key0,            mods: Alt|Command,                      chars: "\x110"        } #
   - { key: Key1,            mods: Alt|Command,                      chars: "\x111"        } #
   - { key: Key2,            mods: Alt|Command,                      chars: "\x112"        } #
   - { key: Key3,            mods: Alt|Command,                      chars: "\x113"        } #
@@ -1628,7 +1629,6 @@ key_bindings:
   - { key: Key7,            mods: Alt|Command,                      chars: "\x117"        } #
   - { key: Key8,            mods: Alt|Command,                      chars: "\x118"        } #
   - { key: Key9,            mods: Alt|Command,                      chars: "\x119"        } #
-  - { key: Key0,            mods: Alt|Command,                      chars: "\x110"        } #
   # - { key: Minus,           mods: Alt|Command,                      chars: "  "           } #
   # - { key: Equals,          mods: Alt|Command,                      chars: "  "           } #
   - { key: LBracket,        mods: Alt|Command,                      chars: "\x11P"        } # bind P swap-window -t -1\; select-window -t -1
@@ -1640,96 +1640,96 @@ key_bindings:
   - { key: Period,          mods: Alt|Command,                      chars: "\x10"         } # mapped -> Ctrl P
   - { key: Slash,           mods: Alt|Command,                      chars: "\x16"         } # mapped -> Ctrl V
 
+  - { key: Key0,            mods: Control|Command,                  chars: "```"          } #
   - { key: Key1,            mods: Control|Command,                  chars: " !== "        } #
-  # - { key: Key2,            mods: Control|Command,                  chars: "  "           } #
+  - { key: Key2,            mods: Control|Command,                  chars: ""           } #
   - { key: Key3,            mods: Control|Command,                  chars: " \\\\ "       } #
-  - { key: Key4,            mods: Control|Command,                  chars: "#["           } #
-  - { key: Key5,            mods: Control|Command,                  chars: " %in% "       } #
-  # - { key: Key6,            mods: Control|Command,                  chars: "  "           } #
+  - { key: Key4,            mods: Control|Command,                  chars: ""           } #
+  - { key: Key5,            mods: Control|Command,                  chars: ""       } #
+  - { key: Key6,            mods: Control|Command,                  chars: "  "           } #
   - { key: Key7,            mods: Control|Command,                  chars: " && "         } #
-  - { key: Key8,            mods: Control|Command,                  chars: " ** "         } #
-  - { key: Key9,            mods: Control|Command,                  chars: " // "         } #
-  - { key: Key0,            mods: Control|Command,                  chars: " ++ "         } #
-  - { key: Minus,           mods: Control|Command,                  chars: " -- "         } #
-  - { key: Equals,          mods: Control|Command,                  chars: " === "        } #
-  - { key: LBracket,        mods: Control|Command,                  chars: " <<= "        } #
-  - { key: RBracket,        mods: Control|Command,                  chars: " >>= "        } #
-  - { key: Semicolon,       mods: Control|Command,                  chars: "::"           } #
-  - { key: Apostrophe,      mods: Control|Command,                  chars: "'''"          } #
-  - { key: Backslash,       mods: Control|Command,                  chars: " || "         } #
+  - { key: Key8,            mods: Control|Command,                  chars: " || "         } #
+  - { key: Key9,            mods: Control|Command,                  chars: "  "         } #
+  - { key: Grave,           mods: Control|Command,                  chars: " %$% "          } #
+  - { key: Minus,           mods: Control|Command,                  chars: "'''"         } #
+  - { key: Equals,          mods: Control|Command,                  chars: "::"        } #
+  - { key: LBracket,        mods: Control|Command,                  chars: " -- "         } #
+  - { key: RBracket,        mods: Control|Command,                  chars: " ++ "         } #
+  - { key: Semicolon,       mods: Control|Command,                  chars: " === "           } #
+  - { key: Apostrophe,      mods: Control|Command,                  chars: " ** "          } #
+  - { key: Backslash,       mods: Control|Command,                  chars: " // "         } #
   - { key: Comma,           mods: Control|Command,                  chars: " << "         } #
   - { key: Period,          mods: Control|Command,                  chars: " >> "         } #
-  - { key: Slash,           mods: Control|Command,                  chars: "/// "         } #
-  - { key: Grave,           mods: Control|Command,                  chars: "```"          } #
+  - { key: Slash,           mods: Control|Command,                  chars: "  "         } #
   - { key: Tab,             mods: Control|Command,                  chars: " -"           } #
 
+  # - { key: Key0,            mods: Control|Command|Shift,            chars: "  "           } #
   - { key: Key1,            mods: Control|Command|Shift,            chars: " .!== "       } #
   # - { key: Key2,            mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Key3,            mods: Control|Command|Shift,            chars: "#' "          } #
+  - { key: Key3,            mods: Control|Command|Shift,            chars: " "          } #
   # - { key: Key4,            mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Key5,            mods: Control|Command|Shift,            chars: " %ni% "       } #
+  - { key: Key5,            mods: Control|Command|Shift,            chars: "  "       } #
   # - { key: Key6,            mods: Control|Command|Shift,            chars: "  "           } #
   - { key: Key7,            mods: Control|Command|Shift,            chars: " .&& "        } #
-  # - { key: Key8,            mods: Control|Command|Shift,            chars: "  "           } #
+  - { key: Key8,            mods: Control|Command|Shift,            chars: " .|| "           } #
   # - { key: Key9,            mods: Control|Command|Shift,            chars: "  "           } #
-  # - { key: Key0,            mods: Control|Command|Shift,            chars: "  "           } #
-  # - { key: Minus,           mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Equals,          mods: Control|Command|Shift,            chars: " .=== "       } #
+  - { key: Grave,           mods: Control|Command|Shift,            chars: " %T>% "           } #
+  - { key: Minus,           mods: Control|Command|Shift,            chars: "\"\"\""           } #
+  - { key: Equals,          mods: Control|Command|Shift,            chars: "::<"       } #
   # - { key: LBracket,        mods: Control|Command|Shift,            chars: "  "           } #
   # - { key: RBracket,        mods: Control|Command|Shift,            chars: "  "           } #
-  - { key: Semicolon,       mods: Control|Command|Shift,            chars: "::<"          } #
-  - { key: Apostrophe,      mods: Control|Command|Shift,            chars: "\"\"\""       } #
-  - { key: Backslash,       mods: Control|Command|Shift,            chars: " .|| "        } #
-  - { key: Comma,           mods: Control|Command|Shift,            chars: " <<< "        } #
-  - { key: Period,          mods: Control|Command|Shift,            chars: " >>> "        } #
-  - { key: Slash,           mods: Control|Command|Shift,            chars: "//! "         } #
-  # - { key: Grave,           mods: Control|Command|Shift,            chars: "  "           } #
+  - { key: Semicolon,       mods: Control|Command|Shift,            chars: " .=== "          } #
+  - { key: Apostrophe,      mods: Control|Command|Shift,            chars: ""       } #
+  - { key: Backslash,       mods: Control|Command|Shift,            chars: ""        } #
+  - { key: Comma,           mods: Control|Command|Shift,            chars: " <<= "        } #
+  - { key: Period,          mods: Control|Command|Shift,            chars: " >>= "        } #
+  - { key: Slash,           mods: Control|Command|Shift,            chars: ""         } #
   - { key: Tab,             mods: Control|Command|Shift,            chars: " --"          } #
 
-  - { key: Key1,            mods: Alt|Control|Command,              chars: " !~ "         } #
+  - { key: Key0,            mods: Alt|Control|Command,              chars: " !~ "           } #
+  # - { key: Key1,            mods: Alt|Control|Command,              chars: "  "           } #
   # - { key: Key2,            mods: Alt|Control|Command,              chars: "  "           } #
-  # - { key: Key3,            mods: Alt|Control|Command,              chars: "  "           } #
-  # - { key: Key4,            mods: Alt|Control|Command,              chars: "  "           } #
-  - { key: Key5,            mods: Alt|Control|Command,              chars: " %% "         } #
+  - { key: Key3,            mods: Alt|Control|Command,              chars: "#["           } #
+  - { key: Key4,            mods: Alt|Control|Command,              chars: "${"           } #
+  - { key: Key5,            mods: Alt|Control|Command,              chars: "  "         } #
   - { key: Key6,            mods: Alt|Control|Command,              chars: " √ "          } #
   # - { key: Key7,            mods: Alt|Control|Command,              chars: "  "           } #
   # - { key: Key8,            mods: Alt|Control|Command,              chars: "  "           } #
   # - { key: Key9,            mods: Alt|Control|Command,              chars: "  "           } #
-  # - { key: Key0,            mods: Alt|Control|Command,              chars: "  "           } #
-  # - { key: Minus,           mods: Alt|Control|Command,              chars: "  "           } #
-  # - { key: Equals,          mods: Alt|Control|Command,              chars: "  "           } #
+  - { key: Grave,           mods: Alt|Control|Command,              chars: "#' "           } #
+  - { key: Minus,           mods: Alt|Control|Command,              chars: " <<- "           } #
+  - { key: Equals,          mods: Alt|Control|Command,              chars: " ->> "           } #
   # - { key: LBracket,        mods: Alt|Control|Command,              chars: "  "           } #
   # - { key: RBracket,        mods: Alt|Control|Command,              chars: "  "           } #
-  # - { key: Semicolon,       mods: Alt|Control|Command,              chars: "  "           } #
-  - { key: Apostrophe,      mods: Alt|Control|Command,              chars: " ->> "        } #
-  # - { key: Backslash,       mods: Alt|Control|Command,              chars: "  "           } #
+  - { key: Semicolon,       mods: Alt|Control|Command,              chars: "::"           } #
+  - { key: Apostrophe,      mods: Alt|Control|Command,              chars: "  "        } #
+  - { key: Backslash,       mods: Alt|Control|Command,              chars: "//! "           } #
   - { key: Comma,           mods: Alt|Control|Command,              chars: " <: "         } #
   - { key: Period,          mods: Alt|Control|Command,              chars: " >: "         } #
-  - { key: Slash,           mods: Alt|Control|Command,              chars: " <<- "        } #
-  # - { key: Grave,           mods: Alt|Control|Command,              chars: "  "           } #
+  - { key: Slash,           mods: Alt|Control|Command,              chars: "::<"        } #
   - { key: Tab,             mods: Alt|Control|Command,              chars: "; "           } #
 
-  # - { key: Key1,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key2,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key3,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key4,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key5,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key6,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key7,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key8,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key9,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  # - { key: Key0,            mods: Alt|Control|Command|Shift,        chars: "  "           } # collision system settings
-  - { key: Minus,           mods: Alt|Control|Command|Shift,        chars: " ∘ "          } #
-  - { key: Equals,          mods: Alt|Control|Command|Shift,        chars: " ∈ "          } #
+  # - { key: Key0,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key1,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key2,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key3,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key4,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key5,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key6,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key7,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key8,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  # - { key: Key9,            mods: Alt|Control|Command|Shift,        chars: ""           } # collision system settings
+  - { key: Grave,           mods: Alt|Control|Command|Shift,        chars: "  "           } #
+  - { key: Minus,           mods: Alt|Control|Command|Shift,        chars: "  "          } #
+  - { key: Equals,          mods: Alt|Control|Command|Shift,        chars: "  "          } #
   # - { key: LBracket,        mods: Alt|Control|Command|Shift,        chars: "  "           } #
   # - { key: RBracket,        mods: Alt|Control|Command|Shift,        chars: "  "           } #
-  # - { key: Semicolon,       mods: Alt|Control|Command|Shift,        chars: "  "           } #
-  # - { key: Apostrophe,      mods: Alt|Control|Command|Shift,        chars: "  "           } #
-  # - { key: Backslash,       mods: Alt|Control|Command|Shift,        chars: "  "           } #
+  - { key: Semicolon,       mods: Alt|Control|Command|Shift,        chars: " ∈ "           } #
+  - { key: Apostrophe,      mods: Alt|Control|Command|Shift,        chars: " ∘ "           } #
+  - { key: Backslash,       mods: Alt|Control|Command|Shift,        chars: "/// "           } #
   # - { key: Comma,           mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
   # - { key: Period,          mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
   # - { key: Slash,           mods: Alt|Control|Command|Shift,        chars: ""             } # collision system settings
-  # - { key: Grave,           mods: Alt|Control|Command|Shift,        chars: "  "           } #
   - { key: Tab,             mods: Alt|Control|Command|Shift,        chars: ": "           } #
 
 ####################################################################################################
