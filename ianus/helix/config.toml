@@ -194,12 +194,6 @@ A-F6 = ["decrement"]                                                            
 # insert mode
 [keys.insert]
 
-# remapped undo / redo
-o = ["undo"]                                                                                        #
-O = ["redo"]                                                                                        #
-u = ["no_op"]                                                                                       #
-U = ["no_op"]                                                                                       #
-
 # escape multi cursor
 esc = ["keep_primary_selection"]                                                                 #
 
