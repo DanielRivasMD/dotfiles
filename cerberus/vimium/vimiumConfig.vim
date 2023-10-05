@@ -59,8 +59,8 @@ map " Marks.activateGotoMode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vomnibar
-map u Vomnibar.activate
-map U Vomnibar.activateInNewTab
+map o Vomnibar.activate
+map O Vomnibar.activateInNewTab
 map b Vomnibar.activateBookmarks
 map B Vomnibar.activateBookmarksInNewTab
 map e Vomnibar.activateEditUrl
@@ -77,8 +77,8 @@ map h performBackwardsFind
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " history
-map o goBack
-map O goForward
+map u goBack
+map U goForward
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
