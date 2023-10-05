@@ -1,3 +1,4 @@
+// TODO: binding collisions
 {
   "Delete": "Delete",
   "MouseRight": "MouseMultiCursor",
@@ -17,13 +18,13 @@
   "Alt-L": "SelectLine",
   "Alt-M": "",
   "Alt-N": "",
-  "Alt-O": "Redo",
+  "Alt-O": "",                                                                                      // remapped => unknown collision
   "Alt-P": "",
   "Alt-Q": "QuitAll",
   "Alt-R": "PlayMacro",
   "Alt-S": "Save,QuitAll",
   "Alt-T": "AddTab,OpenFile",
-  "Alt-U": "OutdentSelection",
+  "Alt-U": "Redo",
   "Alt-V": "VSplit",
   "Alt-W": "",
   "Alt-X": "CutLine",
@@ -34,23 +35,23 @@
   "Alt-b": "WordLeft",                                                                              // mapped -> `alt-left`
   "Alt-c": "Copy",
   "Alt-d": "SpawnMultiCursor",
-  "Alt-e": "None",                                                                                  // disabled => accent
+  "Alt-e": "None",                                                                                  // remapped => accent
   "Alt-f": "WordRight",                                                                             // mapped -> `alt-right`
   "Alt-g": "CursorStart",                                                                           // mapped -> `cmd-up`
   "Alt-h": "FindPrevious",
-  "Alt-i": "None",                                                                                  // disabled => accent
+  "Alt-i": "None",                                                                                  // remapped => accent
   "Alt-j": "SpawnMultiCursorDown",
   "Alt-k": "SpawnMultiCursorUp",
   "Alt-l": "FindNext",
   "Alt-m": "",
-  "Alt-n": "None",                                                                                  // disabled => accent
-  "Alt-o": "Undo",
+  "Alt-n": "None",                                                                                  // remapped => accent
+  "Alt-o": "None",
   "Alt-p": "JumpToMatchingBrace",
   "Alt-q": "Quit",
   "Alt-r": "ToggleMacro",
   "Alt-s": "Save,Quit",
   "Alt-t": "OpenFile",
-  "Alt-u": "None",                                                                                  // disabled => accent
+  "Alt-u": "None",                                                                                  // remapped => accent
   "Alt-v": "Paste",
   "Alt-w": "Save",
   "Alt-x": "Cut",
@@ -133,10 +134,10 @@
   "Ctrl-F4": "None",                                                                                // mapped -> ``
   "Ctrl-F5": "None",                                                                                // mapped -> ``
   "Ctrl-F6": "None",                                                                                // mapped -> ``
-  "Ctrl-F7": "None",                                                                                // mapped -> ``
-  "Ctrl-F8": "None",                                                                                // mapped -> ``
-  "Ctrl-F9": "None",                                                                                // mapped -> ``
-  "Ctrl-F10": "None",                                                                               // mapped -> ``
-  "Ctrl-F11": "None",                                                                               // mapped -> ``
+  "Ctrl-F7": "None",                                                                                // mapped -> `alt-e`
+  "Ctrl-F8": "None",                                                                                // mapped -> `alt-i`
+  "Ctrl-F9": "None",                                                                                // mapped -> `alt-n`
+  "Ctrl-F10": "Undo",                                                                               // mapped -> `alt-u`
+  "Ctrl-F11": "OutdentSelection",                                                                   // mapped -> `alt-O`
   "Ctrl-F12": "None"                                                                                // mapped -> ``
 }
