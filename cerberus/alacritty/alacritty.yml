@@ -1440,7 +1440,7 @@ key_bindings:
   - { key: Up,              mods: Command,                          chars: "\x1bg"                  } # mapped -> Alt g
   # - { key: Up,              mods: Command|Shift,                    chars: ""                       } #
   # - { key: Up,              mods: Alt|Control,                      chars: ""                       } #
-  - { key: Up,              mods: Alt|Command,                      chars: "\x1b[1;3P"              } # mapped -> Alt F1
+  # - { key: Up,              mods: Alt|Command,                      chars: ""                       } #
   - { key: Up,              mods: Control|Command,                  chars: "\x1b[1;3R"              } # mapped -> Alt F3
   - { key: Up,              mods: Alt|Control|Command,              chars: "\x11k"                  } #
   # - { key: Up,              mods: Control|Command|Shift,            chars: ""                       } #
@@ -1454,11 +1454,14 @@ key_bindings:
   - { key: Down,            mods: Command,                          chars: "\x1bG"                  } # mapped -> Alt G
   # - { key: Down,            mods: Command|Shift,                    chars: ""                       } #
   # - { key: Down,            mods: Alt|Control,                      chars: ""                       } #
-  - { key: Down,            mods: Alt|Command,                      chars: "\x1b[1;3Q"              } # mapped -> Alt F2
+  # - { key: Down,            mods: Alt|Command,                      chars: ""                       } #
   - { key: Down,            mods: Control|Command,                  chars: "\x1b[1;3S"              } # mapped -> Alt F4
   - { key: Down,            mods: Alt|Control|Command,              chars: "\x11j"                  } #
   # - { key: Down,            mods: Control|Command|Shift,            chars: ""                       } #
   - { key: Down,            mods: Alt|Control|Command|Shift,        chars: "\x1b[17;3~"             } # mapped -> Alt F6
+
+  - { key: PageUp,                                                  chars: "\x1b[1;3P"              } # mapped -> Alt F1
+  - { key: PageDown,                                                chars: "\x1b[1;3Q"              } # mapped -> Alt F2
 
   ####################################################################################################
   # interactive keybindings
