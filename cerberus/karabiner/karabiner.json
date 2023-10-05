@@ -17,7 +17,6 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
-
                     {
                         "manipulators": [
                             {
@@ -43,7 +42,6 @@
                             }
                         ]
                     },
-
                     {
                         "manipulators": [
                             {
@@ -69,7 +67,6 @@
                             }
                         ]
                     },
-
                     {
                         "manipulators": [
                             {
@@ -96,7 +93,6 @@
                             }
                         ]
                     },
-
                     {
                         "description": "Change rigth_option to control+command",
                         "manipulators": [
@@ -748,11 +744,11 @@
                 },
                 {
                     "from": {
-                        "key_code": "keypad_slash"
+                        "key_code": "grave_accent_and_tilde"
                     },
                     "to": [
                         {
-                            "key_code": "display_brightness_decrement"
+                            "key_code": "keypad_num_lock"
                         }
                     ]
                 },
@@ -768,26 +764,6 @@
                 },
                 {
                     "from": {
-                        "key_code": "keypad_hyphen"
-                    },
-                    "to": [
-                        {
-                            "key_code": "mute"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_plus"
-                    },
-                    "to": [
-                        {
-                            "key_code": "volume_increment"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "keypad_enter"
                     },
                     "to": [
@@ -798,11 +774,11 @@
                 },
                 {
                     "from": {
-                        "key_code": "non_us_backslash"
+                        "key_code": "keypad_hyphen"
                     },
                     "to": [
                         {
-                            "key_code": "0"
+                            "key_code": "mute"
                         }
                     ]
                 },
@@ -818,11 +794,31 @@
                 },
                 {
                     "from": {
-                        "key_code": "grave_accent_and_tilde"
+                        "key_code": "keypad_plus"
                     },
                     "to": [
                         {
-                            "key_code": "keypad_num_lock"
+                            "key_code": "volume_increment"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "keypad_slash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "display_brightness_decrement"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "non_us_backslash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "0"
                         }
                     ]
                 }
