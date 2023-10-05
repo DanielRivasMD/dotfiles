@@ -38,12 +38,6 @@ hidden = false
 # normal mode
 [keys.normal]
 
-# remapped undo / redo
-o = ["undo"]                                                                                        #
-O = ["redo"]                                                                                        #
-u = ["no_op"]                                                                                       #
-U = ["no_op"]                                                                                       #
-
 # escape multi cursor
 esc = ["keep_primary_selection"]                                                                 #
 
@@ -64,13 +58,13 @@ A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "past
 A-L = ["extend_line_below"]                                                                         # select line
 # A-M = [""]                                                                                          #
 # A-N = [""]                                                                                          #
-A-O = ["later"]                                                                                     # redo
+# A-O = [""]                                                                                          #                           # remapped => unknown collision
 # A-P = [""]                                                                                        #
 A-Q = [":quit-all"]                                                                                 # quit all
 A-R = ["replay_macro"]                                                                              # play macro
 A-S = [":write-quit-all"]                                                                           # save & quit all
 # A-T = ["file_picker"]                                                                               #
-A-U = ["unindent"]                                                                                  # outdent selection
+A-U = ["later"]                                                                                     # redo
 A-V = [":vsplit-new"]                                                                               # vertical split
 # A-W = [""]                                                                                          #
 A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
@@ -81,23 +75,23 @@ A-Z = ["wonly"]                                                                 
 A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                                                  # copy
 A-d = ["select_next_sibling"]                                                                       # spawn multi cursor
-# A-e = ["no_op"]                                                                                     # none                      # disabled => accent
+# A-e = [""]                                                                                          #                           # remapped => accent
 A-f = ["move_next_word_end"]                                                                        # word right                  # mapped -> `alt-right`
 A-g = ["goto_file_start"]                                                                           # cursor start                # mapped -> `cmd-up`
 A-h = ["search_prev"]                                                                               # find previous
-A-i = ["no_op"]                                                                                     # none                        # disabled => accent
+# A-i = [""]                                                                                          #                           # remapped => accent
 A-j = ["copy_selection_on_next_line"]                                                               # spawn multi cursor down
 A-k = ["copy_selection_on_prev_line"]                                                               # spawn multi cursor up
 A-l = ["search_next"]                                                                               # find next
 # A-m = [""]                                                                                          #
-# A-n = ["no_op"]                                                                                     # none                      # disabled => accent
-A-o = ["earlier"]                                                                                   # undo
+# A-n = [""]                                                                                          #                           # remapped => accent
+# A-o = [""]                                                                                          #
 A-p = ["match_brackets"]                                                                            # jump to matching brace
 A-q = [":quit"]                                                                                     # quit
 A-r = ["record_macro"]                                                                              # toggle macro
 A-s = [":write-quit"]                                                                               # save & quit
 # A-t = [""]                                                                                          #
-# A-u = ["no_op"]                                                                                     # none                      # disabled => accent
+# A-u = [""]                                                                                          #                           # remapped => accent
 A-v = ["paste_after"]                                                                               # paste
 A-w = [":write"]                                                                                    # save
 A-x = ["delete_selection"]                                                                          # cut
@@ -182,8 +176,8 @@ A-F6 = ["decrement"]                                                            
 # C-F7 = [""]                                                                                       #
 # C-F8 = [""]                                                                                       #
 # C-F9 = [""]                                                                                       #
-# C-F10 = [""]                                                                                      #
-# C-F11 = [""]                                                                                      #
+C-F10 = ["earlier"]                                                                                 # undo
+C-F11 = ["unindent"]                                                                                #
 # C-F12 = [""]                                                                                      #
 
 # return
@@ -213,13 +207,13 @@ A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "past
 A-L = ["extend_line_below"]                                                                         # select line
 # A-M = [""]                                                                                          #
 # A-N = [""]                                                                                          #
-A-O = ["later"]                                                                                     # redo
+# A-O = [""]                                                                                          #                           # remapped => unknown collision
 # A-P = [""]                                                                                        #
 A-Q = [":quit-all"]                                                                                 # quit all
 A-R = ["replay_macro"]                                                                              # play macro
 A-S = [":write-quit-all"]                                                                           # save & quit all
 # A-T = ["file_picker"]                                                                               #
-A-U = ["unindent"]                                                                                  # outdent selection
+A-U = ["later"]                                                                                     # redo
 A-V = [":vsplit-new"]                                                                               # vertical split
 # A-W = [""]                                                                                          #
 A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
@@ -230,23 +224,23 @@ A-Z = ["wonly"]                                                                 
 A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                                                  # copy
 A-d = ["select_next_sibling"]                                                                       # spawn multi cursor
-# A-e = ["no_op"]                                                                                     # none                      # disabled => accent
+# A-e = [""]                                                                                          #                           # remapped => accent
 A-f = ["move_next_word_end"]                                                                        # word right                  # mapped -> `alt-right`
 A-g = ["goto_file_start"]                                                                           # cursor start                # mapped -> `cmd-up`
 A-h = ["search_prev"]                                                                               # find previous
-A-i = ["no_op"]                                                                                     # none                        # disabled => accent
+# A-i = [""]                                                                                          #                           # remapped => accent
 A-j = ["copy_selection_on_next_line"]                                                               # spawn multi cursor down
 A-k = ["copy_selection_on_prev_line"]                                                               # spawn multi cursor up
 A-l = ["search_next"]                                                                               # find next
 # A-m = [""]                                                                                          #
-# A-n = ["no_op"]                                                                                     # none                      # disabled => accent
-A-o = ["earlier"]                                                                                   # undo
+# A-n = [""]                                                                                          #                           # remapped => accent
+# A-o = [""]                                                                                          #
 A-p = ["match_brackets"]                                                                            # jump to matching brace
 A-q = [":quit"]                                                                                     # quit
 A-r = ["record_macro"]                                                                              # toggle macro
 A-s = [":write-quit"]                                                                               # save & quit
 # A-t = [""]                                                                                          #
-# A-u = ["no_op"]                                                                                     # none                      # disabled => accent
+# A-u = [""]                                                                                          #                           # remapped => accent
 A-v = ["paste_after"]                                                                               # paste
 A-w = [":write"]                                                                                    # save
 A-x = ["delete_selection"]                                                                          # cut
@@ -331,20 +325,14 @@ A-F6 = ["decrement"]                                                            
 # C-F7 = [""]                                                                                       #
 # C-F8 = [""]                                                                                       #
 # C-F9 = [""]                                                                                       #
-# C-F10 = [""]                                                                                      #
-# C-F11 = [""]                                                                                      #
+C-F10 = ["earlier"]                                                                                 # undo
+C-F11 = ["unindent"]                                                                                #
 # C-F12 = [""]                                                                                      #
 
 ####################################################################################################
 
 # select mode
 [keys.select]
-
-# remapped undo / redo
-o = ["undo"]                                                                                        #
-O = ["redo"]                                                                                        #
-u = ["no_op"]                                                                                       #
-U = ["no_op"]                                                                                       #
 
 # escape multi cursor
 esc = ["keep_primary_selection"]                                                                 #
@@ -365,13 +353,13 @@ A-K = ["extend_to_line_bounds", "delete_selection", "move_visual_line_up", "past
 A-L = ["extend_line_below"]                                                                         # select line
 # A-M = [""]                                                                                          #
 # A-N = [""]                                                                                          #
-A-O = ["later"]                                                                                     # redo
+# A-O = [""]                                                                                          #                           # remapped => unknown collision
 # A-P = [""]                                                                                        #
 A-Q = [":quit-all"]                                                                                 # quit all
 A-R = ["replay_macro"]                                                                              # play macro
 A-S = [":write-quit-all"]                                                                           # save & quit all
 # A-T = ["file_picker"]                                                                               #
-A-U = ["unindent"]                                                                                  # outdent selection
+A-U = ["later"]                                                                                     # redo
 A-V = [":vsplit-new"]                                                                               # vertical split
 # A-W = [""]                                                                                          #
 A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
@@ -382,23 +370,23 @@ A-Z = ["wonly"]                                                                 
 A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                                                  # copy
 A-d = ["select_next_sibling"]                                                                       # spawn multi cursor
-# A-e = ["no_op"]                                                                                     # none                      # disabled => accent
+# A-e = [""]                                                                                          #                           # remapped => accent
 A-f = ["move_next_word_end"]                                                                        # word right                  # mapped -> `alt-right`
 A-g = ["goto_file_start"]                                                                           # cursor start                # mapped -> `cmd-up`
 A-h = ["search_prev"]                                                                               # find previous
-A-i = ["no_op"]                                                                                     # none                        # disabled => accent
+# A-i = [""]                                                                                          #                           # remapped => accent
 A-j = ["copy_selection_on_next_line"]                                                               # spawn multi cursor down
 A-k = ["copy_selection_on_prev_line"]                                                               # spawn multi cursor up
 A-l = ["search_next"]                                                                               # find next
 # A-m = [""]                                                                                          #
-# A-n = ["no_op"]                                                                                     # none                      # disabled => accent
-A-o = ["earlier"]                                                                                   # undo
+# A-n = [""]                                                                                          #                           # remapped => accent
+# A-o = [""]                                                                                          #
 A-p = ["match_brackets"]                                                                            # jump to matching brace
 A-q = [":quit"]                                                                                     # quit
 A-r = ["record_macro"]                                                                              # toggle macro
 A-s = [":write-quit"]                                                                               # save & quit
 # A-t = [""]                                                                                          #
-# A-u = ["no_op"]                                                                                     # none                      # disabled => accent
+# A-u = [""]                                                                                          #                           # remapped => accent
 A-v = ["paste_after"]                                                                               # paste
 A-w = [":write"]                                                                                    # save
 A-x = ["delete_selection"]                                                                          # cut
@@ -483,8 +471,8 @@ A-F6 = ["decrement"]                                                            
 # C-F7 = [""]                                                                                       #
 # C-F8 = [""]                                                                                       #
 # C-F9 = [""]                                                                                       #
-# C-F10 = [""]                                                                                      #
-# C-F11 = [""]                                                                                      #
+C-F10 = ["earlier"]                                                                                 # undo
+C-F11 = ["unindent"]                                                                                #
 # C-F12 = [""]                                                                                      #
 
 ####################################################################################################
