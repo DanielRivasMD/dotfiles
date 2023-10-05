@@ -48,7 +48,7 @@ U = ["no_op"]                                                                   
 esc = ["keep_primary_selection"]                                                                 #
 
 C-s = ["insert_mode"]                                                                               #  mapped -> `alt-enter`
-C-space = ["completion"]
+# C-space = ["select_mode"]
 
 A-A = ["select_all"]                                                                                # select all
 A-B = ["shell_pipe"]                                                                                # shell mode
@@ -187,7 +187,7 @@ A-F6 = ["decrement"]                                                            
 # C-F12 = [""]                                                                                      #
 
 # return
-"ret" = ["open_below"]
+"ret" = ["insert_mode"]
 
 ####################################################################################################
 
@@ -197,8 +197,7 @@ A-F6 = ["decrement"]                                                            
 # escape multi cursor
 esc = ["keep_primary_selection"]                                                                 #
 
-C-s = "normal_mode"                                                                                 #  mapped -> `alt-enter`
-C-space = "completion"
+C-space = ["normal_mode"]
 
 A-A = ["select_all"]                                                                                # select all
 A-B = ["shell_pipe"]                                                                                # shell mode
@@ -350,8 +349,7 @@ U = ["no_op"]                                                                   
 # escape multi cursor
 esc = ["keep_primary_selection"]                                                                 #
 
-C-s = "normal_mode"                                                                                 #  mapped -> `alt-enter`
-C-space = "completion"
+C-space = ["normal_mode"]
 
 A-A = ["select_all"]                                                                                # select all
 A-B = ["shell_pipe"]                                                                                # shell mode
