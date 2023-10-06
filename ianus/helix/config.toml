@@ -172,8 +172,8 @@ A-F6 = ["decrement"]                                                            
 # C-F2 = [""]                                                                                         #
 # C-F3 = [""]                                                                                         #
 # C-F4 = [""]                                                                                         #
-# C-F5 = [""]                                                                                         #
-# C-F6 = [""]                                                                                         #
+# C-F5 = [""]                                                                                         #                           # mapped -> `alt-cmd-i`
+# C-F6 = [""]                                                                                         #                           # mapped -> `alt-cmd-n`
 # C-F7 = [""]                                                                                         #                           # mapped -> `alt-e`
 # C-F8 = [""]                                                                                         #                           # mapped -> `alt-i`
 # C-F9 = [""]                                                                                         #                           # mapped -> `alt-n`
@@ -317,8 +317,8 @@ A-F6 = ["decrement"]                                                            
 # C-F2 = [""]                                                                                         #
 # C-F3 = [""]                                                                                         #
 # C-F4 = [""]                                                                                         #
-# C-F5 = [""]                                                                                         #
-# C-F6 = [""]                                                                                         #
+# C-F5 = [""]                                                                                         #                           # mapped -> `alt-cmd-i`
+# C-F6 = [""]                                                                                         #                           # mapped -> `alt-cmd-n`
 # C-F7 = [""]                                                                                         #                           # mapped -> `alt-e`
 # C-F8 = [""]                                                                                         #                           # mapped -> `alt-i`
 # C-F9 = [""]                                                                                         #                           # mapped -> `alt-n`
@@ -462,8 +462,8 @@ A-F6 = ["decrement"]                                                            
 # C-F2 = [""]                                                                                         #
 # C-F3 = [""]                                                                                         #
 # C-F4 = [""]                                                                                         #
-# C-F5 = [""]                                                                                         #
-# C-F6 = [""]                                                                                         #
+# C-F5 = [""]                                                                                         #                           # mapped -> `alt-cmd-i`
+# C-F6 = [""]                                                                                         #                           # mapped -> `alt-cmd-n`
 # C-F7 = [""]                                                                                         #                           # mapped -> `alt-e`
 # C-F8 = [""]                                                                                         #                           # mapped -> `alt-i`
 # C-F9 = [""]                                                                                         #                           # mapped -> `alt-n`
@@ -474,9 +474,10 @@ C-F11 = ["unindent"]                                                            
 ####################################################################################################
 
 # create a new minor mode bound to `+`
-[keys.normal."+"]
-j = ":run-shell-command just show"                                                                  #
-c = ":run-shell-command cargo build"                                                                #
-t = ":run-shell-command cargo test"                                                                 #
+[keys.normal."="]
+t = ":run-shell-command tmux send-keys -t -1 'echo this is inside' Enter"
+# j = ":run-shell-command just show"                                                                  #
+# c = ":run-shell-command cargo build"                                                                #
+# t = ":run-shell-command cargo test"                                                                 #
 
 ####################################################################################################
