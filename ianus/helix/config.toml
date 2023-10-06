@@ -41,8 +41,10 @@ hidden = false                                                                  
 # escape multi cursor
 esc = ["keep_primary_selection"]                                                                    #
 
-C-s = ["insert_mode"]                                                                               #  mapped -> `alt-enter`
-# C-space = ["select_mode"]
+# return
+"ret" = ["insert_mode"]                                                                             #
+# C-s = ["insert_mode"]                                                                               #                             # mapped -> `alt-enter`
+# C-space = ["select_mode"]                                                                           #
 
 A-A = ["select_all"]                                                                                # select all
 A-B = ["shell_pipe"]                                                                                # shell mode
@@ -139,7 +141,6 @@ C-down = ["jump_view_down"]                                                     
 C-up = ["jump_view_up"]                                                                             #
 C-left = ["jump_view_left"]                                                                         # previous split
 C-right = ["jump_view_right"]                                                                       # next split
-# C-space = ["no_op"]                                                                                 # none
 
 # F1 = [""]                                                                                         #
 # F2 = [""]                                                                                         #
@@ -154,12 +155,12 @@ C-right = ["jump_view_right"]                                                   
 # F11 = [""]                                                                                        #
 # F12 = [""]                                                                                        #
 
-A-F1 = ["goto_prev_change"]                                                                         #
-A-F2 = ["goto_next_change"]                                                                         #
-# A-F3 = [""]                                                                                       #
-# A-F4 = [""]                                                                                       #
-A-F5 = ["increment"]                                                                                #
-A-F6 = ["decrement"]                                                                                #
+A-F1 = ["goto_prev_change"]                                                                         # previous git change         # mapped -> `pageup`
+A-F2 = ["goto_next_change"]                                                                         # next git change             # mapped -> `pagedown`
+# A-F3 = [""]                                                                                       #                             # mapped -> `ctrl-cmd-up`
+# A-F4 = [""]                                                                                       #                             # mapped -> `ctrl-cmd-down`
+A-F5 = ["increment"]                                                                                # increment digits            # mapped -> `alt-ctrl-cmd-shift-up`
+A-F6 = ["decrement"]                                                                                # decrement digits            # mapped -> `alt-ctrl-cmd-shift-down`
 # A-F7 = [""]                                                                                       #
 # A-F8 = [""]                                                                                       #
 # A-F9 = [""]                                                                                       #
@@ -173,15 +174,12 @@ A-F6 = ["decrement"]                                                            
 # C-F4 = [""]                                                                                       #
 # C-F5 = [""]                                                                                       #
 # C-F6 = [""]                                                                                       #
-# C-F7 = [""]                                                                                       #
-# C-F8 = [""]                                                                                       #
-# C-F9 = [""]                                                                                       #
-C-F10 = ["earlier"]                                                                                 # undo
-C-F11 = ["unindent"]                                                                                # outdent selection
+# C-F7 = [""]                                                                                       #                             # mapped -> `alt-e`
+# C-F8 = [""]                                                                                       #                             # mapped -> `alt-i`
+# C-F9 = [""]                                                                                       #                             # mapped -> `alt-n`
+C-F10 = ["earlier"]                                                                                 # undo                        # mapped -> `alt-u`
+C-F11 = ["unindent"]                                                                                # outdent selection           # mapped -> `alt-O`
 # C-F12 = [""]                                                                                      #
-
-# return
-"ret" = ["insert_mode"]
 
 ####################################################################################################
 
@@ -288,7 +286,6 @@ C-down = ["jump_view_down"]                                                     
 C-up = ["jump_view_up"]                                                                             #
 C-left = ["jump_view_left"]                                                                         # previous split
 C-right = ["jump_view_right"]                                                                       # next split
-# C-space = ["no_op"]                                                                                 # none
 
 # F1 = [""]                                                                                         #
 # F2 = [""]                                                                                         #
@@ -303,12 +300,12 @@ C-right = ["jump_view_right"]                                                   
 # F11 = [""]                                                                                        #
 # F12 = [""]                                                                                        #
 
-A-F1 = ["goto_prev_change"]                                                                         #
-A-F2 = ["goto_next_change"]                                                                         #
-# A-F3 = [""]                                                                                       #
-# A-F4 = [""]                                                                                       #
-A-F5 = ["increment"]                                                                                #
-A-F6 = ["decrement"]                                                                                #
+A-F1 = ["goto_prev_change"]                                                                         # previous git change         # mapped -> `pageup`
+A-F2 = ["goto_next_change"]                                                                         # next git change             # mapped -> `pagedown`
+# A-F3 = [""]                                                                                       #                             # mapped -> `ctrl-cmd-up`
+# A-F4 = [""]                                                                                       #                             # mapped -> `ctrl-cmd-down`
+A-F5 = ["increment"]                                                                                # increment digits            # mapped -> `alt-ctrl-cmd-shift-up`
+A-F6 = ["decrement"]                                                                                # decrement digits            # mapped -> `alt-ctrl-cmd-shift-down`
 # A-F7 = [""]                                                                                       #
 # A-F8 = [""]                                                                                       #
 # A-F9 = [""]                                                                                       #
@@ -322,11 +319,11 @@ A-F6 = ["decrement"]                                                            
 # C-F4 = [""]                                                                                       #
 # C-F5 = [""]                                                                                       #
 # C-F6 = [""]                                                                                       #
-# C-F7 = [""]                                                                                       #
-# C-F8 = [""]                                                                                       #
-# C-F9 = [""]                                                                                       #
-C-F10 = ["earlier"]                                                                                 # undo
-C-F11 = ["unindent"]                                                                                # outdent selection
+# C-F7 = [""]                                                                                       #                             # mapped -> `alt-e`
+# C-F8 = [""]                                                                                       #                             # mapped -> `alt-i`
+# C-F9 = [""]                                                                                       #                             # mapped -> `alt-n`
+C-F10 = ["earlier"]                                                                                 # undo                        # mapped -> `alt-u`
+C-F11 = ["unindent"]                                                                                # outdent selection           # mapped -> `alt-O`
 # C-F12 = [""]                                                                                      #
 
 ####################################################################################################
@@ -434,7 +431,6 @@ C-down = ["jump_view_down"]                                                     
 C-up = ["jump_view_up"]                                                                             #
 C-left = ["jump_view_left"]                                                                         # previous split
 C-right = ["jump_view_right"]                                                                       # next split
-# C-space = ["no_op"]                                                                                 # none
 
 # F1 = [""]                                                                                         #
 # F2 = [""]                                                                                         #
@@ -449,12 +445,12 @@ C-right = ["jump_view_right"]                                                   
 # F11 = [""]                                                                                        #
 # F12 = [""]                                                                                        #
 
-A-F1 = ["goto_prev_change"]                                                                         #
-A-F2 = ["goto_next_change"]                                                                         #
-# A-F3 = [""]                                                                                       #
-# A-F4 = [""]                                                                                       #
-A-F5 = ["increment"]                                                                                #
-A-F6 = ["decrement"]                                                                                #
+A-F1 = ["goto_prev_change"]                                                                         # previous git change         # mapped -> `pageup`
+A-F2 = ["goto_next_change"]                                                                         # next git change             # mapped -> `pagedown`
+# A-F3 = [""]                                                                                       #                             # mapped -> `ctrl-cmd-up`
+# A-F4 = [""]                                                                                       #                             # mapped -> `ctrl-cmd-down`
+A-F5 = ["increment"]                                                                                # increment digits            # mapped -> `alt-ctrl-cmd-shift-up`
+A-F6 = ["decrement"]                                                                                # decrement digits            # mapped -> `alt-ctrl-cmd-shift-down`
 # A-F7 = [""]                                                                                       #
 # A-F8 = [""]                                                                                       #
 # A-F9 = [""]                                                                                       #
@@ -468,11 +464,11 @@ A-F6 = ["decrement"]                                                            
 # C-F4 = [""]                                                                                       #
 # C-F5 = [""]                                                                                       #
 # C-F6 = [""]                                                                                       #
-# C-F7 = [""]                                                                                       #
-# C-F8 = [""]                                                                                       #
-# C-F9 = [""]                                                                                       #
-C-F10 = ["earlier"]                                                                                 # undo
-C-F11 = ["unindent"]                                                                                # outdent selection
+# C-F7 = [""]                                                                                       #                             # mapped -> `alt-e`
+# C-F8 = [""]                                                                                       #                             # mapped -> `alt-i`
+# C-F9 = [""]                                                                                       #                             # mapped -> `alt-n`
+C-F10 = ["earlier"]                                                                                 # undo                        # mapped -> `alt-u`
+C-F11 = ["unindent"]                                                                                # outdent selection           # mapped -> `alt-O`
 # C-F12 = [""]                                                                                      #
 
 ####################################################################################################
