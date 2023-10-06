@@ -68,6 +68,56 @@
                     {
                         "manipulators": [
                             {
+                                "description": "Bypass collision.",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f5",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Bypass collision.",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f6",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
                                 "description": "Bypass accent ´.",
                                 "from": {
                                     "key_code": "e",
@@ -164,7 +214,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Alt-Shift-o.",
+                                "description": "Bypass collision.",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
