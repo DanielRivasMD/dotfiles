@@ -32,7 +32,7 @@ map Q goToRoot
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " modes
-map ` enterInsertMode
+map <a-enter> enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
 
@@ -46,7 +46,7 @@ map <c-a-m-space> LinkHints.activateModeToDownloadLink
 
 map <c-m-enter> LinkHints.activateMode
 
-map <a-enter> LinkHints.activateModeToOpenInNewTab
+map <c-enter> LinkHints.activateModeToOpenInNewTab
 map <m-enter> LinkHints.activateModeToOpenInNewForegroundTab
 map <c-a-m-enter> LinkHints.activateModeWithQueue
 
