@@ -1,9 +1,8 @@
-// TODO: binding collisions
 {
   "Delete": "Delete",
   "MouseRight": "MouseMultiCursor",
-
   "Alt-/": "lua:comment.comment",
+
   "Alt-A": "SelectAll",
   "Alt-B": "ShellMode",
   "Alt-C": "lua:comment.comment",
@@ -26,7 +25,7 @@
   "Alt-T": "AddTab,OpenFile",
   "Alt-U": "Redo",
   "Alt-V": "VSplit",
-  "Alt-W": "",
+  "Alt-W": "",                                                                                      // TODO: word wrap
   "Alt-X": "CutLine",
   "Alt-Y": "CopyLine",
   "Alt-Z": "Unsplit",
@@ -60,30 +59,30 @@
 
   "Ctrl-a": "StartOfLine",                                                                          // mapped -> `cmd-left`
   "Ctrl-b": "CommandMode",                                                                          // mapped -> `alt-b`
-  // "Ctrl-c": "None",
-  // "Ctrl-d": "None",
+  "Ctrl-c": "None",
+  "Ctrl-d": "None",
   "Ctrl-e": "EndOfLine",                                                                            // mapped -> `cmd-right`
   "Ctrl-f": "FindLiteral",                                                                          // mapped -> `alt-f`
-  // "Ctrl-g": "None",                                                                              // mapped -> `ctrl-cmd-enter`
-  // "Ctrl-h": "None",                                                                              // mapped -> `alt-ctrl-cmd-enter`
-  // "Ctrl-i": "None",
-  // "Ctrl-j": "None",                                                                              // mapped -> `alt-cmd-enter`
+  "Ctrl-g": "None",                                                                                 // mapped -> `ctrl-cmd-enter`
+  "Ctrl-h": "None",                                                                                 // mapped -> `alt-ctrl-cmd-enter`
+  "Ctrl-i": "None",
+  "Ctrl-j": "None",                                                                                 // mapped -> `alt-cmd-enter`
   "Ctrl-k": "SelectToEndOfLine,Delete",
-  // "Ctrl-l": "None",
-  // "Ctrl-m": "None",
-  // "Ctrl-n": "None",                                                                              // mapped -> `alt-ctrl-enter`
+  "Ctrl-l": "None",
+  "Ctrl-m": "None",
+  "Ctrl-n": "None",                                                                                 // mapped -> `alt-ctrl-enter`
   "Ctrl-o": "PreviousTab",                                                                          // mapped -> `alt-cmd-,`
   "Ctrl-p": "NextTab",                                                                              // mapped -> `alt-cmd-.`
-  // "Ctrl-q": "None",
-  // "Ctrl-r": "None",                                                                              // mapped -> `ctrl-enter`
+  "Ctrl-q": "None",
+  "Ctrl-r": "None",                                                                                 // mapped -> `ctrl-enter`
   "Ctrl-s": "JumpLine",                                                                             // mapped -> `alt-enter`
-  // "Ctrl-t": "None",                                                                              // mapped -> `cmd-enter`
+  "Ctrl-t": "None",                                                                                 // mapped -> `cmd-enter`
   "Ctrl-u": "SelectToStartOfLine,Delete",
-  // "Ctrl-v": "None",                                                                              // mapped -> `alt-cmd-/`
+  "Ctrl-v": "None",                                                                                 // mapped -> `alt-cmd-/`
   "Ctrl-w": "DeleteWordLeft",
-  // "Ctrl-x": "None",                                                                              // mapped -> `shift-enter`
-  // "Ctrl-y": "None",
-  // "Ctrl-z": "None",
+  "Ctrl-x": "None",                                                                                 // mapped -> `shift-enter`
+  "Ctrl-y": "None",
+  "Ctrl-z": "None",
 
   "AltDown": "ParagraphNext",
   "AltUp": "ParagraphPrevious",
@@ -96,7 +95,7 @@
   "AltShiftRight": "SelectWordRight",
 
   "CtrlDown": "None",
-  "CtrlUp": "",
+  "CtrlUp": "None",
   "CtrlLeft": "PreviousSplit",
   "CtrlRight": "NextSplit",
   "CtrlSpace": "Autocomplete",
@@ -115,8 +114,8 @@
   "F11": "None",
   "F12": "None",
 
-  "Alt-F1": "DiffPrevious",                                                                         // mapped -> `alt-cmd-up`
-  "Alt-F2": "DiffNext",                                                                             // mapped -> `alt-cmd-down`
+  "Alt-F1": "DiffPrevious",                                                                         // mapped -> `pageup`
+  "Alt-F2": "DiffNext",                                                                             // mapped -> `pagedown`
   "Alt-F3": "None",                                                                                 // mapped -> `ctrl-cmd-up`
   "Alt-F4": "None",                                                                                 // mapped -> `ctlr-cmd-down
   "Alt-F5": "None",                                                                                 // mapped -> `alt-ctrl-cmd-shift-up`
