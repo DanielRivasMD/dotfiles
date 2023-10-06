@@ -2,36 +2,36 @@
 # theme
 ####################################################################################################
 
-# theme = "adwaita-dark"
-theme = "base16_transparent"
-# theme = "dark_plus"
-# theme = "fleet_dark"
-# theme = "github_dark"
-# theme = "molokai"
-# theme = "snazzy"
+# theme = "adwaita-dark"                                                                            #
+theme = "base16_transparent"                                                                        #
+# theme = "dark_plus"                                                                               #
+# theme = "fleet_dark"                                                                              #
+# theme = "github_dark"                                                                             #
+# theme = "molokai"                                                                                 #
+# theme = "snazzy"                                                                                  #
 
 ####################################################################################################
 
 [editor]
 # line-number = "relative"
-mouse = true
-rulers = [80]
-shell = ["zsh", "-c"]
-bufferline = "always"
+mouse = true                                                                                        #
+rulers = [80]                                                                                       #
+shell = ["zsh", "-c"]                                                                               #
+bufferline = "always"                                                                               #
 
 ####################################################################################################
 
 # cursor shape
 [editor.cursor-shape]
-insert = "bar"
-normal = "underline"
-select = "block"
+insert = "bar"                                                                                      #
+normal = "underline"                                                                                #
+select = "block"                                                                                    #
 
 ####################################################################################################
 
 # file picker
 [editor.file-picker]
-hidden = false
+hidden = false                                                                                      #
 
 ####################################################################################################
 
@@ -39,7 +39,7 @@ hidden = false
 [keys.normal]
 
 # escape multi cursor
-esc = ["keep_primary_selection"]                                                                 #
+esc = ["keep_primary_selection"]                                                                    #
 
 C-s = ["insert_mode"]                                                                               #  mapped -> `alt-enter`
 # C-space = ["select_mode"]
@@ -177,7 +177,7 @@ A-F6 = ["decrement"]                                                            
 # C-F8 = [""]                                                                                       #
 # C-F9 = [""]                                                                                       #
 C-F10 = ["earlier"]                                                                                 # undo
-C-F11 = ["unindent"]                                                                                #
+C-F11 = ["unindent"]                                                                                # outdent selection
 # C-F12 = [""]                                                                                      #
 
 # return
@@ -189,9 +189,9 @@ C-F11 = ["unindent"]                                                            
 [keys.insert]
 
 # escape multi cursor
-esc = ["keep_primary_selection"]                                                                 #
+esc = ["keep_primary_selection"]                                                                    #
 
-C-space = ["normal_mode"]
+C-space = ["normal_mode"]                                                                           #
 
 A-A = ["select_all"]                                                                                # select all
 A-B = ["shell_pipe"]                                                                                # shell mode
@@ -326,7 +326,7 @@ A-F6 = ["decrement"]                                                            
 # C-F8 = [""]                                                                                       #
 # C-F9 = [""]                                                                                       #
 C-F10 = ["earlier"]                                                                                 # undo
-C-F11 = ["unindent"]                                                                                #
+C-F11 = ["unindent"]                                                                                # outdent selection
 # C-F12 = [""]                                                                                      #
 
 ####################################################################################################
@@ -335,9 +335,9 @@ C-F11 = ["unindent"]                                                            
 [keys.select]
 
 # escape multi cursor
-esc = ["keep_primary_selection"]                                                                 #
+esc = ["keep_primary_selection"]                                                                    #
 
-C-space = ["normal_mode"]
+C-space = ["normal_mode"]                                                                           #
 
 A-A = ["select_all"]                                                                                # select all
 A-B = ["shell_pipe"]                                                                                # shell mode
@@ -472,15 +472,15 @@ A-F6 = ["decrement"]                                                            
 # C-F8 = [""]                                                                                       #
 # C-F9 = [""]                                                                                       #
 C-F10 = ["earlier"]                                                                                 # undo
-C-F11 = ["unindent"]                                                                                #
+C-F11 = ["unindent"]                                                                                # outdent selection
 # C-F12 = [""]                                                                                      #
 
 ####################################################################################################
 
 # create a new minor mode bound to `+`
 [keys.normal."+"]
-j = ":run-shell-command just show"
-c = ":run-shell-command cargo build"
-t = ":run-shell-command cargo test"
+j = ":run-shell-command just show"                                                                  #
+c = ":run-shell-command cargo build"                                                                #
+t = ":run-shell-command cargo test"                                                                 #
 
 ####################################################################################################
