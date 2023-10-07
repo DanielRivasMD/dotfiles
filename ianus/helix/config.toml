@@ -119,9 +119,6 @@ C-w = ["delete_word_backward"]                                                  
 # C-y = [""]                                                                                          # none
 # C-z = [""]                                                                                          # none
 
-S-up = ["extend_line_above"]
-S-down = ["extend_line_below"]
-
 A-up = ["goto_prev_paragraph"]                                                                      # paragraph previous
 A-down = ["goto_next_paragraph"]                                                                    # paragraph next
 A-left = ["select_mode", "goto_line_start", "normal_mode"]                                          # select to start of line     # mapped -> `shift-cmd-left`
@@ -136,6 +133,11 @@ C-up = ["jump_view_up"]                                                         
 C-down = ["jump_view_down"]                                                                         #
 C-left = ["jump_view_left"]                                                                         # previous split
 C-right = ["jump_view_right"]                                                                       # next split
+
+S-up = ["extend_line_above"]                                                                        #
+S-down = ["extend_line_below"]                                                                      #
+S-left = ["extend_char_left"]                                                                       #
+S-right = ["extend_char_right"]                                                                     #
 
 # F1 = [""]                                                                                           #
 # F2 = [""]                                                                                           #
