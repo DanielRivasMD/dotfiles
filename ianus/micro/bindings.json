@@ -3,13 +3,13 @@
   "MouseRight": "MouseMultiCursor",
   "Alt-/": "lua:comment.comment",
 
-  "Alt-A": "SelectAll",
+  "Alt-A": "",
   "Alt-B": "ShellMode",
   "Alt-C": "lua:comment.comment",
   "Alt-D": "DuplicateLine",
   "Alt-E": "",
   "Alt-F": "Find",
-  "Alt-G": "CursorEnd",                                                                             // mapped -> `cmd-down`
+  "Alt-G": "",
   "Alt-H": "HSplit",
   "Alt-I": "IndentSelection",
   "Alt-J": "MoveLinesDown",
@@ -30,13 +30,13 @@
   "Alt-Y": "CopyLine",
   "Alt-Z": "Unsplit",
 
-  "Alt-a": "",
+  "Alt-a": "SelectAll",
   "Alt-b": "WordLeft",                                                                              // mapped -> `alt-left`
   "Alt-c": "Copy",
   "Alt-d": "SpawnMultiCursor",
   "Alt-e": "None",                                                                                  // remapped => accent
   "Alt-f": "WordRight",                                                                             // mapped -> `alt-right`
-  "Alt-g": "CursorStart",                                                                           // mapped -> `cmd-up`
+  "Alt-g": "",
   "Alt-h": "FindPrevious",
   "Alt-i": "None",                                                                                  // remapped => accent
   "Alt-j": "SpawnMultiCursorDown",
@@ -44,7 +44,7 @@
   "Alt-l": "FindNext",
   "Alt-m": "",
   "Alt-n": "None",                                                                                  // remapped => accent
-  "Alt-o": "None",
+  "Alt-o": "",
   "Alt-p": "JumpToMatchingBrace",
   "Alt-q": "Quit",
   "Alt-r": "ToggleMacro",
@@ -120,10 +120,10 @@
   "Alt-F4": "None",                                                                                 // mapped -> `ctlr-cmd-down
   "Alt-F5": "None",                                                                                 // mapped -> `alt-ctrl-cmd-shift-up`
   "Alt-F6": "None",                                                                                 // mapped -> `alt-ctrl-cmd-shift-down`
-  "Alt-F7": "None",                                                                                 // mapped -> ``
-  "Alt-F8": "None",                                                                                 // mapped -> ``
-  "Alt-F9": "None",                                                                                 // mapped -> ``
-  "Alt-F10": "None",                                                                                // mapped -> ``
+  "Alt-F7": "CursorStart",                                                                          // mapped -> `cmd-up`
+  "Alt-F8": "CursorEnd",                                                                            // mapped -> `cmd-down`
+  "Alt-F9": "None",                                                                                 // mapped -> `shift-cmd-up`
+  "Alt-F10": "None",                                                                                // mapped -> `shift-cmd-down`
   "Alt-F11": "None",                                                                                // mapped -> ``
   "Alt-F12": "None",                                                                                // mapped -> ``
 
