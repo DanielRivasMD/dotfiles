@@ -38,33 +38,6 @@ hidden = false                                                                  
 # normal mode
 [keys.normal]
 
-# A-A = [""]                                                                                          #
-A-B = ["shell_pipe"]                                                                                # shell mode
-A-C = ["toggle_comments"]                                                                           # toggle comment
-A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
-# A-E = [""]                                                                                          #
-A-F = ["rsearch"]                                                                                   # find
-# A-G = [""]                                                                                          #
-A-H = [":hsplit-new"]                                                                               # horizontal split
-A-I = ["indent"]                                                                                    # indent selection
-A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
-A-K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]                 # move lines up
-A-L = ["extend_line_below"]                                                                         # select line
-# A-M = [""]                                                                                          #
-# A-N = [""]                                                                                          #
-# A-O = [""]                                                                                          #                           # remapped => unknown collision
-# A-P = [""]                                                                                        #
-A-Q = [":quit-all"]                                                                                 # quit all
-A-R = ["replay_macro"]                                                                              # play macro
-A-S = [":write-quit-all"]                                                                           # save & quit all
-# A-T = [""]                                                                                          #
-A-U = ["later"]                                                                                     # redo
-A-V = [":vsplit-new"]                                                                               # vertical split
-# A-W = [""]                                                                                          #
-A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
-A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
-A-Z = ["wonly"]                                                                                     # unsplit
-
 A-a = ["select_all"]                                                                                # select all
 A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                                                  # copy
@@ -91,6 +64,33 @@ A-w = [":write"]                                                                
 A-x = ["delete_selection"]                                                                          # cut
 A-y = ["search_selection", "search_next"]                                                           # skip multi cursor
 A-z = ["search_selection", "search_prev"]                                                           # remove multi cursor
+
+# A-A = [""]                                                                                          #
+A-B = ["shell_pipe"]                                                                                # shell mode
+A-C = ["toggle_comments"]                                                                           # toggle comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
+# A-E = [""]                                                                                          #
+A-F = ["rsearch"]                                                                                   # find
+# A-G = [""]                                                                                          #
+A-H = [":hsplit-new"]                                                                               # horizontal split
+A-I = ["indent"]                                                                                    # indent selection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
+A-K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]                 # move lines up
+A-L = ["extend_line_below"]                                                                         # select line
+# A-M = [""]                                                                                          #
+# A-N = [""]                                                                                          #
+# A-O = [""]                                                                                          #                           # remapped => unknown collision
+# A-P = [""]                                                                                        #
+A-Q = [":quit-all"]                                                                                 # quit all
+A-R = ["replay_macro"]                                                                              # play macro
+A-S = [":write-quit-all"]                                                                           # save & quit all
+# A-T = [""]                                                                                          #
+A-U = ["later"]                                                                                     # redo
+A-V = [":vsplit-new"]                                                                               # vertical split
+# A-W = [""]                                                                                          #
+A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
+A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
+A-Z = ["wonly"]                                                                                     # unsplit
 
 C-a = ["goto_line_start"]                                                                           # start of line               # mapped ->
 C-b = ["command_mode"]                                                                              # command mode                # mapped -> `alt-b`
@@ -196,33 +196,6 @@ C-F11 = ["unindent"]                                                            
 # insert mode
 [keys.insert]
 
-# A-A = [""]                                                                                          #
-A-B = ["shell_pipe"]                                                                                # shell mode
-A-C = ["toggle_comments"]                                                                           # toggle comment
-A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
-# A-E = [""]                                                                                          #
-A-F = ["rsearch"]                                                                                   # find
-# A-G = [""]                                                                                          #
-A-H = [":hsplit-new"]                                                                               # horizontal split
-A-I = ["indent"]                                                                                    # indent selection
-A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
-A-K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]                 # move lines up
-A-L = ["extend_line_below"]                                                                         # select line
-# A-M = [""]                                                                                          #
-# A-N = [""]                                                                                          #
-# A-O = [""]                                                                                          #                           # remapped => unknown collision
-# A-P = [""]                                                                                        #
-A-Q = [":quit-all"]                                                                                 # quit all
-A-R = ["replay_macro"]                                                                              # play macro
-A-S = [":write-quit-all"]                                                                           # save & quit all
-# A-T = [""]                                                                                          #
-A-U = ["later"]                                                                                     # redo
-A-V = [":vsplit-new"]                                                                               # vertical split
-# A-W = [""]                                                                                          #
-A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
-A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
-A-Z = ["wonly"]                                                                                     # unsplit
-
 A-a = ["select_all"]                                                                                # select all
 A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                                                  # copy
@@ -249,6 +222,33 @@ A-w = [":write"]                                                                
 A-x = ["delete_selection"]                                                                          # cut
 A-y = ["search_selection", "search_next"]                                                           # skip multi cursor
 A-z = ["search_selection", "search_prev"]                                                           # remove multi cursor
+
+# A-A = [""]                                                                                          #
+A-B = ["shell_pipe"]                                                                                # shell mode
+A-C = ["toggle_comments"]                                                                           # toggle comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
+# A-E = [""]                                                                                          #
+A-F = ["rsearch"]                                                                                   # find
+# A-G = [""]                                                                                          #
+A-H = [":hsplit-new"]                                                                               # horizontal split
+A-I = ["indent"]                                                                                    # indent selection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
+A-K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]                 # move lines up
+A-L = ["extend_line_below"]                                                                         # select line
+# A-M = [""]                                                                                          #
+# A-N = [""]                                                                                          #
+# A-O = [""]                                                                                          #                           # remapped => unknown collision
+# A-P = [""]                                                                                        #
+A-Q = [":quit-all"]                                                                                 # quit all
+A-R = ["replay_macro"]                                                                              # play macro
+A-S = [":write-quit-all"]                                                                           # save & quit all
+# A-T = [""]                                                                                          #
+A-U = ["later"]                                                                                     # redo
+A-V = [":vsplit-new"]                                                                               # vertical split
+# A-W = [""]                                                                                          #
+A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
+A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
+A-Z = ["wonly"]                                                                                     # unsplit
 
 C-a = ["goto_line_start"]                                                                           # start of line               # mapped ->
 C-b = ["command_mode"]                                                                              # command mode                # mapped -> `alt-b`
@@ -354,33 +354,6 @@ C-F11 = ["unindent"]                                                            
 # select mode
 [keys.select]
 
-# A-A = [""]                                                                                          #
-A-B = ["shell_pipe"]                                                                                # shell mode
-A-C = ["toggle_comments"]                                                                           # toggle comment
-A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
-# A-E = [""]                                                                                          #
-A-F = ["rsearch"]                                                                                   # find
-# A-G = [""]                                                                                          #
-A-H = [":hsplit-new"]                                                                               # horizontal split
-A-I = ["indent"]                                                                                    # indent selection
-A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
-A-K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]                 # move lines up
-A-L = ["extend_line_below"]                                                                         # select line
-# A-M = [""]                                                                                          #
-# A-N = [""]                                                                                          #
-# A-O = [""]                                                                                          #                           # remapped => unknown collision
-# A-P = [""]                                                                                        #
-A-Q = [":quit-all"]                                                                                 # quit all
-A-R = ["replay_macro"]                                                                              # play macro
-A-S = [":write-quit-all"]                                                                           # save & quit all
-# A-T = [""]                                                                                          #
-A-U = ["later"]                                                                                     # redo
-A-V = [":vsplit-new"]                                                                               # vertical split
-# A-W = [""]                                                                                          #
-A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
-A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
-A-Z = ["wonly"]                                                                                     # unsplit
-
 A-a = ["select_all"]                                                                                # select all
 A-b = ["move_prev_word_start"]                                                                      # word left                   # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                                                  # copy
@@ -407,6 +380,33 @@ A-w = [":write"]                                                                
 A-x = ["delete_selection"]                                                                          # cut
 A-y = ["search_selection", "search_next"]                                                           # skip multi cursor
 A-z = ["search_selection", "search_prev"]                                                           # remove multi cursor
+
+# A-A = [""]                                                                                          #
+A-B = ["shell_pipe"]                                                                                # shell mode
+A-C = ["toggle_comments"]                                                                           # toggle comment
+A-D = ["extend_to_line_bounds", "yank", "paste_after"]                                              # duplicate line
+# A-E = [""]                                                                                          #
+A-F = ["rsearch"]                                                                                   # find
+# A-G = [""]                                                                                          #
+A-H = [":hsplit-new"]                                                                               # horizontal split
+A-I = ["indent"]                                                                                    # indent selection
+A-J = ["extend_to_line_bounds", "delete_selection", "paste_after"]                                  # move lines down
+A-K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]                 # move lines up
+A-L = ["extend_line_below"]                                                                         # select line
+# A-M = [""]                                                                                          #
+# A-N = [""]                                                                                          #
+# A-O = [""]                                                                                          #                           # remapped => unknown collision
+# A-P = [""]                                                                                        #
+A-Q = [":quit-all"]                                                                                 # quit all
+A-R = ["replay_macro"]                                                                              # play macro
+A-S = [":write-quit-all"]                                                                           # save & quit all
+# A-T = [""]                                                                                          #
+A-U = ["later"]                                                                                     # redo
+A-V = [":vsplit-new"]                                                                               # vertical split
+# A-W = [""]                                                                                          #
+A-X = ["extend_to_line_bounds", "delete_selection"]                                                 # cut line
+A-Y = ["extend_to_line_bounds", "yank"]                                                             # copy line
+A-Z = ["wonly"]                                                                                     # unsplit
 
 C-a = ["goto_line_start"]                                                                           # start of line               # mapped ->
 C-b = ["command_mode"]                                                                              # command mode                # mapped -> `alt-b`

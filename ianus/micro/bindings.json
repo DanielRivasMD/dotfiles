@@ -3,33 +3,6 @@
   "MouseRight": "MouseMultiCursor",
   "Alt-/": "lua:comment.comment",
 
-  "Alt-A": "",
-  "Alt-B": "ShellMode",
-  "Alt-C": "lua:comment.comment",
-  "Alt-D": "DuplicateLine",
-  "Alt-E": "",
-  "Alt-F": "Find",
-  "Alt-G": "",
-  "Alt-H": "HSplit",
-  "Alt-I": "IndentSelection",
-  "Alt-J": "MoveLinesDown",
-  "Alt-K": "MoveLinesUp",
-  "Alt-L": "SelectLine",
-  "Alt-M": "",
-  "Alt-N": "",
-  "Alt-O": "",                                                                                      // remapped => unknown collision
-  "Alt-P": "",
-  "Alt-Q": "QuitAll",
-  "Alt-R": "PlayMacro",
-  "Alt-S": "Save,QuitAll",
-  "Alt-T": "AddTab,OpenFile",
-  "Alt-U": "Redo",
-  "Alt-V": "VSplit",
-  "Alt-W": "",                                                                                      // TODO: word wrap
-  "Alt-X": "CutLine",
-  "Alt-Y": "CopyLine",
-  "Alt-Z": "Unsplit",
-
   "Alt-a": "SelectAll",
   "Alt-b": "WordLeft",                                                                              // mapped -> `alt-left`
   "Alt-c": "Copy",
@@ -56,6 +29,33 @@
   "Alt-x": "Cut",
   "Alt-y": "SkipMultiCursor",
   "Alt-z": "RemoveMultiCursor",
+
+  "Alt-A": "",
+  "Alt-B": "ShellMode",
+  "Alt-C": "lua:comment.comment",
+  "Alt-D": "DuplicateLine",
+  "Alt-E": "",
+  "Alt-F": "Find",
+  "Alt-G": "",
+  "Alt-H": "HSplit",
+  "Alt-I": "IndentSelection",
+  "Alt-J": "MoveLinesDown",
+  "Alt-K": "MoveLinesUp",
+  "Alt-L": "SelectLine",
+  "Alt-M": "",
+  "Alt-N": "",
+  "Alt-O": "",                                                                                      // remapped => unknown collision
+  "Alt-P": "",
+  "Alt-Q": "QuitAll",
+  "Alt-R": "PlayMacro",
+  "Alt-S": "Save,QuitAll",
+  "Alt-T": "AddTab,OpenFile",
+  "Alt-U": "Redo",
+  "Alt-V": "VSplit",
+  "Alt-W": "",                                                                                      // TODO: word wrap
+  "Alt-X": "CutLine",
+  "Alt-Y": "CopyLine",
+  "Alt-Z": "Unsplit",
 
   "Ctrl-a": "StartOfLine",                                                                          // mapped -> `cmd-left`
   "Ctrl-b": "CommandMode",                                                                          // mapped -> `alt-b`
