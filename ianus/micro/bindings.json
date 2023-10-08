@@ -71,8 +71,8 @@
   "Ctrl-l": "None",
   "Ctrl-m": "None",
   "Ctrl-n": "None",                                                             // mapped -> `alt-ctrl-enter`
-  "Ctrl-o": "PreviousTab",                                                      // mapped -> `alt-cmd-,`
-  "Ctrl-p": "NextTab",                                                          // mapped -> `alt-cmd-.`
+  "Ctrl-o": "None",                                                             // mapped -> `alt-cmd-,`
+  "Ctrl-p": "None",                                                             // mapped -> `alt-cmd-.`
   "Ctrl-q": "None",
   "Ctrl-r": "None",                                                             // mapped -> `ctrl-enter`
   "Ctrl-s": "JumpLine",                                                         // mapped -> `alt-enter`
@@ -124,8 +124,8 @@
   "Alt-F8": "CursorEnd",                                                        // mapped -> `cmd-down`
   "Alt-F9": "None",                                                             // mapped -> `shift-cmd-up`
   "Alt-F10": "None",                                                            // mapped -> `shift-cmd-down`
-  "Alt-F11": "None",                                                            // mapped -> ``
-  "Alt-F12": "None",                                                            // mapped -> ``
+  "Alt-F11": "PreviousTab",                                                            // mapped -> ``
+  "Alt-F12": "NextTab",                                                            // mapped -> ``
 
   "Ctrl-F1": "None",                                                            // mapped -> ``
   "Ctrl-F2": "None",                                                            // mapped -> ``
