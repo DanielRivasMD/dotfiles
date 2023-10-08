@@ -23,8 +23,8 @@ bufferline = "always"                                                           
 
 # cursor shape
 [editor.cursor-shape]
-insert = "bar"                                                                  #
 normal = "underline"                                                            #
+insert = "bar"                                                                  #
 select = "block"                                                                #
 
 ####################################################################################################
@@ -54,9 +54,9 @@ A-l = ["search_next"]                                                           
 # A-n = [""]                                                                      #                   # remapped => accent
 # A-o = [""]                                                                      #
 A-p = ["match_brackets"]                                                        # jump matching brace
-A-q = [":quit"]                                                                 # quit
+A-q = [":buffer-close"]                                                         # close buffer
 A-r = ["record_macro"]                                                          # toggle macro
-A-s = [":write-quit"]                                                           # save & quit
+A-s = [":write-buffer-close"]                                                   # save & close buffer
 # A-t = [""]                                                                      #
 # A-u = [""]                                                                      #                   # remapped => accent
 A-v = ["paste_after"]                                                           # paste
@@ -81,9 +81,9 @@ A-L = ["extend_line_below"]                                                     
 # A-N = [""]                                                                      #
 # A-O = [""]                                                                      #                   # remapped => unknown collision
 # A-P = [""]                                                                    #
-A-Q = [":quit-all"]                                                             # quit all
+A-Q = [":quit"]                                                                 # quit all
 A-R = ["replay_macro"]                                                          # play macro
-A-S = [":write-quit-all"]                                                       # save & quit all
+A-S = [":write-quit"]                                                           # save & quit all
 # A-T = [""]                                                                      #
 A-U = ["later"]                                                                 # redo
 A-V = [":vsplit-new"]                                                           # vertical split
@@ -199,7 +199,6 @@ del = ["delete_selection_noyank"]                                               
 
 # return
 ret = ["insert_mode"]                                                           #
-C-s = [":config-reload"]                                                        #                   # mapped -> `alt-enter`
 
 ####################################################################################################
 
@@ -527,10 +526,10 @@ del = ["delete_selection_noyank"]                                               
 
 # create a new minor mode bound to `+`
 [keys.normal."="]
-r = ["yank_joined_to_clipboard", ":run-shell-command tmux send-keys -t -1 ```eval(str2expression(system('pbpaste', intern = T)))``` Enter"]
-j = ["yank_joined_to_clipboard", ":run-shell-command tmux send-keys -t -1 eval(str2expression(system('pbpaste', intern = T))) Enter"]
-# c = ":run-shell-command cargo build"                                            #
-# t = ":run-shell-command cargo test"                                             #
+r = ["yank_joined_to_clipboard", ":sh tmux send-keys -t -1 ```eval(str2expression(system('pbpaste', intern = T)))``` Enter"]
+j = ["yank_joined_to_clipboard", ":sh tmux send-keys -t -1 eval(str2expression(system('pbpaste', intern = T))) Enter"]
+# c = ":sh cargo build"                                            #
+# t = ":sh cargo test"                                             #
 
 ####################################################################################################
 
