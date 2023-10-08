@@ -191,12 +191,15 @@ C-F11 = ["unindent"]                                                            
 # S-F11 = [""]                                                                    #
 # S-F12 = [""]                                                                    #
 
-# esc = ["collapse_selection"]                                                    #
+# escape selections
+esc = ["collapse_selection", "keep_primary_selection"]                          #
+
+# delete selections
+del = ["delete_selection_noyank"]                                               #
 
 # return
-"ret" = ["insert_mode"]                                                         #
+ret = ["insert_mode"]                                                           #
 C-s = [":config-reload"]                                                        #                   # mapped -> `alt-enter`
-# C-space = ["keep_primary_selection"]                                            #
 
 ####################################################################################################
 
@@ -356,6 +359,9 @@ C-F11 = ["unindent"]                                                            
 # S-F11 = [""]                                                                    #
 # S-F12 = [""]                                                                    #
 
+# delete selections
+del = ["delete_selection_noyank"]                                               #
+
 ####################################################################################################
 
 # select mode
@@ -513,6 +519,9 @@ C-F11 = ["unindent"]                                                            
 # S-F10 = [""]                                                                    #
 # S-F11 = [""]                                                                    #
 # S-F12 = [""]                                                                    #
+
+# delete selections
+del = ["delete_selection_noyank"]                                               #
 
 ####################################################################################################
 
