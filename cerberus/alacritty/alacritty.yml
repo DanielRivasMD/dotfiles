@@ -1356,7 +1356,7 @@ key_bindings:
   - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
   # - { key: Left,        mods: Alt|Control,                chars: ""             } #
   - { key: Left,        mods: Alt|Command,                chars: "\x11p"        } # tmux next-window
-  # - { key: Left,        mods: Control|Command,            chars: ""             } #
+  - { key: Left,        mods: Control|Command,            chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
   - { key: Left,        mods: Alt|Control|Command,        chars: "\x11h"        } #
   # - { key: Left,        mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Left,        mods: Alt|Control|Command|Shift,  chars: ""             } # collision
@@ -1371,7 +1371,7 @@ key_bindings:
   - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
   # - { key: Right,       mods: Alt|Control,                chars: ""             } #
   - { key: Right,       mods: Alt|Command,                chars: "\x11n"        } # tmux previous-window
-  # - { key: Right,       mods: Control|Command,            chars: ""             } #
+  - { key: Right,       mods: Control|Command,            chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
   - { key: Right,       mods: Alt|Control|Command,        chars: "\x11l"        } #
   # - { key: Right,       mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Right,       mods: Alt|Control|Command|Shift,  chars: ""             } # collision
