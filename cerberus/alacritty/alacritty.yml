@@ -1381,8 +1381,8 @@ key_bindings:
   # - { key: Up,              mods: Alt|Shift,                        chars: ""                       } #
   - { key: Up,              mods: Control,                          chars: "\x1b[1;5A"              } #
   # - { key: Up,              mods: Control|Shift,                    chars: ""                       } #
-  - { key: Up,              mods: Command,                          chars: "\x1bg"                  } # mapped -> Alt g
-  # - { key: Up,              mods: Command|Shift,                    chars: ""                       } #
+  - { key: Up,              mods: Command,                          chars: "\x1b[18;3~"                  } # mapped -> Alt g
+  - { key: Up,              mods: Command|Shift,                    chars: "\x1b[20;3~"                       } #
   # - { key: Up,              mods: Alt|Control,                      chars: ""                       } #
   # - { key: Up,              mods: Alt|Command,                      chars: ""                       } #
   - { key: Up,              mods: Control|Command,                  chars: "\x1b[1;3R"              } # mapped -> Alt F3
@@ -1395,8 +1395,8 @@ key_bindings:
   # - { key: Down,            mods: Alt|Shift,                        chars: ""                       } #
   - { key: Down,            mods: Control,                          chars: "\x1b[1;5B"              } #
   # - { key: Down,            mods: Control|Shift,                    chars: ""                       } #
-  - { key: Down,            mods: Command,                          chars: "\x1bG"                  } # mapped -> Alt G
-  # - { key: Down,            mods: Command|Shift,                    chars: ""                       } #
+  - { key: Down,            mods: Command,                          chars: "\x1b[19;3~"                  } # mapped -> Alt G
+  - { key: Down,            mods: Command|Shift,                    chars: "\x1b[21;3~"                       } #
   # - { key: Down,            mods: Alt|Control,                      chars: ""                       } #
   # - { key: Down,            mods: Alt|Command,                      chars: ""                       } #
   - { key: Down,            mods: Control|Command,                  chars: "\x1b[1;3S"              } # mapped -> Alt F4
