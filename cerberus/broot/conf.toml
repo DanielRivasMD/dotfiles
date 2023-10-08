@@ -65,13 +65,6 @@ execution = "hx {file}"
 leave_broot = false
 description = "open file with `helix` editor -> `alt-cmd-enter`"
 
-[[verbs]]
-invocation = "create {subpath}"
-shortcut = "c"
-execution = "touch {directory}/{subpath}"
-leave_broot = false
-description = "create file"
-
 # search
 [[verbs]]
 invocation = "total_search"
@@ -94,15 +87,15 @@ description = "go to previous match"
 # view
 [[verbs]]
 invocation = "toggle_files"
-key = "shift-alt-f"
+key = "ctrl-o"                          # mapped -> `alt-cmd-,`
 internal = ":toggle_files"
-description = "toggle files"
+description = "toggle files -> `alt-cmd-,`"
 
 [[verbs]]
 invocation = "toggle_hidden"
-key = "shift-alt-d"
+key = "ctrl-p"                          # mapped -> `alt-cmd-.`
 internal = "toggle_hidden"
-description = "toggle hidden"
+description = "toggle hidden -> `alt-cmd-.`"
 
 # pager
 [[verbs]]
@@ -147,19 +140,12 @@ external = "bat --paging always --plain {file}"
 leave_broot = true
 description = "open file with `bat` to copy"
 
-# print
-[[verbs]]
-invocation = "print_tree"
-key = "ctrl-v"                          # mapped -> `alt-cmd-/`
-internal = "print_tree"
-description = "print tree and leaves broot"
-
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
-key = "ctrl-g"                          # mapped -> `ctrl-cmd-space`
+key = "ctrl-v"                          # mapped -> `alt-cmd-/`
 internal = "toggle_git_ignore"
-description = "toggle git ignore"
+description = "toggle git ignore -> `alt-cmd-/`"
 
 # sort
 [[verbs]]
@@ -214,15 +200,15 @@ description = "stage all matching files"
 # move
 [[verbs]]
 invocation = "select_first"
-key = "alt-g"                           # mapped -> `cmd-up`
+key = "alt-F7"                         # mapped -> `cmd-up`
 internal = "select_first"
-description = "go to top of the list"
+description = "go to top of the list -> `cmd-up`"
 
 [[verbs]]
 invocation = "select_last"
-key = "shift-alt-g"                     # mapped -> `cmd-down`
+key = "alt-F8"                         # mapped -> `cmd-down`
 internal = "select_last"
-description = "go to bottom of the list"
+description = "go to bottom of the list -> `cmd-down`"
 
 [[verbs]]
 invocation = "page_up"
@@ -244,53 +230,40 @@ internal = "toggle_preview"
 description = "open / close preview panel"
 
 [[verbs]]
-invocation = "open_preview"
-key = "right"
-apply_to = "file"
-internal = "open_preview {file}"
-leave_broot = false
-description = "display file on panel"
-
-[[verbs]]
 invocation = "close_preview"
-key = "left"
+key = "alt-b"                           # mapped -> `alt-left`
 apply_to = "file"
 internal = "close_preview {file}"
 leave_broot = false
-description = "close display"
+description = "close display -> `alt-left`"
+
+[[verbs]]
+invocation = "open_preview"
+key = "alt-f"                           # mapped -> `alt-right`
+apply_to = "file"
+internal = "open_preview {file}"
+leave_broot = false
+description = "display file on panel -> `alt-right`"
 
 [[verbs]]
 invocation = "panel_left"
-key = "alt-b"                           # mapped -> `alt-left`
+key = "ctrl-left"
 internal = "panel_left"
-description = "select left panel -> `alt-left`"
+description = "select left panel"
 
 [[verbs]]
 invocation = "panel_right"
-key = "alt-f"                           # mapped -> `alt-right`
+key = "ctrl-right"
 internal = "panel_right"
-description = "select right panel -> `alt-right`"
+description = "select right panel"
 
-# patch not-responding after atuin
+# create
 [[verbs]]
-key = "shift-down"
-internal = ":line_down"
-
-[[verbs]]
-key = "shift-up"
-internal = ":line_up"
-
-[[verbs]]
-invocation = "open_preview"
-key = "shift-right"
-apply_to = "file"
-internal = "open_preview {file}"
-
-[[verbs]]
-invocation = "close_preview"
-key = "shift-left"
-apply_to = "file"
-internal = "close_preview {file}"
+invocation = "create {subpath}"
+shortcut = "c"
+execution = "touch {directory}/{subpath}"
+leave_broot = false
+description = "create file"
 
 
 ####################################################################################################
