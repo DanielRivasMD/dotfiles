@@ -239,56 +239,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change home to command+option+shift.",
-                                "from": {
-                                    "key_code": "home",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "right_command",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
-                                "description": "Change end to control+option+shift.",
-                                "from": {
-                                    "key_code": "end",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
                                 "description": "Change caps_lock to command+control+option+shift.",
                                 "from": {
                                     "key_code": "caps_lock",
