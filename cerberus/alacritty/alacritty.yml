@@ -1244,8 +1244,7 @@ key_bindings:
   # - { key: Z,           mods: Alt|Control|Command|Shift,  chars: ""             } #
 
   ####################################################################################################
-  ####################################################################################################
-  # shortcuts for tmux. the leader key is ctrl-q (0x11)
+  # movement & switch keys
   ####################################################################################################
 
   - { key: Return,      mods: Shift,                      chars: "\x18"         } # mapped -> `ctrl-x`
@@ -1286,7 +1285,7 @@ key_bindings:
   - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
   # - { key: Left,        mods: Alt|Control,                chars: ""             } #
   - { key: Left,        mods: Alt|Command,                chars: "\x11p"        } # tmux next-window
-  - { key: Left,        mods: Control|Command,            chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
+  - { key: Left,        mods: Control|Command,            chars: "\x1b[20;3~"   } # mapped -> `alt-F9`
   - { key: Left,        mods: Alt|Control|Command,        chars: "\x11h"        } #
   # - { key: Left,        mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Left,        mods: Alt|Control|Command|Shift,  chars: ""             } # collision
@@ -1301,7 +1300,7 @@ key_bindings:
   - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
   # - { key: Right,       mods: Alt|Control,                chars: ""             } #
   - { key: Right,       mods: Alt|Command,                chars: "\x11n"        } # tmux previous-window
-  - { key: Right,       mods: Control|Command,            chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
+  - { key: Right,       mods: Control|Command,            chars: "\x1b[21;3~"   } # mapped -> `alt-F10`
   - { key: Right,       mods: Alt|Control|Command,        chars: "\x11l"        } #
   # - { key: Right,       mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Right,       mods: Alt|Control|Command|Shift,  chars: ""             } # collision
@@ -1311,31 +1310,28 @@ key_bindings:
   # - { key: Up,          mods: Alt|Shift,                  chars: ""             } #
   - { key: Up,          mods: Control,                    chars: "\x1b[1;5A"    } #
   # - { key: Up,          mods: Control|Shift,              chars: ""             } #
-  - { key: Up,          mods: Command,                    chars: "\x1b[18;3~"   } # mapped -> `alt-F7`
-  - { key: Up,          mods: Command|Shift,              chars: "\x1b[20;3~"   } # mapped -> `alt-F9`
+  - { key: Up,          mods: Command,                    chars: "\x1b[1;3P"   } # mapped -> `alt-F1`
+  - { key: Up,          mods: Command|Shift,              chars: "\x1b[1;3R"   } # mapped -> `alt-F3`
   # - { key: Up,          mods: Alt|Control,                chars: ""             } #
-  # - { key: Up,          mods: Alt|Command,                chars: ""             } #
-  - { key: Up,          mods: Control|Command,            chars: "\x1b[1;3R"    } # mapped -> `alt-F3`
+  - { key: Up,          mods: Alt|Command,                chars: "\x1b[15;3~"    } # mapped -> `alt-F5`
+  - { key: Up,          mods: Control|Command,            chars: "\x1b[18;3~"    } # mapped -> `alt-F7`
   - { key: Up,          mods: Alt|Control|Command,        chars: "\x11k"        } #
   # - { key: Up,          mods: Control|Command|Shift,      chars: ""             } #
-  - { key: Up,          mods: Alt|Control|Command|Shift,  chars: "\x1b[15;3~"   } # mapped -> `alt-F5`
+  - { key: Up,          mods: Alt|Control|Command|Shift,  chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
 
   - { key: Down,        mods: Shift,                      chars: "\x1b[1;2B"    } #
   - { key: Down,        mods: Alt,                        chars: "\x1b[1;3B"    } #
   # - { key: Down,        mods: Alt|Shift,                  chars: ""             } #
   - { key: Down,        mods: Control,                    chars: "\x1b[1;5B"    } #
   # - { key: Down,        mods: Control|Shift,              chars: ""             } #
-  - { key: Down,        mods: Command,                    chars: "\x1b[19;3~"   } # mapped -> `alt-F8`
-  - { key: Down,        mods: Command|Shift,              chars: "\x1b[21;3~"   } # mapped -> `alt-F10`
+  - { key: Down,        mods: Command,                    chars: "\x1b[1;3Q"   } # mapped -> `alt-F2`
+  - { key: Down,        mods: Command|Shift,              chars: "\x1b[1;3S"   } # mapped -> `alt-F4`
   # - { key: Down,        mods: Alt|Control,                chars: ""             } #
-  # - { key: Down,        mods: Alt|Command,                chars: ""             } #
-  - { key: Down,        mods: Control|Command,            chars: "\x1b[1;3S"    } # mapped -> `alt-F4`
+  - { key: Down,        mods: Alt|Command,                chars: "\x1b[17;3~"    } # mapped -> `alt-F6`
+  - { key: Down,        mods: Control|Command,            chars: "\x1b[19;3~"    } # mapped -> `alt-F8`
   - { key: Down,        mods: Alt|Control|Command,        chars: "\x11j"        } #
   # - { key: Down,        mods: Control|Command|Shift,      chars: ""             } #
-  - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[17;3~"   } # mapped -> `alt-F6`
-
-  - { key: PageUp,                                        chars: "\x1b[1;3P"    } # mapped -> `alt-F1`
-  - { key: PageDown,                                      chars: "\x1b[1;3Q"    } # mapped -> `alt-F2`
+  - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
 
   ####################################################################################################
   # interactive keybindings
