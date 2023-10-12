@@ -920,28 +920,26 @@ key_bindings:
   ####################################################################################################
 
   - { key: A,           mods: Alt,                        chars: "\x1ba"        } #
-  # - { key: B,           mods: Alt,                        chars: "\x1bb"        } # original
   - { key: B,           mods: Alt,                        chars: "\x02"         } # mapped -> `ctrl-b`
   - { key: C,           mods: Alt,                        chars: "\x1bc"        } #
   - { key: D,           mods: Alt,                        chars: "\x1bd"        } #
-  - { key: E,           mods: Alt,                        chars: "\x1be"        } # mapped -> `ctrl-F7`
-  # - { key: F,           mods: Alt,                        chars: "\x1bf"        } # original
+  # - { key: E,           mods: Alt,                        chars: "\x1be"        } # bypassed -> `ctrl-F7`
   - { key: F,           mods: Alt,                        chars: "\x06"         } # mapped -> `ctrl-F`
   - { key: G,           mods: Alt,                        chars: "\x1bg"        } #
   - { key: H,           mods: Alt,                        chars: "\x1bh"        } #
-  - { key: I,           mods: Alt,                        chars: "\x1bi"        } # mapped -> `ctrl-F8`
+  # - { key: I,           mods: Alt,                        chars: "\x1bi"        } # bypassed -> `ctrl-F8`
   - { key: J,           mods: Alt,                        chars: "\x1bj"        } #
   - { key: K,           mods: Alt,                        chars: "\x1bk"        } #
   - { key: L,           mods: Alt,                        chars: "\x1bl"        } #
   - { key: M,           mods: Alt,                        chars: "\x1bm"        } #
-  - { key: N,           mods: Alt,                        chars: "\x1bn"        } # mapped -> `ctrl-F9`
+  # - { key: N,           mods: Alt,                        chars: "\x1bn"        } # bypassed -> `ctrl-F9`
   - { key: O,           mods: Alt,                        chars: "\x1bo"        } #
   - { key: P,           mods: Alt,                        chars: "\x1bp"        } #
   - { key: Q,           mods: Alt,                        chars: "\x1bq"        } #
   - { key: R,           mods: Alt,                        chars: "\x1br"        } #
   - { key: S,           mods: Alt,                        chars: "\x1bs"        } #
   - { key: T,           mods: Alt,                        chars: "\x1bt"        } #
-  - { key: U,           mods: Alt,                        chars: "\x1bu"        } # mapped -> `ctrl-F10`
+  # - { key: U,           mods: Alt,                        chars: "\x1bu"        } # bypassed -> `ctrl-F10`
   - { key: V,           mods: Alt,                        chars: "\x1bv"        } #
   - { key: W,           mods: Alt,                        chars: "\x1bw"        } #
   - { key: X,           mods: Alt,                        chars: "\x1bx"        } #
@@ -962,7 +960,7 @@ key_bindings:
   - { key: L,           mods: Alt|Shift,                  chars: "\x1bL"        } #
   - { key: M,           mods: Alt|Shift,                  chars: "\x1bM"        } #
   - { key: N,           mods: Alt|Shift,                  chars: "\x1bN"        } #
-  - { key: O,           mods: Alt|Shift,                  chars: "\x1bO"        } # mapped -> `ctrl-F11`
+  # - { key: O,           mods: Alt|Shift,                  chars: "\x1bO"        } # bypassed -> `ctrl-F11`
   - { key: P,           mods: Alt|Shift,                  chars: "\x1bP"        } #
   - { key: Q,           mods: Alt|Shift,                  chars: "\x1bQ"        } #
   - { key: R,           mods: Alt|Shift,                  chars: "\x1bR"        } #
@@ -1123,7 +1121,7 @@ key_bindings:
   - { key: K,           mods: Alt|Command,                chars: "\x11>"        } # tmux layout main-horizontal
   - { key: L,           mods: Alt|Command,                chars: ""             } #
   - { key: M,           mods: Alt|Command,                chars: ""             } #
-  - { key: N,           mods: Alt|Command,                chars: "\x1b[17;6~"   } # tmux new-window -> `ctrl-F6`
+  - { key: N,           mods: Alt|Command,                chars: "\x1b[17;6~"   } # bypassed -> `ctrl-F6` # tmux new-window
   - { key: O,           mods: Alt|Command,                chars: ""             } #
   - { key: P,           mods: Alt|Command,                chars: ""             } #
   - { key: Q,           mods: Alt|Command,                chars: ""             } #
