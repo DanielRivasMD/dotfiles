@@ -1333,6 +1333,36 @@ key_bindings:
   # - { key: Down,        mods: Control|Command|Shift,      chars: ""             } #
   - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
 
+  - { key: PageUp,                                        chars: "\x1b[1;5P"    } # mapped -> `ctrl-F1`
+  - { key: PageDown,                                      chars: "\x1b[1;5Q"    } # mapped -> `ctrl-F2`
+  - { key: PageUp,      mods: Shift,                      chars: "\x1b[1;4P"    } # mapped -> `alt-shift-F1`
+  - { key: PageDown,    mods: Shift,                      chars: "\x1b[1;4Q"    } # mapped -> `alt-shift-F2`
+  - { key: PageUp,      mods: Alt,                        chars: "\x1b[1;4R"    } # mapped -> `alt-shift-F3`
+  - { key: PageDown,    mods: Alt,                        chars: "\x1b[1;4S"    } # mapped -> `alt-shift-F4`
+  - { key: PageUp,      mods: Alt|Shift,                  chars: "\x1b[15;4~"   } # mapped -> `alt-shift-F5`
+  - { key: PageDown,    mods: Alt|Shift,                  chars: "\x1b[17;4~"   } # mapped -> `alt-shift-F6`
+  - { key: PageUp,      mods: Control,                    chars: "\x1b[18;4~"   } # mapped -> `alt-shift-F7`
+  - { key: PageDown,    mods: Control,                    chars: "\x1b[19;4~"   } # mapped -> `alt-shift-F8`
+  - { key: PageUp,      mods: Control|Shift,              chars: "\x1b[20;4~"   } # mapped -> `alt-shift-F9`
+  - { key: PageDown,    mods: Control|Shift,              chars: "\x1b[21;4~"   } # mapped -> `alt-shift-F10`
+  - { key: PageUp,      mods: Alt|Control,                chars: "\x1b[23;4~"   } # mapped -> `alt-shift-F11`
+  - { key: PageDown,    mods: Alt|Control,                chars: "\x1b[24;4~"   } # mapped -> `alt-shift-F12`
+
+  - { key: Home,                                          chars: "\x1b[1;5R"    } # mapped -> `ctrl-F3`
+  - { key: End,                                           chars: "\x1b[1;5S"    } # mapped -> `ctrl-F4`
+  - { key: Home,        mods: Shift,                      chars: "\x1b[1;6P"    } # mapped -> `ctrl-shift-F1`
+  - { key: End,         mods: Shift,                      chars: "\x1b[1;6Q"    } # mapped -> `ctrl-shift-F2`
+  - { key: Home,        mods: Alt,                        chars: "\x1b[1;6R"    } # mapped -> `ctrl-shift-F3`
+  - { key: End,         mods: Alt,                        chars: "\x1b[1;6S"    } # mapped -> `ctrl-shift-F4`
+  - { key: Home,        mods: Alt|Shift,                  chars: "\x1b[15;6~"   } # mapped -> `ctrl-shift-F5`
+  - { key: End,         mods: Alt|Shift,                  chars: "\x1b[17;6~"   } # mapped -> `ctrl-shift-F6`
+  - { key: Home,        mods: Control,                    chars: "\x1b[18;6~"   } # mapped -> `ctrl-shift-F7`
+  - { key: End,         mods: Control,                    chars: "\x1b[19;6~"   } # mapped -> `ctrl-shift-F8`
+  - { key: Home,        mods: Control|Shift,              chars: "\x1b[20;6~"   } # mapped -> `ctrl-shift-F9`
+  - { key: End,         mods: Control|Shift,              chars: "\x1b[21;6~"   } # mapped -> `ctrl-shift-F10`
+  - { key: Home,        mods: Alt|Control,                chars: "\x1b[23;6~"   } # mapped -> `ctrl-shift-F11`
+  - { key: End,         mods: Alt|Control,                chars: "\x1b[24;6~"   } # mapped -> `ctrl-shift-F12`
+
   ####################################################################################################
   # interactive keybindings
   ####################################################################################################
