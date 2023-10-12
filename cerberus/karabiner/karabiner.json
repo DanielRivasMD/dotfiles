@@ -239,7 +239,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to command+control+option+shift.",
+                                "description": "Change `caps_lock` to `alt-ctrl-cmd-shift`.",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -263,7 +263,7 @@
                         ]
                     },
                     {
-                        "description": "Change rigth_option to Control + Command",
+                        "description": "Change `rigth_option` to `ctrl-cmd`.",
                         "manipulators": [
                             {
                                 "from": {
@@ -287,7 +287,7 @@
                         ]
                     },
                     {
-                        "description": "Command-Enter to send in Apple Mail",
+                        "description": "Apple Mail send - `cmd-enter`.",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -321,7 +321,7 @@
                         ]
                     },
                     {
-                        "description": "Control-Enter to forward email in Apple Mail",
+                        "description": "Apple Mail forward mail - `ctrl-enter`.",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -355,7 +355,7 @@
                         ]
                     },
                     {
-                        "description": "Alt-Enter to reply in Apple Mail",
+                        "description": "Apple Mail reply - `alt-enter`.",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -388,7 +388,7 @@
                         ]
                     },
                     {
-                        "description": "Alt-Shift-Enter to reply to all in Apple Mail",
+                        "description": "Apple Mail reply all - `alt-shift-enter`.",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -423,7 +423,7 @@
                         ]
                     },
                     {
-                        "description": "Shift-Enter to compose new mail in Apple Mail",
+                        "description": "Apple Mail new - `shift-enter`.",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -456,7 +456,7 @@
                         ]
                     },
                     {
-                        "description": "Command-Space to get new mail in Apple Mail",
+                        "description": "Apple Mail get mail - `cmd-space`.",
                         "manipulators": [
                             {
                                 "conditions": [
