@@ -126,70 +126,70 @@ promptToReturnFromSubprocess: true # display confirmation when subprocess termin
 keybinding:
     universal:
         quit: 'Q'
-        quit-alt1: '<c-c>' # '<c-c>' alternative/alias of quit
-        return: '<esc>' # return to previous menu, will quit if there's nowhere to return
+        quit-alt1: '<c-c>'              # '<c-c>' alternative/alias of quit
+        return: '<esc>'                 # return to previous menu, will quit if there's nowhere to return
         quitWithoutChangingDirectory: 'q'
-        togglePanel: '<tab>' # goto the next panel
-        prevItem: null # '<up>' go one line up
-        nextItem: null # '<down>' go one line down
-        prevItem-alt: '<up>' # 'k' go one line up
-        nextItem-alt: '<down>' # 'j' go one line down
-        prevPage: '<c-b>' # go to next page in list                             # mapped -> `alt-up`
-        nextPage: '<c-f>' # go to previous page in list                         # mapped -> `alt-down`
-        gotoTop: '<c-o>' # '<' go to top of list                                # mapped -> `cmd-up`
-        gotoBottom: '<c-p>' # '>' go to bottom of list                          # mapped -> `cmd-down`
-        scrollLeft: 'H' # scroll left within list view
-        scrollRight: 'L' # scroll right within list view
-        prevBlock: null # '<left>' goto the previous block / panel
-        nextBlock: null # '<right>' goto the next block / panel
-        prevBlock-alt: <c-v> # 'h' goto the previous block / panel              # mapped -> `ctrl-cmd-up`
-        nextBlock-alt: <c-x> # 'l' goto the next block / panel                  # mapped -> `ctrl-cmd-down`
-        jumpToBlock: ['1', '2', '3', '4', '5'] # goto the Nth block / panel
-        nextMatch: 'l' # 'n'
-        prevMatch: 'h' # 'N'
-        optionMenu: null # show help menu
-        optionMenu-alt1: '?' # show help menu
+        togglePanel: '<tab>'            # goto the next panel
+        prevItem: null                  # '<up>' go one line up
+        nextItem: null                  # '<down>' go one line down
+        prevItem-alt: '<up>'            # 'k' go one line up
+        nextItem-alt: '<down>'          # 'j' go one line down
+        prevPage: '<c-b>'               # go to next page in list               # mapped -> `alt-up`
+        nextPage: '<c-f>'               # go to previous page in list           # mapped -> `alt-down`
+        gotoTop: '<c-o>'                # '<' go to top of list                 # mapped -> `cmd-up`
+        gotoBottom: '<c-p>'             # '>' go to bottom of list              # mapped -> `cmd-down`
+        scrollLeft: 'H'                 # scroll left within list view
+        scrollRight: 'L'                # scroll right within list view
+        prevBlock: null                 # '<left>' goto the previous block / panel
+        nextBlock: null                 # '<right>' goto the next block / panel
+        prevBlock-alt: <c-v>            # 'h' goto the previous block / panel   # mapped -> `ctrl-cmd-up`
+        nextBlock-alt: <c-x>            # 'l' goto the next block / panel       # mapped -> `ctrl-cmd-down`
+        jumpToBlock: [1, 2, 3, 4, 5]    # goto the Nth block / panel
+        nextMatch: 'l'                  # 'n'
+        prevMatch: 'h'                  # 'N'
+        optionMenu: null                # show help menu
+        optionMenu-alt1: '?'            # show help menu
         select: '<space>'
         goInto: '<enter>'
-        openRecentRepos: '|' # '<c-r>'
+        openRecentRepos: '|'            # '<c-r>'
         confirm: '<enter>'
         remove: 'd'
         new: 'n'
         edit: 'e'
-        openFile: null # 'o'
-        scrollUpMain: null # '<pgup>' main panel scroll up
-        scrollDownMain: null # 'pgdown' main panel scroll down
-        scrollUpMain-alt1: null # 'K' main panel scroll up
-        scrollDownMain-alt1: null # 'J' main panel scroll down
-        scrollUpMain-alt2: 'k' # '<c-u>' main panel scroll up
-        scrollDownMain-alt2: 'j' # '<c-d>' main panel scroll down
-        executeCustomCommand: '<c-s>'
+        openFile: null                  # 'o'
+        scrollUpMain: null              # '<pgup>' main panel scroll up
+        scrollDownMain: null            # 'pgdown' main panel scroll down
+        scrollUpMain-alt1: null         # 'K' main panel scroll up
+        scrollDownMain-alt1: null       # 'J' main panel scroll down
+        scrollUpMain-alt2: 'k'          # '<c-u>' main panel scroll up
+        scrollDownMain-alt2: 'j'        # '<c-d>' main panel scroll down
+        executeCustomCommand: '<c-s>'                                           # mapped -> `alt-enter`
         createRebaseOptionsMenu: 'm'
         pushFiles: 'P'
         pullFiles: 'p'
-        refresh: 'R'
-        createPatchOptionsMenu: 'N' # '<c-p>'
-        prevTab: '<c-j>' # '['
-        nextTab: '<c-n>' # ']'
-        nextScreenMode: '\' # '+'
-        prevScreenMode: null # '_'
-        undo: 'u' # 'z'
-        redo: 'U' # '<c-z>'
-        filteringMenu: <c-r> # '<c-s>'
+        refresh: 'r'
+        createPatchOptionsMenu: 'N'     # '<c-p>'
+        prevTab: '<c-j>'                # '['                                   # mapped -> `ctrl-cmd-left`
+        nextTab: '<c-n>'                # ']'                                   # mapped -> `ctrl-cmd-right`
+        nextScreenMode: '\'             # '+'
+        prevScreenMode: null            # '_'
+        undo: 'u'                       # 'z'
+        redo: 'U'                       # '<c-z>'
+        filteringMenu: <c-r>            # '<c-s>'                               # mapped -> `ctrl-enter`
         diffingMenu: 'W'
-        # diffingMenu-alt: '<c-e>' # deprecated
-        copyToClipboard: 'y' # '<c-o>'
+        # diffingMenu-alt: '<c-e>'      # deprecated
+        copyToClipboard: 'y'            # '<c-o>'
         submitEditorText: '<enter>'
-        extrasMenu: '<c-t>'
+        extrasMenu: '<c-t>'                                                     # mapped -> `cmd-enter`
         toggleWhitespaceInDiffView: null
-        increaseContextInDiffView: '=' # '}'
-        decreaseContextInDiffView: '-' # '{'
+        increaseContextInDiffView: '='  # '}'
+        decreaseContextInDiffView: '-'  # '{'
     status:
         checkForUpdate: 'u'
         recentRepos: '<enter>'
     files:
         commitChanges: 'c'
-        commitChangesWithoutHook: 'w' # commit changes without pre-commit hook
+        commitChangesWithoutHook: 'w'   # commit changes without pre-commit hook
         amendLastCommit: 'A'
         commitChangesWithEditor: 'C'
         confirmDiscard: 'x'
@@ -197,25 +197,25 @@ keybinding:
         refreshFiles: 'r'
         stashAllChanges: 's'
         viewStashOptions: 'S'
-        toggleStagedAll: 'a' # stage/unstage all
+        toggleStagedAll: 'a'            # stage/unstage all
         viewResetOptions: 'D'
         fetch: 'f'
-        toggleTreeView: '<c-g>' # '`'
+        toggleTreeView: '<c-g>'         # '`'                                   # mapped -> `shift-enter`
         openMergeTool: 'M'
-        openStatusFilter: '<c-r>'
+        openStatusFilter: '<c-r>'                                               # mapped -> `ctrl-enter`
     branches:
-        createPullRequest: 'u' # 'o'
-        viewPullRequestOptions: 'U' # 'O'
+        createPullRequest: 'u'          # 'o'
+        viewPullRequestOptions: 'U'     # 'O'
         checkoutBranchByName: 'c'
         forceCheckoutBranch: 'F'
         rebaseBranch: 'r'
         renameBranch: 'R'
         mergeIntoCurrentBranch: 'M'
         viewGitFlowOptions: 'i'
-        fastForward: 'f' # fast-forward this branch from its upstream
+        fastForward: 'f'                # fast-forward this branch from its upstream
         createTag: 'T'
         pushTag: 'P'
-        setUpstream: 'u' # set as upstream of checked-out branch
+        setUpstream: 'u'                # set as upstream of checked-out branch
         fetchRemote: 'f'
     commits:
         squashDown: 's'
@@ -223,30 +223,30 @@ keybinding:
         renameCommitWithEditor: 'R'
         viewResetOptions: 'g'
         markCommitAsFixup: 'f'
-        createFixupCommit: 'F' # create fixup commit for this commit
+        createFixupCommit: 'F'          # create fixup commit for this commit
         squashAboveCommits: 'S'
-        moveDownCommit: 'J' # '<c-j>' move commit down one
-        moveUpCommit: 'K' # '<c-k>' move commit up one
+        moveDownCommit: 'J'             # '<c-j>' move commit down one
+        moveUpCommit: 'K'               # '<c-k>' move commit up one
         amendToCommit: 'A'
-        pickCommit: 'p' # pick commit (when mid-rebase)
+        pickCommit: 'p'                 # pick commit (when mid-rebase)
         revertCommit: 't'
         cherryPickCopy: 'c'
         cherryPickCopyRange: 'C'
         pasteCommits: 'v'
         tagCommit: 'T'
         checkoutCommit: '<space>'
-        resetCherryPick: 'Y' # '<c-R>'
+        resetCherryPick: 'Y'            # '<c-R>'
         copyCommitMessageToClipboard: 'y' # '<c-y>'
-        openLogMenu: 'L' # '<c-l>'
+        openLogMenu: 'L'                # '<c-l>'
         viewBisectOptions: 'b'
     stash:
-        popStash: 's' # 'g'
+        popStash: 's'                   # 'g'
         renameStash: 'r'
     commitFiles:
         checkoutCommitFile: 'c'
     main:
-        toggleDragSelect: null # 'v'
-        toggleDragSelect-alt: 'v' # 'V'
+        toggleDragSelect: null          # 'v'
+        toggleDragSelect-alt: 'v'       # 'V'
         toggleSelectHunk: 'a'
         pickBothHunks: 'b'
     submodules:
