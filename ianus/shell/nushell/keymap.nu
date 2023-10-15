@@ -26,17 +26,6 @@ $env.config = {
     }
 
     {
-      name: list_shells
-      modifier: shift
-      keycode: "f4"                                         # patched -> `alt-cmd-/`
-      mode: emacs
-      event: {
-        send: executehostcommand,
-        cmd: "shells"
-      }
-    }
-
-    {
       name: previous_dir
       modifier: shift
       keycode: "f1"                                         # patch -> `alt-cmd-,`
@@ -55,6 +44,17 @@ $env.config = {
       event: {
         send: executehostcommand,
         cmd: "n"
+      }
+    }
+
+    {
+      name: list_shells
+      modifier: shift
+      keycode: "f4"                                         # patched -> `alt-cmd-/`
+      mode: emacs
+      event: {
+        send: executehostcommand,
+        cmd: "shells"
       }
     }
 
