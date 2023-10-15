@@ -1539,9 +1539,9 @@ key_bindings:
   # - { key: Semicolon,   mods: Alt|Command,                chars: "  "           } #
   # - { key: Apostrophe,  mods: Alt|Command,                chars: "  "           } #
   # - { key: Backslash,   mods: Alt|Command,                chars: "  "           } #
-  - { key: Comma,       mods: Alt|Command,                chars: "\x0F"         } # mapped -> `ctrl-o`
-  - { key: Period,      mods: Alt|Command,                chars: "\x10"         } # mapped -> `ctrl-p`
-  - { key: Slash,       mods: Alt|Command,                chars: "\x16"         } # mapped -> `ctrl-v`
+  - { key: Comma,       mods: Alt|Command,                chars: "\x1b[1;2P"    } # mapped -> `shift-F1`
+  - { key: Period,      mods: Alt|Command,                chars: "\x1b[1;2Q"    } # mapped -> `shift-F2`
+  - { key: Slash,       mods: Alt|Command,                chars: "\x1b[1;2S"    } # mapped -> `shift-F4`
 
   # - { key: Key0,        mods: Control|Command,            chars: "  "           } #
   - { key: Key1,        mods: Control|Command,            chars: " !== "        } #
