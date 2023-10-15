@@ -125,25 +125,25 @@ promptToReturnFromSubprocess: true # display confirmation when subprocess termin
 
 keybinding:
     universal:
-        quit: 'q'
+        quit: 'Q'
         quit-alt1: '<c-c>' # '<c-c>' alternative/alias of quit
         return: '<esc>' # return to previous menu, will quit if there's nowhere to return
-        quitWithoutChangingDirectory: 'Q'
+        quitWithoutChangingDirectory: 'q'
         togglePanel: '<tab>' # goto the next panel
         prevItem: null # '<up>' go one line up
         nextItem: null # '<down>' go one line down
         prevItem-alt: '<up>' # 'k' go one line up
         nextItem-alt: '<down>' # 'j' go one line down
-        prevPage: ',' # go to next page in list
-        nextPage: '.' # go to previous page in list
-        gotoTop: 'g' # '<' go to top of list
-        gotoBottom: 'G' # '>' go to bottom of list
+        prevPage: '<c-b>' # go to next page in list                             # mapped -> `alt-up`
+        nextPage: '<c-f>' # go to previous page in list                         # mapped -> `alt-down`
+        gotoTop: '<c-o>' # '<' go to top of list                                # mapped -> `cmd-up`
+        gotoBottom: '<c-p>' # '>' go to bottom of list                          # mapped -> `cmd-down`
         scrollLeft: 'H' # scroll left within list view
         scrollRight: 'L' # scroll right within list view
         prevBlock: null # '<left>' goto the previous block / panel
         nextBlock: null # '<right>' goto the next block / panel
-        prevBlock-alt: <left> # 'h' goto the previous block / panel
-        nextBlock-alt: <right> # 'l' goto the next block / panel
+        prevBlock-alt: <c-v> # 'h' goto the previous block / panel              # mapped -> `ctrl-cmd-up`
+        nextBlock-alt: <c-x> # 'l' goto the next block / panel                  # mapped -> `ctrl-cmd-down`
         jumpToBlock: ['1', '2', '3', '4', '5'] # goto the Nth block / panel
         nextMatch: 'l' # 'n'
         prevMatch: 'h' # 'N'
@@ -156,34 +156,34 @@ keybinding:
         remove: 'd'
         new: 'n'
         edit: 'e'
-        openFile: '<c-s>' # 'o'
+        openFile: null # 'o'
         scrollUpMain: null # '<pgup>' main panel scroll up
         scrollDownMain: null # 'pgdown' main panel scroll down
         scrollUpMain-alt1: null # 'K' main panel scroll up
         scrollDownMain-alt1: null # 'J' main panel scroll down
         scrollUpMain-alt2: 'k' # '<c-u>' main panel scroll up
         scrollDownMain-alt2: 'j' # '<c-d>' main panel scroll down
-        executeCustomCommand: ':'
+        executeCustomCommand: '<c-s>'
         createRebaseOptionsMenu: 'm'
         pushFiles: 'P'
         pullFiles: 'p'
         refresh: 'R'
         createPatchOptionsMenu: 'N' # '<c-p>'
-        nextTab: '>' # ']'
-        prevTab: '<' # '['
-        nextScreenMode: '=' # '+'
-        prevScreenMode: '-' # '_'
-        undo: 'o' # 'z'
-        redo: 'O' # '<c-z>'
-        filteringMenu: <c-f> # '<c-s>'
+        prevTab: '<c-j>' # '['
+        nextTab: '<c-n>' # ']'
+        nextScreenMode: '\' # '+'
+        prevScreenMode: null # '_'
+        undo: 'u' # 'z'
+        redo: 'U' # '<c-z>'
+        filteringMenu: <c-r> # '<c-s>'
         diffingMenu: 'W'
         # diffingMenu-alt: '<c-e>' # deprecated
         copyToClipboard: 'y' # '<c-o>'
         submitEditorText: '<enter>'
-        extrasMenu: '@'
-        toggleWhitespaceInDiffView: '<c-x>' # '<c-w>'
-        increaseContextInDiffView: '+' # '}'
-        decreaseContextInDiffView: '_' # '{'
+        extrasMenu: '<c-t>'
+        toggleWhitespaceInDiffView: null
+        increaseContextInDiffView: '=' # '}'
+        decreaseContextInDiffView: '-' # '{'
     status:
         checkForUpdate: 'u'
         recentRepos: '<enter>'
@@ -200,9 +200,9 @@ keybinding:
         toggleStagedAll: 'a' # stage/unstage all
         viewResetOptions: 'D'
         fetch: 'f'
-        toggleTreeView: '\' # '`'
+        toggleTreeView: '<c-g>' # '`'
         openMergeTool: 'M'
-        openStatusFilter: '<c-b>'
+        openStatusFilter: '<c-r>'
     branches:
         createPullRequest: 'u' # 'o'
         viewPullRequestOptions: 'U' # 'O'
