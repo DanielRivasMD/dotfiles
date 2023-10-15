@@ -58,44 +58,44 @@
   "Alt-Z": "Unsplit",
 
   "Ctrl-a": "StartOfLine",                                                      // mapped -> `cmd-left`
-  "Ctrl-b": "CommandMode",                                                      // mapped -> `alt-b`
+  "Ctrl-b": "ParagraphPrevious",                                                // mapped -> `alt-up`
   "Ctrl-c": "None",
   "Ctrl-d": "None",
   "Ctrl-e": "EndOfLine",                                                        // mapped -> `cmd-right`
-  "Ctrl-f": "FindLiteral",                                                      // mapped -> `alt-f`
-  "Ctrl-g": "None",                                                             // mapped -> `ctrl-cmd-enter`
-  "Ctrl-h": "None",                                                             // mapped -> `alt-ctrl-cmd-enter`
+  "Ctrl-f": "ParagraphNext",                                                    // mapped -> `alt-down`
+  "Ctrl-g": "None",                                                             // mapped -> `shift-enter`
+  "Ctrl-h": "None",                                                             // mapped -> ``
   "Ctrl-i": "None",
-  "Ctrl-j": "None",                                                             // mapped -> `alt-cmd-enter`
+  "Ctrl-j": "PreviousTab",                                                      // mapped -> `ctrl-cmd-left`
   "Ctrl-k": "SelectToEndOfLine,Delete",
   "Ctrl-l": "None",
   "Ctrl-m": "None",
-  "Ctrl-n": "None",                                                             // mapped -> `alt-ctrl-enter`
-  "Ctrl-o": "None",                                                             // mapped -> `alt-cmd-,`
-  "Ctrl-p": "None",                                                             // mapped -> `alt-cmd-.`
+  "Ctrl-n": "NextTab",                                                          // mapped -> `ctrl-cmd-right`
+  "Ctrl-o": "CursorStart",                                                      // mapped -> `cmd-up`
+  "Ctrl-p": "CursorEnd",                                                        // mapped -> `cmd-down`
   "Ctrl-q": "None",
   "Ctrl-r": "None",                                                             // mapped -> `ctrl-enter`
   "Ctrl-s": "JumpLine",                                                         // mapped -> `alt-enter`
   "Ctrl-t": "None",                                                             // mapped -> `cmd-enter`
   "Ctrl-u": "SelectToStartOfLine,Delete",
-  "Ctrl-v": "None",                                                             // mapped -> `alt-cmd-/`
+  "Ctrl-v": "None",                                                             // mapped -> `ctrl-cmd-up`
   "Ctrl-w": "DeleteWordLeft",
-  "Ctrl-x": "None",                                                             // mapped -> `shift-enter`
+  "Ctrl-x": "None",                                                             // mapped -> `ctrl-cmd-down`
   "Ctrl-y": "None",
   "Ctrl-z": "None",
 
-  "AltDown": "ParagraphNext",
-  "AltUp": "ParagraphPrevious",
+  "AltUp": "CommandMode",                                                       // mapped -> `alt-b`
+  "AltDown": "FindLiteral",                                                     // mapped -> `alt-f`
   "AltLeft": "SelectToStartOfLine",                                             // mapped -> `shift-cmd-left`
   "AltRight": "SelectToEndOfLine",                                              // mapped -> `shift-cmd-right`
 
-  "AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight",
   "AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight",
+  "AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight",
   "AltShiftLeft": "SelectWordLeft",
   "AltShiftRight": "SelectWordRight",
 
-  "CtrlDown": "None",
-  "CtrlUp": "None",
+  "CtrlUp": "PreviousSplit",
+  "CtrlDown": "NextSplit",
   "CtrlLeft": "PreviousSplit",
   "CtrlRight": "NextSplit",
   "CtrlSpace": "Autocomplete",
@@ -114,29 +114,29 @@
   "F11": "None",
   "F12": "None",
 
-  "Shift-F1": "None",
-  "Shift-F2": "None",
-  "Shift-F3": "None",
-  "Shift-F4": "None",
-  "Shift-F5": "None",
-  "Shift-F6": "None",
-  "Shift-F7": "None",
-  "Shift-F8": "None",
-  "Shift-F9": "None",
-  "Shift-F10": "None",
-  "Shift-F11": "None",
-  "Shift-F12": "None",
+  "Shift-F1": "None",                                                           // mapped -> `alt-cmd-,`
+  "Shift-F2": "None",                                                           // mapped -> `alt-cmd-.`
+  // "Shift-F3": "None",                                                          // collision tmux alacritty
+  "Shift-F4": "None",                                                           // mapped -> `alt-cmd-/`
+  "Shift-F5": "None",                                                           // mapped -> ``
+  "Shift-F6": "None",                                                           // mapped -> ``
+  "Shift-F7": "None",                                                           // mapped -> ``
+  "Shift-F8": "None",                                                           // mapped -> ``
+  "Shift-F9": "None",                                                           // mapped -> ``
+  "Shift-F10": "None",                                                          // mapped -> ``
+  "Shift-F11": "None",                                                          // mapped -> ``
+  "Shift-F12": "None",                                                          // mapped -> ``
 
-  "Alt-F1": "CursorStart",                                                      // mapped -> `cmd-up`
-  "Alt-F2": "CursorEnd",                                                        // mapped -> `cmd-down`
-  "Alt-F3": "None",                                                             // mapped -> `cmd-shift-up`
-  "Alt-F4": "None",                                                             // mapped -> `cmd-shift-down`
-  "Alt-F5": "None",                                                             // mapped -> `alt-cmd-up`
-  "Alt-F6": "None",                                                             // mapped -> `alt-cmd-down`
-  "Alt-F7": "None",                                                             // mapped -> `ctrl-cmd-up`
-  "Alt-F8": "None",                                                             // mapped -> `ctlr-cmd-down
-  "Alt-F9": "PreviousTab",                                                      // mapped -> `ctrl-cmd-left`
-  "Alt-F10": "NextTab",                                                         // mapped -> `ctrl-cmd-right`
+  "Alt-F1": "None",                                                             // mapped -> ``
+  "Alt-F2": "None",                                                             // mapped -> ``
+  "Alt-F3": "None",                                                             // mapped -> ``
+  "Alt-F4": "None",                                                             // mapped -> ``
+  "Alt-F5": "None",                                                             // mapped -> ``
+  "Alt-F6": "None",                                                             // mapped -> ``
+  "Alt-F7": "None",                                                             // mapped -> `cmd-shift-up`
+  "Alt-F8": "None",                                                             // mapped -> `cmd-shift-down`
+  "Alt-F9": "None",                                                             // mapped -> `alt-cmd-up`
+  "Alt-F10": "None",                                                            // mapped -> `alt-cmd-down`
   "Alt-F11": "None",                                                            // mapped -> `alt-ctrl-cmd-shift-up`
   "Alt-F12": "None",                                                            // mapped -> `alt-ctrl-cmd-shift-down`
 
@@ -164,7 +164,7 @@
   "Ctrl-F9": "None",                                                            // mapped -> `alt-n`
   "Ctrl-F10": "Undo",                                                           // mapped -> `alt-u`
   "Ctrl-F11": "OutdentSelection",                                               // mapped -> `alt-O`
-  // "Ctrl-F12": "None"                                                           // collision tmux alacritty
+  "Ctrl-F12": "None",                                                           // mapped -> ``
 
   "Ctrl-Shift-F1": "None",                                                      // mapped -> `shift-home`
   "Ctrl-Shift-F2": "None",                                                      // mapped -> `shift-end`
