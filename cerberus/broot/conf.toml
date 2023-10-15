@@ -45,30 +45,23 @@ description = "refresh tree"
 
 # file
 [[verbs]]
-invocation = "edit"
-key = "ctrl-x"                          # mapped -> `shift-enter`
-execution = "subl {file}"
-leave_broot = false
-description = "open file with `subl` editor -> `shift-enter`"
-
-[[verbs]]
 invocation = "micro"
-key = "ctrl-n"                          # mapped -> `alt-ctrl-enter`
+key = "ctrl-j"                          # mapped -> `ctrl-cmd-left`
 execution = "micro {file}"
 leave_broot = false
-description = "open file with `micro` editor -> `alt-ctrl-enter`"
+description = "open file with `micro` editor -> `ctrl-cmd-left`"
 
 [[verbs]]
 invocation = "helix"
-key = "ctrl-j"                          # mapped -> `alt-cmd-enter`
+key = "ctrl-n"                          # mapped -> `ctrl-cmd-right`
 execution = "hx {file}"
 leave_broot = false
-description = "open file with `helix` editor -> `alt-cmd-enter`"
+description = "open file with `helix` editor -> `ctrl-cmd-right`"
 
 # search
 [[verbs]]
 invocation = "total_search"
-key = "ctrl-f"                          # mapped -> `alt-f`
+key = "alt-down"                          # mapped -> `alt-f`
 internal = "total_search"
 description = "search again but on all children -> `alt-f`"
 
@@ -87,20 +80,20 @@ description = "go to previous match"
 # view
 [[verbs]]
 invocation = "toggle_files"
-key = "ctrl-o"                          # mapped -> `alt-cmd-,`
+key = "alt-shift-f"
 internal = ":toggle_files"
-description = "toggle files -> `alt-cmd-,`"
+description = "toggle files"
 
 [[verbs]]
 invocation = "toggle_hidden"
-key = "ctrl-p"                          # mapped -> `alt-cmd-.`
+key = "alt-shift-d"
 internal = "toggle_hidden"
-description = "toggle hidden -> `alt-cmd-.`"
+description = "toggle hidden"
 
 # pager
 [[verbs]]
 invocation = "bat"
-key = "ctrl-b"                          # mapped -> `alt-b`
+key = "alt-up"                          # mapped -> `alt-b`
 external = "bat --paging always {file}"
 leave_broot = true
 description = "open file with `bat` -> `alt-b`"
@@ -143,9 +136,9 @@ description = "open file with `bat` to copy"
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
-key = "ctrl-v"                          # mapped -> `alt-cmd-/`
+key = "alt-shift-g"
 internal = "toggle_git_ignore"
-description = "toggle git ignore -> `alt-cmd-/`"
+description = "toggle git ignore"
 
 # sort
 [[verbs]]
@@ -200,34 +193,34 @@ description = "stage all matching files"
 # move
 [[verbs]]
 invocation = "select_first"
-key = "alt-F7"                         # mapped -> `cmd-up`
+key = "ctrl-o"                         # mapped -> `cmd-up`
 internal = "select_first"
 description = "go to top of the list -> `cmd-up`"
 
 [[verbs]]
 invocation = "select_last"
-key = "alt-F8"                         # mapped -> `cmd-down`
+key = "ctrl-p"                         # mapped -> `cmd-down`
 internal = "select_last"
 description = "go to bottom of the list -> `cmd-down`"
 
 [[verbs]]
 invocation = "page_up"
-key = "alt-up"
+key = "ctrl-b"                          # mapped -> `alt-up`
 internal = "page_up"
-description = "go to page up"
+description = "go to page up -> `alt-up`"
 
 [[verbs]]
 invocation = "page_down"
-key = "alt-down"
+key = "ctrl-f"                          # mapped -> `alt-down`
 internal = "page_down"
-description = "go to page down"
+description = "go to page down -> `alt-down`"
 
 # panel
 [[verbs]]
 invocation = "toggle_preview"
-key = "ctrl-h"
+key = "ctrl-g"                          # mapped -> `shift-enter`
 internal = "toggle_preview"
-description = "open / close preview panel"
+description = "open / close preview panel -> `shift-enter`"
 
 [[verbs]]
 invocation = "close_preview"
@@ -256,6 +249,15 @@ invocation = "panel_right"
 key = "ctrl-right"
 internal = "panel_right"
 description = "select right panel"
+
+# patch not-responding after atuin
+[[verbs]]
+key = "ctrl-down"
+internal = ":line_down"
+
+[[verbs]]
+key = "ctrl-up"
+internal = ":line_up"
 
 # create
 [[verbs]]
