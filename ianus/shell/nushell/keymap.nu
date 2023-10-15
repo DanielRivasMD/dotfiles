@@ -27,8 +27,8 @@ $env.config = {
 
     {
       name: list_shells
-      modifier: CONTROL
-      keycode: "char_v"                                     # patched -> `alt-cmd-/`
+      modifier: shift
+      keycode: "f4"                                         # patched -> `alt-cmd-/`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -38,8 +38,8 @@ $env.config = {
 
     {
       name: previous_dir
-      modifier: CONTROL
-      keycode: "char_o"                                     # patch -> `alt-cmd-,`
+      modifier: shift
+      keycode: "f1"                                         # patch -> `alt-cmd-,`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -49,8 +49,8 @@ $env.config = {
 
     {
       name: next_dir
-      modifier: CONTROL
-      keycode: "char_p"                                     # patched -> `alt-cmd-.`
+      modifier: shift
+      keycode: "f2"                                         # patched -> `alt-cmd-.`
       mode: emacs
       event: {
         send: executehostcommand,
