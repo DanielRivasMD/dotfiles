@@ -177,15 +177,15 @@ bindkey '^j' _call_just
 bindkey '^n' _call_navi
 
 # command edit
-bindkey '^x' edit-command-line
+bindkey '^g' edit-command-line
 
 # unbind
 bindkey -r "^B"
 bindkey -r "^F"
-bindkey -r "^G"
 bindkey -r "^H"
 bindkey -r "^O"
 bindkey -r "^P"
+bindkey -r "^X"
 
 ####################################################################################################
 
