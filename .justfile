@@ -244,34 +244,6 @@ Ianus:
 
 ####################################################################################################
 
-# deliver archives to Uppmax
-Mercury-uppmax:
-  #!/bin/bash
-  set -euo pipefail
-
-  #declarations
-  source .just.sh
-
-  # create directories
-  ssh ${uppmaxID} "if [[ ! -d ${ianusRemote} ]]; then mkdir -p ${ianusRemote}; fi"
-  ssh ${uppmaxID} "if [[ ! -d ${homeRemote}/bin ]]; then mkdir -p ${homeRemote}/bin; fi"
-
-  # directory
-  rsync -azvhP "${ianus}/pier" "${uppmaxID}:${ianusRemote}/"                      # pier
-  rsync -azvhP "${ianus}/R" "${uppmaxID}:${ianusRemote}/"                         # r
-  rsync -azvhP "${ianus}/screen" "${uppmaxID}:${ianusRemote}/"                    # screen
-  rsync -azvhP "${ianus}/shell" "${uppmaxID}:${ianusRemote}/"                     # shell
-  rsync -azvhP "${ianus}/starship" "${uppmaxID}:${ianusRemote}/"                  # starship
-  rsync -azvhP "${ianus}/tmux" "${uppmaxID}:${ianusRemote}/"                      # tmux
-  rsync -azvhP "${ianus}/micro/plug" "${uppmaxID}:${ianusRemote}/micro/"          # micro plugins
-  rsync -azvhP "${ianus}/micro/bindings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro bindings
-  rsync -azvhP "${ianus}/micro/settings.json" "${uppmaxID}:${ianusRemote}/micro/" # micro settings
-
-  # remote bin
-  rsync -azvhPX "${remoteBin}/bin/"* "${uppmaxID}:${homeRemote}/bin/"
-
-####################################################################################################
-
 # deliver archives to Pawsey
 Mercury-pawsey:
   #!/bin/bash
@@ -319,49 +291,6 @@ Mercury-pawsey:
 # He served as the blacksmith of the gods, and was worshipped in the manufacturing and industrial centres of Greece, particularly Athens.
 # The cult of Hephaestus was based in Lemnos.
 # Hephaestus's symbols are a smith's hammer, anvil, and a pair of tongs.
-
-####################################################################################################
-
-# link archives Uppmax
-Vulcano-uppmax:
-  #!/bin/bash
-  set -euo pipefail
-
-  # declarations
-  source .just.sh
-
-  # @HOME
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/R/Rprofile.d" "${homeRemote}/.Rprofile.d"                           # rprofile directory
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/R/uppmax_Rprofile.R" "${homeRemote}/.Rprofile"                      # rprofile
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/pier/pier.toml" "${homeRemote}/.pier.toml"                          # pier
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/tmux/2.5.tmux.conf" "${homeRemote}/.tmux.conf"                      # tmux 2.5
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/screen/4.01.00.screenrc" "${homeRemote}/.screenrc"                  # screen
-
-  # @config
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/micro" "${homeRemote}/.config"                                      # micro directory
-  ssh ${uppmaxID} ln -svf "${ianusRemote}/starship" "${homeRemote}/.config"                                   # starship directory
-
-  # shell
-  ssh ${uppmaxID} ln -svf "${terminalRemote}/uppmax_profile.sh" "${homeRemote}/.profile"                      # terminal profile
-
-  # bash
-  ssh ${uppmaxID} "if [[ ! -d ${homeRemote}/.bash ]]; then ssh ${uppmaxID} mkdir ${homeRemote}/.bash; fi"     # purge before linking
-  ssh ${uppmaxID} ln -svf "${bashRemote}/uppmax_bashrc.sh" "${homeRemote}/.bashrc"                            # bashrc
-  ssh ${uppmaxID} ln -svf "${bashRemote}/uppmax_bash_profile.sh" "${homeRemote}/.bash_profile"                # bash profile
-  ssh ${uppmaxID} ln -svf "${bashRemote}/uppmax_bash_aliases.sh" "${homeRemote}/.bash/bash_aliases.sh"        # bash aliases
-  ssh ${uppmaxID} ln -svf "${bashRemote}/fzf.bash" "${homeRemote}/.bash"                                      # fzf bash
-
-  # zsh
-  ssh ${uppmaxID} "if [[ ! -d ${homeRemote}/.zsh ]]; then ssh ${uppmaxID} mkdir ${homeRemote}/.zsh; fi"       # purge before linking
-  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zshrc.sh" "${homeRemote}/.zshrc"                               # zshrc
-  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_aliases.sh" "${homeRemote}/.zsh/zsh_aliases.sh"            # zsh aliases
-  ssh ${uppmaxID} ln -svf "${zshRemote}/fzf.zsh" "${homeRemote}/.zsh"                                         # fzf zsh
-  ssh ${uppmaxID} ln -svf "${zshRemote}/uppmax_zsh_plugins.txt" "${homeRemote}/.zsh/zsh_plugins.txt"          # zsh plugins
-  ssh ${uppmaxID} ln -svf "${zshRemote}/zsh_pandoc_autocompletion.sh" "${homeRemote}/.zsh"                    # zsh completion
-  ssh ${uppmaxID} ln -svf "${zshRemote}/completion" "${homeRemote}/.config/zsh_completion"                    # zsh completion
-
-  # fish
-  ssh ${uppmaxID} ln -svf "${fishRemote}/uppmax_config.fish" "${homeRemote}/.config/fish/config.fish"         # fish config
 
 ####################################################################################################
 
