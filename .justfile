@@ -33,14 +33,6 @@ Cerberus:
   # declarations
   source .just.sh
 
-  # atom
-  echo ''
-  echo 'Linking Atom'
-  echo '===================================================================================================='
-  if [[ -d "${home}/.atom" ]]; then rm -rf "${home}/.atom"; fi                        # purge before linking
-  ln -svf "${cerberus}/atom" "${home}/.atom"                                          # atom
-  echo '===================================================================================================='
-
   # gitconfig
   echo ''
   echo 'Linking git config directory'
@@ -84,8 +76,6 @@ Cerberus:
   ln -svf "${cerberus}/karabiner" "${config}/"                                  # karabiner
   ln -svf "${cerberus}/khal" "${config}/"                                       # khal
   ln -svf "${cerberus}/gh/config.yml" "${config}/gh/"                           # gh
-  ln -svf "${cerberus}/rstudio" "${config}/"                                    # rstudio
-  ln -svf "${cerberus}/rstudio/keybindings" "${home}/.R/rstudio/"               # rstudio keybindings
   echo '===================================================================================================='
 
   # config directories
@@ -95,21 +85,6 @@ Cerberus:
   ln -svf "${cerberus}/ranger" "${config}"                                      # ranger directory
   ln -svf "${cerberus}/gitui" "${config}"                                       # gitui directory
   ln -svf "${cerberus}/zellij" "${config}"                                      # zellij directory
-  echo '===================================================================================================='
-
-  # local
-  echo ''
-  echo 'Linking Rstudio config'
-  echo '===================================================================================================='
-  ln -svf "${cerberus}/rstudio/rstudio-desktop.json" "${localShare}/rstudio/"   # rstudio
-  echo '===================================================================================================='
-
-  # code
-  echo ''
-  echo 'Linking Code config'
-  echo '===================================================================================================='
-  ln -svf "${cerberus}/code/keybindings.json" "${codeConf}/"                    # code keybindings
-  ln -svf "${cerberus}/code/settings.json" "${codeConf}/"                       # code settings
   echo '===================================================================================================='
 
   # distant
@@ -136,19 +111,6 @@ Cerberus:
   echo '===================================================================================================='
   if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
   ln -svf "${cerberus}/navi" "${naviConf}"                                      # navi cheats directory
-  echo '===================================================================================================='
-
-  # sublime
-  echo ''
-  echo 'Linking Sublime config'
-  echo '===================================================================================================='
-  ln -svf "${sublKeymapTarget}" "${sublKeymapOrigin}"
-  ln -svf "${sublPackageTarget}" "${sublPackageOrigin}"
-  ln -svf "${sublSettingTarget}" "${sublSettingOrigin}"
-  ln -svf "${sublTrailTarget}" "${sublTrailOrigin}"
-  ln -svf "${sublRustTarget}" "${sublRustOrigin}"
-  ln -svf "${sublRfmtTarget}" "${sublRfmtOrigin}"
-  ln -svf "${sublGitTarget}" "${sublGitOrigin}"
   echo '===================================================================================================='
 
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
@@ -556,13 +518,7 @@ Hadur:
 # compose protocols
 ####################################################################################################
 
-# deliver & link configuration Uppmax
-Deploy-Uppmax: Mercury-uppmax && Vulcano-uppmax
-
 # deliver & link configuration Pawsey
 Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
-
-# deliver & link configuration Ulam
-Deploy-ICM_Ulam: Mercury-icm_ulam && Vulcano-icm_ulam
 
 ####################################################################################################
