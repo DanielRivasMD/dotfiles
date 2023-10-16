@@ -127,12 +127,12 @@
   "Shift-F11": "None",                                                          // mapped -> ``
   "Shift-F12": "None",                                                          // mapped -> ``
 
-  "Alt-F1": "None",                                                             // mapped -> ``
-  "Alt-F2": "None",                                                             // mapped -> ``
-  "Alt-F3": "None",                                                             // mapped -> ``
-  "Alt-F4": "None",                                                             // mapped -> ``
-  "Alt-F5": "None",                                                             // mapped -> ``
-  "Alt-F6": "None",                                                             // mapped -> ``
+  "Alt-F1": "None",                                                             // mapped -> `cmd-space`
+  "Alt-F2": "None",                                                             // mapped -> `ctrl-cmd-space`
+  "Alt-F3": "None",                                                             // mapped -> `alt-ctrl-enter`
+  "Alt-F4": "None",                                                             // mapped -> `alt-cmd-enter`
+  "Alt-F5": "None",                                                             // mapped -> `ctrl-cmd-enter`
+  "Alt-F6": "None",                                                             // mapped -> `alt-ctrl-cmd-enter`
   "Alt-F7": "None",                                                             // mapped -> `cmd-shift-up`
   "Alt-F8": "None",                                                             // mapped -> `cmd-shift-down`
   "Alt-F9": "None",                                                             // mapped -> `alt-cmd-up`
@@ -164,7 +164,7 @@
   "Ctrl-F9": "None",                                                            // mapped -> `alt-n`
   "Ctrl-F10": "Undo",                                                           // mapped -> `alt-u`
   "Ctrl-F11": "OutdentSelection",                                               // mapped -> `alt-O`
-  "Ctrl-F12": "None",                                                           // mapped -> ``
+  "Ctrl-F12": "None",                                                           // mapped -> `shift-space`
 
   "Ctrl-Shift-F1": "None",                                                      // mapped -> `shift-home`
   "Ctrl-Shift-F2": "None",                                                      // mapped -> `shift-end`
