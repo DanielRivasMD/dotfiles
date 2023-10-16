@@ -15,6 +15,9 @@ tmux send-keys "cd /Users/drivas/Kukulkan/GainLine/repo/Cohesion" C-m
 # create a new window
 tmux new-window -t $session:2 -n dev
 tmux send-keys "cd /Users/drivas/Kukulkan/GainLine/repo/Cohesion" C-m
+tmux split-window -v
+tmux send-keys "cd /Users/drivas/Kukulkan/GainLine/repo/Cohesion" C-m
+tmux resize-pane -U 15
 
 # create a new window
 tmux new-window -t $session:3 -n check
