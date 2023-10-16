@@ -1254,23 +1254,23 @@ key_bindings:
   # - { key: Return,      mods: Control|Shift,              chars: ""             } #
   - { key: Return,      mods: Command,                    chars: "\x14"         } # mapped -> `ctrl-t`
   # - { key: Return,      mods: Command|Shift,              chars: ""             } #
-  # - { key: Return,      mods: Alt|Control,                chars: ""             } #
-  # - { key: Return,      mods: Alt|Command,                chars: ""             } #
-  # - { key: Return,      mods: Control|Command,            chars: ""             } #
-  # - { key: Return,      mods: Alt|Control|Command,        chars: ""             } #
+  - { key: Return,      mods: Alt|Control,                chars: "\x1b[1;3R"    } # mapped -> `alt-F3`
+  - { key: Return,      mods: Alt|Command,                chars: "\x1b[1;3S"    } # mapped -> `alt-F4`
+  - { key: Return,      mods: Control|Command,            chars: "\x1b[15;3~"   } # mapped -> `alt-F5`
+  - { key: Return,      mods: Alt|Control|Command,        chars: "\x1b[17;3~"   } # mapped -> `alt-F6`
   # - { key: Return,      mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Return,      mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
-  - { key: Space,       mods: Shift,                      chars: "\x11c"        } # tmux copy-mode
+  - { key: Space,       mods: Shift,                      chars: "\x1b[24;5~"   } # tmux copy-mode mapped -> `ctrl-F12`
   - { key: Space,       mods: Alt,                        chars: "\x11."        } # tmux display-menu
-  - { key: Space,       mods: Alt|Shift,                  chars: "\x1b[1;2R"    } # remote-toggle-key -> `shift-F3`
+  - { key: Space,       mods: Alt|Shift,                  chars: "\x1b[1;2R"    } # tmux remote-toggle-key -> `shift-F3`
   # - { key: Space,       mods: Control,                    chars: ""             } # direct bound
   # - { key: Space,       mods: Control|Shift,              chars: ""             } #
-  # - { key: Space,       mods: Command,                    chars: ""             } #
+  - { key: Space,       mods: Command,                    chars: "\x1b[1;3P"   } # mapped -> `alt-F1`
   - { key: Space,       mods: Command|Shift,              chars: "\x11q"        } # tmux switch-client
   - { key: Space,       mods: Alt|Control,                chars: "\x11O"        } # tmux last-pane & resize-pane
   - { key: Space,       mods: Alt|Command,                chars: "\x11L"        } # tmux last-window
-  # - { key: Space,       mods: Control|Command,            chars: ""             } #
+  - { key: Space,       mods: Control|Command,            chars: "\x1b[1;3Q"    } # mapped -> `alt-F2`
   - { key: Space,       mods: Alt|Control|Command,        chars: "\x11o"        } # tmux last-pane
   # - { key: Space,       mods: Control|Command|Shift,      chars: ""             } # collision
   - { key: Space,       mods: Alt|Control|Command|Shift,  chars: "\x11z"        } # tmux resize-pane
