@@ -39,15 +39,15 @@ map V enterVisualLineMode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " links
-map <m-space> focusInput
+map <c-m-space> focusInput
 
 map <c-space> LinkHints.activateModeToCopyLinkUrl
 map <c-a-m-space> LinkHints.activateModeToDownloadLink
 
 map <c-m-enter> LinkHints.activateMode
 
-map <c-enter> LinkHints.activateModeToOpenInNewTab
-map <m-enter> LinkHints.activateModeToOpenInNewForegroundTab
+map <m-enter> LinkHints.activateModeToOpenInNewTab
+map <c-enter> LinkHints.activateModeToOpenInNewForegroundTab
 map <c-a-m-enter> LinkHints.activateModeWithQueue
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,7 +65,7 @@ map b Vomnibar.activateBookmarks
 map B Vomnibar.activateBookmarksInNewTab
 map e Vomnibar.activateEditUrl
 map E Vomnibar.activateEditUrlInNewTab
-map s Vomnibar.activateTabSelection
+map <m-space> Vomnibar.activateTabSelection
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -86,8 +86,6 @@ map U goForward
 map ; createTab
 map , previousTab
 map . nextTab
-map <c-,> firstTab
-map <c-.> lastTab
 map <a-m-space> visitPreviousTab
 map ' visitPreviousTab
 map d duplicateTab
@@ -104,6 +102,6 @@ map ] moveTabRight
 
 " help
 map ? showHelp
-map S toggleViewSource
+map s toggleViewSource
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
