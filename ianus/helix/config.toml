@@ -39,6 +39,18 @@ hidden = false                                                                  
 [keys.normal]
 
 A-a = ["select_all"]                                                            # select all
+# escape selections
+esc = ["collapse_selection", "keep_primary_selection"]                          #
+
+# return
+ret = ["insert_mode"]                                                           #
+
+# delete selections
+del = ["delete_selection_noyank"]                                               #
+
+# send selections interactive
+# C-scape = [""]
+
 A-b = ["move_prev_word_start"]                                                  # word left         # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                              # copy
 A-d = ["search_selection", "extend_search_next"]                                # spawn multicursor
@@ -217,14 +229,6 @@ C-F11 = ["unindent"]                                                            
 # C-S-F11 = [""]                                                                  #                   # mapped -> `alt-ctrl-home`
 # C-S-F12 = [""]                                                                  #                   # mapped -> `alt-ctrl-end`
 
-# escape selections
-esc = ["collapse_selection", "keep_primary_selection"]                          #
-
-# delete selections
-del = ["delete_selection_noyank"]                                               #
-
-# return
-ret = ["insert_mode"]                                                           #
 
 ####################################################################################################
 
@@ -232,6 +236,12 @@ ret = ["insert_mode"]                                                           
 [keys.insert]
 
 A-a = ["select_all"]                                                            # select all
+# delete selections
+del = ["delete_selection_noyank"]                                               #
+
+# completion
+C-scape = ["completion"]                                                        #
+
 A-b = ["move_prev_word_start"]                                                  # word left         # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                              # copy
 A-d = ["search_selection", "extend_search_next"]                                # spawn multicursor
@@ -410,8 +420,6 @@ C-F11 = ["unindent"]                                                            
 # C-S-F11 = [""]                                                                  #                   # mapped -> `alt-ctrl-home`
 # C-S-F12 = [""]                                                                  #                   # mapped -> `alt-ctrl-end`
 
-# delete selections
-del = ["delete_selection_noyank"]                                               #
 
 ####################################################################################################
 
@@ -419,6 +427,9 @@ del = ["delete_selection_noyank"]                                               
 [keys.select]
 
 A-a = ["select_all"]                                                            # select all
+# delete selections
+del = ["delete_selection_noyank"]                                               #
+
 A-b = ["move_prev_word_start"]                                                  # word left         # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                              # copy
 A-d = ["search_selection", "extend_search_next"]                                # spawn multicursor
@@ -597,18 +608,6 @@ C-F11 = ["unindent"]                                                            
 # C-S-F11 = [""]                                                                  #                   # mapped -> `alt-ctrl-home`
 # C-S-F12 = [""]                                                                  #                   # mapped -> `alt-ctrl-end`
 
-# delete selections
-del = ["delete_selection_noyank"]                                               #
 
 ####################################################################################################
 
-# # create a new minor mode bound to `+`
-# [keys.normal."="]
-# r = ["yank_joined_to_clipboard", ":sh tmux send-keys -t -1 ```eval(str2expression(system('pbpaste', intern = T)))``` Enter"]
-# j = ["yank_joined_to_clipboard", ":sh tmux send-keys -t -1 eval(str2expression(system('pbpaste', intern = T))) Enter"]
-# # c = ":sh cargo build"                                            #
-# # t = ":sh cargo test"                                             #
-
-####################################################################################################
-
-# 10 + 10
