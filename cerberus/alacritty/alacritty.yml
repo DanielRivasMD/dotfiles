@@ -1029,18 +1029,18 @@ key_bindings:
 
   - { key: A,           mods: Command,                    chars: "\x11a"        } # tmux choose-tree
   - { key: B,           mods: Command,                    chars: ""             } #
-  - { key: C,           mods: Command,                    chars: "\x11y"        } # tmux copy line
+  - { key: C,           mods: Command,                    chars: ""             } #
   - { key: D,           mods: Command,                    chars: "\x11d"        } # tmux detach
   - { key: E,           mods: Command,                    chars: ""             } #
   - { key: F,           mods: Command,                    chars: ""             } #
-  - { key: G,           mods: Command,                    chars: "\x11="        } # tmux split-window vertical
-  - { key: H,           mods: Command,                    chars: "\x11-"        } # tmux split-window horizontal
+  - { key: G,           mods: Command,                    chars: "\x11g"        } # tmux split-window vertical
+  - { key: H,           mods: Command,                    chars: "\x11h"        } # tmux split-window horizontal
   - { key: I,           mods: Command,                    chars: ""             } #
-  - { key: J,           mods: Command,                    chars: "\x11["        } # tmux join-pane
-  - { key: K,           mods: Command,                    chars: "\x11]"        } # tmux break-pane
+  - { key: J,           mods: Command,                    chars: "\x11j"        } # tmux join-pane
+  - { key: K,           mods: Command,                    chars: "\x11k"        } # tmux break-pane
   - { key: L,           mods: Command,                    chars: ""             } #
   - { key: M,           mods: Command,                    chars: ""             } #
-  - { key: N,           mods: Command,                    chars: "\x11;"        } # tmux new-window current path
+  - { key: N,           mods: Command,                    chars: "\x11n"        } # tmux new-window current path
   - { key: O,           mods: Command,                    chars: ""             } #
   - { key: P,           mods: Command,                    chars: ""             } #
   - { key: Q,           mods: Command,                    chars: ""             } # collision
@@ -1051,7 +1051,7 @@ key_bindings:
   - { key: V,           mods: Command,                    action: Paste         } #
   - { key: W,           mods: Command,                    chars: "\x11w"        } # tmux rotate-window
   - { key: X,           mods: Command,                    chars: "\x11x"        } # tmux kill-pane
-  - { key: Y,           mods: Command,                    chars: ""             } #
+  - { key: Y,           mods: Command,                    chars: "\x11y"        } # tmux copy line
   - { key: Z,           mods: Command,                    chars: ""             } #
 
   - { key: A,           mods: Command|Shift,              chars: ""             } #
@@ -1060,14 +1060,14 @@ key_bindings:
   - { key: D,           mods: Command|Shift,              chars: ""             } #
   - { key: E,           mods: Command|Shift,              chars: ""             } #
   - { key: F,           mods: Command|Shift,              chars: ""             } #
-  - { key: G,           mods: Command|Shift,              chars: "\x11+"        } # tmux layout even-vertical
-  - { key: H,           mods: Command|Shift,              chars: "\x11_"        } # tmux layout even-horizontal
+  - { key: G,           mods: Command|Shift,              chars: "\x11G"        } # tmux layout even-vertical
+  - { key: H,           mods: Command|Shift,              chars: "\x11H"        } # tmux layout even-horizontal
   - { key: I,           mods: Command|Shift,              chars: ""             } #
-  - { key: J,           mods: Command|Shift,              chars: "\x11<"        } # tmux layout main-vertical
-  - { key: K,           mods: Command|Shift,              chars: "\x11>"        } # tmux layout main-horizontal
+  - { key: J,           mods: Command|Shift,              chars: "\x11J"        } # tmux layout main-vertical
+  - { key: K,           mods: Command|Shift,              chars: "\x11K"        } # tmux layout main-horizontal
   - { key: L,           mods: Command|Shift,              chars: ""             } #
   - { key: M,           mods: Command|Shift,              chars: ""             } #
-  - { key: N,           mods: Command|Shift,              chars: "\x1b[17;6~"   } # bypassed -> `ctrl-F6` # tmux new-window
+  - { key: N,           mods: Command|Shift,              chars: "\x11N"        } # tmux new-window
   - { key: O,           mods: Command|Shift,              chars: ""             } #
   - { key: P,           mods: Command|Shift,              chars: ""             } #
   - { key: Q,           mods: Command|Shift,              chars: ""             } #
@@ -1076,7 +1076,7 @@ key_bindings:
   - { key: T,           mods: Command|Shift,              chars: ""             } #
   - { key: U,           mods: Command|Shift,              chars: ""             } #
   - { key: V,           mods: Command|Shift,              chars: ""             } #
-  - { key: W,           mods: Command|Shift,              chars: "\x11:"        } # tmux select-layout tiled
+  - { key: W,           mods: Command|Shift,              chars: "\x11W"        } # tmux select-layout tiled
   - { key: X,           mods: Command|Shift,              chars: "\x11X"        } # tmux kill-window
   - { key: Y,           mods: Command|Shift,              chars: ""             } #
   - { key: Z,           mods: Command|Shift,              chars: ""             } #
@@ -1262,7 +1262,7 @@ key_bindings:
   # - { key: Return,      mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Space,       mods: Shift,                      chars: "\x1b[24;5~"   } # tmux copy-mode mapped -> `ctrl-F12`
-  - { key: Space,       mods: Alt,                        chars: "\x11."        } # tmux display-menu
+  - { key: Space,       mods: Alt,                        chars: "\x11;"        } # tmux display-menu
   - { key: Space,       mods: Alt|Shift,                  chars: "\x1b[1;2R"    } # tmux remote-toggle-key -> `shift-F3`
   # - { key: Space,       mods: Control,                    chars: ""             } # direct bound
   # - { key: Space,       mods: Control|Shift,              chars: ""             } #
@@ -1283,9 +1283,9 @@ key_bindings:
   - { key: Left,        mods: Command,                    chars: "\x01"         } # mapped -> `ctrl-a`
   - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
   # - { key: Left,        mods: Alt|Control,                chars: ""             } # direct bound tmux
-  - { key: Left,        mods: Alt|Command,                chars: "\x11p"        } # tmux next-window
+  - { key: Left,        mods: Alt|Command,                chars: "\x11{"        } # tmux next-window
   - { key: Left,        mods: Control|Command,            chars: "\x0A"         } # mapped -> `ctrl-j`
-  - { key: Left,        mods: Alt|Control|Command,        chars: "\x11h"        } #
+  - { key: Left,        mods: Alt|Control|Command,        chars: "\x11<"        } #
   # - { key: Left,        mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Left,        mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
@@ -1297,9 +1297,9 @@ key_bindings:
   - { key: Right,       mods: Command,                    chars: "\x05"         } # mapped -> `ctrl-e`
   - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
   # - { key: Right,       mods: Alt|Control,                chars: ""             } # direct bound tmux
-  - { key: Right,       mods: Alt|Command,                chars: "\x11n"        } # tmux previous-window
+  - { key: Right,       mods: Alt|Command,                chars: "\x11}"        } # tmux previous-window
   - { key: Right,       mods: Control|Command,            chars: "\x0E"         } # mapped -> `ctrl-n`
-  - { key: Right,       mods: Alt|Control|Command,        chars: "\x11l"        } #
+  - { key: Right,       mods: Alt|Control|Command,        chars: "\x11>"        } #
   # - { key: Right,       mods: Control|Command|Shift,      chars: ""             } #
   # - { key: Right,       mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
@@ -1313,7 +1313,7 @@ key_bindings:
   # - { key: Up,          mods: Alt|Control,                chars: ""             } # direct bound tmux
   - { key: Up,          mods: Alt|Command,                chars: "\x1b[20;3~"   } # mapped -> `alt-F9`
   - { key: Up,          mods: Control|Command,            chars: "\x16"         } # mapped -> `ctrl-v`
-  - { key: Up,          mods: Alt|Control|Command,        chars: "\x11k"        } #
+  - { key: Up,          mods: Alt|Control|Command,        chars: "\x11+"        } #
   # - { key: Up,          mods: Control|Command|Shift,      chars: ""             } #
   - { key: Up,          mods: Alt|Control|Command|Shift,  chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
 
@@ -1327,7 +1327,7 @@ key_bindings:
   # - { key: Down,        mods: Alt|Control,                chars: ""             } # direct bound tmux
   - { key: Down,        mods: Alt|Command,                chars: "\x1b[21;3~"   } # mapped -> `alt-F10`
   - { key: Down,        mods: Control|Command,            chars: "\x18"         } # mapped -> `ctrl-x`
-  - { key: Down,        mods: Alt|Control|Command,        chars: "\x11j"        } #
+  - { key: Down,        mods: Alt|Control|Command,        chars: "\x11-"        } #
   # - { key: Down,        mods: Control|Command|Shift,      chars: ""             } #
   - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
 
@@ -1475,7 +1475,7 @@ key_bindings:
   # - { key: Apostrophe,  mods: Command,                    chars: "  "           } #
   # - { key: Backslash,   mods: Command,                    chars: "  "           } #
   - { key: Comma,       mods: Command,                    chars: "\x11,"        } # tmux source config
-  - { key: Period,      mods: Command,                    chars: "\x11M"        } # tmux mark pane
+  - { key: Period,      mods: Command,                    chars: "\x11."        } # tmux mark pane
   # - { key: Slash,       mods: Command,                    chars: "  "           } #
 
   # - { key: Key0,        mods: Command|Shift,              chars: "  "           } #
@@ -1532,8 +1532,8 @@ key_bindings:
   - { key: Key9,        mods: Alt|Command,                chars: "\x119"        } #
   # - { key: Minus,       mods: Alt|Command,                chars: "  "           } #
   # - { key: Equals,      mods: Alt|Command,                chars: "  "           } #
-  - { key: LBracket,    mods: Alt|Command,                chars: "\x11P"        } # tmux swap-window
-  - { key: RBracket,    mods: Alt|Command,                chars: "\x11N"        } # tmux swap-window
+  - { key: LBracket,    mods: Alt|Command,                chars: "\x11("        } # tmux swap-window
+  - { key: RBracket,    mods: Alt|Command,                chars: "\x11)"        } # tmux swap-window
   # - { key: Semicolon,   mods: Alt|Command,                chars: "  "           } #
   # - { key: Apostrophe,  mods: Alt|Command,                chars: "  "           } #
   # - { key: Backslash,   mods: Alt|Command,                chars: "  "           } #
