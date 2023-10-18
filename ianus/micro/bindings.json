@@ -22,7 +22,7 @@
   "Alt-q": "Quit",
   "Alt-r": "ToggleMacro",
   "Alt-s": "Save,Quit",
-  "Alt-t": "OpenFile",
+  "Alt-t": "None",
   "Alt-u": "None",                                                              // bypassed => accent
   "Alt-v": "Paste",
   "Alt-w": "Save",
@@ -63,7 +63,7 @@
   "Ctrl-d": "None",
   "Ctrl-e": "EndOfLine",                                                        // mapped -> `cmd-right`
   "Ctrl-f": "ParagraphNext",                                                    // mapped -> `alt-down`
-  "Ctrl-g": "None",                                                             // mapped -> `shift-enter`
+  "Ctrl-g": "JumpLine",                                                         // mapped -> `shift-enter`
   "Ctrl-h": "None",                                                             // mapped -> ``
   "Ctrl-i": "None",
   "Ctrl-j": "PreviousTab",                                                      // mapped -> `ctrl-cmd-left`
@@ -74,8 +74,8 @@
   "Ctrl-o": "CursorStart",                                                      // mapped -> `cmd-up`
   "Ctrl-p": "CursorEnd",                                                        // mapped -> `cmd-down`
   "Ctrl-q": "None",
-  "Ctrl-r": "None",                                                             // mapped -> `ctrl-enter`
-  "Ctrl-s": "JumpLine",                                                         // mapped -> `alt-enter`
+  "Ctrl-r": "OpenFile",                                                         // mapped -> `ctrl-enter`
+  "Ctrl-s": "None",                                                             // mapped -> `alt-enter`
   "Ctrl-t": "None",                                                             // mapped -> `cmd-enter`
   "Ctrl-u": "SelectToStartOfLine,Delete",
   "Ctrl-v": "None",                                                             // mapped -> `ctrl-cmd-up`
