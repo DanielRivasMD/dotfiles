@@ -611,9 +611,14 @@ C-F11 = ["unindent"]                                                            
 
 ####################################################################################################
 
-# 
-# S-F4 = [""]                                                                     #                   # mapped -> `alt-cmd-/`
-# S-F5 = [""]                                                                     #                   # mapped -> ``
-# S-F6 = [""]                                                                     #                   # mapped -> ``
-# S-F7 = [""]                                                                     #                   # mapped -> ``
-# S-F8 = [""]                                                                     # 
+# [keys.normal."+"# ]
+# p = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.py", ":sh tmux send-keys -t -1 ```print(\"Hello\")``` Enter"# ]
+# # p = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.py", ":sh tmux send-keys -t -1 ```execfile(\".tmp.py\")``` Enter"# ]
+# r = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.R", ":sh tmux send-keys -t -1 'eval(source(\".tmp.R\"))' Enter"# ]
+# s = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.R", ":sh tmux send-keys -t -1 'echo hello' Enter"# ]
+# # j = ["yank_joined_to_clipboard", ":sh tmux send-keys -t -1 eval(str2expression(system('pbpaste', intern = T))) Enter"# ]
+# # c = ":sh cargo build"                                            # #
+# # t = ":sh cargo test"                                             #
+
+
+####################################################################################################
