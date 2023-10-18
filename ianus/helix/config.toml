@@ -23,9 +23,9 @@ lsp.display-inlay-hints = true
 
 # cursor shape
 [editor.cursor-shape]
-normal = "block"                                                                #
+normal = "bar"                                                                  #
 insert = "underline"                                                            #
-select = "bar"                                                                  #
+select = "block"                                                                #
 
 ####################################################################################################
 
@@ -151,6 +151,11 @@ C-down = ["jump_view_down"]                                                     
 C-left = ["jump_view_left"]                                                     # previous split
 C-right = ["jump_view_right"]                                                   # next split
 
+# C-S-up = [""]                                                                   #
+# C-S-down = [""]                                                                 #
+# C-S-left = [""]                                                                 #
+# C-S-right = [""]                                                                #
+
 # F1 = [""]                                                                       #
 # F2 = [""]                                                                       #
 # F3 = [""]                                                                       #
@@ -164,25 +169,25 @@ C-right = ["jump_view_right"]                                                   
 # F11 = [""]                                                                      #
 # F12 = [""]                                                                      #
 
-S-F1 = ["jump_backward"]                                                        #                   # mapped -> `alt-cmd-,`
-S-F2 = ["jump_forward"]                                                         #                   # mapped -> `alt-cmd-.`
+# S-F1 = [""]                                                                     #                   # mapped -> `alt-e`
+# S-F2 = [""]                                                                     #                   # mapped -> `alt-i`
 # S-F3 = [""]                                                                     # collision tmux    # mapped -> `alt-shift-space`
 S-F4 = ["jumplist_picker"]                                                      #                   # mapped -> `alt-cmd-/`
-# S-F5 = [""]                                                                     #                   # mapped -> ``
-# S-F6 = [""]                                                                     #                   # mapped -> ``
-# S-F7 = [""]                                                                     #                   # mapped -> ``
-# S-F8 = [""]                                                                     #                   # mapped -> ``
-# S-F9 = [""]                                                                     #                   # mapped -> ``
-# S-F10 = [""]                                                                    #                   # mapped -> ``
-# S-F11 = [""]                                                                    #                   # mapped -> ``
-# S-F12 = [""]                                                                    #                   # mapped -> ``
+S-F5 = ["jump_backward"]                                                        #                   # mapped -> `alt-cmd-,`
+S-F6 = ["jump_forward"]                                                         #                   # mapped -> `alt-cmd-.`
+# S-F7 = [""]                                                                     #                   # mapped -> `alt-cmd-i`
+# S-F8 = [""]                                                                     #                   # mapped -> `alt-cmd-n`
+S-F9 = ["workspace_diagnostics_picker"]                                         #                   # mapped -> `alt-ctrl-enter`
+S-F10 = ["workspace_symbol_picker"]                                             #                   # mapped -> `alt-cmd-enter`
+S-F11 = ["goto_reference"]                                                      #                   # mapped -> `ctrl-cmd-enter`
+S-F12 = ["goto_definition"]                                                     #                   # mapped -> `alt-ctrl-cmd-enter`
 
-A-F1 = ["goto_last_accessed_file"]                                              #                   # mapped -> `cmd-space`
-A-F2 = ["hover"]                                                                #                   # mapped -> `ctrl-cmd-space`
-A-F3 = ["workspace_diagnostics_picker"]                                         #                   # mapped -> `alt-ctrl-enter`
-A-F4 = ["workspace_symbol_picker"]                                              #                   # mapped -> `alt-cmd-enter`
-A-F5 = ["goto_reference"]                                                       #                   # mapped -> `ctrl-cmd-enter`
-A-F6 = ["goto_definition"]                                                      #                   # mapped -> `alt-ctrl-cmd-enter`
+# A-F1 = [""]                                                                     #                   # mapped -> ``
+# A-F2 = [""]                                                                     #                   # mapped -> ``
+# A-F3 = [""]                                                                     #                   # mapped -> ``
+A-F4 = ["undo"]                                                                 # undo              # mapped -> `alt-u`
+# A-F5 = [""]                                                                     #                   # mapped -> ``
+# A-F6 = [""]                                                                     #                   # mapped -> ``
 A-F7 = ["select_mode", "goto_file_start", "normal_mode"]                        # select until start# mapped -> `cmd-shift-up`
 A-F8 = ["select_mode", "goto_last_line", "goto_line_end", "normal_mode"]        # select until end  # mapped -> `cmd-shift-down`
 # A-F9 = [""]                                                                     #                   # mapped -> `alt-cmd-up`
@@ -192,42 +197,42 @@ A-F12 = ["decrement"]                                                           
 
 A-S-F1 = ["goto_prev_diag"]                                                     #                   # mapped -> `shift-pageup`
 A-S-F2 = ["goto_next_diag"]                                                     #                   # mapped -> `shift-pagedown`
-A-S-F3 = ["goto_prev_comment"]                                                  #                   # mapped -> `alt-pageup`
-A-S-F4 = ["goto_next_comment"]                                                  #                   # mapped -> `alt-pagedown`
-A-S-F5 = ["goto_prev_class"]                                                    #                   # mapped -> `alt-shift-pageup`
-A-S-F6 = ["goto_next_class"]                                                    #                   # mapped -> `alt-shift-pagedown`
-A-S-F7 = ["goto_prev_function"]                                                 #                   # mapped -> `ctrl-pageup`
-A-S-F8 = ["goto_next_function"]                                                 #                   # mapped -> `ctrl-pagedown`
-A-S-F9 = ["goto_prev_parameter"]                                                #                   # mapped -> `ctrl-shift-pageup`
-A-S-F10 = ["goto_next_parameter"]                                               #                   # mapped -> `ctrl-shift-pagedown`
-A-S-F11 = ["goto_prev_test"]                                                    #                   # mapped -> `alt-ctrl-pageup`
-A-S-F12 = ["goto_next_test"]                                                    #                   # mapped -> `alt-ctrl-pagedown`
+# A-S-F3 = [""]                                                                   #                   # mapped -> ``
+A-S-F4 = ["rename_symbol"]                                                      #                   # mapped -> `alt-n`
+A-S-F5 = ["goto_prev_comment"]                                                  #                   # mapped -> `alt-pageup`
+A-S-F6 = ["goto_next_comment"]                                                  #                   # mapped -> `alt-pagedown`
+A-S-F7 = ["goto_prev_class"]                                                    #                   # mapped -> `alt-shift-pageup`
+A-S-F8 = ["goto_next_class"]                                                    #                   # mapped -> `alt-shift-pagedown`
+A-S-F9 = ["goto_prev_function"]                                                 #                   # mapped -> `ctrl-pageup`
+A-S-F10 = ["goto_next_function"]                                                #                   # mapped -> `ctrl-pagedown`
+A-S-F11 = ["goto_prev_parameter"]                                               #                   # mapped -> `ctrl-shift-pageup`
+A-S-F12 = ["goto_next_parameter"]                                               #                   # mapped -> `ctrl-shift-pagedown`
 
-C-F1 = ["goto_prev_change"]                                                     # previous git      # mapped -> `pageup`
-C-F2 = ["goto_next_change"]                                                     # next git          # mapped -> `pagedown`
-# C-F3 = [""]                                                                     #                   # mapped -> `home`
-# C-F4 = [""]                                                                     #                   # mapped -> `end`
-# C-F5 = [""]                                                                     #                   # mapped -> `alt-cmd-i`
-# C-F6 = [""]                                                                     #                   # mapped -> `alt-cmd-n`
-# C-F7 = [""]                                                                     #                   # mapped -> `alt-e`
-# C-F8 = [""]                                                                     #                   # mapped -> `alt-i`
-C-F9 = ["rename_symbol"]                                                        #                   # mapped -> `alt-n`
-C-F10 = ["undo"]                                                                # undo              # mapped -> `alt-u`
-C-F11 = ["unindent"]                                                            # outdent selection # mapped -> `alt-O`
-# C-F12 = [""]                                                                  # collision tmux    # mapped -> `ctrl-F12`
+# C-F1 = [""]                                                                     #                   # mapped -> ``
+# C-F2 = [""]                                                                     #                   # mapped -> ``
+# C-F3 = [""]                                                                     # collision tmux    # mapped -> `ctrl-F3`
+C-F4 = ["unindent"]                                                             # outdent selection # mapped -> `alt-O`
+# C-F5 = [""]                                                                     #                   # mapped -> ``
+# C-F6 = [""]                                                                     #                   # mapped -> ``
+C-F7 = ["goto_last_accessed_file"]                                              #                   # mapped -> `cmd-space`
+C-F8 = ["hover"]                                                                #                   # mapped -> `ctrl-cmd-space`
+C-F9 = ["goto_prev_change"]                                                     # previous git      # mapped -> `pageup`
+C-F10 = ["goto_next_change"]                                                    # next git          # mapped -> `pagedown`
+# C-F11 = [""]                                                                    #                   # mapped -> `home`
+# C-F12 = [""]                                                                    #                   # mapped -> `end`
 
 # C-S-F1 = [""]                                                                   #                   # mapped -> `shift-home`
 # C-S-F2 = [""]                                                                   #                   # mapped -> `shift-end`
-# C-S-F3 = [""]                                                                   #                   # mapped -> `alt-home`
-# C-S-F4 = [""]                                                                   #                   # mapped -> `alt-end`
-# C-S-F5 = [""]                                                                   #                   # mapped -> `alt-shift-home`
-# C-S-F6 = [""]                                                                   #                   # mapped -> `alt-shift-end`
-# C-S-F7 = [""]                                                                   #                   # mapped -> `ctrl-home`
-# C-S-F8 = [""]                                                                   #                   # mapped -> `ctrl-end`
-# C-S-F9 = [""]                                                                   #                   # mapped -> `ctrl-shift-home`
-# C-S-F10 = [""]                                                                  #                   # mapped -> `ctrl-shift-end`
-# C-S-F11 = [""]                                                                  #                   # mapped -> `alt-ctrl-home`
-# C-S-F12 = [""]                                                                  #                   # mapped -> `alt-ctrl-end`
+# C-S-F3 = [""]                                                                   #                   # mapped -> ``
+# C-S-F4 = [""]                                                                   #                   # mapped -> ``
+# C-S-F5 = [""]                                                                   #                   # mapped -> `alt-home`
+# C-S-F6 = [""]                                                                   #                   # mapped -> `alt-end`
+# C-S-F7 = [""]                                                                   #                   # mapped -> `alt-shift-home`
+# C-S-F8 = [""]                                                                   #                   # mapped -> `alt-shift-end`
+# C-S-F9 = [""]                                                                   #                   # mapped -> `ctrl-home`
+# C-S-F10 = [""]                                                                  #                   # mapped -> `ctrl-end`
+# C-S-F11 = [""]                                                                  #                   # mapped -> `ctrl-shift-home`
+# C-S-F12 = [""]                                                                  #                   # mapped -> `ctrl-shift-end`
 
 
 ####################################################################################################
@@ -342,6 +347,11 @@ C-down = ["jump_view_down"]                                                     
 C-left = ["jump_view_left"]                                                     # previous split
 C-right = ["jump_view_right"]                                                   # next split
 
+# C-S-up = [""]                                                                   #
+# C-S-down = [""]                                                                 #
+# C-S-left = [""]                                                                 #
+# C-S-right = [""]                                                                #
+
 # F1 = [""]                                                                       #
 # F2 = [""]                                                                       #
 # F3 = [""]                                                                       #
@@ -355,25 +365,25 @@ C-right = ["jump_view_right"]                                                   
 # F11 = [""]                                                                      #
 # F12 = [""]                                                                      #
 
-S-F1 = ["jump_backward"]                                                        #                   # mapped -> `alt-cmd-,`
-S-F2 = ["jump_forward"]                                                         #                   # mapped -> `alt-cmd-.`
+# S-F1 = [""]                                                                     #                   # mapped -> `alt-e`
+# S-F2 = [""]                                                                     #                   # mapped -> `alt-i`
 # S-F3 = [""]                                                                     # collision tmux    # mapped -> `alt-shift-space`
 S-F4 = ["jumplist_picker"]                                                      #                   # mapped -> `alt-cmd-/`
-# S-F5 = [""]                                                                     #                   # mapped -> ``
-# S-F6 = [""]                                                                     #                   # mapped -> ``
-# S-F7 = [""]                                                                     #                   # mapped -> ``
-# S-F8 = [""]                                                                     #                   # mapped -> ``
-# S-F9 = [""]                                                                     #                   # mapped -> ``
-# S-F10 = [""]                                                                    #                   # mapped -> ``
-# S-F11 = [""]                                                                    #                   # mapped -> ``
-# S-F12 = [""]                                                                    #                   # mapped -> ``
+S-F5 = ["jump_backward"]                                                        #                   # mapped -> `alt-cmd-,`
+S-F6 = ["jump_forward"]                                                         #                   # mapped -> `alt-cmd-.`
+# S-F7 = [""]                                                                     #                   # mapped -> `alt-cmd-i`
+# S-F8 = [""]                                                                     #                   # mapped -> `alt-cmd-n`
+S-F9 = ["workspace_diagnostics_picker"]                                         #                   # mapped -> `alt-ctrl-enter`
+S-F10 = ["workspace_symbol_picker"]                                             #                   # mapped -> `alt-cmd-enter`
+S-F11 = ["goto_reference"]                                                      #                   # mapped -> `ctrl-cmd-enter`
+S-F12 = ["goto_definition"]                                                     #                   # mapped -> `alt-ctrl-cmd-enter`
 
-A-F1 = ["goto_last_accessed_file"]                                              #                   # mapped -> `cmd-space`
-A-F2 = ["hover"]                                                                #                   # mapped -> `ctrl-cmd-space`
-A-F3 = ["workspace_diagnostics_picker"]                                         #                   # mapped -> `alt-ctrl-enter`
-A-F4 = ["workspace_symbol_picker"]                                              #                   # mapped -> `alt-cmd-enter`
-A-F5 = ["goto_reference"]                                                       #                   # mapped -> `ctrl-cmd-enter`
-A-F6 = ["goto_definition"]                                                      #                   # mapped -> `alt-ctrl-cmd-enter`
+# A-F1 = [""]                                                                     #                   # mapped -> ``
+# A-F2 = [""]                                                                     #                   # mapped -> ``
+# A-F3 = [""]                                                                     #                   # mapped -> ``
+A-F4 = ["undo"]                                                                 # undo              # mapped -> `alt-u`
+# A-F5 = [""]                                                                     #                   # mapped -> ``
+# A-F6 = [""]                                                                     #                   # mapped -> ``
 A-F7 = ["select_mode", "goto_file_start", "insert_mode"]                        # select until start# mapped -> `cmd-shift-up`
 A-F8 = ["select_mode", "goto_last_line", "goto_line_end", "insert_mode"]        # select until end  # mapped -> `cmd-shift-down`
 # A-F9 = [""]                                                                     #                   # mapped -> `alt-cmd-up`
@@ -383,42 +393,42 @@ A-F12 = ["decrement"]                                                           
 
 A-S-F1 = ["goto_prev_diag"]                                                     #                   # mapped -> `shift-pageup`
 A-S-F2 = ["goto_next_diag"]                                                     #                   # mapped -> `shift-pagedown`
-A-S-F3 = ["goto_prev_comment"]                                                  #                   # mapped -> `alt-pageup`
-A-S-F4 = ["goto_next_comment"]                                                  #                   # mapped -> `alt-pagedown`
-A-S-F5 = ["goto_prev_class"]                                                    #                   # mapped -> `alt-shift-pageup`
-A-S-F6 = ["goto_next_class"]                                                    #                   # mapped -> `alt-shift-pagedown`
-A-S-F7 = ["goto_prev_function"]                                                 #                   # mapped -> `ctrl-pageup`
-A-S-F8 = ["goto_next_function"]                                                 #                   # mapped -> `ctrl-pagedown`
-A-S-F9 = ["goto_prev_parameter"]                                                #                   # mapped -> `ctrl-shift-pageup`
-A-S-F10 = ["goto_next_parameter"]                                               #                   # mapped -> `ctrl-shift-pagedown`
-A-S-F11 = ["goto_prev_test"]                                                    #                   # mapped -> `alt-ctrl-pageup`
-A-S-F12 = ["goto_next_test"]                                                    #                   # mapped -> `alt-ctrl-pagedown`
+# A-S-F3 = [""]                                                                   #                   # mapped -> ``
+A-S-F4 = ["rename_symbol"]                                                      #                   # mapped -> `alt-n`
+A-S-F5 = ["goto_prev_comment"]                                                  #                   # mapped -> `alt-pageup`
+A-S-F6 = ["goto_next_comment"]                                                  #                   # mapped -> `alt-pagedown`
+A-S-F7 = ["goto_prev_class"]                                                    #                   # mapped -> `alt-shift-pageup`
+A-S-F8 = ["goto_next_class"]                                                    #                   # mapped -> `alt-shift-pagedown`
+A-S-F9 = ["goto_prev_function"]                                                 #                   # mapped -> `ctrl-pageup`
+A-S-F10 = ["goto_next_function"]                                                #                   # mapped -> `ctrl-pagedown`
+A-S-F11 = ["goto_prev_parameter"]                                               #                   # mapped -> `ctrl-shift-pageup`
+A-S-F12 = ["goto_next_parameter"]                                               #                   # mapped -> `ctrl-shift-pagedown`
 
-C-F1 = ["goto_prev_change"]                                                     # previous git      # mapped -> `pageup`
-C-F2 = ["goto_next_change"]                                                     # next git          # mapped -> `pagedown`
-# C-F3 = [""]                                                                     #                   # mapped -> `home`
-# C-F4 = [""]                                                                     #                   # mapped -> `end`
-# C-F5 = [""]                                                                     #                   # mapped -> `alt-cmd-i`
-# C-F6 = [""]                                                                     #                   # mapped -> `alt-cmd-n`
-# C-F7 = [""]                                                                     #                   # mapped -> `alt-e`
-# C-F8 = [""]                                                                     #                   # mapped -> `alt-i`
-C-F9 = ["rename_symbol"]                                                        #                   # mapped -> `alt-n`
-C-F10 = ["undo"]                                                                # undo              # mapped -> `alt-u`
-C-F11 = ["unindent"]                                                            # outdent selection # mapped -> `alt-O`
-# C-F12 = [""]                                                                  # collision tmux    # mapped -> `ctrl-F12`
+# C-F1 = [""]                                                                     #                   # mapped -> ``
+# C-F2 = [""]                                                                     #                   # mapped -> ``
+# C-F3 = [""]                                                                     # collision tmux    # mapped -> `ctrl-F3`
+C-F4 = ["unindent"]                                                             # outdent selection # mapped -> `alt-O`
+# C-F5 = [""]                                                                     #                   # mapped -> ``
+# C-F6 = [""]                                                                     #                   # mapped -> ``
+C-F7 = ["goto_last_accessed_file"]                                              #                   # mapped -> `cmd-space`
+C-F8 = ["hover"]                                                                #                   # mapped -> `ctrl-cmd-space`
+C-F9 = ["goto_prev_change"]                                                     # previous git      # mapped -> `pageup`
+C-F10 = ["goto_next_change"]                                                    # next git          # mapped -> `pagedown`
+# C-F11 = [""]                                                                    #                   # mapped -> `home`
+# C-F12 = [""]                                                                    #                   # mapped -> `end`
 
 # C-S-F1 = [""]                                                                   #                   # mapped -> `shift-home`
 # C-S-F2 = [""]                                                                   #                   # mapped -> `shift-end`
-# C-S-F3 = [""]                                                                   #                   # mapped -> `alt-home`
-# C-S-F4 = [""]                                                                   #                   # mapped -> `alt-end`
-# C-S-F5 = [""]                                                                   #                   # mapped -> `alt-shift-home`
-# C-S-F6 = [""]                                                                   #                   # mapped -> `alt-shift-end`
-# C-S-F7 = [""]                                                                   #                   # mapped -> `ctrl-home`
-# C-S-F8 = [""]                                                                   #                   # mapped -> `ctrl-end`
-# C-S-F9 = [""]                                                                   #                   # mapped -> `ctrl-shift-home`
-# C-S-F10 = [""]                                                                  #                   # mapped -> `ctrl-shift-end`
-# C-S-F11 = [""]                                                                  #                   # mapped -> `alt-ctrl-home`
-# C-S-F12 = [""]                                                                  #                   # mapped -> `alt-ctrl-end`
+# C-S-F3 = [""]                                                                   #                   # mapped -> ``
+# C-S-F4 = [""]                                                                   #                   # mapped -> ``
+# C-S-F5 = [""]                                                                   #                   # mapped -> `alt-home`
+# C-S-F6 = [""]                                                                   #                   # mapped -> `alt-end`
+# C-S-F7 = [""]                                                                   #                   # mapped -> `alt-shift-home`
+# C-S-F8 = [""]                                                                   #                   # mapped -> `alt-shift-end`
+# C-S-F9 = [""]                                                                   #                   # mapped -> `ctrl-home`
+# C-S-F10 = [""]                                                                  #                   # mapped -> `ctrl-end`
+# C-S-F11 = [""]                                                                  #                   # mapped -> `ctrl-shift-home`
+# C-S-F12 = [""]                                                                  #                   # mapped -> `ctrl-shift-end`
 
 
 ####################################################################################################
@@ -530,6 +540,11 @@ C-down = ["jump_view_down"]                                                     
 C-left = ["jump_view_left"]                                                     # previous split
 C-right = ["jump_view_right"]                                                   # next split
 
+# C-S-up = [""]                                                                   #
+# C-S-down = [""]                                                                 #
+# C-S-left = [""]                                                                 #
+# C-S-right = [""]                                                                #
+
 # F1 = [""]                                                                       #
 # F2 = [""]                                                                       #
 # F3 = [""]                                                                       #
@@ -543,25 +558,25 @@ C-right = ["jump_view_right"]                                                   
 # F11 = [""]                                                                      #
 # F12 = [""]                                                                      #
 
-S-F1 = ["jump_backward"]                                                        #                   # mapped -> `alt-cmd-,`
-S-F2 = ["jump_forward"]                                                         #                   # mapped -> `alt-cmd-.`
+# S-F1 = [""]                                                                     #                   # mapped -> `alt-e`
+# S-F2 = [""]                                                                     #                   # mapped -> `alt-i`
 # S-F3 = [""]                                                                     # collision tmux    # mapped -> `alt-shift-space`
 S-F4 = ["jumplist_picker"]                                                      #                   # mapped -> `alt-cmd-/`
-# S-F5 = [""]                                                                     #                   # mapped -> ``
-# S-F6 = [""]                                                                     #                   # mapped -> ``
-# S-F7 = [""]                                                                     #                   # mapped -> ``
-# S-F8 = [""]                                                                     #                   # mapped -> ``
-# S-F9 = [""]                                                                     #                   # mapped -> ``
-# S-F10 = [""]                                                                    #                   # mapped -> ``
-# S-F11 = [""]                                                                    #                   # mapped -> ``
-# S-F12 = [""]                                                                    #                   # mapped -> ``
+S-F5 = ["jump_backward"]                                                        #                   # mapped -> `alt-cmd-,`
+S-F6 = ["jump_forward"]                                                         #                   # mapped -> `alt-cmd-.`
+# S-F7 = [""]                                                                     #                   # mapped -> `alt-cmd-i`
+# S-F8 = [""]                                                                     #                   # mapped -> `alt-cmd-n`
+S-F9 = ["workspace_diagnostics_picker"]                                         #                   # mapped -> `alt-ctrl-enter`
+S-F10 = ["workspace_symbol_picker"]                                             #                   # mapped -> `alt-cmd-enter`
+S-F11 = ["goto_reference"]                                                      #                   # mapped -> `ctrl-cmd-enter`
+S-F12 = ["goto_definition"]                                                     #                   # mapped -> `alt-ctrl-cmd-enter`
 
-A-F1 = ["goto_last_accessed_file"]                                              #                   # mapped -> `cmd-space`
-A-F2 = ["hover"]                                                                #                   # mapped -> `ctrl-cmd-space`
-A-F3 = ["workspace_diagnostics_picker"]                                         #                   # mapped -> `alt-ctrl-enter`
-A-F4 = ["workspace_symbol_picker"]                                              #                   # mapped -> `alt-cmd-enter`
-A-F5 = ["goto_reference"]                                                       #                   # mapped -> `ctrl-cmd-enter`
-A-F6 = ["goto_definition"]                                                      #                   # mapped -> `alt-ctrl-cmd-enter`
+# A-F1 = [""]                                                                     #                   # mapped -> ``
+# A-F2 = [""]                                                                     #                   # mapped -> ``
+# A-F3 = [""]                                                                     #                   # mapped -> ``
+A-F4 = ["undo"]                                                                 # undo              # mapped -> `alt-u`
+# A-F5 = [""]                                                                     #                   # mapped -> ``
+# A-F6 = [""]                                                                     #                   # mapped -> ``
 A-F7 = ["select_mode", "goto_file_start", "normal_mode"]                        # select until start# mapped -> `cmd-shift-up`
 A-F8 = ["select_mode", "goto_last_line", "goto_line_end", "normal_mode"]        # select until end  # mapped -> `cmd-shift-down`
 # A-F9 = [""]                                                                     #                   # mapped -> `alt-cmd-up`
@@ -571,54 +586,42 @@ A-F12 = ["decrement"]                                                           
 
 A-S-F1 = ["goto_prev_diag"]                                                     #                   # mapped -> `shift-pageup`
 A-S-F2 = ["goto_next_diag"]                                                     #                   # mapped -> `shift-pagedown`
-A-S-F3 = ["goto_prev_comment"]                                                  #                   # mapped -> `alt-pageup`
-A-S-F4 = ["goto_next_comment"]                                                  #                   # mapped -> `alt-pagedown`
-A-S-F5 = ["goto_prev_class"]                                                    #                   # mapped -> `alt-shift-pageup`
-A-S-F6 = ["goto_next_class"]                                                    #                   # mapped -> `alt-shift-pagedown`
-A-S-F7 = ["goto_prev_function"]                                                 #                   # mapped -> `ctrl-pageup`
-A-S-F8 = ["goto_next_function"]                                                 #                   # mapped -> `ctrl-pagedown`
-A-S-F9 = ["goto_prev_parameter"]                                                #                   # mapped -> `ctrl-shift-pageup`
-A-S-F10 = ["goto_next_parameter"]                                               #                   # mapped -> `ctrl-shift-pagedown`
-A-S-F11 = ["goto_prev_test"]                                                    #                   # mapped -> `alt-ctrl-pageup`
-A-S-F12 = ["goto_next_test"]                                                    #                   # mapped -> `alt-ctrl-pagedown`
+# A-S-F3 = [""]                                                                   #                   # mapped -> ``
+A-S-F4 = ["rename_symbol"]                                                      #                   # mapped -> `alt-n`
+A-S-F5 = ["goto_prev_comment"]                                                  #                   # mapped -> `alt-pageup`
+A-S-F6 = ["goto_next_comment"]                                                  #                   # mapped -> `alt-pagedown`
+A-S-F7 = ["goto_prev_class"]                                                    #                   # mapped -> `alt-shift-pageup`
+A-S-F8 = ["goto_next_class"]                                                    #                   # mapped -> `alt-shift-pagedown`
+A-S-F9 = ["goto_prev_function"]                                                 #                   # mapped -> `ctrl-pageup`
+A-S-F10 = ["goto_next_function"]                                                #                   # mapped -> `ctrl-pagedown`
+A-S-F11 = ["goto_prev_parameter"]                                               #                   # mapped -> `ctrl-shift-pageup`
+A-S-F12 = ["goto_next_parameter"]                                               #                   # mapped -> `ctrl-shift-pagedown`
 
-C-F1 = ["goto_prev_change"]                                                     # previous git      # mapped -> `pageup`
-C-F2 = ["goto_next_change"]                                                     # next git          # mapped -> `pagedown`
-# C-F3 = [""]                                                                     #                   # mapped -> `home`
-# C-F4 = [""]                                                                     #                   # mapped -> `end`
-# C-F5 = [""]                                                                     #                   # mapped -> `alt-cmd-i`
-# C-F6 = [""]                                                                     #                   # mapped -> `alt-cmd-n`
-# C-F7 = [""]                                                                     #                   # mapped -> `alt-e`
-# C-F8 = [""]                                                                     #                   # mapped -> `alt-i`
-C-F9 = ["rename_symbol"]                                                        #                   # mapped -> `alt-n`
-C-F10 = ["undo"]                                                                # undo              # mapped -> `alt-u`
-C-F11 = ["unindent"]                                                            # outdent selection # mapped -> `alt-O`
-# C-F12 = [""]                                                                  # collision tmux    # mapped -> `ctrl-F12`
+# C-F1 = [""]                                                                     #                   # mapped -> ``
+# C-F2 = [""]                                                                     #                   # mapped -> ``
+# C-F3 = [""]                                                                     # collision tmux    # mapped -> `ctrl-F3`
+C-F4 = ["unindent"]                                                             # outdent selection # mapped -> `alt-O`
+# C-F5 = [""]                                                                     #                   # mapped -> ``
+# C-F6 = [""]                                                                     #                   # mapped -> ``
+C-F7 = ["goto_last_accessed_file"]                                              #                   # mapped -> `cmd-space`
+C-F8 = ["hover"]                                                                #                   # mapped -> `ctrl-cmd-space`
+C-F9 = ["goto_prev_change"]                                                     # previous git      # mapped -> `pageup`
+C-F10 = ["goto_next_change"]                                                    # next git          # mapped -> `pagedown`
+# C-F11 = [""]                                                                    #                   # mapped -> `home`
+# C-F12 = [""]                                                                    #                   # mapped -> `end`
 
 # C-S-F1 = [""]                                                                   #                   # mapped -> `shift-home`
 # C-S-F2 = [""]                                                                   #                   # mapped -> `shift-end`
-# C-S-F3 = [""]                                                                   #                   # mapped -> `alt-home`
-# C-S-F4 = [""]                                                                   #                   # mapped -> `alt-end`
-# C-S-F5 = [""]                                                                   #                   # mapped -> `alt-shift-home`
-# C-S-F6 = [""]                                                                   #                   # mapped -> `alt-shift-end`
-# C-S-F7 = [""]                                                                   #                   # mapped -> `ctrl-home`
-# C-S-F8 = [""]                                                                   #                   # mapped -> `ctrl-end`
-# C-S-F9 = [""]                                                                   #                   # mapped -> `ctrl-shift-home`
-# C-S-F10 = [""]                                                                  #                   # mapped -> `ctrl-shift-end`
-# C-S-F11 = [""]                                                                  #                   # mapped -> `alt-ctrl-home`
-# C-S-F12 = [""]                                                                  #                   # mapped -> `alt-ctrl-end`
-
-
-####################################################################################################
-
-# [keys.normal."+"# ]
-# p = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.py", ":sh tmux send-keys -t -1 ```print(\"Hello\")``` Enter"# ]
-# # p = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.py", ":sh tmux send-keys -t -1 ```execfile(\".tmp.py\")``` Enter"# ]
-# r = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.R", ":sh tmux send-keys -t -1 'eval(source(\".tmp.R\"))' Enter"# ]
-# s = ["yank_joined_to_clipboard", ":sh pbpaste > .tmp.R", ":sh tmux send-keys -t -1 'echo hello' Enter"# ]
-# # j = ["yank_joined_to_clipboard", ":sh tmux send-keys -t -1 eval(str2expression(system('pbpaste', intern = T))) Enter"# ]
-# # c = ":sh cargo build"                                            # #
-# # t = ":sh cargo test"                                             #
+# C-S-F3 = [""]                                                                   #                   # mapped -> ``
+# C-S-F4 = [""]                                                                   #                   # mapped -> ``
+# C-S-F5 = [""]                                                                   #                   # mapped -> `alt-home`
+# C-S-F6 = [""]                                                                   #                   # mapped -> `alt-end`
+# C-S-F7 = [""]                                                                   #                   # mapped -> `alt-shift-home`
+# C-S-F8 = [""]                                                                   #                   # mapped -> `alt-shift-end`
+# C-S-F9 = [""]                                                                   #                   # mapped -> `ctrl-home`
+# C-S-F10 = [""]                                                                  #                   # mapped -> `ctrl-end`
+# C-S-F11 = [""]                                                                  #                   # mapped -> `ctrl-shift-home`
+# C-S-F12 = [""]                                                                  #                   # mapped -> `ctrl-shift-end`
 
 
 ####################################################################################################
