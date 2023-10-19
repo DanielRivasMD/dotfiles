@@ -76,7 +76,7 @@
   "Ctrl-q": "None",
   "Ctrl-r": "OpenFile",                                                         // mapped -> `ctrl-enter`
   "Ctrl-s": "None",                                                             // mapped -> `alt-enter`
-  "Ctrl-t": "None",                                                             // mapped -> `cmd-enter`
+  "Ctrl-t": "CommandMode",                                                      // mapped -> `cmd-enter`
   "Ctrl-u": "SelectToStartOfLine,Delete",
   "Ctrl-v": "None",                                                             // mapped -> `ctrl-cmd-up`
   "Ctrl-w": "DeleteWordLeft",
@@ -114,25 +114,25 @@
   "F11": "None",
   "F12": "None",
 
-  "Shift-F1": "None",                                                           // mapped -> `alt-cmd-,`
-  "Shift-F2": "None",                                                           // mapped -> `alt-cmd-.`
-  // "Shift-F3": "None",                                                          // collision tmux alacritty
+  "Shift-F1": "None",                                                           // mapped -> `alt-e`
+  "Shift-F2": "None",                                                           // mapped -> `alt-i`
+  // "Shift-F3": "None",                                                          // collision tmux mapped -> `alt-shift-space`
   "Shift-F4": "None",                                                           // mapped -> `alt-cmd-/`
-  "Shift-F5": "None",                                                           // mapped -> ``
-  "Shift-F6": "None",                                                           // mapped -> ``
-  "Shift-F7": "None",                                                           // mapped -> ``
-  "Shift-F8": "None",                                                           // mapped -> ``
-  "Shift-F9": "None",                                                           // mapped -> ``
-  "Shift-F10": "None",                                                          // mapped -> ``
-  "Shift-F11": "None",                                                          // mapped -> ``
-  "Shift-F12": "None",                                                          // mapped -> ``
+  "Shift-F5": "None",                                                           // mapped -> `alt-cmd-,`
+  "Shift-F6": "None",                                                           // mapped -> `alt-cmd-.`
+  "Shift-F7": "None",                                                           // mapped -> `alt-cmd-i`
+  "Shift-F8": "None",                                                           // mapped -> `alt-cmd-n`
+  "Shift-F9": "None",                                                           // mapped -> `alt-ctrl-enter`
+  "Shift-F10": "None",                                                          // mapped -> `alt-cmd-enter`
+  "Shift-F11": "None",                                                          // mapped -> `ctrl-cmd-enter`
+  "Shift-F12": "None",                                                          // mapped -> `alt-ctrl-cmd-enter`
 
-  "Alt-F1": "None",                                                             // mapped -> `cmd-space`
-  "Alt-F2": "None",                                                             // mapped -> `ctrl-cmd-space`
-  "Alt-F3": "None",                                                             // mapped -> `alt-ctrl-enter`
-  "Alt-F4": "None",                                                             // mapped -> `alt-cmd-enter`
-  "Alt-F5": "None",                                                             // mapped -> `ctrl-cmd-enter`
-  "Alt-F6": "None",                                                             // mapped -> `alt-ctrl-cmd-enter`
+  "Alt-F1": "None",                                                             // mapped -> ``
+  "Alt-F2": "None",                                                             // mapped -> ``
+  "Alt-F3": "None",                                                             // mapped -> ``
+  "Alt-F4": "Undo",                                                             // mapped -> `alt-u`
+  "Alt-F5": "None",                                                             // mapped -> ``
+  "Alt-F6": "None",                                                             // mapped -> ``
   "Alt-F7": "None",                                                             // mapped -> `cmd-shift-up`
   "Alt-F8": "None",                                                             // mapped -> `cmd-shift-down`
   "Alt-F9": "None",                                                             // mapped -> `alt-cmd-up`
@@ -142,40 +142,40 @@
 
   "Alt-Shift-F1": "None",                                                       // mapped -> `shift-pageup`
   "Alt-Shift-F2": "None",                                                       // mapped -> `shift-pagedown`
-  "Alt-Shift-F3": "None",                                                       // mapped -> `alt-pageup`
-  "Alt-Shift-F4": "None",                                                       // mapped -> `alt-pagedown`
-  "Alt-Shift-F5": "None",                                                       // mapped -> `alt-shift-pageup`
-  "Alt-Shift-F6": "None",                                                       // mapped -> `alt-shift-pagedown`
-  "Alt-Shift-F7": "None",                                                       // mapped -> `ctrl-pageup`
-  "Alt-Shift-F8": "None",                                                       // mapped -> `ctrl-pagedown`
-  "Alt-Shift-F9": "None",                                                       // mapped -> `ctrl-shift-pageup`
-  "Alt-Shift-F10": "None",                                                      // mapped -> `ctrl-shift-pagedown`
-  "Alt-Shift-F11": "None",                                                      // mapped -> `alt-ctrl-pageup`
-  "Alt-Shift-F12": "None",                                                      // mapped -> `alt-ctrl-pagedown`
+  "Alt-Shift-F3": "None",                                                       // mapped -> ``
+  "Alt-Shift-F4": "None",                                                       // mapped -> `alt-n`
+  "Alt-Shift-F5": "None",                                                       // mapped -> `alt-pageup`
+  "Alt-Shift-F6": "None",                                                       // mapped -> `alt-pagedown`
+  "Alt-Shift-F7": "None",                                                       // mapped -> `alt-shift-pageup`
+  "Alt-Shift-F8": "None",                                                       // mapped -> `alt-shift-pagedown`
+  "Alt-Shift-F9": "None",                                                       // mapped -> `ctrl-pageup`
+  "Alt-Shift-F10": "None",                                                      // mapped -> `ctrl-pagedown`
+  "Alt-Shift-F11": "None",                                                      // mapped -> `ctrl-shift-pageup`
+  "Alt-Shift-F12": "None",                                                      // mapped -> `ctrl-shift-pagedown`
 
-  "Ctrl-F1": "DiffPrevious",                                                    // mapped -> `pageup`
-  "Ctrl-F2": "DiffNext",                                                        // mapped -> `pagedown`
-  "Ctrl-F3": "None",                                                            // mapped -> `home`
-  "Ctrl-F4": "None",                                                            // mapped -> `end`
-  "Ctrl-F5": "None",                                                            // mapped -> `alt-cmd-i`
-  "Ctrl-F6": "None",                                                            // mapped -> `alt-cmd-n`
-  "Ctrl-F7": "None",                                                            // mapped -> `alt-e`
-  "Ctrl-F8": "None",                                                            // mapped -> `alt-i`
-  "Ctrl-F9": "None",                                                            // mapped -> `alt-n`
-  "Ctrl-F10": "Undo",                                                           // mapped -> `alt-u`
-  "Ctrl-F11": "OutdentSelection",                                               // mapped -> `alt-O`
-  "Ctrl-F12": "None",                                                           // mapped -> `shift-space`
+  "Ctrl-F1": "None",                                                            // mapped -> ``
+  "Ctrl-F2": "None",                                                            // mapped -> ``
+  "Ctrl-F3": "None",                                                            // collision tmux mapped -> `ctrl-F3`
+  "Ctrl-F4": "OutdentSelection",                                                // mapped -> `alt-O`
+  "Ctrl-F5": "None",                                                            // mapped -> ``
+  "Ctrl-F6": "None",                                                            // mapped -> ``
+  "Ctrl-F7": "None",                                                            // mapped -> `cmd-space`
+  "Ctrl-F8": "None",                                                            // mapped -> `ctrl-cmd-space`
+  "Ctrl-F9": "DiffPrevious",                                                    // mapped -> `pageup`
+  "Ctrl-F10": "DiffNext",                                                       // mapped -> `pagedown`
+  "Ctrl-F11": "None",                                                           // mapped -> `home`
+  "Ctrl-F12": "None",                                                           // mapped -> `end`
 
   "Ctrl-Shift-F1": "None",                                                      // mapped -> `shift-home`
   "Ctrl-Shift-F2": "None",                                                      // mapped -> `shift-end`
-  "Ctrl-Shift-F3": "None",                                                      // mapped -> `alt-home`
-  "Ctrl-Shift-F4": "None",                                                      // mapped -> `alt-end`
-  "Ctrl-Shift-F5": "None",                                                      // mapped -> `alt-shift-home`
-  "Ctrl-Shift-F6": "None",                                                      // mapped -> `alt-shift-end`
-  "Ctrl-Shift-F7": "None",                                                      // mapped -> `ctrl-home`
-  "Ctrl-Shift-F8": "None",                                                      // mapped -> `ctrl-end`
-  "Ctrl-Shift-F9": "None",                                                      // mapped -> `ctrl-shift-home`
-  "Ctrl-Shift-F10": "None",                                                     // mapped -> `ctrl-shift-end`
-  "Ctrl-Shift-F11": "None",                                                     // mapped -> `alt-ctrl-home`
-  "Ctrl-Shift-F12": "None",                                                     // mapped -> `alt-ctrl-end`
+  "Ctrl-Shift-F3": "None",                                                      // mapped -> ``
+  "Ctrl-Shift-F4": "None",                                                      // mapped -> ``
+  "Ctrl-Shift-F5": "None",                                                      // mapped -> `alt-home`
+  "Ctrl-Shift-F6": "None",                                                      // mapped -> `alt-end`
+  "Ctrl-Shift-F7": "None",                                                      // mapped -> `alt-shift-home`
+  "Ctrl-Shift-F8": "None",                                                      // mapped -> `alt-shift-end`
+  "Ctrl-Shift-F9": "None",                                                      // mapped -> `ctrl-home`
+  "Ctrl-Shift-F10": "None",                                                     // mapped -> `ctrl-end`
+  "Ctrl-Shift-F11": "None",                                                     // mapped -> `ctrl-shift-home`
+  "Ctrl-Shift-F12": "None",                                                     // mapped -> `ctrl-shift-end`
 }
