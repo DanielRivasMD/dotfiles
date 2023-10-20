@@ -1453,16 +1453,16 @@ key_bindings:
   # - { key: Slash,       mods: Control|Shift,              chars: "  "           } #
   - { key: Tab,         mods: Control|Shift,              chars: "..="          } #
 
-  # - { key: Key0,        mods: Command,                    chars: "  "           } #
-  # - { key: Key1,        mods: Command,                    chars: "  "           } #
-  # - { key: Key2,        mods: Command,                    chars: "  "           } #
-  # - { key: Key3,        mods: Command,                    chars: "  "           } #
-  # - { key: Key4,        mods: Command,                    chars: "  "           } #
-  # - { key: Key5,        mods: Command,                    chars: "  "           } #
-  # - { key: Key6,        mods: Command,                    chars: "  "           } #
-  # - { key: Key7,        mods: Command,                    chars: "  "           } #
-  # - { key: Key8,        mods: Command,                    chars: "  "           } #
-  # - { key: Key9,        mods: Command,                    chars: "  "           } #
+  - { key: Key0,        mods: Command,                    chars: "\x110"        } #
+  - { key: Key1,        mods: Command,                    chars: "\x111"        } #
+  - { key: Key2,        mods: Command,                    chars: "\x112"        } #
+  - { key: Key3,        mods: Command,                    chars: "\x113"        } #
+  - { key: Key4,        mods: Command,                    chars: "\x114"        } #
+  - { key: Key5,        mods: Command,                    chars: "\x115"        } #
+  - { key: Key6,        mods: Command,                    chars: "\x116"        } #
+  - { key: Key7,        mods: Command,                    chars: "\x117"        } #
+  - { key: Key8,        mods: Command,                    chars: "\x118"        } #
+  - { key: Key9,        mods: Command,                    chars: "\x119"        } #
   # - { key: Minus,       mods: Command,                    chars: "  "           } #
   # - { key: Equals,      mods: Command,                    chars: "  "           } #
   # - { key: LBracket,    mods: Command,                    chars: "  "           } #
@@ -1516,16 +1516,16 @@ key_bindings:
   # - { key: Period,      mods: Alt|Control,                chars: "  "           } #
   # - { key: Slash,       mods: Alt|Control,                chars: "  "           } #
 
-  - { key: Key0,        mods: Alt|Command,                chars: "\x110"        } #
-  - { key: Key1,        mods: Alt|Command,                chars: "\x111"        } #
-  - { key: Key2,        mods: Alt|Command,                chars: "\x112"        } #
-  - { key: Key3,        mods: Alt|Command,                chars: "\x113"        } #
-  - { key: Key4,        mods: Alt|Command,                chars: "\x114"        } #
-  - { key: Key5,        mods: Alt|Command,                chars: "\x115"        } #
-  - { key: Key6,        mods: Alt|Command,                chars: "\x116"        } #
-  - { key: Key7,        mods: Alt|Command,                chars: "\x117"        } #
-  - { key: Key8,        mods: Alt|Command,                chars: "\x118"        } #
-  - { key: Key9,        mods: Alt|Command,                chars: "\x119"        } #
+  # - { key: Key0,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key1,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key2,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key3,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key4,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key5,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key6,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key7,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key8,        mods: Alt|Command,                chars: "  "           } #
+  # - { key: Key9,        mods: Alt|Command,                chars: "  "           } #
   # - { key: Minus,       mods: Alt|Command,                chars: "  "           } #
   # - { key: Equals,      mods: Alt|Command,                chars: "  "           } #
   - { key: LBracket,    mods: Alt|Command,                chars: "\x11("        } # tmux swap-window
