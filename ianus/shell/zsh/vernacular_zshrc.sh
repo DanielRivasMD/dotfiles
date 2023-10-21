@@ -121,7 +121,7 @@ eval "$(zoxide init zsh)"
 # editor
 ####################################################################################################
 
-# edit line in editor with ctrl-x:
+# edit line in editor with ctrl-g:
 autoload edit-command-line; zle -N edit-command-line
 
 ####################################################################################################
