@@ -18,7 +18,6 @@ localShare="${home}/.local/share"
 
 # cerberus
 brootConf="${home}/.config/broot"
-codeConf="${appSuport}/Code/User"
 lazycliConf="${appSuport}/lazycli"
 lazygitConf="${appSuport}/jesseduffield/lazygit"
 naviConf="${appSuport}/navi/cheats/drivas"
@@ -45,9 +44,6 @@ terminalRemote="${shellRemote}/terminal"
 bashRemote="${shellRemote}/bash"
 fishRemote="${shellRemote}/fish"
 zshRemote="${shellRemote}/zsh"
-
-# Uppmax
-uppmaxID="drivas@rackham.uppmax.uu.se"
 
 # Pawsey
 pawseyID="drivas@topaz.pawsey.org.au"
