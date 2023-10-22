@@ -107,6 +107,15 @@ Cerberus:
 
   # purge before linking
   echo ''
+  echo 'Linking espanso config'
+  echo '===================================================================================================='
+  if [[ -f "${espansoConf}" ]]; then rm -f "${espansoConf}"; fi
+  ln -svf "${cerberus}/espanso/config/default.yml" "${espansoConf}/config"      # espanso config default
+  ln -svf "${cerberus}/espanso/match/base.yml" "${espansoConf}/match"           # espanso config base
+  echo '===================================================================================================='
+
+  # purge before linking
+  echo ''
   echo 'Linking navi config'
   echo '===================================================================================================='
   if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi

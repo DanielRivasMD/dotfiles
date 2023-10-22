@@ -21,6 +21,7 @@ brootConf="${home}/.config/broot"
 lazycliConf="${appSuport}/lazycli"
 lazygitConf="${appSuport}/jesseduffield/lazygit"
 naviConf="${appSuport}/navi/cheats/drivas"
+espansoConf="${appSuport}/espanso"
 
 ####################################################################################################
 
