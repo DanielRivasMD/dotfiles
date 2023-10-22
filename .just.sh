@@ -11,17 +11,17 @@ cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
 forked="${home}/Forked"
 observatory="${home}/Observatory"
-appSuport="${home}/Library/Application Support"
+appSupport="${home}/Library/Application Support"
 localShare="${home}/.local/share"
 
 ####################################################################################################
 
 # cerberus
 brootConf="${home}/.config/broot"
-lazycliConf="${appSuport}/lazycli"
-lazygitConf="${appSuport}/jesseduffield/lazygit"
-naviConf="${appSuport}/navi/cheats/drivas"
-espansoConf="${appSuport}/espanso"
+lazycliConf="${appSupport}/lazycli"
+lazygitConf="${appSupport}/jesseduffield/lazygit"
+naviConf="${appSupport}/navi/cheats/drivas"
+espansoConf="${appSupport}/espanso"
 
 ####################################################################################################
 
@@ -32,7 +32,7 @@ bash="${shell}/bash"
 fish="${shell}/fish"
 zsh="${shell}/zsh"
 nushell="${shell}/nushell"
-nushellConf="${appSuport}/nushell"
+nushellConf="${appSupport}/nushell"
 
 ####################################################################################################
 

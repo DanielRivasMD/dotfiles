@@ -69,8 +69,8 @@ Cerberus:
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/alacritty" "${config}/"                                  # alacritty
   rm -rf "${config}/atuin" && ln -sv "${cerberus}/atuin" "${config}/"           # atuin
+  ln -svf "${cerberus}/alacritty" "${config}/"                                  # alacritty
   ln -svf "${cerberus}/bottom" "${config}/"                                     # bottom
   ln -svf "${cerberus}/cheat" "${config}/"                                      # cheat
   ln -svf "${cerberus}/karabiner" "${config}/"                                  # karabiner
@@ -97,7 +97,7 @@ Cerberus:
   ln -svf "${cerberus}/lazygit/config.yml" "${lazygitConf}/"                    # lazygit config
   echo '===================================================================================================='
 
-  # force use toml config
+  # purge before linking
   echo ''
   echo 'Linking broot config'
   echo '===================================================================================================='
@@ -179,8 +179,9 @@ Ianus:
   echo 'Linking config @config'
   echo '===================================================================================================='
   ln -svf "${ianus}/micro" "${config}"                                          # micro directory
-  ln -svf "${ianus}/starship" "${config}"                                       # starship directory
+  ln -svf "${ianus}/helix" "${config}"                                          # helix config
   ln -svf "${ianus}/lsd" "${config}"                                            # lsd directory
+  ln -svf "${ianus}/starship" "${config}"                                       # starship directory
   echo '===================================================================================================='
 
   # shell
@@ -230,13 +231,6 @@ Ianus:
   echo '===================================================================================================='
   ln -svf "${nushell}/env.nu" "${nushellConf}/"                                 # nushell env
   ln -svf "${nushell}/config.nu" "${nushellConf}/"                              # nushell config
-  echo '===================================================================================================='
-
-  # helix
-  echo ''
-  echo 'Linking helix config'
-  echo '===================================================================================================='
-  ln -svf "${ianus}/helix" "${config}"                                          # helix config
   echo '===================================================================================================='
 
 ####################################################################################################
