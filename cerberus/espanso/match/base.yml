@@ -27,6 +27,31 @@ matches:
   - trigger: ":gt"
     replace: "https://github.com/DanielRivasMD"
 
+  # accents
+  - trigger: "a//"
+    replace: "á"
+
+  - trigger: "e//"
+    replace: "é"
+
+  - trigger: "i//"
+    replace: "í"
+
+  - trigger: "o//"
+    replace: "ó"
+
+  - trigger: "u//"
+    replace: "ú"
+
+  - trigger: "a::"
+    replace: "ä"
+
+  - trigger: "o::"
+    replace: "ö"
+
+  - trigger: "u::"
+    replace: "ü"
+
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
   # But matches can also be dynamic:
