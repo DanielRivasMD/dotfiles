@@ -12,6 +12,21 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
 
+  - trigger: ":mail"
+    replace: "danielrivasmd@gmail.com"
+
+  - trigger: ":name"
+    replace: "Salvador Daniel Rivas Carrillo"
+
+  - trigger: ":dr"
+    replace: "Daniel Rivas"
+
+  - trigger: ":ln"
+    replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
+
+  - trigger: ":gt"
+    replace: "https://github.com/DanielRivasMD"
+
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
   # But matches can also be dynamic:
