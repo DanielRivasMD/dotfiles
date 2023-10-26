@@ -122,6 +122,15 @@ Cerberus:
   ln -svf "${cerberus}/navi" "${naviConf}"                                      # navi cheats directory
   echo '===================================================================================================='
 
+  # completions
+  echo ''
+  echo 'Linking completions'
+  echo '===================================================================================================='
+  ln -svf "/Users/drivas/Observatory/fd/contrib/completion/_fd"
+  ln -svf "ln -svf /Users/drivas/Observatory/watchexec/completions/zsh" "_watchexec"
+  echo '===================================================================================================='
+
+
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
   # ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
 
