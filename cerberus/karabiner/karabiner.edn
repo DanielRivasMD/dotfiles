@@ -1,86 +1,128 @@
+{:templates {:launch "osascript -e 'tell application \"%s\" to activate'"}
+ :layers {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
+ :simlayers {
+             :launch-mode {:key :0}
+             :period-mode {:key :period}
+             :comma-mode {:key :comma}
+             :space-mode {:key :spacebar :condi :macbook-internal}
+            }
 
-    ;; close parenthesis
-    ;; tilde
-    ;; i
-    ;; n
-    ;; e
-    ;; i
-    ;; n
-    ;; u
-    ;; O
+ :main [
+        {:des "Hyper Mode - Control"
+         :rules [:hyper-mode
+                 [:a :!Ta]
+                 [:c :!Tc]
+                 [:d :!Td]
+                 [:z :!Tz]
+                ]
+        }
 
-    ;; caps lock
-    ;; right cmd
+        {:des   "caps_lock to esc when pressed alone, to ctrl as modifier"
+         :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]
+        }
 
-    ;; get mail
-    ;; send mail
-    ;; forward mail
-    ;; reply mail
-    ;; reply all mail
-    ;; new mail
+        {:des "Hyper Mode - Mousekey"
+         :rules [:hyper-mode
+                 [:down_arrow {:mkey {:y 1536}}]
+                 [:up_arrow {:mkey {:y -1536}}]
+                 [:left_arrow {:mkey {:x -1536}}]
+                 [:right_arrow {:mkey {:x 1536}}]
+                 [:return_or_enter {:pkey :button1}]
+                 [:!Creturn_or_enter {:pkey :button2}]
+                ]
+        }
 
-    ;; 0
-    ;; `
-    ;; asterisk
-    ;; enter
-    ;; hyphen
-    ;; num lock
-    ;; plus
-    ;; slash
-    ;; non us backslah
+        {:des "Hyper Mode - Deletion"
+         :rules [:hyper-mode
+                 [:n :!Odelete_or_backspace]
+                 [:m :delete_or_backspace]
+                 [:comma :delete_forward]
+                 [:period :!Odelete_forward]
+                 [:!Cn :!Cdelete_or_backspace]
+                 [:!Cm :!Cdelete_or_backspace]
+                 [:!Ccomma :!Cdelete_forward]
+                 [:!Cperiod :!Cdelete_forward]
+                ]
+        }
 
-    {:main [{:des   "alfred"
-         :rules [;; set f16 as the trigger key of alfred
-                 ;; press h + l will trigger alfred and set "in-alfred" to 1
-                 [[:h :j] [:f16 ["in-alfred" 1]]]
+        {:des "Hyper Mode - Misc"
+         :rules [:hyper-mode
+                 [:escape :caps_lock]
+                 [:grave_accent_and_tilde :!CS5]
+                ]
+        }
 
-                 :in-alfred ;; when "in-alfred" is 1
+        {:des "Comma Mode [,] as Trigger Key"
+         :rules [:comma-mode
+                 [:a :open_bracket]
+                 [:s :close_bracket]
+                 [:d :!S7]
+                 [:f :!S8]
+                 [:q :!Shyphen]
+                 [:w :!Sequal_sign]
+                 [:e :!S5]
+                 [:r :!S6]
+                ]
+        }
 
-                 ;; press enter will select one alfred result and set "in-alfred" to 0
-                 [:##return_or_enter [:return_or_enter ["in-alfred" 0]]]
+        {:des "Period Mode [.] as Trigger Key"
+         :rules [:period-mode
+                 [:comma ["period-comma-mode" 1] nil {:alone :comma :afterup ["period-comma-mode" 0]}]
+                 [:a [:!Sgrave_accent_and_tilde :slash]]
+                 [:s [:period :!S8]]
+                 [:d :!S9]
+                 [:f :!S0]
+                 [:q :hyphen]
+                 [:w :equal_sign]
+                 [:e :!Sopen_bracket]
+                 [:r :!Sclose_bracket]
+                ]
+        }
 
-                 ;; press esc will exit alfred and set "in-alfred" to 0
-                 [:##escape [:escape ["in-alfred" 0]]]
+        ; {:des "Launcher Mode [L] as Trigger Key"
+        ;  :rules [:launch-mode
+        ;          [:equal_sign [:launch "Telegram"]]
+        ;          [:s [:launch "Safari"]]
+        ;          [:m [:launch "MWeb.app"]]
+        ;         ]
+        ; }
 
-                 ;; press ctrl + j will invoke down_arrow
-                 [:!Tj :down_arrow]
+        ;; {:des "HHKB, FILCO MINILA Change left control to esc if alone"
+        ;;  :rules [[:##left_control :left_control [:hhkb-bt :hhkb :hhkb-tmk :filco-minila] {:alone :escape}]]}
 
-                 ;; press ctrl + k will invoke up_arrow
-                 [:!Tk :up_arrow]
+        {:des "Change right_command to command-tab when used alone"
+         :rules [[:right_command :!Tleft_command nil {:alone [:!Ctab]}]]
+        }
 
-                 ;; press ctrl + l will invoke return_or_enter and set "in-alfred" to 0
-                 [:!Tl [:return_or_enter ["in-alfred 0"]]]]}]}
+        {:des "Change right_option to 4 modifiers combination, f17 when used alone"
+         :rules [[:right_option :!COTleft_shift nil {:alone [:!Otab]}]]
+        }
 
+        {:des "Quit application by pressing command-q twice" 
+         :rules [[:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
+                 [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
+                ]
+        }
+    ]
 
-    {:main [{:des "simultaneous j l press to F19" :rules [[[:j :l] :f19]]}]
-    ;; rule [[:j :l] :f19]
-    ;;       <from>  <to>
+ ; the default value is 250
+ :simlayer-threshold 500
 
-    ;; so when from is a vector (or array), Goku will parse it as
-    ;; simultaneous key press
-            
-    :templates {:launch "osascript -e 'tell application \"Alfred 5\" to run trigger \"launch%s\" in workflow \"yqrashawn.workflow.launcher\" with argument \"%s\"'"}
-     :main [{:des "launcher mode"
-             :rules [[:j [:launch "Alacritty"] :launch-mode]
-                     [:k [:launch "Emacs"] :launch-mode]
-                     [:l [:launch "Chrome"] :launch-mode]
-                     [:m [:launch "Mail"] :launch-mode]
-                     [:v [:launch "WeChat"] :launch-mode]
-                     [:q [:launch "KE"] :launch-mode]
-                     [:f [:launch "Finder"] :launch-mode]
-                     [:9 [:launch "PDFExpert"] :launch-mode]
-                     [:comma [:launch "Safari"] :launch-mode]
-                     [:period [:launch "Paw"] :launch-mode]
-                     [:equal_sign [:launch "Textual"] :launch-mode]
-                     [:8 [:launch "KEEvents"] :launch-mode]
-                     [:b [:launch "BearyChat"] :launch-mode]
-                     [:t [:launch "TG"] :launch-mode]]}]}
+ :devices {:macbook-internal [{:product_id 638 :vendor_id 1452}]
+           :filco-minila [{:product_id 34050 :vendor_id 2652}]
+           :hhkb-tmk [{:vendor_id 65261 :product_id 51966}]
+           :hhkb-bt [{:vendor_id 1278 :product_id 514}]
+           :hhkb [{:vendor_id 2131 :product_id 256}]}
 
-    ;; This is my configuration to launch or display applications with wj wk wl etc.
-    ;; First I define the :launch template. Then I use it in <to>.
+ :applications {:Terminals ["^com\\.apple\\.Terminal$"
+                            "^com\\.googlecode\\.iterm2$"]}
 
-    ;; [:j [:launch "Alacritty"] :launch-mode]
-    ;; Goku will parse the rule and replace "%s" with "Alacritty".
-    ;; The "%s" is for string. If you need other formats, check out here.
-    ;; java.util.Formatter doc:
-    ;; https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html
+ :input-sources {:sogou {:input_mode_id "com.sogou.inputmethod.pinyin"
+                         :input_source_id "com.sogou.inputmethod.sogou.pinyin"
+                         :language "zh-Hans"}
+
+                 :us {:input_mode_id ""
+                      :input_source_id "com.apple.keylayout.ABC"
+                      :language "en"}
+                }
+}
