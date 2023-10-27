@@ -67,6 +67,24 @@ matches:
 
   ####################################################################################################
 
+  # go
+  - trigger: ":gp"
+    replace: "fmt.Println($|$)"
+
+  - trigger: ":ge"
+    replace: |
+      if err != nil {
+        fmt.Println(err.Error())
+      }
+
+  ####################################################################################################
+
+  # rust
+  - trigger: ":rp"
+    replace: "println{\"{:?}\"}, $|$);"
+
+  ####################################################################################################
+
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
   # But matches can also be dynamic:
