@@ -464,3 +464,9 @@ Hadur:
 Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
 
 ####################################################################################################
+
+# watch changes goku karabiner
+watch:
+  watchexec --watch cerberus/karabiner/karabiner.edn -- 'goku'
+
+####################################################################################################
