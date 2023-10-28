@@ -74,6 +74,7 @@ Cerberus:
   ln -svf "${cerberus}/bottom" "${config}/"                                     # bottom
   ln -svf "${cerberus}/cheat" "${config}/"                                      # cheat
   ln -svf "${cerberus}/karabiner" "${config}/"                                  # karabiner
+  ln -svf "${cerberus}/karabiner/karabiner.edn" "${config}/"                    # karabiner
   ln -svf "${cerberus}/khal" "${config}/"                                       # khal
   ln -svf "${cerberus}/gh/config.yml" "${config}/gh/"                           # gh
   echo '===================================================================================================='
