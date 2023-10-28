@@ -1,114 +1,367 @@
-{:templates 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:templates
   {:launch "osascript -e 'tell application \"%s\" to activate'"}
- :layers 
-  {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
- :simlayers {
-             :period-mode {:key :period}
-             :comma-mode {:key :comma}
-             :space-mode {:key :spacebar :condi :macbook-internal}
-            }
+    :layers 
+      {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
+    :simlayers {
+      :quote-mode {:key :q}
+      :at-mode {:key :a}
+      :zero-mode {:key :z}
+      :super-mode {:key :s}
+      :xtreme-mode {:key :x}
+      :period-mode {:key :period}
+      :comma-mode {:key :comma}
+      
+      :space-mode {:key :spacebar :condi :macbook-internal}
+    }
 
- :main [
-        {:des "Hyper Mode - Control"
-         :rules [:hyper-mode
-                 [:a :!Ta]
-                 [:c :!Tc]
-                 [:d :!Td]
-                 [:z :!Tz]
-                ]
-        }
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des   "caps_lock to esc when pressed alone, composed"
-         :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]
-        }
+  :main [
 
-        {:des "Hyper Mode - Mousekey"
-         :rules [:hyper-mode
-                 [:down_arrow {:mkey {:y 1000}}]
-                 [:up_arrow {:mkey {:y -1000}}]
-                 [:left_arrow {:mkey {:x -1000}}]
-                 [:right_arrow {:mkey {:x 1000}}]
-                 [:return_or_enter {:pkey :button1}]
-                 [:!Creturn_or_enter {:pkey :button2}]
-                ]
-        }
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Hyper Mode - Deletion"
-         :rules [:hyper-mode
-                 [:comma :delete_or_backspace]
-                 [:!Scomma :!Odelete_or_backspace]
-                 [:period :delete_forward]
-                 [:!Speriod :!Odelete_forward]
-                ]
-        }
+    {:des "Arroba Mode"
+      :rules [:at-mode
+        [:c [:!S2 :c :h :a :i :n :spacebar]]
+        [:d [:!S2 :d :e :b :u :g :spacebar]]
+        [:e [:!S2 :e :d :i :t :spacebar]]
+        [:i [:!S2 :i :n :f :o :spacebar]]
+        [:l [:!S2 :l :e :s :s :spacebar]]
+        [:p [:!S2 :p :i :p :e :spacebar]]
+        [:t [:!S2 :t :i :m :e :spacebar]]
+        [:s [:!S2 :s :h :o :w :spacebar]]
+        [:v [:!S2 :e :v :a :l :spacebar]]
+      ]
+    }
 
-        {:des "Comma Mode [,] as Trigger Key"
-         :rules [:comma-mode
-                 [:a :open_bracket]
-                 [:s :close_bracket]
-                 [:d :!S7]
-                 [:f :!S8]
-                 [:q :!Shyphen]
-                 [:w :!Sequal_sign]
-                 [:e :!S5]
-                 [:r :!S6]
-                ]
-        }
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Period Mode [.] as Trigger Key"
-         :rules [:period-mode
-                 [:comma ["period-comma-mode" 1] nil {:alone :comma :afterup ["period-comma-mode" 0]}]
-                 [:a [:!Sgrave_accent_and_tilde :slash]]
-                 [:s [:period :!S8]]
-                 [:d :!S9]
-                 [:f :!S0]
-                 [:q :hyphen]
-                 [:w :equal_sign]
-                 [:e :!Sopen_bracket]
-                 [:r :!Sclose_bracket]
-                ]
-        }
+    {:des "Hyper Mode - TODO"
+      :rules [:hyper-mode
+        [:b [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]
+        [:d [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]
+        [:f [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]
+        [:i [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]
+        [:t [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]
+        [:w [:w :h :e :r :e :spacebar]]
+      ]
+    }
 
-        {:des "Launcher Mode [L] as Trigger Key"
-         :rules [:launch-mode
-                  [:semicolon [:launch "Alacritty"]]
-                  [:quote [:launch "Joplin"]]
-                  [:backslash [:launch "Lapce"]]
-                  [:open_bracket [:launch "Mail"]]
-                  [:close_bracket [:launch "Firefox"]]
-                  [:equal_sign [:launch "Telegram"]]
-                  [:hyphen [:launch "Whatsapp"]]
-                  [:grave_accent_and_tilde [:launch "Skim"]]
-                ]
-        }
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Change left_control to menu selector when used alone"
-         :rules [[:left_control :left_control nil {:alone [:!Tnon_us_backslash]}]]
-        }
+    {:des   "caps_lock to esc when pressed alone, composed"
+      :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]
+    }
 
-        {:des "Change left_option to window rotation when used alone"
-         :rules [[:left_option :left_option nil {:alone [:!Otab]}]]
-        }
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Change left_command to last app when used alone"
-         :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]
-        }
+    {:des "Hyper Mode - Mousekey"
+      :rules [:hyper-mode
+        [:down_arrow {:mkey {:y 1000}}]
+        [:up_arrow {:mkey {:y -1000}}]
+        [:left_arrow {:mkey {:x -1000}}]
+        [:right_arrow {:mkey {:x 1000}}]
+        [:return_or_enter {:pkey :button1}]
+        [:!Creturn_or_enter {:pkey :button2}]
+      ]
+    }
 
-        {:des "Change right_command to command-control & to paste selector when used alone"
-         :rules [[:right_command :!Tleft_command nil {:alone [:!CTOSnon_us_backslash]}]]
-        }
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Change right_option to paste when used alone"
-         :rules [[:right_option :right_option nil {:alone [:!CTOnon_us_backslash]}]]
-        }
+    {:des "Hyper Mode - Deletion"
+      :rules [:hyper-mode
+        [:comma :delete_or_backspace]
+        [:!Scomma :!Odelete_or_backspace]
+        [:period :delete_forward]
+        [:!Speriod :!Odelete_forward]
+      ]
+    }
 
-        {:des "Quit application by pressing command-q twice" 
-         :rules [
-                  [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
-                  [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
-                ]
-        }
-    ]
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Comma Mode [,] as Trigger Key"
+      :rules [:comma-mode
+        [:a :open_bracket]
+        [:s :close_bracket]
+        [:d :!S7]
+        [:f :!S8]
+        [:q :!Shyphen]
+        [:w :!Sequal_sign]
+        [:e :!S5]
+        [:r :!S6]
+      ]
+    }
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Period Mode [.] as Trigger Key"
+      :rules [:period-mode
+        [:comma ["period-comma-mode" 1] nil {:alone :comma :afterup ["period-comma-mode" 0]}]
+        [:a [:!Sgrave_accent_and_tilde :slash]]
+        [:s [:period :!S8]]
+        [:d :!S9]
+        [:f :!S0]
+        [:q :hyphen]
+        [:w :equal_sign]
+        [:e :!Sopen_bracket]
+        [:r :!Sclose_bracket]
+      ]
+    }
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Launcher Mode [L] as Trigger Key"
+      :rules [:launch-mode
+        [:semicolon [:launch "Alacritty"]]
+        [:quote [:launch "Joplin"]]
+        [:backslash [:launch "Lapce"]]
+        [:open_bracket [:launch "Mail"]]
+        [:close_bracket [:launch "Firefox"]]
+        [:equal_sign [:launch "Telegram"]]
+        [:hyphen [:launch "Whatsapp"]]
+        [:grave_accent_and_tilde [:launch "Skim"]]
+      ]
+    }
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Change left_control to menu selector when used alone"
+      :rules [[:left_control :left_control nil {:alone [:!Tnon_us_backslash]}]]
+    }
+
+    {:des "Change left_option to window rotation when used alone"
+      :rules [[:left_option :left_option nil {:alone [:!Otab]}]]
+    }
+
+    {:des "Change left_command to last app when used alone"
+      :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]
+    }
+
+    {:des "Change right_command to command-control & to paste selector when used alone"
+      :rules [[:right_command :!Tleft_command nil {:alone [:!CTOSnon_us_backslash]}]]
+    }
+
+    {:des "Change right_option to paste when used alone"
+      :rules [[:right_option :right_option nil {:alone [:!CTOnon_us_backslash]}]]
+    }
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Quit application by pressing command-q twice" 
+      :rules [
+        [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
+        [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
+      ]
+    }
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "tilde"
+      :rules [
+        [:!S0 :!Sgrave_accent_and_tilde]
+        [:!Sgrave_accent_and_tilde :!S0]
+      ]
+    }
+
+    {:des "patch accents"
+      :rules [
+        [:!OCi :!Tf5]
+        [:!OCn :!Tf6]
+        [:!Oe :!Tf7]
+        [:!Oi :!Tf8]
+        [:!On :!Tf9]
+        [:!Ou :!Tf10]
+        [:!OSo :!Tf11]
+      ]
+    }
+
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Coding modifications"
+      :rules [
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; option
+        [:!O0 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
+        [:!O1 [:spacebar :!S1 :spacebar]]
+        [:!O2 [:spacebar :!S2 :spacebar]]
+        ; [:!O3 []]
+        [:!O4 [:spacebar :!S4 :spacebar]]
+        [:!O5 [:spacebar :!S5 :spacebar]]
+        [:!O6 [:spacebar :!S6 :spacebar]]
+        [:!O7 [:spacebar :slash :spacebar]]
+        [:!O8 [:spacebar :!S8 :spacebar]]
+        [:!O9 [:spacebar :hyphen :spacebar]]
+        [:!Ograve_accent_and_tilde [:spacebar :!Sequal_sign :spacebar]]
+        [:!Ohyphen [:spacebar :equal_sign :spacebar]]
+        [:!Oequal_sign [:spacebar :equal_sign :equal_sign :spacebar]]
+        [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
+        [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
+        [:!Osemicolon [:spacebar :!Sbackslash :!Speriod :spacebar]]
+        [:!Oquote [:spacebar :!S7 :spacebar]]
+        [:!Obackslash [:spacebar :!Sbackslash :spacebar]]
+        [:!Ocomma [:spacebar :!Scomma :spacebar]]
+        [:!Operiod [:spacebar :!Speriod :spacebar]]
+        [:!Oslash [:spacebar :!Ssemicolon :equal_sign :spacebar]]
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+        ; option - shift
+        [:!OS0 [:spacebar :period :!Sgrave_accent_and_tilde :spacebar]]
+        [:!OS1 [:spacebar :period :!S1 :spacebar]]
+        [:!OS2 [:spacebar :period :!S2 :spacebar]]
+        ; [:!OS3 []]
+        [:!OS4 [:spacebar :period :!S4 :spacebar]]
+        [:!OS5 [:spacebar :period :!S5 :spacebar]]
+        [:!OS6 [:spacebar :period :!S6 :spacebar]]
+        [:!OS7 [:spacebar :period :slash :spacebar]]
+        [:!OS8 [:spacebar :period :!S8 :spacebar]]
+        [:!OS9 [:spacebar :period :hyphen :spacebar]]
+        [:!OSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :spacebar]]
+        [:!OShyphen [:spacebar :period :equal_sign :spacebar]]
+        [:!OSequal_sign [:spacebar :period :equal_sign :equal_sign :spacebar]]
+        [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
+        [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
+        [:!OSsemicolon [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
+        [:!OSquote [:spacebar :period :!S7 :spacebar]]
+        [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]
+        [:!OScomma [:spacebar :!Scomma :hyphen :spacebar]]
+        [:!OSperiod [:spacebar :hyphen :!Speriod :spacebar]]
+        [:!OSslash [:spacebar :equal_sign :!Speriod :spacebar]]
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control
+        [:!T0 [:spacebar :!S1 :!Sgrave_accent_and_tilde :spacebar]]
+        [:!T1 [:spacebar :!S1 :!S1 :spacebar]]
+        ; [:!T2 []]
+        ; [:!T3 []]
+        ; [:!T4 []]
+        [:!T5 [:spacebar :!S5 :!S5 :spacebar]]
+        ; [:!T6 []]
+        [:!T7 [:spacebar :slash :slash :spacebar]]
+        [:!T8 [:spacebar :!S8 :!S8 :spacebar]]
+        [:!T9 [:spacebar :hyphen :hyphen :spacebar]]
+        [:!Tgrave_accent_and_tilde [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]
+        [:!Thyphen [:spacebar :!S1 :equal_sign :spacebar]]
+        [:!Tequal_sign [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]
+        ; [:!Topen_bracket []]
+        ; [:!Tclose_bracket []]
+        ; [:!Tsemicolon []]
+        [:!Tquote [:spacebar :!S7 :!S7 :spacebar]]
+        [:!Tbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
+        [:!Tcomma [:spacebar :!Scomma :!Scomma :spacebar]]
+        [:!Tperiod [:spacebar :!Speriod :!Speriod :spacebar]]
+        ; [:!Tslash []]
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control - shift
+        ; [:!TS0 []]
+        [:!TS1 [:spacebar :period :!S1 :!S1 :spacebar]]
+        ; [:!TS2 []]
+        ; [:!TS3 []]
+        ; [:!TS4 []]
+        [:!TS5 [:spacebar :period :!S5 :!S5 :spacebar]]
+        ; [:!TS6 []]
+        [:!TS7 [:spacebar :period :slash :slash :spacebar]]
+        [:!TS8 [:spacebar :period :!S8 :!S8 :spacebar]]
+        [:!TS9 [:spacebar :period :hyphen :hyphen :spacebar]]
+        [:!TSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]
+        [:!TShyphen [:spacebar :period :!S1 :equal_sign :spacebar]]
+        [:!TSequal_sign [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]
+        ; [:!TSopen_bracket []]
+        ; [:!TSclose_bracket []]
+        ; [:!TSsemicolon []]
+        [:!TSquote [:spacebar :period :!S7 :!S7 :spacebar]]
+        [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]
+        [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]
+        [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]
+        ; [:!TSslash []]
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control - command
+        ; [:!TC0 []]
+        ; [:!TC1 []]
+        ; [:!TC2 []]
+        ; [:!TC3 []]
+        ; [:!TC4 []]
+        ; [:!TC5 []]
+        ; [:!TC6 []]
+        [:!TC7 [:spacebar :slash :equal_sign :spacebar]]
+        [:!TC8 [:spacebar :!S8 :equal_sign :spacebar]]
+        [:!TC9 [:spacebar :hyphen :equal_sign :spacebar]]
+        [:!TCgrave_accent_and_tilde [:spacebar :!Sequal_sign :equal_sign :spacebar]]
+        ; [:!TChyphen []]
+        ; [:!TCequal_sign []]
+        ; [:!TCopen_bracket []]
+        ; [:!TCclose_bracket []]
+        ; [:!TCsemicolon []]
+        ; [:!TCquote []]
+        ; [:!TCbackslash []]
+        ; [:!TCcomma []]
+        ; [:!TCperiod []]
+        ; [:!TCslash []]
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+      ]
+    }
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Quote Mode"
+      :rules [:quote-mode
+        [:hyphen [:spacebar :hyphen]]
+        [:equal_sign [:spacebar :hyphen :hyphen]]
+        [:open_bracket [:period :period]]
+        [:close_bracket [:period :period :period]]
+        [:semicolon [:semicolon :spacebar]]
+        [:quote [:!Ssemicolon :spacebar]]
+        [:backslash [:comma :spacebar]]
+        [:comma [:quote :quote :quote]]
+        [:period [:!Squote :!Squote :!Squote]]
+        [:slash [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]
+      ]
+    }
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Super Mode"
+      :rules [:super-mode
+        [:open_bracket [:!S3 :open_bracket]]
+        [:close_bracket [:!S3 :quote]]
+        [:semicolon [:!Ssemicolon :!Ssemicolon]]
+        [:quote [:!Ssemicolon :!Ssemicolon :!Scomma]]
+        [:backslash [:!S4 :!Sopen_bracket]]
+        [:comma [:!Scomma :!Ssemicolon]]
+        [:period [:!Speriod :!Ssemicolon]]
+        [:slash [:slash :slash :!S1]]
+      ]
+    }
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    {:des "Zero Mode"
+      :rules [:zero-mode
+        [:open_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
+        [:close_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
+        [:semicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
+        [:quote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
+        [:backslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
+        [:comma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
+        [:period [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
+        [:slash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
+      ]
+    }
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ]
 
  ; the default value is 250
  :simlayer-threshold 500
