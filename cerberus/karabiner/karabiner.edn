@@ -1,7 +1,8 @@
-{:templates {:launch "osascript -e 'tell application \"%s\" to activate'"}
- :layers {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
+{:templates 
+  {:launch "osascript -e 'tell application \"%s\" to activate'"}
+ :layers 
+  {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
  :simlayers {
-             :launch-mode {:key :0}
              :period-mode {:key :period}
              :comma-mode {:key :comma}
              :space-mode {:key :spacebar :condi :macbook-internal}
@@ -17,16 +18,16 @@
                 ]
         }
 
-        {:des   "caps_lock to esc when pressed alone, to ctrl as modifier"
+        {:des   "caps_lock to esc when pressed alone, composed"
          :rules [[:##caps_lock :!CTOleft_shift nil {:alone :escape}]]
         }
 
         {:des "Hyper Mode - Mousekey"
          :rules [:hyper-mode
-                 [:down_arrow {:mkey {:y 1536}}]
-                 [:up_arrow {:mkey {:y -1536}}]
-                 [:left_arrow {:mkey {:x -1536}}]
-                 [:right_arrow {:mkey {:x 1536}}]
+                 [:down_arrow {:mkey {:y 1000}}]
+                 [:up_arrow {:mkey {:y -1000}}]
+                 [:left_arrow {:mkey {:x -1000}}]
+                 [:right_arrow {:mkey {:x 1000}}]
                  [:return_or_enter {:pkey :button1}]
                  [:!Creturn_or_enter {:pkey :button2}]
                 ]
@@ -34,21 +35,10 @@
 
         {:des "Hyper Mode - Deletion"
          :rules [:hyper-mode
-                 [:n :!Odelete_or_backspace]
-                 [:m :delete_or_backspace]
-                 [:comma :delete_forward]
-                 [:period :!Odelete_forward]
-                 [:!Cn :!Cdelete_or_backspace]
-                 [:!Cm :!Cdelete_or_backspace]
-                 [:!Ccomma :!Cdelete_forward]
-                 [:!Cperiod :!Cdelete_forward]
-                ]
-        }
-
-        {:des "Hyper Mode - Misc"
-         :rules [:hyper-mode
-                 [:escape :caps_lock]
-                 [:grave_accent_and_tilde :!CS5]
+                 [:comma :delete_or_backspace]
+                 [:!Scomma :!Odelete_or_backspace]
+                 [:period :delete_forward]
+                 [:!Speriod :!Odelete_forward]
                 ]
         }
 
@@ -79,28 +69,43 @@
                 ]
         }
 
-        ; {:des "Launcher Mode [L] as Trigger Key"
-        ;  :rules [:launch-mode
-        ;          [:equal_sign [:launch "Telegram"]]
-        ;          [:s [:launch "Safari"]]
-        ;          [:m [:launch "MWeb.app"]]
-        ;         ]
-        ; }
-
-        ;; {:des "HHKB, FILCO MINILA Change left control to esc if alone"
-        ;;  :rules [[:##left_control :left_control [:hhkb-bt :hhkb :hhkb-tmk :filco-minila] {:alone :escape}]]}
-
-        {:des "Change right_command to command-tab when used alone"
-         :rules [[:right_command :!Tleft_command nil {:alone [:!Ctab]}]]
+        {:des "Launcher Mode [L] as Trigger Key"
+         :rules [:launch-mode
+                  [:semicolon [:launch "Alacritty"]]
+                  [:quote [:launch "Joplin"]]
+                  [:backslash [:launch "Lapce"]]
+                  [:open_bracket [:launch "Mail"]]
+                  [:close_bracket [:launch "Firefox"]]
+                  [:equal_sign [:launch "Telegram"]]
+                  [:hyphen [:launch "Whatsapp"]]
+                  [:grave_accent_and_tilde [:launch "Skim"]]
+                ]
         }
 
-        {:des "Change right_option to 4 modifiers combination, f17 when used alone"
-         :rules [[:right_option :!COTleft_shift nil {:alone [:!Otab]}]]
+        {:des "Change left_control to menu selector when used alone"
+         :rules [[:left_control :left_control nil {:alone [:!Tnon_us_backslash]}]]
+        }
+
+        {:des "Change left_option to window rotation when used alone"
+         :rules [[:left_option :left_option nil {:alone [:!Otab]}]]
+        }
+
+        {:des "Change left_command to last app when used alone"
+         :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]
+        }
+
+        {:des "Change right_command to command-control & to paste selector when used alone"
+         :rules [[:right_command :!Tleft_command nil {:alone [:!CTOSnon_us_backslash]}]]
+        }
+
+        {:des "Change right_option to paste when used alone"
+         :rules [[:right_option :right_option nil {:alone [:!CTOnon_us_backslash]}]]
         }
 
         {:des "Quit application by pressing command-q twice" 
-         :rules [[:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
-                 [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
+         :rules [
+                  [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
+                  [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
                 ]
         }
     ]
