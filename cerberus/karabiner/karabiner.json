@@ -38,6 +38,113 @@
           } ]
         } ]
       }, {
+        "description" : "Hyper Mode - Launcher",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "grave_accent_and_tilde"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Skim\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "equal_sign"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Telegram\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "hyphen"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Whatsapp\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Alacritty\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Joplin\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Lapce\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Mail\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Firefox\" to activate'"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Hyper Mode - Hyper-Mouse",
         "manipulators" : [ {
           "from" : {
@@ -4779,6 +4886,27 @@
           "to" : [ {
             "key_code" : "f11",
             "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Simultaneous",
+        "manipulators" : [ {
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "a"
+            }, {
+              "key_code" : "s"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : false,
+              "key_down_order" : "insensitive",
+              "key_up_order" : "insensitive",
+              "key_up_when" : "any"
+            }
+          },
+          "to" : [ {
+            "key_code" : "l"
           } ],
           "type" : "basic"
         } ]
