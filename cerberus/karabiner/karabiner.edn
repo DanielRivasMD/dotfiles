@@ -379,8 +379,8 @@
     }
 
     ; right command => clipboard selector
-    {:des "Change right_command to command-control & to clipboard selector when used alone"
-      :rules [[:right_command :!Tleft_command nil {:alone [:!CTOSnon_us_backslash]}]]
+    {:des "Change right_command to command-control & to open file when used alone"
+      :rules [[:right_command :!Tleft_command nil {:alone [:!Okeypad_num_lock]}]]
     }
 
     ; right option => paste
@@ -388,9 +388,9 @@
       :rules [[:right_option :left_option nil {:alone [:!CTOnon_us_backslash]}]]
     }
 
-    ; right shift => 
-    {:des "Change right_shift to caps lock"
-      :rules [[:right_shift :left_shift nil ]];{:alone []}]]
+    ; right shift => clipboard selector
+    {:des "Change right_shift to clipboard selector when used alone"
+      :rules [[:right_shift :left_shift nil {:alone [:!CTOSnon_us_backslash]}]]
     }
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
