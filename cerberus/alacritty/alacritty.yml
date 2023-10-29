@@ -919,6 +919,7 @@ key_bindings:
   # alphabet
   ####################################################################################################
 
+  - { key: Delete,      mods: Alt,                        chars: "\x1bd"        } # patch delete word forward
   - { key: A,           mods: Alt,                        chars: "\x1ba"        } #
   - { key: B,           mods: Alt,                        chars: "\x1b[1;3A"    } # mapped -> `alt-up`
   - { key: C,           mods: Alt,                        chars: "\x1bc"        } #
