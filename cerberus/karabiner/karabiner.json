@@ -4682,11 +4682,11 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Change right_command to command-control & to clipboard selector when used alone",
+        "description" : "Change right_command to command-control & to open file when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "non_us_backslash",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            "key_code" : "keypad_num_lock",
+            "modifiers" : [ "left_option" ]
           } ],
           "from" : {
             "key_code" : "right_command"
@@ -4713,8 +4713,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Change right_shift to caps lock",
+        "description" : "Change right_shift to clipboard selector when used alone",
         "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "non_us_backslash",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
           "from" : {
             "key_code" : "right_shift"
           },
