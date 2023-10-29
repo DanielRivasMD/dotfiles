@@ -17,16 +17,19 @@
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-    {:des "Hyper Mode - Launcher"
-      :rules [:hyper-mode
-        [:grave_accent_and_tilde [:launch "Skim"]]
-        [:equal_sign [:launch "Telegram"]]
-        [:hyphen [:launch "Whatsapp"]]
-        [:semicolon [:launch "Alacritty"]]
-        [:quote [:launch "Joplin"]]
-        [:backslash [:launch "Lapce"]]
-        [:comma [:launch "Mail"]]
-        [:period [:launch "Firefox"]]
+    {:des "Launcher"
+      :rules [
+        [:!OTCSgrave_accent_and_tilde [:launch "Slack"]]
+        [:!OTCSequal_sign [:launch "Telegram"]]
+        [:!OTCShyphen [:launch "Whatsapp"]]
+        ; [:!OTCSopen_bracket [:launch ""]]
+        ; [:!OTCSclose_bracket [:launch ""]]
+        [:!OTCSsemicolon [:launch "Alacritty"]]
+        [:!OTCSquote [:launch "Joplin"]]
+        [:!OTCSbackslash [:launch "Lapce"]]
+        [:!OTCScomma [:launch "Mail"]]
+        [:!OTCSperiod [:launch "Firefox"]]
+        [:!OTCSslash [:launch "Skim"]]
       ]
     }
 
@@ -428,11 +431,11 @@
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-    {:des "Simultaneous"
-      :rules [
-        [[:a :s] [:l]]
-      ]
-    }    
+    ; {:des "Simultaneous"
+    ;   :rules [
+    ;     [[:a :s] [:!OTCleft_shift]]
+    ;   ]
+    ; }    
         
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
