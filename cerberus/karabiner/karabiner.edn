@@ -229,7 +229,7 @@
     ; control - shift
     {:des "Coding modifications - control - shift"
       :rules [
-    
+
         ; [:!TS0 []]
         [:!TS1 [:spacebar :period :!S1 :!S1 :spacebar]]
         ; [:!TS2 []]
@@ -260,7 +260,7 @@
     ; control - command
     {:des "Coding modifications - control - command"
       :rules [
-        
+
         ; [:!TC0 []]
         ; [:!TC1 []]
         ; [:!TC2 []]
@@ -282,6 +282,78 @@
         ; [:!TCcomma []]
         ; [:!TCperiod []]
         ; [:!TCslash []]
+
+      ]
+    }
+
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    ; control - command
+    {:des "Symbols - control - command"
+      :rules [
+
+        [:!TCa [:semicolon :semicolon :a]]
+        [:!TCb [:semicolon :semicolon :b]]
+        ; [:!TCc [:semicolon :semicolon :c]]
+        [:!TCd [:semicolon :semicolon :d]]
+        [:!TCe [:semicolon :semicolon :e]]
+        [:!TCf [:semicolon :semicolon :f]]
+        [:!TCg [:semicolon :semicolon :g]]
+        [:!TCh [:semicolon :semicolon :h]]
+        [:!TCi [:semicolon :semicolon :i]]
+        [:!TCj [:semicolon :semicolon :j]]
+        [:!TCk [:semicolon :semicolon :k]]
+        [:!TCl [:semicolon :semicolon :l]]
+        [:!TCm [:semicolon :semicolon :m]]
+        [:!TCn [:semicolon :semicolon :n]]
+        [:!TCo [:semicolon :semicolon :o]]
+        [:!TCp [:semicolon :semicolon :p]]
+        ; [:!TCq [:semicolon :semicolon :q]]
+        [:!TCr [:semicolon :semicolon :r]]
+        [:!TCs [:semicolon :semicolon :s]]
+        [:!TCt [:semicolon :semicolon :t]]
+        [:!TCu [:semicolon :semicolon :u]]
+        [:!TCv [:semicolon :semicolon :v]]
+        ; [:!TCw [:semicolon :semicolon :w]]
+        [:!TCx [:semicolon :semicolon :x]]
+        [:!TCy [:semicolon :semicolon :y]]
+        [:!TCz [:semicolon :semicolon :z]]
+
+      ]
+    }
+
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    ; alt - control - command
+    {:des "Symbols - alt - control - command"
+      :rules [
+
+        [:!OTCa [:comma :comma :a]]
+        [:!OTCb [:comma :comma :b]]
+        [:!OTCc [:comma :comma :c]]
+        [:!OTCd [:comma :comma :d]]
+        [:!OTCe [:comma :comma :e]]
+        [:!OTCf [:comma :comma :f]]
+        [:!OTCg [:comma :comma :g]]
+        [:!OTCh [:comma :comma :h]]
+        [:!OTCi [:comma :comma :i]]
+        [:!OTCj [:comma :comma :j]]
+        ; [:!OTCk [:comma :comma :k]]
+        [:!OTCl [:comma :comma :l]]
+        [:!OTCm [:comma :comma :m]]
+        [:!OTCn [:comma :comma :n]]
+        [:!OTCo [:comma :comma :o]]
+        [:!OTCp [:comma :comma :p]]
+        ; [:!OTCq [:comma :comma :q]]
+        [:!OTCr [:comma :comma :r]]
+        [:!OTCs [:comma :comma :s]]
+        ; [:!OTCt [:comma :comma :t]]
+        [:!OTCu [:comma :comma :u]]
+        [:!OTCv [:comma :comma :v]]
+        [:!OTCw [:comma :comma :w]]
+        [:!OTCx [:comma :comma :x]]
+        [:!OTCy [:comma :comma :y]]
+        [:!OTCz [:comma :comma :z]]
 
       ]
     }
