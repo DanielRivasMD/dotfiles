@@ -38,32 +38,194 @@ matches:
   ####################################################################################################
 
   # accents
-  - trigger: "a//"
+  - trigger: "a/"
     replace: "á"
 
-  - trigger: "e//"
+  - trigger: "e/"
     replace: "é"
 
-  - trigger: "i//"
+  - trigger: "i/"
     replace: "í"
 
-  - trigger: "o//"
+  - trigger: "o/"
     replace: "ó"
 
-  - trigger: "u//"
+  - trigger: "u/"
     replace: "ú"
 
-  - trigger: "a::"
+  - trigger: "a:"
     replace: "ä"
 
-  - trigger: "o::"
+  - trigger: "o:"
     replace: "ö"
 
-  - trigger: "u::"
+  - trigger: "u:"
     replace: "ü"
 
-  - trigger: "n--"
+  - trigger: "n-"
     replace: "ñ"
+
+  ####################################################################################################
+
+  # symbols
+  - trigger: ";;a"
+    replace: "α"
+
+  - trigger: ";;b"
+    replace: "β"
+
+  # - trigger: ";;c"
+  #   replace: ""
+
+  - trigger: ";;d"
+    replace: "δ"
+
+  - trigger: ";;e"
+    replace: "ε"
+
+  - trigger: ";;f"
+    replace: "φ"
+
+  - trigger: ";;g"
+    replace: "γ"
+
+  - trigger: ";;h"
+    replace: "η"
+
+  - trigger: ";;i"
+    replace: "ι"
+
+  - trigger: ";;j"
+    replace: "ξ"
+
+  - trigger: ";;k"
+    replace: "κ"
+
+  - trigger: ";;l"
+    replace: "λ"
+
+  - trigger: ";;m"
+    replace: "μ"
+
+  - trigger: ";;n"
+    replace: "ν"
+
+  - trigger: ";;o"
+    replace: "ο"
+
+  - trigger: ";;p"
+    replace: "π"
+
+  # - trigger: ";;q"
+  #   replace: ""
+
+  - trigger: ";;r"
+    replace: "ρ"
+
+  - trigger: ";;s"
+    replace: "σ"
+
+  - trigger: ";;t"
+    replace: "τ"
+
+  - trigger: ";;u"
+    replace: "θ"
+
+  - trigger: ";;v"
+    replace: "ω"
+
+  # - trigger: ";;w"
+  #   replace: ""
+
+  - trigger: ";;x"
+    replace: "χ"
+
+  - trigger: ";;y"
+    replace: "υ"
+
+  - trigger: ";;z"
+    replace: "ζ"
+
+  ####################################################################################################
+
+  # symbols  
+  - trigger: ",,a"
+    replace: "ɒ"
+
+  - trigger: ",,b"
+    replace: "ß"
+
+  - trigger: ",,c"
+    replace: "ç"
+
+  - trigger: ",,d"
+    replace: "Δ"
+
+  - trigger: ",,e"
+    replace: "ę"
+
+  - trigger: ",,f"
+    replace: "ƒ"
+
+  - trigger: ",,g"
+    replace: "ɣ"
+
+  - trigger: ",,h"
+    replace: "з"
+
+  - trigger: ",,i"
+    replace: "и"
+
+  - trigger: ",,j"
+    replace: "ʌ"
+
+  # - trigger: ",,k"
+  #   replace: "ϙ"
+
+  - trigger: ",,l"
+    replace: "ł"
+
+  - trigger: ",,m"
+    replace: "ɱ"
+
+  - trigger: ",,n"
+    replace: "ŋ"
+
+  - trigger: ",,o"
+    replace: "ø"
+
+  - trigger: ",,p"
+    replace: "п"
+
+  # - trigger: ",,q"
+  #   replace: " " 
+
+  - trigger: ",,r"
+    replace: "я"
+
+  - trigger: ",,s"
+    replace: "Σ"
+
+  # - trigger: ",,t"
+  #   replace: " " 
+
+  - trigger: ",,u"
+    replace: "Θ"
+
+  - trigger: ",,v"
+    replace: "Ω"
+
+  - trigger: ",,w"
+    replace: "ʍ"
+
+  - trigger: ",,x"
+    replace: "∇"
+
+  - trigger: ",,y"
+    replace: "Λ"
+
+  - trigger: ",,z"
+    replace: "∫"
 
   ####################################################################################################
 
