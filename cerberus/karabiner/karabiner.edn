@@ -237,7 +237,7 @@
 
         ; control - command
         {:des "Coding modifications - control - command"
-         :rules [; [:!TC0 []]
+         :rules [[:!TC0 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]
                  ; [:!TC1 []]
                  ; [:!TC2 []]
                  ; [:!TC3 []]
