@@ -2717,6 +2717,24 @@
         "description" : "Coding modifications - control - command",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "0",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "7",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control" ]
@@ -3683,8 +3701,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f5",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f7",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -3695,8 +3713,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f6",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f8",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -3707,8 +3725,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f7",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f1",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -3719,8 +3737,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f8",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f2",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -3731,8 +3749,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f9",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f4",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -3743,8 +3761,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f10",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f4",
+            "modifiers" : [ "left_option" ]
           } ],
           "type" : "basic"
         }, {
@@ -3755,7 +3773,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f11",
+            "key_code" : "f4",
             "modifiers" : [ "left_control" ]
           } ],
           "type" : "basic"
