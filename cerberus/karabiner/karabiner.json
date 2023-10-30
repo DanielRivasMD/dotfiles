@@ -40,41 +40,41 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "quote-mode",
+              "name" : "super-mode",
               "value" : 1
             }
           } ],
           "from" : {
-            "key_code" : "q"
+            "key_code" : "w"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "quote-mode",
+              "name" : "super-mode",
               "value" : 0
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "q"
+            "key_code" : "w"
           } ]
         }, {
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "super-mode",
+              "name" : "quote-mode",
               "value" : 1
             }
           } ],
           "from" : {
-            "key_code" : "a"
+            "key_code" : "q"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "super-mode",
+              "name" : "quote-mode",
               "value" : 0
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "a"
+            "key_code" : "q"
           } ]
         }, {
           "type" : "basic",
@@ -755,6 +755,393 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Super Mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "n"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "d"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "b"
+          }, {
+            "key_code" : "u"
+          }, {
+            "key_code" : "g"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "d"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "n"
+          }, {
+            "key_code" : "f"
+          }, {
+            "key_code" : "o"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "l"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "p"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "p"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "m"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "o"
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "v"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "l"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket"
+          },
+          "to" : [ {
+            "key_code" : "3",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "open_bracket"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket"
+          },
+          "to" : [ {
+            "key_code" : "3",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "quote"
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon"
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote"
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash"
+          },
+          "to" : [ {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "comma",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "period",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "slash"
+          }, {
+            "key_code" : "slash"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "super-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Quote Mode",
         "manipulators" : [ {
           "from" : {
@@ -916,393 +1303,6 @@
           } ],
           "conditions" : [ {
             "name" : "quote-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Super Mode",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "c"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "c"
-          }, {
-            "key_code" : "h"
-          }, {
-            "key_code" : "a"
-          }, {
-            "key_code" : "i"
-          }, {
-            "key_code" : "n"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "d"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "d"
-          }, {
-            "key_code" : "e"
-          }, {
-            "key_code" : "b"
-          }, {
-            "key_code" : "u"
-          }, {
-            "key_code" : "g"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "e"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "e"
-          }, {
-            "key_code" : "d"
-          }, {
-            "key_code" : "i"
-          }, {
-            "key_code" : "t"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "i"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "i"
-          }, {
-            "key_code" : "n"
-          }, {
-            "key_code" : "f"
-          }, {
-            "key_code" : "o"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "l"
-          }, {
-            "key_code" : "e"
-          }, {
-            "key_code" : "s"
-          }, {
-            "key_code" : "s"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "p"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "p"
-          }, {
-            "key_code" : "i"
-          }, {
-            "key_code" : "p"
-          }, {
-            "key_code" : "e"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "t"
-          }, {
-            "key_code" : "i"
-          }, {
-            "key_code" : "m"
-          }, {
-            "key_code" : "e"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "s"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "s"
-          }, {
-            "key_code" : "h"
-          }, {
-            "key_code" : "o"
-          }, {
-            "key_code" : "w"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "v"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "e"
-          }, {
-            "key_code" : "v"
-          }, {
-            "key_code" : "a"
-          }, {
-            "key_code" : "l"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "w"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "w"
-          }, {
-            "key_code" : "h"
-          }, {
-            "key_code" : "i"
-          }, {
-            "key_code" : "c"
-          }, {
-            "key_code" : "h"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "open_bracket"
-          },
-          "to" : [ {
-            "key_code" : "3",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "open_bracket"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "close_bracket"
-          },
-          "to" : [ {
-            "key_code" : "3",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "quote"
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "semicolon"
-          },
-          "to" : [ {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote"
-          },
-          "to" : [ {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "comma",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "backslash"
-          },
-          "to" : [ {
-            "key_code" : "4",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "comma"
-          },
-          "to" : [ {
-            "key_code" : "comma",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period"
-          },
-          "to" : [ {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash"
-          },
-          "to" : [ {
-            "key_code" : "slash"
-          }, {
-            "key_code" : "slash"
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "super-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
