@@ -46,20 +46,9 @@ plug "wintermi/zsh-golang"
 eval "$(starship init zsh)"
 
 ####################################################################################################
-#  Plugins AB
 ####################################################################################################
 
-# Plugins managed by antibody (AB) statically
-# antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins.sh
-source ${ZDOTDIR}/zsh_plugins.sh
 
-# # Plugins managed by antibody (AB) dinamically
-# # source <(antibody init)
-# zdharma/fast-syntax-highlighting
-# zsh-users/zsh-autosuggestions
-# zsh-users/zsh-completions
-# wfxr/forgit
-# chrissicool/zsh-256color
 
 ####################################################################################################
 #  Autocompletion
