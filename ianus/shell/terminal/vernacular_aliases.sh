@@ -1,15 +1,15 @@
 ####################################################################################################
-# Forked patches
+# forked patches
 ####################################################################################################
 
 alias pier='~/bin/forkedPatch/pier'
 alias rip='~/bin/forkedPatch/rip'
 
 ####################################################################################################
-# General aliases
+# general aliases
 ####################################################################################################
 
-# General aliases
+# general aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -34,7 +34,7 @@ alias mp='mplayer'
 alias sudo='sudo '
 
 ####################################################################################################
-# Go toolLinks
+# go tool links
 ####################################################################################################
 
 alias f='fillin'
@@ -42,7 +42,7 @@ alias lzg='lazygit'
 alias lzd='lazydocker'
 
 ####################################################################################################
-# Rust toolLinks
+# rust tool links
 ####################################################################################################
 
 # lazycli
@@ -96,7 +96,7 @@ alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
 alias ed='ea --tree --level 2 --ignore-glob ".git" --only-dirs'
 
 # lsd
-alias l='lsd --long --classify'
+alias l='ls --long --classify'
 alias lr='l --reverse --timesort'
 alias lz='l --reverse --sizesort'
 
