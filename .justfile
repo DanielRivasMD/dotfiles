@@ -465,7 +465,7 @@ Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
 ####################################################################################################
 
 # watch changes goku karabiner
-watch:
+goku-watch:
   #!/bin/bash
   set -euo pipefail
 
@@ -478,7 +478,7 @@ watch:
 ####################################################################################################
 
 # format goku karabiner
-format:
+goku-format:
   #!/bin/bash
   set -euo pipefail
 
@@ -487,5 +487,18 @@ format:
 
   # format with clojure format
   cljfmt fix "${karabiner}/karabiner.edn"
+
+####################################################################################################
+
+# format & watch goku
+Goku: 
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
+  # format & watch
+  watchexec --watch "${karabiner}/karabiner.edn" -- 'cljfmt fix cerberus/karabiner/karabiner.edn && goku'
 
 ####################################################################################################
