@@ -62,12 +62,32 @@
 
         {:des "Hyper Mode - TODO"
          :rules [:hyper-mode
+                 ; [:a []]
                  [:b [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]
+                 ; [:c []]
                  [:d [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]
+                 ; [:e []]
                  [:f [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]
+                 ; [:g []]
+                 ; [:h []]
                  [:i [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]
+                 ; [:j []]
+                 ; [:k []]
+                 ; [:l []]
+                 ; [:m []]
+                 ; [:n []]
+                 ; [:o []]
+                 ; [:p []]
+                 ; [:q []]
+                 ; [:r []]
+                 ; [:s []]
                  [:t [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]
-                 [:w [:w :h :e :r :e :spacebar]]]}
+                 ; [:u []]
+                 ; [:v []]
+                 ; [:w []]
+                 ; [:x []]
+                 [:y [:w :h :e :r :e :spacebar]]]}
+                 ; [:z []]
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -82,16 +102,32 @@
 
         {:des "Super Mode"
          :rules [:super-mode
+                 ; [:a [:!S2 :spacebar]]
+                 ; [:b [:!S2 :spacebar]]
                  [:c [:!S2 :c :h :a :i :n :spacebar]]
                  [:d [:!S2 :d :e :b :u :g :spacebar]]
                  [:e [:!S2 :e :d :i :t :spacebar]]
+                 ; [:f [:!S2 :spacebar]]
+                 ; [:g [:!S2 :spacebar]]
+                 ; [:h [:!S2 :spacebar]]
                  [:i [:!S2 :i :n :f :o :spacebar]]
+                 ; [:j [:!S2 :spacebar]]
+                 ; [:k [:!S2 :spacebar]]
                  [:l [:!S2 :l :e :s :s :spacebar]]
+                 ; [:m [:!S2 :spacebar]]
+                 ; [:n [:!S2 :spacebar]]
+                 ; [:o [:!S2 :spacebar]]
                  [:p [:!S2 :p :i :p :e :spacebar]]
-                 [:q [:!S2 :w :h :i :c :h :spacebar]]
-                 [:t [:!S2 :t :i :m :e :spacebar]]
+                 ; [:q [:!S2 :spacebar]]
+                 ; [:r [:!S2 :spacebar]]
                  [:s [:!S2 :s :h :o :w :spacebar]]
+                 [:t [:!S2 :t :i :m :e :spacebar]]
+                 ; [:u [:!S2 :spacebar]]
                  [:v [:!S2 :e :v :a :l :spacebar]]
+                 ; [:w [:!S2 :spacebar]]
+                 ; [:x [:!S2 :spacebar]]
+                 [:y [:!S2 :w :h :i :c :h :spacebar]]
+                 ; [:z [:!S2 :spacebar]]
 
                  [:open_bracket [:!S3 :open_bracket]]
                  [:close_bracket [:!S3 :quote]]
@@ -387,8 +423,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Simultaneous"
-         :rules [[[:w :e] [:!EQright_shift]]
-                 [[:s :d] [:!EWright_shift]]]}
+         :rules [[[:d :f] [:!EWright_shift]]
+                 [[:j :k] [:!EQright_shift]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         ]}
