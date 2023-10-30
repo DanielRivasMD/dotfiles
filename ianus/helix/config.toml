@@ -46,7 +46,7 @@ ret = ["insert_mode"]
 
 # delete selections
 del = ["delete_selection_noyank"]
-backspace = ["insert_mode", "delete_char_backward"]
+backspace = ["delete_char_backward"]
 
 # send selections interactive
 # C-space = [""]
