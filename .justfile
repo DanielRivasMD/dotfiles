@@ -38,64 +38,64 @@ Cerberus:
   echo 'Linking git config directory'
   echo '===================================================================================================='
   if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi        # purge before linking
-  ln -svf "${cerberus}/gitconfig.d" "${home}/.gitconfig.d"                      # gitconfig directory
+  ln -svf "${gitconfigDir}" "${home}/.gitconfig.d"                      # gitconfig directory
   echo '===================================================================================================='
 
   # git files
   echo ''
   echo 'Linking git config files'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/git/gitconfig" "${home}/.gitconfig"                      # gitconfig
-  ln -svf "${cerberus}/git/gitignore_global" "${home}/.gitignore_global"        # gitignore_global
+  ln -svf "${gitconfig}" "${home}/.gitconfig"                      # gitconfig
+  ln -svf "${gitignore}" "${home}/.gitignore_global"        # gitignore_global
   echo '===================================================================================================='
 
   # rc files
   echo ''
   echo 'Linking rc config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/gem/gemrc" "${home}/.gemrc"                              # gemrc
-  ln -svf "${cerberus}/mplayer/mplayer" "${home}/.mplayer"                      # mplayer
-  ln -svf "${cerberus}/nano/nanorc" "${home}/.nanorc"                           # nanorc
+  ln -svf "${gemrc}" "${home}/.gemrc"                              # gemrc
+  ln -svf "${mplayer}" "${home}/.mplayer"                      # mplayer
+  ln -svf "${nanorc}" "${home}/.nanorc"                           # nanorc
   echo '===================================================================================================='
 
   # toml files
   echo ''
   echo 'Linking toml config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/procs/procs.toml" "${home}/.procs.toml"                  # procs
+  ln -svf "${procs}" "${home}/.procs.toml"                  # procs
   echo '===================================================================================================='
 
   # config files
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  rm -rf "${config}/atuin" && ln -sv "${cerberus}/atuin" "${config}/"           # atuin
-  ln -svf "${cerberus}/alacritty" "${config}/"                                  # alacritty
-  ln -svf "${cerberus}/bottom" "${config}/"                                     # bottom
-  ln -svf "${cerberus}/cheat" "${config}/"                                      # cheat
-  ln -svf "${cerberus}/karabiner" "${config}/"                                  # karabiner
-  ln -svf "${cerberus}/karabiner/karabiner.edn" "${config}/"                    # karabiner
-  ln -svf "${cerberus}/khal" "${config}/"                                       # khal
-  ln -svf "${cerberus}/gh/config.yml" "${config}/gh/"                           # gh
+  rm -rf "${config}/atuin" && ln -sv "${atuin}" "${config}/"           # atuin
+  ln -svf "${alacritty}" "${config}/"                                  # alacritty
+  ln -svf "${bottom}" "${config}/"                                     # bottom
+  ln -svf "${cheat}" "${config}/"                                      # cheat
+  ln -svf "${gh}/config.yml" "${config}/gh/"                           # gh
+  ln -svf "${karabiner}" "${config}/"                                  # karabiner
+  ln -svf "${karabiner}/karabiner.edn" "${config}/"                    # karabiner
+  ln -svf "${khal}" "${config}/"                                       # khal
   echo '===================================================================================================='
 
   # config directories
   echo ''
   echo 'Linking config dirs @config'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/ranger" "${config}"                                      # ranger directory
-  ln -svf "${cerberus}/gitui" "${config}"                                       # gitui directory
-  ln -svf "${cerberus}/zellij" "${config}"                                      # zellij directory
+  ln -svf "${ranger}" "${config}"                                      # ranger directory
+  ln -svf "${gitui}" "${config}"                                       # gitui directory
+  ln -svf "${zellij}" "${config}"                                      # zellij directory
   echo '===================================================================================================='
 
   # distant
   echo ''
   echo 'Linking config @distant locations'
   echo '===================================================================================================='
-  ln -svf "${cerberus}/julia/startup.jl" "${home}/.julia/config/"               # julia startup
-  ln -svf "${cerberus}/ssh/config" "${home}/.ssh/"                              # ssh config
-  ln -svf "${cerberus}/lazycli/config.yml" "${lazycliConf}/"                    # lazycli config
-  ln -svf "${cerberus}/lazygit/config.yml" "${lazygitConf}/"                    # lazygit config
+  ln -svf "${julia}/startup.jl" "${home}/.julia/config/"               # julia startup
+  ln -svf "${sshConfig}" "${home}/.ssh/"                              # ssh config
+  ln -svf "${lazycli}/config.yml" "${lazycliConf}/"                    # lazycli config
+  ln -svf "${lazygit}/config.yml" "${lazygitConf}/"                    # lazygit config
   echo '===================================================================================================='
 
   # purge before linking
@@ -103,7 +103,7 @@ Cerberus:
   echo 'Linking broot config'
   echo '===================================================================================================='
   if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi
-  ln -svf "${cerberus}/broot/conf.toml" "${brootConf}/"                         # broot config
+  ln -svf "${broot}/conf.toml" "${brootConf}/"                         # broot config
   echo '===================================================================================================='
 
   # purge before linking
@@ -111,8 +111,8 @@ Cerberus:
   echo 'Linking espanso config'
   echo '===================================================================================================='
   if [[ -f "${espansoConf}" ]]; then rm -f "${espansoConf}"; fi
-  ln -svf "${cerberus}/espanso/config/default.yml" "${espansoConf}/config"      # espanso config default
-  ln -svf "${cerberus}/espanso/match/base.yml" "${espansoConf}/match"           # espanso config base
+  ln -svf "${espansoConfig}/default.yml" "${espansoConf}/config"      # espanso config default
+  ln -svf "${espansoMatch}/base.yml" "${espansoConf}/match"           # espanso config base
   echo '===================================================================================================='
 
   # purge before linking
@@ -120,17 +120,16 @@ Cerberus:
   echo 'Linking navi config'
   echo '===================================================================================================='
   if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
-  ln -svf "${cerberus}/navi" "${naviConf}"                                      # navi cheats directory
+  ln -svf "${navi}" "${naviConf}"                                      # navi cheats directory
   echo '===================================================================================================='
 
   # completions
   echo ''
   echo 'Linking completions'
   echo '===================================================================================================='
-  ln -svf "/Users/drivas/Observatory/fd/contrib/completion/_fd"
-  ln -svf "ln -svf /Users/drivas/Observatory/watchexec/completions/zsh" "_watchexec"
+  ln -svf "${observatory}/fd/contrib/completion/_fd" "${config}/zsh_completion/_fd"
+  ln -svf "${observatory}/watchexec/completions/zsh" "${config}/zsh_completion/_watchexec"
   echo '===================================================================================================='
-
 
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
   # ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
@@ -179,19 +178,19 @@ Ianus:
   echo ''
   echo 'Linking config @HOME'
   echo '===================================================================================================='
-  ln -svf "${ianus}/pier/pier.toml" "${home}/.pier.toml"                        # pier
-  ln -svf "${ianus}/tmux/3.2a.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.2a
-  ln -svf "${ianus}/screen/4.08.00.screenrc" "${home}/.screenrc"                # screen
+  ln -svf "${pier}/pier.toml" "${home}/.pier.toml"                        # pier
+  ln -svf "${tmux}/3.2a.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.2a
+  ln -svf "${screen}/4.08.00.screenrc" "${home}/.screenrc"                # screen
   echo '===================================================================================================='
 
   # @config
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  ln -svf "${ianus}/micro" "${config}"                                          # micro directory
-  ln -svf "${ianus}/helix" "${config}"                                          # helix config
-  ln -svf "${ianus}/lsd" "${config}"                                            # lsd directory
-  ln -svf "${ianus}/starship" "${config}"                                       # starship directory
+  ln -svf "${micro}" "${config}"                                          # micro directory
+  ln -svf "${helix}" "${config}"                                          # helix config
+  ln -svf "${lsd}" "${config}"                                            # lsd directory
+  ln -svf "${starship}" "${config}"                                       # starship directory
   echo '===================================================================================================='
 
   # shell
@@ -467,6 +466,26 @@ Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
 
 # watch changes goku karabiner
 watch:
-  watchexec --watch cerberus/karabiner/karabiner.edn -- 'goku'
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
+  # watch source changes
+  watchexec --watch "${karabiner}/karabiner.edn" -- 'goku'
+
+####################################################################################################
+
+# format goku karabiner
+format:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
+  # format with clojure format
+  cljfmt fix "${karabiner}/karabiner.edn"
 
 ####################################################################################################
