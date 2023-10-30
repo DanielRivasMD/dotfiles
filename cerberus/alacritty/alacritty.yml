@@ -1101,7 +1101,7 @@ key_bindings:
   # - { key: Return,      mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Space,       mods: Shift,                      chars: "\x1b[1;5R"    } # tmux copy-mode mapped -> `ctrl-F3`
-  - { key: Space,       mods: Alt,                        chars: "\x11;"        } # tmux display-menu
+  # - { key: Space,       mods: Alt,                        chars: ""             } # collision
   - { key: Space,       mods: Alt|Shift,                  chars: "\x1b[1;2R"    } # tmux remote-toggle-key -> `shift-F3`
   # - { key: Space,       mods: Control,                    chars: ""             } # direct bound
   # - { key: Space,       mods: Control|Shift,              chars: ""             } #
