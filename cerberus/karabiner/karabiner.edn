@@ -1,9 +1,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-{:templates
+{:applications 
+  {
+    :mail ["com.apple.mail"]
+  }
+
+:templates
+
   {:launch "osascript -e 'tell application \"%s\" to activate'"}
+
   :layers 
     {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
+
   :simlayers {
     :super-mode {:key :a}
     :quote-mode {:key :q}
@@ -14,6 +22,25 @@
 
   :main [
 
+    {:des "Mail bindings"
+      :rules [
+        [:!Creturn_or_enter :!CSd [:mail]]                  ; send
+        [:!Oreturn_or_enter :!Cr [:mail]]                   ; reply
+        [:!OSreturn_or_enter :!CSr [:mail]]                 ; reply all
+        [:!OCreturn_or_enter :!CSf [:mail]]                 ; forward
+        [:!Sreturn_or_enter :!Cn [:mail]]                   ; new
+        [:!OTCreturn_or_enter :!CSj [:mail]]                ; junk
+        [:!Tspacebar :!CSu [:mail]]                         ; unread
+        [:!Sspacebar :!CSl [:mail]]                         ; flag
+        [:!Cspacebar :!CSn [:mail]]                         ; get
+        [:!Of :!OCf [:mail]]                                ; find mail
+        [:!OSf :!Cf [:mail]]                                ; find
+        [:!Oh :!CSg [:mail]]                                ; find prev
+        [:!Ol :!Cg [:mail]]                                 ; find next
+      ]
+    }
+
+    
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     {:des "Launcher"
@@ -426,7 +453,6 @@
       ]
     }
 
-
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     {:des "Simultaneous"
@@ -440,7 +466,6 @@
 
       ]
     }
-
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
