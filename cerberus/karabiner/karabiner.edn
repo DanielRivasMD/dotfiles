@@ -8,9 +8,10 @@
 
  :layers
  {:hyper-mode {:key :keypad_num_lock}
-  :super-mode {:key :a}
   :quote-mode {:key :q}
-  :zero-mode {:key :z}}
+  :super-mode {:key :w}
+  :zero-mode {:key :z}
+  :xtreme-mode {:key :x}}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -79,6 +80,30 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        {:des "Super Mode"
+         :rules [:super-mode
+                 [:c [:!S2 :c :h :a :i :n :spacebar]]
+                 [:d [:!S2 :d :e :b :u :g :spacebar]]
+                 [:e [:!S2 :e :d :i :t :spacebar]]
+                 [:i [:!S2 :i :n :f :o :spacebar]]
+                 [:l [:!S2 :l :e :s :s :spacebar]]
+                 [:p [:!S2 :p :i :p :e :spacebar]]
+                 [:q [:!S2 :w :h :i :c :h :spacebar]]
+                 [:t [:!S2 :t :i :m :e :spacebar]]
+                 [:s [:!S2 :s :h :o :w :spacebar]]
+                 [:v [:!S2 :e :v :a :l :spacebar]]
+
+                 [:open_bracket [:!S3 :open_bracket]]
+                 [:close_bracket [:!S3 :quote]]
+                 [:semicolon [:!Ssemicolon :!Ssemicolon]]
+                 [:quote [:!Ssemicolon :!Ssemicolon :!Scomma]]
+                 [:backslash [:!S4 :!Sopen_bracket]]
+                 [:comma [:!Scomma :!Ssemicolon]]
+                 [:period [:!Speriod :!Ssemicolon]]
+                 [:slash [:slash :slash :!S1]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
         {:des "Quote Mode"
          :rules [:quote-mode
                  [:hyphen [:spacebar :hyphen]]
@@ -94,30 +119,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Super Mode"
-         :rules [:super-mode
-                 [:c [:!S2 :c :h :a :i :n :spacebar]]
-                 [:d [:!S2 :d :e :b :u :g :spacebar]]
-                 [:e [:!S2 :e :d :i :t :spacebar]]
-                 [:i [:!S2 :i :n :f :o :spacebar]]
-                 [:l [:!S2 :l :e :s :s :spacebar]]
-                 [:p [:!S2 :p :i :p :e :spacebar]]
-                 [:t [:!S2 :t :i :m :e :spacebar]]
-                 [:s [:!S2 :s :h :o :w :spacebar]]
-                 [:v [:!S2 :e :v :a :l :spacebar]]
-                 [:w [:!S2 :w :h :i :c :h :spacebar]]
-
-                 [:open_bracket [:!S3 :open_bracket]]
-                 [:close_bracket [:!S3 :quote]]
-                 [:semicolon [:!Ssemicolon :!Ssemicolon]]
-                 [:quote [:!Ssemicolon :!Ssemicolon :!Scomma]]
-                 [:backslash [:!S4 :!Sopen_bracket]]
-                 [:comma [:!Scomma :!Ssemicolon]]
-                 [:period [:!Speriod :!Ssemicolon]]
-                 [:slash [:slash :slash :!S1]]]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
         {:des "Zero Mode"
          :rules [:zero-mode
                  [:open_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
@@ -128,6 +129,12 @@
                  [:comma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
                  [:period [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
                  [:slash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; {:des "Xtreme Mode"
+        ;  :rules [:xtreme-mode
+        ;          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
