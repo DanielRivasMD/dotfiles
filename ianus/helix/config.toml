@@ -2,36 +2,36 @@
 # theme
 ####################################################################################################
 
-# theme = "adwaita-dark"                                                        #
-theme = "base16_transparent"                                                    #
-# theme = "dark_plus"                                                           #
-# theme = "fleet_dark"                                                          #
-# theme = "github_dark"                                                         #
-# theme = "molokai"                                                             #
-# theme = "snazzy"                                                              #
+# theme = "adwaita-dark"
+theme = "base16_transparent"
+# theme = "dark_plus"
+# theme = "fleet_dark"
+# theme = "github_dark"
+# theme = "molokai"
+# theme = "snazzy"
 
 ####################################################################################################
 
 [editor]
-mouse = true                                                                    #
-rulers = [80]                                                                   #
-shell = ["zsh", "-c"]                                                           #
-bufferline = "always"                                                           #
+mouse = true
+rulers = [100]
+shell = ["zsh", "-c"]
+bufferline = "always"
 lsp.display-inlay-hints = true
 
 ####################################################################################################
 
 # cursor shape
 [editor.cursor-shape]
-normal = "bar"                                                                  #
-insert = "underline"                                                            #
-select = "block"                                                                #
+normal = "bar"
+insert = "underline"
+select = "block"
 
 ####################################################################################################
 
 # file picker
 [editor.file-picker]
-hidden = false                                                                  #
+hidden = false
 
 ####################################################################################################
 
@@ -39,13 +39,14 @@ hidden = false                                                                  
 [keys.normal]
 
 # escape selections
-esc = ["collapse_selection", "keep_primary_selection"]                          #
+esc = ["collapse_selection", "keep_primary_selection"]
 
 # return
-ret = ["insert_mode"]                                                           #
+ret = ["insert_mode"]
 
 # delete selections
-del = ["delete_selection_noyank"]                                               #
+del = ["delete_selection_noyank"]
+backspace = ["insert_mode", "delete_char_backward"]
 
 # send selections interactive
 # C-space = [""]
