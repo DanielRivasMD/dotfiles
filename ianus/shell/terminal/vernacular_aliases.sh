@@ -43,8 +43,8 @@ alias lzd='lazydocker'
 # lazycli
 alias lzc='lazycli'
 
-# bat
-alias man='batman'
+# # bat
+# alias man='batman'
 
 # broot
 alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-info'
