@@ -1,6 +1,10 @@
 ####################################################################################################
 # General settings
+# plugins
 ####################################################################################################
+  
+# created by zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 # Load zsh settings
 if [ -f ${HOME}/.profile ]; then
@@ -12,14 +16,28 @@ ZDOTDIR=${HOME}/.zsh
 ####################################################################################################
 #  aliases
 ####################################################################################################
+# plugins
+plug "zap-zsh/completions"
+plug "zap-zsh/sudo"
+plug "zap-zsh/supercharge"
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
 
 if [ -f ${IANUS}/shell/terminal/vernacular_aliases.sh ]; then
   . ${IANUS}/shell/terminal/vernacular_aliases.sh
 fi
+plug "hlissner/zsh-autopair"
+plug "MichaelAquilina/zsh-you-should-use"
+plug "olrtg/zsh-fvm"
 
 if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then
   . ${ZDOTDIR}/zsh_aliases.sh
 fi
+plug "wintermi/zsh-brew"
+plug "wintermi/zsh-lsd"
+plug "wintermi/zsh-starship"
+plug "wintermi/zsh-rust"
+plug "wintermi/zsh-golang"
 
 ####################################################################################################
 #  Prompt
