@@ -219,12 +219,9 @@ Ianus:
   ln -svf "${zsh}/vernacular_zshrc.sh" "${home}/.zshrc"                         # zshrc
   ln -svf "${zsh}/vernacular_zsh_aliases.sh" "${home}/.zsh/zsh_aliases.sh"      # zsh aliases
   ln -svf "${zsh}/fzf.zsh" "${home}/.zsh"                                       # fzf zsh
-  ln -svf "${zsh}/vernacular_zsh_plugins.sh" "${home}/.zsh/zsh_plugins.sh"      # zsh plugins
-  ln -svf "${zsh}/vernacular_zsh_plugins.txt" "${home}/.zsh/zsh_plugins.txt"    # zsh plugins
-  ln -svf "${zsh}/zsh_pandoc_autocompletion.sh" "${home}/.zsh"                  # zsh completion
-  ln -svf "${zsh}/zsh_broot_patch.sh" "${home}/.zsh"                            # zsh broot patch
-  ln -svf "${zsh}/zsh_just_patch.sh" "${home}/.zsh"                             # zsh just patch
-  ln -svf "${zsh}/zsh_navi_patch.sh" "${home}/.zsh"                             # zsh navi patch
+  ln -svf "${zsh}/zsh_just.sh" "${home}/.zsh"                                   # zsh just
+  ln -svf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                   # zsh navi
+  ln -svf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                 # zsh zoxide
   echo '===================================================================================================='
 
   # fish
