@@ -1,473 +1,388 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-{
-  :applications 
-    {
-      :mail ["com.apple.mail"]
-    }
+{:applications
+ {:mail ["com.apple.mail"]}
 
-  :templates
-    {
-      :launch "osascript -e 'tell application \"%s\" to activate'"
-    }
+ :templates
+ {:launch "osascript -e 'tell application \"%s\" to activate'"}
 
-  :layers 
-    {
-      :hyper-mode {:key :keypad_num_lock}
-      :super-mode {:key :a}
-      :quote-mode {:key :q}
-      :zero-mode {:key :z}
-    }
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  :main [
-
-    {:des "Mail bindings"
-      :rules [
-        [:!Creturn_or_enter :!CSd [:mail]]                  ; send
-        [:!Oreturn_or_enter :!Cr [:mail]]                   ; reply
-        [:!OSreturn_or_enter :!CSr [:mail]]                 ; reply all
-        [:!OCreturn_or_enter :!CSf [:mail]]                 ; forward
-        [:!Sreturn_or_enter :!Cn [:mail]]                   ; new
-        [:!OTCreturn_or_enter :!CSj [:mail]]                ; junk
-        [:!Tspacebar :!CSu [:mail]]                         ; unread
-        [:!Sspacebar :!CSl [:mail]]                         ; flag
-        [:!Cspacebar :!CSn [:mail]]                         ; get
-        [:!Of :!OCf [:mail]]                                ; find mail
-        [:!OSf :!Cf [:mail]]                                ; find
-        [:!Oh :!CSg [:mail]]                                ; find prev
-        [:!Ol :!Cg [:mail]]                                 ; find next
-        [:!OTCSup_arrow :!TCopen_bracket [:mail]]           ; mailbox prev
-        [:!OTCSdown_arrow :!TCclose_bracket [:mail]]        ; mailbox next
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Launcher"
-      :rules [
-        [:!OTCSgrave_accent_and_tilde [:launch "Slack"]]
-        [:!OTCSequal_sign [:launch "Telegram"]]
-        [:!OTCShyphen [:launch "Whatsapp"]]
-        ; [:!OTCSopen_bracket [:launch ""]]
-        ; [:!OTCSclose_bracket [:launch ""]]
-        [:!OTCSsemicolon [:launch "Alacritty"]]
-        [:!OTCSquote [:launch "Joplin"]]
-        [:!OTCSbackslash [:launch "Lapce"]]
-        [:!OTCScomma [:launch "Mail"]]
-        [:!OTCSperiod [:launch "Firefox"]]
-        [:!OTCSslash [:launch "Skim"]]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Hyper Mode - Hyper-Mouse"
-      :rules [:hyper-mode
-        [:down_arrow {:mkey {:y 1000}}]
-        [:up_arrow {:mkey {:y -1000}}]
-        [:left_arrow {:mkey {:x -1000}}]
-        [:right_arrow {:mkey {:x 1000}}]
-        [:return_or_enter {:pkey :button1}]
-        [:!Oreturn_or_enter {:pkey :button2}]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Hyper Mode - TODO"
-      :rules [:hyper-mode
-        [:b [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]
-        [:d [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]
-        [:f [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]
-        [:i [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]
-        [:t [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]
-        [:w [:w :h :e :r :e :spacebar]]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Hyper Mode - Deletion"
-      :rules [:hyper-mode
-        [:open_bracket :delete_or_backspace]
-        [:!Sopen_bracket :!Odelete_or_backspace]
-        [:close_bracket :delete_forward]
-        [:!Sclose_bracket :!Odelete_forward]
-      ]
-    }
-
-   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        
-    {:des "Quote Mode"
-      :rules [:quote-mode
-        [:hyphen [:spacebar :hyphen]]
-        [:equal_sign [:spacebar :hyphen :hyphen]]
-        [:open_bracket [:period :period]]
-        [:close_bracket [:period :period :period]]
-        [:semicolon [:semicolon :spacebar]]
-        [:quote [:!Ssemicolon :spacebar]]
-        [:backslash [:comma :spacebar]]
-        [:comma [:quote :quote :quote]]
-        [:period [:!Squote :!Squote :!Squote]]
-        [:slash [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Super Mode"
-      :rules [:super-mode
-        [:c [:!S2 :c :h :a :i :n :spacebar]]
-        [:d [:!S2 :d :e :b :u :g :spacebar]]
-        [:e [:!S2 :e :d :i :t :spacebar]]
-        [:i [:!S2 :i :n :f :o :spacebar]]
-        [:l [:!S2 :l :e :s :s :spacebar]]
-        [:p [:!S2 :p :i :p :e :spacebar]]
-        [:t [:!S2 :t :i :m :e :spacebar]]
-        [:s [:!S2 :s :h :o :w :spacebar]]
-        [:v [:!S2 :e :v :a :l :spacebar]]
-        [:w [:!S2 :w :h :i :c :h :spacebar]]
-
-        [:open_bracket [:!S3 :open_bracket]]
-        [:close_bracket [:!S3 :quote]]
-        [:semicolon [:!Ssemicolon :!Ssemicolon]]
-        [:quote [:!Ssemicolon :!Ssemicolon :!Scomma]]
-        [:backslash [:!S4 :!Sopen_bracket]]
-        [:comma [:!Scomma :!Ssemicolon]]
-        [:period [:!Speriod :!Ssemicolon]]
-        [:slash [:slash :slash :!S1]]
-      ]
-    }
-
-   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Zero Mode"
-      :rules [:zero-mode
-        [:open_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
-        [:close_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
-        [:semicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
-        [:quote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
-        [:backslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
-        [:comma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
-        [:period [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
-        [:slash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; option
-    {:des "Coding modifications - option"
-      :rules [
-
-        [:!O0 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
-        [:!O1 [:spacebar :!S1 :spacebar]]
-        [:!O2 [:spacebar :!S2 :spacebar]]
-        ; [:!O3 []]
-        [:!O4 [:spacebar :!S4 :spacebar]]
-        [:!O5 [:spacebar :!S5 :spacebar]]
-        [:!O6 [:spacebar :!S6 :spacebar]]
-        [:!O7 [:spacebar :slash :spacebar]]
-        [:!O8 [:spacebar :!S8 :spacebar]]
-        [:!O9 [:spacebar :hyphen :spacebar]]
-        [:!Ograve_accent_and_tilde [:spacebar :!Sequal_sign :spacebar]]
-        [:!Ohyphen [:spacebar :equal_sign :spacebar]]
-        [:!Oequal_sign [:spacebar :equal_sign :equal_sign :spacebar]]
-        [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
-        [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
-        [:!Osemicolon [:spacebar :!Sbackslash :!Speriod :spacebar]]
-        [:!Oquote [:spacebar :!S7 :spacebar]]
-        [:!Obackslash [:spacebar :!Sbackslash :spacebar]]
-        [:!Ocomma [:spacebar :!Scomma :spacebar]]
-        [:!Operiod [:spacebar :!Speriod :spacebar]]
-        [:!Oslash [:spacebar :!Ssemicolon :equal_sign :spacebar]]
-
-      ]
-    }
-     
-   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
- 
-    ; option - shift
-    {:des "Coding modifications - option - shift"
-      :rules [
-        
-        [:!OS0 [:spacebar :period :!Sgrave_accent_and_tilde :spacebar]]
-        [:!OS1 [:spacebar :period :!S1 :spacebar]]
-        [:!OS2 [:spacebar :period :!S2 :spacebar]]
-        ; [:!OS3 []]
-        [:!OS4 [:spacebar :period :!S4 :spacebar]]
-        [:!OS5 [:spacebar :period :!S5 :spacebar]]
-        [:!OS6 [:spacebar :period :!S6 :spacebar]]
-        [:!OS7 [:spacebar :period :slash :spacebar]]
-        [:!OS8 [:spacebar :period :!S8 :spacebar]]
-        [:!OS9 [:spacebar :period :hyphen :spacebar]]
-        [:!OSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :spacebar]]
-        [:!OShyphen [:spacebar :period :equal_sign :spacebar]]
-        [:!OSequal_sign [:spacebar :period :equal_sign :equal_sign :spacebar]]
-        [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
-        [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
-        [:!OSsemicolon [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
-        [:!OSquote [:spacebar :period :!S7 :spacebar]]
-        [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]
-        [:!OScomma [:spacebar :!Scomma :hyphen :spacebar]]
-        [:!OSperiod [:spacebar :hyphen :!Speriod :spacebar]]
-        [:!OSslash [:spacebar :equal_sign :!Speriod :spacebar]]
-
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; control
-    {:des "Coding modifications - control"
-      :rules [
-
-        [:!T0 [:spacebar :!S1 :!Sgrave_accent_and_tilde :spacebar]]
-        [:!T1 [:spacebar :!S1 :!S1 :spacebar]]
-        ; [:!T2 []]
-        ; [:!T3 []]
-        ; [:!T4 []]
-        [:!T5 [:spacebar :!S5 :!S5 :spacebar]]
-        ; [:!T6 []]
-        [:!T7 [:spacebar :slash :slash :spacebar]]
-        [:!T8 [:spacebar :!S8 :!S8 :spacebar]]
-        [:!T9 [:spacebar :hyphen :hyphen :spacebar]]
-        [:!Tgrave_accent_and_tilde [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]
-        [:!Thyphen [:spacebar :!S1 :equal_sign :spacebar]]
-        [:!Tequal_sign [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]
-        ; [:!Topen_bracket []]
-        ; [:!Tclose_bracket []]
-        ; [:!Tsemicolon []]
-        [:!Tquote [:spacebar :!S7 :!S7 :spacebar]]
-        [:!Tbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
-        [:!Tcomma [:spacebar :!Scomma :!Scomma :spacebar]]
-        [:!Tperiod [:spacebar :!Speriod :!Speriod :spacebar]]
-        ; [:!Tslash []]
-
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; control - shift
-    {:des "Coding modifications - control - shift"
-      :rules [
-
-        ; [:!TS0 []]
-        [:!TS1 [:spacebar :period :!S1 :!S1 :spacebar]]
-        ; [:!TS2 []]
-        ; [:!TS3 []]
-        ; [:!TS4 []]
-        [:!TS5 [:spacebar :period :!S5 :!S5 :spacebar]]
-        ; [:!TS6 []]
-        [:!TS7 [:spacebar :period :slash :slash :spacebar]]
-        [:!TS8 [:spacebar :period :!S8 :!S8 :spacebar]]
-        [:!TS9 [:spacebar :period :hyphen :hyphen :spacebar]]
-        [:!TSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]
-        [:!TShyphen [:spacebar :period :!S1 :equal_sign :spacebar]]
-        [:!TSequal_sign [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]
-        ; [:!TSopen_bracket []]
-        ; [:!TSclose_bracket []]
-        ; [:!TSsemicolon []]
-        [:!TSquote [:spacebar :period :!S7 :!S7 :spacebar]]
-        [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]
-        [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]
-        [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]
-        ; [:!TSslash []]
-
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; control - command
-    {:des "Coding modifications - control - command"
-      :rules [
-
-        ; [:!TC0 []]
-        ; [:!TC1 []]
-        ; [:!TC2 []]
-        ; [:!TC3 []]
-        ; [:!TC4 []]
-        ; [:!TC5 []]
-        ; [:!TC6 []]
-        [:!TC7 [:spacebar :slash :equal_sign :spacebar]]
-        [:!TC8 [:spacebar :!S8 :equal_sign :spacebar]]
-        [:!TC9 [:spacebar :hyphen :equal_sign :spacebar]]
-        [:!TCgrave_accent_and_tilde [:spacebar :!Sequal_sign :equal_sign :spacebar]]
-        ; [:!TChyphen []]
-        ; [:!TCequal_sign []]
-        ; [:!TCopen_bracket []]
-        ; [:!TCclose_bracket []]
-        ; [:!TCsemicolon []]
-        ; [:!TCquote []]
-        ; [:!TCbackslash []]
-        ; [:!TCcomma []]
-        ; [:!TCperiod []]
-        ; [:!TCslash []]
-
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; control - command
-    {:des "Symbols - control - command"
-      :rules [
-
-        [:!TCa [:semicolon :semicolon :a]]
-        [:!TCb [:semicolon :semicolon :b]]
-        ; [:!TCc [:semicolon :semicolon :c]]
-        [:!TCd [:semicolon :semicolon :d]]
-        [:!TCe [:semicolon :semicolon :e]]
-        [:!TCf [:semicolon :semicolon :f]]
-        [:!TCg [:semicolon :semicolon :g]]
-        [:!TCh [:semicolon :semicolon :h]]
-        [:!TCi [:semicolon :semicolon :i]]
-        [:!TCj [:semicolon :semicolon :j]]
-        [:!TCk [:semicolon :semicolon :k]]
-        [:!TCl [:semicolon :semicolon :l]]
-        [:!TCm [:semicolon :semicolon :m]]
-        [:!TCn [:semicolon :semicolon :n]]
-        [:!TCo [:semicolon :semicolon :o]]
-        [:!TCp [:semicolon :semicolon :p]]
-        ; [:!TCq [:semicolon :semicolon :q]]
-        [:!TCr [:semicolon :semicolon :r]]
-        [:!TCs [:semicolon :semicolon :s]]
-        [:!TCt [:semicolon :semicolon :t]]
-        [:!TCu [:semicolon :semicolon :u]]
-        [:!TCv [:semicolon :semicolon :v]]
-        ; [:!TCw [:semicolon :semicolon :w]]
-        [:!TCx [:semicolon :semicolon :x]]
-        [:!TCy [:semicolon :semicolon :y]]
-        [:!TCz [:semicolon :semicolon :z]]
-
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; alt - control - command
-    {:des "Symbols - alt - control - command"
-      :rules [
-
-        [:!OTCa [:comma :comma :a]]
-        [:!OTCb [:comma :comma :b]]
-        [:!OTCc [:comma :comma :c]]
-        [:!OTCd [:comma :comma :d]]
-        [:!OTCe [:comma :comma :e]]
-        [:!OTCf [:comma :comma :f]]
-        [:!OTCg [:comma :comma :g]]
-        [:!OTCh [:comma :comma :h]]
-        [:!OTCi [:comma :comma :i]]
-        [:!OTCj [:comma :comma :j]]
-        ; [:!OTCk [:comma :comma :k]]
-        [:!OTCl [:comma :comma :l]]
-        [:!OTCm [:comma :comma :m]]
-        [:!OTCn [:comma :comma :n]]
-        [:!OTCo [:comma :comma :o]]
-        [:!OTCp [:comma :comma :p]]
-        ; [:!OTCq [:comma :comma :q]]
-        [:!OTCr [:comma :comma :r]]
-        [:!OTCs [:comma :comma :s]]
-        ; [:!OTCt [:comma :comma :t]]
-        [:!OTCu [:comma :comma :u]]
-        [:!OTCv [:comma :comma :v]]
-        [:!OTCw [:comma :comma :w]]
-        [:!OTCx [:comma :comma :x]]
-        [:!OTCy [:comma :comma :y]]
-        [:!OTCz [:comma :comma :z]]
-
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; caps lock
-    {:des   "caps_lock to esc when pressed alone, composed"
-      :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; left control => menu selector
-    {:des "Change left_control to menu selector when used alone"
-      :rules [[:left_control :left_control nil {:alone [:!Tnon_us_backslash]}]]
-    }
-
-    ; left option => window rotation
-    {:des "Change left_option to window rotation when used alone"
-      :rules [[:left_option :left_option nil {:alone [:!Otab]}]]
-    }
-
-    ; left command => last app
-    {:des "Change left_command to last app when used alone"
-      :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]
-    }
-
-    ; right command => clipboard selector
-    {:des "Change right_command to command-control & to open file when used alone"
-      :rules [[:right_command :!Tleft_command nil {:alone [:!Okeypad_num_lock]}]]
-    }
-
-    ; right option => paste
-    {:des "Change right_option to paste when used alone"
-      :rules [[:right_option :left_option nil {:alone [:!CTOnon_us_backslash]}]]
-    }
-
-    ; right shift => clipboard selector
-    {:des "Change right_shift to clipboard selector when used alone"
-      :rules [[:right_shift :left_shift nil {:alone [:!CTOSnon_us_backslash]}]]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; quite app
-    {:des "Quit application by pressing command-q twice" 
-      :rules [
-        [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
-        [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    ; tilde
-    {:des "Remapp tilde"
-      :rules [
-        [:!S0 :!Sgrave_accent_and_tilde]
-        [:!Sgrave_accent_and_tilde :!S0]
-      ]
-    }
-
-    ; accents
-    {:des "Bypass accents"
-      :rules [
-        [:!OCi :!Tf5]
-        [:!OCn :!Tf6]
-        [:!Oe :!Tf7]
-        [:!Oi :!Tf8]
-        [:!On :!Tf9]
-        [:!Ou :!Tf10]
-        [:!OSo :!Tf11]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-    {:des "Simultaneous"
-      :rules [
-        [[:w :e] [:!EQright_shift]]
-        [[:s :d] [:!EWright_shift]]
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ]
-}
+ :layers
+ {:hyper-mode {:key :keypad_num_lock}
+  :super-mode {:key :a}
+  :quote-mode {:key :q}
+  :zero-mode {:key :z}}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
+
+ :main [{:des "Mail bindings"
+         :rules [[:!Creturn_or_enter :!CSd [:mail]]                   ; send
+                 [:!Oreturn_or_enter :!Cr [:mail]]                    ; reply
+                 [:!OSreturn_or_enter :!CSr [:mail]]                  ; reply all
+                 [:!OCreturn_or_enter :!CSf [:mail]]                  ; forward
+                 [:!Sreturn_or_enter :!Cn [:mail]]                    ; new
+                 [:!OTCreturn_or_enter :!CSj [:mail]]                 ; junk
+                 [:!Tspacebar :!CSu [:mail]]                          ; unread
+                 [:!Sspacebar :!CSl [:mail]]                          ; flag
+                 [:!Cspacebar :!CSn [:mail]]                          ; get
+                 [:!Of :!OCf [:mail]]                                 ; find mail
+                 [:!OSf :!Cf [:mail]]                                 ; find
+                 [:!Oh :!CSg [:mail]]                                 ; find prev
+                 [:!Ol :!Cg [:mail]]                                  ; find next
+                 [:!OTCSup_arrow :!TCopen_bracket [:mail]]            ; mailbox prev
+                 [:!OTCSdown_arrow :!TCclose_bracket [:mail]]         ; mailbox next
+                 ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Launcher"
+         :rules [[:!OTCSgrave_accent_and_tilde [:launch "Slack"]]
+                 [:!OTCSequal_sign [:launch "Telegram"]]
+                 [:!OTCShyphen [:launch "Whatsapp"]]
+                 ; [:!OTCSopen_bracket [:launch ""]]
+                 ; [:!OTCSclose_bracket [:launch ""]]
+                 [:!OTCSsemicolon [:launch "Alacritty"]]
+                 [:!OTCSquote [:launch "Joplin"]]
+                 [:!OTCSbackslash [:launch "Lapce"]]
+                 [:!OTCScomma [:launch "Mail"]]
+                 [:!OTCSperiod [:launch "Firefox"]]
+                 [:!OTCSslash [:launch "Skim"]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Hyper Mode - Hyper-Mouse"
+         :rules [:hyper-mode
+                 [:down_arrow {:mkey {:y 1000}}]
+                 [:up_arrow {:mkey {:y -1000}}]
+                 [:left_arrow {:mkey {:x -1000}}]
+                 [:right_arrow {:mkey {:x 1000}}]
+                 [:return_or_enter {:pkey :button1}]
+                 [:!Oreturn_or_enter {:pkey :button2}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Hyper Mode - TODO"
+         :rules [:hyper-mode
+                 [:b [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]
+                 [:d [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]
+                 [:f [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]
+                 [:i [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]
+                 [:t [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]
+                 [:w [:w :h :e :r :e :spacebar]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Hyper Mode - Deletion"
+         :rules [:hyper-mode
+                 [:open_bracket :delete_or_backspace]
+                 [:!Sopen_bracket :!Odelete_or_backspace]
+                 [:close_bracket :delete_forward]
+                 [:!Sclose_bracket :!Odelete_forward]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Quote Mode"
+         :rules [:quote-mode
+                 [:hyphen [:spacebar :hyphen]]
+                 [:equal_sign [:spacebar :hyphen :hyphen]]
+                 [:open_bracket [:period :period]]
+                 [:close_bracket [:period :period :period]]
+                 [:semicolon [:semicolon :spacebar]]
+                 [:quote [:!Ssemicolon :spacebar]]
+                 [:backslash [:comma :spacebar]]
+                 [:comma [:quote :quote :quote]]
+                 [:period [:!Squote :!Squote :!Squote]]
+                 [:slash [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Super Mode"
+         :rules [:super-mode
+                 [:c [:!S2 :c :h :a :i :n :spacebar]]
+                 [:d [:!S2 :d :e :b :u :g :spacebar]]
+                 [:e [:!S2 :e :d :i :t :spacebar]]
+                 [:i [:!S2 :i :n :f :o :spacebar]]
+                 [:l [:!S2 :l :e :s :s :spacebar]]
+                 [:p [:!S2 :p :i :p :e :spacebar]]
+                 [:t [:!S2 :t :i :m :e :spacebar]]
+                 [:s [:!S2 :s :h :o :w :spacebar]]
+                 [:v [:!S2 :e :v :a :l :spacebar]]
+                 [:w [:!S2 :w :h :i :c :h :spacebar]]
+
+                 [:open_bracket [:!S3 :open_bracket]]
+                 [:close_bracket [:!S3 :quote]]
+                 [:semicolon [:!Ssemicolon :!Ssemicolon]]
+                 [:quote [:!Ssemicolon :!Ssemicolon :!Scomma]]
+                 [:backslash [:!S4 :!Sopen_bracket]]
+                 [:comma [:!Scomma :!Ssemicolon]]
+                 [:period [:!Speriod :!Ssemicolon]]
+                 [:slash [:slash :slash :!S1]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Zero Mode"
+         :rules [:zero-mode
+                 [:open_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
+                 [:close_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
+                 [:semicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
+                 [:quote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
+                 [:backslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
+                 [:comma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
+                 [:period [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
+                 [:slash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; option
+        {:des "Coding modifications - option"
+         :rules [[:!O0 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
+                 [:!O1 [:spacebar :!S1 :spacebar]]
+                 [:!O2 [:spacebar :!S2 :spacebar]]
+                 ; [:!O3 []]
+                 [:!O4 [:spacebar :!S4 :spacebar]]
+                 [:!O5 [:spacebar :!S5 :spacebar]]
+                 [:!O6 [:spacebar :!S6 :spacebar]]
+                 [:!O7 [:spacebar :slash :spacebar]]
+                 [:!O8 [:spacebar :!S8 :spacebar]]
+                 [:!O9 [:spacebar :hyphen :spacebar]]
+                 [:!Ograve_accent_and_tilde [:spacebar :!Sequal_sign :spacebar]]
+                 [:!Ohyphen [:spacebar :equal_sign :spacebar]]
+                 [:!Oequal_sign [:spacebar :equal_sign :equal_sign :spacebar]]
+                 [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
+                 [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
+                 [:!Osemicolon [:spacebar :!Sbackslash :!Speriod :spacebar]]
+                 [:!Oquote [:spacebar :!S7 :spacebar]]
+                 [:!Obackslash [:spacebar :!Sbackslash :spacebar]]
+                 [:!Ocomma [:spacebar :!Scomma :spacebar]]
+                 [:!Operiod [:spacebar :!Speriod :spacebar]]
+                 [:!Oslash [:spacebar :!Ssemicolon :equal_sign :spacebar]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; option - shift
+        {:des "Coding modifications - option - shift"
+         :rules [[:!OS0 [:spacebar :period :!Sgrave_accent_and_tilde :spacebar]]
+                 [:!OS1 [:spacebar :period :!S1 :spacebar]]
+                 [:!OS2 [:spacebar :period :!S2 :spacebar]]
+                 ; [:!OS3 []]
+                 [:!OS4 [:spacebar :period :!S4 :spacebar]]
+                 [:!OS5 [:spacebar :period :!S5 :spacebar]]
+                 [:!OS6 [:spacebar :period :!S6 :spacebar]]
+                 [:!OS7 [:spacebar :period :slash :spacebar]]
+                 [:!OS8 [:spacebar :period :!S8 :spacebar]]
+                 [:!OS9 [:spacebar :period :hyphen :spacebar]]
+                 [:!OSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :spacebar]]
+                 [:!OShyphen [:spacebar :period :equal_sign :spacebar]]
+                 [:!OSequal_sign [:spacebar :period :equal_sign :equal_sign :spacebar]]
+                 [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
+                 [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
+                 [:!OSsemicolon [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
+                 [:!OSquote [:spacebar :period :!S7 :spacebar]]
+                 [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]
+                 [:!OScomma [:spacebar :!Scomma :hyphen :spacebar]]
+                 [:!OSperiod [:spacebar :hyphen :!Speriod :spacebar]]
+                 [:!OSslash [:spacebar :equal_sign :!Speriod :spacebar]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control
+        {:des "Coding modifications - control"
+         :rules [[:!T0 [:spacebar :!S1 :!Sgrave_accent_and_tilde :spacebar]]
+                 [:!T1 [:spacebar :!S1 :!S1 :spacebar]]
+                 ; [:!T2 []]
+                 ; [:!T3 []]
+                 ; [:!T4 []]
+                 [:!T5 [:spacebar :!S5 :!S5 :spacebar]]
+                 ; [:!T6 []]
+                 [:!T7 [:spacebar :slash :slash :spacebar]]
+                 [:!T8 [:spacebar :!S8 :!S8 :spacebar]]
+                 [:!T9 [:spacebar :hyphen :hyphen :spacebar]]
+                 [:!Tgrave_accent_and_tilde [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]
+                 [:!Thyphen [:spacebar :!S1 :equal_sign :spacebar]]
+                 [:!Tequal_sign [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]
+                 ; [:!Topen_bracket []]
+                 ; [:!Tclose_bracket []]
+                 ; [:!Tsemicolon []]
+                 [:!Tquote [:spacebar :!S7 :!S7 :spacebar]]
+                 [:!Tbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
+                 [:!Tcomma [:spacebar :!Scomma :!Scomma :spacebar]]
+                 [:!Tperiod [:spacebar :!Speriod :!Speriod :spacebar]]
+                 ; [:!Tslash []]
+                 ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control - shift
+        {:des "Coding modifications - control - shift"
+         :rules [; [:!TS0 []]
+                 [:!TS1 [:spacebar :period :!S1 :!S1 :spacebar]]
+                 ; [:!TS2 []]
+                 ; [:!TS3 []]
+                 ; [:!TS4 []]
+                 [:!TS5 [:spacebar :period :!S5 :!S5 :spacebar]]
+                 ; [:!TS6 []]
+                 [:!TS7 [:spacebar :period :slash :slash :spacebar]]
+                 [:!TS8 [:spacebar :period :!S8 :!S8 :spacebar]]
+                 [:!TS9 [:spacebar :period :hyphen :hyphen :spacebar]]
+                 [:!TSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]
+                 [:!TShyphen [:spacebar :period :!S1 :equal_sign :spacebar]]
+                 [:!TSequal_sign [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]
+                 ; [:!TSopen_bracket []]
+                 ; [:!TSclose_bracket []]
+                 ; [:!TSsemicolon []]
+                 [:!TSquote [:spacebar :period :!S7 :!S7 :spacebar]]
+                 [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]
+                 [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]
+                 [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]
+                 ; [:!TSslash []]
+                 ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control - command
+        {:des "Coding modifications - control - command"
+         :rules [; [:!TC0 []]
+                 ; [:!TC1 []]
+                 ; [:!TC2 []]
+                 ; [:!TC3 []]
+                 ; [:!TC4 []]
+                 ; [:!TC5 []]
+                 ; [:!TC6 []]
+                 [:!TC7 [:spacebar :slash :equal_sign :spacebar]]
+                 [:!TC8 [:spacebar :!S8 :equal_sign :spacebar]]
+                 [:!TC9 [:spacebar :hyphen :equal_sign :spacebar]]
+                 [:!TCgrave_accent_and_tilde [:spacebar :!Sequal_sign :equal_sign :spacebar]]
+                 ; [:!TChyphen []]
+                 ; [:!TCequal_sign []]
+                 ; [:!TCopen_bracket []]
+                 ; [:!TCclose_bracket []]
+                 ; [:!TCsemicolon []]
+                 ; [:!TCquote []]
+                 ; [:!TCbackslash []]
+                 ; [:!TCcomma []]
+                 ; [:!TCperiod []]
+                 ; [:!TCslash []]
+                 ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; control - command
+        {:des "Symbols - control - command"
+         :rules [[:!TCa [:semicolon :semicolon :a]]
+                 [:!TCb [:semicolon :semicolon :b]]
+                 ; [:!TCc [:semicolon :semicolon :c]]
+                 [:!TCd [:semicolon :semicolon :d]]
+                 [:!TCe [:semicolon :semicolon :e]]
+                 [:!TCf [:semicolon :semicolon :f]]
+                 [:!TCg [:semicolon :semicolon :g]]
+                 [:!TCh [:semicolon :semicolon :h]]
+                 [:!TCi [:semicolon :semicolon :i]]
+                 [:!TCj [:semicolon :semicolon :j]]
+                 [:!TCk [:semicolon :semicolon :k]]
+                 [:!TCl [:semicolon :semicolon :l]]
+                 [:!TCm [:semicolon :semicolon :m]]
+                 [:!TCn [:semicolon :semicolon :n]]
+                 [:!TCo [:semicolon :semicolon :o]]
+                 [:!TCp [:semicolon :semicolon :p]]
+                 ; [:!TCq [:semicolon :semicolon :q]]
+                 [:!TCr [:semicolon :semicolon :r]]
+                 [:!TCs [:semicolon :semicolon :s]]
+                 [:!TCt [:semicolon :semicolon :t]]
+                 [:!TCu [:semicolon :semicolon :u]]
+                 [:!TCv [:semicolon :semicolon :v]]
+                 ; [:!TCw [:semicolon :semicolon :w]]
+                 [:!TCx [:semicolon :semicolon :x]]
+                 [:!TCy [:semicolon :semicolon :y]]
+                 [:!TCz [:semicolon :semicolon :z]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; alt - control - command
+        {:des "Symbols - alt - control - command"
+         :rules [[:!OTCa [:comma :comma :a]]
+                 [:!OTCb [:comma :comma :b]]
+                 [:!OTCc [:comma :comma :c]]
+                 [:!OTCd [:comma :comma :d]]
+                 [:!OTCe [:comma :comma :e]]
+                 [:!OTCf [:comma :comma :f]]
+                 [:!OTCg [:comma :comma :g]]
+                 [:!OTCh [:comma :comma :h]]
+                 [:!OTCi [:comma :comma :i]]
+                 [:!OTCj [:comma :comma :j]]
+                 ; [:!OTCk [:comma :comma :k]]
+                 [:!OTCl [:comma :comma :l]]
+                 [:!OTCm [:comma :comma :m]]
+                 [:!OTCn [:comma :comma :n]]
+                 [:!OTCo [:comma :comma :o]]
+                 [:!OTCp [:comma :comma :p]]
+                 ; [:!OTCq [:comma :comma :q]]
+                 [:!OTCr [:comma :comma :r]]
+                 [:!OTCs [:comma :comma :s]]
+                 ; [:!OTCt [:comma :comma :t]]
+                 [:!OTCu [:comma :comma :u]]
+                 [:!OTCv [:comma :comma :v]]
+                 [:!OTCw [:comma :comma :w]]
+                 [:!OTCx [:comma :comma :x]]
+                 [:!OTCy [:comma :comma :y]]
+                 [:!OTCz [:comma :comma :z]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; caps lock
+        {:des   "caps_lock to esc when pressed alone, composed"
+         :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; left control => menu selector
+        {:des "Change left_control to menu selector when used alone"
+         :rules [[:left_control :left_control nil {:alone [:!Tnon_us_backslash]}]]}
+
+        ; left option => window rotation
+        {:des "Change left_option to window rotation when used alone"
+         :rules [[:left_option :left_option nil {:alone [:!Otab]}]]}
+
+        ; left command => last app
+        {:des "Change left_command to last app when used alone"
+         :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]}
+
+        ; right command => clipboard selector
+        {:des "Change right_command to command-control & to open file when used alone"
+         :rules [[:right_command :!Tleft_command nil {:alone [:!Okeypad_num_lock]}]]}
+
+        ; right option => paste
+        {:des "Change right_option to paste when used alone"
+         :rules [[:right_option :left_option nil {:alone [:!CTOnon_us_backslash]}]]}
+
+        ; right shift => clipboard selector
+        {:des "Change right_shift to clipboard selector when used alone"
+         :rules [[:right_shift :left_shift nil {:alone [:!CTOSnon_us_backslash]}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; quite app
+        {:des "Quit application by pressing command-q twice"
+         :rules [[:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
+                 [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; tilde
+        {:des "Remapp tilde"
+         :rules [[:!S0 :!Sgrave_accent_and_tilde]
+                 [:!Sgrave_accent_and_tilde :!S0]]}
+
+        ; accents
+        {:des "Bypass accents"
+         :rules [[:!OCi :!Tf5]
+                 [:!OCn :!Tf6]
+                 [:!Oe :!Tf7]
+                 [:!Oi :!Tf8]
+                 [:!On :!Tf9]
+                 [:!Ou :!Tf10]
+                 [:!OSo :!Tf11]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Simultaneous"
+         :rules [[[:w :e] [:!EQright_shift]]
+                 [[:s :d] [:!EWright_shift]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
