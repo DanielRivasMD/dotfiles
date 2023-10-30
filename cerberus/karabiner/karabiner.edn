@@ -10,13 +10,12 @@
   {:launch "osascript -e 'tell application \"%s\" to activate'"}
 
   :layers 
-    {:hyper-mode {:key :keypad_num_lock :alone {:key :keypad_num_lock}}}
-
-  :simlayers {
-    :super-mode {:key :a}
-    :quote-mode {:key :q}
-    :zero-mode {:key :z}
-  }
+    {
+      :hyper-mode {:key :keypad_num_lock}
+      :super-mode {:key :a}
+      :quote-mode {:key :q}
+      :zero-mode {:key :z}
+    }
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
