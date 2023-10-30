@@ -1094,11 +1094,13 @@ key_bindings:
   - { key: Return,      mods: Command,                    chars: "\x14"         } # mapped -> `ctrl-t`
   # - { key: Return,      mods: Command|Shift,              chars: ""             } #
   - { key: Return,      mods: Alt|Control,                chars: "\x1b[20;2~"   } # mapped -> `alt-F9`
+  # - { key: Return,      mods: Alt|Control|Shift,          chars: ""             } #
   - { key: Return,      mods: Alt|Command,                chars: "\x1b[21;2~"   } # mapped -> `alt-F10`
+  # - { key: Return,      mods: Alt|Command|Shift,          chars: ""             } #
   - { key: Return,      mods: Control|Command,            chars: "\x1b[23;2~"   } # mapped -> `alt-F11`
+  # - { key: Return,      mods: Control|Command|Shift,      chars: ""             } # collision
   - { key: Return,      mods: Alt|Control|Command,        chars: "\x1b[24;2~"   } # mapped -> `alt-F12`
-  # - { key: Return,      mods: Control|Command|Shift,      chars: ""             } #
-  # - { key: Return,      mods: Alt|Control|Command|Shift,  chars: ""             } # collision
+  - { key: Return,      mods: Alt|Control|Command|Shift,  chars: "\x08"         } # mapped -> `ctrl-h`
 
   - { key: Space,       mods: Shift,                      chars: "\x1b[1;5R"    } # tmux copy-mode mapped -> `ctrl-F3`
   # - { key: Space,       mods: Alt,                        chars: ""             } # collision
@@ -1106,13 +1108,14 @@ key_bindings:
   # - { key: Space,       mods: Control,                    chars: ""             } # direct bound
   # - { key: Space,       mods: Control|Shift,              chars: ""             } #
   - { key: Space,       mods: Command,                    chars: "\x11;"        } # tmux display-menu
-  # - { key: Space,       mods: Command,                    chars: "\x1b[18;5~"   } # mapped -> `ctrl-F7`
   - { key: Space,       mods: Command|Shift,              chars: "\x11q"        } # tmux switch-client
   - { key: Space,       mods: Alt|Control,                chars: "\x11O"        } # tmux last-pane & resize-pane
+  # - { key: Space,       mods: Alt|Control|Shift,          chars: ""             } #
   - { key: Space,       mods: Alt|Command,                chars: "\x11L"        } # tmux last-window
+  # - { key: Space,       mods: Alt|Command|Shift,          chars: ""             } #
   - { key: Space,       mods: Control|Command,            chars: "\x1b[19;5~"   } # mapped -> `ctrl-F8`
+  - { key: Space,       mods: Control|Command|Shift,      chars: "\x1b[18;5~"   } # mapped -> `ctrl-F7`
   - { key: Space,       mods: Alt|Control|Command,        chars: "\x11o"        } # tmux last-pane
-  # - { key: Space,       mods: Control|Command|Shift,      chars: ""             } #
   - { key: Space,       mods: Alt|Control|Command|Shift,  chars: "\x11z"        } # tmux resize-pane
 
   - { key: Left,        mods: Shift,                      chars: "\x1b[1;2D"    } #
@@ -1123,10 +1126,12 @@ key_bindings:
   - { key: Left,        mods: Command,                    chars: "\x01"         } # mapped -> `ctrl-a`
   - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
   # - { key: Left,        mods: Alt|Control,                chars: ""             } # direct bound tmux
+  - { key: Left,        mods: Alt|Control|Shift,          chars: "\x1b[18;6~"   } # mapped -> `ctrl-shift-F7`
   - { key: Left,        mods: Alt|Command,                chars: "\x11{"        } # tmux next-window
+  - { key: Left,        mods: Alt|Command|Shift,          chars: "\x1b[23;6~"   } # mapped -> `ctrl-shift-F11`
   - { key: Left,        mods: Control|Command,            chars: "\x0A"         } # mapped -> `ctrl-j`
-  - { key: Left,        mods: Alt|Control|Command,        chars: "\x11<"        } #
   # - { key: Left,        mods: Control|Command|Shift,      chars: ""             } #
+  - { key: Left,        mods: Alt|Control|Command,        chars: "\x11<"        } #
   # - { key: Left,        mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Right,       mods: Shift,                      chars: "\x1b[1;2C"    } #
@@ -1137,10 +1142,12 @@ key_bindings:
   - { key: Right,       mods: Command,                    chars: "\x05"         } # mapped -> `ctrl-e`
   - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
   # - { key: Right,       mods: Alt|Control,                chars: ""             } # direct bound tmux
+  - { key: Right,       mods: Alt|Control|Shift,          chars: "\x1b[19;6~"   } # mapped -> `ctrl-shift-F8`
   - { key: Right,       mods: Alt|Command,                chars: "\x11}"        } # tmux previous-window
+  - { key: Right,       mods: Alt|Command|Shift,          chars: "\x1b[24;6~"   } # mapped -> `ctrl-shift-F12`
   - { key: Right,       mods: Control|Command,            chars: "\x0E"         } # mapped -> `ctrl-n`
-  - { key: Right,       mods: Alt|Control|Command,        chars: "\x11>"        } #
   # - { key: Right,       mods: Control|Command|Shift,      chars: ""             } #
+  - { key: Right,       mods: Alt|Control|Command,        chars: "\x11>"        } #
   # - { key: Right,       mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Up,          mods: Shift,                      chars: "\x1b[1;2A"    } #
@@ -1151,10 +1158,12 @@ key_bindings:
   - { key: Up,          mods: Command,                    chars: "\x0F"         } # mapped -> `ctrl-o`
   - { key: Up,          mods: Command|Shift,              chars: "\x1b[18;3~"   } # mapped -> `alt-F7`
   # - { key: Up,          mods: Alt|Control,                chars: ""             } # direct bound tmux
+  - { key: Up,          mods: Alt|Control|Shift,          chars: "\x1b[18;4~"   } # mapped -> `alt-shift-F7`
   - { key: Up,          mods: Alt|Command,                chars: "\x1b[20;3~"   } # mapped -> `alt-F9`
+  - { key: Up,          mods: Alt|Command|Shift,          chars: "\x1b[23;4~"   } # mapped -> `alt-shift-F11`
   - { key: Up,          mods: Control|Command,            chars: "\x16"         } # mapped -> `ctrl-v`
-  - { key: Up,          mods: Alt|Control|Command,        chars: "\x11+"        } #
   # - { key: Up,          mods: Control|Command|Shift,      chars: ""             } #
+  - { key: Up,          mods: Alt|Control|Command,        chars: "\x11+"        } #
   - { key: Up,          mods: Alt|Control|Command|Shift,  chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
 
   - { key: Down,        mods: Shift,                      chars: "\x1b[1;2B"    } #
@@ -1165,10 +1174,12 @@ key_bindings:
   - { key: Down,        mods: Command,                    chars: "\x10"         } # mapped -> `ctrl-p`
   - { key: Down,        mods: Command|Shift,              chars: "\x1b[19;3~"   } # mapped -> `alt-F8`
   # - { key: Down,        mods: Alt|Control,                chars: ""             } # direct bound tmux
+  - { key: Down,        mods: Alt|Control|Shift,          chars: "\x1b[19;4~"   } # mapped -> `alt-shift-F8`
   - { key: Down,        mods: Alt|Command,                chars: "\x1b[21;3~"   } # mapped -> `alt-F10`
+  - { key: Down,        mods: Alt|Command|Shift,          chars: "\x1b[24;4~"   } # mapped -> `alt-shift-F12`
   - { key: Down,        mods: Control|Command,            chars: "\x18"         } # mapped -> `ctrl-x`
-  - { key: Down,        mods: Alt|Control|Command,        chars: "\x11-"        } #
   # - { key: Down,        mods: Control|Command|Shift,      chars: ""             } #
+  - { key: Down,        mods: Alt|Control|Command,        chars: "\x11-"        } #
   - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
 
   - { key: PageUp,                                        chars: "\x1b[20;5~"   } # mapped -> `ctrl-F9`
@@ -1177,12 +1188,8 @@ key_bindings:
   - { key: PageDown,    mods: Shift,                      chars: "\x1b[1;4Q"    } # mapped -> `alt-shift-F2`
   - { key: PageUp,      mods: Alt,                        chars: "\x1b[15;4~"   } # mapped -> `alt-shift-F5`
   - { key: PageDown,    mods: Alt,                        chars: "\x1b[17;4~"   } # mapped -> `alt-shift-F6`
-  - { key: PageUp,      mods: Alt|Shift,                  chars: "\x1b[18;4~"   } # mapped -> `alt-shift-F7`
-  - { key: PageDown,    mods: Alt|Shift,                  chars: "\x1b[19;4~"   } # mapped -> `alt-shift-F8`
-  - { key: PageUp,      mods: Control,                    chars: "\x1b[20;4~"   } # mapped -> `alt-shift-F9`
+  - { key: PageUp,      mods: Control,                     chars: "\x1b[20;4~"   } # mapped -> `alt-shift-F9`
   - { key: PageDown,    mods: Control,                    chars: "\x1b[21;4~"   } # mapped -> `alt-shift-F10`
-  - { key: PageUp,      mods: Control|Shift,              chars: "\x1b[23;4~"   } # mapped -> `alt-shift-F11`
-  - { key: PageDown,    mods: Control|Shift,              chars: "\x1b[24;4~"   } # mapped -> `alt-shift-F12`
 
   - { key: Home,                                          chars: "\x1b[23;5~"   } # mapped -> `ctrl-F11`
   - { key: End,                                           chars: "\x1b[24;5~"   } # mapped -> `ctrl-F12`
@@ -1190,12 +1197,8 @@ key_bindings:
   - { key: End,         mods: Shift,                      chars: "\x1b[1;6Q"    } # mapped -> `ctrl-shift-F2`
   - { key: Home,        mods: Alt,                        chars: "\x1b[15;6~"   } # mapped -> `ctrl-shift-F5`
   - { key: End,         mods: Alt,                        chars: "\x1b[17;6~"   } # mapped -> `ctrl-shift-F6`
-  - { key: Home,        mods: Alt|Shift,                  chars: "\x1b[18;6~"   } # mapped -> `ctrl-shift-F7`
-  - { key: End,         mods: Alt|Shift,                  chars: "\x1b[19;6~"   } # mapped -> `ctrl-shift-F8`
   - { key: Home,        mods: Control,                    chars: "\x1b[20;6~"   } # mapped -> `ctrl-shift-F9`
   - { key: End,         mods: Control,                    chars: "\x1b[21;6~"   } # mapped -> `ctrl-shift-F10`
-  - { key: Home,        mods: Control|Shift,              chars: "\x1b[23;6~"   } # mapped -> `ctrl-shift-F11`
-  - { key: End,         mods: Control|Shift,              chars: "\x1b[24;6~"   } # mapped -> `ctrl-shift-F12`
 
   ####################################################################################################
   # interactive keybindings
