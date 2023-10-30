@@ -1,13 +1,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-{:applications 
-  {
-    :mail ["com.apple.mail"]
-  }
+{
+  :applications 
+    {
+      :mail ["com.apple.mail"]
+    }
 
-:templates
-
-  {:launch "osascript -e 'tell application \"%s\" to activate'"}
+  :templates
+    {
+      :launch "osascript -e 'tell application \"%s\" to activate'"
+    }
 
   :layers 
     {
@@ -36,10 +38,11 @@
         [:!OSf :!Cf [:mail]]                                ; find
         [:!Oh :!CSg [:mail]]                                ; find prev
         [:!Ol :!Cg [:mail]]                                 ; find next
+        [:!OTCSup_arrow :!TCopen_bracket [:mail]]           ; mailbox prev
+        [:!OTCSdown_arrow :!TCclose_bracket [:mail]]        ; mailbox next
       ]
     }
 
-    
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     {:des "Launcher"
@@ -463,31 +466,8 @@
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-      ]
-    }
-
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
   ]
-
- ; the default value is 250
- :simlayer-threshold 3000
-
- :devices {
-   :macbook-internal [{:product_id 638 :vendor_id 1452}]
-  }
-
- :applications {
-   :Terminals [
-      "^com\\.apple\\.Terminal$"
-      "^Alacritty$"
-    ]
-  }
-
- :input-sources 
-    :us {
-      :input_mode_id ""
-      :language "en"
-    }
-  }
 }
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  
