@@ -250,15 +250,6 @@ key = "ctrl-right"
 internal = "panel_right"
 description = "select right panel"
 
-# patch not-responding after atuin
-[[verbs]]
-key = "ctrl-down"
-internal = ":line_down"
-
-[[verbs]]
-key = "ctrl-up"
-internal = ":line_up"
-
 # create
 [[verbs]]
 invocation = "create {subpath}"
