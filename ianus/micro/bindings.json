@@ -64,7 +64,7 @@
   "Ctrl-e": "EndOfLine",                                                        // mapped -> `cmd-right`
   "Ctrl-f": "ParagraphNext",                                                    // mapped -> `alt-down`
   "Ctrl-g": "JumpLine",                                                         // mapped -> `shift-enter`
-  "Ctrl-h": "None",                                                             // mapped -> ``
+  "Ctrl-h": "None",                                                             // mapped -> `alt-ctrl-cmd-shift-enter`
   "Ctrl-i": "None",
   "Ctrl-j": "PreviousTab",                                                      // mapped -> `ctrl-cmd-left`
   "Ctrl-k": "SelectToEndOfLine,Delete",
@@ -146,12 +146,12 @@
   "Alt-Shift-F4": "None",                                                       // mapped -> `alt-n`
   "Alt-Shift-F5": "None",                                                       // mapped -> `alt-pageup`
   "Alt-Shift-F6": "None",                                                       // mapped -> `alt-pagedown`
-  "Alt-Shift-F7": "None",                                                       // mapped -> `alt-shift-pageup`
-  "Alt-Shift-F8": "None",                                                       // mapped -> `alt-shift-pagedown`
+  "Alt-Shift-F7": "None",                                                       // mapped -> `d::f-up`
+  "Alt-Shift-F8": "None",                                                       // mapped -> `d::f-down`
   "Alt-Shift-F9": "None",                                                       // mapped -> `ctrl-pageup`
   "Alt-Shift-F10": "None",                                                      // mapped -> `ctrl-pagedown`
-  "Alt-Shift-F11": "None",                                                      // mapped -> `ctrl-shift-pageup`
-  "Alt-Shift-F12": "None",                                                      // mapped -> `ctrl-shift-pagedown`
+  "Alt-Shift-F11": "None",                                                      // mapped -> `j::k-up`
+  "Alt-Shift-F12": "None",                                                      // mapped -> `j::k-down`
 
   "Ctrl-F1": "None",                                                            // mapped -> ``
   "Ctrl-F2": "None",                                                            // mapped -> ``
@@ -172,10 +172,10 @@
   "Ctrl-Shift-F4": "None",                                                      // mapped -> ``
   "Ctrl-Shift-F5": "None",                                                      // mapped -> `alt-home`
   "Ctrl-Shift-F6": "None",                                                      // mapped -> `alt-end`
-  "Ctrl-Shift-F7": "None",                                                      // mapped -> `alt-shift-home`
-  "Ctrl-Shift-F8": "None",                                                      // mapped -> `alt-shift-end`
+  "Ctrl-Shift-F7": "None",                                                      // mapped -> `d::f-left`
+  "Ctrl-Shift-F8": "None",                                                      // mapped -> `d::f-right`
   "Ctrl-Shift-F9": "None",                                                      // mapped -> `ctrl-home`
   "Ctrl-Shift-F10": "None",                                                     // mapped -> `ctrl-end`
-  "Ctrl-Shift-F11": "None",                                                     // mapped -> `ctrl-shift-home`
-  "Ctrl-Shift-F12": "None",                                                     // mapped -> `ctrl-shift-end`
+  "Ctrl-Shift-F11": "None",                                                     // mapped -> `j::k-left`
+  "Ctrl-Shift-F12": "None",                                                     // mapped -> `j::k-right`
 }
