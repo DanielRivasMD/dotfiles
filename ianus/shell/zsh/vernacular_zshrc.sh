@@ -115,6 +115,9 @@ fi
 
 eval "$(zoxide init zsh)"
 
+ZFUN="${ZDOTDIR}/zsh_zoxide.sh"
+[ -f ${ZFUN} ] && source ${ZFUN}
+
 ####################################################################################################
 # editor
 ####################################################################################################
@@ -142,10 +145,12 @@ bindkey '^n' _call_navi
 # command edit
 bindkey '^g' edit-command-line
 
+# zoxide
+bindkey '^h' _call_zi
+
 # unbind
 bindkey -r "^B"
 bindkey -r "^F"
-bindkey -r "^H"
 bindkey -r "^O"
 bindkey -r "^P"
 bindkey -r "^X"
