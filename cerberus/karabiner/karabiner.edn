@@ -47,7 +47,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Terminal"
-         :rules [[:left_option :left_option nil {:alone [:!CSspacebar]}]]}
+         :rules [[:left_option :left_option nil {:alone [:!Of3]}]
+                 [:left_control :left_control nil {:alone [:!Sf3]}]
+                 [:left_shift :left_shift nil {:alone [:!Tf3]}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
