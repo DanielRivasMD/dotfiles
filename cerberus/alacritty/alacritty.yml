@@ -1102,13 +1102,13 @@ key_bindings:
   - { key: Return,      mods: Alt|Control|Command,        chars: "\x1b[24;2~"   } # mapped -> `alt-F12`
   - { key: Return,      mods: Alt|Control|Command|Shift,  chars: "\x08"         } # mapped -> `ctrl-h`
 
-  - { key: Space,       mods: Shift,                      chars: "\x1b[1;5R"    } # tmux copy-mode mapped -> `ctrl-F3`
+  # - { key: Space,       mods: Shift,                      chars: ""             } #
   # - { key: Space,       mods: Alt,                        chars: ""             } # collision
-  - { key: Space,       mods: Alt|Shift,                  chars: "\x1b[1;2R"    } # tmux remote-toggle-key -> `shift-F3`
+  # - { key: Space,       mods: Alt|Shift,                  chars: ""             } #
   # - { key: Space,       mods: Control,                    chars: ""             } # direct bound
   # - { key: Space,       mods: Control|Shift,              chars: ""             } #
   - { key: Space,       mods: Command,                    chars: "\x11;"        } # tmux display-menu
-  - { key: Space,       mods: Command|Shift,              chars: "\x11q"        } # tmux switch-client
+  # - { key: Space,       mods: Command|Shift,              chars: ""             } #
   - { key: Space,       mods: Alt|Control,                chars: "\x11O"        } # tmux last-pane & resize-pane
   # - { key: Space,       mods: Alt|Control|Shift,          chars: ""             } #
   - { key: Space,       mods: Alt|Command,                chars: "\x11L"        } # tmux last-window
