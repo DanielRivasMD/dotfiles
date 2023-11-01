@@ -344,14 +344,38 @@
         "description" : "Terminal",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command", "left_shift" ]
+            "key_code" : "f3",
+            "modifiers" : [ "left_option" ]
           } ],
           "from" : {
             "key_code" : "left_option"
           },
           "to" : [ {
             "key_code" : "left_option"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "f3",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "f3",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "from" : {
+            "key_code" : "left_shift"
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
           } ],
           "type" : "basic"
         } ]
@@ -3582,7 +3606,7 @@
         "description" : "Change right_command to command-control & to open file when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "keypad_num_lock",
+            "key_code" : "non_us_backslash",
             "modifiers" : [ "left_option" ]
           } ],
           "from" : {
