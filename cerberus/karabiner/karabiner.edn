@@ -406,7 +406,7 @@
 
         ; right command => clipboard selector
         {:des "Change right_command to command-control & to open file when used alone"
-         :rules [[:right_command :!Tleft_command nil {:alone [:!Okeypad_num_lock]}]]}
+         :rules [[:right_command :!Tleft_command nil {:alone [:!Onon_us_backslash]}]]}
 
         ; right option => paste
         {:des "Change right_option to paste when used alone"
