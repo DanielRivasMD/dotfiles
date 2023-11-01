@@ -11,7 +11,8 @@
                                       ;; key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)
                       }}
  :applications
- {:mail ["com.apple.mail"]}
+ {:mail ["com.apple.mail"]
+  :terminal ["Alacritty"]}
 
  :templates
  {:launch "osascript -e 'tell application \"%s\" to activate'"}
@@ -42,6 +43,12 @@
                  [:!OTCSup_arrow :!TCopen_bracket [:mail]]            ; mailbox prev
                  [:!OTCSdown_arrow :!TCclose_bracket [:mail]]         ; mailbox next
                  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Terminal"
+         :rules [[:left_option :left_option nil {:alone [:!CSspacebar]}]]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Launcher"
@@ -98,7 +105,6 @@
                  ; [:x []]
                  [:y [:w :h :e :r :e :spacebar]]]}
                  ; [:z []]
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -176,7 +182,6 @@
                  [:comma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
                  [:period [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
                  [:slash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]]}
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -262,6 +267,7 @@
                  [:!Tperiod [:spacebar :!Speriod :!Speriod :spacebar]]
                  ; [:!Tslash []]
                  ]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; control - shift
@@ -288,6 +294,7 @@
                  [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]
                  ; [:!TSslash []]
                  ]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; control - command
@@ -314,6 +321,7 @@
                  ; [:!TCperiod []]
                  ; [:!TCslash []]
                  ]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; control - command
@@ -437,8 +445,6 @@
         {:des "Simultaneous"
          :rules [[[:d :f] [:!EWright_shift]]
                  [[:g :h] [:!WQright_shift]]
-                 [[:j :k] [:!EQright_shift]]]}
+                 [[:j :k] [:!EQright_shift]]]}]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        ]}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
