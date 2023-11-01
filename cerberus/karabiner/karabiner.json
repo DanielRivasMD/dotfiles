@@ -341,6 +341,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Terminal",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "from" : {
+            "key_code" : "left_option"
+          },
+          "to" : [ {
+            "key_code" : "left_option"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Launcher",
         "manipulators" : [ {
           "from" : {
