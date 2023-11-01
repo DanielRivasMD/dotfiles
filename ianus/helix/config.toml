@@ -269,7 +269,7 @@ A-s = [":write-buffer-close"]                                                   
 # A-t = [""]                                                                      #
 # A-u = [""]                                                                      #                   # bypassed => accent
 A-v = ["paste_after"]                                                           # paste
-A-w = ["normal_mode", ":write"]                                                                # save
+A-w = ["normal_mode", ":write"]                                                 # save
 A-x = ["delete_selection"]                                                      # cut
 A-y = ["search_selection", "search_next"]                                       # skip multicursor
 A-z = ["search_selection", "search_prev"]                                       # remove multicursor
