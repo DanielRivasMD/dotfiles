@@ -127,6 +127,7 @@ Cerberus:
   echo ''
   echo 'Linking completions'
   echo '===================================================================================================='
+  ln -svf "${observatory}/eza/completions/zsh/_eza" "${config}/zsh_completion/_eza"
   ln -svf "${observatory}/fd/contrib/completion/_fd" "${config}/zsh_completion/_fd"
   ln -svf "${observatory}/watchexec/completions/zsh" "${config}/zsh_completion/_watchexec"
   echo '===================================================================================================='
