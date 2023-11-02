@@ -3519,6 +3519,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Change left_shift to copy mode when used alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "f3",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "from" : {
+            "key_code" : "left_shift"
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Change left_control to menu selector when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
