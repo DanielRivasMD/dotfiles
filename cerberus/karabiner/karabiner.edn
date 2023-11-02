@@ -12,7 +12,8 @@
                       }}
  :applications
  {:mail ["com.apple.mail"]
-  :terminal ["Alacritty"]}
+  :browser ["org.mozilla.firefox"]
+  :terminal ["io.alacritty"]}
 
  :templates
  {:launch "osascript -e 'tell application \"%s\" to activate'"}
@@ -26,7 +27,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
- :main [{:des "Mail bindings"
+ :main [
+{:des "Mail bindings"
          :rules [[:!Creturn_or_enter :!CSd [:mail]]                   ; send
                  [:!Oreturn_or_enter :!Cr [:mail]]                    ; reply
                  [:!OSreturn_or_enter :!CSr [:mail]]                  ; reply all
@@ -44,7 +46,12 @@
                  [:!OTCSdown_arrow :!TCclose_bracket [:mail]]         ; mailbox next
                  ]}
 
+; {:des "Fire!!" :rules [[:!Sreturn_or_enter :!Ct [:browser]]]}
+; {:des "Fire!!" :rules [:!Sreturn_or_enter :semicolon :browser]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Terminal" :rules [[:a :b [:terminal]]]}
 
         ; {:des "Terminal"
         ;  :rules [[:left_option :left_option nil {:alone [:!Of3]}]
