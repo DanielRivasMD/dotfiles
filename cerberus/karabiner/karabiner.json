@@ -341,6 +341,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Terminal",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "b"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "io.alacritty" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Launcher",
         "manipulators" : [ {
           "from" : {
