@@ -394,6 +394,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        ; left shift => copy mode
+        {:des "Change left_shift to copy mode when used alone"
+         :rules [[:left_shift :left_shift nil {:alone [:!Tf3]}]]}
+
         ; left control => menu selector
         {:des "Change left_control to menu selector when used alone"
          :rules [[:left_control :left_control nil {:alone [:!Tnon_us_backslash]}]]}
