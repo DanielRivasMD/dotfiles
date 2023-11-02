@@ -341,45 +341,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Terminal",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "f3",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "from" : {
-            "key_code" : "left_option"
-          },
-          "to" : [ {
-            "key_code" : "left_option"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
-            "key_code" : "f3",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "from" : {
-            "key_code" : "left_control"
-          },
-          "to" : [ {
-            "key_code" : "left_control"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
-            "key_code" : "f3",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "from" : {
-            "key_code" : "left_shift"
-          },
-          "to" : [ {
-            "key_code" : "left_shift"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Launcher",
         "manipulators" : [ {
           "from" : {
