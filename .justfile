@@ -500,3 +500,18 @@ Goku:
   watchexec --watch "${karabiner}/karabiner.edn" -- 'cljfmt fix cerberus/karabiner/karabiner.edn && goku'
 
 ####################################################################################################
+
+# record software
+Mnemosyne:
+  #!/bin/bash
+  set -euo pipefail
+
+  # declarations
+  source .just.sh
+
+  # collect
+  brew list --formula > "${setupDir}/brew_formulae.txt"
+  brew list --cask > "${setupDir}/brew_casks.txt"
+
+
+####################################################################################################
