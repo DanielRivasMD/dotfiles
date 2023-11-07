@@ -47,7 +47,7 @@
                  ]}
 
 ; {:des "Fire!!" :rules [[:!Sreturn_or_enter :!Ct [:browser]]]}
-; {:des "Fire!!" :rules [:!Sreturn_or_enter :semicolon :browser]}
+{:des "Fire!!" :rules [:!Sreturn_or_enter :semicolon :browser]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -431,7 +431,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; quite app
+        ; quit app
         {:des "Quit application by pressing command-q twice"
          :rules [[:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
                  [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]]}
