@@ -15,12 +15,6 @@ brew install itchyny/tap/fillin
 
 brew install kdabir/tap/has
 
-brew tap brianp/homebrew-muxed
-brew install muxed_bin
-
-brew tap pokanop/pokanop
-brew install nostromo
-
 brew tap lavifb/todo_r https://github.com/lavifb/todo_r.git
 brew install todor
 
