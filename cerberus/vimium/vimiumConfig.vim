@@ -83,7 +83,7 @@ map U goForward
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
-map <shift-enter> createTab
+map ; createTab
 map , previousTab
 map . nextTab
 map <a-m-space> visitPreviousTab
