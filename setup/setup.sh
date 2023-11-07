@@ -57,6 +57,12 @@ done < setup/cargo.txt
 
 ####################################################################################################
 
+# go version manager
+curl -sSL https://git.io/g-install | sh -s
+
+# zsh package manager
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+
 # install golang update
 go install github.com/nao1215/gup@latest
 
