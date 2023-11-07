@@ -3594,18 +3594,17 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Change right_command to command-control & to open file when used alone",
+        "description" : "Change right_shift to clipboard selector when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "non_us_pound",
-            "modifiers" : [ "left_control" ]
+            "modifiers" : [ "left_command" ]
           } ],
           "from" : {
-            "key_code" : "right_command"
+            "key_code" : "right_shift"
           },
           "to" : [ {
-            "key_code" : "left_command",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "left_shift"
           } ],
           "type" : "basic"
         } ]
@@ -3625,17 +3624,18 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Change right_shift to clipboard selector when used alone",
+        "description" : "Change right_command to command-control & to open file when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "non_us_pound",
-            "modifiers" : [ "left_command" ]
+            "modifiers" : [ "left_control" ]
           } ],
           "from" : {
-            "key_code" : "right_shift"
+            "key_code" : "right_command"
           },
           "to" : [ {
-            "key_code" : "left_shift"
+            "key_code" : "left_command",
+            "modifiers" : [ "left_control" ]
           } ],
           "type" : "basic"
         } ]
