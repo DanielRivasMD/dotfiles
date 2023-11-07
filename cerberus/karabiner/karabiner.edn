@@ -419,15 +419,15 @@
 
         ; right command => clipboard selector
         {:des "Change right_command to command-control & to open file when used alone"
-         :rules [[:right_command :!Tleft_command nil {:alone [:!Onon_us_backslash]}]]}
+         :rules [[:right_command :!Tleft_command nil {:alone [:!Tnon_us_pound]}]]}
 
         ; right option => paste
         {:des "Change right_option to paste when used alone"
-         :rules [[:right_option :left_option nil {:alone [:!CTOnon_us_backslash]}]]}
+         :rules [[:right_option :left_option nil {:alone [:!Onon_us_pound]}]]}
 
         ; right shift => clipboard selector
         {:des "Change right_shift to clipboard selector when used alone"
-         :rules [[:right_shift :left_shift nil {:alone [:!CTOSnon_us_backslash]}]]}
+         :rules [[:right_shift :left_shift nil {:alone [:!Cnon_us_pound]}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
