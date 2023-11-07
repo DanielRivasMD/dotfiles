@@ -489,7 +489,7 @@ goku-format:
 ####################################################################################################
 
 # format & watch goku
-Goku: 
+Goku:
   #!/bin/bash
   set -euo pipefail
 
@@ -516,5 +516,11 @@ Mnemosyne:
   # collect cargo
   cargo-install-update install-update --list | awk '{if (NR > 3) print $1}' > "${setupDir}/cargo.txt"
 
+
+####################################################################################################
+
+# set up
+setup:
+  source setup/setup.sh
 
 ####################################################################################################
