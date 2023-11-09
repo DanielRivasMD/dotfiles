@@ -45,12 +45,14 @@ espanso="${cerberus}/espanso"
 espansoConfig="${espanso}/config"
 espansoMatch="${espanso}/match"
 navi="${cerberus}/navi"
+lapce="${cerberus}/lapce"
 
 brootConf="${home}/.config/broot"
 lazycliConf="${appSupport}/lazycli"
 lazygitConf="${appSupport}/jesseduffield/lazygit"
 naviConf="${appSupport}/navi/cheats/drivas"
 espansoConf="${appSupport}/espanso"
+lapceConf="${appSupport}/dev.lapce.Lapce-Stable"
 
 ####################################################################################################
 
