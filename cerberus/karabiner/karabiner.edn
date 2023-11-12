@@ -23,6 +23,7 @@
   :super-mode {:key :non_us_pound}
   :xtreme-mode {:key :q}
   :zero-mode {:key :z}
+  }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -55,16 +56,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Launcher"
-         :rules [[:!OTCSgrave_accent_and_tilde [:launch "Slack"]]
+         :rules [[:!OTCS0 [:launch "Slack"]]
                  [:!OTCSequal_sign [:launch "Telegram"]]
                  [:!OTCShyphen [:launch "Whatsapp"]]
-                 ; [:!OTCSopen_bracket [:launch ""]]
-                 ; [:!OTCSclose_bracket [:launch ""]]
+                 [:!OTCSopen_bracket [:launch "Mail"]]
+                 [:!OTCSclose_bracket [:launch "Firefox"]]
                  [:!OTCSsemicolon [:launch "Alacritty"]]
                  [:!OTCSquote [:launch "Joplin"]]
                  [:!OTCSbackslash [:launch "Lapce"]]
-                 [:!OTCScomma [:launch "Mail"]]
-                 [:!OTCSperiod [:launch "Firefox"]]
+                 ; [:!OTCScomma [:launch ""]]
+                 ; [:!OTCSperiod [:launch ""]]
                  [:!OTCSslash [:launch "Skim"]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
