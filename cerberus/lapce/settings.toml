@@ -1,0 +1,31 @@
+
+[ui]
+font-size = 18
+
+[editor]
+font-size = 18
+tab-width = 2
+format-on-save = true
+multicursor-whole-words = false
+font-family = "Hack Nerd Font"
+
+[core]
+modal = false
+color-theme = "Kanagawa Wave"
+icon-theme = "Material Icons"
+custom-titlebar = true
+
+[terminal]
+font-size = 18
+
+[lapce-julia-ls]
+"lsp.serverPath" = "/usr/local/bin/julia"
+
+[lapce-rust]
+serverPath = "/usr/local/bin/rust-analyzer"
+
+[lapce-toml]
+"volt.serverPath" = "/usr/local/bin/taplo"
+
+[lapce-dart]
+serverPath = "/usr/local/bin/dart"
