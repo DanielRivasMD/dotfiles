@@ -193,6 +193,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        {:des "Deletion"
+         :rules [
+                 [:!Copen_bracket :delete_or_backspace]
+                 [:!CSopen_bracket :!Odelete_or_backspace]
+                 [:!Cclose_bracket :delete_forward]
+                 [:!CSclose_bracket :!Odelete_forward]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
