@@ -45,7 +45,7 @@
             }
           } ],
           "from" : {
-            "key_code" : "w"
+            "key_code" : "non_us_pound"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
@@ -54,13 +54,13 @@
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "w"
+            "key_code" : "non_us_pound"
           } ]
         }, {
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "quote-mode",
+              "name" : "xtreme-mode",
               "value" : 1
             }
           } ],
@@ -69,7 +69,7 @@
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "quote-mode",
+              "name" : "xtreme-mode",
               "value" : 0
             }
           } ],
@@ -395,7 +395,7 @@
         "description" : "Launcher",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "grave_accent_and_tilde",
+            "key_code" : "0",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
             }
@@ -424,6 +424,28 @@
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Whatsapp\" to activate'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Mail\" to activate'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Firefox\" to activate'"
           } ],
           "type" : "basic"
         }, {
@@ -457,28 +479,6 @@
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Lapce\" to activate'"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "comma",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Mail\" to activate'"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Firefox\" to activate'"
           } ],
           "type" : "basic"
         }, {
@@ -586,7 +586,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Hyper Mode - TODO",
+        "description" : "Hyper Mode - NOTE",
         "manipulators" : [ {
           "from" : {
             "key_code" : "b"
@@ -720,7 +720,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "y"
+            "key_code" : "w"
           },
           "to" : [ {
             "key_code" : "w"
@@ -743,30 +743,15 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Hyper Mode - Deletion",
+        "description" : "Hyper Mode",
         "manipulators" : [ {
           "from" : {
             "key_code" : "open_bracket"
           },
           "to" : [ {
-            "key_code" : "delete_or_backspace"
-          } ],
-          "conditions" : [ {
-            "name" : "hyper-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "open_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "hyphen"
           } ],
           "conditions" : [ {
             "name" : "hyper-mode",
@@ -779,7 +764,11 @@
             "key_code" : "close_bracket"
           },
           "to" : [ {
-            "key_code" : "delete_forward"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "hyphen"
+          }, {
+            "key_code" : "hyphen"
           } ],
           "conditions" : [ {
             "name" : "hyper-mode",
@@ -789,14 +778,91 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "close_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
+            "key_code" : "semicolon"
           },
           "to" : [ {
-            "key_code" : "delete_forward",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote"
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash"
+          },
+          "to" : [ {
+            "key_code" : "backslash",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "period"
           } ],
           "conditions" : [ {
             "name" : "hyper-mode",
@@ -1029,7 +1095,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "y"
+            "key_code" : "w"
           },
           "to" : [ {
             "key_code" : "2",
@@ -1193,40 +1259,8 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Quote Mode",
+        "description" : "Xtreme Mode",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "hyphen"
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "hyphen"
-          } ],
-          "conditions" : [ {
-            "name" : "quote-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "equal_sign"
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "hyphen"
-          }, {
-            "key_code" : "hyphen"
-          } ],
-          "conditions" : [ {
-            "name" : "quote-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
           "from" : {
             "key_code" : "open_bracket"
           },
@@ -1236,7 +1270,7 @@
             "key_code" : "period"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1253,7 +1287,7 @@
             "key_code" : "period"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1268,7 +1302,7 @@
             "key_code" : "spacebar"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1284,7 +1318,7 @@
             "key_code" : "spacebar"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1299,7 +1333,7 @@
             "key_code" : "spacebar"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1316,7 +1350,7 @@
             "key_code" : "quote"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1336,7 +1370,7 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1353,7 +1387,7 @@
             "key_code" : "grave_accent_and_tilde"
           } ],
           "conditions" : [ {
-            "name" : "quote-mode",
+            "name" : "xtreme-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],
@@ -1566,6 +1600,55 @@
             "name" : "zero-mode",
             "value" : 1,
             "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Deletion",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward",
+            "modifiers" : [ "left_option" ]
           } ],
           "type" : "basic"
         } ]
@@ -3570,21 +3653,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Change left_shift to copy mode when used alone",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "f3",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "from" : {
-            "key_code" : "left_shift"
-          },
-          "to" : [ {
-            "key_code" : "left_shift"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Change left_control to menu selector when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
@@ -3734,25 +3802,13 @@
         "description" : "Remapp tilde",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "0",
+            "key_code" : "non_us_backslash",
             "modifiers" : {
               "mandatory" : [ "left_shift" ]
             }
           },
           "to" : [ {
             "key_code" : "grave_accent_and_tilde",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "grave_accent_and_tilde",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "0",
             "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
@@ -3903,61 +3959,6 @@
             "modifiers" : [ "right_command", "right_option" ]
           } ],
           "type" : "basic"
-        }, {
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "hyphen"
-            }, {
-              "key_code" : "equal_sign"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : false,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any"
-            }
-          },
-          "to" : [ {
-            "key_code" : "non_us_backslash",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "quote"
-            }, {
-              "key_code" : "backslash"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : false,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any"
-            }
-          },
-          "to" : [ {
-            "key_code" : "grave_accent_and_tilde"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "semicolon"
-            }, {
-              "key_code" : "quote"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : false,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any"
-            }
-          },
-          "to" : [ {
-            "key_code" : "non_us_backslash"
-          } ],
-          "type" : "basic"
         } ]
       }, {
         "description" : "Simple modifications",
@@ -3971,26 +3972,73 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "grave_accent_and_tilde"
-          },
-          "to" : [ {
-            "key_code" : "keypad_num_lock"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_num_lock"
-          },
-          "to" : [ {
-            "key_code" : "non_us_backslash"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "non_us_backslash"
           },
           "to" : [ {
             "key_code" : "0"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Enter remappings",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "s",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "r",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "h",
+            "modifiers" : [ "left_control" ]
           } ],
           "type" : "basic"
         } ]
@@ -4284,6 +4332,13 @@
     "selected" : true,
     "simple_modifications" : [ {
       "from" : {
+        "key_code" : "grave_accent_and_tilde"
+      },
+      "to" : [ {
+        "key_code" : "keypad_num_lock"
+      } ]
+    }, {
+      "from" : {
         "key_code" : "keypad_asterisk"
       },
       "to" : [ {
@@ -4316,6 +4371,13 @@
       },
       "to" : [ {
         "key_code" : "display_brightness_decrement"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "escape"
+      },
+      "to" : [ {
+        "key_code" : "non_us_pound"
       } ]
     } ],
     "virtual_hid_keyboard" : {
