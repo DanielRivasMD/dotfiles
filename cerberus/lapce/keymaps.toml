@@ -1,35 +1,119 @@
-
-[[keymaps]]
-command = "palette.command"
-key = "Meta+Enter"
+####################################################################################################
+# deprecations
+####################################################################################################
 
 [[keymaps]]
 command = "-palette.command"
 key = "F1"
 
 [[keymaps]]
-command = "palette.command"
-key = "Meta+Enter"
-
-[[keymaps]]
 command = "-palette.command"
 key = "Meta+Shift+p"
-
-[[keymaps]]
-command = "next_editor_tab"
-key = "Alt+Meta+ArrowRight"
 
 [[keymaps]]
 command = "-next_editor_tab"
 key = "Ctrl+Tab"
 
 [[keymaps]]
-command = "previous_editor_tab"
-key = "Alt+Meta+ArrowLeft"
-
-[[keymaps]]
 command = "-previous_editor_tab"
 key = "Ctrl+Shift+Tab"
+
+[[keymaps]]
+command = "-insert_cursor_above"
+mode = "i"
+key = "Alt+Meta+ArrowUp"
+[[keymaps]]
+command = "-insert_cursor_below"
+mode = "i"
+key = "Alt+Meta+ArrowDown"
+[[keymaps]]
+command = "-select_current_line"
+mode = "i"
+key = "Meta+l"
+[[keymaps]]
+command = "-toggle_line_comment"
+key = "Meta+/"
+
+[[keymaps]]
+command = "-indent_line"
+key = "Meta+]"
+
+[[keymaps]]
+command = "-outdent_line"
+key = "Meta+["
+
+[[keymaps]]
+command = "-undo"
+key = "Meta+z"
+
+[[keymaps]]
+command = "-redo"
+key = "Meta+Shift+z"
+
+[[keymaps]]
+command = "-redo"
+key = "Meta+y"
+
+[[keymaps]]
+command = "-move_line_up"
+mode = "i"
+key = "Alt+ArrowUp"
+[[keymaps]]
+command = "-move_line_down"
+mode = "i"
+key = "Alt+ArrowDown"
+[[keymaps]]
+command = "-delete_line"
+mode = "i"
+key = "Meta+Shift+k"
+[[keymaps]]
+command = "-select_next_current"
+mode = "i"
+key = "Meta+d"
+[[keymaps]]
+command = "-select_skip_current"
+mode = "i"
+key = "Meta+k Meta+d"
+[[keymaps]]
+command = "-select_all_current"
+mode = "i"
+key = "Meta+Shift+l"
+[[keymaps]]
+command = "-palette"
+key = "Meta+p"
+
+[[keymaps]]
+command = "-goto_definition"
+key = "F12"
+
+[[keymaps]]
+command = "-duplicate_line_down"
+mode = "i"
+key = "Alt+Shift+ArrowDown"
+[[keymaps]]
+command = "-duplicate_line_up"
+mode = "i"
+key = "Alt+Shift+ArrowUp"
+[[keymaps]]
+command = "-select_undo"
+mode = "i"
+key = "Meta+u"
+
+####################################################################################################
+# remappings
+####################################################################################################
+
+[[keymaps]]
+command = "palette.command"
+key = "Ctrl+t"
+
+[[keymaps]]
+command = "next_editor_tab"
+key = "Alt+Meta+ArrowRight"
+
+[[keymaps]]
+command = "previous_editor_tab"
+key = "Alt+Meta+ArrowLeft"
 
 [[keymaps]]
 command = "paragraph_forward"
@@ -42,80 +126,37 @@ key = "Alt+ArrowUp"
 [[keymaps]]
 command = "insert_cursor_above"
 mode = "i"
-key = "Alt+˚"
-
-[[keymaps]]
-command = "-insert_cursor_above"
-mode = "i"
-key = "Alt+Meta+ArrowUp"
+key = "Alt+k"
 
 [[keymaps]]
 command = "insert_cursor_below"
 mode = "i"
-key = "Alt+∆"
-
-[[keymaps]]
-command = "-insert_cursor_below"
-mode = "i"
-key = "Alt+Meta+ArrowDown"
+key = "Alt+j"
 
 [[keymaps]]
 command = "select_current_line"
 mode = "i"
-key = "Alt+Shift+ò"
-
-[[keymaps]]
-command = "-select_current_line"
-mode = "i"
-key = "Meta+l"
+key = "Alt+Shift+l"
 
 [[keymaps]]
 command = "toggle_line_comment"
-key = "Alt+Shift+ç"
-
-[[keymaps]]
-command = "-toggle_line_comment"
-key = "Meta+/"
+key = "Alt+Shift+c"
 
 [[keymaps]]
 command = "indent_line"
-key = "Alt+Shift+ˆ"
-
-[[keymaps]]
-command = "-indent_line"
-key = "Meta+]"
+key = "Alt+Shift+i"
 
 [[keymaps]]
 command = "outdent_line"
 key = "Ctrl+F4"
 
 [[keymaps]]
-command = "-outdent_line"
-key = "Meta+["
-
-[[keymaps]]
 command = "undo"
 key = "Alt+F4"
 
 [[keymaps]]
-command = "-undo"
-key = "Meta+z"
-
-[[keymaps]]
 command = "redo"
-key = "Alt+Shift+¨"
-
-[[keymaps]]
-command = "-redo"
-key = "Meta+Shift+z"
-
-[[keymaps]]
-command = "redo"
-key = "Alt+Shift+¨"
-
-[[keymaps]]
-command = "-redo"
-key = "Meta+y"
+key = "Alt+Shift+u"
 
 [[keymaps]]
 command = "move_line_up"
@@ -123,29 +164,14 @@ mode = "i"
 key = "Alt+Shift+k"
 
 [[keymaps]]
-command = "-move_line_up"
-mode = "i"
-key = "Alt+ArrowUp"
-
-[[keymaps]]
 command = "move_line_down"
 mode = "i"
-key = "Alt+Shift+ô"
-
-[[keymaps]]
-command = "-move_line_down"
-mode = "i"
-key = "Alt+ArrowDown"
+key = "Alt+Shift+j"
 
 [[keymaps]]
 command = "delete_line"
 mode = "i"
-key = "Alt+Shift+˛"
-
-[[keymaps]]
-command = "-delete_line"
-mode = "i"
-key = "Meta+Shift+k"
+key = "Alt+Shift+x"
 
 [[keymaps]]
 command = "next_diff"
@@ -154,40 +180,21 @@ key = "PageDown"
 [[keymaps]]
 command = "select_next_current"
 mode = "i"
-key = "Alt+∂"
-
-[[keymaps]]
-command = "-select_next_current"
-mode = "i"
-key = "Meta+d"
+key = "Alt+d"
 
 [[keymaps]]
 command = "select_skip_current"
 mode = "i"
-key = "Alt+¥"
-
-[[keymaps]]
-command = "-select_skip_current"
-mode = "i"
-key = "Meta+k Meta+d"
+key = "Alt+y"
 
 [[keymaps]]
 command = "select_all_current"
 mode = "i"
-key = "Alt+å"
-
-[[keymaps]]
-command = "-select_all_current"
-mode = "i"
-key = "Meta+Shift+l"
+key = "Alt+a"
 
 [[keymaps]]
 command = "palette"
-key = "Ctrl+Enter"
-
-[[keymaps]]
-command = "-palette"
-key = "Meta+p"
+key = "Ctrl+r"
 
 [[keymaps]]
 command = "previous_diff"
@@ -198,18 +205,9 @@ command = "goto_definition"
 key = "Ctrl+Alt+Meta+Enter"
 
 [[keymaps]]
-command = "-goto_definition"
-key = "F12"
-
-[[keymaps]]
 command = "duplicate_line_down"
 mode = "i"
-key = "Alt+Shift+î"
-
-[[keymaps]]
-command = "-duplicate_line_down"
-mode = "i"
-key = "Alt+Shift+ArrowDown"
+key = "Alt+Shift+d"
 
 [[keymaps]]
 command = "duplicate_line_up"
@@ -217,16 +215,8 @@ mode = "i"
 key = " "
 
 [[keymaps]]
-command = "-duplicate_line_up"
-mode = "i"
-key = "Alt+Shift+ArrowUp"
-
-[[keymaps]]
 command = "select_undo"
 mode = "i"
 key = "Meta+z"
 
-[[keymaps]]
-command = "-select_undo"
-mode = "i"
-key = "Meta+u"
+####################################################################################################
