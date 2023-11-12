@@ -403,9 +403,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; left shift => copy mode
-        {:des "Change left_shift to copy mode when used alone"
-         :rules [[:left_shift :left_shift nil {:alone [:!Tf3]}]]}
+        ; ; left shift => copy mode
+        ; {:des "Change left_shift to copy mode when used alone"
+        ;  :rules [[:left_shift :left_shift nil {:alone [:!Tf3]}]]}
 
         ; left control => menu selector
         {:des "Change left_control to menu selector when used alone"
@@ -442,8 +442,9 @@
 
         ; tilde
         {:des "Remapp tilde"
-         :rules [[:!S0 :!Sgrave_accent_and_tilde]
-                 [:!Sgrave_accent_and_tilde :!S0]]}
+         :rules [
+           [:!Snon_us_backslash :!Sgrave_accent_and_tilde]
+                 ]}
 
         ; accents
         {:des "Bypass accents"
@@ -461,17 +462,13 @@
          :rules [[[:d :f] [:!EWright_shift]]
                  [[:g :h] [:!WQright_shift]]
                  [[:j :k] [:!EQright_shift]]
-                 [[:hyphen :equal_sign] [:!Snon_us_backslash]]
-                 [[:quote :backslash] [:grave_accent_and_tilde]]
-                 [[:semicolon :quote] [:non_us_backslash]]]}
+                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
                 {:des "Simple modifications"
                  :rules [
                   [:0 :grave_accent_and_tilde]
-                  [:grave_accent_and_tilde :keypad_num_lock]
-                  [:keypad_num_lock :non_us_backslash]
                   [:non_us_backslash :0]
                 ]}
                 ]}
