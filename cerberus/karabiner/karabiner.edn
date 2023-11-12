@@ -20,7 +20,6 @@
 
  :layers
  {:hyper-mode {:key :keypad_num_lock}
-  :quote-mode {:key :q}
   :super-mode {:key :w}
   :zero-mode {:key :z}
   :xtreme-mode {:key :x}}
@@ -161,10 +160,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Quote Mode"
-         :rules [:quote-mode
-                 [:hyphen [:spacebar :hyphen]]
-                 [:equal_sign [:spacebar :hyphen :hyphen]]
                  [:open_bracket [:period :period]]
                  [:close_bracket [:period :period :period]]
                  [:semicolon [:semicolon :spacebar]]
