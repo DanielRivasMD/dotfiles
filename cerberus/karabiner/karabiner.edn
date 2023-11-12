@@ -20,7 +20,7 @@
 
  :layers
  {:hyper-mode {:key :keypad_num_lock}
-  :super-mode {:key :w}
+  :super-mode {:key :non_us_pound}
   :xtreme-mode {:key :q}
   :zero-mode {:key :z}
 
@@ -144,9 +144,9 @@
                  [:t [:!S2 :t :i :m :e :spacebar]]
                  ; [:u [:!S2 :spacebar]]
                  [:v [:!S2 :e :v :a :l :spacebar]]
-                 ; [:w [:!S2 :spacebar]]
+                 [:w [:!S2 :w :h :i :c :h :spacebar]]
                  ; [:x [:!S2 :spacebar]]
-                 [:y [:!S2 :w :h :i :c :h :spacebar]]
+                 ; [:y [:!S2 :spacebar]]
                  ; [:z [:!S2 :spacebar]]
 
                  [:open_bracket [:!S3 :open_bracket]]
