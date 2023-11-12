@@ -112,12 +112,18 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Hyper Mode - Deletion"
+        {:des "Hyper Mode"
          :rules [:hyper-mode
-                 [:open_bracket :delete_or_backspace]
-                 [:!Sopen_bracket :!Odelete_or_backspace]
-                 [:close_bracket :delete_forward]
-                 [:!Sclose_bracket :!Odelete_forward]]}
+                 [:open_bracket [:spacebar :hyphen]]
+                 [:close_bracket [:spacebar :hyphen :hyphen]]
+                 [:semicolon [:semicolon :spacebar]]
+                 [:quote [:!Ssemicolon :spacebar]]
+                 [:backslash [:!Sbackslash :spacebar]]
+                 [:comma [:comma :spacebar]]
+                 [:period [:period :period]]
+                 [:slash [:period :period :period]]
+                 ]}
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
