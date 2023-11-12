@@ -22,13 +22,11 @@
  {:hyper-mode {:key :keypad_num_lock}
   :super-mode {:key :non_us_pound}
   :xtreme-mode {:key :q}
-  :zero-mode {:key :z}
-  }
+  :zero-mode {:key :z}}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
- :main [
-{:des "Mail bindings"
+ :main [{:des "Mail bindings"
          :rules [[:!Creturn_or_enter :!CSd [:mail]]                   ; send
                  [:!Oreturn_or_enter :!Cr [:mail]]                    ; reply
                  [:!OSreturn_or_enter :!CSr [:mail]]                  ; reply all
@@ -121,9 +119,7 @@
                  [:backslash [:!Sbackslash :spacebar]]
                  [:comma [:comma :spacebar]]
                  [:period [:period :period]]
-                 [:slash [:period :period :period]]
-                 ]}
-
+                 [:slash [:period :period :period]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -194,8 +190,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Deletion"
-         :rules [
-                 [:!Copen_bracket :delete_or_backspace]
+         :rules [[:!Copen_bracket :delete_or_backspace]
                  [:!CSopen_bracket :!Odelete_or_backspace]
                  [:!Cclose_bracket :delete_forward]
                  [:!CSclose_bracket :!Odelete_forward]]}
@@ -442,11 +437,9 @@
 
         ; tilde
         {:des "Remapp tilde"
-         :rules [
-           [:!Snon_us_backslash :!Sgrave_accent_and_tilde]
-                 ]}
+         :rules [[:!Snon_us_backslash :!Sgrave_accent_and_tilde]]}
 
-        ; accents
+; accents
         {:des "Bypass accents"
          :rules [[:!OCi :!Sf7]
                  [:!OCn :!Sf8]
@@ -461,29 +454,21 @@
         {:des "Simultaneous"
          :rules [[[:d :f] [:!EWright_shift]]
                  [[:g :h] [:!WQright_shift]]
-                 [[:j :k] [:!EQright_shift]]
-                 ]}
+                 [[:j :k] [:!EQright_shift]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-                {:des "Simple modifications"
-                 :rules [
-                  [:0 :grave_accent_and_tilde]
-                  [:non_us_backslash :0]
-                ]}
+        {:des "Simple modifications"
+         :rules [[:0 :grave_accent_and_tilde]
+                 [:non_us_backslash :0]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-{:des "Enter remappings"
- :rules [
-   [:!Sreturn_or_enter :!Tg]
-   [:!Oreturn_or_enter :!Ts]
-   [:!Treturn_or_enter :!Tr]
-   [:!Creturn_or_enter :!Tt]
-   [:!OTCSreturn_or_enter :!Th]
- ]
-  }
-                
-                ]}
+        {:des "Enter remappings"
+         :rules [[:!Sreturn_or_enter :!Tg]
+                 [:!Oreturn_or_enter :!Ts]
+                 [:!Treturn_or_enter :!Tr]
+                 [:!Creturn_or_enter :!Tt]
+                 [:!OTCSreturn_or_enter :!Th]]}]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
