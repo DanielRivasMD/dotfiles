@@ -96,6 +96,8 @@ Cerberus:
   ln -svf "${sshConfig}" "${home}/.ssh/"                              # ssh config
   ln -svf "${lazycli}/config.yml" "${lazycliConf}/"                    # lazycli config
   ln -svf "${lazygit}/config.yml" "${lazygitConf}/"                    # lazygit config
+  ln -svf "${lapce}/keymaps.toml" "${lapceConf}/"                      # lapce config
+  ln -svf "${lapce}/settings.toml" "${lapceConf}/"                      # lapce config
   echo '===================================================================================================='
 
   # purge before linking
