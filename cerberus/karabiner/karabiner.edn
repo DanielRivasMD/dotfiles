@@ -471,6 +471,19 @@
                   [:0 :grave_accent_and_tilde]
                   [:non_us_backslash :0]
                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Enter remappings"
+ :rules [
+   [:!Sreturn_or_enter :!Tg]
+   [:!Oreturn_or_enter :!Ts]
+   [:!Treturn_or_enter :!Tr]
+   [:!Creturn_or_enter :!Tt]
+   [:!OTCSreturn_or_enter :!Th]
+ ]
+  }
+                
                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
