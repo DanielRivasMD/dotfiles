@@ -199,7 +199,7 @@
 
         ; option
         {:des "Coding modifications - option"
-         :rules [[:!O0 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
+         :rules [[:!Onon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
                  [:!O1 [:spacebar :!S1 :spacebar]]
                  [:!O2 [:spacebar :!S2 :spacebar]]
                  ; [:!O3 []]
@@ -209,7 +209,7 @@
                  [:!O7 [:spacebar :slash :spacebar]]
                  [:!O8 [:spacebar :!S8 :spacebar]]
                  [:!O9 [:spacebar :hyphen :spacebar]]
-                 [:!Ograve_accent_and_tilde [:spacebar :!Sequal_sign :spacebar]]
+                 [:!O0 [:spacebar :!Sequal_sign :spacebar]]
                  [:!Ohyphen [:spacebar :equal_sign :spacebar]]
                  [:!Oequal_sign [:spacebar :equal_sign :equal_sign :spacebar]]
                  [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
@@ -225,7 +225,7 @@
 
         ; option - shift
         {:des "Coding modifications - option - shift"
-         :rules [[:!OS0 [:spacebar :period :!Sgrave_accent_and_tilde :spacebar]]
+         :rules [[:!OSnon_us_backslash [:spacebar :period :!Sgrave_accent_and_tilde :spacebar]]
                  [:!OS1 [:spacebar :period :!S1 :spacebar]]
                  [:!OS2 [:spacebar :period :!S2 :spacebar]]
                  ; [:!OS3 []]
@@ -235,7 +235,7 @@
                  [:!OS7 [:spacebar :period :slash :spacebar]]
                  [:!OS8 [:spacebar :period :!S8 :spacebar]]
                  [:!OS9 [:spacebar :period :hyphen :spacebar]]
-                 [:!OSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :spacebar]]
+                 [:!OS0 [:spacebar :period :!Sequal_sign :spacebar]]
                  [:!OShyphen [:spacebar :period :equal_sign :spacebar]]
                  [:!OSequal_sign [:spacebar :period :equal_sign :equal_sign :spacebar]]
                  [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
@@ -251,7 +251,7 @@
 
         ; control
         {:des "Coding modifications - control"
-         :rules [[:!T0 [:spacebar :!S1 :!Sgrave_accent_and_tilde :spacebar]]
+         :rules [[:!Tnon_us_backslash [:spacebar :!S1 :!Sgrave_accent_and_tilde :spacebar]]
                  [:!T1 [:spacebar :!S1 :!S1 :spacebar]]
                  ; [:!T2 []]
                  ; [:!T3 []]
@@ -261,7 +261,7 @@
                  [:!T7 [:spacebar :slash :slash :spacebar]]
                  [:!T8 [:spacebar :!S8 :!S8 :spacebar]]
                  [:!T9 [:spacebar :hyphen :hyphen :spacebar]]
-                 [:!Tgrave_accent_and_tilde [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]
+                 [:!T0 [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]
                  [:!Thyphen [:spacebar :!S1 :equal_sign :spacebar]]
                  [:!Tequal_sign [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]
                  ; [:!Topen_bracket []]
@@ -278,7 +278,7 @@
 
         ; control - shift
         {:des "Coding modifications - control - shift"
-         :rules [; [:!TS0 []]
+         :rules [; [:!TSnon_us_backslash []]
                  [:!TS1 [:spacebar :period :!S1 :!S1 :spacebar]]
                  ; [:!TS2 []]
                  ; [:!TS3 []]
@@ -288,7 +288,7 @@
                  [:!TS7 [:spacebar :period :slash :slash :spacebar]]
                  [:!TS8 [:spacebar :period :!S8 :!S8 :spacebar]]
                  [:!TS9 [:spacebar :period :hyphen :hyphen :spacebar]]
-                 [:!TSgrave_accent_and_tilde [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]
+                 [:!TS0 [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]
                  [:!TShyphen [:spacebar :period :!S1 :equal_sign :spacebar]]
                  [:!TSequal_sign [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]
                  ; [:!TSopen_bracket []]
@@ -305,7 +305,7 @@
 
         ; control - command
         {:des "Coding modifications - control - command"
-         :rules [[:!TC0 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]
+         :rules [[:!TCnon_us_backslash [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]
                  ; [:!TC1 []]
                  ; [:!TC2 []]
                  ; [:!TC3 []]
@@ -315,7 +315,7 @@
                  [:!TC7 [:spacebar :slash :equal_sign :spacebar]]
                  [:!TC8 [:spacebar :!S8 :equal_sign :spacebar]]
                  [:!TC9 [:spacebar :hyphen :equal_sign :spacebar]]
-                 [:!TCgrave_accent_and_tilde [:spacebar :!Sequal_sign :equal_sign :spacebar]]
+                 [:!TC0 [:spacebar :!Sequal_sign :equal_sign :spacebar]]
                  ; [:!TChyphen []]
                  ; [:!TCequal_sign []]
                  ; [:!TCopen_bracket []]
