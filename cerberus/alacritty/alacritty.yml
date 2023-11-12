@@ -1086,12 +1086,12 @@ key_bindings:
   # movement & switch keys
   ####################################################################################################
 
-  - { key: Return,      mods: Shift,                      chars: "\x07"         } # mapped -> `ctrl-g`
-  - { key: Return,      mods: Alt,                        chars: "\x13"         } # mapped -> `ctrl-s`
+  # - { key: Return,      mods: Shift,                      chars: "\x07"         } # mapped -> `ctrl-g`
+  # - { key: Return,      mods: Alt,                        chars: "\x13"         } # mapped -> `ctrl-s`
   # - { key: Return,      mods: Alt|Shift,                  chars: ""             } #
-  - { key: Return,      mods: Control,                    chars: "\x12"         } # mapped -> `ctrl-r`
+  # - { key: Return,      mods: Control,                    chars: "\x12"         } # mapped -> `ctrl-r`
   # - { key: Return,      mods: Control|Shift,              chars: ""             } #
-  - { key: Return,      mods: Command,                    chars: "\x14"         } # mapped -> `ctrl-t`
+  # - { key: Return,      mods: Command,                    chars: "\x14"         } # mapped -> `ctrl-t`
   # - { key: Return,      mods: Command|Shift,              chars: ""             } #
   - { key: Return,      mods: Alt|Control,                chars: "\x1b[20;2~"   } # mapped -> `alt-F9`
   # - { key: Return,      mods: Alt|Control|Shift,          chars: ""             } #
@@ -1100,7 +1100,7 @@ key_bindings:
   - { key: Return,      mods: Control|Command,            chars: "\x1b[23;2~"   } # mapped -> `alt-F11`
   # - { key: Return,      mods: Control|Command|Shift,      chars: ""             } # collision
   - { key: Return,      mods: Alt|Control|Command,        chars: "\x1b[24;2~"   } # mapped -> `alt-F12`
-  - { key: Return,      mods: Alt|Control|Command|Shift,  chars: "\x08"         } # mapped -> `ctrl-h`
+  # - { key: Return,      mods: Alt|Control|Command|Shift,  chars: "\x08"         } # mapped -> `ctrl-h`
 
   # - { key: Space,       mods: Shift,                      chars: ""             } #
   # - { key: Space,       mods: Alt,                        chars: ""             } # collision
