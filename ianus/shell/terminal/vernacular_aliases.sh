@@ -48,6 +48,7 @@ alias lzc='lazycli'
 
 # broot
 alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-info'
+alias bs='br --git-status'
 
 # gfold
 alias gf='~/.cargo/bin/gfold'
