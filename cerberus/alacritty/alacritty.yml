@@ -1188,7 +1188,7 @@ key_bindings:
   - { key: PageDown,    mods: Shift,                      chars: "\x1b[1;4Q"    } # mapped -> `alt-shift-F2`
   - { key: PageUp,      mods: Alt,                        chars: "\x1b[15;4~"   } # mapped -> `alt-shift-F5`
   - { key: PageDown,    mods: Alt,                        chars: "\x1b[17;4~"   } # mapped -> `alt-shift-F6`
-  - { key: PageUp,      mods: Control,                     chars: "\x1b[20;4~"   } # mapped -> `alt-shift-F9`
+  - { key: PageUp,      mods: Control,                    chars: "\x1b[20;4~"   } # mapped -> `alt-shift-F9`
   - { key: PageDown,    mods: Control,                    chars: "\x1b[21;4~"   } # mapped -> `alt-shift-F10`
 
   - { key: Home,                                          chars: "\x1b[23;5~"   } # mapped -> `ctrl-F11`
