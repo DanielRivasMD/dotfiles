@@ -431,6 +431,18 @@
         {:des "Change right_command to command-control & to open file when used alone"
          :rules [[:right_command :!Tleft_command nil {:alone [:!Tnon_us_pound]}]]}
 
+        ; tab
+        {:des "Change espace to composed"
+         :rules [[:tab :!EQright_shift nil {:alone [:tab]}]]}
+
+        ; escape
+        {:des "Change espace to composed"
+         :rules [[:escape :!EWright_shift nil {:alone [:vk_none]}]]}
+
+        ; backspace
+        {:des "Change backspace to composed"
+         :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:delete_or_backspace]}]]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; quit app
