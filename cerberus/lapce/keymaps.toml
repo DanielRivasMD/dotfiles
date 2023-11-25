@@ -99,6 +99,31 @@ command = "-select_undo"
 mode = "i"
 key = "Meta+u"
 
+[[keymaps]]
+command = "-rename_symbol"
+key = "F2"
+
+[[keymaps]]
+command = "-next_error"
+key = "F8"
+
+[[keymaps]]
+command = "-previous_error"
+key = "Shift+F8"
+
+[[keymaps]]
+command = "-open_keyboard_shortcuts"
+key = "Meta+K Meta+S"
+
+[[keymaps]]
+command = "-delete_to_beginning_of_line"
+mode = "i"
+key = "Meta+backspace"
+
+[[keymaps]]
+command = "-split_vertical"
+key = 'Meta+\'
+
 ####################################################################################################
 # remappings
 ####################################################################################################
@@ -236,32 +261,16 @@ command = "rename_symbol"
 key = "Alt+Shift+F4"
 
 [[keymaps]]
-command = "-rename_symbol"
-key = "F2"
-
-[[keymaps]]
 command = "next_error"
 key = "Ctrl+X"
-
-[[keymaps]]
-command = "-next_error"
-key = "F8"
 
 [[keymaps]]
 command = "previous_error"
 key = "Ctrl+V"
 
 [[keymaps]]
-command = "-previous_error"
-key = "Shift+F8"
-
-[[keymaps]]
 command = "open_keyboard_shortcuts"
 key = "Meta+."
-
-[[keymaps]]
-command = "-open_keyboard_shortcuts"
-key = "Meta+K Meta+S"
 
 [[keymaps]]
 command = "delete_to_beginning_of_line"
@@ -269,17 +278,8 @@ mode = "i"
 key = "Ctrl+U"
 
 [[keymaps]]
-command = "-delete_to_beginning_of_line"
-mode = "i"
-key = "Meta+backspace"
-
-[[keymaps]]
 command = "split_vertical"
 key = "Alt+Shift+G"
-
-[[keymaps]]
-command = "-split_vertical"
-key = 'Meta+\'
 
 [[keymaps]]
 command = "split_horizontal"
@@ -288,3 +288,5 @@ key = "Alt+Shift+H"
 [[keymaps]]
 command = "goto_type_definition"
 key = "Alt+Meta+Enter"
+
+####################################################################################################
