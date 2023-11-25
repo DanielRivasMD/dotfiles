@@ -54,8 +54,8 @@
                  [:!OSf :!Cf [:mail]]                                 ; find
                  [:!Oh :!CSg [:mail]]                                 ; find prev
                  [:!Ol :!Cg [:mail]]                                  ; find next
-                 [:!OTCSup_arrow :!TCopen_bracket [:mail]]            ; mailbox prev
-                 [:!OTCSdown_arrow :!TCclose_bracket [:mail]]         ; mailbox next
+                 [:!!up_arrow :!TCopen_bracket [:mail]]               ; mailbox prev
+                 [:!!down_arrow :!TCclose_bracket [:mail]]            ; mailbox next
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -68,17 +68,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Launcher"
-         :rules [[:!OTCS0 [:launch "Slack"]]
-                 [:!OTCSequal_sign [:launch "Telegram"]]
-                 [:!OTCShyphen [:launch "Whatsapp"]]
-                 [:!OTCSopen_bracket [:launch "Mail"]]
-                 [:!OTCSclose_bracket [:launch "Firefox"]]
-                 [:!OTCSsemicolon [:launch "Alacritty"]]
-                 [:!OTCSquote [:launch "Joplin"]]
-                 [:!OTCSbackslash [:launch "Lapce"]]
-                 ; [:!OTCScomma [:launch ""]]
-                 ; [:!OTCSperiod [:launch ""]]
-                 [:!OTCSslash [:launch "Skim"]]]}
+         :rules [[:!!0 [:launch "Slack"]]
+                 [:!!equal_sign [:launch "Telegram"]]
+                 [:!!hyphen [:launch "Whatsapp"]]
+                 [:!!open_bracket [:launch "Mail"]]
+                 [:!!close_bracket [:launch "Firefox"]]
+                 [:!!semicolon [:launch "Alacritty"]]
+                 [:!!quote [:launch "Joplin"]]
+                 [:!!backslash [:launch "Lapce"]]
+                 ; [:!!comma [:launch ""]]
+                 ; [:!!period [:launch ""]]
+                 [:!!slash [:launch "Skim"]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -140,7 +140,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Hyper Mode - symbols"
+        {:des "Super Mode - symbols"
          :rules [:zero-mode
                  [:!Shyphen [:spacebar :hyphen :spacebar]]
                  [:!Sequal_sign [:spacebar :equal_sign :spacebar]]
@@ -204,7 +204,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Super Mode - alphabet"
+        {:des "Escape Mode - alphabet"
          :rules [; [:!EWRa [:!S2 :spacebar]]
                  ; [:!EWRb [:!S2 :spacebar]]
                  [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]
@@ -235,7 +235,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Super Mode - symbols"
+        {:des "Escape Mode - symbols"
          :rules [[:!EWRopen_bracket [:!S3 :open_bracket]]
                  [:!EWRclose_bracket [:!S3 :quote]]
                  [:!EWRsemicolon [:!Ssemicolon :!Ssemicolon]]
@@ -244,6 +244,90 @@
                  [:!EWRcomma [:!Scomma :!Ssemicolon]]
                  [:!EWRperiod [:!Speriod :!Ssemicolon]]
                  [:!EWRslash [:slash :slash :!S1]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Tab Mode - alphabet"
+         :rules [[:!EQRa [:semicolon :semicolon :a]]
+                 [:!EQRb [:semicolon :semicolon :b]]
+                 [:!EQRc [:semicolon :semicolon :c]] ; TODO:
+                 [:!EQRd [:semicolon :semicolon :d]]
+                 [:!EQRe [:semicolon :semicolon :e]]
+                 [:!EQRf [:semicolon :semicolon :f]]
+                 [:!EQRg [:semicolon :semicolon :g]]
+                 [:!EQRh [:semicolon :semicolon :h]]
+                 [:!EQRi [:semicolon :semicolon :i]]
+                 [:!EQRj [:semicolon :semicolon :j]]
+                 [:!EQRk [:semicolon :semicolon :k]]
+                 [:!EQRl [:semicolon :semicolon :l]]
+                 [:!EQRm [:semicolon :semicolon :m]]
+                 [:!EQRn [:semicolon :semicolon :n]]
+                 [:!EQRo [:semicolon :semicolon :o]]
+                 [:!EQRp [:semicolon :semicolon :p]]
+                 [:!EQRq [:semicolon :semicolon :q]] ; TODO:
+                 [:!EQRr [:semicolon :semicolon :r]]
+                 [:!EQRs [:semicolon :semicolon :s]]
+                 [:!EQRt [:semicolon :semicolon :t]]
+                 [:!EQRu [:semicolon :semicolon :u]]
+                 [:!EQRv [:semicolon :semicolon :v]]
+                 [:!EQRw [:semicolon :semicolon :w]] ; TODO:
+                 [:!EQRx [:semicolon :semicolon :x]]
+                 [:!EQRy [:semicolon :semicolon :y]]
+                 [:!EQRz [:semicolon :semicolon :z]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Tab Mode - symbols"
+         :rules [[:!EQRopen_bracket [:!S3 :open_bracket]]
+                 [:!EQRclose_bracket [:!S3 :quote]]
+                 [:!EQRsemicolon [:!Ssemicolon :!Ssemicolon]]
+                 [:!EQRquote [:!Ssemicolon :!Ssemicolon :!Scomma]]
+                 [:!EQRbackslash [:!S4 :!Sopen_bracket]]
+                 [:!EQRcomma [:!Scomma :!Ssemicolon]]
+                 [:!EQRperiod [:!Speriod :!Ssemicolon]]
+                 [:!EQRslash [:slash :slash :!S1]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Hyper Mode - alphabet"
+         :rules [[:!WQRa [:comma :comma :a]]
+                 [:!WQRb [:comma :comma :b]]
+                 [:!WQRc [:comma :comma :c]]
+                 [:!WQRd [:comma :comma :d]]
+                 [:!WQRe [:comma :comma :e]]
+                 [:!WQRf [:comma :comma :f]]
+                 [:!WQRg [:comma :comma :g]]
+                 [:!WQRh [:comma :comma :h]]
+                 [:!WQRi [:comma :comma :i]]
+                 [:!WQRj [:comma :comma :j]]
+                 [:!WQRk [:comma :comma :k]] ; TODO:
+                 [:!WQRl [:comma :comma :l]]
+                 [:!WQRm [:comma :comma :m]]
+                 [:!WQRn [:comma :comma :n]]
+                 [:!WQRo [:comma :comma :o]]
+                 [:!WQRp [:comma :comma :p]]
+                 [:!WQRq [:comma :comma :q]] ; TODO:
+                 [:!WQRr [:comma :comma :r]]
+                 [:!WQRs [:comma :comma :s]]
+                 [:!WQRt [:comma :comma :t]] ; TODO:
+                 [:!WQRu [:comma :comma :u]]
+                 [:!WQRv [:comma :comma :v]]
+                 [:!WQRw [:comma :comma :w]]
+                 [:!WQRx [:comma :comma :x]]
+                 [:!WQRy [:comma :comma :y]]
+                 [:!WQRz [:comma :comma :z]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Hyper Mode - symbols"
+         :rules [[:!WQRopen_bracket [:!S3 :open_bracket]]
+                 [:!WQRclose_bracket [:!S3 :quote]]
+                 [:!WQRsemicolon [:!Ssemicolon :!Ssemicolon]]
+                 [:!WQRquote [:!Ssemicolon :!Ssemicolon :!Scomma]]
+                 [:!WQRbackslash [:!S4 :!Sopen_bracket]]
+                 [:!WQRcomma [:!Scomma :!Ssemicolon]]
+                 [:!WQRperiod [:!Speriod :!Ssemicolon]]
+                 [:!WQRslash [:slash :slash :!S1]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -395,81 +479,19 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; control - command
-        {:des "Symbols - control - command"
-         :rules [[:!TCa [:semicolon :semicolon :a]]
-                 [:!TCb [:semicolon :semicolon :b]]
-                 ; [:!TCc [:semicolon :semicolon :c]]
-                 [:!TCd [:semicolon :semicolon :d]]
-                 [:!TCe [:semicolon :semicolon :e]]
-                 [:!TCf [:semicolon :semicolon :f]]
-                 [:!TCg [:semicolon :semicolon :g]]
-                 [:!TCh [:semicolon :semicolon :h]]
-                 [:!TCi [:semicolon :semicolon :i]]
-                 [:!TCj [:semicolon :semicolon :j]]
-                 [:!TCk [:semicolon :semicolon :k]]
-                 [:!TCl [:semicolon :semicolon :l]]
-                 [:!TCm [:semicolon :semicolon :m]]
-                 [:!TCn [:semicolon :semicolon :n]]
-                 [:!TCo [:semicolon :semicolon :o]]
-                 [:!TCp [:semicolon :semicolon :p]]
-                 ; [:!TCq [:semicolon :semicolon :q]]
-                 [:!TCr [:semicolon :semicolon :r]]
-                 [:!TCs [:semicolon :semicolon :s]]
-                 [:!TCt [:semicolon :semicolon :t]]
-                 [:!TCu [:semicolon :semicolon :u]]
-                 [:!TCv [:semicolon :semicolon :v]]
-                 ; [:!TCw [:semicolon :semicolon :w]]
-                 [:!TCx [:semicolon :semicolon :x]]
-                 [:!TCy [:semicolon :semicolon :y]]
-                 [:!TCz [:semicolon :semicolon :z]]]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        ; alt - control - command
-        {:des "Symbols - alt - control - command"
-         :rules [[:!OTCa [:comma :comma :a]]
-                 [:!OTCb [:comma :comma :b]]
-                 [:!OTCc [:comma :comma :c]]
-                 [:!OTCd [:comma :comma :d]]
-                 [:!OTCe [:comma :comma :e]]
-                 [:!OTCf [:comma :comma :f]]
-                 [:!OTCg [:comma :comma :g]]
-                 [:!OTCh [:comma :comma :h]]
-                 [:!OTCi [:comma :comma :i]]
-                 [:!OTCj [:comma :comma :j]]
-                 ; [:!OTCk [:comma :comma :k]]
-                 [:!OTCl [:comma :comma :l]]
-                 [:!OTCm [:comma :comma :m]]
-                 [:!OTCn [:comma :comma :n]]
-                 [:!OTCo [:comma :comma :o]]
-                 [:!OTCp [:comma :comma :p]]
-                 ; [:!OTCq [:comma :comma :q]]
-                 [:!OTCr [:comma :comma :r]]
-                 [:!OTCs [:comma :comma :s]]
-                 ; [:!OTCt [:comma :comma :t]]
-                 [:!OTCu [:comma :comma :u]]
-                 [:!OTCv [:comma :comma :v]]
-                 [:!OTCw [:comma :comma :w]]
-                 [:!OTCx [:comma :comma :x]]
-                 [:!OTCy [:comma :comma :y]]
-                 [:!OTCz [:comma :comma :z]]]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
         ; caps lock
         {:des   "caps_lock to esc when pressed alone, composed"
          :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; ; left shift => copy mode
-        ; {:des "Change left_shift to copy mode when used alone"
-        ;  :rules [[:left_shift :left_shift nil {:alone [:!Tf3]}]]}
+        ; left shift
+        {:des "Change left_shift to composed"
+         :rules [[:left_shift :left_shift nil {:alone [:left_shift]}]]} ; TODO:
 
         ; left control => menu selector
         {:des "Change left_control to menu selector when used alone"
-         :rules [[:left_control :left_control nil {:alone [:!Tnon_us_pound]}]]}
+         :rules [[:left_control :left_control nil {:alone [:!Ttab]}]]}
 
         ; left option => window rotation
         {:des "Change left_option to window rotation when used alone"
@@ -481,7 +503,7 @@
 
         ; right shift => clipboard selector
         {:des "Change right_shift to clipboard selector when used alone"
-         :rules [[:right_shift :left_shift nil {:alone [:!OTCSnon_us_pound]}]]}
+         :rules [[:right_shift :left_shift nil {:alone [:!Tnon_us_pound]}]]}
 
         ; right option => paste
         {:des "Change right_option to paste when used alone"
@@ -497,7 +519,7 @@
 
         ; escape
         {:des "Change espace to composed"
-         :rules [[:escape :!EWright_shift nil {:alone [:vk_none]}]]}
+         :rules [[:escape :!EWright_shift nil {:alone [:!!keypad_num_lock]}]]}
 
         ; backspace
         {:des "Change backspace to composed"
