@@ -147,7 +147,7 @@
                  [:!Sdelete_or_backspace :!Odelete_forward]
                  [:!Sopen_bracket [:period :period]]
                  [:!Sclose_bracket [:period :period :period]]
-                 [:!Ssemicolon [:semicolon :spacebar]]
+                 [:!Ssemicolon [:!Ssemicolon :spacebar]]
                  [:!Squote [:!Ssemicolon :spacebar]]
                  [:!Sbackslash [:comma :spacebar]]
                  [:!Scomma [:quote :quote :quote]]
@@ -551,8 +551,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Simple modifications"
-         :rules [[:0 :grave_accent_and_tilde]
-                 [:non_us_backslash :0]]}
+         :rules [
+                 [:0 [:!Ssemicolon :!Ssemicolon :quote :!Ssemicolon :!Ssemicolon]]
+                 [:non_us_backslash :0]
+                 [:!Snon_us_pound [:!Ssemicolon :!Ssemicolon :hyphen :!Ssemicolon :!Ssemicolon]]
+                 [:!Cnon_us_backslash [:!Ssemicolon :!Ssemicolon :hyphen :!Ssemicolon :!Ssemicolon]]
+                 [:!Sgrave_accent_and_tilde [:!Ssemicolon :!Ssemicolon :hyphen :!Ssemicolon :!Ssemicolon]]
+                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
