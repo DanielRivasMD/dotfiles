@@ -341,6 +341,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        {:des "quotes"
+         :rules [[:!Cquote [:period :quote :period]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
         ; option
         {:des "Coding modifications - option"
          :rules [[:!Onon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
@@ -551,13 +556,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Simple modifications"
-         :rules [
-                 [:0 [:!Ssemicolon :!Ssemicolon :quote :!Ssemicolon :!Ssemicolon]]
-                 [:non_us_backslash :0]
-                 [:!Snon_us_pound [:!Ssemicolon :!Ssemicolon :hyphen :!Ssemicolon :!Ssemicolon]]
-                 [:!Cnon_us_backslash [:!Ssemicolon :!Ssemicolon :hyphen :!Ssemicolon :!Ssemicolon]]
-                 [:!Sgrave_accent_and_tilde [:!Ssemicolon :!Ssemicolon :hyphen :!Ssemicolon :!Ssemicolon]]
-                 ]}
+         :rules [[:0 [:period :hyphen :period]]
+                 [:f20 :0]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
