@@ -23,8 +23,23 @@ matches:
   - trigger: ":mail"
     replace: "danielrivasmd@gmail.com"
 
+  - trigger: ":gldaddress"
+    replace: "Manuel Azpiroz 1790"
+
+  - trigger: ":mxphone"
+    replace: ""
+
+  - trigger: ":swphone"
+    replace: "767799639"
+
   - trigger: ":name"
     replace: "Salvador Daniel Rivas Carrillo"
+
+  - trigger: ":fname"
+    replace: "Salvador Daniel"
+
+  - trigger: ":lname"
+    replace: "Rivas Carrillo"
 
   - trigger: ":dr"
     replace: "Daniel Rivas"
