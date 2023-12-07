@@ -557,7 +557,21 @@
 
         {:des "Simple modifications"
          :rules [[:0 [:period :hyphen :period]]
-                 [:f20 :0]]}
+                 [:f20 :0]
+                 [:keypad_slash :display_brightness_decrement]
+                 [:keypad_asterisk :display_brightness_increment]
+                 [:keypad_hyphen :mute]
+                 [:keypad_plus :volume_increment]
+                 [:keypad_enter :volume_decrement]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Keypad modifications"
+         :rules  [[:!Okeypad_slash [:spacebar :keypad_slash :spacebar]]
+                  [:!Okeypad_asterisk [:spacebar :keypad_asterisk :spacebar]]
+                  [:!Okeypad_hyphen [:spacebar :keypad_hyphen :spacebar]]
+                  [:!Okeypad_plus [:spacebar :keypad_plus :spacebar]]
+                  [:!Okeypad_enter [:spacebar :equal_sign :spacebar]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
