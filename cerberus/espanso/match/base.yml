@@ -53,6 +53,34 @@ matches:
   ####################################################################################################
 
   # accents
+  - trigger: "A//"
+    replace: "Á"
+
+  - trigger: "E//"
+    replace: "É"
+
+  - trigger: "I//"
+    replace: "Í"
+
+  - trigger: "O//"
+    replace: "Ó"
+
+  - trigger: "U//"
+    replace: "Ú"
+
+  - trigger: "A::"
+    replace: "Ä"
+
+  - trigger: "O::"
+    replace: "Ö"
+
+  - trigger: "U::"
+    replace: "Ü"
+
+  - trigger: "N--"
+    replace: "Ñ"
+
+  # accents
   - trigger: "a//"
     replace: "á"
 
