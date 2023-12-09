@@ -14,10 +14,10 @@
 
 ####################################################################################################
 
-export def create_right_prompt [] {
-  let time_segment = date now | format date '%m/%d/%Y %r'
-  $time_segment
-}
+# export def create_right_prompt [] {
+#   let time_segment = date now | format date '%m/%d/%Y %r'
+#   $time_segment
+# }
 
 ####################################################################################################
 
@@ -25,7 +25,7 @@ export def create_right_prompt [] {
 # let-env PROMPT_COMMAND = { create_left_prompt }
 $env.STARSHIP_SHELL = ""
 $env.PROMPT_COMMAND = { starship prompt --cmd-duration $env.CMD_DURATION_MS --status $env.LAST_EXIT_CODE }
-$env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
+$env.PROMPT_COMMAND_RIGHT = ""
 
 ####################################################################################################
 
