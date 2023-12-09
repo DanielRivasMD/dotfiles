@@ -335,6 +335,17 @@
         "description" : "Launcher",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Skype\" to activate'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "0",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
@@ -419,6 +430,17 @@
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Lapce\" to activate'"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Word\" to activate'"
           } ],
           "type" : "basic"
         }, {
@@ -887,11 +909,9 @@
             "key_code" : "slash"
           },
           "to" : [ {
-            "key_code" : "period"
+            "key_code" : "spacebar"
           }, {
-            "key_code" : "period"
-          }, {
-            "key_code" : "period"
+            "key_code" : "hyphen"
           } ],
           "conditions" : [ {
             "name" : "zero-mode",
@@ -1081,14 +1101,11 @@
             }
           },
           "to" : [ {
-            "key_code" : "quote",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "period"
           }, {
-            "key_code" : "quote",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "period"
           }, {
-            "key_code" : "quote",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "period"
           } ],
           "conditions" : [ {
             "name" : "zero-mode",
@@ -1104,11 +1121,11 @@
             }
           },
           "to" : [ {
-            "key_code" : "grave_accent_and_tilde"
+            "key_code" : "spacebar"
           }, {
-            "key_code" : "grave_accent_and_tilde"
+            "key_code" : "hyphen"
           }, {
-            "key_code" : "grave_accent_and_tilde"
+            "key_code" : "hyphen"
           } ],
           "conditions" : [ {
             "name" : "zero-mode",
@@ -1850,21 +1867,11 @@
             }
           },
           "to" : [ {
-            "key_code" : "spacebar"
+            "key_code" : "grave_accent_and_tilde"
           }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "grave_accent_and_tilde"
           }, {
-            "key_code" : "t",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
+            "key_code" : "grave_accent_and_tilde"
           } ],
           "conditions" : [ {
             "name" : "zero-mode",
@@ -3393,24 +3400,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "quotes",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "period"
-          }, {
-            "key_code" : "quote"
-          }, {
-            "key_code" : "period"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Coding modifications - option",
         "manipulators" : [ {
           "from" : {
@@ -4693,6 +4682,84 @@
             "key_code" : "equal_sign"
           }, {
             "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Coding modifications - command",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "quote"
+          }, {
+            "key_code" : "period"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "quote"
+          }, {
+            "key_code" : "period"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "quote"
+          }, {
+            "key_code" : "period"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "quote"
+          }, {
+            "key_code" : "period"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "period"
+          }, {
+            "key_code" : "quote"
+          }, {
+            "key_code" : "period"
           } ],
           "type" : "basic"
         } ]
