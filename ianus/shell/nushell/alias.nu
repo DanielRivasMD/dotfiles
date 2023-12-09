@@ -6,10 +6,10 @@
 # alias nuopen = open
 # alias open = ^open
 
-# ls   
-alias ll = ls --long   
-alias lla = ls --long --all   
-alias lld = ls --long --all --du   
+# ls
+alias ll = ls --long
+alias lla = ls --long --all
+alias lld = ls --long --all --du
 
 ####################################################################################################
 # Forked patches
