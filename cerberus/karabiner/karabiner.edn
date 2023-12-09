@@ -68,7 +68,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Launcher"
-         :rules [[:!!0 [:launch "Slack"]]
+         :rules [[:!!9 [:launch "Skype"]]
+                 [:!!0 [:launch "Slack"]]
                  [:!!equal_sign [:launch "Telegram"]]
                  [:!!hyphen [:launch "Whatsapp"]]
                  [:!!open_bracket [:launch "Mail"]]
@@ -76,7 +77,7 @@
                  [:!!semicolon [:launch "Alacritty"]]
                  [:!!quote [:launch "Joplin"]]
                  [:!!backslash [:launch "Lapce"]]
-                 ; [:!!comma [:launch ""]]
+                 [:!!comma [:launch "Word"]]
                  ; [:!!period [:launch ""]]
                  [:!!slash [:launch "Skim"]]]}
 
@@ -136,7 +137,7 @@
                  [:backslash [:!Sbackslash :spacebar]]
                  [:comma [:comma :spacebar]]
                  [:period [:period :period]]
-                 [:slash [:period :period :period]]]}
+                 [:slash [:spacebar :hyphen]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -151,8 +152,8 @@
                  [:!Squote [:!Ssemicolon :spacebar]]
                  [:!Sbackslash [:comma :spacebar]]
                  [:!Scomma [:quote :quote :quote]]
-                 [:!Speriod [:!Squote :!Squote :!Squote]]
-                 [:!Sslash [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]]}
+                 [:!Speriod [:period :period :period]]
+                 [:!Sslash [:spacebar :hyphen :hyphen]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -196,7 +197,8 @@
                  [:!Copen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
                  [:!Cclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
                  [:!Csemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
-                 [:!Cquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
+                 [:!Cquote [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]
+                 ; [:!Cquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
                  [:!Cbackslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
                  [:!Ccomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
                  [:!Cperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
@@ -341,11 +343,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "quotes"
-         :rules [[:!Cquote [:period :quote :period]]]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
         ; option
         {:des "Coding modifications - option"
          :rules [[:!Onon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
@@ -480,6 +477,20 @@
                  ; [:!TCcomma []]
                  ; [:!TCperiod []]
                  ; [:!TCslash []]
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; command
+        {:des "Coding modifications - command"
+         :rules [[:!Copen_bracket [:period :quote :period]]
+                 [:!Cclose_bracket [:period :quote :period]]
+                 [:!Csemicolon [:period :quote :period]]
+                 [:!Cquote [:period :quote :period]]
+                 [:!Cbackslash [:period :quote :period]]
+                 ; [:!Ccomma []]
+                 ; [:!Cperiod []]
+                 ; [:!Cslash []]
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
