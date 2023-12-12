@@ -5226,6 +5226,271 @@
             "key_code" : "spacebar"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_slash",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_asterisk",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_plus",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_slash",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_asterisk",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_plus",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_slash",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_asterisk",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_plus",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Enter remappings",
