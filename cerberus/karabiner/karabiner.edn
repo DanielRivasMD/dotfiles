@@ -566,6 +566,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        ; simple
         {:des "Simple modifications"
          :rules [[:0 [:period :hyphen :period]]
                  [:f20 :0]
@@ -577,12 +578,31 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        ; keypad
         {:des "Keypad modifications"
          :rules  [[:!Okeypad_slash [:spacebar :keypad_slash :spacebar]]
                   [:!Okeypad_asterisk [:spacebar :keypad_asterisk :spacebar]]
                   [:!Okeypad_hyphen [:spacebar :keypad_hyphen :spacebar]]
                   [:!Okeypad_plus [:spacebar :keypad_plus :spacebar]]
-                  [:!Okeypad_enter [:spacebar :equal_sign :spacebar]]]}
+                  [:!Okeypad_enter [:spacebar :equal_sign :spacebar]]
+
+                  [:!OSkeypad_slash [:spacebar :period :keypad_slash :spacebar]]
+                  [:!OSkeypad_asterisk [:spacebar :period :keypad_asterisk :spacebar]]
+                  [:!OSkeypad_hyphen [:spacebar :period :keypad_hyphen :spacebar]]
+                  [:!OSkeypad_plus [:spacebar :period :keypad_plus :spacebar]]
+                  [:!OSkeypad_enter [:spacebar :period :equal_sign :spacebar]]
+
+                  [:!Tkeypad_slash [:spacebar :keypad_slash :keypad_slash :spacebar]]
+                  [:!Tkeypad_asterisk [:spacebar :keypad_asterisk :keypad_asterisk :spacebar]]
+                  [:!Tkeypad_hyphen [:spacebar :keypad_hyphen :keypad_hyphen :spacebar]]
+                  [:!Tkeypad_plus [:spacebar :keypad_plus :keypad_plus :spacebar]]
+                  [:!Tkeypad_enter [:spacebar :equal_sign :equal_sign :spacebar]]
+
+                  [:!TSkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]
+                  [:!TSkeypad_asterisk [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]
+                  [:!TSkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]
+                  [:!TSkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]
+                  [:!TSkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
