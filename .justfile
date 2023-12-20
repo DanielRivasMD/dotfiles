@@ -73,6 +73,7 @@ Cerberus:
   ln -svf "${alacritty}" "${config}/"                                  # alacritty
   ln -svf "${bottom}" "${config}/"                                     # bottom
   ln -svf "${cheat}" "${config}/"                                      # cheat
+  if [[ ! -d "${gh}" ]]; then mkdir "${gh}"; fi
   ln -svf "${gh}/config.yml" "${config}/gh/"                           # gh
   ln -svf "${karabiner}" "${config}/"                                  # karabiner
   ln -svf "${karabiner}/karabiner.edn" "${config}/"                    # karabiner
@@ -105,6 +106,7 @@ Cerberus:
   echo 'Linking broot config'
   echo '===================================================================================================='
   if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi
+  if [[ ! -d "${brootConf}" ]]; then mkdir "${brootConf}"; fi
   ln -svf "${broot}/conf.toml" "${brootConf}/"                         # broot config
   echo '===================================================================================================='
 
@@ -129,6 +131,7 @@ Cerberus:
   echo ''
   echo 'Linking completions'
   echo '===================================================================================================='
+  if [[ ! -d "${observatory}" ]]; then mkdir "${observatory}"; fi
   ln -svf "${observatory}/eza/completions/zsh/_eza" "${config}/zsh_completion/_eza"
   ln -svf "${observatory}/fd/contrib/completion/_fd" "${config}/zsh_completion/_fd"
   ln -svf "${observatory}/watchexec/completions/zsh" "${config}/zsh_completion/_watchexec"
@@ -231,6 +234,7 @@ Ianus:
   echo ''
   echo 'Linking fish profile'
   echo '===================================================================================================='
+  if [[ ! -d "${fish}" ]]; then mkdir "${fish}"; fi
   ln -svf "${fish}/vernacular_config.fish" "${config}/fish/config.fish"         # fish config
   echo '===================================================================================================='
 
