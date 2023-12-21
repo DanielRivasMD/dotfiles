@@ -71,8 +71,8 @@ alias wc='wordcrab'
 # zoxide
 alias zz='z -'
 
-# exa
-alias e='exa --long --classify --links --git --header --group --icons'
+# eza
+alias e='eza --long --classify --links --git --header --group --icons'
 alias ea='e --all'
 alias er='e --sort=newest'
 
