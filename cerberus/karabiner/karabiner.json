@@ -745,6 +745,29 @@
             "type" : "variable_if"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "w"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "conditions" : [ {
+            "name" : "zero-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Zero Mode - symbols",
@@ -5150,6 +5173,64 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Additional key",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f20",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "0"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f20",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "0"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f20",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "0"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f20",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "0"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f20",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "0"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Keypad modifications",
         "manipulators" : [ {
           "from" : {
@@ -5498,18 +5579,6 @@
           "from" : {
             "key_code" : "return_or_enter",
             "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "return_or_enter",
-            "modifiers" : {
               "mandatory" : [ "left_option" ]
             }
           },
@@ -5539,6 +5608,18 @@
           },
           "to" : [ {
             "key_code" : "t",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
             "modifiers" : [ "left_control" ]
           } ],
           "type" : "basic"
