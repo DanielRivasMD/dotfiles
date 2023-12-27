@@ -16,6 +16,8 @@ tmux split-window -v
 tmux send-keys "cd /Users/drivas/" C-m
 tmux send-keys "btm" C-m
 tmux resize-pane -U 15
+tmux selectp -t 1
+tmux split-window -h
 
 # create a new window
 tmux new-window -t $session:2 -n archive
