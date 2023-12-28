@@ -20,11 +20,8 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
 
-  - trigger: ":gmail"
+  - trigger: ":mail"
     replace: "danielrivasmd@gmail.com"
-
-  - trigger: ":ymail"
-    replace: "danielrivasmd@yahoo.com"
 
   - trigger: ":gad"
     replace: "Manuel Azpiroz 1790"
@@ -41,23 +38,26 @@ matches:
   - trigger: ":swph"
     replace: "767799639"
 
-  - trigger: ":name"
+  - trigger: ":nm"
     replace: "Salvador Daniel Rivas Carrillo"
 
-  - trigger: ":fm"
+  - trigger: ":fnm"
     replace: "Salvador Daniel"
 
-  - trigger: ":lm"
+  - trigger: ":lnm"
     replace: "Rivas Carrillo"
 
   - trigger: ":dr"
     replace: "Daniel Rivas"
 
-  - trigger: ":ln"
+  - trigger: ":lkn"
     replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
 
   - trigger: ":gt"
     replace: "https://github.com/DanielRivasMD"
+
+  - trigger: ":gs"
+    replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
 
   ####################################################################################################
 
