@@ -282,6 +282,30 @@ command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
 description = 'use sample'
 tags = ['go']
 
+[scripts.tmux-catedra]
+alias = 'tmux-catedra'
+command = 'sh ~/.archive/ianus/tmux/session/catedra.sh'
+description = 'launch tmux session'
+tags = ['tmux']
+
+[scripts.tmux-control]
+alias = 'tmux-control'
+command = 'sh ~/.archive/ianus/tmux/session/control.sh'
+description = 'launch tmux session'
+tags = ['tmux']
+
+[scripts.tmux-cohesion]
+alias = 'tmux-cohesion'
+command = 'sh ~/.archive/ianus/tmux/session/cohesion.sh'
+description = 'launch tmux session'
+tags = ['tmux']
+
+[scripts.tmux-mind]
+alias = 'tmux-mind'
+command = 'sh ~/.archive/ianus/tmux/session/mind.sh'
+description = 'launch tmux session'
+tags = ['tmux']
+
 [scripts.topaz-sftp]
 alias = 'topaz-sftp'
 command = 'sftp drivas@topaz.pawsey.org.au'
