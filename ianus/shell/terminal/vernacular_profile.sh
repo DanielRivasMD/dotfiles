@@ -39,7 +39,7 @@ export LC_ALL=en_US.UTF-8
 ####################################################################################################
 
 export GOPATH="$HOME/.go/"
-export GOROOT="/usr/local/Cellar/go/1.21.5/libexec"
+export GOROOT="/opt/homebrew/Cellar/go/1.21.6/libexec"
 export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
 ####################################################################################################
