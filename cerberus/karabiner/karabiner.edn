@@ -40,7 +40,71 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
- :main [{:des "Mail bindings"
+ :main [; caps lock
+        {:des   "caps_lock to esc when pressed alone, composed"
+         :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; ; left shift
+        ; {:des "Change left_shift to composed"
+        ;  :rules [[:left_shift :left_shift nil {:alone [:left_shift]}]]} ; TODO:
+
+        ; left control => menu selector
+        {:des "Change left_control to menu selector when used alone"
+         :rules [[:left_control :left_control nil {:alone [:!Ttab]}]]}
+
+        ; left option => window rotation
+        {:des "Change left_option to window rotation when used alone"
+         :rules [[:left_option :left_option nil {:alone [:!Otab]}]]}
+
+        ; left command => last app
+        {:des "Change left_command to last app when used alone"
+         :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]}
+
+        ; right shift => clipboard selector
+        {:des "Change right_shift to clipboard selector when used alone"
+         :rules [[:right_shift :left_shift nil {:alone [:!Tnon_us_pound]}]]}
+
+        ; right option => paste
+        {:des "Change right_option to paste when used alone"
+         :rules [[:right_option :left_option nil {:alone [:!Onon_us_pound]}]]}
+
+        ; right command => open file  
+        {:des "Change right_command to command-control & to open file when used alone"
+         :rules [[:right_command :!Tleft_command nil {:alone [:!Cnon_us_pound]}]]}
+
+        ; tab
+        {:des "Change espace to composed"
+         :rules [[:tab :!EQright_shift nil {:alone [:tab]}]]}
+
+        ; escape
+        {:des "Change espace to composed"
+         :rules [[:escape :!EWright_shift nil {:alone [:delete_forward]}]]}
+
+        ; backspace
+        {:des "Change backspace to composed"
+         :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:delete_or_backspace]}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Launcher"
+         :rules [[:!!9 [:launch "Skype"]]
+                 [:!!0 [:launch "Slack"]]
+                 [:!!equal_sign [:launch "Telegram"]]
+                 [:!!hyphen [:launch "Whatsapp"]]
+                 [:!!open_bracket [:launch "Mail"]]
+                 [:!!close_bracket [:launch "Firefox"]]
+                 [:!!semicolon [:launch "Alacritty"]]
+                 [:!!quote [:launch "Joplin"]]
+                 [:!!backslash [:launch "Lapce"]]
+                 [:!!comma [:launch "Word"]]
+                 ; [:!!period [:launch ""]]
+                 [:!!slash [:launch "Skim"]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        {:des "Mail bindings"
          :rules [[:!Creturn_or_enter :!CSd [:mail]]                                                 ; cmd-enter =>          send
                  [:!Oreturn_or_enter :!Cr [:mail]]                                                  ; alt-enter =>          reply
                  [:!OSreturn_or_enter :!CSr [:mail]]                                                ; alt-shift-enter =>    reply all
@@ -65,22 +129,6 @@
                  [:left_control :left_control :term {:alone [:!Sf3]}]                               ; toggle tmux remote
                  [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; toggle copy mode
                  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        {:des "Launcher"
-         :rules [[:!!9 [:launch "Skype"]]
-                 [:!!0 [:launch "Slack"]]
-                 [:!!equal_sign [:launch "Telegram"]]
-                 [:!!hyphen [:launch "Whatsapp"]]
-                 [:!!open_bracket [:launch "Mail"]]
-                 [:!!close_bracket [:launch "Firefox"]]
-                 [:!!semicolon [:launch "Alacritty"]]
-                 [:!!quote [:launch "Joplin"]]
-                 [:!!backslash [:launch "Lapce"]]
-                 [:!!comma [:launch "Word"]]
-                 ; [:!!period [:launch ""]]
-                 [:!!slash [:launch "Skim"]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -129,13 +177,13 @@
 
         {:des "Zero Mode - symbols"
          :rules [:zero-mode
-                 [:hyphen [:spacebar :hyphen :spacebar]]                                            ; -
-                 [:equal_sign [:spacebar :equal_sign :spacebar]]                                    ; =
-                 ; [:delete_or_backspace :delete_forward]                                           ;
-                 ; [:open_bracket [:spacebar :hyphen]]                                              ;
-                 ; [:close_bracket [:spacebar :hyphen :hyphen]]                                     ;
+                 ; [:hyphen []]                                                                     ;
+                 ; [:equal_sign []]                                                                 ;
+                 ; [:delete_or_backspace []]                                                        ;
+                 ; [:open_bracket []]                                                               ;
+                 ; [:close_bracket []]                                                              ;
                  [:semicolon [:semicolon :spacebar]]                                                ; ;
-                 ; [:quote [:!Ssemicolon :spacebar]]                                                ;
+                 ; [:quote []]                                                ;
                  [:backslash [:!Sbackslash :spacebar]]                                              ; |
                  [:comma [:comma :spacebar]]                                                        ; ,
                  [:period [:period :period]]                                                        ; ..
@@ -146,14 +194,14 @@
 
         {:des "Super Mode - symbols"
          :rules [:zero-mode
-                 ; [:!Shyphen [:spacebar :hyphen :spacebar]]                                        ;
-                 ; [:!Sequal_sign [:spacebar :equal_sign :spacebar]]                                ;
-                 ; [:!Sdelete_or_backspace :!Odelete_forward]                                       ;
-                 ; [:!Sopen_bracket [:period :period]]                                              ;
-                 ; [:!Sclose_bracket [:period :period :period]]                                     ;
+                 ; [:!Shyphen []]                                        ;
+                 ; [:!Sequal_sign []]                                ;
+                 ; [:!Sdelete_or_backspace []]                                       ;
+                 ; [:!Sopen_bracket []]                                              ;
+                 ; [:!Sclose_bracket []]                                     ;
                  [:!Ssemicolon [:!Ssemicolon :spacebar]]                                            ; :
-                 ; [:!Squote [:!Ssemicolon :spacebar]]                                              ;
-                 ; [:!Sbackslash [:comma :spacebar]]                                                ;
+                 ; [:!Squote []]                                              ;
+                 ; [:!Sbackslash []]                                                ;
                  [:!Scomma [:quote :quote :quote]]                                                  ; '''
                  [:!Speriod [:period :period :period]]                                              ; ...
                  [:!Sslash [:spacebar :hyphen :hyphen]]                                             ;  --
@@ -163,9 +211,9 @@
 
         {:des "Control Mode"
          :rules [:zero-mode
-                 ; [:!Thyphen [:spacebar :hyphen :spacebar]]                                        ;
-                 ; [:!Tequal_sign [:spacebar :equal_sign :spacebar]]                                ;
-                 ; [:!Tdelete_or_backspace :delete_forward]                                         ;
+                 ; [:!Thyphen []]                                        ;
+                 ; [:!Tequal_sign []]                                ;
+                 ; [:!Tdelete_or_backspace []]                                         ;
                  [:!Topen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]           ; %<+%
                  [:!Tclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]         ; %+>%
                  [:!Tsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                ; %$%
@@ -180,7 +228,7 @@
 
         {:des "Option Mode"
          :rules [:zero-mode
-                 [:!Ohyphen [:spacebar :hyphen :spacebar]]                                          ;
+                 [:!Ohyphen []]                                          ;
                  [:!Oequal_sign [:spacebar :equal_sign :spacebar]]                                  ;
                  [:!Odelete_or_backspace :delete_forward]                                           ;
                  [:!Oopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]           ;
@@ -197,7 +245,7 @@
 
         {:des "Xtreme Mode"
          :rules [:zero-mode
-                 [:!Chyphen [:spacebar :hyphen :spacebar]]                                          ;
+                 [:!Chyphen []]                                          ;
                  [:!Cequal_sign [:spacebar :equal_sign :spacebar]]                                  ;
                  [:!Cdelete_or_backspace :delete_forward]                                           ;
                  [:!Copen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]           ;
@@ -502,54 +550,6 @@
                  ; [:!Cperiod []]                                                                   ;
                  ; [:!Cslash []]                                                                    ;
                  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        ; caps lock
-        {:des   "caps_lock to esc when pressed alone, composed"
-         :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        ; left shift
-        {:des "Change left_shift to composed"
-         :rules [[:left_shift :left_shift nil {:alone [:left_shift]}]]} ; TODO:
-
-        ; left control => menu selector
-        {:des "Change left_control to menu selector when used alone"
-         :rules [[:left_control :left_control nil {:alone [:!Ttab]}]]}
-
-        ; left option => window rotation
-        {:des "Change left_option to window rotation when used alone"
-         :rules [[:left_option :left_option nil {:alone [:!Otab]}]]}
-
-        ; left command => last app
-        {:des "Change left_command to last app when used alone"
-         :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]}
-
-        ; right shift => clipboard selector
-        {:des "Change right_shift to clipboard selector when used alone"
-         :rules [[:right_shift :left_shift nil {:alone [:!Tnon_us_pound]}]]}
-
-        ; right option => paste
-        {:des "Change right_option to paste when used alone"
-         :rules [[:right_option :left_option nil {:alone [:!Onon_us_pound]}]]}
-
-        ; right command => open file  
-        {:des "Change right_command to command-control & to open file when used alone"
-         :rules [[:right_command :!Tleft_command nil {:alone [:!Cnon_us_pound]}]]}
-
-        ; tab
-        {:des "Change espace to composed"
-         :rules [[:tab :!EQright_shift nil {:alone [:tab]}]]}
-
-        ; escape
-        {:des "Change espace to composed"
-         :rules [[:escape :!EWright_shift nil {:alone [:delete_forward]}]]}
-
-        ; backspace
-        {:des "Change backspace to composed"
-         :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:delete_or_backspace]}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
