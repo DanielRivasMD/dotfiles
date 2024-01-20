@@ -88,6 +88,12 @@ command = 'procs --sortd CPU --watch'
 description = 'watch resources usage CPU-sorted'
 tags = ['shell']
 
+[scripts.daemon]
+alias = 'daemon'
+command = '''sudo kill $(ps aux | awk '{if ($11 == "wdavdaemon") print $2}')'''
+description = 'kill microsoft defender'
+tags = ['shell']
+
 [scripts.dir-count]
 alias = 'dir-count'
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
