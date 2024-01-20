@@ -627,10 +627,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Enter remappings"
-         :rules [[:!Oreturn_or_enter :!Ts]
-                 [:!Treturn_or_enter :!Tr]
-                 [:!Creturn_or_enter :!Tt]
-                 [:!Sreturn_or_enter :!Tg]
-                 [:!OTCSreturn_or_enter :!Th]]}]}
+         :rules [[:!Oreturn_or_enter :!Ts [:!browser]]
+                 [:!Treturn_or_enter :!Tr [:!browser]]
+                 [:!Creturn_or_enter :!Tt [:!browser]]
+                 [:!Sreturn_or_enter :!Tg [:!browser]]
+                 [:!OTCSreturn_or_enter :!Th [:!browser]]]}]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
