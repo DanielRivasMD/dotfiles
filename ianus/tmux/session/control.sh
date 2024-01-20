@@ -41,6 +41,11 @@ tmux send-keys "cd /Users/drivas/Factorem" C-m
 tmux split-window -v
 tmux send-keys "cd /Users/drivas/Factorem" C-m
 
+# create a new window
+tmux new-window -t $session:5 -n joplin
+tmux send-keys "cd /Users/drivas" C-m
+tmux send-keys "joplin" C-m
+
 # return to main window
 tmux select-window -t $session:1
 
