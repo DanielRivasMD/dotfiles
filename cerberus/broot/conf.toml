@@ -9,9 +9,9 @@ default_flags = ""
 # config
 [[verbs]]
 invocation = "open_leave"
-key = "ctrl-s"                          # mapped -> `alt-enter`
+key = "ctrl-h"                          # mapped -> ` -> `alt-ctrl-cmd-shift-enter``
 cmd = ":cd"
-description = "go into directory -> `alt-enter`"
+description = "go into directory -> `alt-ctrl-cmd-shift-enter`"
 
 [[verbs]]
 invocation = "root_up"
@@ -43,14 +43,14 @@ invocation = "micro"
 key = "shift-f9"                        # mapped -> `alt-ctrl-enter`
 execution = "micro {file}"
 leave_broot = false
-description = "open file with `micro` editor -> `ctrl-cmd-left`"
+description = "open file with `micro` editor -> `alt-ctrl-enter`"
 
 [[verbs]]
 invocation = "helix"
 key = "shift-f10"                       # mapped -> `alt-cmd-enter`
 execution = "hx {file}"
 leave_broot = false
-description = "open file with `helix` editor -> `ctrl-cmd-right`"
+description = "open file with `helix` editor -> `alt-cmd-enter`"
 
 # search
 [[verbs]]
@@ -168,9 +168,9 @@ description = "toggle stage"
 
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "ctrl-space"
+key = "ctrl-s"                          # mapped -> `alt-enter`
 internal = "toggle_staging_area"
-description = "toggle staging area"
+description = "toggle staging area -> `alt-enter`"
 
 [[verbs]]
 invocation = "clear_stage"
@@ -212,9 +212,9 @@ description = "go to page down -> `alt-down`"
 # panel
 [[verbs]]
 invocation = "toggle_preview"
-key = "ctrl-g"                          # mapped -> `shift-enter`
+key = "ctrl-space"
 internal = "toggle_preview"
-description = "open / close preview panel -> `shift-enter`"
+description = "open / close preview panel"
 
 [[verbs]]
 invocation = "close_preview"
