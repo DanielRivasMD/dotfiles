@@ -50,13 +50,13 @@ matches:
   - trigger: ":dr"
     replace: "Daniel Rivas"
 
-  - trigger: ":lk"
+  - trigger: ":link"
     replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
 
-  - trigger: ":gt"
+  - trigger: ":github"
     replace: "https://github.com/DanielRivasMD"
 
-  - trigger: ":gs"
+  - trigger: ":schoolar"
     replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
 
   ####################################################################################################
@@ -284,6 +284,9 @@ matches:
   - trigger: ".'."
     replace: "`"
  
+  - trigger: ".'''."
+    replace: "```"
+
   - trigger: ".-."
     replace: "~"
 
