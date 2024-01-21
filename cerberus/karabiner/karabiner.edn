@@ -203,7 +203,7 @@
                  ; [:open_bracket []]                                                               ;
                  ; [:close_bracket []]                                                              ;
                  [:semicolon [:semicolon :spacebar]]                                                ; '; '
-                 [:quote [:period :quote :period]]                                                  ; '`'
+                 ; [:quote []]                                                                      ;
                  [:backslash [:!Sbackslash :spacebar]]                                              ; '| '
                  [:comma [:comma :spacebar]]                                                        ; ', '
                  [:period [:period :period]]                                                        ; '..'
@@ -252,7 +252,7 @@
                  ; [:!Sopen_bracket []]                                                             ;
                  ; [:!Sclose_bracket []]                                                            ;
                  [:!Ssemicolon [:!Ssemicolon :spacebar]]                                            ; ': '
-                 [:!Squote [:period :quote :quote :quote :period]]                                  ; '```'
+                 ; [:!Squote []]                                                                    ;
                  ; [:!Sbackslash []]                                                                ;
                  ; [:!Scomma []]                                                                    ;
                  [:!Speriod [:period :period :period]]                                              ; '...'
@@ -454,7 +454,8 @@
 
         ; option
         {:des "Coding modifications - option"
-         :rules [[:!O1 [:spacebar :!S1 :spacebar]]                                                  ; ' ! '
+         :rules [[:!Of20 [:spacebar :!Sbackslash :!Speriod :spacebar]]                              ; ' |> '
+                 [:!O1 [:spacebar :!S1 :spacebar]]                                                  ; ' ! '
                  [:!O2 [:spacebar :!S2 :spacebar]]                                                  ; ' @ '
                  ; [:!O3 []]                                                                        ;
                  [:!O4 [:spacebar :!S4 :spacebar]]                                                  ; ' $ '
@@ -469,19 +470,20 @@
                  [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]             ; ' == '
                  [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                       ; ' <= '
                  [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                     ; ' >= '
-                 [:!Osemicolon [:spacebar :!Sbackslash :!Speriod :spacebar]]                        ; ' |> '
+                 [:!Osemicolon [:spacebar :!Ssemicolon :equal_sign :spacebar]]                      ; ' := '
                  [:!Oquote [:spacebar :!S7 :spacebar]]                                              ; ' & '
                  [:!Obackslash [:spacebar :!Sbackslash :spacebar]]                                  ; ' | '
                  [:!Ocomma [:spacebar :!Scomma :spacebar]]                                          ; ' < '
                  [:!Operiod [:spacebar :!Speriod :spacebar]]                                        ; ' > '
-                 [:!Oslash [:spacebar :!Ssemicolon :equal_sign :spacebar]]                          ; ' := '
+                 [:!Osemicolon [:spacebar :!Sbackslash :!Speriod :spacebar]]                        ; ' |> '
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; option - shift
         {:des "Coding modifications - option - shift"
-         :rules [[:!OS1 [:spacebar :period :!S1 :spacebar]]                                         ; ' .! '
+         :rules [[:!OSf20 [:spacebar :period :!Sbackslash :!Speriod :spacebar]]                     ; ' .|> '
+                 [:!OS1 [:spacebar :period :!S1 :spacebar]]                                         ; ' .! '
                  [:!OS2 [:spacebar :period :!S2 :spacebar]]                                         ; ' .@ '
                  ; [:!OS3 []]                                                                       ;
                  [:!OS4 [:spacebar :period :!S4 :spacebar]]                                         ; ' .$ '
@@ -499,8 +501,8 @@
                  [:!OSsemicolon [:spacebar :period :!Sbackslash :!Speriod :spacebar]]               ; ' .|> '
                  [:!OSquote [:spacebar :period :!S7 :spacebar]]                                     ; ' .& '
                  [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]                         ; ' .| '
-                 [:!OScomma [:spacebar :!Scomma :hyphen :spacebar]]                                 ; ' <- '
-                 [:!OSperiod [:spacebar :hyphen :!Speriod :spacebar]]                               ; ' -> '
+                 [:!OScomma [:spacebar :period :!Scomma :spacebar]]                                 ; ' .< '
+                 [:!OSperiod [:spacebar :period :!Speriod :spacebar]]                               ; ' .> '
                  [:!OSslash [:spacebar :equal_sign :!Speriod :spacebar]]                            ; ' => '
                  ]}
 
@@ -580,10 +582,10 @@
                  ; [:!TCopen_bracket []]                                                            ;
                  ; [:!TCclose_bracket []]                                                           ;
                  ; [:!TCsemicolon []]                                                               ;
-                 ; [:!TCquote []]                                                                   ;
+                 [:!TCquote [:period :quote :quote :quote :period]]                                 ; '```'
                  ; [:!TCbackslash []]                                                               ;
-                 ; [:!TCcomma []]                                                                   ;
-                 ; [:!TCperiod []]                                                                  ;
+                 [:!TCcomma [:spacebar :!Scomma :hyphen :spacebar]]                                 ; ' <- '
+                 [:!TCperiod [:spacebar :hyphen :!Speriod :spacebar]]                               ; ' -> '
                  ; [:!TCslash []]                                                                   ;
                  ]}
 
@@ -643,38 +645,47 @@
                  [:!Tf20 :0]
                  [:!Cf20 :0]
                  [:!Sf20 :0]
-                 [:!OTCSf20 :0]]}
+                 [:!OTCSf20 :0]
+                 ; [:f19 :grave_accent_and_tilde]                                                   ;
+                 ; [:!Sf19 :!Sgrave_accent_and_tilde]                                               ;
+                 [:f19 :non_us_backslash]                                                           ;
+                 [:!Sf19 :!Snon_us_backslash]                                                       ;
+                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; keypad
         {:des "Keypad modifications"
          :rules  [; option
-                  [:!Okeypad_slash [:spacebar :keypad_slash :spacebar]]
-                  [:!Okeypad_asterisk [:spacebar :keypad_asterisk :spacebar]]
-                  [:!Okeypad_hyphen [:spacebar :keypad_hyphen :spacebar]]
-                  [:!Okeypad_plus [:spacebar :keypad_plus :spacebar]]
-                  [:!Okeypad_enter [:spacebar :equal_sign :spacebar]]
+                  [:!Of19 [:period :period]]
+                  [:!Okeypad_0 [:spacebar :!Sbackslash :!Speriod :spacebar]]                        ; ' |> '
+                  [:!Okeypad_slash [:spacebar :keypad_slash :spacebar]]                             ; ' / '
+                  [:!Okeypad_asterisk [:spacebar :keypad_asterisk :spacebar]]                       ; ' * '
+                  [:!Okeypad_hyphen [:spacebar :keypad_hyphen :spacebar]]                           ; ' - '
+                  [:!Okeypad_plus [:spacebar :keypad_plus :spacebar]]                               ; ' + '
+                  [:!Okeypad_enter [:spacebar :equal_sign :spacebar]]                               ; ' = '
 
                   ; option - shift
-                  [:!OSkeypad_slash [:spacebar :period :keypad_slash :spacebar]]
-                  [:!OSkeypad_asterisk [:spacebar :period :keypad_asterisk :spacebar]]
-                  [:!OSkeypad_hyphen [:spacebar :period :keypad_hyphen :spacebar]]
-                  [:!OSkeypad_plus [:spacebar :period :keypad_plus :spacebar]]
-                  [:!OSkeypad_enter [:spacebar :period :equal_sign :spacebar]]
+                  [:!OSkeypad_0 [:spacebar :period :!Sbackslash :!Speriod :spacebar]]               ; ' .|> '
+                  [:!OSkeypad_slash [:spacebar :period :keypad_slash :spacebar]]                    ; ' ./ '
+                  [:!OSkeypad_asterisk [:spacebar :period :keypad_asterisk :spacebar]]              ; ' .* '
+                  [:!OSkeypad_hyphen [:spacebar :period :keypad_hyphen :spacebar]]                  ; ' .- '
+                  [:!OSkeypad_plus [:spacebar :period :keypad_plus :spacebar]]                      ; ' .+ '
+                  [:!OSkeypad_enter [:spacebar :period :equal_sign :spacebar]]                      ; ' .= '
 
                   ; control
-                  [:!Tkeypad_slash [:spacebar :keypad_slash :keypad_slash :spacebar]]
-                  [:!Tkeypad_asterisk [:spacebar :keypad_asterisk :keypad_asterisk :spacebar]]
-                  [:!Tkeypad_hyphen [:spacebar :keypad_hyphen :keypad_hyphen :spacebar]]
-                  [:!Tkeypad_plus [:spacebar :keypad_plus :keypad_plus :spacebar]]
-                  [:!Tkeypad_enter [:spacebar :equal_sign :equal_sign :spacebar]]
+                  [:!Tkeypad_slash [:spacebar :keypad_slash :keypad_slash :spacebar]]               ; ' // '
+                  [:!Tkeypad_asterisk [:spacebar :keypad_asterisk :keypad_asterisk :spacebar]]      ; ' ** '
+                  [:!Tkeypad_hyphen [:spacebar :keypad_hyphen :keypad_hyphen :spacebar]]            ; ' -- '
+                  [:!Tkeypad_plus [:spacebar :keypad_plus :keypad_plus :spacebar]]                  ; ' ++ '
+                  [:!Tkeypad_enter [:spacebar :equal_sign :equal_sign :spacebar]]                   ; ' == '
 
                   ; control - shift
-                  [:!TSkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]
-                  [:!TSkeypad_asterisk [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]
-                  [:!TSkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]
-                  [:!TSkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]
-                  [:!TSkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]]}]}
+                  [:!TSkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]      ; ' .// '
+                  [:!TSkeypad_asterisk [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]       ; ' .** '
+                  [:!TSkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]   ; ' .-- '
+                  [:!TSkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]         ; ' .++ '
+                  [:!TSkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]          ; ' .== '
+                  ]}]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
