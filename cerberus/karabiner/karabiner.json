@@ -537,6 +537,86 @@
             "bundle_identifiers" : [ "alacritty" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "s",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "lapce" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "r",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "lapce" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "lapce" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "lapce" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "h",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "lapce" ]
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "caps_lock to esc when pressed alone, composed",
