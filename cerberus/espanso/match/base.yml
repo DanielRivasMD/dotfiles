@@ -1,25 +1,25 @@
 ####################################################################################################
 
-# espanso match file
-
-# For a complete introduction, visit the official docs at: https://espanso.org/docs/
-
-# You can use this file to define the base matches (aka snippets)
-# that will be available in every application when using espanso.
-
-# Matches are substitution rules: when you type the "trigger" string
-# it gets replaced by the "replace" string.
-
-####################################################################################################
-
 matches:
 
   ####################################################################################################
+  # simple text replacement
+  ####################################################################################################
 
-  # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
+  # name
+  - trigger: ":nm"
+    replace: "Salvador Daniel Rivas Carrillo"
 
+  - trigger: ":fnm"
+    replace: "Salvador Daniel"
+
+  - trigger: ":lnm"
+    replace: "Rivas Carrillo"
+
+  - trigger: ":dr"
+    replace: "Daniel Rivas"
+
+  # address
   - trigger: ":mail"
     replace: "danielrivasmd@gmail.com"
 
@@ -38,18 +38,7 @@ matches:
   - trigger: ":swph"
     replace: "767799639"
 
-  - trigger: ":nm"
-    replace: "Salvador Daniel Rivas Carrillo"
-
-  - trigger: ":fnm"
-    replace: "Salvador Daniel"
-
-  - trigger: ":lnm"
-    replace: "Rivas Carrillo"
-
-  - trigger: ":dr"
-    replace: "Daniel Rivas"
-
+  # links
   - trigger: ":link"
     replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
 
@@ -58,6 +47,21 @@ matches:
 
   - trigger: ":schoolar"
     replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
+
+  # salutation
+  - trigger: ":ch"
+    replace: "Cheers,"
+
+  - trigger: ":reg"
+    replace: "Regards,"
+
+  # salutation
+  - trigger: ":breg"
+    replace: "Best regards,"
+
+  # salutation
+  - trigger: ":sc"
+    replace: "Sincerely,"
 
   ####################################################################################################
 
@@ -309,11 +313,7 @@ matches:
 
   ####################################################################################################
 
-  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
-
-  # But matches can also be dynamic:
-
-  # Print the current date
+  # print the current date
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:
@@ -324,7 +324,7 @@ matches:
 
   ####################################################################################################
 
-  # Print the output of a shell command
+  # print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
     vars:
@@ -332,7 +332,5 @@ matches:
         type: shell
         params:
           cmd: "echo 'Hello from your shell'"
-
-  # And much more! For more information, visit the docs: https://espanso.org/docs/
 
 ####################################################################################################
