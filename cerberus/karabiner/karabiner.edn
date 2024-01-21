@@ -28,8 +28,9 @@
                                       ;; key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)
                       }}
  :applications
- {:mail ["com.apple.mail"]
-  :browser ["org.mozilla.firefox"]
+ {:browser ["org.mozilla.firefox"]
+  :editor ["lapce"]
+  :mail ["com.apple.mail"]
   :term ["alacritty"]}
 
  :templates
@@ -83,13 +84,26 @@
                  [:left_control :left_control :term {:alone [:!Sf3]}]                               ; toggle tmux remote
                  [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; toggle copy mode
                  ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        ; Alacritty
         {:des "Enter remappings"
          :rules [[:!Oreturn_or_enter :!Ts [:term]]                                                  ; `alt-enter`
                  [:!Treturn_or_enter :!Tr [:term]]                                                  ; `ctrl-enter`
                  [:!Creturn_or_enter :!Tt [:term]]                                                  ; `cmd-enter`
                  [:!Sreturn_or_enter :!Tg [:term]]                                                  ; `shift-enter`
                  [:!OTCSreturn_or_enter :!Th [:term]]                                               ; `alt-ctrl-cmd-shift-enter`
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Lapce
+        {:des "Enter remappings"
+         :rules [[:!Oreturn_or_enter :!Ts [:editor]]                                                ; `alt-enter`
+                 [:!Treturn_or_enter :!Tr [:editor]]                                                ; `ctrl-enter`
+                 [:!Creturn_or_enter :!Tt [:editor]]                                                ; `cmd-enter`
+                 [:!Sreturn_or_enter :!Tg [:editor]]                                                ; `shift-enter`
+                 [:!OTCSreturn_or_enter :!Th [:editor]]                                             ; `alt-ctrl-cmd-shift-enter`
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
