@@ -4146,63 +4146,6 @@
         "description" : "Function keypad",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "slash"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "hyphen"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "return_or_enter",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "0",
             "modifiers" : {
               "mandatory" : [ "right_command", "right_control", "right_option" ]
@@ -4315,181 +4258,16 @@
           "from" : {
             "key_code" : "l",
             "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "return_or_enter",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "hyphen",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "equal_sign",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "9"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "p",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "4"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "open_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "5"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "close_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "6"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "semicolon",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "1"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "2"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "backslash",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "3"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "0"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
               "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "equal_sign",
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "1",
             "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4541,46 +4319,18 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "hyphen",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "equal_sign",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "9"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "4"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4591,7 +4341,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "5"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4602,7 +4357,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "6"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4613,7 +4373,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "1"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4624,7 +4389,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "2"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4635,7 +4405,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "3"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4646,7 +4421,13 @@
             }
           },
           "to" : [ {
-            "key_code" : "0"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4710,46 +4491,20 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "hyphen",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "equal_sign",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "9"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "left_control", "right_command", "right_control", "right_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "4"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4760,7 +4515,14 @@
             }
           },
           "to" : [ {
-            "key_code" : "5"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4771,7 +4533,14 @@
             }
           },
           "to" : [ {
-            "key_code" : "6"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4782,7 +4551,14 @@
             }
           },
           "to" : [ {
-            "key_code" : "1"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4793,7 +4569,14 @@
             }
           },
           "to" : [ {
-            "key_code" : "2"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4804,7 +4587,14 @@
             }
           },
           "to" : [ {
-            "key_code" : "3"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4815,7 +4605,413 @@
             }
           },
           "to" : [ {
-            "key_code" : "0"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4879,46 +5075,18 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "hyphen",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "equal_sign",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "9"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "p",
             "modifiers" : {
               "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "4"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4929,7 +5097,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "5"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4940,7 +5113,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "6"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4951,7 +5129,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "1"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4962,7 +5145,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "2"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4973,7 +5161,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "3"
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
@@ -4984,176 +5177,13 @@
             }
           },
           "to" : [ {
-            "key_code" : "0"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "return_or_enter",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
             "key_code" : "equal_sign"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "hyphen",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "equal_sign",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "9"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "p",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "4"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "open_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "5"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "close_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "6"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "semicolon",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "1"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "2"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "backslash",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "3"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift", "right_command", "right_control", "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "0"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         } ]
@@ -5174,6 +5204,177 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "keypad_slash",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_asterisk",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_plus",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_4",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_5",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_6",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_1",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_2",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_3",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "keypad_0",
             "modifiers" : {
               "mandatory" : [ "left_option" ]
@@ -5182,11 +5383,9 @@
           "to" : [ {
             "key_code" : "spacebar"
           }, {
-            "key_code" : "backslash",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "equal_sign"
           }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "equal_sign"
           }, {
             "key_code" : "spacebar"
           } ],
@@ -5195,11 +5394,13 @@
           "from" : {
             "key_code" : "keypad_slash",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "mandatory" : [ "left_option", "left_shift" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
           }, {
             "key_code" : "keypad_slash"
           }, {
@@ -5210,11 +5411,13 @@
           "from" : {
             "key_code" : "keypad_asterisk",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "mandatory" : [ "left_option", "left_shift" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
           }, {
             "key_code" : "keypad_asterisk"
           }, {
@@ -5225,11 +5428,13 @@
           "from" : {
             "key_code" : "keypad_hyphen",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "mandatory" : [ "left_option", "left_shift" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
           }, {
             "key_code" : "keypad_hyphen"
           }, {
@@ -5240,11 +5445,13 @@
           "from" : {
             "key_code" : "keypad_plus",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "mandatory" : [ "left_option", "left_shift" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
           }, {
             "key_code" : "keypad_plus"
           }, {
@@ -5255,13 +5462,123 @@
           "from" : {
             "key_code" : "keypad_enter",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "mandatory" : [ "left_option", "left_shift" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
           }, {
+            "key_code" : "period"
+          }, {
             "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_4",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_5",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_6",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_1",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_2",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_3",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
           }, {
             "key_code" : "spacebar"
           } ],
@@ -5278,10 +5595,112 @@
           }, {
             "key_code" : "period"
           }, {
-            "key_code" : "backslash",
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_slash",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_asterisk",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_plus",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_4",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "4",
             "modifiers" : [ "left_shift" ]
           }, {
-            "key_code" : "period",
+            "key_code" : "4",
             "modifiers" : [ "left_shift" ]
           }, {
             "key_code" : "spacebar"
@@ -5289,166 +5708,110 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "keypad_slash",
+            "key_code" : "keypad_5",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
           }, {
-            "key_code" : "period"
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
           }, {
-            "key_code" : "keypad_slash"
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
           }, {
             "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "keypad_asterisk",
+            "key_code" : "keypad_6",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
           }, {
-            "key_code" : "period"
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
           }, {
-            "key_code" : "keypad_asterisk"
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
           }, {
             "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "keypad_hyphen",
+            "key_code" : "keypad_1",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
           }, {
-            "key_code" : "period"
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
           }, {
-            "key_code" : "keypad_hyphen"
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
           }, {
             "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "keypad_plus",
+            "key_code" : "keypad_2",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
           }, {
-            "key_code" : "period"
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
           }, {
-            "key_code" : "keypad_plus"
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
           }, {
             "key_code" : "spacebar"
           } ],
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "keypad_enter",
+            "key_code" : "keypad_3",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
             "key_code" : "spacebar"
           }, {
-            "key_code" : "period"
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_0",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
           }, {
             "key_code" : "equal_sign"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_slash",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "keypad_slash"
-          }, {
-            "key_code" : "keypad_slash"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_asterisk",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "keypad_asterisk"
-          }, {
-            "key_code" : "keypad_asterisk"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_hyphen",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "keypad_hyphen"
-          }, {
-            "key_code" : "keypad_hyphen"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_plus",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "keypad_plus"
-          }, {
-            "key_code" : "keypad_plus"
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_enter",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
           }, {
             "key_code" : "equal_sign"
           }, {
@@ -5544,6 +5907,395 @@
             "key_code" : "spacebar"
           }, {
             "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_4",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_5",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_6",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_1",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_2",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_3",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_0",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_slash",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "keypad_slash"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_asterisk",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "keypad_asterisk"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "keypad_hyphen"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_plus",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "keypad_plus"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "equal_sign"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_4",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_5",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_6",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_1",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_2",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_3",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_0",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "period"
+          }, {
+            "key_code" : "equal_sign"
           }, {
             "key_code" : "equal_sign"
           }, {
