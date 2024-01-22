@@ -659,125 +659,109 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-                 ;  [:!O1 [:spacebar :!S1 :spacebar]]                                                  ; ' ! '
-                 ; [:!O2 [:spacebar :!S2 :spacebar]]                                                  ; ' @ '
-                 ; ; [:!O3 []]                                                                        ;
-                 ; [:!O4 [:spacebar :!S4 :spacebar]]                                                  ; ' $ '
-                 ; [:!O5 [:spacebar :!S5 :spacebar]]                                                  ; ' % '
-                 ; [:!O6 [:spacebar :!S6 :spacebar]]                                                  ; ' ^ '
-                 ; ; [:!O7 []]                                                                        ;
-                 ; [:!O8 [:spacebar :!S8 :spacebar]]                                                  ; ' * '
-                 ; [:!O9 [:spacebar :slash :spacebar]]                                                ; ' / '
-                 ; [:!O0 [:spacebar :!Sequal_sign :spacebar]]                                         ; ' + '
-                 ; [:!Ohyphen [:spacebar :hyphen :spacebar]]                                          ; ' - '
-                 ; [:!Oequal_sign [:spacebar :equal_sign :spacebar]]                                  ; ' = '
-                 ; [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]             ; ' == '
-                 ; [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                       ; ' <= '
-                 ; [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                     ; ' >= '
-
         ; function
         {:des "Function keypad"
          :rules [;simple
-                 [:!EWQl :slash]                                                                   ;
-                 [:!EWQperiod :!S8]                                                                ;
-                 [:!EWQdelete_or_backspace :hyphen]                                                ;
-                 [:!EWQreturn_or_enter :!Sequal_sign]                                              ;
-                 [:!EWQright_shift :equal_sign]                                                    ;
-                 [:!EWQ0 :7]                                                                       ;
-                 [:!EWQhyphen :8]                                                                  ;
-                 [:!EWQequal_sign :9]                                                              ;
-                 [:!EWQp :4]                                                                       ;
-                 [:!EWQopen_bracket :5]                                                            ;
-                 [:!EWQclose_bracket :6]                                                           ;
-                 [:!EWQsemicolon :1]                                                               ;
-                 [:!EWQquote :2]                                                                   ;
-                 [:!EWQbackslash :3]                                                               ;
-                 [:!EWQslash :0]                                                                   ;
-
-                 ; shift
-                 [:!EWQSl :!Sequal_sign]                                                           ;
-                 [:!EWQSperiod :!Sequal_sign]                                                      ;
-                 [:!EWQSdelete_or_backspace :!Sequal_sign]                                         ;
-                 [:!EWQSreturn_or_enter :equal_sign]                                               ;
-                 [:!EWQSright_shift :!Sequal_sign]                                                 ;
-                 [:!EWQS0 :7]                                                                      ;
-                 [:!EWQShyphen :8]                                                                 ;
-                 [:!EWQSequal_sign :9]                                                             ;
-                 [:!EWQSp :4]                                                                      ;
-                 [:!EWQSopen_bracket :5]                                                           ;
-                 [:!EWQSclose_bracket :6]                                                          ;
-                 [:!EWQSsemicolon :1]                                                              ;
-                 [:!EWQSquote :2]                                                                  ;
-                 [:!EWQSbackslash :3]                                                              ;
-                 [:!EWQSslash :0]                                                                  ;
+                 ; [:!EWQl :slash]                                                                   ; '/'
+                 ; [:!EWQperiod :!S8]                                                                ; '*'
+                 ; [:!EWQdelete_or_backspace :hyphen]                                                ; '-'
+                 ; [:!EWQreturn_or_enter :!Sequal_sign]                                              ; '+'
+                 ; [:!EWQright_shift :equal_sign]                                                    ; '='
+                 [:!EWQ0 :7]                                                                       ; '7'
+                 [:!EWQhyphen :8]                                                                  ; '8'
+                 [:!EWQequal_sign :9]                                                              ; '9'
+                 [:!EWQp :4]                                                                       ; '4'
+                 [:!EWQopen_bracket :5]                                                            ; '5'
+                 [:!EWQclose_bracket :6]                                                           ; '6'
+                 [:!EWQsemicolon :1]                                                               ; '1'
+                 [:!EWQquote :2]                                                                   ; '2'
+                 [:!EWQbackslash :3]                                                               ; '3'
+                 [:!EWQslash :0]                                                                   ; '0'
 
                  ; option
-                 [:!EWQOl :!Sequal_sign]                                                           ;
-                 [:!EWQOperiod :!Sequal_sign]                                                      ;
-                 [:!EWQOdelete_or_backspace :!Sequal_sign]                                         ;
-                 [:!EWQOreturn_or_enter :equal_sign]                                               ;
-                 [:!EWQOright_shift :!Sequal_sign]                                                 ;
-                 [:!EWQO0 :7]                                                                      ;
-                 [:!EWQOhyphen :8]                                                                 ;
-                 [:!EWQOequal_sign :9]                                                             ;
-                 [:!EWQOp :4]                                                                      ;
-                 [:!EWQOopen_bracket :5]                                                           ;
-                 [:!EWQOclose_bracket :6]                                                          ;
-                 [:!EWQOsemicolon :1]                                                              ;
-                 [:!EWQOquote :2]                                                                  ;
-                 [:!EWQObackslash :3]                                                              ;
-                 [:!EWQOslash :0]                                                                  ;
+                 [:!EWQOl [:spacebar :!S1 :spacebar]]                                              ; ' / '
+                 [:!EWQOperiod :!Sequal_sign]                                                      ; ' * '
+                 [:!EWQOdelete_or_backspace :!Sequal_sign]                                         ; ' - '
+                 [:!EWQOreturn_or_enter :equal_sign]                                               ; ' + '
+                 [:!EWQOright_shift :!Sequal_sign]                                                 ; ' = '
+                 ; [:!EWQO0 []]                                                                      ; ''
+                 ; [:!EWQOhyphen []]                                                                 ; ''
+                 ; [:!EWQOequal_sign []]                                                             ; ''
+                 [:!EWQOp [:spacebar :!S4 :spacebar]]                                                                      ; ''
+                 [:!EWQOopen_bracket [:spacebar :!S5 :spacebar]]                                                           ; ''
+                 [:!EWQOclose_bracket [:spacebar :!S6 :spacebar]]                                                          ; ''
+                 [:!EWQOsemicolon [:spacebar :!S1 :spacebar]]                                                              ; ''
+                 [:!EWQOquote [:spacebar :!S2 :spacebar]]                                                                  ; ''
+                 [:!EWQObackslash [:spacebar :!S7 :spacebar]]                                                              ; ''
+                 [:!EWQOslash [:spacebar :equal_sign :equal_sign :spacebar]]                                                                  ; ''
 
                  ; control
-                 [:!EWQTl :!Sequal_sign]                                                           ;
-                 [:!EWQTperiod :!Sequal_sign]                                                      ;
-                 [:!EWQTdelete_or_backspace :!Sequal_sign]                                         ;
-                 [:!EWQTreturn_or_enter :equal_sign]                                               ;
-                 [:!EWQTright_shift :!Sequal_sign]                                                 ;
-                 [:!EWQT0 :7]                                                                      ;
-                 [:!EWQThyphen :8]                                                                 ;
-                 [:!EWQTequal_sign :9]                                                             ;
-                 [:!EWQTp :4]                                                                      ;
-                 [:!EWQTopen_bracket :5]                                                           ;
-                 [:!EWQTclose_bracket :6]                                                          ;
-                 [:!EWQTsemicolon :1]                                                              ;
-                 [:!EWQTquote :2]                                                                  ;
-                 [:!EWQTbackslash :3]                                                              ;
-                 [:!EWQTslash :0]                                                                  ;
+                 [:!EWQTl :!Sequal_sign]                                                           ; ' ./ '
+                 [:!EWQTperiod :!Sequal_sign]                                                      ; ' .* '
+                 [:!EWQTdelete_or_backspace :!Sequal_sign]                                         ; ' .- '
+                 [:!EWQTreturn_or_enter :equal_sign]                                               ; ' .+ '
+                 [:!EWQTright_shift :!Sequal_sign]                                                 ; ' .= '
+                 ; [:!EWQT0 []]                                                                      ; ''
+                 ; [:!EWQThyphen []]                                                                 ; ''
+                 ; [:!EWQTequal_sign []]                                                             ; ''
+                 [:!EWQTp [:spacebar :period :!S4 :spacebar]]                                                                      ; ''
+                 [:!EWQTopen_bracket [:spacebar :period :!S5 :spacebar]]                                                           ; ''
+                 [:!EWQTclose_bracket [:spacebar :period :!S6 :spacebar]]                                                          ; ''
+                 [:!EWQTsemicolon [:spacebar :period :!S1 :spacebar]]                                                              ; ''
+                 [:!EWQTquote [:spacebar :period :!S2 :spacebar]]                                                                  ; ''
+                 [:!EWQTbackslash [:spacebar :period :!S7 :spacebar]]                                                              ; ''
+                 [:!EWQTslash [:spacebar :period :equal_sign :equal_sign :spacebar]]                                                                  ; ''
 
-                 ; command
-                 [:!EWQCl :!Sequal_sign]                                                           ;
-                 [:!EWQCperiod :!Sequal_sign]                                                      ;
-                 [:!EWQCdelete_or_backspace :!Sequal_sign]                                         ;
-                 [:!EWQCreturn_or_enter :equal_sign]                                               ;
-                 [:!EWQCright_shift :!Sequal_sign]                                                 ;
-                 [:!EWQC0 :7]                                                                      ;
-                 [:!EWQChyphen :8]                                                                 ;
-                 [:!EWQCequal_sign :9]                                                             ;
-                 [:!EWQCp :4]                                                                      ;
-                 [:!EWQCopen_bracket :5]                                                           ;
-                 [:!EWQCclose_bracket :6]                                                          ;
-                 [:!EWQCsemicolon :1]                                                              ;
-                 [:!EWQCquote :2]                                                                  ;
-                 [:!EWQCbackslash :3]                                                              ;
-                 [:!EWQCslash :0]                                                                  ;
+                 ; shift
+                 [:!EWQSl :!Sequal_sign]                                                           ; ' // '
+                 [:!EWQSperiod :!Sequal_sign]                                                      ; ' ** '
+                 [:!EWQSdelete_or_backspace :!Sequal_sign]                                         ; ' -- '
+                 [:!EWQSreturn_or_enter :equal_sign]                                               ; ' ++ '
+                 [:!EWQSright_shift :!Sequal_sign]                                                 ; ' == '
+                 ; [:!EWQS0 []]                                                                      ; ''
+                 ; [:!EWQShyphen []]                                                                 ; ''
+                 ; [:!EWQSequal_sign []]                                                             ; ''
+                 [:!EWQSp [:spacebar :!S4 :!S4 :spacebar]]                                                                      ; ''
+                 [:!EWQSopen_bracket [:spacebar :!S5 :!S5 :spacebar]]                                                           ; ''
+                 [:!EWQSclose_bracket [:spacebar :!S6 :!S6 :spacebar]]                                                          ; ''
+                 [:!EWQSsemicolon [:spacebar :!S1 :!S1 :spacebar]]                                                              ; ''
+                 [:!EWQSquote [:spacebar :!S2 :!S2 :spacebar]]                                                                  ; ''
+                 [:!EWQSbackslash [:spacebar :!S7 :!S7 :spacebar]]                                                              ; ''
+                 [:!EWQSslash [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                                                                  ; ''
 
                  ; hyper
-                 [:!EWQOTCSl :!Sequal_sign]                                                        ;
-                 [:!EWQOTCSperiod :!Sequal_sign]                                                   ;
-                 [:!EWQOTCSdelete_or_backspace :!Sequal_sign]                                      ;
-                 [:!EWQOTCSreturn_or_enter :equal_sign]                                            ;
-                 [:!EWQOTCSright_shift :!Sequal_sign]                                              ;
-                 [:!EWQOTCS0 :7]                                                                   ;
-                 [:!EWQOTCShyphen :8]                                                              ;
-                 [:!EWQOTCSequal_sign :9]                                                          ;
-                 [:!EWQOTCSp :4]                                                                   ;
-                 [:!EWQOTCSopen_bracket :5]                                                        ;
-                 [:!EWQOTCSclose_bracket :6]                                                       ;
-                 [:!EWQOTCSsemicolon :1]                                                           ;
-                 [:!EWQOTCSquote :2]                                                               ;
-                 [:!EWQOTCSbackslash :3]                                                           ;
-                 [:!EWQOTCSslash :0]                                                               ;
+                 [:!EWQOTCSl :!Sequal_sign]                                                        ; ' .// '
+                 [:!EWQOTCSperiod :!Sequal_sign]                                                   ; ' .** '
+                 [:!EWQOTCSdelete_or_backspace :!Sequal_sign]                                      ; ' .-- '
+                 [:!EWQOTCSreturn_or_enter :equal_sign]                                            ; ' .++ '
+                 [:!EWQOTCSright_shift :!Sequal_sign]                                              ; ' .== '
+                 ; [:!EWQOTCS0 []]                                                                      ; ''
+                 ; [:!EWQOTCShyphen []]                                                                 ; ''
+                 ; [:!EWQOTCSequal_sign []]                                                             ; ''
+                 [:!EWQOTCSp [:spacebar :period :!S4 :!S4 :spacebar]]                                                                      ; ''
+                 [:!EWQOTCSopen_bracket [:spacebar :period :!S5 :!S5 :spacebar]]                                                           ; ''
+                 [:!EWQOTCSclose_bracket [:spacebar :period :!S6 :!S6 :spacebar]]                                                          ; ''
+                 [:!EWQOTCSsemicolon [:spacebar :period :!S1 :!S1 :spacebar]]                                                              ; ''
+                 [:!EWQOTCSquote [:spacebar :period :!S2 :!S2 :spacebar]]                                                                  ; ''
+                 [:!EWQOTCSbackslash [:spacebar :period :!S7 :!S7 :spacebar]]                                                              ; ''
+                 [:!EWQOTCSslash [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                                                                  ; ''
+
+                 ; command
+                 [:!EWQCl :!Sequal_sign]                                                           ; ''
+                 [:!EWQCperiod :!Sequal_sign]                                                      ; ''
+                 [:!EWQCdelete_or_backspace :!Sequal_sign]                                         ; ''
+                 [:!EWQCreturn_or_enter :equal_sign]                                               ; ''
+                 [:!EWQCright_shift :!Sequal_sign]                                                 ; ''
+                 ; [:!EWQC0 []]                                                                      ; ''
+                 ; [:!EWQChyphen []]                                                                 ; ''
+                 ; [:!EWQCequal_sign []]                                                             ; ''
+                 [:!EWQCp [:spacebar :!S4 :spacebar]]                                                                      ; ''
+                 [:!EWQCopen_bracket [:spacebar :!S5 :spacebar]]                                                           ; ''
+                 [:!EWQCclose_bracket [:spacebar :!S6 :spacebar]]                                                          ; ''
+                 [:!EWQCsemicolon [:spacebar :!S1 :spacebar]]                                                              ; ''
+                 [:!EWQCquote [:spacebar :!S2 :spacebar]]                                                                  ; ''
+                 [:!EWQCbackslash [:spacebar :!S7 :spacebar]]                                                              ; ''
+                 [:!EWQCslash [:spacebar :equal_sign :equal_sign :spacebar]]                                                                  ; ''
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -786,20 +770,38 @@
         {:des "Keypad modifications"
          :rules  [; option
                   [:!Of19 [:period :period]]
-                  [:!Okeypad_0 [:spacebar :!Sbackslash :!Speriod :spacebar]]                        ; ' |> '
                   [:!Okeypad_slash [:spacebar :keypad_slash :spacebar]]                             ; ' / '
                   [:!Okeypad_asterisk [:spacebar :keypad_asterisk :spacebar]]                       ; ' * '
                   [:!Okeypad_hyphen [:spacebar :keypad_hyphen :spacebar]]                           ; ' - '
                   [:!Okeypad_plus [:spacebar :keypad_plus :spacebar]]                               ; ' + '
                   [:!Okeypad_enter [:spacebar :equal_sign :spacebar]]                               ; ' = '
+                  ; [:!Okeypad_7 [:spacebar :!S :spacebar]]                                         ; ''
+                  ; [:!Okeypad_8 [:spacebar :!S :spacebar]]                                         ; ''
+                  ; [:!Okeypad_9 [:spacebar :!S :spacebar]]                                         ; ''
+                  [:!Okeypad_4 [:spacebar :!S4 :spacebar]]                                          ; ' $ '
+                  [:!Okeypad_5 [:spacebar :!S5 :spacebar]]                                          ; ' % '
+                  [:!Okeypad_6 [:spacebar :!S6 :spacebar]]                                          ; ' ^ '
+                  [:!Okeypad_1 [:spacebar :!S1 :spacebar]]                                          ; ' ! '
+                  [:!Okeypad_2 [:spacebar :!S2 :spacebar]]                                          ; ' @ '
+                  [:!Okeypad_3 [:spacebar :!S7 :spacebar]]                                          ; ' & '
+                  [:!Okeypad_0 [:spacebar :equal_sign :equal_sign :spacebar]]                       ; ' == '
 
                   ; option - shift
-                  [:!OSkeypad_0 [:spacebar :period :!Sbackslash :!Speriod :spacebar]]               ; ' .|> '
                   [:!OSkeypad_slash [:spacebar :period :keypad_slash :spacebar]]                    ; ' ./ '
                   [:!OSkeypad_asterisk [:spacebar :period :keypad_asterisk :spacebar]]              ; ' .* '
                   [:!OSkeypad_hyphen [:spacebar :period :keypad_hyphen :spacebar]]                  ; ' .- '
                   [:!OSkeypad_plus [:spacebar :period :keypad_plus :spacebar]]                      ; ' .+ '
                   [:!OSkeypad_enter [:spacebar :period :equal_sign :spacebar]]                      ; ' .= '
+                  ; [:!OSkeypad_7 [:spacebar :!S :spacebar]]                                        ; ''
+                  ; [:!OSkeypad_8 [:spacebar :!S :spacebar]]                                        ; ''
+                  ; [:!OSkeypad_9 [:spacebar :!S :spacebar]]                                        ; ''
+                  [:!OSkeypad_4 [:spacebar :period :!S4 :spacebar]]                                 ; ' .$ '
+                  [:!OSkeypad_5 [:spacebar :period :!S5 :spacebar]]                                 ; ' .% '
+                  [:!OSkeypad_6 [:spacebar :period :!S6 :spacebar]]                                 ; ' .^ '
+                  [:!OSkeypad_1 [:spacebar :period :!S1 :spacebar]]                                 ; ' .! '
+                  [:!OSkeypad_2 [:spacebar :period :!S2 :spacebar]]                                 ; ' .@ '
+                  [:!OSkeypad_3 [:spacebar :period :!S7 :spacebar]]                                 ; ' .& '
+                  [:!OSkeypad_0 [:spacebar :period :equal_sign :equal_sign :spacebar]]              ; ' .== '
 
                   ; control
                   [:!Tkeypad_slash [:spacebar :keypad_slash :keypad_slash :spacebar]]               ; ' // '
@@ -807,6 +809,16 @@
                   [:!Tkeypad_hyphen [:spacebar :keypad_hyphen :keypad_hyphen :spacebar]]            ; ' -- '
                   [:!Tkeypad_plus [:spacebar :keypad_plus :keypad_plus :spacebar]]                  ; ' ++ '
                   [:!Tkeypad_enter [:spacebar :equal_sign :equal_sign :spacebar]]                   ; ' == '
+                  ; [:!Tkeypad_7 [:spacebar :!S :spacebar]]                                         ; ''
+                  ; [:!Tkeypad_8 [:spacebar :!S :spacebar]]                                         ; ''
+                  ; [:!Tkeypad_9 [:spacebar :!S :spacebar]]                                         ; ''
+                  [:!Tkeypad_4 [:spacebar :!S4 :!S4 :spacebar]]                                     ; ' $$ '
+                  [:!Tkeypad_5 [:spacebar :!S5 :!S5 :spacebar]]                                     ; ' %% '
+                  [:!Tkeypad_6 [:spacebar :!S6 :!S6 :spacebar]]                                     ; ' ^^ '
+                  [:!Tkeypad_1 [:spacebar :!S1 :!S1 :spacebar]]                                     ; ' !! '
+                  [:!Tkeypad_2 [:spacebar :!S2 :!S2 :spacebar]]                                     ; ' @@ '
+                  [:!Tkeypad_3 [:spacebar :!S7 :!S7 :spacebar]]                                     ; ' && '
+                  [:!Tkeypad_0 [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]           ; ' === '
 
                   ; control - shift
                   [:!TSkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]      ; ' .// '
@@ -814,6 +826,33 @@
                   [:!TSkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]   ; ' .-- '
                   [:!TSkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]         ; ' .++ '
                   [:!TSkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]          ; ' .== '
+                  ; [:!TSkeypad_7 [:spacebar :!S :spacebar]]                                        ; ''
+                  ; [:!TSkeypad_8 [:spacebar :!S :spacebar]]                                        ; ''
+                  ; [:!TSkeypad_9 [:spacebar :!S :spacebar]]                                        ; ''
+                  [:!TSkeypad_4 [:spacebar :period :!S4 :!S4 :spacebar]]                            ; ' .$$ '
+                  [:!TSkeypad_5 [:spacebar :period :!S5 :!S5 :spacebar]]                            ; ' .%% '
+                  [:!TSkeypad_6 [:spacebar :period :!S6 :!S6 :spacebar]]                            ; ' .^^ '
+                  [:!TSkeypad_1 [:spacebar :period :!S1 :!S1 :spacebar]]                            ; ' .!! '
+                  [:!TSkeypad_2 [:spacebar :period :!S2 :!S2 :spacebar]]                            ; ' .@@ '
+                  [:!TSkeypad_3 [:spacebar :period :!S7 :!S7 :spacebar]]                            ; ' .&& '
+                  [:!TSkeypad_0 [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]  ; ' .=== '
+
+                  ; control - command
+                  [:!TCkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]      ; ' .// '
+                  [:!TCkeypad_asterisk [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]       ; ' .** '
+                  [:!TCkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]   ; ' .-- '
+                  [:!TCkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]         ; ' .++ '
+                  [:!TCkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]          ; ' .== '
+                  ; [:!TCkeypad_7 [:spacebar :!S :spacebar]]                                        ; ''
+                  ; [:!TCkeypad_8 [:spacebar :!S :spacebar]]                                        ; ''
+                  ; [:!TCkeypad_9 [:spacebar :!S :spacebar]]                                        ; ''
+                  [:!TCkeypad_4 [:spacebar :period :!S4 :!S4 :spacebar]]                            ; ' .$$ '
+                  [:!TCkeypad_5 [:spacebar :period :!S5 :!S5 :spacebar]]                            ; ' .%% '
+                  [:!TCkeypad_6 [:spacebar :period :!S6 :!S6 :spacebar]]                            ; ' .^^ '
+                  [:!TCkeypad_1 [:spacebar :period :!S1 :!S1 :spacebar]]                            ; ' .!! '
+                  [:!TCkeypad_2 [:spacebar :period :!S2 :!S2 :spacebar]]                            ; ' .@@ '
+                  [:!TCkeypad_3 [:spacebar :period :!S7 :!S7 :spacebar]]                            ; ' .&& '
+                  [:!TCkeypad_0 [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]  ; ' .=== '
                   ]}]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
