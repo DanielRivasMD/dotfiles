@@ -42,17 +42,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  :main [{:des "Launcher"
-         :rules [[:!!0 [:launch "Skype"]]
-                 [:!!equal_sign [:launch "Telegram"]]
-                 [:!!hyphen [:launch "Whatsapp"]]
-                 [:!!open_bracket [:launch "Mail"]]
-                 [:!!close_bracket [:launch "Firefox"]]
-                 [:!!semicolon [:launch "Alacritty"]]
-                 [:!!quote [:launch "Slack"]]
-                 [:!!backslash [:launch "Lapce"]]
-                 [:!!comma [:launch "Word"]]
-                 [:!!period [:launch "PowerPoint"]]
-                 [:!!slash [:launch "Skim"]]]}
+         :rules [[:!WQR1 [:launch "Skype"]]                                                         ;
+                 [:!WQR2 [:launch "Telegram"]]                                                      ;
+                 [:!WQR3 [:launch "Whatsapp"]]                                                      ;
+                 [:!WQR4 [:launch "Word"]]                                                          ;
+                 [:!WQR5 [:launch "PowerPoint"]]                                                    ;
+                 [:!WQR6 [:launch "Skim"]]                                                          ;
+                 [:!WQR7 [:launch "Slack"]]                                                         ;
+                 [:!WQR8 [:launch "Mail"]]                                                          ;
+                 [:!WQR9 [:launch "Firefox"]]                                                       ;
+                 [:!WQRhyphen [:launch "Alacritty"]]                                                ;
+                 [:!WQRequal_sign [:launch "Lapce"]]                                                ;
+                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -116,13 +117,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; caps lock
-        {:des   "caps_lock to esc when pressed alone, composed"
+        {:des "caps_lock to esc when pressed alone, composed"
          :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; function
-        {:des   "funciton to composed"
+        {:des "funciton to composed"
          :rules [[:##fn :!EWQright_shift nil {:alone :escape}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -659,9 +660,29 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+                 ;  [:!O1 [:spacebar :!S1 :spacebar]]                                                  ; ' ! '
+                 ; [:!O2 [:spacebar :!S2 :spacebar]]                                                  ; ' @ '
+                 ; ; [:!O3 []]                                                                        ;
+                 ; [:!O4 [:spacebar :!S4 :spacebar]]                                                  ; ' $ '
+                 ; [:!O5 [:spacebar :!S5 :spacebar]]                                                  ; ' % '
+                 ; [:!O6 [:spacebar :!S6 :spacebar]]                                                  ; ' ^ '
+                 ; ; [:!O7 []]                                                                        ;
+                 ; [:!O8 [:spacebar :!S8 :spacebar]]                                                  ; ' * '
+                 ; [:!O9 [:spacebar :slash :spacebar]]                                                ; ' / '
+                 ; [:!O0 [:spacebar :!Sequal_sign :spacebar]]                                         ; ' + '
+                 ; [:!Ohyphen [:spacebar :hyphen :spacebar]]                                          ; ' - '
+                 ; [:!Oequal_sign [:spacebar :equal_sign :spacebar]]                                  ; ' = '
+                 ; [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]             ; ' == '
+                 ; [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                       ; ' <= '
+                 ; [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                     ; ' >= '
+
         ; function
         {:des "Function keypad"
-         :rules [;simple
+         :rules [; additional
+                 [:!EWQRreturn_or_enter :equal_sign]                                                                       ;
+                 [:!EWQRdelete_or_backspace :!Sequal_sign]                                                                       ;
+
+                 ;simple
                  [:!EWQR0 :7]                                                                       ;
                  [:!EWQRhyphen :8]                                                                  ;
                  [:!EWQRequal_sign :9]                                                              ;
