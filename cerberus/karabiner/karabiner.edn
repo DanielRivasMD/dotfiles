@@ -42,13 +42,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  :main [{:des "Launcher"
-         :rules [[:!WQR1 [:launch "Skype"]]                                                         ;
+         :rules [[:!WQR1 [:launch "Whatsapp"]]                                                      ;
                  [:!WQR2 [:launch "Telegram"]]                                                      ;
-                 [:!WQR3 [:launch "Whatsapp"]]                                                      ;
-                 [:!WQR4 [:launch "Word"]]                                                          ;
+                 [:!WQR3 [:launch "Slack"]]                                                         ;
+                 [:!WQR4 [:launch "Skype"]]                                                         ;
                  [:!WQR5 [:launch "PowerPoint"]]                                                    ;
-                 [:!WQR6 [:launch "Skim"]]                                                          ;
-                 [:!WQR7 [:launch "Slack"]]                                                         ;
+                 [:!WQR6 [:launch "Word"]]                                                          ;
+                 [:!WQR7 [:launch "Skim"]]                                                          ;
                  [:!WQR8 [:launch "Mail"]]                                                          ;
                  [:!WQR9 [:launch "Firefox"]]                                                       ;
                  [:!WQRhyphen [:launch "Alacritty"]]                                                ;
@@ -124,7 +124,7 @@
 
         ; function
         {:des "funciton to composed"
-         :rules [[:##fn :!EWQright_shift nil {:alone :escape}]]}
+         :rules [[:##fn :!EWright_command nil {:alone :escape}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -635,8 +635,7 @@
 
         ; simple
         {:des "Simple modifications"
-         :rules [[:0 [:period :hyphen :period]]
-                 [:f20 :0]
+         :rules [[:f20 :0]
                  [:keypad_slash :display_brightness_decrement]
                  [:keypad_asterisk :display_brightness_increment]
                  [:keypad_hyphen :mute]
@@ -678,81 +677,107 @@
 
         ; function
         {:des "Function keypad"
-         :rules [; additional
-                 [:!EWQRreturn_or_enter :equal_sign]                                                                       ;
-                 [:!EWQRdelete_or_backspace :!Sequal_sign]                                                                       ;
-
-                 ;simple
-                 [:!EWQR0 :7]                                                                       ;
-                 [:!EWQRhyphen :8]                                                                  ;
-                 [:!EWQRequal_sign :9]                                                              ;
-                 [:!EWQRp :4]                                                                       ;
-                 [:!EWQRopen_bracket :5]                                                            ;
-                 [:!EWQRclose_bracket :6]                                                           ;
-                 [:!EWQRsemicolon :1]                                                               ;
-                 [:!EWQRquote :2]                                                                   ;
-                 [:!EWQRbackslash :3]                                                               ;
-                 [:!EWQRslash :0]                                                                   ;
+         :rules [;simple
+                 [:!EWQl :slash]                                                                   ;
+                 [:!EWQperiod :!S8]                                                                ;
+                 [:!EWQdelete_or_backspace :hyphen]                                                ;
+                 [:!EWQreturn_or_enter :!Sequal_sign]                                              ;
+                 [:!EWQright_shift :equal_sign]                                                    ;
+                 [:!EWQ0 :7]                                                                       ;
+                 [:!EWQhyphen :8]                                                                  ;
+                 [:!EWQequal_sign :9]                                                              ;
+                 [:!EWQp :4]                                                                       ;
+                 [:!EWQopen_bracket :5]                                                            ;
+                 [:!EWQclose_bracket :6]                                                           ;
+                 [:!EWQsemicolon :1]                                                               ;
+                 [:!EWQquote :2]                                                                   ;
+                 [:!EWQbackslash :3]                                                               ;
+                 [:!EWQslash :0]                                                                   ;
 
                  ; shift
-                 [:!EWQRS0 :7]                                                                      ;
-                 [:!EWQRShyphen :8]                                                                 ;
-                 [:!EWQRSequal_sign :9]                                                             ;
-                 [:!EWQRSp :4]                                                                      ;
-                 [:!EWQRSopen_bracket :5]                                                           ;
-                 [:!EWQRSclose_bracket :6]                                                          ;
-                 [:!EWQRSsemicolon :1]                                                              ;
-                 [:!EWQRSquote :2]                                                                  ;
-                 [:!EWQRSbackslash :3]                                                              ;
-                 [:!EWQRSslash :0]                                                                  ;
+                 [:!EWQSl :!Sequal_sign]                                                           ;
+                 [:!EWQSperiod :!Sequal_sign]                                                      ;
+                 [:!EWQSdelete_or_backspace :!Sequal_sign]                                         ;
+                 [:!EWQSreturn_or_enter :equal_sign]                                               ;
+                 [:!EWQSright_shift :!Sequal_sign]                                                 ;
+                 [:!EWQS0 :7]                                                                      ;
+                 [:!EWQShyphen :8]                                                                 ;
+                 [:!EWQSequal_sign :9]                                                             ;
+                 [:!EWQSp :4]                                                                      ;
+                 [:!EWQSopen_bracket :5]                                                           ;
+                 [:!EWQSclose_bracket :6]                                                          ;
+                 [:!EWQSsemicolon :1]                                                              ;
+                 [:!EWQSquote :2]                                                                  ;
+                 [:!EWQSbackslash :3]                                                              ;
+                 [:!EWQSslash :0]                                                                  ;
 
                  ; option
-                 [:!EWQRO0 :7]                                                                      ;
-                 [:!EWQROhyphen :8]                                                                 ;
-                 [:!EWQROequal_sign :9]                                                             ;
-                 [:!EWQROp :4]                                                                      ;
-                 [:!EWQROopen_bracket :5]                                                           ;
-                 [:!EWQROclose_bracket :6]                                                          ;
-                 [:!EWQROsemicolon :1]                                                              ;
-                 [:!EWQROquote :2]                                                                  ;
-                 [:!EWQRObackslash :3]                                                              ;
-                 [:!EWQROslash :0]                                                                  ;
+                 [:!EWQOl :!Sequal_sign]                                                           ;
+                 [:!EWQOperiod :!Sequal_sign]                                                      ;
+                 [:!EWQOdelete_or_backspace :!Sequal_sign]                                         ;
+                 [:!EWQOreturn_or_enter :equal_sign]                                               ;
+                 [:!EWQOright_shift :!Sequal_sign]                                                 ;
+                 [:!EWQO0 :7]                                                                      ;
+                 [:!EWQOhyphen :8]                                                                 ;
+                 [:!EWQOequal_sign :9]                                                             ;
+                 [:!EWQOp :4]                                                                      ;
+                 [:!EWQOopen_bracket :5]                                                           ;
+                 [:!EWQOclose_bracket :6]                                                          ;
+                 [:!EWQOsemicolon :1]                                                              ;
+                 [:!EWQOquote :2]                                                                  ;
+                 [:!EWQObackslash :3]                                                              ;
+                 [:!EWQOslash :0]                                                                  ;
 
                  ; control
-                 [:!EWQRT0 :7]                                                                      ;
-                 [:!EWQRThyphen :8]                                                                 ;
-                 [:!EWQRTequal_sign :9]                                                             ;
-                 [:!EWQRTp :4]                                                                      ;
-                 [:!EWQRTopen_bracket :5]                                                           ;
-                 [:!EWQRTclose_bracket :6]                                                          ;
-                 [:!EWQRTsemicolon :1]                                                              ;
-                 [:!EWQRTquote :2]                                                                  ;
-                 [:!EWQRTbackslash :3]                                                              ;
-                 [:!EWQRTslash :0]                                                                  ;
+                 [:!EWQTl :!Sequal_sign]                                                           ;
+                 [:!EWQTperiod :!Sequal_sign]                                                      ;
+                 [:!EWQTdelete_or_backspace :!Sequal_sign]                                         ;
+                 [:!EWQTreturn_or_enter :equal_sign]                                               ;
+                 [:!EWQTright_shift :!Sequal_sign]                                                 ;
+                 [:!EWQT0 :7]                                                                      ;
+                 [:!EWQThyphen :8]                                                                 ;
+                 [:!EWQTequal_sign :9]                                                             ;
+                 [:!EWQTp :4]                                                                      ;
+                 [:!EWQTopen_bracket :5]                                                           ;
+                 [:!EWQTclose_bracket :6]                                                          ;
+                 [:!EWQTsemicolon :1]                                                              ;
+                 [:!EWQTquote :2]                                                                  ;
+                 [:!EWQTbackslash :3]                                                              ;
+                 [:!EWQTslash :0]                                                                  ;
 
                  ; command
-                 [:!EWQRC0 :7]                                                                      ;
-                 [:!EWQRChyphen :8]                                                                 ;
-                 [:!EWQRCequal_sign :9]                                                             ;
-                 [:!EWQRCp :4]                                                                      ;
-                 [:!EWQRCopen_bracket :5]                                                           ;
-                 [:!EWQRCclose_bracket :6]                                                          ;
-                 [:!EWQRCsemicolon :1]                                                              ;
-                 [:!EWQRCquote :2]                                                                  ;
-                 [:!EWQRCbackslash :3]                                                              ;
-                 [:!EWQRCslash :0]                                                                  ;
+                 [:!EWQCl :!Sequal_sign]                                                           ;
+                 [:!EWQCperiod :!Sequal_sign]                                                      ;
+                 [:!EWQCdelete_or_backspace :!Sequal_sign]                                         ;
+                 [:!EWQCreturn_or_enter :equal_sign]                                               ;
+                 [:!EWQCright_shift :!Sequal_sign]                                                 ;
+                 [:!EWQC0 :7]                                                                      ;
+                 [:!EWQChyphen :8]                                                                 ;
+                 [:!EWQCequal_sign :9]                                                             ;
+                 [:!EWQCp :4]                                                                      ;
+                 [:!EWQCopen_bracket :5]                                                           ;
+                 [:!EWQCclose_bracket :6]                                                          ;
+                 [:!EWQCsemicolon :1]                                                              ;
+                 [:!EWQCquote :2]                                                                  ;
+                 [:!EWQCbackslash :3]                                                              ;
+                 [:!EWQCslash :0]                                                                  ;
 
                  ; hyper
-                 [:!EWQROTCS0 :7]                                                                   ;
-                 [:!EWQROTCShyphen :8]                                                              ;
-                 [:!EWQROTCSequal_sign :9]                                                          ;
-                 [:!EWQROTCSp :4]                                                                   ;
-                 [:!EWQROTCSopen_bracket :5]                                                        ;
-                 [:!EWQROTCSclose_bracket :6]                                                       ;
-                 [:!EWQROTCSsemicolon :1]                                                           ;
-                 [:!EWQROTCSquote :2]                                                               ;
-                 [:!EWQROTCSbackslash :3]                                                           ;
-                 [:!EWQROTCSslash :0]                                                               ;
+                 [:!EWQOTCSl :!Sequal_sign]                                                        ;
+                 [:!EWQOTCSperiod :!Sequal_sign]                                                   ;
+                 [:!EWQOTCSdelete_or_backspace :!Sequal_sign]                                      ;
+                 [:!EWQOTCSreturn_or_enter :equal_sign]                                            ;
+                 [:!EWQOTCSright_shift :!Sequal_sign]                                              ;
+                 [:!EWQOTCS0 :7]                                                                   ;
+                 [:!EWQOTCShyphen :8]                                                              ;
+                 [:!EWQOTCSequal_sign :9]                                                          ;
+                 [:!EWQOTCSp :4]                                                                   ;
+                 [:!EWQOTCSopen_bracket :5]                                                        ;
+                 [:!EWQOTCSclose_bracket :6]                                                       ;
+                 [:!EWQOTCSsemicolon :1]                                                           ;
+                 [:!EWQOTCSquote :2]                                                               ;
+                 [:!EWQOTCSbackslash :3]                                                           ;
+                 [:!EWQOTCSslash :0]                                                               ;
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
