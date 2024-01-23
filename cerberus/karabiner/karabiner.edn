@@ -375,7 +375,7 @@
         {:des "Tab Mode - alphabet"
          :rules [[:!EQRa [:semicolon :semicolon :a]]                                                ; 'α'
                  [:!EQRb [:semicolon :semicolon :b]]                                                ; 'β'
-                 [:!EQRc [:semicolon :semicolon :c]]                                                ; ''
+                 ; [:!EQRc [:semicolon :semicolon :c]]                                              ; ''
                  [:!EQRd [:semicolon :semicolon :d]]                                                ; 'δ'
                  [:!EQRe [:semicolon :semicolon :e]]                                                ; 'ε'
                  [:!EQRf [:semicolon :semicolon :f]]                                                ; 'φ'
@@ -389,13 +389,13 @@
                  [:!EQRn [:semicolon :semicolon :n]]                                                ; 'ν'
                  [:!EQRo [:semicolon :semicolon :o]]                                                ; 'ο'
                  [:!EQRp [:semicolon :semicolon :p]]                                                ; 'π'
-                 [:!EQRq [:semicolon :semicolon :q]]                                                ; ''
+                 ; [:!EQRq [:semicolon :semicolon :q]]                                              ; ''
                  [:!EQRr [:semicolon :semicolon :r]]                                                ; 'ρ'
                  [:!EQRs [:semicolon :semicolon :s]]                                                ; 'σ'
                  [:!EQRt [:semicolon :semicolon :t]]                                                ; 'τ'
                  [:!EQRu [:semicolon :semicolon :u]]                                                ; 'θ'
                  [:!EQRv [:semicolon :semicolon :v]]                                                ; 'ω'
-                 [:!EQRw [:semicolon :semicolon :w]]                                                ; ''
+                 ; [:!EQRw [:semicolon :semicolon :w]]                                              ; ''
                  [:!EQRx [:semicolon :semicolon :x]]                                                ; 'χ'
                  [:!EQRy [:semicolon :semicolon :y]]                                                ; 'υ'
                  [:!EQRz [:semicolon :semicolon :z]]                                                ; 'ζ'
@@ -430,16 +430,16 @@
                  [:!WQRh [:comma :comma :h]]                                                        ; 'з'
                  [:!WQRi [:comma :comma :i]]                                                        ; 'и'
                  [:!WQRj [:comma :comma :j]]                                                        ; 'ʌ'
-                 [:!WQRk [:comma :comma :k]]                                                        ; ''
+                 ; [:!WQRk [:comma :comma :k]]                                                      ; ''
                  [:!WQRl [:comma :comma :l]]                                                        ; 'ł'
                  [:!WQRm [:comma :comma :m]]                                                        ; 'ɱ'
                  [:!WQRn [:comma :comma :n]]                                                        ; 'ŋ'
                  [:!WQRo [:comma :comma :o]]                                                        ; 'ø'
                  [:!WQRp [:comma :comma :p]]                                                        ; 'п'
-                 [:!WQRq [:comma :comma :q]]                                                        ; ''
+                 ; [:!WQRq [:comma :comma :q]]                                                      ; ''
                  [:!WQRr [:comma :comma :r]]                                                        ; 'я'
                  [:!WQRs [:comma :comma :s]]                                                        ; 'Σ'
-                 [:!WQRt [:comma :comma :t]]                                                        ; ''
+                 ; [:!WQRt [:comma :comma :t]]                                                      ; ''
                  [:!WQRu [:comma :comma :u]]                                                        ; 'Θ'
                  [:!WQRv [:comma :comma :v]]                                                        ; 'Ω'
                  [:!WQRw [:comma :comma :w]]                                                        ; 'ʍ'
@@ -469,19 +469,7 @@
 
         ; option
         {:des "Coding modifications - option"
-         :rules [[:!O1 [:spacebar :!S1 :spacebar]]                                                  ; ' ! '
-                 [:!O2 [:spacebar :!S2 :spacebar]]                                                  ; ' @ '
-                 ; [:!O3 []]                                                                        ;
-                 [:!O4 [:spacebar :!S4 :spacebar]]                                                  ; ' $ '
-                 [:!O5 [:spacebar :!S5 :spacebar]]                                                  ; ' % '
-                 [:!O6 [:spacebar :!S6 :spacebar]]                                                  ; ' ^ '
-                 ; [:!O7 []]                                                                        ;
-                 [:!O8 [:spacebar :!S8 :spacebar]]                                                  ; ' * '
-                 [:!O9 [:spacebar :slash :spacebar]]                                                ; ' / '
-                 [:!O0 [:spacebar :!Sequal_sign :spacebar]]                                         ; ' + '
-                 [:!Ohyphen [:spacebar :hyphen :spacebar]]                                          ; ' - '
-                 [:!Oequal_sign [:spacebar :equal_sign :spacebar]]                                  ; ' = '
-                 [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]             ; ' == '
+         :rules [[:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]             ; ' == '
                  [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                       ; ' <= '
                  [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                     ; ' >= '
                  ; [:!Osemicolon []]                                                                ; ''
@@ -496,19 +484,7 @@
 
         ; option - shift
         {:des "Coding modifications - option - shift"
-         :rules [[:!OS1 [:spacebar :period :!S1 :spacebar]]                                         ; ' .! '
-                 [:!OS2 [:spacebar :period :!S2 :spacebar]]                                         ; ' .@ '
-                 ; [:!OS3 []]                                                                       ;
-                 [:!OS4 [:spacebar :period :!S4 :spacebar]]                                         ; ' .$ '
-                 [:!OS5 [:spacebar :period :!S5 :spacebar]]                                         ; ' .% '
-                 [:!OS6 [:spacebar :period :!S6 :spacebar]]                                         ; ' .^ '
-                 ; [:!OS7 []]                                                                       ;
-                 [:!OS8 [:spacebar :period :!S8 :spacebar]]                                         ; ' .* '
-                 [:!OS9 [:spacebar :period :slash :spacebar]]                                       ; ' ./ '
-                 [:!OS0 [:spacebar :period :!Sequal_sign :spacebar]]                                ; ' .+ '
-                 [:!OShyphen [:spacebar :period :hyphen :spacebar]]                                 ; ' .- '
-                 [:!OSequal_sign [:spacebar :period :equal_sign :spacebar]]                         ; ' .= '
-                 [:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]]    ; ' .== '
+         :rules [[:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]]    ; ' .== '
                  [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]              ; ' .<= '
                  [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]            ; ' .>= '
                  [:!OSsemicolon [:spacebar :period :!Sbackslash :!Speriod :spacebar]]               ; ' .|> '
@@ -523,19 +499,7 @@
 
         ; control
         {:des "Coding modifications - control"
-         :rules [[:!T1 [:spacebar :!S1 :!S1 :spacebar]]                                             ; ' !! '
-                 ; [:!T2 []]                                                                        ;
-                 ; [:!T3 []]                                                                        ;
-                 ; [:!T4 []]                                                                        ;
-                 [:!T5 [:spacebar :!S5 :!S5 :spacebar]]                                             ; ' %% '
-                 ; [:!T6 []]                                                                        ;
-                 ; [:!T7 []]                                                                        ;
-                 [:!T8 [:spacebar :!S8 :!S8 :spacebar]]                                             ; ' ** '
-                 [:!T9 [:spacebar :slash :slash :spacebar]]                                         ; ' // '
-                 [:!T0 [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                           ; ' ++ '
-                 [:!Thyphen [:spacebar :hyphen :hyphen :spacebar]]                                  ; ' -- '
-                 [:!Tequal_sign [:spacebar :!S1 :equal_sign :spacebar]]                             ; ' != '
-                 [:!Tdelete_or_backspace [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]] ; ' === '
+         :rules [[:!Tdelete_or_backspace [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]] ; ' === '
                  ; [:!Topen_bracket []]                                                             ;
                  ; [:!Tclose_bracket []]                                                            ;
                  ; [:!Tsemicolon []]                                                                ;
@@ -551,19 +515,8 @@
 
         ; control - shift
         {:des "Coding modifications - control - shift"
-         :rules [[:!TS1 [:spacebar :period :!S1 :!S1 :spacebar]]                                    ; ' .!! '
-                 ; [:!TS2 []]                                                                       ;
-                 ; [:!TS3 []]                                                                       ;
-                 ; [:!TS4 []]                                                                       ;
-                 [:!TS5 [:spacebar :period :!S5 :!S5 :spacebar]]                                    ; ' .%% '
-                 ; [:!TS6 []]                                                                       ;
-                 ; [:!TS7 []]                                                                       ;
-                 [:!TS8 [:spacebar :period :!S8 :!S8 :spacebar]]                                    ; ' .** '
-                 [:!TS9 [:spacebar :period :slash :slash :spacebar]]                                ; ' .// '
-                 [:!TS0 [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]                  ; ' .++ '
-                 [:!TShyphen [:spacebar :period :hyphen :hyphen :spacebar]]                         ; ' .-- '
-                 [:!TSequal_sign [:spacebar :period :!S1 :equal_sign :spacebar]]                    ; ' .!= '
-                 [:!TSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]] ; ' .=== '                                                                                                                            ;
+         :rules [[:!TSdelete_or_backspace                                                           ;
+                  [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                ; ' .=== '                                                                                                                            ;
                  ; [:!TSopen_bracket []]                                                            ;
                  ; [:!TSclose_bracket []]                                                           ;
                  ; [:!TSsemicolon []]                                                               ;
@@ -579,19 +532,7 @@
 
         ; control - command
         {:des "Coding modifications - control - command"
-         :rules [; [:!TC1 []]                                                                       ;
-                 ; [:!TC2 []]                                                                       ;
-                 ; [:!TC3 []]                                                                       ;
-                 ; [:!TC4 []]                                                                       ;
-                 ; [:!TC5 []]                                                                       ;
-                 ; [:!TC6 []]                                                                       ;
-                 [:!TC7 [:spacebar :slash :equal_sign :spacebar]]                                   ; ' /= '
-                 [:!TC8 [:spacebar :!S8 :equal_sign :spacebar]]                                     ; ' *= '
-                 [:!TC9 [:spacebar :hyphen :equal_sign :spacebar]]                                  ; ' -= '
-                 [:!TC0 [:spacebar :!Sequal_sign :equal_sign :spacebar]]                            ; ' += '
-                 ; [:!TChyphen []]                                                                  ;
-                 ; [:!TCequal_sign []]                                                              ;
-                 ; [:!TCdelete_or_backspace []]                                                     ;
+         :rules [; [:!TCdelete_or_backspace []]                                                     ;
                  ; [:!TCopen_bracket []]                                                            ;
                  ; [:!TCclose_bracket []]                                                           ;
                  ; [:!TCsemicolon []]                                                               ;
@@ -601,23 +542,6 @@
                  [:!TCperiod [:spacebar :hyphen :!Speriod :spacebar]]                               ; ' -> '
                  ; [:!TCslash []]                                                                   ;
                  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        ; ; command
-        ; {:des "Coding modifications - command"
-        ;  :rules [; [:!Chyphen []]                                                                   ;
-        ;          ; [:!Cequal_sign []]                                                               ;
-        ;          ; [:!Cdelete_or_backspace []]                                                      ;
-        ;          ; [:!Copen_bracket []]                                                             ;
-        ;          ; [:!Cclose_bracket []]                                                            ;
-        ;          ; [:!Csemicolon []]                                                                ;
-        ;          ; [:!Cquote []]                                                                    ;
-        ;          ; [:!Cbackslash []]                                                                ;
-        ;          ; [:!Ccomma []]                                                                    ;
-        ;          ; [:!Cperiod []]                                                                   ;
-        ;          ; [:!Cslash []]                                                                    ;
-        ;          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -662,106 +586,106 @@
         ; function
         {:des "Function keypad"
          :rules [;simple
-                 ; [:!EWQl :slash]                                                                   ; '/'
-                 ; [:!EWQperiod :!S8]                                                                ; '*'
-                 ; [:!EWQdelete_or_backspace :hyphen]                                                ; '-'
-                 ; [:!EWQreturn_or_enter :!Sequal_sign]                                              ; '+'
-                 ; [:!EWQright_shift :equal_sign]                                                    ; '='
-                 [:!EWQ0 :7]                                                                       ; '7'
-                 [:!EWQhyphen :8]                                                                  ; '8'
-                 [:!EWQequal_sign :9]                                                              ; '9'
-                 [:!EWQp :4]                                                                       ; '4'
-                 [:!EWQopen_bracket :5]                                                            ; '5'
-                 [:!EWQclose_bracket :6]                                                           ; '6'
-                 [:!EWQsemicolon :1]                                                               ; '1'
-                 [:!EWQquote :2]                                                                   ; '2'
-                 [:!EWQbackslash :3]                                                               ; '3'
-                 [:!EWQslash :0]                                                                   ; '0'
+                 ; [:!EWQl :slash]                                                                  ; '/'
+                 ; [:!EWQperiod :!S8]                                                               ; '*'
+                 ; [:!EWQdelete_or_backspace :hyphen]                                               ; '-'
+                 ; [:!EWQreturn_or_enter :!Sequal_sign]                                             ; '+'
+                 ; [:!EWQright_shift :equal_sign]                                                   ; '='
+                 [:!EWQ0 :7]                                                                        ; '7'
+                 [:!EWQhyphen :8]                                                                   ; '8'
+                 [:!EWQequal_sign :9]                                                               ; '9'
+                 [:!EWQp :4]                                                                        ; '4'
+                 [:!EWQopen_bracket :5]                                                             ; '5'
+                 [:!EWQclose_bracket :6]                                                            ; '6'
+                 [:!EWQsemicolon :1]                                                                ; '1'
+                 [:!EWQquote :2]                                                                    ; '2'
+                 [:!EWQbackslash :3]                                                                ; '3'
+                 [:!EWQslash :0]                                                                    ; '0'
 
                  ; option
-                 [:!EWQOl [:spacebar :!S1 :spacebar]]                                              ; ' / '
-                 [:!EWQOperiod :!Sequal_sign]                                                      ; ' * '
-                 [:!EWQOdelete_or_backspace :!Sequal_sign]                                         ; ' - '
-                 [:!EWQOreturn_or_enter :equal_sign]                                               ; ' + '
-                 [:!EWQOright_shift :!Sequal_sign]                                                 ; ' = '
-                 ; [:!EWQO0 []]                                                                      ; ''
-                 ; [:!EWQOhyphen []]                                                                 ; ''
-                 ; [:!EWQOequal_sign []]                                                             ; ''
-                 [:!EWQOp [:spacebar :!S4 :spacebar]]                                                                      ; ''
-                 [:!EWQOopen_bracket [:spacebar :!S5 :spacebar]]                                                           ; ''
-                 [:!EWQOclose_bracket [:spacebar :!S6 :spacebar]]                                                          ; ''
-                 [:!EWQOsemicolon [:spacebar :!S1 :spacebar]]                                                              ; ''
-                 [:!EWQOquote [:spacebar :!S2 :spacebar]]                                                                  ; ''
-                 [:!EWQObackslash [:spacebar :!S7 :spacebar]]                                                              ; ''
-                 [:!EWQOslash [:spacebar :equal_sign :equal_sign :spacebar]]                                                                  ; ''
+                 [:!EWQOl [:spacebar :!S1 :spacebar]]                                               ; ' / '
+                 [:!EWQOperiod :!Sequal_sign]                                                       ; ' * '
+                 [:!EWQOdelete_or_backspace :!Sequal_sign]                                          ; ' - '
+                 [:!EWQOreturn_or_enter :equal_sign]                                                ; ' + '
+                 [:!EWQOright_shift :!Sequal_sign]                                                  ; ' = '
+                 ; [:!EWQO0 []]                                                                     ; ''
+                 ; [:!EWQOhyphen []]                                                                ; ''
+                 ; [:!EWQOequal_sign []]                                                            ; ''
+                 [:!EWQOp [:spacebar :!S4 :spacebar]]                                               ; ' $ '
+                 [:!EWQOopen_bracket [:spacebar :!S5 :spacebar]]                                    ; ' % '
+                 [:!EWQOclose_bracket [:spacebar :!S6 :spacebar]]                                   ; ' ^ '
+                 [:!EWQOsemicolon [:spacebar :!S1 :spacebar]]                                       ; ' ! '
+                 [:!EWQOquote [:spacebar :!S2 :spacebar]]                                           ; ' @ '
+                 [:!EWQObackslash [:spacebar :!S7 :spacebar]]                                       ; ' & '
+                 [:!EWQOslash [:spacebar :equal_sign :equal_sign :spacebar]]                        ; ' == '
 
                  ; control
-                 [:!EWQTl :!Sequal_sign]                                                           ; ' ./ '
-                 [:!EWQTperiod :!Sequal_sign]                                                      ; ' .* '
-                 [:!EWQTdelete_or_backspace :!Sequal_sign]                                         ; ' .- '
-                 [:!EWQTreturn_or_enter :equal_sign]                                               ; ' .+ '
-                 [:!EWQTright_shift :!Sequal_sign]                                                 ; ' .= '
-                 ; [:!EWQT0 []]                                                                      ; ''
-                 ; [:!EWQThyphen []]                                                                 ; ''
-                 ; [:!EWQTequal_sign []]                                                             ; ''
-                 [:!EWQTp [:spacebar :period :!S4 :spacebar]]                                                                      ; ''
-                 [:!EWQTopen_bracket [:spacebar :period :!S5 :spacebar]]                                                           ; ''
-                 [:!EWQTclose_bracket [:spacebar :period :!S6 :spacebar]]                                                          ; ''
-                 [:!EWQTsemicolon [:spacebar :period :!S1 :spacebar]]                                                              ; ''
-                 [:!EWQTquote [:spacebar :period :!S2 :spacebar]]                                                                  ; ''
-                 [:!EWQTbackslash [:spacebar :period :!S7 :spacebar]]                                                              ; ''
-                 [:!EWQTslash [:spacebar :period :equal_sign :equal_sign :spacebar]]                                                                  ; ''
+                 [:!EWQTl :!Sequal_sign]                                                            ; ' ./ '
+                 [:!EWQTperiod :!Sequal_sign]                                                       ; ' .* '
+                 [:!EWQTdelete_or_backspace :!Sequal_sign]                                          ; ' .- '
+                 [:!EWQTreturn_or_enter :equal_sign]                                                ; ' .+ '
+                 [:!EWQTright_shift :!Sequal_sign]                                                  ; ' .= '
+                 ; [:!EWQT0 []]                                                                     ; ''
+                 ; [:!EWQThyphen []]                                                                ; ''
+                 ; [:!EWQTequal_sign []]                                                            ; ''
+                 [:!EWQTp [:spacebar :period :!S4 :spacebar]]                                       ; ' .$ '
+                 [:!EWQTopen_bracket [:spacebar :period :!S5 :spacebar]]                            ; ' .% '
+                 [:!EWQTclose_bracket [:spacebar :period :!S6 :spacebar]]                           ; ' .^ '
+                 [:!EWQTsemicolon [:spacebar :period :!S1 :spacebar]]                               ; ' .! '
+                 [:!EWQTquote [:spacebar :period :!S2 :spacebar]]                                   ; ' .@ '
+                 [:!EWQTbackslash [:spacebar :period :!S7 :spacebar]]                               ; ' .& '
+                 [:!EWQTslash [:spacebar :period :equal_sign :equal_sign :spacebar]]                ; ' .== '
 
                  ; shift
-                 [:!EWQSl :!Sequal_sign]                                                           ; ' // '
-                 [:!EWQSperiod :!Sequal_sign]                                                      ; ' ** '
-                 [:!EWQSdelete_or_backspace :!Sequal_sign]                                         ; ' -- '
-                 [:!EWQSreturn_or_enter :equal_sign]                                               ; ' ++ '
-                 [:!EWQSright_shift :!Sequal_sign]                                                 ; ' == '
-                 ; [:!EWQS0 []]                                                                      ; ''
-                 ; [:!EWQShyphen []]                                                                 ; ''
-                 ; [:!EWQSequal_sign []]                                                             ; ''
-                 [:!EWQSp [:spacebar :!S4 :!S4 :spacebar]]                                                                      ; ''
-                 [:!EWQSopen_bracket [:spacebar :!S5 :!S5 :spacebar]]                                                           ; ''
-                 [:!EWQSclose_bracket [:spacebar :!S6 :!S6 :spacebar]]                                                          ; ''
-                 [:!EWQSsemicolon [:spacebar :!S1 :!S1 :spacebar]]                                                              ; ''
-                 [:!EWQSquote [:spacebar :!S2 :!S2 :spacebar]]                                                                  ; ''
-                 [:!EWQSbackslash [:spacebar :!S7 :!S7 :spacebar]]                                                              ; ''
-                 [:!EWQSslash [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                                                                  ; ''
+                 [:!EWQSl :!Sequal_sign]                                                            ; ' // '
+                 [:!EWQSperiod :!Sequal_sign]                                                       ; ' ** '
+                 [:!EWQSdelete_or_backspace :!Sequal_sign]                                          ; ' -- '
+                 [:!EWQSreturn_or_enter :equal_sign]                                                ; ' ++ '
+                 [:!EWQSright_shift :!Sequal_sign]                                                  ; ' == '
+                 ; [:!EWQS0 []]                                                                     ; ''
+                 ; [:!EWQShyphen []]                                                                ; ''
+                 ; [:!EWQSequal_sign []]                                                            ; ''
+                 [:!EWQSp [:spacebar :!S4 :!S4 :spacebar]]                                          ; ' $$ '
+                 [:!EWQSopen_bracket [:spacebar :!S5 :!S5 :spacebar]]                               ; ' %% '
+                 [:!EWQSclose_bracket [:spacebar :!S6 :!S6 :spacebar]]                              ; ' ^^ '
+                 [:!EWQSsemicolon [:spacebar :!S1 :!S1 :spacebar]]                                  ; ' !! '
+                 [:!EWQSquote [:spacebar :!S2 :!S2 :spacebar]]                                      ; ' @@ '
+                 [:!EWQSbackslash [:spacebar :!S7 :!S7 :spacebar]]                                  ; ' && '
+                 [:!EWQSslash [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]            ; ' === '
 
                  ; hyper
-                 [:!EWQOTCSl :!Sequal_sign]                                                        ; ' .// '
-                 [:!EWQOTCSperiod :!Sequal_sign]                                                   ; ' .** '
-                 [:!EWQOTCSdelete_or_backspace :!Sequal_sign]                                      ; ' .-- '
-                 [:!EWQOTCSreturn_or_enter :equal_sign]                                            ; ' .++ '
-                 [:!EWQOTCSright_shift :!Sequal_sign]                                              ; ' .== '
-                 ; [:!EWQOTCS0 []]                                                                      ; ''
-                 ; [:!EWQOTCShyphen []]                                                                 ; ''
-                 ; [:!EWQOTCSequal_sign []]                                                             ; ''
-                 [:!EWQOTCSp [:spacebar :period :!S4 :!S4 :spacebar]]                                                                      ; ''
-                 [:!EWQOTCSopen_bracket [:spacebar :period :!S5 :!S5 :spacebar]]                                                           ; ''
-                 [:!EWQOTCSclose_bracket [:spacebar :period :!S6 :!S6 :spacebar]]                                                          ; ''
-                 [:!EWQOTCSsemicolon [:spacebar :period :!S1 :!S1 :spacebar]]                                                              ; ''
-                 [:!EWQOTCSquote [:spacebar :period :!S2 :!S2 :spacebar]]                                                                  ; ''
-                 [:!EWQOTCSbackslash [:spacebar :period :!S7 :!S7 :spacebar]]                                                              ; ''
-                 [:!EWQOTCSslash [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                                                                  ; ''
+                 [:!EWQOTCSl :!Sequal_sign]                                                         ; ' .// '
+                 [:!EWQOTCSperiod :!Sequal_sign]                                                    ; ' .** '
+                 [:!EWQOTCSdelete_or_backspace :!Sequal_sign]                                       ; ' .-- '
+                 [:!EWQOTCSreturn_or_enter :equal_sign]                                             ; ' .++ '
+                 [:!EWQOTCSright_shift :!Sequal_sign]                                               ; ' .== '
+                 ; [:!EWQOTCS0 []]                                                                  ; ''
+                 ; [:!EWQOTCShyphen []]                                                             ; ''
+                 ; [:!EWQOTCSequal_sign []]                                                         ; ''
+                 [:!EWQOTCSp [:spacebar :period :!S4 :!S4 :spacebar]]                               ; ' .$$ '
+                 [:!EWQOTCSopen_bracket [:spacebar :period :!S5 :!S5 :spacebar]]                    ; ' .%% '
+                 [:!EWQOTCSclose_bracket [:spacebar :period :!S6 :!S6 :spacebar]]                   ; ' .^^ '
+                 [:!EWQOTCSsemicolon [:spacebar :period :!S1 :!S1 :spacebar]]                       ; ' .!! '
+                 [:!EWQOTCSquote [:spacebar :period :!S2 :!S2 :spacebar]]                           ; ' .@@ '
+                 [:!EWQOTCSbackslash [:spacebar :period :!S7 :!S7 :spacebar]]                       ; ' .&& '
+                 [:!EWQOTCSslash [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]] ; ' .=== '
 
-                 ; command
-                 [:!EWQCl :!Sequal_sign]                                                           ; ''
-                 [:!EWQCperiod :!Sequal_sign]                                                      ; ''
-                 [:!EWQCdelete_or_backspace :!Sequal_sign]                                         ; ''
-                 [:!EWQCreturn_or_enter :equal_sign]                                               ; ''
-                 [:!EWQCright_shift :!Sequal_sign]                                                 ; ''
-                 ; [:!EWQC0 []]                                                                      ; ''
-                 ; [:!EWQChyphen []]                                                                 ; ''
-                 ; [:!EWQCequal_sign []]                                                             ; ''
-                 [:!EWQCp [:spacebar :!S4 :spacebar]]                                                                      ; ''
-                 [:!EWQCopen_bracket [:spacebar :!S5 :spacebar]]                                                           ; ''
-                 [:!EWQCclose_bracket [:spacebar :!S6 :spacebar]]                                                          ; ''
-                 [:!EWQCsemicolon [:spacebar :!S1 :spacebar]]                                                              ; ''
-                 [:!EWQCquote [:spacebar :!S2 :spacebar]]                                                                  ; ''
-                 [:!EWQCbackslash [:spacebar :!S7 :spacebar]]                                                              ; ''
-                 [:!EWQCslash [:spacebar :equal_sign :equal_sign :spacebar]]                                                                  ; ''
+                ; command
+                 [:!EWQCl [:spacebar :slash :equal_sign :spacebar]]                                 ; ' /= '
+                 [:!EWQCperiod [:spacebar :!S8 :equal_sign :spacebar]]                              ; ' *= '
+                 [:!EWQCdelete_or_backspace [:spacebar :hyphen :equal_sign :spacebar]]              ; ' -= '
+                 [:!EWQCreturn_or_enter [:spacebar :!Sequal_sign :equal_sign :spacebar]]            ; ' += '
+                 [:!EWQCright_shift :!Sequal_sign]                                                  ; ''
+                 ; [:!EWQC0 []]                                                                     ; ''
+                 ; [:!EWQChyphen []]                                                                ; ''
+                 ; [:!EWQCequal_sign []]                                                            ; ''
+                 [:!EWQCp []]                                                                       ; ''
+                 [:!EWQCopen_bracket []]                                                            ; ''
+                 [:!EWQCclose_bracket []]                                                           ; ''
+                 [:!EWQCsemicolon []]                                                               ; ''
+                 [:!EWQCquote []]                                                                   ; ''
+                 [:!EWQCbackslash []]                                                               ; ''
+                 [:!EWQCslash []]                                                                   ; ''
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -822,7 +746,8 @@
 
                   ; control - shift
                   [:!TSkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]      ; ' .// '
-                  [:!TSkeypad_asterisk [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]       ; ' .** '
+                  [:!TSkeypad_asterisk                                                              ;
+                   [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]                 ; ' .** '
                   [:!TSkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]   ; ' .-- '
                   [:!TSkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]         ; ' .++ '
                   [:!TSkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]          ; ' .== '
@@ -839,7 +764,8 @@
 
                   ; control - command
                   [:!TCkeypad_slash [:spacebar :period :keypad_slash :keypad_slash :spacebar]]      ; ' .// '
-                  [:!TCkeypad_asterisk [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]       ; ' .** '
+                  [:!TCkeypad_asterisk                                                              ;
+                   [:spacebar :period :keypad_asterisk :keypad_asterisk :spacebar]]                 ; ' .** '
                   [:!TCkeypad_hyphen [:spacebar :period :keypad_hyphen :keypad_hyphen :spacebar]]   ; ' .-- '
                   [:!TCkeypad_plus [:spacebar :period :keypad_plus :keypad_plus :spacebar]]         ; ' .++ '
                   [:!TCkeypad_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]          ; ' .== '
