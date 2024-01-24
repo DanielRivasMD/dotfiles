@@ -2258,6 +2258,15 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Control - Command Mode - alphabet",
@@ -3935,51 +3944,30 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "f20",
+            "key_code" : "0",
             "modifiers" : {
-              "mandatory" : [ "left_control" ]
+              "mandatory" : [ "right_command", "right_control", "right_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "0"
+            "key_code" : "grave_accent_and_tilde"
           } ],
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "f20",
+            "key_code" : "0",
             "modifiers" : {
-              "mandatory" : [ "left_command" ]
+              "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ]
             }
           },
           "to" : [ {
-            "key_code" : "0"
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "f20",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
             "key_code" : "0"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f20",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "0"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f19"
           },
           "to" : [ {
             "key_code" : "non_us_backslash"
@@ -3987,9 +3975,9 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "f19",
+            "key_code" : "0",
             "modifiers" : {
-              "mandatory" : [ "left_shift" ]
+              "mandatory" : [ "left_command" ]
             }
           },
           "to" : [ {
