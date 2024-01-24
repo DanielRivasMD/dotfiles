@@ -132,8 +132,9 @@ Cerberus:
   echo 'Linking completions'
   echo '===================================================================================================='
   if [[ ! -d "${config}/zsh_completion" ]]; then mkdir "${config}/zsh_completion"; fi
-  ln -svf "${observatory}/eza/completions/zsh/_eza" "${config}/zsh_completion/_eza"
   ln -svf "${observatory}/fd/contrib/completion/_fd" "${config}/zsh_completion/_fd"
+  ln -svf "${observatory}/eza/completions/zsh/_eza" "${config}/zsh_completion/_eza"
+  ln -svf "${observatory}/just/completions/just.zsh" "${config}/zsh_completion/_just"
   ln -svf "${observatory}/watchexec/completions/zsh" "${config}/zsh_completion/_watchexec"
   echo '===================================================================================================='
 
