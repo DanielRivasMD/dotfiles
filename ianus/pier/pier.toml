@@ -318,6 +318,17 @@ command = 'sftp drivas@topaz.pawsey.org.au'
 description = 'sftp to Pawsey Topaz'
 tags = ['remote']
 
+[scripts.update]
+alias = 'update'
+command = '''
+#!/bin/sh
+brew upgrade
+rustup update
+$HOME/bin/forkedPatch/pier cargo-up
+'''
+description = 'update packages'
+tags = ['shell']
+
 [scripts.uppmax-sftp]
 alias = 'uppmax-sftp'
 command = 'sftp drivas@rackham.uppmax.uu.se'
