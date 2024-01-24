@@ -118,7 +118,7 @@ tags = ['shell']
 [scripts.git]
 alias = 'git'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 source ${PIER}/break_single_line.sh $COLUMNS
 
 git status --short
@@ -152,7 +152,7 @@ tags = ['go']
 [scripts.gt]
 alias = 'gt'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 directory="/Users/drivas/.archive/pier/"
 case "$1" in
 1)  bat -l "Git Config" ${HOME}/.gitconfig.d/alias_one_letter
@@ -175,7 +175,7 @@ tags = ['julia']
 [scripts.kal]
 alias = 'kal'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»"
@@ -187,7 +187,7 @@ tags = ['khal']
 [scripts.kals]
 alias = 'kals'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
 khal list \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
@@ -201,7 +201,7 @@ tags = ['khal']
 [scripts.kastro]
 alias = 'kastro'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --include-calendar Astronomy
@@ -213,7 +213,7 @@ tags = ['khal']
 [scripts.kaw]
 alias = 'kaw'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
@@ -239,7 +239,7 @@ tags = ['khal']
 [scripts.krugby]
 alias = 'krugby'
 command = '''
-#!/bin/zsh
+#!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
 khal calendar \
   --include-calendar SuperRugby
