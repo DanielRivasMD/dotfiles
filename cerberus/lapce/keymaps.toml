@@ -129,6 +129,10 @@ key = 'Meta+\'
 ####################################################################################################
 
 [[keymaps]]
+command = "palette"
+key = "Ctrl+r"
+
+[[keymaps]]
 command = "palette.command"
 key = "Ctrl+t"
 
@@ -203,6 +207,10 @@ command = "next_diff"
 key = "Alt+Meta+ArrowDown"
 
 [[keymaps]]
+command = "previous_diff"
+key = "Alt+Meta+ArrowUp"
+
+[[keymaps]]
 command = "select_next_current"
 mode = "i"
 key = "Alt+d"
@@ -218,16 +226,9 @@ mode = "i"
 key = "Alt+a"
 
 [[keymaps]]
-command = "palette"
-key = "Ctrl+r"
-
-[[keymaps]]
-command = "previous_diff"
-key = "Alt+Meta+ArrowUp"
-
-[[keymaps]]
-command = "goto_definition"
-key = "Ctrl+Alt+Meta+Enter"
+command = "select_undo"
+mode = "i"
+key = "Alt+z"
 
 [[keymaps]]
 command = "duplicate_line_down"
@@ -238,11 +239,6 @@ key = "Alt+Shift+d"
 command = "duplicate_line_up"
 mode = "i"
 key = " "
-
-[[keymaps]]
-command = "select_undo"
-mode = "i"
-key = "Meta+z"
 
 [[keymaps]]
 command = "next_window_tab"
@@ -262,11 +258,11 @@ key = "Alt+Shift+F4"
 
 [[keymaps]]
 command = "next_error"
-key = "Ctrl+X"
+key = "Ctrl+x"
 
 [[keymaps]]
 command = "previous_error"
-key = "Ctrl+V"
+key = "Ctrl+v"
 
 [[keymaps]]
 command = "open_keyboard_shortcuts"
@@ -275,18 +271,20 @@ key = "Meta+."
 [[keymaps]]
 command = "delete_to_beginning_of_line"
 mode = "i"
-key = "Ctrl+U"
+key = "Ctrl+u"
 
 [[keymaps]]
 command = "split_vertical"
-key = "Alt+Shift+G"
+key = "Alt+Shift+g"
 
 [[keymaps]]
 command = "split_horizontal"
-key = "Alt+Shift+H"
+key = "Alt+Shift+h"
+
+[[keymaps]]
+command = "goto_definition"
+key = "Ctrl+Alt+Meta+Enter"
 
 [[keymaps]]
 command = "goto_type_definition"
 key = "Alt+Meta+Enter"
-
-####################################################################################################
