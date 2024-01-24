@@ -65,6 +65,7 @@
                  [:!OCreturn_or_enter :!CSf [:mail]]                                                ; `alt-cmd-enter` ->      forward
                  [:!Sreturn_or_enter :!Cn [:mail]]                                                  ; `shift-enter` ->        new
                  [:!OTCreturn_or_enter :!CSj [:mail]]                                               ; `alt-ctrl-cmd-enter` -> junk
+                 [:!EWQreturn_or_enter :!CSj [:mail]]                                               ; `alt-ctrl-cmd-enter` -> junk
                  [:!Tspacebar :!CSu [:mail]]                                                        ; `ctrl-space` ->         unread
                  [:!Sspacebar :!CSl [:mail]]                                                        ; `shift-space` ->        flag
                  [:!Cspacebar :!CSn [:mail]]                                                        ; `cmd-space` ->          get
@@ -156,7 +157,7 @@
 
         ; right command => open file  
         {:des "Change right_command to command-control & to open file when used alone"
-         :rules [[:right_command :!Tleft_command nil {:alone [:!Cnon_us_pound]}]]}
+         :rules [[:right_command :!Wright_command nil {:alone [:!Cnon_us_pound]}]]}
 
         ; tab
         {:des "Change espace to composed"
@@ -393,32 +394,32 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Control - Command Mode - alphabet"
-         :rules [[:!TCa [:comma :comma :a]]                                                         ; 'ɒ'
-                 [:!TCb [:comma :comma :b]]                                                         ; 'ß'
-                 [:!TCc [:comma :comma :c]]                                                         ; 'ç'
-                 [:!TCd [:comma :comma :d]]                                                         ; 'Δ'
-                 [:!TCe [:comma :comma :e]]                                                         ; 'ę'
-                 [:!TCf [:comma :comma :f]]                                                         ; 'ƒ'
-                 [:!TCg [:comma :comma :g]]                                                         ; 'ɣ'
-                 [:!TCh [:comma :comma :h]]                                                         ; 'з'
-                 [:!TCi [:comma :comma :i]]                                                         ; 'и'
-                 [:!TCj [:comma :comma :j]]                                                         ; 'ʌ'
-                 [:!TCk [:comma :comma :k]]                                                         ; 'ϙ'
-                 [:!TCl [:comma :comma :l]]                                                         ; 'ł'
-                 [:!TCm [:comma :comma :m]]                                                         ; 'ɱ'
-                 [:!TCn [:comma :comma :n]]                                                         ; 'ŋ'
-                 [:!TCo [:comma :comma :o]]                                                         ; 'ø'
-                 [:!TCp [:comma :comma :p]]                                                         ; 'п'
-                 ; [:!TCq [:comma :comma :q]]                                                       ; ''
-                 [:!TCr [:comma :comma :r]]                                                         ; 'я'
-                 [:!TCs [:comma :comma :s]]                                                         ; 'Σ'
-                 ; [:!TCt [:comma :comma :t]]                                                       ; ''
-                 [:!TCu [:comma :comma :u]]                                                         ; 'Θ'
-                 [:!TCv [:comma :comma :v]]                                                         ; 'Ω'
-                 [:!TCw [:comma :comma :w]]                                                         ; 'ʍ'
-                 [:!TCx [:comma :comma :x]]                                                         ; '∇'
-                 [:!TCy [:comma :comma :y]]                                                         ; 'Λ'
-                 [:!TCz [:comma :comma :z]]                                                         ; '∫'
+         :rules [[:!WQa [:comma :comma :a]]                                                         ; 'ɒ'
+                 [:!WQb [:comma :comma :b]]                                                         ; 'ß'
+                 [:!WQc [:comma :comma :c]]                                                         ; 'ç'
+                 [:!WQd [:comma :comma :d]]                                                         ; 'Δ'
+                 [:!WQe [:comma :comma :e]]                                                         ; 'ę'
+                 [:!WQf [:comma :comma :f]]                                                         ; 'ƒ'
+                 [:!WQg [:comma :comma :g]]                                                         ; 'ɣ'
+                 [:!WQh [:comma :comma :h]]                                                         ; 'з'
+                 [:!WQi [:comma :comma :i]]                                                         ; 'и'
+                 [:!WQj [:comma :comma :j]]                                                         ; 'ʌ'
+                 [:!WQk [:comma :comma :k]]                                                         ; 'ϙ'
+                 [:!WQl [:comma :comma :l]]                                                         ; 'ł'
+                 [:!WQm [:comma :comma :m]]                                                         ; 'ɱ'
+                 [:!WQn [:comma :comma :n]]                                                         ; 'ŋ'
+                 [:!WQo [:comma :comma :o]]                                                         ; 'ø'
+                 [:!WQp [:comma :comma :p]]                                                         ; 'п'
+                 ; [:!WQq [:comma :comma :q]]                                                       ; ''
+                 [:!WQr [:comma :comma :r]]                                                         ; 'я'
+                 [:!WQs [:comma :comma :s]]                                                         ; 'Σ'
+                 ; [:!WQt [:comma :comma :t]]                                                       ; ''
+                 [:!WQu [:comma :comma :u]]                                                         ; 'Θ'
+                 [:!WQv [:comma :comma :v]]                                                         ; 'Ω'
+                 [:!WQw [:comma :comma :w]]                                                         ; 'ʍ'
+                 [:!WQx [:comma :comma :x]]                                                         ; '∇'
+                 [:!WQy [:comma :comma :y]]                                                         ; 'Λ'
+                 [:!WQz [:comma :comma :z]]                                                         ; '∫'
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -532,6 +533,11 @@
                  [:!TCright_shift [:!S1 :!S1]]                                                      ; '!!'
                  [:!TCright_option [:!S8 :!S8]]                                                     ; '**'
                  [:!TCright_command [:slash :slash]]                                                ; '//'
+
+                 [:!WQquote [:period :quote :quote :quote :period]]                                 ; '```'
+                 [:!WQcomma [:spacebar :!Scomma :hyphen :spacebar]]                                 ; ' <- '
+                 [:!WQperiod [:spacebar :hyphen :!Speriod :spacebar]]                               ; ' -> '
+                 [:!WQright_shift [:!S1 :!S1]]                                                      ; '!!'
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -590,6 +596,7 @@
                  ; [:!Sf20 []]
                  [:!EWQ0 :grave_accent_and_tilde]                                                   ;
                  [:!EWQC0 :!Sgrave_accent_and_tilde]                                                ;
+                 [:f19 :grave_accent_and_tilde]                                                     ;
                  [:0 :non_us_backslash]                                                             ;
                  [:!C0 :!Snon_us_backslash]                                                         ;
                  ]}
