@@ -42,7 +42,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  :main [{:des "Launcher"
-         :rules [[:!WQR1 [:launch "Whatsapp"]]                                                      ;
+         :rules [
+                 [:!WQR1 [:launch "Whatsapp"]]                                                      ;
                  [:!WQR2 [:launch "Telegram"]]                                                      ;
                  [:!WQR3 [:launch "Slack"]]                                                         ;
                  [:!WQR4 [:launch "Skype"]]                                                         ;
@@ -59,7 +60,8 @@
 
         ; Mail
         {:des "Mail bindings"
-         :rules [[:!Creturn_or_enter :!CSd [:mail]]                                                 ; `cmd-enter` ->          send
+         :rules [
+                 [:!Creturn_or_enter :!CSd [:mail]]                                                 ; `cmd-enter` ->          send
                  [:!Oreturn_or_enter :!Cr [:mail]]                                                  ; `alt-enter` ->          reply
                  [:!OSreturn_or_enter :!CSr [:mail]]                                                ; `alt-shift-enter` ->    reply all
                  [:!OCreturn_or_enter :!CSf [:mail]]                                                ; `alt-cmd-enter` ->      forward
@@ -81,7 +83,8 @@
 
         ; Alacritty
         {:des "Terminal sessions"
-         :rules [[:left_option :left_option :term {:alone [:!Of3]}]                                 ; previous tmux session
+         :rules [
+                 [:left_option :left_option :term {:alone [:!Of3]}]                                 ; previous tmux session
                  [:left_control :left_control :term {:alone [:!Sf3]}]                               ; toggle tmux remote
                  [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; toggle copy mode
                  ]}
@@ -292,7 +295,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Escape Mode - alphabet"
-         :rules [; [:!EWRa [:!S2 :spacebar]]                                                        ;
+         :rules [
+                 ; [:!EWRa [:!S2 :spacebar]]                                                        ;
                  ; [:!EWRb [:!S2 :spacebar]]                                                        ;
                  [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]                                           ; '@chain '
                  [:!EWRd [:!S2 :d :e :b :u :g :spacebar]]                                           ; '@debug '
@@ -323,8 +327,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Escape Mode - symbols"
-         :rules [; [:!EWRhyphen []]                                                                 ;
-                 ; [:!EWRequal_sign []]                                                             ;
+         :rules [
+                 [:!EWRhyphen [:spacebar :!Scomma :hyphen :spacebar]]                               ; ' <- '
+                 [:!EWRequal_sign [:spacebar :hyphen :!Speriod :spacebar]]                          ; ' -> '
                  [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]         ; '%<+%'
                  [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]       ; '%+>%'
                  [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                              ; '%$%'
@@ -343,7 +348,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Tab Mode - alphabet"
-         :rules [[:!EQRa [:semicolon :semicolon :a]]                                                ; 'α'
+         :rules [
+                 [:!EQRa [:semicolon :semicolon :a]]                                                ; 'α'
                  [:!EQRb [:semicolon :semicolon :b]]                                                ; 'β'
                  ; [:!EQRc [:semicolon :semicolon :c]]                                              ; ''
                  [:!EQRd [:semicolon :semicolon :d]]                                                ; 'δ'
@@ -374,7 +380,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Tab Mode - symbols"
-         :rules [; [:!EQRhyphen []]                                                                 ; ''
+         :rules [
+                 ; [:!EQRhyphen []]                                                                 ; ''
                  ; [:!EQRequal_sign []]                                                             ; ''
                  [:!EQRopen_bracket [:!S3 :open_bracket]]                                           ; '#['
                  [:!EQRclose_bracket [:!S3 :quote]]                                                 ; '#''
@@ -394,7 +401,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Control - Command Mode - alphabet"
-         :rules [[:!WQa [:comma :comma :a]]                                                         ; 'ɒ'
+         :rules [
+                 [:!WQa [:comma :comma :a]]                                                         ; 'ɒ'
                  [:!WQb [:comma :comma :b]]                                                         ; 'ß'
                  [:!WQc [:comma :comma :c]]                                                         ; 'ç'
                  [:!WQd [:comma :comma :d]]                                                         ; 'Δ'
@@ -525,8 +533,8 @@
                  ; [:!TCsemicolon []]                                                               ;
                  [:!TCquote [:period :quote :quote :quote :period]]                                 ; '```'
                  ; [:!TCbackslash []]                                                               ;
-                 [:!TCcomma [:spacebar :!Scomma :hyphen :spacebar]]                                 ; ' <- '
-                 [:!TCperiod [:spacebar :hyphen :!Speriod :spacebar]]                               ; ' -> '
+                 ; [:!TCcomma []]                                                                   ;
+                 ; [:!TCperiod []]                                                                  ;
                  ; [:!TCslash []]                                                                   ;
                  ; [:!TCdelete_or_backspace []]                                                     ;
                  [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                    ; '=='
@@ -535,8 +543,6 @@
                  [:!TCright_command [:slash :slash]]                                                ; '//'
 
                  [:!WQquote [:period :quote :quote :quote :period]]                                 ; '```'
-                 [:!WQcomma [:spacebar :!Scomma :hyphen :spacebar]]                                 ; ' <- '
-                 [:!WQperiod [:spacebar :hyphen :!Speriod :spacebar]]                               ; ' -> '
                  [:!WQright_shift [:!S1 :!S1]]                                                      ; '!!'
                  ]}
 
@@ -544,7 +550,8 @@
 
         ; hyper
         {:des "Coding modifications - hyper"
-         :rules [; [:!!0 []]                                                                        ;
+         :rules [
+                 ; [:!!0 []]                                                                        ;
                  ; [:!!hyphen []]                                                                   ;
                  ; [:!!equal_sign []]                                                               ;
                  ; [:!!open_bracket []]                                                             ;
@@ -566,24 +573,28 @@
 
         ; accents
         {:des "Bypass accents"
-         :rules [[:!OCi :!Sf7]
-                 [:!OCn :!Sf8]
-                 [:!Oe :!Sf1]
-                 [:!Oi :!Sf2]
-                 [:!On :!OSf4]
-                 [:!Ou :!Of4]
-                 [:!OSo :!Tf4]]}
+         :rules [
+                 [:!OCi :!Sf7]                                                                      ;
+                 [:!OCn :!Sf8]                                                                      ;
+                 [:!Oe :!Sf1]                                                                       ;
+                 [:!Oi :!Sf2]                                                                       ;
+                 [:!On :!OSf4]                                                                      ;
+                 [:!Ou :!Of4]                                                                       ;
+                 [:!OSo :!Tf4]                                                                      ;
+                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; simple
         {:des "Simple modifications"
-         :rules [[:f20 :0]
-                 [:keypad_slash :display_brightness_decrement]
-                 [:keypad_asterisk :display_brightness_increment]
-                 [:keypad_hyphen :mute]
-                 [:keypad_plus :volume_increment]
-                 [:keypad_enter :volume_decrement]]}
+         :rules [
+                 [:f20 :0]                                                                          ;
+                 [:keypad_slash :display_brightness_decrement]                                      ;
+                 [:keypad_asterisk :display_brightness_increment]                                   ;
+                 [:keypad_hyphen :mute]                                                             ;
+                 [:keypad_plus :volume_increment]                                                   ;
+                 [:keypad_enter :volume_decrement]                                                  ;
+                 ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -605,7 +616,8 @@
 
         ; function
         {:des "Function keypad"
-         :rules [;simple
+         :rules [
+                 ;simple
                  [:!EWQ0 :7]                                                                        ; '7'
                  [:!EWQhyphen :8]                                                                   ; '8'
                  [:!EWQequal_sign :9]                                                               ; '9'
@@ -616,6 +628,17 @@
                  [:!EWQquote :2]                                                                    ; '2'
                  [:!EWQbackslash :3]                                                                ; '3'
                  [:!EWQslash :0]                                                                    ; '0'
+
+                 ; numbers
+                 [:!EWQ1 :f1]                                                                       ; 'F1'
+                 [:!EWQ2 :f2]                                                                       ; 'F2'
+                 [:!EWQ3 :f3]                                                                       ; 'F3'
+                 [:!EWQ4 :f4]                                                                       ; 'F4'
+                 [:!EWQ5 :f5]                                                                       ; 'F5'
+                 [:!EWQ6 :f6]                                                                       ; 'F6'
+                 [:!EWQ7 :f7]                                                                       ; 'F7'
+                 [:!EWQ8 :f8]                                                                       ; 'F8'
+                 [:!EWQ9 :f9]                                                                       ; 'F9'
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
