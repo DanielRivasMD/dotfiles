@@ -3,28 +3,26 @@
 # default flags
 default_flags = ""
 
-# TODO: update
-
 ####################################################################################################
 
 # config
 [[verbs]]
 invocation = "open_leave"
-key = "ctrl-h"                          # mapped -> ` -> `alt-ctrl-cmd-shift-enter``
+key = "ctrl-h"                          # mapped -> `delete-tab`
 cmd = ":cd"
-description = "go into directory -> `alt-ctrl-cmd-shift-enter`"
+description = "go into directory -> `delete-tab`"
 
 [[verbs]]
 invocation = "root_up"
-key = "ctrl-r"                          # mapped -> `ctrl-enter`
+key = "ctrl-r"                          # mapped -> `delete-ctrl`
 internal = "root_up"
-description = "move tree root up -> `ctrl-enter`"
+description = "move tree root up -> `delete-ctrl`"
 
 [[verbs]]
-key = "ctrl-t"                          # mapped -> `cmd-enter`
+key = "ctrl-t"                          # mapped -> `delete-cmd`
 external = "command open {file}"
 leave_broot = false
-description = "open according to OS -> `cmd-enter`"
+description = "open according to OS -> `delete-cmd`"
 
 [[verbs]]
 invocation = "quit"
@@ -169,9 +167,9 @@ description = "toggle stage"
 
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "ctrl-s"                          # mapped -> `alt-enter`
+key = "ctrl-s"                          # mapped -> `delete-alt`
 internal = "toggle_staging_area"
-description = "toggle staging area -> `alt-enter`"
+description = "toggle staging area -> `delete-alt`"
 
 [[verbs]]
 invocation = "clear_stage"
