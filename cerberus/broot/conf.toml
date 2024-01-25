@@ -7,16 +7,16 @@ default_flags = ""
 
 # config
 [[verbs]]
-invocation = "open_leave"
-key = "ctrl-h"                          # mapped -> `delete-tab`
-cmd = ":cd"
-description = "go into directory -> `delete-tab`"
-
-[[verbs]]
 invocation = "root_up"
 key = "ctrl-r"                          # mapped -> `delete-ctrl`
 internal = "root_up"
 description = "move tree root up -> `delete-ctrl`"
+
+[[verbs]]
+invocation = "open_leave"
+key = "ctrl-s"                          # mapped -> `delete-alt`
+cmd = ":cd"
+description = "go into directory -> `delete-tab`"
 
 [[verbs]]
 key = "ctrl-t"                          # mapped -> `delete-cmd`
