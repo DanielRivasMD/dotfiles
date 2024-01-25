@@ -334,10 +334,10 @@
                  [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]       ; '%+>%'
                  [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                              ; '%$%'
                  [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                        ; '%T>%'
-                 [:!EWRbackslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                    ; '%!>%'
+                 [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                ; '%<>%'
                  [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                              ; '%<%'
                  [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                            ; '%>%'
-                 [:!EWRslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                    ; '%<>%'
+                 [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                        ; '%!>%'
                  [:!EWRdelete_or_backspace [:!S3 :quote]]                                           ; '#''
                  ; [:!EWRreturn_or_enter []]                                                        ; ''
                  ; [:!EWRright_shift []]                                                            ; ''
@@ -440,7 +440,7 @@
                  ; [:!TCopen_bracket []]                                                            ;
                  ; [:!TCclose_bracket []]                                                           ;
                  ; [:!TCsemicolon []]                                                               ;
-                 [:!TCquote [:period :quote :quote :quote :period]]                                 ; '```'
+                 ; [:!TCquote []]                                                                   ;
                  ; [:!TCbackslash []]                                                               ;
                  ; [:!TCcomma []]                                                                   ;
                  ; [:!TCperiod []]                                                                  ;
@@ -451,8 +451,6 @@
                  [:!TCright_option [:!S8 :!S8]]                                                     ; '**'
                  [:!TCright_command [:slash :slash]]                                                ; '//'
 
-                 [:!WQquote [:period :quote :quote :quote :period]]                                 ; '```'
-                 [:!WQdelete_or_backspace [:!S3 :!S1 :slash]]                                       ; '#!/'
                  [:!WQright_shift [:!S1 :!S1]]                                                      ; '!!'
                  ]}
 
@@ -602,15 +600,19 @@
         ; additional
         {:des "Additional key"
          :rules [
-                 ; [:!Of20 []]
-                 ; [:!Tf20 []]
-                 ; [:!Cf20 []]
-                 ; [:!Sf20 []]
-                 [:!EWQ0 :grave_accent_and_tilde]                                                   ;
-                 [:!EWQC0 :!Sgrave_accent_and_tilde]                                                ;
-                 [:f19 :grave_accent_and_tilde]                                                     ;
-                 [:0 :non_us_backslash]                                                             ;
-                 [:!C0 :!Snon_us_backslash]                                                         ;
+                 ; builtin
+                 [:!EWQ0 :grave_accent_and_tilde]                                                   ; '`'
+                 [:!EWQT0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
+                 [:!EWQOf20 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                        ; ' ~ '
+                 [:!EWQTf20 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]            ; ' =~ '
+                 [:!EWQSf20 :!Sgrave_accent_and_tilde]                                              ; '~'
+
+                 ; master
+                 [:0 :non_us_backslash]                                                             ; '`'
+                 [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]                     ; '```'
+                 [:!Of20 [:spacebar :!Snon_us_backslash :spacebar]]                                 ; ' ~ '
+                 [:!Tf20 [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]                     ; ' =~ '
+                 [:!Sf20 :!Snon_us_backslash]                                                       ; '~'
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
