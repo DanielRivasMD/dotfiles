@@ -28,7 +28,7 @@ $env.config = {
     {
       name: previous_dir
       modifier: shift
-      keycode: "f1"                                         # patch -> `alt-cmd-,`
+      keycode: "f5"                                         # patch -> `alt-cmd-,`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -39,7 +39,7 @@ $env.config = {
     {
       name: next_dir
       modifier: shift
-      keycode: "f2"                                         # patched -> `alt-cmd-.`
+      keycode: "f6"                                         # patched -> `alt-cmd-.`
       mode: emacs
       event: {
         send: executehostcommand,
