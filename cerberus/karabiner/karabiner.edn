@@ -201,7 +201,7 @@
                  ; [:j []]                                                                          ;
                  ; [:k []]                                                                          ;
                  ; [:l []]                                                                          ;
-                 ; [:m []]                                                                          ;
+                 [:m [:m :u :t :a :b :l :e]]                                                        ; 'mutable'
                  ; [:n []]                                                                          ;
                  ; [:o []]                                                                          ;
                  ; [:p []]                                                                          ;
@@ -306,7 +306,7 @@
                  ; [:!EWRh [:!S2 :spacebar]]                                                        ;
                  [:!EWRi [:!S2 :i :n :f :o :spacebar]]                                              ; '@info '
                  ; [:!EWRj [:!S2 :spacebar]]                                                        ;
-                 ; [:!EWRk [:!S2 :spacebar]]                                                        ;
+                 [:!EWRk [:!S2 :w :i :t :h :!Shyphen :k :w :spacebar]]                              ; '@with_kw '
                  [:!EWRl [:!S2 :l :e :s :s :spacebar]]                                              ; '@less '
                  ; [:!EWRm [:!S2 :spacebar]]                                                        ;
                  ; [:!EWRn [:!S2 :spacebar]]                                                        ;
@@ -318,7 +318,7 @@
                  [:!EWRt [:!S2 :t :i :m :e :spacebar]]                                              ; '@time '
                  ; [:!EWRu [:!S2 :spacebar]]                                                        ;
                  [:!EWRv [:!S2 :e :v :a :l :spacebar]]                                              ; '@eval '
-                 ; [:!EWRw [:!S2 :spacebar]]                                                        ;
+                 [:!EWRw [:!S2 :w :a :r :n :spacebar]]                                              ; '@warn '
                  ; [:!EWRx [:!S2 :spacebar]]                                                        ;
                  ; [:!EWRy [:!S2 :spacebar]]                                                        ;
                  [:!EWRz [:!S2 :w :h :i :c :h :spacebar]]                                           ; '@which '
