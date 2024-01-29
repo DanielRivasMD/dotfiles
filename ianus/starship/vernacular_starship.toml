@@ -35,7 +35,7 @@ format                                       = '⟪[$hostname](#B452CD)⟫ '
 disabled                                     = false
 
 [jobs]
-symbol                                       = ' ∫'
+symbol                                       = ' ⁂'
 number_threshold                             = 2
 symbol_threshold                             = 1
 format                                       = "[$symbol $number]($style)"
@@ -84,12 +84,12 @@ ahead                                        = ' [⇡](#1874CD)[${count}](#bebeb
 behind                                       = ' [⇣](#8B0000)[${count}](#bebebe)'
 diverged                                     = ' [](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#8B0000)[${behind_count}](#bebebe)'
 conflicted                                   = ' [](#8B0000)[${count}](#bebebe)'
-untracked                                    = ' [θ](#8B0000)[${count}](#bebebe)'
-stashed                                      = ' [Λ](#1874CD)[${count}](#bebebe)'
-modified                                     = ' [Δ](#FFC125)[${count}](#bebebe)'
-staged                                       = ' [Ω](#95E6CB)[${count}](#bebebe)'
+untracked                                    = ' [☋](#8B0000)[${count}](#bebebe)'
+stashed                                      = ' [⨕](#1874CD)[${count}](#bebebe)'
+modified                                     = ' [♅](#FFC125)[${count}](#bebebe)'
+staged                                       = ' [☊](#95E6CB)[${count}](#bebebe)'
 renamed                                      = ' [⇌](#FFC125)[${count}](#bebebe)'
-deleted                                      = ' [χ](#8B0000)[${count}](#bebebe)'
+deleted                                      = ' [⌀](#8B0000)[${count}](#bebebe)'
 
 format                                       = '([\[$ahead_behind$all_status \]](bold #bebebe))'
 
@@ -99,7 +99,7 @@ format                                       = '([\[$ahead_behind$all_status \]]
 format                                       = ' [ $context](bold #1874CD)'
 
 [golang]
-format                                       = ' [ﳑ](#00CED1) [$version](bold #acacac)'
+format                                       = ' [🐾](#00CED1) [$version](bold #acacac)'
 
 [julia]
 format                                       = ' [ஃ](#9C4C9C) [$version](bold #acacac)'
@@ -114,15 +114,15 @@ disabled                                     = false
 format                                       = ' [](#708090) [$version](#acacac)'
 
 [perl]
-format                                       = ' [🐪](#acacac) [$version](bold #acacac)'
+format                                       = ' [♞](#acacac) [$version](bold #acacac)'
 
 [python]
 pyenv_version_name                           = true
 pyenv_prefix                                 = ''
-format                                       = ' [](#228B22)'
+format                                       = ' [⚕](#228B22)'
 
 [rlang]
-format                                       = ' [®](#708090) [$version](#acacac)'
+format                                       = ' [♜](#708090) [$version](#acacac)'
 detect_files                                 = [".R"]
 detect_folders                               = [".Rproj.user"]
 
