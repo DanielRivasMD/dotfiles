@@ -1040,6 +1040,31 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "m"
+          }, {
+            "key_code" : "u"
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "b"
+          }, {
+            "key_code" : "l"
+          }, {
+            "key_code" : "e"
+          } ],
+          "conditions" : [ {
+            "name" : "zero-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "s"
           },
           "to" : [ {
@@ -1475,6 +1500,35 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "hyphen",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "k"
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "l",
             "modifiers" : {
               "mandatory" : [ "right_control", "right_option", "right_shift" ]
@@ -1579,6 +1633,28 @@
             "key_code" : "a"
           }, {
             "key_code" : "l"
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_control", "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "r"
+          }, {
+            "key_code" : "n"
           }, {
             "key_code" : "spacebar"
           } ],
