@@ -290,9 +290,31 @@ tags = ['remote']
 alias = 'update'
 command = '''
 #!/bin/sh
-brew upgrade
+brew update
+
+echo 'Outdated packages managed by Homebrew'
+source ${PIER}/break_cross.sh
+echo $(brew outdated)
+source ${PIER}/break_cross.sh
+echo ''
+
+brew upgrade &
+
+echo 'Outdated rustup versions'
+source ${PIER}/break_cross.sh
+echo &(rustup check)
+source ${PIER}/break_cross.sh
+echo ''
+
 rustup update
-$HOME/bin/forkedPatch/pier cargo-up
+
+echo 'Outdated packages managed by cargo'
+source ${PIER}/break_cross.sh
+echo $($HOME/bin/forkedPatch/pier cargo-ls)
+source ${PIER}/break_cross.sh
+echo ''
+
+$HOME/bin/forkedPatch/pier cargo-up &
 '''
 description = 'update packages'
 tags = ['shell']
