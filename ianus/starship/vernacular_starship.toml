@@ -129,4 +129,14 @@ detect_folders                               = [".Rproj.user"]
 [rust]
 format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
 
+[vagrant]
+format                                       = ' [$symbol($version)]($style)'
+version_format                               = 'v${raw}'
+symbol                                       = '⍱'
+detect_extensions                            = []
+detect_files                                 = ['Vagrantfile']
+detect_folders                               = []
+style                                        = 'cyan bold'
+disabled                                     = false
+
 ####################################################################################################
