@@ -152,7 +152,7 @@
 
         ; right shift => clipboard selector
         {:des "Change right_shift to clipboard selector when used alone"
-         :rules [[:right_shift :left_shift nil {:alone [:!Tnon_us_pound]}]]}
+         :rules [[:right_shift :right_shift nil {:alone [:!Tnon_us_pound]}]]}
 
         ; right option => paste
         {:des "Change right_option to paste when used alone"
@@ -173,6 +173,15 @@
         ; backspace
         {:des "Change backspace to composed"
          :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:delete_or_backspace]}]]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; 
+        {:des "delete => "
+         :rules [
+                 [:!Sright_shift :delete_forward]
+                 [:!Rleft_shift :delete_or_backspace]
+      ]}
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
