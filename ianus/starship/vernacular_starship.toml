@@ -45,7 +45,7 @@ style                                        = '#00CED1'
 disabled                                     = true
 
 [package]
-format                                       = ' [](#95E6CB)  [$version](#acacac)'
+format                                       = ' [](#95E6CB)  [$version](#ACACAC)'
 
 [status]
 format                                       = ' [$status](#8B0000)'
@@ -98,39 +98,42 @@ format                                       = '([\[$ahead_behind$all_status \]]
 [docker_context]
 format                                       = ' [ $context](bold #1874CD)'
 
-[golang]
-format                                       = ' [🐾](#00CED1) [$version](bold #acacac)'
-
-[java]
-format                                       = ' [☕](#8B0000)[$version](bold #acacac)'
-
-[julia]
-format                                       = ' [ஃ](#9C4C9C) [$version](bold #acacac)'
+[nodejs]
+format                                       = ' [](#1874CD) [$version](bold #ACACAC)'
 
 [kubernetes]
-format                                       = ' [☸](#00CED1) [$version](bold #acacac)'
+format                                       = ' [☸](#00CED1) [$version](bold #ACACAC)'
 disabled                                     = false
 [kubernetes.context_aliases]
 'dev.local.cluster.k8s'                      = 'dev'
 
+####################################################################################################
+
+[golang]
+format                                       = ' [🐾](#00CED1) [$version](bold #ACACAC)'
+
+[java]
+format                                       = ' [☕](#8B0000)[$version](bold #ACACAC)'
+
+[julia]
+format                                       = ' [ஃ](#9C4C9C) [$version](bold #ACACAC)'
+
 [lua]
-format                                       = ' [](#708090) [$version](bold #acacac)'
+format                                       = ' [](#708090) [$version](bold #ACACAC)'
 
 [perl]
-format                                       = ' [♞](#acacac) [$version](bold #acacac)'
+format                                       = ' [♞](#ACACAC) [$version](bold #ACACAC)'
 
 [python]
-pyenv_version_name                           = true
-pyenv_prefix                                 = ''
-format                                       = ' [⚕](#228B22)'
+format                                       = ' [⚕](#228B22) [$version](bold #ACACAC)'
 
 [rlang]
-format                                       = ' [♜](#708090) [$version](bold #acacac)'
+format                                       = ' [♜](#708090) [$version](bold #ACACAC)'
 
 [rust]
-format                                       = ' [⚙️](#CD6600) [$version](bold #acacac)'
+format                                       = ' [⚙️](#CD6600) [$version](bold #ACACAC)'
 
 [vagrant]
-format                                       = ' [⍱](#00FFFF) [$version](bold #acacac)'
+format                                       = ' [⍱](#00FFFF) [$version](bold #ACACAC)'
 
 ####################################################################################################
