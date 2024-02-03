@@ -173,14 +173,13 @@
         ; backspace
         {:des "Change backspace to composed"
          :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:delete_or_backspace]}]]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; 
-        {:des "delete => "
-         :rules [
-                 [:!Sright_shift :delete_forward]
-                 [:!Rleft_shift :delete_or_backspace]
-      ]}
+        {:des "Change delete shifts"
+         :rules [[:!Sright_shift :delete_forward]
+                 [:!Rleft_shift :delete_or_backspace]]}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
