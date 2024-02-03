@@ -101,6 +101,9 @@ format                                       = ' [ $context](bold #1874CD)'
 [golang]
 format                                       = ' [🐾](#00CED1) [$version](bold #acacac)'
 
+[java]
+format                                       = ' [☕](#8B0000)[$version](bold #acacac)'
+
 [julia]
 format                                       = ' [ஃ](#9C4C9C) [$version](bold #acacac)'
 
@@ -111,7 +114,7 @@ disabled                                     = false
 'dev.local.cluster.k8s'                      = 'dev'
 
 [lua]
-format                                       = ' [](#708090) [$version](#acacac)'
+format                                       = ' [](#708090) [$version](bold #acacac)'
 
 [perl]
 format                                       = ' [♞](#acacac) [$version](bold #acacac)'
@@ -122,21 +125,12 @@ pyenv_prefix                                 = ''
 format                                       = ' [⚕](#228B22)'
 
 [rlang]
-format                                       = ' [♜](#708090) [$version](#acacac)'
-detect_files                                 = [".R"]
-detect_folders                               = [".Rproj.user"]
+format                                       = ' [♜](#708090) [$version](bold #acacac)'
 
 [rust]
-format                                       = ' [⚙️](#CD6600) [$version](#acacac)'
+format                                       = ' [⚙️](#CD6600) [$version](bold #acacac)'
 
 [vagrant]
-format                                       = ' [$symbol($version)]($style)'
-version_format                               = 'v${raw}'
-symbol                                       = '⍱'
-detect_extensions                            = []
-detect_files                                 = ['Vagrantfile']
-detect_folders                               = []
-style                                        = 'cyan bold'
-disabled                                     = false
+format                                       = ' [⍱](#00FFFF) [$version](bold #acacac)'
 
 ####################################################################################################
