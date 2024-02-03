@@ -2,36 +2,12 @@
 # cerberus
 ####################################################################################################
 
-# atom
-cerberus/atom/.apm
-cerberus/atom/node-gyp
-cerberus/atom/blob-store
-cerberus/atom/compile-cache
-cerberus/atom/git-time-machine
-cerberus/atom/packages
-cerberus/atom/recovery
-cerberus/atom/split-diff
-cerberus/atom/storage
-cerberus/atom/.atom*
-cerberus/atom/.gitignore
-cerberus/atom/snippets.json
-
 # karabiner
 cerberus/karabiner/automatic_backups
-cerberus/karabiner/assets/complex_modifications/preview-vim.json
 
 # khal
 cerberus/khal/calendars
 cerberus/khal/ics
-
-# nvim
-cerberus/nvim/autoload/plugged
-
-# ranger
-cerberus/ranger/plugins/__init__.py
-cerberus/ranger/plugins/__init__.pyo
-cerberus/ranger/plugins/ranger_devicons
-
 
 ####################################################################################################
 # ianus
@@ -41,16 +17,6 @@ cerberus/ranger/plugins/ranger_devicons
 ianus/micro/backups
 ianus/micro/buffers
 ianus/micro/plug
-
-# tmux
-ianus/tmux/plugins
-ianus/tmux/resurrect
-ianus/tmux/sidebar
-
-# vim
-ianus/vim/bundle
-ianus/vim/view
-
 
 ####################################################################################################
 
