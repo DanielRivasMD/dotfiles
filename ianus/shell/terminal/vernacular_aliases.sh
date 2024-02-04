@@ -80,7 +80,7 @@ alias wc='wordcrab'
 alias zz='z -'
 
 # eza
-alias e='eza --header --long --icons --links --classify --git --total-size --group'
+alias e='eza --header --long --icons --classify --git --total-size --group'
 alias ea='e --all'
 alias er='e --sort=newest'
 alias ear='ea --sort=newest'
