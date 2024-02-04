@@ -84,8 +84,8 @@
         ; Alacritty
         {:des "Terminal sessions"
          :rules [
+                 [:escape :escape :term {:alone [:!Sf3]}]                                           ; toggle tmux remote
                  [:left_option :left_option :term {:alone [:!Of3]}]                                 ; previous tmux session
-                 [:left_control :left_control :term {:alone [:!Sf3]}]                               ; toggle tmux remote
                  [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; toggle copy mode
                  ]}
 
@@ -164,7 +164,7 @@
 
         ; left control => menu selector
         {:des "Change left_control to menu selector when used alone"
-         :rules [[:left_control :left_control nil {:alone [:!Ttab]}]]}
+         :rules [[:left_control :left_control nil {:alone [:f18]}]]}
 
         ; left option => window rotation
         {:des "Change left_option to window rotation when used alone"
@@ -176,15 +176,15 @@
 
         ; right shift => clipboard selector
         {:des "Change right_shift to clipboard selector when used alone"
-         :rules [[:right_shift :right_shift nil {:alone [:!Tnon_us_pound]}]]}
+         :rules [[:right_shift :right_shift nil {:alone [:f17]}]]}
 
         ; right option => paste
         {:des "Change right_option to paste when used alone"
-         :rules [[:right_option :left_option nil {:alone [:!Onon_us_pound]}]]}
+         :rules [[:right_option :left_option nil {:alone [:f16]}]]}
 
         ; right command => open file  
         {:des "Change right_command to command-control & to open file when used alone"
-         :rules [[:right_command :!Wright_command nil {:alone [:!Cnon_us_pound]}]]}
+         :rules [[:right_command :!Wright_command nil {:alone [:f15]}]]}
 
         ; tab
         {:des "Change espace to composed"
@@ -192,11 +192,11 @@
 
         ; escape
         {:des "Change espace to composed"
-         :rules [[:escape :!EWright_shift nil {:alone [:delete_forward]}]]}
+         :rules [[:escape :!EWright_shift nil {:alone [:f14]}]]}
 
         ; backspace
         {:des "Change backspace to composed"
-         :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:delete_or_backspace]}]]}
+         :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:f13]}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
