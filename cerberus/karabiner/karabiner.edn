@@ -92,6 +92,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; Alacritty
+        {:des "Terminal delete"
+         :rules [
+                 [:!Sright_option :!Od [:term]]
+                 [:!Sright_command :!Tk [:term]]
+                 [:!Rleft_control :!Tw [:term]]
+                 [:!Rleft_option :!Tl [:term]]
+                 [:!Rleft_command :!Tu [:term]]
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Alacritty
         {:des "Terminal remappings"
          :rules [
                  [:!WQRleft_control :!Tr [:term]]                                                   ; `delete-ctrl`
@@ -115,6 +127,18 @@
                  [:!WQRtab :!Th [:editor]]                                                          ; `delete-tab`
                  [:!WQRright_command :!Tj [:editor]]                                                ; `delete-cmd`
                  [:!WQRright_option :!Tn [:editor]]                                                 ; `delete-alt`
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Lapce
+        {:des "Editor delete"
+         :rules [
+                 [:!Sright_option :!Od [:editor]]
+                 [:!Sright_command :!Tk [:editor]]
+                 [:!Rleft_control :!Tw [:editor]]
+                 [:!Rleft_option :!Tl [:editor]]
+                 [:!Rleft_command :!Tu [:editor]]
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
