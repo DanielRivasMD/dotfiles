@@ -127,11 +127,21 @@ Cerberus:
   ln -svf "${navi}" "${naviConf}"                                      # navi cheats directory
   echo '===================================================================================================='
 
-  # completions
+  # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
+  # ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
+
+  ####################################################################################################
+  # Completions
+
+  echo ''
+  echo 'Creating completion directory'
+  echo '===================================================================================================='
+  if [[ ! -d "${zshcomp}" ]]; then mkdir "${zshcomp}"; fi && echo 'Directory ready'
+  echo '===================================================================================================='
+
   echo ''
   echo 'Linking completions'
   echo '===================================================================================================='
-  if [[ ! -d "${zshcomp}" ]]; then mkdir "${zshcomp}"; fi
   ln -svf "${observatory}/fd/contrib/completion/_fd" "${zshcomp}/_fd"
   ln -svf "${observatory}/eza/completions/zsh/_eza" "${zshcomp}/_eza"
   ln -svf "${observatory}/just/completions/just.zsh" "${zshcomp}/_just"
@@ -141,11 +151,9 @@ Cerberus:
   echo ''
   echo 'Generate completions'
   echo '===================================================================================================='
-  zellij setup --generate-completion zsh > "${zshcomp}/_zellij"
+  zellij setup --generate-completion zsh > "${zshcomp}/_zellij" && echo 'Setup zellij'
   echo '===================================================================================================='
 
-  # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
-  # ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
 
 ####################################################################################################
 # Ianus
