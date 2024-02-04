@@ -131,11 +131,11 @@ Cerberus:
   echo ''
   echo 'Linking completions'
   echo '===================================================================================================='
-  if [[ ! -d "${config}/zsh_completion" ]]; then mkdir "${config}/zsh_completion"; fi
-  ln -svf "${observatory}/fd/contrib/completion/_fd" "${config}/zsh_completion/_fd"
-  ln -svf "${observatory}/eza/completions/zsh/_eza" "${config}/zsh_completion/_eza"
-  ln -svf "${observatory}/just/completions/just.zsh" "${config}/zsh_completion/_just"
-  ln -svf "${observatory}/watchexec/completions/zsh" "${config}/zsh_completion/_watchexec"
+  if [[ ! -d "${zshcomp}" ]]; then mkdir "${zshcomp}"; fi
+  ln -svf "${observatory}/fd/contrib/completion/_fd" "${zshcomp}/_fd"
+  ln -svf "${observatory}/eza/completions/zsh/_eza" "${zshcomp}/_eza"
+  ln -svf "${observatory}/just/completions/just.zsh" "${zshcomp}/_just"
+  ln -svf "${observatory}/watchexec/completions/zsh" "${zshcomp}/_watchexec"
   echo '===================================================================================================='
 
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
