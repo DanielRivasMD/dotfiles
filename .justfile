@@ -138,6 +138,12 @@ Cerberus:
   ln -svf "${observatory}/watchexec/completions/zsh" "${zshcomp}/_watchexec"
   echo '===================================================================================================='
 
+  echo ''
+  echo 'Generate completions'
+  echo '===================================================================================================='
+  zellij setup --generate-completion zsh > "${zshcomp}/_zellij"
+  echo '===================================================================================================='
+
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
   # ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
 
