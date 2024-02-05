@@ -7,60 +7,60 @@ matches:
   ####################################################################################################
 
   # name
-  - trigger: ";nm"
+  - trigger: "??nm"
     replace: "Salvador Daniel Rivas Carrillo"
 
-  - trigger: ";fnm"
+  - trigger: "??fnm"
     replace: "Salvador Daniel"
 
-  - trigger: ";lnm"
+  - trigger: "??lnm"
     replace: "Rivas Carrillo"
 
-  - trigger: ";dr"
+  - trigger: "??dr"
     replace: "Daniel Rivas"
 
   # address
-  - trigger: ";mail"
+  - trigger: "??mail"
     replace: "danielrivasmd@gmail.com"
 
-  - trigger: ";gad"
+  - trigger: "??gad"
     replace: "Manuel Azpiroz 1790"
 
-  - trigger: ";gzc"
+  - trigger: "??gzc"
     replace: "44260"
 
-  - trigger: ";gdl"
+  - trigger: "??gdl"
     replace: "Guadalajara"
 
-  - trigger: ";mxph"
+  - trigger: "??mxph"
     replace: "3322192477"
 
-  - trigger: ";swph"
+  - trigger: "??swph"
     replace: "767799639"
 
   # links
-  - trigger: ";link"
+  - trigger: "??link"
     replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
 
-  - trigger: ";github"
+  - trigger: "??github"
     replace: "https://github.com/DanielRivasMD"
 
-  - trigger: ";schoolar"
+  - trigger: "??schoolar"
     replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
 
   # salutation
-  - trigger: ";ch"
+  - trigger: "??ch"
     replace: "Cheers,"
 
-  - trigger: ";rg"
+  - trigger: "??rg"
     replace: "Regards,"
 
   # salutation
-  - trigger: ";br"
+  - trigger: "??br"
     replace: "Best regards,"
 
   # salutation
-  - trigger: ";sc"
+  - trigger: "??sc"
     replace: "Sincerely,"
 
   ####################################################################################################
