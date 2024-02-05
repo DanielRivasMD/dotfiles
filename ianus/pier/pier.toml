@@ -84,13 +84,13 @@ tags = ['shell']
 
 [scripts.finder-hidden-off]
 alias = 'finder-hidden-off'
-command = 'defaults write com.apple.Finder AppleShowAllFiles false'
+command = 'defaults write com.apple.Finder AppleShowAllFiles false && killall Finder'
 description = 'turn finder hidden files on'
 tags = ['shell']
 
 [scripts.finder-hidden-on]
 alias = 'finder-hidden-on'
-command = 'defaults write com.apple.Finder AppleShowAllFiles true'
+command = 'defaults write com.apple.Finder AppleShowAllFiles true && killall Finder'
 description = 'turn finder hidden files off'
 tags = ['shell']
 
