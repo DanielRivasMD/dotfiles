@@ -3,22 +3,22 @@
   "MouseRight": "MouseMultiCursor",
   "Alt-/": "lua:comment.comment",
 
-  "Alt-a": "SelectAll",
+  "Alt-a": "None",
   "Alt-b": "WordLeft",                                                          // mapped -> `alt-left`
   "Alt-c": "Copy",
   "Alt-d": "SpawnMultiCursor",
   "Alt-e": "None",                                                              // bypassed => accent
   "Alt-f": "WordRight",                                                         // mapped -> `alt-right`
-  "Alt-g": "",
+  "Alt-g": "None",
   "Alt-h": "FindPrevious",
   "Alt-i": "None",                                                              // bypassed => accent
   "Alt-j": "SpawnMultiCursorDown",
   "Alt-k": "SpawnMultiCursorUp",
   "Alt-l": "FindNext",
-  "Alt-m": "",
+  "Alt-m": "None",
   "Alt-n": "None",                                                              // bypassed => accent
-  "Alt-o": "",
-  "Alt-p": "JumpToMatchingBrace",
+  "Alt-o": "None",
+  "Alt-p": "None",
   "Alt-q": "Quit",
   "Alt-r": "ToggleMacro",
   "Alt-s": "Save,Quit",
@@ -30,7 +30,7 @@
   "Alt-y": "SkipMultiCursor",
   "Alt-z": "RemoveMultiCursor",
 
-  "Alt-A": "",
+  "Alt-A": "SelectAll",
   "Alt-B": "ShellMode",
   "Alt-C": "lua:comment.comment",
   "Alt-D": "DuplicateLine",
@@ -45,7 +45,7 @@
   "Alt-M": "",
   "Alt-N": "",
   "Alt-O": "",                                                                  // bypassed => unknown collision
-  "Alt-P": "",
+  "Alt-P": "JumpToMatchingBrace",
   "Alt-Q": "QuitAll",
   "Alt-R": "PlayMacro",
   "Alt-S": "Save,QuitAll",
