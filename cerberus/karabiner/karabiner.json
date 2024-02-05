@@ -424,14 +424,14 @@
         "description" : "Terminal sessions",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "f3",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "a",
+            "modifiers" : [ "left_option" ]
           } ],
           "from" : {
             "key_code" : "escape"
           },
           "to" : [ {
-            "key_code" : "escape"
+            "key_code" : "vk_none"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -440,7 +440,7 @@
           "type" : "basic"
         }, {
           "to_if_alone" : [ {
-            "key_code" : "f3",
+            "key_code" : "g",
             "modifiers" : [ "left_option" ]
           } ],
           "from" : {
@@ -456,14 +456,61 @@
           "type" : "basic"
         }, {
           "to_if_alone" : [ {
-            "key_code" : "f3",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "m",
+            "modifiers" : [ "left_option" ]
           } ],
           "from" : {
             "key_code" : "left_shift"
           },
           "to" : [ {
             "key_code" : "left_shift"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "p",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "from" : {
+            "key_code" : "left_shift"
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "from" : {
+            "key_code" : "left_shift"
+          },
+          "to" : [ {
+            "key_code" : "left_shift"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f1"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -661,6 +708,22 @@
           },
           "to" : [ {
             "key_code" : "n",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f8",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
