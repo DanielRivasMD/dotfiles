@@ -82,6 +82,18 @@ command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
 description = 'count directories in present address'
 tags = ['shell']
 
+[scripts.finder-hidden-off]
+alias = 'finder-hidden-off'
+command = 'defaults write com.apple.Finder AppleShowAllFiles false'
+description = 'turn finder hidden files on'
+tags = ['shell']
+
+[scripts.finder-hidden-on]
+alias = 'finder-hidden-on'
+command = 'defaults write com.apple.Finder AppleShowAllFiles true'
+description = 'turn finder hidden files off'
+tags = ['shell']
+
 [scripts.file-count]
 alias = 'file-count'
 command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
