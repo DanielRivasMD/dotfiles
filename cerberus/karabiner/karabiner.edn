@@ -84,9 +84,12 @@
         ; Alacritty
         {:des "Terminal sessions"
          :rules [
-                 [:escape :escape :term {:alone [:!Sf3]}]                                           ; toggle tmux remote
-                 [:left_option :left_option :term {:alone [:!Of3]}]                                 ; previous tmux session
-                 [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; toggle copy mode
+                 [:escape :vk_none :term {:alone [:!Oa]}]                                           ; toggle tmux remote
+                 [:left_option :left_option :term {:alone [:!Og]}]                                 ; previous tmux session
+                 [:left_shift :left_shift :term {:alone [:!Om]}]                                   ; toggle copy mode
+                 [:left_shift :left_shift :term {:alone [:!Op]}]                                   ; toggle copy mode
+                 [:left_shift :left_shift :term {:alone [:!Ot]}]                                   ; toggle copy mode
+                 [:!Cn :f1 [:term]]
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -113,6 +116,15 @@
                  [:!WQRtab :!Th [:term]]                                                            ; `delete-tab`
                  [:!WQRright_command :!Tj [:term]]                                                  ; `delete-cmd`
                  [:!WQRright_option :!Tn [:term]]                                                   ; `delete-alt`
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; TODO: migrate bindings
+        ; Alacritty
+        {:des "Terminal remappings"
+         :rules [
+                 [:!TCspacebar :!Tf8 [:term]]                                                       ; `delete-ctrl`
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
