@@ -492,7 +492,7 @@ goku-watch:
   source .just.sh
 
   # watch source changes
-  watchexec --watch "${karabiner}/karabiner.edn" -- 'goku'
+  watchexec --watch "${karabiner}/karabiner.edn" -- 'goku' &
 
 ####################################################################################################
 
