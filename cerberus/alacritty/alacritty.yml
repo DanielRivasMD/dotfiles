@@ -921,11 +921,11 @@ key_bindings:
 
   # - { key: Delete,      mods: Alt,                        chars: "\x1bd"        } # patch delete word forward
   - { key: A,           mods: Alt,                        chars: "\x1ba"        } #
-  - { key: B,           mods: Alt,                        chars: "\x1b[1;3A"    } # mapped -> `alt-up`
+  # - { key: B,           mods: Alt,                        chars: "\x1b[1;3A"    } # mapped -> `alt-up`
   - { key: C,           mods: Alt,                        chars: "\x1bc"        } #
   - { key: D,           mods: Alt,                        chars: "\x1bd"        } #
   # - { key: E,           mods: Alt,                        chars: "\x1be"        } # bypassed -> `shift-F1`
-  - { key: F,           mods: Alt,                        chars: "\x1b[1;3B"    } # mapped -> `alt-down`
+  # - { key: F,           mods: Alt,                        chars: "\x1b[1;3B"    } # mapped -> `alt-down`
   - { key: G,           mods: Alt,                        chars: "\x1bg"        } #
   - { key: H,           mods: Alt,                        chars: "\x1bh"        } #
   # - { key: I,           mods: Alt,                        chars: "\x1bi"        } # bypassed -> `shift-F2`
@@ -1123,13 +1123,13 @@ key_bindings:
   # - { key: Left,        mods: Alt|Shift,                  chars: ""             } #
   - { key: Left,        mods: Control,                    chars: "\x1b[1;5D"    } #
   # - { key: Left,        mods: Control|Shift,              chars: ""             } #
-  - { key: Left,        mods: Command,                    chars: "\x01"         } # mapped -> `ctrl-a`
-  - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
+  # - { key: Left,        mods: Command,                    chars: "\x01"         } # mapped -> `ctrl-a`
+  # - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
   # - { key: Left,        mods: Alt|Control,                chars: ""             } # direct bound tmux
   - { key: Left,        mods: Alt|Control|Shift,          chars: "\x1b[18;6~"   } # mapped -> `ctrl-shift-F7`
   - { key: Left,        mods: Alt|Command,                chars: "\x11{"        } # tmux next-window
   - { key: Left,        mods: Alt|Command|Shift,          chars: "\x1b[23;6~"   } # mapped -> `ctrl-shift-F11`
-  - { key: Left,        mods: Control|Command,            chars: "\x0A"         } # mapped -> `ctrl-j`
+  # - { key: Left,        mods: Control|Command,            chars: "\x0A"         } # mapped -> `ctrl-j`
   # - { key: Left,        mods: Control|Command|Shift,      chars: ""             } #
   - { key: Left,        mods: Alt|Control|Command,        chars: "\x11<"        } #
   # - { key: Left,        mods: Alt|Control|Command|Shift,  chars: ""             } # collision
@@ -1139,45 +1139,45 @@ key_bindings:
   # - { key: Right,       mods: Alt|Shift,                  chars: ""             } #
   - { key: Right,       mods: Control,                    chars: "\x1b[1;5C"    } #
   # - { key: Right,       mods: Control|Shift,              chars: ""             } #
-  - { key: Right,       mods: Command,                    chars: "\x05"         } # mapped -> `ctrl-e`
-  - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
+  # - { key: Right,       mods: Command,                    chars: "\x05"         } # mapped -> `ctrl-e`
+  # - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
   # - { key: Right,       mods: Alt|Control,                chars: ""             } # direct bound tmux
   - { key: Right,       mods: Alt|Control|Shift,          chars: "\x1b[19;6~"   } # mapped -> `ctrl-shift-F8`
   - { key: Right,       mods: Alt|Command,                chars: "\x11}"        } # tmux previous-window
   - { key: Right,       mods: Alt|Command|Shift,          chars: "\x1b[24;6~"   } # mapped -> `ctrl-shift-F12`
-  - { key: Right,       mods: Control|Command,            chars: "\x0E"         } # mapped -> `ctrl-n`
+  # - { key: Right,       mods: Control|Command,            chars: "\x0E"         } # mapped -> `ctrl-n`
   # - { key: Right,       mods: Control|Command|Shift,      chars: ""             } #
   - { key: Right,       mods: Alt|Control|Command,        chars: "\x11>"        } #
   # - { key: Right,       mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Up,          mods: Shift,                      chars: "\x1b[1;2A"    } #
-  - { key: Up,          mods: Alt,                        chars: "\x02"         } # mapped -> `ctrl-b`
+  # - { key: Up,          mods: Alt,                        chars: "\x02"         } # mapped -> `ctrl-b`
   # - { key: Up,          mods: Alt|Shift,                  chars: ""             } #
   - { key: Up,          mods: Control,                    chars: "\x1b[1;5A"    } #
   # - { key: Up,          mods: Control|Shift,              chars: ""             } #
-  - { key: Up,          mods: Command,                    chars: "\x0F"         } # mapped -> `ctrl-o`
+  # - { key: Up,          mods: Command,                    chars: "\x0F"         } # mapped -> `ctrl-o`
   - { key: Up,          mods: Command|Shift,              chars: "\x1b[18;3~"   } # mapped -> `alt-F7`
   # - { key: Up,          mods: Alt|Control,                chars: ""             } # direct bound tmux
   - { key: Up,          mods: Alt|Control|Shift,          chars: "\x1b[18;4~"   } # mapped -> `alt-shift-F7`
   - { key: Up,          mods: Alt|Command,                chars: "\x1b[20;3~"   } # mapped -> `alt-F9`
   - { key: Up,          mods: Alt|Command|Shift,          chars: "\x1b[23;4~"   } # mapped -> `alt-shift-F11`
-  - { key: Up,          mods: Control|Command,            chars: "\x16"         } # mapped -> `ctrl-v`
+  # - { key: Up,          mods: Control|Command,            chars: "\x16"         } # mapped -> `ctrl-v`
   # - { key: Up,          mods: Control|Command|Shift,      chars: ""             } #
   - { key: Up,          mods: Alt|Control|Command,        chars: "\x11+"        } #
   - { key: Up,          mods: Alt|Control|Command|Shift,  chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
 
   - { key: Down,        mods: Shift,                      chars: "\x1b[1;2B"    } #
-  - { key: Down,        mods: Alt,                        chars: "\x06"         } # mapped -> `ctrl-f`
+  # - { key: Down,        mods: Alt,                        chars: "\x06"         } # mapped -> `ctrl-f`
   # - { key: Down,        mods: Alt|Shift,                  chars: ""             } #
   - { key: Down,        mods: Control,                    chars: "\x1b[1;5B"    } #
   # - { key: Down,        mods: Control|Shift,              chars: ""             } #
-  - { key: Down,        mods: Command,                    chars: "\x10"         } # mapped -> `ctrl-p`
+  # - { key: Down,        mods: Command,                    chars: "\x10"         } # mapped -> `ctrl-p`
   - { key: Down,        mods: Command|Shift,              chars: "\x1b[19;3~"   } # mapped -> `alt-F8`
   # - { key: Down,        mods: Alt|Control,                chars: ""             } # direct bound tmux
   - { key: Down,        mods: Alt|Control|Shift,          chars: "\x1b[19;4~"   } # mapped -> `alt-shift-F8`
   - { key: Down,        mods: Alt|Command,                chars: "\x1b[21;3~"   } # mapped -> `alt-F10`
   - { key: Down,        mods: Alt|Command|Shift,          chars: "\x1b[24;4~"   } # mapped -> `alt-shift-F12`
-  - { key: Down,        mods: Control|Command,            chars: "\x18"         } # mapped -> `ctrl-x`
+  # - { key: Down,        mods: Control|Command,            chars: "\x18"         } # mapped -> `ctrl-x`
   # - { key: Down,        mods: Control|Command|Shift,      chars: ""             } #
   - { key: Down,        mods: Alt|Control|Command,        chars: "\x11-"        } #
   - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
