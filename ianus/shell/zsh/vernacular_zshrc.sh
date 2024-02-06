@@ -36,10 +36,9 @@ plug "MichaelAquilina/zsh-you-should-use"
 plug "olrtg/zsh-fvm"
 
 plug "wintermi/zsh-brew"
-plug "wintermi/zsh-lsd"
-plug "wintermi/zsh-starship"
-plug "wintermi/zsh-rust"
 plug "wintermi/zsh-golang"
+plug "wintermi/zsh-rust"
+plug "wintermi/zsh-starship"
 
 ####################################################################################################
 #  autocompletion
@@ -102,6 +101,13 @@ NFUN="${ZDOTDIR}/zsh_navi.sh"
 ####################################################################################################
 
 eval "$(starship init zsh)"
+
+####################################################################################################
+# zellij
+####################################################################################################
+
+ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
+[ -f ${ZJFUN} ] && source ${ZJFUN}
 
 ####################################################################################################
 # zoxide
