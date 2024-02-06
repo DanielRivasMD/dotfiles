@@ -2,10 +2,6 @@
 # theme
 ####################################################################################################
 
-# TODO: rebind alt-d
-# TODO: rebind alt-c
-# TODO: update bindings
-
 # theme = "adwaita-dark"
 theme = "base16_transparent"
 # theme = "dark_plus"
@@ -58,7 +54,7 @@ C-space = ["hover"]
 # A-a = [""]                                                                      #
 A-b = ["move_prev_word_start", "collapse_selection"]                            # word left         # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                              # copy
-A-d = ["search_selection", "extend_search_next"]                                # spawn multicursor
+A-d = ["delete_word_forward"]                                                   # delete next word
 # A-e = [""]                                                                      #                   # bypassed => accent
 A-f = ["move_next_word_end", "collapse_selection"]                              # word right        # mapped -> `alt-right`
 # A-g = [""]                                                                      #
@@ -217,8 +213,8 @@ A-S-F10 = ["goto_next_parameter"]                                               
 # C-F2 = [""]                                                                     #                   # mapped -> ``
 # C-F3 = [""]                                                                     # collision tmux    # mapped -> `ctrl-F3`
 C-F4 = ["unindent"]                                                             # outdent selection # mapped -> `alt-O`
-# C-F5 = [""]                                                                     #                   # mapped -> ``
 # C-F6 = [""]                                                                     #                   # mapped -> ``
+C-F6 = ["search_selection", "extend_search_next"]                               # spawn multicursor # mapped -> `alt-d`
 # C-F7 = [""]                                                                     #                   # mapped -> `ctrl-cmd-shift-space`
 C-F8 = ["goto_last_accessed_file"]                                              #                   # mapped -> `ctrl-cmd-space`
 C-F9 = ["goto_prev_class"]                                                      # previous git      # mapped -> `pageup`
@@ -254,7 +250,7 @@ C-space = ["hover"]
 # A-a = [""]                                                                      #
 A-b = ["move_prev_word_start", "collapse_selection"]                            # word left         # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                              # copy
-A-d = ["search_selection", "extend_search_next"]                                # spawn multicursor
+A-d = ["delete_word_forward"]                                                   # delete next word
 # A-e = [""]                                                                      #                   # bypassed => accent
 A-f = ["move_next_word_end", "collapse_selection"]                              # word right        # mapped -> `alt-right`
 # A-g = [""]                                                                      #
@@ -413,8 +409,8 @@ A-S-F10 = ["goto_next_parameter"]                                               
 # C-F2 = [""]                                                                     #                   # mapped -> ``
 # C-F3 = [""]                                                                     # collision tmux    # mapped -> `ctrl-F3`
 C-F4 = ["unindent"]                                                             # outdent selection # mapped -> `alt-O`
-# C-F5 = [""]                                                                     #                   # mapped -> ``
 # C-F6 = [""]                                                                     #                   # mapped -> ``
+C-F6 = ["search_selection", "extend_search_next"]                               # spawn multicursor # mapped -> `alt-d`
 # C-F7 = [""]                                                                     #                   # mapped -> `ctrl-cmd-shift-space`
 C-F8 = ["goto_last_accessed_file"]                                              #                   # mapped -> `ctrl-cmd-space`
 C-F9 = ["goto_prev_class"]                                                      # previous git      # mapped -> `pageup`
@@ -450,7 +446,7 @@ C-space = ["hover"]
 # A-a = [""]                                                                      #
 A-b = ["move_prev_word_start", "collapse_selection"]                            # word left         # mapped -> `alt-left`
 A-c = ["yank_joined_to_clipboard"]                                              # copy
-A-d = ["search_selection", "extend_search_next"]                                # spawn multicursor
+A-d = ["delete_word_forward"]                                                   # delete next word
 # A-e = [""]                                                                      #                   # bypassed => accent
 A-f = ["move_next_word_end", "collapse_selection"]                              # word right        # mapped -> `alt-right`
 # A-g = [""]                                                                      #
@@ -609,8 +605,8 @@ A-S-F10 = ["goto_next_parameter"]                                               
 # C-F2 = [""]                                                                     #                   # mapped -> ``
 # C-F3 = [""]                                                                     # collision tmux    # mapped -> `ctrl-F3`
 C-F4 = ["unindent"]                                                             # outdent selection # mapped -> `alt-O`
-# C-F5 = [""]                                                                     #                   # mapped -> ``
 # C-F6 = [""]                                                                     #                   # mapped -> ``
+C-F6 = ["search_selection", "extend_search_next"]                               # spawn multicursor # mapped -> `alt-d`
 # C-F7 = [""]                                                                     #                   # mapped -> `ctrl-cmd-shift-space`
 C-F8 = ["goto_last_accessed_file"]                                              #                   # mapped -> `ctrl-cmd-space`
 C-F9 = ["goto_prev_class"]                                                      # previous git      # mapped -> `pageup`
@@ -633,4 +629,4 @@ C-F10 = ["goto_next_class"]                                                     
 
 
 ####################################################################################################
-   
+
