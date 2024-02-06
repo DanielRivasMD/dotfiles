@@ -80,14 +80,14 @@ alias wc='wordcrab'
 alias zz='z -'
 
 # eza
-alias e='eza --header --long --icons --classify --git --total-size --group'
+alias e='eza --header --long --icons --classify --git --group'
 alias ea='e --all'
 alias er='e --sort=newest'
 alias ear='ea --sort=newest'
 alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
 
 # lsd
-alias l='lsd --header --long --classify --git --total-size'
+alias l='lsd --header --long --classify --git'
 alias la='l --almost-all'
 alias lr='l --timesort --reverse'
 alias lar='la --timesort --reverse'
