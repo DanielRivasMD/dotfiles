@@ -32,23 +32,23 @@ map Q goToRoot
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " modes
-map <a-enter> enterInsertMode
+map <c-space> enterInsertMode
 map v enterVisualMode
 map V enterVisualLineMode
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " links
-map <c-m-space> focusInput
+map <c-m-f1> focusInput
 
-map <c-space> LinkHints.activateModeToCopyLinkUrl
-map <c-a-m-space> LinkHints.activateModeToDownloadLink
+map <c-f1> LinkHints.activateModeToDownloadLink
+map <c-f2> LinkHints.activateModeToCopyLinkUrl
 
-map <c-m-enter> LinkHints.activateMode
+map <m-f1> LinkHints.activateMode
 
-map <m-enter> LinkHints.activateModeToOpenInNewTab
-map <c-enter> LinkHints.activateModeToOpenInNewForegroundTab
-map <c-a-m-enter> LinkHints.activateModeWithQueue
+map <m-f2> LinkHints.activateModeToOpenInNewTab
+map <a-f1> LinkHints.activateModeToOpenInNewForegroundTab
+map <a-f2> LinkHints.activateModeWithQueue
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -86,13 +86,11 @@ map U goForward
 map ; createTab
 map , previousTab
 map . nextTab
-map <a-m-space> visitPreviousTab
 map ' visitPreviousTab
 map d duplicateTab
 map \ togglePinTab
 map m toggleMuteTab
 map x removeTab
-map <a-q> removeTab
 map z restoreTab
 map w moveTabToNewWindow
 map [ moveTabLeft
