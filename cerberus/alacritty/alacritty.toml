@@ -113,11 +113,6 @@ key = "A"
 mods = "Alt"
 
 [[keyboard.bindings]]
-chars = "\u001B[1;3A"
-key = "B"
-mods = "Alt"
-
-[[keyboard.bindings]]
 chars = "\u001Bc"
 key = "C"
 mods = "Alt"
@@ -125,11 +120,6 @@ mods = "Alt"
 [[keyboard.bindings]]
 chars = "\u001Bd"
 key = "D"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3B"
-key = "F"
 mods = "Alt"
 
 [[keyboard.bindings]]
@@ -798,16 +788,6 @@ key = "Left"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u0001"
-key = "Left"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3D"
-key = "Left"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
 chars = "\u001B[18;6~"
 key = "Left"
 mods = "Alt|Control|Shift"
@@ -821,13 +801,6 @@ mods = "Alt|Command"
 chars = "\u001B[23;6~"
 key = "Left"
 mods = "Alt|Command|Shift"
-
-[[keyboard.bindings]]
-chars = """
-
-"""
-key = "Left"
-mods = "Control|Command"
 
 [[keyboard.bindings]]
 chars = "\u0011<"
@@ -850,16 +823,6 @@ key = "Right"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u0005"
-key = "Right"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3C"
-key = "Right"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
 chars = "\u001B[19;6~"
 key = "Right"
 mods = "Alt|Control|Shift"
@@ -875,11 +838,6 @@ key = "Right"
 mods = "Alt|Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u000E"
-key = "Right"
-mods = "Control|Command"
-
-[[keyboard.bindings]]
 chars = "\u0011>"
 key = "Right"
 mods = "Alt|Control|Command"
@@ -890,19 +848,9 @@ key = "Up"
 mods = "Shift"
 
 [[keyboard.bindings]]
-chars = "\u0002"
-key = "Up"
-mods = "Alt"
-
-[[keyboard.bindings]]
 chars = "\u001B[1;5A"
 key = "Up"
 mods = "Control"
-
-[[keyboard.bindings]]
-chars = "\u000F"
-key = "Up"
-mods = "Command"
 
 [[keyboard.bindings]]
 chars = "\u001B[18;3~"
@@ -925,11 +873,6 @@ key = "Up"
 mods = "Alt|Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\u0016"
-key = "Up"
-mods = "Control|Command"
-
-[[keyboard.bindings]]
 chars = "\u0011+"
 key = "Up"
 mods = "Alt|Control|Command"
@@ -945,19 +888,9 @@ key = "Down"
 mods = "Shift"
 
 [[keyboard.bindings]]
-chars = "\u0006"
-key = "Down"
-mods = "Alt"
-
-[[keyboard.bindings]]
 chars = "\u001B[1;5B"
 key = "Down"
 mods = "Control"
-
-[[keyboard.bindings]]
-chars = "\u0010"
-key = "Down"
-mods = "Command"
 
 [[keyboard.bindings]]
 chars = "\u001B[19;3~"
@@ -978,11 +911,6 @@ mods = "Alt|Command"
 chars = "\u001B[24;4~"
 key = "Down"
 mods = "Alt|Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0018"
-key = "Down"
-mods = "Control|Command"
 
 [[keyboard.bindings]]
 chars = "\u0011-"
