@@ -1,14 +1,21 @@
 // TODO: update theme
-// TODO: update bindings
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 layout {
-    pane
     pane split_direction="vertical" {
         pane
-        pane command="btm"
+        pane split_direction="horizontal" {
+            pane
+            pane
+        }
+    }
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 themes {
     tokyo-night-light {
@@ -26,6 +33,8 @@ themes {
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 keybinds clear-defaults=true {
 
     shared_except "locked" {
@@ -39,6 +48,8 @@ keybinds clear-defaults=true {
 //        bind "Alt [" { PreviousSwapLayout; }
 //        bind "Alt ]" { NextSwapLayout; }
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // modes
     shared_except "normal" {
@@ -70,14 +81,22 @@ keybinds clear-defaults=true {
         bind "F8" { SwitchToMode "Session"; }
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
     shared {
+        bind "Alt a" { SwitchToMode "Pane"; NewPane; SwitchToMode "Normal"; }
+        bind "Alt g" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "Alt m" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }
         bind "Alt p" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }
         bind "Alt t" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
     locked {
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
     normal {
         bind "F1" { SwitchToMode "Locked"; }                                                     // `esc`
@@ -85,6 +104,8 @@ keybinds clear-defaults=true {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
     pane {
         bind "F3" { SwitchToMode "Normal"; }
@@ -103,6 +124,8 @@ keybinds clear-defaults=true {
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
     tab {
         bind "F4" { SwitchToMode "Normal"; }
@@ -124,6 +147,8 @@ keybinds clear-defaults=true {
         bind "Tab" { ToggleTab; }
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
     resize {
         bind "F5" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
@@ -138,6 +163,8 @@ keybinds clear-defaults=true {
         bind "-" { Resize "Decrease"; }
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
     move {
         bind "F6" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
@@ -147,6 +174,8 @@ keybinds clear-defaults=true {
         bind "k" "Up" { MovePane "Up"; }
         bind "l" "Right" { MovePane "Right"; }
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
     scroll {
         bind "F7" { SwitchToMode "Normal"; }
@@ -186,10 +215,14 @@ keybinds clear-defaults=true {
 //        bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
     session {
         bind "F8" { SwitchToMode "Normal"; }
         bind "d" { Detach; }
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
     tmux {
 //        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
@@ -216,9 +249,13 @@ keybinds clear-defaults=true {
 
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 plugins {
     tab-bar { path "tab-bar"; }
     status-bar { path "status-bar"; }
     strider { path "strider"; }
     compact-bar { path "compact-bar"; }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
