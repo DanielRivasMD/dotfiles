@@ -15,6 +15,8 @@ _default:
 @edit:
   micro .justfile
 
+# TODO: split protocols into scripts
+
 ####################################################################################################
 # Cerberus
 ####################################################################################################
@@ -38,67 +40,67 @@ Cerberus:
   echo 'Linking git config directory'
   echo '===================================================================================================='
   if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi        # purge before linking
-  ln -svf "${gitconfigDir}" "${home}/.gitconfig.d"                      # gitconfig directory
+  ln -svf "${gitconfigDir}" "${home}/.gitconfig.d"                              # gitconfig directory
   echo '===================================================================================================='
 
   # git files
   echo ''
   echo 'Linking git config files'
   echo '===================================================================================================='
-  ln -svf "${gitconfig}" "${home}/.gitconfig"                      # gitconfig
-  ln -svf "${gitignore}" "${home}/.gitignore_global"        # gitignore_global
+  ln -svf "${gitconfig}" "${home}/.gitconfig"                                   # gitconfig
+  ln -svf "${gitignore}" "${home}/.gitignore_global"                            # gitignore_global
   echo '===================================================================================================='
 
   # rc files
   echo ''
   echo 'Linking rc config'
   echo '===================================================================================================='
-  ln -svf "${gemrc}" "${home}/.gemrc"                              # gemrc
-  ln -svf "${mplayer}" "${home}/.mplayer"                      # mplayer
-  ln -svf "${nanorc}" "${home}/.nanorc"                           # nanorc
+  ln -svf "${gemrc}" "${home}/.gemrc"                                           # gemrc
+  ln -svf "${mplayer}" "${home}/.mplayer"                                       # mplayer
+  ln -svf "${nanorc}" "${home}/.nanorc"                                         # nanorc
   echo '===================================================================================================='
 
   # toml files
   echo ''
   echo 'Linking toml config'
   echo '===================================================================================================='
-  ln -svf "${procs}" "${home}/.procs.toml"                  # procs
+  ln -svf "${procs}" "${home}/.procs.toml"                                      # procs
   echo '===================================================================================================='
 
   # config files
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  rm -rf "${config}/atuin" && ln -sv "${atuin}" "${config}/"           # atuin
-  ln -svf "${alacritty}" "${config}/"                                  # alacritty
-  ln -svf "${bottom}" "${config}/"                                     # bottom
-  ln -svf "${cheat}" "${config}/"                                      # cheat
-  if [[ ! -d "${config}/gh" ]]; then mkdir "${config}/gh"; fi
-  ln -svf "${gh}/config.yml" "${config}/gh/"                           # gh
-  ln -svf "${karabiner}" "${config}/"                                  # karabiner
-  ln -svf "${karabiner}/karabiner.edn" "${config}/"                    # karabiner
-  ln -svf "${khal}" "${config}/"                                       # khal
+  rm -rf "${config}/atuin" && ln -sv "${atuin}" "${config}/"                    # atuin
+  ln -svf "${alacritty}" "${config}/"                                           # alacritty
+  ln -svf "${bottom}" "${config}/"                                              # bottom
+  ln -svf "${cheat}" "${config}/"                                               # cheat
+
+  if [[ ! -d "${config}/gh" ]]; then mkdir "${config}/gh"; fi                   # create directory
+  ln -svf "${gh}/config.yml" "${config}/gh/"                                    # gh
+  ln -svf "${karabiner}" "${config}/"                                           # karabiner
+  ln -svf "${karabiner}/karabiner.edn" "${config}/"                             # karabiner
+  ln -svf "${khal}" "${config}/"                                                # khal
   echo '===================================================================================================='
 
   # config directories
   echo ''
   echo 'Linking config dirs @config'
   echo '===================================================================================================='
-  ln -svf "${ranger}" "${config}"                                      # ranger directory
-  ln -svf "${gitui}" "${config}"                                       # gitui directory
-  ln -svf "${zellij}" "${config}"                                      # zellij directory
+  ln -svf "${gitui}" "${config}"                                                # gitui directory
+  ln -svf "${zellij}" "${config}"                                               # zellij directory
   echo '===================================================================================================='
 
   # distant
   echo ''
   echo 'Linking config @distant locations'
   echo '===================================================================================================='
-  ln -svf "${julia}/startup.jl" "${home}/.julia/config/"               # julia startup
-  ln -svf "${sshConfig}" "${home}/.ssh/"                              # ssh config
-  ln -svf "${lazycli}/config.yml" "${lazycliConf}/"                    # lazycli config
-  ln -svf "${lazygit}/config.yml" "${lazygitConf}/"                    # lazygit config
-  ln -svf "${lapce}/keymaps.toml" "${lapceConf}/"                      # lapce config
-  ln -svf "${lapce}/settings.toml" "${lapceConf}/"                      # lapce config
+  ln -svf "${julia}/startup.jl" "${home}/.julia/config/"                        # julia startup
+  ln -svf "${sshConfig}" "${home}/.ssh/"                                        # ssh config
+  ln -svf "${lazycli}/config.yml" "${lazycliConf}/"                             # lazycli config
+  ln -svf "${lazygit}/config.yml" "${lazygitConf}/"                             # lazygit config
+  ln -svf "${lapce}/keymaps.toml" "${lapceConf}/"                               # lapce config
+  ln -svf "${lapce}/settings.toml" "${lapceConf}/"                              # lapce config
   echo '===================================================================================================='
 
   # purge before linking
@@ -106,25 +108,25 @@ Cerberus:
   echo 'Linking broot config'
   echo '===================================================================================================='
   if [[ -f "${brootConf}/conf.hjson" ]]; then rm -f "${brootConf}/conf.hjson"; fi
-  if [[ ! -d "${brootConf}" ]]; then mkdir "${brootConf}"; fi
-  ln -svf "${broot}/conf.toml" "${brootConf}/"                         # broot config
+  if [[ ! -d "${brootConf}" ]]; then mkdir "${brootConf}"; fi                   # create directory
+  ln -svf "${broot}/conf.toml" "${brootConf}/"                                  # broot config
   echo '===================================================================================================='
 
   # purge before linking
   echo ''
   echo 'Linking espanso config'
   echo '===================================================================================================='
-  if [[ -f "${espansoConf}" ]]; then rm -f "${espansoConf}"; fi
-  ln -svf "${espansoConfig}/default.yml" "${espansoConf}/config"      # espanso config default
-  ln -svf "${espansoMatch}/base.yml" "${espansoConf}/match"           # espanso config base
+  if [[ -f "${espansoConf}" ]]; then rm -f "${espansoConf}"; fi                 # purge before linking
+  ln -svf "${espansoConfig}/default.yml" "${espansoConf}/config"                # espanso config default
+  ln -svf "${espansoMatch}/base.yml" "${espansoConf}/match"                     # espanso config base
   echo '===================================================================================================='
 
   # purge before linking
   echo ''
   echo 'Linking navi config'
   echo '===================================================================================================='
-  if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
-  ln -svf "${navi}" "${naviConf}"                                      # navi cheats directory
+  if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi                      # purge before linking
+  ln -svf "${navi}" "${naviConf}"                                               # navi cheats directory
   echo '===================================================================================================='
 
   # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
@@ -199,19 +201,19 @@ Ianus:
   echo ''
   echo 'Linking config @HOME'
   echo '===================================================================================================='
-  ln -svf "${pier}/pier.toml" "${home}/.pier.toml"                        # pier
-  ln -svf "${tmux}/3.2a.tmux.conf" "${home}/.tmux.conf"                   # tumx 3.2a
-  ln -svf "${screen}/4.08.00.screenrc" "${home}/.screenrc"                # screen
+  ln -svf "${pier}/pier.toml" "${home}/.pier.toml"                              # pier
+  ln -svf "${tmux}/3.2a.tmux.conf" "${home}/.tmux.conf"                         # tumx 3.2a
+  ln -svf "${screen}/4.08.00.screenrc" "${home}/.screenrc"                      # screen
   echo '===================================================================================================='
 
   # @config
   echo ''
   echo 'Linking config @config'
   echo '===================================================================================================='
-  ln -svf "${micro}" "${config}"                                          # micro directory
-  ln -svf "${helix}" "${config}"                                          # helix config
-  ln -svf "${lsd}" "${config}"                                            # lsd directory
-  ln -svf "${starship}" "${config}"                                       # starship directory
+  ln -svf "${micro}" "${config}"                                                # micro directory
+  ln -svf "${helix}" "${config}"                                                # helix config
+  ln -svf "${lsd}" "${config}"                                                  # lsd directory
+  ln -svf "${starship}" "${config}"                                             # starship directory
   echo '===================================================================================================='
 
   # shell
@@ -229,7 +231,7 @@ Ianus:
   ln -svf "${bash}/vernacular_bashrc.sh" "${home}/.bashrc"                      # bashrc
   ln -svf "${bash}/vernacular_bash_aliases.sh" "${home}/.bash/bash_aliases.sh"  # bash aliases
   ln -svf "${bash}/fzf.bash" "${home}/.bash"                                    # fzf bash
-  ln -svf "${bash}/bash_navi_patch.sh" "${home}/.bash"                          # bash navi patch
+  ln -svf "${bash}/bash_navi_patch.sh" "${home}/.bash"                          # bash navi
   echo '===================================================================================================='
 
   # zsh
@@ -242,6 +244,7 @@ Ianus:
   ln -svf "${zsh}/fzf.zsh" "${home}/.zsh"                                       # fzf zsh
   ln -svf "${zsh}/zsh_just.sh" "${home}/.zsh"                                   # zsh just
   ln -svf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                   # zsh navi
+  ln -svf "${zsh}/zsh_zellij.sh" "${home}/.zsh"                                 # zsh zellij
   ln -svf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                 # zsh zoxide
   echo '===================================================================================================='
 
@@ -249,7 +252,7 @@ Ianus:
   echo ''
   echo 'Linking fish profile'
   echo '===================================================================================================='
-  if [[ ! -d "${config}/fish" ]]; then mkdir "${config}/fish"; fi
+  if [[ ! -d "${config}/fish" ]]; then mkdir "${config}/fish"; fi               # create directory
   ln -svf "${fish}/vernacular_config.fish" "${config}/fish/config.fish"         # fish config
   echo '===================================================================================================='
 
