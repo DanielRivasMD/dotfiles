@@ -84,11 +84,25 @@
         ; Alacritty
         {:des "Terminal sessions"
          :rules [
-                 [:escape :vk_none :term {:alone [:!Oa]}]                                           ; toggle tmux remote
-                 [:left_option :left_option :term {:alone [:!Og]}]                                 ; previous tmux session
-                 [:left_shift :left_shift :term {:alone [:!Om]}]                                   ; toggle copy mode
-                 [:left_shift :left_shift :term {:alone [:!Op]}]                                   ; toggle copy mode
-                 [:left_shift :left_shift :term {:alone [:!Ot]}]                                   ; toggle copy mode
+                 ;zellij modes
+                 [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
+                 [:!OCn :f2 [:term]]                                                                ; normal
+                 [:!OCp :f3 [:term]]                                                                ; pane
+                 [:!OCt :f4 [:term]]                                                                ; tab
+                 [:!OCr :f5 [:term]]                                                                ; resize
+                 [:!OCm :f6 [:term]]                                                                ; move
+                 [:!OCf :f7 [:term]]                                                                ; search
+                 [:!OCs :f8 [:term]]                                                                ; session
+                 ; [:!OC :f9 [:term]]                                                               ;
+                 ; [:!OC :f10 [:term]]                                                              ;
+                 ; [:!OC :f11 [:term]]                                                              ;
+                 ; [:!OC :f12 [:term]]                                                              ;
+
+                 ; [: :!Oa [:term]]                                                                 ;
+                 ; [: :!Og [:term]]                                                                 ;
+                 [:!Cn :!Om [:term]]                                                                ; new tab
+                 [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
+                 [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
                  [:!Cn :f1 [:term]]
                  ]}
 
