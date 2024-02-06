@@ -22,14 +22,17 @@ key = "Ctrl+Shift+Tab"
 command = "-insert_cursor_above"
 mode = "i"
 key = "Alt+Meta+ArrowUp"
+
 [[keymaps]]
 command = "-insert_cursor_below"
 mode = "i"
 key = "Alt+Meta+ArrowDown"
+
 [[keymaps]]
 command = "-select_current_line"
 mode = "i"
 key = "Meta+l"
+
 [[keymaps]]
 command = "-toggle_line_comment"
 key = "Meta+/"
@@ -58,26 +61,32 @@ key = "Meta+y"
 command = "-move_line_up"
 mode = "i"
 key = "Alt+ArrowUp"
+
 [[keymaps]]
 command = "-move_line_down"
 mode = "i"
 key = "Alt+ArrowDown"
+
 [[keymaps]]
 command = "-delete_line"
 mode = "i"
 key = "Meta+Shift+k"
+
 [[keymaps]]
 command = "-select_next_current"
 mode = "i"
 key = "Meta+d"
+
 [[keymaps]]
 command = "-select_skip_current"
 mode = "i"
 key = "Meta+k Meta+d"
+
 [[keymaps]]
 command = "-select_all_current"
 mode = "i"
 key = "Meta+Shift+l"
+
 [[keymaps]]
 command = "-palette"
 key = "Meta+p"
@@ -90,10 +99,12 @@ key = "F12"
 command = "-duplicate_line_down"
 mode = "i"
 key = "Alt+Shift+ArrowDown"
+
 [[keymaps]]
 command = "-duplicate_line_up"
 mode = "i"
 key = "Alt+Shift+ArrowUp"
+
 [[keymaps]]
 command = "-select_undo"
 mode = "i"
@@ -123,6 +134,10 @@ key = "Meta+backspace"
 [[keymaps]]
 command = "-split_vertical"
 key = 'Meta+\'
+
+[[keymaps]]
+command = "-toggle_file_explorer_focus"
+key = "Meta+Shift+E"
 
 ####################################################################################################
 # remappings
@@ -288,3 +303,9 @@ key = "Ctrl+Alt+Meta+Enter"
 [[keymaps]]
 command = "goto_type_definition"
 key = "Alt+Meta+Enter"
+
+[[keymaps]]
+command = "toggle_file_explorer_focus"
+key = "Alt+F1"
+
+####################################################################################################
