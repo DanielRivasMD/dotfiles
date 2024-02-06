@@ -39,8 +39,13 @@ export LC_ALL=en_US.UTF-8
 ####################################################################################################
 
 export GOPATH="$HOME/.go/"
-export GOROOT="/opt/homebrew/Cellar/go/1.21.6/libexec"
 export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+if [[ $HOST == "BMC-02ZX3JYMD6N" ]]; then
+  export GOROOT="/opt/homebrew/Cellar/go/1.21.6/libexec"
+elif [[ $HOST == "BMC-07GQ0FYQ6NY" ]]; then
+  export GOROOT="/usr/local/Cellar/go/1.21.6/libexec"
+fi
 
 ####################################################################################################
 #  cargo-rust path
@@ -85,7 +90,7 @@ export STARSHIP_CONFIG=${IANUS}/starship/vernacular_starship.toml
 ####################################################################################################
 
 export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
-export ZELLIJ_CONFIG_FILE=${ZELLIJ_CONFIG_DIR}/config.yml
+export ZELLIJ_CONFIG_FILE=${ZELLIJ_CONFIG_DIR}/config.kdl
 
 ####################################################################################################
 # less
@@ -135,7 +140,6 @@ source "${HOME}/.config/broot/launcher/bash/br"
 
 ####################################################################################################
 # shell functions
-
 ####################################################################################################
 
 # Rmarkdown knit
