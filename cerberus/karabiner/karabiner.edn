@@ -111,11 +111,14 @@
         ; Alacritty
         {:des "Terminal delete"
          :rules [
-                 [:!Sright_option :!Od [:term]]
-                 [:!Sright_command :!Tk [:term]]
-                 [:!Rleft_control :!Tw [:term]]
-                 [:!Rleft_option :!Tl [:term]]
-                 [:!Rleft_command :!Tu [:term]]
+                 [:!Sright_option :!Od [:term]]                                                     ; delete word forward
+                 [:!Sright_command :!Tk [:term]]                                                    ; delete line forward
+                 [:!Rleft_control :!Tw [:term]]                                                     ; delete word backward
+                 [:!Rleft_command :!Tu [:term]]                                                     ; delete line backward
+
+                 [:!Rleft_option :!Tl [:term]]                                                      ; clear screen
+                 [:!Oc :!Tf5 [:term]]                                                               ; patch `alt-c`
+                 [:!Od :!Tf6 [:term]]                                                               ; patch `alt-d`
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
