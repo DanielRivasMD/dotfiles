@@ -1554,7 +1554,8 @@
         "description" : "Change left_control to menu selector when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "f18"
+            "key_code" : "f3",
+            "modifiers" : [ "left_option" ]
           } ],
           "from" : {
             "key_code" : "left_control"
@@ -1598,7 +1599,8 @@
         "description" : "Change right_shift to clipboard selector when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "f17"
+            "key_code" : "f3",
+            "modifiers" : [ "left_command" ]
           } ],
           "from" : {
             "key_code" : "right_shift"
@@ -1612,7 +1614,8 @@
         "description" : "Change right_option to paste when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "f16"
+            "key_code" : "f3",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "from" : {
             "key_code" : "right_option"
@@ -1626,7 +1629,8 @@
         "description" : "Change right_command to command-control & to open file when used alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "f15"
+            "key_code" : "f3",
+            "modifiers" : [ "left_control", "left_shift" ]
           } ],
           "from" : {
             "key_code" : "right_command"
@@ -1653,7 +1657,8 @@
           "type" : "basic"
         }, {
           "to_if_alone" : [ {
-            "key_code" : "f14"
+            "key_code" : "f3",
+            "modifiers" : [ "left_command", "left_shift" ]
           } ],
           "from" : {
             "key_code" : "escape"
@@ -1668,7 +1673,8 @@
         "description" : "Change backspace to composed",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "f13"
+            "key_code" : "f3",
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "from" : {
             "key_code" : "delete_or_backspace"
