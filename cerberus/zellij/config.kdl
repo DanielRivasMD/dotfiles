@@ -1,37 +1,6 @@
-// TODO: update theme
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-layout {
-    pane split_direction="vertical" {
-        pane
-        pane split_direction="horizontal" {
-            pane
-            pane
-        }
-    }
-    pane size=1 borderless=true {
-        plugin location="zellij:compact-bar"
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-themes {
-    tokyo-night-light {
-        fg 52 59 88
-        bg 213 214 219
-        black 15 15 20
-        red 186 75 96
-        green 72 94 48
-        yellow 143 94 21
-        blue 52 84 138
-        magenta 90 74 120
-        cyan 15 75 110
-        white 130 137 172
-        orange 150 80 39
-    }
-}
+theme "tokyo-night-light"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -51,6 +20,7 @@ keybinds clear-defaults=true {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    // TODO: update bindings
     // modes
     shared_except "normal" {
         bind "F1" { SwitchToMode "Normal"; }                                                     // `esc`
@@ -58,27 +28,27 @@ keybinds clear-defaults=true {
     }
 
     shared_except "pane" {
-        bind "F3" { SwitchToMode "Pane"; }
+        bind "F4" { SwitchToMode "Pane"; }
     }
 
     shared_except "tab" {
-        bind "F4" { SwitchToMode "Tab"; }
+        bind "F5" { SwitchToMode "Tab"; }
     }
 
     shared_except "resize" {
-        bind "F5" { SwitchToMode "Resize"; }
+        bind "F6" { SwitchToMode "Resize"; }
     }
 
     shared_except "move" {
-        bind "F6" { SwitchToMode "Move"; }
+        bind "F7" { SwitchToMode "Move"; }
     }
 
     shared_except "search" {
-        bind "F7" { SwitchToMode "Search"; }
+        bind "F8" { SwitchToMode "Search"; }
     }
 
     shared_except "session" {
-        bind "F8" { SwitchToMode "Session"; }
+        bind "F9" { SwitchToMode "Session"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
