@@ -126,13 +126,17 @@
         ; Alacritty
         {:des "Terminal remappings"
          :rules [
+                 [:!WQRtab :!Th [:term]]                                                            ; `delete-tab`
+                 [:!WQRcaps_lock :!Tg [:term]]                                                      ; `delete-caps_lock`
+                 [:!WQRleft_shift :!Oc [:term]]                                                     ; `delete-shift`
                  [:!WQRleft_control :!Tr [:term]]                                                   ; `delete-ctrl`
                  [:!WQRleft_option :!Ts [:term]]                                                    ; `delete-alt`
                  [:!WQRleft_command :!Tt [:term]]                                                   ; `delete-cmd`
-                 [:!WQRleft_shift :!Tg [:term]]                                                     ; `delete-shift`
-                 [:!WQRtab :!Th [:term]]                                                            ; `delete-tab`
                  [:!WQRright_command :!Tj [:term]]                                                  ; `delete-cmd`
                  [:!WQRright_option :!Tn [:term]]                                                   ; `delete-alt`
+
+                 [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; tmux copy
+                 [:delete_or_backspace :!WQright_shift :term {:alone [:!Sf3]}]                      ; tmux remote
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
