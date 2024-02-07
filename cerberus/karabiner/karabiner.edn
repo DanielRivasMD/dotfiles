@@ -87,19 +87,20 @@
                  ;zellij modes
                  [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
                  [:!OCn :f2 [:term]]                                                                ; normal
-                 [:!OCp :f3 [:term]]                                                                ; pane
-                 [:!OCt :f4 [:term]]                                                                ; tab
-                 [:!OCr :f5 [:term]]                                                                ; resize
-                 [:!OCm :f6 [:term]]                                                                ; move
-                 [:!OCf :f7 [:term]]                                                                ; search
-                 [:!OCs :f8 [:term]]                                                                ; session
-                 ; [:!OC :f9 [:term]]                                                               ;
+                 ; [ [:term]]                                                                       ;
+                 [:!OCp :f4 [:term]]                                                                ; pane
+                 [:!OCt :f5 [:term]]                                                                ; tab
+                 [:!OCr :f6 [:term]]                                                                ; resize
+                 [:!OCm :f7 [:term]]                                                                ; move
+                 [:!OCf :f8 [:term]]                                                                ; search
+                 [:!OCs :f9 [:term]]                                                                ; session
+
                  ; [:!OC :f10 [:term]]                                                              ;
                  ; [:!OC :f11 [:term]]                                                              ;
                  ; [:!OC :f12 [:term]]                                                              ;
 
-                 ; [: :!Oa [:term]]                                                                 ;
-                 ; [: :!Og [:term]]                                                                 ;
+                 [:!Ch :!Oa [:term]]                                                                ; new pane
+                 [:!Cg :!Og [:term]]                                                                ; new embeded pane
                  [:!Cn :!Om [:term]]                                                                ; new tab
                  [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
                  [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
