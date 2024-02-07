@@ -5,8 +5,8 @@
 
   "Alt-a": "None",
   "Alt-b": "WordLeft",                                                          // mapped -> `alt-left`
-  "Alt-c": "Copy",
-  "Alt-d": "SpawnMultiCursor",
+  "Alt-c": "None",
+  "Alt-d": "None",
   "Alt-e": "None",                                                              // bypassed => accent
   "Alt-f": "WordRight",                                                         // mapped -> `alt-right`
   "Alt-g": "None",
@@ -157,8 +157,8 @@
   "Ctrl-F2": "None",                                                            // mapped -> ``
   "Ctrl-F3": "None",                                                            // collision tmux mapped -> `ctrl-F3`
   "Ctrl-F4": "OutdentSelection",                                                // mapped -> `alt-O`
-  "Ctrl-F5": "None",                                                            // mapped -> ``
-  "Ctrl-F6": "None",                                                            // mapped -> ``
+  "Ctrl-F5": "Copy",                                                            // mapped -> `alt-c`
+  "Ctrl-F6": "SpawnMultiCursor",                                                // mapped -> `alt-d`
   "Ctrl-F7": "None",                                                            // mapped -> `cmd-space`
   "Ctrl-F8": "None",                                                            // mapped -> `ctrl-cmd-space`
   "Ctrl-F9": "DiffPrevious",                                                    // mapped -> `pageup`
