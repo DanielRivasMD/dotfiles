@@ -138,7 +138,28 @@
         ; Alacritty
         {:des "Terminal remappings"
          :rules [
-                 [:!TCspacebar :!Tf8 [:term]]                                                       ; `delete-ctrl`
+                 ; [:!Oleft_arrow :!Ob [:term]]                                                     ; `alt-left`
+                 ; [:!Oright_arrow :!Of [:term]]                                                    ; `alt-right`
+
+                 [:!Ob :!Oup_arrow [:term]]                                                         ; `alt-b`
+                 [:!Of :!Odown_arrow [:term]]                                                       ; `alt-f`
+
+                 [:!Cleft_arrow :!Ta [:term]]                                                       ; `cmd-left`
+                 [:!Cright_arrow :!Te [:term]]                                                      ; `cmd-right`
+
+                 [:!CSleft_arrow :!Oleft_arrow [:term]]                                             ; `cmd-shift-left`
+                 [:!CSright_arrow :!Oright_arrow [:term]]                                           ; `cmd-shift-right`
+
+                 [:!Oup_arrow :!Tb [:term]]                                                         ; `alt-up`
+                 [:!Odown_arrow :!Tf [:term]]                                                       ; `alt-down`
+
+                 [:!Cup_arrow :!To [:term]]                                                         ; `cmd-up`
+                 [:!Cdown_arrow :!Tp [:term]]                                                       ; `cmd-down`
+
+                 [:!TCup_arrow :!Tv [:term]]                                                        ; `ctrl-cmd-up`
+                 [:!TCdown_arrow :!Tx [:term]]                                                      ; `ctrl-cmd-down`
+
+                 [:!TCspacebar :!Tf8 [:term]]                                                       ; `ctrl-cmd-space`
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -252,7 +273,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; 
+        ; delete remapping
         {:des "Change delete shifts"
          :rules [[:!Sright_shift :delete_forward]
                  [:!Rleft_shift :delete_or_backspace]]}
