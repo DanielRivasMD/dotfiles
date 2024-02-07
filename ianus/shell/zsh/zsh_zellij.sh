@@ -4,9 +4,9 @@
 
 if [[ -z "$ZELLIJ" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c
+        zellij attach
     else
-        zellij
+        zellij --layout "${ZELLIJ_CONFIG_DIR}/layout.kdl"
     fi
 
     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
