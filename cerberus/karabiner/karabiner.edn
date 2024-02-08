@@ -1,279 +1,279 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-    ;; !  | means mandatory
-    ;; #  | means optional
-    ;; C  | left_command
-    ;; T  | left_control
-    ;; O  | left_option
-    ;; S  | left_shift
-    ;; F  | fn
-    ;; Q  | right_command
-    ;; W  | right_control
-    ;; E  | right_option
-    ;; R  | right_shift
-    ;; P  | caps_lock
-    ;; !! | mandatory command + control + optional + shift (hyper)
-    ;; ## | optional any
+{:profiles
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-{:profiles {:Default {:default true
-                      :sim     50     ;; simultaneous_threshold_milliseconds (def: 50)
+{:Default {:default true
+           :sim     50     ;; simultaneous_threshold_milliseconds (def: 50)
                                       ;; keys need to be pressed within this threshold to be considered simultaneous
-                      :delay   300    ;; to_delayed_action_delay_milliseconds (def: 500)
+           :delay   300    ;; to_delayed_action_delay_milliseconds (def: 500)
                                       ;; basically it means time after which the key press is count delayed
-                      :alone   300    ;; to_if_alone_timeout_milliseconds (def: 1000)
+           :alone   300    ;; to_if_alone_timeout_milliseconds (def: 1000)
                                       ;; hold for 995s and single tap registered; hold for 1005s and seen as modifier
-                      :held    500    ;; to_if_held_down_threshold_milliseconds (def: 500)
+           :held    500    ;; to_if_held_down_threshold_milliseconds (def: 500)
                                       ;; key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)
-                      }}
- :applications
- {:browser ["org.mozilla.firefox"]
-  :editor ["lapce"]
-  :mail ["com.apple.mail"]
-  :term ["alacritty"]}
+           }}
+:applications
+{:browser ["org.mozilla.firefox"]
+ :editor ["lapce"]
+ :mail ["com.apple.mail"]
+ :term ["alacritty"]}
 
- :templates
- {:launch "osascript -e 'tell application \"%s\" to activate'"}
+:templates
+{:launch "osascript -e 'tell application \"%s\" to activate'"}
 
- :layers
- {:zero-mode {:key :keypad_num_lock}}
+:layers
+{:zero-mode {:key :keypad_num_lock}}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+:main [
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Launcher"
+ :rules [[:!WQR1 [:launch "Whatsapp"]]                                                      ;
+         [:!WQR2 [:launch "Telegram"]]                                                      ;
+         [:!WQR3 [:launch "Slack"]]                                                         ;
+         [:!WQR4 [:launch "Skype"]]                                                         ;
+         [:!WQR5 [:launch "PowerPoint"]]                                                    ;
+         [:!WQR6 [:launch "Word"]]                                                          ;
+         [:!WQR7 [:launch "Skim"]]                                                          ;
+         [:!WQR8 [:launch "Mail"]]                                                          ;
+         [:!WQR9 [:launch "Firefox"]]                                                       ;
+         [:!WQRhyphen [:launch "Alacritty"]]                                                ;
+         [:!WQRequal_sign [:launch "Lapce"]]                                                ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Mail
+{:des "Mail bindings"
+ :rules [[:!Creturn_or_enter :!CSd [:mail]]                                                 ; `cmd-enter` ->          send
+         [:!Oreturn_or_enter :!Cr [:mail]]                                                  ; `alt-enter` ->          reply
+         [:!OSreturn_or_enter :!CSr [:mail]]                                                ; `alt-shift-enter` ->    reply all
+         [:!OCreturn_or_enter :!CSf [:mail]]                                                ; `alt-cmd-enter` ->      forward
+         [:!Sreturn_or_enter :!Cn [:mail]]                                                  ; `shift-enter` ->        new
+         [:!OTCreturn_or_enter :!CSj [:mail]]                                               ; `alt-ctrl-cmd-enter` -> junk
+         [:!EWQreturn_or_enter :!CSj [:mail]]                                               ; `alt-ctrl-cmd-enter` -> junk
+         [:!Tspacebar :!CSu [:mail]]                                                        ; `ctrl-space` ->         unread
+         [:!Sspacebar :!CSl [:mail]]                                                        ; `shift-space` ->        flag
+         [:!Cspacebar :!CSn [:mail]]                                                        ; `cmd-space` ->          get
+         [:!Of :!OCf [:mail]]                                                               ; `alt-f` ->              find mail
+         [:!OSf :!Cf [:mail]]                                                               ; `alt-shift-f` ->        find
+         [:!Oh :!CSg [:mail]]                                                               ; `alt-h` ->              find prev
+         [:!Ol :!Cg [:mail]]                                                                ; `alt-g` ->              find next
+         [:!!up_arrow :!TCopen_bracket [:mail]]                                             ; `alt-ctrl-cmd-up` ->    mailbox prev
+         [:!!down_arrow :!TCclose_bracket [:mail]]                                          ; `alt-ctrl-cmd-down` ->  mailbox next
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Alacritty
+; {:des "Terminal sessions"
+;  :rules [
+;          ;zellij modes
+;          [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
+;          [:!OCn :f2 [:term]]                                                                ; normal
+;          ; [ [:term]]                                                                       ;
+;          [:!OCp :f4 [:term]]                                                                ; pane
+;          [:!OCt :f5 [:term]]                                                                ; tab
+;          [:!OCr :f6 [:term]]                                                                ; resize
+;          [:!OCm :f7 [:term]]                                                                ; move
+;          [:!OCf :f8 [:term]]                                                                ; search
+;          [:!OCs :f9 [:term]]                                                                ; session
+
+;          ; [:!Ch :!Oa [:term]]                                                                ; new pane
+;          ; [:!Cg :!Og [:term]]                                                                ; new embeded pane
+;          ; [:!Cn :!Om [:term]]                                                                ; new tab
+;          ; [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
+;          ; [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
+;          ; [:!Cn :f1 [:term]]
+;          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
- :main [{:des "Launcher"
-         :rules [
-                 [:!WQR1 [:launch "Whatsapp"]]                                                      ;
-                 [:!WQR2 [:launch "Telegram"]]                                                      ;
-                 [:!WQR3 [:launch "Slack"]]                                                         ;
-                 [:!WQR4 [:launch "Skype"]]                                                         ;
-                 [:!WQR5 [:launch "PowerPoint"]]                                                    ;
-                 [:!WQR6 [:launch "Word"]]                                                          ;
-                 [:!WQR7 [:launch "Skim"]]                                                          ;
-                 [:!WQR8 [:launch "Mail"]]                                                          ;
-                 [:!WQR9 [:launch "Firefox"]]                                                       ;
-                 [:!WQRhyphen [:launch "Alacritty"]]                                                ;
-                 [:!WQRequal_sign [:launch "Lapce"]]                                                ;
-                 ]}
+; Alacritty
+{:des "Terminal alphabet"
+ :rules [; [:!Oa :!OCa [:term]]
+                ; [:!Ob :!OCb [:term]]
+                ; [:!Oc :!OCc [:term]]
+                ; [:!Od :!OCd [:term]]
+                ; [:!Oe :!OCe [:term]]
+                ; [:!Of :!OCf [:term]]
+                ; [:!Og :!OCg [:term]]
+                ; [:!Oh :!OCh [:term]]
+                ; [:!Oi :!OCi [:term]]
+                ; [:!Oj :!OCj [:term]]
+                ; [:!Ok :!OCk [:term]]
+                ; [:!Ol :!OCl [:term]]
+                ; [:!Om :!OCm [:term]]
+                ; [:!On :!OCn [:term]]
+                ; [:!Oo :!OCo [:term]]
+                ; [:!Op :!OCp [:term]]
+                ; [:!Oq :!OCq [:term]]
+                ; [:!Or :!OCr [:term]]
+                ; [:!Os :!OCs [:term]]
+                ; [:!Ot :!OCt [:term]]
+                ; [:!Ou :!OCu [:term]]
+                ; [:!Ov :!OCv [:term]]
+                ; [:!Ow :!OCw [:term]]
+                ; [:!Ox :!OCx [:term]]
+                ; [:!Oy :!OCy [:term]]
+                ; [:!Oz :!OCz [:term]]
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; Mail
-        {:des "Mail bindings"
-         :rules [
-                 [:!Creturn_or_enter :!CSd [:mail]]                                                 ; `cmd-enter` ->          send
-                 [:!Oreturn_or_enter :!Cr [:mail]]                                                  ; `alt-enter` ->          reply
-                 [:!OSreturn_or_enter :!CSr [:mail]]                                                ; `alt-shift-enter` ->    reply all
-                 [:!OCreturn_or_enter :!CSf [:mail]]                                                ; `alt-cmd-enter` ->      forward
-                 [:!Sreturn_or_enter :!Cn [:mail]]                                                  ; `shift-enter` ->        new
-                 [:!OTCreturn_or_enter :!CSj [:mail]]                                               ; `alt-ctrl-cmd-enter` -> junk
-                 [:!EWQreturn_or_enter :!CSj [:mail]]                                               ; `alt-ctrl-cmd-enter` -> junk
-                 [:!Tspacebar :!CSu [:mail]]                                                        ; `ctrl-space` ->         unread
-                 [:!Sspacebar :!CSl [:mail]]                                                        ; `shift-space` ->        flag
-                 [:!Cspacebar :!CSn [:mail]]                                                        ; `cmd-space` ->          get
-                 [:!Of :!OCf [:mail]]                                                               ; `alt-f` ->              find mail
-                 [:!OSf :!Cf [:mail]]                                                               ; `alt-shift-f` ->        find
-                 [:!Oh :!CSg [:mail]]                                                               ; `alt-h` ->              find prev
-                 [:!Ol :!Cg [:mail]]                                                                ; `alt-g` ->              find next
-                 [:!!up_arrow :!TCopen_bracket [:mail]]                                             ; `alt-ctrl-cmd-up` ->    mailbox prev
-                 [:!!down_arrow :!TCclose_bracket [:mail]]                                          ; `alt-ctrl-cmd-down` ->  mailbox next
-                 ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        ; ; Alacritty
-        ; {:des "Terminal sessions"
-        ;  :rules [
-        ;          ;zellij modes
-        ;          [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
-        ;          [:!OCn :f2 [:term]]                                                                ; normal
-        ;          ; [ [:term]]                                                                       ;
-        ;          [:!OCp :f4 [:term]]                                                                ; pane
-        ;          [:!OCt :f5 [:term]]                                                                ; tab
-        ;          [:!OCr :f6 [:term]]                                                                ; resize
-        ;          [:!OCm :f7 [:term]]                                                                ; move
-        ;          [:!OCf :f8 [:term]]                                                                ; search
-        ;          [:!OCs :f9 [:term]]                                                                ; session
-
-        ;          ; [:!Ch :!Oa [:term]]                                                                ; new pane
-        ;          ; [:!Cg :!Og [:term]]                                                                ; new embeded pane
-        ;          ; [:!Cn :!Om [:term]]                                                                ; new tab
-        ;          ; [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
-        ;          ; [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
-        ;          ; [:!Cn :f1 [:term]]
-        ;          ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-        ; Alacritty
-        {:des "Terminal alphabet"
-         :rules [
-                 ; [:!Oa :!OCa [:term]]
-                 ; [:!Ob :!OCb [:term]]
-                 ; [:!Oc :!OCc [:term]]
-                 ; [:!Od :!OCd [:term]]
-                 ; [:!Oe :!OCe [:term]]
-                 ; [:!Of :!OCf [:term]]
-                 ; [:!Og :!OCg [:term]]
-                 ; [:!Oh :!OCh [:term]]
-                 ; [:!Oi :!OCi [:term]]
-                 ; [:!Oj :!OCj [:term]]
-                 ; [:!Ok :!OCk [:term]]
-                 ; [:!Ol :!OCl [:term]]
-                 ; [:!Om :!OCm [:term]]
-                 ; [:!On :!OCn [:term]]
-                 ; [:!Oo :!OCo [:term]]
-                 ; [:!Op :!OCp [:term]]
-                 ; [:!Oq :!OCq [:term]]
-                 ; [:!Or :!OCr [:term]]
-                 ; [:!Os :!OCs [:term]]
-                 ; [:!Ot :!OCt [:term]]
-                 ; [:!Ou :!OCu [:term]]
-                 ; [:!Ov :!OCv [:term]]
-                 ; [:!Ow :!OCw [:term]]
-                 ; [:!Ox :!OCx [:term]]
-                 ; [:!Oy :!OCy [:term]]
-                 ; [:!Oz :!OCz [:term]]
-                 ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-        ; Alacritty
-        {:des "Terminal alphabet"
-         :rules [
-                 [:!Ch :!Oa [:term]]                                                                ;
+; Alacritty
+{:des "Terminal alphabet"
+ :rules [[:!Ch :!Oa [:term]]                                                                ;
                  ; [: :!Ob [:term]]
                  ; [: :!Oc [:term]]
                  ; [: :!Od [:term]]
                  ; [: :!Oe [:term]]
                  ; [: :!Of [:term]]
-                 [:!Cg :!Og [:term]]                                                                ;
-                 [:!OTCleft_arrow :!Oh [:term]]                                                     ;
+         [:!Cg :!Og [:term]]                                                                ;
+         [:!OTCleft_arrow :!Oh [:term]]                                                     ;
                  ; [: :!Oi [:term]]
-                 [:!OTCright_arrow :!Oj [:term]]                                                    ;
-                 [:!OTCdown_arrow :!Ok [:term]]                                                     ;
-                 [:!OTCup_arrow :!Ol [:term]]                                                       ;
-                 [:!!right_shift :!Om [:term]]                                                      ;
+         [:!OTCright_arrow :!Oj [:term]]                                                    ;
+         [:!OTCdown_arrow :!Ok [:term]]                                                     ;
+         [:!OTCup_arrow :!Ol [:term]]                                                       ;
+         [:!!right_shift :!Om [:term]]                                                      ;
                  ; [: :!On [:term]]
-                 [:!!spacebar :!Oo [:term]]                                                         ;
-                 [:!OCleft_arrow :!Op [:term]]                                                      ;
-                 [:!OCright_arrow :!Oq [:term]]                                                     ;
-                 [:!Cn :!Or [:term]]
-                 [:escape :!EWright_shift :term {:alone [:!Os]}]                                    ; locked / normal
-                [:!OCp :!Ot [:term]]                                                                ; pane
+         [:!!spacebar :!Oo [:term]]                                                         ;
+         [:!OCleft_arrow :!Op [:term]]                                                      ;
+         [:!OCright_arrow :!Oq [:term]]                                                     ;
+         [:!Cn :!Or [:term]]
+         [:escape :!EWright_shift :term {:alone [:!Os]}]                                    ; locked / normal
+         [:!OCp :!Ot [:term]]                                                                ; pane
                  ; [: :!Ou [:term]]
-                [:!OCt :!Ov [:term]]                                                                ; tab
-                [:!OCr :!Ow [:term]]                                                                ; resize
-                [:!OCm :!Ox [:term]]                                                                ; move
-                [:!OCf :!Oy [:term]]                                                                ; search
-                [:!OCs :!Oz [:term]]                                                                ; session
-                 ]}
+         [:!OCt :!Ov [:term]]                                                                ; tab
+         [:!OCr :!Ow [:term]]                                                                ; resize
+         [:!OCm :!Ox [:term]]                                                                ; move
+         [:!OCf :!Oy [:term]]                                                                ; search
+         [:!OCs :!Oz [:term]]                                                                ; session
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; Alacritty
-        {:des "Terminal delete"
-         :rules [
-                 [:!Sright_option :!Od [:term]]                                                     ; delete word forward
-                 [:!Sright_command :!Tk [:term]]                                                    ; delete line forward
-                 [:!Rleft_control :!Tw [:term]]                                                     ; delete word backward
-                 [:!Rleft_command :!Tu [:term]]                                                     ; delete line backward
+{:des "Terminal delete"
+ :rules [[:!Sright_option :!Od [:term]]                                                     ; delete word forward
+         [:!Sright_command :!Tk [:term]]                                                    ; delete line forward
+         [:!Rleft_control :!Tw [:term]]                                                     ; delete word backward
+         [:!Rleft_command :!Tu [:term]]                                                     ; delete line backward
 
-                 [:!Rleft_option :!Tl [:term]]                                                      ; clear screen
-                 [:!Oc :!Tf5 [:term]]                                                               ; patch `alt-c`
-                 [:!Od :!Tf6 [:term]]                                                               ; patch `alt-d`
-                 ]}
+         [:!Rleft_option :!Tl [:term]]                                                      ; clear screen
+         [:!Oc :!Tf5 [:term]]                                                               ; patch `alt-c`
+         [:!Od :!Tf6 [:term]]                                                               ; patch `alt-d`
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; Alacritty
-        {:des "Terminal remappings"
-         :rules [
-                 [:!WQRtab :!Th [:term]]                                                            ; `delete-tab`
-                 [:!WQRcaps_lock :!Tg [:term]]                                                      ; `delete-caps_lock`
-                 [:!WQRleft_shift :!Oc [:term]]                                                     ; `delete-shift`
-                 [:!WQRleft_control :!Tr [:term]]                                                   ; `delete-ctrl`
-                 [:!WQRleft_option :!Ts [:term]]                                                    ; `delete-alt`
-                 [:!WQRleft_command :!Tt [:term]]                                                   ; `delete-cmd`
-                 [:!WQRright_command :!Tj [:term]]                                                  ; `delete-cmd`
-                 [:!WQRright_option :!Tn [:term]]                                                   ; `delete-alt`
+{:des "Terminal remappings"
+ :rules [[:!WQRtab :!Th [:term]]                                                            ; `delete-tab`
+         [:!WQRcaps_lock :!Tg [:term]]                                                      ; `delete-caps_lock`
+         [:!WQRleft_shift :!Oc [:term]]                                                     ; `delete-shift`
+         [:!WQRleft_control :!Tr [:term]]                                                   ; `delete-ctrl`
+         [:!WQRleft_option :!Ts [:term]]                                                    ; `delete-alt`
+         [:!WQRleft_command :!Tt [:term]]                                                   ; `delete-cmd`
+         [:!WQRright_command :!Tj [:term]]                                                  ; `delete-cmd`
+         [:!WQRright_option :!Tn [:term]]                                                   ; `delete-alt`
 
-                 [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; tmux copy
-                 [:delete_or_backspace :!WQright_shift :term {:alone [:!Sf3]}]                      ; tmux remote
-                 ]}
+         [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; tmux copy
+         [:delete_or_backspace :!WQright_shift :term {:alone [:!Sf3]}]                      ; tmux remote
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; TODO: migrate bindings
         ; Alacritty
-        {:des "Terminal remappings"
-         :rules [
-                 ; [:!Oleft_arrow :!Ob [:term]]                                                     ; `alt-left`
+{:des "Terminal remappings"
+ :rules [; [:!Oleft_arrow :!Ob [:term]]                                                     ; `alt-left`
                  ; [:!Oright_arrow :!Of [:term]]                                                    ; `alt-right`
 
-                 [:!Ob :!Oup_arrow [:term]]                                                         ; `alt-b`
-                 [:!Of :!Odown_arrow [:term]]                                                       ; `alt-f`
+         [:!Ob :!Oup_arrow [:term]]                                                         ; `alt-b`
+         [:!Of :!Odown_arrow [:term]]                                                       ; `alt-f`
 
-                 [:!Cleft_arrow :!Ta [:term]]                                                       ; `cmd-left`
-                 [:!Cright_arrow :!Te [:term]]                                                      ; `cmd-right`
+         [:!Cleft_arrow :!Ta [:term]]                                                       ; `cmd-left`
+         [:!Cright_arrow :!Te [:term]]                                                      ; `cmd-right`
 
-                 [:!CSleft_arrow :!Oleft_arrow [:term]]                                             ; `cmd-shift-left`
-                 [:!CSright_arrow :!Oright_arrow [:term]]                                           ; `cmd-shift-right`
+         [:!CSleft_arrow :!Oleft_arrow [:term]]                                             ; `cmd-shift-left`
+         [:!CSright_arrow :!Oright_arrow [:term]]                                           ; `cmd-shift-right`
 
-                 [:!Oup_arrow :!Tb [:term]]                                                         ; `alt-up`
-                 [:!Odown_arrow :!Tf [:term]]                                                       ; `alt-down`
+         [:!Oup_arrow :!Tb [:term]]                                                         ; `alt-up`
+         [:!Odown_arrow :!Tf [:term]]                                                       ; `alt-down`
 
-                 [:!Cup_arrow :!To [:term]]                                                         ; `cmd-up`
-                 [:!Cdown_arrow :!Tp [:term]]                                                       ; `cmd-down`
+         [:!Cup_arrow :!To [:term]]                                                         ; `cmd-up`
+         [:!Cdown_arrow :!Tp [:term]]                                                       ; `cmd-down`
 
-                 [:!TCup_arrow :!Tv [:term]]                                                        ; `ctrl-cmd-up`
-                 [:!TCdown_arrow :!Tx [:term]]                                                      ; `ctrl-cmd-down`
+         [:!TCup_arrow :!Tv [:term]]                                                        ; `ctrl-cmd-up`
+         [:!TCdown_arrow :!Tx [:term]]                                                      ; `ctrl-cmd-down`
 
-                 [:!TCspacebar :!Tf8 [:term]]                                                       ; `ctrl-cmd-space`
-                 ]}
+         [:!TCspacebar :!Tf8 [:term]]                                                       ; `ctrl-cmd-space`
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; Lapce
         {:des "Editor sessions"
-         :rules [
-                 [:escape :!EWright_shift :editor {:alone [:!Of1]}]                                 ; toggle file explorer
+         :rules [[:escape :!EWright_shift :editor {:alone [:!Of1]}]                                 ; toggle file explorer
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; Lapce
-        {:des "Editor remappings"
-         :rules [
-                 [:!WQRleft_control :!Tr [:editor]]                                                 ; `delete-ctrl`
-                 [:!WQRleft_option :!Ts [:editor]]                                                  ; `delete-alt`
-                 [:!WQRleft_command :!Tt [:editor]]                                                 ; `delete-cmd`
-                 [:!WQRleft_shift :!Tg [:editor]]                                                   ; `delete-shift`
-                 [:!WQRtab :!Th [:editor]]                                                          ; `delete-tab`
-                 [:!WQRright_command :!Tj [:editor]]                                                ; `delete-cmd`
-                 [:!WQRright_option :!Tn [:editor]]                                                 ; `delete-alt`
-                 ]}
+{:des "Editor remappings"
+ :rules [[:!WQRleft_control :!Tr [:editor]]                                                 ; `delete-ctrl`
+         [:!WQRleft_option :!Ts [:editor]]                                                  ; `delete-alt`
+         [:!WQRleft_command :!Tt [:editor]]                                                 ; `delete-cmd`
+         [:!WQRleft_shift :!Tg [:editor]]                                                   ; `delete-shift`
+         [:!WQRtab :!Th [:editor]]                                                          ; `delete-tab`
+         [:!WQRright_command :!Tj [:editor]]                                                ; `delete-cmd`
+         [:!WQRright_option :!Tn [:editor]]                                                 ; `delete-alt`
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; Lapce
-        {:des "Editor delete"
-         :rules [
-                 [:!Sright_option :!Od [:editor]]
-                 [:!Sright_command :!Tk [:editor]]
-                 [:!Rleft_control :!Tw [:editor]]
-                 [:!Rleft_option :!Tl [:editor]]
-                 [:!Rleft_command :!Tu [:editor]]
-                 ]}
+{:des "Editor delete"
+ :rules [[:!Sright_option :!Od [:editor]]
+         [:!Sright_command :!Tk [:editor]]
+         [:!Rleft_control :!Tw [:editor]]
+         [:!Rleft_option :!Tl [:editor]]
+         [:!Rleft_command :!Tu [:editor]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
         ; Firefox
         {:des "Firefox vimium mappings"
-         :rules [
-                 [:!!spacebar :!TCf1 [:browser]]                                                    ; focus
+         :rules [[:!!spacebar :!TCf1 [:browser]]                                                    ; focus
 
                  [:!EWRdelete_or_backspace :!Tf1 [:browser]]                                        ; download link
                  [:!EWRreturn_or_enter :!Tf2 [:browser]]                                            ; copy link
@@ -295,65 +295,64 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; caps lock
-        {:des "caps_lock to esc when pressed alone, composed"
-         :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
+{:des "caps_lock to esc when pressed alone, composed"
+ :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; function
-        {:des "funciton to composed"
-         :rules [[:##fn :!EWright_command nil {:alone :escape}]]}
+{:des "funciton to composed"
+ :rules [[:##fn :!EWright_command nil {:alone :escape}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; left control => window selector
-        {:des "Change left_control to menu selector when used alone"
-         :rules [[:left_control :left_control nil {:alone [:!Of3]}]]}
+{:des "Change left_control to menu selector when used alone"
+ :rules [[:left_control :left_control nil {:alone [:!Of3]}]]}
 
         ; left option => window rotation
-        {:des "Change left_option to window rotation when used alone"
-         :rules [[:left_option :left_option nil {:alone [:!Otab]}]]}
+{:des "Change left_option to window rotation when used alone"
+ :rules [[:left_option :left_option nil {:alone [:!Otab]}]]}
 
         ; left command => last app
-        {:des "Change left_command to last app when used alone"
-         :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]}
+{:des "Change left_command to last app when used alone"
+ :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]}
 
         ; right shift => clipboard selector
-        {:des "Change right_shift to clipboard selector when used alone"
-         :rules [[:right_shift :right_shift nil {:alone [:!Cf3]}]]}
+{:des "Change right_shift to clipboard selector when used alone"
+ :rules [[:right_shift :right_shift nil {:alone [:!Cf3]}]]}
 
         ; right option => paste
-        {:des "Change right_option to paste when used alone"
-         :rules [[:right_option :left_option nil {:alone [:!SOf3]}]]}
+{:des "Change right_option to paste when used alone"
+ :rules [[:right_option :left_option nil {:alone [:!SOf3]}]]}
 
         ; right command => open file  
-        {:des "Change right_command to command-control & to open file when used alone"
-         :rules [[:right_command :!Wright_command nil {:alone [:!STf3]}]]}
+{:des "Change right_command to command-control & to open file when used alone"
+ :rules [[:right_command :!Wright_command nil {:alone [:!STf3]}]]}
 
         ; tab
-        {:des "Change espace to composed"
-         :rules [[:tab :!EQright_shift nil {:alone [:tab]}]]}
+{:des "Change espace to composed"
+ :rules [[:tab :!EQright_shift nil {:alone [:tab]}]]}
 
         ; escape => menu selector
-        {:des "Change espace to composed"
-         :rules [[:escape :!EWright_shift nil {:alone [:!SCf3]}]]}
+{:des "Change espace to composed"
+ :rules [[:escape :!EWright_shift nil {:alone [:!SCf3]}]]}
 
         ; backspace
-        {:des "Change backspace to composed"
-         :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:!OTCf3]}]]}
+{:des "Change backspace to composed"
+ :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:!OTCf3]}]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; delete remapping
-        {:des "Change delete shifts"
-         :rules [[:!Sright_shift :delete_forward]
-                 [:!Rleft_shift :delete_or_backspace]]}
+{:des "Change delete shifts"
+ :rules [[:!Sright_shift :delete_forward]
+         [:!Rleft_shift :delete_or_backspace]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Espanso mode - alphabet"
-         :rules [
-                 ; [:!WQRa [:!Sslash :!Sslash ]]                                                    ;
+         :rules [; [:!WQRa [:!Sslash :!Sslash ]]                                                    ;
                  [:!WQRb [:!Sslash :!Sslash :b :r]]                                                 ; `Best regards,`
                  [:!WQRc [:!Sslash :!Sslash :c :h]]                                                 ; `Cheers,`
                  [:!WQRd [:!Sslash :!Sslash :d :r]]                                                 ; `Daniel Rivas`
@@ -394,13 +393,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Zero Mode - alphabet"
-         :rules [:zero-mode
+{:des "Zero Mode - alphabet"
+ :rules [:zero-mode
                  ; [:a []]                                                                          ;
                  ; [:b []]                                                                          ;
                  ; [:c []]                                                                          ;
                  ; [:d []]                                                                          ;
-                 [:e [:e :n :u :m]]                                                                 ; 'enum'
+         [:e [:e :n :u :m]]                                                                 ; 'enum'
                  ; [:f []]                                                                          ;
                  ; [:g []]                                                                          ;
                  ; [:h []]                                                                          ;
@@ -408,46 +407,46 @@
                  ; [:j []]                                                                          ;
                  ; [:k []]                                                                          ;
                  ; [:l []]                                                                          ;
-                 [:m [:m :u :t :a :b :l :e]]                                                        ; 'mutable'
+         [:m [:m :u :t :a :b :l :e]]                                                        ; 'mutable'
                  ; [:n []]                                                                          ;
                  ; [:o []]                                                                          ;
                  ; [:p []]                                                                          ;
                  ; [:q []]                                                                          ;
                  ; [:r []]                                                                          ;
-                 [:s [:s :t :r :u :c :t]]                                                           ; 'struct'
+         [:s [:s :t :r :u :c :t]]                                                           ; 'struct'
                  ; [:t []]                                                                          ;
                  ; [:u []]                                                                          ;
                  ; [:v []]                                                                          ;
-                 [:w [:w :h :e :r :e :spacebar]]                                                    ; 'where '
+         [:w [:w :h :e :r :e :spacebar]]                                                    ; 'where '
                  ; [:x []]                                                                          ;
                  ; [:y []]                                                                          ;
-                 [:z [:w :h :i :c :h :spacebar]]                                                    ; 'which '
-                 ]}
+         [:z [:w :h :i :c :h :spacebar]]                                                    ; 'which '
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Zero Mode - symbols"
-         :rules [:zero-mode
+{:des "Zero Mode - symbols"
+ :rules [:zero-mode
                  ; [:hyphen []]                                                                     ;
                  ; [:equal_sign []]                                                                 ;
                  ; [:open_bracket []]                                                               ;
                  ; [:close_bracket []]                                                              ;
-                 [:semicolon [:semicolon :spacebar]]                                                ; '; '
+         [:semicolon [:semicolon :spacebar]]                                                ; '; '
                  ; [:quote []]                                                                      ;
                  ; [:backslash []]                                                                  ;
-                 [:comma [:comma :spacebar]]                                                        ; ', '
-                 [:period [:period :period]]                                                        ; '..'
-                 [:slash [:spacebar :hyphen]]                                                       ; ' -'
+         [:comma [:comma :spacebar]]                                                        ; ', '
+         [:period [:period :period]]                                                        ; '..'
+         [:slash [:spacebar :hyphen]]                                                       ; ' -'
                  ; [:delete_or_backspace []]                                                        ;
                  ; [:return_or_enter []]                                                            ;
                  ; [:right_shift []]                                                                ;
                  ; [:right_option []]                                                               ;
                  ; [:right_command []]                                                              ;
-                 ]}
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Zero Mode - alphabet"
+        {:des "Super Mode - alphabet"
          :rules [:zero-mode
                  ; [:a []]                                                                          ;
                  [:!Sb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                     ; 'BUG:'
@@ -479,31 +478,30 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Super Mode - symbols"
-         :rules [:zero-mode
+{:des "Super Mode - symbols"
+ :rules [:zero-mode
                  ; [:!Shyphen []]                                                                   ;
                  ; [:!Sequal_sign []]                                                               ;
                  ; [:!Sdelete_or_backspace []]                                                      ;
                  ; [:!Sopen_bracket []]                                                             ;
                  ; [:!Sclose_bracket []]                                                            ;
-                 [:!Ssemicolon [:!Ssemicolon :spacebar]]                                            ; ': '
+         [:!Ssemicolon [:!Ssemicolon :spacebar]]                                            ; ': '
                  ; [:!Squote []]                                                                    ;
                  ; [:!Sbackslash []]                                                                ;
                  ; [:!Scomma []]                                                                    ;
-                 [:!Speriod [:period :period :period]]                                              ; '...'
-                 [:!Sslash [:spacebar :hyphen :hyphen]]                                             ; ' --'
+         [:!Speriod [:period :period :period]]                                              ; '...'
+         [:!Sslash [:spacebar :hyphen :hyphen]]                                             ; ' --'
                  ; [:!Sdelete_or_backspace []]                                                      ;
                  ; [:!Sreturn_or_enter []]                                                          ;
                  ; [:!Sright_shift []]                                                              ;
                  ; [:!Sright_option []]                                                             ;
                  ; [:!Sright_command []]                                                            ;
-                 ]}
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Escape Mode - alphabet"
-         :rules [
-                 ; [:!EWRa [:!S2 :spacebar]]                                                        ;
+         :rules [; [:!EWRa [:!S2 :spacebar]]                                                        ;
                  ; [:!EWRb [:!S2 :spacebar]]                                                        ;
                  [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]                                           ; '@chain '
                  [:!EWRd [:!S2 :d :e :b :u :g :spacebar]]                                           ; '@debug '
@@ -533,30 +531,28 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Escape Mode - symbols"
-         :rules [
-                 ; [:!EWRhyphen []]                                                                 ; ''
+{:des "Escape Mode - symbols"
+ :rules [; [:!EWRhyphen []]                                                                 ; ''
                  ; [:!EWRequal_sign []]                                                             ; ''
-                 [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]         ; '%<+%'
-                 [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]       ; '%+>%'
-                 [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                              ; '%$%'
-                 [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                        ; '%T>%'
-                 [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                ; '%<>%'
-                 [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                              ; '%<%'
-                 [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                            ; '%>%'
-                 [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                        ; '%!>%'
-                 [:!EWRdelete_or_backspace [:!S3 :quote]]                                           ; '#''
+         [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]         ; '%<+%'
+         [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]       ; '%+>%'
+         [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                              ; '%$%'
+         [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                        ; '%T>%'
+         [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                ; '%<>%'
+         [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                              ; '%<%'
+         [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                            ; '%>%'
+         [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                        ; '%!>%'
+         [:!EWRdelete_or_backspace [:!S3 :quote]]                                           ; '#''
                  ; [:!EWRreturn_or_enter []]                                                        ; ''
                  ; [:!EWRright_shift []]                                                            ; ''
                  ; [:!EWRright_option []]                                                           ; ''
                  ; [:!EWRright_command []]                                                          ; ''
-                 ]}
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Tab Mode - alphabet"
-         :rules [
-                 [:!EQRa [:semicolon :semicolon :a]]                                                ; 'α'
+         :rules [[:!EQRa [:semicolon :semicolon :a]]                                                ; 'α'
                  [:!EQRb [:semicolon :semicolon :b]]                                                ; 'β'
                  ; [:!EQRc [:semicolon :semicolon :c]]                                              ; ''
                  [:!EQRd [:semicolon :semicolon :d]]                                                ; 'δ'
@@ -586,30 +582,29 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Tab Mode - symbols"
-         :rules [
-                 ; [:!EQRhyphen []]                                                                 ; ''
+{:des "Tab Mode - symbols"
+ :rules [; [:!EQRhyphen []]                                                                 ; ''
                  ; [:!EQRequal_sign []]                                                             ; ''
-                 [:!EQRopen_bracket [:!Scomma :!Ssemicolon]]                                        ; '<:'
-                 [:!EQRclose_bracket [:!Speriod :!Ssemicolon]]                                      ; '>:'
-                 [:!EQRsemicolon [:!Ssemicolon :!Ssemicolon]]                                       ; '::'
-                 [:!EQRquote [:!Ssemicolon :!Ssemicolon :!Scomma]]                                  ; '::<'
-                 [:!EQRbackslash [:!S4 :!Sopen_bracket]]                                            ; '${'
-                 [:!EQRcomma [:spacebar :!Scomma :hyphen :spacebar]]                                ; ' <- '
-                 [:!EQRperiod [:spacebar :hyphen :!Speriod :spacebar]]                              ; ' -> '
-                 [:!EQRslash [:slash :slash :!S1]]                                                  ; '//!'
-                 [:!EQRdelete_or_backspace [:!S3 :open_bracket]]                                    ; '#['
+         [:!EQRopen_bracket [:!Scomma :!Ssemicolon]]                                        ; '<:'
+         [:!EQRclose_bracket [:!Speriod :!Ssemicolon]]                                      ; '>:'
+         [:!EQRsemicolon [:!Ssemicolon :!Ssemicolon]]                                       ; '::'
+         [:!EQRquote [:!Ssemicolon :!Ssemicolon :!Scomma]]                                  ; '::<'
+         [:!EQRbackslash [:!S4 :!Sopen_bracket]]                                            ; '${'
+         [:!EQRcomma [:spacebar :!Scomma :hyphen :spacebar]]                                ; ' <- '
+         [:!EQRperiod [:spacebar :hyphen :!Speriod :spacebar]]                              ; ' -> '
+         [:!EQRslash [:slash :slash :!S1]]                                                  ; '//!'
+         [:!EQRdelete_or_backspace [:!S3 :open_bracket]]                                    ; '#['
                  ; [:!EQRreturn_or_enter []]                                                        ; ''
                  ; [:!EQRright_shift []]                                                            ; ''
                  ; [:!EQRright_option []]                                                           ; ''
                  ; [:!EQRright_command []]                                                          ; ''
-                 ]}
+         ]}
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         {:des "Control - Command Mode - alphabet"
-         :rules [
-                 [:!WQa [:comma :comma :a]]                                                         ; 'ɒ'
+         :rules [[:!WQa [:comma :comma :a]]                                                         ; 'ɒ'
                  [:!WQb [:comma :comma :b]]                                                         ; 'ß'
                  [:!WQc [:comma :comma :c]]                                                         ; 'ç'
                  [:!WQd [:comma :comma :d]]                                                         ; 'Δ'
@@ -640,10 +635,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; control - command
-        {:des "Coding modifications - control - command"
-         :rules [
-                 [:!TChyphen [:hyphen :hyphen]]                                                     ; '--'
-                 [:!TCequal_sign [:!Sequal_sign :!Sequal_sign]]                                     ; '++'
+{:des "Coding modifications - control - command"
+ :rules [[:!TChyphen [:hyphen :hyphen]]                                                     ; '--'
+         [:!TCequal_sign [:!Sequal_sign :!Sequal_sign]]                                     ; '++'
                  ; [:!TCopen_bracket []]                                                            ;
                  ; [:!TCclose_bracket []]                                                           ;
                  ; [:!TCsemicolon []]                                                               ;
@@ -652,21 +646,20 @@
                  ; [:!TCcomma []]                                                                   ;
                  ; [:!TCperiod []]                                                                  ;
                  ; [:!TCslash []]                                                                   ;
-                 [:!TCdelete_or_backspace [:!S3 :!S1 :slash]]                                       ; '#!/'
-                 [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                    ; '=='
-                 [:!TCright_shift [:!S1 :!S1]]                                                      ; '!!'
-                 [:!TCright_option [:!S8 :!S8]]                                                     ; '**'
-                 [:!TCright_command [:slash :slash]]                                                ; '//'
+         [:!TCdelete_or_backspace [:!S3 :!S1 :slash]]                                       ; '#!/'
+         [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                    ; '=='
+         [:!TCright_shift [:!S1 :!S1]]                                                      ; '!!'
+         [:!TCright_option [:!S8 :!S8]]                                                     ; '**'
+         [:!TCright_command [:slash :slash]]                                                ; '//'
 
-                 [:!WQright_shift [:!S1 :!S1]]                                                      ; '!!'
-                 ]}
+         [:!WQright_shift [:!S1 :!S1]]                                                      ; '!!'
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; option
         {:des "Coding modifications - option"
-         :rules [
-                 [:!Ohyphen [:spacebar :hyphen :spacebar]]                                          ; ' - '
+         :rules [[:!Ohyphen [:spacebar :hyphen :spacebar]]                                          ; ' - '
                  [:!Oequal_sign [:spacebar :!Sequal_sign :spacebar]]                                ; ' + '
                  [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                       ; ' <= '
                  [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                     ; ' >= '
@@ -686,31 +679,29 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; option - shift
-        {:des "Coding modifications - option - shift"
-         :rules [
-                 [:!OShyphen [:spacebar :period :hyphen :spacebar]]                                 ; ' .- '
-                 [:!OSequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                       ; ' .+ '
-                 [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]              ; ' .<= '
-                 [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]            ; ' .>= '
-                 [:!OSsemicolon [:spacebar :period :!S7 :spacebar]]                                 ; ' .& '
-                 [:!OSquote [:spacebar :period :!S6 :spacebar]]                                     ; ' .^ '
-                 [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]                         ; ' .| '
-                 [:!OScomma [:spacebar :period :!Scomma :spacebar]]                                 ; ' .< '
-                 [:!OSperiod [:spacebar :period :!Speriod :spacebar]]                               ; ' .> '
-                 [:!OSslash [:spacebar :period :!S5 :spacebar]]                                     ; ' .% '
-                 [:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]]    ; ' .== '
-                 [:!OSreturn_or_enter [:spacebar :period :equal_sign :spacebar]]                    ; ' .= '
-                 [:!OSright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]             ; ' .|> '
-                 [:!OSright_option [:spacebar :period :!S8 :spacebar]]                              ; ' .* '
-                 [:!OSright_command [:spacebar :period :slash :spacebar]]                           ; ' ./ '
-                 ]}
+{:des "Coding modifications - option - shift"
+ :rules [[:!OShyphen [:spacebar :period :hyphen :spacebar]]                                 ; ' .- '
+         [:!OSequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                       ; ' .+ '
+         [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]              ; ' .<= '
+         [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]            ; ' .>= '
+         [:!OSsemicolon [:spacebar :period :!S7 :spacebar]]                                 ; ' .& '
+         [:!OSquote [:spacebar :period :!S6 :spacebar]]                                     ; ' .^ '
+         [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]                         ; ' .| '
+         [:!OScomma [:spacebar :period :!Scomma :spacebar]]                                 ; ' .< '
+         [:!OSperiod [:spacebar :period :!Speriod :spacebar]]                               ; ' .> '
+         [:!OSslash [:spacebar :period :!S5 :spacebar]]                                     ; ' .% '
+         [:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]]    ; ' .== '
+         [:!OSreturn_or_enter [:spacebar :period :equal_sign :spacebar]]                    ; ' .= '
+         [:!OSright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]             ; ' .|> '
+         [:!OSright_option [:spacebar :period :!S8 :spacebar]]                              ; ' .* '
+         [:!OSright_command [:spacebar :period :slash :spacebar]]                           ; ' ./ '
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; control
         {:des "Coding modifications - control"
-         :rules [
-                 [:!Thyphen [:spacebar :hyphen :hyphen :spacebar]]                                  ; ' -- '
+         :rules [[:!Thyphen [:spacebar :hyphen :hyphen :spacebar]]                                  ; ' -- '
                  [:!Tequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                  ; ' ++ '
                  ; [:!Topen_bracket []]                                                             ; ''
                  ; [:!Tclose_bracket []]                                                            ; ''
@@ -731,33 +722,31 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; control - shift
-        {:des "Coding modifications - control - shift"
-         :rules [
-                 [:!TShyphen [:spacebar :period :hyphen :hyphen :spacebar]]                         ; ' .-- '
-                 [:!TSequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]         ; ' .++ '
+{:des "Coding modifications - control - shift"
+ :rules [[:!TShyphen [:spacebar :period :hyphen :hyphen :spacebar]]                         ; ' .-- '
+         [:!TSequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]         ; ' .++ '
                  ; [:!TSopen_bracket []]                                                            ; ''
                  ; [:!TSclose_bracket []]                                                           ; ''
-                 [:!TSsemicolon [:spacebar :period :!S7 :!S7 :spacebar]]                            ; ''
-                 [:!TSquote [:!Squote :!Squote :!Squote]]                                           ; '"""'
+         [:!TSsemicolon [:spacebar :period :!S7 :!S7 :spacebar]]                            ; ''
+         [:!TSquote [:!Squote :!Squote :!Squote]]                                           ; '"""'
                  ; [:!TSquote []]                                                                   ; ''
-                 [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]            ; ' .|| '
-                 [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                       ; ' <<< '
-                 [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                   ; ' >>> '
-                 [:!TSslash [:spacebar :period :!S5 :!S5 :spacebar]]                                ; ' .%% '
-                 [:!TSdelete_or_backspace
-                  [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                ; ' .=== '
-                 [:!TSreturn_or_enter [:spacebar :period :!S1 :equal_sign :spacebar]]               ; ' .!= '
-                 [:!TSright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]                   ; ' := '
-                 [:!TSright_option [:spacebar :period :!S8 :!S8 :spacebar]]                         ; ' .** '
-                 [:!TSright_command [:spacebar :period :slash :slash :spacebar]]                    ; ' .// '
-                 ]}
+         [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]            ; ' .|| '
+         [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                       ; ' <<< '
+         [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                   ; ' >>> '
+         [:!TSslash [:spacebar :period :!S5 :!S5 :spacebar]]                                ; ' .%% '
+         [:!TSdelete_or_backspace
+          [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                ; ' .=== '
+         [:!TSreturn_or_enter [:spacebar :period :!S1 :equal_sign :spacebar]]               ; ' .!= '
+         [:!TSright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]                   ; ' := '
+         [:!TSright_option [:spacebar :period :!S8 :!S8 :spacebar]]                         ; ' .** '
+         [:!TSright_command [:spacebar :period :slash :slash :spacebar]]                    ; ' .// '
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; hyper
         {:des "Coding modifications - hyper"
-         :rules [
-                 ; [:!!0 []]                                                                        ;
+         :rules [; [:!!0 []]                                                                        ;
                  ; [:!!hyphen []]                                                                   ;
                  ; [:!!equal_sign []]                                                               ;
                  ; [:!!open_bracket []]                                                             ;
@@ -779,8 +768,7 @@
 
         ; accents
         {:des "Bypass accents"
-         :rules [
-                 [:!OCi :!Sf7]                                                                      ;
+         :rules [[:!OCi :!Sf7]                                                                      ;
                  [:!OCn :!Sf8]                                                                      ;
                  [:!Oe :!Sf1]                                                                       ;
                  [:!Oi :!Sf2]                                                                       ;
@@ -792,42 +780,39 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; simple
-        {:des "Simple modifications"
-         :rules [
-                 [:f20 :0]                                                                          ;
-                 [:keypad_slash :display_brightness_decrement]                                      ;
-                 [:keypad_asterisk :display_brightness_increment]                                   ;
-                 [:keypad_hyphen :mute]                                                             ;
-                 [:keypad_plus :volume_increment]                                                   ;
-                 [:keypad_enter :volume_decrement]                                                  ;
-                 ]}
+{:des "Simple modifications"
+ :rules [[:f20 :0]                                                                          ;
+         [:keypad_slash :display_brightness_decrement]                                      ;
+         [:keypad_asterisk :display_brightness_increment]                                   ;
+         [:keypad_hyphen :mute]                                                             ;
+         [:keypad_plus :volume_increment]                                                   ;
+         [:keypad_enter :volume_decrement]                                                  ;
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; additional
-        {:des "Additional key"
-         :rules [
-                 ; builtin
-                 [:!EWQ0 :grave_accent_and_tilde]                                                   ; '`'
-                 [:!EWQT0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
-                 [:!EWQOf20 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                        ; ' ~ '
-                 [:!EWQTf20 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]            ; ' =~ '
-                 [:!EWQSf20 :!Sgrave_accent_and_tilde]                                              ; '~'
+{:des "Additional key"
+ :rules [; builtin
+         [:!EWQ0 :grave_accent_and_tilde]                                                   ; '`'
+         [:!EWQT0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
+         [:!EWQOf20 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                        ; ' ~ '
+         [:!EWQTf20 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]            ; ' =~ '
+         [:!EWQSf20 :!Sgrave_accent_and_tilde]                                              ; '~'
 
                  ; master
-                 [:0 :non_us_backslash]                                                             ; '`'
-                 [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]                     ; '```'
-                 [:!Of20 [:spacebar :!Snon_us_backslash :spacebar]]                                 ; ' ~ '
-                 [:!Tf20 [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]                     ; ' =~ '
-                 [:!Sf20 :!Snon_us_backslash]                                                       ; '~'
-                 ]}
+         [:0 :non_us_backslash]                                                             ; '`'
+         [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]                     ; '```'
+         [:!Of20 [:spacebar :!Snon_us_backslash :spacebar]]                                 ; ' ~ '
+         [:!Tf20 [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]                     ; ' =~ '
+         [:!Sf20 :!Snon_us_backslash]                                                       ; '~'
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ; function
         {:des "Function keypad"
-         :rules [
-                 ;simple
+         :rules [;simple
                  [:!EWQ0 :7]                                                                        ; '7'
                  [:!EWQhyphen :8]                                                                   ; '8'
                  [:!EWQequal_sign :9]                                                               ; '9'
@@ -851,6 +836,7 @@
                  [:!EWQ9 :f9]                                                                       ; 'F9'
                  ]}
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ]}]}

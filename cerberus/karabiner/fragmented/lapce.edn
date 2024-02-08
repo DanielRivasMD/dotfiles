@@ -1,0 +1,31 @@
+
+        ; Lapce
+        {:des "Editor sessions"
+         :rules [[:escape :!EWright_shift :editor {:alone [:!Of1]}]                                 ; toggle file explorer
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Lapce
+{:des "Editor remappings"
+ :rules [[:!WQRleft_control :!Tr [:editor]]                                                 ; `delete-ctrl`
+         [:!WQRleft_option :!Ts [:editor]]                                                  ; `delete-alt`
+         [:!WQRleft_command :!Tt [:editor]]                                                 ; `delete-cmd`
+         [:!WQRleft_shift :!Tg [:editor]]                                                   ; `delete-shift`
+         [:!WQRtab :!Th [:editor]]                                                          ; `delete-tab`
+         [:!WQRright_command :!Tj [:editor]]                                                ; `delete-cmd`
+         [:!WQRright_option :!Tn [:editor]]                                                 ; `delete-alt`
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Lapce
+{:des "Editor delete"
+ :rules [[:!Sright_option :!Od [:editor]]
+         [:!Sright_command :!Tk [:editor]]
+         [:!Rleft_control :!Tw [:editor]]
+         [:!Rleft_option :!Tl [:editor]]
+         [:!Rleft_command :!Tu [:editor]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

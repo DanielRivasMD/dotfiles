@@ -1,0 +1,149 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Alacritty
+; {:des "Terminal sessions"
+;  :rules [
+;          ;zellij modes
+;          [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
+;          [:!OCn :f2 [:term]]                                                                ; normal
+;          ; [ [:term]]                                                                       ;
+;          [:!OCp :f4 [:term]]                                                                ; pane
+;          [:!OCt :f5 [:term]]                                                                ; tab
+;          [:!OCr :f6 [:term]]                                                                ; resize
+;          [:!OCm :f7 [:term]]                                                                ; move
+;          [:!OCf :f8 [:term]]                                                                ; search
+;          [:!OCs :f9 [:term]]                                                                ; session
+
+;          ; [:!Ch :!Oa [:term]]                                                                ; new pane
+;          ; [:!Cg :!Og [:term]]                                                                ; new embeded pane
+;          ; [:!Cn :!Om [:term]]                                                                ; new tab
+;          ; [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
+;          ; [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
+;          ; [:!Cn :f1 [:term]]
+;          ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alphabet"
+ :rules [; [:!Oa :!OCa [:term]]
+                ; [:!Ob :!OCb [:term]]
+                ; [:!Oc :!OCc [:term]]
+                ; [:!Od :!OCd [:term]]
+                ; [:!Oe :!OCe [:term]]
+                ; [:!Of :!OCf [:term]]
+                ; [:!Og :!OCg [:term]]
+                ; [:!Oh :!OCh [:term]]
+                ; [:!Oi :!OCi [:term]]
+                ; [:!Oj :!OCj [:term]]
+                ; [:!Ok :!OCk [:term]]
+                ; [:!Ol :!OCl [:term]]
+                ; [:!Om :!OCm [:term]]
+                ; [:!On :!OCn [:term]]
+                ; [:!Oo :!OCo [:term]]
+                ; [:!Op :!OCp [:term]]
+                ; [:!Oq :!OCq [:term]]
+                ; [:!Or :!OCr [:term]]
+                ; [:!Os :!OCs [:term]]
+                ; [:!Ot :!OCt [:term]]
+                ; [:!Ou :!OCu [:term]]
+                ; [:!Ov :!OCv [:term]]
+                ; [:!Ow :!OCw [:term]]
+                ; [:!Ox :!OCx [:term]]
+                ; [:!Oy :!OCy [:term]]
+                ; [:!Oz :!OCz [:term]]
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alphabet"
+ :rules [[:!Ch :!Oa [:term]]                                                                ;
+                 ; [: :!Ob [:term]]
+                 ; [: :!Oc [:term]]
+                 ; [: :!Od [:term]]
+                 ; [: :!Oe [:term]]
+                 ; [: :!Of [:term]]
+         [:!Cg :!Og [:term]]                                                                ;
+         [:!OTCleft_arrow :!Oh [:term]]                                                     ;
+                 ; [: :!Oi [:term]]
+         [:!OTCright_arrow :!Oj [:term]]                                                    ;
+         [:!OTCdown_arrow :!Ok [:term]]                                                     ;
+         [:!OTCup_arrow :!Ol [:term]]                                                       ;
+         [:!!right_shift :!Om [:term]]                                                      ;
+                 ; [: :!On [:term]]
+         [:!!spacebar :!Oo [:term]]                                                         ;
+         [:!OCleft_arrow :!Op [:term]]                                                      ;
+         [:!OCright_arrow :!Oq [:term]]                                                     ;
+         [:!Cn :!Or [:term]]
+         [:escape :!EWright_shift :term {:alone [:!Os]}]                                    ; locked / normal
+         [:!OCp :!Ot [:term]]                                                                ; pane
+                 ; [: :!Ou [:term]]
+         [:!OCt :!Ov [:term]]                                                                ; tab
+         [:!OCr :!Ow [:term]]                                                                ; resize
+         [:!OCm :!Ox [:term]]                                                                ; move
+         [:!OCf :!Oy [:term]]                                                                ; search
+         [:!OCs :!Oz [:term]]                                                                ; session
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Alacritty
+{:des "Terminal delete"
+ :rules [[:!Sright_option :!Od [:term]]                                                     ; delete word forward
+         [:!Sright_command :!Tk [:term]]                                                    ; delete line forward
+         [:!Rleft_control :!Tw [:term]]                                                     ; delete word backward
+         [:!Rleft_command :!Tu [:term]]                                                     ; delete line backward
+
+         [:!Rleft_option :!Tl [:term]]                                                      ; clear screen
+         [:!Oc :!Tf5 [:term]]                                                               ; patch `alt-c`
+         [:!Od :!Tf6 [:term]]                                                               ; patch `alt-d`
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; Alacritty
+{:des "Terminal remappings"
+ :rules [[:!WQRtab :!Th [:term]]                                                            ; `delete-tab`
+         [:!WQRcaps_lock :!Tg [:term]]                                                      ; `delete-caps_lock`
+         [:!WQRleft_shift :!Oc [:term]]                                                     ; `delete-shift`
+         [:!WQRleft_control :!Tr [:term]]                                                   ; `delete-ctrl`
+         [:!WQRleft_option :!Ts [:term]]                                                    ; `delete-alt`
+         [:!WQRleft_command :!Tt [:term]]                                                   ; `delete-cmd`
+         [:!WQRright_command :!Tj [:term]]                                                  ; `delete-cmd`
+         [:!WQRright_option :!Tn [:term]]                                                   ; `delete-alt`
+
+         [:left_shift :left_shift :term {:alone [:!Tf3]}]                                   ; tmux copy
+         [:delete_or_backspace :!WQright_shift :term {:alone [:!Sf3]}]                      ; tmux remote
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; TODO: migrate bindings
+        ; Alacritty
+{:des "Terminal remappings"
+ :rules [; [:!Oleft_arrow :!Ob [:term]]                                                     ; `alt-left`
+                 ; [:!Oright_arrow :!Of [:term]]                                                    ; `alt-right`
+
+         [:!Ob :!Oup_arrow [:term]]                                                         ; `alt-b`
+         [:!Of :!Odown_arrow [:term]]                                                       ; `alt-f`
+
+         [:!Cleft_arrow :!Ta [:term]]                                                       ; `cmd-left`
+         [:!Cright_arrow :!Te [:term]]                                                      ; `cmd-right`
+
+         [:!CSleft_arrow :!Oleft_arrow [:term]]                                             ; `cmd-shift-left`
+         [:!CSright_arrow :!Oright_arrow [:term]]                                           ; `cmd-shift-right`
+
+         [:!Oup_arrow :!Tb [:term]]                                                         ; `alt-up`
+         [:!Odown_arrow :!Tf [:term]]                                                       ; `alt-down`
+
+         [:!Cup_arrow :!To [:term]]                                                         ; `cmd-up`
+         [:!Cdown_arrow :!Tp [:term]]                                                       ; `cmd-down`
+
+         [:!TCup_arrow :!Tv [:term]]                                                        ; `ctrl-cmd-up`
+         [:!TCdown_arrow :!Tx [:term]]                                                      ; `ctrl-cmd-down`
+
+         [:!TCspacebar :!Tf8 [:term]]                                                       ; `ctrl-cmd-space`
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

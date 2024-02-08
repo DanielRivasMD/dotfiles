@@ -1,0 +1,64 @@
+
+        ; quit app
+        {:des "Quit application by pressing command-q twice"
+         :rules [[:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
+                 [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; caps lock
+{:des "caps_lock to esc when pressed alone, composed"
+ :rules [[:##caps_lock :!OTCleft_shift nil {:alone :escape}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; function
+{:des "funciton to composed"
+ :rules [[:##fn :!EWright_command nil {:alone :escape}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; left control => window selector
+{:des "Change left_control to menu selector when used alone"
+ :rules [[:left_control :left_control nil {:alone [:!Of3]}]]}
+
+        ; left option => window rotation
+{:des "Change left_option to window rotation when used alone"
+ :rules [[:left_option :left_option nil {:alone [:!Otab]}]]}
+
+        ; left command => last app
+{:des "Change left_command to last app when used alone"
+ :rules [[:left_command :left_command nil {:alone [:!Ctab]}]]}
+
+        ; right shift => clipboard selector
+{:des "Change right_shift to clipboard selector when used alone"
+ :rules [[:right_shift :right_shift nil {:alone [:!Cf3]}]]}
+
+        ; right option => paste
+{:des "Change right_option to paste when used alone"
+ :rules [[:right_option :left_option nil {:alone [:!SOf3]}]]}
+
+        ; right command => open file  
+{:des "Change right_command to command-control & to open file when used alone"
+ :rules [[:right_command :!Wright_command nil {:alone [:!STf3]}]]}
+
+        ; tab
+{:des "Change espace to composed"
+ :rules [[:tab :!EQright_shift nil {:alone [:tab]}]]}
+
+        ; escape => menu selector
+{:des "Change espace to composed"
+ :rules [[:escape :!EWright_shift nil {:alone [:!SCf3]}]]}
+
+        ; backspace
+{:des "Change backspace to composed"
+ :rules [[:delete_or_backspace :!WQright_shift nil {:alone [:!OTCf3]}]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ; delete remapping
+{:des "Change delete shifts"
+ :rules [[:!Sright_shift :delete_forward]
+         [:!Rleft_shift :delete_or_backspace]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

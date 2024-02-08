@@ -1,0 +1,16 @@
+
+        ; Firefox
+        {:des "Firefox vimium mappings"
+         :rules [[:!!spacebar :!TCf1 [:browser]]                                                    ; focus
+
+                 [:!EWRdelete_or_backspace :!Tf1 [:browser]]                                        ; download link
+                 [:!EWRreturn_or_enter :!Tf2 [:browser]]                                            ; copy link
+
+                 [:!EQRreturn_or_enter :!Cf1 [:browser]]                                            ; open current tab
+
+                 [:!EQRdelete_or_backspace :!Cf2 [:browser]]                                        ; open new tab
+                 [:!EQRspacebar :!Of1 [:browser]]                                                   ; open new tab & switch
+                 [:!EWRspacebar :!Of2 [:browser]]                                                   ; open multiple tabs
+                 ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
