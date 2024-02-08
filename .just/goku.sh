@@ -2,8 +2,8 @@
 # Goku
 ####################################################################################################
 
-#!/bin/bash
-set -euo pipefail
+#!/bin/sh
+# set -euo pipefail
 
 ####################################################################################################
 
@@ -12,7 +12,32 @@ source .just/.config.sh
 
 ####################################################################################################
 
-# format & watch
-watchexec --watch "${karabiner}/karabiner.edn" -- 'cljfmt fix cerberus/karabiner/karabiner.edn && goku'
+# format
+cljfmt fix "${fragmented}/"*
+
+# concatenate
+cat \
+  "${fragmented}/.profiles.edn" \
+  "${fragmented}/profile.edn" \
+  "${fragmented}/.main.edn" \
+  "${fragmented}/launcher.edn" \
+  "${fragmented}/mail.edn" \
+  "${fragmented}/alacritty.edn" \
+  "${fragmented}/lapce.edn" \
+  "${fragmented}/firefox.edn" \
+  "${fragmented}/keys.edn" \
+  "${fragmented}/espanso.edn" \
+  "${fragmented}/zero.edn" \
+  "${fragmented}/super.edn" \
+  "${fragmented}/esc.edn" \
+  "${fragmented}/tab.edn" \
+  "${fragmented}/cmd.edn" \
+  "${fragmented}/opt.edn" \
+  "${fragmented}/ctrl.edn" \
+  "${fragmented}/hyper.edn" \
+  "${fragmented}/patch.edn" \
+  "${fragmented}/fn.edn" \
+  "${fragmented}/.eof.edn" \
+  > "${karabiner}/karabiner.edn"
 
 ####################################################################################################
