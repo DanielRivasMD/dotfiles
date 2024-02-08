@@ -81,30 +81,63 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+        ; ; Alacritty
+        ; {:des "Terminal sessions"
+        ;  :rules [
+        ;          ;zellij modes
+        ;          [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
+        ;          [:!OCn :f2 [:term]]                                                                ; normal
+        ;          ; [ [:term]]                                                                       ;
+        ;          [:!OCp :f4 [:term]]                                                                ; pane
+        ;          [:!OCt :f5 [:term]]                                                                ; tab
+        ;          [:!OCr :f6 [:term]]                                                                ; resize
+        ;          [:!OCm :f7 [:term]]                                                                ; move
+        ;          [:!OCf :f8 [:term]]                                                                ; search
+        ;          [:!OCs :f9 [:term]]                                                                ; session
+
+        ;          ; [:!Ch :!Oa [:term]]                                                                ; new pane
+        ;          ; [:!Cg :!Og [:term]]                                                                ; new embeded pane
+        ;          ; [:!Cn :!Om [:term]]                                                                ; new tab
+        ;          ; [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
+        ;          ; [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
+        ;          ; [:!Cn :f1 [:term]]
+        ;          ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
         ; Alacritty
-        {:des "Terminal sessions"
          :rules [
-                 ;zellij modes
-                 [:escape :!EWright_shift :term {:alone [:f1]}]                                     ; locked
-                 [:!OCn :f2 [:term]]                                                                ; normal
-                 ; [ [:term]]                                                                       ;
-                 [:!OCp :f4 [:term]]                                                                ; pane
-                 [:!OCt :f5 [:term]]                                                                ; tab
-                 [:!OCr :f6 [:term]]                                                                ; resize
-                 [:!OCm :f7 [:term]]                                                                ; move
-                 [:!OCf :f8 [:term]]                                                                ; search
-                 [:!OCs :f9 [:term]]                                                                ; session
 
-                 ; [:!OC :f10 [:term]]                                                              ;
-                 ; [:!OC :f11 [:term]]                                                              ;
-                 ; [:!OC :f12 [:term]]                                                              ;
 
-                 [:!Ch :!Oa [:term]]                                                                ; new pane
-                 [:!Cg :!Og [:term]]                                                                ; new embeded pane
-                 [:!Cn :!Om [:term]]                                                                ; new tab
-                 [:!OCleft_arrow :!Op [:term]]                                                      ; left tab
-                 [:!OCright_arrow :!Ot [:term]]                                                     ; right tab
-                 [:!Cn :f1 [:term]]
+        ; Alacritty
+        {:des "Terminal alphabet"
+         :rules [
+                 [:!Ch :!Oa [:term]]                                                                ;
+                 ; [: :!Ob [:term]]
+                 ; [: :!Oc [:term]]
+                 ; [: :!Od [:term]]
+                 ; [: :!Oe [:term]]
+                 ; [: :!Of [:term]]
+                 [:!Cg :!Og [:term]]                                                                ;
+                 [:!OTCleft_arrow :!Oh [:term]]                                                     ;
+                 ; [: :!Oi [:term]]
+                 [:!OTCright_arrow :!Oj [:term]]                                                    ;
+                 [:!OTCdown_arrow :!Ok [:term]]                                                     ;
+                 [:!OTCup_arrow :!Ol [:term]]                                                       ;
+                 [:!!right_shift :!Om [:term]]                                                      ;
+                 ; [: :!On [:term]]
+                 [:!!spacebar :!Oo [:term]]                                                         ;
+                 [:!OCleft_arrow :!Op [:term]]                                                      ;
+                 [:!OCright_arrow :!Oq [:term]]                                                     ;
+                 [:!Cn :!Or [:term]]
+                 [:escape :!EWright_shift :term {:alone [:!Os]}]                                    ; locked / normal
+                [:!OCp :!Ot [:term]]                                                                ; pane
+                 ; [: :!Ou [:term]]
+                [:!OCt :!Ov [:term]]                                                                ; tab
+                [:!OCr :!Ow [:term]]                                                                ; resize
+                [:!OCm :!Ox [:term]]                                                                ; move
+                [:!OCf :!Oy [:term]]                                                                ; search
+                [:!OCs :!Oz [:term]]                                                                ; session
                  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
