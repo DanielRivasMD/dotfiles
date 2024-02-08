@@ -7,16 +7,15 @@
          [:!Oreturn_or_enter :!Cr [:mail]]                                                          ; `alt-enter` ->          reply
          [:!OSreturn_or_enter :!CSr [:mail]]                                                        ; `alt-shift-enter` ->    reply all
          [:!OCreturn_or_enter :!CSf [:mail]]                                                        ; `alt-cmd-enter` ->      forward
-         [:!Sreturn_or_enter :!Cn [:mail]]                                                          ; `shift-enter` ->        new
-         [:!OTCreturn_or_enter :!CSj [:mail]]                                                       ; `alt-ctrl-cmd-enter` -> junk
-         [:!EWQreturn_or_enter :!CSj [:mail]]                                                       ; `alt-ctrl-cmd-enter` -> junk
+         [:!EQRreturn_or_enter :!Cn [:mail]]                                                        ; `tab-enter` ->          new
+         [:!EQRreturn_or_enter :!CSj [:mail]]                                                       ; `tab-space` ->          junk
          [:!Tspacebar :!CSu [:mail]]                                                                ; `ctrl-space` ->         unread
          [:!Sspacebar :!CSl [:mail]]                                                                ; `shift-space` ->        flag
          [:!Cspacebar :!CSn [:mail]]                                                                ; `cmd-space` ->          get
          [:!Of :!OCf [:mail]]                                                                       ; `alt-f` ->              find mail
          [:!OSf :!Cf [:mail]]                                                                       ; `alt-shift-f` ->        find
          [:!Oh :!CSg [:mail]]                                                                       ; `alt-h` ->              find prev
-         [:!Ol :!Cg [:mail]]                                                                        ; `alt-g` ->              find next
+         [:!Ol :!Cg [:mail]]                                                                        ; `alt-l` ->              find next
          [:!!up_arrow :!TCopen_bracket [:mail]]                                                     ; `alt-ctrl-cmd-up` ->    mailbox prev
          [:!!down_arrow :!TCclose_bracket [:mail]]                                                  ; `alt-ctrl-cmd-down` ->  mailbox next
          ]}
