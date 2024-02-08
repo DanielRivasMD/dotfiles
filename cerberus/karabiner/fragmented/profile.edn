@@ -19,19 +19,22 @@
 
 {:Default {:default true
            :sim     50     ;; simultaneous_threshold_milliseconds (def: 50)
-                                      ;; keys need to be pressed within this threshold to be considered simultaneous
+                           ;; keys need to be pressed within this threshold to be considered simultaneous
            :delay   300    ;; to_delayed_action_delay_milliseconds (def: 500)
-                                      ;; basically it means time after which the key press is count delayed
+                           ;; basically it means time after which the key press is count delayed
            :alone   300    ;; to_if_alone_timeout_milliseconds (def: 1000)
-                                      ;; hold for 995s and single tap registered; hold for 1005s and seen as modifier
+                           ;; hold for 995s and single tap registered; hold for 1005s and seen as modifier
            :held    500    ;; to_if_held_down_threshold_milliseconds (def: 500)
-                                      ;; key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)
+                           ;; key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)
            }}
+
 :applications
-{:browser ["org.mozilla.firefox"]
- :editor ["lapce"]
- :mail ["com.apple.mail"]
- :term ["alacritty"]}
+{;
+ :browser ["org.mozilla.firefox"]                                                                   ;
+ :editor ["lapce"]                                                                                  ;
+ :mail ["com.apple.mail"]                                                                           ;
+ :term ["alacritty"]                                                                                ;
+ }
 
 :templates
 {:launch "osascript -e 'tell application \"%s\" to activate'"}
