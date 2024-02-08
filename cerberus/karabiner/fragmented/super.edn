@@ -1,54 +1,57 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        {:des "Super Mode - alphabet"
-         :rules [:zero-mode
-                 ; [:a []]                                                                          ;
-                 [:!Sb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                     ; 'BUG:'
-                 ; [:c []]                                                                          ;
-                 [:!Sd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                     ; 'DOC:'
-                 ; [:e []]                                                                          ;
-                 [:!Sf [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                     ; 'FIX:'
-                 ; [:g []]                                                                          ;
-                 ; [:h []]                                                                          ;
-                 [:!Si [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                                ; 'IDEA:'
-                 ; [:j []]                                                                          ;
-                 ; [:k []]                                                                          ;
-                 ; [:l []]                                                                          ;
-                 ; [:m []]                                                                          ;
-                 ; [:n []]                                                                          ;
-                 ; [:o []]                                                                          ;
-                 ; [:p []]                                                                          ;
-                 ; [:q []]                                                                          ;
-                 ; [:r []]                                                                          ;
-                 ; [:s []]                                                                          ;
-                 [:!St [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                ; 'TODO:'
-                 ; [:u []]                                                                          ;
-                 ; [:v []]                                                                          ;
-                 ; [:w []]                                                                          ;
-                 ; [:x []]                                                                          ;
-                 ; [:y []]                                                                          ;
-                 ; [:z []]                                                                          ;
-                 ]}
+;
+{:des "Super Mode - alphabet"
+ :rules [:zero-mode
+         ; [:a []]                                                                                  ;
+         [:!Sb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                             ; 'BUG:'
+         ; [:c []]                                                                                  ;
+         [:!Sd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                             ; 'DOC:'
+         ; [:e []]                                                                                  ;
+         [:!Sf [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                             ; 'FIX:'
+         ; [:g []]                                                                                  ;
+         ; [:h []]                                                                                  ;
+         [:!Si [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                                        ; 'IDEA:'
+         ; [:j []]                                                                                  ;
+         ; [:k []]                                                                                  ;
+         ; [:l []]                                                                                  ;
+         ; [:m []]                                                                                  ;
+         ; [:n []]                                                                                  ;
+         ; [:o []]                                                                                  ;
+         ; [:p []]                                                                                  ;
+         ; [:q []]                                                                                  ;
+         ; [:r []]                                                                                  ;
+         ; [:s []]                                                                                  ;
+         [:!St [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                        ; 'TODO:'
+         ; [:u []]                                                                                  ;
+         ; [:v []]                                                                                  ;
+         ; [:w []]                                                                                  ;
+         ; [:x []]                                                                                  ;
+         ; [:y []]                                                                                  ;
+         ; [:z []]                                                                                  ;
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;
 {:des "Super Mode - symbols"
  :rules [:zero-mode
-                 ; [:!Shyphen []]                                                                   ;
-                 ; [:!Sequal_sign []]                                                               ;
-                 ; [:!Sdelete_or_backspace []]                                                      ;
-                 ; [:!Sopen_bracket []]                                                             ;
-                 ; [:!Sclose_bracket []]                                                            ;
-         [:!Ssemicolon [:!Ssemicolon :spacebar]]                                            ; ': '
-                 ; [:!Squote []]                                                                    ;
-                 ; [:!Sbackslash []]                                                                ;
-                 ; [:!Scomma []]                                                                    ;
-         [:!Speriod [:period :period :period]]                                              ; '...'
-         [:!Sslash [:spacebar :hyphen :hyphen]]                                             ; ' --'
-                 ; [:!Sdelete_or_backspace []]                                                      ;
-                 ; [:!Sreturn_or_enter []]                                                          ;
-                 ; [:!Sright_shift []]                                                              ;
-                 ; [:!Sright_option []]                                                             ;
-                 ; [:!Sright_command []]                                                            ;
+         ; [:!Shyphen []]                                                                           ;
+         ; [:!Sequal_sign []]                                                                       ;
+         ; [:!Sdelete_or_backspace []]                                                              ;
+         ; [:!Sopen_bracket []]                                                                     ;
+         ; [:!Sclose_bracket []]                                                                    ;
+         [:!Ssemicolon [:!Ssemicolon :spacebar]]                                                    ; ': '
+         ; [:!Squote []]                                                                            ;
+         ; [:!Sbackslash []]                                                                        ;
+         ; [:!Scomma []]                                                                            ;
+         [:!Speriod [:period :period :period]]                                                      ; '...'
+         [:!Sslash [:spacebar :hyphen :hyphen]]                                                     ; ' --'
+         ; [:!Sdelete_or_backspace []]                                                              ;
+         ; [:!Sreturn_or_enter []]                                                                  ;
+         ; [:!Sright_shift []]                                                                      ;
+         ; [:!Sright_option []]                                                                     ;
+         ; [:!Sright_command []]                                                                    ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

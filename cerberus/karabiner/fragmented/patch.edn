@@ -1,44 +1,47 @@
-
-        ; accents
-        {:des "Bypass accents"
-         :rules [[:!OCi :!Sf7]                                                                      ;
-                 [:!OCn :!Sf8]                                                                      ;
-                 [:!Oe :!Sf1]                                                                       ;
-                 [:!Oi :!Sf2]                                                                       ;
-                 [:!On :!OSf4]                                                                      ;
-                 [:!Ou :!Of4]                                                                       ;
-                 [:!OSo :!Tf4]                                                                      ;
-                 ]}
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; simple
-{:des "Simple modifications"
- :rules [[:f20 :0]                                                                          ;
-         [:keypad_slash :display_brightness_decrement]                                      ;
-         [:keypad_asterisk :display_brightness_increment]                                   ;
-         [:keypad_hyphen :mute]                                                             ;
-         [:keypad_plus :volume_increment]                                                   ;
-         [:keypad_enter :volume_decrement]                                                  ;
+; accents
+{:des "Bypass accents"
+ :rules [;
+         [:!OCi :!Sf7]                                                                              ;
+         [:!OCn :!Sf8]                                                                              ;
+         [:!Oe :!Sf1]                                                                               ;
+         [:!Oi :!Sf2]                                                                               ;
+         [:!On :!OSf4]                                                                              ;
+         [:!Ou :!Of4]                                                                               ;
+         [:!OSo :!Tf4]                                                                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ; additional
+; simple
+{:des "Simple modifications"
+ :rules [;
+         [:f20 :0]                                                                                  ;
+         [:keypad_slash :display_brightness_decrement]                                              ;
+         [:keypad_asterisk :display_brightness_increment]                                           ;
+         [:keypad_hyphen :mute]                                                                     ;
+         [:keypad_plus :volume_increment]                                                           ;
+         [:keypad_enter :volume_decrement]                                                          ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; additional
 {:des "Additional key"
  :rules [; builtin
-         [:!EWQ0 :grave_accent_and_tilde]                                                   ; '`'
-         [:!EWQT0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
-         [:!EWQOf20 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                        ; ' ~ '
-         [:!EWQTf20 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]            ; ' =~ '
-         [:!EWQSf20 :!Sgrave_accent_and_tilde]                                              ; '~'
+         [:!EWQ0 :grave_accent_and_tilde]                                                           ; '`'
+         [:!EWQT0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]        ; '```'
+         [:!EWQOf20 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                                ; ' ~ '
+         [:!EWQTf20 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]                    ; ' =~ '
+         [:!EWQSf20 :!Sgrave_accent_and_tilde]                                                      ; '~'
 
-                 ; master
-         [:0 :non_us_backslash]                                                             ; '`'
-         [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]                     ; '```'
-         [:!Of20 [:spacebar :!Snon_us_backslash :spacebar]]                                 ; ' ~ '
-         [:!Tf20 [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]                     ; ' =~ '
-         [:!Sf20 :!Snon_us_backslash]                                                       ; '~'
+         ; master
+         [:0 :non_us_backslash]                                                                     ; '`'
+         [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]                             ; '```'
+         [:!Of20 [:spacebar :!Snon_us_backslash :spacebar]]                                         ; ' ~ '
+         [:!Tf20 [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]                             ; ' =~ '
+         [:!Sf20 :!Snon_us_backslash]                                                               ; '~'
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
