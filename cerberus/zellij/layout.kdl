@@ -36,25 +36,27 @@ layout {
 
     tab name="Files" focus=true {
         pane split_direction="vertical" {
-            pane
-            pane
-            pane
+            pane name="D1"
+            pane name="D2" focus=true
+            pane name="D3"
         }
         pane name="Downloads" cwd="/Users/drivas/Downloads"
     }
 
     tab name="Archive" {
-        triple_pane split_direction="vertical" {
-            pane cwd="/Users/drivas/.archive"
-            pane cwd="/Users/drivas/.archive"
+        pane split_direction="vertical" {
+            pane name="A1" cwd="/Users/drivas/.archive"
+            pane name="A2" cwd="/Users/drivas/.archive"
         }
+        pane name="Archive" cwd="/Users/drivas/.archive"
     }
 
     tab name="Factorem" {
-        triple_pane split_direction="vertical" {
-            pane cwd="/Users/drivas/Factorem"
-            pane cwd="/Users/drivas/Factorem"
+        pane split_direction="vertical" {
+            pane name="F1" cwd="/Users/drivas/Factorem"
+            pane name="F2" cwd="/Users/drivas/Factorem"
         }
+        pane name="Factorem" cwd="/Users/drivas/Factorem"
     }
 
 }
