@@ -60,32 +60,32 @@
 ; Alacritty
 {:des "Terminal alphabet"
  :rules [;
-         [:!Ch :!Oa [:term]]                                                                        ; split pane horizontal
+         [:!EQRhyphen :!Oa [:term]]                                                                 ; `tab-hyphen` ->      split pane horizontal
          ; [: :!Ob [:term]]
          ; [: :!Oc [:term]]
          ; [: :!Od [:term]]
          ; [: :!Oe [:term]]
          ; [: :!Of [:term]]
-         [:!Cg :!Og [:term]]                                                                        ; split pane vertical
-         [:!OTCleft_arrow :!Oh [:term]]                                                             ; move left pane
+         [:!EQRequal_sign :!Og [:term]]                                                             ; `tab-equal` ->       split pane vertical
+         [:!EQRleft_arrow :!Oh [:term]]                                                             ; `tab-left` ->        move left pane
          ; [: :!Oi [:term]]
-         [:!OTCright_arrow :!Oj [:term]]                                                            ; move right pane
-         [:!OTCdown_arrow :!Ok [:term]]                                                             ; move down pane
-         [:!OTCup_arrow :!Ol [:term]]                                                               ; move up pane
-         [:!!right_shift :!Om [:term]]                                                              ; toggle floating pane
+         [:!EQRright_arrow :!Oj [:term]]                                                            ; `tab-right` ->       move right pane
+         [:!EQRdown_arrow :!Ok [:term]]                                                             ; `tab-down` ->        move down pane
+         [:!EQRup_arrow :!Ol [:term]]                                                               ; `tab-up` ->          move up pane
+         [:!!right_shift :!Om [:term]]                                                              ; `caps_lock-shift` -> toggle floating pane
          ; [: :!On [:term]]
-         [:!!spacebar :!Oo [:term]]                                                                 ; toggle full screen
-         [:!OCleft_arrow :!Op [:term]]                                                              ; move left tab
-         [:!OCright_arrow :!Oq [:term]]                                                             ; move right tab
-         [:!Cn :!Or [:term]]                                                                        ; new tab
-         [:escape :!EWright_shift :term {:alone [:!Os]}]                                            ; locked / normal
-         [:!OCp :!Ot [:term]]                                                                       ; pane
+         [:!!spacebar :!Oo [:term]]                                                                 ; `caps_lock-space` -> toggle full screen
+         [:!OCleft_arrow :!Op [:term]]                                                              ; `alt-cmd-left` ->    move left tab
+         [:!OCright_arrow :!Oq [:term]]                                                             ; `alt-cmd-right` ->   move right tab
+         [:!OCspacebar :!Or [:term]]                                                                ; `alt-cmd-space` ->   new tab
+         [:escape :!EWright_shift :term {:alone [:!Os]}]                                            ; `esc` ->             locked / normal
+         [:!EWRreturn_or_enter :!Ot [:term]]                                                        ; `esc-enter` ->       pane mode
          ; [: :!Ou [:term]]
-         [:!OCt :!Ov [:term]]                                                                       ; tab
-         [:!OCr :!Ow [:term]]                                                                       ; resize
-         [:!OCm :!Ox [:term]]                                                                       ; move
-         [:!OCf :!Oy [:term]]                                                                       ; search
-         [:!OCs :!Oz [:term]]                                                                       ; session
+         [:!EWRright_command :!Ov [:term]]                                                          ; `esc-cmd` ->         tab mode
+         [:!EWRspacebar :!Ow [:term]]                                                               ; `esc-space` ->       resize mode
+         ; [:!OCm :!Ox [:term]]                                                                     ; `` ->                move mode
+         [:!EWRdelete_or_backspace :!Oy [:term]]                                                    ; `esc-backspace` ->   search mode
+         [:left_option :left_option :term {:alone [:!Oz]}]                                          ; `alt` ->             session mode
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
