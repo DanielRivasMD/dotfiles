@@ -919,28 +919,27 @@ key_bindings:
   # alphabet
   ####################################################################################################
 
-  # - { key: Delete,      mods: Alt,                        chars: "\x1bd"        } # patch delete word forward
   - { key: A,           mods: Alt,                        chars: "\x1ba"        } #
-  # - { key: B,           mods: Alt,                        chars: "\x1b[1;3A"    } # mapped -> `alt-up`
+  - { key: B,           mods: Alt,                        chars: "\x1bb"        } #
   - { key: C,           mods: Alt,                        chars: "\x1bc"        } #
   - { key: D,           mods: Alt,                        chars: "\x1bd"        } #
-  # - { key: E,           mods: Alt,                        chars: "\x1be"        } # bypassed -> `shift-F1`
-  # - { key: F,           mods: Alt,                        chars: "\x1b[1;3B"    } # mapped -> `alt-down`
+  - { key: E,           mods: Alt,                        chars: "\x1be"        } #
+  - { key: F,           mods: Alt,                        chars: "\x1bf"        } #
   - { key: G,           mods: Alt,                        chars: "\x1bg"        } #
   - { key: H,           mods: Alt,                        chars: "\x1bh"        } #
-  # - { key: I,           mods: Alt,                        chars: "\x1bi"        } # bypassed -> `shift-F2`
+  - { key: I,           mods: Alt,                        chars: "\x1bi"        } #
   - { key: J,           mods: Alt,                        chars: "\x1bj"        } #
   - { key: K,           mods: Alt,                        chars: "\x1bk"        } #
   - { key: L,           mods: Alt,                        chars: "\x1bl"        } #
   - { key: M,           mods: Alt,                        chars: "\x1bm"        } #
-  # - { key: N,           mods: Alt,                        chars: "\x1bn"        } # bypassed -> `alt-shift-F4`
+  - { key: N,           mods: Alt,                        chars: "\x1bn"        } #
   - { key: O,           mods: Alt,                        chars: "\x1bo"        } #
   - { key: P,           mods: Alt,                        chars: "\x1bp"        } #
   - { key: Q,           mods: Alt,                        chars: "\x1bq"        } #
   - { key: R,           mods: Alt,                        chars: "\x1br"        } #
   - { key: S,           mods: Alt,                        chars: "\x1bs"        } #
   - { key: T,           mods: Alt,                        chars: "\x1bt"        } #
-  # - { key: U,           mods: Alt,                        chars: "\x1bu"        } # bypassed -> `alt-F4`
+  - { key: U,           mods: Alt,                        chars: "\x1bu"        } #
   - { key: V,           mods: Alt,                        chars: "\x1bv"        } #
   - { key: W,           mods: Alt,                        chars: "\x1bw"        } #
   - { key: X,           mods: Alt,                        chars: "\x1bx"        } #
@@ -961,7 +960,7 @@ key_bindings:
   - { key: L,           mods: Alt|Shift,                  chars: "\x1bL"        } #
   - { key: M,           mods: Alt|Shift,                  chars: "\x1bM"        } #
   - { key: N,           mods: Alt|Shift,                  chars: "\x1bN"        } #
-  # - { key: O,           mods: Alt|Shift,                  chars: "\x1bO"        } # bypassed -> `ctrl-F4`
+  - { key: O,           mods: Alt|Shift,                  chars: "\x1bO"        } #
   - { key: P,           mods: Alt|Shift,                  chars: "\x1bP"        } #
   - { key: Q,           mods: Alt|Shift,                  chars: "\x1bQ"        } #
   - { key: R,           mods: Alt|Shift,                  chars: "\x1bR"        } #
@@ -990,7 +989,7 @@ key_bindings:
   # - { key: N,           mods: Control,                    chars: ""             } # remapped
   # - { key: O,           mods: Control,                    chars: ""             } # remapped
   # - { key: P,           mods: Control,                    chars: ""             } # remapped
-  - { key: Q,           mods: Control,                    chars: "\x11"         } # tmux leader
+  # - { key: Q,           mods: Control,                    chars: ""             } # tmux leader
   # - { key: R,           mods: Control,                    chars: ""             } # remapped
   # - { key: S,           mods: Control,                    chars: ""             } # remapped
   # - { key: T,           mods: Control,                    chars: ""             } # remapped
@@ -1001,250 +1000,108 @@ key_bindings:
   # - { key: Y,           mods: Control,                    chars: ""             } # paste
   # - { key: Z,           mods: Control,                    chars: ""             } # send job background
 
-  - { key: A,           mods: Command,                    chars: "\x11a"        } # tmux choose-tree
-  - { key: B,           mods: Command,                    chars: ""             } #
-  - { key: C,           mods: Command,                    chars: ""             } #
-  - { key: D,           mods: Command,                    chars: "\x11d"        } # tmux detach
-  - { key: E,           mods: Command,                    chars: ""             } #
-  - { key: F,           mods: Command,                    chars: ""             } #
-  - { key: G,           mods: Command,                    chars: "\x11g"        } # tmux split-window vertical
-  - { key: H,           mods: Command,                    chars: "\x11h"        } # tmux split-window horizontal
-  - { key: I,           mods: Command,                    chars: ""             } #
-  - { key: J,           mods: Command,                    chars: "\x11j"        } # tmux join-pane
-  - { key: K,           mods: Command,                    chars: "\x11k"        } # tmux break-pane
-  - { key: L,           mods: Command,                    chars: ""             } #
-  - { key: M,           mods: Command,                    chars: ""             } #
-  - { key: N,           mods: Command,                    chars: "\x11n"        } # tmux new-window current path
-  - { key: O,           mods: Command,                    chars: ""             } #
-  - { key: P,           mods: Command,                    chars: ""             } #
-  - { key: Q,           mods: Command,                    chars: ""             } # collision
-  - { key: R,           mods: Command,                    chars: "\x11r"        } # tmux rename-window
-  - { key: S,           mods: Command,                    chars: "\x11s"        } # tmux choose-tree
-  - { key: T,           mods: Command,                    chars: ""             } #
-  - { key: U,           mods: Command,                    chars: ""             } #
-  - { key: V,           mods: Command,                    action: Paste         } #
-  - { key: W,           mods: Command,                    chars: "\x11w"        } # tmux rotate-window
-  - { key: X,           mods: Command,                    chars: "\x11x"        } # tmux kill-pane
-  - { key: Y,           mods: Command,                    chars: "\x11y"        } # tmux copy line
-  - { key: Z,           mods: Command,                    chars: ""             } #
+  # - { key: A,           mods: Command,                    chars: ""             } #
+  # - { key: B,           mods: Command,                    chars: ""             } #
+  # - { key: C,           mods: Command,                    chars: ""             } #
+  # - { key: D,           mods: Command,                    chars: ""             } #
+  # - { key: E,           mods: Command,                    chars: ""             } #
+  # - { key: F,           mods: Command,                    chars: ""             } #
+  # - { key: G,           mods: Command,                    chars: ""             } #
+  # - { key: H,           mods: Command,                    chars: ""             } #
+  # - { key: I,           mods: Command,                    chars: ""             } #
+  # - { key: J,           mods: Command,                    chars: ""             } #
+  # - { key: K,           mods: Command,                    chars: ""             } #
+  # - { key: L,           mods: Command,                    chars: ""             } #
+  # - { key: M,           mods: Command,                    chars: ""             } #
+  # - { key: N,           mods: Command,                    chars: ""             } #
+  # - { key: O,           mods: Command,                    chars: ""             } #
+  # - { key: P,           mods: Command,                    chars: ""             } #
+  # - { key: Q,           mods: Command,                    chars: ""             } # collision
+  # - { key: R,           mods: Command,                    chars: ""             } #
+  # - { key: S,           mods: Command,                    chars: ""             } #
+  # - { key: T,           mods: Command,                    chars: ""             } #
+  # - { key: U,           mods: Command,                    chars: ""             } #
+  # - { key: V,           mods: Command,                    action: Paste         } #
+  # - { key: W,           mods: Command,                    chars: ""             } #
+  # - { key: X,           mods: Command,                    chars: ""             } #
+  # - { key: Y,           mods: Command,                    chars: ""             } #
+  # - { key: Z,           mods: Command,                    chars: ""             } #
 
-  - { key: A,           mods: Command|Shift,              chars: ""             } #
-  - { key: B,           mods: Command|Shift,              chars: ""             } #
-  - { key: C,           mods: Command|Shift,              chars: ""             } #
-  - { key: D,           mods: Command|Shift,              chars: ""             } #
-  - { key: E,           mods: Command|Shift,              chars: ""             } #
-  - { key: F,           mods: Command|Shift,              chars: ""             } #
-  - { key: G,           mods: Command|Shift,              chars: "\x11G"        } # tmux layout even-vertical
-  - { key: H,           mods: Command|Shift,              chars: "\x11H"        } # tmux layout even-horizontal
-  - { key: I,           mods: Command|Shift,              chars: ""             } #
-  - { key: J,           mods: Command|Shift,              chars: "\x11J"        } # tmux layout main-vertical
-  - { key: K,           mods: Command|Shift,              chars: "\x11K"        } # tmux layout main-horizontal
-  - { key: L,           mods: Command|Shift,              chars: ""             } #
-  - { key: M,           mods: Command|Shift,              chars: ""             } #
-  - { key: N,           mods: Command|Shift,              chars: "\x11N"        } # tmux new-window
-  - { key: O,           mods: Command|Shift,              chars: ""             } #
-  - { key: P,           mods: Command|Shift,              chars: ""             } #
-  - { key: Q,           mods: Command|Shift,              chars: ""             } #
-  - { key: R,           mods: Command|Shift,              chars: "\x11R"        } # tmux rename-session
-  - { key: S,           mods: Command|Shift,              chars: ""             } #
-  - { key: T,           mods: Command|Shift,              chars: ""             } #
-  - { key: U,           mods: Command|Shift,              chars: ""             } #
-  - { key: V,           mods: Command|Shift,              chars: ""             } #
-  - { key: W,           mods: Command|Shift,              chars: "\x11W"        } # tmux select-layout tiled
-  - { key: X,           mods: Command|Shift,              chars: "\x11X"        } # tmux kill-window
-  - { key: Y,           mods: Command|Shift,              chars: ""             } #
-  - { key: Z,           mods: Command|Shift,              chars: ""             } #
+  # - { key: A,           mods: Command|Shift,              chars: ""             } #
+  # - { key: B,           mods: Command|Shift,              chars: ""             } #
+  # - { key: C,           mods: Command|Shift,              chars: ""             } #
+  # - { key: D,           mods: Command|Shift,              chars: ""             } #
+  # - { key: E,           mods: Command|Shift,              chars: ""             } #
+  # - { key: F,           mods: Command|Shift,              chars: ""             } #
+  # - { key: G,           mods: Command|Shift,              chars: ""             } #
+  # - { key: H,           mods: Command|Shift,              chars: ""             } #
+  # - { key: I,           mods: Command|Shift,              chars: ""             } #
+  # - { key: J,           mods: Command|Shift,              chars: ""             } #
+  # - { key: K,           mods: Command|Shift,              chars: ""             } #
+  # - { key: L,           mods: Command|Shift,              chars: ""             } #
+  # - { key: M,           mods: Command|Shift,              chars: ""             } #
+  # - { key: N,           mods: Command|Shift,              chars: ""             } #
+  # - { key: O,           mods: Command|Shift,              chars: ""             } #
+  # - { key: P,           mods: Command|Shift,              chars: ""             } #
+  # - { key: Q,           mods: Command|Shift,              chars: ""             } #
+  # - { key: R,           mods: Command|Shift,              chars: ""             } #
+  # - { key: S,           mods: Command|Shift,              chars: ""             } #
+  # - { key: T,           mods: Command|Shift,              chars: ""             } #
+  # - { key: U,           mods: Command|Shift,              chars: ""             } #
+  # - { key: V,           mods: Command|Shift,              chars: ""             } #
+  # - { key: W,           mods: Command|Shift,              chars: ""             } #
+  # - { key: X,           mods: Command|Shift,              chars: ""             } #
+  # - { key: Y,           mods: Command|Shift,              chars: ""             } #
+  # - { key: Z,           mods: Command|Shift,              chars: ""             } #
 
-  - { key: A,           mods: Alt|Command,                chars: ""             } #
-  - { key: B,           mods: Alt|Command,                chars: ""             } #
-  - { key: C,           mods: Alt|Command,                chars: ""             } #
-  - { key: D,           mods: Alt|Command,                chars: ""             } #
-  - { key: E,           mods: Alt|Command,                chars: ""             } #
-  - { key: F,           mods: Alt|Command,                chars: ""             } #
-  - { key: G,           mods: Alt|Command,                chars: ""             } #
-  - { key: H,           mods: Alt|Command,                chars: ""             } #
-  # - { key: I,           mods: Alt|Command,                chars: ""             } # bypassed -> `shift-F7`
-  - { key: J,           mods: Alt|Command,                chars: ""             } #
-  - { key: K,           mods: Alt|Command,                chars: ""             } #
-  - { key: L,           mods: Alt|Command,                chars: ""             } #
-  - { key: M,           mods: Alt|Command,                chars: ""             } #
-  # - { key: N,           mods: Alt|Command,                chars: ""             } # bypassed -> `shift-F8`
-  - { key: O,           mods: Alt|Command,                chars: ""             } #
-  - { key: P,           mods: Alt|Command,                chars: ""             } #
-  - { key: Q,           mods: Alt|Command,                chars: ""             } #
-  - { key: R,           mods: Alt|Command,                chars: ""             } #
-  - { key: S,           mods: Alt|Command,                chars: ""             } #
-  - { key: T,           mods: Alt|Command,                chars: ""             } #
-  - { key: U,           mods: Alt|Command,                chars: ""             } #
-  - { key: V,           mods: Alt|Command,                chars: ""             } #
-  - { key: W,           mods: Alt|Command,                chars: ""             } #
-  - { key: X,           mods: Alt|Command,                chars: ""             } #
-  - { key: Y,           mods: Alt|Command,                chars: ""             } #
-  - { key: Z,           mods: Alt|Command,                chars: ""             } #
+  # - { key: A,           mods: Alt|Command,                chars: ""             } #
+  # - { key: B,           mods: Alt|Command,                chars: ""             } #
+  # - { key: C,           mods: Alt|Command,                chars: ""             } #
+  # - { key: D,           mods: Alt|Command,                chars: ""             } #
+  # - { key: E,           mods: Alt|Command,                chars: ""             } #
+  # - { key: F,           mods: Alt|Command,                chars: ""             } #
+  # - { key: G,           mods: Alt|Command,                chars: ""             } #
+  # - { key: H,           mods: Alt|Command,                chars: ""             } #
+  # - { key: I,           mods: Alt|Command,                chars: ""             } #
+  # - { key: J,           mods: Alt|Command,                chars: ""             } #
+  # - { key: K,           mods: Alt|Command,                chars: ""             } #
+  # - { key: L,           mods: Alt|Command,                chars: ""             } #
+  # - { key: M,           mods: Alt|Command,                chars: ""             } #
+  # - { key: N,           mods: Alt|Command,                chars: ""             } #
+  # - { key: O,           mods: Alt|Command,                chars: ""             } #
+  # - { key: P,           mods: Alt|Command,                chars: ""             } #
+  # - { key: Q,           mods: Alt|Command,                chars: ""             } #
+  # - { key: R,           mods: Alt|Command,                chars: ""             } #
+  # - { key: S,           mods: Alt|Command,                chars: ""             } #
+  # - { key: T,           mods: Alt|Command,                chars: ""             } #
+  # - { key: U,           mods: Alt|Command,                chars: ""             } #
+  # - { key: V,           mods: Alt|Command,                chars: ""             } #
+  # - { key: W,           mods: Alt|Command,                chars: ""             } #
+  # - { key: X,           mods: Alt|Command,                chars: ""             } #
+  # - { key: Y,           mods: Alt|Command,                chars: ""             } #
+  # - { key: Z,           mods: Alt|Command,                chars: ""             } #
 
   ####################################################################################################
   # movement & switch keys
   ####################################################################################################
 
-  # - { key: Return,      mods: Shift,                      chars: "\x07"         } # mapped -> `ctrl-g`
-  # - { key: Return,      mods: Alt,                        chars: "\x13"         } # mapped -> `ctrl-s`
-  # - { key: Return,      mods: Alt|Shift,                  chars: ""             } #
-  # - { key: Return,      mods: Control,                    chars: "\x12"         } # mapped -> `ctrl-r`
-  # - { key: Return,      mods: Control|Shift,              chars: ""             } #
-  # - { key: Return,      mods: Command,                    chars: "\x14"         } # mapped -> `ctrl-t`
-  # - { key: Return,      mods: Command|Shift,              chars: ""             } #
-  - { key: Return,      mods: Alt|Control,                chars: "\x1b[20;2~"   } # mapped -> `alt-F9`
-  # - { key: Return,      mods: Alt|Control|Shift,          chars: ""             } #
-  - { key: Return,      mods: Alt|Command,                chars: "\x1b[21;2~"   } # mapped -> `alt-F10`
-  # - { key: Return,      mods: Alt|Command|Shift,          chars: ""             } #
-  - { key: Return,      mods: Control|Command,            chars: "\x1b[23;2~"   } # mapped -> `alt-F11`
-  # - { key: Return,      mods: Control|Command|Shift,      chars: ""             } # collision
-  - { key: Return,      mods: Alt|Control|Command,        chars: "\x1b[24;2~"   } # mapped -> `alt-F12`
-  # - { key: Return,      mods: Alt|Control|Command|Shift,  chars: "\x08"         } # mapped -> `ctrl-h`
-
-  # - { key: Space,       mods: Shift,                      chars: ""             } #
-  # - { key: Space,       mods: Alt,                        chars: ""             } # collision
-  # - { key: Space,       mods: Alt|Shift,                  chars: ""             } #
-  # - { key: Space,       mods: Control,                    chars: ""             } # direct bound
-  # - { key: Space,       mods: Control|Shift,              chars: ""             } #
-  - { key: Space,       mods: Command,                    chars: "\x11;"        } # tmux display-menu
-  # - { key: Space,       mods: Command|Shift,              chars: ""             } #
-  - { key: Space,       mods: Alt|Control,                chars: "\x11O"        } # tmux last-pane & resize-pane
-  # - { key: Space,       mods: Alt|Control|Shift,          chars: ""             } #
-  - { key: Space,       mods: Alt|Command,                chars: "\x11L"        } # tmux last-window
-  # - { key: Space,       mods: Alt|Command|Shift,          chars: ""             } #
-  - { key: Space,       mods: Control|Command,            chars: "\x1b[19;5~"   } # mapped -> `ctrl-F8`
-  - { key: Space,       mods: Control|Command|Shift,      chars: "\x1b[18;5~"   } # mapped -> `ctrl-F7`
-  - { key: Space,       mods: Alt|Control|Command,        chars: "\x11o"        } # tmux last-pane
-  - { key: Space,       mods: Alt|Control|Command|Shift,  chars: "\x11z"        } # tmux resize-pane
-
   - { key: Left,        mods: Shift,                      chars: "\x1b[1;2D"    } #
   - { key: Left,        mods: Alt,                        chars: "\x1bb"        } # mapped -> `alt-b`
-  # - { key: Left,        mods: Alt|Shift,                  chars: ""             } #
   - { key: Left,        mods: Control,                    chars: "\x1b[1;5D"    } #
-  # - { key: Left,        mods: Control|Shift,              chars: ""             } #
-  # - { key: Left,        mods: Command,                    chars: "\x01"         } # mapped -> `ctrl-a`
   # - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
-  # - { key: Left,        mods: Alt|Control,                chars: ""             } # direct bound tmux
-  - { key: Left,        mods: Alt|Control|Shift,          chars: "\x1b[18;6~"   } # mapped -> `ctrl-shift-F7`
-  - { key: Left,        mods: Alt|Command,                chars: "\x11{"        } # tmux next-window
-  - { key: Left,        mods: Alt|Command|Shift,          chars: "\x1b[23;6~"   } # mapped -> `ctrl-shift-F11`
-  # - { key: Left,        mods: Control|Command,            chars: "\x0A"         } # mapped -> `ctrl-j`
-  # - { key: Left,        mods: Control|Command|Shift,      chars: ""             } #
-  - { key: Left,        mods: Alt|Control|Command,        chars: "\x11<"        } #
-  # - { key: Left,        mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Right,       mods: Shift,                      chars: "\x1b[1;2C"    } #
   - { key: Right,       mods: Alt,                        chars: "\x1bf"        } # mapped -> `alt-f`
-  # - { key: Right,       mods: Alt|Shift,                  chars: ""             } #
   - { key: Right,       mods: Control,                    chars: "\x1b[1;5C"    } #
-  # - { key: Right,       mods: Control|Shift,              chars: ""             } #
-  # - { key: Right,       mods: Command,                    chars: "\x05"         } # mapped -> `ctrl-e`
   # - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
-  # - { key: Right,       mods: Alt|Control,                chars: ""             } # direct bound tmux
-  - { key: Right,       mods: Alt|Control|Shift,          chars: "\x1b[19;6~"   } # mapped -> `ctrl-shift-F8`
-  - { key: Right,       mods: Alt|Command,                chars: "\x11}"        } # tmux previous-window
-  - { key: Right,       mods: Alt|Command|Shift,          chars: "\x1b[24;6~"   } # mapped -> `ctrl-shift-F12`
-  # - { key: Right,       mods: Control|Command,            chars: "\x0E"         } # mapped -> `ctrl-n`
-  # - { key: Right,       mods: Control|Command|Shift,      chars: ""             } #
-  - { key: Right,       mods: Alt|Control|Command,        chars: "\x11>"        } #
-  # - { key: Right,       mods: Alt|Control|Command|Shift,  chars: ""             } # collision
 
   - { key: Up,          mods: Shift,                      chars: "\x1b[1;2A"    } #
   # - { key: Up,          mods: Alt,                        chars: "\x02"         } # mapped -> `ctrl-b`
-  # - { key: Up,          mods: Alt|Shift,                  chars: ""             } #
   - { key: Up,          mods: Control,                    chars: "\x1b[1;5A"    } #
-  # - { key: Up,          mods: Control|Shift,              chars: ""             } #
-  # - { key: Up,          mods: Command,                    chars: "\x0F"         } # mapped -> `ctrl-o`
-  - { key: Up,          mods: Command|Shift,              chars: "\x1b[18;3~"   } # mapped -> `alt-F7`
-  # - { key: Up,          mods: Alt|Control,                chars: ""             } # direct bound tmux
-  - { key: Up,          mods: Alt|Control|Shift,          chars: "\x1b[18;4~"   } # mapped -> `alt-shift-F7`
-  - { key: Up,          mods: Alt|Command,                chars: "\x1b[20;3~"   } # mapped -> `alt-F9`
-  - { key: Up,          mods: Alt|Command|Shift,          chars: "\x1b[23;4~"   } # mapped -> `alt-shift-F11`
-  # - { key: Up,          mods: Control|Command,            chars: "\x16"         } # mapped -> `ctrl-v`
-  # - { key: Up,          mods: Control|Command|Shift,      chars: ""             } #
-  - { key: Up,          mods: Alt|Control|Command,        chars: "\x11+"        } #
-  - { key: Up,          mods: Alt|Control|Command|Shift,  chars: "\x1b[23;3~"   } # mapped -> `alt-F11`
 
   - { key: Down,        mods: Shift,                      chars: "\x1b[1;2B"    } #
   # - { key: Down,        mods: Alt,                        chars: "\x06"         } # mapped -> `ctrl-f`
-  # - { key: Down,        mods: Alt|Shift,                  chars: ""             } #
   - { key: Down,        mods: Control,                    chars: "\x1b[1;5B"    } #
-  # - { key: Down,        mods: Control|Shift,              chars: ""             } #
-  # - { key: Down,        mods: Command,                    chars: "\x10"         } # mapped -> `ctrl-p`
-  - { key: Down,        mods: Command|Shift,              chars: "\x1b[19;3~"   } # mapped -> `alt-F8`
-  # - { key: Down,        mods: Alt|Control,                chars: ""             } # direct bound tmux
-  - { key: Down,        mods: Alt|Control|Shift,          chars: "\x1b[19;4~"   } # mapped -> `alt-shift-F8`
-  - { key: Down,        mods: Alt|Command,                chars: "\x1b[21;3~"   } # mapped -> `alt-F10`
-  - { key: Down,        mods: Alt|Command|Shift,          chars: "\x1b[24;4~"   } # mapped -> `alt-shift-F12`
-  # - { key: Down,        mods: Control|Command,            chars: "\x18"         } # mapped -> `ctrl-x`
-  # - { key: Down,        mods: Control|Command|Shift,      chars: ""             } #
-  - { key: Down,        mods: Alt|Control|Command,        chars: "\x11-"        } #
-  - { key: Down,        mods: Alt|Control|Command|Shift,  chars: "\x1b[24;3~"   } # mapped -> `alt-F12`
-
-  - { key: PageUp,                                        chars: "\x1b[20;5~"   } # mapped -> `ctrl-F9`
-  - { key: PageDown,                                      chars: "\x1b[21;5~"   } # mapped -> `ctrl-F10`
-  - { key: PageUp,      mods: Shift,                      chars: "\x1b[1;4P"    } # mapped -> `alt-shift-F1`
-  - { key: PageDown,    mods: Shift,                      chars: "\x1b[1;4Q"    } # mapped -> `alt-shift-F2`
-  - { key: PageUp,      mods: Alt,                        chars: "\x1b[15;4~"   } # mapped -> `alt-shift-F5`
-  - { key: PageDown,    mods: Alt,                        chars: "\x1b[17;4~"   } # mapped -> `alt-shift-F6`
-  - { key: PageUp,      mods: Control,                    chars: "\x1b[20;4~"   } # mapped -> `alt-shift-F9`
-  - { key: PageDown,    mods: Control,                    chars: "\x1b[21;4~"   } # mapped -> `alt-shift-F10`
-
-  - { key: Home,                                          chars: "\x1b[23;5~"   } # mapped -> `ctrl-F11`
-  - { key: End,                                           chars: "\x1b[24;5~"   } # mapped -> `ctrl-F12`
-  - { key: Home,        mods: Shift,                      chars: "\x1b[1;6P"    } # mapped -> `ctrl-shift-F1`
-  - { key: End,         mods: Shift,                      chars: "\x1b[1;6Q"    } # mapped -> `ctrl-shift-F2`
-  - { key: Home,        mods: Alt,                        chars: "\x1b[15;6~"   } # mapped -> `ctrl-shift-F5`
-  - { key: End,         mods: Alt,                        chars: "\x1b[17;6~"   } # mapped -> `ctrl-shift-F6`
-  - { key: Home,        mods: Control,                    chars: "\x1b[20;6~"   } # mapped -> `ctrl-shift-F9`
-  - { key: End,         mods: Control,                    chars: "\x1b[21;6~"   } # mapped -> `ctrl-shift-F10`
-
-  ####################################################################################################
-  # interactive keybindings
-  ####################################################################################################
-
-  - { key: Key0,        mods: Command,                    chars: "\x110"        } #
-  - { key: Key1,        mods: Command,                    chars: "\x111"        } #
-  - { key: Key2,        mods: Command,                    chars: "\x112"        } #
-  - { key: Key3,        mods: Command,                    chars: "\x113"        } #
-  - { key: Key4,        mods: Command,                    chars: "\x114"        } #
-  - { key: Key5,        mods: Command,                    chars: "\x115"        } #
-  - { key: Key6,        mods: Command,                    chars: "\x116"        } #
-  - { key: Key7,        mods: Command,                    chars: "\x117"        } #
-  - { key: Key8,        mods: Command,                    chars: "\x118"        } #
-  - { key: Key9,        mods: Command,                    chars: "\x119"        } #
-  # - { key: Minus,       mods: Command,                    chars: "  "           } #
-  # - { key: Equals,      mods: Command,                    chars: "  "           } #
-  # - { key: LBracket,    mods: Command,                    chars: "  "           } #
-  # - { key: RBracket,    mods: Command,                    chars: "  "           } #
-  # - { key: Semicolon,   mods: Command,                    chars: "  "           } #
-  # - { key: Apostrophe,  mods: Command,                    chars: "  "           } #
-  # - { key: Backslash,   mods: Command,                    chars: "  "           } #
-  - { key: Comma,       mods: Command,                    chars: "\x11,"        } # tmux source config
-  - { key: Period,      mods: Command,                    chars: "\x11."        } # tmux mark pane
-  # - { key: Slash,       mods: Command,                    chars: "  "           } #
-
-  # - { key: Key0,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key1,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key2,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key3,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key4,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key5,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key6,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key7,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key8,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Key9,        mods: Alt|Command,                chars: "  "           } #
-  # - { key: Minus,       mods: Alt|Command,                chars: "  "           } #
-  # - { key: Equals,      mods: Alt|Command,                chars: "  "           } #
-  - { key: LBracket,    mods: Alt|Command,                chars: "\x11("        } # tmux swap-window
-  - { key: RBracket,    mods: Alt|Command,                chars: "\x11)"        } # tmux swap-window
-  # - { key: Semicolon,   mods: Alt|Command,                chars: "  "           } #
-  # - { key: Apostrophe,  mods: Alt|Command,                chars: "  "           } #
-  # - { key: Backslash,   mods: Alt|Command,                chars: "  "           } #
-  - { key: Comma,       mods: Alt|Command,                chars: "\x1b[15;2~"   } # mapped -> `shift-F5`
-  - { key: Period,      mods: Alt|Command,                chars: "\x1b[17;2~"   } # mapped -> `shift-F6`
-  - { key: Slash,       mods: Alt|Command,                chars: "\x1b[1;2S"    } # mapped -> `shift-F4`
 
   ####################################################################################################
   # function keys
