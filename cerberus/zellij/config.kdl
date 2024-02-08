@@ -149,18 +149,16 @@ keybinds clear-defaults=true {
         bind "J" { Resize "Decrease Down"; }
         bind "K" { Resize "Decrease Up"; }
         bind "L" { Resize "Decrease Right"; }
-    }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    move {
-        bind "Alt x" { SwitchToMode "Normal"; }
-        bind "n" "Tab" { MovePane; }
-        bind "p" { MovePaneBackwards; }
-        bind "Left" { MovePane "Left"; }
-        bind "Down" { MovePane "Down"; }
-        bind "Up" { MovePane "Up"; }
-        bind "Right" { MovePane "Right"; }
+    // move
+        bind "n" { SwitchToMode "Move"; MovePane; SwitchToMode "Resize"; }
+        bind "p" { SwitchToMode "Move"; MovePaneBackwards; SwitchToMode "Resize"; }
+        bind "Left" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Resize"; }
+        bind "Down" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Resize"; }
+        bind "Up" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Resize"; }
+        bind "Right" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Resize"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
