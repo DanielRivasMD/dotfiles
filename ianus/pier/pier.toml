@@ -15,6 +15,10 @@ alias = 'bianca-ssh-im'
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2019016'
 tags = ['remote']
+[scripts.alacritty-refresh]
+command = 'rm ~/.config/alacritty/alacritty.toml && alacritty migrate'
+description = 'refresh alacritty config'
+tags = ['config']
 
 [scripts.bianca-sftp-ai]
 alias = 'bianca-sftp-ai'
