@@ -1,111 +1,94 @@
-[scripts.alacritty]
-alias = 'alacritty'
+[scripts.alacritty-edit]
 command = 'micro ${CERBERUS}/alacritty/alacritty.yml'
 description = 'open alacritty config with micro'
 tags = ['config']
 
-[scripts.bianca-sftp-im]
-alias = 'bianca-sftp-im'
-command = 'sftp -qr drivas-sens2019016@bianca-sftp.uppmax.uu.se'
-description = 'sftp to Bianca sens2019016'
-tags = ['remote']
-
-[scripts.bianca-ssh-im]
-alias = 'bianca-ssh-im'
-command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2019016'
-tags = ['remote']
 [scripts.alacritty-refresh]
 command = 'rm ~/.config/alacritty/alacritty.toml && alacritty migrate'
 description = 'refresh alacritty config'
 tags = ['config']
 
 [scripts.bianca-sftp-ai]
-alias = 'bianca-sftp-ai'
 command = 'sftp -qr drivas-sens2022521@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2022521'
 tags = ['remote']
 
-[scripts.bianca-ssh-ai]
-alias = 'bianca-ssh-ai'
-command = 'ssh drivas-sens2022521@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2022521'
-tags = ['remote']
-
 [scripts.bianca-sftp-ca]
-alias = 'bianca-sftp-ca'
 command = 'sftp -qr drivas-sens2022593@bianca-sftp.uppmax.uu.se'
 description = 'sftp to Bianca sens2022593'
 tags = ['remote']
 
+[scripts.bianca-sftp-im]
+command = 'sftp -qr drivas-sens2019016@bianca-sftp.uppmax.uu.se'
+description = 'sftp to Bianca sens2019016'
+tags = ['remote']
+
+[scripts.bianca-ssh-ai]
+command = 'ssh drivas-sens2022521@bianca.uppmax.uu.se'
+description = 'ssh to Bianca sens2022521'
+tags = ['remote']
+
 [scripts.bianca-ssh-ca]
-alias = 'bianca-ssh-ca'
 command = 'ssh drivas-sens2022593@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2022593'
 tags = ['remote']
 
-[scripts.clean-fire]
-alias = 'clean-fire'
-command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; done'''
-description = 'stop all Firefox jobs'
-tags = ['shell']
+[scripts.bianca-ssh-im]
+command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
+description = 'ssh to Bianca sens2019016'
+tags = ['remote']
 
 [scripts.cargo-ls]
-alias = 'cargo-ls'
 command = 'cargo-install-update install-update --list'
 description = 'list cargo binaries & updates'
 tags = ['rust']
 
 [scripts.cargo-up]
-alias = 'cargo-up'
 command = 'cargo-install-update install-update --all'
 description = 'update cargo binaries'
 tags = ['rust']
 
 [scripts.cheat-julia]
-alias = 'cheat-julia'
 command = 'open ~/Documents/Bahlam/Biblo/Cheat_sheet/Julia/julia-cheat.html'
 description = 'visualize julia cheatsheet'
 tags = ['julia']
 
+[scripts.clean-fire]
+command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; done'''
+description = 'stop all Firefox jobs'
+tags = ['shell']
+
 [scripts.cpu]
-alias = 'cpu'
 command = 'procs --sortd CPU --watch'
 description = 'watch resources usage CPU-sorted'
 tags = ['shell']
 
 [scripts.daemon]
-alias = 'daemon'
 command = '''sudo kill $(ps aux | awk '{if ($11 == "wdavdaemon") print $2}')'''
 description = 'kill microsoft defender'
 tags = ['shell']
 
 [scripts.dir-count]
-alias = 'dir-count'
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
 description = 'count directories in present address'
 tags = ['shell']
 
+[scripts.file-count]
+command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
+description = 'count files in present address'
+tags = ['shell']
+
 [scripts.finder-hidden-off]
-alias = 'finder-hidden-off'
 command = 'defaults write com.apple.Finder AppleShowAllFiles false && killall Finder'
 description = 'turn finder hidden files on'
 tags = ['shell']
 
 [scripts.finder-hidden-on]
-alias = 'finder-hidden-on'
 command = 'defaults write com.apple.Finder AppleShowAllFiles true && killall Finder'
 description = 'turn finder hidden files off'
 tags = ['shell']
 
-[scripts.file-count]
-alias = 'file-count'
-command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
-description = 'count files in present address'
-tags = ['shell']
-
 [scripts.fpath]
-alias = 'fpath'
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
 echo $FPATH | xsv flatten -d ":" -n
@@ -114,7 +97,6 @@ description = 'display fpath'
 tags = ['shell']
 
 [scripts.git]
-alias = 'git'
 command = '''
 #!/bin/sh
 source ${PIER}/break_single_line.sh $COLUMNS
@@ -132,13 +114,11 @@ description = 'all-round git status'
 tags = ['git']
 
 [scripts.godoc]
-alias = 'godoc'
 command = 'godoc -http=localhost:6060; open http://localhost:6060 -a Opera'
 description = 'open port for godoc'
 tags = ['go']
 
 [scripts.gopath]
-alias = 'gopath'
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
 echo $GOPATH | xsv flatten -d ":" -n
@@ -148,7 +128,6 @@ description = 'display GOPATH'
 tags = ['go']
 
 [scripts.gt]
-alias = 'gt'
 command = '''
 #!/bin/sh
 directory="/Users/drivas/.archive/pier/"
@@ -165,13 +144,11 @@ description = 'list git shortcuts'
 tags = ['git']
 
 [scripts.julia]
-alias = 'julia'
 command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
 description = 'edit julia awesome list'
 tags = ['julia']
 
 [scripts.kal]
-alias = 'kal'
 command = '''
 #!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
@@ -183,7 +160,6 @@ description = 'all calendars'
 tags = ['khal']
 
 [scripts.kals]
-alias = 'kals'
 command = '''
 #!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
@@ -197,7 +173,6 @@ description = 'list calendars'
 tags = ['khal']
 
 [scripts.kastro]
-alias = 'kastro'
 command = '''
 #!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
@@ -209,19 +184,16 @@ description = 'astronomy calendar'
 tags = ['khal']
 
 [scripts.kedit]
-alias = 'kedit'
 command = 'micro ${ARCHIVE}/cerberus/khal/khalNew.sh'
 description = 'edit khal-endar event'
 tags = ['khal']
 
 [scripts.knew]
-alias = 'knew'
 command = 'source ${ARCHIVE}/cerberus/khal/khalNew.sh & git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/khal/khalNew.sh'
 description = 'add khal-endar event'
 tags = ['khal']
 
 [scripts.krugby]
-alias = 'krugby'
 command = '''
 #!/bin/sh
 source ${PIER}/break_single_line.sh  $COLUMNS
@@ -233,19 +205,16 @@ description = 'SuperRugby calendar'
 tags = ['khal']
 
 [scripts.magnus-sftp]
-alias = 'magnus-sftp'
 command = 'sftp drivas@magnus.pawsey.org.au'
 description = 'sftp to Pawsey Magnus'
 tags = ['remote']
 
 [scripts.micro]
-alias = 'micro'
 command = 'micro ${IANUS}/micro/bindings.json'
 description = 'open micro config with micro'
 tags = ['shell']
 
 [scripts.path]
-alias = 'path'
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
 echo $PATH | xsv flatten -d ":" -n
@@ -255,55 +224,46 @@ description = 'display PATH'
 tags = ['shell']
 
 [scripts.pier]
-alias = 'pier'
 command = 'bat ~/.pier.toml'
 description = 'print pier.toml'
 tags = ['rust']
 
 [scripts.pwd]
-alias = 'pwd'
 command = 'pwd | tr -d "\n" | cb'
 description = 'copy pwd without new line'
 tags = ['shell']
 
 [scripts.sample]
-alias = 'sample'
 command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
 description = 'use sample'
 tags = ['go']
 
 [scripts.tmux-catedra]
-alias = 'tmux-catedra'
 command = 'sh ~/.archive/ianus/tmux/session/catedra.sh'
 description = 'launch tmux session'
 tags = ['tmux']
 
-[scripts.tmux-control]
-alias = 'tmux-control'
-command = 'sh ~/.archive/ianus/tmux/session/control.sh'
-description = 'launch tmux session'
-tags = ['tmux']
-
 [scripts.tmux-cohesion]
-alias = 'tmux-cohesion'
 command = 'sh ~/.archive/ianus/tmux/session/cohesion.sh'
 description = 'launch tmux session'
 tags = ['tmux']
 
+[scripts.tmux-control]
+command = 'sh ~/.archive/ianus/tmux/session/control.sh'
+description = 'launch tmux session'
+tags = ['tmux']
+
 [scripts.tmux-mind]
-alias = 'tmux-mind'
 command = 'sh ~/.archive/ianus/tmux/session/mind.sh'
 description = 'launch tmux session'
 tags = ['tmux']
 
 [scripts.topaz-sftp]
-alias = 'topaz-sftp'
 command = 'sftp drivas@topaz.pawsey.org.au'
 description = 'sftp to Pawsey Topaz'
 tags = ['remote']
 
 [scripts.update]
-alias = 'update'
 command = '''
 #!/bin/sh
 brew update
@@ -336,7 +296,6 @@ description = 'update packages'
 tags = ['shell']
 
 [scripts.uppmax-sftp]
-alias = 'uppmax-sftp'
 command = 'sftp drivas@rackham.uppmax.uu.se'
 description = 'sftp to Uppmax Rackham'
 tags = ['remote']
