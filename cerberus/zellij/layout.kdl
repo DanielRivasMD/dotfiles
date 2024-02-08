@@ -1,15 +1,60 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 layout {
-    pane split_direction="vertical" {
-        pane
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+    }
+    pane_template name="tests_under_files" {
         pane split_direction="horizontal" {
+            children
+            pane
+        }
+    }
+
+    tab name="Server (root)" focus=true {
+        tests_under_files split_direction="vertical" {
             pane
             pane
         }
     }
-    pane size=1 borderless=true {
-        plugin location="zellij:compact-bar"
+    tab name="Client (root)" {
+        tests_under_files split_direction="vertical" {
+            pane
+            pane
+        }
+    }
+    tab name="Server (screen thread)" split_direction="vertical" {
+        pane name="SCREEN"
+        pane name="TAB"
+        pane name="TERMINAL PANE"
+    }
+    tab name="Server (pty thread)" split_direction="vertical" {
+        pane
+        pane
+    }
+    tab name="Server (pane grids)" split_direction="horizontal" {
+        pane split_direction="vertical" {
+            pane
+            pane
+            pane
+        }
+        pane split_direction="vertical" {
+            pane name="FLOATING_PANES"
+            pane name="FLOATING_PANES - GRID"
+        }
+    }
+    tab name="Server (Terminal)" split_direction="horizontal" {
+        pane split_direction="vertical" {
+            pane name="TERMINAL PANE"
+            pane name="GRID (ANSI PARSER)"
+        }
+        pane split_direction="vertical" {
+            pane name="TERMINAL CHARACTER"
+            pane name="SIXEL"
+        }
     }
 }
 
