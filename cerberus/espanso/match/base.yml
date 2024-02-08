@@ -7,13 +7,13 @@ matches:
   ####################################################################################################
 
   # name
-  - trigger: "??nm"
+  - trigger: "??name"
     replace: "Salvador Daniel Rivas Carrillo"
 
-  - trigger: "??fnm"
+  - trigger: "??fn"
     replace: "Salvador Daniel"
 
-  - trigger: "??lnm"
+  - trigger: "??ln"
     replace: "Rivas Carrillo"
 
   - trigger: "??dr"
@@ -303,7 +303,7 @@ matches:
   ####################################################################################################
 
   # print the current date
-  - trigger: ":date"
+  - trigger: ":date:"
     replace: "{{mydate}}"
     vars:
       - name: mydate
@@ -314,7 +314,7 @@ matches:
   ####################################################################################################
 
   # print the output of a shell command
-  - trigger: ":shell"
+  - trigger: ":shell:"
     replace: "{{output}}"
     vars:
       - name: output
