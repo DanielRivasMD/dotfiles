@@ -3,7 +3,7 @@
 layout {
     default_tab_template {
         pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
+            plugin location="zellij:compact-bar"
         }
         children
     }
@@ -43,7 +43,15 @@ layout {
         pane name="Downloads" cwd="/Users/drivas/Downloads"
     }
 
-    tab name="Archive" {
+    tab name="Archive" hide_floating_panes=true {
+        floating_panes {
+            pane name="F" {
+                x "50%"
+                y "50%"
+                width "50%"
+                height "50%"
+            }
+        }
         pane split_direction="vertical" {
             pane name="A1" cwd="/Users/drivas/.archive"
             pane name="A2" cwd="/Users/drivas/.archive"
@@ -51,7 +59,15 @@ layout {
         pane name="Archive" cwd="/Users/drivas/.archive"
     }
 
-    tab name="Factorem" {
+    tab name="Factorem" hide_floating_panes=true {
+        floating_panes {
+            pane name="F" {
+                x "50%"
+                y "50%"
+                width "50%"
+                height "50%"
+            }
+        }
         pane split_direction="vertical" {
             pane name="F1" cwd="/Users/drivas/Factorem"
             pane name="F2" cwd="/Users/drivas/Factorem"
