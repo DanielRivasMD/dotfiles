@@ -102,48 +102,66 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
-{:des "Terminal remappings"
+{:des "Terminal control - alphabet"
  :rules [;
-         [:!WQRtab :!Th [:term]]                                                                    ; `delete-tab`
+         [:!Cleft_arrow :!Ta [:term]]                                                               ; `cmd-left`
+         [:!Oup_arrow :!Tb [:term]]                                                                 ; `alt-up`
+         ; [: :!Tc [:term]]                                                                         ; DOC:                 collision defaults
+         ; [: :!Td [:term]]                                                                         ; DOC:                 collision defaults
+         [:!Cright_arrow :!Te [:term]]                                                              ; `cmd-right`
+         [:!Odown_arrow :!Tf [:term]]                                                               ; `alt-down`
          [:!WQRcaps_lock :!Tg [:term]]                                                              ; `delete-caps_lock`
-         [:!WQRleft_shift :!Oc [:term]]                                                             ; `delete-shift`
+         [:!WQRtab :!Th [:term]]                                                                    ; `delete-tab`
+         ; [: :!Ti [:term]]                                                                         ; DOC:                 collision defaults
+         [:!WQRright_command :!Tj [:term]]                                                          ; `delete-cmd`
+         ; [: :!Tk [:term]]                                                                         ; DOC:                 collision defaults
+         ; [: :!Tl [:term]]                                                                         ; DOC:                 collision defaults
+         ; [: :!Tm [:term]]                                                                         ; DOC:                 collision defaults
+         [:!WQRright_option :!Tn [:term]]                                                           ; `delete-alt`
+         [:!Cup_arrow :!To [:term]]                                                                 ; `cmd-up`
+         [:!Cdown_arrow :!Tp [:term]]                                                               ; `cmd-down`
+         ; [: :!Tq [:term]]                                                                         ; DOC:                 collision defaults
          [:!WQRleft_control :!Tr [:term]]                                                           ; `delete-ctrl`
          [:!WQRleft_option :!Ts [:term]]                                                            ; `delete-alt`
          [:!WQRleft_command :!Tt [:term]]                                                           ; `delete-cmd`
-         [:!WQRright_command :!Tj [:term]]                                                          ; `delete-cmd`
-         [:!WQRright_option :!Tn [:term]]                                                           ; `delete-alt`
-
-         [:left_shift :left_shift :term {:alone [:!Tf3]}]                                           ; tmux copy
-         [:delete_or_backspace :!WQright_shift :term {:alone [:!Sf3]}]                              ; tmux remote
+         ; [: :!Tu [:term]]                                                                         ; DOC:                 collision defaults
+         [:!TCup_arrow :!Tv [:term]]                                                                ; `ctrl-cmd-up`
+         [:!TCdown_arrow :!Tx [:term]]                                                              ; `ctrl-cmd-down`
+         [:!WQRspacebar :!Ty [:term]]                                                               ; `delete-space`
+         ; [: :!Tz [:term]]                                                                         ; DOC:                 collision defaults
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
-{:des "Terminal remappings"
+{:des "Terminal delete"
  :rules [;
-         ; [:!Oleft_arrow :!Ob [:term]]                                                             ; `alt-left`
-         ; [:!Oright_arrow :!Of [:term]]                                                            ; `alt-right`
+         [:!Sright_option :!Od [:term]]                                                             ; delete word forward
+         [:!Sright_command :!Tk [:term]]                                                            ; delete line forward
+         [:!Rleft_control :!Tw [:term]]                                                             ; delete word backward
+         [:!Rleft_command :!Tu [:term]]                                                             ; delete line backward
 
-         [:!Ob :!Oup_arrow [:term]]                                                                 ; `alt-b`
-         [:!Of :!Odown_arrow [:term]]                                                               ; `alt-f`
+         [:!Rleft_option :!Tl [:term]]                                                              ; clear screen
+         ]}
 
-         [:!Cleft_arrow :!Ta [:term]]                                                               ; `cmd-left`
-         [:!Cright_arrow :!Te [:term]]                                                              ; `cmd-right`
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal movement mappings"
+ :rules [;
+         ; [:left_shift :left_shift :term {:alone [:!Tf3]}]                                           ; tmux copy
+         ; [:delete_or_backspace :!WQright_shift :term {:alone [:!Sf3]}]                              ; tmux remote
 
          [:!CSleft_arrow :!Oleft_arrow [:term]]                                                     ; `cmd-shift-left`
          [:!CSright_arrow :!Oright_arrow [:term]]                                                   ; `cmd-shift-right`
 
-         [:!Oup_arrow :!Tb [:term]]                                                                 ; `alt-up`
-         [:!Odown_arrow :!Tf [:term]]                                                               ; `alt-down`
-
-         [:!Cup_arrow :!To [:term]]                                                                 ; `cmd-up`
-         [:!Cdown_arrow :!Tp [:term]]                                                               ; `cmd-down`
-
-         [:!TCup_arrow :!Tv [:term]]                                                                ; `ctrl-cmd-up`
-         [:!TCdown_arrow :!Tx [:term]]                                                              ; `ctrl-cmd-down`
-
-         [:!TCspacebar :!Tf8 [:term]]                                                               ; `ctrl-cmd-space`
+         [:!TCspacebar :!Of1 [:term]]                                                               ; `ctrl-cmd-space`
+         [:!TCleft_arrow :!Tf1 [:term]]                                                               ; `ctrl-cmd-space`
+         [:!TCright_arrow :!Sf1 [:term]]                                                               ; `ctrl-cmd-space`
+         [:!OCright_command :!OTf1 [:term]]                                                              ; `ctrl-cmd-space`
+         [:!OCright_option :!OSf1 [:term]]                                                              ; `ctrl-cmd-space`
+         [:!OCright_shift :!TSf1 [:term]]                                                              ; `ctrl-cmd-space`
+         [:!OCreturn_or_enter :!OTSf1 [:term]]                                                             ; `ctrl-cmd-space`
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
