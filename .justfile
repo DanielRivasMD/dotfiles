@@ -61,7 +61,7 @@ Mnemosyne:
 
 # format & watch goku
 Goku:
-  watchexec --watch cerberus/karabiner/fragmented -- source .just/goku.sh && goku
+  watchexec --watch cerberus/karabiner/fragmented -- 'source .just/goku.sh && goku'
 
 ####################################################################################################
 # compose protocols
