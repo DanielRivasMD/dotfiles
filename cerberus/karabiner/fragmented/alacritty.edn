@@ -64,6 +64,39 @@
          ; [: :!OSz [:term]]                                                                        ;
          ]}
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alt - alphabet"
+ :rules [;
+         ; [:!Ob :!Oup_arrow [:term]]                                                                 ; `alt-b`
+         ; [:!Of :!Odown_arrow [:term]]                                                               ; `alt-f`
+         [:!Oa :!Of13 [:term]]                                                                      ;
+         [:!Ob :!Tf13 [:term]]                                                                      ;
+         [:!Oc :!Sf13 [:term]]                                                                      ;
+         [:!Od :!OTf13 [:term]]                                                                     ;
+         [:!Oe :!OSf13 [:term]]                                                                     ;
+         [:!Of :!TSf13 [:term]]                                                                     ;
+         [:!Og :!OTSf13 [:term]]                                                                    ;
+         [:!Oh :!Of14 [:term]]                                                                      ;
+         [:!Oi :!Sf14 [:term]]                                                                      ;
+         [:!Oj :!OTf14 [:term]]                                                                     ;
+         [:!Ok :!TSf14 [:term]]                                                                     ;
+         [:!Ol :!Of15 [:term]]                                                                      ;
+         [:!Om :!Sf15 [:term]]                                                                      ;
+         [:!On :!OTf15 [:term]]                                                                     ;
+         [:!Oo :!Of16 [:term]]                                                                      ;
+         [:!Op :!Tf16 [:term]]                                                                      ;
+         [:!Oq :!Sf16 [:term]]                                                                      ;
+         [:!Or :!OTf16 [:term]]                                                                     ;
+         [:!Os :!OSf16 [:term]]                                                                     ;
+         [:!Ot :!TSf16 [:term]]                                                                     ;
+         [:!Ou :!OTSf16 [:term]]                                                                    ;
+         [:!Ov :!Of17 [:term]]                                                                      ;
+         [:!Ow :!Tf17 [:term]]                                                                      ;
+         [:!Ox :!Sf17 [:term]]                                                                      ;
+         [:!Oy :!OTf17 [:term]]                                                                     ;
+         [:!Oz :!OSf17 [:term]]                                                                     ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
