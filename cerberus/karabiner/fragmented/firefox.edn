@@ -3,16 +3,16 @@
 ; Firefox
 {:des "Firefox vimium mappings"
  :rules [;
-         [:!!spacebar :!TCf1 [:browser]]                                                            ; `caps_lock-space` ->  focus
+         [:delete_or_backspace :!WQright_shift :browser {:alone [:!Of1]}]                           ; `basckspace` ->     focus
 
-         [:!EWRdelete_or_backspace :!Tf1 [:browser]]                                                ; `esc-backspace` ->    download link
-         [:!EWRreturn_or_enter :!Tf2 [:browser]]                                                    ; `esc-enter` ->        copy link
+         [:!EQRright_command :!Tf1 [:browser]]                                                      ; `tab-cmd` ->        download link
+         [:!EQRright_option :!Cf1 [:browser]]                                                       ; `tab-alt` ->        copy link
 
-         [:!EQRreturn_or_enter :!Cf1 [:browser]]                                                    ; `tab-enter` ->        open current tab
+         [:!EQRreturn_or_enter :!OTCf1 [:browser]]                                                  ; `tab-enter` ->      open current tab
 
-         [:!EQRdelete_or_backspace :!Cf2 [:browser]]                                                ; `tab-backspace` ->    open new tab
-         [:!EQRspacebar :!Of1 [:browser]]                                                           ; `tab-space` ->        open new tab & switch
-         [:!EWRspacebar :!Of2 [:browser]]                                                           ; `eac-space` ->        open multiple tabs
+         [:!EQRright_shift :!OTf1 [:browser]]                                                       ; `tab-shift` ->      open new tab
+         [:!EQRspacebar :!OCf1 [:browser]]                                                          ; `tab-space` ->      open new tab & switch
+         [:!EQRdelete_or_backspace :!TCf1 [:browser]]                                               ; `tab-backspace` ->  open multiple tabs
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
