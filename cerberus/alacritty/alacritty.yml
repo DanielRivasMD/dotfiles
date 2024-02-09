@@ -1082,28 +1082,6 @@ key_bindings:
   # - { key: Z,           mods: Alt|Command,                chars: ""             } #
 
   ####################################################################################################
-  # movement & switch keys
-  ####################################################################################################
-
-  - { key: Left,        mods: Shift,                      chars: "\x1b[1;2D"    } #
-  - { key: Left,        mods: Alt,                        chars: "\x1bb"        } # mapped -> `alt-b`
-  - { key: Left,        mods: Control,                    chars: "\x1b[1;5D"    } #
-  # - { key: Left,        mods: Command|Shift,              chars: "\x1b[1;3D"    } # mapped -> `alt-left`
-
-  - { key: Right,       mods: Shift,                      chars: "\x1b[1;2C"    } #
-  - { key: Right,       mods: Alt,                        chars: "\x1bf"        } # mapped -> `alt-f`
-  - { key: Right,       mods: Control,                    chars: "\x1b[1;5C"    } #
-  # - { key: Right,       mods: Command|Shift,              chars: "\x1b[1;3C"    } # mapped -> `alt-right`
-
-  - { key: Up,          mods: Shift,                      chars: "\x1b[1;2A"    } #
-  # - { key: Up,          mods: Alt,                        chars: "\x02"         } # mapped -> `ctrl-b`
-  - { key: Up,          mods: Control,                    chars: "\x1b[1;5A"    } #
-
-  - { key: Down,        mods: Shift,                      chars: "\x1b[1;2B"    } #
-  # - { key: Down,        mods: Alt,                        chars: "\x06"         } # mapped -> `ctrl-f`
-  - { key: Down,        mods: Control,                    chars: "\x1b[1;5B"    } #
-
-  ####################################################################################################
   # function keys
   ####################################################################################################
 
