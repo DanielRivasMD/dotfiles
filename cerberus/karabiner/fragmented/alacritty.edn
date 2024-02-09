@@ -102,6 +102,39 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
+{:des "Terminal alt - alphabet"
+ :rules [;
+         [:!SOa :!Of12 [:term]]                                                                     ;
+         [:!SOb :!Tf12 [:term]]                                                                     ;
+         [:!SOc :!Sf12 [:term]]                                                                     ;
+         [:!SOd :!OTf12 [:term]]                                                                    ;
+         [:!SOe :!OSf12 [:term]]                                                                    ;
+         [:!SOf :!TSf12 [:term]]                                                                    ;
+         [:!SOg :!OTSf12 [:term]]                                                                   ;
+         [:!SOh :!Of11 [:term]]                                                                     ;
+         [:!SOi :!Tf11 [:term]]                                                                     ;
+         [:!SOj :!Sf11 [:term]]                                                                     ;
+         [:!SOk :!OTf11 [:term]]                                                                    ;
+         [:!SOl :!OSf11 [:term]]                                                                    ;
+         [:!SOm :!TSf11 [:term]]                                                                    ;
+         [:!SOn :!OTSf11 [:term]]                                                                   ;
+         [:!SOo :!Of10 [:term]]                                                                     ;
+         [:!SOp :!Tf10 [:term]]                                                                     ;
+         [:!SOq :!Sf10 [:term]]                                                                     ;
+         [:!SOr :!OTf10 [:term]]                                                                    ;
+         [:!SOs :!OSf10 [:term]]                                                                    ;
+         [:!SOt :!TSf10 [:term]]                                                                    ;
+         [:!SOu :!OTSf10 [:term]]                                                                   ;
+         [:!SOv :!Of9 [:term]]                                                                      ;
+         [:!SOw :!Tf9 [:term]]                                                                      ;
+         [:!SOx :!Sf9 [:term]]                                                                      ;
+         [:!SOy :!OTf9 [:term]]                                                                     ;
+         [:!SOz :!OSf9 [:term]]                                                                     ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
 {:des "Terminal control - alphabet"
  :rules [;
          [:!Cleft_arrow :!Ta [:term]]                                                               ; `cmd-left`
