@@ -39,16 +39,16 @@ map V enterVisualLineMode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " links
-map <c-m-f1> focusInput
+map <a-f1> focusInput
 
 map <c-f1> LinkHints.activateModeToDownloadLink
-map <c-f2> LinkHints.activateModeToCopyLinkUrl
+map <m-f1> LinkHints.activateModeToCopyLinkUrl
 
-map <m-f1> LinkHints.activateMode
+map <a-c-m-f1> LinkHints.activateMode
 
-map <m-f2> LinkHints.activateModeToOpenInNewTab
-map <a-f1> LinkHints.activateModeToOpenInNewForegroundTab
-map <a-f2> LinkHints.activateModeWithQueue
+map <a-c-f1> LinkHints.activateModeToOpenInNewTab
+map <a-m-f1> LinkHints.activateModeToOpenInNewForegroundTab
+map <c-m-f1> LinkHints.activateModeWithQueue
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
