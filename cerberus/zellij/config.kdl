@@ -8,14 +8,6 @@ keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
-//        bind "Alt Left" { MoveFocusOrTab "Left"; }
-//        bind "Alt Right" { MoveFocusOrTab "Right"; }
-//        bind "Alt Down" { MoveFocus "Down"; }
-//        bind "Alt Up" { MoveFocus "Up"; }
-//        bind "Alt +" { Resize "Increase"; }
-//        bind "Alt -" { Resize "Decrease"; }
-//        bind "Alt [" { PreviousSwapLayout; }
-//        bind "Alt ]" { NextSwapLayout; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -37,8 +29,8 @@ keybinds clear-defaults=true {
         bind "Alt w" { SwitchToMode "Resize"; }
     }
 
-    shared_except "move" {
-        bind "Alt x" { SwitchToMode "Move"; }
+    shared_except "scroll" {
+        bind "Alt x" { SwitchToMode "Scroll"; }
     }
 
     shared_except "search" {
@@ -56,27 +48,54 @@ keybinds clear-defaults=true {
         // bind "Alt b" {}
         // bind "Alt c" {}
         // bind "Alt d" {}
-        // bind "Alt e" {  }                                                                        accent
+        // bind "Alt e" {  }                                                                        DOC: accent
         // bind "Alt f" {}
         bind "Alt g" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }
         bind "Alt h" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }
-        // bind "Alt i" {  }                                                                        accent
+        // bind "Alt i" {  }                                                                        DOC: accent
         bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }
         bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Down"; SwitchToMode "Normal"; }
         bind "Alt l" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }
-        bind "Alt m" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
-        // bind "Alt n" {  }                                                                        accent
-        bind "Alt o" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        bind "Alt m" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        // bind "Alt n" {  }                                                                        DOC: accent
+        // bind "Alt o" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "Alt p" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }
         bind "Alt q" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }
         bind "Alt r" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }
         // bind "Alt t" {}
-        // bind "Alt u" {  }                                                                        accent
+        // bind "Alt u" {  }                                                                        DOC: accent
         // bind "Alt v" {}
         // bind "Alt w" {}
         // bind "Alt x" {}
         // bind "Alt y" {}
         // bind "Alt z" {}
+
+        // bind "Alt A" {}
+        // bind "Alt B" {}
+        // bind "Alt C" {}
+        // bind "Alt D" {}
+        // bind "Alt E" {}
+        // bind "Alt F" {}
+        // bind "Alt G" {}
+        bind "Alt H" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Normal"; }
+        // bind "Alt I" {}
+        bind "Alt J" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Normal"; }
+        bind "Alt K" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Normal"; }
+        bind "Alt L" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Normal"; }
+        bind "Alt M" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
+        // bind "Alt N" {}
+        // bind "Alt O" {  }                                                                        DOC: accent
+        // bind "Alt P" {}
+        // bind "Alt Q" {}
+        // bind "Alt R" {}
+        // bind "Alt S" {}
+        // bind "Alt T" {}
+        // bind "Alt U" {}
+        // bind "Alt V" {}
+        // bind "Alt W" {}
+        // bind "Alt X" {}
+        // bind "Alt Y" {}
+        // bind "Alt Z" {}
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,29 +106,17 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     normal {
-        bind "Alt s" { SwitchToMode "Locked"; }                                                     // `esc`
-
-        // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Alt s" { SwitchToMode "Locked"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     pane {
         bind "Alt t" { SwitchToMode "Normal"; }
-        //bind "h" "Left" { MoveFocus "Left"; }
-        //bind "l" "Right" { MoveFocus "Right"; }
-        //bind "j" "Down" { MoveFocus "Down"; }
-        //bind "k" "Up" { MoveFocus "Up"; }
-        bind "p" { SwitchFocus; }
-        //bind "n" { NewPane; SwitchToMode "Normal"; }
-        //bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
-        //bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
-        //bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
-        //bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
-        bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
+        bind "Tab" { SwitchFocus; }
+        bind "Space" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
 
@@ -117,9 +124,6 @@ keybinds clear-defaults=true {
 
     tab {
         bind "Alt v" { SwitchToMode "Normal"; }
-        //bind "h" "Left" "Up" "k" { GoToPreviousTab; }
-        //bind "l" "Right" "Down" "j" { GoToNextTab; }
-        //bind "n" { NewTab; SwitchToMode "Normal"; }
         bind "x" { CloseTab; SwitchToMode "Normal"; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
         bind "1" { GoToTab 1; SwitchToMode "Normal"; }
@@ -149,22 +153,12 @@ keybinds clear-defaults=true {
         bind "J" { Resize "Decrease Down"; }
         bind "K" { Resize "Decrease Up"; }
         bind "L" { Resize "Decrease Right"; }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    // move
-        bind "n" { SwitchToMode "Move"; MovePane; SwitchToMode "Resize"; }
-        bind "p" { SwitchToMode "Move"; MovePaneBackwards; SwitchToMode "Resize"; }
-        bind "Left" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Resize"; }
-        bind "Down" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Resize"; }
-        bind "Up" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Resize"; }
-        bind "Right" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Resize"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     scroll {
-        bind "Alt y" { SwitchToMode "Normal"; }
+        bind "Alt x" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
@@ -209,29 +203,6 @@ keybinds clear-defaults=true {
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    tmux {
-//        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
-//        bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
-//        bind "%" { NewPane "Right"; SwitchToMode "Normal"; }
-//        bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
-//        bind "c" { NewTab; SwitchToMode "Normal"; }
-//        bind "," { SwitchToMode "RenameTab"; }
-//        bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
-//        bind "n" { GoToNextTab; SwitchToMode "Normal"; }
-//        bind "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
-//        bind "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
-//        bind "Down" { MoveFocus "Down"; SwitchToMode "Normal"; }
-//        bind "Up" { MoveFocus "Up"; SwitchToMode "Normal"; }
-//        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
-//        bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
-//        bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
-//        bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
-//        bind "o" { FocusNextPane; }
-//        bind "d" { Detach; }
-//        bind "Space" { NextSwapLayout; }
-//        bind "x" { CloseFocus; SwitchToMode "Normal"; }
-    }
 
 }
 
