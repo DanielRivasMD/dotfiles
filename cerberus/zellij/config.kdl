@@ -58,7 +58,7 @@ keybinds clear-defaults=true {
         bind "Alt l" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }
         bind "Alt m" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
         // bind "Alt n" {  }                                                                        DOC: accent
-        // bind "Alt o" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        bind "Alt o" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "Alt p" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }
         bind "Alt q" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }
         bind "Alt r" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }
@@ -77,12 +77,12 @@ keybinds clear-defaults=true {
         // bind "Alt E" {}
         // bind "Alt F" {}
         // bind "Alt G" {}
-        bind "Alt H" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Normal"; }
+        // bind "Alt H" {}
         // bind "Alt I" {}
-        bind "Alt J" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Normal"; }
-        bind "Alt K" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Normal"; }
-        bind "Alt L" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Normal"; }
-        bind "Alt M" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
+        // bind "Alt J" {}
+        // bind "Alt K" {}
+        // bind "Alt L" {}
+        // bind "Alt M" {}
         // bind "Alt N" {}
         // bind "Alt O" {  }                                                                        DOC: accent
         // bind "Alt P" {}
@@ -153,6 +153,10 @@ keybinds clear-defaults=true {
         bind "J" { Resize "Decrease Down"; }
         bind "K" { Resize "Decrease Up"; }
         bind "L" { Resize "Decrease Right"; }
+        bind "Left" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Resize"; }
+        bind "Right" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Resize"; }
+        bind "Up" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Resize"; }
+        bind "Down" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Resize"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
