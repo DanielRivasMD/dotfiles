@@ -64,6 +64,11 @@ A-F1 = ["goto_last_accessed_file"]                                              
 C-F1 = ["goto_previous_buffer"]                                                 # prev tab          # mapped -> `ctrl-cmd-left`
 S-F1 = ["goto_next_buffer"]                                                     # next tab          # mapped -> `ctrl-cmd-right`
 
+# helix split
+C-S-F18 = ["hsplit"]                                                            # horizontal split  # mapped -> `ctrl-cmd-[`
+A-C-S-F18 = ["vsplit"]                                                          # vertical split    # mapped -> `ctrl-cmd-]`
+A-F19 = ["wonly"]                                                               # unsplit           # mapped -> `ctrl-cmd-backspace`
+
 # jump
 A-C-F1 = ["jump_backward"]                                                      # prev jump         # mapped -> `alt-cmd-,`
 A-S-F1 = ["jump_forward"]                                                       # next jump         # mapped -> `alt-cmd-.`
@@ -149,8 +154,8 @@ S-F12 = ["toggle_comments"]                                                     
 A-C-F12 = ["extend_to_line_bounds", "yank", "paste_after"]                      # duplicate line    # mapped -> `alt-shift-d`
 # A-S-F12 = [""]                                                                #                   # mapped -> `alt-shift-e`
 C-S-F12 = ["global_search"]                                                     # global search     # mapped -> `alt-shift-f`
-A-C-S-F12 = ["vsplit"]                                                          # vertical split    # mapped -> `alt-shift-g`
-A-F11 = ["hsplit"]                                                              # horizontal split  # mapped -> `alt-shift-h`
+# A-C-S-F12 = [""]                                                              #                   # mapped -> `alt-shift-g`
+# A-F11 = [""]                                                                  #                   # mapped -> `alt-shift-h`
 C-F11 = ["indent"]                                                              # indent            # mapped -> `alt-shift-i`
 S-F11 = ["extend_to_line_bounds", "delete_selection", "paste_after"]            # move down         # mapped -> `alt-shift-j`
 A-C-F11 = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move up   # mapped -> `alt-shift-k`
@@ -168,7 +173,7 @@ A-C-S-F10 = ["redo"]                                                            
 # C-F9 = [""]                                                                   #                   # mapped -> `alt-shift-w`
 S-F9 = ["extend_to_line_bounds", "delete_selection"]                            # cut line          # mapped -> `alt-shift-x`
 A-C-F9 = ["extend_to_line_bounds", "yank"]                                      # copy line         # mapped -> `alt-shift-y`
-A-S-F9 = ["wonly"]                                                              # unsplit           # mapped -> `alt-shift-z`
+# A-S-F9 = [""]                                                                 #                   # mapped -> `alt-shift-z`
 
 C-a = ["goto_line_start"]                                                       # start line        # mapped -> `cmd-left`
 # C-b = [""]                                                                    # none              # mapped -> ``
@@ -225,6 +230,11 @@ C-down = ["jump_view_down"]                                                     
 A-F1 = ["goto_last_accessed_file"]                                              # last tab          # mapped -> `ctrl-cmd-space`
 C-F1 = ["goto_previous_buffer"]                                                 # prev tab          # mapped -> `ctrl-cmd-left`
 S-F1 = ["goto_next_buffer"]                                                     # next tab          # mapped -> `ctrl-cmd-right`
+
+# helix split
+C-S-F18 = ["hsplit"]                                                            # horizontal split  # mapped -> `ctrl-cmd-[`
+A-C-S-F18 = ["vsplit"]                                                          # vertical split    # mapped -> `ctrl-cmd-]`
+A-F19 = ["wonly"]                                                               # unsplit           # mapped -> `ctrl-cmd-backspace`
 
 # jump
 A-C-F1 = ["jump_backward"]                                                      # prev jump         # mapped -> `alt-cmd-,`
@@ -311,8 +321,8 @@ S-F12 = ["toggle_comments"]                                                     
 A-C-F12 = ["extend_to_line_bounds", "yank", "paste_after"]                      # duplicate line    # mapped -> `alt-shift-d`
 # A-S-F12 = [""]                                                                #                   # mapped -> `alt-shift-e`
 C-S-F12 = ["global_search"]                                                     # global search     # mapped -> `alt-shift-f`
-A-C-S-F12 = ["vsplit"]                                                          # vertical split    # mapped -> `alt-shift-g`
-A-F11 = ["hsplit"]                                                              # horizontal split  # mapped -> `alt-shift-h`
+# A-C-S-F12 = [""]                                                              #                   # mapped -> `alt-shift-g`
+# A-F11 = [""]                                                                  #                   # mapped -> `alt-shift-h`
 C-F11 = ["indent"]                                                              # indent            # mapped -> `alt-shift-i`
 S-F11 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "insert_mode"]                      # move down         # mapped -> `alt-shift-j`
 A-C-F11 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "insert_mode"]   # move up   # mapped -> `alt-shift-k`
@@ -390,6 +400,11 @@ C-down = ["jump_view_down"]                                                     
 A-F1 = ["goto_last_accessed_file"]                                              # last tab          # mapped -> `ctrl-cmd-space`
 C-F1 = ["goto_previous_buffer"]                                                 # prev tab          # mapped -> `ctrl-cmd-left`
 S-F1 = ["goto_next_buffer"]                                                     # next tab          # mapped -> `ctrl-cmd-right`
+
+# helix split
+C-S-F18 = ["hsplit"]                                                            # horizontal split  # mapped -> `ctrl-cmd-[`
+A-C-S-F18 = ["vsplit"]                                                          # vertical split    # mapped -> `ctrl-cmd-]`
+A-F19 = ["wonly"]                                                               # unsplit           # mapped -> `ctrl-cmd-backspace`
 
 # jump
 A-C-F1 = ["jump_backward"]                                                      # prev jump         # mapped -> `alt-cmd-,`
@@ -476,8 +491,8 @@ S-F12 = ["toggle_comments"]                                                     
 A-C-F12 = ["extend_to_line_bounds", "yank", "paste_after"]                      # duplicate line    # mapped -> `alt-shift-d`
 # A-S-F12 = [""]                                                                #                   # mapped -> `alt-shift-e`
 C-S-F12 = ["global_search"]                                                     # global search     # mapped -> `alt-shift-f`
-A-C-S-F12 = ["vsplit"]                                                          # vertical split    # mapped -> `alt-shift-g`
-A-F11 = ["hsplit"]                                                              # horizontal split  # mapped -> `alt-shift-h`
+# A-C-S-F12 = [""]                                                              #                   # mapped -> `alt-shift-g`
+# A-F11 = [""]                                                                  #                   # mapped -> `alt-shift-h`
 C-F11 = ["indent"]                                                              # indent            # mapped -> `alt-shift-i`
 S-F11 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "select_mode"]                      # move down         # mapped -> `alt-shift-j`
 A-C-F11 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "select_mode"]   # move up           # mapped -> `alt-shift-k`
