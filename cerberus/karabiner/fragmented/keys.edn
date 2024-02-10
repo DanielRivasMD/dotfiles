@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; quit app
+; key modifiers
 {:des "Modifier key remappings"
  :rules [;
          [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                            ;
@@ -10,12 +10,12 @@
          [:left_control :left_control nil {:alone [:!Of3]}]                                         ;
          [:left_option :left_option nil {:alone [:!Otab]}]                                          ;
          [:left_command :left_command nil {:alone [:!Ctab]}]                                        ;
-         [:right_shift :right_shift nil {:alone [:!Cf3]}]                                           ;
-         [:right_option :left_option nil {:alone [:!SOf3]}]                                         ;
-         [:right_command :!Wright_command nil {:alone [:!STf3]}]                                    ;
+         [:right_shift :right_shift nil {:alone [:!Tf3]}]                                           ;
+         [:right_option :left_option nil {:alone [:!Cf3]}]                                          ;
+         [:right_command :!Wright_command nil {:alone [:!OSf3]}]                                    ;
          [:tab :!EQright_shift nil {:alone [:tab]}]                                                 ;
-         [:escape :!EWright_shift nil {:alone [:!SCf3]}]                                            ;
-         [:delete_or_backspace :!WQright_shift nil {:alone [:!OTCf3]}]                              ;
+         [:escape :!EWright_shift nil {:alone [:!TSf3]}]                                            ;
+         [:delete_or_backspace :!WQright_shift nil {:alone [:!CSf3]}]                               ;
          [:!Sright_shift :delete_forward]                                                           ;
          [:!Rleft_shift :delete_or_backspace]                                                       ;
          ]}
