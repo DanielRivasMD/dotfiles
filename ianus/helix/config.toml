@@ -209,7 +209,7 @@ C-x = ["decrement"]                                                             
 [keys.insert]
 
 # escape selections
-esc = ["collapse_selection", "keep_primary_selection"]
+esc = ["normal_mode"]
 
 # hover
 C-space = ["hover"]
@@ -376,7 +376,7 @@ C-x = ["decrement"]                                                             
 [keys.select]
 
 # escape selections
-esc = ["collapse_selection", "keep_primary_selection"]
+esc = ["normal_mode"]
 
 # return
 ret = ["insert_mode"]
