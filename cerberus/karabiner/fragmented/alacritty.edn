@@ -168,6 +168,9 @@
 ; Alacritty
 {:des "Terminal movement mappings"
  :rules [;
+         ; reload
+         [:!Creturn_or_enter :!Tf19 [:term]]
+
          ; helix tab
          [:!TCspacebar :!Of1 [:term]]                                                               ; `ctrl-cmd-space`
          [:!TCleft_arrow :!Tf1 [:term]]                                                             ; `ctrl-cmd-left`
