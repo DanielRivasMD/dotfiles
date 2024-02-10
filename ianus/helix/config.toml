@@ -45,7 +45,7 @@ esc = ["collapse_selection", "keep_primary_selection"]
 ret = ["insert_mode"]
 
 # reload
-C-F19 = [":reload-all"]
+A-C-F6 = [":reload-all"]
 
 # hover
 C-space = ["hover"]
@@ -63,42 +63,42 @@ C-up = ["jump_view_up"]                                                         
 C-down = ["jump_view_down"]                                                     # lower split       # `ctrl-down`
 
 # helix tab
-A-F1 = ["goto_last_accessed_file"]                                              # last tab          # `ctrl-cmd-space`
-C-F1 = ["goto_previous_buffer"]                                                 # prev tab          # `ctrl-cmd-left`
-S-F1 = ["goto_next_buffer"]                                                     # next tab          # `ctrl-cmd-right`
+A-C-F7 = ["goto_last_accessed_file"]                                              # last tab          # `ctrl-cmd-space`
+A-C-F8 = ["goto_previous_buffer"]                                                 # prev tab          # `ctrl-cmd-left`
+A-C-F9 = ["goto_next_buffer"]                                                     # next tab          # `ctrl-cmd-right`
 
 # helix split
-C-S-F18 = ["hsplit"]                                                            # horizontal split  # `ctrl-cmd-[`
-A-C-S-F18 = ["vsplit"]                                                          # vertical split    # `ctrl-cmd-]`
-A-F19 = ["wonly"]                                                               # unsplit           # `ctrl-cmd-backspace`
+A-C-F10 = ["hsplit"]                                                            # horizontal split  # `ctrl-cmd-[`
+A-C-F11 = ["vsplit"]                                                          # vertical split    # `ctrl-cmd-]`
+A-C-F12 = ["wonly"]                                                               # unsplit           # `ctrl-cmd-backspace`
 
 # jump
-A-C-F1 = ["jump_backward"]                                                      # prev jump         # `alt-cmd-,`
-A-S-F1 = ["jump_forward"]                                                       # next jump         # `alt-cmd-.`
-C-S-F1 = ["jumplist_picker"]                                                    # jump list         # `alt-cmd-/`
-A-C-S-F1 = ["save_selection"]                                                   # record jump point # `alt-cmd-shift`
-
-# symbols
-A-F2 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
-C-F2 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
-S-F2 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
-A-C-F2 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
-S-F18 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
-A-C-F18 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
-A-S-F18 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
+A-F13 = ["jump_backward"]                                                      # prev jump         # `alt-cmd-,`
+A-F14 = ["jump_forward"]                                                       # next jump         # `alt-cmd-.`
+A-F15 = ["jumplist_picker"]                                                    # jump list         # `alt-cmd-/`
+A-F16 = ["save_selection"]                                                   # record jump point # `alt-cmd-shift`
 
 # diagnostics
-A-S-F2 = ["goto_prev_diag"]                                                     # prev diag         # `alt-cmd--`
-C-S-F2 = ["goto_next_diag"]                                                     # next diag         # `alt-cmd-=`
-A-C-S-F2 = ["workspace_diagnostics_picker"]                                     # diag list         # `alt-cmd-0`
+A-F17 = ["goto_prev_diag"]                                                     # prev diag         # `alt-cmd--`
+A-F18 = ["goto_next_diag"]                                                     # next diag         # `alt-cmd-=`
+A-F19 = ["workspace_diagnostics_picker"]                                     # diag list         # `alt-cmd-0`
+
+# symbols
+C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
+C-F16 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
+C-F17 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
+C-F18 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
+C-F19 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
+A-C-F13 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
+A-C-F14 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
 
 # comments
-C-S-F17 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
-C-S-F9 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
+A-C-F15 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
+A-C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
 
 # version control
-A-C-S-F17 = ["goto_prev_change"]                                                # prev change       # `alt-cmd-up`
-A-C-S-F9 = ["goto_next_change"]                                                 # next change       # `alt-cmd-down`
+S-A-C-F6 = ["goto_prev_change"]                                                # prev change       # `alt-cmd-up`
+S-A-C-F7 = ["goto_next_change"]                                                 # next change       # `alt-cmd-down`
 
 # movement
 S-left = ["extend_char_left"]                                                   # select left       # `shift-left`
@@ -115,8 +115,8 @@ A-down = ["goto_next_paragraph", "collapse_selection"]                          
 # movement
 A-left = ["select_mode", "goto_line_start", "normal_mode"]                      # select start line # `cmd-shift-left`
 A-right = ["select_mode", "goto_line_end", "normal_mode"]                       # select end line   # `cmd-shift-right`
-A-F18 = ["select_mode", "goto_file_start", "normal_mode"]                       # select start      # `cmd-shift-up`
-C-F18 = ["select_mode", "goto_last_line", "goto_line_end", "normal_mode"]       # select end        # `cmd-shift-down`
+S-A-C-F8 = ["select_mode", "goto_file_start", "normal_mode"]                       # select start      # `cmd-shift-up`
+S-A-C-F9 = ["select_mode", "goto_last_line", "goto_line_end", "normal_mode"]       # select end        # `cmd-shift-down`
 
 # movement
 A-S-left = ["extend_prev_word_start"]                                           # select word left  # `alt-shift-left`
@@ -124,59 +124,59 @@ A-S-right = [ "extend_next_word_end"]                                           
 A-S-up = ["select_mode", "goto_prev_paragraph", "normal_mode"]                  # select block prev # `alt-shift-up`
 A-S-down = ["select_mode", "goto_next_paragraph", "normal_mode"]                # select block next # `alt-shift-down`
 
-# A-F13 = [""]                                                                  #                   # `alt-a`
-C-F13 = ["command_mode"]                                                        # command mode      # `alt-b`
-S-F13 = ["yank_joined_to_clipboard"]                                            # copy              # `alt-c`
-A-C-F13 = ["search_selection", "extend_search_next"]                            # spawn multi       # `alt-d`
-# A-S-F13 = [""]                                                                #                   # `alt-e`
-C-S-F13 = ["search"]                                                            # search            # `alt-f`
-# A-C-S-F13 = [""]                                                              #                   # `alt-g`
-A-F14 = ["search_prev"]                                                         # find prev         # `alt-h`
-# S-F14 = [""]                                                                  #                   # `alt-i`
-A-C-F14 = ["copy_selection_on_next_line"]                                       # spawn multi down  # `alt-j`
-C-S-F14 = ["copy_selection_on_prev_line"]                                       # spawn multi up    # `alt-k`
-A-F15 = ["search_next"]                                                         # find next         # `alt-l`
-# S-F15 = [""]                                                                  #                   # `alt-m`
-A-C-F15 = ["rename_symbol"]                                                     # rename            # `alt-n`
-# A-F16 = [""]                                                                  #                   # `alt-o`
-C-F16 = ["match_brackets"]                                                      # jump matching     # `alt-p`
-S-F16 = [":buffer-close"]                                                       # close buffer      # `alt-q`
-A-C-F16 = ["record_macro"]                                                      # toggle macro      # `alt-r`
-A-S-F16 = [":write-buffer-close"]                                               # save & close buf  # `alt-s`
-# C-S-F16 = [""]                                                                #                   # `alt-t`
-A-C-S-F16 = ["undo"]                                                            # undo              # `alt-u`
-A-F17 = ["paste_after"]                                                         # paste             # `alt-v`
-C-F17 = [":write"]                                                              # save              # `alt-w`
-S-F17 = ["delete_selection"]                                                    # cut               # `alt-x`
-A-C-F17 = ["search_selection", "search_next"]                                   # skip multi        # `alt-y`
-A-S-F17 = ["search_selection", "search_prev"]                                   # remove multi      # `alt-z`
+# A-F1 = [""]                                                                  #                   # `alt-a`
+A-F2 = ["command_mode"]                                                        # command mode      # `alt-b`
+A-F4 = ["yank_joined_to_clipboard"]                                            # copy              # `alt-c`
+A-F5 = ["search_selection", "extend_search_next"]                            # spawn multi       # `alt-d`
+# A-F6 = [""]                                                                #                   # `alt-e`
+A-F7 = ["search"]                                                            # search            # `alt-f`
+# A-F8 = [""]                                                              #                   # `alt-g`
+A-F9 = ["search_prev"]                                                         # find prev         # `alt-h`
+# A-F10 = [""]                                                                  #                   # `alt-i`
+A-F11 = ["copy_selection_on_next_line"]                                       # spawn multi down  # `alt-j`
+A-F12 = ["copy_selection_on_prev_line"]                                       # spawn multi up    # `alt-k`
+C-F1 = ["search_next"]                                                         # find next         # `alt-l`
+# C-F2 = [""]                                                                  #                   # `alt-m`
+C-F4 = ["rename_symbol"]                                                     # rename            # `alt-n`
+# C-F5 = [""]                                                                  #                   # `alt-o`
+C-F6 = ["match_brackets"]                                                      # jump matching     # `alt-p`
+C-F7 = [":buffer-close"]                                                       # close buffer      # `alt-q`
+C-F8 = ["record_macro"]                                                      # toggle macro      # `alt-r`
+C-F9 = [":write-buffer-close"]                                               # save & close buf  # `alt-s`
+# C-F10 = [""]                                                                #                   # `alt-t`
+C-F11 = ["undo"]                                                            # undo              # `alt-u`
+C-F12 = ["paste_after"]                                                         # paste             # `alt-v`
+A-C-F1 = [":write"]                                                              # save              # `alt-w`
+A-C-F2 = ["delete_selection"]                                                    # cut               # `alt-x`
+A-C-F4 = ["search_selection", "search_next"]                                   # skip multi        # `alt-y`
+A-C-F5 = ["search_selection", "search_prev"]                                   # remove multi      # `alt-z`
 
-A-F12 = ["select_all"]                                                          # select all        # `alt-shift-a`
-C-F12 = ["shell_pipe"]                                                          # shell mode        # `alt-shift-b`
-S-F12 = ["toggle_comments"]                                                     # toggle comment    # `alt-shift-c`
-A-C-F12 = ["extend_to_line_bounds", "yank", "paste_after"]                      # duplicate line    # `alt-shift-d`
-# A-S-F12 = [""]                                                                #                   # `alt-shift-e`
-C-S-F12 = ["global_search"]                                                     # global search     # `alt-shift-f`
-# A-C-S-F12 = [""]                                                              #                   # `alt-shift-g`
-# A-F11 = [""]                                                                  #                   # `alt-shift-h`
-C-F11 = ["indent"]                                                              # indent            # `alt-shift-i`
-S-F11 = ["extend_to_line_bounds", "delete_selection", "paste_after"]            # move down         # `alt-shift-j`
-A-C-F11 = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move up   # `alt-shift-k`
-A-S-F11 = ["extend_line_below"]                                                 # select line       # `alt-shift-l`
-# C-S-F11 = [""]                                                                #                   # `alt-shift-m`
-# A-C-S-F11 = [""]                                                              #                   # `alt-shift-n`
-A-F10 = ["unindent"]                                                            # unindent          # `alt-shift-o`
-# C-F10 = [""]                                                                  #                   # `alt-shift-p`
-S-F10 = [":quit"]                                                               # quit all          # `alt-shift-q`
-A-C-F10 = ["replay_macro"]                                                      # play macro        # `alt-shift-r`
-A-S-F10 = [":write-quit"]                                                       # save & quit all   # `alt-shift-s`
-# C-S-F10 = [""]                                                                #                   # `alt-shift-t`
-A-C-S-F10 = ["redo"]                                                            # redo              # `alt-shift-u`
-# A-F9 = [""]                                                                   #                   # `alt-shift-v`
-# C-F9 = [""]                                                                   #                   # `alt-shift-w`
-S-F9 = ["extend_to_line_bounds", "delete_selection"]                            # cut line          # `alt-shift-x`
-A-C-F9 = ["extend_to_line_bounds", "yank"]                                      # copy line         # `alt-shift-y`
-# A-S-F9 = [""]                                                                 #                   # `alt-shift-z`
+S-A-F1 = ["select_all"]                                                          # select all        # `alt-shift-a`
+S-A-F2 = ["shell_pipe"]                                                          # shell mode        # `alt-shift-b`
+S-A-F4 = ["toggle_comments"]                                                     # toggle comment    # `alt-shift-c`
+S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after"]                      # duplicate line    # `alt-shift-d`
+# S-A-F6 = [""]                                                                #                   # `alt-shift-e`
+S-A-F7 = ["global_search"]                                                     # global search     # `alt-shift-f`
+# S-A-F8 = [""]                                                              #                   # `alt-shift-g`
+# S-A-F9 = [""]                                                                  #                   # `alt-shift-h`
+S-A-F10 = ["indent"]                                                              # indent            # `alt-shift-i`
+S-A-F11 = ["extend_to_line_bounds", "delete_selection", "paste_after"]            # move down         # `alt-shift-j`
+S-A-F12 = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move up   # `alt-shift-k`
+S-C-F1 = ["extend_line_below"]                                                 # select line       # `alt-shift-l`
+# S-C-F2 = [""]                                                                #                   # `alt-shift-m`
+# S-C-F4 = [""]                                                              #                   # `alt-shift-n`
+S-C-F5 = ["unindent"]                                                            # unindent          # `alt-shift-o`
+# S-C-F6 = [""]                                                                  #                   # `alt-shift-p`
+S-C-F7 = [":quit"]                                                               # quit all          # `alt-shift-q`
+S-C-F8 = ["replay_macro"]                                                      # play macro        # `alt-shift-r`
+S-C-F9 = [":write-quit"]                                                       # save & quit all   # `alt-shift-s`
+# S-C-F10 = [""]                                                                #                   # `alt-shift-t`
+S-C-F11 = ["redo"]                                                            # redo              # `alt-shift-u`
+# S-C-F12 = [""]                                                                   #                   # `alt-shift-v`
+# S-A-C-F1 = [""]                                                                   #                   # `alt-shift-w`
+S-A-C-F2 = ["extend_to_line_bounds", "delete_selection"]                            # cut line          # `alt-shift-x`
+S-A-C-F4 = ["extend_to_line_bounds", "yank"]                                      # copy line         # `alt-shift-y`
+# S-A-C-F5 = [""]                                                                 #                   # `alt-shift-z`
 
 C-a = ["goto_line_start"]                                                       # start line        # `cmd-left`
 # C-b = [""]                                                                    # none              #
