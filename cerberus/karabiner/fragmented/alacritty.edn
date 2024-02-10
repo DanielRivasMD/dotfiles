@@ -3,21 +3,21 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!EQRhyphen :!Oa [:term]]                                                                 ; `tab-hyphen`      split pane horizontal
+         [:!EWQright_command :!Oa [:term]]                                                          ; `space-cmd`       split pane horizontal
          [:!Oleft_arrow :!Ob [:term]]                                                               ; `alt-left`
          [:!WQRleft_shift :!Oc [:term]]                                                             ; `delete-shift`
          [:!Sright_option :!Od [:term]]                                                             ; `shift-alt`       delete word forward
          ; [: :!Oe [:term]]                                                                         ; DOC:              collision => accent
          [:!Oright_arrow :!Of [:term]]                                                              ; `alt-right`
-         [:!EQRequal_sign :!Og [:term]]                                                             ; `tab-equal`       split pane vertical
-         [:!EQRleft_arrow :!Oh [:term]]                                                             ; `tab-left`        move left pane
+         [:!EWQright_option :!Og [:term]]                                                           ; `space-alt`       split pane vertical
+         [:!EWQleft_arrow :!Oh [:term]]                                                             ; `space-left`      move left pane
          ; [: :!Oi [:term]]                                                                         ; DOC:              collision => accent
-         [:!EQRright_arrow :!Oj [:term]]                                                            ; `tab-right`       move right pane
-         [:!EQRdown_arrow :!Ok [:term]]                                                             ; `tab-down`        move down pane
-         [:!EQRup_arrow :!Ol [:term]]                                                               ; `tab-up`          move up pane
-         [:left_option :left_option :term {:alone [:!Om]}]                                          ; `alt`             toggle floating pane
+         [:!EWQright_arrow :!Oj [:term]]                                                            ; `space-right`     move right pane
+         [:!EWQdown_arrow :!Ok [:term]]                                                             ; `space-down`      move down pane
+         [:!EWQup_arrow :!Ol [:term]]                                                               ; `space-up`        move up pane
+         [:!EWQright_shift :!Om [:term]]                                                            ; `space-shift`     toggle floating pane
          ; [: :!On [:term]]                                                                         ; DOC:              collision => accent
-         ; [: :!Oo [:term]]                                                                         ; ``
+         [:!EWQleft_shift :!Oo [:term]]                                                             ; `space-shift`     toggle floating pane
          [:!OCleft_arrow :!Op [:term]]                                                              ; `alt-cmd-left`    move left tab
          [:!OCright_arrow :!Oq [:term]]                                                             ; `alt-cmd-right`   move right tab
          [:delete_or_backspace :!WQright_shift :term {:alone [:!Or]}]                               ; `backspace`       new tab
@@ -27,7 +27,7 @@
          [:!EWRdelete_or_backspace :!Ov [:term]]                                                    ; `esc-backspace`   tab mode
          [:!EWRspacebar :!Ow [:term]]                                                               ; `esc-space`       resize mode
          [:!EWRright_command :!Ox [:term]]                                                          ; `esc-cmd`         scroll mode
-         [:!EWRright_shift :!Oy [:term]]                                                            ; `esc-shift`       search mode
+         [:left_shift :left_shift :term {:alone [:!Oy]}]                                            ; `shift`           search mode
          [:!EWRright_option :!Oz [:term]]                                                           ; `esc-alt`         session mode
          ]}
 
@@ -43,12 +43,12 @@
          ; [: :!OSe [:term]]                                                                        ;
          ; [: :!OSf [:term]]                                                                        ;
          ; [: :!OSg [:term]]                                                                        ;
-         [:!EWRleft_arrow :!OSh [:term]]                                                            ; `esc-left`        move left float pane
          ; [: :!OSi [:term]]                                                                        ;
-         [:!EWRright_arrow :!OSj [:term]]                                                           ; `esc-right`       move right float pane
-         [:!EWRup_arrow :!OSk [:term]]                                                              ; `esc-up`          move up float pane
-         [:!EWRdown_arrow :!OSl [:term]]                                                            ; `esc-down`        move down float pane
-         [:left_shift :left_shift :term {:alone [:!OSm]}]                                           ; `shift`           toggle floating pane
+         ; [: :!OSh [:term]]                                                                        ;
+         ; [: :!OSj [:term]]                                                                        ;
+         ; [: :!OSk [:term]]                                                                        ;
+         ; [: :!OSl [:term]]                                                                        ;
+         ; [: :!OSm [:term]]                                                                        ;
          ; [: :!OSn [:term]]                                                                        ;
          ; [: :!!Oo [:term]]                                                                        ; DOC:              collision => accent
          ; [: :!OSp [:term]]                                                                        ;
