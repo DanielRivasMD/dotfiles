@@ -40,7 +40,7 @@ export LC_ALL=en_US.UTF-8
 
 export GOPATH="$HOME/.go/"
 export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-export GOROOT="$(brew --prefix)/Cellar/go/1.21.6/libexec"
+export GOROOT="$(brew --prefix)/Cellar/go/1.21.7/libexec"
 
 ####################################################################################################
 #  cargo-rust path
