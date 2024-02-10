@@ -44,6 +44,9 @@ esc = ["collapse_selection", "keep_primary_selection"]
 # return
 ret = ["insert_mode"]
 
+# reload
+C-F19 = [":reload-all"]
+
 # hover
 C-space = ["hover"]
 
@@ -210,6 +213,9 @@ C-x = ["decrement"]                                                             
 
 # escape selections
 esc = ["normal_mode"]
+
+# reload
+C-F19 = ["normal_mode", ":reload-all"]
 
 # hover
 C-space = ["hover"]
@@ -380,6 +386,9 @@ esc = ["normal_mode"]
 
 # return
 ret = ["insert_mode"]
+
+# reload
+C-F19 = ["normal_mode", ":reload-all"]
 
 # hover
 C-space = ["hover"]
