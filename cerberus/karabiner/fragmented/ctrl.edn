@@ -5,11 +5,11 @@
  :rules [;
          [:!Thyphen [:spacebar :hyphen :hyphen :spacebar]]                                          ; ' -- '
          [:!Tequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                          ; ' ++ '
-         ; [:!Topen_bracket []]                                                                     ; ''
-         ; [:!Tclose_bracket []]                                                                    ; ''
-         [:!Tsemicolon [:spacebar :!S7 :!S7 :spacebar]]                                             ; ''
+         ; [:!Topen_bracket []]                                                                     ;
+         ; [:!Tclose_bracket []]                                                                    ;
+         [:!Tsemicolon [:spacebar :!S7 :!S7 :spacebar]]                                             ;
          [:!Tquote [:quote :quote :quote]]                                                          ; '''''
-         ; [:!Tquote []]                                                                            ; ''
+         ; [:!Tquote []]                                                                            ;
          [:!Tbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]                             ; ' || '
          [:!Tcomma [:spacebar :!Scomma :!Scomma :spacebar]]                                         ; ' << '
          [:!Tperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                      ; ' >> '
@@ -28,11 +28,11 @@
  :rules [;
          [:!TShyphen [:spacebar :period :hyphen :hyphen :spacebar]]                                 ; ' .-- '
          [:!TSequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]                 ; ' .++ '
-         ; [:!TSopen_bracket []]                                                                    ; ''
-         ; [:!TSclose_bracket []]                                                                   ; ''
-         [:!TSsemicolon [:spacebar :period :!S7 :!S7 :spacebar]]                                    ; ''
+         ; [:!TSopen_bracket []]                                                                    ;
+         ; [:!TSclose_bracket []]                                                                   ;
+         [:!TSsemicolon [:spacebar :period :!S7 :!S7 :spacebar]]                                    ;
          [:!TSquote [:!Squote :!Squote :!Squote]]                                                   ; '"""'
-         ; [:!TSquote []]                                                                           ; ''
+         ; [:!TSquote []]                                                                           ;
          [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]                    ; ' .|| '
          [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                               ; ' <<< '
          [:!TSperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                           ; ' >>> '

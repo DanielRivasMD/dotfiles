@@ -35,21 +35,22 @@
 
 {:des "Escape Mode - symbols"
  :rules [;
-         ; [:!EWRhyphen []]                                                                         ; ''
-         ; [:!EWRequal_sign []]                                                                     ; ''
-         [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                 ; '%<+%'
-         [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]               ; '%+>%'
-         [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                      ; '%$%'
-         [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                ; '%T>%'
-         [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                        ; '%<>%'
-         [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                      ; '%<%'
-         [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                    ; '%>%'
-         [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                ; '%!>%'
+         ; [:!EWRhyphen []]                                                                         ;
+         ; [:!EWRequal_sign []]                                                                     ;
+         [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                 ; ' %<+% '
+         [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]               ; ' %+>% '
+         [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                      ; ' %$% '
+         [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                ; ' %T>% '
+         [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                        ; ' %<>% '
+         [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                      ; ' %<% '
+         [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                    ; ' %>% '
+         [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                ; ' %!>% '
          [:!EWRdelete_or_backspace [:!S3 :quote]]                                                   ; '#''
-         ; [:!EWRreturn_or_enter []]                                                                ; ''
-         ; [:!EWRright_shift []]                                                                    ; ''
-         ; [:!EWRright_option []]                                                                   ; ''
-         ; [:!EWRright_command []]                                                                  ; ''
+         ; [:!EWRreturn_or_enter []]                                                                ;
+         ; [:!EWRright_shift []]                                                                    ;
+         ; [:!EWRright_option []]                                                                   ;
+         ; [:!EWRright_command []]                                                                  ;
+         ; [:!EWRspacebar []]                                                                       ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

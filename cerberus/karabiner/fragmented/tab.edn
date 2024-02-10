@@ -5,7 +5,7 @@
  :rules [;
          [:!EQRa [:semicolon :semicolon :a]]                                                        ; 'α'
          [:!EQRb [:semicolon :semicolon :b]]                                                        ; 'β'
-         ; [:!EQRc [:semicolon :semicolon :c]]                                                      ; ''
+         ; [:!EQRc [:semicolon :semicolon :c]]                                                      ;
          [:!EQRd [:semicolon :semicolon :d]]                                                        ; 'δ'
          [:!EQRe [:semicolon :semicolon :e]]                                                        ; 'ε'
          [:!EQRf [:semicolon :semicolon :f]]                                                        ; 'φ'
@@ -19,13 +19,13 @@
          [:!EQRn [:semicolon :semicolon :n]]                                                        ; 'ν'
          [:!EQRo [:semicolon :semicolon :o]]                                                        ; 'ο'
          [:!EQRp [:semicolon :semicolon :p]]                                                        ; 'π'
-         ; [:!EQRq [:semicolon :semicolon :q]]                                                      ; ''
+         ; [:!EQRq [:semicolon :semicolon :q]]                                                      ;
          [:!EQRr [:semicolon :semicolon :r]]                                                        ; 'ρ'
          [:!EQRs [:semicolon :semicolon :s]]                                                        ; 'σ'
          [:!EQRt [:semicolon :semicolon :t]]                                                        ; 'τ'
          [:!EQRu [:semicolon :semicolon :u]]                                                        ; 'θ'
          [:!EQRv [:semicolon :semicolon :v]]                                                        ; 'ω'
-         ; [:!EQRw [:semicolon :semicolon :w]]                                                      ; ''
+         ; [:!EQRw [:semicolon :semicolon :w]]                                                      ;
          [:!EQRx [:semicolon :semicolon :x]]                                                        ; 'χ'
          [:!EQRy [:semicolon :semicolon :y]]                                                        ; 'υ'
          [:!EQRz [:semicolon :semicolon :z]]                                                        ; 'ζ'
@@ -36,8 +36,8 @@
 ;
 {:des "Tab Mode - symbols"
  :rules [;
-         ; [:!EQRhyphen []]                                                                         ; ''
-         ; [:!EQRequal_sign []]                                                                     ; ''
+         ; [:!EQRhyphen []]                                                                         ;
+         ; [:!EQRequal_sign []]                                                                     ;
          [:!EQRopen_bracket [:!Scomma :!Ssemicolon]]                                                ; '<:'
          [:!EQRclose_bracket [:!Speriod :!Ssemicolon]]                                              ; '>:'
          [:!EQRsemicolon [:!Ssemicolon :!Ssemicolon]]                                               ; '::'
@@ -47,10 +47,11 @@
          [:!EQRperiod [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
          [:!EQRslash [:slash :slash :!S1]]                                                          ; '//!'
          [:!EQRdelete_or_backspace [:!S3 :open_bracket]]                                            ; '#['
-         ; [:!EQRreturn_or_enter []]                                                                ; ''
-         ; [:!EQRright_shift []]                                                                    ; ''
-         ; [:!EQRright_option []]                                                                   ; ''
-         ; [:!EQRright_command []]                                                                  ; ''
+         ; [:!EQRreturn_or_enter []]                                                                ;
+         ; [:!EQRright_shift []]                                                                    ;
+         ; [:!EQRright_option []]                                                                   ;
+         ; [:!EQRright_command []]                                                                  ;
+         ; [:!EQRspacebar []]                                                                       ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
