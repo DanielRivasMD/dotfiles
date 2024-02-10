@@ -69,32 +69,32 @@
 ; Alacritty
 {:des "Terminal alt - alphabet"
  :rules [;
-         [:!Oa :!Of13 [:term]]                                                                      ;
-         [:!Ob :!Tf13 [:term]]                                                                      ;
-         [:!Oc :!Sf13 [:term]]                                                                      ;
-         [:!Od :!OTf13 [:term]]                                                                     ;
-         [:!Oe :!OSf13 [:term]]                                                                     ;
-         [:!Of :!TSf13 [:term]]                                                                     ;
-         [:!Og :!OTSf13 [:term]]                                                                    ;
-         [:!Oh :!Of14 [:term]]                                                                      ;
-         [:!Oi :!Sf14 [:term]]                                                                      ;
-         [:!Oj :!OTf14 [:term]]                                                                     ;
-         [:!Ok :!TSf14 [:term]]                                                                     ;
-         [:!Ol :!Of15 [:term]]                                                                      ;
-         [:!Om :!Sf15 [:term]]                                                                      ;
-         [:!On :!OTf15 [:term]]                                                                     ;
-         [:!Oo :!Of16 [:term]]                                                                      ;
-         [:!Op :!Tf16 [:term]]                                                                      ;
-         [:!Oq :!Sf16 [:term]]                                                                      ;
-         [:!Or :!OTf16 [:term]]                                                                     ;
-         [:!Os :!OSf16 [:term]]                                                                     ;
-         [:!Ot :!TSf16 [:term]]                                                                     ;
-         [:!Ou :!OTSf16 [:term]]                                                                    ;
-         [:!Ov :!Of17 [:term]]                                                                      ;
-         [:!Ow :!Tf17 [:term]]                                                                      ;
-         [:!Ox :!Sf17 [:term]]                                                                      ;
-         [:!Oy :!OTf17 [:term]]                                                                     ;
-         [:!Oz :!OSf17 [:term]]                                                                     ;
+         [:!Oa :!Of1 [:term]]                                                                      ;
+         [:!Ob :!Of2 [:term]]                                                                      ;
+         [:!Oc :!Of4 [:term]]                                                                      ;
+         [:!Od :!Of5 [:term]]                                                                     ;
+         [:!Oe :!Of6 [:term]]                                                                     ;
+         [:!Of :!Of7 [:term]]                                                                     ;
+         [:!Og :!Of8 [:term]]                                                                    ;
+         [:!Oh :!Of9 [:term]]                                                                      ;
+         [:!Oi :!Of10 [:term]]                                                                      ;
+         [:!Oj :!Of11 [:term]]                                                                     ;
+         [:!Ok :!Of12 [:term]]                                                                     ;
+         [:!Ol :!Tf1 [:term]]                                                                      ;
+         [:!Om :!Tf2 [:term]]                                                                      ;
+         [:!On :!Tf4 [:term]]                                                                     ;
+         [:!Oo :!Tf5 [:term]]                                                                      ;
+         [:!Op :!Tf6 [:term]]                                                                      ;
+         [:!Oq :!Tf7 [:term]]                                                                      ;
+         [:!Or :!Tf8 [:term]]                                                                     ;
+         [:!Os :!Tf9 [:term]]                                                                     ;
+         [:!Ot :!Tf10 [:term]]                                                                     ;
+         [:!Ou :!Tf11 [:term]]                                                                    ;
+         [:!Ov :!Tf12 [:term]]                                                                      ;
+         [:!Ow :!OTf1 [:term]]                                                                      ;
+         [:!Ox :!OTf2 [:term]]                                                                      ;
+         [:!Oy :!OTf4 [:term]]                                                                     ;
+         [:!Oz :!OTf5 [:term]]                                                                     ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -102,32 +102,32 @@
 ; Alacritty
 {:des "Terminal alt - alphabet"
  :rules [;
-         [:!SOa :!Of12 [:term]]                                                                     ;
-         [:!SOb :!Tf12 [:term]]                                                                     ;
-         [:!SOc :!Sf12 [:term]]                                                                     ;
-         [:!SOd :!OTf12 [:term]]                                                                    ;
-         [:!SOe :!OSf12 [:term]]                                                                    ;
-         [:!SOf :!TSf12 [:term]]                                                                    ;
-         [:!SOg :!OTSf12 [:term]]                                                                   ;
-         [:!SOh :!Of11 [:term]]                                                                     ;
-         [:!SOi :!Tf11 [:term]]                                                                     ;
-         [:!SOj :!Sf11 [:term]]                                                                     ;
-         [:!SOk :!OTf11 [:term]]                                                                    ;
-         [:!SOl :!OSf11 [:term]]                                                                    ;
-         [:!SOm :!TSf11 [:term]]                                                                    ;
-         [:!SOn :!OTSf11 [:term]]                                                                   ;
-         [:!SOo :!Of10 [:term]]                                                                     ;
-         [:!SOp :!Tf10 [:term]]                                                                     ;
-         [:!SOq :!Sf10 [:term]]                                                                     ;
-         [:!SOr :!OTf10 [:term]]                                                                    ;
-         [:!SOs :!OSf10 [:term]]                                                                    ;
-         [:!SOt :!TSf10 [:term]]                                                                    ;
-         [:!SOu :!OTSf10 [:term]]                                                                   ;
-         [:!SOv :!Of9 [:term]]                                                                      ;
-         [:!SOw :!Tf9 [:term]]                                                                      ;
-         [:!SOx :!Sf9 [:term]]                                                                      ;
-         [:!SOy :!OTf9 [:term]]                                                                     ;
-         [:!SOz :!OSf9 [:term]]                                                                     ;
+         [:!SOa :!SOf1 [:term]]                                                                     ;
+         [:!SOb :!SOf2 [:term]]                                                                     ;
+         [:!SOc :!SOf4 [:term]]                                                                     ;
+         [:!SOd :!SOf5 [:term]]                                                                    ;
+         [:!SOe :!SOf6 [:term]]                                                                    ;
+         [:!SOf :!SOf7 [:term]]                                                                    ;
+         [:!SOg :!SOf8 [:term]]                                                                   ;
+         [:!SOh :!SOf9 [:term]]                                                                     ;
+         [:!SOi :!SOf10 [:term]]                                                                     ;
+         [:!SOj :!SOf11 [:term]]                                                                     ;
+         [:!SOk :!SOf12 [:term]]                                                                    ;
+         [:!SOl :!STf1 [:term]]                                                                    ;
+         [:!SOm :!STf2 [:term]]                                                                    ;
+         [:!SOn :!STf4 [:term]]                                                                   ;
+         [:!SOo :!STf5 [:term]]                                                                     ;
+         [:!SOp :!STf6 [:term]]                                                                     ;
+         [:!SOq :!STf7 [:term]]                                                                     ;
+         [:!SOr :!STf8 [:term]]                                                                    ;
+         [:!SOs :!STf9 [:term]]                                                                    ;
+         [:!SOt :!STf10 [:term]]                                                                    ;
+         [:!SOu :!STf11 [:term]]                                                                   ;
+         [:!SOv :!STf12 [:term]]                                                                      ;
+         [:!SOw :!SOTf1 [:term]]                                                                      ;
+         [:!SOx :!SOTf2 [:term]]                                                                      ;
+         [:!SOy :!SOTf4 [:term]]                                                                     ;
+         [:!SOz :!SOTf5 [:term]]                                                                     ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -169,51 +169,51 @@
 {:des "Terminal movement mappings"
  :rules [;
          ; reload
-         [:!Creturn_or_enter :!Tf19 [:term]]
+         [:!Creturn_or_enter :!OTf6 [:term]]
 
          ; helix tab
-         [:!TCspacebar :!Of1 [:term]]                                                               ; `ctrl-cmd-space`
-         [:!TCleft_arrow :!Tf1 [:term]]                                                             ; `ctrl-cmd-left`
-         [:!TCright_arrow :!Sf1 [:term]]                                                            ; `ctrl-cmd-right`
+         [:!TCspacebar :!OTf7 [:term]]                                                               ; `ctrl-cmd-space`
+         [:!TCleft_arrow :!OTf8 [:term]]                                                             ; `ctrl-cmd-left`
+         [:!TCright_arrow :!OTf9 [:term]]                                                            ; `ctrl-cmd-right`
 
          ; helix split
-         [:!TCopen_bracket :!TSf18 [:term]]                                                         ; `ctrl-cmd-[`
-         [:!TCclose_bracket :!OTSf18 [:term]]                                                       ; `ctrl-cmd-]`
-         [:!TCdelete_or_backspace :!Of19 [:term]]                                                   ; `ctrl-cmd-backspace`
+         [:!TCopen_bracket :!OTf10 [:term]]                                                         ; `ctrl-cmd-[`
+         [:!TCclose_bracket :!OTf11 [:term]]                                                       ; `ctrl-cmd-]`
+         [:!TCdelete_or_backspace :!OTf12 [:term]]                                                   ; `ctrl-cmd-backspace`
 
          ;jump
-         [:!OCcomma :!OTf1 [:term]]                                                                 ; `alt-cmd-,`
-         [:!OCperiod :!OSf1 [:term]]                                                                ; `alt-cmd-.`
-         [:!OCslash :!TSf1 [:term]]                                                                 ; `alt-cmd-/`
-         [:!OCright_shift :!OTSf1 [:term]]                                                          ; `alt-cmd-shift`
-
-         ; symbols
-         [:!OCopen_bracket :!Of2]                                                                   ; `alt-cmd-[`
-         [:!OCclose_bracket :!Tf2]                                                                  ; `alt-cmd-]`
-         [:!OCbackslash :!Sf2]                                                                      ; `alt-cmd-\`
-         [:!OCreturn_or_enter :!OTf2]                                                               ; `alt-cmd-enter`
-         [:!OCsemicolon :!Sf18]                                                                     ; `alt-cmd-;`
-         [:!OCquote :!OTf18]                                                                        ; `alt-cmd-'`
-         [:!OCspacebar :!OSf18]                                                                     ; `alt-cmd-space`
+         [:!OCcomma :!Of13 [:term]]                                                                 ; `alt-cmd-,`
+         [:!OCperiod :!Of14 [:term]]                                                                ; `alt-cmd-.`
+         [:!OCslash :!Of15 [:term]]                                                                 ; `alt-cmd-/`
+         [:!OCright_shift :!Of16 [:term]]                                                          ; `alt-cmd-shift`
 
          ; diagnostics
-         [:!OChyphen :!OSf2]                                                                        ; `alt-cmd--`
-         [:!OCequal_sign :!TSf2]                                                                    ; `alt-cmd-=`
-         [:!OCdelete_or_backspace :!OTSf2]                                                          ; `alt-cmd-backspace`
+         [:!OChyphen :!Of17]                                                                        ; `alt-cmd--`
+         [:!OCequal_sign :!Of18]                                                                    ; `alt-cmd-=`
+         [:!OCdelete_or_backspace :!Of19]                                                          ; `alt-cmd-backspace`
+
+         ; symbols
+         [:!OCopen_bracket :!Tf13]                                                                   ; `alt-cmd-[`
+         [:!OCclose_bracket :!Tf16]                                                                  ; `alt-cmd-]`
+         [:!OCbackslash :!Tf17]                                                                      ; `alt-cmd-\`
+         [:!OCreturn_or_enter :!Tf18]                                                               ; `alt-cmd-enter`
+         [:!OCsemicolon :!Tf19]                                                                     ; `alt-cmd-;`
+         [:!OCquote :!OTf13]                                                                        ; `alt-cmd-'`
+         [:!OCspacebar :!OTf14]                                                                     ; `alt-cmd-space`
 
          ; comments
-         [:!OCright_command :!TSf17]                                                                ; `alt-cmd-cmd`
-         [:!OCright_option :!TSf9]                                                                  ; `alt-cmd-alt`
+         [:!OCright_command :!OTf15]                                                                ; `alt-cmd-cmd`
+         [:!OCright_option :!OTf16]                                                                  ; `alt-cmd-alt`
 
          ; version control
-         [:!OCup_arrow :!OTSf17 [:term]]                                                            ; `alt-cmd-up`
-         [:!OCdown_arrow :!OTSf9 [:term]]                                                           ; `alt-cmd-down`
+         [:!OCup_arrow :!SOTf6 [:term]]                                                            ; `alt-cmd-up`
+         [:!OCdown_arrow :!SOTf7 [:term]]                                                           ; `alt-cmd-down`
 
          ; movement
          [:!CSleft_arrow :!Oleft_arrow [:term]]                                                     ; `cmd-shift-left`
          [:!CSright_arrow :!Oright_arrow [:term]]                                                   ; `cmd-shift-right`
-         [:!CSup_arrow :!Of18 [:term]]                                                              ; `cmd-shift-up`
-         [:!CSdown_arrow :!Tf18 [:term]]                                                            ; `cmd-shift-down`
+         [:!CSup_arrow :!SOTf8 [:term]]                                                              ; `cmd-shift-up`
+         [:!CSdown_arrow :!SOTf9 [:term]]                                                            ; `cmd-shift-down`
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
