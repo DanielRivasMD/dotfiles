@@ -10,6 +10,7 @@
          [:left_control :left_control nil {:alone [:!Of3]}]                                         ;
          [:left_option :left_option nil {:alone [:!Otab]}]                                          ;
          [:left_command :left_command nil {:alone [:!Ctab]}]                                        ;
+         [:spacebar :!EWright_command nil {:alone [:spacebar]}]                                     ;
          [:right_shift :right_shift nil {:alone [:!Tf3]}]                                           ;
          [:right_option :left_option nil {:alone [:!Cf3]}]                                          ;
          [:right_command :!Wright_command nil {:alone [:!OSf3]}]                                    ;
