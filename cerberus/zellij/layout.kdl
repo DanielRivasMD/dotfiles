@@ -34,45 +34,54 @@ layout {
         }
     }
 
-    tab name="Files" focus=true {
-        pane split_direction="vertical" {
+    tab name="Files" hide_floating_panes=true focus=true {
+        pane stacked=true split_direction="horizontal" {
             pane name="D1"
-            pane name="D2" focus=true
+            pane name="D2"
             pane name="D3"
+            pane name="D4"
+            pane name="D5"
         }
-        pane name="Downloads" cwd="/Users/drivas/Downloads"
+        floating_panes {
+            pane name="Downloads" cwd="/Users/drivas/Downloads" {
+                x "50%"
+                y "50%"
+                width "60%"
+                height "97%"
+            }
+        }
     }
 
     tab name="Archive" hide_floating_panes=true {
         floating_panes {
-            pane name="F" {
+            pane name="Config" cwd="/Users/drivas/.config" {
                 x "50%"
                 y "50%"
-                width "50%"
-                height "50%"
+                width "60%"
+                height "60%"
             }
         }
         pane split_direction="vertical" {
             pane name="A1" cwd="/Users/drivas/.archive"
             pane name="A2" cwd="/Users/drivas/.archive"
         }
-        pane name="Archive" cwd="/Users/drivas/.archive"
+        pane name="Archive" cwd="/Users/drivas/.archive" split_direction="horizontal"
     }
 
     tab name="Factorem" hide_floating_panes=true {
         floating_panes {
-            pane name="F" {
+            pane name="Observatory" cwd="/Users/drivas/Observatory" {
                 x "50%"
                 y "50%"
-                width "50%"
-                height "50%"
+                width "60%"
+                height "60%"
             }
         }
         pane split_direction="vertical" {
             pane name="F1" cwd="/Users/drivas/Factorem"
             pane name="F2" cwd="/Users/drivas/Factorem"
         }
-        pane name="Factorem" cwd="/Users/drivas/Factorem"
+        pane name="Factorem" cwd="/Users/drivas/Factorem" split_direction="horizontal"
     }
 
 }
