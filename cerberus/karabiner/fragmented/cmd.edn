@@ -46,11 +46,12 @@
          ; [:!TCcomma []]                                                                           ;
          ; [:!TCperiod []]                                                                          ;
          ; [:!TCslash []]                                                                           ;
-         [:!TCdelete_or_backspace [:!S3 :!S1 :slash]]                                               ; '#!/'
+         ; [:!TCdelete_or_backspace []]                                                             ;
          [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                            ; '=='
          [:!TCright_shift [:!S1 :!S1]]                                                              ; '!!'
          [:!TCright_option [:!S8 :!S8]]                                                             ; '**'
          [:!TCright_command [:slash :slash]]                                                        ; '//'
+         ; [:!TCspacebar []]                                                                        ;
 
          [:!WQright_shift [:!S1 :!S1]]                                                              ; '!!'
          ]}

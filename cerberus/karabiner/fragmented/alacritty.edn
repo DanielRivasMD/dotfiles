@@ -3,28 +3,28 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!EWQright_command :!Oa [:term]]                                                          ; `space-cmd`       split pane horizontal
+         [:!EWQopen_bracket :!Oa [:term]]                                                           ; `space-[`         split pane horizontal
          [:!Oleft_arrow :!Ob [:term]]                                                               ; `alt-left`
          [:!WQRleft_shift :!Oc [:term]]                                                             ; `delete-shift`
          [:!Sright_option :!Od [:term]]                                                             ; `shift-alt`       delete word forward
          ; [: :!Oe [:term]]                                                                         ; DOC:              collision => accent
          [:!Oright_arrow :!Of [:term]]                                                              ; `alt-right`
-         [:!EWQright_option :!Og [:term]]                                                           ; `space-alt`       split pane vertical
+         [:!EWQclose_bracket :!Og [:term]]                                                          ; `space-]`         split pane vertical
          [:!EWQleft_arrow :!Oh [:term]]                                                             ; `space-left`      move left pane
          ; [: :!Oi [:term]]                                                                         ; DOC:              collision => accent
          [:!EWQright_arrow :!Oj [:term]]                                                            ; `space-right`     move right pane
          [:!EWQdown_arrow :!Ok [:term]]                                                             ; `space-down`      move down pane
          [:!EWQup_arrow :!Ol [:term]]                                                               ; `space-up`        move up pane
-         [:!EWQright_shift :!Om [:term]]                                                            ; `space-shift`     toggle floating pane
+         [:!EWQright_command :!Om [:term]]                                                          ; `space-cmd`       toggle floating pane
          ; [: :!On [:term]]                                                                         ; DOC:              collision => accent
-         [:!EWQleft_shift :!Oo [:term]]                                                             ; `space-shift`     toggle floating pane
+         [:!EWQright_alt :!Oo [:term]]                                                              ; `space-alt`       toggle floating pane
          [:!OCleft_arrow :!Op [:term]]                                                              ; `alt-cmd-left`    move left tab
          [:!OCright_arrow :!Oq [:term]]                                                             ; `alt-cmd-right`   move right tab
-         [:delete_or_backspace :!WQright_shift :term {:alone [:!Or]}]                               ; `backspace`       new tab
+         [:!EWQright_shift :!Or [:term]]                                                            ; `space-shift`     new tab
          [:escape :!EWright_shift :term {:alone [:!Os]}]                                            ; `esc`             locked / normal
          [:!EWRreturn_or_enter :!Ot [:term]]                                                        ; `esc-enter`       pane mode
          ; [: :!Ou [:term]]                                                                         ; DOC:              collision => accent
-         [:!EWRdelete_or_backspace :!Ov [:term]]                                                    ; `esc-backspace`   tab mode
+         [:!EWRright_shift :!Ov [:term]]                                                            ; `esc-shift`       tab mode
          [:!EWRspacebar :!Ow [:term]]                                                               ; `esc-space`       resize mode
          [:!EWRright_command :!Ox [:term]]                                                          ; `esc-cmd`         scroll mode
          [:left_shift :left_shift :term {:alone [:!Oy]}]                                            ; `shift`           search mode
@@ -172,6 +172,11 @@
          [:!TCspacebar :!Of1 [:term]]                                                               ; `ctrl-cmd-space`
          [:!TCleft_arrow :!Tf1 [:term]]                                                             ; `ctrl-cmd-left`
          [:!TCright_arrow :!Sf1 [:term]]                                                            ; `ctrl-cmd-right`
+
+         ; helix split
+         [:!TCopen_bracket :!TSf18 [:term]]                                                         ; `ctrl-cmd-[`
+         [:!TCclose_bracket :!OTSf18 [:term]]                                                       ; `ctrl-cmd-]`
+         [:!TCdelete_or_backspace :!Of19 [:term]]                                                   ; `ctrl-cmd-backspace`
 
          ;jump
          [:!OCcomma :!OTf1 [:term]]                                                                 ; `alt-cmd-,`
