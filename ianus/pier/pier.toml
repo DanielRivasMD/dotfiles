@@ -1,3 +1,23 @@
+[scripts.brew-up]
+command = 'zellij run --cwd $HOME --name "brew" --floating -- brew upgrade'
+description = 'update packages'
+tags = ['update']
+
+[scripts.rustup-up]
+command = 'zellij run --cwd $HOME --name "rustup" --floating -- rustup update'
+description = 'update rust compiler'
+tags = ['update']
+
+[scripts.cargo-up]
+command = 'zellij run --cwd $HOME --name "cargo" --floating -- cargo-install-update install-update --all'
+description = 'update cargo binaries'
+tags = ['update']
+
+[scripts.go-up]
+command = 'zellij run --cwd $HOME --name "go" --floating -- go-global-update'
+description = 'update cargo binaries'
+tags = ['update']
+
 [scripts.alacritty-edit]
 command = 'micro ${CERBERUS}/alacritty/alacritty.yml'
 description = 'open alacritty config with micro'
@@ -37,16 +57,6 @@ tags = ['remote']
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2019016'
 tags = ['remote']
-
-[scripts.cargo-ls]
-command = 'cargo-install-update install-update --list'
-description = 'list cargo binaries & updates'
-tags = ['rust']
-
-[scripts.cargo-up]
-command = 'cargo-install-update install-update --all'
-description = 'update cargo binaries'
-tags = ['rust']
 
 [scripts.cheat-julia]
 command = 'open ~/Documents/Bahlam/Biblo/Cheat_sheet/Julia/julia-cheat.html'
@@ -262,38 +272,6 @@ tags = ['tmux']
 command = 'sftp drivas@topaz.pawsey.org.au'
 description = 'sftp to Pawsey Topaz'
 tags = ['remote']
-
-[scripts.update]
-command = '''
-#!/bin/sh
-brew update
-
-echo 'Outdated packages managed by Homebrew'
-source ${PIER}/break_cross.sh
-echo $(brew outdated)
-source ${PIER}/break_cross.sh
-echo ''
-
-brew upgrade &
-
-echo 'Outdated rustup versions'
-source ${PIER}/break_cross.sh
-echo &(rustup check)
-source ${PIER}/break_cross.sh
-echo ''
-
-rustup update
-
-echo 'Outdated packages managed by cargo'
-source ${PIER}/break_cross.sh
-echo $($HOME/bin/forkedPatch/pier cargo-ls)
-source ${PIER}/break_cross.sh
-echo ''
-
-$HOME/bin/forkedPatch/pier cargo-up &
-'''
-description = 'update packages'
-tags = ['shell']
 
 [scripts.uppmax-sftp]
 command = 'sftp drivas@rackham.uppmax.uu.se'
