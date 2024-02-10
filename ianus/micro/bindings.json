@@ -3,91 +3,91 @@
   "MouseRight": "MouseMultiCursor",
   "Alt-/": "lua:comment.comment",
 
-  "Alt-a": "None",
-  "Alt-b": "WordLeft",                                                          // mapped -> `alt-left`
-  "Alt-c": "None",
-  "Alt-d": "None",
-  "Alt-e": "None",                                                              // bypassed => accent
-  "Alt-f": "WordRight",                                                         // mapped -> `alt-right`
-  "Alt-g": "None",
-  "Alt-h": "FindPrevious",
-  "Alt-i": "None",                                                              // bypassed => accent
-  "Alt-j": "SpawnMultiCursorDown",
-  "Alt-k": "SpawnMultiCursorUp",
-  "Alt-l": "FindNext",
-  "Alt-m": "None",
-  "Alt-n": "None",                                                              // bypassed => accent
-  "Alt-o": "None",
-  "Alt-p": "None",
-  "Alt-q": "Quit",
-  "Alt-r": "ToggleMacro",
-  "Alt-s": "Save,Quit",
-  "Alt-t": "None",
-  "Alt-u": "None",                                                              // bypassed => accent
-  "Alt-v": "Paste",
-  "Alt-w": "Save",
-  "Alt-x": "Cut",
-  "Alt-y": "SkipMultiCursor",
-  "Alt-z": "RemoveMultiCursor",
+  "Alt-F1": "None",
+  "Alt-F2": "None",
+  "Alt-F4": "None",
+  "Alt-F5": "None",
+  "Alt-F6": "None",
+  "Alt-F7": "WordRight",
+  "Alt-F8": "None",
+  "Alt-F9": "FindPrevious",
+  "Alt-F10": "None",
+  "Alt-F11": "SpawnMultiCursorDown",
+  "Alt-F12": "SpawnMultiCursorUp",
+  "Ctrl-F1": "FindNext",
+  "Ctrl-F2": "None",
+  "Ctrl-F4": "None",
+  "Ctrl-F5": "None",
+  "Ctrl-F6": "None",
+  "Ctrl-F7": "Quit",
+  "Ctrl-F8": "ToggleMacro",
+  "Ctrl-F9": "Save,Quit",
+  "Ctrl-F10": "None",
+  "Ctrl-F11": "None",
+  "Ctrl-F12": "Paste",
+  "Alt-Ctrl-F1": "Save",
+  "Alt-Ctrl-F2": "Cut",
+  "Alt-Ctrl-F4": "SkipMultiCursor",
+  "Alt-Ctrl-F5": "RemoveMultiCursor",
 
-  "Alt-A": "SelectAll",
-  "Alt-B": "ShellMode",
-  "Alt-C": "lua:comment.comment",
-  "Alt-D": "DuplicateLine",
-  "Alt-E": "",
-  "Alt-F": "Find",
-  "Alt-G": "VSplit",
-  "Alt-H": "HSplit",
-  "Alt-I": "IndentSelection",
-  "Alt-J": "MoveLinesDown",
-  "Alt-K": "MoveLinesUp",
-  "Alt-L": "SelectLine",
-  "Alt-M": "",
-  "Alt-N": "",
-  "Alt-O": "",                                                                  // bypassed => unknown collision
-  "Alt-P": "JumpToMatchingBrace",
-  "Alt-Q": "QuitAll",
-  "Alt-R": "PlayMacro",
-  "Alt-S": "Save,QuitAll",
-  "Alt-T": "AddTab,OpenFile",
-  "Alt-U": "Redo",
-  "Alt-V": "",
-  "Alt-W": "",
-  "Alt-X": "CutLine",
-  "Alt-Y": "CopyLine",
-  "Alt-Z": "Unsplit",
+  "Alt-Shift-F1": "SelectAll",
+  "Alt-Shift-F2": "ShellMode",
+  "Alt-Shift-F4": "lua:comment.comment",
+  "Alt-Shift-F5": "DuplicateLine",
+  "Alt-Shift-F6": "None",
+  "Alt-Shift-F7": "Find",
+  "Alt-Shift-F8": "VSplit",
+  "Alt-Shift-F9": "HSplit",
+  "Alt-Shift-F10": "IndentSelection",
+  "Alt-Shift-F11": "MoveLinesDown",
+  "Alt-Shift-F12": "MoveLinesUp",
+  "Ctrl-Shift-F1": "SelectLine",
+  "Ctrl-Shift-F2": "None",
+  "Ctrl-Shift-F4": "None",
+  "Ctrl-Shift-F5": "None",
+  "Ctrl-Shift-F6": "JumpToMatchingBrace",
+  "Ctrl-Shift-F7": "QuitAll",
+  "Ctrl-Shift-F8": "PlayMacro",
+  "Ctrl-Shift-F9": "Save,QuitAll",
+  "Ctrl-Shift-F10": "AddTab,OpenFile",
+  "Ctrl-Shift-F11": "Redo",
+  "Ctrl-Shift-F12": "None",
+  "Alt-Ctrl-Shift-F1": "None",
+  "Alt-Ctrl-Shift-F2": "CutLine",
+  "Alt-Ctrl-Shift-F4": "CopyLine",
+  "Alt-Ctrl-Shift-F5": "Unsplit",
 
-  "Ctrl-a": "StartOfLine",                                                      // mapped -> `cmd-left`
-  "Ctrl-b": "ParagraphPrevious",                                                // mapped -> `alt-up`
+  "Ctrl-a": "StartOfLine",
+  "Ctrl-b": "ParagraphPrevious",
   "Ctrl-c": "None",
   "Ctrl-d": "None",
-  "Ctrl-e": "EndOfLine",                                                        // mapped -> `cmd-right`
-  "Ctrl-f": "ParagraphNext",                                                    // mapped -> `alt-down`
-  "Ctrl-g": "JumpLine",                                                         // mapped -> `shift-enter`
-  "Ctrl-h": "None",                                                             // mapped -> `alt-ctrl-cmd-shift-enter`
+  "Ctrl-e": "EndOfLine",
+  "Ctrl-f": "ParagraphNext",
+  "Ctrl-g": "JumpLine",
+  "Ctrl-h": "None",
   "Ctrl-i": "None",
-  "Ctrl-j": "PreviousTab",                                                      // mapped -> `ctrl-cmd-left`
+  "Ctrl-j": "PreviousTab",
   "Ctrl-k": "SelectToEndOfLine,Delete",
   "Ctrl-l": "None",
   "Ctrl-m": "None",
-  "Ctrl-n": "NextTab",                                                          // mapped -> `ctrl-cmd-right`
-  "Ctrl-o": "CursorStart",                                                      // mapped -> `cmd-up`
-  "Ctrl-p": "CursorEnd",                                                        // mapped -> `cmd-down`
+  "Ctrl-n": "NextTab",
+  "Ctrl-o": "CursorStart",
+  "Ctrl-p": "CursorEnd",
   "Ctrl-q": "None",
-  "Ctrl-r": "OpenFile",                                                         // mapped -> `ctrl-enter`
-  "Ctrl-s": "None",                                                             // mapped -> `alt-enter`
-  "Ctrl-t": "CommandMode",                                                      // mapped -> `cmd-enter`
+  "Ctrl-r": "OpenFile",
+  "Ctrl-s": "None",
+  "Ctrl-t": "CommandMode",
   "Ctrl-u": "SelectToStartOfLine,Delete",
-  "Ctrl-v": "None",                                                             // mapped -> `ctrl-cmd-up`
+  "Ctrl-v": "None",
   "Ctrl-w": "DeleteWordLeft",
-  "Ctrl-x": "None",                                                             // mapped -> `ctrl-cmd-down`
+  "Ctrl-x": "None",
   "Ctrl-y": "None",
   "Ctrl-z": "None",
 
-  "AltUp": "",                                                                  // mapped -> `alt-b`
-  "AltDown": "FindLiteral",                                                     // mapped -> `alt-f`
-  "AltLeft": "SelectToStartOfLine",                                             // mapped -> `shift-cmd-left`
-  "AltRight": "SelectToEndOfLine",                                              // mapped -> `shift-cmd-right`
+  "AltUp": "None",
+  "AltDown": "FindLiteral",
+  "AltLeft": "SelectToStartOfLine",
+  "AltRight": "SelectToEndOfLine",
 
   "AltShiftUp": "StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight",
   "AltShiftDown": "StartOfLine,SelectLine,ParagraphNext,SelectWordRight",
@@ -101,81 +101,7 @@
   "CtrlSpace": "Autocomplete",
   "CtrlUnderscore": "lua:comment.comment",
 
-  "F1": "None",
-  "F2": "None",
-  "F3": "None",
-  "F4": "None",
-  "F5": "None",
-  "F6": "None",
-  "F7": "None",
-  "F8": "None",
-  "F9": "None",
-  "F10": "None",
-  "F11": "None",
-  "F12": "None",
+ // "Ctrl-F9": "DiffPrevious",
+ // "Ctrl-F10": "DiffNext",
 
-  "Shift-F1": "None",                                                           // mapped -> `alt-e`
-  "Shift-F2": "None",                                                           // mapped -> `alt-i`
-  // "Shift-F3": "None",                                                          // collision tmux mapped -> `alt-shift-space`
-  "Shift-F4": "None",                                                           // mapped -> `alt-cmd-/`
-  "Shift-F5": "None",                                                           // mapped -> `alt-cmd-,`
-  "Shift-F6": "None",                                                           // mapped -> `alt-cmd-.`
-  "Shift-F7": "None",                                                           // mapped -> `alt-cmd-i`
-  "Shift-F8": "None",                                                           // mapped -> `alt-cmd-n`
-  "Shift-F9": "None",                                                           // mapped -> `alt-ctrl-enter`
-  "Shift-F10": "None",                                                          // mapped -> `alt-cmd-enter`
-  "Shift-F11": "None",                                                          // mapped -> `ctrl-cmd-enter`
-  "Shift-F12": "None",                                                          // mapped -> `alt-ctrl-cmd-enter`
-
-  "Alt-F1": "None",                                                             // mapped -> ``
-  "Alt-F2": "None",                                                             // mapped -> ``
-  "Alt-F3": "None",                                                             // mapped -> ``
-  "Alt-F4": "Undo",                                                             // mapped -> `alt-u`
-  "Alt-F5": "None",                                                             // mapped -> ``
-  "Alt-F6": "None",                                                             // mapped -> ``
-  "Alt-F7": "None",                                                             // mapped -> `cmd-shift-up`
-  "Alt-F8": "None",                                                             // mapped -> `cmd-shift-down`
-  "Alt-F9": "None",                                                             // mapped -> `alt-cmd-up`
-  "Alt-F10": "None",                                                            // mapped -> `alt-cmd-down`
-  "Alt-F11": "None",                                                            // mapped -> `alt-ctrl-cmd-shift-up`
-  "Alt-F12": "None",                                                            // mapped -> `alt-ctrl-cmd-shift-down`
-
-  "Alt-Shift-F1": "None",                                                       // mapped -> `shift-pageup`
-  "Alt-Shift-F2": "None",                                                       // mapped -> `shift-pagedown`
-  "Alt-Shift-F3": "None",                                                       // mapped -> ``
-  "Alt-Shift-F4": "None",                                                       // mapped -> `alt-n`
-  "Alt-Shift-F5": "None",                                                       // mapped -> `alt-pageup`
-  "Alt-Shift-F6": "None",                                                       // mapped -> `alt-pagedown`
-  "Alt-Shift-F7": "None",                                                       // mapped -> `d::f-up`
-  "Alt-Shift-F8": "None",                                                       // mapped -> `d::f-down`
-  "Alt-Shift-F9": "None",                                                       // mapped -> `ctrl-pageup`
-  "Alt-Shift-F10": "None",                                                      // mapped -> `ctrl-pagedown`
-  "Alt-Shift-F11": "None",                                                      // mapped -> `j::k-up`
-  "Alt-Shift-F12": "None",                                                      // mapped -> `j::k-down`
-
-  "Ctrl-F1": "None",                                                            // mapped -> ``
-  "Ctrl-F2": "None",                                                            // mapped -> ``
-  "Ctrl-F3": "None",                                                            // collision tmux mapped -> `ctrl-F3`
-  "Ctrl-F4": "OutdentSelection",                                                // mapped -> `alt-O`
-  "Ctrl-F5": "Copy",                                                            // mapped -> `alt-c`
-  "Ctrl-F6": "SpawnMultiCursor",                                                // mapped -> `alt-d`
-  "Ctrl-F7": "None",                                                            // mapped -> `cmd-space`
-  "Ctrl-F8": "None",                                                            // mapped -> `ctrl-cmd-space`
-  "Ctrl-F9": "DiffPrevious",                                                    // mapped -> `pageup`
-  "Ctrl-F10": "DiffNext",                                                       // mapped -> `pagedown`
-  "Ctrl-F11": "None",                                                           // mapped -> `home`
-  "Ctrl-F12": "None",                                                           // mapped -> `end`
-
-  "Ctrl-Shift-F1": "None",                                                      // mapped -> `shift-home`
-  "Ctrl-Shift-F2": "None",                                                      // mapped -> `shift-end`
-  "Ctrl-Shift-F3": "None",                                                      // mapped -> ``
-  "Ctrl-Shift-F4": "None",                                                      // mapped -> ``
-  "Ctrl-Shift-F5": "None",                                                      // mapped -> `alt-home`
-  "Ctrl-Shift-F6": "None",                                                      // mapped -> `alt-end`
-  "Ctrl-Shift-F7": "None",                                                      // mapped -> `d::f-left`
-  "Ctrl-Shift-F8": "None",                                                      // mapped -> `d::f-right`
-  "Ctrl-Shift-F9": "None",                                                      // mapped -> `ctrl-home`
-  "Ctrl-Shift-F10": "None",                                                     // mapped -> `ctrl-end`
-  "Ctrl-Shift-F11": "None",                                                     // mapped -> `j::k-left`
-  "Ctrl-Shift-F12": "None",                                                     // mapped -> `j::k-right`
 }
