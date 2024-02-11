@@ -46,14 +46,14 @@
          ; [:!TCcomma []]                                                                           ;
          ; [:!TCperiod []]                                                                          ;
          ; [:!TCslash []]                                                                           ;
-         ; [:!TCdelete_or_backspace []]                                                             ;
+         [:!TCdelete_or_backspace [:!S1 :!S1]]                                                      ; '!!'
          [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                            ; '=='
-         [:!TCright_shift [:!S1 :!S1]]                                                              ; '!!'
+         ; [:!TCright_shift []]                                                                     ;
          [:!TCright_option [:!S8 :!S8]]                                                             ; '**'
          [:!TCright_command [:slash :slash]]                                                        ; '//'
          ; [:!TCspacebar []]                                                                        ;
 
-         [:!WQright_shift [:!S1 :!S1]]                                                              ; '!!'
+         [:!WQdelete_or_backspace [:!S1 :!S1]]                                                        ; '!!'
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
