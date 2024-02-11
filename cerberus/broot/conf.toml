@@ -10,25 +10,25 @@ default_flags = ""
 invocation = "root_up"
 key = "ctrl-v"
 internal = "root_up"
-description = "move tree root up -> `ctrl-cmd-up`"
+description = "`ctrl-cmd-up` -> move tree root up"
 
 [[verbs]]
 invocation = "open_leave"
 key = "ctrl-x"
 cmd = ":cd"
-description = "go into directory -> `ctrl-cmd-down`"
+description = "`ctrl-cmd-down` -> go into directory"
 
 [[verbs]]
 invocation = "quit"
 key = "ctrl-f7"
 internal = "quit"
-description = "quit broot -> `alt-q`"
+description = "`alt-q` -> quit broot"
 
 [[verbs]]
 invocation = "refresh"
 key = "ctrl-f8"
 internal = "refresh"
-description = "refresh tree -> `alt-r`"
+description = "`alt-r` -> refresh tree"
 
 # file
 [[verbs]]
@@ -36,46 +36,46 @@ invocation = "micro"
 key = "ctrl-j"
 execution = "micro {file}"
 leave_broot = false
-description = "open file with `micro` editor -> `delete-cmd`"
+description = "`delete-cmd` -> open file with `micro` editor"
 
 [[verbs]]
 invocation = "helix"
 key = "ctrl-n"
 execution = "hx {file}"
 leave_broot = false
-description = "open file with `helix` editor -> `delete-alt`"
+description = "`delete-alt` -> open file with `helix` editor"
 
 # search
 [[verbs]]
 invocation = "total_search"
 key = "alt-f7"
 internal = "total_search"
-description = "search again but on all children -> `alt-f`"
+description = "`alt-f` -> search again but on all children"
 
 [[verbs]]
 invocation = "next_match"
 key = "ctrl-f1"
 internal = "next_match"
-description = "go to next match -> `alt-l`"
+description = "`alt-l` -> go to next match"
 
 [[verbs]]
 invocation = "previous_match"
 key = "alt-f9"
 internal = "previous_match"
-description = "go to previous match -> `alt-h`"
+description = "`alt-h` -> go to previous match"
 
 # view
 [[verbs]]
 invocation = "toggle_files"
 key = "shift-alt-f7"
 internal = ":toggle_files"
-description = "toggle files -> `alt-shift-f`"
+description = "`alt-shift-f` -> toggle files"
 
 [[verbs]]
 invocation = "toggle_hidden"
 key = "shift-alt-f5"
 internal = "toggle_hidden"
-description = "toggle hidden -> `alt-shift-d`"
+description = "`alt-shift-d` -> toggle hidden"
 
 # pager
 [[verbs]]
@@ -83,112 +83,112 @@ invocation = "bat"
 key = "alt-f2"
 external = "bat --paging always {file}"
 leave_broot = true
-description = "open file with `bat` -> `alt-b`"
+description = "`alt-b` -> open file with `bat`"
 
 [[verbs]]
 invocation = "mdcat"
 key = "ctrl-f2"
 external = "mdcat --paginate {file}"
 leave_broot = true
-description = "open file with `mdcat` -> `alt-m`"
+description = "`alt-m` -> open file with `mdcat`"
 
 [[verbs]]
 invocation = "jless"
 key = "alt-f11"
 external = "jless {file}"
 leave_broot = true
-description = "open file with `jless` -> `alt-j`"
+description = "`alt-j` -> open file with `jless`"
 
 [[verbs]]
 invocation = "hck"
 key = "alt-f12"
 external = "hck {file}"
 leave_broot = true
-description = "open file with `hck` -> `alt-k`"
+description = "`alt-k` -> open file with `hck`"
 
 [[verbs]]
 invocation = "xsv"
 key = "alt-ctrl-f4"
 external = "xsv table {file}"
 leave_broot = true
-description = "open file with `xsv` -> `alt-x`"
+description = "`alt-x` -> open file with `xsv`"
 
 [[verbs]]
 invocation = "print_to_copy"
 key = "alt-f4"
 external = "bat --paging always --plain {file}"
 leave_broot = true
-description = "open file with `bat` to copy -> `alt-c`"
+description = "`alt-c` -> open file with `bat` to copy"
 
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
 key = "alt-shift-f8"
 internal = "toggle_git_ignore"
-description = "toggle git ignore -> `alt-shift-g`"
+description = "`alt-shift-g` -> toggle git ignore"
 
 # sort
 [[verbs]]
 invocation = "sort_by_type"
 key = "ctrl-shift-f10"
 internal = "sort_by_type"
-description = "sort by type -> `alt-shift-t`"
+description = "`alt-shift-t` -> sort by type"
 
 [[verbs]]
 invocation = "sort_by_size"
 key = "alt-ctrl-shift-f5"
 internal = "sort_by_size"
-description = "sort by size -> `alt-shift-z`"
+description = "`alt-shift-z` -> sort by size"
 
 [[verbs]]
 invocation = "sort_by_date"
 key = "alt-ctrl-shift-f4"
 internal = "sort_by_date"
-description = "sort by date -> `alt-shift-y`"
+description = "`alt-shift-y` -> sort by date"
 
 [[verbs]]
 invocation = "sort_by_count"
 key = "alt-shift-f4"
 internal = "sort_by_count"
-description = "sort by count -> `alt-shift-c`"
+description = "`alt-shift-c` -> sort by count"
 
 # stage
 [[verbs]]
 invocation = "toggle_stage"
 key = "ctrl-f9"
 internal = "toggle_stage"
-description = "toggle stage -> `alt-s`"
+description = "`alt-s` -> toggle stage"
 
 [[verbs]]
 invocation = "toggle_staging_area"
 key = "alt-ctrl-shift-f10"
 internal = "toggle_staging_area"
-description = "toggle staging area -> `alt-tab`"
+description = "`alt-tab` -> toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
 key = "alt-ctrl-f5"
 internal = "clear_stage"
-description = "clear stage area -> `alt-z`"
+description = "`alt-z` -> clear stage area"
 
 [[verbs]]
 invocation = "stage_all_files"
 key = "alt-f1"
 internal = "stage_all_files"
-description = "stage all matching files -> `alt-a`"
+description = "`alt-a` -> stage all matching files"
 
 # move
 [[verbs]]
 invocation = "select_first"
 key = "ctrl-o"
 internal = "select_first"
-description = "go to top of the list -> `cmd-up`"
+description = "`cmd-up` -> go to top of the list"
 
 [[verbs]]
 invocation = "select_last"
 key = "ctrl-p"
 internal = "select_last"
-description = "go to bottom of the list -> `cmd-down`"
+description = "`cmd-down` -> go to bottom of the list"
 
 [[verbs]]
 invocation = "page_up"
@@ -215,7 +215,7 @@ key = "alt-b"
 apply_to = "file"
 internal = "close_preview {file}"
 leave_broot = false
-description = "close display -> `alt-left`"
+description = "`alt-left` -> close display"
 
 [[verbs]]
 invocation = "open_preview"
@@ -223,7 +223,7 @@ key = "alt-f"
 apply_to = "file"
 internal = "open_preview {file}"
 leave_broot = false
-description = "display file on panel -> `alt-right`"
+description = "`alt-right` -> display file on panel"
 
 [[verbs]]
 invocation = "panel_left"
