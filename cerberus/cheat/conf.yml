@@ -1,6 +1,6 @@
 ---
 # The editor to use with 'cheat -e <sheet>'. Defaults to $EDITOR or $VISUAL.
-editor: vim
+editor: $EDITOR
 
 # Should 'cheat' always colorize output?
 colorize: true
@@ -49,11 +49,6 @@ cheatpaths:
 
   # If you have personalized cheatsheets, list them last. They will take
   # precedence over the more global cheatsheets.
-
-  - name: alfred
-    path: ~/.config/cheat/cheatsheets/alfred
-    tags: [ alfred ]
-    readonly: false
 
   - name: cli
     path: ~/.config/cheat/cheatsheets/cli
