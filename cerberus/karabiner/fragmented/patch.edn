@@ -14,15 +14,16 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; additional
-; {:des "Additional key - Mac Internal"
-;  :rules [; builtin
-;          [:0 :grave_accent_and_tilde]                                                           ; '`'
-;          [:!T0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]        ; '```'
-;          [:!Of20 [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                                ; ' ~ '
-;          [:!Tf20 [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]                    ; ' =~ '
-;          [:!Sf20 :!Sgrave_accent_and_tilde]                                                      ; '~'
-;          ]}
+; additional
+{:des "Additional key - MacPro"
+ :rules [:pro
+         [:non_us_backslash :0]
+         [:!Snon_us_backslash :!Sgrave_accent_and_tilde]                                 ; '~'
+         [:0 :grave_accent_and_tilde]                                                    ; '`'
+         [:!T0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
+         [:!Onon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]           ; ' ~ '
+         [:!Tnon_us_backslash [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]; ' =~ '
+         ]}
 
 {:des "Additional keys - Master"
  :rules [:master
