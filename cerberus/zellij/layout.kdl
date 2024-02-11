@@ -34,58 +34,37 @@ layout {
         }
     }
 
-    tab name="Files" hide_floating_panes=true focus=true {
+    tab name="Files" focus=true {
         pane stacked=true split_direction="horizontal" {
             pane name="D1"
             pane name="D2"
             pane name="D3"
             pane name="D4"
             pane name="D5"
-        }
-        floating_panes {
-            pane name="Downloads" cwd="/Users/drivas/Downloads" {
-                x "50%"
-                y "50%"
-                width "60%"
-                height "98%"
-            }
+            pane name="Downloads" cwd="/Users/drivas/Downloads" focus=true
         }
     }
 
-    tab name="Archive" hide_floating_panes=true {
-        floating_panes {
-            pane name="Config" cwd="/Users/drivas/.config" {
-                x "50%"
-                y "50%"
-                width "60%"
-                height "60%"
-            }
-        }
+    tab name="Archive" {
         pane split_direction="vertical" {
-            pane name="A1" cwd="/Users/drivas/.archive"
-            pane name="A2" cwd="/Users/drivas/.archive"
+            pane name="Config" cwd="/Users/drivas/.config"
         }
-        pane name="Archive" cwd="/Users/drivas/.archive" split_direction="horizontal"
+        pane split_direction="horizontal" {
+            pane name="Archive" cwd="/Users/drivas/.archive" 
+        }
     }
 
-    tab name="Factorem" hide_floating_panes=true {
-        floating_panes {
-            pane name="Observatory" cwd="/Users/drivas/Observatory" {
-                x "50%"
-                y "50%"
-                width "60%"
-                height "60%"
-            }
-        }
+    tab name="Factorem" {
         pane split_direction="vertical" {
-            pane name="F1" cwd="/Users/drivas/Factorem"
-            pane name="F2" cwd="/Users/drivas/Factorem"
+            pane name="Observatory" cwd="/Users/drivas/Observatory"
         }
-        pane name="Factorem" cwd="/Users/drivas/Factorem" split_direction="horizontal"
+        pane split_direction="horizontal" {
+            pane name="Factorem" cwd="/Users/drivas/Factorem"
+        }
     }
 
     tab name="Update" {
-        pane name="U"
+        pane name="Update"
     }
 }
 
