@@ -30,16 +30,23 @@
 
 :applications
 {;
- :browser ["org.mozilla.firefox"]                                                                   ;
- :editor ["lapce"]                                                                                  ;
- :mail ["com.apple.mail"]                                                                           ;
- :term ["alacritty"]                                                                                ;
+ :browser ["org.mozilla.firefox"]                                              ;
+ :editor ["lapce"]                                                             ;
+ :mail ["com.apple.mail"]                                                      ;
+ :term ["alacritty"]                                                           ;
  }
 
-:templates
-{:launch "osascript -e 'tell application \"%s\" to activate'"}
+:devices {;
+          :mac [{:vendor_id 1452 :product_id 832}]                               ;
+          :master [{:vendor_id 1133 :product_id 45915}]                          ;
+          }
 
-:layers
-{:zero-mode {:key :keypad_num_lock}}
+:templates {;
+            :launch "osascript -e 'tell application \"%s\" to activate'"       ;
+            }
+
+:layers {;
+         :zero-mode {:key :keypad_num_lock}                                    ;
+         }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
