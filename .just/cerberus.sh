@@ -125,6 +125,7 @@ echo '==========================================================================
 echo ''
 echo 'Linking completions'
 echo '===================================================================================================='
+ln -svf "${observatory}/cheat/scripts/cheat.zsh" "${zshcomp}/_cheat"
 ln -svf "${observatory}/chezmoi/completions/chezmoi.zsh" "${zshcomp}/_chezmoi"
 ln -svf "${observatory}/fd/contrib/completion/_fd" "${zshcomp}/_fd"
 ln -svf "${observatory}/eza/completions/zsh/_eza" "${zshcomp}/_eza"
