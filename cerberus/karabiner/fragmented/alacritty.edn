@@ -167,7 +167,7 @@
 ; Alacritty
 {:des "Terminal movement mappings"
  :rules [;
-         ; reload
+         ; helix reload
          [:!Creturn_or_enter :!OTf6 [:term]]
 
          ; helix tab
@@ -219,6 +219,8 @@
          [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right 
          [:!CSup_arrow :!SOTf8 [:term]]                    ; cmd-shift-up 
          [:!CSdown_arrow :!SOTf9 [:term]]                  ; cmd-shift-down
-         ]}
+
+         ; broot toggle
+         [:!Otab :!SOTf10 [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
