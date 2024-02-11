@@ -3,32 +3,32 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!EWQopen_bracket :!Oa [:term]]                                                           ; `space-[`         split pane horizontal
-         [:!Oleft_arrow :!Ob [:term]]                                                               ; `alt-left`
-         [:!WQRleft_shift :!Oc [:term]]                                                             ; `delete-shift`
-         [:!Sright_option :!Od [:term]]                                                             ; `shift-alt`       delete word forward
-         ; [: :!Oe [:term]]                                                                         ; DOC:              collision => accent
-         [:!Oright_arrow :!Of [:term]]                                                              ; `alt-right`
-         [:!EWQclose_bracket :!Og [:term]]                                                          ; `space-]`         split pane vertical
-         [:!EWQleft_arrow :!Oh [:term]]                                                             ; `space-left`      move left pane
-         ; [: :!Oi [:term]]                                                                         ; DOC:              collision => accent
-         [:!EWQright_arrow :!Oj [:term]]                                                            ; `space-right`     move right pane
-         [:!EWQdown_arrow :!Ok [:term]]                                                             ; `space-down`      move down pane
-         [:!EWQup_arrow :!Ol [:term]]                                                               ; `space-up`        move up pane
-         [:!EWQright_command :!Om [:term]]                                                          ; `space-cmd`       toggle floating pane
-         ; [: :!On [:term]]                                                                         ; DOC:              collision => accent
-         [:!EWQright_alt :!Oo [:term]]                                                              ; `space-alt`       toggle floating pane
-         [:!OCleft_arrow :!Op [:term]]                                                              ; `alt-cmd-left`    move left tab
-         [:!OCright_arrow :!Oq [:term]]                                                             ; `alt-cmd-right`   move right tab
-         [:!EWQright_shift :!Or [:term]]                                                            ; `space-shift`     new tab
-         [:escape :!EWright_shift :term {:alone [:!Os]}]                                            ; `esc`             locked / normal
-         [:!EWRreturn_or_enter :!Ot [:term]]                                                        ; `esc-enter`       pane mode
-         ; [: :!Ou [:term]]                                                                         ; DOC:              collision => accent
-         [:!EWRright_shift :!Ov [:term]]                                                            ; `esc-shift`       tab mode
-         [:!EWRspacebar :!Ow [:term]]                                                               ; `esc-space`       resize mode
-         [:!EWRright_command :!Ox [:term]]                                                          ; `esc-cmd`         scroll mode
-         [:left_shift :left_shift :term {:alone [:!Oy]}]                                            ; `shift`           search mode
-         [:!EWRright_option :!Oz [:term]]                                                           ; `esc-alt`         session mode
+         ; [: :!Oa [:term]]
+         [:!Oleft_arrow :!Ob [:term]]                                          ; `alt-left`
+         [:!WQRleft_shift :!Oc [:term]]                                        ; `delete-shift`
+         [:!Sright_option :!Od [:term]]                                        ; `shift-alt`
+         ; [: :!Oe [:term]]                                                    ; collision => accent
+         [:!Oright_arrow :!Of [:term]]                                         ; `alt-right`
+         [:!EQRright_shift :!Og [:term]]                                     ; `space-]`
+         [:!EQRleft_shift :!Oh [:term]]                                      ; `space-[`
+         ; [: :!Oi [:term]]                                                    ; collision => accent
+         [:left_shift :left_shift :term {:alone [:!Oj]}]                                                    ; collision => accent
+         [:!EQRspacebar :!Ok [:term]]                                                    ; collision => accent
+         [:!EQRreturn_or_enter :!Ol [:term]]                                         ; `space-alt`
+         ; [: :!Om [:term]]                                                    ; collision => accent
+         ; [: :!On [:term]]                                                    ; collision => accent
+         [:!OCspacebar :!Oo [:term]]                                                    ; collision => accent
+         [:!OCleft_arrow :!Op [:term]]                                         ; `alt-cmd-left`
+         [:!OCright_arrow :!Oq [:term]]                                        ; `alt-cmd-right`
+         [:!OCright_shift :!Or [:term]]                                       ; `space-shift`
+         ; [: :!Os [:term]]                                                    ; collision => accent
+         ; [: :!Ot [:term]]                                                    ; collision => accent
+         ; [: :!Ou [:term]]                                                    ; collision => accent
+         ; [: :!Ov [:term]]                                                    ; collision => accent
+         [:!EQRleft_arrow :!Ow [:term]]                                        ; `space-left`
+         [:!EQRright_arrow :!Ox [:term]]                                       ; `space-right`
+         [:!EQRdown_arrow :!Oy [:term]]                                        ; `space-down`
+         [:!EQRup_arrow :!Oz [:term]]                                          ; `space-up`
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -36,15 +36,14 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         ; [: :!OSa [:term]]                                                                        ;
-         ; [: :!OSb [:term]]                                                                        ;
-         ; [: :!OSc [:term]]                                                                        ;
-         ; [: :!OSd [:term]]                                                                        ;
-         ; [: :!OSe [:term]]                                                                        ;
-         ; [: :!OSf [:term]]                                                                        ;
-         ; [: :!OSg [:term]]                                                                        ;
+         [:escape :!EWright_shift :term {:alone [:!SOa]}]                       ; `esc`
+         [:!EWRreturn_or_enter :!SOb [:term]]                                   ; `esc-enter`
+         [:!EWRright_shift :!SOc [:term]]                                       ; `esc-shift`
+         [:!EWRspacebar :!SOd [:term]]                                          ; `esc-space`
+         [:!EWRright_command :!SOf [:term]]                                     ; `esc-cmd`
+         [:!EWRleft_shift :!SOg [:term]]                       ; `shift`
+         [:!EWRright_option :!SOh [:term]]                                      ; `esc-alt`
          ; [: :!OSi [:term]]                                                                        ;
-         ; [: :!OSh [:term]]                                                                        ;
          ; [: :!OSj [:term]]                                                                        ;
          ; [: :!OSk [:term]]                                                                        ;
          ; [: :!OSl [:term]]                                                                        ;
@@ -172,20 +171,26 @@
          [:!Creturn_or_enter :!OTf6 [:term]]
 
          ; helix tab
+         [:!WQspacebar :!OTf7 [:term]]                                                               ; `ctrl-cmd-space`
+         [:!WQleft_arrow :!OTf8 [:term]]                                                             ; `ctrl-cmd-left`
+         [:!WQright_arrow :!OTf9 [:term]]                                                            ; `ctrl-cmd-right`
+
          [:!TCspacebar :!OTf7 [:term]]                                                               ; `ctrl-cmd-space`
          [:!TCleft_arrow :!OTf8 [:term]]                                                             ; `ctrl-cmd-left`
          [:!TCright_arrow :!OTf9 [:term]]                                                            ; `ctrl-cmd-right`
 
          ; helix split
-         [:!TCopen_bracket :!OTf10 [:term]]                                                         ; `ctrl-cmd-[`
-         [:!TCclose_bracket :!OTf11 [:term]]                                                       ; `ctrl-cmd-]`
-         [:!TCdelete_or_backspace :!OTf12 [:term]]                                                   ; `ctrl-cmd-backspace`
+         [:!WQleft_shift :!OTf10 [:term]]                                                         ; `ctrl-cmd-,`
+         [:!WQright_shift :!OTf11 [:term]]                                                       ; `ctrl-cmd-.`
+         [:!WQcaps_lock :!OTf12 [:term]]                                                   ; `ctrl-cmd-slash`
+
+         [:!TCright_shift :!OTf11 [:term]]                                                       ; `ctrl-cmd-.`
 
          ;jump
-         [:!OCcomma :!Of13 [:term]]                                                                 ; `alt-cmd-,`
-         [:!OCperiod :!Of14 [:term]]                                                                ; `alt-cmd-.`
-         [:!OCslash :!Of15 [:term]]                                                                 ; `alt-cmd-/`
-         [:!OCright_shift :!Of16 [:term]]                                                          ; `alt-cmd-shift`
+         [:!Ccomma :!Of13 [:term]]                                                                 ; `alt-cmd-,`
+         [:!Cperiod :!Of14 [:term]]                                                                ; `alt-cmd-.`
+         [:!Cslash :!Of15 [:term]]                                                                 ; `alt-cmd-/`
+         [:!Cright_shift :!Of16 [:term]]                                                          ; `alt-cmd-shift`
 
          ; diagnostics
          [:!OChyphen :!Of17]                                                                        ; `alt-cmd--`
@@ -195,15 +200,15 @@
          ; symbols
          [:!OCopen_bracket :!OTf13]                                                                   ; `alt-cmd-[`
          [:!OCclose_bracket :!OTf14]                                                                  ; `alt-cmd-]`
-         [:!OCbackslash :!OTf15]                                                                      ; `alt-cmd-\`
-         [:!OCreturn_or_enter :!OTf16]                                                               ; `alt-cmd-enter`
-         [:!OCsemicolon :!OTf17]                                                                     ; `alt-cmd-;`
-         [:!OCquote :!OTf18]                                                                        ; `alt-cmd-'`
-         [:!OCspacebar :!OTf19]                                                                     ; `alt-cmd-space`
+         [:!OCsemicolon :!OTf15]                                                                      ; `alt-cmd-\`
+         [:!OCquote :!OTf16]                                                               ; `alt-cmd-enter`
+         [:!OCperiod :!OTf17]                                                                     ; `alt-cmd-;`
+         [:!OCcomma :!OTf18]                                                                        ; `alt-cmd-'`
+         [:!OCreturn_or_enter :!OTf19]                                                                     ; `alt-cmd-space`
 
          ; comments
-         [:!OCright_command :!Tf13]                                                                ; `alt-cmd-cmd`
-         [:!OCright_option :!Tf16]                                                                  ; `alt-cmd-alt`
+         [:!Cright_command :!Tf13]                                                                ; `alt-cmd-cmd`
+         [:!Cright_option :!Tf16]                                                                  ; `alt-cmd-alt`
 
          ; version control
          [:!OCup_arrow :!SOTf6 [:term]]                                                            ; `alt-cmd-up`
