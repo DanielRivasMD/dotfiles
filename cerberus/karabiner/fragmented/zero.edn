@@ -15,32 +15,32 @@
 ;
 {:des "Zero Mode - alphabet"
  :rules [:zero-mode
-         ; [:a []]                                                                                  ;
-         ; [:b []]                                                                                  ;
-         ; [:c []]                                                                                  ;
-         ; [:d []]                                                                                  ;
-         [:e [:e :n :u :m]]                                                                         ; 'enum'
-         ; [:f []]                                                                                  ;
-         ; [:g []]                                                                                  ;
-         ; [:h []]                                                                                  ;
-         ; [:i []]                                                                                  ;
-         ; [:j []]                                                                                  ;
-         ; [:k []]                                                                                  ;
-         ; [:l []]                                                                                  ;
-         [:m [:m :u :t :a :b :l :e]]                                                                ; 'mutable'
-         ; [:n []]                                                                                  ;
-         ; [:o []]                                                                                  ;
-         ; [:p []]                                                                                  ;
-         ; [:q []]                                                                                  ;
-         ; [:r []]                                                                                  ;
-         [:s [:s :t :r :u :c :t]]                                                                   ; 'struct'
-         ; [:t []]                                                                                  ;
-         ; [:u []]                                                                                  ;
-         ; [:v []]                                                                                  ;
-         [:w [:w :h :e :r :e :spacebar]]                                                            ; 'where '
-         ; [:x []]                                                                                  ;
-         ; [:y []]                                                                                  ;
-         [:z [:w :h :i :c :h :spacebar]]                                                            ; 'which '
+         ; [:a []]                                                                       ;
+         ; [:b []]                                                                       ;
+         ; [:c []]                                                                       ;
+         ; [:d []]                                                                       ;
+         [:e [:e :n :u :m]]                                                              ; 'enum'
+         ; [:f []]                                                                       ;
+         ; [:g []]                                                                       ;
+         ; [:h []]                                                                       ;
+         ; [:i []]                                                                       ;
+         ; [:j []]                                                                       ;
+         ; [:k []]                                                                       ;
+         ; [:l []]                                                                       ;
+         [:m [:m :u :t :a :b :l :e]]                                                     ; 'mutable'
+         ; [:n []]                                                                       ;
+         ; [:o []]                                                                       ;
+         ; [:p []]                                                                       ;
+         ; [:q []]                                                                       ;
+         ; [:r []]                                                                       ;
+         [:s [:s :t :r :u :c :t]]                                                        ; 'struct'
+         ; [:t []]                                                                       ;
+         ; [:u []]                                                                       ;
+         ; [:v []]                                                                       ;
+         [:w [:w :h :e :r :e :spacebar]]                                                 ; 'where '
+         ; [:x []]                                                                       ;
+         ; [:y []]                                                                       ;
+         [:z [:w :h :i :c :h :spacebar]]                                                 ; 'which '
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -48,22 +48,22 @@
 ;
 {:des "Zero Mode - symbols"
  :rules [:zero-mode
-         ; [:hyphen []]                                                                             ;
-         ; [:equal_sign []]                                                                         ;
-         ; [:open_bracket []]                                                                       ;
-         ; [:close_bracket []]                                                                      ;
-         [:semicolon [:semicolon :spacebar]]                                                        ; '; '
-         ; [:quote []]                                                                              ;
-         ; [:backslash []]                                                                          ;
-         [:comma [:comma :spacebar]]                                                                ; ', '
-         [:period [:period :period]]                                                                ; '..'
-         [:slash [:spacebar :hyphen]]                                                               ; ' -'
-         ; [:delete_or_backspace []]                                                                ;
-         ; [:return_or_enter []]                                                                    ;
-         ; [:right_shift []]                                                                        ;
-         ; [:right_option []]                                                                       ;
-         ; [:right_command []]                                                                      ;
-         ; [:spacebar []]                                                                           ;
+         ; [:hyphen []]                                                                  ;
+         ; [:equal_sign []]                                                              ;
+         ; [:open_bracket []]                                                            ;
+         ; [:close_bracket []]                                                           ;
+         [:semicolon [:semicolon :spacebar]]                                             ; '; '
+         ; [:quote []]                                                                   ;
+         ; [:backslash []]                                                               ;
+         [:comma [:comma :spacebar]]                                                     ; ', '
+         [:period [:period :period]]                                                     ; '..'
+         [:slash [:spacebar :hyphen]]                                                    ; ' -'
+         ; [:delete_or_backspace []]                                                     ;
+         ; [:return_or_enter []]                                                         ;
+         ; [:right_shift []]                                                             ;
+         ; [:right_option []]                                                            ;
+         ; [:right_command []]                                                           ;
+         ; [:spacebar []]                                                                ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

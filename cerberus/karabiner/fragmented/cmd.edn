@@ -3,32 +3,32 @@
 ; control - command
 {:des "Control - Command Mode - alphabet"
  :rules [;
-         [:!WQa [:comma :comma :a]]                                                                 ; 'ɒ'
-         [:!WQb [:comma :comma :b]]                                                                 ; 'ß'
-         [:!WQc [:comma :comma :c]]                                                                 ; 'ç'
-         [:!WQd [:comma :comma :d]]                                                                 ; 'Δ'
-         [:!WQe [:comma :comma :e]]                                                                 ; 'ę'
-         [:!WQf [:comma :comma :f]]                                                                 ; 'ƒ'
-         [:!WQg [:comma :comma :g]]                                                                 ; 'ɣ'
-         [:!WQh [:comma :comma :h]]                                                                 ; 'з'
-         [:!WQi [:comma :comma :i]]                                                                 ; 'и'
-         [:!WQj [:comma :comma :j]]                                                                 ; 'ʌ'
-         [:!WQk [:comma :comma :k]]                                                                 ; 'ϙ'
-         [:!WQl [:comma :comma :l]]                                                                 ; 'ł'
-         [:!WQm [:comma :comma :m]]                                                                 ; 'ɱ'
-         [:!WQn [:comma :comma :n]]                                                                 ; 'ŋ'
-         [:!WQo [:comma :comma :o]]                                                                 ; 'ø'
-         [:!WQp [:comma :comma :p]]                                                                 ; 'п'
-         ; [:!WQq [:comma :comma :q]]                                                               ; ''
-         [:!WQr [:comma :comma :r]]                                                                 ; 'я'
-         [:!WQs [:comma :comma :s]]                                                                 ; 'Σ'
-         ; [:!WQt [:comma :comma :t]]                                                               ; ''
-         [:!WQu [:comma :comma :u]]                                                                 ; 'Θ'
-         [:!WQv [:comma :comma :v]]                                                                 ; 'Ω'
-         [:!WQw [:comma :comma :w]]                                                                 ; 'ʍ'
-         [:!WQx [:comma :comma :x]]                                                                 ; '∇'
-         [:!WQy [:comma :comma :y]]                                                                 ; 'Λ'
-         [:!WQz [:comma :comma :z]]                                                                 ; '∫'
+         [:!WQa [:comma :comma :a]]                                                      ; 'ɒ'
+         [:!WQb [:comma :comma :b]]                                                      ; 'ß'
+         [:!WQc [:comma :comma :c]]                                                      ; 'ç'
+         [:!WQd [:comma :comma :d]]                                                      ; 'Δ'
+         [:!WQe [:comma :comma :e]]                                                      ; 'ę'
+         [:!WQf [:comma :comma :f]]                                                      ; 'ƒ'
+         [:!WQg [:comma :comma :g]]                                                      ; 'ɣ'
+         [:!WQh [:comma :comma :h]]                                                      ; 'з'
+         [:!WQi [:comma :comma :i]]                                                      ; 'и'
+         [:!WQj [:comma :comma :j]]                                                      ; 'ʌ'
+         [:!WQk [:comma :comma :k]]                                                      ; 'ϙ'
+         [:!WQl [:comma :comma :l]]                                                      ; 'ł'
+         [:!WQm [:comma :comma :m]]                                                      ; 'ɱ'
+         [:!WQn [:comma :comma :n]]                                                      ; 'ŋ'
+         [:!WQo [:comma :comma :o]]                                                      ; 'ø'
+         [:!WQp [:comma :comma :p]]                                                      ; 'п'
+         ; [:!WQq [:comma :comma :q]]                                                    ; ''
+         [:!WQr [:comma :comma :r]]                                                      ; 'я'
+         [:!WQs [:comma :comma :s]]                                                      ; 'Σ'
+         ; [:!WQt [:comma :comma :t]]                                                    ; ''
+         [:!WQu [:comma :comma :u]]                                                      ; 'Θ'
+         [:!WQv [:comma :comma :v]]                                                      ; 'Ω'
+         [:!WQw [:comma :comma :w]]                                                      ; 'ʍ'
+         [:!WQx [:comma :comma :x]]                                                      ; '∇'
+         [:!WQy [:comma :comma :y]]                                                      ; 'Λ'
+         [:!WQz [:comma :comma :z]]                                                      ; '∫'
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -36,24 +36,24 @@
 ; control - command
 {:des "Coding modifications - control - command"
  :rules [;
-         [:!TChyphen [:hyphen :hyphen]]                                                             ; '--'
-         [:!TCequal_sign [:!Sequal_sign :!Sequal_sign]]                                             ; '++'
-         ; [:!TCopen_bracket []]                                                                    ;
-         ; [:!TCclose_bracket []]                                                                   ;
-         ; [:!TCsemicolon []]                                                                       ;
-         ; [:!TCquote []]                                                                           ;
-         ; [:!TCbackslash []]                                                                       ;
-         ; [:!TCcomma []]                                                                           ;
-         ; [:!TCperiod []]                                                                          ;
-         ; [:!TCslash []]                                                                           ;
-         [:!TCdelete_or_backspace [:!S1 :!S1]]                                                      ; '!!'
-         [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                            ; '=='
-         ; [:!TCright_shift []]                                                                     ;
-         [:!TCright_option [:!S8 :!S8]]                                                             ; '**'
-         [:!TCright_command [:slash :slash]]                                                        ; '//'
-         ; [:!TCspacebar []]                                                                        ;
+         [:!TChyphen [:hyphen :hyphen]]                                                  ; '--'
+         [:!TCequal_sign [:!Sequal_sign :!Sequal_sign]]                                  ; '++'
+         ; [:!TCopen_bracket []]                                                         ;
+         ; [:!TCclose_bracket []]                                                        ;
+         ; [:!TCsemicolon []]                                                            ;
+         ; [:!TCquote []]                                                                ;
+         ; [:!TCbackslash []]                                                            ;
+         ; [:!TCcomma []]                                                                ;
+         ; [:!TCperiod []]                                                               ;
+         ; [:!TCslash []]                                                                ;
+         [:!TCdelete_or_backspace [:!S1 :!S1]]                                           ; '!!'
+         [:!TCreturn_or_enter [:equal_sign :equal_sign]]                                 ; '=='
+         ; [:!TCright_shift []]                                                          ;
+         [:!TCright_option [:!S8 :!S8]]                                                  ; '**'
+         [:!TCright_command [:slash :slash]]                                             ; '//'
+         ; [:!TCspacebar []]                                                             ;
 
-         [:!WQdelete_or_backspace [:!S1 :!S1]]                                                        ; '!!'
+         [:!WQdelete_or_backspace [:!S1 :!S1]]                                           ; '!!'
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

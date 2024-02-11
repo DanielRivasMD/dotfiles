@@ -2,17 +2,17 @@
 
 {:des "Launcher"
  :rules [;
-         [:!WQR1 [:launch "Whatsapp"]]                                                              ;
-         [:!WQR2 [:launch "Telegram"]]                                                              ;
-         [:!WQR3 [:launch "Slack"]]                                                                 ;
-         [:!WQR4 [:launch "Skype"]]                                                                 ;
-         [:!WQR5 [:launch "PowerPoint"]]                                                            ;
-         [:!WQR6 [:launch "Word"]]                                                                  ;
-         [:!WQR7 [:launch "Skim"]]                                                                  ;
-         [:!WQR8 [:launch "Mail"]]                                                                  ;
-         [:!WQR9 [:launch "Firefox"]]                                                               ;
-         [:!WQRhyphen [:launch "Alacritty"]]                                                        ;
-         [:!WQRequal_sign [:launch "Lapce"]]                                                        ;
+         [:!WQR1 [:launch "Whatsapp"]]           ;
+         [:!WQR2 [:launch "Telegram"]]           ;
+         [:!WQR3 [:launch "Slack"]]              ;
+         [:!WQR4 [:launch "Skype"]]              ;
+         ; [:!WQR5 [:launch ""]]                 ;
+         ; [:!WQR6 [:launch ""]]                 ;
+         ; [:!WQR7 [:launch ""]]                 ;
+         [:!WQR8 [:launch "Mail"]]               ;
+         [:!WQR9 [:launch "Firefox"]]            ;
+         [:!WQRhyphen [:launch "Alacritty"]]     ;
+         [:!WQRequal_sign [:launch "Lapce"]]     ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

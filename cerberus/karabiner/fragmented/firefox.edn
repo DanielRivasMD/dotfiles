@@ -3,16 +3,16 @@
 ; Firefox
 {:des "Firefox vimium mappings"
  :rules [;
-         [:delete_or_backspace :!WQright_shift :browser {:alone [:!Of1]}]                           ; `basckspace` ->     focus
+         [:delete_or_backspace :!WQright_shift :browser {:alone [:!Of1]}]      ; bspace   ; focus
 
-         [:!EQRright_command :!Tf1 [:browser]]                                                      ; `tab-cmd` ->        download link
-         [:!EQRright_option :!Cf1 [:browser]]                                                       ; `tab-alt` ->        copy link
+         [:!EQRright_command :!Tf1 [:browser]]                                 ; t-cmd    ; download link
+         [:!EQRright_option :!Cf1 [:browser]]                                  ; t-alt    ; copy link
 
-         [:!EQRreturn_or_enter :!OTCf1 [:browser]]                                                  ; `tab-enter` ->      open current tab
+         [:!EQRreturn_or_enter :!OTCf1 [:browser]]                             ; t-enter  ; open current tab
 
-         [:!EQRright_shift :!OTf1 [:browser]]                                                       ; `tab-shift` ->      open new tab
-         [:!EQRspacebar :!OCf1 [:browser]]                                                          ; `tab-space` ->      open new tab & switch
-         [:!EQRdelete_or_backspace :!TCf1 [:browser]]                                               ; `tab-backspace` ->  open multiple tabs
+         [:!EQRright_shift :!OTf1 [:browser]]                                  ; t-shift  ; open new tab
+         [:!EQRspacebar :!OCf1 [:browser]]                                     ; t-space  ; open new tab & switch
+         [:!EQRdelete_or_backspace :!TCf1 [:browser]]                          ; t-bspace ; open multiple tabs
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
