@@ -84,17 +84,17 @@ A-F18 = ["goto_next_diag"]                                                     #
 A-F19 = ["workspace_diagnostics_picker"]                                     # diag list         # `alt-cmd-0`
 
 # symbols
-C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
-C-F16 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
-C-F17 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
-C-F18 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
-C-F19 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
-A-C-F13 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
-A-C-F14 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
+A-C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
+A-C-F14 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
+A-C-F15 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
+A-C-F16 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
+A-C-F17 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
+A-C-F18 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
+A-C-F19 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
 
 # comments
-A-C-F15 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
-A-C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
+C-F13 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
+C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
 
 # version control
 S-A-C-F6 = ["goto_prev_change"]                                                # prev change       # `alt-cmd-up`
@@ -254,17 +254,17 @@ A-F18 = ["goto_next_diag"]                                                     #
 A-F19 = ["workspace_diagnostics_picker"]                                     # diag list         # `alt-cmd-0`
 
 # symbols
-C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
-C-F16 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
-C-F17 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
-C-F18 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
-C-F19 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
-A-C-F13 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
-A-C-F14 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
+A-C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
+A-C-F14 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
+A-C-F15 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
+A-C-F16 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
+A-C-F17 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
+A-C-F18 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
+A-C-F19 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
 
 # comments
-A-C-F15 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
-A-C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
+C-F13 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
+C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
 
 # version control
 S-A-C-F6 = ["goto_prev_change"]                                                # prev change       # `alt-cmd-up`
@@ -427,17 +427,17 @@ A-F18 = ["goto_next_diag"]                                                     #
 A-F19 = ["workspace_diagnostics_picker"]                                     # diag list         # `alt-cmd-0`
 
 # symbols
-C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
-C-F16 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
-C-F17 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
-C-F18 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
-C-F19 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
-A-C-F13 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
-A-C-F14 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
+A-C-F13 = ["goto_prev_parameter"]                                                  # prev param        # `alt-cmd-[`
+A-C-F14 = ["goto_next_parameter"]                                                  # next param        # `alt-cmd-]`
+A-C-F15 = ["goto_prev_function"]                                                   # prev func         # `alt-cmd-\`
+A-C-F16 = ["goto_next_function"]                                                 # next func         # `alt-cmd-enter`
+A-C-F17 = ["goto_prev_class"]                                                     # prev class        # `alt-cmd-;`
+A-C-F18 = ["goto_next_class"]                                                   # next class        # `alt-cmd-'`
+A-C-F19 = ["workspace_symbol_picker"]                                           # symbol list       # `alt-cmd-space`
 
 # comments
-A-C-F15 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
-A-C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
+C-F13 = ["goto_prev_comment"]                                                 # prev comment      # `alt-cmd-cmd`
+C-F16 = ["goto_next_comment"]                                                  # next comment      # `alt-cmd-alt`
 
 # version control
 S-A-C-F6 = ["goto_prev_change"]                                                # prev change       # `alt-cmd-up`
