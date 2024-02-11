@@ -193,17 +193,17 @@
          [:!OCdelete_or_backspace :!Of19]                                                          ; `alt-cmd-backspace`
 
          ; symbols
-         [:!OCopen_bracket :!Tf13]                                                                   ; `alt-cmd-[`
-         [:!OCclose_bracket :!Tf16]                                                                  ; `alt-cmd-]`
-         [:!OCbackslash :!Tf17]                                                                      ; `alt-cmd-\`
-         [:!OCreturn_or_enter :!Tf18]                                                               ; `alt-cmd-enter`
-         [:!OCsemicolon :!Tf19]                                                                     ; `alt-cmd-;`
-         [:!OCquote :!OTf13]                                                                        ; `alt-cmd-'`
-         [:!OCspacebar :!OTf14]                                                                     ; `alt-cmd-space`
+         [:!OCopen_bracket :!OTf13]                                                                   ; `alt-cmd-[`
+         [:!OCclose_bracket :!OTf14]                                                                  ; `alt-cmd-]`
+         [:!OCbackslash :!OTf15]                                                                      ; `alt-cmd-\`
+         [:!OCreturn_or_enter :!OTf16]                                                               ; `alt-cmd-enter`
+         [:!OCsemicolon :!OTf17]                                                                     ; `alt-cmd-;`
+         [:!OCquote :!OTf18]                                                                        ; `alt-cmd-'`
+         [:!OCspacebar :!OTf19]                                                                     ; `alt-cmd-space`
 
          ; comments
-         [:!OCright_command :!OTf15]                                                                ; `alt-cmd-cmd`
-         [:!OCright_option :!OTf16]                                                                  ; `alt-cmd-alt`
+         [:!OCright_command :!Tf13]                                                                ; `alt-cmd-cmd`
+         [:!OCright_option :!Tf16]                                                                  ; `alt-cmd-alt`
 
          ; version control
          [:!OCup_arrow :!SOTf6 [:term]]                                                            ; `alt-cmd-up`
