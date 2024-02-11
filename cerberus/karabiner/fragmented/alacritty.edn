@@ -167,7 +167,7 @@
 ; Alacritty
 {:des "Terminal movement mappings"
  :rules [;
-         ; helix reload
+         ; helix reload & broot open
          [:!Creturn_or_enter :!OTf6 [:term]]
 
          ; helix tab

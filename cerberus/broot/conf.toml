@@ -7,6 +7,13 @@ default_flags = ""
 
 # config
 [[verbs]]
+key = "alt-ctrl-f6"
+external = "command open {file}"
+leave_broot = false
+description = "`cmd-enter` -> open according to OS"
+
+
+[[verbs]]
 invocation = "root_up"
 key = "ctrl-v"
 internal = "root_up"
