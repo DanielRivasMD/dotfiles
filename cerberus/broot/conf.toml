@@ -255,6 +255,25 @@ description = "create file"
 
 ####################################################################################################
 
+[[verbs]]
+key = "alt-b"
+internal = ":input_go_word_left"
+
+[[verbs]]
+key = "alt-f"
+internal = ":input_go_word_right"
+
+[[verbs]]
+key = "ctrl-w"
+internal = ":input_del_word_left"
+
+[[verbs]]
+key = "alt-d"
+internal = ":input_del_word_right"
+
+
+####################################################################################################
+
 # theme
 [skin]
 # default = "rgb(131, 148, 150) rgb(0, 43, 54) / rgb(131, 148, 150) rgb(7, 54, 66)"        # base0 base03 / base01 base02
