@@ -15,6 +15,18 @@ auto_exec = false
 description = ""
 
 [[verbs]]
+# invocation = "open_stay!"
+internal = "open_stay!"
+key = "ctrl-e"
+description = ""
+
+[[verbs]]
+# invocation = "close_pane_ok"
+internal = "close_panel_ok"
+key = "ctrl-a"
+description = ""
+
+[[verbs]]
 key = "alt-ctrl-f6"
 external = "command open {file}"
 leave_broot = false
