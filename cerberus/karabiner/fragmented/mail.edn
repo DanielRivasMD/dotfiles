@@ -8,7 +8,7 @@
          [:!OSreturn_or_enter :!CSr [:mail]]               ; alt-shift-enter   ; reply all
          [:!OCreturn_or_enter :!CSf [:mail]]               ; alt-cmd-enter     ; forward
          [:!EQRreturn_or_enter :!Cn [:mail]]               ; tab-enter         ; new
-         [:!EQRreturn_or_enter :!CSj [:mail]]              ; tab-space         ; junk
+         [:!EQRspacebar :!CSj [:mail]]                     ; tab-space         ; junk
          [:!Tspacebar :!CSu [:mail]]                       ; ctrl-space        ; unread
          [:!Sspacebar :!CSl [:mail]]                       ; shift-space       ; flag
          [:!Cspacebar :!CSn [:mail]]                       ; cmd-space         ; get
