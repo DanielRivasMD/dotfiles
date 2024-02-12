@@ -3,7 +3,7 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         ; [: :!Oa [:term]]
+         [:left_shift :left_shift :term {:alone [:!Oa]}]   ; shift
          [:!Oleft_arrow :!Ob [:term]]                      ; alt-left
          [:!WQRleft_shift :!Oc [:term]]                    ; delete-shift
          [:!Sright_option :!Od [:term]]                    ; shift-alt
@@ -12,19 +12,19 @@
          [:!EQRright_shift :!Og [:term]]                   ; tab-shift
          [:!EQRleft_shift :!Oh [:term]]                    ; tab-shift
          ; [: :!Oi [:term]]            COLLISION => ACCENT
-         [:left_shift :left_shift :term {:alone [:!Oj]}]   ; shift
-         [:!EQRspacebar :!Ok [:term]]                      ; tab-space
-         [:!EQRreturn_or_enter :!Ol [:term]]               ; tab-enter
-         ; [: :!Om [:term]]                                ;
+         [:!EQRspacebar :!Oj [:term]]                      ; tab-space
+         [:!EQRreturn_or_enter :!Ok [:term]]               ; tab-enter
+         [:delete_or_backspace :!WQright_shift :term {:alone [:!Ol]}]; bspace
+         [:left_option :left_option :term {:alone [:!Om]}] ; alt
          ; [: :!On [:term]]            COLLISION => ACCENT
          [:!OCspacebar :!Oo [:term]]                       ; alt-cmd-space
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift
-         ; [: :!Os [:term]]                                ;
-         ; [: :!Ot [:term]]                                ;
+         [:!Espacebar :!Os [:term]]                        ; alt-space
+         [:!Sspacebar :!Ot [:term]]                        ; shift-space
          ; [: :!Ou [:term]]            COLLISION => ACCENT
-         ; [: :!Ov [:term]]                                ;
+         [:!Sreturn_or_enter :!Ov [:term]]                 ; shift-enter
          [:!EQRleft_arrow :!Ow [:term]]                    ; space-left
          [:!EQRright_arrow :!Ox [:term]]                   ; space-right
          [:!EQRdown_arrow :!Oy [:term]]                    ; space-down
@@ -38,11 +38,12 @@
  :rules [;
          [:escape :!EWright_shift :term {:alone [:!SOa]}]  ; esc
          [:!EWRreturn_or_enter :!SOb [:term]]              ; esc-enter
-         [:!EWRright_shift :!SOc [:term]]                  ; esc-shift
-         [:!EWRspacebar :!SOd [:term]]                     ; esc-space
-         [:!EWRright_command :!SOf [:term]]                ; esc-cmd
-         [:!EWRleft_shift :!SOg [:term]]                   ; esc-shift
-         [:!EWRright_option :!SOh [:term]]                 ; esc-alt
+         [:!EWRspacebar :!SOc [:term]]                     ; esc-space
+         [:!EWRright_shift :!SOd [:term]]                  ; esc-shift
+         [:!EWRright_command :!SOe [:term]]                ; esc-cmd
+         [:!EWRright_option :!SOf [:term]]                 ; esc-alt
+         [:!EWRdelete_or_backspace :!SOg [:term]]          ; esc-bspace
+         ; [: :!SOg [:term]]                               ;
          ; [: :!SOi [:term]]                               ;
          ; [: :!SOj [:term]]                               ;
          ; [: :!SOk [:term]]                               ;
@@ -52,15 +53,15 @@
          ; [: :!SOo [:term]]           COLLISION => ACCENT
          ; [: :!SOp [:term]]                               ;
          ; [: :!SOq [:term]]                               ;
-         ; [: :!SOr [:term]]                               ;
-         ; [: :!SOs [:term]]                               ;
-         ; [: :!SOt [:term]]                               ;
-         ; [: :!SOu [:term]]                               ;
-         ; [: :!SOv [:term]]                               ;
-         ; [: :!SOw [:term]]                               ;
-         ; [: :!SOx [:term]]                               ;
-         ; [: :!SOy [:term]]                               ;
-         ; [: :!SOz [:term]]                               ;
+         [:!C1 :!SOr [:term]]                              ;
+         [:!C2 :!SOs [:term]]                              ;
+         [:!C3 :!SOt [:term]]                              ;
+         [:!C4 :!SOu [:term]]                              ;
+         [:!C5 :!SOv [:term]]                              ;
+         [:!C6 :!SOw [:term]]                              ;
+         [:!C7 :!SOx [:term]]                              ;
+         [:!C8 :!SOy [:term]]                              ;
+         [:!C9 :!SOz [:term]]                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -186,7 +187,7 @@
 
          [:!TCright_shift :!OTf11 [:term]]                 ; ctrl-cmd-shift
 
-         ;jump
+         ; jump
          [:!Ccomma :!Of13 [:term]]                         ; cmd-,
          [:!Cperiod :!Of14 [:term]]                        ; cmd-.
          [:!Cslash :!Of15 [:term]]                         ; cmd-/
@@ -221,6 +222,11 @@
          [:!CSdown_arrow :!SOTf9 [:term]]                  ; cmd-shift-down
 
          ; broot toggle
-         [:!Otab :!SOTf10 [:term]]]}
+         [:!Otab :!SOTf10 [:term]];
+
+         ;
+         [:!Oup_arrow :!Sf1 [:term]];
+         [:!Odown_arrow :!Sf2 [:term]];
+         ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
