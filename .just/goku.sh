@@ -22,15 +22,16 @@ cat \
   "${fragmented}/.main.edn" \
   "${fragmented}/launcher.edn" \
   "${fragmented}/mail.edn" \
-  "${fragmented}/alacritty.edn" \
-  "${fragmented}/lapce.edn" \
   "${fragmented}/firefox.edn" \
+  "${fragmented}/lapce.edn" \
+  "${fragmented}/alacritty.edn" \
   "${fragmented}/keys.edn" \
   "${fragmented}/espanso.edn" \
   "${fragmented}/zero.edn" \
   "${fragmented}/super.edn" \
   "${fragmented}/esc.edn" \
   "${fragmented}/tab.edn" \
+  "${fragmented}/space.edn" \
   "${fragmented}/cmd.edn" \
   "${fragmented}/opt.edn" \
   "${fragmented}/ctrl.edn" \
