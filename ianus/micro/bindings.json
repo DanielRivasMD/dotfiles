@@ -1,4 +1,6 @@
 {
+    "Shift-F1": "ParagraphPrevious",
+    "Shift-F2": "ParagraphNext",
     "Alt-/": "lua:comment.comment",                                             //                  //
     "Alt-Ctrl-F1": "Save",                                                      // `alt-w`          //
     "Alt-Ctrl-F2": "Cut",                                                       // `alt-x`          //
@@ -13,7 +15,7 @@
     "Alt-F11": "SpawnMultiCursorDown",                                          // `alt-j`          //
     "Alt-F12": "SpawnMultiCursorUp",                                            // `alt-k`          //
     "Alt-F2": "None",                                                           // `alt-b`          //
-    "Alt-F4": "None",                                                           // `alt-c`          //
+    "Alt-F4": "Copy",                                                           // `alt-c`          //
     "Alt-F5": "None",                                                           // `alt-d`          //
     "Alt-F6": "None",                                                           // `alt-e`          //
     "Alt-F7": "WordRight",                                                      // `alt-f`          //
