@@ -39,8 +39,6 @@ layout {
             pane name="D1"
             pane name="D2"
             pane name="D3"
-            pane name="D4"
-            pane name="D5"
             pane name="Downloads" cwd="/Users/drivas/Downloads" focus=true
         }
     }
@@ -50,7 +48,7 @@ layout {
             pane name="Config" cwd="/Users/drivas/.config"
         }
         pane split_direction="horizontal" {
-            pane name="Archive" cwd="/Users/drivas/.archive" 
+            pane name="Archive" cwd="/Users/drivas/.archive" focus=true
         }
     }
 
