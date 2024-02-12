@@ -1,0 +1,57 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;
+{:des "Tab Mode - alphabet"
+ :rules [;
+         [:!EWQa [:semicolon :semicolon :a]]                                             ; 'α'
+         [:!EWQb [:semicolon :semicolon :b]]                                             ; 'β'
+         ; [:!EWQc [:semicolon :semicolon :c]]                                           ;
+         [:!EWQd [:semicolon :semicolon :d]]                                             ; 'δ'
+         [:!EWQe [:semicolon :semicolon :e]]                                             ; 'ε'
+         [:!EWQf [:semicolon :semicolon :f]]                                             ; 'φ'
+         [:!EWQg [:semicolon :semicolon :g]]                                             ; 'γ'
+         [:!EWQh [:semicolon :semicolon :h]]                                             ; 'η'
+         [:!EWQi [:semicolon :semicolon :i]]                                             ; 'ι'
+         [:!EWQj [:semicolon :semicolon :j]]                                             ; 'ξ'
+         [:!EWQk [:semicolon :semicolon :k]]                                             ; 'κ'
+         [:!EWQl [:semicolon :semicolon :l]]                                             ; 'λ'
+         [:!EWQm [:semicolon :semicolon :m]]                                             ; 'μ'
+         [:!EWQn [:semicolon :semicolon :n]]                                             ; 'ν'
+         [:!EWQo [:semicolon :semicolon :o]]                                             ; 'ο'
+         [:!EWQp [:semicolon :semicolon :p]]                                             ; 'π'
+         ; [:!EWQq [:semicolon :semicolon :q]]                                           ;
+         [:!EWQr [:semicolon :semicolon :r]]                                             ; 'ρ'
+         [:!EWQs [:semicolon :semicolon :s]]                                             ; 'σ'
+         [:!EWQt [:semicolon :semicolon :t]]                                             ; 'τ'
+         [:!EWQu [:semicolon :semicolon :u]]                                             ; 'θ'
+         [:!EWQv [:semicolon :semicolon :v]]                                             ; 'ω'
+         ; [:!EWQw [:semicolon :semicolon :w]]                                           ;
+         [:!EWQx [:semicolon :semicolon :x]]                                             ; 'χ'
+         [:!EWQy [:semicolon :semicolon :y]]                                             ; 'υ'
+         [:!EWQz [:semicolon :semicolon :z]]                                             ; 'ζ'
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;
+{:des "Tab Mode - symbols"
+ :rules [;
+         ; [:!EWQhyphen []]                                                              ;
+         ; [:!EWQequal_sign []]                                                          ;
+         [:!EWQopen_bracket [:!Scomma :!Ssemicolon]]                                     ; '<:'
+         [:!EWQclose_bracket [:!Speriod :!Ssemicolon]]                                   ; '>:'
+         [:!EWQsemicolon [:!Ssemicolon :!Ssemicolon]]                                    ; '::'
+         [:!EWQquote [:!Ssemicolon :!Ssemicolon :!Scomma]]                               ; '::<'
+         [:!EWQbackslash [:!S4 :!Sopen_bracket]]                                         ; '${'
+         [:!EWQcomma [:spacebar :!Scomma :hyphen :spacebar]]                             ; ' <- '
+         [:!EWQperiod [:spacebar :hyphen :!Speriod :spacebar]]                           ; ' -> '
+         [:!EWQslash [:slash :slash :!S1]]                                               ; '//!'
+         [:!EWQdelete_or_backspace [:!S3 :open_bracket]]                                 ; '#['
+         ; [:!EWQreturn_or_enter []]                                                     ;
+         ; [:!EWQright_shift []]                                                         ;
+         ; [:!EWQright_option []]                                                        ;
+         ; [:!EWQright_command []]                                                       ;
+         ; [:!EWQspacebar []]                                                            ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
