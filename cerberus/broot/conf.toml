@@ -12,7 +12,6 @@ external = "command open {file}"
 leave_broot = false
 description = "`cmd-enter` -> open according to OS"
 
-
 [[verbs]]
 invocation = "root_up"
 key = "ctrl-v"
@@ -123,8 +122,8 @@ description = "`alt-x` -> open file with `xsv`"
 [[verbs]]
 invocation = "print_to_copy"
 key = "alt-f4"
-external = "bat --paging always --plain {file}"
-leave_broot = true
+external = ["sh", "-e", "/Users/drivas/.archive/cerberus/broot/copy.sh", "{file}"]
+leave_broot = false
 description = "`alt-c` -> open file with `bat` to copy"
 
 # git
@@ -161,16 +160,16 @@ description = "`alt-shift-c` -> sort by count"
 
 # stage
 [[verbs]]
+invocation = "toggle_staging_area"
+key = "ctrl-space"
+internal = "toggle_staging_area"
+description = "toggle staging area"
+
+[[verbs]]
 invocation = "toggle_stage"
 key = "ctrl-f9"
 internal = "toggle_stage"
 description = "`alt-s` -> toggle stage"
-
-[[verbs]]
-invocation = "toggle_staging_area"
-key = "alt-ctrl-shift-f10"
-internal = "toggle_staging_area"
-description = "`alt-tab` -> toggle staging area"
 
 [[verbs]]
 invocation = "clear_stage"
