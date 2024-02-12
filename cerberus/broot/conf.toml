@@ -7,6 +7,14 @@ default_flags = ""
 
 # config
 [[verbs]]
+external = "mv {file} {parent}/{new_filename}"
+invocation = "rename {new_filename:file-name}"
+key = "ctrl-y"
+leave_broot = false
+auto_exec = false
+description = ""
+
+[[verbs]]
 key = "alt-ctrl-f6"
 external = "command open {file}"
 leave_broot = false
