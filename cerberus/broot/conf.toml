@@ -212,25 +212,25 @@ description = "go to page down"
 # panel
 [[verbs]]
 invocation = "toggle_preview"
-key = "ctrl-space"
+key = "alt-ctrl-f7"
 internal = "toggle_preview"
-description = "open / close preview panel"
+description = "`ctrl-cmd-space` -> open / close preview panel"
 
 [[verbs]]
 invocation = "close_preview"
-key = "alt-b"
+key = "alt-ctrl-f8"
 apply_to = "file"
 internal = "close_preview {file}"
 leave_broot = false
-description = "`alt-left` -> close display"
+description = "`ctrl-cmd-left` -> close display"
 
 [[verbs]]
 invocation = "open_preview"
-key = "alt-f"
+key = "alt-ctrl-f9"
 apply_to = "file"
 internal = "open_preview {file}"
 leave_broot = false
-description = "`alt-right` -> display file on panel"
+description = "`ctrl-cmd-right` -> display file on panel"
 
 [[verbs]]
 invocation = "panel_left"
