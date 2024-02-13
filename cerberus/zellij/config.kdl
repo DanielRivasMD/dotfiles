@@ -13,33 +13,29 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // modes
+    shared_except "normal" "entersearch" {
+        bind "Enter" { SwitchToMode "Normal"; }
+    }
+
     shared_except "normal" {
         bind "Alt A" { SwitchToMode "Normal"; }
         bind "Esc" { SwitchToMode "Normal"; }
     }
 
-    shared_except "renamepane" {
-       bind "Alt B" { UndoRenamePane; SwitchToMode "Tab"; }
-    }
-
-    shared_except "renametab" {
-       bind "Alt C" { UndoRenameTab; SwitchToMode "Pane"; }
-    }
-
     shared_except "resize" {
-        bind "Alt D" { SwitchToMode "Resize"; }
+        bind "Alt B" { SwitchToMode "Resize"; }
     }
 
     shared_except "scroll" {
-        bind "Alt E" { SwitchToMode "Scroll"; }
+        bind "Alt C" { SwitchToMode "Scroll"; }
     }
 
     shared_except "entersearch" {
-        bind "Alt F" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
 
     shared_except "session" {
-        bind "Alt G" { SwitchToMode "Session"; }
+        bind "Alt E" { SwitchToMode "Session"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,19 +109,8 @@ keybinds clear-defaults=true {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    renamepane {
-       bind "Alt B" { UndoRenamePane; SwitchToMode "Tab"; }
-    }
-
-    renametab {
-       bind "Alt C" { UndoRenameTab; SwitchToMode "Pane"; }
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
     resize {
-        bind "Alt D" { SwitchToMode "Normal"; }
-        bind "Enter" { SwitchToMode "Normal"; }
+        bind "Alt B" { SwitchToMode "Normal"; }
         bind "z" { SwitchToMode "Pane"; TogglePaneFrames; SwitchToMode "Normal"; }
         bind "=" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
@@ -137,6 +122,8 @@ keybinds clear-defaults=true {
         bind "J" { Resize "Decrease Down"; }
         bind "K" { Resize "Decrease Up"; }
         bind "L" { Resize "Decrease Right"; }
+        bind "Delete" { SwitchToMode "RenamePane"; PaneNameInput 0; }
+        bind "Backspace" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "Left" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Resize"; }
         bind "Right" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Resize"; }
         bind "Up" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Resize"; }
@@ -146,7 +133,7 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     scroll {
-        bind "Alt E" { SwitchToMode "Normal"; }
+        bind "Alt C" { SwitchToMode "Normal"; }
         bind "f" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "k" "Up" { ScrollUp; }
         bind "j" "Down" { ScrollDown; }
@@ -157,13 +144,13 @@ keybinds clear-defaults=true {
     }
 
     entersearch {
-        bind "Alt F" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     session {
-        bind "Alt G" { SwitchToMode "Normal"; }
+        bind "Alt E" { SwitchToMode "Normal"; }
         bind "d" { Detach; }
     }
 
