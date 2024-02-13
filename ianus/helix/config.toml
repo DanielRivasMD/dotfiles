@@ -109,8 +109,8 @@ S-down = ["extend_line_below"]                                                  
 # movement
 A-b = ["move_prev_word_start", "collapse_selection"]                            # word left         # `alt-left`
 A-f = ["move_next_word_end", "collapse_selection"]                              # word right        # `alt-right`
-A-up = ["goto_prev_paragraph", "collapse_selection"]                            # prev block        # `alt-up`
-A-down = ["goto_next_paragraph", "collapse_selection"]                          # next block        # `alt-down`
+S-F1 = ["goto_prev_paragraph", "collapse_selection"]                            # prev block        # `alt-up`
+S-F2 = ["goto_next_paragraph", "collapse_selection"]                          # next block        # `alt-down`
 
 # movement
 A-left = ["select_mode", "goto_line_start", "normal_mode"]                      # select start line # `cmd-shift-left`
@@ -279,8 +279,8 @@ S-down = ["extend_line_below"]                                                  
 # movement
 A-b = ["move_prev_word_start", "collapse_selection"]                            # word left         # `alt-left`
 A-f = ["move_next_word_end", "collapse_selection"]                              # word right        # `alt-right`
-A-up = ["goto_prev_paragraph", "collapse_selection"]                            # prev block        # `alt-up`
-A-down = ["goto_next_paragraph", "collapse_selection"]                          # next block        # `alt-down`
+S-F1 = ["goto_prev_paragraph", "collapse_selection"]                            # prev block        # `alt-up`
+S-F2 = ["goto_next_paragraph", "collapse_selection"]                          # next block        # `alt-down`
 
 # movement
 A-left = ["select_mode", "goto_line_start", "insert_mode"]                      # select start line # `cmd-shift-left`
@@ -452,8 +452,8 @@ S-down = ["extend_line_below"]                                                  
 # movement
 A-b = ["move_prev_word_start", "collapse_selection"]                            # word left         # `alt-left`
 A-f = ["move_next_word_end", "collapse_selection"]                              # word right        # `alt-right`
-A-up = ["goto_prev_paragraph", "collapse_selection"]                            # prev block        # `alt-up`
-A-down = ["goto_next_paragraph", "collapse_selection"]                          # next block        # `alt-down`
+S-F1 = ["goto_prev_paragraph", "collapse_selection"]                            # prev block        # `alt-up`
+S-F2 = ["goto_next_paragraph", "collapse_selection"]                          # next block        # `alt-down`
 
 # movement
 A-left = ["select_mode", "goto_line_start", "select_mode"]                      # select start line # `cmd-shift-left`
