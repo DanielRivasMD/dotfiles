@@ -11,6 +11,7 @@ theme = "base16_transparent"
 # theme = "snazzy"
 
 ####################################################################################################
+####################################################################################################
 
 [editor]
 mouse = true
@@ -34,6 +35,7 @@ select = "block"
 hidden = false
 
 ####################################################################################################
+####################################################################################################
 
 # normal mode
 [keys.normal]
@@ -44,8 +46,11 @@ esc = ["collapse_selection", "keep_primary_selection"]
 # return
 ret = ["insert_mode"]
 
+####################################################################################################
+####################################################################################################
+
 # reload
-A-C-F6 = [":reload-all"]
+A-C-F6 = ["normal_mode", ":reload-all", "normal_mode"]
 
 # hover
 C-space = ["hover"]
@@ -133,8 +138,8 @@ A-F7 = ["search"]                                                            # s
 # A-F8 = [""]                                                              #                   # `alt-g`
 A-F9 = ["search_prev"]                                                         # find prev         # `alt-h`
 # A-F10 = [""]                                                                  #                   # `alt-i`
-A-F11 = ["copy_selection_on_next_line"]                                       # spawn multi down  # `alt-j`
-A-F12 = ["copy_selection_on_prev_line"]                                       # spawn multi up    # `alt-k`
+A-F11 = ["normal_mode", "copy_selection_on_next_line", "normal_mode"]                                       # spawn multi down  # `alt-j`
+A-F12 = ["normal_mode", "copy_selection_on_prev_line", "normal_mode"]                                       # spawn multi up    # `alt-k`
 C-F1 = ["search_next"]                                                         # find next         # `alt-l`
 # C-F2 = [""]                                                                  #                   # `alt-m`
 C-F4 = ["rename_symbol"]                                                     # rename            # `alt-n`
@@ -146,7 +151,7 @@ C-F9 = [":write-buffer-close"]                                               # s
 # C-F10 = [""]                                                                #                   # `alt-t`
 C-F11 = ["undo"]                                                            # undo              # `alt-u`
 C-F12 = ["paste_after"]                                                         # paste             # `alt-v`
-A-C-F1 = [":write"]                                                              # save              # `alt-w`
+A-C-F1 = ["normal_mode", ":write", "normal_mode"]                                                              # save              # `alt-w`
 A-C-F2 = ["delete_selection"]                                                    # cut               # `alt-x`
 A-C-F4 = ["search_selection", "search_next"]                                   # skip multi        # `alt-y`
 A-C-F5 = ["search_selection", "search_prev"]                                   # remove multi      # `alt-z`
@@ -160,8 +165,8 @@ S-A-F7 = ["global_search"]                                                     #
 # S-A-F8 = [""]                                                              #                   # `alt-shift-g`
 # S-A-F9 = [""]                                                                  #                   # `alt-shift-h`
 S-A-F10 = ["indent"]                                                              # indent            # `alt-shift-i`
-S-A-F11 = ["extend_to_line_bounds", "delete_selection", "paste_after"]            # move down         # `alt-shift-j`
-S-A-F12 = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move up   # `alt-shift-k`
+S-A-F11 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "normal_mode"]            # move down         # `alt-shift-j`
+S-A-F12 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "normal_mode"] # move up   # `alt-shift-k`
 S-C-F1 = ["extend_line_below"]                                                 # select line       # `alt-shift-l`
 # S-C-F2 = [""]                                                                #                   # `alt-shift-m`
 # S-C-F4 = [""]                                                              #                   # `alt-shift-n`
@@ -207,12 +212,16 @@ C-x = ["decrement"]                                                             
 
 
 ####################################################################################################
+####################################################################################################
 
 # insert mode
 [keys.insert]
 
 # escape selections
 esc = ["normal_mode"]
+
+####################################################################################################
+####################################################################################################
 
 # reload
 A-C-F6 = ["normal_mode", ":reload-all", "insert_mode"]
@@ -377,6 +386,7 @@ C-x = ["decrement"]                                                             
 
 
 ####################################################################################################
+####################################################################################################
 
 # select mode
 [keys.select]
@@ -386,6 +396,9 @@ esc = ["normal_mode"]
 
 # return
 ret = ["insert_mode"]
+
+####################################################################################################
+####################################################################################################
 
 # reload
 A-C-F6 = ["normal_mode", ":reload-all", "select_mode"]
@@ -503,8 +516,8 @@ S-A-F7 = ["global_search"]                                                     #
 # S-A-F8 = [""]                                                              #                   # `alt-shift-g`
 # S-A-F9 = [""]                                                                  #                   # `alt-shift-h`
 S-A-F10 = ["indent"]                                                              # indent            # `alt-shift-i`
-S-A-F11 = ["extend_to_line_bounds", "delete_selection", "paste_after"]            # move down         # `alt-shift-j`
-S-A-F12 = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # move up   # `alt-shift-k`
+S-A-F11 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "select_mode"]            # move down         # `alt-shift-j`
+S-A-F12 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "select_mode"] # move up   # `alt-shift-k`
 S-C-F1 = ["extend_line_below"]                                                 # select line       # `alt-shift-l`
 # S-C-F2 = [""]                                                                #                   # `alt-shift-m`
 # S-C-F4 = [""]                                                              #                   # `alt-shift-n`
