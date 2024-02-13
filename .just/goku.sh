@@ -3,7 +3,6 @@
 ####################################################################################################
 
 #!/bin/sh
-# set -euo pipefail
 
 ####################################################################################################
 
@@ -15,11 +14,20 @@ source .just/.config.sh
 # format
 cljfmt fix "${fragmented}/"*
 
+####################################################################################################
+
+# create temporary files
+echo "\n{:profiles\n" > "${karabiner}/.profile.tmp"
+echo "\n:main [\n" > "${karabiner}/.main.tmp"
+echo "\n]}]}" > "${karabiner}/.eof.tmp"
+
+####################################################################################################
+
 # concatenate
 cat \
-  "${fragmented}/.profiles.edn" \
+  "${karabiner}/.profile.tmp" \
   "${fragmented}/profile.edn" \
-  "${fragmented}/.main.edn" \
+  "${karabiner}/.main.tmp" \
   "${fragmented}/launcher.edn" \
   "${fragmented}/mail.edn" \
   "${fragmented}/firefox.edn" \
@@ -38,7 +46,14 @@ cat \
   "${fragmented}/hyper.edn" \
   "${fragmented}/patch.edn" \
   "${fragmented}/fn.edn" \
-  "${fragmented}/.eof.edn" \
+  "${karabiner}/.eof.tmp" \
   > "${karabiner}/karabiner.edn"
+
+####################################################################################################
+
+# purge temporary files
+rm "${karabiner}/.profile.tmp"
+rm "${karabiner}/.main.tmp"
+rm "${karabiner}/.eof.tmp"
 
 ####################################################################################################
