@@ -5,7 +5,8 @@ mouse = true
 rulers = [100]
 shell = ["zsh", "-c"]
 bufferline = "always"
-lsp.display-inlay-hints = true
+lsp.display-inlay-hints = false
+auto-info = false
 
 ####################################################################################################
 
