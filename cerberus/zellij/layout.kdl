@@ -16,14 +16,6 @@ layout {
     }
 
     tab name="Monitor" split_direction="horizontal" hide_floating_panes=true {
-        floating_panes {
-            pane name="Notes" command="joplin" {
-                x "0%"
-                y "2%"
-                width "100%"
-                height "98%"
-            }
-        }
         pane split_direction="vertical" {
             pane name="Clock" command="tock" size="35%" borderless=true
             pane name="Control" focus=true
@@ -32,9 +24,17 @@ layout {
             pane name="btm" command="btm" borderless=true
             pane name="ytop" command="ytop" borderless=true
         }
+        floating_panes {
+            pane name="Notes" command="joplin" {
+                x "0%"
+                y "2%"
+                width "100%"
+                height "98%"
+            }
+        }
     }
 
-    tab name="Files" focus=true {
+    tab name="Files" focus=true hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
             pane name="D1"
             pane name="D2"
@@ -43,21 +43,53 @@ layout {
         }
     }
 
-    tab name="Archive" {
+    tab name="Archive" hide_floating_panes=true {
         pane split_direction="vertical" {
             pane name="Config" cwd="/Users/drivas/.config"
         }
         pane split_direction="horizontal" {
             pane name="Archive" cwd="/Users/drivas/.archive" focus=true
         }
+        floating_panes {
+            pane name="Goku" cwd="/Users/drivas/.archive" {
+                x "0%"
+                y "2%"
+                width "23%"
+                height "48%"
+            }
+        }
+        floating_panes {
+            pane name="Just" cwd="/Users/drivas/.archive" {
+                x "0%"
+                y "52%"
+                width "23%"
+                height "48%"
+            }
+        }
+        floating_panes {
+            pane name="Git" cwd="/Users/drivas/.archive" {
+                x "25%"
+                y "2%"
+                width "75%"
+                height "98%"
+            }
+        }
     }
 
-    tab name="Factorem" {
+    tab name="Factorem" hide_floating_panes=true {
         pane split_direction="vertical" {
             pane name="Observatory" cwd="/Users/drivas/Observatory"
         }
         pane split_direction="horizontal" {
             pane name="Factorem" cwd="/Users/drivas/Factorem"
+        }
+        floating_panes {
+            pane name="Git" cwd="/Users/drivas/Factorem" {
+                x "25%"
+                y "2%"
+                width "75%"
+                height "98%"
+            }
         }
     }
 
