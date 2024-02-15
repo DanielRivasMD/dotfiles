@@ -40,10 +40,11 @@ cat \
   "${fragmented}/esc.edn" \
   "${fragmented}/tab.edn" \
   "${fragmented}/space.edn" \
-  "${fragmented}/cmd.edn" \
+  "${fragmented}/ctrl_cmd.edn" \
   "${fragmented}/opt.edn" \
   "${fragmented}/ctrl.edn" \
   "${fragmented}/hyper.edn" \
+  "${fragmented}/cmd.edn" \
   "${fragmented}/patch.edn" \
   "${fragmented}/fn.edn" \
   "${karabiner}/.eof.tmp" \
