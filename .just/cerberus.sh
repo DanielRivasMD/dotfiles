@@ -69,6 +69,7 @@ echo ''
 echo 'Linking config dirs @config'
 echo '===================================================================================================='
 ln -svf "${gitui}" "${config}"                                                # gitui directory
+ln -svf "${zed}" "${config}"                                               # zed directory
 ln -svf "${zellij}" "${config}"                                               # zellij directory
 echo '===================================================================================================='
 

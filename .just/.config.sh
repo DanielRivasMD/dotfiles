@@ -51,6 +51,7 @@ espansoMatch="${espanso}/match"
 navi="${cerberus}/navi"
 lapce="${cerberus}/lapce"
 zshcomp="${config}/zsh_completion"
+zed="${cerberus}/zed"
 
 brootConf="${home}/.config/broot"
 lazycliConf="${appSupport}/lazycli"
