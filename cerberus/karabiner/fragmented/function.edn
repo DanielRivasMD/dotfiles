@@ -1,0 +1,57 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;
+{:des "Function Mode - alphabet"
+ :rules [;
+         [:!Fa [:comma :comma :a]]                                                       ; 'ɒ'
+         [:!Fb [:comma :comma :b]]                                                       ; 'ß'
+         [:!Fc [:comma :comma :c]]                                                       ; 'ç'
+         [:!Fd [:comma :comma :d]]                                                       ; 'Δ'
+         [:!Fe [:comma :comma :e]]                                                       ; 'ę'
+         [:!Ff [:comma :comma :f]]                                                       ; 'ƒ'
+         [:!Fg [:comma :comma :g]]                                                       ; 'ɣ'
+         [:!Fh [:comma :comma :h]]                                                       ; 'з'
+         [:!Fi [:comma :comma :i]]                                                       ; 'и'
+         [:!Fj [:comma :comma :j]]                                                       ; 'ʌ'
+         [:!Fk [:comma :comma :k]]                                                       ; 'ϙ'
+         [:!Fl [:comma :comma :l]]                                                       ; 'ł'
+         [:!Fm [:comma :comma :m]]                                                       ; 'ɱ'
+         [:!Fn [:comma :comma :n]]                                                       ; 'ŋ'
+         [:!Fo [:comma :comma :o]]                                                       ; 'ø'
+         [:!Fp [:comma :comma :p]]                                                       ; 'п'
+         ; [:!Fq [:comma :comma :q]]                                                     ; ''
+         [:!Fr [:comma :comma :r]]                                                       ; 'я'
+         [:!Fs [:comma :comma :s]]                                                       ; 'Σ'
+         ; [:!Ft [:comma :comma :t]]                                                     ; ''
+         [:!Fu [:comma :comma :u]]                                                       ; 'Θ'
+         [:!Fv [:comma :comma :v]]                                                       ; 'Ω'
+         [:!Fw [:comma :comma :w]]                                                       ; 'ʍ'
+         [:!Fx [:comma :comma :x]]                                                       ; '∇'
+         [:!Fy [:comma :comma :y]]                                                       ; 'Λ'
+         [:!Fz [:comma :comma :z]]                                                       ; '∫'
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; function
+{:des "Function Mode - symbols"
+ :rules [;
+         [:!Fhyphen [:hyphen :hyphen]]                                                   ; '--'
+         [:!Fequal_sign [:!Sequal_sign :!Sequal_sign]]                                   ; '++'
+         ; [:!Fopen_bracket []]                                                          ;
+         ; [:!Fclose_bracket []]                                                         ;
+         ; [:!Fsemicolon []]                                                             ;
+         ; [:!Fquote []]                                                                 ;
+         ; [:!Fbackslash []]                                                             ;
+         ; [:!Fcomma []]                                                                 ;
+         ; [:!Fperiod []]                                                                ;
+         ; [:!Fslash []]                                                                 ;
+         ; [:!Fdelete_or_backspace []]                                                   ;
+         [:!Freturn_or_enter [:equal_sign :equal_sign]]                                  ; '=='
+         [:!Fright_shift [:!S1 :!S1]]                                                    ; '!!'
+         [:!Fright_option [:!S8 :!S8]]                                                   ; '**'
+         [:!Fright_command [:slash :slash]]                                              ; '//'
+         ; [:!Fspacebar []]                                                              ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
