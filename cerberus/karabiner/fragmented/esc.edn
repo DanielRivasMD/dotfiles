@@ -35,8 +35,8 @@
 
 {:des "Escape Mode - symbols"
  :rules [;
-         ; [:!EWRhyphen []]                                                              ;
-         ; [:!EWRequal_sign []]                                                          ;
+         ; [:!EWRhyphen []]            COLLISION (zellij mode)
+         ; [:!EWRequal_sign []]        COLLISION (zellij mode)
          [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]      ; ' %<+% '
          [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]    ; ' %+>% '
          [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                           ; ' %$% '
@@ -46,11 +46,11 @@
          [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                         ; ' %>% '
          [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                     ; ' %!>% '
          [:!EWRdelete_or_backspace [:!S3 :!S1 :slash]]                                   ; '#!/'
-         ; [:!EWRreturn_or_enter []]                                                     ;
-         ; [:!EWRright_shift []]                                                         ;
-         ; [:!EWRright_option []]                                                        ;
-         ; [:!EWRright_command []]                                                       ;
-         ; [:!EWRspacebar []]                                                            ;
+         ; [:!EWRreturn_or_enter []]   COLLISION (zellij mode)
+         ; [:!EWRright_shift []]       COLLISION (zellij mode)
+         ; [:!EWRright_option []]      COLLISION (zellij mode)
+         ; [:!EWRright_command []]     COLLISION (zellij mode)
+         ; [:!EWRspacebar []]          COLLISION (zellij mode)
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
