@@ -31,14 +31,14 @@
 :applications
 {;
  :browser ["org.mozilla.firefox"]                                              ;
- :editor ["lapce"]                                                             ;
+ :editor ["lapce", "zed", "alacritty"]                                         ;
  :mail ["com.apple.mail"]                                                      ;
  :term ["alacritty"]                                                           ;
  }
 
 :devices {;
-          :pro [{:vendor_id 1452 :product_id 832}]                               ;
-          :master [{:vendor_id 1133 :product_id 45915}]                          ;
+          :pro [{:vendor_id 1452 :product_id 832}]                             ;
+          :master [{:vendor_id 1133 :product_id 45915}]                        ;
           }
 
 :templates {;
