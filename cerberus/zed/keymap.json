@@ -1,0 +1,22 @@
+[
+  {
+    "bindings": {
+      // "ctrl-r": "workspace::Open",
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-down": "editor::MoveToEndOfParagraph",
+      "alt-shift-up": "editor::SelectToStartOfParagraph",
+      "alt-shift-down": "editor::SelectToEndOfParagraph",
+      "alt-up": "editor::MoveToStartOfParagraph",
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r": "file_finder::Toggle",
+    }
+  }
+]
