@@ -34,3 +34,72 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; Alacritty
+{:des "Terminal zellij bindings - alphabet"
+ :rules [;
+         ; [:left_shift :left_shift :editor {:alone [:!TCSa]}]   ; shift
+         ; ; [:!Oleft_arrow :!TCSb [:editor]]                      ; alt-left
+         ; [:!WQRleft_shift :!TCSc [:editor]]                    ; delete-shift
+         ; [:!Sright_option :!TCSd [:editor]]                    ; shift-alt
+         ; ; [: :!TCSe [:editor]]            COLLISION => ACCENT
+         ; ; [:!Oright_arrow :!TCSf [:editor]]                     ; alt-right
+         [:!OTright_shift :!TCSg [:editor]]                    ; tab-shift
+         [:!OTright_option :!TCSh [:editor]]                     ; tab-shift
+         ; ; [: :!TCSi [:editor]]            COLLISION => ACCENT
+         ; [:!OCreturn_or_enter :!TCSj [:editor]]                       ; tab-space
+         ; [:!OTreturn_or_enter :!TCSk [:editor]]                ; tab-enter
+         ; [:!OTright_command :!TCSl [:editor]]; bspace
+         ; ; [:delete_or_backspace :!WQright_shift :editor {:alone [:!TCSl]}]; bspace
+         ; [:!OTspacebar :!TCSm [:editor]] ; alt
+         ; [:!OTkeypad_0 :!TCSm [:editor]] ; alt
+         ; ; [:left_option :left_option :editor {:alone [:!TCSm]}] ; alt
+         ; ; [: :!TCSn [:editor]]            COLLISION => ACCENT
+         ; [:!OCspacebar :!TCSo [:editor]]                       ; alt-cmd-space
+         ; [:!OCkeypad_0 :!TCSo [:editor]]                       ; alt-cmd-space
+         ; ; [:!OCleft_arrow :!TCSp [:editor]]                     ; alt-cmd-left
+         ; ; [:!OCright_arrow :!TCSq [:editor]]                    ; alt-cmd-right
+         ; [:!OCright_shift :!TCSr [:editor]]                    ; alt-cmd-shift
+         ; [:!Espacebar :!TCSs [:editor]]                        ; alt-space
+         ; [:!OCdelete_or_backspace :!TCSt [:editor]]                        ; shift-space
+         ; ; [: :!TCSu [:editor]]            COLLISION => ACCENT
+         ; [:!OTdelete_or_backspace :!TCSv [:editor]]                 ; shift-enter
+         ; [:!OTleft_arrow :!TCSw [:editor]]                     ; space-left
+         ; [:!OTright_arrow :!TCSx [:editor]]                    ; space-right
+         ; [:!OTdown_arrow :!TCSy [:editor]]                     ; space-down
+         ; [:!OTup_arrow :!TCSz [:editor]]                       ; space-up
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alt - alphabet"
+ :rules [;
+         ; [:!Oa :!Of1 [:editor]]                              ;
+         ; [:!Ob :!Of2 [:editor]]                              ;
+         ; [:!Oc :!Of4 [:editor]]                              ;
+         ; [:!Od :!Of5 [:editor]]                              ;
+         ; [:!Oe :!Of6 [:editor]]                              ;
+         ; [:!Of :!Of7 [:editor]]                              ;
+         ; [:!Og :!Of8 [:editor]]                              ;
+         ; [:!Oh :!Of9 [:editor]]                              ;
+         ; [:!Oi :!Of10 [:editor]]                             ;
+         ; [:!Oj :!Of11 [:editor]]                             ;
+         ; [:!Ok :!Of12 [:editor]]                             ;
+         ; [:!Ol :!Tf1 [:editor]]                              ;
+         ; [:!Om :!Tf2 [:editor]]                              ;
+         ; [:!On :!Tf4 [:editor]]                              ;
+         ; [:!Oo :!Tf5 [:editor]]                              ;
+         ; [:!Op :!Tf6 [:editor]]                              ;
+         ; [:!Oq :!Tf7 [:editor]]                              ;
+         ; [:!Or :!Tf8 [:editor]]                              ;
+         ; [:!Os :!Tf9 [:editor]]                              ;
+         ; [:!Ot :!Tf10 [:editor]]                             ;
+         ; [:!Ou :!Tf11 [:editor]]                             ;
+         ; [:!Ov :!Tf12 [:editor]]                             ;
+         ; [:!Ow :!OTf1 [:editor]]                             ;
+         ; [:!Ox :!OTf2 [:editor]]                             ;
+         ; [:!Oy :!OTf4 [:editor]]                             ;
+         ; [:!Oz :!OTf5 [:editor]]                             ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
