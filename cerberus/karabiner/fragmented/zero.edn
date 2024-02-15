@@ -1,18 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;
-{:des "Zero Mode - mouse"
- :rules [:zero-mode
-         [:down_arrow {:mkey {:y 1000}}]
-         [:up_arrow {:mkey {:y -1000}}]
-         [:left_arrow {:mkey {:x -1000}}]
-         [:right_arrow {:mkey {:x 1000}}]
-         [:return_or_enter {:pkey :button1}]
-         [:!Oreturn_or_enter {:pkey :button2}]]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;
 {:des "Zero Mode - alphabet"
  :rules [:zero-mode
          ; [:a []]                                                                       ;
@@ -58,12 +46,12 @@
          [:comma [:comma :spacebar]]                                                     ; ', '
          [:period [:period :period]]                                                     ; '..'
          [:slash [:spacebar :hyphen]]                                                    ; ' -'
-         ; [:delete_or_backspace []]                                                     ;
-         ; [:return_or_enter []]                                                         ;
-         ; [:right_shift []]                                                             ;
-         ; [:right_option []]                                                            ;
-         ; [:right_command []]                                                           ;
-         ; [:spacebar []]                                                                ;
+         ; [:delete_or_backspace []]   NOT AVAILABLE
+         ; [:return_or_enter []]       NOT AVAILABLE
+         ; [:right_shift []]           NOT AVAILABLE
+         ; [:right_option []]          NOT AVAILABLE
+         ; [:right_command []]         NOT AVAILABLE
+         ; [:spacebar []]              NOT AVAILABLE
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
