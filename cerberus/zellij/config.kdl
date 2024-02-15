@@ -73,18 +73,18 @@ keybinds clear-defaults=true {
         // bind "Alt C" {}
         // bind "Alt D" {}
         // bind "Alt E" {}
-        // bind "Alt F" {}
-        // bind "Alt G" {}
-        // bind "Alt H" {}
-        // bind "Alt I" {}
+        bind "Alt F" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Normal"; }
+        bind "Alt G" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Normal"; }
+        bind "Alt H" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Normal"; }
+        bind "Alt I" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Normal"; }
         // bind "Alt J" {}
         // bind "Alt K" {}
         // bind "Alt L" {}
         // bind "Alt M" {}
         // bind "Alt N" {}
         // bind "Alt O" {  }                                                                        DOC: accent
-        // bind "Alt P" {}
-        // bind "Alt Q" {}
+        bind "Alt P" { SwitchToMode "Resize"; Resize "Increase"; SwitchToMode "Normal"; }
+        bind "Alt Q" { SwitchToMode "Resize"; Resize "Decrease"; SwitchToMode "Normal"; }
         bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }
         bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }
         bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }
