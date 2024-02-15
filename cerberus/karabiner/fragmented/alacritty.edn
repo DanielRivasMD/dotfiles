@@ -9,26 +9,30 @@
          [:!Sright_option :!Od [:term]]                    ; shift-alt
          ; [: :!Oe [:term]]            COLLISION => ACCENT
          [:!Oright_arrow :!Of [:term]]                     ; alt-right
-         [:!EQRright_shift :!Og [:term]]                   ; tab-shift
-         [:!EQRleft_shift :!Oh [:term]]                    ; tab-shift
+         [:!OTright_shift :!Og [:term]]                    ; tab-shift
+         [:!OTright_option :!Oh [:term]]                     ; tab-shift
          ; [: :!Oi [:term]]            COLLISION => ACCENT
-         [:!EQRspacebar :!Oj [:term]]                      ; tab-space
-         [:!EQRreturn_or_enter :!Ok [:term]]               ; tab-enter
-         [:delete_or_backspace :!WQright_shift :term {:alone [:!Ol]}]; bspace
-         [:left_option :left_option :term {:alone [:!Om]}] ; alt
+         [:!OCreturn_or_enter :!Oj [:term]]                       ; tab-space
+         [:!OTreturn_or_enter :!Ok [:term]]                ; tab-enter
+         [:!OTright_command :!Ol [:term]]; bspace
+         ; [:delete_or_backspace :!WQright_shift :term {:alone [:!Ol]}]; bspace
+         [:!OTspacebar :!Om [:term]] ; alt
+         [:!OTkeypad_0 :!Om [:term]] ; alt
+         ; [:left_option :left_option :term {:alone [:!Om]}] ; alt
          ; [: :!On [:term]]            COLLISION => ACCENT
          [:!OCspacebar :!Oo [:term]]                       ; alt-cmd-space
+         [:!OCkeypad_0 :!Oo [:term]]                       ; alt-cmd-space
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift
          [:!Espacebar :!Os [:term]]                        ; alt-space
-         [:!Sspacebar :!Ot [:term]]                        ; shift-space
+         [:!OCdelete_or_backspace :!Ot [:term]]                        ; shift-space
          ; [: :!Ou [:term]]            COLLISION => ACCENT
-         [:!Sreturn_or_enter :!Ov [:term]]                 ; shift-enter
-         [:!EQRleft_arrow :!Ow [:term]]                    ; space-left
-         [:!EQRright_arrow :!Ox [:term]]                   ; space-right
-         [:!EQRdown_arrow :!Oy [:term]]                    ; space-down
-         [:!EQRup_arrow :!Oz [:term]]                      ; space-up
+         [:!OTdelete_or_backspace :!Ov [:term]]                 ; shift-enter
+         [:!OTleft_arrow :!Ow [:term]]                     ; space-left
+         [:!OTright_arrow :!Ox [:term]]                    ; space-right
+         [:!OTdown_arrow :!Oy [:term]]                     ; space-down
+         [:!OTup_arrow :!Oz [:term]]                       ; space-up
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -36,14 +40,14 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:escape :!EWright_shift :term {:alone [:!SOa]}]  ; esc
-         [:!EWRreturn_or_enter :!SOb [:term]]              ; esc-enter
+         [:!EWRleft_control :!SOa [:term]]                 ; esc-ctrl
+         [:escape :!EWright_shift :term {:alone [:!SOb]}]  ; esc
          [:!EWRspacebar :!SOc [:term]]                     ; esc-space
-         [:!EWRright_shift :!SOd [:term]]                  ; esc-shift
-         [:!EWRright_command :!SOe [:term]]                ; esc-cmd
-         [:!EWRright_option :!SOf [:term]]                 ; esc-alt
-         [:!EWRdelete_or_backspace :!SOg [:term]]          ; esc-bspace
+         [:!EWRreturn_or_enter :!SOd [:term]]              ; esc-enter
+         [:!EWRdelete_or_backspace :!SOe [:term]]          ; esc-bspace
+         ; [: :!SOf [:term]]                               ;
          ; [: :!SOg [:term]]                               ;
+         ; [: :!SOh [:term]]                               ;
          ; [: :!SOi [:term]]                               ;
          ; [: :!SOj [:term]]                               ;
          ; [: :!SOk [:term]]                               ;
@@ -53,15 +57,24 @@
          ; [: :!SOo [:term]]           COLLISION => ACCENT
          ; [: :!SOp [:term]]                               ;
          ; [: :!SOq [:term]]                               ;
-         [:!C1 :!SOr [:term]]                              ;
-         [:!C2 :!SOs [:term]]                              ;
-         [:!C3 :!SOt [:term]]                              ;
-         [:!C4 :!SOu [:term]]                              ;
-         [:!C5 :!SOv [:term]]                              ;
-         [:!C6 :!SOw [:term]]                              ;
-         [:!C7 :!SOx [:term]]                              ;
-         [:!C8 :!SOy [:term]]                              ;
-         [:!C9 :!SOz [:term]]                              ;
+         [:!OC1 :!SOr [:term]]                              ;
+         [:!OC2 :!SOs [:term]]                              ;
+         [:!OC3 :!SOt [:term]]                              ;
+         [:!OC4 :!SOu [:term]]                              ;
+         [:!OC5 :!SOv [:term]]                              ;
+         [:!OC6 :!SOw [:term]]                              ;
+         [:!OC7 :!SOx [:term]]                              ;
+         [:!OC8 :!SOy [:term]]                              ;
+         [:!OC9 :!SOz [:term]]                              ;
+         [:!OCkeypad_1 :!SOr [:term]]                              ;
+         [:!OCkeypad_2 :!SOs [:term]]                              ;
+         [:!OCkeypad_3 :!SOt [:term]]                              ;
+         [:!OCkeypad_4 :!SOu [:term]]                              ;
+         [:!OCkeypad_5 :!SOv [:term]]                              ;
+         [:!OCkeypad_6 :!SOw [:term]]                              ;
+         [:!OCkeypad_7 :!SOx [:term]]                              ;
+         [:!OCkeypad_8 :!SOy [:term]]                              ;
+         [:!OCkeypad_9 :!SOz [:term]]                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -136,11 +149,11 @@
 {:des "Terminal control - alphabet"
  :rules [;
          [:!Cleft_arrow :!Ta [:term]]                      ; cmd-left
-         ; [: :!Tb [:term]]                                ;
+         [:!Sspacebar :!Tb [:term]]                        ; shift-space
          ; [: :!Tc [:term]]            DEFAULT
          ; [: :!Td [:term]]            DEFAULT
          [:!Cright_arrow :!Te [:term]]                     ; cmd-right
-         ; [: :!Tf [:term]]                                ;
+         [:!Sreturn_or_enter :!Tf [:term]]                 ; shift-enter
          [:!WQRcaps_lock :!Tg [:term]]                     ; delete-caps
          [:!WQRtab :!Th [:term]]                           ; delete-tab
          ; [: :!Ti [:term]]            DEFAULT
@@ -169,9 +182,9 @@
 {:des "Terminal movement mappings"
  :rules [;
          ; helix reload & broot open
-         [:!Creturn_or_enter :!OTf6 [:term]]
+         [:!WQleft_option :!OTf6 [:term]]
 
-         ; helix tab
+         ; helix tab & broot viewer
          [:!WQspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
          [:!WQleft_arrow :!OTf8 [:term]]                   ; ctrl-cmd-left
          [:!WQright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
@@ -181,35 +194,54 @@
          [:!TCright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
 
          ; helix split
-         [:!WQleft_shift :!OTf10 [:term]]                  ; ctrl-cmd-shift
-         [:!WQright_shift :!OTf11 [:term]]                 ; ctrl-cmd-shift
-         [:!WQcaps_lock :!OTf12 [:term]]                   ; ctrl-cmd-caps
-
+         [:!TCright_alt :!OTf10 [:term]]                   ; ctrl-cmd-alt
          [:!TCright_shift :!OTf11 [:term]]                 ; ctrl-cmd-shift
+         [:!TCright_command :!OTf12 [:term]]               ; cmd-cmd-alt
 
          ; jump
-         [:!Ccomma :!Of13 [:term]]                         ; cmd-,
-         [:!Cperiod :!Of14 [:term]]                        ; cmd-.
-         [:!Cslash :!Of15 [:term]]                         ; cmd-/
-         [:!Cright_shift :!Of16 [:term]]                   ; cmd-shift
+         [:!TCsemicolon :!Of13 [:term]]                       ; cmd-,
+         [:!TCquote :!Of14 [:term]]                      ; cmd-.
+         [:!TCbackslash :!Of15 [:term]]                       ; cmd-/
+         [:!TCreturn_or_enter :!Of16 [:term]]                 ; cmd-shift
+
+         ; ; jump
+         [:!TCkeypad_9 :!Of13 [:term]]                       ; cmd-,
+         [:!TCkeypad_6 :!Of14 [:term]]                      ; cmd-.
+         [:!TCkeypad_3 :!Of15 [:term]]                       ; cmd-/
+         [:!TCkeypad_period :!Of16 [:term]]                 ; cmd-shift
+
+         ; TODO: proably rebind to access from nushell
+         ; diagnostics
+         [:!TCcomma :!Of17]                                ; alt-cmd--
+         [:!TCperiod :!Of18]                            ; alt-cmd-=
+         [:!TCslash :!Of19]                   ; alt-cmd-backspace
 
          ; diagnostics
-         [:!OChyphen :!Of17]                               ; alt-cmd--
-         [:!OCequal_sign :!Of18]                           ; alt-cmd-=
-         [:!OCdelete_or_backspace :!Of19]                  ; alt-cmd-backspace
+         [:!TCkeypad_slash :!Of17]                                ; alt-cmd--
+         [:!TCkeypad_asterisk :!Of18]                            ; alt-cmd-=
+         [:!TCkeypad_hyphen :!Of19]                   ; alt-cmd-backspace
 
          ; symbols
-         [:!OCopen_bracket :!OTf13]                        ; alt-cmd-[
-         [:!OCclose_bracket :!OTf14]                       ; alt-cmd-]
-         [:!OCsemicolon :!OTf15]                           ; alt-cmd-;
-         [:!OCquote :!OTf16]                               ; alt-cmd-'
-         [:!OCperiod :!OTf17]                              ; alt-cmd-,
-         [:!OCcomma :!OTf18]                               ; alt-cmd-.
-         [:!OCreturn_or_enter :!OTf19]                     ; alt-cmd-enter
+         [:!TCkeypad_7 :!OTf13]                         ; alt-cmd-[
+         [:!TCkeypad_8 :!OTf14]                        ; alt-cmd-]
+         [:!TCkeypad_4 :!OTf15]                            ; alt-cmd-;
+         [:!TCkeypad_5 :!OTf16]                                ; alt-cmd-'
+         [:!TCkeypad_1 :!OTf17]                               ; alt-cmd-,
+         [:!TCkeypad_2 :!OTf18]                                ; alt-cmd-.
+         [:!TCkeypad_0 :!OTf19]                      ; alt-cmd-enter
+
+         ; symbols
+         [:!TChyphen :!OTf15]                               ; alt-cmd-,
+         [:!TCequal_sign :!OTf16]                                ; alt-cmd-.
+         [:!TCdelete_or_backspace :!OTf19]                      ; alt-cmd-enter
 
          ; comments
-         [:!Cright_command :!Tf13]                         ; cmd-cmd
-         [:!Cright_option :!Tf16]                          ; cmd-alt
+         [:!TCopen_bracket :!Tf13]                         ; cmd-cmd
+         [:!TCclose_bracket :!Tf16]                          ; cmd-alt
+
+         ; comments
+         [:!TCkeypad_plus :!Tf13]                         ; cmd-cmd
+         [:!TCkeypad_enter :!Tf16]                          ; cmd-alt
 
          ; version control
          [:!OCup_arrow :!SOTf6 [:term]]                    ; alt-cmd-up
@@ -224,7 +256,7 @@
          ; broot toggle
          [:!Otab :!SOTf10 [:term]];
 
-         ;
+         ; alt down
          [:!Oup_arrow :!Sf1 [:term]];
          [:!Odown_arrow :!Sf2 [:term]];
          ]}
