@@ -45,10 +45,10 @@
          [:!EWRspacebar :!SOc [:term]]                     ; esc-space
          [:!EWRreturn_or_enter :!SOd [:term]]              ; esc-enter
          [:!EWRdelete_or_backspace :!SOe [:term]]          ; esc-bspace
-         ; [: :!SOf [:term]]                               ;
-         ; [: :!SOg [:term]]                               ;
-         ; [: :!SOh [:term]]                               ;
-         ; [: :!SOi [:term]]                               ;
+         [:!EWRup_arrow :!SOf [:term]]                     ;
+         [:!EWRdown_arrow :!SOg [:term]]                   ;
+         [:!EWRleft_arrow :!SOh [:term]]                   ;
+         [:!EWRright_arrow :!SOi [:term]]                  ;
          ; [: :!SOj [:term]]                               ;
          ; [: :!SOk [:term]]                               ;
          ; [: :!SOl [:term]]                               ;
