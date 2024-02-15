@@ -3,9 +3,8 @@
 ; hyper
 {:des "Coding modifications - hyper"
  :rules [;
-         ; [:!!0 []]                                                                                ;
-         ; [:!!hyphen []]                                                                           ;
-         ; [:!!equal_sign []]                                                                       ;
+         [:!!hyphen [:hyphen :hyphen]]                                                  ; '--'
+         [:!!equal_sign [:!Sequal_sign :!Sequal_sign]]                                  ; '++'
          ; [:!!open_bracket []]                                                                     ;
          ; [:!!close_bracket []]                                                                    ;
          ; [:!!semicolon []]                                                                        ;
@@ -15,10 +14,11 @@
          ; [:!!period []]                                                                           ;
          ; [:!!slash []]                                                                            ;
          ; [:!!delete_or_backspace []]                                                              ;
-         ; [:!!return_or_enter []]                                                                  ;
-         ; [:!!right_shift []]                                                                      ;
-         ; [:!!right_option []]                                                                     ;
-         ; [:!!right_command []]                                                                    ;
+         [:!!return_or_enter [:equal_sign :equal_sign]]                                 ; '=='
+         [:!!right_shift [:!S1 :!S1]]                                           ; '!!'
+         [:!!right_option [:!S8 :!S8]]                                                  ; '**'
+         [:!!right_command [:slash :slash]]                                             ; '//'
+         ; [:!!spacebar []]                                                                    ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
