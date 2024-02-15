@@ -31,12 +31,15 @@ cat \
   "${fragmented}/launcher.edn" \
   "${fragmented}/mail.edn" \
   "${fragmented}/firefox.edn" \
-  "${fragmented}/lapce.edn" \
-  "${fragmented}/alacritty.edn" \
+  "${fragmented}/editor.edn" \
+  "${fragmented}/terminal.edn" \
+  "${fragmented}/zellij.edn" \
   "${fragmented}/keys.edn" \
   "${fragmented}/espanso.edn" \
+  "${fragmented}/mouse.edn" \
   "${fragmented}/zero.edn" \
   "${fragmented}/super.edn" \
+  "${fragmented}/function.edn" \
   "${fragmented}/esc.edn" \
   "${fragmented}/tab.edn" \
   "${fragmented}/space.edn" \
