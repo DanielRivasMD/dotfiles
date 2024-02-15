@@ -19,6 +19,7 @@
          [:!Tright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                    ; ' => '
          [:!Tright_option [:spacebar :!S8 :!S8 :spacebar]]                               ; ' ** '
          [:!Tright_command [:spacebar :slash :slash :spacebar]]                          ; ' // '
+         ; [:!Tspacebar []]                                                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -43,6 +44,7 @@
          [:!TSright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]                ; ' := '
          [:!TSright_option [:spacebar :period :!S8 :!S8 :spacebar]]                      ; ' .** '
          [:!TSright_command [:spacebar :period :slash :slash :spacebar]]                 ; ' .// '
+         ; [:!TSspacebar []]                                                             ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
