@@ -32,6 +32,8 @@ cat \
   "${fragmented}/mail.edn" \
   "${fragmented}/firefox.edn" \
   "${fragmented}/editor.edn" \
+  "${fragmented}/lapce.edn" \
+  "${fragmented}/zed.edn" \
   "${fragmented}/terminal.edn" \
   "${fragmented}/zellij.edn" \
   "${fragmented}/keys.edn" \

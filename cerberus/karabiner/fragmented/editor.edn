@@ -4,9 +4,6 @@
 {:des "Editor sessions"
  :rules [;
          [:escape :!EWright_shift :lapce {:alone [:!OTf3]}]; file explorer
-         [:escape :!EWright_shift :zed {:alone [:!Cb]}]    ; file explorer
-         [:delete_or_backspace :!WQright_shift
-          :zed {:alone [:!Cj]}]                            ; terminal
          [:!OTright_shift :!TCSg [:editor]]                ;
          [:!OTright_option :!TCSh [:editor]]               ;
          ]}
