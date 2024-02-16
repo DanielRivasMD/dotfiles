@@ -20,7 +20,7 @@ local ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
 ####################################################################################################
 # plugins
 ####################################################################################################
-  
+
 # created by zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
@@ -106,8 +106,10 @@ eval "$(starship init zsh)"
 # zellij
 ####################################################################################################
 
-ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
-[ -f ${ZJFUN} ] && source ${ZJFUN}
+if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
+    ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
+    [ -f ${ZJFUN} ] && source ${ZJFUN}
+fi
 
 ####################################################################################################
 # zoxide
