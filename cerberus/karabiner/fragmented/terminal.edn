@@ -3,8 +3,18 @@
 ; Alacritty
 {:des "Terminal software bindings"
  :rules [;
-         ; helix reload & broot open
-         [:!WQleft_option :!OTf6 [:term]]                  ; cmd-alt
+         ; alt down
+         [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up
+         [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
+
+         ; movement
+         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left 
+         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right 
+         [:!CSup_arrow :!Sf4 [:term]]                      ; cmd-shift-up 
+         [:!CSdown_arrow :!Sf5 [:term]]                    ; cmd-shift-down
+
+         ; broot open
+         [:!Creturn_or_enter :!OTf6 [:term]]               ; cmd-enter
 
          ; helix tab & broot viewer
          [:!WQspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
@@ -19,6 +29,18 @@
          [:!TCright_shift :!OTf10 [:term]]                 ; ctrl-cmd-shift
          [:!TCright_alt :!OTf11 [:term]]                   ; ctrl-cmd-alt
          [:!TCright_command :!OTf12 [:term]]               ; ctrl-cmd-cmd
+
+         ; broot create
+         [:!WQreturn_or_enter :!SOTf6 [:term]]              ; ctrl-cmd-enter
+         [:!WQdelete_or_backspace :!SOTf7 [:term]]          ; ctrl-cmd-bspace
+
+         ; broot toggle
+         [:left_option :left_option :term                  ; alt-tab
+          {:alone [:!SOTf10]}]
+
+         ; version control
+         [:!OCup_arrow :!SOTf11 [:term]]                   ; alt-cmd-up
+         [:!OCdown_arrow :!SOTf12 [:term]]                 ; alt-cmd-down
 
          ; helix jump
          [:!TCsemicolon :!Of13 [:term]]                    ; ctrl-cmd-;
@@ -53,32 +75,15 @@
          [:!TCequal_sign :!OTf16]                          ; ctrl-cmd-=
          [:!TCdelete_or_backspace :!OTf19]                 ; ctrl-cmd-bspace
 
+         ; helix reload
+         [:!WQleft_option :!OTf20 [:term]]                  ; cmd-alt
+
          ; helix comments
          [:!TCopen_bracket :!Tf13]                         ; ctrl-cmd-[
          [:!TCclose_bracket :!Tf16]                        ; ctrl-cmd-]
 
          [:!TCkeypad_plus :!Tf13]                          ; ctrl-cmd-+
          [:!TCkeypad_enter :!Tf16]                         ; ctrl-cmd-enter
-
-         ; movement
-         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left 
-         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right 
-         [:!CSup_arrow :!SOTf8 [:term]]                    ; cmd-shift-up 
-         [:!CSdown_arrow :!SOTf9 [:term]]                  ; cmd-shift-down
-
-         ; broot toggle
-         [:left_option :left_option :term                  ; alt-tab
-          {:alone [:!SOTf10]}]
-
-         [:!Creturn_or_enter :!SOTf11 [:term]]             ; cmd-enter
-
-         ; alt down
-         [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up
-         [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
-
-         ; version control
-         [:!OCup_arrow :!SOTf6 [:term]]                    ; alt-cmd-up
-         [:!OCdown_arrow :!SOTf7 [:term]]                  ; alt-cmd-down
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
