@@ -3,103 +3,143 @@
 ; Lapce
 {:des "Editor sessions"
  :rules [;
-         ; [:escape :!EWright_shift :editor {:alone [:!CSf3]}]                                        ; toggle file explorer
+         [:escape :!EWright_shift :lapce {:alone [:!OTf3]}]; file explorer
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Lapce
-{:des "Editor remappings"
+; Editor
+{:des "Control remappings"
  :rules [;
-         [:!WQRleft_control :!Tr [:editor]]                                                         ; `delete-ctrl`
-         [:!WQRleft_option :!Ts [:editor]]                                                          ; `delete-alt`
-         [:!WQRleft_command :!Tt [:editor]]                                                         ; `delete-cmd`
-         [:!WQRleft_shift :!Tg [:editor]]                                                           ; `delete-shift`
-         [:!WQRtab :!Th [:editor]]                                                                  ; `delete-tab`
-         [:!WQRright_command :!Tj [:editor]]                                                        ; `delete-cmd`
-         [:!WQRright_option :!Tn [:editor]]                                                         ; `delete-alt`
+         [:!WQRtab :!Th [:editor]]                         ; del-tab
+         [:!WQRcaps_lock :!Tg [:editor]]                   ; del-caps
+         [:!WQRleft_shift :!Oc [:editor]]                  ; del-shift
+         [:!WQRleft_control :!Tr [:editor]]                ; del-ctrl
+         [:!WQRleft_option :!Ts [:editor]]                 ; del-alt
+         [:!WQRleft_command :!Tt [:editor]]                ; del-cmd
+         [:!WQRspacebar :!Ty [:editor]]                    ; del-space
+         [:!WQRright_command :!Tj [:editor]]               ; del-cmd
+         [:!WQRright_option :!Tn [:editor]]                ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Lapce
+; Editor
 {:des "Editor delete"
  :rules [;
-         [:!Sright_option :!Od [:editor]]                                                           ;
-         [:!Sright_command :!Tk [:editor]]                                                          ;
-         [:!Rleft_control :!Tw [:editor]]                                                           ;
-         [:!Rleft_option :!Tl [:editor]]                                                            ;
-         [:!Rleft_command :!Tu [:editor]]                                                           ;
+         [:!Sright_option :!Od [:editor]]                  ; shift-alt
+         [:!Sright_command :!Tk [:editor]]                 ; shift-cmd
+         [:!Rleft_control :!Tw [:editor]]                  ; shift-ctrl
+         [:!Rleft_command :!Tu [:editor]]                  ; shift-cmd
+         [:!Rleft_option :!Tl [:editor]]                   ; shift-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Alacritty
-{:des "Terminal zellij bindings - alphabet"
+{:des ""
  :rules [;
-         ; [:left_shift :left_shift :editor {:alone [:!TCSa]}]   ; shift
-         ; ; [:!Oleft_arrow :!TCSb [:editor]]                      ; alt-left
-         ; [:!WQRleft_shift :!TCSc [:editor]]                    ; delete-shift
-         ; [:!Sright_option :!TCSd [:editor]]                    ; shift-alt
-         ; ; [: :!TCSe [:editor]]            COLLISION => ACCENT
-         ; ; [:!Oright_arrow :!TCSf [:editor]]                     ; alt-right
-         [:!OTright_shift :!TCSg [:editor]]                    ; tab-shift
-         [:!OTright_option :!TCSh [:editor]]                     ; tab-shift
-         ; ; [: :!TCSi [:editor]]            COLLISION => ACCENT
-         ; [:!OCreturn_or_enter :!TCSj [:editor]]                       ; tab-space
-         ; [:!OTreturn_or_enter :!TCSk [:editor]]                ; tab-enter
-         ; [:!OTright_command :!TCSl [:editor]]; bspace
-         ; ; [:delete_or_backspace :!WQright_shift :editor {:alone [:!TCSl]}]; bspace
-         ; [:!OTspacebar :!TCSm [:editor]] ; alt
-         ; [:!OTkeypad_0 :!TCSm [:editor]] ; alt
-         ; ; [:left_option :left_option :editor {:alone [:!TCSm]}] ; alt
-         ; ; [: :!TCSn [:editor]]            COLLISION => ACCENT
-         ; [:!OCspacebar :!TCSo [:editor]]                       ; alt-cmd-space
-         ; [:!OCkeypad_0 :!TCSo [:editor]]                       ; alt-cmd-space
-         ; ; [:!OCleft_arrow :!TCSp [:editor]]                     ; alt-cmd-left
-         ; ; [:!OCright_arrow :!TCSq [:editor]]                    ; alt-cmd-right
-         ; [:!OCright_shift :!TCSr [:editor]]                    ; alt-cmd-shift
-         ; [:!Espacebar :!TCSs [:editor]]                        ; alt-space
-         ; [:!OCdelete_or_backspace :!TCSt [:editor]]                        ; shift-space
-         ; ; [: :!TCSu [:editor]]            COLLISION => ACCENT
-         ; [:!OTdelete_or_backspace :!TCSv [:editor]]                 ; shift-enter
-         ; [:!OTleft_arrow :!TCSw [:editor]]                     ; space-left
-         ; [:!OTright_arrow :!TCSx [:editor]]                    ; space-right
-         ; [:!OTdown_arrow :!TCSy [:editor]]                     ; space-down
-         ; [:!OTup_arrow :!TCSz [:editor]]                       ; space-up
+         [:!OTright_shift :!TCSg [:editor]]                ;
+         [:!OTright_option :!TCSh [:editor]]               ;
+         ; [:!OTright_command :!TCSl [:editor]]              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Alacritty
-{:des "Terminal alt - alphabet"
+; Editor
+{:des "Editor alt - alphabet"
  :rules [;
-         ; [:!Oa :!Of1 [:editor]]                              ;
-         ; [:!Ob :!Of2 [:editor]]                              ;
-         ; [:!Oc :!Of4 [:editor]]                              ;
-         ; [:!Od :!Of5 [:editor]]                              ;
-         ; [:!Oe :!Of6 [:editor]]                              ;
-         ; [:!Of :!Of7 [:editor]]                              ;
-         ; [:!Og :!Of8 [:editor]]                              ;
-         ; [:!Oh :!Of9 [:editor]]                              ;
-         ; [:!Oi :!Of10 [:editor]]                             ;
-         ; [:!Oj :!Of11 [:editor]]                             ;
-         ; [:!Ok :!Of12 [:editor]]                             ;
-         ; [:!Ol :!Tf1 [:editor]]                              ;
-         ; [:!Om :!Tf2 [:editor]]                              ;
-         ; [:!On :!Tf4 [:editor]]                              ;
-         ; [:!Oo :!Tf5 [:editor]]                              ;
-         ; [:!Op :!Tf6 [:editor]]                              ;
-         ; [:!Oq :!Tf7 [:editor]]                              ;
-         ; [:!Or :!Tf8 [:editor]]                              ;
-         ; [:!Os :!Tf9 [:editor]]                              ;
-         ; [:!Ot :!Tf10 [:editor]]                             ;
-         ; [:!Ou :!Tf11 [:editor]]                             ;
-         ; [:!Ov :!Tf12 [:editor]]                             ;
-         ; [:!Ow :!OTf1 [:editor]]                             ;
-         ; [:!Ox :!OTf2 [:editor]]                             ;
-         ; [:!Oy :!OTf4 [:editor]]                             ;
-         ; [:!Oz :!OTf5 [:editor]]                             ;
+         [:!Oa :!Of1 [:lapce]]                             ;
+         [:!Ob :!Of2 [:lapce]]                             ;
+         [:!Oc :!Of4 [:lapce]]                             ;
+         [:!Od :!Of5 [:lapce]]                             ;
+         [:!Oe :!Of6 [:lapce]]                             ;
+         [:!Of :!Of7 [:lapce]]                             ;
+         [:!Og :!Of8 [:lapce]]                             ;
+         [:!Oh :!Of9 [:lapce]]                             ;
+         [:!Oi :!Of10 [:lapce]]                            ;
+         [:!Oj :!Of11 [:lapce]]                            ;
+         [:!Ok :!Of12 [:lapce]]                            ;
+         [:!Ol :!Tf1 [:lapce]]                             ;
+         [:!Om :!Tf2 [:lapce]]                             ;
+         [:!On :!Tf4 [:lapce]]                             ;
+         [:!Oo :!Tf5 [:lapce]]                             ;
+         [:!Op :!Tf6 [:lapce]]                             ;
+         [:!Oq :!Tf7 [:lapce]]                             ;
+         [:!Or :!Tf8 [:lapce]]                             ;
+         [:!Os :!Tf9 [:lapce]]                             ;
+         [:!Ot :!Tf10 [:lapce]]                            ;
+         [:!Ou :!Tf11 [:lapce]]                            ;
+         [:!Ov :!Tf12 [:lapce]]                            ;
+         [:!Ow :!OTf1 [:lapce]]                            ;
+         [:!Ox :!OTf2 [:lapce]]                            ;
+         [:!Oy :!OTf4 [:lapce]]                            ;
+         [:!Oz :!OTf5 [:lapce]]                            ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Editor
+{:des "Editor alt - alphabet"
+ :rules [;
+         [:!SOa :!SOf1 [:lapce]]                           ;
+         [:!SOb :!SOf2 [:lapce]]                           ;
+         [:!SOc :!SOf4 [:lapce]]                           ;
+         [:!SOd :!SOf5 [:lapce]]                           ;
+         [:!SOe :!SOf6 [:lapce]]                           ;
+         [:!SOf :!SOf7 [:lapce]]                           ;
+         [:!SOg :!SOf8 [:lapce]]                           ;
+         [:!SOh :!SOf9 [:lapce]]                           ;
+         [:!SOi :!SOf10 [:lapce]]                          ;
+         [:!SOj :!SOf11 [:lapce]]                          ;
+         [:!SOk :!SOf12 [:lapce]]                          ;
+         [:!SOl :!STf1 [:lapce]]                           ;
+         [:!SOm :!STf2 [:lapce]]                           ;
+         [:!SOn :!STf4 [:lapce]]                           ;
+         [:!SOo :!STf5 [:lapce]]                           ;
+         [:!SOp :!STf6 [:lapce]]                           ;
+         [:!SOq :!STf7 [:lapce]]                           ;
+         [:!SOr :!STf8 [:lapce]]                           ;
+         [:!SOs :!STf9 [:lapce]]                           ;
+         [:!SOt :!STf10 [:lapce]]                          ;
+         [:!SOu :!STf11 [:lapce]]                          ;
+         [:!SOv :!STf12 [:lapce]]                          ;
+         [:!SOw :!SOTf1 [:lapce]]                          ;
+         [:!SOx :!SOTf2 [:lapce]]                          ;
+         [:!SOy :!SOTf4 [:lapce]]                          ;
+         [:!SOz :!SOTf5 [:lapce]]                          ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Editor
+{:des "Editor control - alphabet"
+ :rules [;
+         [:!Cleft_arrow :!Ta [:editor]]                    ; cmd-left
+         [:!Sspacebar :!Tb [:editor]]                      ; shift-space
+         ; [: :!Tc [:editor]]          DEFAULT
+         ; [: :!Td [:editor]]          DEFAULT
+         [:!Cright_arrow :!Te [:editor]]                   ; cmd-right
+         [:!Sreturn_or_enter :!Tf [:editor]]               ; shift-enter
+         ; [: :!Tg [:editor]]          COLLISION (remapped)
+         ; [: :!Th [:editor]]          COLLISION (remapped)
+         ; [: :!Ti [:editor]]          DEFAULT
+         ; [: :!Tj [:editor]]          COLLISION (remapped)
+         ; [: :!Tk [:editor]]          COLLISION (delete)
+         ; [: :!Tl [:editor]]          COLLISION (delete)
+         ; [: :!Tm [:editor]]          DEFAULT
+         ; [: :!Tn [:editor]]          COLLISION (remapped)
+         [:!Cup_arrow :!To [:editor]]                      ; cmd-up
+         [:!Cdown_arrow :!Tp [:editor]]                    ; cmd-down
+         ; [: :!Tq [:editor]]          DEFAULT
+         ; [: :!Tr [:editor]]          COLLISION (remapped)
+         ; [: :!Ts [:editor]]          COLLISION (remapped)
+         ; [: :!Tt [:editor]]          COLLISION (remapped)
+         ; [: :!Tu [:editor]]          COLLISION (delete)
+         [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up
+         ; [: :!Tw [:editor]]          COLLISION (delete)
+         [:!TCdown_arrow :!Tx [:editor]]                   ; ctrl-cmd-down
+         ; [: :!Ty [:editor]]          DEFAULT
+         ; [: :!Tz [:editor]]          DEFAULT
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
