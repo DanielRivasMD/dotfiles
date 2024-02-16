@@ -1,6 +1,6 @@
 
 [ui]
-font-size = 18
+font-size = 16
 
 [editor]
 font-size = 16
@@ -8,6 +8,8 @@ tab-width = 2
 format-on-save = true
 multicursor-whole-words = false
 font-family = "Hack Nerd Font"
+enable-completion-lens = true
+show-tab = true
 
 [core]
 modal = false
@@ -16,7 +18,7 @@ icon-theme = "Material Icons"
 custom-titlebar = true
 
 [terminal]
-font-size = 18
+font-size = 16
 
 [lapce-julia-ls]
 "lsp.serverPath" = "/usr/local/bin/julia"
