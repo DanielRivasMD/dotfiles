@@ -5,34 +5,32 @@
  :rules [;
          [:left_shift :left_shift :term {:alone [:!Oa]}]   ; shift
          [:!Oleft_arrow :!Ob [:term]]                      ; alt-left
-         [:!WQRleft_shift :!Oc [:term]]                    ; delete-shift
-         [:!Sright_option :!Od [:term]]                    ; shift-alt
-         ; [: :!Oe [:term]]            COLLISION => ACCENT
+         ; [: :!Oc [:term]]            COLLISION (remapped)
+         ; [: :!Od [:term]]            COLLISION (delete)
+         ; [: :!Oe [:term]]            COLLISION (accent)
          [:!Oright_arrow :!Of [:term]]                     ; alt-right
-         [:!OTright_shift :!Og [:term]]                    ; tab-shift
-         [:!OTright_option :!Oh [:term]]                     ; tab-shift
-         ; [: :!Oi [:term]]            COLLISION => ACCENT
-         [:!OCreturn_or_enter :!Oj [:term]]                       ; tab-space
-         [:!OTreturn_or_enter :!Ok [:term]]                ; tab-enter
-         [:!OTright_command :!Ol [:term]]; bspace
-         ; [:delete_or_backspace :!WQright_shift :term {:alone [:!Ol]}]; bspace
-         [:!OTspacebar :!Om [:term]] ; alt
-         [:!OTkeypad_0 :!Om [:term]] ; alt
-         ; [:left_option :left_option :term {:alone [:!Om]}] ; alt
-         ; [: :!On [:term]]            COLLISION => ACCENT
+         [:!OTright_shift :!Og [:term]]                    ; alt-ctrl-shift
+         [:!OTright_option :!Oh [:term]]                   ; alt-ctrl-alt
+         ; [: :!Oi [:term]]            COLLISION (accent)
+         [:!OCreturn_or_enter :!Oj [:term]]                ; alt-cmd-enter
+         [:!OTreturn_or_enter :!Ok [:term]]                ; alt-ctrl-enter
+         [:!OTright_command :!Ol [:term]]                  ; alt-ctrl-cmd
+         [:!OTspacebar :!Om [:term]]                       ; alt-ctrl-space
+         [:!OTkeypad_0 :!Om [:term]]                       ; alt-ctrl-0
+         ; [: :!On [:term]]            COLLISION (accent)
          [:!OCspacebar :!Oo [:term]]                       ; alt-cmd-space
-         [:!OCkeypad_0 :!Oo [:term]]                       ; alt-cmd-space
+         [:!OCkeypad_0 :!Oo [:term]]                       ; alt-cmd-0
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift
-         [:!Espacebar :!Os [:term]]                        ; alt-space
-         [:!OCdelete_or_backspace :!Ot [:term]]                        ; shift-space
-         ; [: :!Ou [:term]]            COLLISION => ACCENT
-         [:!OTdelete_or_backspace :!Ov [:term]]                 ; shift-enter
-         [:!OTleft_arrow :!Ow [:term]]                     ; space-left
-         [:!OTright_arrow :!Ox [:term]]                    ; space-right
-         [:!OTdown_arrow :!Oy [:term]]                     ; space-down
-         [:!OTup_arrow :!Oz [:term]]                       ; space-up
+         [:!Eleft_command :!Os [:term]]                    ; alt-cmd
+         [:!OCdelete_or_backspace :!Ot [:term]]            ; alt-cmd-bspace
+         ; [: :!Ou [:term]]            COLLISION (accent)
+         [:!OTdelete_or_backspace :!Ov [:term]]            ; alt-ctrl-bspace
+         [:!OTleft_arrow :!Ow [:term]]                     ; alt-ctrl-left
+         [:!OTright_arrow :!Ox [:term]]                    ; alt-ctrl-right
+         [:!OTdown_arrow :!Oy [:term]]                     ; alt-ctrl-down
+         [:!OTup_arrow :!Oz [:term]]                       ; alt-ctrl-up
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -45,36 +43,36 @@
          [:!EWRspacebar :!SOc [:term]]                     ; esc-space
          [:!EWRreturn_or_enter :!SOd [:term]]              ; esc-enter
          [:!EWRdelete_or_backspace :!SOe [:term]]          ; esc-bspace
-         [:!EWRup_arrow :!SOf [:term]]                     ;
-         [:!EWRdown_arrow :!SOg [:term]]                   ;
-         [:!EWRleft_arrow :!SOh [:term]]                   ;
-         [:!EWRright_arrow :!SOi [:term]]                  ;
+         [:!EWRleft_arrow :!SOf [:term]]                   ; esc-left
+         [:!EWRright_arrow :!SOg [:term]]                  ; esc-right
+         [:!EWRup_arrow :!SOh [:term]]                     ; esc-down
+         [:!EWRdown_arrow :!SOi [:term]]                   ; esc-up
          ; [: :!SOj [:term]]                               ;
          ; [: :!SOk [:term]]                               ;
          ; [: :!SOl [:term]]                               ;
          ; [: :!SOm [:term]]                               ;
          ; [: :!SOn [:term]]                               ;
-         ; [: :!SOo [:term]]           COLLISION => ACCENT
-         [:!EWRhyphen :!SOp [:term]]                        ;
-         [:!EWRequal_sign :!SOq [:term]]                    ;
-         [:!OC1 :!SOr [:term]]                              ;
-         [:!OC2 :!SOs [:term]]                              ;
-         [:!OC3 :!SOt [:term]]                              ;
-         [:!OC4 :!SOu [:term]]                              ;
-         [:!OC5 :!SOv [:term]]                              ;
-         [:!OC6 :!SOw [:term]]                              ;
-         [:!OC7 :!SOx [:term]]                              ;
-         [:!OC8 :!SOy [:term]]                              ;
-         [:!OC9 :!SOz [:term]]                              ;
-         [:!OCkeypad_1 :!SOr [:term]]                              ;
-         [:!OCkeypad_2 :!SOs [:term]]                              ;
-         [:!OCkeypad_3 :!SOt [:term]]                              ;
-         [:!OCkeypad_4 :!SOu [:term]]                              ;
-         [:!OCkeypad_5 :!SOv [:term]]                              ;
-         [:!OCkeypad_6 :!SOw [:term]]                              ;
-         [:!OCkeypad_7 :!SOx [:term]]                              ;
-         [:!OCkeypad_8 :!SOy [:term]]                              ;
-         [:!OCkeypad_9 :!SOz [:term]]                              ;
+         ; [: :!SOo [:term]]           COLLISION (accent)
+         [:!EWRhyphen :!SOp [:term]]                       ; esc--
+         [:!EWRequal_sign :!SOq [:term]]                   ; esc-=
+         [:!OC1 :!SOr [:term]]                             ; alt-cmd-1
+         [:!OC2 :!SOs [:term]]                             ; alt-cmd-2
+         [:!OC3 :!SOt [:term]]                             ; alt-cmd-3
+         [:!OC4 :!SOu [:term]]                             ; alt-cmd-4
+         [:!OC5 :!SOv [:term]]                             ; alt-cmd-5
+         [:!OC6 :!SOw [:term]]                             ; alt-cmd-6
+         [:!OC7 :!SOx [:term]]                             ; alt-cmd-7
+         [:!OC8 :!SOy [:term]]                             ; alt-cmd-8
+         [:!OC9 :!SOz [:term]]                             ; alt-cmd-9
+         [:!OCkeypad_1 :!SOr [:term]]                      ; alt-cmd-1
+         [:!OCkeypad_2 :!SOs [:term]]                      ; alt-cmd-2
+         [:!OCkeypad_3 :!SOt [:term]]                      ; alt-cmd-3
+         [:!OCkeypad_4 :!SOu [:term]]                      ; alt-cmd-4
+         [:!OCkeypad_5 :!SOv [:term]]                      ; alt-cmd-5
+         [:!OCkeypad_6 :!SOw [:term]]                      ; alt-cmd-6
+         [:!OCkeypad_7 :!SOx [:term]]                      ; alt-cmd-7
+         [:!OCkeypad_8 :!SOy [:term]]                      ; alt-cmd-8
+         [:!OCkeypad_9 :!SOz [:term]]                      ; alt-cmd-9
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
