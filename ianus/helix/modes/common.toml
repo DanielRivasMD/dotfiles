@@ -9,8 +9,32 @@ backspace = ["delete_char_backward"]
 A-d = ["delete_word_forward"]                              # delete next word  # `shift-alt`
 # A-c = [""]                                               # none              # `del-shift`
 
-# reload
-A-C-F6 = ["normal_mode", ":reload-all", "XXX_MODE"]
+# movement
+A-b = ["move_prev_word_start", "collapse_selection"]       # word left         # `alt-left`
+A-f = ["move_next_word_end", "collapse_selection"]         # word right        # `alt-right`
+S-F1 = ["goto_prev_paragraph", "collapse_selection"]       # prev block        # `alt-up`
+S-F2 = ["goto_next_paragraph", "collapse_selection"]       # next block        # `alt-down`
+
+# movement
+S-left = ["extend_char_left"]                              # select left       # `shift-left`
+S-right = ["extend_char_right"]                            # select right      # `shift-right`
+S-up = ["extend_line_above"]                               # select up         # `shift-up`
+S-down = ["extend_line_below"]                             # select down       # `shift-down`
+
+# movement
+A-S-left = ["extend_prev_word_start"]                      # select word left  # `alt-shift-left`
+A-S-right = [ "extend_next_word_end"]                      # select word right # `alt-shift-right`
+A-S-up = ["select_mode", "goto_prev_paragraph",
+  "XXX_MODE"]                                              # select block prev # `alt-shift-up`
+A-S-down = ["select_mode", "goto_next_paragraph",
+  "XXX_MODE"]                                              # select block next # `alt-shift-down`
+
+# movement
+A-left = ["select_mode", "goto_line_start", "XXX_MODE"]    # select start line # `cmd-shift-left`
+A-right = ["select_mode", "goto_line_end", "XXX_MODE"]     # select end line   # `cmd-shift-right`
+S-F4 = ["select_mode", "goto_file_start", "XXX_MODE"]      # select start      # `cmd-shift-up`
+S-F5 = ["select_mode", "goto_last_line", "goto_line_end",
+  "XXX_MODE"]                                              # select end        # `cmd-shift-down`
 
 # helix pane
 C-left = ["jump_view_left"]                                # prev split        # `ctrl-left`
@@ -27,6 +51,14 @@ A-C-F9 = ["goto_next_buffer"]                              # next tab          #
 A-C-F10 = ["hsplit"]                                       # horizontal split  # `ctrl-cmd-shift`
 A-C-F11 = ["vsplit"]                                       # vertical split    # `ctrl-cmd-alt`
 A-C-F12 = ["wonly"]                                        # unsplit           # `ctrl-cmd-cmd`
+
+# comments
+A-C-S-F8 = ["goto_prev_comment"]                           # prev comment      # `ctrl-cmd-[`
+A-C-S-F9 = ["goto_next_comment"]                           # next comment      # `ctrl-cmd-]`
+
+# version control
+S-A-C-F11 = ["goto_prev_change"]                           # prev change       # `alt-cmd-up`
+S-A-C-F12 = ["goto_next_change"]                           # next change       # `alt-cmd-down`
 
 # jump
 A-F13 = ["jump_backward"]                                  # prev jump         # `ctrl-cmd-;`
@@ -48,40 +80,8 @@ A-C-F17 = ["goto_prev_class"]                              # prev class        #
 A-C-F18 = ["goto_next_class"]                              # next class        # `ctrl-cmd-2`
 A-C-F19 = ["workspace_symbol_picker"]                      # symbol list       # `ctrl-cmd-0`
 
-# comments
-C-F13 = ["goto_prev_comment"]                              # prev comment      # `ctrl-cmd-[`
-C-F16 = ["goto_next_comment"]                              # next comment      # `ctrl-cmd-]`
-
-# version control
-S-A-C-F6 = ["goto_prev_change"]                            # prev change       # `alt-cmd-up`
-S-A-C-F7 = ["goto_next_change"]                            # next change       # `alt-cmd-down`
-
-# movement
-S-left = ["extend_char_left"]                              # select left       # `shift-left`
-S-right = ["extend_char_right"]                            # select right      # `shift-right`
-S-up = ["extend_line_above"]                               # select up         # `shift-up`
-S-down = ["extend_line_below"]                             # select down       # `shift-down`
-
-# movement
-A-b = ["move_prev_word_start", "collapse_selection"]       # word left         # `alt-left`
-A-f = ["move_next_word_end", "collapse_selection"]         # word right        # `alt-right`
-S-F1 = ["goto_prev_paragraph", "collapse_selection"]       # prev block        # `alt-up`
-S-F2 = ["goto_next_paragraph", "collapse_selection"]       # next block        # `alt-down`
-
-# movement
-A-left = ["select_mode", "goto_line_start", "XXX_MODE"]    # select start line # `cmd-shift-left`
-A-right = ["select_mode", "goto_line_end", "XXX_MODE"]     # select end line   # `cmd-shift-right`
-S-A-C-F8 = ["select_mode", "goto_file_start", "XXX_MODE"]  # select start      # `cmd-shift-up`
-S-A-C-F9 = ["select_mode", "goto_last_line", "goto_line_end",
-  "XXX_MODE"]                                              # select end        # `cmd-shift-down`
-
-# movement
-A-S-left = ["extend_prev_word_start"]                      # select word left  # `alt-shift-left`
-A-S-right = [ "extend_next_word_end"]                      # select word right # `alt-shift-right`
-A-S-up = ["select_mode", "goto_prev_paragraph",
-  "XXX_MODE"]                                              # select block prev # `alt-shift-up`
-A-S-down = ["select_mode", "goto_next_paragraph",
-  "XXX_MODE"]                                              # select block next # `alt-shift-down`
+# reload
+A-C-F20 = ["normal_mode", ":reload-all", "XXX_MODE"]
 
 # alphabet
 # A-F1 = [""]                                              #                   # `alt-a`
