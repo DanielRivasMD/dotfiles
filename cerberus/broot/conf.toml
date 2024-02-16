@@ -4,30 +4,51 @@
 default_flags = ""
 
 ####################################################################################################
-
 # config
+####################################################################################################
+
+# create
+[[verbs]]
+invocation = "create {subpath}"
+shortcut = "c"
+key = "ctrl-space"
+execution = "touch {directory}/{subpath}"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-space` -> create file"
+
+# rename
 [[verbs]]
 external = "mv {file} {parent}/{new_filename}"
 invocation = "rename {new_filename:file-name}"
+shortcut = "rn"
 key = "ctrl-y"
 leave_broot = false
 auto_exec = false
-description = ""
+description = "`delete-space` -> rename file"
 
+# delete
 [[verbs]]
-# invocation = "open_stay!"
+external = "rm {file}"
+invocation = "rm {file:file-name}"
+key = "ctrl-l"
+leave_broot = false
+auto_exec = false
+description = "`shift-alt` -> rename file"
+
+# open
+[[verbs]]
 internal = "open_stay!"
 key = "ctrl-e"
-description = ""
+description = "`cmd-right` -> open directory"
 
 [[verbs]]
-# invocation = "close_pane_ok"
 internal = "close_panel_ok"
 key = "ctrl-a"
-description = ""
+description = "`cmd-left` -> close direcotry"
 
 [[verbs]]
-key = "alt-ctrl-f6"
+key = "alt-ctrl-shift-f11"
 external = "command open {file}"
 leave_broot = false
 description = "`cmd-enter` -> open according to OS"
@@ -44,19 +65,21 @@ key = "ctrl-x"
 cmd = ":cd"
 description = "`ctrl-cmd-down` -> go into directory"
 
+# quit
 [[verbs]]
 invocation = "quit"
 key = "ctrl-f7"
 internal = "quit"
 description = "`alt-q` -> quit broot"
 
+# refresh
 [[verbs]]
 invocation = "refresh"
 key = "ctrl-f8"
 internal = "refresh"
 description = "`alt-r` -> refresh tree"
 
-# file
+# editor
 [[verbs]]
 invocation = "micro"
 key = "ctrl-j"
@@ -139,6 +162,7 @@ external = "xsv table {file}"
 leave_broot = true
 description = "`alt-x` -> open file with `xsv`"
 
+# copy
 [[verbs]]
 invocation = "print_to_copy"
 key = "alt-f4"
@@ -181,9 +205,9 @@ description = "`alt-shift-c` -> sort by count"
 # stage
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "ctrl-space"
+key = "alt-ctrl-shift-f10"
 internal = "toggle_staging_area"
-description = "toggle staging area"
+description = "`alt` -> toggle staging area"
 
 [[verbs]]
 invocation = "toggle_stage"
@@ -218,15 +242,15 @@ description = "`cmd-down` -> go to bottom of the list"
 
 [[verbs]]
 invocation = "page_up"
-key = "alt-up"
+key = "shift-f1"
 internal = "page_up"
-description = "go to page up"
+description = "`alt-up` -> go to page up"
 
 [[verbs]]
 invocation = "page_down"
-key = "alt-down"
+key = "shift-f2"
 internal = "page_down"
-description = "go to page down"
+description = "`alt-down` -> go to page down"
 
 # panel
 [[verbs]]
@@ -263,17 +287,10 @@ key = "ctrl-right"
 internal = "panel_right"
 description = "select right panel"
 
-# create
-[[verbs]]
-invocation = "create {subpath}"
-shortcut = "c"
-execution = "touch {directory}/{subpath}"
-leave_broot = false
-description = "create file"
-
 
 ####################################################################################################
 
+# command line move & delete
 [[verbs]]
 key = "alt-b"
 internal = ":input_go_word_left"
