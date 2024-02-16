@@ -294,3 +294,35 @@ key = "Alt+Ctrl+F3"
 [[keymaps]]
 command = "toggle_terminal_focus"
 key = "Meta+Shift+F3"
+
+[[keymaps]]
+command = "document_start"
+key = "Ctrl+O"
+
+[[keymaps]]
+command = "document_end"
+key = "Ctrl+P"
+
+# [[keymaps]]
+# command = "-document_start"
+# key = "Meta+Up"
+
+# [[keymaps]]
+# command = "-document_end"
+# key = "Meta+Down"
+
+[[keymaps]]
+command = "save"
+key = "Ctrl+Alt+F1"
+
+# [[keymaps]]
+# command = "-save"
+# key = "Meta+S"
+
+[[keymaps]]
+command = "split_close"
+key = "Ctrl+F7"
+
+# [[keymaps]]
+# command = "-split_close"
+# key = "Meta+W"
