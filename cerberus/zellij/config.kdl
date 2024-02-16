@@ -73,10 +73,10 @@ keybinds clear-defaults=true {
         // bind "Alt C" {}
         // bind "Alt D" {}
         // bind "Alt E" {}
-        bind "Alt F" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Normal"; }
-        bind "Alt G" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Normal"; }
-        bind "Alt H" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Normal"; }
-        bind "Alt I" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Normal"; }
+        bind "Alt F" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Normal"; }
+        bind "Alt G" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Normal"; }
+        bind "Alt H" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Normal"; }
+        bind "Alt I" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Normal"; }
         // bind "Alt J" {}
         // bind "Alt K" {}
         // bind "Alt L" {}
