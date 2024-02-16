@@ -8,6 +8,14 @@
 // from the command palette or from `Zed` application menu.
 {
   "theme": "Solarized Dark",
+  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_size": 16,
+  "ui_font_family": "Zed Mono",
   "ui_font_size": 16,
-  "buffer_font_size": 16
+  "preferred_line_length": 100,
+  "tab_size": 2,
+  "terminal": {
+    "default_width": 640,
+    "default_height": 1000
+  }
 }
