@@ -11,30 +11,57 @@ default_flags = ""
 [[verbs]]
 invocation = "create {subpath}"
 shortcut = "c"
-key = "ctrl-space"
+key = "alt-ctrl-shift-f6"
 execution = "touch {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`ctrl-space` -> create file"
+description = "`ctrl-cmd-enter` -> create file"
+
+# directory
+[[verbs]]
+invocation = "mk {subpath}"
+key = "alt-ctrl-f10"
+execution = "mkdir {directory}/{subpath}"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-shift` -> create directory"
+
+# move
+[[verbs]]
+external = "mv {file} {other-panel-directory}"
+invocation = "move_to_pane"
+key = "alt-ctrl-f11"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-alt` -> move file to pane"
+
+# copy
+[[verbs]]
+external = "cp -r {file} {other-panel-directory}"
+invocation = "copy_to_pane"
+key = "alt-ctrl-f12"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-cmd` -> copy file to pane"
 
 # rename
 [[verbs]]
 external = "mv {file} {parent}/{new_filename}"
 invocation = "rename {new_filename:file-name}"
 shortcut = "rn"
-key = "ctrl-y"
+key = "ctrl-l"
 leave_broot = false
 auto_exec = false
-description = "`delete-space` -> rename file"
+description = "`shift-alt` -> rename file"
 
 # delete
 [[verbs]]
 external = "rm {file}"
 invocation = "rm {file:file-name}"
-key = "ctrl-l"
+key = "alt-ctrl-shift-f7"
 leave_broot = false
 auto_exec = false
-description = "`shift-alt` -> rename file"
+description = "`ctrl-cmd-delete` -> delete file"
 
 # open
 [[verbs]]
@@ -48,7 +75,7 @@ key = "ctrl-a"
 description = "`cmd-left` -> close direcotry"
 
 [[verbs]]
-key = "alt-ctrl-shift-f11"
+key = "alt-ctrl-f6"
 external = "command open {file}"
 leave_broot = false
 description = "`cmd-enter` -> open according to OS"
