@@ -139,6 +139,10 @@ key = 'Meta+\'
 command = "-toggle_file_explorer_focus"
 key = "Meta+Shift+E"
 
+[[keymaps]]
+command = "-toggle_terminal_focus"
+key = "Ctrl+`"
+
 ####################################################################################################
 # remappings
 ####################################################################################################
@@ -169,53 +173,47 @@ key = "Alt+ArrowUp"
 
 [[keymaps]]
 command = "insert_cursor_above"
-mode = "i"
-key = "Alt+k"
+key = "Alt+F12"
 
 [[keymaps]]
 command = "insert_cursor_below"
-mode = "i"
-key = "Alt+j"
+key = "Alt+F11"
 
 [[keymaps]]
 command = "select_current_line"
-mode = "i"
-key = "Alt+Shift+l"
+key = "Ctrl+Shift+F1"
 
 [[keymaps]]
 command = "toggle_line_comment"
-key = "Alt+Shift+c"
+key = "Alt+Shift+F4"
 
 [[keymaps]]
 command = "indent_line"
-key = "Alt+Shift+i"
+key = "Alt+Shift+F10"
 
 [[keymaps]]
 command = "outdent_line"
-key = "Ctrl+F4"
+key = "Ctrl+Shift+F5"
 
 [[keymaps]]
 command = "undo"
-key = "Meta+Z"
+key = "Ctrl+F11"
 
 [[keymaps]]
 command = "redo"
-key = "Alt+Shift+u"
+key = "Ctrl+Shift+F11"
 
 [[keymaps]]
 command = "move_line_up"
-mode = "i"
-key = "Alt+Shift+k"
+key = "Alt+Shift+F12"
 
 [[keymaps]]
 command = "move_line_down"
-mode = "i"
-key = "Alt+Shift+j"
+key = "Alt+Shift+F11"
 
 [[keymaps]]
 command = "delete_line"
-mode = "i"
-key = "Alt+Shift+x"
+key = "Alt+Ctrl+Shift+F2"
 
 [[keymaps]]
 command = "next_diff"
@@ -227,33 +225,23 @@ key = "Alt+Meta+ArrowUp"
 
 [[keymaps]]
 command = "select_next_current"
-mode = "i"
-key = "Alt+d"
+key = "Alt+F5"
 
 [[keymaps]]
 command = "select_skip_current"
-mode = "i"
-key = "Alt+y"
+key = "Alt+Ctrl+F4"
 
 [[keymaps]]
 command = "select_all_current"
-mode = "i"
-key = "Alt+a"
+key = "Alt+F1"
 
 [[keymaps]]
 command = "select_undo"
-mode = "i"
-key = "Alt+z"
+key = "Alt+Ctrl+F5"
 
 [[keymaps]]
 command = "duplicate_line_down"
-mode = "i"
-key = "Alt+Shift+d"
-
-[[keymaps]]
-command = "duplicate_line_up"
-mode = "i"
-key = " "
+key = "Alt+Shift+F5"
 
 [[keymaps]]
 command = "next_window_tab"
@@ -267,9 +255,9 @@ key = "Ctrl+Alt+ArrowLeft"
 command = "show_hover"
 key = "Ctrl+Space"
 
-[[keymaps]]
-command = "rename_symbol"
-key = "Alt+Shift+F4"
+# [[keymaps]]
+# command = "rename_symbol"
+# key = "Alt+Shift+F4"
 
 [[keymaps]]
 command = "next_error"
@@ -280,30 +268,29 @@ command = "previous_error"
 key = "Ctrl+v"
 
 [[keymaps]]
-command = "open_keyboard_shortcuts"
-key = "Meta+."
-
-[[keymaps]]
 command = "delete_to_beginning_of_line"
-mode = "i"
 key = "Ctrl+u"
 
 [[keymaps]]
 command = "split_vertical"
-key = "Alt+Shift+g"
+key = "Ctrl+Meta+Shift+g"
 
 [[keymaps]]
 command = "split_horizontal"
-key = "Alt+Shift+h"
+key = "Ctrl+Meta+Shift+h"
 
-[[keymaps]]
-command = "goto_definition"
-key = "Ctrl+Alt+Meta+Enter"
+# [[keymaps]]
+# command = "goto_definition"
+# key = "Ctrl+Alt+Meta+Enter"
 
-[[keymaps]]
-command = "goto_type_definition"
-key = "Alt+Meta+Enter"
+# [[keymaps]]
+# command = "goto_type_definition"
+# key = "Alt+Meta+Enter"
 
 [[keymaps]]
 command = "toggle_file_explorer_focus"
+key = "Alt+Ctrl+F3"
+
+[[keymaps]]
+command = "toggle_terminal_focus"
 key = "Meta+Shift+F3"
