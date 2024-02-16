@@ -7,15 +7,94 @@ default_flags = ""
 # config
 ####################################################################################################
 
-# create
+# move
 [[verbs]]
-invocation = "create {subpath}"
-shortcut = "c"
-key = "alt-ctrl-shift-f6"
-execution = "touch {directory}/{subpath}"
+invocation = "select_first"
+key = "ctrl-o"
+internal = "select_first"
+description = "`cmd-up` -> go to top of the list"
+
+[[verbs]]
+invocation = "select_last"
+key = "ctrl-p"
+internal = "select_last"
+description = "`cmd-down` -> go to bottom of the list"
+
+[[verbs]]
+invocation = "page_up"
+key = "shift-f1"
+internal = "page_up"
+description = "`alt-up` -> go to page up"
+
+[[verbs]]
+invocation = "page_down"
+key = "shift-f2"
+internal = "page_down"
+description = "`alt-down` -> go to page down"
+
+# open
+[[verbs]]
+internal = "close_panel_ok"
+key = "ctrl-a"
+description = "`cmd-left` -> close direcotry"
+
+[[verbs]]
+internal = "open_stay!"
+key = "ctrl-e"
+description = "`cmd-right` -> open directory"
+
+[[verbs]]
+invocation = "root_up"
+key = "ctrl-v"
+internal = "root_up"
+description = "`ctrl-cmd-up` -> move tree root up"
+
+[[verbs]]
+invocation = "open_leave"
+key = "ctrl-x"
+cmd = ":cd"
+description = "`ctrl-cmd-down` -> go into directory"
+
+[[verbs]]
+key = "alt-ctrl-f6"
+external = "command open {file}"
 leave_broot = false
-auto_exec = false
-description = "`ctrl-cmd-enter` -> create file"
+description = "`cmd-enter` -> open according to OS"
+
+# panel
+[[verbs]]
+invocation = "toggle_preview"
+key = "alt-ctrl-f7"
+internal = "toggle_preview"
+description = "`ctrl-cmd-space` -> open / close preview panel"
+
+[[verbs]]
+invocation = "close_preview"
+key = "alt-ctrl-f8"
+apply_to = "file"
+internal = "close_preview {file}"
+leave_broot = false
+description = "`ctrl-cmd-left` -> close display"
+
+[[verbs]]
+invocation = "open_preview"
+key = "alt-ctrl-f9"
+apply_to = "file"
+internal = "open_preview {file}"
+leave_broot = false
+description = "`ctrl-cmd-right` -> display file on panel"
+
+[[verbs]]
+invocation = "panel_left"
+key = "ctrl-left"
+internal = "panel_left"
+description = "select left panel"
+
+[[verbs]]
+invocation = "panel_right"
+key = "ctrl-right"
+internal = "panel_right"
+description = "select right panel"
 
 # directory
 [[verbs]]
@@ -54,6 +133,16 @@ leave_broot = false
 auto_exec = false
 description = "`shift-alt` -> rename file"
 
+# create
+[[verbs]]
+invocation = "create {subpath}"
+shortcut = "c"
+key = "alt-ctrl-shift-f6"
+execution = "touch {directory}/{subpath}"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-enter` -> create file"
+
 # delete
 [[verbs]]
 external = "rm {file}"
@@ -63,34 +152,30 @@ leave_broot = false
 auto_exec = false
 description = "`ctrl-cmd-delete` -> delete file"
 
-# open
+# stage
 [[verbs]]
-internal = "open_stay!"
-key = "ctrl-e"
-description = "`cmd-right` -> open directory"
+invocation = "toggle_staging_area"
+key = "alt-ctrl-shift-f10"
+internal = "toggle_staging_area"
+description = "`alt` -> toggle staging area"
 
 [[verbs]]
-internal = "close_panel_ok"
-key = "ctrl-a"
-description = "`cmd-left` -> close direcotry"
+invocation = "stage_all_files"
+key = "alt-f1"
+internal = "stage_all_files"
+description = "`alt-a` -> stage all matching files"
 
 [[verbs]]
-key = "alt-ctrl-f6"
-external = "command open {file}"
-leave_broot = false
-description = "`cmd-enter` -> open according to OS"
+invocation = "toggle_stage"
+key = "ctrl-f9"
+internal = "toggle_stage"
+description = "`alt-s` -> toggle stage"
 
 [[verbs]]
-invocation = "root_up"
-key = "ctrl-v"
-internal = "root_up"
-description = "`ctrl-cmd-up` -> move tree root up"
-
-[[verbs]]
-invocation = "open_leave"
-key = "ctrl-x"
-cmd = ":cd"
-description = "`ctrl-cmd-down` -> go into directory"
+invocation = "clear_stage"
+key = "alt-ctrl-f5"
+internal = "clear_stage"
+description = "`alt-z` -> clear stage area"
 
 # quit
 [[verbs]]
@@ -142,16 +227,16 @@ description = "`alt-h` -> go to previous match"
 
 # view
 [[verbs]]
-invocation = "toggle_files"
-key = "shift-alt-f7"
-internal = ":toggle_files"
-description = "`alt-shift-f` -> toggle files"
-
-[[verbs]]
 invocation = "toggle_hidden"
 key = "shift-alt-f5"
 internal = "toggle_hidden"
 description = "`alt-shift-d` -> toggle hidden"
+
+[[verbs]]
+invocation = "toggle_files"
+key = "shift-alt-f7"
+internal = ":toggle_files"
+description = "`alt-shift-f` -> toggle files"
 
 # pager
 [[verbs]]
@@ -228,91 +313,6 @@ invocation = "sort_by_count"
 key = "alt-shift-f4"
 internal = "sort_by_count"
 description = "`alt-shift-c` -> sort by count"
-
-# stage
-[[verbs]]
-invocation = "toggle_staging_area"
-key = "alt-ctrl-shift-f10"
-internal = "toggle_staging_area"
-description = "`alt` -> toggle staging area"
-
-[[verbs]]
-invocation = "toggle_stage"
-key = "ctrl-f9"
-internal = "toggle_stage"
-description = "`alt-s` -> toggle stage"
-
-[[verbs]]
-invocation = "clear_stage"
-key = "alt-ctrl-f5"
-internal = "clear_stage"
-description = "`alt-z` -> clear stage area"
-
-[[verbs]]
-invocation = "stage_all_files"
-key = "alt-f1"
-internal = "stage_all_files"
-description = "`alt-a` -> stage all matching files"
-
-# move
-[[verbs]]
-invocation = "select_first"
-key = "ctrl-o"
-internal = "select_first"
-description = "`cmd-up` -> go to top of the list"
-
-[[verbs]]
-invocation = "select_last"
-key = "ctrl-p"
-internal = "select_last"
-description = "`cmd-down` -> go to bottom of the list"
-
-[[verbs]]
-invocation = "page_up"
-key = "shift-f1"
-internal = "page_up"
-description = "`alt-up` -> go to page up"
-
-[[verbs]]
-invocation = "page_down"
-key = "shift-f2"
-internal = "page_down"
-description = "`alt-down` -> go to page down"
-
-# panel
-[[verbs]]
-invocation = "toggle_preview"
-key = "alt-ctrl-f7"
-internal = "toggle_preview"
-description = "`ctrl-cmd-space` -> open / close preview panel"
-
-[[verbs]]
-invocation = "close_preview"
-key = "alt-ctrl-f8"
-apply_to = "file"
-internal = "close_preview {file}"
-leave_broot = false
-description = "`ctrl-cmd-left` -> close display"
-
-[[verbs]]
-invocation = "open_preview"
-key = "alt-ctrl-f9"
-apply_to = "file"
-internal = "open_preview {file}"
-leave_broot = false
-description = "`ctrl-cmd-right` -> display file on panel"
-
-[[verbs]]
-invocation = "panel_left"
-key = "ctrl-left"
-internal = "panel_left"
-description = "select left panel"
-
-[[verbs]]
-invocation = "panel_right"
-key = "ctrl-right"
-internal = "panel_right"
-description = "select right panel"
 
 
 ####################################################################################################
