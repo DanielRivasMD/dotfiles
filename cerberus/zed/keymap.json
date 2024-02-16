@@ -5,22 +5,23 @@
     }
   },
   {
-
     "context": "Editor",
     "bindings": {
-
       "ctrl-u": "editor::DeleteToBeginningOfLine",
       "ctrl-k": "editor::DeleteToEndOfLine",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
-
       "alt-d": "editor::DeleteToNextWordEnd",
       // "alt-f": "project_search::ToggleFocus",
       "alt-h": "search::SelectPrevMatch",
       "alt-j": "editor::AddSelectionBelow",
       "alt-k": "editor::AddSelectionAbove",
       "alt-l": "search::SelectNextMatch",
-
-      "alt-shift-c": ["editor::ToggleComments", { "advance_downwards": false }],
+      "alt-shift-c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ],
       "alt-shift-d": "editor::DuplicateLine",
       "alt-shift-i": "editor::Indent",
       "alt-shift-j": "editor::MoveLineDown",
@@ -31,20 +32,19 @@
       "alt-shift-up": "editor::SelectToStartOfParagraph",
       "alt-shift-down": "editor::SelectToEndOfParagraph",
       "alt-up": "editor::MoveToStartOfParagraph",
-
     }
   },
   {
-
     "context": "Workspace",
     "bindings": {
-
-      "ctrl-r": "file_finder::Toggle",
-      "ctrl-cmd-shift-g": "pane::SplitRight",
-      "ctrl-cmd-shift-h": "pane::SplitDown",
+      "ctrl-": "terminal_panel::ToggleFocus",
+      // "ctrl-r": "file_finder::Toggle",
+      // "cmd-b": "workspace::ToggleLeftDock",
+      // "cmd-shift-p": "command_palette::Toggle",
+      "ctrl-cmd-shift-g": "pane::SplitRight", // alt-ctrl-shift
+      "ctrl-cmd-shift-h": "pane::SplitDown", // alt-ctrl-alt
       // "cmd-k up": "pane::SplitUp",
       // "cmd-k left": "pane::SplitLeft",
-
     }
   }
 ]
