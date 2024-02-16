@@ -31,9 +31,11 @@
 :applications
 {;
  :browser ["org.mozilla.firefox"]                                              ;
- :editor ["lapce", "zed", "alacritty"]                                         ;
  :mail ["com.apple.mail"]                                                      ;
+ :editor ["lapce", "zed", "alacritty"]                                         ;
  :term ["alacritty"]                                                           ;
+ :lapce ["lapce"]                                                              ;
+ :zed ["zed"]                                                                  ;
  }
 
 :devices {;
