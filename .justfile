@@ -31,7 +31,7 @@ Cerberus:
 
 # link Ianus archive
 Ianus:
-  source .just/iauns.sh
+  source .just/ianus.sh
 
 ####################################################################################################
 
