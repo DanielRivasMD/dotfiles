@@ -1,43 +1,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
-{:des "Terminal control - alphabet"
- :rules [;
-         [:!Cleft_arrow :!Ta [:term]]                      ; cmd-left
-         [:!Sspacebar :!Tb [:term]]                        ; shift-space
-         ; [: :!Tc [:term]]            DEFAULT
-         ; [: :!Td [:term]]            DEFAULT
-         [:!Cright_arrow :!Te [:term]]                     ; cmd-right
-         [:!Sreturn_or_enter :!Tf [:term]]                 ; shift-enter
-         [:!WQRcaps_lock :!Tg [:term]]                     ; delete-caps
-         [:!WQRtab :!Th [:term]]                           ; delete-tab
-         ; [: :!Ti [:term]]            DEFAULT
-         [:!WQRright_command :!Tj [:term]]                 ; delete-cmd
-         [:!Sright_command :!Tk [:term]]                   ; shift-cmd
-         [:!Rleft_option :!Tl [:term]]                     ; shift-alt
-         ; [: :!Tm [:term]]            DEFAULT
-         [:!WQRright_option :!Tn [:term]]                  ; delete-alt
-         [:!Cup_arrow :!To [:term]]                        ; cmd-up
-         [:!Cdown_arrow :!Tp [:term]]                      ; cmd-down
-         ; [: :!Tq [:term]]            DEFAULT
-         [:!WQRleft_control :!Tr [:term]]                  ; delete-ctrl
-         [:!WQRleft_option :!Ts [:term]]                   ; delete-alt
-         [:!WQRleft_command :!Tt [:term]]                  ; delete-cmd
-         [:!Rleft_command :!Tu [:term]]                    ; shift-cmd
-         [:!Rleft_control :!Tw [:term]]                    ; shift-ctrl
-         [:!TCup_arrow :!Tv [:term]]                       ; ctrl-cmd-up
-         [:!TCdown_arrow :!Tx [:term]]                     ; ctrl-cmd-down
-         [:!WQRspacebar :!Ty [:term]]                      ; delete-space
-         ; [: :!Tz [:term]]            DEFAULT
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal movement mappings"
+{:des "Terminal software bindings"
  :rules [;
          ; helix reload & broot open
-         [:!WQleft_option :!OTf6 [:term]]
+         [:!WQleft_option :!OTf6 [:term]]                  ; cmd-alt
 
          ; helix tab & broot viewer
          [:!WQspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
@@ -49,58 +16,49 @@
          [:!TCright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
 
          ; helix split
-         [:!TCright_alt :!OTf10 [:term]]                   ; ctrl-cmd-alt
-         [:!TCright_shift :!OTf11 [:term]]                 ; ctrl-cmd-shift
-         [:!TCright_command :!OTf12 [:term]]               ; cmd-cmd-alt
+         [:!TCright_shift :!OTf10 [:term]]                 ; ctrl-cmd-shift
+         [:!TCright_alt :!OTf11 [:term]]                   ; ctrl-cmd-alt
+         [:!TCright_command :!OTf12 [:term]]               ; ctrl-cmd-cmd
 
-         ; jump
-         [:!TCsemicolon :!Of13 [:term]]                       ; cmd-,
-         [:!TCquote :!Of14 [:term]]                      ; cmd-.
-         [:!TCbackslash :!Of15 [:term]]                       ; cmd-/
-         [:!TCreturn_or_enter :!Of16 [:term]]                 ; cmd-shift
+         ; helix jump
+         [:!TCsemicolon :!Of13 [:term]]                    ; ctrl-cmd-;
+         [:!TCquote :!Of14 [:term]]                        ; ctrl-cmd-'
+         [:!TCbackslash :!Of15 [:term]]                    ; ctrl-cmd-\
+         [:!TCreturn_or_enter :!Of16 [:term]]              ; ctrl-cmd-enter
 
-         ; ; jump
-         [:!TCkeypad_9 :!Of13 [:term]]                       ; cmd-,
-         [:!TCkeypad_6 :!Of14 [:term]]                      ; cmd-.
-         [:!TCkeypad_3 :!Of15 [:term]]                       ; cmd-/
-         [:!TCkeypad_period :!Of16 [:term]]                 ; cmd-shift
+         [:!TCkeypad_9 :!Of13 [:term]]                     ; ctrl-cmd-9
+         [:!TCkeypad_6 :!Of14 [:term]]                     ; ctrl-cmd-6
+         [:!TCkeypad_3 :!Of15 [:term]]                     ; ctrl-cmd-3
+         [:!TCkeypad_period :!Of16 [:term]]                ; ctrl-cmd-.
 
-         ; TODO: proably rebind to access from nushell
-         ; diagnostics
-         [:!TCcomma :!Of17]                                ; alt-cmd--
-         [:!TCperiod :!Of18]                            ; alt-cmd-=
-         [:!TCslash :!Of19]                   ; alt-cmd-backspace
+         ; helix diagnostics
+         [:!TCcomma :!Of17]                                ; ctrl-cmd-,
+         [:!TCperiod :!Of18]                               ; ctrl-cmd-.
+         [:!TCslash :!Of19]                                ; ctrl-cmd-/
 
-         ; diagnostics
-         [:!TCkeypad_slash :!Of17]                                ; alt-cmd--
-         [:!TCkeypad_asterisk :!Of18]                            ; alt-cmd-=
-         [:!TCkeypad_hyphen :!Of19]                   ; alt-cmd-backspace
+         [:!TCkeypad_slash :!Of17]                         ; ctrl-cmd-/
+         [:!TCkeypad_asterisk :!Of18]                      ; ctrl-cmd-*
+         [:!TCkeypad_hyphen :!Of19]                        ; ctrl-cmd--
 
-         ; symbols
-         [:!TCkeypad_7 :!OTf13]                         ; alt-cmd-[
-         [:!TCkeypad_8 :!OTf14]                        ; alt-cmd-]
-         [:!TCkeypad_4 :!OTf15]                            ; alt-cmd-;
-         [:!TCkeypad_5 :!OTf16]                                ; alt-cmd-'
-         [:!TCkeypad_1 :!OTf17]                               ; alt-cmd-,
-         [:!TCkeypad_2 :!OTf18]                                ; alt-cmd-.
-         [:!TCkeypad_0 :!OTf19]                      ; alt-cmd-enter
+         ; helix symbols
+         [:!TCkeypad_7 :!OTf13]                            ; ctrl-cmd-7
+         [:!TCkeypad_8 :!OTf14]                            ; ctrl-cmd-8
+         [:!TCkeypad_4 :!OTf15]                            ; ctrl-cmd-4
+         [:!TCkeypad_5 :!OTf16]                            ; ctrl-cmd-5
+         [:!TCkeypad_1 :!OTf17]                            ; ctrl-cmd-1
+         [:!TCkeypad_2 :!OTf18]                            ; ctrl-cmd-2
+         [:!TCkeypad_0 :!OTf19]                            ; ctrl-cmd-0
 
-         ; symbols
-         [:!TChyphen :!OTf15]                               ; alt-cmd-,
-         [:!TCequal_sign :!OTf16]                                ; alt-cmd-.
-         [:!TCdelete_or_backspace :!OTf19]                      ; alt-cmd-enter
+         [:!TChyphen :!OTf15]                              ; ctrl-cmd--
+         [:!TCequal_sign :!OTf16]                          ; ctrl-cmd-=
+         [:!TCdelete_or_backspace :!OTf19]                 ; ctrl-cmd-bspace
 
-         ; comments
-         [:!TCopen_bracket :!Tf13]                         ; cmd-cmd
-         [:!TCclose_bracket :!Tf16]                          ; cmd-alt
+         ; helix comments
+         [:!TCopen_bracket :!Tf13]                         ; ctrl-cmd-[
+         [:!TCclose_bracket :!Tf16]                        ; ctrl-cmd-]
 
-         ; comments
-         [:!TCkeypad_plus :!Tf13]                         ; cmd-cmd
-         [:!TCkeypad_enter :!Tf16]                          ; cmd-alt
-
-         ; version control
-         [:!OCup_arrow :!SOTf6 [:term]]                    ; alt-cmd-up
-         [:!OCdown_arrow :!SOTf7 [:term]]                  ; alt-cmd-down
+         [:!TCkeypad_plus :!Tf13]                          ; ctrl-cmd-+
+         [:!TCkeypad_enter :!Tf16]                         ; ctrl-cmd-enter
 
          ; movement
          [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left 
@@ -109,23 +67,18 @@
          [:!CSdown_arrow :!SOTf9 [:term]]                  ; cmd-shift-down
 
          ; broot toggle
-         [:!Otab :!SOTf10 [:term]];
+         [:left_option :left_option :term                  ; alt-tab
+          {:alone [:!SOTf10]}]
+
+         [:!Creturn_or_enter :!SOTf11 [:term]]             ; cmd-enter
 
          ; alt down
-         [:!Oup_arrow :!Sf1 [:term]];
-         [:!Odown_arrow :!Sf2 [:term]];
-         ; [:!F1 :f13 [:term]];
-         ; [:!F1 :f14 [:term]];
-         ; [:!F1 :f15 [:term]];
-         ; [:!F1 :f16 [:term]];
-         ; [:!F1 :f17 [:term]];
-         ; [:!F1 :f18 [:term]];
-         ; [:!F1 :f19 [:term]];
-         ; [:!F1 :f20 [:term]];
-         ; [:!F1 :f21 [:term]];
-         ; [:!F1 :f22 [:term]];
-         ; [:!F1 :f23 [:term]];
-         ; [:!F1 :f24 [:term]];
+         [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up
+         [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
+
+         ; version control
+         [:!OCup_arrow :!SOTf6 [:term]]                    ; alt-cmd-up
+         [:!OCdown_arrow :!SOTf7 [:term]]                  ; alt-cmd-down
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
