@@ -34,6 +34,13 @@
          [:!WQreturn_or_enter :!SOTf6 [:term]]              ; ctrl-cmd-enter
          [:!WQdelete_or_backspace :!SOTf7 [:term]]          ; ctrl-cmd-bspace
 
+         ; helix comments
+         [:!TCopen_bracket :!SOTf8]                         ; ctrl-cmd-[
+         [:!TCclose_bracket :!SOTf9]                        ; ctrl-cmd-]
+
+         [:!TCkeypad_plus :!SOTf8]                          ; ctrl-cmd-+
+         [:!TCkeypad_enter :!SOTf9]                         ; ctrl-cmd-enter
+
          ; broot toggle
          [:left_option :left_option :term                  ; alt-tab
           {:alone [:!SOTf10]}]
@@ -77,13 +84,6 @@
 
          ; helix reload
          [:!WQleft_option :!OTf20 [:term]]                  ; cmd-alt
-
-         ; helix comments
-         [:!TCopen_bracket :!Tf13]                         ; ctrl-cmd-[
-         [:!TCclose_bracket :!Tf16]                        ; ctrl-cmd-]
-
-         [:!TCkeypad_plus :!Tf13]                          ; ctrl-cmd-+
-         [:!TCkeypad_enter :!Tf16]                         ; ctrl-cmd-enter
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
