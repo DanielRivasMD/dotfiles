@@ -1,15 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Lapce
-{:des "Editor sessions"
- :rules [;
-         [:escape :!EWright_shift :lapce {:alone [:!OTf3]}]; file explorer
-         [:!OTright_shift :!TCSg [:editor]]                ;
-         [:!OTright_option :!TCSh [:editor]]               ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ; Editor
 {:des "Control remappings"
  :rules [;
@@ -22,84 +12,6 @@
          [:!WQRspacebar :!Ty [:editor]]                    ; del-space
          [:!WQRright_command :!Tj [:editor]]               ; del-cmd
          [:!WQRright_option :!Tn [:editor]]                ; del-alt
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Editor
-{:des "Editor delete"
- :rules [;
-         [:!Sright_option :!Od [:editor]]                  ; shift-alt
-         [:!Sright_command :!Tk [:editor]]                 ; shift-cmd
-         [:!Rleft_control :!Tw [:editor]]                  ; shift-ctrl
-         [:!Rleft_command :!Tu [:editor]]                  ; shift-cmd
-         [:!Rleft_option :!Tl [:editor]]                   ; shift-alt
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Editor
-{:des "Editor alt - alphabet"
- :rules [;
-         [:!Oa :!Of1 [:lapce]]                             ;
-         [:!Ob :!Of2 [:lapce]]                             ;
-         [:!Oc :!Of4 [:lapce]]                             ;
-         [:!Od :!Of5 [:lapce]]                             ;
-         [:!Oe :!Of6 [:lapce]]                             ;
-         [:!Of :!Of7 [:lapce]]                             ;
-         [:!Og :!Of8 [:lapce]]                             ;
-         [:!Oh :!Of9 [:lapce]]                             ;
-         [:!Oi :!Of10 [:lapce]]                            ;
-         [:!Oj :!Of11 [:lapce]]                            ;
-         [:!Ok :!Of12 [:lapce]]                            ;
-         [:!Ol :!Tf1 [:lapce]]                             ;
-         [:!Om :!Tf2 [:lapce]]                             ;
-         [:!On :!Tf4 [:lapce]]                             ;
-         [:!Oo :!Tf5 [:lapce]]                             ;
-         [:!Op :!Tf6 [:lapce]]                             ;
-         [:!Oq :!Tf7 [:lapce]]                             ;
-         [:!Or :!Tf8 [:lapce]]                             ;
-         [:!Os :!Tf9 [:lapce]]                             ;
-         [:!Ot :!Tf10 [:lapce]]                            ;
-         [:!Ou :!Tf11 [:lapce]]                            ;
-         [:!Ov :!Tf12 [:lapce]]                            ;
-         [:!Ow :!OTf1 [:lapce]]                            ;
-         [:!Ox :!OTf2 [:lapce]]                            ;
-         [:!Oy :!OTf4 [:lapce]]                            ;
-         [:!Oz :!OTf5 [:lapce]]                            ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Editor
-{:des "Editor alt - alphabet"
- :rules [;
-         [:!SOa :!SOf1 [:lapce]]                           ;
-         [:!SOb :!SOf2 [:lapce]]                           ;
-         [:!SOc :!SOf4 [:lapce]]                           ;
-         [:!SOd :!SOf5 [:lapce]]                           ;
-         [:!SOe :!SOf6 [:lapce]]                           ;
-         [:!SOf :!SOf7 [:lapce]]                           ;
-         [:!SOg :!SOf8 [:lapce]]                           ;
-         [:!SOh :!SOf9 [:lapce]]                           ;
-         [:!SOi :!SOf10 [:lapce]]                          ;
-         [:!SOj :!SOf11 [:lapce]]                          ;
-         [:!SOk :!SOf12 [:lapce]]                          ;
-         [:!SOl :!STf1 [:lapce]]                           ;
-         [:!SOm :!STf2 [:lapce]]                           ;
-         [:!SOn :!STf4 [:lapce]]                           ;
-         [:!SOo :!STf5 [:lapce]]                           ;
-         [:!SOp :!STf6 [:lapce]]                           ;
-         [:!SOq :!STf7 [:lapce]]                           ;
-         [:!SOr :!STf8 [:lapce]]                           ;
-         [:!SOs :!STf9 [:lapce]]                           ;
-         [:!SOt :!STf10 [:lapce]]                          ;
-         [:!SOu :!STf11 [:lapce]]                          ;
-         [:!SOv :!STf12 [:lapce]]                          ;
-         [:!SOw :!SOTf1 [:lapce]]                          ;
-         [:!SOx :!SOTf2 [:lapce]]                          ;
-         [:!SOy :!SOTf4 [:lapce]]                          ;
-         [:!SOz :!SOTf5 [:lapce]]                          ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
