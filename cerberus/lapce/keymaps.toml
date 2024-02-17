@@ -3,59 +3,12 @@
 ####################################################################################################
 
 [[keymaps]]
-command = "-palette.command"
-key = "F1"
+command = "-toggle_terminal_focus"
+key = "Ctrl+`"
 
 [[keymaps]]
-command = "-palette.command"
-key = "Meta+Shift+p"
-
-[[keymaps]]
-command = "-next_editor_tab"
-key = "Ctrl+Tab"
-
-[[keymaps]]
-command = "-previous_editor_tab"
-key = "Ctrl+Shift+Tab"
-
-[[keymaps]]
-command = "-insert_cursor_above"
-mode = "i"
-key = "Alt+Meta+ArrowUp"
-
-[[keymaps]]
-command = "-insert_cursor_below"
-mode = "i"
-key = "Alt+Meta+ArrowDown"
-
-[[keymaps]]
-command = "-select_current_line"
-mode = "i"
-key = "Meta+l"
-
-[[keymaps]]
-command = "-toggle_line_comment"
-key = "Meta+/"
-
-[[keymaps]]
-command = "-indent_line"
-key = "Meta+]"
-
-[[keymaps]]
-command = "-outdent_line"
-key = "Meta+["
-
-[[keymaps]]
-command = "-undo"
-key = "Meta+z"
-
-[[keymaps]]
-command = "-redo"
-key = "Meta+Shift+z"
-
-[[keymaps]]
-command = "-redo"
-key = "Meta+y"
+command = "-select_skip_current"
+key = "Meta+k Meta+d"
 
 [[keymaps]]
 command = "-move_line_up"
@@ -68,241 +21,41 @@ mode = "i"
 key = "Alt+ArrowDown"
 
 [[keymaps]]
-command = "-delete_line"
+command = "-duplicate_line_up"
 mode = "i"
-key = "Meta+Shift+k"
-
-[[keymaps]]
-command = "-select_next_current"
-mode = "i"
-key = "Meta+d"
-
-[[keymaps]]
-command = "-select_skip_current"
-mode = "i"
-key = "Meta+k Meta+d"
-
-[[keymaps]]
-command = "-select_all_current"
-mode = "i"
-key = "Meta+Shift+l"
-
-[[keymaps]]
-command = "-palette"
-key = "Meta+p"
-
-[[keymaps]]
-command = "-goto_definition"
-key = "F12"
+key = "Alt+Shift+ArrowUp"
 
 [[keymaps]]
 command = "-duplicate_line_down"
 mode = "i"
 key = "Alt+Shift+ArrowDown"
 
-[[keymaps]]
-command = "-duplicate_line_up"
-mode = "i"
-key = "Alt+Shift+ArrowUp"
-
-[[keymaps]]
-command = "-select_undo"
-mode = "i"
-key = "Meta+u"
-
-[[keymaps]]
-command = "-rename_symbol"
-key = "F2"
-
-[[keymaps]]
-command = "-next_error"
-key = "F8"
-
-[[keymaps]]
-command = "-previous_error"
-key = "Shift+F8"
-
-[[keymaps]]
-command = "-open_keyboard_shortcuts"
-key = "Meta+K Meta+S"
-
-[[keymaps]]
-command = "-delete_to_beginning_of_line"
-mode = "i"
-key = "Meta+backspace"
-
-[[keymaps]]
-command = "-toggle_file_explorer_focus"
-key = "Meta+Shift+E"
-
-[[keymaps]]
-command = "-toggle_terminal_focus"
-key = "Ctrl+`"
-
 ####################################################################################################
 # remappings
 ####################################################################################################
 
 [[keymaps]]
-command = "palette"
-key = "Ctrl+r"
+command = "toggle_terminal_focus"
+key = "Meta+j"
 
 [[keymaps]]
-command = "palette.command"
-key = "Ctrl+t"
+command = "move_line_up"
+key = "Alt+Shift+k"
 
 [[keymaps]]
-command = "next_editor_tab"
-key = "Alt+Meta+ArrowRight"
+command = "move_line_down"
+key = "Alt+Shift+j"
 
 [[keymaps]]
-command = "previous_editor_tab"
-key = "Alt+Meta+ArrowLeft"
-
-[[keymaps]]
-command = "paragraph_forward"
-key = "Alt+ArrowDown"
+command = "select_skip_current"
+key = "Alt+y"
 
 [[keymaps]]
 command = "paragraph_backward"
 key = "Alt+ArrowUp"
 
 [[keymaps]]
-command = "insert_cursor_above"
-key = "Alt+F12"
+command = "paragraph_forward"
+key = "Alt+ArrowDown"
 
-[[keymaps]]
-command = "insert_cursor_below"
-key = "Alt+F11"
-
-[[keymaps]]
-command = "select_current_line"
-key = "Ctrl+Shift+F1"
-
-[[keymaps]]
-command = "toggle_line_comment"
-key = "Alt+Shift+F4"
-
-[[keymaps]]
-command = "indent_line"
-key = "Alt+Shift+F10"
-
-[[keymaps]]
-command = "outdent_line"
-key = "Ctrl+Shift+F5"
-
-[[keymaps]]
-command = "undo"
-key = "Meta+Z"
-
-[[keymaps]]
-command = "redo"
-key = "Ctrl+Shift+F11"
-
-[[keymaps]]
-command = "move_line_up"
-key = "Alt+Shift+F12"
-
-[[keymaps]]
-command = "move_line_down"
-key = "Alt+Shift+F11"
-
-[[keymaps]]
-command = "delete_line"
-key = "Alt+Ctrl+Shift+F2"
-
-[[keymaps]]
-command = "next_diff"
-key = "Alt+Meta+ArrowDown"
-
-[[keymaps]]
-command = "previous_diff"
-key = "Alt+Meta+ArrowUp"
-
-[[keymaps]]
-command = "select_next_current"
-key = "Alt+F5"
-
-[[keymaps]]
-command = "select_skip_current"
-key = "Alt+Ctrl+F4"
-
-[[keymaps]]
-command = "select_all_current"
-key = "Alt+F1"
-
-[[keymaps]]
-command = "select_undo"
-key = "Alt+Ctrl+F5"
-
-[[keymaps]]
-command = "duplicate_line_down"
-key = "Alt+Shift+F5"
-
-[[keymaps]]
-command = "next_window_tab"
-key = "Ctrl+Alt+ArrowRight"
-
-[[keymaps]]
-command = "previous_window_tab"
-key = "Ctrl+Alt+ArrowLeft"
-
-[[keymaps]]
-command = "show_hover"
-key = "Ctrl+Space"
-
-# [[keymaps]]
-# command = "rename_symbol"
-# key = "Alt+Shift+F4"
-
-[[keymaps]]
-command = "next_error"
-key = "Ctrl+x"
-
-[[keymaps]]
-command = "previous_error"
-key = "Ctrl+v"
-
-[[keymaps]]
-command = "delete_to_beginning_of_line"
-key = "Ctrl+u"
-
-# [[keymaps]]
-# command = "goto_definition"
-# key = "Ctrl+Alt+Meta+Enter"
-
-# [[keymaps]]
-# command = "goto_type_definition"
-# key = "Alt+Meta+Enter"
-
-[[keymaps]]
-command = "toggle_file_explorer_focus"
-key = "Alt+Ctrl+F3"
-
-[[keymaps]]
-command = "toggle_terminal_focus"
-key = "Meta+Shift+F3"
-
-[[keymaps]]
-command = "document_start"
-key = "Ctrl+O"
-
-[[keymaps]]
-command = "document_end"
-key = "Ctrl+P"
-
-# [[keymaps]]
-# command = "-document_start"
-# key = "Meta+Up"
-
-# [[keymaps]]
-# command = "-document_end"
-# key = "Meta+Down"
-
-[[keymaps]]
-command = "save"
-key = "Ctrl+Alt+F1"
-
-[[keymaps]]
-command = "split_horizontal"
-key = 'Meta+Shift+\'
+####################################################################################################
