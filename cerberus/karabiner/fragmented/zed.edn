@@ -1,40 +1,119 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Zed
-{:des "Editor sessions"
+{:des "Zed - Control remappings"
+ :rules [;
+         ; [:!WQRtab :!Th [:zed]]                          ; del-tab
+         ; [:!WQRcaps_lock :!Tg [:zed]]                    ; del-caps
+         ; [:!WQRleft_shift :!Oc [:zed]]                   ; del-shift
+         ; [:!WQRleft_control :!Tr [:zed]]                 ; del-ctrl
+         ; [:!WQRleft_option :!Ts [:zed]]                  ; del-alt
+         ; [:!WQRleft_command :!Tt [:zed]]                 ; del-cmd
+         ; [:!WQRspacebar :!Ty [:zed]]                     ; del-space
+         ; [:!WQRright_command :!Tj [:zed]]                ; del-cmd
+         ; [:!WQRright_option :!Tn [:zed]]                 ; del-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Zed
+{:des "Zed - Interactive delete"
+ :rules [;
+         ; [:!Sright_option :!Odelete_forward [:zed]]        ; delete word forward
+         [:!Sright_command :!Cdelete_forward [:zed]]       ; delete line forward
+         ; [:!Rleft_control :!Odelete_or_backspace [:zed]]   ; delete word backward
+         ; [:!Rleft_command :!Cdelete_or_backspace [:zed]]   ; delete line backward
+         ; [:!Rleft_option : [:zed]]                       ; shift-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Zed
+{:des "Zed - Sessions"
  :rules [;
          [:escape :!EWright_shift :zed {:alone [:!Cb]}]    ; file explorer
-         [:delete_or_backspace :!WQright_shift
-          :zed {:alone [:!Cj]}]                            ; terminal
-         [:!TCright_command :!OCy [:zed]]                  ; close docks
+         ; [:delete_or_backspace :!WQright_shift
+          ; :zed {:alone [:!Cj]}]                            ; terminal
 
-         [:!Rleft_command :!Cdelete_or_backspace [:zed]]   ; delete line backward
-         [:!Sright_command :!Cdelete_forward [:zed]]       ; delete line forward
-         [:!Rleft_control :!Odelete_or_backspace [:zed]]   ; delete word backward
-         [:!Sright_option :!Odelete_forward [:zed]]        ; delete word forward
-
-         [:!Of :!Cf [:zed]]                                ; find
-         [:!Oh :!CSg [:zed]]                               ; prev
-         [:!Ol :!Cg [:zed]]                                ; next
-         ; [:!Of :!CSh [:zed]]                             ; TODO: replace
-         [:!Ok :!OTp [:zed]]                               ; multi up
-         [:!Oj :!OTn [:zed]]                               ; multi down
-
-         [:!OSc :!Cslash [:zed]]                           ; comment
-         [:!OSd :!CSd [:zed]]                              ; duplicate
-         [:!OSk :!TCup_arrow [:zed]]                       ; move up
-         [:!OSj :!TCdown_arrow [:zed]]                     ; move down
-         [:!OSi :!Cclose_bracket [:zed]]                   ; indent
-         [:!OSo :!Copen_bracket [:zed]]                    ; unindent
-         [:!OSx :!TSk [:zed]]                              ; delete line
+         [:!OTright_shift :!TCSg [:zed]]                   ; split vertical
+         [:!OTright_option :!TCSh [:zed]]                  ; split horizontal
+         [:!OCright_shift :!TCSg [:zed]]                   ; split vertical
+         [:!OCright_option :!TCSh [:zed]]                  ; split horizontal
+         ; [:!OTright_command :!TCSbackslash [:zed]]       ;
 
          [:!Oup_arrow :!Tup_arrow [:zed]]                  ; prev paragraph
          [:!Odown_arrow :!Tdown_arrow [:zed]]              ; next paragraph
          [:!OSup_arrow :!TSup_arrow [:zed]]                ; select prev paragraph
          [:!OSdown_arrow :!TSdown_arrow [:zed]]            ; select next paragraph
 
-         [:!OTright_shift :!TCSg [:zed]]                   ; split vertical
-         [:!OTright_option :!TCSh [:zed]]                  ; split horizontal
+         [:!TCright_command :!OCy [:zed]]                  ; close docks
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Zed
+{:des "Zed - alt - alphabet"
+ :rules [;
+         ; [:!Oa : [:zed]]                                 ;
+         ; [:!Ob : [:zed]]                                 ;
+         ; [:!Oc : [:zed]]                                 ;
+         ; [:!Od : [:zed]]                                 ;
+         ; [:!Oe : [:zed]]                                 ;
+         [:!Of :!Cf [:zed]]                                ; find
+         ; [:!Og : [:zed]]                                 ;
+         [:!Oh :!CSg [:zed]]                               ; prev
+         ; [:!Oi : [:zed]]                                 ;
+         [:!Oj :!OTn [:zed]]                               ; multi down
+         [:!Ok :!OTp [:zed]]                               ; multi up
+         [:!Ol :!Cg [:zed]]                                ; next
+         ; [:!Om : [:zed]]                                 ;
+         ; [:!On : [:zed]]                                 ;
+         ; [:!Oo : [:zed]]                                 ;
+         ; [:!Op : [:zed]]                                 ;
+         ; [:!Oq : [:zed]]                                 ;
+         ; [:!Or : [:zed]]                                 ;
+         ; [:!Os : [:zed]]                                 ;
+         ; [:!Ot : [:zed]]                                 ;
+         ; [:!Ou : [:zed]]                                 ;
+         ; [:!Ov : [:zed]]                                 ;
+         ; [:!Ow : [:zed]]                                 ;
+         ; [:!Ox : [:zed]]                                 ;
+         ; [:!Oy : [:zed]]                                 ;
+         ; [:!Oz : [:zed]]                                 ;
+         ; [:!Of :!CSh [:zed]]                             ; TODO: replace
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Zed
+{:des "Zed - alt - alphabet"
+ :rules [;
+         ; [:!SOa : [:zed]]                                ;
+         ; [:!SOb : [:zed]]                                ;
+         [:!OSc :!Cslash [:zed]]                           ; comment
+         [:!OSd :!CSd [:zed]]                              ; duplicate
+         ; [:!SOe : [:zed]]                                ;
+         ; [:!SOf : [:zed]]                                ;
+         ; [:!SOg : [:zed]]                                ;
+         ; [:!SOh : [:zed]]                                ;
+         [:!OSi :!Cclose_bracket [:zed]]                   ; indent
+         [:!OSj :!TCdown_arrow [:zed]]                     ; move down
+         [:!OSk :!TCup_arrow [:zed]]                       ; move up
+         ; [:!SOl : [:zed]]                                ;
+         ; [:!SOm : [:zed]]                                ;
+         ; [:!SOn : [:zed]]                                ;
+         [:!OSo :!Copen_bracket [:zed]]                    ; unindent
+         ; [:!SOp : [:zed]]                                ;
+         ; [:!SOq  : [:zed]]                                ;
+         ; [:!SOr : [:zed]]                                ;
+         ; [:!SOs : [:zed]]                                ;
+         ; [:!SOt : [:zed]]                                ;
+         ; [:!SOu : [:zed]]                                ;
+         ; [:!SOv : [:zed]]                                ;
+         ; [:!SOw : [:zed]]                                ;
+         [:!OSx :!TSk [:zed]]                              ; delete line
+         ; [:!SOy : [:zed]]                                ;
+         ; [:!SOz : [:zed]]                                ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

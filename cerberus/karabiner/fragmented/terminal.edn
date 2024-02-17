@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Lapce
-{:des "Control remappings"
+; Alacritty
+{:des "Alacritty - Control remappings"
  :rules [;
          [:!WQRtab :!Th [:term]]                           ; del-tab
          [:!WQRcaps_lock :!Tg [:term]]                     ; del-caps
@@ -17,7 +17,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
-{:des "Terminal delete"
+{:des "Alacritty - Interactive delete"
  :rules [;
          [:!Sright_option :!Od [:term]]                    ; shift-alt
          [:!Sright_command :!Tk [:term]]                   ; shift-cmd
@@ -29,7 +29,40 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
-{:des "Terminal software bindings"
+{:des "Alacritty control - alphabet"
+ :rules [;
+         ; [: :!Ta [:term]]            REDUNDANT (editor)
+         ; [: :!Tb [:term]]            REDUNDANT (editor)
+         ; [: :!Tc [:term]]            DEFAULT
+         ; [: :!Td [:term]]            DEFAULT
+         ; [: :!Te [:term]]            REDUNDANT (editor)
+         ; [: :!Tf [:term]]            REDUNDANT (editor)
+         ; [: :!Tg [:term]]            COLLISION (remapped)
+         ; [: :!Th [:term]]            COLLISION (remapped)
+         ; [: :!Ti [:term]]            DEFAULT
+         ; [: :!Tj [:term]]            COLLISION (remapped)
+         ; [: :!Tk [:term]]            COLLISION (delete)
+         ; [: :!Tl [:term]]            COLLISION (delete)
+         ; [: :!Tm [:term]]            DEFAULT
+         ; [: :!Tn [:term]]            COLLISION (remapped)
+         [:!Cup_arrow :!To [:term]]                        ; cmd-up
+         [:!Cdown_arrow :!Tp [:term]]                      ; cmd-down
+         ; [: :!Tq [:term]]            DEFAULT
+         ; [: :!Tr [:term]]            COLLISION (remapped)
+         ; [: :!Ts [:term]]            COLLISION (remapped)
+         ; [: :!Tt [:term]]            COLLISION (remapped)
+         ; [: :!Tu [:term]]            COLLISION (delete)
+         ; [: :!Tv [:term]]            REDUNDANT (editor)
+         ; [: :!Tw [:term]]            COLLISION (delete)
+         ; [: :!Tx [:term]]            REDUNDANT (editor)
+         ; [: :!Ty [:term]]            COLLISION (remapped)
+         ; [: :!Tz [:term]]            DEFAULT
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Alacritty software bindings"
  :rules [;
          ; alt down
          [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up

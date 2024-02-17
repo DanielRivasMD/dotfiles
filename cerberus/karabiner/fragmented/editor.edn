@@ -1,5 +1,52 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; GUI
+{:des "GUI - Control remappings"
+ :rules [;
+         ; [:!WQRtab :!Th [:gui]]                          ; del-tab
+         ; [:!WQRcaps_lock :!Tg [:gui]]                    ; del-caps
+         ; [:!WQRleft_shift :!Oc [:gui]]                   ; del-shift
+         ; [:!WQRleft_control :!Tr [:gui]]                 ; del-ctrl
+         ; [:!WQRleft_option :!Ts [:gui]]                  ; del-alt
+         ; [:!WQRleft_command :!Tt [:gui]]                 ; del-cmd
+         ; [:!WQRspacebar :!Ty [:gui]]                     ; del-space
+         ; [:!WQRright_command :!Tj [:gui]]                ; del-cmd
+         ; [:!WQRright_option :!Tn [:gui]]                 ; del-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; GUI
+{:des "GUI - Interactive delete"
+ :rules [;
+         [:!Sright_option :!Odelete_forward [:gui]]        ; delete word forward
+         ; [:!Sright_command :!Cdelete_forward [:gui]]     ; delete line forward
+         [:!Rleft_control :!Odelete_or_backspace [:gui]]   ; delete word backward
+         [:!Rleft_command :!Cdelete_or_backspace [:gui]]   ; delete line backward
+         ; [:!Rleft_option : [:gui]]                       ; shift-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; GUI
+{:des "GUI - Sessions"
+ :rules [;
+         ; [:escape :!EWright_shift :lapce {:alone [:!CSe]}] ; file explorer
+         [:delete_or_backspace :!WQright_shift
+          :gui {:alone [:!Cj]}]                            ; terminal
+
+         ; [:!OTright_shift :!Cbackslash [:lapce]]           ; split vertical
+         ; [:!OTright_option :!CSbackslash [:lapce]]         ; split horizontal
+         ; [:!OCright_shift :!Cbackslash [:lapce]]           ; split vertical
+         ; [:!OCright_option :!CSbackslash [:lapce]]         ; split horizontal
+         ; [:!OTright_command :!TCSbackslash [:lapce]]       ;
+
+         ; [:!OCleft_arrow :!TStab [:lapce]]                 ; left tab
+         ; [:!OCright_arrow :!Ttab [:lapce]]                 ; right tab
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; Editor
 {:des "Editor control - alphabet"
  :rules [;
@@ -24,9 +71,6 @@
          ; [:!WQRleft_control :!Tr [:editor]]              ; del-ctrl
          ; [:!WQRleft_option :!Ts [:editor]]               ; del-alt
          ; [:!WQRleft_command :!Tt [:editor]]              ; del-cmd
-         ; [: :!Tr [:editor]]          COLLISION (remapped)
-         ; [: :!Ts [:editor]]          COLLISION (remapped)
-         ; [: :!Tt [:editor]]          COLLISION (remapped)
          ; [: :!Tu [:editor]]          COLLISION (delete)
          [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up
          ; [: :!Tw [:editor]]          COLLISION (delete)
