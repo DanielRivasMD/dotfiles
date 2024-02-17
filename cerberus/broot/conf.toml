@@ -143,14 +143,14 @@ leave_broot = false
 auto_exec = false
 description = "`ctrl-cmd-enter` -> create file"
 
-# delete
-[[verbs]]
-external = "rm {file}"
-invocation = "rm {file:file-name}"
-key = "alt-ctrl-shift-f7"
-leave_broot = false
-auto_exec = false
-description = "`ctrl-cmd-delete` -> delete file"
+# # remove
+# [[verbs]]
+# external = "rm {file}"
+# invocation = "rm {file}"
+# key = "alt-ctrl-shift-f7"
+# leave_broot = false
+# auto_exec = false
+# description = "`ctrl-cmd-delete` -> delete file"
 
 # stage
 [[verbs]]
@@ -278,7 +278,12 @@ description = "`alt-x` -> open file with `xsv`"
 [[verbs]]
 invocation = "print_to_copy"
 key = "alt-f4"
-external = ["sh", "-e", "/Users/drivas/.archive/cerberus/broot/copy.sh", "{file}"]
+external = [
+  "sh",
+  "-e",
+  "/Users/drivas/.archive/cerberus/broot/copy.sh",
+  "{file}",
+]
 leave_broot = false
 description = "`alt-c` -> open file with `bat` to copy"
 
