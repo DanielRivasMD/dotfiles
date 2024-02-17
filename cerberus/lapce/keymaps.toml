@@ -7,10 +7,6 @@ command = "-toggle_terminal_focus"
 key = "Ctrl+`"
 
 [[keymaps]]
-command = "-select_skip_current"
-key = "Meta+k Meta+d"
-
-[[keymaps]]
 command = "-move_line_up"
 mode = "i"
 key = "Alt+ArrowUp"
@@ -30,6 +26,10 @@ command = "-duplicate_line_down"
 mode = "i"
 key = "Alt+Shift+ArrowDown"
 
+[[keymaps]]
+command = "-select_skip_current"
+key = "Meta+k Meta+d"
+
 ####################################################################################################
 # remappings
 ####################################################################################################
@@ -39,23 +39,27 @@ command = "toggle_terminal_focus"
 key = "Meta+j"
 
 [[keymaps]]
-command = "move_line_up"
-key = "Alt+Shift+k"
-
-[[keymaps]]
-command = "move_line_down"
-key = "Alt+Shift+j"
-
-[[keymaps]]
-command = "select_skip_current"
-key = "Alt+y"
-
-[[keymaps]]
 command = "paragraph_backward"
 key = "Alt+ArrowUp"
 
 [[keymaps]]
 command = "paragraph_forward"
 key = "Alt+ArrowDown"
+
+[[keymaps]]
+command = "select_skip_current"
+key = "Alt+y"
+
+[[keymaps]]
+command = "duplicate_line_down"
+key = "Alt+Shift+d"
+
+[[keymaps]]
+command = "move_line_up"
+key = "Alt+Shift+k"
+
+[[keymaps]]
+command = "move_line_down"
+key = "Alt+Shift+j"
 
 ####################################################################################################
