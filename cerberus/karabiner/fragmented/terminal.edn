@@ -1,5 +1,21 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; Lapce
+{:des "Control remappings"
+ :rules [;
+         [:!WQRtab :!Th [:term]]                           ; del-tab
+         [:!WQRcaps_lock :!Tg [:term]]                     ; del-caps
+         [:!WQRleft_shift :!Oc [:term]]                    ; del-shift
+         [:!WQRleft_control :!Tr [:term]]                  ; del-ctrl
+         [:!WQRleft_option :!Ts [:term]]                   ; del-alt
+         [:!WQRleft_command :!Tt [:term]]                  ; del-cmd
+         [:!WQRspacebar :!Ty [:term]]                      ; del-space
+         [:!WQRright_command :!Tj [:term]]                 ; del-cmd
+         [:!WQRright_option :!Tn [:term]]                  ; del-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; Alacritty
 {:des "Terminal delete"
  :rules [;
