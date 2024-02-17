@@ -3,15 +3,15 @@
 ; Editor
 {:des "Control remappings"
  :rules [;
-         [:!WQRtab :!Th [:editor]]                         ; del-tab
-         [:!WQRcaps_lock :!Tg [:editor]]                   ; del-caps
-         [:!WQRleft_shift :!Oc [:editor]]                  ; del-shift
-         [:!WQRleft_control :!Tr [:editor]]                ; del-ctrl
-         [:!WQRleft_option :!Ts [:editor]]                 ; del-alt
-         [:!WQRleft_command :!Tt [:editor]]                ; del-cmd
-         [:!WQRspacebar :!Ty [:editor]]                    ; del-space
-         [:!WQRright_command :!Tj [:editor]]               ; del-cmd
-         [:!WQRright_option :!Tn [:editor]]                ; del-alt
+         [:!WQRtab :!Th [:term]]                           ; del-tab
+         [:!WQRcaps_lock :!Tg [:term]]                     ; del-caps
+         [:!WQRleft_shift :!Oc [:term]]                    ; del-shift
+         [:!WQRleft_control :!Tr [:term]]                  ; del-ctrl
+         [:!WQRleft_option :!Ts [:term]]                   ; del-alt
+         [:!WQRleft_command :!Tt [:term]]                  ; del-cmd
+         [:!WQRspacebar :!Ty [:term]]                      ; del-space
+         [:!WQRright_command :!Tj [:term]]                 ; del-cmd
+         [:!WQRright_option :!Tn [:term]]                  ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -19,32 +19,32 @@
 ; Editor
 {:des "Editor control - alphabet"
  :rules [;
-         [:!Cleft_arrow :!Ta [:editor]]                    ; cmd-left
-         [:!Sspacebar :!Tb [:editor]]                      ; shift-space
-         ; [: :!Tc [:editor]]          DEFAULT
-         ; [: :!Td [:editor]]          DEFAULT
-         [:!Cright_arrow :!Te [:editor]]                   ; cmd-right
-         [:!Sreturn_or_enter :!Tf [:editor]]               ; shift-enter
-         ; [: :!Tg [:editor]]          COLLISION (remapped)
-         ; [: :!Th [:editor]]          COLLISION (remapped)
-         ; [: :!Ti [:editor]]          DEFAULT
-         ; [: :!Tj [:editor]]          COLLISION (remapped)
-         ; [: :!Tk [:editor]]          COLLISION (delete)
-         ; [: :!Tl [:editor]]          COLLISION (delete)
-         ; [: :!Tm [:editor]]          DEFAULT
-         ; [: :!Tn [:editor]]          COLLISION (remapped)
-         [:!Cup_arrow :!To [:editor]]                      ; cmd-up
-         [:!Cdown_arrow :!Tp [:editor]]                    ; cmd-down
-         ; [: :!Tq [:editor]]          DEFAULT
-         ; [: :!Tr [:editor]]          COLLISION (remapped)
-         ; [: :!Ts [:editor]]          COLLISION (remapped)
-         ; [: :!Tt [:editor]]          COLLISION (remapped)
-         ; [: :!Tu [:editor]]          COLLISION (delete)
-         [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up
-         ; [: :!Tw [:editor]]          COLLISION (delete)
-         [:!TCdown_arrow :!Tx [:editor]]                   ; ctrl-cmd-down
-         ; [: :!Ty [:editor]]          DEFAULT
-         ; [: :!Tz [:editor]]          DEFAULT
+         [:!Cleft_arrow :!Ta [:term]]                      ; cmd-left
+         [:!Sspacebar :!Tb [:term]]                        ; shift-space
+         ; [: :!Tc [:term]]            DEFAULT
+         ; [: :!Td [:term]]            DEFAULT
+         [:!Cright_arrow :!Te [:term]]                     ; cmd-right
+         [:!Sreturn_or_enter :!Tf [:term]]                 ; shift-enter
+         ; [: :!Tg [:term]]            COLLISION (remapped)
+         ; [: :!Th [:term]]            COLLISION (remapped)
+         ; [: :!Ti [:term]]            DEFAULT
+         ; [: :!Tj [:term]]            COLLISION (remapped)
+         ; [: :!Tk [:term]]            COLLISION (delete)
+         ; [: :!Tl [:term]]            COLLISION (delete)
+         ; [: :!Tm [:term]]            DEFAULT
+         ; [: :!Tn [:term]]            COLLISION (remapped)
+         [:!Cup_arrow :!To [:term]]                        ; cmd-up
+         [:!Cdown_arrow :!Tp [:term]]                      ; cmd-down
+         ; [: :!Tq [:term]]            DEFAULT
+         ; [: :!Tr [:term]]            COLLISION (remapped)
+         ; [: :!Ts [:term]]            COLLISION (remapped)
+         ; [: :!Tt [:term]]            COLLISION (remapped)
+         ; [: :!Tu [:term]]            COLLISION (delete)
+         [:!TCup_arrow :!Tv [:term]]                       ; ctrl-cmd-up
+         ; [: :!Tw [:term]]            COLLISION (delete)
+         [:!TCdown_arrow :!Tx [:term]]                     ; ctrl-cmd-down
+         ; [: :!Ty [:term]]            DEFAULT
+         ; [: :!Tz [:term]]            DEFAULT
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
