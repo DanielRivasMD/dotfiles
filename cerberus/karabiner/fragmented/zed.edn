@@ -6,36 +6,35 @@
          [:escape :!EWright_shift :zed {:alone [:!Cb]}]    ; file explorer
          [:delete_or_backspace :!WQright_shift
           :zed {:alone [:!Cj]}]                            ; terminal
-         [:!TCright_command :!OCy [:zed]];
+         [:!TCright_command :!OCy [:zed]]                  ; close docks
 
-         [:!Rleft_command :!Cdelete_or_backspace [:zed]];
-         [:!Sright_command :!Cdelete_forward [:zed]];
-         [:!Rleft_control :!Odelete_or_backspace [:zed]];
-         [:!Sright_option :!Odelete_forward [:zed]];
+         [:!Rleft_command :!Cdelete_or_backspace [:zed]]   ; delete line backward
+         [:!Sright_command :!Cdelete_forward [:zed]]       ; delete line forward
+         [:!Rleft_control :!Odelete_or_backspace [:zed]]   ; delete word backward
+         [:!Sright_option :!Odelete_forward [:zed]]        ; delete word forward
 
-         [:!Of :!Cf [:zed]];
-         [:!Oh :!CSg [:zed]];
-         [:!Ol :!Cg [:zed]];
-         ; [:!Of :!CSh [:zed]]; TODO: replace
-         [:!Ok :!OTp [:zed]];
-         [:!Oj :!OTn [:zed]];
+         [:!Of :!Cf [:zed]]                                ; find
+         [:!Oh :!CSg [:zed]]                               ; prev
+         [:!Ol :!Cg [:zed]]                                ; next
+         ; [:!Of :!CSh [:zed]]                             ; TODO: replace
+         [:!Ok :!OTp [:zed]]                               ; multi up
+         [:!Oj :!OTn [:zed]]                               ; multi down
 
-         [:!OSc :!Cslash [:zed]];
-         [:!OSd :!CSd [:zed]];
-         [:!OSi :!Cclose_bracket [:zed]];
-         [:!OSo :!Copen_bracket [:zed]];
-         [:!OSc :!Cslash [:zed]];
-         [:!OSk :!TCup_arrow [:zed]];
-         [:!OSj :!TCdown_arrow [:zed]];
-         [:!OSx :!TSk [:zed]];
+         [:!OSc :!Cslash [:zed]]                           ; comment
+         [:!OSd :!CSd [:zed]]                              ; duplicate
+         [:!OSk :!TCup_arrow [:zed]]                       ; move up
+         [:!OSj :!TCdown_arrow [:zed]]                     ; move down
+         [:!OSi :!Cclose_bracket [:zed]]                   ; indent
+         [:!OSo :!Copen_bracket [:zed]]                    ; unindent
+         [:!OSx :!TSk [:zed]]                              ; delete line
 
-         [:!Oup_arrow :!Tup_arrow [:zed]];
-         [:!Odown_arrow :!Tdown_arrow [:zed]];
-         [:!OSup_arrow :!TSup_arrow [:zed]];
-         [:!OSdown_arrow :!TSdown_arrow [:zed]];
+         [:!Oup_arrow :!Tup_arrow [:zed]]                  ; prev paragraph
+         [:!Odown_arrow :!Tdown_arrow [:zed]]              ; next paragraph
+         [:!OSup_arrow :!TSup_arrow [:zed]]                ; select prev paragraph
+         [:!OSdown_arrow :!TSdown_arrow [:zed]]            ; select next paragraph
 
-         [:!OTright_shift :!TCSg [:zed]];
-         [:!OTright_option :!TCSh [:zed]];
+         [:!OTright_shift :!TCSg [:zed]]                   ; split vertical
+         [:!OTright_option :!TCSh [:zed]]                  ; split horizontal
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
