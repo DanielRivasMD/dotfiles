@@ -132,10 +132,6 @@ mode = "i"
 key = "Meta+backspace"
 
 [[keymaps]]
-command = "-split_vertical"
-key = 'Meta+\'
-
-[[keymaps]]
 command = "-toggle_file_explorer_focus"
 key = "Meta+Shift+E"
 
@@ -197,7 +193,7 @@ key = "Ctrl+Shift+F5"
 
 [[keymaps]]
 command = "undo"
-key = "Ctrl+F11"
+key = "Meta+Z"
 
 [[keymaps]]
 command = "redo"
@@ -271,14 +267,6 @@ key = "Ctrl+v"
 command = "delete_to_beginning_of_line"
 key = "Ctrl+u"
 
-[[keymaps]]
-command = "split_vertical"
-key = "Ctrl+Meta+Shift+g"
-
-[[keymaps]]
-command = "split_horizontal"
-key = "Ctrl+Meta+Shift+h"
-
 # [[keymaps]]
 # command = "goto_definition"
 # key = "Ctrl+Alt+Meta+Enter"
@@ -315,14 +303,6 @@ key = "Ctrl+P"
 command = "save"
 key = "Ctrl+Alt+F1"
 
-# [[keymaps]]
-# command = "-save"
-# key = "Meta+S"
-
 [[keymaps]]
-command = "split_close"
-key = "Ctrl+F7"
-
-# [[keymaps]]
-# command = "-split_close"
-# key = "Meta+W"
+command = "split_horizontal"
+key = 'Meta+Shift+\'
