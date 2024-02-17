@@ -1,6 +1,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
+{:des "Terminal delete"
+ :rules [;
+         [:!Sright_option :!Od [:term]]                    ; shift-alt
+         [:!Sright_command :!Tk [:term]]                   ; shift-cmd
+         [:!Rleft_control :!Tw [:term]]                    ; shift-ctrl
+         [:!Rleft_command :!Tu [:term]]                    ; shift-cmd
+         [:!Rleft_option :!Tl [:term]]                     ; shift-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
 {:des "Terminal software bindings"
  :rules [;
          ; alt down
