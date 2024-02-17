@@ -3,15 +3,15 @@
 ; Lapce
 {:des "Control remappings"
  :rules [;
-         [:!WQRtab :!Th [:lapce]]                          ; del-tab
-         [:!WQRcaps_lock :!Tg [:lapce]]                    ; del-caps
-         [:!WQRleft_shift :!Oc [:lapce]]                   ; del-shift
+         ; [:!WQRtab :!Th [:lapce]]                          ; del-tab
+         ; [:!WQRcaps_lock :!Tg [:lapce]]                    ; del-caps
+         ; [:!WQRleft_shift :!Oc [:lapce]]                   ; del-shift
          [:!WQRleft_control :!Cp [:lapce]]                 ; del-ctrl
-         [:!WQRleft_option :!Ts [:lapce]]                  ; del-alt
+         ; [:!WQRleft_option :!Ts [:lapce]]                  ; del-alt
          [:!WQRleft_command :f1 [:lapce]]                  ; del-cmd
-         [:!WQRspacebar :!Ty [:lapce]]                     ; del-space
-         [:!WQRright_command :!Tj [:lapce]]                ; del-cmd
-         [:!WQRright_option :!Tn [:lapce]]                 ; del-alt
+         ; [:!WQRspacebar :!Ty [:lapce]]                     ; del-space
+         ; [:!WQRright_command :!Tj [:lapce]]                ; del-cmd
+         ; [:!WQRright_option :!Tn [:lapce]]                 ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
