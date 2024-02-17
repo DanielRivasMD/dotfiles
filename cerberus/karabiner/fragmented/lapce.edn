@@ -6,7 +6,7 @@
          [:!WQRtab :!Th [:lapce]]                          ; del-tab
          [:!WQRcaps_lock :!Tg [:lapce]]                    ; del-caps
          [:!WQRleft_shift :!Oc [:lapce]]                   ; del-shift
-         [:!WQRleft_control :!Tr [:lapce]]                 ; del-ctrl
+         [:!WQRleft_control :!Cp [:lapce]]                 ; del-ctrl
          [:!WQRleft_option :!Ts [:lapce]]                  ; del-alt
          [:!WQRleft_command :f1 [:lapce]]                  ; del-cmd
          [:!WQRspacebar :!Ty [:lapce]]                     ; del-space
@@ -19,9 +19,14 @@
 ; Lapce
 {:des "Editor sessions"
  :rules [;
-         [:escape :!EWright_shift :lapce {:alone [:!OTf3]}]; file explorer
+         [:escape :!EWright_shift :lapce {:alone [:!CSe]}] ; file explorer
+         [:delete_or_backspace :!WQright_shift
+          :lapce {:alone [:!Cj]}]                          ; terminal
          [:!OTright_shift :!Cbackslash [:lapce]]           ; split vertical
          [:!OTright_option :!CSbackslash [:lapce]]         ; split horizontal
+         [:!OTright_command :!TCSbackslash [:lapce]]       ; split horizontal
+         [:!OCleft_arrow :!TStab [:lapce]]                 ; left tab
+         [:!OCright_arrow :!Ttab [:lapce]]                 ; right tab
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -29,11 +34,77 @@
 ; Lapce
 {:des "Editor delete"
  :rules [;
-         [:!Sright_option :!Od [:lapce]]                  ; shift-alt
-         [:!Sright_command :!Tk [:lapce]]                 ; shift-cmd
-         [:!Rleft_control :!Tw [:lapce]]                  ; shift-ctrl
-         [:!Rleft_command :!Tu [:lapce]]                  ; shift-cmd
-         [:!Rleft_option :!Tl [:lapce]]                   ; shift-alt
+         [:!Sright_option :!Odelete_forward [:lapce]]      ; shift-alt
+         [:!Sright_command :!Tk [:lapce]]                  ; shift-cmd
+         [:!Rleft_control :!Odelete_or_backspace [:lapce]] ; shift-ctrl
+         [:!Rleft_command :!Cdelete_or_backspace [:lapce]] ; shift-cmd
+         ; [:!Rleft_option : [:lapce]]                     ; shift-alt
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Editor
+{:des "Editor alt - alphabet"
+ :rules [;
+         [:!Oa :!CSl [:lapce]]                             ;
+         ; [:!Ob : [:lapce]]                               ;
+         [:!Oc :!Cbackslash [:lapce]]                      ;
+         [:!Od :!Cd [:lapce]]                              ;
+         ; [:!Oe : [:lapce]]                               ;
+         ; [:!Of : [:lapce]]                               ;
+         ; [:!Og : [:lapce]]                               ;
+         ; [:!Oh : [:lapce]]                               ;
+         [:!Oi :!Cclose_bracket [:lapce]]                  ;
+         [:!Oj :!OCdown_arrow [:lapce]]                    ;
+         [:!Ok :!OCup_arrow [:lapce]]                      ;
+         ; [:!Ol : [:lapce]]                               ;
+         ; [:!Om : [:lapce]]                               ;
+         ; [:!On : [:lapce]]                               ;
+         [:!Oo :!Copen_bracket [:lapce]]                   ;
+         ; [:!Op : [:lapce]]                               ;
+         ; [:!Oq : [:lapce]]                               ;
+         ; [:!Or : [:lapce]]                               ;
+         ; [:!Os : [:lapce]]                               ;
+         ; [:!Ot : [:lapce]]                               ;
+         [:!Ou :!Cz [:lapce]]                              ;
+         ; [:!Ov : [:lapce]]                               ;
+         ; [:!Ow : [:lapce]]                               ;
+         ; [:!Ox : [:lapce]]                               ;
+         ; [:!Oy : [:lapce]]                               ;
+         [:!Oz :!Cu [:lapce]]                              ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Editor
+{:des "Editor alt - alphabet"
+ :rules [;
+         ; [:!SOa : [:lapce]]                              ;
+         ; [:!SOb : [:lapce]]                              ;
+         [:!SOc :!Cslash [:lapce]]                         ;
+         ; [:!SOd : [:lapce]]                              ;
+         ; [:!SOe : [:lapce]]                              ;
+         ; [:!SOf : [:lapce]]                              ;
+         ; [:!SOg : [:lapce]]                              ;
+         ; [:!SOh : [:lapce]]                              ;
+         ; [:!SOi : [:lapce]]                              ;
+         ; [:!SOj : [:lapce]]                              ;
+         ; [:!SOk : [:lapce]]                              ;
+         [:!SOl :!Cl [:lapce]]                             ;
+         ; [:!SOm : [:lapce]]                              ;
+         ; [:!SOn : [:lapce]]                              ;
+         ; [:!SOo : [:lapce]]                              ;
+         ; [:!SOp : [:lapce]]                              ;
+         ; [:!SOq : [:lapce]]                              ;
+         ; [:!SOr : [:lapce]]                              ;
+         ; [:!SOs : [:lapce]]                              ;
+         ; [:!SOt : [:lapce]]                              ;
+         [:!SOu :!CSz [:lapce]]                            ;
+         ; [:!SOv : [:lapce]]                              ;
+         ; [:!SOw : [:lapce]]                              ;
+         [:!SOx :!CSk [:lapce]]                            ;
+         ; [:!SOy : [:lapce]]                              ;
+         ; [:!SOz : [:lapce]]                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
