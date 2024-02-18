@@ -38,8 +38,8 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!EWRleft_control :!SOa [:term]]                 ; esc-ctrl
-         [:escape :!EWright_shift :term {:alone [:!SOb]}]  ; esc
+         [:escape :!EWright_shift :term {:alone [:!SOa]}]  ; esc
+         [:!EWRright_shift :!SOb [:term]]                  ; esc-shift
          [:!EWRspacebar :!SOc [:term]]                     ; esc-space
          [:!EWRreturn_or_enter :!SOd [:term]]              ; esc-enter
          [:!EWRdelete_or_backspace :!SOe [:term]]          ; esc-bspace
