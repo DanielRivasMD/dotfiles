@@ -8,39 +8,6 @@ keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    // modes
-    shared_except "normal" "entersearch" {
-        bind "Enter" { SwitchToMode "Normal"; }
-    }
-
-    shared_except "normal" {
-        bind "Alt A" { SwitchToMode "Normal"; }
-        bind "Esc" { SwitchToMode "Normal"; }
-    }
-
-    shared_except "resize" {
-        bind "Alt B" { SwitchToMode "Resize"; }
-    }
-
-    shared_except "scroll" {
-        bind "Alt C" { SwitchToMode "Scroll"; }
-    }
-
-    shared_except "entersearch" {
-        bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
-    }
-
-    shared_except "session" {
-        bind "Alt E" { SwitchToMode "Session"; }
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    shared {
         bind "Alt a" { EditScrollback; SwitchToMode "Normal"; }
         // bind "Alt b" {}
         // bind "Alt c" {}
@@ -94,6 +61,34 @@ keybinds clear-defaults=true {
         bind "Alt X" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }
         bind "Alt Y" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }
         bind "Alt Z" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // modes
+    shared_except "normal" "entersearch" {
+        bind "Enter" { SwitchToMode "Normal"; }
+    }
+
+    shared_except "normal" {
+        bind "Alt A" { SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Normal"; }
+    }
+
+    shared_except "resize" {
+        bind "Alt B" { SwitchToMode "Resize"; }
+    }
+
+    shared_except "scroll" {
+        bind "Alt C" { SwitchToMode "Scroll"; }
+    }
+
+    shared_except "entersearch" {
+        bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
+    }
+
+    shared_except "session" {
+        bind "Alt E" { SwitchToMode "Session"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
