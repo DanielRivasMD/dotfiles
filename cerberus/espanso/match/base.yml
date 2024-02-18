@@ -7,60 +7,60 @@ matches:
   ####################################################################################################
 
   # name
-  - trigger: "??name"
+  - trigger: ":name:"
     replace: "Salvador Daniel Rivas Carrillo"
 
-  - trigger: "??fn"
+  - trigger: ":fn:"
     replace: "Salvador Daniel"
 
-  - trigger: "??ln"
+  - trigger: ":ln:"
     replace: "Rivas Carrillo"
 
-  - trigger: "??dr"
+  - trigger: ":dr:"
     replace: "Daniel Rivas"
 
   # address
-  - trigger: "??mail"
+  - trigger: ":mail:"
     replace: "danielrivasmd@gmail.com"
 
-  - trigger: "??gad"
+  - trigger: ":gad:"
     replace: "Manuel Azpiroz 1790"
 
-  - trigger: "??gzc"
+  - trigger: ":gzc:"
     replace: "44260"
 
-  - trigger: "??gdl"
+  - trigger: ":gdl:"
     replace: "Guadalajara"
 
-  - trigger: "??mxph"
+  - trigger: ":mxph:"
     replace: "3322192477"
 
-  - trigger: "??swph"
+  - trigger: ":swph:"
     replace: "767799639"
 
   # links
-  - trigger: "??link"
+  - trigger: ":link:"
     replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
 
-  - trigger: "??github"
+  - trigger: ":github:"
     replace: "https://github.com/DanielRivasMD"
 
-  - trigger: "??schoolar"
+  - trigger: ":schoolar:"
     replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
 
   # salutation
-  - trigger: "??ch"
+  - trigger: ":ch:"
     replace: "Cheers,"
 
-  - trigger: "??rg"
+  - trigger: ":rg:"
     replace: "Regards,"
 
   # salutation
-  - trigger: "??br"
+  - trigger: ":br:"
     replace: "Best regards,"
 
   # salutation
-  - trigger: "??sl"
+  - trigger: ":sl:"
     replace: "Sincerely,"
 
   ####################################################################################################
@@ -204,7 +204,7 @@ matches:
 
   ####################################################################################################
 
-  # symbols  
+  # symbols
   - trigger: ",,a"
     replace: "ɒ"
 
@@ -254,7 +254,7 @@ matches:
     replace: "п"
 
   # - trigger: ",,q"
-  #   replace: "" 
+  #   replace: ""
 
   - trigger: ",,r"
     replace: "я"
@@ -263,7 +263,7 @@ matches:
     replace: "Σ"
 
   # - trigger: ",,t"
-  #   replace: "" 
+  #   replace: ""
 
   - trigger: ",,u"
     replace: "Θ"
