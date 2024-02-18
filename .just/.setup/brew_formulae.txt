@@ -2,20 +2,16 @@ abseil
 adns
 aom
 apache-arrow
+apache-spark
 aribb24
 assimp
 aws-sdk-cpp
 bash-completion
 bat
 bat-extras
-bat-extras-batdiff
-bat-extras-batgrep
-bat-extras-batman
-bat-extras-batpipe
-bat-extras-batwatch
-bat-extras-prettybat
 bdw-gc
 berkeley-db
+berkeley-db@5
 blueutil
 boost
 brotli
@@ -28,7 +24,9 @@ cffi
 cfitsio
 cgif
 cheat
+chezmoi
 cjson
+clojure-lsp-native
 cmake
 cmocka
 coreutils
@@ -46,7 +44,6 @@ docker-machine
 double-conversion
 duf
 duktape
-eg-examples
 emacs
 entr
 epsilon
@@ -54,7 +51,6 @@ expat
 ffmpeg
 fftw
 fillin
-fish
 flac
 fontconfig
 fossil
@@ -66,7 +62,6 @@ fribidi
 fvm
 fzf
 gcc
-gcc@9
 gdal
 gdbm
 gdk-pixbuf
@@ -86,6 +81,7 @@ gmp
 gnu-getopt
 gnupg
 gnutls
+go
 gobject-introspection
 goku
 gpgme
@@ -125,8 +121,6 @@ julia
 khal
 krb5
 lame
-lazydocker
-lazygit
 leptonica
 libaec
 libarchive
@@ -137,6 +131,7 @@ libbluray
 libcaca
 libdap
 libde265
+libdicom
 libev
 libevent
 libexif
@@ -148,6 +143,7 @@ libgit2@1.5
 libgpg-error
 libgsf
 libheif
+libiconv
 libidn
 libidn2
 libimagequant
@@ -156,6 +152,7 @@ libksba
 liblerc
 liblqr
 libmatio
+libmicrohttpd
 libmng
 libmpc
 libnghttp2
@@ -176,6 +173,7 @@ libsodium
 libsoxr
 libspatialite
 libspng
+libssh
 libssh2
 libtasn1
 libtermkey
@@ -203,6 +201,7 @@ libxrandr
 libxrender
 libxxf86vm
 libyaml
+litecli
 little-cms2
 llvm
 llvm@12
@@ -226,7 +225,6 @@ mesa
 metis
 micro
 minizip
-mmv
 most
 mozjpeg
 mpdecimal
@@ -236,6 +234,7 @@ mplayer
 msgpack
 mujs
 mupdf
+mycli
 ncurses
 neomutt
 netcdf
@@ -255,12 +254,15 @@ openblas
 opencore-amr
 openexr
 openjdk
+openjdk@11
+openjdk@17
 openjpeg
 openldap
 openlibm
 openslide
 openssl@1.1
 openssl@3
+openvino
 opus
 orc
 p11-kit
@@ -270,9 +272,11 @@ pango
 pcre
 pcre2
 perl
+pgcli
 pinentry
 pixman
 pkg-config
+pmix
 poppler
 poppler-qt5
 popt
@@ -286,8 +290,18 @@ proj
 proj@7
 protobuf
 protobuf@21
+ptpython
+pugixml
 pycparser
+pygments
+python-click
+python-cryptography
+python-dateutil
+python-pytz
 python-setuptools
+python-tabulate
+python-tk@3.11
+python-typing-extensions
 python@3.10
 python@3.11
 python@3.12
@@ -296,7 +310,6 @@ python@3.9
 qhull
 qt
 qt@5
-ranger
 rapidjson
 rav1e
 rclone
@@ -319,6 +332,7 @@ six
 snappy
 speex
 sqlite
+sqlparse
 srt
 suite-sparse
 surfraw
@@ -333,15 +347,13 @@ tesseract
 texlab
 theora
 thrift
-tmux
-todor
 tokyo-cabinet
 toolbox
-tree
 tree-sitter
 ts
 ttygif
 ttyrec
+ucl
 udunits
 unbound
 unibilium
@@ -350,6 +362,7 @@ unixodbc
 upx
 uriparser
 utf8proc
+uthash
 vips
 watchexec
 webp
