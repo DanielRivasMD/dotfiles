@@ -1,1 +1,9 @@
-
+[
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-\\": "pane::SplitRight",
+      "cmd-|": "pane::SplitDown",
+    }
+  }
+]
