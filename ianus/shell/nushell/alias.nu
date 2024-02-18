@@ -48,7 +48,7 @@ alias mp = mplayer
 alias f = fillin
 alias lzg = lazygit
 alias lzd = lazydocker
-
+alias lzn = lazynpm
 
 ####################################################################################################
 # Rust toolLinks
@@ -70,17 +70,20 @@ alias gf = gfold
 # gitui
 alias gt = gitui
 
-# git-local-ignore
-alias gl = git-local-ignore
-
 # hgrep
 alias hg = hgrep
+
+# mgit
+alias mg = mgit
 
 # samesame
 alias ss = samesame
 
 # wordcrab
 alias wc = wordcrab
+
+# zellij
+alias zj = zellij
 
 # zoxide
 alias zz = z -
