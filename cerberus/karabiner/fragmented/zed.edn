@@ -33,12 +33,12 @@
  :rules [;
          [:escape :!EWright_shift :zed {:alone [:!Cb]}]    ; file explorer
          ; [:delete_or_backspace :!WQright_shift
-          ; :zed {:alone [:!Cj]}]                            ; terminal
+          ; :zed {:alone [:!Cj]}]                          ; terminal
 
-         [:!OTright_shift :!TCSg [:zed]]                   ; split vertical
-         [:!OTright_option :!TCSh [:zed]]                  ; split horizontal
-         [:!OCright_shift :!TCSg [:zed]]                   ; split vertical
-         [:!OCright_option :!TCSh [:zed]]                  ; split horizontal
+         ; [:!OTright_shift :!Cbackslash [:zed]]           ; split vertical
+         ; [:!OTright_option :!CSbackslash [:zed]]         ; split horizontal
+         ; [:!OCright_shift :!Cbackslash [:zed]]           ; split vertical
+         ; [:!OCright_option :!CSbackslash [:zed]]         ; split horizontal
          ; [:!OTright_command :!TCSbackslash [:zed]]       ;
 
          [:!Oup_arrow :!Tup_arrow [:zed]]                  ; prev paragraph
