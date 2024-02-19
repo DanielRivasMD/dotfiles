@@ -53,12 +53,12 @@ A-C-F11 = ["vsplit"]                                       # ctrl-cmd-alt      #
 A-C-F12 = ["wonly"]                                        # ctrl-cmd-cmd      # unsplit
 
 # comments
-A-C-S-F8 = ["goto_prev_comment"]                           # ctrl-cmd-[        # prev comment
-A-C-S-F9 = ["goto_next_comment"]                           # ctrl-cmd-]        # next comment
+S-F8 = ["goto_prev_comment"]                               # ctrl-cmd-[        # prev comment
+S-F9 = ["goto_next_comment"]                               # ctrl-cmd-]        # next comment
 
 # version control
-S-A-C-F11 = ["goto_prev_change"]                           # alt-cmd-up        # prev change
-S-A-C-F12 = ["goto_next_change"]                           # alt-cmd-down      # next change
+S-F11 = ["goto_prev_change"]                               # alt-cmd-up        # prev change
+S-F12 = ["goto_next_change"]                               # alt-cmd-down      # next change
 
 # jump
 A-F13 = ["jump_backward"]                                  # ctrl-cmd-;        # prev jump
