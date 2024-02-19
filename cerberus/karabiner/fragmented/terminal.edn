@@ -92,23 +92,23 @@
          [:!TCright_command :!OTf12 [:term]]               ; ctrl-cmd-cmd
 
          ; broot create
-         [:!WQreturn_or_enter :!SOTf6 [:term]]              ; ctrl-cmd-enter
-         [:!WQdelete_or_backspace :!SOTf7 [:term]]          ; ctrl-cmd-bspace
+         [:!TCreturn_or_enter :!Sf6 [:term]]               ; ctrl-cmd-enter
+         [:!TCdelete_or_backspace :!Sf7 [:term]]           ; ctrl-cmd-bspace
 
          ; helix comments
-         [:!TCopen_bracket :!SOTf8]                         ; ctrl-cmd-[
-         [:!TCclose_bracket :!SOTf9]                        ; ctrl-cmd-]
+         [:!TCopen_bracket :!Sf8]                          ; ctrl-cmd-[
+         [:!TCclose_bracket :!Sf9]                         ; ctrl-cmd-]
 
-         [:!TCkeypad_plus :!SOTf8]                          ; ctrl-cmd-+
-         [:!TCkeypad_enter :!SOTf9]                         ; ctrl-cmd-enter
+         [:!TCkeypad_plus :!Sf8]                           ; ctrl-cmd-+
+         [:!TCkeypad_enter :!Sf9]                          ; ctrl-cmd-enter
 
          ; broot toggle
          [:left_option :left_option :term                  ; alt-tab
-          {:alone [:!SOTf10]}]
+          {:alone [:!Sf10]}]
 
          ; version control
-         [:!OCup_arrow :!SOTf11 [:term]]                   ; alt-cmd-up
-         [:!OCdown_arrow :!SOTf12 [:term]]                 ; alt-cmd-down
+         [:!OCup_arrow :!Sf11 [:term]]                     ; alt-cmd-up
+         [:!OCdown_arrow :!Sf12 [:term]]                   ; alt-cmd-down
 
          ; helix jump
          [:!TCsemicolon :!Of13 [:term]]                    ; ctrl-cmd-;
