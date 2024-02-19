@@ -17,9 +17,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ####################################################################################################
 
 # install rust binaries
-while read item
+while read -r item
 do
-  cargo install ${item}
+  cargo install "${item}"
 done < "${setupDir}/cargo.txt"
 
 ####################################################################################################
