@@ -70,6 +70,10 @@ alias hg='hgrep'
 # mgit
 alias mg='mgit'
 
+# pueue
+alias p='pueue'
+alias pd='pueued'
+
 # samesame
 alias ss='samesame'
 
