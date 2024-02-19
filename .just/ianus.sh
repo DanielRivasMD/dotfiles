@@ -23,9 +23,6 @@ source .just/.config.sh
 
 ####################################################################################################
 
-# declarations
-source .just.sh
-
 # R
 echo ''
 echo 'Linking R config'
