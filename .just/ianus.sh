@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################################################
 # Ianus
 ####################################################################################################
@@ -15,10 +16,6 @@
 # As such, Janus was ritually invoked at the beginning of each ceremony, regardless of the main deity honored on any particular occasion.
 
 # The ancient Greeks had no equivalent to Janus, whom the Romans claimed as distinctively their own.
-####################################################################################################
-
-#!/bin/bash
-
 ####################################################################################################
 
 # declarations

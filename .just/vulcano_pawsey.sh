@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################################################
 # Vulcano
 ####################################################################################################
@@ -20,11 +21,6 @@
 # He served as the blacksmith of the gods, and was worshipped in the manufacturing and industrial centres of Greece, particularly Athens.
 # The cult of Hephaestus was based in Lemnos.
 # Hephaestus's symbols are a smith's hammer, anvil, and a pair of tongs.
-####################################################################################################
-
-#!/bin/bash
-set -euo pipefail
-
 ####################################################################################################
 
 # declarations

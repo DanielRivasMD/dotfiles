@@ -16,7 +16,7 @@ forked="${home}/Forked"
 observatory="${home}/Observatory"
 appSupport="${home}/Library/Application Support"
 localShare="${home}/.local/share"
-setupDir="${archive}/setup"
+setupDir="${archive}/.just/.setup"
 
 ####################################################################################################
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################################################
 # Mercury
 ####################################################################################################
@@ -8,11 +9,6 @@
 # In his earliest forms, he appears to have been related to the Etruscan deity Turms; both gods share characteristics with the Greek god Hermes.
 # He is often depicted holding the caduceus in his left hand.
 # Similar to his Greek equivalent Hermes, he was awarded a magic wand by Apollo, which later turned into the caduceus, the staff with intertwined snakes.
-####################################################################################################
-
-#!/bin/bash
-set -euo pipefail
-
 ####################################################################################################
 
 # declarations

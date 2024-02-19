@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################################################
 # Hadur
 ####################################################################################################
@@ -9,10 +10,6 @@
 # He is thought to be a great man with long hair and with armour and weapons made of pure copper, since copper was his sacred metal.
 # He supposedly made the legendary sword, Sword of God (Isten kardja) which was discovered by Attila the Hun and secured his rule.
 # It was customary for the Magyars to sacrifice white stallions to him before a battle.
-####################################################################################################
-
-#!/bin/bash
-
 ####################################################################################################
 
 # declarations
