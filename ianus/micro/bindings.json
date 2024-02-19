@@ -11,8 +11,6 @@
     "Alt-Ctrl-F8": "PreviousTab",
     "Alt-Ctrl-F9": "NextTab",
     "Alt-Ctrl-Shift-F1": "None",
-    "Alt-Ctrl-Shift-F11": "DiffPrevious",
-    "Alt-Ctrl-Shift-F12": "DiffNext",
     "Alt-Ctrl-Shift-F2": "CutLine",
     "Alt-Ctrl-Shift-F4": "CopyLine",
     "Alt-Ctrl-Shift-F5": "None",
@@ -102,5 +100,9 @@
     "F4": "command:jumptag",
     "MouseRight": "MouseMultiCursor",
     "Shift-F1": "ParagraphPrevious",
-    "Shift-F2": "ParagraphNext"
+    "Shift-F11": "DiffPrevious",
+    "Shift-F12": "DiffNext",
+    "Shift-F2": "ParagraphNext",
+    "Shift-F4": "StartOfLine,SelectLine,CursorStart,SelectWordRight",
+    "Shift-F5": "StartOfLine,SelectLine,CursorEnd,SelectWordRight"
 }
