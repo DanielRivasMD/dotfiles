@@ -1,3 +1,9 @@
+#!/bin/bash
+####################################################################################################
+
+# setup
+setupDir="$HOME/.archive/.just/.setup"
+
 ####################################################################################################
 
 # install homebrew
@@ -5,18 +11,10 @@
 
 ####################################################################################################
 
-# install tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-####################################################################################################
-
 # patch formulae
 brew install itchyny/tap/fillin
 
 brew install kdabir/tap/has
-
-brew tap lavifb/todo_r https://github.com/lavifb/todo_r.git
-brew install todor
 
 brew tap watermint/toolbox
 brew install toolbox
@@ -37,10 +35,10 @@ brew install --cask docker
 ####################################################################################################
 
 # install formulae
-brew install --formulae $(cat setup/brew_formulae.txt)
+brew install --formulae $(cat "${setupDir}/brew_formulae.txt")
 
 # install casks
-brew install --casks $(cat setup/brew_casks.txt)
+brew install --casks $(cat "${setup}/brew_casks.txt")
 
 ####################################################################################################
 
@@ -53,7 +51,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 while read item
 do
   cargo install ${item}
-done < setup/cargo.txt
+done < "${setup}/cargo.txt"
 
 ####################################################################################################
 
@@ -63,9 +61,6 @@ curl -sSL https://git.io/g-install | sh -s
 # zsh package manager
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 
-# install golang update
-go install github.com/nao1215/gup@latest
-
 ####################################################################################################
 
 # link
@@ -73,7 +68,7 @@ mkdir -p ${HOME}/.config/gup
 ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
 
 # install golang binaries
-gup import
+# TODO: finish installation
 
 ####################################################################################################
 
