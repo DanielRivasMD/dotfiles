@@ -137,25 +137,25 @@ description = "`shift-alt` -> rename file"
 [[verbs]]
 invocation = "create {subpath}"
 shortcut = "c"
-key = "alt-ctrl-shift-f6"
+key = "shift-f6"
 execution = "touch {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
 description = "`ctrl-cmd-enter` -> create file"
 
-# # remove
-# [[verbs]]
-# external = "rm {file}"
-# invocation = "rm {file}"
-# key = "alt-ctrl-shift-f7"
-# leave_broot = false
-# auto_exec = false
-# description = "`ctrl-cmd-delete` -> delete file"
+# remove
+[[verbs]]
+external = "rm -rf {file}"
+invocation = "rm {file}"
+key = "shift-f7"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-delete` -> delete file"
 
 # stage
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "alt-ctrl-shift-f10"
+key = "shift-f10"
 internal = "toggle_staging_area"
 description = "`alt` -> toggle staging area"
 
