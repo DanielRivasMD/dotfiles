@@ -126,6 +126,7 @@ ln -svf "${observatory}/cheat/scripts/cheat.zsh" "${zshcomp}/_cheat"
 ln -svf "${observatory}/chezmoi/completions/chezmoi.zsh" "${zshcomp}/_chezmoi"
 ln -svf "${observatory}/fd/contrib/completion/_fd" "${zshcomp}/_fd"
 ln -svf "${observatory}/eza/completions/zsh/_eza" "${zshcomp}/_eza"
+cp -v "${zshcomp}/_eza" "${zshcomp}/_e" && sd eza e "${zshcomp}/_e"
 ln -svf "${observatory}/just/completions/just.zsh" "${zshcomp}/_just"
 ln -svf "${observatory}/watchexec/completions/zsh" "${zshcomp}/_watchexec"
 echo '===================================================================================================='
@@ -134,6 +135,7 @@ echo ''
 echo 'Generate completions'
 echo '===================================================================================================='
 zellij setup --generate-completion zsh > "${zshcomp}/_zellij" && echo 'Setup zellij'
+cp -v "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"
 echo '===================================================================================================='
 
 ####################################################################################################
