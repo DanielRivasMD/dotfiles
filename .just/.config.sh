@@ -70,6 +70,7 @@ micro="${ianus}/micro"
 helix="${ianus}/helix"
 moded="${helix}/modes"
 lsd="${ianus}/lsd"
+sheldon="${ianus}/sheldon"
 starship="${ianus}/starship"
 
 shell="${ianus}/shell"
