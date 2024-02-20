@@ -111,7 +111,7 @@ external = "mv {file} {other-panel-directory}"
 invocation = "move_to_pane"
 key = "alt-ctrl-f11"
 leave_broot = false
-auto_exec = false
+auto_exec = true
 description = "`ctrl-cmd-alt` -> move file to pane"
 
 # copy
@@ -120,7 +120,7 @@ external = "cp -r {file} {other-panel-directory}"
 invocation = "copy_to_pane"
 key = "alt-ctrl-f12"
 leave_broot = false
-auto_exec = false
+auto_exec = true
 description = "`ctrl-cmd-cmd` -> copy file to pane"
 
 # rename
