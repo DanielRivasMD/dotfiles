@@ -39,7 +39,6 @@ echo ''
 echo 'Linking config @HOME'
 echo '===================================================================================================='
 ln -svf "${pier}/pier.toml" "${home}/.pier.toml"                              # pier
-ln -svf "${tmux}/3.2a.tmux.conf" "${home}/.tmux.conf"                         # tumx 3.2a
 ln -svf "${screen}/4.08.00.screenrc" "${home}/.screenrc"                      # screen
 echo '===================================================================================================='
 
@@ -83,14 +82,6 @@ ln -svf "${zsh}/zsh_just.sh" "${home}/.zsh"                                   # 
 ln -svf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                   # zsh navi
 ln -svf "${zsh}/zsh_zellij.sh" "${home}/.zsh"                                 # zsh zellij
 ln -svf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                 # zsh zoxide
-echo '===================================================================================================='
-
-# fish
-echo ''
-echo 'Linking fish profile'
-echo '===================================================================================================='
-if [[ ! -d "${config}/fish" ]]; then mkdir "${config}/fish"; fi               # create directory
-ln -svf "${fish}/vernacular_config.fish" "${config}/fish/config.fish"         # fish config
 echo '===================================================================================================='
 
 # nushell
