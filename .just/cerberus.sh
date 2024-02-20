@@ -108,7 +108,6 @@ ln -svf "${navi}" "${naviConf}"                                               # 
 echo '===================================================================================================='
 
 # ln -svf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
-# ln -svf "${forked}/rip/target/release/rip" "${home}/bin/forkedPatch/"
 
 ####################################################################################################
 # Completions

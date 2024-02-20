@@ -27,8 +27,6 @@ source .just/.config.sh
 echo ''
 echo 'Linking R config'
 echo '===================================================================================================='
-if [[ -d "${home}/.Renviron.d" ]]; then rm -rf "${home}/.Renviron.d"; fi      # purge before linking
-ln -svf "${ianus}/R/Renviron.d" "${home}/.Renviron.d"                         # renviron directory
 if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi      # purge before linking
 ln -svf "${ianus}/R/Rprofile.d" "${home}/.Rprofile.d"                         # rprofile directory
 ln -svf "${ianus}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                # rprofile
@@ -49,6 +47,7 @@ echo '==========================================================================
 ln -svf "${micro}" "${config}"                                                # micro directory
 ln -svf "${helix}" "${config}"                                                # helix config
 ln -svf "${lsd}" "${config}"                                                  # lsd directory
+ln -svf "${sheldon}" "${config}"                                              # sheldon directory
 ln -svf "${starship}" "${config}"                                             # starship directory
 echo '===================================================================================================='
 
@@ -106,6 +105,7 @@ echo 'Generate completions'
 echo '===================================================================================================='
 pueue completions zsh "${zshcomp}" && echo 'Setup pueue'
 cp -v "${zshcomp}/_pueue" "${zshcomp}/_p" && sd pueue p "${zshcomp}/_p"
+sheldon completions --shell zsh > "${zshcomp}/_sheldon" && echo 'Setup sheldon'
 echo '===================================================================================================='
 
 ####################################################################################################

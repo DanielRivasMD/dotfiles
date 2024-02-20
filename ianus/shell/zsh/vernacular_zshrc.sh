@@ -108,16 +108,12 @@ ZFUN="${ZDOTDIR}/zsh_zoxide.sh"
 # editor
 ####################################################################################################
 
-# edit line in editor with ctrl-g => shift-enter
+# edit line
 autoload edit-command-line; zle -N edit-command-line
 
 ####################################################################################################
 # key bindings
 ####################################################################################################
-
-# # movement
-# bindkey "\x1b[1;3D" backward-word
-# bindkey "\x1b[1;3C" forward-word
 
 # atuin
 bindkey '^s' _atuin_search_widget
