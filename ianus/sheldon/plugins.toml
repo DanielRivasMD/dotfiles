@@ -1,0 +1,43 @@
+####################################################################################################
+
+[plugins]
+
+[plugins.completions]
+github = "zap-zsh/completions"
+
+[plugins.sudo]
+github = "zap-zsh/sudo"
+
+[plugins.supercharge]
+github = "zap-zsh/supercharge"
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+
+[plugins.zsh-autopair]
+github = "hlissner/zsh-autopair"
+
+[plugins.zsh-you-should-use]
+github = "MichaelAquilina/zsh-you-should-use"
+
+[plugins.zsh-fvm]
+github = "olrtg/zsh-fvm"
+
+
+[plugins.zsh-brew]
+github = "wintermi/zsh-brew"
+
+[plugins.zsh-golang]
+github = "wintermi/zsh-golang"
+
+[plugins.zsh-rust]
+github = "wintermi/zsh-rust"
+
+[plugins.zsh-starship]
+github = "wintermi/zsh-starship"
+
+####################################################################################################
