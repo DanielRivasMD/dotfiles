@@ -85,6 +85,9 @@ S-F7 = ["workspace_symbol_picker"]                         # ctrl-cmd-0        #
 # reload
 S-F10 = ["normal_mode", ":reload-all", "XXX_MODE"]
 
+
+####################################################################################################
+
 # alphabet
 # A-F1 = [""]                                              # alt-a             #
 A-F2 = ["command_mode"]                                    # alt-b             # command mode
@@ -115,6 +118,9 @@ A-C-F2 = ["delete_selection"]                              # alt-x             #
 A-C-F4 = ["search_selection", "search_next"]               # alt-y             # skip multi
 A-C-F5 = ["search_selection", "search_prev"]               # alt-z             # remove multi
 
+
+####################################################################################################
+
 # alphabet
 S-A-F1 = ["select_all"]                                    # alt-shift-a       # select all
 S-A-F2 = ["shell_pipe"]                                    # alt-shift-b       # shell mode
@@ -144,6 +150,9 @@ S-C-F11 = ["redo"]                                         # alt-shift-u       #
 S-A-C-F2 = ["extend_to_line_bounds", "delete_selection"]   # alt-shift-x       # cut line
 S-A-C-F4 = ["extend_to_line_bounds", "yank"]               # alt-shift-y       # copy line
 # S-A-C-F5 = [""]                                          # alt-shift-z       #
+
+
+####################################################################################################
 
 # control
 C-a = ["goto_line_start"]                                  # cmd-left          # start line
@@ -176,6 +185,7 @@ C-x = ["decrement"]                                        # ctrl-cmd-down     #
 
 ####################################################################################################
 
+# control - command
 # A-F19 = [""]                                             # ctrl-cmd-a        #
 # A-F20 = [""]                                             # ctrl-cmd-b        #
 # S-F13 = [""]                                             # ctrl-cmd-c        #
@@ -183,15 +193,15 @@ C-x = ["decrement"]                                        # ctrl-cmd-down     #
 # S-F15 = [""]                                             # ctrl-cmd-e        #
 # S-F16 = [""]                                             # ctrl-cmd-f        #
 # S-F17 = [""]                                             # ctrl-cmd-g        #
-# S-F18 = [""]                                             # ctrl-cmd-h        #
+S-F18 = ["goto_reference"]                                 # ctrl-cmd-h        #
 S-F19 = ["normal_mode", "find_till_char"]                  # ctrl-cmd-i        #
-# S-F20 = [""]                                             # ctrl-cmd-j        #
-# A-C-F19 = [""]                                           # ctrl-cmd-k        #
-# A-C-F20 = [""]                                           # ctrl-cmd-l        #
+S-F20 = ["goto_definition"]                                # ctrl-cmd-j        #
+A-C-F19 = ["goto_type_definition"]                         # ctrl-cmd-k        #
+A-C-F20 = ["goto_implementation"]                          # ctrl-cmd-l        #
 A-C-S-F6 = ["normal_mode", "repeat_last_motion"]           # ctrl-cmd-m        #
 # A-C-S-F7 = [""]                                          # ctrl-cmd-n        #
 A-C-S-F8 = ["normal_mode", "till_prev_char"]               # ctrl-cmd-o        #
-# A-C-S-F8 = [""]                                          # ctrl-cmd-p        #
+# A-C-S-F9 = [""]                                          # ctrl-cmd-p        #
 # A-C-S-F10 = [""]                                         # ctrl-cmd-q        #
 # A-C-S-F11 = [""]                                         # ctrl-cmd-r        #
 # A-C-S-F12 = [""]                                         # ctrl-cmd-s        #
@@ -201,8 +211,7 @@ A-C-S-F8 = ["normal_mode", "till_prev_char"]               # ctrl-cmd-o        #
 # A-C-S-F16 = [""]                                         # ctrl-cmd-w        #
 # A-C-S-F17 = [""]                                         # ctrl-cmd-x        #
 # A-C-S-F18 = [""]                                         # ctrl-cmd-y        #
-# A-C-S-F19 = [""]                                         # ctrl-cmd-z        #
-# A-C-S-F20 = [""]                                         # ctrl-cmd-z        #
+A-C-S-F19 = ["goto_last_modification"]                     # ctrl-cmd-z        #
 
 
 ####################################################################################################
