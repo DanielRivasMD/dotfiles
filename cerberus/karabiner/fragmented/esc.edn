@@ -45,7 +45,7 @@
          [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                           ; ' %<% '
          [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                         ; ' %>% '
          [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                     ; ' %!>% '
-         [:!EWRdelete_or_backspace [:!S3 :!S1 :slash]]                                   ; '#!/'
+         ; [:!EWRdelete_or_backspace []] COLLISION (zellij mode)
          ; [:!EWRreturn_or_enter []]   COLLISION (zellij mode)
          ; [:!EWRright_shift []]       COLLISION (zellij mode)
          ; [:!EWRright_option []]      COLLISION (zellij mode)
