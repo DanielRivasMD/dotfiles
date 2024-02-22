@@ -31,14 +31,13 @@ select = "block"
 ####################################################################################################
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
+left = ["mode", "spinner", "diagnostics"]
+center = ["file-name", "file-modification-indicator", "read-only-indicator", "version-control"]
 right = [
-  "diagnostics",
   "selections",
   "position",
+  "primary-selection-length",
   "file-encoding",
-  "file-line-ending",
   "file-type",
 ]
 separator = "│"
