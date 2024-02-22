@@ -148,6 +148,7 @@ echo ''
 echo 'Linking executables'
 echo '===================================================================================================='
 ln -svf "${observatory}/yq/yq" "${home}/.go/bin"
+ln -svf "${observatory}/todo_r/target/release/todor" "${home}/.cargo/bin"
 echo '===================================================================================================='
 
 
