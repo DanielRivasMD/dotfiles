@@ -17,6 +17,7 @@ observatory="${home}/Observatory"
 appSupport="${home}/Library/Application Support"
 localShare="${home}/.local/share"
 setupDir="${archive}/.just/.setup"
+completionsDir="${archive}/completions"
 
 ####################################################################################################
 
