@@ -32,7 +32,7 @@ select = "block"
 
 [editor.statusline]
 left = ["mode", "spinner", "diagnostics"]
-center = ["file-name", "file-modification-indicator", "read-only-indicator", "version-control"]
+center = ["file-modification-indicator", "file-name", "read-only-indicator", "version-control"]
 right = [
   "selections",
   "position",
