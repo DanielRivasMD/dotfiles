@@ -62,6 +62,39 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
+{:des ""
+ :rules [;
+         [:!TCa :!Of19 [:term]];
+         [:!TCb :!Of20 [:term]];
+         [:!TCc :!Sf13 [:term]];
+         [:!TCd :!Sf14 [:term]];
+         [:!TCe :!Sf15 [:term]];
+         [:!TCf :!Sf16 [:term]];
+         [:!TCg :!Sf17 [:term]];
+         [:!TCh :!Sf18 [:term]];
+         [:!TCi :!Sf19 [:term]];
+         [:!TCj :!Sf20 [:term]];
+         [:!TCk :!OTf19 [:term]];
+         [:!TCl :!OTf20 [:term]];
+         [:!TCm :!SOTf6 [:term]];
+         [:!TCn :!SOTf7 [:term]];
+         [:!TCo :!SOTf8 [:term]];
+         [:!TCp :!SOTf9 [:term]];
+         [:!TCq :!SOTf10 [:term]];
+         [:!TCr :!SOTf11 [:term]];
+         [:!TCs :!SOTf12 [:term]];
+         [:!TCt :!SOTf13 [:term]];
+         [:!TCu :!SOTf14 [:term]];
+         [:!TCv :!SOTf15 [:term]];
+         [:!TCw :!SOTf16 [:term]];
+         [:!TCx :!SOTf17 [:term]];
+         [:!TCy :!SOTf18 [:term]];
+         [:!TCz :!SOTf19 [:term]];
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
 {:des "Alacritty software bindings"
  :rules [;
          ; alt down
@@ -69,19 +102,15 @@
          [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
 
          ; movement
-         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left 
-         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right 
-         [:!CSup_arrow :!Sf4 [:term]]                      ; cmd-shift-up 
+         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left
+         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right
+         [:!CSup_arrow :!Sf4 [:term]]                      ; cmd-shift-up
          [:!CSdown_arrow :!Sf5 [:term]]                    ; cmd-shift-down
 
          ; broot open
          [:!Creturn_or_enter :!OTf6 [:term]]               ; cmd-enter
 
          ; helix tab & broot viewer
-         [:!WQspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
-         [:!WQleft_arrow :!OTf8 [:term]]                   ; ctrl-cmd-left
-         [:!WQright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
-
          [:!TCspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
          [:!TCleft_arrow :!OTf8 [:term]]                   ; ctrl-cmd-left
          [:!TCright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
@@ -114,21 +143,21 @@
          [:!TCsemicolon :!Of13 [:term]]                    ; ctrl-cmd-;
          [:!TCquote :!Of14 [:term]]                        ; ctrl-cmd-'
          [:!TCbackslash :!Of15 [:term]]                    ; ctrl-cmd-\
-         [:!TCreturn_or_enter :!Of16 [:term]]              ; ctrl-cmd-enter
+         ; [:!TCreturn_or_enter :!Sf6 [:term]]             ; ctrl-cmd-enter
 
          [:!TCkeypad_9 :!Of13 [:term]]                     ; ctrl-cmd-9
          [:!TCkeypad_6 :!Of14 [:term]]                     ; ctrl-cmd-6
          [:!TCkeypad_3 :!Of15 [:term]]                     ; ctrl-cmd-3
-         [:!TCkeypad_period :!Of16 [:term]]                ; ctrl-cmd-.
+         [:!TCkeypad_period :!Sf6 [:term]]                 ; ctrl-cmd-.
 
          ; helix diagnostics
-         [:!TCcomma :!Of17]                                ; ctrl-cmd-,
-         [:!TCperiod :!Of18]                               ; ctrl-cmd-.
-         [:!TCslash :!Of19]                                ; ctrl-cmd-/
+         [:!TCcomma :!Of16]                                ; ctrl-cmd-,
+         [:!TCperiod :!Of17]                               ; ctrl-cmd-.
+         [:!TCslash :!Of18]                                ; ctrl-cmd-/
 
-         [:!TCkeypad_slash :!Of17]                         ; ctrl-cmd-/
-         [:!TCkeypad_asterisk :!Of18]                      ; ctrl-cmd-*
-         [:!TCkeypad_hyphen :!Of19]                        ; ctrl-cmd--
+         [:!TCkeypad_slash :!Of16]                         ; ctrl-cmd-/
+         [:!TCkeypad_asterisk :!Of17]                      ; ctrl-cmd-*
+         [:!TCkeypad_hyphen :!Of18]                        ; ctrl-cmd--
 
          ; helix symbols
          [:!TCkeypad_7 :!OTf13]                            ; ctrl-cmd-7
@@ -137,14 +166,11 @@
          [:!TCkeypad_5 :!OTf16]                            ; ctrl-cmd-5
          [:!TCkeypad_1 :!OTf17]                            ; ctrl-cmd-1
          [:!TCkeypad_2 :!OTf18]                            ; ctrl-cmd-2
-         [:!TCkeypad_0 :!OTf19]                            ; ctrl-cmd-0
+         [:!TCkeypad_0 :!Sf7]                              ; ctrl-cmd-0
 
          [:!TChyphen :!OTf15]                              ; ctrl-cmd--
          [:!TCequal_sign :!OTf16]                          ; ctrl-cmd-=
-         [:!TCdelete_or_backspace :!OTf19]                 ; ctrl-cmd-bspace
-
-         ; helix reload
-         [:!WQleft_option :!OTf20 [:term]]                  ; cmd-alt
+         ; [:!TCdelete_or_backspace :!Sf7]                 ; ctrl-cmd-bspace
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
