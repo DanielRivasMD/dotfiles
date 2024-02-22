@@ -82,9 +82,6 @@ A-C-F17 = ["goto_prev_class"]                              # ctrl-cmd-1        #
 A-C-F18 = ["goto_next_class"]                              # ctrl-cmd-2        # next class
 S-F7 = ["workspace_symbol_picker"]                         # ctrl-cmd-0        # symbol list
 
-# reload
-S-F10 = ["normal_mode", ":reload-all", "XXX_MODE"]
-
 
 ####################################################################################################
 
@@ -146,7 +143,7 @@ S-C-F9 = [":write-quit"]                                   # alt-shift-s       #
 # S-C-F10 = [""]                                           # alt-shift-t       #
 S-C-F11 = ["redo"]                                         # alt-shift-u       # redo
 # S-C-F12 = [""]                                           # alt-shift-v       #
-# S-A-C-F1 = [""]                                          # alt-shift-w       #
+S-A-C-F1 = ["normal_mode", ":reload-all", "XXX_MODE"]      # alt-shift-w       # reload
 S-A-C-F2 = ["extend_to_line_bounds", "delete_selection"]   # alt-shift-x       # cut line
 S-A-C-F4 = ["extend_to_line_bounds", "yank"]               # alt-shift-y       # copy line
 # S-A-C-F5 = [""]                                          # alt-shift-z       #
