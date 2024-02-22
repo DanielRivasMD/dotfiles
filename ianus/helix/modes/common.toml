@@ -3,6 +3,8 @@
 # hover
 C-space = ["hover"]
 
+####################################################################################################
+
 # delete
 del = ["delete_selection_noyank"]
 backspace = ["delete_char_backward"]
@@ -48,8 +50,8 @@ A-C-F8 = ["goto_previous_buffer"]                          # ctrl-cmd-left     #
 A-C-F9 = ["goto_next_buffer"]                              # ctrl-cmd-right    # next tab
 
 # helix split
-A-C-F10 = ["hsplit"]                                       # ctrl-cmd-shift    # horizontal split
-A-C-F11 = ["vsplit"]                                       # ctrl-cmd-alt      # vertical split
+A-C-F10 = ["vsplit"]                                       # ctrl-cmd-alt      # vertical split
+A-C-F11 = ["hsplit"]                                       # ctrl-cmd-shift    # horizontal split
 A-C-F12 = ["wonly"]                                        # ctrl-cmd-cmd      # unsplit
 
 # comments
@@ -64,12 +66,12 @@ S-F12 = ["goto_next_change"]                               # alt-cmd-down      #
 A-F13 = ["jump_backward"]                                  # ctrl-cmd-;        # prev jump
 A-F14 = ["jump_forward"]                                   # ctrl-cmd-'        # next jump
 A-F15 = ["jumplist_picker"]                                # ctrl-cmd-\        # jump list
-A-F16 = ["save_selection"]                                 # ctrl-cmd-enter    # record jump point
+S-F6 = ["save_selection"]                                  # ctrl-cmd-enter    # record jump point
 
 # diagnostics
-A-F17 = ["goto_prev_diag"]                                 # ctrl-cmd-,        # prev diag
-A-F18 = ["goto_next_diag"]                                 # ctrl-cmd-.        # next diag
-A-F19 = ["workspace_diagnostics_picker"]                   # ctrl-cmd-/        # diag list
+A-F16 = ["goto_prev_diag"]                                 # ctrl-cmd-,        # prev diag
+A-F17 = ["goto_next_diag"]                                 # ctrl-cmd-.        # next diag
+A-F18 = ["workspace_diagnostics_picker"]                   # ctrl-cmd-/        # diag list
 
 # symbols
 A-C-F13 = ["goto_prev_parameter"]                          # ctrl-cmd-7        # prev param
@@ -78,10 +80,10 @@ A-C-F15 = ["goto_prev_function"]                           # ctrl-cmd-4        #
 A-C-F16 = ["goto_next_function"]                           # ctrl-cmd-5        # next func
 A-C-F17 = ["goto_prev_class"]                              # ctrl-cmd-1        # prev class
 A-C-F18 = ["goto_next_class"]                              # ctrl-cmd-2        # next class
-A-C-F19 = ["workspace_symbol_picker"]                      # ctrl-cmd-0        # symbol list
+S-F7 = ["workspace_symbol_picker"]                         # ctrl-cmd-0        # symbol list
 
 # reload
-A-C-F20 = ["normal_mode", ":reload-all", "XXX_MODE"]
+S-F10 = ["normal_mode", ":reload-all", "XXX_MODE"]
 
 # alphabet
 # A-F1 = [""]                                              # alt-a             #
@@ -150,7 +152,7 @@ C-a = ["goto_line_start"]                                  # cmd-left          #
 # C-d = [""]                                               #                   # none
 C-e = ["goto_line_end", "move_char_right"]                 # cmd-right         # end line
 # C-f = [""]                                               # shift-enter       # none
-# C-g = [""]                                               # del-caps          # TODO: go to line
+# C-g = [""]                                               # del-caps          # none
 # C-h = [""]                                               # del-tab           # none
 # C-i = [""]                                               #                   # none
 C-j = ["goto_definition"]                                  # del-cmd           # none
@@ -162,14 +164,45 @@ C-o = ["goto_file_start"]                                  # cmd-up            #
 C-p = ["goto_last_line"]                                   # cmd-down          # cursor end
 # C-q = [""]                                               #                   # none
 C-r = ["file_picker"]                                      # del-ctrl          # file picker
-# C-s = [""]                                               # del-alt           # none
+C-s = ["buffer_picker"]                                    # del-alt           # buffer picker
 C-t = ["command_palette"]                                  # del-cmd           # command palette
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
 C-v = ["increment"]                                        # ctrl-cmd-up       # increment digits
-C-w = ["delete_word_backward"]                             # shift-ctrl        # delete word left TODO: review
+C-w = ["delete_word_backward"]                             # shift-ctrl        # delete word left
 C-x = ["decrement"]                                        # ctrl-cmd-down     # decrement digits
 # C-y = [""]                                               # del-space         # none
 # C-z = [""]                                               #                   # none
+
+
+####################################################################################################
+
+# A-F19 = [""]                                             # ctrl-cmd-a        #
+# A-F20 = [""]                                             # ctrl-cmd-b        #
+# S-F13 = [""]                                             # ctrl-cmd-c        #
+# S-F14 = [""]                                             # ctrl-cmd-d        #
+# S-F15 = [""]                                             # ctrl-cmd-e        #
+# S-F16 = [""]                                             # ctrl-cmd-f        #
+# S-F17 = [""]                                             # ctrl-cmd-g        #
+# S-F18 = [""]                                             # ctrl-cmd-h        #
+S-F19 = ["normal_mode", "find_till_char"]                  # ctrl-cmd-i        #
+# S-F20 = [""]                                             # ctrl-cmd-j        #
+# A-C-F19 = [""]                                           # ctrl-cmd-k        #
+# A-C-F20 = [""]                                           # ctrl-cmd-l        #
+A-C-S-F6 = ["normal_mode", "repeat_last_motion"]           # ctrl-cmd-m        #
+# A-C-S-F7 = [""]                                          # ctrl-cmd-n        #
+A-C-S-F8 = ["normal_mode", "till_prev_char"]               # ctrl-cmd-o        #
+# A-C-S-F8 = [""]                                          # ctrl-cmd-p        #
+# A-C-S-F10 = [""]                                         # ctrl-cmd-q        #
+# A-C-S-F11 = [""]                                         # ctrl-cmd-r        #
+# A-C-S-F12 = [""]                                         # ctrl-cmd-s        #
+# A-C-S-F13 = [""]                                         # ctrl-cmd-t        #
+# A-C-S-F14 = [""]                                         # ctrl-cmd-u        #
+# A-C-S-F15 = [""]                                         # ctrl-cmd-v        #
+# A-C-S-F16 = [""]                                         # ctrl-cmd-w        #
+# A-C-S-F17 = [""]                                         # ctrl-cmd-x        #
+# A-C-S-F18 = [""]                                         # ctrl-cmd-y        #
+# A-C-S-F19 = [""]                                         # ctrl-cmd-z        #
+# A-C-S-F20 = [""]                                         # ctrl-cmd-z        #
 
 
 ####################################################################################################
