@@ -66,13 +66,16 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // modes
-    shared_except "normal" "entersearch" {
+    shared_except "normal" "locked" "entersearch" {
         bind "Enter" { SwitchToMode "Normal"; }
+    }
+
+    shared_except "normal" "locked" {
+        bind "Esc" { SwitchToMode "Normal"; }
     }
 
     shared_except "normal" {
         bind "Alt A" { SwitchToMode "Normal"; }
-        bind "Esc" { SwitchToMode "Normal"; }
     }
 
     shared_except "resize" {
