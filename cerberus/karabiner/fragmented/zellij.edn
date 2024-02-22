@@ -12,14 +12,12 @@
          [:!OTright_shift :!Og [:term]]                    ; alt-ctrl-shift
          [:!OTright_option :!Oh [:term]]                   ; alt-ctrl-alt
          ; [: :!Oi [:term]]            COLLISION (accent)
-         [:!OCreturn_or_enter :!Oj [:term]]                ; alt-cmd-enter
-         [:!OTreturn_or_enter :!Ok [:term]]                ; alt-ctrl-enter
+         [:!OTreturn_or_enter :!Oj [:term]]                ; alt-ctrl-enter
+         [:!OTbackslash :!Ok [:term]]                      ; alt-ctrl-/
          [:!OTright_command :!Ol [:term]]                  ; alt-ctrl-cmd
          [:!OTspacebar :!Om [:term]]                       ; alt-ctrl-space
-         [:!OTkeypad_0 :!Om [:term]]                       ; alt-ctrl-0
          ; [: :!On [:term]]            COLLISION (accent)
          [:!OCspacebar :!Oo [:term]]                       ; alt-cmd-space
-         [:!OCkeypad_0 :!Oo [:term]]                       ; alt-cmd-0
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift
