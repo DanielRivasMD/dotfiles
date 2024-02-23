@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; super
 {:des "Super Mode - alphabet"
  :rules [:zero-mode
          ; [:a []]                                                                                  ;
@@ -33,20 +33,19 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; super
 {:des "Super Mode - symbols"
  :rules [:zero-mode
          ; [:!Shyphen []]                                                                ;
          ; [:!Sequal_sign []]                                                            ;
-         ; [:!Sdelete_or_backspace []]                                                   ;
          ; [:!Sopen_bracket []]                                                          ;
          ; [:!Sclose_bracket []]                                                         ;
          [:!Ssemicolon [:!Ssemicolon :spacebar]]                                         ; ': '
          ; [:!Squote []]                                                                 ;
-         ; [:!Sbackslash []]                                                             ;
+         [:!Sbackslash [:spacebar :hyphen :hyphen]]                                      ; ' --'
          ; [:!Scomma []]                                                                 ;
          [:!Speriod [:period :period :period]]                                           ; '...'
-         [:!Sslash [:spacebar :hyphen :hyphen]]                                          ; ' --'
+         [:!Sslash [:slash :slash :!S1 :spacebar]]                                       ; '//! '
          ; [:!Sdelete_or_backspace []] NOT AVAILABLE
          ; [:!Sreturn_or_enter []]     NOT AVAILABLE
          ; [:!Sright_shift []]         NOT AVAILABLE

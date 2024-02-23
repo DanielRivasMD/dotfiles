@@ -46,7 +46,7 @@
          ; [:!Fcomma []]                                                                 ;
          ; [:!Fperiod []]                                                                ;
          ; [:!Fslash []]                                                                 ;
-         [:!Fdelete_or_backspace [:!S3 :!S1 :slash]]                                     ; '#!/'
+         ; [:!Fdelete_or_backspace []]                                                   ;
          [:!Freturn_or_enter [:equal_sign :equal_sign]]                                  ; '=='
          [:!Fright_shift [:!S1 :!S1]]                                                    ; '!!'
          [:!Fright_option [:!S8 :!S8]]                                                   ; '**'

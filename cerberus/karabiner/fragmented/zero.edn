@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; zero
 {:des "Zero Mode - alphabet"
  :rules [:zero-mode
          ; [:a []]                                                                       ;
@@ -33,7 +33,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; zero
 {:des "Zero Mode - symbols"
  :rules [:zero-mode
          ; [:hyphen []]                                                                  ;
@@ -42,10 +42,10 @@
          ; [:close_bracket []]                                                           ;
          [:semicolon [:semicolon :spacebar]]                                             ; '; '
          ; [:quote []]                                                                   ;
-         ; [:backslash []]                                                               ;
+         [:backslash [:spacebar :hyphen]]                                                ; ' -'
          [:comma [:comma :spacebar]]                                                     ; ', '
          [:period [:period :period]]                                                     ; '..'
-         [:slash [:spacebar :hyphen]]                                                    ; ' -'
+         [:slash [:slash :slash :slash :spacebar]]                                       ; '/// '
          ; [:delete_or_backspace []]   NOT AVAILABLE
          ; [:return_or_enter []]       NOT AVAILABLE
          ; [:right_shift []]           NOT AVAILABLE

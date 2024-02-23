@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; command
 {:des "Command Mode - symbols"
  :rules [;
          [:!Chyphen [:spacebar :hyphen :equal_sign :spacebar]]                           ; ' -= '
@@ -23,7 +23,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; command
 {:des "Command Mode - symbols"
  :rules [;
          [:!CShyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                  ; ' .-= '
