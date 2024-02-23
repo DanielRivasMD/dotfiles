@@ -108,4 +108,12 @@ cp -v "${zshcomp}/_pueue" "${zshcomp}/_p" && sd pueue p "${zshcomp}/_p"
 sheldon completions --shell zsh > "${zshcomp}/_sheldon" && echo 'Setup sheldon'
 echo '===================================================================================================='
 
+echo '===================================================================================================='
+bender completion zsh > "${zshcomp}/_bender" && echo 'Setup bender'
+hercules completion zsh > "${zshcomp}/_hercules" && echo 'Setup hercules'
+lou completion zsh > "${zshcomp}/_lou" && echo 'Setup lou'
+mbombo completion zsh > "${zshcomp}/_mbombo" && echo 'Setup mbombo'
+minerva completion zsh > "${zshcomp}/_minerva" && echo 'Setup minerva'
+echo '===================================================================================================='
+
 ####################################################################################################
