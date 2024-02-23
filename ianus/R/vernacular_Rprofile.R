@@ -2,7 +2,7 @@
 
 # base R
 options(prompt = '> ')
-# options(stringsAsFactors = FALSE)
+options(stringsAsFactors = FALSE)
 options(max.print = 999)
 options(nwarnings = 99)
 options(editor = 'subl')
