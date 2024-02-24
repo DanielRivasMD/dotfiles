@@ -111,6 +111,7 @@ echo '==========================================================================
 echo '===================================================================================================='
 bender completion zsh > "${zshcomp}/_bender" && echo 'Setup bender'
 hercules completion zsh > "${zshcomp}/_hercules" && echo 'Setup hercules'
+janus completion zsh > "${zshcomp}/_janus" && echo 'Setup janus'
 lou completion zsh > "${zshcomp}/_lou" && echo 'Setup lou'
 mbombo completion zsh > "${zshcomp}/_mbombo" && echo 'Setup mbombo'
 minerva completion zsh > "${zshcomp}/_minerva" && echo 'Setup minerva'
