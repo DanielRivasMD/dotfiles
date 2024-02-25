@@ -3,15 +3,15 @@
 ; GUI
 {:des "GUI - Control remappings"
  :rules [;
-         ; [:!WQRtab :!Th [:gui]]                          ; del-tab
-         ; [:!WQRcaps_lock :!Tg [:gui]]                    ; del-caps
-         ; [:!WQRleft_shift :!Oc [:gui]]                   ; del-shift
+         [:!WQRtab :!Th [:gui]]                            ; del-tab
+         [:!WQRcaps_lock :!Tg [:gui]]                      ; del-caps
+         [:!WQRleft_shift :!Oc [:gui]]                     ; del-shift
          ; [:!WQRleft_control :!Tr [:gui]]                 ; del-ctrl
-         ; [:!WQRleft_option :!Ts [:gui]]                  ; del-alt
+         [:!WQRleft_option :!Ts [:gui]]                    ; del-alt
          ; [:!WQRleft_command :!Tt [:gui]]                 ; del-cmd
-         ; [:!WQRspacebar :!Ty [:gui]]                     ; del-space
-         ; [:!WQRright_command :!Tj [:gui]]                ; del-cmd
-         ; [:!WQRright_option :!Tn [:gui]]                 ; del-alt
+         [:!WQRspacebar :!Ty [:gui]]                       ; del-space
+         [:!WQRright_command :!Tj [:gui]]                  ; del-cmd
+         [:!WQRright_option :!Tn [:gui]]                   ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -23,7 +23,7 @@
          ; [:!Sright_command :!Cdelete_forward [:gui]]     ; delete line forward
          [:!Rleft_control :!Odelete_or_backspace [:gui]]   ; delete word backward
          [:!Rleft_command :!Cdelete_or_backspace [:gui]]   ; delete line backward
-         ; [:!Rleft_option : [:gui]]                       ; shift-alt
+         [:!Rleft_option :!Tl [:gui]]                      ; shift-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
