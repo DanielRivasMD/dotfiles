@@ -25,12 +25,6 @@ LC_TIME="en_US.UTF-8"
 LC_COLLATE="en_US.UTF-8"
 LC_MONETARY="en_US.UTF-8"
 LC_MESSAGES="en_US.UTF-8"
-LC_PAPER="en_US.UTF-8"
-LC_NAME="en_US.UTF-8"
-LC_ADDRESS="en_US.UTF-8"
-LC_TELEPHONE="en_US.UTF-8"
-LC_MEASUREMENT="en_US.UTF-8"
-LC_IDENTIFICATION="en_US.UTF-8"
 export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
 
@@ -68,9 +62,9 @@ PATH=$PATH:/usr/local/mysql/bin/
 PATH=$PATH:/usr/local/bin/
 PATH=$PATH:/usr/local/sbin/
 PATH=$PATH:${GOPATH}bin/
-PATH=$PATH:$HOME/bin/cargoTools/
-PATH=$PATH:$HOME/bin/goTools/
-PATH=$PATH:$HOME/bin/toolLinks/
+PATH=$PATH:$HOME/bin/cargo/
+PATH=$PATH:$HOME/bin/go/
+PATH=$PATH:$HOME/bin/links/
 
 export PATH
 
