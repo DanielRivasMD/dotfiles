@@ -115,6 +115,8 @@ janus completion zsh > "${zshcomp}/_janus" && echo 'Setup janus'
 lou completion zsh > "${zshcomp}/_lou" && echo 'Setup lou'
 mbombo completion zsh > "${zshcomp}/_mbombo" && echo 'Setup mbombo'
 minerva completion zsh > "${zshcomp}/_minerva" && echo 'Setup minerva'
+tabularasa completion zsh > "${zshcomp}/_tabularasa" && echo 'Setup tabularasa'
+tbr completion zsh > "${zshcomp}/_tbr" && echo 'Setup tbr'
 echo '===================================================================================================='
 
 ####################################################################################################
