@@ -15,8 +15,7 @@ alias lld = ls --long --all --du
 # Forked patches
 ####################################################################################################
 
-alias pier = ~/bin/forkedPatch/pier
-alias rip = ~/bin/forkedPatch/rip
+alias pier = ~/bin/forked/pier
 
 ####################################################################################################
 # General aliases
