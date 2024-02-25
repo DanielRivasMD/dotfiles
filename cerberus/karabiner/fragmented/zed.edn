@@ -54,10 +54,10 @@
 ; Zed
 {:des "Zed - alt - alphabet"
  :rules [;
-         ; [:!Oa : [:zed]]                                 ;
+         [:!Oa :!CSl [:zed]]                                 ;
          ; [:!Ob : [:zed]]                                 ;
          ; [:!Oc : [:zed]]                                 ;
-         ; [:!Od : [:zed]]                                 ;
+         [:!Od :!Cd [:zed]]                                ; select next
          ; [:!Oe : [:zed]]                                 ;
          [:!Of :!Cf [:zed]]                                ; find
          ; [:!Og : [:zed]]                                 ;
