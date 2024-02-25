@@ -135,6 +135,7 @@ echo 'Generate completions'
 echo '===================================================================================================='
 zellij setup --generate-completion zsh > "${zshcomp}/_zellij" && echo 'Setup zellij'
 cp -v "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"
+cobra-cli completion zsh > "${zshcomp}/_cobra-cli" && echo 'Setup cobra'
 echo '===================================================================================================='
 
 echo ''
