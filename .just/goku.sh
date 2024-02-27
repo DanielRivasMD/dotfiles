@@ -27,7 +27,7 @@ cat \
   "${karabiner}/.main.tmp" \
   "${fragmented}/launcher.edn" \
   "${fragmented}/mail.edn" \
-  "${fragmented}/firefox.edn" \
+  "${fragmented}/browser.edn" \
   "${fragmented}/editor.edn" \
   "${fragmented}/lapce.edn" \
   "${fragmented}/zed.edn" \
