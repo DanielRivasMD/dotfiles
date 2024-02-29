@@ -11,11 +11,11 @@ ZDOTDIR=${HOME}/.zsh
 ####################################################################################################
 
 # load aliases
-local VALIAS="${IANUS}/shell/terminal/vernacular_aliases.sh"
-[ -f ${VALIAS} ] && . ${VALIAS}
+VALIAS="${IANUS}/shell/terminal/vernacular_aliases.sh"
+[ -f "${VALIAS}" ] && . "${VALIAS}"
 
-local ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
-[ -f ${ZALIAS} ] && . ${ZALIAS}
+ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
+[ -f "${ZALIAS}" ] && . "${ZALIAS}"
 
 ####################################################################################################
 # plugins
