@@ -1,56 +1,57 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; esc
 {:des "Escape Mode - alphabet"
  :rules [;
-         ; [:!EWRa [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRb [:!S2 :spacebar]]                                                     ;
-         [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]                                        ; '@chain '
-         [:!EWRd [:!S2 :d :e :b :u :g :spacebar]]                                        ; '@debug '
-         [:!EWRe [:!S2 :e :d :i :t :spacebar]]                                           ; '@edit '
-         ; [:!EWRf [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRg [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRh [:!S2 :spacebar]]                                                     ;
-         [:!EWRi [:!S2 :i :n :f :o :spacebar]]                                           ; '@info '
-         ; [:!EWRj [:!S2 :spacebar]]                                                     ;
-         [:!EWRk [:!S2 :w :i :t :h :!Shyphen :k :w :spacebar]]                           ; '@with_kw '
-         [:!EWRl [:!S2 :l :e :s :s :spacebar]]                                           ; '@less '
-         ; [:!EWRm [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRn [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRo [:!S2 :spacebar]]                                                     ;
-         [:!EWRp [:!S2 :p :i :p :e :spacebar]]                                           ; '@pipe '
-         ; [:!EWRq [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRr [:!S2 :spacebar]]                                                     ;
-         [:!EWRs [:!S2 :s :h :o :w :spacebar]]                                           ; '@show '
-         [:!EWRt [:!S2 :t :i :m :e :spacebar]]                                           ; '@time '
-         ; [:!EWRu [:!S2 :spacebar]]                                                     ;
-         [:!EWRv [:!S2 :e :v :a :l :spacebar]]                                           ; '@eval '
-         [:!EWRw [:!S2 :w :a :r :n :spacebar]]                                           ; '@warn '
-         ; [:!EWRx [:!S2 :spacebar]]                                                     ;
-         ; [:!EWRy [:!S2 :spacebar]]                                                     ;
-         [:!EWRz [:!S2 :w :h :i :c :h :spacebar]]                                        ; '@which '
+         ; [:!EWRa [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRb [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]               ; '@chain '                        ;
+         [:!EWRd [:!S2 :d :e :b :u :g :spacebar]]               ; '@debug '                        ;
+         [:!EWRe [:!S2 :e :d :i :t :spacebar]]                  ; '@edit '                         ;
+         ; [:!EWRf [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRg [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRh [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRi [:!S2 :i :n :f :o :spacebar]]                  ; '@info '                         ;
+         ; [:!EWRj [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRk [:!S2 :w :i :t :h :!Shyphen :k :w :spacebar]]  ; '@with_kw '                      ;
+         [:!EWRl [:!S2 :l :e :s :s :spacebar]]                  ; '@less '                         ;
+         ; [:!EWRm [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRn [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRo [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRp [:!S2 :p :i :p :e :spacebar]]                  ; '@pipe '                         ;
+         ; [:!EWRq [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRr [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRs [:!S2 :s :h :o :w :spacebar]]                  ; '@show '                         ;
+         [:!EWRt [:!S2 :t :i :m :e :spacebar]]                  ; '@time '                         ;
+         ; [:!EWRu [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRv [:!S2 :e :v :a :l :spacebar]]                  ; '@eval '                         ;
+         [:!EWRw [:!S2 :w :a :r :n :spacebar]]                  ; '@warn '                         ;
+         ; [:!EWRx [:!S2 :spacebar]]                            ;                                  ;
+         ; [:!EWRy [:!S2 :spacebar]]                            ;                                  ;
+         [:!EWRz [:!S2 :w :h :i :c :h :spacebar]]               ; '@which '                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; esc
 {:des "Escape Mode - symbols"
  :rules [;
-         ; [:!EWRhyphen []]            COLLISION (zellij mode)
-         ; [:!EWRequal_sign []]        COLLISION (zellij mode)
-         [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]      ; ' %<+% '
-         [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]    ; ' %+>% '
-         [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                           ; ' %$% '
-         [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                     ; ' %T>% '
-         [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]             ; ' %<>% '
-         [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                           ; ' %<% '
-         [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                         ; ' %>% '
-         [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                     ; ' %!>% '
-         ; [:!EWRdelete_or_backspace []] COLLISION (zellij mode)
-         ; [:!EWRreturn_or_enter []]   COLLISION (zellij mode)
-         ; [:!EWRright_shift []]       COLLISION (zellij mode)
-         ; [:!EWRright_option []]      COLLISION (zellij mode)
-         ; [:!EWRright_command []]     COLLISION (zellij mode)
-         ; [:!EWRspacebar []]          COLLISION (zellij mode)
+         ; [:!EWRhyphen []]            COLLISION (zellij mode)                                     ;
+         ; [:!EWRequal_sign []]        COLLISION (zellij mode)                                     ;
+         [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]      ; ' %<+% ';
+         [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]    ; ' %+>% ';
+         [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                           ; ' %$% ' ;
+         [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                     ; ' %T>% ';
+         [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]             ; ' %<>% ';
+         [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                           ; ' %<% ' ;
+         [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                         ; ' %>% ' ;
+         [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                     ; ' %!>% ';
+         ; [:!EWRdelete_or_backspace []] COLLISION (zellij mode)                                   ;
+         ; [:!EWRreturn_or_enter []]   COLLISION (zellij mode)                                     ;
+         ; [:!EWRright_shift []]       COLLISION (zellij mode)                                     ;
+         ; [:!EWRright_option []]      COLLISION (zellij mode)                                     ;
+         ; [:!EWRright_command []]     COLLISION (zellij mode)                                     ;
+         ; [:!EWRspacebar []]          COLLISION (zellij mode)                                     ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
