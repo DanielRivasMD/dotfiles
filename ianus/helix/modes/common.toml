@@ -55,8 +55,8 @@ A-C-F11 = ["hsplit"]                                       # ctrl-cmd-shift    #
 A-C-F12 = ["wonly"]                                        # ctrl-cmd-cmd      # unsplit
 
 # comments
-S-F8 = ["goto_prev_comment"]                               # ctrl-cmd-[        # prev comment
-S-F9 = ["goto_next_comment"]                               # ctrl-cmd-]        # next comment
+S-F8 = ["normal_mode", "till_prev_char"]                   # ctrl-cmd-[        # prev comment
+S-F9 = ["normal_mode", "find_till_char"]                   # ctrl-cmd-]        # next comment
 
 # version control
 S-F11 = ["goto_prev_change"]                               # alt-cmd-up        # prev change
@@ -191,13 +191,13 @@ S-F14 = ["goto_definition"]                                # ctrl-cmd-d        #
 S-F16 = ["goto_implementation"]                            # ctrl-cmd-f        #
 # S-F17 = [""]                                             # ctrl-cmd-g        #
 # S-F18 = [""]                                             # ctrl-cmd-h        #
-S-F19 = ["normal_mode", "find_till_char"]                  # ctrl-cmd-i        #
-# S-F20 = [""]                                             # ctrl-cmd-j        #
-# A-C-F19 = [""]                                           # ctrl-cmd-k        #
+# S-F19 = [""]                                             # ctrl-cmd-i        #
+S-F20 = ["goto_next_comment"]                              # ctrl-cmd-j        #
+A-C-F19 = ["goto_prev_comment"]                            # ctrl-cmd-k        #
 # A-C-F20 = [""]                                           # ctrl-cmd-l        #
 A-C-S-F6 = ["normal_mode", "repeat_last_motion"]           # ctrl-cmd-m        #
-# A-C-S-F7 = [""]                                          # ctrl-cmd-n        #
-A-C-S-F8 = ["normal_mode", "till_prev_char"]               # ctrl-cmd-o        #
+A-C-S-F7 = ["goto_last_modification"]                      # ctrl-cmd-n        #
+# A-C-S-F8 = [""]                                          # ctrl-cmd-o        #
 # A-C-S-F9 = [""]                                          # ctrl-cmd-p        #
 # A-C-S-F10 = [""]                                         # ctrl-cmd-q        #
 A-C-S-F11 = ["goto_reference"]                             # ctrl-cmd-r        #
@@ -208,7 +208,7 @@ A-C-S-F13 = ["goto_type_definition"]                       # ctrl-cmd-t        #
 # A-C-S-F16 = [""]                                         # ctrl-cmd-w        #
 # A-C-S-F17 = [""]                                         # ctrl-cmd-x        #
 # A-C-S-F18 = [""]                                         # ctrl-cmd-y        #
-A-C-S-F19 = ["goto_last_modification"]                     # ctrl-cmd-z        #
+# A-C-S-F19 = [""]                                         # ctrl-cmd-z        #
 
 
 ####################################################################################################
