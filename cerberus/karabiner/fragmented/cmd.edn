@@ -1,24 +1,34 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; command
-{:des "Command Mode - symbols"
+{:des "Command Mode - alphabet"
  :rules [;
-         [:!Chyphen [:spacebar :hyphen :equal_sign :spacebar]]                           ; ' -= '
-         [:!Cequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                 ; ' += '
-         ; [:!Copen_bracket []]                                                          ;
-         ; [:!Cclose_bracket []]                                                         ;
-         ; [:!Csemicolon []]                                                             ;
-         ; [:!Cquote []]                                                                 ;
-         ; [:!Cbackslash []]                                                             ;
-         ; [:!Ccomma []]                                                                 ;
-         ; [:!Cperiod []]                                                                ;
-         ; [:!Cslash []]                                                                 ;
-         ; [:!Cdelete_or_backspace []]                                                   ;
-         ; [:!Creturn_or_enter []]                                                       ;
-         ; [:!Cright_shift []]                                                           ;
-         [:!Cright_option [:spacebar :!S8 :equal_sign :spacebar]]                        ; ' *= '
-         [:!Cright_command [:spacebar :slash :equal_sign :spacebar]]                     ; ' /= '
-         ; [:!Cspacebar []]                                                              ;
+         ; [:!Ca []]                                                                               ;
+         ; [:!Cb []]                                                                               ;
+         ; [:!Cc []]                                                                               ;
+         ; [:!Cd []]                                                                               ;
+         ; [:!Ce []]                                                                               ;
+         ; [:!Cf []]                                                                               ;
+         ; [:!Cg []]                                                                               ;
+         ; [:!Ch []]                                                                               ;
+         ; [:!Ci []]                                                                               ;
+         ; [:!Cj []]                                                                               ;
+         ; [:!Ck []]                                                                               ;
+         ; [:!Cl []]                                                                               ;
+         ; [:!Cm []]                                                                               ;
+         ; [:!Cn []]                                                                               ;
+         ; [:!Co []]                                                                               ;
+         ; [:!Cp []]                                                                               ;
+         ; [:!Cq []]                                                                               ;
+         ; [:!Cr []]                                                                               ;
+         ; [:!Cs []]                                                                               ;
+         ; [:!Ct []]                                                                               ;
+         ; [:!Cu []]                                                                               ;
+         ; [:!Cv []]                                                                               ;
+         ; [:!Cw []]                                                                               ;
+         ; [:!Cx []]                                                                               ;
+         ; [:!Cy []]                                                                               ;
+         ; [:!Cz []]                                                                               ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -26,22 +36,45 @@
 ; command
 {:des "Command Mode - symbols"
  :rules [;
-         [:!CShyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                  ; ' .-= '
-         [:!CSequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]        ; ' .+= '
-         ; [:!CSopen_bracket []]                                                         ;
-         ; [:!CSclose_bracket []]                                                        ;
-         ; [:!CSsemicolon []]                                                            ;
-         ; [:!CSquote []]                                                                ;
-         ; [:!CSbackslash []]                                                            ;
-         ; [:!CScomma []]                                                                ;
-         ; [:!CSperiod []]                                                               ;
-         ; [:!CSslash []]                                                                ;
-         ; [:!CSdelete_or_backspace []]                                                  ;
-         ; [:!CSreturn_or_enter []]                                                      ;
-         ; [:!CSright_shift []]                                                          ;
-         [:!CSright_option [:spacebar :period :!S8 :equal_sign :spacebar]]               ; ' .*= '
-         [:!CSright_command [:spacebar :period :slash :equal_sign :spacebar]]            ; ' ./= '
-         ; [:!CSspacebar []]                                                             ;
+         [:!Chyphen [:spacebar :hyphen :equal_sign :spacebar]]            ; ' -= '                 ;
+         [:!Cequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]  ; ' += '                 ;
+         ; [:!Copen_bracket []]                                           ;                        ;
+         ; [:!Cclose_bracket []]                                          ;                        ;
+         ; [:!Csemicolon []]                                              ;                        ;
+         ; [:!Cquote []]                                                  ;                        ;
+         ; [:!Cbackslash []]                                              ;                        ;
+         ; [:!Ccomma []]                                                  ;                        ;
+         ; [:!Cperiod []]                                                 ;                        ;
+         ; [:!Cslash []]                                                  ;                        ;
+         ; [:!Cdelete_or_backspace []]                                    ;                        ;
+         ; [:!Creturn_or_enter []]                                        ;                        ;
+         ; [:!Cright_shift []]                                            ;                        ;
+         [:!Cright_option [:spacebar :!S8 :equal_sign :spacebar]]         ; ' *= '                 ;
+         [:!Cright_command [:spacebar :slash :equal_sign :spacebar]]      ; ' /= '                 ;
+         ; [:!Cspacebar []]                                               ;                        ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - symbols"
+ :rules [;
+         [:!CShyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '      ;
+         [:!CSequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]   ; ' .+= '      ;
+         ; [:!CSopen_bracket []]                                                    ;              ;
+         ; [:!CSclose_bracket []]                                                   ;              ;
+         ; [:!CSsemicolon []]                                                       ;              ;
+         ; [:!CSquote []]                                                           ;              ;
+         ; [:!CSbackslash []]                                                       ;              ;
+         ; [:!CScomma []]                                                           ;              ;
+         ; [:!CSperiod []]                                                          ;              ;
+         ; [:!CSslash []]                                                           ;              ;
+         ; [:!CSdelete_or_backspace []]                                             ;              ;
+         ; [:!CSreturn_or_enter []]                                                 ;              ;
+         ; [:!CSright_shift []]                                                     ;              ;
+         [:!CSright_option [:spacebar :period :!S8 :equal_sign :spacebar]]          ; ' .*= '      ;
+         [:!CSright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '      ;
+         ; [:!CSspacebar []]                                                        ;              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
