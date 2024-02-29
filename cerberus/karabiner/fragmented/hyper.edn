@@ -1,24 +1,57 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; hyper
-{:des "Coding modifications - hyper"
+{:des "Hyper Mode - alphabet"
  :rules [;
-         ; [:!!hyphen []]                                                                ;
-         ; [:!!equal_sign []]                                                            ;
-         ; [:!!open_bracket []]                                                          ;
-         ; [:!!close_bracket []]                                                         ;
-         ; [:!!semicolon []]                                                             ;
-         ; [:!!quote []]                                                                 ;
-         ; [:!!backslash []]                                                             ;
-         ; [:!!comma []]                                                                 ;
-         ; [:!!period []]                                                                ;
-         ; [:!!slash []]                                                                 ;
-         ; [:!!delete_or_backspace []]                                                   ;
-         ; [:!!return_or_enter []]                                                       ;
-         ; [:!!right_shift []]                                                           ;
-         ; [:!!right_option []]                                                          ;
-         ; [:!!right_command []]                                                         ;
-         ; [:!!spacebar []]            COLLISION (speak function)
+         ; [:!!a []]                                                                               ;
+         ; [:!!b []]                                                                               ;
+         ; [:!!c []]                                                                               ;
+         ; [:!!d []]                                                                               ;
+         ; [:!!e []]                                                                               ;
+         ; [:!!f []]                                                                               ;
+         ; [:!!g []]                                                                               ;
+         ; [:!!h []]                                                                               ;
+         ; [:!!i []]                                                                               ;
+         ; [:!!j []]                                                                               ;
+         ; [:!!k []]                                                                               ;
+         ; [:!!l []]                                                                               ;
+         ; [:!!m []]                                                                               ;
+         ; [:!!n []]                                                                               ;
+         ; [:!!o []]                                                                               ;
+         ; [:!!p []]                                                                               ;
+         ; [:!!q []]                                                                               ;
+         ; [:!!r []]                                                                               ;
+         ; [:!!s []]                                                                               ;
+         ; [:!!t []]                                                                               ;
+         ; [:!!u []]                                                                               ;
+         ; [:!!v []]                                                                               ;
+         ; [:!!w []]                                                                               ;
+         ; [:!!x []]                                                                               ;
+         ; [:!!y []]                                                                               ;
+         ; [:!!z []]                                                                               ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper
+{:des "Hyper Mode - symbols"
+ :rules [;
+         ; [:!!hyphen []]                                                                          ;
+         ; [:!!equal_sign []]                                                                      ;
+         ; [:!!open_bracket []]                                                                    ;
+         ; [:!!close_bracket []]                                                                   ;
+         ; [:!!semicolon []]                                                                       ;
+         ; [:!!quote []]                                                                           ;
+         ; [:!!backslash []]                                                                       ;
+         ; [:!!comma []]                                                                           ;
+         ; [:!!period []]                                                                          ;
+         ; [:!!slash []]                                                                           ;
+         ; [:!!delete_or_backspace []]                                                             ;
+         ; [:!!return_or_enter []]                                                                 ;
+         ; [:!!right_shift []]                                                                     ;
+         ; [:!!right_option []]                                                                    ;
+         ; [:!!right_command []]                                                                   ;
+         ; [:!!spacebar []]            COLLISION (speak function)                                  ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
