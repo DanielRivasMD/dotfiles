@@ -3,15 +3,17 @@
 ; Alacritty
 {:des "Alacritty - Control remappings"
  :rules [;
-         [:!WQRtab :!Th [:term]]                           ; del-tab
-         [:!WQRcaps_lock :!Tg [:term]]                     ; del-caps
-         [:!WQRleft_shift :!Oc [:term]]                    ; del-shift
-         [:!WQRleft_control :!Tr [:term]]                  ; del-ctrl
-         [:!WQRleft_option :!Ts [:term]]                   ; del-alt
-         [:!WQRleft_command :!Tt [:term]]                  ; del-cmd
-         [:!WQRspacebar :!Ty [:term]]                      ; del-space
-         [:!WQRright_command :!Tj [:term]]                 ; del-cmd
-         [:!WQRright_option :!Tn [:term]]                  ; del-alt
+         ; TODO: map deletes
+         ; TODO: format editors
+         [:!WQRtab :!Th [:term]]                 ; del-tab                                         ;
+         [:!WQRcaps_lock :!Tg [:term]]           ; del-caps                                        ;
+         [:!WQRleft_shift :!Oc [:term]]          ; del-shift                                       ;
+         [:!WQRleft_control :!Tr [:term]]        ; del-ctrl                                        ;
+         [:!WQRleft_option :!Ts [:term]]         ; del-alt                                         ;
+         [:!WQRleft_command :!Tt [:term]]        ; del-cmd                                         ;
+         [:!WQRspacebar :!Ty [:term]]            ; del-space                                       ;
+         [:!WQRright_command :!Tj [:term]]       ; del-cmd                                         ;
+         [:!WQRright_option :!Tn [:term]]        ; del-alt                                         ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -19,11 +21,12 @@
 ; Alacritty
 {:des "Alacritty - Interactive delete"
  :rules [;
-         [:!Sright_option :!Od [:term]]                    ; shift-alt
-         [:!Sright_command :!Tk [:term]]                   ; shift-cmd
-         [:!Rleft_control :!Tw [:term]]                    ; shift-ctrl
-         [:!Rleft_command :!Tu [:term]]                    ; shift-cmd
-         [:!Rleft_option :!Tl [:term]]                     ; shift-alt
+         ; TODO: map shifts
+         [:!Sright_option :!Od [:term]]          ; shift-alt                                       ;
+         [:!Sright_command :!Tk [:term]]         ; shift-cmd                                       ;
+         [:!Rleft_control :!Tw [:term]]          ; shift-ctrl                                      ;
+         [:!Rleft_command :!Tu [:term]]          ; shift-cmd                                       ;
+         [:!Rleft_option :!Tl [:term]]           ; shift-alt                                       ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -31,32 +34,33 @@
 ; Alacritty
 {:des "Alacritty control - alphabet"
  :rules [;
-         ; [: :!Ta [:term]]            REDUNDANT (editor)
-         ; [: :!Tb [:term]]            REDUNDANT (editor)
-         ; [: :!Tc [:term]]            DEFAULT
-         ; [: :!Td [:term]]            DEFAULT
-         ; [: :!Te [:term]]            REDUNDANT (editor)
-         ; [: :!Tf [:term]]            REDUNDANT (editor)
-         ; [: :!Tg [:term]]            COLLISION (remapped)
-         ; [: :!Th [:term]]            COLLISION (remapped)
-         ; [: :!Ti [:term]]            DEFAULT
-         ; [: :!Tj [:term]]            COLLISION (remapped)
-         ; [: :!Tk [:term]]            COLLISION (delete)
-         ; [: :!Tl [:term]]            COLLISION (delete)
-         ; [: :!Tm [:term]]            DEFAULT
-         ; [: :!Tn [:term]]            COLLISION (remapped)
-         [:!Cup_arrow :!To [:term]]                        ; cmd-up
-         [:!Cdown_arrow :!Tp [:term]]                      ; cmd-down
-         ; [: :!Tq [:term]]            DEFAULT
-         ; [: :!Tr [:term]]            COLLISION (remapped)
-         ; [: :!Ts [:term]]            COLLISION (remapped)
-         ; [: :!Tt [:term]]            COLLISION (remapped)
-         ; [: :!Tu [:term]]            COLLISION (delete)
-         ; [: :!Tv [:term]]            REDUNDANT (editor)
-         ; [: :!Tw [:term]]            COLLISION (delete)
-         ; [: :!Tx [:term]]            REDUNDANT (editor)
-         ; [: :!Ty [:term]]            COLLISION (remapped)
-         ; [: :!Tz [:term]]            DEFAULT
+         ; TODO: consider migrating to corresponding modifier
+         ; [: :!Ta [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tb [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tc [:term]]            DEFAULT                                                     ;
+         ; [: :!Td [:term]]            DEFAULT                                                     ;
+         ; [: :!Te [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tf [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tg [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Th [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Ti [:term]]            DEFAULT                                                     ;
+         ; [: :!Tj [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tk [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tl [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tm [:term]]            DEFAULT                                                     ;
+         ; [: :!Tn [:term]]            COLLISION (remapped)                                        ;
+         [:!Cup_arrow :!To [:term]]              ; cmd-up                                          ;
+         [:!Cdown_arrow :!Tp [:term]]            ; cmd-down                                        ;
+         ; [: :!Tq [:term]]            DEFAULT                                                     ;
+         ; [: :!Tr [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Ts [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tt [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tu [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tv [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tw [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tx [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Ty [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tz [:term]]            DEFAULT                                                     ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -64,32 +68,32 @@
 ; Alacritty
 {:des "Alacritty control - command - alphabet"
  :rules [;
-         [:!TCa :!Of19 [:term]];
-         [:!TCb :!Of20 [:term]];
-         [:!TCc :!Sf13 [:term]];
-         [:!TCd :!Sf14 [:term]];
-         [:!TCe :!Sf15 [:term]];
-         [:!TCf :!Sf16 [:term]];
-         [:!TCg :!Sf17 [:term]];
-         [:!TCh :!Sf18 [:term]];
-         [:!TCi :!Sf19 [:term]];
-         [:!TCj :!Sf20 [:term]];
-         [:!TCk :!OTf19 [:term]];
-         [:!TCl :!OTf20 [:term]];
-         [:!TCm :!SOTf6 [:term]];
-         [:!TCn :!SOTf7 [:term]];
-         [:!TCo :!SOTf8 [:term]];
-         [:!TCp :!SOTf9 [:term]];
-         [:!TCq :!SOTf10 [:term]];
-         [:!TCr :!SOTf11 [:term]];
-         [:!TCs :!SOTf12 [:term]];
-         [:!TCt :!SOTf13 [:term]];
-         [:!TCu :!SOTf14 [:term]];
-         [:!TCv :!SOTf15 [:term]];
-         [:!TCw :!SOTf16 [:term]];
-         [:!TCx :!SOTf17 [:term]];
-         [:!TCy :!SOTf18 [:term]];
-         [:!TCz :!SOTf19 [:term]];
+         [:!TCa :!Of19 [:term]]                                                                    ;
+         [:!TCb :!Of20 [:term]]                                                                    ;
+         [:!TCc :!Sf13 [:term]]                                                                    ;
+         [:!TCd :!Sf14 [:term]]                                                                    ;
+         [:!TCe :!Sf15 [:term]]                                                                    ;
+         [:!TCf :!Sf16 [:term]]                                                                    ;
+         [:!TCg :!Sf17 [:term]]                                                                    ;
+         [:!TCh :!Sf18 [:term]]                                                                    ;
+         [:!TCi :!Sf19 [:term]]                                                                    ;
+         [:!TCj :!Sf20 [:term]]                                                                    ;
+         [:!TCk :!OTf19 [:term]]                                                                   ;
+         [:!TCl :!OTf20 [:term]]                                                                   ;
+         [:!TCm :!SOTf6 [:term]]                                                                   ;
+         [:!TCn :!SOTf7 [:term]]                                                                   ;
+         [:!TCo :!SOTf8 [:term]]                                                                   ;
+         [:!TCp :!SOTf9 [:term]]                                                                   ;
+         [:!TCq :!SOTf10 [:term]]                                                                  ;
+         [:!TCr :!SOTf11 [:term]]                                                                  ;
+         [:!TCs :!SOTf12 [:term]]                                                                  ;
+         [:!TCt :!SOTf13 [:term]]                                                                  ;
+         [:!TCu :!SOTf14 [:term]]                                                                  ;
+         [:!TCv :!SOTf15 [:term]]                                                                  ;
+         [:!TCw :!SOTf16 [:term]]                                                                  ;
+         [:!TCx :!SOTf17 [:term]]                                                                  ;
+         [:!TCy :!SOTf18 [:term]]                                                                  ;
+         [:!TCz :!SOTf19 [:term]]                                                                  ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
