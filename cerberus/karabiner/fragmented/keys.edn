@@ -2,23 +2,30 @@
 
 ; key modifiers
 {:des "Modifier key remappings"
- :rules [;
-         [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                            ;
-         [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}];
-         [:##caps_lock :!OTCleft_shift nil {:alone :escape}]                                        ;
-         [:##fn :!EWright_command nil {:alone :escape}]                                             ;
-         [:left_control :left_control nil {:alone [:!Of3]}]                                         ;
-         [:left_option :left_option nil {:alone [:!Otab]}]                                          ;
-         [:left_command :left_command nil {:alone [:!Ctab]}]                                        ;
-         [:spacebar :!EWright_command nil {:alone [:spacebar]}]                                     ;
-         [:right_shift :right_shift nil {:alone [:!Tf3]}]                                           ;
-         [:right_option :left_option nil {:alone [:!Cf3]}]                                          ;
-         [:right_command :!Wright_command nil {:alone [:!OSf3]}]                                    ;
-         [:tab :!EQright_shift nil {:alone [:tab]}]                                                 ;
-         [:escape :!EWright_shift nil {:alone [:!TSf3]}]                                            ;
-         [:delete_or_backspace :!WQright_shift nil {:alone [:!CSf3]}]                               ;
-         [:!Sright_shift :delete_forward]                                                           ;
-         [:!Rleft_shift :delete_or_backspace]                                                       ;
+ :rules [; quit
+         [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                           ;
+         [:!C#Pq ["command-q" 1] nil
+          {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]                          ;
+
+         ; caps & fn
+         [:##caps_lock :!OTCleft_shift nil {:alone :escape}]                                       ;
+         [:##fn :!EWright_command nil {:alone :escape}]                                            ;
+
+         ; modifiers
+         [:escape :!EWright_shift nil {:alone [:!TSf3]}]                                           ;
+         [:tab :!EQright_shift nil {:alone [:tab]}]                                                ;
+         [:left_control :left_control nil {:alone [:!Of3]}]                                        ;
+         [:left_option :left_option nil {:alone [:!Otab]}]                                         ;
+         [:left_command :left_command nil {:alone [:!Ctab]}]                                       ;
+         [:spacebar :!EWright_command nil {:alone [:spacebar]}]                                    ;
+         [:right_command :!Tleft_command nil {:alone [:!OSf3]}]                                    ;
+         [:right_option :right_option nil {:alone [:!Cf3]}]                                        ;
+         [:right_shift :right_shift nil {:alone [:!Tf3]}]                                          ;
+         [:delete_or_backspace :!WQright_shift nil {:alone [:!CSf3]}]                              ;
+
+         ; delete
+         [:!Sright_shift :delete_forward]                                                          ;
+         [:!Rleft_shift :delete_or_backspace]                                                      ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
