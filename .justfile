@@ -60,14 +60,15 @@ Mnemosyne:
 ####################################################################################################
 
 # format & watch goku
-Goku:
-  watchexec --watch cerberus/karabiner/fragmented -- 'source .just/goku.sh && goku'
+@Goku:
+  source .just/goku_daemon.sh
 
 ####################################################################################################
 
 # format & watch helix
-Helix:
-  watchexec --watch ianus/helix/modes -- 'source .just/helix.sh'
+@Helix:
+  source .just/helix_daemon.sh
+
 ####################################################################################################
 
 # open fragmented karabiner
