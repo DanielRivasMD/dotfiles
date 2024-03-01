@@ -10,7 +10,7 @@ layout {
 
     tab name="Monitor" split_direction="horizontal" hide_floating_panes=true {
         pane split_direction="vertical" {
-            pane name="Clock" command="tock" size="35%" borderless=true
+            pane name="Clock" command="tock" size="40%" borderless=true
             pane name="Control" focus=true
         }
         pane split_direction="vertical" size="75%" {
@@ -24,8 +24,8 @@ layout {
 
     tab name="Files" focus=true hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
-            pane name="F0" cwd="/Users/drivas/Downloads" focus=true
-            pane name="F1" cwd="/Users/drivas"
+            pane name="F0" cwd="/Users/drivas/Downloads"
+            pane name="F1" cwd="/Users/drivas" focus=true
             pane name="F2" cwd="/Users/drivas"
         }
     }
@@ -36,9 +36,9 @@ layout {
         floating_panes {
             pane name="VersionControl" cwd="/Users/drivas/.archive" {
                 x "0%"
-                y "2%"
+                y "3%"
                 width "100%"
-                height "98%"
+                height "97%"
             }
         }
     }
@@ -49,9 +49,9 @@ layout {
         floating_panes {
             pane name="VersionControl" cwd="/Users/drivas/Factorem" {
                 x "0%"
-                y "2%"
+                y "3%"
                 width "100%"
-                height "98%"
+                height "97%"
             }
         }
     }
