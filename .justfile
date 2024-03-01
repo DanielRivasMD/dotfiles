@@ -68,6 +68,15 @@ Goku:
 # format & watch helix
 Helix:
   watchexec --watch ianus/helix/modes -- 'source .just/helix.sh'
+####################################################################################################
+
+# open fragmented karabiner
+@Karabiner-fragmented:
+  hx cerberus/karabiner/fragmented/{esc.edn,function.edn,tab.edn,hyper.edn,ctrl.edn,opt.edn,cmd.edn,space.edn,ctrl_cmd.edn,zero.edn,super.edn}
+
+# open editors karabiner
+@Karabiner-editors:
+  hx cerberus/karabiner/fragmented/{editor.edn,lapce.edn,zed.edn,terminal.edn}
 
 ####################################################################################################
 # compose protocols
