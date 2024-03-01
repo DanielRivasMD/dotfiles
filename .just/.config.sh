@@ -18,6 +18,11 @@ completionsDir="${archive}/completions"
 
 ####################################################################################################
 
+# pueue
+pueuedTracker="${appSupport}/pueue/pueue.pid"
+
+####################################################################################################
+
 # cerberus
 gitconfigDir="${cerberus}/gitconfig.d"
 git="${cerberus}/git"
