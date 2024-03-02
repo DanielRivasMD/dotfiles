@@ -14,6 +14,6 @@ source .just/.handle_daemon.sh
 ####################################################################################################
 
 # format & watch goku
-pueue add -- watchexec --watch cerberus/karabiner/fragmented -- 'source .just/goku_forge.sh && goku'
+pueue add -- watchexec --watch cerberus/karabiner/fragmented -- 'source .just/goku_forge.sh'
 
 ####################################################################################################
