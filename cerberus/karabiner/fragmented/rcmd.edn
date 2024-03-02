@@ -1,0 +1,66 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - alphabet"
+ :rules [;
+         ; [:!Ea []]                                                                               ;
+         ; [:!Eb []]                                                                               ;
+         ; [:!Ec []]                                                                               ;
+         ; [:!Ed []]                                                                               ;
+         ; [:!Ee []]                                                                               ;
+         ; [:!Ef []]                                                                               ;
+         ; [:!Eg []]                                                                               ;
+         ; [:!Eh []]                                                                               ;
+         ; [:!Ei []]                                                                               ;
+         ; [:!Ej []]                                                                               ;
+         ; [:!Ek []]                                                                               ;
+         ; [:!El []]                                                                               ;
+         ; [:!Em []]                                                                               ;
+         ; [:!En []]                                                                               ;
+         ; [:!Eo []]                                                                               ;
+         ; [:!Ep []]                                                                               ;
+         ; [:!Eq []]                                                                               ;
+         ; [:!Er []]                                                                               ;
+         ; [:!Es []]                                                                               ;
+         ; [:!Et []]                                                                               ;
+         ; [:!Eu []]                                                                               ;
+         ; [:!Ev []]                                                                               ;
+         ; [:!Ew []]                                                                               ;
+         ; [:!Ex []]                                                                               ;
+         ; [:!Ey []]                                                                               ;
+         ; [:!Ez []]                                                                               ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - symbols"
+ :rules [;
+         ; [:!Qhyphen []]              COLLISION (zellij mode)                                     ;
+         ; [:!Qequal_sign []]          COLLISION (zellij mode)                                     ;
+         ; [:!Qopen_bracket []]                                                                    ;
+         ; [:!Qclose_bracket []]                                                                   ;
+         ; [:!Qsemicolon []]                                                                       ;
+         ; [:!Qquote []]                                                                           ;
+         ; [:!Qbackslash []]                                                                       ;
+         ; [:!Qcomma []]                                                                           ;
+         ; [:!Qperiod []]                                                                          ;
+         ; [:!Qslash []]                                                                           ;
+         ; [:!Qdelete_or_backspace []]                                                             ;
+         ; [:!Qreturn_or_enter []]                                                                 ;
+         ; [:!Qright_shift []]                                                                     ;
+         ; [:!Qright_option []]        COLLISION (zellij mode)                                     ;
+         ; [:!Qright_command []]       NOT AVAILABLE                                               ;
+         ; [:!Qspacebar []]            COLLISION (zellij mode)                                     ;
+
+         ; [:!Qleft_command []]        COLLISION (zellij mode)                                     ;
+         ; [:!Qleft_option []]         COLLISION (zellij mode)                                     ;
+         ; [:!Qleft_control []]        COLLISION (zellij mode)                                     ;
+         ; [:!Qleft_shift []]          COLLISION (zellij mode)                                     ;
+         ; [:!Qcaps_lock []]                                                                       ;
+         ; [:!Qtab []]                                                                             ;
+         ; [:!Qnon_us_backslash []]    COLLISION (zellij mode)                                     ;
+         ; [:!Qespace []]                                                                          ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
