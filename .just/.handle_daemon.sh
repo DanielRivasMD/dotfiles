@@ -8,6 +8,12 @@ then
 
   # wait for daemon
   sleep 3
+
+  # create group
+  pueue group add "${pueueWGroup}"
+
+  # parallel jobs
+  pueue parallel --group "${pueueWGroup}" 3
 fi
 
 ####################################################################################################
