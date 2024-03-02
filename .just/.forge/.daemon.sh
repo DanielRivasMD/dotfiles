@@ -7,7 +7,7 @@ then
   pueued --daemonize
 
   # wait for daemon
-  sleep 3
+  sleep 1
 
   # create group
   pueue group add "${pueueWGroup}"
