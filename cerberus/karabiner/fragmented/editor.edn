@@ -3,15 +3,15 @@
 ; GUI
 {:des "GUI - Control remappings"
  :rules [;
-         [:!WQRtab :!Th [:gui]]                            ; del-tab
-         [:!WQRcaps_lock :!Tg [:gui]]                      ; del-caps
-         [:!WQRleft_shift :!Oc [:gui]]                     ; del-shift
-         ; [:!WQRleft_control :!Tr [:gui]]                 ; del-ctrl
-         [:!WQRleft_option :!Ts [:gui]]                    ; del-alt
-         ; [:!WQRleft_command :!Tt [:gui]]                 ; del-cmd
-         [:!WQRspacebar :!Ty [:gui]]                       ; del-space
-         [:!WQRright_command :!Tj [:gui]]                  ; del-cmd
-         [:!WQRright_option :!Tn [:gui]]                   ; del-alt
+         [:!EQRtab :!Th [:gui]]                            ; del-tab
+         [:!EQRcaps_lock :!Tg [:gui]]                      ; del-caps
+         [:!EQRleft_shift :!Oc [:gui]]                     ; del-shift
+         ; [:!EQRleft_control :!Tr [:gui]]                 ; del-ctrl
+         [:!EQRleft_option :!Ts [:gui]]                    ; del-alt
+         ; [:!EQRleft_command :!Tt [:gui]]                 ; del-cmd
+         [:!EQRspacebar :!Ty [:gui]]                       ; del-space
+         [:!EQRright_command :!Tj [:gui]]                  ; del-cmd
+         [:!EQRright_option :!Tn [:gui]]                   ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -48,32 +48,32 @@
 ; Editor
 {:des "Editor control - alphabet"
  :rules [;
-         ; [:!WQRleft_shift :!Oc [:editor]]                ; del-shift
+         ; [:!EQRleft_shift :!Oc [:editor]]                ; del-shift
          [:!Cleft_arrow :!Ta [:editor]]                    ; cmd-left
          [:!Sspacebar :!Tb [:editor]]                      ; shift-space
          ; [: :!Tc [:editor]]          DEFAULT
          ; [: :!Td [:editor]]          DEFAULT
          [:!Cright_arrow :!Te [:editor]]                   ; cmd-right
          [:!Sreturn_or_enter :!Tf [:editor]]               ; shift-enter
-         ; [:!WQRcaps_lock :!Tg [:editor]]                 ; del-caps
-         ; [:!WQRtab :!Th [:editor]]                       ; del-tab
+         ; [:!EQRcaps_lock :!Tg [:editor]]                 ; del-caps
+         ; [:!EQRtab :!Th [:editor]]                       ; del-tab
          ; [: :!Ti [:editor]]          DEFAULT
-         ; [:!WQRright_command :!Tj [:editor]]             ; del-cmd
+         ; [:!EQRright_command :!Tj [:editor]]             ; del-cmd
          ; [: :!Tk [:editor]]          COLLISION (delete)
          ; [: :!Tl [:editor]]          COLLISION (delete)
          ; [: :!Tm [:editor]]          DEFAULT
-         ; [:!WQRright_option :!Tn [:editor]]              ; del-alt
+         ; [:!EQRright_option :!Tn [:editor]]              ; del-alt
          ; [:!Cup_arrow :!To [:editor]]                    ; cmd-up
          ; [:!Cdown_arrow :!Tp [:editor]]                  ; cmd-down
          ; [: :!Tq [:editor]]          DEFAULT
-         ; [:!WQRleft_control :!Tr [:editor]]              ; del-ctrl
-         ; [:!WQRleft_option :!Ts [:editor]]               ; del-alt
-         ; [:!WQRleft_command :!Tt [:editor]]              ; del-cmd
+         ; [:!EQRleft_control :!Tr [:editor]]              ; del-ctrl
+         ; [:!EQRleft_option :!Ts [:editor]]               ; del-alt
+         ; [:!EQRleft_command :!Tt [:editor]]              ; del-cmd
          ; [: :!Tu [:editor]]          COLLISION (delete)
          [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up
          ; [: :!Tw [:editor]]          COLLISION (delete)
          [:!TCdown_arrow :!Tx [:editor]]                   ; ctrl-cmd-down
-         ; [:!WQRspacebar :!Ty [:editor]]                  ; del-space
+         ; [:!EQRspacebar :!Ty [:editor]]                  ; del-space
          ; [: :!Tz [:editor]]          DEFAULT
          ]}
 
