@@ -3,7 +3,7 @@
 ; browser
 {:des "Browser vimium mappings"
  :rules [;
-         [:delete_or_backspace :!WQright_shift :browser {:alone [:!Of1]}] ; bspace   ; focus       ;
+         [:right_shift :!WQright_shift :browser {:alone [:!Of1]}]         ; shift    ; focus       ;
 
          [:!EQRright_command :!Tf1 [:browser]]                            ; t-cmd    ; down link   ;
          [:!EQRright_option :!Cf1 [:browser]]                             ; t-alt    ; copy link   ;
