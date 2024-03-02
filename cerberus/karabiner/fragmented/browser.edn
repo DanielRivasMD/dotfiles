@@ -5,14 +5,14 @@
  :rules [;
          [:right_shift :right_shift :browser {:alone [:!Of1]}]            ; shift    ; focus       ;
 
-         [:!EQRright_command :!Tf1 [:browser]]                            ; t-cmd    ; down link   ;
-         [:!EQRright_option :!Cf1 [:browser]]                             ; t-alt    ; copy link   ;
+         [:!WQRright_command :!Tf1 [:browser]]                            ; t-cmd    ; down link   ;
+         [:!WQRright_option :!Cf1 [:browser]]                             ; t-alt    ; copy link   ;
 
-         [:!EQRreturn_or_enter :!OTCf1 [:browser]]                        ; t-enter  ; current tab ;
+         [:!WQRreturn_or_enter :!OTCf1 [:browser]]                        ; t-enter  ; current tab ;
 
-         [:!EQRright_shift :!OTf1 [:browser]]                             ; t-shift  ; new tab     ;
-         [:!EQRspacebar :!OCf1 [:browser]]                                ; t-space  ; new tab & go;
-         [:!EQRdelete_or_backspace :!TCf1 [:browser]]                     ; t-bspace ; multitab    ;
+         [:!WQRright_shift :!OTf1 [:browser]]                             ; t-shift  ; new tab     ;
+         [:!WQRspacebar :!OCf1 [:browser]]                                ; t-space  ; new tab & go;
+         [:!WQRdelete_or_backspace :!TCf1 [:browser]]                     ; t-bspace ; multitab    ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
