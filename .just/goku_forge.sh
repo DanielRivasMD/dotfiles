@@ -25,7 +25,6 @@ cat \
   "${karabiner}/.profile.tmp" \
   "${fragmented}/profile.edn" \
   "${karabiner}/.main.tmp" \
-  "${fragmented}/launcher.edn" \
   "${fragmented}/mail.edn" \
   "${fragmented}/browser.edn" \
   "${fragmented}/editor.edn" \
@@ -43,10 +42,13 @@ cat \
   "${fragmented}/tab.edn" \
   "${fragmented}/space.edn" \
   "${fragmented}/ctrl_cmd.edn" \
-  "${fragmented}/opt.edn" \
+  "${fragmented}/lopt.edn" \
   "${fragmented}/ctrl.edn" \
   "${fragmented}/hyper.edn" \
-  "${fragmented}/cmd.edn" \
+  "${fragmented}/lcmd.edn" \
+  "${fragmented}/rshift.edn" \
+  "${fragmented}/ropt.edn" \
+  "${fragmented}/rcmd.edn" \
   "${fragmented}/patch.edn" \
   "${fragmented}/fn.edn" \
   "${karabiner}/.eof.tmp" \
