@@ -9,7 +9,7 @@
 
          ; caps & fn
          [:##caps_lock :!OTCleft_shift nil {:alone :escape}]                                       ;
-         [:##fn :!EWright_command nil {:alone :escape}]                                            ;
+         [:##fn :right_control nil {:alone :escape}]                                               ;
 
          ; modifiers
          [:escape :!EWright_shift nil {:alone [:!TSf3]}]                                           ;
@@ -18,7 +18,7 @@
          [:left_option :left_option nil {:alone [:!Otab]}]                                         ;
          [:left_command :left_command nil {:alone [:!Ctab]}]                                       ;
          [:spacebar :!EWright_command nil {:alone [:spacebar]}]                                    ;
-         [:right_command :!Tleft_command nil {:alone [:!OSf3]}]                                    ;
+         [:right_command :right_command nil {:alone [:!OSf3]}]                                     ;
          [:right_option :right_option nil {:alone [:!Cf3]}]                                        ;
          [:right_shift :right_shift nil {:alone [:!Tf3]}]                                          ;
          [:delete_or_backspace :!WQright_shift nil {:alone [:!CSf3]}]                              ;

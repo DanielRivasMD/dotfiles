@@ -3,27 +3,27 @@
 ; function
 {:des "Function keypad"
  :rules [;simple
-         [:!EWQ0 :7]                   ; '7'                                                       ;
-         [:!EWQhyphen :8]              ; '8'                                                       ;
-         [:!EWQequal_sign :9]          ; '9'                                                       ;
-         [:!EWQp :4]                   ; '4'                                                       ;
-         [:!EWQopen_bracket :5]        ; '5'                                                       ;
-         [:!EWQclose_bracket :6]       ; '6'                                                       ;
-         [:!EWQsemicolon :1]           ; '1'                                                       ;
-         [:!EWQquote :2]               ; '2'                                                       ;
-         [:!EWQbackslash :3]           ; '3'                                                       ;
-         [:!EWQslash :0]               ; '0'                                                       ;
+         [:!W0 :7]                     ; '7'                                                       ;
+         [:!Whyphen :8]                ; '8'                                                       ;
+         [:!Wequal_sign :9]            ; '9'                                                       ;
+         [:!Wp :4]                     ; '4'                                                       ;
+         [:!Wopen_bracket :5]          ; '5'                                                       ;
+         [:!Wclose_bracket :6]         ; '6'                                                       ;
+         [:!Wsemicolon :1]             ; '1'                                                       ;
+         [:!Wquote :2]                 ; '2'                                                       ;
+         [:!Wbackslash :3]             ; '3'                                                       ;
+         [:!Wslash :0]                 ; '0'                                                       ;
 
          ; numbers
-         [:!EWQ1 :f1]                  ; 'F1'                                                      ;
-         [:!EWQ2 :f2]                  ; 'F2'                                                      ;
-         [:!EWQ3 :f3]                  ; 'F3'                                                      ;
-         [:!EWQ4 :f4]                  ; 'F4'                                                      ;
-         [:!EWQ5 :f5]                  ; 'F5'                                                      ;
-         [:!EWQ6 :f6]                  ; 'F6'                                                      ;
-         [:!EWQ7 :f7]                  ; 'F7'                                                      ;
-         [:!EWQ8 :f8]                  ; 'F8'                                                      ;
-         [:!EWQ9 :f9]                  ; 'F9'                                                      ;
+         [:!W1 :f1]                    ; 'F1'                                                      ;
+         [:!W2 :f2]                    ; 'F2'                                                      ;
+         [:!W3 :f3]                    ; 'F3'                                                      ;
+         [:!W4 :f4]                    ; 'F4'                                                      ;
+         [:!W5 :f5]                    ; 'F5'                                                      ;
+         [:!W6 :f6]                    ; 'F6'                                                      ;
+         [:!W7 :f7]                    ; 'F7'                                                      ;
+         [:!W8 :f8]                    ; 'F8'                                                      ;
+         [:!W9 :f9]                    ; 'F9'                                                      ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
