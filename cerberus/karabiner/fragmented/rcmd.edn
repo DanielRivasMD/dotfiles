@@ -36,8 +36,8 @@
 ; command
 {:des "Command Mode - symbols"
  :rules [;
-         ; [:!Qhyphen []]              COLLISION (zellij mode)                                     ;
-         ; [:!Qequal_sign []]          COLLISION (zellij mode)                                     ;
+         ; [:!Qhyphen []]                                                                          ;
+         ; [:!Qequal_sign []]                                                                      ;
          ; [:!Qopen_bracket []]                                                                    ;
          ; [:!Qclose_bracket []]                                                                   ;
          ; [:!Qsemicolon []]                                                                       ;
@@ -49,18 +49,18 @@
          ; [:!Qdelete_or_backspace []]                                                             ;
          ; [:!Qreturn_or_enter []]                                                                 ;
          ; [:!Qright_shift []]                                                                     ;
-         ; [:!Qright_option []]        COLLISION (zellij mode)                                     ;
+         ; [:!Qright_option []]                                                                    ;
          ; [:!Qright_command []]       NOT AVAILABLE                                               ;
-         ; [:!Qspacebar []]            COLLISION (zellij mode)                                     ;
+         ; [:!Qspacebar []]                                                                        ;
 
-         ; [:!Qleft_command []]        COLLISION (zellij mode)                                     ;
-         ; [:!Qleft_option []]         COLLISION (zellij mode)                                     ;
-         ; [:!Qleft_control []]        COLLISION (zellij mode)                                     ;
-         ; [:!Qleft_shift []]          COLLISION (zellij mode)                                     ;
-         ; [:!Qcaps_lock []]                                                                       ;
-         ; [:!Qtab []]                                                                             ;
-         ; [:!Qnon_us_backslash []]    COLLISION (zellij mode)                                     ;
-         ; [:!Qespace []]                                                                          ;
+         [:!Qleft_command [:launch "Zed"]]                                                         ;
+         [:!Qleft_option [:launch "Lapce"]]                                                        ;
+         [:!Qleft_control [:launch "Alacritty"]]                                                   ;
+         ; [:!Qleft_shift [:launch ""]]                                                            ;
+         ; [:!Qcaps_lock [:launch ""]]                                                             ;
+         [:!Qtab [:launch "Firefox"]]                                                              ;
+         [:!Qnon_us_backslash [:launch "Chrome"]]                                                  ;
+         [:!Qescape [:launch "Mail"]]                                                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

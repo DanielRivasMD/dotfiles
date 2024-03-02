@@ -50,17 +50,17 @@
          ; [:!Ereturn_or_enter []]                                                                 ;
          ; [:!Eright_shift []]                                                                     ;
          ; [:!Eright_option []]        NOT AVAILABLE                                               ;
-         ; [:!Eright_command []]                                                                   ;
+         ; [:!Eright_command []]       COLLISION (zellij mode)                                     ;
          ; [:!Espacebar []]            COLLISION (espanso)                                         ;
 
-         [:!Eleft_command [:launch "Alacritty"]]                                                   ;
-         [:!Eleft_option [:launch "Lapce"]]                                                        ;
-         [:!Eleft_control [:launch "Zed"]]                                                         ;
-         ; [:!Eleft_shift [:launch ""]]                                                            ;
-         ; [:!Ecaps_lock [:launch ""]]                                                             ;
-         [:!Etab [:launch "Firefox"]]                                                              ;
-         [:!Enon_us_backslash [:launch "Chrome"]]                                                  ;
-         [:!Eescape [:launch "Mail"]]                                                              ;
+         ; [:!Eleft_command []]        COLLISION (zellij mode)                                     ;
+         ; [:!Eleft_option []]         COLLISION (zellij mode)                                     ;
+         ; [:!Eleft_control []]        COLLISION (zellij mode)                                     ;
+         ; [:!Eleft_shift []]          COLLISION (zellij mode)                                     ;
+         ; [:!Ecaps_lock []]                                                                       ;
+         ; [:!Etab []]                                                                             ;
+         ; [:!Enon_us_backslash []]    COLLISION (zellij mode)                                     ;
+         ; [:!Eespace []]                                                                          ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
