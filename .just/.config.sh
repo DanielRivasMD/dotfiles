@@ -20,6 +20,7 @@ completionsDir="${archive}/completions"
 
 # pueue
 pueuedTracker="${appSupport}/pueue/pueue.pid"
+pueueWGroup="watch"
 
 ####################################################################################################
 
