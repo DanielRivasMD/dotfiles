@@ -43,14 +43,14 @@
          ; [:!!semicolon []]                                                                       ;
          ; [:!!quote []]                                                                           ;
          ; [:!!backslash []]                                                                       ;
-         ; [:!!comma []]                                                                           ;
-         ; [:!!period []]                                                                          ;
-         ; [:!!slash []]                                                                           ;
-         ; [:!!delete_or_backspace []]                                                             ;
-         ; [:!!return_or_enter []]                                                                 ;
-         ; [:!!right_shift []]                                                                     ;
-         ; [:!!right_option []]                                                                    ;
-         ; [:!!right_command []]                                                                   ;
+         ; [:!!comma []]               COLLISION (system)                                          ;
+         ; [:!!period []]              COLLISION (system)                                          ;
+         [:!!slash [:launch "Chrome"]]                                                             ;
+         [:!!delete_or_backspace [:launch "Lapce"]]                                                ;
+         [:!!return_or_enter [:launch "Alacritty"]]                                                ;
+         [:!!right_shift [:launch "Zed"]]                                                          ;
+         [:!!right_option [:launch "Mail"]]                                                        ;
+         [:!!right_command [:launch "Firefox"]]                                                    ;
          ; [:!!spacebar []]            COLLISION (speak function)                                  ;
          ]}
 
