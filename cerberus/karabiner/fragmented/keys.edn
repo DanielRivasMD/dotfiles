@@ -15,11 +15,11 @@
          [:escape :!EWright_shift nil {:alone [:!EWRf3]}]                                          ;
          [:tab :!WQright_shift nil {:alone [:tab]}]                                                ;
          [:left_control :left_control nil {:alone [:!Tf3]}]                                        ;
-         [:left_option :left_option nil {:alone [:!Of3]}]                                          ;
-         [:left_command :left_command nil {:alone [:!Cf3]}]                                        ;
+         [:left_option :left_option nil {:alone [:!Otab]}]                                         ;
+         [:left_command :left_command nil {:alone [:!Ctab]}]                                       ;
          [:spacebar :!EWright_command nil {:alone [:spacebar]}]                                    ;
-         [:right_command :right_command nil {:alone [:!Ctab]}]                                     ;
-         [:right_option :right_option nil {:alone [:!Otab]}]                                       ;
+         [:right_command :right_command nil {:alone [:!Cf3]}]                                      ;
+         [:right_option :right_option nil {:alone [:!Of3]}]                                        ;
          [:right_shift :right_shift nil {:alone [:!Sf3]}]                                          ;
          [:delete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]                             ;
 
