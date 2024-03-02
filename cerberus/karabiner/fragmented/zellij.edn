@@ -1,10 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; TODO: bind resize zellij
 
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:left_shift :left_shift :term {:alone [:!Oa]}]   ; shift                                 ;
+         [:!Qright_option :!Oa [:term]]                    ; cmd-alt                               ;
          [:!Oleft_arrow :!Ob [:term]]                      ; alt-left                              ;
          ; [: :!Oc [:term]]                      COLLISION (remapped)                              ;
          ; [: :!Od [:term]]                      COLLISION (delete)                                ;
@@ -22,7 +21,7 @@
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left                          ;
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right                         ;
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift                         ;
-         [:!Eleft_command :!Os [:term]]                    ; alt-cmd                               ;
+         [:!Qleft_command :!Os [:term]]                    ; alt-cmd                               ;
          [:!OCdelete_or_backspace :!Ot [:term]]            ; alt-cmd-bspace                        ;
          ; [: :!Ou [:term]]                      COLLISION (accent)                                ;
          [:!OTdelete_or_backspace :!Ov [:term]]            ; alt-ctrl-bspace                       ;
@@ -37,23 +36,23 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:escape :!EWright_shift :term {:alone [:!SOa]}]  ; esc                                   ;
-         [:!EWRright_shift :!SOb [:term]]                  ; esc-shift                             ;
-         [:!EWRspacebar :!SOc [:term]]                     ; esc-space                             ;
-         [:!EWRreturn_or_enter :!SOd [:term]]              ; esc-enter                             ;
-         [:!EWRdelete_or_backspace :!SOe [:term]]          ; esc-bspace                            ;
-         [:!EWRleft_arrow :!SOf [:term]]                   ; esc-left                              ;
-         [:!EWRright_arrow :!SOg [:term]]                  ; esc-right                             ;
-         [:!EWRup_arrow :!SOh [:term]]                     ; esc-down                              ;
-         [:!EWRdown_arrow :!SOi [:term]]                   ; esc-up                                ;
+         [:!Qleft_control :!SOa [:term]]                   ; cmd-ctrl                              ;
+         [:!Qleft_shift :!SOb [:term]]                     ; cmd-shift                             ;
+         [:!Qleft_option :!SOc [:term]]                    ; cmd-alt                               ;
+         [:!Qspacebar :!SOd [:term]]                       ; cmd-space                             ;
+         [:!Qnon_us_backslash :!SOe [:term]]               ; cmd-fn                                ;
+         ; [: :!SOf [:term]]                               ;                                       ;
+         ; [: :!SOg [:term]]                               ;                                       ;
+         ; [: :!SOh [:term]]                               ;                                       ;
+         ; [: :!SOi [:term]]                               ;                                       ;
          ; [: :!SOj [:term]]                               ;                                       ;
          ; [: :!SOk [:term]]                               ;                                       ;
          ; [: :!SOl [:term]]                               ;                                       ;
          ; [: :!SOm [:term]]                               ;                                       ;
          ; [: :!SOn [:term]]                               ;                                       ;
          ; [: :!SOo [:term]]                     COLLISION (accent)                                ;
-         [:!EWRhyphen :!SOp [:term]]                       ; esc--                                 ;
-         [:!EWRequal_sign :!SOq [:term]]                   ; esc-=                                 ;
+         ; [: :!SOp [:term]]                               ;                                       ;
+         ; [: :!SOq [:term]]                               ;                                       ;
          [:!OC1 :!SOr [:term]]                             ; alt-cmd-1                             ;
          [:!OC2 :!SOs [:term]]                             ; alt-cmd-2                             ;
          [:!OC3 :!SOt [:term]]                             ; alt-cmd-3                             ;
