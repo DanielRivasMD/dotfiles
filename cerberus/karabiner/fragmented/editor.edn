@@ -32,7 +32,7 @@
 {:des "GUI - Sessions"
  :rules [;
          ; [:escape :!EWright_shift :gui {:alone [:!CSe]}] ; file explorer
-         [:right_shift :right_shift
+         [:delete_or_backspace :!EQright_shift
           :gui {:alone [:!Cj]}]                            ; terminal
 
          [:!TCright_shift :!Cbackslash [:gui]]             ; split vertical
