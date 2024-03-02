@@ -48,36 +48,19 @@
          ; [:!Eslash []]                                                                           ;
          ; [:!Edelete_or_backspace []]                                                             ;
          ; [:!Ereturn_or_enter []]                                                                 ;
-         ; [:!Eright_shift []]                                                                     ;
-         ; [:!Eright_option []]        NOT AVAILABLE                                               ;
+         ; [:!Eright_shift []]         NOT AVAILABLE                                               ;
+         ; [:!Eright_option []]                                                                    ;
          ; [:!Eright_command []]                                                                   ;
-         ; [:!Espacebar []]            COLLISION (espanso)                                         ;
+         ; [:!Espacebar []]                                                                        ;
 
-         ; [:!Rleft_command []]                                                      ;
-         ; [:!Rleft_option []]                                                      ;
-         ; [:!Rleft_control []]                                                        ;
-         ; [:!Rleft_shift []]                                                           ;
-         ; [:!Rcaps_lock []]                                                      ;
-         ; [:!Rtab []]                                                                ;
+         ; [:!Rleft_command []]                                                                    ;
+         ; [:!Rleft_option []]                                                                     ;
+         ; [:!Rleft_control []]                                                                    ;
+         ; [:!Rleft_shift []]                                                                      ;
+         ; [:!Rcaps_lock []]                                                                       ;
+         ; [:!Rtab []]                                                                             ;
          ; [:!Rnon_us_backslash []]                                                                ;
          ; [:!Rescape []]                                                                          ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - numbers"
- :rules [;
-         ; [:!E1 []]                                                                               ;
-         ; [:!E2 []]                                                                               ;
-         ; [:!E3 []]                                                                               ;
-         ; [:!E4 []]                                                                               ;
-         ; [:!E5 []]                                                                               ;
-         ; [:!E6 []]                                                                               ;
-         ; [:!E7 []]                                                                               ;
-         ; [:!E8 []]                                                                               ;
-         ; [:!E9 []]                                                                               ;
-         ; [:!E0 []]                                                                               ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
