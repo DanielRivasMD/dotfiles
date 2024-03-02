@@ -9,6 +9,7 @@ config="${home}/.config"
 archive="${home}/.archive"
 cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
+forge="${archive}/.just/.forge"
 forked="${home}/Forked"
 observatory="${home}/Observatory"
 appSupport="${home}/Library/Application Support"
@@ -20,7 +21,7 @@ completionsDir="${archive}/completions"
 
 # pueue
 pueuedTracker="${appSupport}/pueue/pueue.pid"
-pueueWGroup="watch"
+pueueWGroup="forgeMaster"
 
 ####################################################################################################
 
