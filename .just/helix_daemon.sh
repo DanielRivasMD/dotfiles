@@ -14,6 +14,6 @@ source .just/.handle_daemon.sh
 ####################################################################################################
 
 # format & watch helix
-pueue add -- watchexec --watch ianus/helix/modes -- 'source .just/helix.sh'
+pueue add -- watchexec --watch ianus/helix/modes -- 'source .just/helix_forge.sh'
 
 ####################################################################################################
