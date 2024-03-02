@@ -1,6 +1,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; TODO: rename
-; TODO: set right command
 
 ; option
 {:des "Option Mode - alphabet"
@@ -55,34 +53,14 @@
          ; [:!Eright_command []]                                                                   ;
          ; [:!Espacebar []]            COLLISION (espanso)                                         ;
 
-         ; [:!Eleft_command []]                                                                    ;
-         ; [:!Eleft_option []]                                                                     ;
-         ; [:!Eleft_control []]                                                                    ;
-         ; [:!Eleft_shift []]                                                                      ;
-         ; [:!Ecaps_lock []]                                                                       ;
-         ; [:!Etab []]                                                                             ;
-         ; [:!Enon_us_backslash []]                                                                ;
-         ; [:!Eespace []]                                                                          ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - numbers"
- :rules [;
-         [:!Enon_us_backslash [:launch "Alacritty"]]                                               ;
-         [:!E1 [:launch "Lapce"]]                                                                  ;
-         [:!E2 [:launch "Zed"]]                                                                    ;
-         ; [:!E3 []]                                                                               ;
-         ; [:!E4 []]                                                                               ;
-         ; [:!E5 []]                                                                               ;
-         ; [:!E6 []]                                                                               ;
-         ; [:!E7 []]                                                                               ;
-         ; [:!E8 []]                                                                               ;
-         ; [:!E9 []]                                                                               ;
-         [:!E0 [:launch "Chrome"]]                                                                 ;
-         [:!Ehyphen [:launch "Firefox"]]                                                           ;
-         [:!Eequal_sign [:launch "Mail"]]                                                          ;
+         [:!Eleft_command [:launch "Alacritty"]]                                                   ;
+         [:!Eleft_option [:launch "Lapce"]]                                                        ;
+         [:!Eleft_control [:launch "Zed"]]                                                         ;
+         ; [:!Eleft_shift [:launch ""]]                                                            ;
+         ; [:!Ecaps_lock [:launch ""]]                                                             ;
+         [:!Etab [:launch "Firefox"]]                                                              ;
+         [:!Enon_us_backslash [:launch "Chrome"]]                                                  ;
+         [:!Eescape [:launch "Mail"]]                                                              ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
