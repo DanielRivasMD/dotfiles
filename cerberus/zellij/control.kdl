@@ -24,17 +24,17 @@ layout {
 
     tab name="Files" focus=true hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
-            pane name="F0" cwd="/Users/drivas/Downloads"
-            pane name="F1" cwd="/Users/drivas" focus=true
-            pane name="F2" cwd="/Users/drivas"
+            pane name="I" cwd="/Users/drivas/Downloads"
+            pane name="II" cwd="/Users/drivas" focus=true
+            pane name="III" cwd="/Users/drivas"
         }
     }
 
     tab name="Archive" hide_floating_panes=true {
-        pane name="Workspace" cwd="/Users/drivas/.archive" focus=true
+        pane name="Canvas" cwd="/Users/drivas/.archive" focus=true
 
         floating_panes {
-            pane name="VersionControl" cwd="/Users/drivas/.archive" {
+            pane name="Git" cwd="/Users/drivas/.archive" {
                 x "0%"
                 y "3%"
                 width "100%"
@@ -44,10 +44,10 @@ layout {
     }
 
     tab name="Factorem" hide_floating_panes=true {
-        pane name="Workspace" cwd="/Users/drivas/Factorem"
+        pane name="Canvas" cwd="/Users/drivas/Factorem"
 
         floating_panes {
-            pane name="VersionControl" cwd="/Users/drivas/Factorem" {
+            pane name="Git" cwd="/Users/drivas/Factorem" {
                 x "0%"
                 y "3%"
                 width "100%"
@@ -57,7 +57,7 @@ layout {
     }
 
     tab name="Update" {
-        pane name="Update"
+        pane name="Master"
     }
 }
 
