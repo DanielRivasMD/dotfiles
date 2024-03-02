@@ -5,6 +5,9 @@ C-space = ["hover"]
 
 ####################################################################################################
 
+# jump back
+S-F10 = ["goto_last_modification"]                         # alt               # go back
+
 # delete
 del = ["delete_selection_noyank"]
 backspace = ["delete_char_backward"]
@@ -54,9 +57,9 @@ A-C-F10 = ["vsplit"]                                       # ctrl-cmd-alt      #
 A-C-F11 = ["hsplit"]                                       # ctrl-cmd-shift    # horizontal split
 A-C-F12 = ["wonly"]                                        # ctrl-cmd-cmd      # unsplit
 
-# comments
-S-F8 = ["normal_mode", "till_prev_char"]                   # ctrl-cmd-[        # prev comment
-S-F9 = ["normal_mode", "find_till_char"]                   # ctrl-cmd-]        # next comment
+# movement
+S-F8 = ["normal_mode", "till_prev_char"]                   # ctrl-cmd-[        # prev until
+S-F9 = ["normal_mode", "find_till_char"]                   # ctrl-cmd-]        # next until
 
 # version control
 S-F11 = ["goto_prev_change"]                               # alt-cmd-up        # prev change
@@ -196,7 +199,7 @@ S-F20 = ["goto_next_comment"]                              # ctrl-cmd-j        #
 A-C-F19 = ["goto_prev_comment"]                            # ctrl-cmd-k        #
 # A-C-F20 = [""]                                           # ctrl-cmd-l        #
 A-C-S-F6 = ["normal_mode", "repeat_last_motion"]           # ctrl-cmd-m        #
-A-C-S-F7 = ["goto_last_modification"]                      # ctrl-cmd-n        #
+# A-C-S-F7 = [""]                                          # ctrl-cmd-n        #
 # A-C-S-F8 = [""]                                          # ctrl-cmd-o        #
 # A-C-S-F9 = [""]                                          # ctrl-cmd-p        #
 # A-C-S-F10 = [""]                                         # ctrl-cmd-q        #
