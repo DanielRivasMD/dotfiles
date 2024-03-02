@@ -1,3 +1,4 @@
+# migrate to pueue
 [scripts.brew-up]
 command = 'zellij run --cwd $HOME --name "brew" --floating -- brew upgrade'
 description = 'update packages'
@@ -17,16 +18,6 @@ tags = ['update']
 command = 'zellij run --cwd $HOME --name "go" --floating -- go-global-update'
 description = 'update cargo binaries'
 tags = ['update']
-
-[scripts.alacritty-edit]
-command = 'micro ${CERBERUS}/alacritty/alacritty.yml'
-description = 'open alacritty config with micro'
-tags = ['config']
-
-[scripts.alacritty-refresh]
-command = 'rm ~/.config/alacritty/alacritty.toml && alacritty migrate'
-description = 'refresh alacritty config'
-tags = ['config']
 
 [scripts.bianca-sftp-ai]
 command = 'sftp -qr drivas-sens2022521@bianca-sftp.uppmax.uu.se'
@@ -57,26 +48,6 @@ tags = ['remote']
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2019016'
 tags = ['remote']
-
-[scripts.cheat-julia]
-command = 'open ~/Documents/Bahlam/Biblo/Cheat_sheet/Julia/julia-cheat.html'
-description = 'visualize julia cheatsheet'
-tags = ['julia']
-
-[scripts.clean-fire]
-command = '''for i in $(procs Firefox | awk 'NR > 2 {print $1}' ); do kill $i; done'''
-description = 'stop all Firefox jobs'
-tags = ['shell']
-
-[scripts.cpu]
-command = 'procs --sortd CPU --watch'
-description = 'watch resources usage CPU-sorted'
-tags = ['shell']
-
-[scripts.daemon]
-command = '''sudo kill $(ps aux | awk '{if ($11 == "wdavdaemon") print $2}')'''
-description = 'kill microsoft defender'
-tags = ['shell']
 
 [scripts.dir-count]
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
@@ -219,11 +190,6 @@ command = 'sftp drivas@magnus.pawsey.org.au'
 description = 'sftp to Pawsey Magnus'
 tags = ['remote']
 
-[scripts.micro]
-command = 'micro ${IANUS}/micro/bindings.json'
-description = 'open micro config with micro'
-tags = ['shell']
-
 [scripts.path]
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
@@ -232,41 +198,6 @@ source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'display PATH'
 tags = ['shell']
-
-[scripts.pier]
-command = 'bat ~/.pier.toml'
-description = 'print pier.toml'
-tags = ['rust']
-
-[scripts.pwd]
-command = 'pwd | tr -d "\n" | cb'
-description = 'copy pwd without new line'
-tags = ['shell']
-
-[scripts.sample]
-command = 'sampler --config /Users/drivas/.archive/cerberus/sampler/monitor.yml'
-description = 'use sample'
-tags = ['go']
-
-[scripts.tmux-catedra]
-command = 'sh ~/.archive/ianus/tmux/session/catedra.sh'
-description = 'launch tmux session'
-tags = ['tmux']
-
-[scripts.tmux-cohesion]
-command = 'sh ~/.archive/ianus/tmux/session/cohesion.sh'
-description = 'launch tmux session'
-tags = ['tmux']
-
-[scripts.tmux-control]
-command = 'sh ~/.archive/ianus/tmux/session/control.sh'
-description = 'launch tmux session'
-tags = ['tmux']
-
-[scripts.tmux-mind]
-command = 'sh ~/.archive/ianus/tmux/session/mind.sh'
-description = 'launch tmux session'
-tags = ['tmux']
 
 [scripts.topaz-sftp]
 command = 'sftp drivas@topaz.pawsey.org.au'
