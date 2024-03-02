@@ -3,7 +3,7 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!Qright_option :!Oa [:term]]                    ; cmd-alt                               ;
+         [:!Eright_command :!Oa [:term]]                   ; alt-cmd                               ;
          [:!Oleft_arrow :!Ob [:term]]                      ; alt-left                              ;
          ; [: :!Oc [:term]]                      COLLISION (remapped)                              ;
          ; [: :!Od [:term]]                      COLLISION (delete)                                ;
@@ -21,7 +21,7 @@
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left                          ;
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right                         ;
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift                         ;
-         [:!Qleft_command :!Os [:term]]                    ; alt-cmd                               ;
+         [:!Eleft_command :!Os [:term]]                    ; alt-cmd                               ;
          [:!OCdelete_or_backspace :!Ot [:term]]            ; alt-cmd-bspace                        ;
          ; [: :!Ou [:term]]                      COLLISION (accent)                                ;
          [:!OTdelete_or_backspace :!Ov [:term]]            ; alt-ctrl-bspace                       ;
@@ -36,11 +36,11 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!Qleft_control :!SOa [:term]]                   ; cmd-ctrl                              ;
-         [:!Qleft_shift :!SOb [:term]]                     ; cmd-shift                             ;
-         [:!Qleft_option :!SOc [:term]]                    ; cmd-alt                               ;
-         [:!Qspacebar :!SOd [:term]]                       ; cmd-space                             ;
-         [:!Qnon_us_backslash :!SOe [:term]]               ; cmd-fn                                ;
+         [:escape :!EWright_shift [:term] {:alone [:!SOa]}]; esc                                   ;
+         [:!Eleft_control :!SOb [:term]]                   ; alt-ctrl                              ;
+         [:!Eleft_option :!SOc [:term]]                    ; alt-alt                               ;
+         [:!Eleft_shift :!SOd [:term]]                     ; alt-shift                             ;
+         [:!Enon_us_backslash :!SOe [:term]]               ; alt-fn                                ;
          ; [: :!SOf [:term]]                               ;                                       ;
          ; [: :!SOg [:term]]                               ;                                       ;
          ; [: :!SOh [:term]]                               ;                                       ;
