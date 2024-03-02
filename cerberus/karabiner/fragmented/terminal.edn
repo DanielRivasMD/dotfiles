@@ -136,7 +136,7 @@
          [:!TCkeypad_enter :!Sf9]                          ; ctrl-cmd-enter
 
          ; broot toggle
-         [:right_option :right_option [:term]              ; alt-tab
+         [:left_option :left_option [:term]                ; alt-tab
           {:alone [:!Sf10]}]
 
          ; version control
