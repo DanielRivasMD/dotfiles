@@ -59,16 +59,12 @@ Mnemosyne:
 
 ####################################################################################################
 
-# format & watch goku
-@Goku:
-  source .just/goku_daemon.sh
+# format & watch config
+Daemon:
+  source .just/.daemons.sh
 
 ####################################################################################################
-
-# format & watch helix
-@Helix:
-  source .just/helix_daemon.sh
-
+# helix
 ####################################################################################################
 
 # open fragmented karabiner
