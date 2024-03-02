@@ -131,9 +131,6 @@ source "${HOME}/.config/broot/launcher/bash/br"
 # shell functions
 ####################################################################################################
 
-# Rmarkdown knit
-function knit() {
-  R --slave -e "rmarkdown::render('$1')" > /dev/null
-}
+source "${IANUS}/shell/terminal/shell_func.sh"
 
 ####################################################################################################
