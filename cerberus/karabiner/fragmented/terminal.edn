@@ -5,15 +5,15 @@
  :rules [;
          ; TODO: map deletes
          ; TODO: format editors
-         [:!WQRtab :!Th [:term]]                 ; del-tab                                         ;
-         [:!WQRcaps_lock :!Tg [:term]]           ; del-caps                                        ;
-         [:!WQRleft_shift :!Oc [:term]]          ; del-shift                                       ;
-         [:!WQRleft_control :!Tr [:term]]        ; del-ctrl                                        ;
-         [:!WQRleft_option :!Ts [:term]]         ; del-alt                                         ;
-         [:!WQRleft_command :!Tt [:term]]        ; del-cmd                                         ;
-         [:!WQRspacebar :!Ty [:term]]            ; del-space                                       ;
-         [:!WQRright_command :!Tj [:term]]       ; del-cmd                                         ;
-         [:!WQRright_option :!Tn [:term]]        ; del-alt                                         ;
+         [:!EQRtab :!Th [:term]]                 ; del-tab                                         ;
+         [:!EQRcaps_lock :!Tg [:term]]           ; del-caps                                        ;
+         [:!EQRleft_shift :!Oc [:term]]          ; del-shift                                       ;
+         [:!EQRleft_control :!Tr [:term]]        ; del-ctrl                                        ;
+         [:!EQRleft_option :!Ts [:term]]         ; del-alt                                         ;
+         [:!EQRleft_command :!Tt [:term]]        ; del-cmd                                         ;
+         [:!EQRspacebar :!Ty [:term]]            ; del-space                                       ;
+         [:!EQRright_command :!Tj [:term]]       ; del-cmd                                         ;
+         [:!EQRright_option :!Tn [:term]]        ; del-alt                                         ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
