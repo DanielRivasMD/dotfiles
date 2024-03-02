@@ -42,18 +42,20 @@ function forge() {
     "${fragmented}/mouse.edn" \
     "${fragmented}/zero.edn" \
     "${fragmented}/super.edn" \
-    "${fragmented}/function.edn" \
     "${fragmented}/esc.edn" \
+    "${fragmented}/function.edn" \
     "${fragmented}/tab.edn" \
+    "${fragmented}/hyper.edn" \
+    "${fragmented}/lopt.edn" \
+    "${fragmented}/lctrl.edn" \
+    "${fragmented}/lcmd.edn" \
     "${fragmented}/space.edn" \
     "${fragmented}/ctrl_cmd.edn" \
-    "${fragmented}/lopt.edn" \
-    "${fragmented}/ctrl.edn" \
-    "${fragmented}/hyper.edn" \
-    "${fragmented}/lcmd.edn" \
     "${fragmented}/rshift.edn" \
     "${fragmented}/ropt.edn" \
+    "${fragmented}/rctrl.edn" \
     "${fragmented}/rcmd.edn" \
+    "${fragmented}/bspace.edn" \
     "${fragmented}/patch.edn" \
     "${fragmented}/fn.edn" \
     "${karabiner}/.eof.tmp" \
