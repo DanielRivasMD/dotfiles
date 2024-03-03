@@ -10,6 +10,11 @@ multicursor-whole-words = false
 font-family = "Hack Nerd Font"
 enable-completion-lens = true
 show-tab = true
+modal-mode-relative-line-numbers = false
+highlight-scope-lines = true
+render-whitespace = "all"
+atomic-soft-tabs = true
+double-click = "all"
 
 [core]
 modal = false
@@ -29,5 +34,20 @@ serverPath = "/usr/local/bin/rust-analyzer"
 [lapce-toml]
 "volt.serverPath" = "/usr/local/bin/taplo"
 
-[lapce-dart]
-serverPath = "/usr/local/bin/dart"
+[color-theme]
+
+[color-theme.base]
+cyan = "#00ffff"
+black = "#000000"
+blue = "#0000ff"
+green = "#008000"
+magenta = "ff00ff"
+orange = "ffa500"
+purple = "800080"
+red = "ff0000"
+white = "ffffff"
+yellow = "ffff00"
+
+[color-theme.ui]
+"editor.selection" = "#800000"
+"editor.caret" = "$white"
