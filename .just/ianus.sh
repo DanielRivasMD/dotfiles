@@ -114,9 +114,9 @@ echo "${RED}====================================================================
 echo ''
 echo "${RED}====================================================================================================${NC}"
 bender completion zsh > "${zshcomp}/_bender"                                    && echo "Installed completions ${BROWN}=>${NC} ${CYAN}bender${NC}"
+cerberus completion zsh > "${zshcomp}/_cerberus"                                        && echo "Installed completions ${BROWN}=>${NC} ${CYAN}cerberus${NC}"
+gorgon completion zsh > "${zshcomp}/_gorgon"                                      && echo "Installed completions ${BROWN}=>${NC} ${CYAN}gorgon${NC}"
 hercules completion zsh > "${zshcomp}/_hercules"                                && echo "Installed completions ${BROWN}=>${NC} ${CYAN}hercules${NC}"
-janus completion zsh > "${zshcomp}/_janus"                                      && echo "Installed completions ${BROWN}=>${NC} ${CYAN}janus${NC}"
-kali completion zsh > "${zshcomp}/_kali"                                        && echo "Installed completions ${BROWN}=>${NC} ${CYAN}kali${NC}"
 lou completion zsh > "${zshcomp}/_lou"                                          && echo "Installed completions ${BROWN}=>${NC} ${CYAN}lou${NC}"
 mbombo completion zsh > "${zshcomp}/_mbombo"                                    && echo "Installed completions ${BROWN}=>${NC} ${CYAN}mbombo${NC}"
 minerva completion zsh > "${zshcomp}/_minerva"                                  && echo "Installed completions ${BROWN}=>${NC} ${CYAN}minerva${NC}"
