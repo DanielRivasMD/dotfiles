@@ -1,22 +1,3 @@
-# migrate to pueue
-[scripts.brew-up]
-command = 'zellij run --cwd $HOME --name "brew" --floating -- brew upgrade'
-description = 'update packages'
-tags = ['update']
-
-[scripts.rustup-up]
-command = 'zellij run --cwd $HOME --name "rustup" --floating -- rustup update'
-description = 'update rust compiler'
-tags = ['update']
-
-[scripts.cargo-up]
-command = 'zellij run --cwd $HOME --name "cargo" --floating -- cargo-install-update install-update --all'
-description = 'update cargo binaries'
-tags = ['update']
-
-[scripts.go-up]
-command = 'zellij run --cwd $HOME --name "go" --floating -- go-global-update'
-description = 'update cargo binaries'
 tags = ['update']
 
 [scripts.bianca-sftp-ai]
