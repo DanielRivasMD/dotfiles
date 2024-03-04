@@ -88,11 +88,6 @@ command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
 description = 'edit julia awesome list'
 tags = ['julia']
 
-[scripts.magnus-sftp]
-command = 'sftp drivas@magnus.pawsey.org.au'
-description = 'sftp to Pawsey Magnus'
-tags = ['remote']
-
 [scripts.path]
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
@@ -101,15 +96,5 @@ source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'display PATH'
 tags = ['shell']
-
-[scripts.topaz-sftp]
-command = 'sftp drivas@topaz.pawsey.org.au'
-description = 'sftp to Pawsey Topaz'
-tags = ['remote']
-
-[scripts.uppmax-sftp]
-command = 'sftp drivas@rackham.uppmax.uu.se'
-description = 'sftp to Uppmax Rackham'
-tags = ['remote']
 
 [default]
