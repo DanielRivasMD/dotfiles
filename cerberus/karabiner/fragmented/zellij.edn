@@ -3,7 +3,7 @@
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
-         [:!Eright_command :!Oa [:term]]                   ; alt-cmd                               ;
+         [:right_shift :right_shift [:term] {:alone [:!Oa]}]; shift                                ;
          [:!Oleft_arrow :!Ob [:term]]                      ; alt-left                              ;
          ; [: :!Oc [:term]]                      COLLISION (remapped)                              ;
          ; [: :!Od [:term]]                      COLLISION (delete)                                ;
@@ -21,7 +21,7 @@
          [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left                          ;
          [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right                         ;
          [:!OCright_shift :!Or [:term]]                    ; alt-cmd-shift                         ;
-         [:!Eleft_command :!Os [:term]]                    ; alt-cmd                               ;
+         [:!Eright_command :!Os [:term]]                   ; alt-cmd                               ;
          [:!OCdelete_or_backspace :!Ot [:term]]            ; alt-cmd-bspace                        ;
          ; [: :!Ou [:term]]                      COLLISION (accent)                                ;
          [:!OTdelete_or_backspace :!Ov [:term]]            ; alt-ctrl-bspace                       ;
@@ -39,7 +39,7 @@
          [:escape :!EWright_shift [:term] {:alone [:!SOa]}]; esc                                   ;
          [:!Eleft_control :!SOb [:term]]                   ; alt-ctrl                              ;
          [:!Eleft_option :!SOc [:term]]                    ; alt-alt                               ;
-         [:!Eleft_shift :!SOd [:term]]                     ; alt-shift                             ;
+         [:!Eleft_command :!SOd [:term]]                   ; alt-cmd                               ;
          [:!Enon_us_backslash :!SOe [:term]]               ; alt-fn                                ;
          ; [: :!SOf [:term]]                               ;                                       ;
          ; [: :!SOg [:term]]                               ;                                       ;
