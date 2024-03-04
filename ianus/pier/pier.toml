@@ -48,7 +48,7 @@ git stash list
 source ${PIER}/break_double_line.sh $COLUMNS
 
 git lk -10
-source ${PIER}/break_single_line.sh  $COLUMNS
+source ${PIER}/break_single_line.sh $COLUMNS
 '''
 description = 'all-round git status'
 tags = ['git']
@@ -61,7 +61,7 @@ tags = ['go']
 [scripts.gopath]
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
-echo $GOPATH | xsv flatten -d ":" -n
+echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
 source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'display GOPATH'
@@ -91,7 +91,7 @@ tags = ['julia']
 [scripts.path]
 command = '''
 source ${PIER}/break_single_line.sh  $COLUMNS
-echo $PATH | xsv flatten -d ":" -n
+echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
 source ${PIER}/break_single_line.sh  $COLUMNS
 '''
 description = 'display PATH'
