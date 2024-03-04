@@ -2,7 +2,7 @@
 ####################################################################################################
 
 # config
-source $HOME/.archive/.just/.config.sh
+source $HOME/.archive/ianus/pier/.config.sh
 
 ####################################################################################################
 # deamon
@@ -16,20 +16,20 @@ source "${forge}/.daemon.sh"
 ####################################################################################################
 
 # watch alacritty
-pueue add --group "${pueueWGroup}" -- watchexec --watch ~/.archive/cerberus/alacritty/alacritty.yml -- 'source ~/.archive/.just/.forge/alacritty.sh'
+pueue add --group "${pueueWGroup}" -- watchexec --watch ~/.archive/cerberus/alacritty/alacritty.yml -- 'source ~/.archive/ianus/pier/.forge/alacritty.sh'
 
 ####################################################################################################
 # goku
 ####################################################################################################
 
 # format & watch goku
-pueue add --group "${pueueWGroup}" -- watchexec --watch ~/.archive/cerberus/karabiner/fragmented -- 'source ~/.archive/.just/.forge/goku.sh'
+pueue add --group "${pueueWGroup}" -- watchexec --watch ~/.archive/cerberus/karabiner/fragmented -- 'source ~/.archive/ianus/pier/.forge/goku.sh'
 
 ####################################################################################################
 # helix
 ####################################################################################################
 
 # format & watch helix
-pueue add --group "${pueueWGroup}" -- watchexec --watch ~/.archive/ianus/helix/modes -- 'source ~/.archive/.just/.forge/helix.sh'
+pueue add --group "${pueueWGroup}" -- watchexec --watch ~/.archive/ianus/helix/modes -- 'source ~/.archive/ianus/pier/.forge/helix.sh'
 
 ####################################################################################################
