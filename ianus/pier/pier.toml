@@ -1,10 +1,10 @@
 [scripts.update]
-command = 'source ${PIER}/.update.sh'
+command = 'source ${PIER}/update.sh &'
 description = 'update homebrew, rustc compiler, & cargo & go binaries'
 tags = ['update']
 
 [scripts.forge]
-command = 'source ${PIER}/.forge.sh'
+command = 'source ${PIER}/forge.sh &'
 description = 'observe & build alacritty, helix & karabiner'
 tags = ['build']
 

@@ -5,12 +5,12 @@
 
 # home
 export home="${HOME}"
-export config="${home}/.config"
 export archive="${home}/.archive"
 export cerberus="${archive}/cerberus"
 export ianus="${archive}/ianus"
-export forge="${archive}/.just/.forge"
-export update="${archive}/.just/.update"
+export pier="${ianus}/pier"
+export forge="${pier}/.forge"
+export update="${pier}/.update"
 export forked="${home}/Forked"
 export observatory="${home}/Observatory"
 export appSupport="${home}/Library/Application Support"
