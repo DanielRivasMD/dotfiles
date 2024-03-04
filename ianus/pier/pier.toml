@@ -88,62 +88,6 @@ command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
 description = 'edit julia awesome list'
 tags = ['julia']
 
-[scripts.kal]
-command = '''
-#!/bin/sh
-source ${PIER}/break_single_line.sh  $COLUMNS
-khal calendar \
-  --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»"
-source ${PIER}/break_single_line.sh  $COLUMNS
-'''
-description = 'all calendars'
-tags = ['khal']
-
-[scripts.kals]
-command = '''
-#!/bin/sh
-source ${PIER}/break_single_line.sh  $COLUMNS
-khal list \
-  --format "{calendar-color}[{start-time}-{end-time}]  {title}{description-separator}{description}  ‹{location}›  «{categories}»" \
-  --exclude-calendar SuperRugby \
-  --exclude-calendar Astronomy
-source ${PIER}/break_single_line.sh  $COLUMNS
-'''
-description = 'list calendars'
-tags = ['khal']
-
-[scripts.kastro]
-command = '''
-#!/bin/sh
-source ${PIER}/break_single_line.sh  $COLUMNS
-khal calendar \
-  --include-calendar Astronomy
-source ${PIER}/break_single_line.sh  $COLUMNS
-'''
-description = 'astronomy calendar'
-tags = ['khal']
-
-[scripts.kedit]
-command = 'micro ${ARCHIVE}/cerberus/khal/khalNew.sh'
-description = 'edit khal-endar event'
-tags = ['khal']
-
-[scripts.knew]
-command = 'source ${ARCHIVE}/cerberus/khal/khalNew.sh & git --git-dir=${ARCHIVE}/.git --work-tree=${ARCHIVE} checkout ${ARCHIVE}/cerberus/khal/khalNew.sh'
-description = 'add khal-endar event'
-tags = ['khal']
-
-[scripts.krugby]
-command = '''
-#!/bin/sh
-source ${PIER}/break_single_line.sh  $COLUMNS
-khal calendar \
-  --include-calendar SuperRugby
-source ${PIER}/break_single_line.sh  $COLUMNS
-'''
-description = 'SuperRugby calendar'
-tags = ['khal']
-
 [scripts.magnus-sftp]
 command = 'sftp drivas@magnus.pawsey.org.au'
 description = 'sftp to Pawsey Magnus'
