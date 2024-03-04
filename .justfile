@@ -75,7 +75,7 @@ Mnemosyne:
 
 # open fragmented karabiner
 @Karabiner-fragmented:
-  hx cerberus/karabiner/fragmented/{esc.edn,function.edn,tab.edn,hyper.edn,ctrl.edn,lopt.edn,lcmd.edn,space.edn,ropt.edn,rcmd.edn,ctrl_cmd.edn,zero.edn,super.edn}
+  hx cerberus/karabiner/fragmented/{esc.edn,function.edn,tab.edn,hyper.edn,lctrl.edn,lopt.edn,lcmd.edn,space.edn,ropt.edn,rcmd.edn,rshift.edn,bspace.edn,ctrl_cmd.edn,zero.edn,super.edn}
 
 # open editors karabiner
 @Karabiner-editors:
