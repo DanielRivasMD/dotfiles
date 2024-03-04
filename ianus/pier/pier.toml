@@ -3,35 +3,6 @@ command = 'source ${PIER}/.update.sh'
 description = 'update homebrew, rustc compiler, & cargo & go binaries'
 tags = ['update']
 
-[scripts.bianca-sftp-ai]
-command = 'sftp -qr drivas-sens2022521@bianca-sftp.uppmax.uu.se'
-description = 'sftp to Bianca sens2022521'
-tags = ['remote']
-
-[scripts.bianca-sftp-ca]
-command = 'sftp -qr drivas-sens2022593@bianca-sftp.uppmax.uu.se'
-description = 'sftp to Bianca sens2022593'
-tags = ['remote']
-
-[scripts.bianca-sftp-im]
-command = 'sftp -qr drivas-sens2019016@bianca-sftp.uppmax.uu.se'
-description = 'sftp to Bianca sens2019016'
-tags = ['remote']
-
-[scripts.bianca-ssh-ai]
-command = 'ssh drivas-sens2022521@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2022521'
-tags = ['remote']
-
-[scripts.bianca-ssh-ca]
-command = 'ssh drivas-sens2022593@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2022593'
-tags = ['remote']
-
-[scripts.bianca-ssh-im]
-command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
-description = 'ssh to Bianca sens2019016'
-tags = ['remote']
 [scripts.forge]
 command = 'source ${PIER}/.forge.sh'
 description = 'observe & build alacritty, helix & karabiner'
