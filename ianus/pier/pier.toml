@@ -1,3 +1,6 @@
+[scripts.update]
+command = 'source ${PIER}/.update.sh'
+description = 'update homebrew, rustc compiler, & cargo & go binaries'
 tags = ['update']
 
 [scripts.bianca-sftp-ai]
@@ -29,6 +32,10 @@ tags = ['remote']
 command = 'ssh drivas-sens2019016@bianca.uppmax.uu.se'
 description = 'ssh to Bianca sens2019016'
 tags = ['remote']
+[scripts.forge]
+command = 'source ${PIER}/.forge.sh'
+description = 'observe & build alacritty, helix & karabiner'
+tags = ['build']
 
 [scripts.dir-count]
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
