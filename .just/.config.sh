@@ -10,6 +10,7 @@ archive="${home}/.archive"
 cerberus="${archive}/cerberus"
 ianus="${archive}/ianus"
 forge="${archive}/.just/.forge"
+update="${archive}/.just/.update"
 forked="${home}/Forked"
 observatory="${home}/Observatory"
 appSupport="${home}/Library/Application Support"
@@ -101,6 +102,7 @@ softwarePawsey="/scratch/pawsey0263/drivas/software"
 # pueue
 pueuedTracker="${appSupport}/pueue/pueue.pid"
 pueueWGroup="forgeMaster"
+pueueUGroup="update"
 
 ####################################################################################################
 
