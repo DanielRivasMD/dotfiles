@@ -50,8 +50,8 @@ keybinds clear-defaults=true {
         // bind "Alt M" {}
         // bind "Alt N" {}
         // bind "Alt O" {  }                                                                        DOC: accent
-        // bind "Alt P" {}
-        // bind "Alt Q" {}
+        bind "Alt P" { SwitchToMode "RenamePane"; PaneNameInput 0; }
+        bind "Alt Q" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }
         bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }
         bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }
@@ -120,8 +120,6 @@ keybinds clear-defaults=true {
         bind "J" { Resize "Decrease Down"; }
         bind "K" { Resize "Decrease Up"; }
         bind "L" { Resize "Decrease Right"; }
-        bind "Delete" { SwitchToMode "RenamePane"; PaneNameInput 0; }
-        bind "Backspace" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "Left" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Resize"; }
         bind "Right" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Resize"; }
         bind "Up" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Resize"; }

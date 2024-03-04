@@ -37,9 +37,9 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
          [:escape :!EWright_shift [:term] {:alone [:!SOa]}]; esc                                   ;
-         [:!Eleft_control :!SOb [:term]]                   ; alt-ctrl                              ;
-         [:!Eleft_option :!SOc [:term]]                    ; alt-alt                               ;
-         [:!Eleft_command :!SOd [:term]]                   ; alt-cmd                               ;
+         [:!Eleft_option :!SOb [:term]]                    ; alt-alt                               ;
+         [:!Eleft_shift :!SOc [:term]]                     ; alt-shift                             ;
+         [:!Ecaps_lock :!SOd [:term]]                      ; alt-caps                              ;
          [:!Enon_us_backslash :!SOe [:term]]               ; alt-fn                                ;
          ; [: :!SOf [:term]]                               ;                                       ;
          ; [: :!SOg [:term]]                               ;                                       ;
@@ -51,8 +51,8 @@
          ; [: :!SOm [:term]]                               ;                                       ;
          ; [: :!SOn [:term]]                               ;                                       ;
          ; [: :!SOo [:term]]                     COLLISION (accent)                                ;
-         ; [: :!SOp [:term]]                               ;                                       ;
-         ; [: :!SOq [:term]]                               ;                                       ;
+         [:!Eleft_control :!SOp [:term]]                   ; alt-ctrl                              ;
+         [:!Eleft_command :!SOq [:term]]                   ; alt-cmd                               ;
          [:!OC1 :!SOr [:term]]                             ; alt-cmd-1                             ;
          [:!OC2 :!SOs [:term]]                             ; alt-cmd-2                             ;
          [:!OC3 :!SOt [:term]]                             ; alt-cmd-3                             ;
