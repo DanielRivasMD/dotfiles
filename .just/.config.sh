@@ -4,126 +4,115 @@
 ####################################################################################################
 
 # home
-home="${HOME}"
-config="${home}/.config"
-archive="${home}/.archive"
-cerberus="${archive}/cerberus"
-ianus="${archive}/ianus"
-forge="${archive}/.just/.forge"
-update="${archive}/.just/.update"
-forked="${home}/Forked"
-observatory="${home}/Observatory"
-appSupport="${home}/Library/Application Support"
-localShare="${home}/.local/share"
-setupDir="${archive}/.just/.setup"
-completionsDir="${archive}/completions"
+export home="${HOME}"
+export config="${home}/.config"
+export archive="${home}/.archive"
+export cerberus="${archive}/cerberus"
+export ianus="${archive}/ianus"
+export forked="${home}/Forked"
+export observatory="${home}/Observatory"
+export appSupport="${home}/Library/Application Support"
+export localShare="${home}/.local/share"
+export setupDir="${archive}/.just/.setup"
+export completionsDir="${archive}/completions"
 
 ####################################################################################################
 
 # cerberus
-gitconfigDir="${cerberus}/gitconfig.d"
-git="${cerberus}/git"
-gitconfig="${git}/gitconfig"
-gitignore="${git}/gitignore_global"
-gemrc="${cerberus}/gem/gemrc"
-mplayer="${cerberus}/mplayer/mplayer"
-nanorc="${cerberus}/nano/nanorc"
-procs="${cerberus}/procs/procs.toml"
-atuin="${cerberus}/atuin"
-alacritty="${cerberus}/alacritty"
-bottom="${cerberus}/bottom"
-cheat="${cerberus}/cheat"
-karabiner="${cerberus}/karabiner"
-fragmented="${karabiner}/fragmented"
-khal="${cerberus}/khal"
-gh="${cerberus}/gh"
-ranger="${cerberus}/ranger"
-gitui="${cerberus}/gitui"
-zellij="${cerberus}/zellij"
-julia="${cerberus}/julia"
-sshConfig="${cerberus}/ssh/config"
-lazycli="${cerberus}/lazycli"
-lazygit="${cerberus}/lazygit"
-broot="${cerberus}/broot"
-espanso="${cerberus}/espanso"
-espansoConfig="${espanso}/config"
-espansoMatch="${espanso}/match"
-navi="${cerberus}/navi"
-lapce="${cerberus}/lapce"
-zshcomp="${config}/zsh_completion"
-zed="${cerberus}/zed"
+export gitconfigDir="${cerberus}/gitconfig.d"
+export git="${cerberus}/git"
+export gitconfig="${git}/gitconfig"
+export gitignore="${git}/gitignore_global"
+export gemrc="${cerberus}/gem/gemrc"
+export mplayer="${cerberus}/mplayer/mplayer"
+export nanorc="${cerberus}/nano/nanorc"
+export procs="${cerberus}/procs/procs.toml"
+export atuin="${cerberus}/atuin"
+export alacritty="${cerberus}/alacritty"
+export bottom="${cerberus}/bottom"
+export cheat="${cerberus}/cheat"
+export karabiner="${cerberus}/karabiner"
+export fragmented="${karabiner}/fragmented"
+export khal="${cerberus}/khal"
+export gh="${cerberus}/gh"
+export ranger="${cerberus}/ranger"
+export gitui="${cerberus}/gitui"
+export zellij="${cerberus}/zellij"
+export julia="${cerberus}/julia"
+export sshConfig="${cerberus}/ssh/config"
+export lazycli="${cerberus}/lazycli"
+export lazygit="${cerberus}/lazygit"
+export broot="${cerberus}/broot"
+export espanso="${cerberus}/espanso"
+export espansoConfig="${espanso}/config"
+export espansoMatch="${espanso}/match"
+export navi="${cerberus}/navi"
+export lapce="${cerberus}/lapce"
+export zshcomp="${config}/zsh_completion"
+export zed="${cerberus}/zed"
 
-brootConf="${home}/.config/broot"
-lazycliConf="${appSupport}/lazycli"
-lazygitConf="${appSupport}/jesseduffield/lazygit"
-naviConf="${appSupport}/navi/cheats/drivas"
-espansoConf="${appSupport}/espanso"
-lapceConf="${appSupport}/dev.lapce.Lapce-Stable"
+export brootConf="${home}/.config/broot"
+export lazycliConf="${appSupport}/lazycli"
+export lazygitConf="${appSupport}/jesseduffield/lazygit"
+export naviConf="${appSupport}/navi/cheats/drivas"
+export espansoConf="${appSupport}/espanso"
+export lapceConf="${appSupport}/dev.lapce.Lapce-Stable"
 
 ####################################################################################################
 
 # ianus
-pier="${ianus}/pier"
-tmux="${ianus}/tmux"
-screen="${ianus}/screen"
-micro="${ianus}/micro"
-helix="${ianus}/helix"
-moded="${helix}/modes"
-lsd="${ianus}/lsd"
-sheldon="${ianus}/sheldon"
-starship="${ianus}/starship"
+export pier="${ianus}/pier"
+export screen="${ianus}/screen"
+export micro="${ianus}/micro"
+export helix="${ianus}/helix"
+export moded="${helix}/modes"
+export lsd="${ianus}/lsd"
+export sheldon="${ianus}/sheldon"
+export starship="${ianus}/starship"
 
-shell="${ianus}/shell"
-terminal="${shell}/terminal"
-bash="${shell}/bash"
-fish="${shell}/fish"
-zsh="${shell}/zsh"
-nushell="${shell}/nushell"
-nushellConf="${appSupport}/nushell"
+export shell="${ianus}/shell"
+export terminal="${shell}/terminal"
+export bash="${shell}/bash"
+export fish="${shell}/fish"
+export zsh="${shell}/zsh"
+export nushell="${shell}/nushell"
+export nushellConf="${appSupport}/nushell"
 
 ####################################################################################################
 
 # remote
-remoteBin="${home}/RemoteBin"
-homeRemote="/home/drivas"
-ianusRemote="${homeRemote}/.archive/ianus"
-shellRemote="${ianusRemote}/shell"
-terminalRemote="${shellRemote}/terminal"
-bashRemote="${shellRemote}/bash"
-fishRemote="${shellRemote}/fish"
-zshRemote="${shellRemote}/zsh"
+export remoteBin="${home}/RemoteBin"
+export homeRemote="/home/drivas"
+export ianusRemote="${homeRemote}/.archive/ianus"
+export shellRemote="${ianusRemote}/shell"
+export terminalRemote="${shellRemote}/terminal"
+export bashRemote="${shellRemote}/bash"
+export fishRemote="${shellRemote}/fish"
+export zshRemote="${shellRemote}/zsh"
 
 # pawsey
-pawseyID="drivas@topaz.pawsey.org.au"
-softwarePawsey="/scratch/pawsey0263/drivas/software"
-
-####################################################################################################
-
-# pueue
-pueuedTracker="${appSupport}/pueue/pueue.pid"
-pueueWGroup="forgeMaster"
-pueueUGroup="update"
+export pawseyID="drivas@topaz.pawsey.org.au"
+export softwarePawsey="/scratch/pawsey0263/drivas/software"
 
 ####################################################################################################
 
 # colors
-NC='\033[0m'
-BLACK='\033[0;30m'
-GRAY='\033[1;30m'
-RED='\033[0;31m'
-LIGHT_RED='\033[1;31m'
-GREEN='\033[0;32m'
-LIGHT_GREEN='\033[1;32m'
-BROWN='\033[0;33m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-LIGHT_BLUE='\033[1;34m'
-PURPLE='\033[0;35m'
-LIGHT_PURPLE='\033[1;35m'
-CYAN='\033[0;36m'
-LIGHT_CYAN='\033[1;36m'
-LIGHT_GRAY='\033[0;37m'
-WHITE='\033[1;37m'
-
+export NC='\033[0m'
+export BLACK='\033[0;30m'
+export GRAY='\033[1;30m'
+export RED='\033[0;31m'
+export LIGHT_RED='\033[1;31m'
+export GREEN='\033[0;32m'
+export LIGHT_GREEN='\033[1;32m'
+export BROWN='\033[0;33m'
+export YELLOW='\033[1;33m'
+export BLUE='\033[0;34m'
+export LIGHT_BLUE='\033[1;34m'
+export PURPLE='\033[0;35m'
+export LIGHT_PURPLE='\033[1;35m'
+export CYAN='\033[0;36m'
+export LIGHT_CYAN='\033[1;36m'
+export LIGHT_GRAY='\033[0;37m'
+export WHITE='\033[1;37m'
 
 ####################################################################################################
