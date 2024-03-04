@@ -46,12 +46,22 @@
          [:!Scomma [:period :spacebar]]                    ; '. '                                  ;
          [:!Speriod [:period :period :period]]             ; '...'                                 ;
          [:!Sslash [:slash :slash :!S1 :spacebar]]         ; '//! '                                ;
+
          ; [:!Sdelete_or_backspace []] NOT AVAILABLE                                               ;
          ; [:!Sreturn_or_enter []]     NOT AVAILABLE                                               ;
          ; [:!Sright_shift []]         NOT AVAILABLE                                               ;
          ; [:!Sright_option []]        NOT AVAILABLE                                               ;
          ; [:!Sright_command []]       NOT AVAILABLE                                               ;
          ; [:!Sspacebar []]            NOT AVAILABLE                                               ;
+
+         ; [:left_command []]                                                                      ;
+         ; [:left_option []]                                                                       ;
+         ; [:left_control []]                                                                      ;
+         ; [:left_shift []]                                                                        ;
+         ; [:caps_lock []]                                                                         ;
+         ; [:tab []]                                                                               ;
+         ; [:non_us_backslash []]                                                                  ;
+         ; [:escape []]                                                                            ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

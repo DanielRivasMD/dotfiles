@@ -46,12 +46,22 @@
          ; [:!TCcomma []]                                                                          ;
          ; [:!TCperiod []]                                                                         ;
          ; [:!TCslash []]                                                                          ;
+
          ; [:!TCdelete_or_backspace []]                                                            ;
          ; [:!TCreturn_or_enter []]                                                                ;
          ; [:!TCright_shift []]                                                                    ;
          ; [:!TCright_option []]                                                                   ;
          ; [:!TCright_command []]                                                                  ;
          ; [:!TCspacebar []]                                                                       ;
+
+         ; [:!TCleft_command []]                                                                   ;
+         ; [:!TCleft_option []]                                                                    ;
+         ; [:!TCleft_control []]                                                                   ;
+         ; [:!TCleft_shift []]                                                                     ;
+         ; [:!TCcaps_lock []]                                                                      ;
+         ; [:!TCtab []]                                                                            ;
+         ; [:!TCnon_us_backslash []]                                                               ;
+         ; [:!TCescape []]                                                                         ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

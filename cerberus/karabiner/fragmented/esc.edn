@@ -46,12 +46,22 @@
          [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                           ; ' %<% ' ;
          [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                         ; ' %>% ' ;
          [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                     ; ' %!>% ';
+
          ; [:!EWRdelete_or_backspace []]                                                           ;
          ; [:!EWRreturn_or_enter []]                                                               ;
          ; [:!EWRright_shift []]                                                                   ;
          ; [:!EWRright_option []]                                                                  ;
          ; [:!EWRright_command []]                                                                 ;
          ; [:!EWRspacebar []]                                                                      ;
+
+         ; [:!EWRleft_command []]                                                                  ;
+         ; [:!EWRleft_option []]                                                                   ;
+         ; [:!EWRleft_control []]                                                                  ;
+         ; [:!EWRleft_shift []]                                                                    ;
+         ; [:!EWRcaps_lock []]                                                                     ;
+         ; [:!EWRtab []]                                                                           ;
+         ; [:!EWRnon_us_backslash []]                                                              ;
+         ; [:!EWRescape []]                                                                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -3,32 +3,32 @@
 ; option
 {:des "Option Mode - alphabet"
  :rules [;
-         ; [:!Ea []]                                                                               ;
-         ; [:!Eb []]                                                                               ;
-         ; [:!Ec []]                                                                               ;
-         ; [:!Ed []]                                                                               ;
-         ; [:!Ee []]                                                                               ;
-         ; [:!Ef []]                                                                               ;
-         ; [:!Eg []]                                                                               ;
-         ; [:!Eh []]                                                                               ;
-         ; [:!Ei []]                                                                               ;
-         ; [:!Ej []]                                                                               ;
-         ; [:!Ek []]                                                                               ;
-         ; [:!El []]                                                                               ;
-         ; [:!Em []]                                                                               ;
-         ; [:!En []]                                                                               ;
-         ; [:!Eo []]                                                                               ;
-         ; [:!Ep []]                                                                               ;
-         ; [:!Eq []]                                                                               ;
-         ; [:!Er []]                                                                               ;
-         ; [:!Es []]                                                                               ;
-         ; [:!Et []]                                                                               ;
-         ; [:!Eu []]                                                                               ;
-         ; [:!Ev []]                                                                               ;
-         ; [:!Ew []]                                                                               ;
-         ; [:!Ex []]                                                                               ;
-         ; [:!Ey []]                                                                               ;
-         ; [:!Ez []]                                                                               ;
+         ; [:!Ra []]                                                                               ;
+         ; [:!Rb []]                                                                               ;
+         ; [:!Rc []]                                                                               ;
+         ; [:!Rd []]                                                                               ;
+         ; [:!Re []]                                                                               ;
+         ; [:!Rf []]                                                                               ;
+         ; [:!Rg []]                                                                               ;
+         ; [:!Rh []]                                                                               ;
+         ; [:!Ri []]                                                                               ;
+         ; [:!Rj []]                                                                               ;
+         ; [:!Rk []]                                                                               ;
+         ; [:!Rl []]                                                                               ;
+         ; [:!Rm []]                                                                               ;
+         ; [:!Rn []]                                                                               ;
+         ; [:!Ro []]                                                                               ;
+         ; [:!Rp []]                                                                               ;
+         ; [:!Rq []]                                                                               ;
+         ; [:!Rr []]                                                                               ;
+         ; [:!Rs []]                                                                               ;
+         ; [:!Rt []]                                                                               ;
+         ; [:!Ru []]                                                                               ;
+         ; [:!Rv []]                                                                               ;
+         ; [:!Rw []]                                                                               ;
+         ; [:!Rx []]                                                                               ;
+         ; [:!Ry []]                                                                               ;
+         ; [:!Rz []]                                                                               ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -36,22 +36,23 @@
 ; option
 {:des "Option Mode - symbols"
  :rules [;
-         ; [:!Ehyphen []]                                                                          ;
-         ; [:!Eequal_sign []]                                                                      ;
-         ; [:!Eopen_bracket []]                                                                    ;
-         ; [:!Eclose_bracket []]                                                                   ;
-         ; [:!Esemicolon []]                                                                       ;
-         ; [:!Equote []]                                                                           ;
-         ; [:!Ebackslash []]                                                                       ;
-         ; [:!Ecomma []]                                                                           ;
-         ; [:!Eperiod []]                                                                          ;
-         ; [:!Eslash []]                                                                           ;
-         ; [:!Edelete_or_backspace []]                                                             ;
-         ; [:!Ereturn_or_enter []]                                                                 ;
-         ; [:!Eright_shift []]         NOT AVAILABLE                                               ;
-         ; [:!Eright_option []]                                                                    ;
-         ; [:!Eright_command []]                                                                   ;
-         ; [:!Espacebar []]                                                                        ;
+         ; [:!Rhyphen []]                                                                          ;
+         ; [:!Requal_sign []]                                                                      ;
+         ; [:!Ropen_bracket []]                                                                    ;
+         ; [:!Rclose_bracket []]                                                                   ;
+         ; [:!Rsemicolon []]                                                                       ;
+         ; [:!Rquote []]                                                                           ;
+         ; [:!Rbackslash []]                                                                       ;
+         ; [:!Rcomma []]                                                                           ;
+         ; [:!Rperiod []]                                                                          ;
+         ; [:!Rslash []]                                                                           ;
+
+         ; [:!Rdelete_or_backspace []]                                                             ;
+         ; [:!Rreturn_or_enter []]                                                                 ;
+         ; [:!Rright_shift []]         NOT AVAILABLE                                               ;
+         ; [:!Rright_option []]                                                                    ;
+         ; [:!Rright_command []]                                                                   ;
+         ; [:!Rspacebar []]                                                                        ;
 
          ; [:!Rleft_command []]                                                                    ;
          ; [:!Rleft_option []]                                                                     ;

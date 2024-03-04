@@ -46,12 +46,22 @@
          ; [:!!comma []]               COLLISION (system)                                          ;
          ; [:!!period []]              COLLISION (system)                                          ;
          [:!!slash [:launch "Chrome"]]                                                             ;
+
          [:!!delete_or_backspace [:launch "Lapce"]]                                                ;
          [:!!return_or_enter [:launch "Alacritty"]]                                                ;
          [:!!right_shift [:launch "Zed"]]                                                          ;
          [:!!right_option [:launch "Mail"]]                                                        ;
          [:!!right_command [:launch "Firefox"]]                                                    ;
          ; [:!!spacebar []]            COLLISION (speak function)                                  ;
+
+         ; [:!!left_command []]                                                                    ;
+         ; [:!!left_option []]                                                                     ;
+         ; [:!!left_control []]                                                                    ;
+         ; [:!!left_shift []]                                                                      ;
+         ; [:!!caps_lock []]                                                                       ;
+         ; [:!!tab []]                                                                             ;
+         ; [:!!non_us_backslash []]                                                                ;
+         ; [:!!escape []]                                                                          ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

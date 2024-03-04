@@ -46,12 +46,22 @@
          [:!WQRcomma [:spacebar :!Scomma :hyphen :spacebar]]    ; ' <- '                           ;
          [:!WQRperiod [:spacebar :hyphen :!Speriod :spacebar]]  ; ' -> '                           ;
          [:!WQRslash [:!S3 :!S1 :slash]]                        ; '#!/'                            ;
+
          [:!WQRdelete_or_backspace [:!S3 :open_bracket]]        ; '#['                             ;
          ; [:!WQRreturn_or_enter []]                            ;                                  ;
          ; [:!WQRright_shift []]                                ;                                  ;
          ; [:!WQRright_option []]                               ;                                  ;
          ; [:!WQRright_command []]                              ;                                  ;
          ; [:!WQRspacebar []]                                   ;                                  ;
+
+         ; [:!WQRleft_command []]                                                                  ;
+         ; [:!WQRleft_option []]                                                                   ;
+         ; [:!WQRleft_control []]                                                                  ;
+         ; [:!WQRleft_shift []]                                                                    ;
+         ; [:!WQRcaps_lock []]                                                                     ;
+         ; [:!WQRtab []]                                                                           ;
+         ; [:!WQRnon_us_backslash []]                                                              ;
+         ; [:!WQRescape []]                                                                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

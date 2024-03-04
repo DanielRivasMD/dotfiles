@@ -46,12 +46,22 @@
          [:!Ocomma [:spacebar :!Scomma :spacebar]]                             ; ' < '             ;
          [:!Operiod [:spacebar :!Speriod :spacebar]]                           ; ' > '             ;
          [:!Oslash [:spacebar :!S5 :spacebar]]                                 ; ' % '             ;
+
          [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]; ' == '            ;
          [:!Oreturn_or_enter [:spacebar :equal_sign :spacebar]]                ; ' = '             ;
          [:!Oright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]         ; ' |> '            ;
          [:!Oright_option [:spacebar :!S8 :spacebar]]                          ; ' * '             ;
          [:!Oright_command [:spacebar :slash :spacebar]]                       ; ' / '             ;
          ; [:!Ospacebar []]            COLLISION (espanso)                                         ;
+
+         ; [:!Oleft_command []]                                                                    ;
+         ; [:!Oleft_option []]                                                                     ;
+         ; [:!Oleft_control []]                                                                    ;
+         ; [:!Oleft_shift []]                                                                      ;
+         ; [:!Ocaps_lock []]                                                                       ;
+         ; [:!Otab []]                                                                             ;
+         ; [:!Onon_us_backslash []]                                                                ;
+         ; [:!Oescape []]                                                                          ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -69,12 +79,22 @@
          [:!OScomma [:spacebar :period :!Scomma :spacebar]]                              ; ' .< '  ;
          [:!OSperiod [:spacebar :period :!Speriod :spacebar]]                            ; ' .> '  ;
          [:!OSslash [:spacebar :period :!S5 :spacebar]]                                  ; ' .% '  ;
+
          [:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]] ; ' .== ' ;
          [:!OSreturn_or_enter [:spacebar :period :equal_sign :spacebar]]                 ; ' .= '  ;
          [:!OSright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]          ; ' .|> ' ;
          [:!OSright_option [:spacebar :period :!S8 :spacebar]]                           ; ' .* '  ;
          [:!OSright_command [:spacebar :period :slash :spacebar]]                        ; ' ./ '  ;
          ; [:!OSspacebar []]                                                             ;         ;
+
+         ; [:!OSleft_command []]                                                                   ;
+         ; [:!OSleft_option []]                                                                    ;
+         ; [:!OSleft_control []]                                                                   ;
+         ; [:!OSleft_shift []]                                                                     ;
+         ; [:!OScaps_lock []]                                                                      ;
+         ; [:!OStab []]                                                                            ;
+         ; [:!OSnon_us_backslash []]                                                               ;
+         ; [:!OSescape []]                                                                         ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
