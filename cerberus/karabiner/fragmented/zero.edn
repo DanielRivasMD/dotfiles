@@ -41,11 +41,12 @@
          ; [:open_bracket []]                              ;                                       ;
          ; [:close_bracket []]                             ;                                       ;
          [:semicolon [:semicolon :spacebar]]               ; '; '                                  ;
-         ; [:quote []]                                     ;                                       ;
-         [:backslash [:spacebar :hyphen]]                  ; ' -'                                  ;
+         [:quote [:spacebar :hyphen]]                      ; ' -'                                  ;
+         ; [:backslash []]                                 ;                                       ;
          [:comma [:comma :spacebar]]                       ; ', '                                  ;
          [:period [:period :period]]                       ; '..'                                  ;
          [:slash [:slash :slash :slash :spacebar]]         ; '/// '                                ;
+
          ; [:delete_or_backspace []]   NOT AVAILABLE                                               ;
          ; [:return_or_enter []]       NOT AVAILABLE                                               ;
          ; [:right_shift []]           NOT AVAILABLE                                               ;

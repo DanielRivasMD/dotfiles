@@ -41,8 +41,8 @@
          ; [:!Sopen_bracket []]                            ;                                       ;
          ; [:!Sclose_bracket []]                           ;                                       ;
          [:!Ssemicolon [:!Ssemicolon :spacebar]]           ; ': '                                  ;
-         ; [:!Squote []]                                   ;                                       ;
-         [:!Sbackslash [:spacebar :hyphen :hyphen]]        ; ' --'                                 ;
+         [:!Squote [:spacebar :hyphen :hyphen]]            ; ' --'                                 ;
+         ; [:!Sbackslash []]                               ;                                       ;
          [:!Scomma [:period :spacebar]]                    ; '. '                                  ;
          [:!Speriod [:period :period :period]]             ; '...'                                 ;
          [:!Sslash [:slash :slash :!S1 :spacebar]]         ; '//! '                                ;
