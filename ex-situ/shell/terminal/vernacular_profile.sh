@@ -9,23 +9,23 @@ stty -ixon
 #  archives
 ####################################################################################################
 
-export ARCHIVE=${HOME}/.archive
-export EX_SITU=${ARCHIVE}/ex-situ
-export IN_SITU=${ARCHIVE}/in-situ
+export "ARCHIVE=${HOME}/.archive"
+export "EX_SITU=${ARCHIVE}/ex-situ"
+export "IN_SITU=${ARCHIVE}/in-situ"
 
 ####################################################################################################
 #  language settings
 ####################################################################################################
 
-LANG=en_US.UTF-8
+LANG="en_US.UTF-8"
 LC_CTYPE="en_US.UTF-8"
 LC_NUMERIC="en_US.UTF-8"
 LC_TIME="en_US.UTF-8"
 LC_COLLATE="en_US.UTF-8"
 LC_MONETARY="en_US.UTF-8"
 LC_MESSAGES="en_US.UTF-8"
-export LANGUAGE=en_US
-export LC_ALL=en_US.UTF-8
+export LANGUAGE="en_US"
+export LC_ALL="en_US.UTF-8"
 
 ####################################################################################################
 #  go path
@@ -54,7 +54,7 @@ PATH=$PATH:/usr/local/mysql/bin/
 # path settings
 PATH=$PATH:/usr/local/bin/
 PATH=$PATH:/usr/local/sbin/
-PATH=$PATH:${GOPATH}bin/
+PATH=$PATH:$GOPATH/bin/
 PATH=$PATH:$HOME/bin/cargo/
 PATH=$PATH:$HOME/bin/go/
 PATH=$PATH:$HOME/bin/links/
@@ -65,14 +65,14 @@ export PATH
 # starship
 ####################################################################################################
 
-export STARSHIP_CONFIG=${EX_SITU}/starship/vernacular_starship.toml
+export STARSHIP_CONFIG="${EX_SITU}/starship/vernacular_starship.toml"
 
 ####################################################################################################
 # zellij
 ####################################################################################################
 
-export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
-export ZELLIJ_CONFIG_FILE=${ZELLIJ_CONFIG_DIR}/config.kdl
+export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
+export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
 
 ####################################################################################################
 # less
