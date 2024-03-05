@@ -22,13 +22,13 @@ description = "`cmd-down` -> go to bottom of the list"
 
 [[verbs]]
 invocation = "page_up"
-key = "shift-f1"
+key = "f1"
 internal = "page_up"
 description = "`alt-up` -> go to page up"
 
 [[verbs]]
 invocation = "page_down"
-key = "shift-f2"
+key = "f2"
 internal = "page_down"
 description = "`alt-down` -> go to page down"
 
@@ -56,7 +56,7 @@ cmd = ":cd"
 description = "`ctrl-cmd-down` -> go into directory"
 
 [[verbs]]
-key = "alt-ctrl-f6"
+key = "f3"
 external = "command open {file}"
 leave_broot = false
 description = "`cmd-enter` -> open according to OS"
@@ -64,13 +64,13 @@ description = "`cmd-enter` -> open according to OS"
 # panel
 [[verbs]]
 invocation = "toggle_preview"
-key = "alt-ctrl-f7"
+key = "f4"
 internal = "toggle_preview"
 description = "`ctrl-cmd-space` -> open / close preview panel"
 
 [[verbs]]
 invocation = "close_preview"
-key = "alt-ctrl-f8"
+key = "f5"
 apply_to = "file"
 internal = "close_preview {file}"
 leave_broot = false
@@ -78,7 +78,7 @@ description = "`ctrl-cmd-left` -> close display"
 
 [[verbs]]
 invocation = "open_preview"
-key = "alt-ctrl-f9"
+key = "f6"
 apply_to = "file"
 internal = "open_preview {file}"
 leave_broot = false
@@ -118,7 +118,7 @@ description = "`ctrl-cmd-alt` -> move file to pane"
 [[verbs]]
 external = "cp -r {file} {other-panel-directory}"
 invocation = "copy_to_pane"
-key = "alt-ctrl-f12"
+key = "shift-f6"
 leave_broot = false
 auto_exec = true
 description = "`ctrl-cmd-cmd` -> copy file to pane"
@@ -137,7 +137,7 @@ description = "`shift-alt` -> rename file"
 [[verbs]]
 invocation = "create {subpath}"
 shortcut = "c"
-key = "shift-f6"
+key = "shift-f2"
 execution = "touch {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
@@ -147,7 +147,7 @@ description = "`ctrl-cmd-enter` -> create file"
 [[verbs]]
 external = "rm -rf {file}"
 invocation = "rm"
-key = "shift-f7"
+key = "shift-f1"
 leave_broot = false
 auto_exec = false
 description = "`ctrl-cmd-delete` -> delete file"
@@ -155,7 +155,7 @@ description = "`ctrl-cmd-delete` -> delete file"
 # stage
 [[verbs]]
 invocation = "toggle_staging_area"
-key = "shift-f10"
+key = "shift-f12"
 internal = "toggle_staging_area"
 description = "`alt` -> toggle staging area"
 
