@@ -36,10 +36,33 @@
 ; Alacritty
 {:des "Alacritty - Arrow"
  :rules [;
+         [:left_option :left_option [:term] {:alone [:f12]}]                                       ;
+         [:!Creturn_or_enter :f3 [:term]]        ;                                                 ;
+
          ; [:!Oleft_arrow : [:term]]             ;                                                 ;
          ; [:!Oright_arrow : [:term]]            ;                                                 ;
          [:!Oup_arrow :f1 [:term]]               ;                                                 ;
          [:!Odown_arrow :f2 [:term]]             ;                                                 ;
+
+         ; [:!Sleft_arrow : [:term]]             ;                                                 ;
+         ; [:!Sright_arrow : [:term]]            ;                                                 ;
+         ; [:!Sup_arrow : [:term]]               ;                                                 ;
+         ; [:!Sdown_arrow : [:term]]             ;                                                 ;
+
+         ; [:!OSleft_arrow : [:term]]            ;                                                 ;
+         ; [:!OSright_arrow : [:term]]           ;                                                 ;
+         ; [:!OSup_arrow : [:term]]              ;                                                 ;
+         ; [:!OSdown_arrow : [:term]]            ;                                                 ;
+
+         ; [:!Tleft_arrow : [:term]]             ;                                                 ;
+         ; [:!Tright_arrow : [:term]]            ;                                                 ;
+         ; [:!Tup_arrow : [:term]]               ;                                                 ;
+         ; [:!Tdown_arrow : [:term]]             ;                                                 ;
+
+         ; [:!TCleft_arrow : [:term]]            ;                                                 ;
+         ; [:!TCright_arrow : [:term]]           ;                                                 ;
+         [:!TCleft_arrow :f5 [:term]]            ; broot viewer & helix tab                        ;
+         [:!TCright_arrow :f6 [:term]]           ; broot viewer & helix tab                        ;
 
          ; [:!Cleft_arrow : [:term]]             ;                                                 ;
          ; [:!Cright_arrow : [:term]]            ;                                                 ;
@@ -48,22 +71,13 @@
 
          [:!CSleft_arrow :!Oleft_arrow [:term]]  ;                                                 ;
          [:!CSright_arrow :!Oright_arrow [:term]];                                                 ;
-         [:!CSup_arrow :!Sf4 [:term]]            ;                                                 ;
-         [:!CSdown_arrow :!Sf5 [:term]]          ;                                                 ;
+         [:!CSup_arrow :!Sf7 [:term]]            ;                                                 ;
+         [:!CSdown_arrow :!Sf8 [:term]]          ;                                                 ;
 
          ; [:!OCleft_arrow : [:term]]            ;                                                 ;
          ; [:!OCright_arrow : [:term]]           ;                                                 ;
-         [:!OCup_arrow :!Sf11 [:term]]           ;                                                 ;
-         [:!OCdown_arrow :!Sf12 [:term]]         ;                                                 ;
-
-         ; [:!TCleft_arrow : [:term]]            ;                                                 ;
-         ; [:!TCright_arrow : [:term]]           ;                                                 ;
-         [:!TCleft_arrow :f8 [:term]]            ; broot viewer & helix tab                        ;
-         [:!TCright_arrow :f9 [:term]]           ; broot viewer & helix tab                        ;
-
-         [:!Creturn_or_enter :!OTf6 [:term]]     ;                                                 ;
-
-         [:left_option :left_option [:term] {:alone [:f10]}]                                       ;
+         [:!OCup_arrow :!Sf9 [:term]]            ;                                                 ;
+         [:!OCdown_arrow :!Sf10 [:term]]         ;                                                 ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
