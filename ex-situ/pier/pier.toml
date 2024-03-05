@@ -1,12 +1,15 @@
-[scripts.update]
-command = 'source ${PIER}/update.sh &'
-description = 'update homebrew, rustc compiler, & cargo & go binaries'
-tags = ['update']
+####################################################################################################
+
+[default]
+
+####################################################################################################
 
 [scripts.forge]
 command = 'source ${PIER}/forge.sh &'
 description = 'observe & build alacritty, helix & karabiner'
 tags = ['build']
+
+####################################################################################################
 
 [scripts.dir-count]
 command = 'fd . --type=d --max-depth=1 | /usr/bin/wc -l'
@@ -18,6 +21,8 @@ command = 'fd . --type=f --max-depth=1 | /usr/bin/wc -l'
 description = 'count files in present address'
 tags = ['shell']
 
+####################################################################################################
+
 [scripts.finder-hidden-off]
 command = 'defaults write com.apple.Finder AppleShowAllFiles false && killall Finder'
 description = 'turn finder hidden files on'
@@ -28,6 +33,8 @@ command = 'defaults write com.apple.Finder AppleShowAllFiles true && killall Fin
 description = 'turn finder hidden files off'
 tags = ['osx']
 
+####################################################################################################
+
 [scripts.fpath]
 command = '''
 # echo $FPATH | xsv flatten -d ":" -n
@@ -37,6 +44,30 @@ source ${PIER}/breakDL.sh  $COLUMNS
 '''
 description = 'display fpath'
 tags = ['env']
+
+[scripts.gopath]
+command = '''
+# echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/.config.sh
+source ${PIER}/breakDL.sh $COLUMNS
+echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/breakDL.sh $COLUMNS
+'''
+description = 'display GOPATH'
+tags = ['env']
+
+[scripts.path]
+command = '''
+# echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/.config.sh
+source ${PIER}/breakDL.sh $COLUMNS
+echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/breakDL.sh $COLUMNS
+'''
+description = 'display PATH'
+tags = ['env']
+
+####################################################################################################
 
 [scripts.git]
 command = '''
@@ -57,36 +88,25 @@ source ${PIER}/breakCross.sh $COLUMNS
 description = 'all-round git status'
 tags = ['git']
 
+####################################################################################################
+
 [scripts.godoc]
 command = 'godoc -http=localhost:6060; open http://localhost:6060 -a Opera'
 description = 'open port for godoc'
 tags = ['go']
 
-[scripts.gopath]
-command = '''
-# echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
-source ${PIER}/.config.sh
-source ${PIER}/breakDL.sh $COLUMNS
-echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
-source ${PIER}/breakDL.sh $COLUMNS
-'''
-description = 'display GOPATH'
-tags = ['env']
+####################################################################################################
 
 [scripts.julia]
 command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
 description = 'edit julia awesome list'
 tags = ['julia']
 
-[scripts.path]
-command = '''
-# echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
-source ${PIER}/.config.sh
-source ${PIER}/breakDL.sh $COLUMNS
-echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
-source ${PIER}/breakDL.sh $COLUMNS
-'''
-description = 'display PATH'
-tags = ['env']
+####################################################################################################
 
-[default]
+[scripts.update]
+command = 'source ${PIER}/update.sh &'
+description = 'update homebrew, rustc compiler, & cargo & go binaries'
+tags = ['update']
+
+####################################################################################################
