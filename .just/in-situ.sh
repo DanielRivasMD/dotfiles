@@ -12,14 +12,6 @@ source .just/.config.sh
 
 ####################################################################################################
 
-# gitconfig
-echo ''
-echo 'Linking git config directory'
-echo '===================================================================================================='
-if [[ -d "${home}/.gitconfig.d" ]]; then rm "${home}/.gitconfig.d"; fi        # purge before linking
-ln -svf "${gitconfigDir}" "${home}/.gitconfig.d"                              # gitconfig directory
-echo '===================================================================================================='
-
 # git files
 echo ''
 echo 'Linking git config files'
@@ -32,9 +24,7 @@ echo '==========================================================================
 echo ''
 echo 'Linking rc config'
 echo '===================================================================================================='
-ln -svf "${gemrc}" "${home}/.gemrc"                                           # gemrc
 ln -svf "${mplayer}" "${home}/.mplayer"                                       # mplayer
-ln -svf "${nanorc}" "${home}/.nanorc"                                         # nanorc
 echo '===================================================================================================='
 
 # toml files
@@ -55,12 +45,12 @@ ln -svf "${cheat}" "${config}/"                                               # 
 
 if [[ ! -d "${config}/gh" ]]; then mkdir "${config}/gh"; fi                   # create directory
 ln -svf "${gh}/config.yml" "${config}/gh/"                                    # gh
+ln -svf "${khal}" "${config}/"                                                # khal
 ln -svf "${karabiner}" "${config}/"                                           # karabiner
 ln -svf "${karabiner}/karabiner.edn" "${config}/"                             # karabiner
-ln -svf "${khal}" "${config}/"                                                # khal
 echo '===================================================================================================='
 
-# config directories
+# config dirs
 echo ''
 echo 'Linking config dirs @config'
 echo '===================================================================================================='
@@ -81,7 +71,7 @@ ln -svf "${lapce}/keymaps.toml" "${lapceConf}/"                               # 
 ln -svf "${lapce}/settings.toml" "${lapceConf}/"                              # lapce config
 echo '===================================================================================================='
 
-# purge before linking
+# broot
 echo ''
 echo 'Linking broot config'
 echo '===================================================================================================='
@@ -90,7 +80,7 @@ if [[ ! -d "${brootConf}" ]]; then mkdir "${brootConf}"; fi                   # 
 ln -svf "${broot}/conf.toml" "${brootConf}/"                                  # broot config
 echo '===================================================================================================='
 
-# purge before linking
+# espanso
 echo ''
 echo 'Linking espanso config'
 echo '===================================================================================================='
@@ -99,7 +89,7 @@ ln -svf "${espansoConfig}/default.yml" "${espansoConf}/config"                # 
 ln -svf "${espansoMatch}/base.yml" "${espansoConf}/match"                     # espanso config base
 echo '===================================================================================================='
 
-# purge before linking
+# navi
 echo ''
 echo 'Linking navi config'
 echo '===================================================================================================='
