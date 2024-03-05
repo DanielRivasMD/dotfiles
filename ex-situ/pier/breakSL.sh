@@ -6,7 +6,7 @@ source ${PIER}/.config.sh
 
 for i in {1.."${1}"};
 do
-  printf "${DARK_BLUE}‡${NC}"
+  printf "${DARK_BLUE}—${NC}"
 done
 echo ""
 
