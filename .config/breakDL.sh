@@ -2,11 +2,11 @@
 ####################################################################################################
 
 # config
-source ${PIER}/.config.sh
+source "${ARCHIVE}/.config/config.sh"
 
 for i in {1.."${1}"};
 do
-  printf "${UBLUE}—${NC}"
+  printf "${GREEN}=${NC}"
 done
 echo ""
 
