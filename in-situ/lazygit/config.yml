@@ -6,8 +6,8 @@ gui:
     scrollPastBottom: true # enable scrolling past the bottom
     scrollOffMargin: 2 # how many lines to keep before/after the cursor when it reaches the top/bottom of the view; see 'Scroll-off Margin' section below
     scrollOffBehavior: 'margin' # one of 'margin' | 'jump'; see 'Scroll-off Margin' section below
-    sidePanelWidth: 0.25 # number from 0 to 1
-    expandFocusedSidePanel: false
+    sidePanelWidth: 0.3 # number from 0 to 1
+    expandFocusedSidePanel: true
     mainPanelSplitMode: 'horizontal' # one of 'horizontal' | 'flexible' | 'vertical'
     language: 'en' # one of 'auto' | 'en' | 'zh' | 'pl' | 'nl'
     timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
@@ -25,7 +25,7 @@ gui:
     showPanelJumps: true # for showing the jump-to-panel keybindings as panel subtitles
     showCommandLog: false
     showIcons: false # deprecated: use nerdFontsVersion instead
-    nerdFontsVersion: "" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
+    nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
     commandLogSize: 0
     splitDiff: 'auto' # one of 'auto' | 'always'
     skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
@@ -113,7 +113,6 @@ reporting: 'undetermined' # one of: 'on' | 'off' | 'undetermined'
 ####################################################################################################
 confirmOnQuit: false
 # determines whether hitting 'esc' will quit the application when there is nothing to cancel/close
-
 ####################################################################################################
 quitOnTopLevelReturn: false
 ####################################################################################################
@@ -135,8 +134,8 @@ keybinding:
         nextItem: null                  # '<down>' go one line down
         prevItem-alt: '<up>'            # 'k' go one line up
         nextItem-alt: '<down>'          # 'j' go one line down
-        prevPage: '<c-b>'               # go to next page in list               # mapped -> `alt-up`
-        nextPage: '<c-f>'               # go to previous page in list           # mapped -> `alt-down`
+        # TODO: prevPage: '<c-b>' '<a-up>'               # go to next page in list               # mapped -> `alt-up`
+        # TODO: nextPage: '<c-f>' '<a-down>'              # go to previous page in list           # mapped -> `alt-down`
         gotoTop: '<c-o>'                # '<' go to top of list                 # mapped -> `cmd-up`
         gotoBottom: '<c-p>'             # '>' go to bottom of list              # mapped -> `cmd-down`
         scrollLeft: 'H'                 # scroll left within list view
@@ -152,7 +151,7 @@ keybinding:
         optionMenu-alt1: '?'            # show help menu
         select: '<space>'
         goInto: '<enter>'
-        openRecentRepos: '|'            # '<c-r>'
+        # TODO: openRecentRepos: '|' '<ctrl-cmd-space>' '<c-space>'           # '<c-r>'
         confirm: '<enter>'
         remove: 'd'
         new: 'n'
@@ -164,24 +163,24 @@ keybinding:
         scrollDownMain-alt1: null       # 'J' main panel scroll down
         scrollUpMain-alt2: 'k'          # '<c-u>' main panel scroll up
         scrollDownMain-alt2: 'j'        # '<c-d>' main panel scroll down
-        executeCustomCommand: '<c-s>'                                           # mapped -> `alt-enter`
+        # executeCustomCommand: '<c-s>' '<c-g>'                                           # mapped -> `alt-enter`
         createRebaseOptionsMenu: 'm'
         pushFiles: 'P'
         pullFiles: 'p'
         refresh: 'r'
         createPatchOptionsMenu: 'N'     # '<c-p>'
-        prevTab: '<c-j>'                # '['                                   # mapped -> `ctrl-cmd-left`
-        nextTab: '<c-n>'                # ']'                                   # mapped -> `ctrl-cmd-right`
-        nextScreenMode: '\'             # '+'
+        # TODO: prevTab: '<c-j>' '<ctrl-cmd-left>'               # '['                                   # mapped -> `ctrl-cmd-left`
+        # TODO: nextTab: '<c-n>' '<ctrl-cmd-right>'               # ']'                                   # mapped -> `ctrl-cmd-right`
+        # TODO: nextScreenMode: '\' <tab>            # '+'
         prevScreenMode: null            # '_'
         undo: 'u'                       # 'z'
         redo: 'U'                       # '<c-z>'
-        filteringMenu: <c-r>            # '<c-s>'                               # mapped -> `ctrl-enter`
+        # TODO: filteringMenu: <c-r> '?'           # '<c-s>'                               # mapped -> `ctrl-enter`
         diffingMenu: 'W'
         # diffingMenu-alt: '<c-e>'      # deprecated
         copyToClipboard: 'y'            # '<c-o>'
         submitEditorText: '<enter>'
-        extrasMenu: '<c-t>'                                                     # mapped -> `cmd-enter`
+        # TODO: extrasMenu: '<c-t>' 'null'                                                    # mapped -> `cmd-enter`
         toggleWhitespaceInDiffView: null
         increaseContextInDiffView: '='  # '}'
         decreaseContextInDiffView: '-'  # '{'
@@ -198,12 +197,12 @@ keybinding:
         refreshFiles: 'r'
         stashAllChanges: 's'
         viewStashOptions: 'S'
-        toggleStagedAll: 'a'            # stage/unstage all
+        # TODO: toggleStagedAll: '<c-y>'            # stage/unstage all
         viewResetOptions: 'D'
         fetch: 'f'
-        toggleTreeView: '<c-g>'         # '`'                                   # mapped -> `shift-enter`
+        # TODO: toggleTreeView: '<c-g>' '\'         # '`'                                   # mapped -> `shift-enter`
         openMergeTool: 'M'
-        openStatusFilter: '<c-r>'                                               # mapped -> `ctrl-enter`
+        # TODO: openStatusFilter: '<c-r>'                                               # mapped -> `ctrl-enter`
     branches:
         createPullRequest: 'u'          # 'o'
         viewPullRequestOptions: 'U'     # 'O'
