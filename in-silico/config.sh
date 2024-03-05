@@ -9,6 +9,7 @@ export config="${home}/.config"
 export archive="${home}/.archive"
 export in_situ="${archive}/in-situ"
 export ex_situ="${archive}/ex-situ"
+export in_silico="${archive}/in-silico"
 export pier="${ex_situ}/pier"
 export forked="${home}/Forked"
 export observatory="${home}/Observatory"
@@ -135,6 +136,6 @@ export pueueUG="update"
 ####################################################################################################
 
 # load colors
-source "${archive}/.config/colors.sh"
+source "${in_silico}/colors.sh"
 
 ####################################################################################################
