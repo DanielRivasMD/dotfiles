@@ -126,7 +126,15 @@ export softwarePawsey="/scratch/pawsey0263/drivas/software"
 
 ####################################################################################################
 
+# pueue
+export pueuedTracker="${appSupport}/pueue/pueue.pid"
+export pueuedSocket="${appSupport}/pueue/pueue_drivas.socket="
+export pueueFG="forge"
+export pueueUG="update"
+
+####################################################################################################
+
 # load colors
-source "${archive}/colors.sh"
+source "${archive}/.config/colors.sh"
 
 ####################################################################################################
