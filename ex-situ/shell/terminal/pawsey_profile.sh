@@ -1,110 +1,88 @@
 ####################################################################################################
-# General settings
+# Pawsey default
 ####################################################################################################
 
-ZDOTDIR=${HOME}/.zsh
+# patch for screen C-q
+stty -ixon
 
 ####################################################################################################
-# aliases
+# Archives
 ####################################################################################################
 
-if [ -f ${IANUS}/shell/terminal/pawsey_aliases.sh ]; then
-  . ${IANUS}/shell/terminal/pawsey_aliases.sh
-fi
+export ARCHIVE=${HOME}/.archive
+export EX_SITU=${ARCHIVE}/ex-situ
 
-if [ -f ${ZDOTDIR}/zsh_aliases.sh ]; then
-  . ${ZDOTDIR}/zsh_aliases.sh
-fi
-
-####################################################################################################
-# Prompt
-####################################################################################################
-
-eval "$(starship init zsh)"
+# ####################################################################################################
+# # BLAST database
+# ####################################################################################################
+#
+# # BLAST database
+# export BLASTDB=/sw/data/uppnex/blast_databases
 
 ####################################################################################################
-# Plugins AB
+# Go Path
 ####################################################################################################
 
-# Plugins managed by antibody (AB) statically
-# antibody bundle < ${ZDOTDIR}/zsh_plugins.txt > ${ZDOTDIR}/zsh_plugins.sh
-source ${ZDOTDIR}/zsh_plugins.sh
+export GOPATH=$HOME/.go/
 
-
-# # Plugins managed by antibody (AB) dinamically
-# # source <(antibody init)
-# zdharma/fast-syntax-highlighting
-# zsh-users/zsh-autosuggestions
-# zsh-users/zsh-completions
-# wfxr/forgit
-# chrissicool/zsh-256color
-
+# ####################################################################################################
+# # Cargo-Rust Path
+# ####################################################################################################
+#
+# PATH=$PATH:$HOME/.cargo/bin
 
 ####################################################################################################
-# Autocompletion
+# Path
 ####################################################################################################
 
-# add custom zsh completion path
-fpath=($HOME/.config/zsh_completion $fpath)
-
-# Autocompletion with arrow interphase
-autoload -Uz compinit
-# Dump zcompdump
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-_comp_options+=(globdots)   # Include hidden files.
-zstyle ':completion:*' menu select
-
-setopt COMPLETE_ALIASES
-zstyle ':completion::complete:*' gain-privileges 1
-
-# Case-insensitive
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# Pandoc autocompletion
-source ${ZDOTDIR}/zsh_pandoc_autocompletion.sh
-
-# Fuzzy finder (fzf)
-[ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
+# PATH settings
+PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/bin/satsuma2
 
 ####################################################################################################
-# History
+# Export
 ####################################################################################################
 
-HISTFILE=${ZDOTDIR}/zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
-setopt appendhistory
+export PATH
+export STARSHIP_CONFIG=${EX_SITU}/starship/pawsey_starship.toml
 
 ####################################################################################################
-# Key bindings
+# Less
 ####################################################################################################
 
-bindkey "\x1b[1;3D" backward-word
-bindkey "\x1b[1;3C" forward-word
-bindkey "\x01" beginning-of-line
-bindkey "\x05" end-of-line
+export LESSHISTFILE="-"
 
 ####################################################################################################
-# zoxide
+# Editor
 ####################################################################################################
 
-eval "$(zoxide init zsh)"
+# Editor
+export VISUAL=micro
+export EDITOR="$VISUAL"
 
 ####################################################################################################
-# McFly
+# Screen width
 ####################################################################################################
 
-if [[ -r "/home/drivas/private/software/mcfly/mcfly.zsh" ]]
-then
-  source "/home/drivas/private/software/mcfly/mcfly.zsh"
-fi
+export MANWIDTH=175
 
 ####################################################################################################
-# editor
+# Pager
 ####################################################################################################
 
-# edit line in editor with ctrl-n:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^b' edit-command-line
+export PAGER=bat
+export BAT_PAGER=less
+
+####################################################################################################
+# Pier
+####################################################################################################
+
+export PIER="${EX_SITU}/pier/"
+
+####################################################################################################
+# Tree
+####################################################################################################
+
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 ####################################################################################################

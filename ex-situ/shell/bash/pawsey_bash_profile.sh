@@ -17,8 +17,8 @@ BDOTDIR=${HOME}/.bash
 # aliases
 ####################################################################################################
 
-if [ -f ${IANUS}/shell/terminal/pawsey_aliases.sh ]; then
-  . ${IANUS}/shell/terminal/pawsey_aliases.sh
+if [ -f ${EX_SITU}/shell/terminal/pawsey_aliases.sh ]; then
+  . ${EX_SITU}/shell/terminal/pawsey_aliases.sh
 fi
 
 if [ -f ${BDOTDIR}/bash_aliases.sh ]; then
@@ -36,7 +36,7 @@ eval "$(starship init bash)"
 ####################################################################################################
 
 # Fuzzy finder (fzf)
-[ -f ${IANUS}/shell/bash/fzf.bash ] && source ${IANUS}/shell/bash/fzf.bash
+[ -f ${EX_SITU}/shell/bash/fzf.bash ] && source ${EX_SITU}/shell/bash/fzf.bash
 
 ####################################################################################################
 # History

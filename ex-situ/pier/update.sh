@@ -2,7 +2,7 @@
 ####################################################################################################
 
 # config
-source $HOME/.archive/ianus/pier/.config.sh
+source $HOME/.archive/ex-situ/pier/.config.sh
 
 ####################################################################################################
 # deamon
@@ -16,20 +16,20 @@ source "${update}/.daemon.sh"
 ####################################################################################################
 
 # list & upgrade homebrew
-pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ianus/pier/.update/brew.sh'
+pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ex-situ/pier/.update/brew.sh'
 
 ####################################################################################################
 # rust
 ####################################################################################################
 
 # check & upgrade rustc compiler & cargo binaries
-pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ianus/pier/.update/rust.sh'
+pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ex-situ/pier/.update/rust.sh'
 
 ####################################################################################################
 # go
 ####################################################################################################
 
 # upgrade go binaries
-pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ianus/pier/.update/go.sh'
+pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ex-situ/pier/.update/go.sh'
 
 ####################################################################################################

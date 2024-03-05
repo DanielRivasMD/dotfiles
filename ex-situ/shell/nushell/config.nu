@@ -1,13 +1,12 @@
 ####################################################################################################
-# General settings
+# nushell config file
 ####################################################################################################
 
-if [[ $- == *i* ]]
-then
-  if [[ -f "$HOME/.archive/ianus/shell/bash/vernacular_bash_profile.sh" ]]
-  then
-    source "$HOME/.archive/ianus/shell/bash/vernacular_bash_profile.sh"
-  fi
-fi
+# source
+source ~/.archive/ex-situ/shell/nushell/alias.nu
+source ~/.archive/ex-situ/shell/nushell/theme.nu
+source ~/.archive/ex-situ/shell/nushell/keymap.nu
+source ~/.archive/ex-situ/shell/nushell/atuin.nu
+source ~/.archive/ex-situ/shell/nushell/zoxide.nu
 
 ####################################################################################################

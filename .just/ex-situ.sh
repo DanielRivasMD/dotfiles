@@ -30,8 +30,8 @@ echo ''
 echo "${YELLOW}Linking R config${NC}"
 echo "${RED}====================================================================================================${NC}"
 if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi        && echo "Directory created ${BROWN}=>${NC} ${GREEN}Rprofile${NC}"
-ln -sf "${ianus}/R/Rprofile.d" "${home}/.Rprofile.d"                            && echo "Linked ${BROWN}=>${NC} ${BLUE}Rprofile${NC} directory"
-ln -sf "${ianus}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                   && echo "Linked ${BROWN}=>${NC} ${BLUE}Rprofile${NC}"
+ln -sf "${ex_situ}/R/Rprofile.d" "${home}/.Rprofile.d"                          && echo "Linked ${BROWN}=>${NC} ${BLUE}Rprofile${NC} directory"
+ln -sf "${ex_situ}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                 && echo "Linked ${BROWN}=>${NC} ${BLUE}Rprofile${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 # @HOME

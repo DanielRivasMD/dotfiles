@@ -23,39 +23,39 @@ _default:
 
 ####################################################################################################
 
-# link Cerberus archive
-Cerberus:
-  source .just/cerberus.sh
+# link in-situ archive
+In-situ:
+  source .just/in-situ.sh
 
 ####################################################################################################
 
-# link Ianus archive
-Ianus:
-  source .just/ianus.sh
+# link ex-situ archive
+Ex-situ:
+  source .just/ex-situ.sh
 
 ####################################################################################################
 
 # deliver archives to Pawsey
-Mercury-pawsey:
-  source .just/mercury_pawsey.sh
+Deliver-pawsey:
+  source .just/deliver-pawsey.sh
 
 ####################################################################################################
 
 # link archives Pawsey
-Vulcano-pawsey:
-  source .just/vulcano.sh
+Link-pawsey:
+  source .just/link-pawsey.sh
 
 ####################################################################################################
 
 # download cluster executables
-Hadur:
-  source .just/hadur.sh
+Prebuild:
+  source .just/prebuild.sh
 
 ####################################################################################################
 
 # record software
-Mnemosyne:
-  source .just/mnemosyne.sh
+Memory:
+  source .just/memory.sh
 
 ####################################################################################################
 # helix
@@ -74,6 +74,6 @@ Mnemosyne:
 ####################################################################################################
 
 # deliver & link configuration Pawsey
-Deploy-Pawsey: Mercury-pawsey && Vulcano-pawsey
+Deploy-pawsey: Deliver-pawsey && Link-pawsey
 
 ####################################################################################################

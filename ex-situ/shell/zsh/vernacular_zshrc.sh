@@ -1,135 +1,149 @@
 ####################################################################################################
-# vernacular default
+# settings
 ####################################################################################################
 
-# patch for screen C-q
-stty -ixon
+# load zsh settings
+[ -f ${HOME}/.profile ] && . ${HOME}/.profile
+ZDOTDIR=${HOME}/.zsh
 
 ####################################################################################################
-#  archives
+# aliases
 ####################################################################################################
 
-export ARCHIVE=${HOME}/.archive
-export IANUS=${ARCHIVE}/ianus
-export CERBERUS=${ARCHIVE}/cerberus
+# load aliases
+VALIAS="${EX_SITU}/shell/terminal/vernacular_aliases.sh"
+[ -f "${VALIAS}" ] && . "${VALIAS}"
+
+ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
+[ -f "${ZALIAS}" ] && . "${ZALIAS}"
 
 ####################################################################################################
-#  language settings
+# plugins
 ####################################################################################################
 
-LANG=en_US.UTF-8
-LC_CTYPE="en_US.UTF-8"
-LC_NUMERIC="en_US.UTF-8"
-LC_TIME="en_US.UTF-8"
-LC_COLLATE="en_US.UTF-8"
-LC_MONETARY="en_US.UTF-8"
-LC_MESSAGES="en_US.UTF-8"
-export LANGUAGE=en_US
-export LC_ALL=en_US.UTF-8
+# plugin manager
+eval "$(sheldon source)"
 
 ####################################################################################################
-#  go path
+#  autocompletion
 ####################################################################################################
 
-export GOPATH="$HOME/.go/"
-export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-export GOROOT="$(brew --prefix)/Cellar/go/1.22.0/libexec"
+# add custom zsh completion path
+fpath=($HOME/.config/zsh_completion $fpath)
+
+# autocompletion with arrow interphase
+autoload -Uz compinit
+# dump zcompdump
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+_comp_options+=(globdots)   # include hidden files
+zstyle ':completion:*' menu select
+
+setopt COMPLETE_ALIASES
+zstyle ':completion::complete:*' gain-privileges 1
+
+# case-insensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ####################################################################################################
-#  cargo-rust path
-####################################################################################################
 
-PATH=$PATH:$HOME/.cargo/bin
-
-####################################################################################################
-#  dart path
-####################################################################################################
-
-PATH=$PATH:/usr/local/opt/dart/libexec/
+# fuzzy finder (fzf)
+[ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
 
 ####################################################################################################
-#  MySQL path
+# history
 ####################################################################################################
 
-PATH=$PATH:/usr/local/mysql/bin/
+HISTFILE=${ZDOTDIR}/zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
 
 ####################################################################################################
-#  path
+# atuin
 ####################################################################################################
 
-# path settings
-PATH=$PATH:/usr/local/bin/
-PATH=$PATH:/usr/local/sbin/
-PATH=$PATH:${GOPATH}bin/
-PATH=$PATH:$HOME/bin/cargo/
-PATH=$PATH:$HOME/bin/go/
-PATH=$PATH:$HOME/bin/links/
-
-export PATH
+# do not bind any keys
+export ATUIN_NOBIND="true"
+eval "$(atuin init zsh)"
 
 ####################################################################################################
-# starship
+# just
 ####################################################################################################
 
-export STARSHIP_CONFIG=${IANUS}/starship/vernacular_starship.toml
+JFUN="${ZDOTDIR}/zsh_just.sh"
+[ -f ${JFUN} ] && source ${JFUN}
+
+####################################################################################################
+# navi
+####################################################################################################
+
+NFUN="${ZDOTDIR}/zsh_navi.sh"
+[ -f ${NFUN} ] && source ${NFUN}
+
+####################################################################################################
+#  starship
+####################################################################################################
+
+eval "$(starship init zsh)"
 
 ####################################################################################################
 # zellij
 ####################################################################################################
 
-export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
-export ZELLIJ_CONFIG_FILE=${ZELLIJ_CONFIG_DIR}/config.kdl
+if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
+    ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
+    [ -f ${ZJFUN} ] && source ${ZJFUN}
+fi
 
 ####################################################################################################
-# less
+# zoxide
 ####################################################################################################
 
-export LESSHISTFILE="-"
+eval "$(zoxide init zsh)"
+
+ZFUN="${ZDOTDIR}/zsh_zoxide.sh"
+[ -f ${ZFUN} ] && source ${ZFUN}
 
 ####################################################################################################
 # editor
 ####################################################################################################
 
-# editor
-export VISUAL=micro
-export EDITOR="$VISUAL"
+# edit line
+autoload edit-command-line; zle -N edit-command-line
 
 ####################################################################################################
-# screen width
+# key bindings
 ####################################################################################################
 
-export MANWIDTH=175
+# atuin
+bindkey '^s' _atuin_search_widget
+
+# just
+bindkey '^j' _call_just
+
+# navi
+bindkey '^n' _call_navi
+
+# command edit
+bindkey '^g' edit-command-line
+
+# zoxide
+bindkey '^h' _call_zi
+
+# unbind
+bindkey -r "^B"
+bindkey -r "^F"
+bindkey -r "^O"
+bindkey -r "^P"
+bindkey -r "^X"
 
 ####################################################################################################
-# pager
-####################################################################################################
 
-export PAGER=bat
-export BAT_PAGER=less
-export RCOLUMNS=$COLUMNS
-
-####################################################################################################
-# bartib
-####################################################################################################
-
-export BARTIB_FILE="${HOME}/.config/bartib/db.bartib"
-
-####################################################################################################
-# pier
-####################################################################################################
-
-export PIER="${IANUS}/pier"
-
-####################################################################################################
-# broot
-####################################################################################################
-
-source "${HOME}/.config/broot/launcher/bash/br"
-
-####################################################################################################
-# shell functions
-####################################################################################################
-
-source "${IANUS}/shell/terminal/shell_func.sh"
+echo -n -e "\t"; echo '                 '
+echo -n -e "\t"; echo '  ____  ______ __'
+echo -n -e "\t"; echo ' /_  / / __/ // /'
+echo -n -e "\t"; echo '  / /__\ \/ _  / '
+echo -n -e "\t"; echo ' /___/___/_//_/  '
+echo -n -e "\t"; echo '                 '
 
 ####################################################################################################

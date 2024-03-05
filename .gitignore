@@ -1,22 +1,22 @@
 ####################################################################################################
-# cerberus
+# in-situ
 ####################################################################################################
 
 # karabiner
-cerberus/karabiner/automatic_backups
+in-situ/karabiner/automatic_backups
 
 # khal
-cerberus/khal/calendars
-cerberus/khal/ics
+in-situ/khal/calendars
+in-situ/khal/ics
 
 ####################################################################################################
-# ianus
+# ex-situ
 ####################################################################################################
 
 # micro
-ianus/micro/backups
-ianus/micro/buffers
-ianus/micro/plug
+ex-situ/micro/backups
+ex-situ/micro/buffers
+ex-situ/micro/plug
 
 ####################################################################################################
 
@@ -26,16 +26,16 @@ deprecated/
 ####################################################################################################
 
 # ignore automatically generated
-cerberus/alacritty/alacritty.toml
-cerberus/karabiner/karabiner.edn
-cerberus/karabiner/karabiner.json
-ianus/helix/config.toml
+in-situ/alacritty/alacritty.toml
+in-situ/karabiner/karabiner.edn
+in-situ/karabiner/karabiner.json
+ex-situ/helix/config.toml
 
 ####################################################################################################
 
 # ignore zed files
-cerberus/zed/embeddings/stable
-cerberus/zed/.tmp*
+in-situ/zed/embeddings/stable
+in-situ/zed/.tmp*
 
 ####################################################################################################
 
