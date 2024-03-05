@@ -21,34 +21,38 @@ tags = ['shell']
 [scripts.finder-hidden-off]
 command = 'defaults write com.apple.Finder AppleShowAllFiles false && killall Finder'
 description = 'turn finder hidden files on'
-tags = ['shell']
+tags = ['osx']
 
 [scripts.finder-hidden-on]
 command = 'defaults write com.apple.Finder AppleShowAllFiles true && killall Finder'
 description = 'turn finder hidden files off'
-tags = ['shell']
+tags = ['osx']
 
 [scripts.fpath]
 command = '''
-source ${PIER}/break_single_line.sh  $COLUMNS
-echo $FPATH | xsv flatten -d ":" -n
+# echo $FPATH | xsv flatten -d ":" -n
+source ${PIER}/breakDL.sh  $COLUMNS
+echo $FPATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/breakDL.sh  $COLUMNS
 '''
 description = 'display fpath'
-tags = ['shell']
+tags = ['env']
 
 [scripts.git]
 command = '''
-#!/bin/sh
-source ${PIER}/break_single_line.sh $COLUMNS
+# git status & git stash & git log
+source ${PIER}/.config.sh
+
+source ${PIER}/breakCross.sh $COLUMNS
 
 git status --short
-source ${PIER}/break_single_line.sh $COLUMNS
+source ${PIER}/breakSL.sh $COLUMNS
 
 git stash list
-source ${PIER}/break_double_line.sh $COLUMNS
+source ${PIER}/breakSL.sh $COLUMNS
 
-git lk -10
-source ${PIER}/break_single_line.sh $COLUMNS
+git log --graph --topo-order --abbrev-commit --date=relative --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %C(dim white)%cn%Creset' -10
+source ${PIER}/breakCross.sh $COLUMNS
 '''
 description = 'all-round git status'
 tags = ['git']
@@ -60,28 +64,14 @@ tags = ['go']
 
 [scripts.gopath]
 command = '''
-source ${PIER}/break_single_line.sh  $COLUMNS
+# echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/.config.sh
+source ${PIER}/breakDL.sh $COLUMNS
 echo $GOPATH | xsv flatten -d ":" -n | awk '{print $2}'
-source ${PIER}/break_single_line.sh  $COLUMNS
+source ${PIER}/breakDL.sh $COLUMNS
 '''
 description = 'display GOPATH'
-tags = ['go']
-
-[scripts.gt]
-command = '''
-#!/bin/sh
-directory="/Users/drivas/.archive/pier/"
-case "$1" in
-1)  bat -l "Git Config" ${HOME}/.gitconfig.d/alias_one_letter
-    ;;
-2)  bat -l "Git Config" ${HOME}/.gitconfig.d/alias_two_letter
-    ;;
-*)  bat -l "Git Config" ${HOME}/.gitconfig.d/functions
-    ;;
-esac
-'''
-description = 'list git shortcuts'
-tags = ['git']
+tags = ['env']
 
 [scripts.julia]
 command = 'micro /Users/drivas/Factorem/Awesome-lists/awesome-julia/README.md'
@@ -90,11 +80,13 @@ tags = ['julia']
 
 [scripts.path]
 command = '''
-source ${PIER}/break_single_line.sh  $COLUMNS
+# echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
+source ${PIER}/.config.sh
+source ${PIER}/breakDL.sh $COLUMNS
 echo $PATH | xsv flatten -d ":" -n | awk '{print $2}'
-source ${PIER}/break_single_line.sh  $COLUMNS
+source ${PIER}/breakDL.sh $COLUMNS
 '''
 description = 'display PATH'
-tags = ['shell']
+tags = ['env']
 
 [default]
