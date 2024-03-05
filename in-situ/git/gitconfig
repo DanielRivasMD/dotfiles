@@ -1,19 +1,16 @@
-[include]
-  path = .gitconfig.d/alias_one_letter
-  path = .gitconfig.d/alias_two_letter
-  path = .gitconfig.d/apply
-  path = .gitconfig.d/core
-  path = .gitconfig.d/functions
-  path = .gitconfig.d/github
-  path = .gitconfig.d/push
-  path = .gitconfig.d/user
+[apply]
+  whitespace = nowarn
+
+[color "status"]
+  untracked = red
+  changed = yellow
+  added = cyan
 
 [core]
   pager = delta
   editor = micro
-
-[interactive]
-  diffFilter = delta --color-only
+  autocrlf = input
+  excludesfile = /Users/drivas/.gitignore_global
 
 [delta]
   features = decorations
@@ -33,12 +30,13 @@
   line-numbers-minus-style = "#b30000"
   side-by-side = true
 
-[color "status"]
-  untracked = red
-  changed = yellow
-  added = cyan
+[github]
+  user = DanielRivasMD
+
+[interactive]
+  diffFilter = delta --color-only
+
 [user]
   name = DanielRivasMD
   email = danielrivasmd@gmail.com
-[pull]
-  ff = only
+  smudge = git-lfs smudge -- %f
