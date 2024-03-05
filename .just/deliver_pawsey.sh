@@ -11,8 +11,8 @@
 # Similar to his Greek equivalent Hermes, he was awarded a magic wand by Apollo, which later turned into the caduceus, the staff with intertwined snakes.
 ####################################################################################################
 
-# declarations
-source .just/.config.sh
+# config
+source "${IN_SILICO}/config.sh"
 
 ####################################################################################################
 

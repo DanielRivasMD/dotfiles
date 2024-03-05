@@ -23,8 +23,8 @@
 # Hephaestus's symbols are a smith's hammer, anvil, and a pair of tongs.
 ####################################################################################################
 
-# declarations
-source .just/.config.sh
+# config
+source "${IN_SILICO}/config.sh"
 
 ####################################################################################################
 

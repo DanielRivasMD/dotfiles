@@ -12,8 +12,8 @@
 # It was customary for the Magyars to sacrifice white stallions to him before a battle.
 ####################################################################################################
 
-# declarations
-source .just/.config.sh
+# config
+source "${IN_SILICO}/config.sh"
 
 ####################################################################################################
 
