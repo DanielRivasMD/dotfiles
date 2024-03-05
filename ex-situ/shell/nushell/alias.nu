@@ -56,8 +56,8 @@ alias lzn = lazynpm
 # lazycli
 alias lzc = lazycli
 
-# # bat
-# alias man = batman
+# bat
+alias man = batman
 
 # broot
 alias br = broot --dates --sizes --permissions --hidden --git-ignored --show-git-info
