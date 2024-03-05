@@ -24,37 +24,37 @@ _default:
 ####################################################################################################
 
 # link in-situ archive
-In-situ:
+@In-situ:
   source .just/in-situ.sh
 
 ####################################################################################################
 
 # link ex-situ archive
-Ex-situ:
+@Ex-situ:
   source .just/ex-situ.sh
 
 ####################################################################################################
 
 # deliver archives to Pawsey
-Deliver-pawsey:
+@Deliver-pawsey:
   source .just/deliver-pawsey.sh
 
 ####################################################################################################
 
 # link archives Pawsey
-Link-pawsey:
+@Link-pawsey:
   source .just/link-pawsey.sh
 
 ####################################################################################################
 
 # download cluster executables
-Prebuild:
+@Prebuild:
   source .just/prebuild.sh
 
 ####################################################################################################
 
 # record software
-Memory:
+@Memory:
   source .just/memory.sh
 
 ####################################################################################################
