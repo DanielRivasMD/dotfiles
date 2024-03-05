@@ -70,9 +70,9 @@
          [:!TCsemicolon :!Of15 [:term]]          ; helix jump                                      ;
          [:!TCquote :!Of16 [:term]]              ; helix jump                                      ;
          [:!TCbackslash :!Of17 [:term]]          ; helix jump                                      ;
-         [:!TCcomma :!Of18]                      ; helix diagnostics                               ;
-         [:!TCperiod :!Of19]                     ; helix diagnostics                               ;
-         [:!TCslash :!Of20]                      ; helix diagnostics                               ;
+         [:!TCcomma :!Of18 [:term]]              ; helix diagnostics                               ;
+         [:!TCperiod :!Of19 [:term]]             ; helix diagnostics                               ;
+         [:!TCslash :!Of20 [:term]]              ; helix diagnostics                               ;
 
          [:!TCdelete_or_backspace :!Sf1 [:term]] ; broot remove & helix symbols                    ;
          [:!TCreturn_or_enter :!Sf2 [:term]]     ; broot create & helix jump                       ;
