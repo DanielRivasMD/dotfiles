@@ -1,29 +1,67 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Zed
-{:des "Zed - Control remappings"
+{:des "Zed - alt - alphabet"
  :rules [;
-         ; [:!EQRtab :!Th [:zed]]                          ; del-tab
-         ; [:!EQRcaps_lock :!Tg [:zed]]                    ; del-caps
-         ; [:!EQRleft_shift :!Oc [:zed]]                   ; del-shift
-         [:!EQRleft_control :!Cp [:zed]]                   ; del-ctrl
-         ; [:!EQRleft_option :!Ts [:zed]]                  ; del-alt
-         [:!EQRleft_command :!CSp [:zed]]                  ; del-cmd
-         ; [:!EQRspacebar :!Ty [:zed]]                     ; del-space
-         ; [:!EQRright_command :!Tj [:zed]]                ; del-cmd
-         ; [:!EQRright_option :!Tn [:zed]]                 ; del-alt
+         [:!Oa :!CSl [:zed]]                                                                       ;
+         ; [:!Ob : [:zed]]                                                                         ;
+         ; [:!Oc : [:zed]]                                                                         ;
+         [:!Od :!Cd [:zed]]                                                                        ;
+         ; [:!Oe : [:zed]]                                                                         ;
+         [:!Of :!Cf [:zed]]                                                                        ;
+         ; [:!Og : [:zed]]                                                                         ;
+         [:!Oh :!CSg [:zed]]                                                                       ;
+         ; [:!Oi : [:zed]]                                                                         ;
+         [:!Oj :!TCn [:zed]]                                                                       ;
+         [:!Ok :!TCp [:zed]]                                                                       ;
+         [:!Ol :!Cg [:zed]]                                                                        ;
+         ; [:!Om : [:zed]]                                                                         ;
+         ; [:!On : [:zed]]                                                                         ;
+         ; [:!Oo : [:zed]]                                                                         ;
+         ; [:!Op : [:zed]]                                                                         ;
+         ; [:!Oq : [:zed]]                                                                         ;
+         ; [:!Or : [:zed]]                                                                         ;
+         ; [:!Os : [:zed]]                                                                         ;
+         ; [:!Ot : [:zed]]                                                                         ;
+         ; [:!Ou : [:zed]]                                                                         ;
+         ; [:!Ov : [:zed]]                                                                         ;
+         ; [:!Ow : [:zed]]                                                                         ;
+         ; [:!Ox : [:zed]]                                                                         ;
+         ; [:!Oy : [:zed]]                                                                         ;
+         ; [:!Oz : [:zed]]                                                                         ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Zed
-{:des "Zed - Interactive delete"
+{:des "Zed - alt - alphabet"
  :rules [;
-         ; [:!Sright_option :!Odelete_forward [:zed]]        ; delete word forward
-         [:!Sright_command :!Cdelete_forward [:zed]]       ; delete line forward
-         ; [:!Rleft_control :!Odelete_or_backspace [:zed]]   ; delete word backward
-         ; [:!Rleft_command :!Cdelete_or_backspace [:zed]]   ; delete line backward
-         ; [:!Rleft_option : [:zed]]                       ; shift-alt
+         ; [:!SOa : [:zed]]                                                                        ;
+         ; [:!SOb : [:zed]]                                                                        ;
+         [:!OSc :!Cslash [:zed]]                                                                   ;
+         [:!OSd :!CSd [:zed]]                                                                      ;
+         ; [:!SOe : [:zed]]                                                                        ;
+         ; [:!SOf : [:zed]]                                                                        ;
+         ; [:!SOg : [:zed]]                                                                        ;
+         ; [:!SOh : [:zed]]                                                                        ;
+         [:!OSi :!Cclose_bracket [:zed]]                                                           ;
+         [:!OSj :!TCdown_arrow [:zed]]                                                             ;
+         [:!OSk :!TCup_arrow [:zed]]                                                               ;
+         ; [:!SOl : [:zed]]                                                                        ;
+         ; [:!SOm : [:zed]]                                                                        ;
+         ; [:!SOn : [:zed]]                                                                        ;
+         [:!OSo :!Copen_bracket [:zed]]                                                            ;
+         ; [:!SOp : [:zed]]                                                                        ;
+         ; [:!SOq  : [:zed]]                                                                       ;
+         ; [:!SOr : [:zed]]                                                                        ;
+         ; [:!SOs : [:zed]]                                                                        ;
+         ; [:!SOt : [:zed]]                                                                        ;
+         ; [:!SOu : [:zed]]                                                                        ;
+         ; [:!SOv : [:zed]]                                                                        ;
+         ; [:!SOw : [:zed]]                                                                        ;
+         [:!OSx :!TSk [:zed]]                                                                      ;
+         ; [:!SOy : [:zed]]                                                                        ;
+         ; [:!SOz : [:zed]]                                                                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -52,68 +90,29 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Zed
-{:des "Zed - alt - alphabet"
+{:des "Zed - Control remappings"
  :rules [;
-         [:!Oa :!CSl [:zed]]                                 ;
-         ; [:!Ob : [:zed]]                                 ;
-         ; [:!Oc : [:zed]]                                 ;
-         [:!Od :!Cd [:zed]]                                ; select next
-         ; [:!Oe : [:zed]]                                 ;
-         [:!Of :!Cf [:zed]]                                ; find
-         ; [:!Og : [:zed]]                                 ;
-         [:!Oh :!CSg [:zed]]                               ; prev
-         ; [:!Oi : [:zed]]                                 ;
-         [:!Oj :!TCn [:zed]]                               ; multi down
-         [:!Ok :!TCp [:zed]]                               ; multi up
-         [:!Ol :!Cg [:zed]]                                ; next
-         ; [:!Om : [:zed]]                                 ;
-         ; [:!On : [:zed]]                                 ;
-         ; [:!Oo : [:zed]]                                 ;
-         ; [:!Op : [:zed]]                                 ;
-         ; [:!Oq : [:zed]]                                 ;
-         ; [:!Or : [:zed]]                                 ;
-         ; [:!Os : [:zed]]                                 ;
-         ; [:!Ot : [:zed]]                                 ;
-         ; [:!Ou : [:zed]]                                 ;
-         ; [:!Ov : [:zed]]                                 ;
-         ; [:!Ow : [:zed]]                                 ;
-         ; [:!Ox : [:zed]]                                 ;
-         ; [:!Oy : [:zed]]                                 ;
-         ; [:!Oz : [:zed]]                                 ;
-         ; [:!Of :!CSh [:zed]]                             ; TODO: replace
+         ; [:!EQRtab :!Th [:zed]]                          ; del-tab
+         ; [:!EQRcaps_lock :!Tg [:zed]]                    ; del-caps
+         ; [:!EQRleft_shift :!Oc [:zed]]                   ; del-shift
+         [:!EQRleft_control :!Cp [:zed]]                   ; del-ctrl
+         ; [:!EQRleft_option :!Ts [:zed]]                  ; del-alt
+         [:!EQRleft_command :!CSp [:zed]]                  ; del-cmd
+         ; [:!EQRspacebar :!Ty [:zed]]                     ; del-space
+         ; [:!EQRright_command :!Tj [:zed]]                ; del-cmd
+         ; [:!EQRright_option :!Tn [:zed]]                 ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Zed
-{:des "Zed - alt - alphabet"
+{:des "Zed - Interactive delete"
  :rules [;
-         ; [:!SOa : [:zed]]                                ;
-         ; [:!SOb : [:zed]]                                ;
-         [:!OSc :!Cslash [:zed]]                           ; comment
-         [:!OSd :!CSd [:zed]]                              ; duplicate
-         ; [:!SOe : [:zed]]                                ;
-         ; [:!SOf : [:zed]]                                ;
-         ; [:!SOg : [:zed]]                                ;
-         ; [:!SOh : [:zed]]                                ;
-         [:!OSi :!Cclose_bracket [:zed]]                   ; indent
-         [:!OSj :!TCdown_arrow [:zed]]                     ; move down
-         [:!OSk :!TCup_arrow [:zed]]                       ; move up
-         ; [:!SOl : [:zed]]                                ;
-         ; [:!SOm : [:zed]]                                ;
-         ; [:!SOn : [:zed]]                                ;
-         [:!OSo :!Copen_bracket [:zed]]                    ; unindent
-         ; [:!SOp : [:zed]]                                ;
-         ; [:!SOq  : [:zed]]                                ;
-         ; [:!SOr : [:zed]]                                ;
-         ; [:!SOs : [:zed]]                                ;
-         ; [:!SOt : [:zed]]                                ;
-         ; [:!SOu : [:zed]]                                ;
-         ; [:!SOv : [:zed]]                                ;
-         ; [:!SOw : [:zed]]                                ;
-         [:!OSx :!TSk [:zed]]                              ; delete line
-         ; [:!SOy : [:zed]]                                ;
-         ; [:!SOz : [:zed]]                                ;
+         ; [:!Sright_option :!Odelete_forward [:zed]]        ; delete word forward
+         [:!Sright_command :!Cdelete_forward [:zed]]       ; delete line forward
+         ; [:!Rleft_control :!Odelete_or_backspace [:zed]]   ; delete word backward
+         ; [:!Rleft_command :!Cdelete_or_backspace [:zed]]   ; delete line backward
+         ; [:!Rleft_option : [:zed]]                       ; shift-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,58 +1,58 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - command
-{:des "Control - Command Mode - alphabet"
+; Alacritty
+{:des "Alacritty control - command - alphabet"
  :rules [;
-         ; [:!TCa []]                                                                              ;
-         ; [:!TCb []]                                                                              ;
-         ; [:!TCc []]                                                                              ;
-         ; [:!TCd []]                                                                              ;
-         ; [:!TCe []]                                                                              ;
-         ; [:!TCf []]                                                                              ;
-         ; [:!TCg []]                                                                              ;
-         ; [:!TCh []]                                                                              ;
-         ; [:!TCi []]                                                                              ;
-         ; [:!TCj []]                                                                              ;
-         ; [:!TCk []]                                                                              ;
-         ; [:!TCl []]                                                                              ;
-         ; [:!TCm []]                                                                              ;
-         ; [:!TCn []]                                                                              ;
-         ; [:!TCo []]                                                                              ;
-         ; [:!TCp []]                                                                              ;
-         ; [:!TCq []]                                                                              ;
-         ; [:!TCr []]                                                                              ;
-         ; [:!TCs []]                                                                              ;
-         ; [:!TCt []]                                                                              ;
-         ; [:!TCu []]                                                                              ;
-         ; [:!TCv []]                                                                              ;
-         ; [:!TCw []]                                                                              ;
-         ; [:!TCx []]                                                                              ;
-         ; [:!TCy []]                                                                              ;
-         ; [:!TCz []]                                                                              ;
+         [:!TCa :!Of19 [:term]]                                                                    ;
+         [:!TCb :!Of20 [:term]]                                                                    ;
+         [:!TCc :!Sf13 [:term]]                                                                    ;
+         [:!TCd :!Sf14 [:term]]                                                                    ;
+         [:!TCe :!Sf15 [:term]]                                                                    ;
+         [:!TCf :!Sf16 [:term]]                                                                    ;
+         [:!TCg :!Sf17 [:term]]                                                                    ;
+         [:!TCh :!Sf18 [:term]]                                                                    ;
+         [:!TCi :!Sf19 [:term]]                                                                    ;
+         [:!TCj :!Sf20 [:term]]                                                                    ;
+         [:!TCk :!OTf19 [:term]]                                                                   ;
+         [:!TCl :!OTf20 [:term]]                                                                   ;
+         [:!TCm :!SOTf6 [:term]]                                                                   ;
+         [:!TCn :!SOTf7 [:term]]                                                                   ;
+         [:!TCo :!SOTf8 [:term]]                                                                   ;
+         [:!TCp :!SOTf9 [:term]]                                                                   ;
+         [:!TCq :!SOTf10 [:term]]                                                                  ;
+         [:!TCr :!SOTf11 [:term]]                                                                  ;
+         [:!TCs :!SOTf12 [:term]]                                                                  ;
+         [:!TCt :!SOTf13 [:term]]                                                                  ;
+         [:!TCu :!SOTf14 [:term]]                                                                  ;
+         [:!TCv :!SOTf15 [:term]]                                                                  ;
+         [:!TCw :!SOTf16 [:term]]                                                                  ;
+         [:!TCx :!SOTf17 [:term]]                                                                  ;
+         [:!TCy :!SOTf18 [:term]]                                                                  ;
+         [:!TCz :!SOTf19 [:term]]                                                                  ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - command
-{:des "Control - Command Mode - symbols"
+; Alacritty
+{:des "Alacritty - Control - Command Mode"
  :rules [;
-         ; [:!TChyphen []]                                                                         ;
-         ; [:!TCequal_sign []]                                                                     ;
-         ; [:!TCopen_bracket []]                                                                   ;
-         ; [:!TCclose_bracket []]                                                                  ;
-         ; [:!TCsemicolon []]                                                                      ;
-         ; [:!TCquote []]                                                                          ;
-         ; [:!TCbackslash []]                                                                      ;
-         ; [:!TCcomma []]                                                                          ;
-         ; [:!TCperiod []]                                                                         ;
-         ; [:!TCslash []]                                                                          ;
+         [:!TChyphen :!OTf15]                    ;                                                 ;
+         [:!TCequal_sign :!OTf16]                ;                                                 ;
+         [:!TCopen_bracket :!Sf8]                ; helix comments                                  ;
+         [:!TCclose_bracket :!Sf9]               ; helix comments                                  ;
+         [:!TCsemicolon :!Of13 [:term]]          ; helix jump                                      ;
+         [:!TCquote :!Of14 [:term]]              ; helix jump                                      ;
+         [:!TCbackslash :!Of15 [:term]]          ; helix jump                                      ;
+         [:!TCcomma :!Of16]                      ; helix diagnostics                               ;
+         [:!TCperiod :!Of17]                     ; helix diagnostics                               ;
+         [:!TCslash :!Of18]                      ; helix diagnostics                               ;
 
-         ; [:!TCdelete_or_backspace []]                                                            ;
-         ; [:!TCreturn_or_enter []]                                                                ;
-         ; [:!TCright_shift []]                                                                    ;
-         ; [:!TCright_option []]                                                                   ;
-         ; [:!TCright_command []]                                                                  ;
-         ; [:!TCspacebar []]                                                                       ;
+         [:!TCreturn_or_enter :!Sf6 [:term]]     ; broot create & helix jump                       ;
+         [:!TCdelete_or_backspace :!Sf7 [:term]] ; broot remove & helix symbols                    ;
+         [:!TCright_shift :!OTf10 [:term]]       ; helix split                                     ;
+         [:!TCright_option :!OTf11 [:term]]      ; helix split                                     ;
+         [:!TCright_command :!OTf12 [:term]]     ; helix split                                     ;
+         [:!TCspacebar :!OTf7 [:term]]           ; broot viewer & helix tab                        ;
 
          ; [:!TCleft_command []]                                                                   ;
          ; [:!TCleft_option []]                                                                    ;
@@ -62,6 +62,30 @@
          ; [:!TCtab []]                                                                            ;
          ; [:!TCnon_us_backslash []]                                                               ;
          ; [:!TCescape []]                                                                         ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Alacritty - Keypad"
+ :rules [;
+         [:!TCkeypad_slash :!Of16 [:term]]       ; helix diagnostics                               ;
+         [:!TCkeypad_asterisk :!Of17 [:term]]    ; helix diagnostics                               ;
+         [:!TCkeypad_hyphen :!Of18 [:term]]      ; helix diagnostics                               ;
+         [:!TCkeypad_plus :!Sf8 [:term]]         ; helix comments                                  ;
+         [:!TCkeypad_enter :!Sf9 [:term]]        ; helix comments                                  ;
+         [:!TCkeypad_period :!Sf6 [:term]]       ; helix jump                                      ;
+
+         [:!TCkeypad_0 :!Sf7 [:term]]            ; helix symbols                                   ;
+         [:!TCkeypad_1 :!OTf17 [:term]]          ; helix symbols                                   ;
+         [:!TCkeypad_2 :!OTf18 [:term]]          ; helix symbols                                   ;
+         [:!TCkeypad_3 :!Of15 [:term]]           ; helix jump                                      ;
+         [:!TCkeypad_4 :!OTf15 [:term]]          ; helix symbols                                   ;
+         [:!TCkeypad_5 :!OTf16 [:term]]          ; helix symbols                                   ;
+         [:!TCkeypad_6 :!Of14 [:term]]           ; helix jump                                      ;
+         [:!TCkeypad_7 :!OTf13 [:term]]          ; helix symbols                                   ;
+         [:!TCkeypad_8 :!OTf14 [:term]]          ; helix symbols                                   ;
+         [:!TCkeypad_9 :!Of13 [:term]]           ; helix jump                                      ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

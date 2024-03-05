@@ -1,6 +1,74 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
+{:des "Alacritty control - alphabet"
+ :rules [;
+         ; [: :!Ta [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tb [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tc [:term]]            DEFAULT                                                     ;
+         ; [: :!Td [:term]]            DEFAULT                                                     ;
+         ; [: :!Te [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tf [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tg [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Th [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Ti [:term]]            DEFAULT                                                     ;
+         ; [: :!Tj [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tk [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tl [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tm [:term]]            DEFAULT                                                     ;
+         ; [: :!Tn [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!To [:term]]            REDUNDANT (arrow)                                           ;
+         ; [: :!Tp [:term]]            REDUNDANT (arrow)                                           ;
+         ; [: :!Tq [:term]]            DEFAULT                                                     ;
+         ; [: :!Tr [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Ts [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tt [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tu [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tv [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Tw [:term]]            COLLISION (delete)                                          ;
+         ; [: :!Tx [:term]]            REDUNDANT (editor)                                          ;
+         ; [: :!Ty [:term]]            COLLISION (remapped)                                        ;
+         ; [: :!Tz [:term]]            DEFAULT                                                     ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Alacritty - Arrow"
+ :rules [;
+         ; [:!Oleft_arrow : [:term]]             ;                                                 ;
+         ; [:!Oright_arrow : [:term]]            ;                                                 ;
+         [:!Oup_arrow :!Sf1 [:term]]             ;                                                 ;
+         [:!Odown_arrow :!Sf2 [:term]]           ;                                                 ;
+
+         ; [:!Cleft_arrow : [:term]]             ;                                                 ;
+         ; [:!Cright_arrow : [:term]]            ;                                                 ;
+         [:!Cup_arrow :!To [:term]]              ;                                                 ;
+         [:!Cdown_arrow :!Tp [:term]]            ;                                                 ;
+
+         [:!CSleft_arrow :!Oleft_arrow [:term]]  ;                                                 ;
+         [:!CSright_arrow :!Oright_arrow [:term]];                                                 ;
+         [:!CSup_arrow :!Sf4 [:term]]            ;                                                 ;
+         [:!CSdown_arrow :!Sf5 [:term]]          ;                                                 ;
+
+         ; [:!OCleft_arrow : [:term]]            ;                                                 ;
+         ; [:!OCright_arrow : [:term]]           ;                                                 ;
+         [:!OCup_arrow :!Sf11 [:term]]           ;                                                 ;
+         [:!OCdown_arrow :!Sf12 [:term]]         ;                                                 ;
+
+         ; [:!TCleft_arrow : [:term]]            ;                                                 ;
+         ; [:!TCright_arrow : [:term]]           ;                                                 ;
+         [:!TCleft_arrow :!OTf8 [:term]]         ; broot viewer & helix tab                        ;
+         [:!TCright_arrow :!OTf9 [:term]]        ; broot viewer & helix tab                        ;
+
+         [:!Creturn_or_enter :!OTf6 [:term]]     ;                                                 ;
+
+         [:left_option :left_option [:term] {:alone [:!Sf10]}]                                     ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
 {:des "Alacritty - Control remappings"
  :rules [;
          [:!EQRtab :!Th [:term]]                 ; del-tab                                         ;
@@ -26,159 +94,4 @@
          [:!Rleft_option :!Tl [:term]]           ; shift-alt                                       ;
          ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Alacritty control - alphabet"
- :rules [;
-         ; TODO: consider migrating to corresponding modifier
-         ; [: :!Ta [:term]]            REDUNDANT (editor)                                          ;
-         ; [: :!Tb [:term]]            REDUNDANT (editor)                                          ;
-         ; [: :!Tc [:term]]            DEFAULT                                                     ;
-         ; [: :!Td [:term]]            DEFAULT                                                     ;
-         ; [: :!Te [:term]]            REDUNDANT (editor)                                          ;
-         ; [: :!Tf [:term]]            REDUNDANT (editor)                                          ;
-         ; [: :!Tg [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Th [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Ti [:term]]            DEFAULT                                                     ;
-         ; [: :!Tj [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Tk [:term]]            COLLISION (delete)                                          ;
-         ; [: :!Tl [:term]]            COLLISION (delete)                                          ;
-         ; [: :!Tm [:term]]            DEFAULT                                                     ;
-         ; [: :!Tn [:term]]            COLLISION (remapped)                                        ;
-         [:!Cup_arrow :!To [:term]]              ; cmd-up                                          ;
-         [:!Cdown_arrow :!Tp [:term]]            ; cmd-down                                        ;
-         ; [: :!Tq [:term]]            DEFAULT                                                     ;
-         ; [: :!Tr [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Ts [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Tt [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Tu [:term]]            COLLISION (delete)                                          ;
-         ; [: :!Tv [:term]]            REDUNDANT (editor)                                          ;
-         ; [: :!Tw [:term]]            COLLISION (delete)                                          ;
-         ; [: :!Tx [:term]]            REDUNDANT (editor)                                          ;
-         ; [: :!Ty [:term]]            COLLISION (remapped)                                        ;
-         ; [: :!Tz [:term]]            DEFAULT                                                     ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Alacritty control - command - alphabet"
- :rules [;
-         [:!TCa :!Of19 [:term]]                                                                    ;
-         [:!TCb :!Of20 [:term]]                                                                    ;
-         [:!TCc :!Sf13 [:term]]                                                                    ;
-         [:!TCd :!Sf14 [:term]]                                                                    ;
-         [:!TCe :!Sf15 [:term]]                                                                    ;
-         [:!TCf :!Sf16 [:term]]                                                                    ;
-         [:!TCg :!Sf17 [:term]]                                                                    ;
-         [:!TCh :!Sf18 [:term]]                                                                    ;
-         [:!TCi :!Sf19 [:term]]                                                                    ;
-         [:!TCj :!Sf20 [:term]]                                                                    ;
-         [:!TCk :!OTf19 [:term]]                                                                   ;
-         [:!TCl :!OTf20 [:term]]                                                                   ;
-         [:!TCm :!SOTf6 [:term]]                                                                   ;
-         [:!TCn :!SOTf7 [:term]]                                                                   ;
-         [:!TCo :!SOTf8 [:term]]                                                                   ;
-         [:!TCp :!SOTf9 [:term]]                                                                   ;
-         [:!TCq :!SOTf10 [:term]]                                                                  ;
-         [:!TCr :!SOTf11 [:term]]                                                                  ;
-         [:!TCs :!SOTf12 [:term]]                                                                  ;
-         [:!TCt :!SOTf13 [:term]]                                                                  ;
-         [:!TCu :!SOTf14 [:term]]                                                                  ;
-         [:!TCv :!SOTf15 [:term]]                                                                  ;
-         [:!TCw :!SOTf16 [:term]]                                                                  ;
-         [:!TCx :!SOTf17 [:term]]                                                                  ;
-         [:!TCy :!SOTf18 [:term]]                                                                  ;
-         [:!TCz :!SOTf19 [:term]]                                                                  ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Alacritty software bindings"
- :rules [;
-         [:!TChyphen :!OTf15]                              ; ctrl-cmd--
-         [:!TCequal_sign :!OTf16]                          ; ctrl-cmd-=
-         ; helix comments
-         [:!TCopen_bracket :!Sf8]                          ; ctrl-cmd-[
-         [:!TCclose_bracket :!Sf9]                         ; ctrl-cmd-]
-         ; helix jump
-         [:!TCsemicolon :!Of13 [:term]]                    ; ctrl-cmd-;
-         [:!TCquote :!Of14 [:term]]                        ; ctrl-cmd-'
-         [:!TCbackslash :!Of15 [:term]]                    ; ctrl-cmd-\
-         ; helix diagnostics
-         [:!TCcomma :!Of16]                                ; ctrl-cmd-,
-         [:!TCperiod :!Of17]                               ; ctrl-cmd-.
-         [:!TCslash :!Of18]                                ; ctrl-cmd-/
-
-         ; broot create
-         [:!TCreturn_or_enter :!Sf6 [:term]]               ; ctrl-cmd-enter
-         ; [:!TCreturn_or_enter :!Sf6 [:term]]             ; ctrl-cmd-enter
-         [:!TCdelete_or_backspace :!Sf7 [:term]]           ; ctrl-cmd-bspace
-         ; [:!TCdelete_or_backspace :!Sf7]                 ; ctrl-cmd-bspace
-         ; helix split
-         [:!TCright_shift :!OTf10 [:term]]                 ; ctrl-cmd-shift
-         [:!TCright_option :!OTf11 [:term]]                ; ctrl-cmd-alt
-         [:!TCright_command :!OTf12 [:term]]               ; ctrl-cmd-cmd
-         ; helix tab & broot viewer
-         [:!TCspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
-         [:!TCleft_arrow :!OTf8 [:term]]                   ; ctrl-cmd-left
-         [:!TCright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
-         ; [:!TCspacebar :f7 [:term]]                     ; ctrl-cmd-space
-         ; [:!TCleft_arrow :f8 [:term]]                   ; ctrl-cmd-left
-         ; [:!TCright_arrow :f9 [:term]]                  ; ctrl-cmd-right
-
-         ; [:!TCleft_command []]                                                                   ;
-         ; [:!TCleft_option []]                                                                    ;
-         ; [:!TCleft_control []]                                                                   ;
-         ; [:!TCleft_shift []]                                                                     ;
-         ; [:!TCcaps_lock []]                                                                      ;
-         ; [:!TCtab []]                                                                            ;
-         ; [:!TCnon_us_backslash []]                                                               ;
-         ; [:!TCescape []]                                                                         ;
-
-         [:!TCkeypad_plus :!Sf8]                           ; ctrl-cmd-+
-         [:!TCkeypad_enter :!Sf9]                          ; ctrl-cmd-enter
-
-         [:!TCkeypad_9 :!Of13 [:term]]                     ; ctrl-cmd-9
-         [:!TCkeypad_6 :!Of14 [:term]]                     ; ctrl-cmd-6
-         [:!TCkeypad_3 :!Of15 [:term]]                     ; ctrl-cmd-3
-         [:!TCkeypad_period :!Sf6 [:term]]                 ; ctrl-cmd-.
-
-         [:!TCkeypad_slash :!Of16]                         ; ctrl-cmd-/
-         [:!TCkeypad_asterisk :!Of17]                      ; ctrl-cmd-*
-         [:!TCkeypad_hyphen :!Of18]                        ; ctrl-cmd--
-
-         ; helix symbols
-         [:!TCkeypad_7 :!OTf13]                            ; ctrl-cmd-7
-         [:!TCkeypad_8 :!OTf14]                            ; ctrl-cmd-8
-         [:!TCkeypad_4 :!OTf15]                            ; ctrl-cmd-4
-         [:!TCkeypad_5 :!OTf16]                            ; ctrl-cmd-5
-         [:!TCkeypad_1 :!OTf17]                            ; ctrl-cmd-1
-         [:!TCkeypad_2 :!OTf18]                            ; ctrl-cmd-2
-         [:!TCkeypad_0 :!Sf7]                              ; ctrl-cmd-0
-
-         ; alt down
-         [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up
-         [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
-
-         ; movement
-         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left
-         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right
-         [:!CSup_arrow :!Sf4 [:term]]                      ; cmd-shift-up
-         [:!CSdown_arrow :!Sf5 [:term]]                    ; cmd-shift-down
-
-         ; broot open
-         [:!Creturn_or_enter :!OTf6 [:term]]               ; cmd-enter
-
-         ; broot toggle
-         [:left_option :left_option [:term]                ; alt-tab
-          ; {:alone [:f10]}]
-          {:alone [:!Sf10]}]
-
-         ; version control
-         [:!OCup_arrow :!Sf11 [:term]]                     ; alt-cmd-up
-         [:!OCdown_arrow :!Sf12 [:term]]                   ; alt-cmd-down
-         ]}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,29 +1,67 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Lapce
-{:des "Lapce - Control remappings"
+{:des "Lapce - alt - alphabet"
  :rules [;
-         ; [:!EQRtab :!Th [:lapce]]                        ; del-tab
-         ; [:!EQRcaps_lock :!Tg [:lapce]]                  ; del-caps
-         ; [:!EQRleft_shift :!Oc [:lapce]]                 ; del-shift
-         [:!EQRleft_control :!Cp [:lapce]]                 ; del-ctrl
-         ; [:!EQRleft_option :!Ts [:lapce]]                ; del-alt
-         [:!EQRleft_command :f1 [:lapce]]                  ; del-cmd
-         ; [:!EQRspacebar :!Ty [:lapce]]                   ; del-space
-         ; [:!EQRright_command :!Tj [:lapce]]              ; del-cmd
-         ; [:!EQRright_option :!Tn [:lapce]]               ; del-alt
+         [:!Oa :!CSl [:lapce]]                                                                     ;
+         ; [:!Ob : [:lapce]]                                                                       ;
+         [:!Oc :!Cbackslash [:lapce]]                                                              ;
+         [:!Od :!Cd [:lapce]]                                                                      ;
+         ; [:!Oe : [:lapce]]                                                                       ;
+         ; [:!Of : [:lapce]]                                                                       ;
+         ; [:!Og : [:lapce]]                                                                       ;
+         ; [:!Oh : [:lapce]]                                                                       ;
+         [:!Oi :!Cclose_bracket [:lapce]]                                                          ;
+         [:!Oj :!OCdown_arrow [:lapce]]                                                            ;
+         [:!Ok :!OCup_arrow [:lapce]]                                                              ;
+         ; [:!Ol : [:lapce]]                                                                       ;
+         ; [:!Om : [:lapce]]                                                                       ;
+         ; [:!On : [:lapce]]                                                                       ;
+         [:!Oo :!Copen_bracket [:lapce]]                                                           ;
+         ; [:!Op : [:lapce]]                                                                       ;
+         ; [:!Oq : [:lapce]]                                                                       ;
+         ; [:!Or : [:lapce]]                                                                       ;
+         ; [:!Os : [:lapce]]                                                                       ;
+         ; [:!Ot : [:lapce]]                                                                       ;
+         [:!Ou :!Cz [:lapce]]                                                                      ;
+         ; [:!Ov : [:lapce]]                                                                       ;
+         ; [:!Ow : [:lapce]]                                                                       ;
+         ; [:!Ox : [:lapce]]                                                                       ;
+         ; [:!Oy : [:lapce]]                                                                       ;
+         [:!Oz :!Cu [:lapce]]                                                                      ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Lapce
-{:des "Lapce - Interactive delete"
+{:des "Lapce - alt - alphabet"
  :rules [;
-         ; [:!Sright_option :!Odelete_forward [:lapce]]      ; shift-alt
-         [:!Sright_command :!Tk [:lapce]]                  ; shift-cmd
-         ; [:!Rleft_control :!Odelete_or_backspace [:lapce]] ; shift-ctrl
-         ; [:!Rleft_command :!Cdelete_or_backspace [:lapce]] ; shift-cmd
-         ; [:!Rleft_option : [:lapce]]                     ; shift-alt
+         ; [:!SOa : [:lapce]]                                                                      ;
+         ; [:!SOb : [:lapce]]                                                                      ;
+         [:!SOc :!Cslash [:lapce]]                                                                 ;
+         ; [:!SOd : [:lapce]]                                                                      ;
+         ; [:!SOe : [:lapce]]                                                                      ;
+         ; [:!SOf : [:lapce]]                                                                      ;
+         ; [:!SOg : [:lapce]]                                                                      ;
+         ; [:!SOh : [:lapce]]                                                                      ;
+         ; [:!SOi : [:lapce]]                                                                      ;
+         ; [:!SOj : [:lapce]]                                                                      ;
+         ; [:!SOk : [:lapce]]                                                                      ;
+         [:!SOl :!Cl [:lapce]]                                                                     ;
+         ; [:!SOm : [:lapce]]                                                                      ;
+         ; [:!SOn : [:lapce]]                                                                      ;
+         ; [:!SOo : [:lapce]]                                                                      ;
+         ; [:!SOp : [:lapce]]                                                                      ;
+         ; [:!SOq : [:lapce]]                                                                      ;
+         ; [:!SOr : [:lapce]]                                                                      ;
+         ; [:!SOs : [:lapce]]                                                                      ;
+         ; [:!SOt : [:lapce]]                                                                      ;
+         [:!SOu :!CSz [:lapce]]                                                                    ;
+         ; [:!SOv : [:lapce]]                                                                      ;
+         ; [:!SOw : [:lapce]]                                                                      ;
+         [:!SOx :!CSk [:lapce]]                                                                    ;
+         ; [:!SOy : [:lapce]]                                                                      ;
+         ; [:!SOz : [:lapce]]                                                                      ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -48,67 +86,29 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Lapce
-{:des "Lapce - alt - alphabet"
+{:des "Lapce - Control remappings"
  :rules [;
-         [:!Oa :!CSl [:lapce]]                             ;
-         ; [:!Ob : [:lapce]]                               ;
-         [:!Oc :!Cbackslash [:lapce]]                      ;
-         [:!Od :!Cd [:lapce]]                              ;
-         ; [:!Oe : [:lapce]]                               ;
-         ; [:!Of : [:lapce]]                               ;
-         ; [:!Og : [:lapce]]                               ;
-         ; [:!Oh : [:lapce]]                               ;
-         [:!Oi :!Cclose_bracket [:lapce]]                  ;
-         [:!Oj :!OCdown_arrow [:lapce]]                    ;
-         [:!Ok :!OCup_arrow [:lapce]]                      ;
-         ; [:!Ol : [:lapce]]                               ;
-         ; [:!Om : [:lapce]]                               ;
-         ; [:!On : [:lapce]]                               ;
-         [:!Oo :!Copen_bracket [:lapce]]                   ;
-         ; [:!Op : [:lapce]]                               ;
-         ; [:!Oq : [:lapce]]                               ;
-         ; [:!Or : [:lapce]]                               ;
-         ; [:!Os : [:lapce]]                               ;
-         ; [:!Ot : [:lapce]]                               ;
-         [:!Ou :!Cz [:lapce]]                              ;
-         ; [:!Ov : [:lapce]]                               ;
-         ; [:!Ow : [:lapce]]                               ;
-         ; [:!Ox : [:lapce]]                               ;
-         ; [:!Oy : [:lapce]]                               ;
-         [:!Oz :!Cu [:lapce]]                              ;
+         ; [:!EQRtab :!Th [:lapce]]                        ; del-tab
+         ; [:!EQRcaps_lock :!Tg [:lapce]]                  ; del-caps
+         ; [:!EQRleft_shift :!Oc [:lapce]]                 ; del-shift
+         [:!EQRleft_control :!Cp [:lapce]]                 ; del-ctrl
+         ; [:!EQRleft_option :!Ts [:lapce]]                ; del-alt
+         [:!EQRleft_command :f1 [:lapce]]                  ; del-cmd
+         ; [:!EQRspacebar :!Ty [:lapce]]                   ; del-space
+         ; [:!EQRright_command :!Tj [:lapce]]              ; del-cmd
+         ; [:!EQRright_option :!Tn [:lapce]]               ; del-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Lapce
-{:des "Lapce - alt - alphabet"
+{:des "Lapce - Interactive delete"
  :rules [;
-         ; [:!SOa : [:lapce]]                              ;
-         ; [:!SOb : [:lapce]]                              ;
-         [:!SOc :!Cslash [:lapce]]                         ;
-         ; [:!SOd : [:lapce]]                              ;
-         ; [:!SOe : [:lapce]]                              ;
-         ; [:!SOf : [:lapce]]                              ;
-         ; [:!SOg : [:lapce]]                              ;
-         ; [:!SOh : [:lapce]]                              ;
-         ; [:!SOi : [:lapce]]                              ;
-         ; [:!SOj : [:lapce]]                              ;
-         ; [:!SOk : [:lapce]]                              ;
-         [:!SOl :!Cl [:lapce]]                             ;
-         ; [:!SOm : [:lapce]]                              ;
-         ; [:!SOn : [:lapce]]                              ;
-         ; [:!SOo : [:lapce]]                              ;
-         ; [:!SOp : [:lapce]]                              ;
-         ; [:!SOq : [:lapce]]                              ;
-         ; [:!SOr : [:lapce]]                              ;
-         ; [:!SOs : [:lapce]]                              ;
-         ; [:!SOt : [:lapce]]                              ;
-         [:!SOu :!CSz [:lapce]]                            ;
-         ; [:!SOv : [:lapce]]                              ;
-         ; [:!SOw : [:lapce]]                              ;
-         [:!SOx :!CSk [:lapce]]                            ;
-         ; [:!SOy : [:lapce]]                              ;
-         ; [:!SOz : [:lapce]]                              ;
+         ; [:!Sright_option :!Odelete_forward [:lapce]]      ; shift-alt
+         [:!Sright_command :!Tk [:lapce]]                  ; shift-cmd
+         ; [:!Rleft_control :!Odelete_or_backspace [:lapce]] ; shift-ctrl
+         ; [:!Rleft_command :!Cdelete_or_backspace [:lapce]] ; shift-cmd
+         ; [:!Rleft_option : [:lapce]]                     ; shift-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
