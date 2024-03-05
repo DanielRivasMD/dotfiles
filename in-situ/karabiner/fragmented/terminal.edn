@@ -3,8 +3,6 @@
 ; Alacritty
 {:des "Alacritty - Control remappings"
  :rules [;
-         ; TODO: map deletes
-         ; TODO: format editors
          [:!EQRtab :!Th [:term]]                 ; del-tab                                         ;
          [:!EQRcaps_lock :!Tg [:term]]           ; del-caps                                        ;
          [:!EQRleft_shift :!Oc [:term]]          ; del-shift                                       ;
@@ -21,7 +19,6 @@
 ; Alacritty
 {:des "Alacritty - Interactive delete"
  :rules [;
-         ; TODO: map shifts
          [:!Sright_option :!Od [:term]]          ; shift-alt                                       ;
          [:!Sright_command :!Tk [:term]]         ; shift-cmd                                       ;
          [:!Rleft_control :!Tw [:term]]          ; shift-ctrl                                      ;
@@ -101,63 +98,53 @@
 ; Alacritty
 {:des "Alacritty software bindings"
  :rules [;
-         ; alt down
-         [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up
-         [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
-
-         ; movement
-         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left
-         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right
-         [:!CSup_arrow :!Sf4 [:term]]                      ; cmd-shift-up
-         [:!CSdown_arrow :!Sf5 [:term]]                    ; cmd-shift-down
-
-         ; broot open
-         [:!Creturn_or_enter :!OTf6 [:term]]               ; cmd-enter
-
-         ; helix tab & broot viewer
-         [:!TCspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
-         [:!TCleft_arrow :!OTf8 [:term]]                   ; ctrl-cmd-left
-         [:!TCright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
-
-         ; helix split
-         [:!TCright_shift :!OTf10 [:term]]                 ; ctrl-cmd-shift
-         [:!TCright_alt :!OTf11 [:term]]                   ; ctrl-cmd-alt
-         [:!TCright_command :!OTf12 [:term]]               ; ctrl-cmd-cmd
-
-         ; broot create
-         [:!TCreturn_or_enter :!Sf6 [:term]]               ; ctrl-cmd-enter
-         [:!TCdelete_or_backspace :!Sf7 [:term]]           ; ctrl-cmd-bspace
-
+         [:!TChyphen :!OTf15]                              ; ctrl-cmd--
+         [:!TCequal_sign :!OTf16]                          ; ctrl-cmd-=
          ; helix comments
          [:!TCopen_bracket :!Sf8]                          ; ctrl-cmd-[
          [:!TCclose_bracket :!Sf9]                         ; ctrl-cmd-]
-
-         [:!TCkeypad_plus :!Sf8]                           ; ctrl-cmd-+
-         [:!TCkeypad_enter :!Sf9]                          ; ctrl-cmd-enter
-
-         ; broot toggle
-         [:left_option :left_option [:term]                ; alt-tab
-          {:alone [:!Sf10]}]
-
-         ; version control
-         [:!OCup_arrow :!Sf11 [:term]]                     ; alt-cmd-up
-         [:!OCdown_arrow :!Sf12 [:term]]                   ; alt-cmd-down
-
          ; helix jump
          [:!TCsemicolon :!Of13 [:term]]                    ; ctrl-cmd-;
          [:!TCquote :!Of14 [:term]]                        ; ctrl-cmd-'
          [:!TCbackslash :!Of15 [:term]]                    ; ctrl-cmd-\
+         ; helix diagnostics
+         [:!TCcomma :!Of16]                                ; ctrl-cmd-,
+         [:!TCperiod :!Of17]                               ; ctrl-cmd-.
+         [:!TCslash :!Of18]                                ; ctrl-cmd-/
+
+         ; broot create
+         [:!TCreturn_or_enter :!Sf6 [:term]]               ; ctrl-cmd-enter
          ; [:!TCreturn_or_enter :!Sf6 [:term]]             ; ctrl-cmd-enter
+         [:!TCdelete_or_backspace :!Sf7 [:term]]           ; ctrl-cmd-bspace
+         ; [:!TCdelete_or_backspace :!Sf7]                 ; ctrl-cmd-bspace
+         ; helix split
+         [:!TCright_shift :!OTf10 [:term]]                 ; ctrl-cmd-shift
+         [:!TCright_option :!OTf11 [:term]]                ; ctrl-cmd-alt
+         [:!TCright_command :!OTf12 [:term]]               ; ctrl-cmd-cmd
+         ; helix tab & broot viewer
+         [:!TCspacebar :!OTf7 [:term]]                     ; ctrl-cmd-space
+         [:!TCleft_arrow :!OTf8 [:term]]                   ; ctrl-cmd-left
+         [:!TCright_arrow :!OTf9 [:term]]                  ; ctrl-cmd-right
+         ; [:!TCspacebar :f7 [:term]]                     ; ctrl-cmd-space
+         ; [:!TCleft_arrow :f8 [:term]]                   ; ctrl-cmd-left
+         ; [:!TCright_arrow :f9 [:term]]                  ; ctrl-cmd-right
+
+         ; [:!TCleft_command []]                                                                   ;
+         ; [:!TCleft_option []]                                                                    ;
+         ; [:!TCleft_control []]                                                                   ;
+         ; [:!TCleft_shift []]                                                                     ;
+         ; [:!TCcaps_lock []]                                                                      ;
+         ; [:!TCtab []]                                                                            ;
+         ; [:!TCnon_us_backslash []]                                                               ;
+         ; [:!TCescape []]                                                                         ;
+
+         [:!TCkeypad_plus :!Sf8]                           ; ctrl-cmd-+
+         [:!TCkeypad_enter :!Sf9]                          ; ctrl-cmd-enter
 
          [:!TCkeypad_9 :!Of13 [:term]]                     ; ctrl-cmd-9
          [:!TCkeypad_6 :!Of14 [:term]]                     ; ctrl-cmd-6
          [:!TCkeypad_3 :!Of15 [:term]]                     ; ctrl-cmd-3
          [:!TCkeypad_period :!Sf6 [:term]]                 ; ctrl-cmd-.
-
-         ; helix diagnostics
-         [:!TCcomma :!Of16]                                ; ctrl-cmd-,
-         [:!TCperiod :!Of17]                               ; ctrl-cmd-.
-         [:!TCslash :!Of18]                                ; ctrl-cmd-/
 
          [:!TCkeypad_slash :!Of16]                         ; ctrl-cmd-/
          [:!TCkeypad_asterisk :!Of17]                      ; ctrl-cmd-*
@@ -172,9 +159,26 @@
          [:!TCkeypad_2 :!OTf18]                            ; ctrl-cmd-2
          [:!TCkeypad_0 :!Sf7]                              ; ctrl-cmd-0
 
-         [:!TChyphen :!OTf15]                              ; ctrl-cmd--
-         [:!TCequal_sign :!OTf16]                          ; ctrl-cmd-=
-         ; [:!TCdelete_or_backspace :!Sf7]                 ; ctrl-cmd-bspace
-         ]}
+         ; alt down
+         [:!Oup_arrow :!Sf1 [:term]]                       ; alt-up
+         [:!Odown_arrow :!Sf2 [:term]]                     ; alt-down
 
+         ; movement
+         [:!CSleft_arrow :!Oleft_arrow [:term]]            ; cmd-shift-left
+         [:!CSright_arrow :!Oright_arrow [:term]]          ; cmd-shift-right
+         [:!CSup_arrow :!Sf4 [:term]]                      ; cmd-shift-up
+         [:!CSdown_arrow :!Sf5 [:term]]                    ; cmd-shift-down
+
+         ; broot open
+         [:!Creturn_or_enter :!OTf6 [:term]]               ; cmd-enter
+
+         ; broot toggle
+         [:left_option :left_option [:term]                ; alt-tab
+          ; {:alone [:f10]}]
+          {:alone [:!Sf10]}]
+
+         ; version control
+         [:!OCup_arrow :!Sf11 [:term]]                     ; alt-cmd-up
+         [:!OCdown_arrow :!Sf12 [:term]]                   ; alt-cmd-down
+         ]}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
