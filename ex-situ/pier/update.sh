@@ -2,34 +2,44 @@
 ####################################################################################################
 
 # config
-source $HOME/.archive/ex-situ/pier/.config.sh
+source "${ARCHIVE}/.config/config.sh"
 
 ####################################################################################################
-# deamon
+# daemon
 ####################################################################################################
 
 # control daemon
-source "${update}/.daemon.sh"
+source "${PIER}/.daemon.sh"
+if check_daemon
+then
+  # create group
+  pueue group add "${pueueUG}"
+
+  # parallel jobs
+  pueue parallel --group "${pueueUG}" 3
+else
+  exit
+fi
 
 ####################################################################################################
 # homebrew
 ####################################################################################################
 
 # list & upgrade homebrew
-pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ex-situ/pier/.update/brew.sh'
+pueue add --group "${pueueUG}" -- 'source ~/.archive/ex-situ/pier/.update/brew.sh'
 
 ####################################################################################################
 # rust
 ####################################################################################################
 
 # check & upgrade rustc compiler & cargo binaries
-pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ex-situ/pier/.update/rust.sh'
+pueue add --group "${pueueUG}" -- 'source ~/.archive/ex-situ/pier/.update/rust.sh'
 
 ####################################################################################################
 # go
 ####################################################################################################
 
 # upgrade go binaries
-pueue add --group "${pueueUGroup}" -- 'source ~/.archive/ex-situ/pier/.update/go.sh'
+pueue add --group "${pueueUG}" -- 'source ~/.archive/ex-situ/pier/.update/go.sh'
 
 ####################################################################################################
