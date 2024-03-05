@@ -6,7 +6,7 @@ C-space = ["hover"]
 ####################################################################################################
 
 # jump back
-S-F10 = ["goto_last_modification"]                         # alt               # go back
+F10 = ["goto_last_modification"]                         # alt               # go back
 
 # delete
 del = ["delete_selection_noyank"]
@@ -17,8 +17,8 @@ A-d = ["delete_word_forward"]                              # shift-alt         #
 # movement
 A-b = ["move_prev_word_start", "collapse_selection"]       # alt-left          # word left
 A-f = ["move_next_word_end", "collapse_selection"]         # alt-right         # word right
-S-F1 = ["goto_prev_paragraph", "collapse_selection"]       # alt-up            # prev block
-S-F2 = ["goto_next_paragraph", "collapse_selection"]       # alt-down          # next block
+F1 = ["goto_prev_paragraph", "collapse_selection"]       # alt-up            # prev block
+F2 = ["goto_next_paragraph", "collapse_selection"]       # alt-down          # next block
 
 # movement
 S-left = ["extend_char_left"]                              # shift-left        # select left
@@ -48,9 +48,9 @@ C-up = ["jump_view_up"]                                    # ctrl-up           #
 C-down = ["jump_view_down"]                                # ctrl-down         # lower split
 
 # helix tab
-A-C-F7 = ["goto_last_accessed_file"]                       # ctrl-cmd-space    # last tab
-A-C-F8 = ["goto_previous_buffer"]                          # ctrl-cmd-left     # prev tab
-A-C-F9 = ["goto_next_buffer"]                              # ctrl-cmd-right    # next tab
+F7 = ["goto_last_accessed_file"]                       # ctrl-cmd-space    # last tab
+F8 = ["goto_previous_buffer"]                          # ctrl-cmd-left     # prev tab
+F9 = ["goto_next_buffer"]                              # ctrl-cmd-right    # next tab
 
 # helix split
 A-C-F10 = ["vsplit"]                                       # ctrl-cmd-alt      # vertical split

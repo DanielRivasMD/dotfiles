@@ -38,8 +38,8 @@
  :rules [;
          ; [:!Oleft_arrow : [:term]]             ;                                                 ;
          ; [:!Oright_arrow : [:term]]            ;                                                 ;
-         [:!Oup_arrow :!Sf1 [:term]]             ;                                                 ;
-         [:!Odown_arrow :!Sf2 [:term]]           ;                                                 ;
+         [:!Oup_arrow :f1 [:term]]               ;                                                 ;
+         [:!Odown_arrow :f2 [:term]]             ;                                                 ;
 
          ; [:!Cleft_arrow : [:term]]             ;                                                 ;
          ; [:!Cright_arrow : [:term]]            ;                                                 ;
@@ -58,12 +58,12 @@
 
          ; [:!TCleft_arrow : [:term]]            ;                                                 ;
          ; [:!TCright_arrow : [:term]]           ;                                                 ;
-         [:!TCleft_arrow :!OTf8 [:term]]         ; broot viewer & helix tab                        ;
-         [:!TCright_arrow :!OTf9 [:term]]        ; broot viewer & helix tab                        ;
+         [:!TCleft_arrow :f8 [:term]]            ; broot viewer & helix tab                        ;
+         [:!TCright_arrow :f9 [:term]]           ; broot viewer & helix tab                        ;
 
          [:!Creturn_or_enter :!OTf6 [:term]]     ;                                                 ;
 
-         [:left_option :left_option [:term] {:alone [:!Sf10]}]                                     ;
+         [:left_option :left_option [:term] {:alone [:f10]}]                                       ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
