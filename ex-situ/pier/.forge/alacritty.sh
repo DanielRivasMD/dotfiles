@@ -6,8 +6,8 @@
 # forge alacritty
 function _forge() {
 
-  # declarations
-  source $HOME/.archive/.just/.config.sh
+  # config
+  source "${IN_SILICO}/config.sh"
 
   # check & remove target
   if test -f "${config}/alacritty/alacritty.toml"

@@ -6,10 +6,10 @@
 # forge goku
 function _forge() {
 
-  # declarations
-  source $HOME/.archive/.just/.config.sh
+  # config
+  source "${IN_SILICO}/config.sh"
 
-# format
+  # format
   cljfmt fix "${fragmented}/"*
 
   # create temporary files
