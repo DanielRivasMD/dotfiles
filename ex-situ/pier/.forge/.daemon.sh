@@ -1,13 +1,17 @@
 ####################################################################################################
 
 # check daemon status
-if test ! -f "${pueuedTracker}"
+if test ! -f "${pueuedTracker}" && test ! -f "${pueueSocket}"
 then
-  # start daemon
-  pueued --daemonize
+  source ${PIER}/breakCross.sh $COLUMNS
+  echo ''
+  echo "${CYAN}pueue${YELLOW} daemon${NC} is not currently running${NC}"
+  echo ''
+  echo "start by calling ${CYAN}pueued${GREEN} --daemonize${NC}"
+  echo ''
+  source ${PIER}/breakCross.sh $COLUMNS
 
-  # wait for daemon
-  sleep 1
+  exit 0
 fi
 
 # create group
