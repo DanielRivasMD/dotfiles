@@ -11,8 +11,8 @@
          [:!WQRreturn_or_enter :!OTCf1 [:browser]]                        ; t-enter  ; current tab ;
 
          [:!WQRright_shift :!OTf1 [:browser]]                             ; t-shift  ; new tab     ;
-         [:!WQRspacebar :!OCf1 [:browser]]                                ; t-space  ; new tab & go;
-         [:!WQRdelete_or_backspace :!TCf1 [:browser]]                     ; t-bspace ; multitab    ;
+         [:!WQRspacebar :!TCf1 [:browser]]                                ; t-space  ; new tab & go;
+         [:!WQRdelete_or_backspace :!OCf1 [:browser]]                     ; t-bspace ; multitab    ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
