@@ -99,7 +99,7 @@ description = "select right panel"
 # directory
 [[verbs]]
 invocation = "mk {subpath}"
-key = "alt-ctrl-f10"
+key = "shift-f4"
 execution = "mkdir {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
@@ -109,7 +109,7 @@ description = "`ctrl-cmd-shift` -> create directory"
 [[verbs]]
 external = "mv {file} {other-panel-directory}"
 invocation = "move_to_pane"
-key = "alt-ctrl-f11"
+key = "shift-f5"
 leave_broot = false
 auto_exec = true
 description = "`ctrl-cmd-alt` -> move file to pane"
