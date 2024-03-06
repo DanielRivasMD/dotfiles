@@ -46,9 +46,10 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking config @config${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${micro}" "${config}"                                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}micro${NC} directory"
+ln -sf "${bpython}" "${config}"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bpython${NC} config"
 ln -sf "${helix}" "${config}"                                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}helix${NC} config"
 ln -sf "${lsd}" "${config}"                                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lsd${NC} directory"
+ln -sf "${micro}" "${config}"                                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}micro${NC} directory"
 ln -sf "${sheldon}" "${config}"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}sheldon${NC} directory"
 ln -sf "${starship}" "${config}"                                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}starship${NC} directory"
 echo "${RED}====================================================================================================${NC}"

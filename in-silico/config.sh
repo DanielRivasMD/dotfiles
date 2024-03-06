@@ -82,10 +82,11 @@ export pier="${ex_situ}/pier"
 export screen="${ex_situ}/screen"
 
 # @config
-export micro="${ex_situ}/micro"
+export bpython="${ex_situ}/bpython"
 export helix="${ex_situ}/helix"
 export moded="${helix}/modes"
 export lsd="${ex_situ}/lsd"
+export micro="${ex_situ}/micro"
 export sheldon="${ex_situ}/sheldon"
 export starship="${ex_situ}/starship"
 
