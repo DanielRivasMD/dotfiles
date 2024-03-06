@@ -85,6 +85,9 @@
          [:!OSdown_arrow :!TSdown_arrow [:zed]]            ; select next paragraph
 
          [:!TCright_command :!OCy [:zed]]                  ; close docks
+
+         [:!TCd :f12 [:zed]]                               ; definition
+         [:!TCr :!OSf12 [:zed]]                            ; references
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
