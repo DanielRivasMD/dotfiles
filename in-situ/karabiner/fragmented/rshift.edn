@@ -49,15 +49,15 @@
 
          ; [:!Rdelete_or_backspace []]                                                             ;
          ; [:!Rreturn_or_enter []]                                                                 ;
-         ; [:!Rright_shift []]         NOT AVAILABLE                                               ;
+         ; [:!Rright_shift []]                   NOT AVAILABLE                                     ;
          ; [:!Rright_option []]                                                                    ;
          ; [:!Rright_command []]                                                                   ;
          ; [:!Rspacebar []]                                                                        ;
 
-         ; [:!Rleft_command []]                                                                    ;
-         ; [:!Rleft_option []]                                                                     ;
-         ; [:!Rleft_control []]                                                                    ;
-         ; [:!Rleft_shift []]                                                                      ;
+         [:!Rleft_command :!Tu [:term]]                                                            ;
+         [:!Rleft_option :!Tl [:term]]                                                             ;
+         [:!Rleft_control :!Tw [:term]]                                                            ;
+         [:!Rleft_shift :delete_or_backspace]                                                      ;
          ; [:!Rcaps_lock []]                                                                       ;
          ; [:!Rtab []]                                                                             ;
          ; [:!Rnon_us_backslash []]                                                                ;
