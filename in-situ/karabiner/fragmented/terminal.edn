@@ -36,13 +36,32 @@
 ; Alacritty
 {:des "Alacritty - Arrow"
  :rules [;
-         [:left_option :left_option [:term] {:alone [:f12]}]                                       ;
-         [:!Creturn_or_enter :f3 [:term]]        ;                                                 ;
+         [:left_option :left_option [:term] {:alone [:f2]}]                                        ;
 
          ; [:!Oleft_arrow : [:term]]             ;                                                 ;
          ; [:!Oright_arrow : [:term]]            ;                                                 ;
-         [:!Oup_arrow :f1 [:term]]               ;                                                 ;
-         [:!Odown_arrow :f2 [:term]]             ;                                                 ;
+         [:!Oup_arrow :f4 [:term]]               ; lazygit move                                    ;
+         [:!Odown_arrow :f5 [:term]]             ; lazygit move                                    ;
+
+         ; [:!Tleft_arrow : [:term]]             ;                                                 ;
+         ; [:!Tright_arrow : [:term]]            ;                                                 ;
+         ; [:!Tup_arrow : [:term]]               ;                                                 ;
+         ; [:!Tdown_arrow : [:term]]             ;                                                 ;
+
+         ; [:!Cleft_arrow : [:term]]             ;                                                 ;
+         ; [:!Cright_arrow : [:term]]            ;                                                 ;
+         [:!Cup_arrow :f6 [:term]]               ; lazygit, broot & helix move                     ;
+         [:!Cdown_arrow :f7 [:term]]             ; lazygit, broot & helix move                     ;
+
+         ; [:!OCleft_arrow : [:term]]            ;                                                 ;
+         ; [:!OCright_arrow : [:term]]           ;                                                 ;
+         [:!OCup_arrow :!Sf7 [:term]]            ;                                                 ;
+         [:!OCdown_arrow :!Sf8 [:term]]          ;                                                 ;
+
+         [:!TCleft_arrow :f8 [:term]]            ; lazygit - broot viewer & helix tab              ;
+         [:!TCright_arrow :f9 [:term]]           ; lazygit - broot viewer & helix tab              ;
+         [:!TCup_arrow :f10 [:term]]             ; lazygit - broot viewer & helix counter          ;
+         [:!TCdown_arrow :f11 [:term]]           ; lazygit - broot viewer & helix counter          ;
 
          ; [:!Sleft_arrow : [:term]]             ;                                                 ;
          ; [:!Sright_arrow : [:term]]            ;                                                 ;
@@ -54,58 +73,15 @@
          ; [:!OSup_arrow : [:term]]              ;                                                 ;
          ; [:!OSdown_arrow : [:term]]            ;                                                 ;
 
-         ; [:!Tleft_arrow : [:term]]             ;                                                 ;
-         ; [:!Tright_arrow : [:term]]            ;                                                 ;
-         ; [:!Tup_arrow : [:term]]               ;                                                 ;
-         ; [:!Tdown_arrow : [:term]]             ;                                                 ;
-
-         ; [:!TCleft_arrow : [:term]]            ;                                                 ;
-         ; [:!TCright_arrow : [:term]]           ;                                                 ;
-         [:!TCleft_arrow :f5 [:term]]            ; broot viewer & helix tab                        ;
-         [:!TCright_arrow :f6 [:term]]           ; broot viewer & helix tab                        ;
-
-         ; [:!Cleft_arrow : [:term]]             ;                                                 ;
-         ; [:!Cright_arrow : [:term]]            ;                                                 ;
-         [:!Cup_arrow :!To [:term]]              ;                                                 ;
-         [:!Cdown_arrow :!Tp [:term]]            ;                                                 ;
+         ; [:!TSleft_arrow : [:term]]            ;                                                 ;
+         ; [:!TSright_arrow : [:term]]           ;                                                 ;
+         ; [:!TSup_arrow : [:term]]              ;                                                 ;
+         ; [:!TSdown_arrow : [:term]]            ;                                                 ;
 
          [:!CSleft_arrow :!Oleft_arrow [:term]]  ;                                                 ;
          [:!CSright_arrow :!Oright_arrow [:term]];                                                 ;
-         [:!CSup_arrow :!Sf7 [:term]]            ;                                                 ;
-         [:!CSdown_arrow :!Sf8 [:term]]          ;                                                 ;
-
-         ; [:!OCleft_arrow : [:term]]            ;                                                 ;
-         ; [:!OCright_arrow : [:term]]           ;                                                 ;
-         [:!OCup_arrow :!Sf9 [:term]]            ;                                                 ;
-         [:!OCdown_arrow :!Sf10 [:term]]         ;                                                 ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Alacritty - Control remappings"
- :rules [;
-         [:!EQRtab :!Th [:term]]                 ; del-tab                                         ;
-         [:!EQRcaps_lock :!Tg [:term]]           ; del-caps                                        ;
-         [:!EQRleft_shift :!Oc [:term]]          ; del-shift                                       ;
-         [:!EQRleft_control :!Tr [:term]]        ; del-ctrl                                        ;
-         [:!EQRleft_option :!Ts [:term]]         ; del-alt                                         ;
-         [:!EQRleft_command :!Tt [:term]]        ; del-cmd                                         ;
-         [:!EQRspacebar :!Ty [:term]]            ; del-space                                       ;
-         [:!EQRright_command :!Tj [:term]]       ; del-cmd                                         ;
-         [:!EQRright_option :!Tn [:term]]        ; del-alt                                         ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Alacritty - Interactive delete"
- :rules [;
-         [:!Sright_option :!Od [:term]]          ; shift-alt                                       ;
-         [:!Sright_command :!Tk [:term]]         ; shift-cmd                                       ;
-         [:!Rleft_control :!Tw [:term]]          ; shift-ctrl                                      ;
-         [:!Rleft_command :!Tu [:term]]          ; shift-cmd                                       ;
-         [:!Rleft_option :!Tl [:term]]           ; shift-alt                                       ;
+         [:!CSup_arrow :!Sf9 [:term]]            ;                                                 ;
+         [:!CSdown_arrow :!Sf10 [:term]]         ;                                                 ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
