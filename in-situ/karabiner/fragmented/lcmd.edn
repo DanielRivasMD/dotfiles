@@ -48,7 +48,7 @@
          ; [:!Cslash []]                                                  ;                        ;
 
          ; [:!Cdelete_or_backspace []]                                    ;                        ;
-         ; [:!Creturn_or_enter []]                                        ;                        ;
+         [:!Creturn_or_enter :f3 [:term]]                                 ;                        ;
          ; [:!Cright_shift []]                                            ;                        ;
          [:!Cright_option [:spacebar :!S8 :equal_sign :spacebar]]         ; ' *= '                 ;
          [:!Cright_command [:spacebar :slash :equal_sign :spacebar]]      ; ' /= '                 ;
@@ -87,7 +87,7 @@
          [:!CSright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '      ;
          ; [:!CSspacebar []]                                                        ;              ;
 
-         ; [:!CSleft_command []]                                                                   ;
+         ; [:!CSleft_command []]                 NOT AVAILABLE                                     ;
          ; [:!CSleft_option []]                                                                    ;
          ; [:!CSleft_control []]                                                                   ;
          ; [:!CSleft_shift []]                                                                     ;
