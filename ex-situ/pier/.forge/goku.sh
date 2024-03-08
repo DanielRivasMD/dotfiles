@@ -46,16 +46,17 @@ function _forge() {
     "${fragmented}/function.edn" \
     "${fragmented}/tab.edn" \
     "${fragmented}/hyper.edn" \
+    "${fragmented}/space.edn" \
+    "${fragmented}/bspace.edn" \
     "${fragmented}/lopt.edn" \
     "${fragmented}/lctrl.edn" \
     "${fragmented}/lcmd.edn" \
-    "${fragmented}/space.edn" \
-    "${fragmented}/ctrl_cmd.edn" \
-    "${fragmented}/rshift.edn" \
+    "${fragmented}/lshift.edn" \
     "${fragmented}/ropt.edn" \
     "${fragmented}/rctrl.edn" \
     "${fragmented}/rcmd.edn" \
-    "${fragmented}/bspace.edn" \
+    "${fragmented}/rshift.edn" \
+    "${fragmented}/ctrl_cmd.edn" \
     "${fragmented}/patch.edn" \
     "${fragmented}/fn.edn" \
     "${karabiner}/.eof.tmp" \
