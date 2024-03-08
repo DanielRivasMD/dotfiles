@@ -50,16 +50,16 @@
          ; [:!EQRdelete_or_backspace []]         NOT AVAILABLE                                     ;
          ; [:!EQRreturn_or_enter []]                                                               ;
          ; [:!EQRright_shift []]                                                                   ;
-         ; [:!EQRright_option []]                                                                  ;
-         ; [:!EQRright_command []]                                                                 ;
-         ; [:!EQRspacebar []]                                                                      ;
+         [:!EQRright_option :!Tn [:term]]                                                          ;
+         [:!EQRright_command :!Tj [:term]]                                                         ;
+         [:!EQRspacebar :!Ty [:term]]                                                              ;
 
-         ; [:!EQRleft_command []]                                                                  ;
-         ; [:!EQRleft_option []]                                                                   ;
-         ; [:!EQRleft_control []]                                                                  ;
-         ; [:!EQRleft_shift []]                                                                    ;
-         ; [:!EQRcaps_lock []]                                                                     ;
-         ; [:!EQRtab []]                                                                           ;
+         [:!EQRleft_command :!Tt [:term]]                                                          ;
+         [:!EQRleft_option :!Ts [:term]]                                                           ;
+         [:!EQRleft_control :!Tr [:term]]                                                          ;
+         [:!EQRleft_shift :!Oc [:term]]                                                            ;
+         [:!EQRcaps_lock :!Tg [:term]]                                                             ;
+         [:!EQRtab :!Th [:term]]                                                                   ;
          ; [:!EQRnon_us_backslash []]                                                              ;
          ; [:!EQRescape []]                                                                        ;
          ]}
