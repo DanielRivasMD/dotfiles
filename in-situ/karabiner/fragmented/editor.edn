@@ -24,9 +24,9 @@
          ; [:!EQRleft_option :!Ts [:editor]]               ; del-alt                               ;
          ; [:!EQRleft_command :!Tt [:editor]]              ; del-cmd                               ;
          ; [: :!Tu [:editor]]          COLLISION (delete)                                          ;
-         [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up                           ;
+         ; [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up                           ;
          ; [: :!Tw [:editor]]          COLLISION (delete)                                          ;
-         [:!TCdown_arrow :!Tx [:editor]]                   ; ctrl-cmd-down                         ;
+         ; [:!TCdown_arrow :!Tx [:editor]]                   ; ctrl-cmd-down                         ;
          ; [:!EQRspacebar :!Ty [:editor]]                  ; del-space                             ;
          ; [: :!Tz [:editor]]          DEFAULT                                                     ;
          ]}
