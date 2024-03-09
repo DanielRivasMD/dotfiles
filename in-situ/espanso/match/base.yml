@@ -19,6 +19,12 @@ matches:
   - trigger: ":dr:"
     replace: "Daniel Rivas"
 
+  - trigger: ":rfc:"
+    replace: "RICS870918RM4"
+
+  - trigger: ":curp:"
+    replace: "RICS870918HJCVRL03"
+
   # address
   - trigger: ":mail:"
     replace: "danielrivasmd@gmail.com"
