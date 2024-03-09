@@ -8,12 +8,12 @@
 "ui.menu.selected" = { modifiers = ["reversed"] }
 "ui.menu.scroll" = { fg = "light-gray" }
 "ui.linenr" = { fg = "light-gray" }
-"ui.linenr.selected" = { fg = "white",  modifiers = ["bold"] }
+"ui.linenr.selected" = { fg = "light-cyan",  modifiers = ["bold"] }
 "ui.popup" = { fg = "white" }
 "ui.window" = { fg = "gray" }
 "ui.selection" = { bg = "gray" }
 "comment" = "light-gray"
-"ui.statusline" = { fg = "white" }
+"ui.statusline" = { fg = "light-blue" }
 "ui.statusline.inactive" = { fg = "gray" }
 "ui.statusline.normal" = { fg = "green", modifiers = ["bold"] }
 "ui.statusline.insert" = { fg = "red", modifiers = ["bold", "italic"] }
@@ -66,7 +66,7 @@
 ####################################################################################################
 
 "diff.plus" = "light-green"
-"diff.delta" = "light-blue"
+"diff.delta" = "yellow"
 "diff.delta.moved" = "blue"
 "diff.minus" = "light-red"
 
