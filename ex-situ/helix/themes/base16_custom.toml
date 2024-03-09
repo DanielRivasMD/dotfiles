@@ -1,5 +1,4 @@
-# Author: GreasySlug <9619abgoni@gmail.com>
-# This theme is base on base16_theme(Author: NNB <nnbnh@protonmail.com>)
+####################################################################################################
 
 "ui.background" = { fg = "white"}
 "ui.background.separator" = { fg = "gray" }
@@ -16,9 +15,9 @@
 "comment" = "light-gray"
 "ui.statusline" = { fg = "white" }
 "ui.statusline.inactive" = { fg = "gray" }
-"ui.statusline.normal" = { fg = "black", bg = "blue" }
-"ui.statusline.insert" = { fg = "black", bg = "green" }
-"ui.statusline.select" = { fg = "black", bg = "magenta" }
+"ui.statusline.normal" = { fg = "green", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "red", modifiers = ["bold", "italic"] }
+"ui.statusline.select" = { fg = "blue", modifiers = ["bold"] }
 "ui.help" = { fg = "light-gray" }
 "ui.cursor" = { modifiers = ["reversed"] }
 "ui.cursor.match" = { fg = "light-yellow", underline = { color = "light-yellow", style = "line" } }
@@ -31,6 +30,8 @@
 "ui.virtual.inlay-hint.parameter" = { fg = "white", bg = "gray"}
 "ui.virtual.inlay-hint.type" = { fg = "white", bg = "gray"}
 "ui.virtual.wrap" = "gray"
+
+####################################################################################################
 
 "variable" = "light-red"
 "constant.numeric" = "yellow"
@@ -47,6 +48,8 @@
 "label" = "light-magenta"
 "namespace" = "light-magenta"
 
+####################################################################################################
+
 "markup.heading" = "light-blue"
 "markup.list" = "light-red"
 "markup.bold" = { fg = "light-yellow", modifiers = ["bold"] }
@@ -60,10 +63,14 @@
 "markup.insert" = { fg = "green" }
 "markup.select" = { fg = "magenta" }
 
+####################################################################################################
+
 "diff.plus" = "light-green"
 "diff.delta" = "light-blue"
 "diff.delta.moved" = "blue"
 "diff.minus" = "light-red"
+
+####################################################################################################
 
 "ui.gutter" = "gray"
 "info" = "light-blue"
@@ -72,8 +79,12 @@
 "warning" = "light-yellow"
 "error" = "light-red"
 
+####################################################################################################
+
 "diagnostic.info" = { underline = { color = "light-blue", style = "dotted" } }
 "diagnostic.hint" = { underline = { color = "light-gray", style = "double_line" } }
 "diagnostic.debug" = { underline ={ color ="light-gray", style = "dashed" } }
 "diagnostic.warning" = { underline = { color = "light-yellow", style = "curl" } }
 "diagnostic.error" = { underline = { color ="light-red", style = "curl" } }
+
+####################################################################################################
