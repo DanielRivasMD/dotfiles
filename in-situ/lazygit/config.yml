@@ -121,16 +121,16 @@ keybinding:
         nextItem: null
         prevItem-alt: '<up>'
         nextItem-alt: '<down>'
-        prevPage: '<f1>'
-        nextPage: '<f2>'
-        gotoTop: '<c-o>'
-        gotoBottom: '<c-p>'
+        prevPage: '<f4>'
+        nextPage: '<f5>'
+        gotoTop: '<f6>'
+        gotoBottom: '<f7>'
         scrollLeft: 'H'
         scrollRight: 'L'
         prevBlock: null
         nextBlock: null
-        prevBlock-alt: <c-v>
-        nextBlock-alt: <c-x>
+        prevBlock-alt: <f10>
+        nextBlock-alt: <f11>
         jumpToBlock: [1, 2, 3, 4, 5]
         nextMatch: 'l'
         prevMatch: 'h'
@@ -138,7 +138,7 @@ keybinding:
         optionMenu-alt1: '?'
         select: '<space>'
         goInto: '<enter>'
-        openRecentRepos: '<f12>'
+        openRecentRepos: '<f2>'
         confirm: '<enter>'
         remove: 'd'
         new: 'n'
@@ -156,9 +156,9 @@ keybinding:
         pullFiles: 'p'
         refresh: 'r'
         createPatchOptionsMenu: 'N'
-        prevTab: '<f5>'
-        nextTab: '<f6>'
-        nextScreenMode: '<f4>'
+        prevTab: '<f8>'
+        nextTab: '<f9>'
+        nextScreenMode: '<f1>'
         prevScreenMode: null
         undo: 'u'
         redo: 'U'
