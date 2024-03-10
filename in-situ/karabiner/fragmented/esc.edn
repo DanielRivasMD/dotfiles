@@ -61,7 +61,40 @@
          ; [:!EWRcaps_lock []]                                                                     ;
          ; [:!EWRtab []]                                                                           ;
          ; [:!EWRnon_us_backslash []]                                                              ;
-         ; [:!EWRescape []]                                                                        ;
+         ; [:!EWRescape []]                      NOT AVAILABLE                                     ;
+         ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc - shift
+{:des "Escape Mode - symbols"
+ :rules [;
+         ; [:!EWRShyphen []]                                                                       ;
+         ; [:!EWRSequal_sign []]                                                                   ;
+         ; [:!EWRSopen_bracket []]                                                                 ;
+         ; [:!EWRSclose_bracket []]                                                                ;
+         ; [:!EWRSsemicolon []]                                                                    ;
+         ; [:!EWRSquote []]                                                                        ;
+         ; [:!EWRSbackslash []]                                                                    ;
+         ; [:!EWRScomma []]                                                                        ;
+         ; [:!EWRSperiod []]                                                                       ;
+         ; [:!EWRSslash []]                                                                        ;
+
+         ; [:!EWRSdelete_or_backspace []]                                                          ;
+         ; [:!EWRSreturn_or_enter []]                                                              ;
+         ; [:!EWRSright_shift []]                                                                  ;
+         ; [:!EWRSright_option []]                                                                 ;
+         ; [:!EWRSright_command []]                                                                ;
+         ; [:!EWRSspacebar []]                                                                     ;
+
+         ; [:!EWRSleft_command []]                                                                 ;
+         ; [:!EWRSleft_option []]                                                                  ;
+         ; [:!EWRSleft_control []]                                                                 ;
+         ; [:!EWRSleft_shift []]                  NOT AVAILABLE                                    ;
+         ; [:!EWRScaps_lock []]                                                                    ;
+         ; [:!EWRStab []]                                                                          ;
+         ; [:!EWRSnon_us_backslash []]                                                             ;
+         ; [:!EWRSescape []]                      NOT AVAILABLE                                    ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

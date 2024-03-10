@@ -57,7 +57,7 @@
 
          ; [:!Tleft_command []]                                                                    ;
          ; [:!Tleft_option []]                                                                     ;
-         ; [:!Tleft_control []]                                                                    ;
+         ; [:!Tleft_control []]                  NOT AVAILABLE                                     ;
          ; [:!Tleft_shift []]                                                                      ;
          ; [:!Tcaps_lock []]                                                                       ;
          ; [:!Ttab []]                                                                             ;
@@ -89,14 +89,14 @@
          [:!TSright_command [:spacebar :period :slash :slash :spacebar]]                 ; ' .// ' ;
          ; [:!TSspacebar []]                                                             ;         ;
 
-         ; [:!TCleft_command []]                                                                   ;
-         ; [:!TCleft_option []]                                                                    ;
-         ; [:!TCleft_control []]                                                                   ;
-         ; [:!TCleft_shift []]                                                                     ;
-         ; [:!TCcaps_lock []]                                                                      ;
-         ; [:!TCtab []]                                                                            ;
-         ; [:!TCnon_us_backslash []]                                                               ;
-         ; [:!TCescape []]                                                                         ;
+         ; [:!TSleft_command []]                                                                   ;
+         ; [:!TSleft_option []]                                                                    ;
+         ; [:!TSleft_control []]                 NOT AVAILABLE                                     ;
+         ; [:!TSleft_shift []]                   NOT AVAILABLE                                     ;
+         ; [:!TScaps_lock []]                                                                      ;
+         ; [:!TStab []]                                                                            ;
+         ; [:!TSnon_us_backslash []]                                                               ;
+         ; [:!TSescape []]                                                                         ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

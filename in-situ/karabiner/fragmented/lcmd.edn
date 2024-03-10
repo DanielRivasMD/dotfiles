@@ -54,7 +54,7 @@
          [:!Cright_command [:spacebar :slash :equal_sign :spacebar]]      ; ' /= '                 ;
          ; [:!Cspacebar []]                                               ;                        ;
 
-         ; [:!Cleft_command []]                                                                    ;
+         ; [:!Cleft_command []]                  NOT AVAILABLE                                     ;
          ; [:!Cleft_option []]                                                                     ;
          ; [:!Cleft_control []]                                                                    ;
          ; [:!Cleft_shift []]                                                                      ;
@@ -66,7 +66,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command
+; command - shift
 {:des "Command Mode - symbols"
  :rules [;
          [:!CShyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '      ;
@@ -90,7 +90,7 @@
          ; [:!CSleft_command []]                 NOT AVAILABLE                                     ;
          ; [:!CSleft_option []]                                                                    ;
          ; [:!CSleft_control []]                                                                   ;
-         ; [:!CSleft_shift []]                                                                     ;
+         ; [:!CSleft_shift []]                   NOT AVAILABLE                                     ;
          ; [:!CScaps_lock []]                                                                      ;
          ; [:!CStab []]                                                                            ;
          ; [:!CSnon_us_backslash []]                                                               ;
