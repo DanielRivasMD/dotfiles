@@ -1,100 +1,118 @@
 ####################################################################################################
+# config
+####################################################################################################
 
 # default flags
 default_flags = ""
 
 ####################################################################################################
-# config
+# fn
 ####################################################################################################
 
-# move
+# panel
 [[verbs]]
-invocation = "select_first"
-key = "ctrl-o"
-internal = "select_first"
-description = "`cmd-up` -> go to top of the list"
-
-[[verbs]]
-invocation = "select_last"
-key = "ctrl-p"
-internal = "select_last"
-description = "`cmd-down` -> go to bottom of the list"
-
-[[verbs]]
-invocation = "page_up"
+invocation = "toggle_preview"
 key = "f1"
-internal = "page_up"
-description = "`alt-up` -> go to page up"
+internal = "toggle_preview"
+description = "`ctrl-cmd-space` -> open / close preview panel"
 
+# stage
 [[verbs]]
-invocation = "page_down"
+invocation = "toggle_staging_area"
 key = "f2"
-internal = "page_down"
-description = "`alt-down` -> go to page down"
+internal = "toggle_staging_area"
+description = "`alt` -> toggle staging area"
 
-# open
-[[verbs]]
-internal = "close_panel_ok"
-key = "ctrl-a"
-description = "`cmd-left` -> close direcotry"
-
-[[verbs]]
-internal = "open_stay!"
-key = "ctrl-e"
-description = "`cmd-right` -> open directory"
-
-[[verbs]]
-invocation = "root_up"
-key = "ctrl-v"
-internal = "root_up"
-description = "`ctrl-cmd-up` -> move tree root up"
-
-[[verbs]]
-invocation = "open_leave"
-key = "ctrl-x"
-cmd = ":cd"
-description = "`ctrl-cmd-down` -> go into directory"
-
+# move
 [[verbs]]
 key = "f3"
 external = "command open {file}"
 leave_broot = false
 description = "`cmd-enter` -> open according to OS"
 
+# move
+[[verbs]]
+invocation = "page_up"
+key = "f4"
+internal = "page_up"
+description = "`alt-up` -> go to page up"
+
+# move
+[[verbs]]
+invocation = "page_down"
+key = "f5"
+internal = "page_down"
+description = "`alt-down` -> go to page down"
+
+# move
+[[verbs]]
+invocation = "select_first"
+key = "f6"
+internal = "select_first"
+description = "`cmd-up` -> go to top of the list"
+
+# move
+[[verbs]]
+invocation = "select_last"
+key = "f7"
+internal = "select_last"
+description = "`cmd-down` -> go to bottom of the list"
+
 # panel
 [[verbs]]
-invocation = "toggle_preview"
-key = "f4"
-internal = "toggle_preview"
-description = "`ctrl-cmd-space` -> open / close preview panel"
-
-[[verbs]]
 invocation = "close_preview"
-key = "f5"
+key = "f8"
 apply_to = "file"
 internal = "close_preview {file}"
 leave_broot = false
 description = "`ctrl-cmd-left` -> close display"
 
+# panel
 [[verbs]]
 invocation = "open_preview"
-key = "f6"
+key = "f9"
 apply_to = "file"
 internal = "open_preview {file}"
 leave_broot = false
 description = "`ctrl-cmd-right` -> display file on panel"
 
+# move
 [[verbs]]
-invocation = "panel_left"
-key = "ctrl-left"
-internal = "panel_left"
-description = "select left panel"
+invocation = "root_up"
+key = "f10"
+internal = "root_up"
+description = "`ctrl-cmd-up` -> move tree root up"
 
+# move
 [[verbs]]
-invocation = "panel_right"
-key = "ctrl-right"
-internal = "panel_right"
-description = "select right panel"
+invocation = "open_leave"
+key = "f11"
+cmd = ":cd"
+description = "`ctrl-cmd-down` -> go into directory"
+
+
+####################################################################################################
+# shift-fn
+####################################################################################################
+
+# remove
+[[verbs]]
+external = "rm -rf {file}"
+invocation = "rm"
+key = "shift-f1"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-delete` -> delete file"
+
+# create
+[[verbs]]
+invocation = "create {subpath}"
+shortcut = "c"
+key = "shift-f2"
+execution = "touch {directory}/{subpath}"
+leave_broot = false
+auto_exec = false
+description = "`ctrl-cmd-enter` -> create file"
 
 # directory
 [[verbs]]
@@ -123,120 +141,17 @@ leave_broot = false
 auto_exec = true
 description = "`ctrl-cmd-cmd` -> copy file to pane"
 
-# rename
-[[verbs]]
-external = "mv {file} {parent}/{new_filename}"
-invocation = "rename {new_filename:file-name}"
-shortcut = "rn"
-key = "ctrl-l"
-leave_broot = false
-auto_exec = false
-description = "`shift-alt` -> rename file"
 
-# create
-[[verbs]]
-invocation = "create {subpath}"
-shortcut = "c"
-key = "shift-f2"
-execution = "touch {directory}/{subpath}"
-leave_broot = false
-auto_exec = false
-description = "`ctrl-cmd-enter` -> create file"
-
-# remove
-[[verbs]]
-external = "rm -rf {file}"
-invocation = "rm"
-key = "shift-f1"
-leave_broot = false
-auto_exec = false
-description = "`ctrl-cmd-delete` -> delete file"
+####################################################################################################
+# alt
+####################################################################################################
 
 # stage
-[[verbs]]
-invocation = "toggle_staging_area"
-key = "shift-f12"
-internal = "toggle_staging_area"
-description = "`alt` -> toggle staging area"
-
 [[verbs]]
 invocation = "stage_all_files"
 key = "alt-f1"
 internal = "stage_all_files"
 description = "`alt-a` -> stage all matching files"
-
-[[verbs]]
-invocation = "toggle_stage"
-key = "ctrl-f9"
-internal = "toggle_stage"
-description = "`alt-s` -> toggle stage"
-
-[[verbs]]
-invocation = "clear_stage"
-key = "alt-ctrl-f5"
-internal = "clear_stage"
-description = "`alt-z` -> clear stage area"
-
-# quit
-[[verbs]]
-invocation = "quit"
-key = "ctrl-f7"
-internal = "quit"
-description = "`alt-q` -> quit broot"
-
-# refresh
-[[verbs]]
-invocation = "refresh"
-key = "ctrl-f8"
-internal = "refresh"
-description = "`alt-r` -> refresh tree"
-
-# editor
-[[verbs]]
-invocation = "micro"
-key = "ctrl-j"
-execution = "micro {file}"
-leave_broot = false
-description = "`delete-cmd` -> open file with `micro` editor"
-
-[[verbs]]
-invocation = "helix"
-key = "ctrl-n"
-execution = "hx {file}"
-leave_broot = false
-description = "`delete-alt` -> open file with `helix` editor"
-
-# search
-[[verbs]]
-invocation = "total_search"
-key = "alt-f7"
-internal = "total_search"
-description = "`alt-f` -> search again but on all children"
-
-[[verbs]]
-invocation = "next_match"
-key = "ctrl-f1"
-internal = "next_match"
-description = "`alt-l` -> go to next match"
-
-[[verbs]]
-invocation = "previous_match"
-key = "alt-f9"
-internal = "previous_match"
-description = "`alt-h` -> go to previous match"
-
-# view
-[[verbs]]
-invocation = "toggle_hidden"
-key = "shift-alt-f5"
-internal = "toggle_hidden"
-description = "`alt-shift-d` -> toggle hidden"
-
-[[verbs]]
-invocation = "toggle_files"
-key = "shift-alt-f7"
-internal = ":toggle_files"
-description = "`alt-shift-f` -> toggle files"
 
 # pager
 [[verbs]]
@@ -245,34 +160,6 @@ key = "alt-f2"
 external = "bat --paging always {file}"
 leave_broot = true
 description = "`alt-b` -> open file with `bat`"
-
-[[verbs]]
-invocation = "mdcat"
-key = "ctrl-f2"
-external = "mdcat --paginate {file}"
-leave_broot = true
-description = "`alt-m` -> open file with `mdcat`"
-
-[[verbs]]
-invocation = "jless"
-key = "alt-f11"
-external = "jless {file}"
-leave_broot = true
-description = "`alt-j` -> open file with `jless`"
-
-[[verbs]]
-invocation = "hck"
-key = "alt-f12"
-external = "hck {file}"
-leave_broot = true
-description = "`alt-k` -> open file with `hck`"
-
-[[verbs]]
-invocation = "xsv"
-key = "alt-ctrl-f2"
-external = "xsv table {file}"
-leave_broot = true
-description = "`alt-x` -> open file with `xsv`"
 
 # copy
 [[verbs]]
@@ -287,6 +174,113 @@ external = [
 leave_broot = false
 description = "`alt-c` -> open file with `bat` to copy"
 
+# search
+[[verbs]]
+invocation = "total_search"
+key = "alt-f7"
+internal = "total_search"
+description = "`alt-f` -> search again but on all children"
+
+# search
+[[verbs]]
+invocation = "previous_match"
+key = "alt-f9"
+internal = "previous_match"
+description = "`alt-h` -> go to previous match"
+
+# pager
+[[verbs]]
+invocation = "jless"
+key = "alt-f11"
+external = "jless {file}"
+leave_broot = true
+description = "`alt-j` -> open file with `jless`"
+
+# pager
+[[verbs]]
+invocation = "hck"
+key = "alt-f12"
+external = "hck {file}"
+leave_broot = true
+description = "`alt-k` -> open file with `hck`"
+
+# search
+[[verbs]]
+invocation = "next_match"
+key = "ctrl-f4"
+internal = "next_match"
+description = "`alt-l` -> go to next match"
+
+# pager
+[[verbs]]
+invocation = "mdcat"
+key = "ctrl-f2"
+external = "mdcat --paginate {file}"
+leave_broot = true
+description = "`alt-m` -> open file with `mdcat`"
+
+# quit
+[[verbs]]
+invocation = "quit"
+key = "ctrl-f9"
+internal = "quit"
+description = "`alt-q` -> quit broot"
+
+# refresh
+[[verbs]]
+invocation = "refresh"
+key = "ctrl-f10"
+internal = "refresh"
+description = "`alt-r` -> refresh tree"
+
+# stage
+[[verbs]]
+invocation = "toggle_stage"
+key = "alt-ctrl-f1"
+internal = "toggle_stage"
+description = "`alt-s` -> toggle stage"
+
+# pager
+[[verbs]]
+invocation = "xsv"
+key = "alt-ctrl-f2"
+external = "xsv table {file}"
+leave_broot = true
+description = "`alt-x` -> open file with `xsv`"
+
+# stage
+[[verbs]]
+invocation = "clear_stage"
+key = "alt-ctrl-f9"
+internal = "clear_stage"
+description = "`alt-z` -> clear stage area"
+
+
+####################################################################################################
+# alt-shift
+####################################################################################################
+
+# sort
+[[verbs]]
+invocation = "sort_by_count"
+key = "alt-shift-f4"
+internal = "sort_by_count"
+description = "`alt-shift-c` -> sort by count"
+
+# view
+[[verbs]]
+invocation = "toggle_files"
+key = "shift-alt-f7"
+internal = ":toggle_files"
+description = "`alt-shift-f` -> toggle files"
+
+# view
+[[verbs]]
+invocation = "toggle_hidden"
+key = "shift-alt-f5"
+internal = "toggle_hidden"
+description = "`alt-shift-d` -> toggle hidden"
+
 # git
 [[verbs]]
 invocation = "toggle_git_ignore"
@@ -297,52 +291,111 @@ description = "`alt-shift-g` -> toggle git ignore"
 # sort
 [[verbs]]
 invocation = "sort_by_type"
-key = "ctrl-shift-f10"
+key = "alt-ctrl-shift-f2"
 internal = "sort_by_type"
 description = "`alt-shift-t` -> sort by type"
 
-[[verbs]]
-invocation = "sort_by_size"
-key = "alt-ctrl-shift-f5"
-internal = "sort_by_size"
-description = "`alt-shift-z` -> sort by size"
-
+# sort
 [[verbs]]
 invocation = "sort_by_date"
-key = "alt-ctrl-shift-f4"
+key = "alt-ctrl-shift-f8"
 internal = "sort_by_date"
 description = "`alt-shift-y` -> sort by date"
 
+# sort
 [[verbs]]
-invocation = "sort_by_count"
-key = "alt-shift-f4"
-internal = "sort_by_count"
-description = "`alt-shift-c` -> sort by count"
+invocation = "sort_by_size"
+key = "alt-ctrl-shift-f9"
+internal = "sort_by_size"
+description = "`alt-shift-z` -> sort by size"
 
 
 ####################################################################################################
+# ctrl
+####################################################################################################
 
+# panel
+[[verbs]]
+invocation = "panel_left"
+key = "ctrl-left"
+internal = "panel_left"
+description = "select left panel"
+
+# panel
+[[verbs]]
+invocation = "panel_right"
+key = "ctrl-right"
+internal = "panel_right"
+description = "select right panel"
+
+# open
+[[verbs]]
+internal = "close_panel_ok"
+key = "ctrl-a"
+description = "`cmd-left` -> close direcotry"
+
+# open
+[[verbs]]
+internal = "open_stay!"
+key = "ctrl-e"
+description = "`cmd-right` -> open directory"
+
+# editor
+[[verbs]]
+invocation = "micro"
+key = "ctrl-j"
+execution = "micro {file}"
+leave_broot = false
+description = "`delete-cmd` -> open file with `micro` editor"
+
+# rename
+[[verbs]]
+external = "mv {file} {parent}/{new_filename}"
+invocation = "rename {new_filename:file-name}"
+shortcut = "rn"
+key = "ctrl-l"
+leave_broot = false
+auto_exec = false
+description = "`shift-alt` -> rename file"
+
+# editor
+[[verbs]]
+invocation = "helix"
+key = "ctrl-n"
+execution = "hx {file}"
+leave_broot = false
+description = "`delete-alt` -> open file with `helix` editor"
+
+
+####################################################################################################
 # command line move & delete
+####################################################################################################
+
 [[verbs]]
 key = "alt-b"
 internal = ":input_go_word_left"
+description = "`alt-left`"
 
 [[verbs]]
 key = "alt-f"
 internal = ":input_go_word_right"
+description = "`alt-right`"
 
 [[verbs]]
 key = "ctrl-w"
 internal = ":input_del_word_left"
+description = "`shift-alt`"
 
 [[verbs]]
 key = "alt-d"
 internal = ":input_del_word_right"
+description = "`shift-alt`"
 
 
 ####################################################################################################
-
 # theme
+####################################################################################################
+
 [skin]
 # default = "rgb(131, 148, 150) rgb(0, 43, 54) / rgb(131, 148, 150) rgb(7, 54, 66)"        # base0 base03 / base01 base02
 default = "gray(23) none / gray(20) none"              # transparent background
