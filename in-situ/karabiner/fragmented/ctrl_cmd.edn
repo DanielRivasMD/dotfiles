@@ -3,6 +3,9 @@
 ; Alacritty
 {:des "Alacritty control - command - alphabet"
  :rules [;
+         ; [: :!Tf14 [:term]]          NOT AVAILABLE                                               ;
+         ; [: :!Tf15 [:term]]          NOT AVAILABLE                                               ;
+         ; [: :!OTf13 [:term]]                                                                     ;
          [:!TCa :!Of11 [:term]]                                                                    ;
          [:!TCb :!Of12 [:term]]                                                                    ;
          [:!TCc :!Of14 [:term]]                                                                    ;
@@ -14,8 +17,8 @@
          [:!TCi :!Of20 [:term]]                                                                    ;
          [:!TCj :!Tf11 [:term]]                                                                    ;
          [:!TCk :!Tf12 [:term]]                                                                    ;
-         [:!TCl :!Tf14 [:term]]                                                                    ;
-         [:!TCm :!Tf15 [:term]]                                                                    ;
+         [:!TCl :!Tf13 [:term]]                                                                    ;
+         [:!TCm :!Of13 [:term]]                                                                    ;
          [:!TCn :!Tf16 [:term]]                                                                    ;
          [:!TCo :!Tf17 [:term]]                                                                    ;
          [:!TCp :!Tf18 [:term]]                                                                    ;
@@ -37,11 +40,15 @@
 ; Alacritty
 {:des "Alacritty - Control - Command Mode"
  :rules [;
-         [:!TChyphen :!SOf11 [:term]]                                                              ;
-         [:!TCequal_sign :!SOf12 [:term]]                                                          ;
-         [:!TCopen_bracket :!SOf13 [:term]]                                                        ;
-         [:!TCclose_bracket :!SOf14 [:term]]                                                       ;
-         [:!TCsemicolon :!SOf15 [:term]]                                                           ;
+         ; [ :!Sf14 [:term]]           NOT AVAILABLE                                               ;
+         ; [ :!Sf15 [:term]]           NOT AVAILABLE                                               ;
+         ; [ :!SOf14 [:term]]          NOT AVAILABLE                                               ;
+         ; [ :!SOf15 [:term]]          NOT AVAILABLE                                               ;
+         [:!TChyphen :!Sf11 [:term]]                                                               ;
+         [:!TCequal_sign :!Sf12 [:term]]                                                           ;
+         [:!TCopen_bracket :!SOf11 [:term]]                                                        ;
+         [:!TCclose_bracket :!SOf12 [:term]]                                                       ;
+         [:!TCsemicolon :!SOf13 [:term]]                                                           ;
          [:!TCquote :!SOf16 [:term]]                                                               ;
          [:!TCbackslash :!SOf17 [:term]]                                                           ;
          [:!TCcomma :!SOf18 [:term]]                                                               ;
@@ -55,11 +62,9 @@
          [:!TCright_command :!Sf6 [:term]]       ; broot copy & helix split                        ;
          [:!TCspacebar :f1 [:term]]              ; lazygit - broot viewer & helix tab              ;
 
-         ; [:!Sf11 :]                                                                              ;
-         ; [:!Sf12 :]                                                                              ;
-         [:!TCleft_command :!Sf13 [:term]]                                                         ;
-         [:!TCleft_option :!Sf14 [:term]]                                                          ;
-         [:!TCleft_control :!Sf15 [:term]]                                                         ;
+         ; [:!TCleft_command : [:term]]          NOT AVAILABLE                                     ;
+         [:!TCleft_option :!Sf13 [:term]]                                                          ;
+         ; [:!TCleft_control : [:term]]          NOT AVAILABLE                                     ;
          [:!TCleft_shift :!Sf16 [:term]]                                                           ;
          [:!TCcaps_lock :!Sf17 [:term]]                                                            ;
          [:!TCtab :!Sf18 [:term]]                                                                  ;
@@ -72,6 +77,8 @@
 ; Alacritty
 {:des "Alacritty - Keypad"
  :rules [;
+         ; [:!SOTf14 :]                NOT AVAILABLE                                               ;
+         ; [:!SOTf15 :]                NOT AVAILABLE                                               ;
          [:!TCkeypad_1 :!STf11 [:term]]             ; helix params                                 ;
          [:!TCkeypad_2 :!STf12 [:term]]             ; helix func                                   ;
          [:!TCkeypad_3 :!STf13 [:term]]             ; helix args                                   ;
@@ -83,12 +90,10 @@
          [:!TCkeypad_9 :!STf19 [:term]]             ; helix diag                                   ;
          [:!TCkeypad_0 :!STf20 [:term]]             ; helix symbols                                ;
 
-         ; [:!SOTf11 :]                                                                            ;
+         ; [: :!SOTf11]                                                                            ;
          [:!TCkeypad_period :!SOTf12 [:term]]      ; helix                                         ;
-         [:!TCkeypad_enter :!SOTf13 [:term]]       ; helix comments                                ;
-         ; [:!SOTf14 :]                                                                            ;
-         ; [:!SOTf15 :]                                                                            ;
          [:!TCkeypad_plus :!SOTf16 [:term]]        ; helix comments                                ;
+         [:!TCkeypad_enter :!SOTf13 [:term]]       ; helix comments                                ;
          [:!TCf20 :!SOTf17]                        ; helix jump                                    ;
          [:!TCkeypad_slash :!SOTf18 [:term]]       ; helix jump                                    ;
          [:!TCkeypad_asterisk :!SOTf19 [:term]]    ; helix jump                                    ;
