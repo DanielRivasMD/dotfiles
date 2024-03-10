@@ -63,11 +63,11 @@ _default:
 
 # open fragmented karabiner
 @Karabiner-fragmented:
-  hx cerberus/karabiner/fragmented/{esc.edn,function.edn,tab.edn,hyper.edn,lctrl.edn,lopt.edn,lcmd.edn,space.edn,ropt.edn,rcmd.edn,rshift.edn,bspace.edn,ctrl_cmd.edn,zero.edn,super.edn}
+  hx in-situ/karabiner/fragmented/{esc.edn,function.edn,tab.edn,hyper.edn,lctrl.edn,lopt.edn,lcmd.edn,space.edn,ropt.edn,rcmd.edn,rshift.edn,bspace.edn,ctrl_cmd.edn,zero.edn,super.edn}
 
 # open editors karabiner
 @Karabiner-editors:
-  hx cerberus/karabiner/fragmented/{editor.edn,lapce.edn,zed.edn,terminal.edn}
+  hx in-situ/karabiner/fragmented/{editor.edn,lapce.edn,zed.edn,terminal.edn}
 
 ####################################################################################################
 # compose protocols
