@@ -37,8 +37,8 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules [;
          [:escape :!EWright_shift [:term] {:alone [:!SOa]}]; esc                                   ;
-         [:!Eleft_shift :!SOb [:term]]                     ; alt-alt                               ;
-         [:!Etab :!SOc [:term]]                            ; alt-tab                               ;
+         [:!Etab :!SOb [:term]]                            ; alt-tab                               ;
+         [:!Eleft_shift :!SOc [:term]]                     ; alt-shift                             ;
          [:!Ecaps_lock :!SOd [:term]]                      ; alt-caps                              ;
          [:!Enon_us_backslash :!SOe [:term]]               ; alt-fn                                ;
          ; [: :!SOf [:term]]                               ;                                       ;
