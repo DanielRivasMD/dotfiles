@@ -64,7 +64,7 @@ A-C-F6 = ["normal_mode", ":write", "MODE"]                 # alt-w             #
 A-C-F7 = ["delete_selection"]                              # alt-x             # cut
 A-C-F8 = ["search_selection", "search_next"]               # alt-y             # skip multi
 A-C-F9 = ["search_selection", "search_prev"]               # alt-z             # remove multi
-# A-C-F10 = [""]                                           # alt-tilde         #
+A-C-F10 = ["command_mode"]                                 # alt-tilde         #
 
 
 ####################################################################################################
