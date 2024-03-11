@@ -40,7 +40,7 @@
          [:!Fequal_sign [:!Sequal_sign :!Sequal_sign]]     ; '++'                                  ;
          ; [:!Fopen_bracket []]                                                                    ;
          ; [:!Fclose_bracket []]                                                                   ;
-         ; [:!Fsemicolon []]                                                                       ;
+         [:!Fsemicolon [:!Ssemicolon :!Ssemicolon]]        ; '::'                                  ;
          ; [:!Fquote []]                                                                           ;
          ; [:!Fbackslash []]                                                                       ;
          ; [:!Fcomma []]                                                                           ;

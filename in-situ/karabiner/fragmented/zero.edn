@@ -36,13 +36,13 @@
 ; zero
 {:des "Zero Mode - symbols"
  :rules [:zero-mode
-         ; [:hyphen []]                                    ;                                       ;
-         ; [:equal_sign []]                                ;                                       ;
-         ; [:open_bracket []]                              ;                                       ;
-         ; [:close_bracket []]                             ;                                       ;
+         [:hyphen [:spacebar :hyphen]]                     ; ' -'                                  ;
+         ; [:equal_sign []]                                                                        ;
+         [:open_bracket [:!S3 :open_bracket]]              ; '#['                                  ;
+         ; [:close_bracket []]                                                                     ;
          [:semicolon [:semicolon :spacebar]]               ; '; '                                  ;
-         [:quote [:spacebar :hyphen]]                      ; ' -'                                  ;
-         ; [:backslash []]                                 ;                                       ;
+         [:quote []]                                                                               ;
+         ; [:backslash []]                                                                         ;
          [:comma [:comma :spacebar]]                       ; ', '                                  ;
          [:period [:period :period]]                       ; '..'                                  ;
          [:slash [:slash :slash :slash :spacebar]]         ; '/// '                                ;

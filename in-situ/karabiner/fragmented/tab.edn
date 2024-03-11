@@ -40,14 +40,14 @@
          [:!WQRequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]     ; ' += '            ;
          [:!WQRopen_bracket [:!Scomma :!Ssemicolon]]                           ; '<:'              ;
          [:!WQRclose_bracket [:!Speriod :!Ssemicolon]]                         ; '>:'              ;
-         [:!WQRsemicolon [:!Ssemicolon :!Ssemicolon]]                          ; '::'              ;
-         [:!WQRquote [:!Ssemicolon :!Ssemicolon :!Scomma]]                     ; '::<'             ;
-         [:!WQRbackslash [:!S4 :!Sopen_bracket]]                               ; '${'              ;
+         [:!WQRsemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                 ; '::<'             ;
+         ; [:!WQRquote []]                                                                         ;
+         ; [:!WQRbackslash []]                                                                     ;
          [:!WQRcomma [:spacebar :!Scomma :hyphen :spacebar]]                   ; ' <- '            ;
          [:!WQRperiod [:spacebar :hyphen :!Speriod :spacebar]]                 ; ' -> '            ;
          [:!WQRslash [:!S3 :!S1 :slash]]                                       ; '#!/'             ;
 
-         [:!WQRdelete_or_backspace [:!S3 :open_bracket]]                       ; '#['              ;
+         ; [:!WQRdelete_or_backspace []]                                                           ;
          ; [:!WQRreturn_or_enter []]                                           ;                   ;
          ; [:!WQRright_shift []]                                               ;                   ;
          [:!WQRright_option [:spacebar :!S8 :equal_sign :spacebar]]            ; ' *= '            ;

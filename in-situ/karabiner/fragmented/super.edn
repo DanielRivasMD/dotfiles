@@ -36,13 +36,13 @@
 ; super
 {:des "Super Mode - symbols"
  :rules [:zero-mode
-         ; [:!Shyphen []]                                  ;                                       ;
-         ; [:!Sequal_sign []]                              ;                                       ;
-         ; [:!Sopen_bracket []]                            ;                                       ;
-         ; [:!Sclose_bracket []]                           ;                                       ;
+         [:!Shyphen [:spacebar :hyphen :hyphen]]           ; ' --'                                 ;
+         ; [:!Sequal_sign []]                                                                      ;
+         [:!Sopen_bracket [:!S4 :!Sopen_bracket]]          ; '${'                                  ;
+         ; [:!Sclose_bracket []]                                                                   ;
          [:!Ssemicolon [:!Ssemicolon :spacebar]]           ; ': '                                  ;
-         [:!Squote [:spacebar :hyphen :hyphen]]            ; ' --'                                 ;
-         ; [:!Sbackslash []]                               ;                                       ;
+         ; [:!Squote                                                                               ;
+         ; [:!Sbackslash []]                                                                       ;
          [:!Scomma [:period :spacebar]]                    ; '. '                                  ;
          [:!Speriod [:period :period :period]]             ; '...'                                 ;
          [:!Sslash [:slash :slash :!S1 :spacebar]]         ; '//! '                                ;
