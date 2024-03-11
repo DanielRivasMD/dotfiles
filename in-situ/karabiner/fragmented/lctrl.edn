@@ -40,7 +40,7 @@
          [:!Tequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]; ' ++ '                 ;
          ; [:!Topen_bracket []]                                           ;                        ;
          ; [:!Tclose_bracket []]                                          ;                        ;
-         [:!Tsemicolon [:spacebar :!S7 :!S7 :spacebar]]                   ;                        ;
+         [:!Tsemicolon [:spacebar :!S7 :!S7 :spacebar]]                   ; ' && '                 ;
          [:!Tquote [:quote :quote :quote]]                                ; '''''                  ;
          [:!Tbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]   ; ' || '                 ;
          [:!Tcomma [:spacebar :!Scomma :!Scomma :spacebar]]               ; ' << '                 ;
@@ -74,7 +74,7 @@
          [:!TSequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]      ; ' .++ ' ;
          ; [:!TSopen_bracket []]                                                         ;         ;
          ; [:!TSclose_bracket []]                                                        ;         ;
-         [:!TSsemicolon [:spacebar :period :!S7 :!S7 :spacebar]]                         ;         ;
+         [:!TSsemicolon [:spacebar :period :!S7 :!S7 :spacebar]]                         ; ' .&& ' ;
          [:!TSquote [:!Squote :!Squote :!Squote]]                                        ; '"""'   ;
          [:!TSbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]         ; ' .|| ' ;
          [:!TScomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                    ; ' <<< ' ;
