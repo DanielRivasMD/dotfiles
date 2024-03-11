@@ -130,13 +130,13 @@ keybinds clear-defaults=true {
 
     scroll {
         bind "Alt C" { SwitchToMode "Normal"; }
-        bind "f" { SwitchToMode "EnterSearch"; SearchInput 0; }
-        bind "k" "Up" { ScrollUp; }
-        bind "j" "Down" { ScrollDown; }
-        bind "Ctrl o" { PageScrollUp; }
-        bind "Ctrl p" { PageScrollDown; }
-        bind "K" { HalfPageScrollUp; }
-        bind "J" { HalfPageScrollDown; }
+        bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Up" { ScrollUp; }
+        bind "Down" { ScrollDown; }
+        bind "F6" { PageScrollUp; }
+        bind "F7" { PageScrollDown; }
+        bind "F4" { HalfPageScrollUp; }
+        bind "F5" { HalfPageScrollDown; }
     }
 
     entersearch {
