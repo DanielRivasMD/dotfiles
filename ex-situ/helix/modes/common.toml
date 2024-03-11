@@ -47,8 +47,10 @@ A-F7 = ["search"]                                          # alt-f             #
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
 # A-F10 = [""]                                             # alt-i             #
-C-F1 = ["normal_mode", "copy_selection_on_next_line", "MODE"] # alt-j          # spawn multi down
-C-F2 = ["normal_mode", "copy_selection_on_prev_line", "MODE"] # alt-k          # spawn multi up
+C-F1 = ["normal_mode", "copy_selection_on_next_line", "MODE"]
+                                                           # alt-j             # spawn multi down
+C-F2 = ["normal_mode", "copy_selection_on_prev_line", "MODE"]
+                                                           # alt-k             # spawn multi up
 C-F4 = ["search_next"]                                     # alt-l             # find next
 # C-F5 = [""]                                              # alt-m             #
 # C-F6 = [""]                                              # alt-n             #
@@ -73,15 +75,19 @@ A-C-F10 = ["command_mode"]                                 # alt-tilde         #
 S-A-F1 = ["select_all"]                                    # alt-shift-a       # select all
 S-A-F2 = ["shell_pipe"]                                    # alt-shift-b       # shell mode
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
-S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after"]  # alt-shift-d       # duplicate line
+S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
+                                                           # alt-shift-d       # duplicate line
 # S-A-F6 = [""]                                            # alt-shift-e       #
 S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
 # S-A-F8 = [""]                                            # alt-shift-g       #
 # S-A-F9 = [""]                                            # alt-shift-h       #
 S-A-F10 = ["indent"]                                       # alt-shift-i       # indent
-S-C-F1 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"]                  # alt-shift-j # move down
-S-C-F2 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"] # alt-shift-k # move up
-S-C-F4 = ["extend_line_below"]                             # alt-shift-l       # select line
+S-C-F1 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"]
+                                                           # alt-shift-j       # move down
+S-C-F2 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"]
+                                                           # alt-shift-k       # move up
+S-C-F4 = ["goto_line_end", "select_mode", "goto_line_start", "MODE"]
+                                                           # alt-shift-l       # select line
 # S-C-F5 = [""]                                            # alt-shift-m       #
 # S-C-F6 = [""]                                            # alt-shift-n       #
 S-C-F7 = ["unindent"]                                      # alt-shift-o       # unindent
@@ -186,8 +192,9 @@ S-F5 = ["hsplit"]                                          # ctrl-cmd-alt      #
 S-F6 = ["wonly"]                                           # ctrl-cmd-cmd      # unsplit
 S-F7 = ["goto_prev_change"]                                # alt-cmd-up        # prev change
 S-F8 = ["goto_next_change"]                                # alt-cmd-down      # next change
-S-F9 = ["select_mode", "goto_file_start", "MODE"]                  # cmd-shift-up   # select start
-S-F10 = ["select_mode", "goto_last_line", "goto_line_end", "MODE"] # cmd-shift-down # select end
+S-F9 = ["select_mode", "goto_file_start", "MODE"]          # cmd-shift-up      # select start
+S-F10 = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
+                                                           # cmd-shift-down    # select end
 
 
 ####################################################################################################
