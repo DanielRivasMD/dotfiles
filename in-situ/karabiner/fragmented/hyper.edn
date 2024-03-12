@@ -40,9 +40,9 @@
          ; [:!!equal_sign []]                                                                      ;
          ; [:!!open_bracket []]                                                                    ;
          ; [:!!close_bracket []]                                                                   ;
-         ; [:!!semicolon []]                                                                       ;
-         ; [:!!quote []]                                                                           ;
-         ; [:!!backslash []]                                                                       ;
+         [:!!semicolon [:launch "Microsoft PowerPoint"]]                                           ;
+         [:!!quote [:launch "Microsoft Excel"]]                                                    ;
+         [:!!backslash [:launch "Microsoft Word"]]                                                 ;
          ; [:!!comma []]               COLLISION (system)                                          ;
          ; [:!!period []]              COLLISION (system)                                          ;
          [:!!slash [:launch "Chrome"]]                                                             ;
