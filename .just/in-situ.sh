@@ -104,6 +104,7 @@ echo "${RED}====================================================================
 
 ####################################################################################################
 # Completions
+####################################################################################################
 
 echo ''
 echo "${YELLOW}Creating completion directory${NC}"
@@ -118,17 +119,17 @@ ln -sf "${observatory}/cheat/scripts/cheat.zsh" "${zshcomp}/_cheat"           &&
 ln -sf "${observatory}/chezmoi/completions/chezmoi.zsh" "${zshcomp}/_chezmoi" && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chezmoi${NC}"
 ln -sf "${observatory}/fd/contrib/completion/_fd" "${zshcomp}/_fd"            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}fd${NC}"
 ln -sf "${observatory}/eza/completions/zsh/_eza" "${zshcomp}/_eza"            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}eza${NC}"
-cp "${zshcomp}/_eza" "${zshcomp}/_e" && sd eza e "${zshcomp}/_e"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}e${NC}"
 ln -sf "${observatory}/just/completions/just.zsh" "${zshcomp}/_just"          && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}just${NC}"
 ln -sf "${observatory}/watchexec/completions/zsh" "${zshcomp}/_watchexec"     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}watchexec${NC}"
+cp "${zshcomp}/_eza" "${zshcomp}/_e" && sd eza e "${zshcomp}/_e"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}e${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 echo ''
 echo "${YELLOW}Generate completions${NC}"
 echo "${RED}====================================================================================================${NC}"
 zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                 && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
-cp "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zj${NC}"
 cobra-cli completion zsh > "${zshcomp}/_cobra-cli"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cobra-cli${NC}"
+cp "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zj${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 echo ''
