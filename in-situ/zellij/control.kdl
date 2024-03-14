@@ -10,11 +10,13 @@ layout {
 
     tab name="Monitor" split_direction="horizontal" hide_floating_panes=true {
         pane split_direction="vertical" {
-            pane name="Clock" command="tock" size="40%" borderless=true
+            pane name="Clock" size="40%" borderless=true command="tock" {
+                args "-m" "-s"
+            }
             pane name="Control" focus=true
         }
         pane split_direction="vertical" size="75%" {
-            pane name="btm" command="btm" borderless=true
+            pane name="btm" borderless=true command="btm"
         }
 
         floating_panes {
