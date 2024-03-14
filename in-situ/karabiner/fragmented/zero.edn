@@ -41,14 +41,14 @@
          [:open_bracket [:!S3 :open_bracket]]              ; '#['                                  ;
          ; [:close_bracket []]                                                                     ;
          [:semicolon [:semicolon :spacebar]]               ; '; '                                  ;
-         [:quote []]                                                                               ;
-         ; [:backslash []]                                                                         ;
+         ; [:quote []]                                                                             ;
+         ; [:backslash []]             COLLISION (mouse mode)                                      ;
          [:comma [:comma :spacebar]]                       ; ', '                                  ;
          [:period [:period :period]]                       ; '..'                                  ;
          [:slash [:slash :slash :slash :spacebar]]         ; '/// '                                ;
 
          ; [:delete_or_backspace []]   NOT AVAILABLE                                               ;
-         ; [:return_or_enter []]       NOT AVAILABLE                                               ;
+         ; [:return_or_enter []]       COLLISION (mouse mode)                                      ;
          ; [:right_shift []]           NOT AVAILABLE                                               ;
          ; [:right_option []]          NOT AVAILABLE                                               ;
          ; [:right_command []]         NOT AVAILABLE                                               ;
