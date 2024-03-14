@@ -1,3 +1,14 @@
+####################################################################################################
+
+[default]
+timedelta = 11d
+highlight_event_days = True
+show_all_days = True
+print_new = event
+default_calendar = Personal
+
+[highlight_days]
+method = fg
 
 [locale]
 timeformat = %H:%M
@@ -5,81 +16,73 @@ dateformat = %Y-%m-%d
 longdateformat = %Y-%m-%d
 datetimeformat = %Y-%m-%d %H:%M
 longdatetimeformat = %Y-%m-%d %H:%M
+
+firstweekday = 0
 weeknumbers = left
 
+[sqlite]
+path = ~/.config/khal/khal.db
 
 
-[default]
-timedelta = 14d
-highlight_event_days = True
-show_all_days = True
-print_new = event
-
-
-[highlight_days]
-multiple = light magenta
-method = fg
-
-
+####################################################################################################
 
 [calendars]
-
-[[UU]]
-path = /Users/drivas/.config/khal/calendars/UU
+[[Funding]]
+path = /Users/drivas/.config/khal/calendars/Funding
 type = calendar
-color = brown
-priority = 15
-
-[[WA]]
-path = /Users/drivas/.config/khal/calendars/WA
-type = calendar
-color = dark magenta
-priority = 15
-
-[[TY]]
-path = /Users/drivas/.config/khal/calendars/TY
-type = calendar
-color = dark green
-priority = 15
-
-[[UG]]
-path = /Users/drivas/.config/khal/calendars/UG
-type = calendar
-color = dark blue
-priority = 15
-
-[[UNAM]]
-path = /Users/drivas/.config/khal/calendars/UNAM
-type = calendar
-color = dark blue
-priority = 15
+color = dark red
+priority = 6
 
 [[Personal]]
 path = /Users/drivas/.config/khal/calendars/Personal
 type = calendar
+color = brown
+priority = 5
+
+[[Igneous]]
+path = /Users/drivas/.config/khal/calendars/Igneous
+type = calendar
+color = dark cyan
+priority = 4
+
+[[Kukulkan]]
+path = /Users/drivas/.config/khal/calendars/Kukulkan
+type = calendar
 color = dark magenta
-priority = 9
+priority = 3
+
+[[Sports]]
+path = /Users/drivas/.config/khal/calendars/Sports
+type = calendar
+color = dark green
+priority = 2
 
 [[Astronomy]]
 path = /Users/drivas/.config/khal/calendars/Astronomy
 type = calendar
-color = dark cyan
-priority = 7
+color = dark blue
+priority = 1
 
-[[Simona]]
-path = /Users/drivas/.config/khal/calendars/Simona
-type = calendar
-color = dark magenta
-priority = 9
 
-[[SuperRugby]]
-path = /Users/drivas/.config/khal/calendars/SuperRugby
-type = calendar
-color = dark gray
-priority = 8
+####################################################################################################
 
-[[Grant]]
-path = /Users/drivas/.config/khal/calendars/Grant
-type = calendar
-color = dark red
-priority = 8
+[keybindings]
+down = down
+up = up
+left = left
+right = right
+duplicate = d
+external_edit = e
+log = l
+mark = m
+new = n
+quit = q
+save = s
+today = t
+export = x
+search = /
+view = enter
+delete = delete
+
+
+####################################################################################################
