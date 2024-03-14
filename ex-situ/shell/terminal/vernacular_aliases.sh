@@ -31,7 +31,10 @@ alias mp='mplayer'
 # go tool links
 ####################################################################################################
 
+# history
 alias f='fillin'
+
+# lazy
 alias lzd='lazydocker'
 alias lzg='lazygit'
 alias lzn='lazynpm'
@@ -40,16 +43,31 @@ alias lzn='lazynpm'
 # julia
 ####################################################################################################
 
+# repl
 alias jl='julia'
 
 ####################################################################################################
 # python
 ####################################################################################################
 
+# enviroment
+alias activate='source venv/bin/activate'
+
+# calendar
+alias cal='khal calendar'
+alias cal-astra='khal calendar --include-calendar AstraZeneca'
+alias cal-astro='khal calendar --include-calendar Astronomy'
+alias cal-funding='khal calendar --include-calendar Funding'
+alias cal-igneous='khal calendar --include-calendar Igneous'
+alias cal-kukulkan='khal calendar --include-calendar Kukulkan'
+alias cal-personal='khal calendar --include-calendar Personal'
+alias cal-sports='khal calendar --include-calendar Sports'
+alias cal-work='khal calendar --exclude-calendar Astronomy --exclude-calendar Sports'
+alias ical='ikhal'
+
+# package manager & repl
 alias pip='pip3'
 alias python='python3'
-
-alias activate='source venv/bin/activate'
 
 ####################################################################################################
 # rust tool links
