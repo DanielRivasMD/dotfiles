@@ -45,12 +45,12 @@
          [:!!backslash [:launch "Microsoft Word"]]                                                 ;
          ; [:!!comma []]               COLLISION (system)                                          ;
          ; [:!!period []]              COLLISION (system)                                          ;
-         [:!!slash [:launch "Chrome"]]                                                             ;
+         [:!!slash [:launch "Mail"]]                                                               ;
 
          [:!!delete_or_backspace [:launch "Lapce"]]                                                ;
          [:!!return_or_enter [:launch "Alacritty"]]                                                ;
          [:!!right_shift [:launch "Zed"]]                                                          ;
-         [:!!right_option [:launch "Mail"]]                                                        ;
+         [:!!right_option [:launch "Chrome"]]                                                      ;
          [:!!right_command [:launch "Firefox"]]                                                    ;
          ; [:!!spacebar []]            COLLISION (speak function)                                  ;
 
