@@ -135,7 +135,9 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
+ln -sf "${completionsDir}/_khal" "${zshcomp}/_khal"                           && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}khal${NC}"
 ln -sf "${completionsDir}/_lsd" "${zshcomp}/_lsd"                             && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lsd${NC}"
+ln -sf "${completionsDir}/_tldr" "${zshcomp}/_tldr"                           && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
 cp "${zshcomp}/_lsd" "${zshcomp}/_l" && sd lsd l "${zshcomp}/_l"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}l${NC}"
 echo "${RED}====================================================================================================${NC}"
 
