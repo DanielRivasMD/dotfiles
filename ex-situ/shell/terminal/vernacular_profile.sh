@@ -6,16 +6,34 @@
 stty -ixon
 
 ####################################################################################################
-#  archives
+# path
 ####################################################################################################
 
-export ARCHIVE="${HOME}/.archive"
-export IN_SILICO="${ARCHIVE}/in-silico"
-export EX_SITU="${ARCHIVE}/ex-situ"
-export IN_SITU="${ARCHIVE}/in-situ"
+# cargo
+PATH=$PATH:$HOME/.cargo/bin
+
+# go
+export GOROOT="$(brew --prefix)/Cellar/go/1.22.1/libexec"
+export GOPATH="$HOME/.go/"
+export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+# MySQL
+PATH=$PATH:/usr/local/mysql/bin/
+
+# python
+PATH=$PATH:$HOME/.python/bin/
+
+# links
+PATH=$PATH:$HOME/bin/links/
+
+# settings
+PATH=$PATH:/usr/local/bin/
+PATH=$PATH:/usr/local/sbin/
+
+export PATH
 
 ####################################################################################################
-#  language settings
+# language settings
 ####################################################################################################
 
 LANG="en_US.UTF-8"
@@ -29,102 +47,47 @@ export LANGUAGE="en_US"
 export LC_ALL="en_US.UTF-8"
 
 ####################################################################################################
-#  go path
+# enviroment
 ####################################################################################################
 
-export GOPATH="$HOME/.go/"
-export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-export GOROOT="$(brew --prefix)/Cellar/go/1.22.1/libexec"
+# archives
+export ARCHIVE="${HOME}/.archive"
+export IN_SILICO="${ARCHIVE}/in-silico"
+export EX_SITU="${ARCHIVE}/ex-situ"
+export IN_SITU="${ARCHIVE}/in-situ"
 
-####################################################################################################
-#  cargo-rust path
-####################################################################################################
+# bartib
+export BARTIB_FILE="${HOME}/.config/bartib/db.bartib"
 
-PATH=$PATH:$HOME/.cargo/bin
-
-####################################################################################################
-#  MySQL path
-####################################################################################################
-
-PATH=$PATH:/usr/local/mysql/bin/
-
-####################################################################################################
-#  path
-####################################################################################################
-
-# path settings
-PATH=$PATH:/usr/local/bin/
-PATH=$PATH:/usr/local/sbin/
-PATH=$PATH:$GOPATH/bin/
-PATH=$PATH:$HOME/bin/cargo/
-PATH=$PATH:$HOME/bin/go/
-PATH=$PATH:$HOME/bin/links/
-
-export PATH
-
-####################################################################################################
-# starship
-####################################################################################################
-
-export STARSHIP_CONFIG="${EX_SITU}/starship/vernacular_starship.toml"
-
-####################################################################################################
-# zellij
-####################################################################################################
-
-export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
-export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
-
-####################################################################################################
-# less
-####################################################################################################
-
-export LESSHISTFILE="-"
-
-####################################################################################################
-# editor
-####################################################################################################
+# broot
+source "${HOME}/.config/broot/launcher/bash/br"
 
 # editor
 export VISUAL=micro
 export EDITOR="$VISUAL"
 
-####################################################################################################
-# screen width
-####################################################################################################
+# less
+export LESSHISTFILE="-"
 
-export MANWIDTH=175
-
-####################################################################################################
 # pager
-####################################################################################################
-
 export PAGER=bat
 export BAT_PAGER=less
 export RCOLUMNS=$COLUMNS
 
-####################################################################################################
-# bartib
-####################################################################################################
-
-export BARTIB_FILE="${HOME}/.config/bartib/db.bartib"
-
-####################################################################################################
 # pier
-####################################################################################################
-
 export PIER="${EX_SITU}/pier"
 
-####################################################################################################
-# broot
-####################################################################################################
+# screen width
+export MANWIDTH=175
 
-source "${HOME}/.config/broot/launcher/bash/br"
-
-####################################################################################################
 # shell functions
-####################################################################################################
-
 source "${EX_SITU}/shell/terminal/shell_func.sh"
+
+# starship
+export STARSHIP_CONFIG="${EX_SITU}/starship/vernacular_starship.toml"
+
+# zellij
+export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
+export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
 
 ####################################################################################################

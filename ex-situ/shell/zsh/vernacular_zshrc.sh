@@ -25,7 +25,7 @@ ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
 eval "$(sheldon source)"
 
 ####################################################################################################
-#  autocompletion
+# autocompletion
 ####################################################################################################
 
 # add custom zsh completion path
@@ -81,7 +81,7 @@ NFUN="${ZDOTDIR}/zsh_navi.sh"
 [ -f ${NFUN} ] && source ${NFUN}
 
 ####################################################################################################
-#  starship
+# starship
 ####################################################################################################
 
 eval "$(starship init zsh)"
@@ -91,8 +91,8 @@ eval "$(starship init zsh)"
 ####################################################################################################
 
 if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
-    ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
-    [ -f ${ZJFUN} ] && source ${ZJFUN}
+  ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
+  [ -f ${ZJFUN} ] && source ${ZJFUN}
 fi
 
 ####################################################################################################
@@ -118,14 +118,14 @@ autoload edit-command-line; zle -N edit-command-line
 # atuin
 bindkey '^s' _atuin_search_widget
 
+# command edit
+bindkey '^g' edit-command-line
+
 # just
 bindkey '^j' _call_just
 
 # navi
 bindkey '^n' _call_navi
-
-# command edit
-bindkey '^g' edit-command-line
 
 # zoxide
 bindkey '^h' _call_zi
