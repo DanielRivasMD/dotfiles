@@ -24,9 +24,9 @@
          ; [:!EQRleft_option :!Ts [:editor]]               ; del-alt                               ;
          ; [:!EQRleft_command :!Tt [:editor]]              ; del-cmd                               ;
          ; [: :!Tu [:editor]]          COLLISION (delete)                                          ;
-         ; [:!TCup_arrow :!Tv [:editor]]                     ; ctrl-cmd-up                           ;
+         ; [: :!Tv [:editor]]                                                                      ;
          ; [: :!Tw [:editor]]          COLLISION (delete)                                          ;
-         ; [:!TCdown_arrow :!Tx [:editor]]                   ; ctrl-cmd-down                         ;
+         ; [: :!Tx [:editor]]                                                                      ;
          ; [:!EQRspacebar :!Ty [:editor]]                  ; del-space                             ;
          ; [: :!Tz [:editor]]          DEFAULT                                                     ;
          ]}
@@ -53,15 +53,15 @@
 ; GUI
 {:des "GUI - Control remappings"
  :rules [;
-         [:!EQRtab :!Th [:gui]]                            ; del-tab
-         [:!EQRcaps_lock :!Tg [:gui]]                      ; del-caps
-         [:!EQRleft_shift :!Oc [:gui]]                     ; del-shift
-         ; [:!EQRleft_control :!Tr [:gui]]                 ; del-ctrl
-         [:!EQRleft_option :!Ts [:gui]]                    ; del-alt
-         ; [:!EQRleft_command :!Tt [:gui]]                 ; del-cmd
-         [:!EQRspacebar :!Ty [:gui]]                       ; del-space
-         [:!EQRright_command :!Tj [:gui]]                  ; del-cmd
-         [:!EQRright_option :!Tn [:gui]]                   ; del-alt
+         [:!EQRtab :!Th [:editor]]                         ; del-tab                                ;
+         [:!EQRcaps_lock :!Tg [:editor]]                   ; del-caps                               ;
+         [:!EQRleft_shift :!Oc [:editor]]                  ; del-shift                              ;
+         ; [:!EQRleft_control :!Tr [:editor]]              ; del-ctrl                               ;
+         [:!EQRleft_option :!Ts [:editor]]                 ; del-alt                                ;
+         ; [:!EQRleft_command :!Tt [:editor]]              ; del-cmd                                ;
+         [:!EQRspacebar :!Ty [:editor]]                    ; del-space                              ;
+         [:!EQRright_command :!Tj [:editor]]               ; del-cmd                                ;
+         [:!EQRright_option :!Tn [:editor]]                ; del-alt                                ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
