@@ -48,7 +48,7 @@
          ; [:!Sslash []]                         NOT AVAILABLE                                     ;
 
          ; [:!Sdelete_or_backspace []]                                                             ;
-         ; [:!Sreturn_or_enter []]                                                                 ;
+         [:!S##return_or_enter :caps_lock]                                                                 ;
          [:!Sright_shift :delete_forward]                                                          ;
          [:!Sright_option :!Od [:term]]                                                            ;
          [:!Sright_command :!Tk [:term]]                                                           ;

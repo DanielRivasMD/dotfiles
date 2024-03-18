@@ -4,11 +4,11 @@
 {:des "Editor control - alphabet"
  :rules [;
          [:!Cleft_arrow :!Ta [:editor]]                    ; cmd-left                              ;
-         [:!Sspacebar :!Tb [:editor]]                      ; shift-space                           ;
+         ; [:!Sspacebar :!Tb [:editor]]                      ; shift-space                           ;
          ; [: :!Tc [:editor]]          DEFAULT                                                     ;
          ; [: :!Td [:editor]]          DEFAULT                                                     ;
          [:!Cright_arrow :!Te [:editor]]                   ; cmd-right                             ;
-         [:!Sreturn_or_enter :!Tf [:editor]]               ; shift-enter                           ;
+         ; [:!Sreturn_or_enter :!Tf [:editor]]               ; shift-enter                           ;
          ; [:!EQRcaps_lock :!Tg [:editor]]                 ; del-caps                              ;
          ; [:!EQRtab :!Th [:editor]]                       ; del-tab                               ;
          ; [: :!Ti [:editor]]          DEFAULT                                                     ;
