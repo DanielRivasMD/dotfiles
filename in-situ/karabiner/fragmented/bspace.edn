@@ -36,32 +36,32 @@
 ; bspace
 {:des "BSpace Mode - symbols"
  :rules [;
-         ; [:!EQRhyphen []]                                                                        ;
-         ; [:!EQRequal_sign []]                                                                    ;
-         ; [:!EQRopen_bracket []]                                                                  ;
-         ; [:!EQRclose_bracket []]                                                                 ;
-         ; [:!EQRsemicolon []]                                                                     ;
-         ; [:!EQRquote []]                                                                         ;
-         ; [:!EQRbackslash []]                                                                     ;
-         ; [:!EQRcomma []]                                                                         ;
-         ; [:!EQRperiod []]                                                                        ;
-         ; [:!EQRslash []]                                                                         ;
+         ; [:!EQR#Phyphen []]                                                                      ;
+         ; [:!EQR#Pequal_sign []]                                                                  ;
+         ; [:!EQR#Popen_bracket []]                                                                ;
+         ; [:!EQR#Pclose_bracket []]                                                               ;
+         ; [:!EQR#Psemicolon []]                                                                   ;
+         ; [:!EQR#Pquote []]                                                                       ;
+         ; [:!EQR#Pbackslash []]                                                                   ;
+         ; [:!EQR#Pcomma []]                                                                       ;
+         ; [:!EQR#Pperiod []]                                                                      ;
+         ; [:!EQR#Pslash []]                                                                       ;
 
-         ; [:!EQRdelete_or_backspace []]         NOT AVAILABLE                                     ;
-         ; [:!EQRreturn_or_enter []]                                                               ;
-         ; [:!EQRright_shift []]                                                                   ;
-         ; [:!EQRright_option :!Tn [:term]]                                                        ;
-         ; [:!EQRright_command :!Tj [:term]]                                                       ;
-         ; [:!EQRspacebar :!Ty [:term]]                                                            ;
+         ; [:!EQR#Pdelete_or_backspace []]       NOT AVAILABLE                                     ;
+         ; [:!EQR#Preturn_or_enter []]                                                             ;
+         ; [:!EQR#Pright_shift []]                                                                 ;
+         ; [:!EQR#Pright_option :!Tn [:term]]                                                      ;
+         ; [:!EQR#Pright_command :!Tj [:term]]                                                     ;
+         ; [:!EQR#Pspacebar :!Ty [:term]]                                                          ;
 
-         [:!EQRleft_command :!Tt [:term]]                                                          ;
-         ; [:!EQRleft_option :!Ts [:term]]                                                         ;
-         [:!EQRleft_control :!Tr [:term]]                                                          ;
-         ; [:!EQRleft_shift :!Oc [:term]]                                                          ;
-         ; [:!EQRcaps_lock :!Tg [:term]]                                                           ;
-         ; [:!EQRtab :!Th [:term]]                                                                 ;
-         ; [:!EQRnon_us_backslash []]                                                              ;
-         ; [:!EQRescape []]                                                                        ;
+         [:!EQR#Pleft_command :!Tt [:term]]                                                        ;
+         ; [:!EQR#Pleft_option :!Ts [:term]]                                                       ;
+         [:!EQR#Pleft_control :!Tr [:term]]                                                        ;
+         ; [:!EQR#Pleft_shift :!Oc [:term]]                                                        ;
+         ; [:!EQR#Pcaps_lock :!Tg [:term]]                                                         ;
+         ; [:!EQR#Ptab :!Th [:term]]                                                               ;
+         ; [:!EQR#Pnon_us_backslash []]                                                            ;
+         ; [:!EQR#Pescape []]                                                                      ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

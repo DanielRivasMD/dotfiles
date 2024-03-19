@@ -47,21 +47,21 @@
          ; [:!Rperiod []]                        NOT AVAILABLE                                     ;
          ; [:!Rslash []]                         NOT AVAILABLE                                     ;
 
-         ; [:!Rdelete_or_backspace []]                                                             ;
-         ; [:!Rreturn_or_enter []]                                                                 ;
-         ; [:!Rright_shift []]                   NOT AVAILABLE                                     ;
-         ; [:!Rright_option []]                                                                    ;
-         ; [:!Rright_command []]                                                                   ;
-         ; [:!Rspacebar []]                                                                        ;
+         ; [:!R#Pdelete_or_backspace []]                                                           ;
+         ; [:!R#Preturn_or_enter []]                                                               ;
+         ; [:!R#Pright_shift []]                 NOT AVAILABLE                                     ;
+         ; [:!R#Pright_option []]                                                                  ;
+         ; [:!R#Pright_command []]                                                                 ;
+         ; [:!R#Pspacebar []]                                                                      ;
 
-         [:!Rleft_command :!Tu [:term]]                                                            ;
+         [:!R#Pleft_command :!Tu [:term]]                                                          ;
          [:!Rleft_option :!Tl [:term]]                                                             ;
-         [:!Rleft_control :!Tw [:term]]                                                            ;
-         [:!Rleft_shift :delete_or_backspace]                                                      ;
-         ; [:!Rcaps_lock []]                                                                       ;
-         ; [:!Rtab []]                                                                             ;
-         ; [:!Rnon_us_backslash []]                                                                ;
-         ; [:!Rescape []]                                                                          ;
+         [:!R#Pleft_control :!Tw [:term]]                                                          ;
+         [:!R#Pleft_shift :delete_or_backspace]                                                    ;
+         ; [:!R#Pcaps_lock []]                                                                     ;
+         ; [:!R#Ptab []]                                                                           ;
+         ; [:!R#Pnon_us_backslash []]                                                              ;
+         ; [:!R#Pescape []]                                                                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

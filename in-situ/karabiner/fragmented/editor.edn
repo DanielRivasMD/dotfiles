@@ -3,31 +3,31 @@
 ; Editor
 {:des "Editor control - alphabet"
  :rules [;
-         [:!Cleft_arrow :!Ta [:editor]]                    ; cmd-left                              ;
+         [:!C#Pleft_arrow :!Ta [:editor]]                  ; cmd-left                              ;
          ; [: :!Tb [:editor]]                                                                      ;
          ; [: :!Tc [:editor]]          DEFAULT                                                     ;
          ; [: :!Td [:editor]]          DEFAULT                                                     ;
-         [:!Cright_arrow :!Te [:editor]]                   ; cmd-right                             ;
+         [:!C#Pright_arrow :!Te [:editor]]                 ; cmd-right                             ;
          ; [: :!Tf [:editor]]                                                                      ;
-         ; [:!EQRcaps_lock :!Tg [:editor]]                 ; del-caps                              ;
-         ; [:!EQRtab :!Th [:editor]]                       ; del-tab                               ;
+         ; [:!EQR#Pcaps_lock :!Tg [:editor]]               ; del-caps                              ;
+         ; [:!EQR#Ptab :!Th [:editor]]                     ; del-tab                               ;
          ; [: :!Ti [:editor]]          DEFAULT                                                     ;
-         ; [:!EQRright_command :!Tj [:editor]]             ; del-cmd                               ;
+         ; [:!EQR#Pright_command :!Tj [:editor]]           ; del-cmd                               ;
          ; [: :!Tk [:editor]]          COLLISION (delete)                                          ;
          ; [: :!Tl [:editor]]          COLLISION (delete)                                          ;
          ; [: :!Tm [:editor]]          DEFAULT                                                     ;
-         ; [:!EQRright_option :!Tn [:editor]]              ; del-alt                               ;
-         ; [:!Cup_arrow :!To [:editor]]                    ; cmd-up                                ;
-         ; [:!Cdown_arrow :!Tp [:editor]]                  ; cmd-down                              ;
+         ; [:!EQR#Pright_option :!Tn [:editor]]            ; del-alt                               ;
+         ; [:!C#Pup_arrow :!To [:editor]]                  ; cmd-up                                ;
+         ; [:!C#Pdown_arrow :!Tp [:editor]]                ; cmd-down                              ;
          ; [: :!Tq [:editor]]          DEFAULT                                                     ;
-         ; [:!EQRleft_control :!Tr [:editor]]              ; del-ctrl                              ;
-         ; [:!EQRleft_option :!Ts [:editor]]               ; del-alt                               ;
-         ; [:!EQRleft_command :!Tt [:editor]]              ; del-cmd                               ;
+         ; [:!EQR#Pleft_control :!Tr [:editor]]            ; del-ctrl                              ;
+         ; [:!EQR#Pleft_option :!Ts [:editor]]             ; del-alt                               ;
+         ; [:!EQR#Pleft_command :!Tt [:editor]]            ; del-cmd                               ;
          ; [: :!Tu [:editor]]          COLLISION (delete)                                          ;
          ; [: :!Tv [:editor]]                                                                      ;
          ; [: :!Tw [:editor]]          COLLISION (delete)                                          ;
          ; [: :!Tx [:editor]]                                                                      ;
-         ; [:!EQRspacebar :!Ty [:editor]]                  ; del-space                             ;
+         ; [:!EQR#Pspacebar :!Ty [:editor]]                ; del-space                             ;
          ; [: :!Tz [:editor]]          DEFAULT                                                     ;
          ]}
 
@@ -37,15 +37,15 @@
 {:des "GUI - Sessions"
  :rules [;
          ; [:escape :!EWright_shift :gui {:alone [:!CSe]}] ; file explorer
-         [:right_shift :right_shift
+         [:#Pright_shift :right_shift
           :gui {:alone [:!Cj]}]                            ; terminal
 
-         [:!TCright_shift :!Cbackslash [:gui]]             ; split vertical
-         [:!TCright_option :!CSbackslash [:gui]]           ; split horizontal
-         ; [:!OTright_command :!TCSbackslash [:gui]]       ;
+         [:!TC#Pright_shift :!Cbackslash [:gui]]           ; split vertical
+         [:!TC#Pright_option :!CSbackslash [:gui]]         ; split horizontal
+         ; [:!OT#Pright_command :!TCSbackslash [:gui]]     ;
 
-         ; [:!OCleft_arrow :!TStab [:gui]]                 ; left tab
-         ; [:!OCright_arrow :!Ttab [:gui]]                 ; right tab
+         ; [:!OC#Pleft_arrow :!TStab [:gui]]               ; left tab
+         ; [:!OC#Pright_arrow :!Ttab [:gui]]               ; right tab
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -53,15 +53,15 @@
 ; GUI
 {:des "GUI - Control remappings"
  :rules [;
-         [:!EQRtab :!Th [:editor]]                         ; del-tab                                ;
-         [:!EQRcaps_lock :!Tg [:editor]]                   ; del-caps                               ;
-         [:!EQRleft_shift :!Oc [:editor]]                  ; del-shift                              ;
-         ; [:!EQRleft_control :!Tr [:editor]]              ; del-ctrl                               ;
-         [:!EQRleft_option :!Ts [:editor]]                 ; del-alt                                ;
-         ; [:!EQRleft_command :!Tt [:editor]]              ; del-cmd                                ;
-         [:!EQRspacebar :!Ty [:editor]]                    ; del-space                              ;
-         [:!EQRright_command :!Tj [:editor]]               ; del-cmd                                ;
-         [:!EQRright_option :!Tn [:editor]]                ; del-alt                                ;
+         [:!EQR#Ptab :!Th [:editor]]                       ; del-tab                                ;
+         [:!EQR#Pcaps_lock :!Tg [:editor]]                 ; del-caps                               ;
+         [:!EQR#Pleft_shift :!Oc [:editor]]                ; del-shift                              ;
+         ; [:!EQR#Pleft_control :!Tr [:editor]]            ; del-ctrl                               ;
+         [:!EQR#Pleft_option :!Ts [:editor]]               ; del-alt                                ;
+         ; [:!EQR#Pleft_command :!Tt [:editor]]            ; del-cmd                                ;
+         [:!EQR#Pspacebar :!Ty [:editor]]                  ; del-space                              ;
+         [:!EQR#Pright_command :!Tj [:editor]]             ; del-cmd                                ;
+         [:!EQR#Pright_option :!Tn [:editor]]              ; del-alt                                ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -69,12 +69,12 @@
 ; GUI
 {:des "GUI - Interactive delete"
  :rules [;
-         ; [:!EQRleft_shift :!Oc [:editor]]                ; del-shift                             ;
-         [:!Sright_option :!Odelete_forward [:gui]]        ; delete word forward
-         ; [:!Sright_command :!Cdelete_forward [:gui]]     ; delete line forward
-         [:!Rleft_control :!Odelete_or_backspace [:gui]]   ; delete word backward
-         [:!Rleft_command :!Cdelete_or_backspace [:gui]]   ; delete line backward
-         [:!Rleft_option :!Tl [:gui]]                      ; shift-alt
+         ; [:!EQR#Pleft_shift :!Oc [:editor]]              ; del-shift                             ;
+         [:!S#Pright_option :!Odelete_forward [:gui]]      ; delete word forward
+         ; [:!S#Pright_command :!Cdelete_forward [:gui]]   ; delete line forward
+         [:!R#Pleft_control :!Odelete_or_backspace [:gui]] ; delete word backward
+         [:!R#Pleft_command :!Cdelete_or_backspace [:gui]] ; delete line backward
+         [:!R#Pleft_option :!Tl [:gui]]                    ; shift-alt
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

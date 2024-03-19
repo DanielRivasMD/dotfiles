@@ -47,21 +47,21 @@
          ; [:!Speriod []]                        NOT AVAILABLE                                     ;
          ; [:!Sslash []]                         NOT AVAILABLE                                     ;
 
-         ; [:!Sdelete_or_backspace []]                                                             ;
-         [:!S##return_or_enter :caps_lock]                                                                 ;
-         [:!Sright_shift :delete_forward]                                                          ;
-         [:!Sright_option :!Od [:term]]                                                            ;
-         [:!Sright_command :!Tk [:term]]                                                           ;
-         ; [:!Sspacebar []]                                                                        ;
+         ; [:!S#Pdelete_or_backspace []]                                                           ;
+         [:!S#Preturn_or_enter :caps_lock]                                                         ;
+         [:!S#Pright_shift :delete_forward]                                                        ;
+         [:!S#Pright_option :!Od [:term]]                                                          ;
+         [:!S#Pright_command :!Tk [:term]]                                                         ;
+         ; [:!S#Pspacebar []]                                                                      ;
 
-         ; [:!Sleft_command []]                                                                    ;
-         ; [:!Sleft_option []]                                                                     ;
-         ; [:!Sleft_control []]                                                                    ;
-         ; [:!Sleft_shift []]                    NOT AVAILABLE                                     ;
-         ; [:!Scaps_lock []]                                                                       ;
-         ; [:!Stab []]                                                                             ;
-         ; [:!Snon_us_backslash []]                                                                ;
-         ; [:!Sescape []]                                                                          ;
+         ; [:!S#Pleft_command []]                                                                  ;
+         ; [:!S#Pleft_option []]                                                                   ;
+         ; [:!S#Pleft_control []]                                                                  ;
+         ; [:!S#Pleft_shift []]                  NOT AVAILABLE                                     ;
+         ; [:!S#Pcaps_lock []]                                                                     ;
+         ; [:!S#Ptab []]                                                                           ;
+         ; [:!S#Pnon_us_backslash []]                                                              ;
+         ; [:!S#Pescape []]                                                                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

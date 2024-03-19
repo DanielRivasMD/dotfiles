@@ -36,32 +36,32 @@
 ; hyper
 {:des "Hyper Mode - symbols"
  :rules [;
-         ; [:!!hyphen []]                                                                          ;
-         ; [:!!equal_sign []]                                                                      ;
-         ; [:!!open_bracket []]                                                                    ;
-         ; [:!!close_bracket []]                                                                   ;
-         [:!!semicolon [:launch "Microsoft PowerPoint"]]                                           ;
-         [:!!quote [:launch "Microsoft Excel"]]                                                    ;
-         [:!!backslash [:launch "Microsoft Word"]]                                                 ;
-         ; [:!!comma []]               COLLISION (system)                                          ;
-         ; [:!!period []]              COLLISION (system)                                          ;
-         [:!!slash [:launch "Mail"]]                                                               ;
+         ; [:!!#Phyphen []]                                                                        ;
+         ; [:!!#Pequal_sign []]                                                                    ;
+         ; [:!!#Popen_bracket []]                                                                  ;
+         ; [:!!#Pclose_bracket []]                                                                 ;
+         [:!!#Psemicolon [:launch "Microsoft PowerPoint"]]                                         ;
+         [:!!#Pquote [:launch "Microsoft Excel"]]                                                  ;
+         [:!!#Pbackslash [:launch "Microsoft Word"]]                                               ;
+         ; [:!!#Pcomma []]             COLLISION (system)                                          ;
+         ; [:!!#Pperiod []]            COLLISION (system)                                          ;
+         [:!!#Pslash [:launch "Mail"]]                                                             ;
 
-         [:!!delete_or_backspace [:launch "Lapce"]]                                                ;
-         [:!!return_or_enter [:launch "Alacritty"]]                                                ;
-         [:!!right_shift [:launch "Zed"]]                                                          ;
-         [:!!right_option [:launch "Chrome"]]                                                      ;
-         [:!!right_command [:launch "Firefox"]]                                                    ;
-         ; [:!!spacebar []]            COLLISION (speak function)                                  ;
+         [:!!#Pdelete_or_backspace [:launch "Lapce"]]                                              ;
+         [:!!#Preturn_or_enter [:launch "Alacritty"]]                                              ;
+         [:!!#Pright_shift [:launch "Zed"]]                                                        ;
+         [:!!#Pright_option [:launch "Chrome"]]                                                    ;
+         [:!!#Pright_command [:launch "Firefox"]]                                                  ;
+         ; [:!!#Pspacebar []]          COLLISION (speak function)                                  ;
 
-         ; [:!!left_command []]                                                                    ;
-         ; [:!!left_option []]                                                                     ;
-         ; [:!!left_control []]                                                                    ;
-         ; [:!!left_shift []]                                                                      ;
-         ; [:!!caps_lock []]                     NOT AVAILABLE                                     ;
-         ; [:!!tab []]                                                                             ;
-         ; [:!!non_us_backslash []]                                                                ;
-         ; [:!!escape []]                                                                          ;
+         ; [:!!#Pleft_command []]                                                                  ;
+         ; [:!!#Pleft_option []]                                                                   ;
+         ; [:!!#Pleft_control []]                                                                  ;
+         ; [:!!#Pleft_shift []]                                                                    ;
+         ; [:!!#Pcaps_lock []]                   NOT AVAILABLE                                     ;
+         ; [:!!#Ptab []]                                                                           ;
+         ; [:!!#Pnon_us_backslash []]                                                              ;
+         ; [:!!#Pescape []]                                                                        ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

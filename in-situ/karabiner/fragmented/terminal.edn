@@ -38,50 +38,50 @@
  :rules [;
          [:left_option :left_option [:term] {:alone [:f2]}]                                        ;
 
-         ; [:!Oleft_arrow : [:term]]             ;                                                 ;
-         ; [:!Oright_arrow : [:term]]            ;                                                 ;
-         [:!Oup_arrow :f4 [:term]]               ; lazygit move                                    ;
-         [:!Odown_arrow :f5 [:term]]             ; lazygit move                                    ;
+         ; [:!O#Pleft_arrow : [:term]]           ;                                                 ;
+         ; [:!O#Pright_arrow : [:term]]          ;                                                 ;
+         [:!O#Pup_arrow :f4 [:term]]             ; lazygit move                                    ;
+         [:!O#Pdown_arrow :f5 [:term]]           ; lazygit move                                    ;
 
-         ; [:!Tleft_arrow : [:term]]             ;                                                 ;
-         ; [:!Tright_arrow : [:term]]            ;                                                 ;
-         ; [:!Tup_arrow : [:term]]               ;                                                 ;
-         ; [:!Tdown_arrow : [:term]]             ;                                                 ;
+         ; [:!T#Pleft_arrow : [:term]]           ;                                                 ;
+         ; [:!T#Pright_arrow : [:term]]          ;                                                 ;
+         ; [:!T#Pup_arrow : [:term]]             ;                                                 ;
+         ; [:!T#Pdown_arrow : [:term]]           ;                                                 ;
 
-         ; [:!Cleft_arrow : [:term]]             ;                                                 ;
-         ; [:!Cright_arrow : [:term]]            ;                                                 ;
-         [:!Cup_arrow :f6 [:term]]               ; lazygit, broot & helix move                     ;
-         [:!Cdown_arrow :f7 [:term]]             ; lazygit, broot & helix move                     ;
+         ; [:!C#Pleft_arrow : [:term]]           ;                                                 ;
+         ; [:!C#Pright_arrow : [:term]]          ;                                                 ;
+         [:!C#Pup_arrow :f6 [:term]]             ; lazygit, broot & helix move                     ;
+         [:!C#Pdown_arrow :f7 [:term]]           ; lazygit, broot & helix move                     ;
 
-         ; [:!OCleft_arrow : [:term]]            ;                                                 ;
-         ; [:!OCright_arrow : [:term]]           ;                                                 ;
-         [:!OCup_arrow :!Sf7 [:term]]            ;                                                 ;
-         [:!OCdown_arrow :!Sf8 [:term]]          ;                                                 ;
+         ; [:!OC#Pleft_arrow : [:term]]          ;                                                 ;
+         ; [:!OC#Pright_arrow : [:term]]         ;                                                 ;
+         [:!OC#Pup_arrow :!Sf7 [:term]]          ;                                                 ;
+         [:!OC#Pdown_arrow :!Sf8 [:term]]        ;                                                 ;
 
-         [:!TCleft_arrow :f8 [:term]]            ; lazygit - broot viewer & helix tab              ;
-         [:!TCright_arrow :f9 [:term]]           ; lazygit - broot viewer & helix tab              ;
-         [:!TCup_arrow :f10 [:term]]             ; lazygit - broot viewer & helix counter          ;
-         [:!TCdown_arrow :f11 [:term]]           ; lazygit - broot viewer & helix counter          ;
+         [:!TC#Pleft_arrow :f8 [:term]]          ; lazygit - broot viewer & helix tab              ;
+         [:!TC#Pright_arrow :f9 [:term]]         ; lazygit - broot viewer & helix tab              ;
+         [:!TC#Pup_arrow :f10 [:term]]           ; lazygit - broot viewer & helix counter          ;
+         [:!TC#Pdown_arrow :f11 [:term]]         ; lazygit - broot viewer & helix counter          ;
 
-         ; [:!Sleft_arrow : [:term]]             ;                                                 ;
-         ; [:!Sright_arrow : [:term]]            ;                                                 ;
-         ; [:!Sup_arrow : [:term]]               ;                                                 ;
-         ; [:!Sdown_arrow : [:term]]             ;                                                 ;
+         ; [:!S#Pleft_arrow : [:term]]           ;                                                 ;
+         ; [:!S#Pright_arrow : [:term]]          ;                                                 ;
+         ; [:!S#Pup_arrow : [:term]]             ;                                                 ;
+         ; [:!S#Pdown_arrow : [:term]]           ;                                                 ;
 
-         ; [:!OSleft_arrow : [:term]]            ;                                                 ;
-         ; [:!OSright_arrow : [:term]]           ;                                                 ;
-         ; [:!OSup_arrow : [:term]]              ;                                                 ;
-         ; [:!OSdown_arrow : [:term]]            ;                                                 ;
+         ; [:!OS#Pleft_arrow : [:term]]          ;                                                 ;
+         ; [:!OS#Pright_arrow : [:term]]         ;                                                 ;
+         ; [:!OS#Pup_arrow : [:term]]            ;                                                 ;
+         ; [:!OS#Pdown_arrow : [:term]]          ;                                                 ;
 
-         ; [:!TSleft_arrow : [:term]]            ;                                                 ;
-         ; [:!TSright_arrow : [:term]]           ;                                                 ;
-         ; [:!TSup_arrow : [:term]]              ;                                                 ;
-         ; [:!TSdown_arrow : [:term]]            ;                                                 ;
+         ; [:!TS#Pleft_arrow : [:term]]          ;                                                 ;
+         ; [:!TS#Pright_arrow : [:term]]         ;                                                 ;
+         ; [:!TS#Pup_arrow : [:term]]            ;                                                 ;
+         ; [:!TS#Pdown_arrow : [:term]]          ;                                                 ;
 
-         [:!CSleft_arrow :!Oleft_arrow [:term]]  ;                                                 ;
-         [:!CSright_arrow :!Oright_arrow [:term]];                                                 ;
-         [:!CSup_arrow :!Sf9 [:term]]            ;                                                 ;
-         [:!CSdown_arrow :!Sf10 [:term]]         ;                                                 ;
+         [:!CS#Pleft_arrow :!Oleft_arrow [:term]];                                                 ;
+         [:!CS#Pright_arrow :!Oright_arrow [:term]]                                                ;
+         [:!CS#Pup_arrow :!Sf9 [:term]]          ;                                                 ;
+         [:!CS#Pdown_arrow :!Sf10 [:term]]       ;                                                 ;
          ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
