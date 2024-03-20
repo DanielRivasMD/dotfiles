@@ -4,32 +4,33 @@
 {:des "Zero Mode - alphabet"
  :rules
  [:zero-mode
-  ; [:a []]                                                                    ;                   ;
-  ; [:b []]                                                                    ;                   ;
-  ; [:c []]                                                                    ;                   ;
-  ; [:d []]                                                                    ;                   ;
-  [:e [:e :n :u :m]]                                                           ; 'enum'            ;
-  ; [:f []]                                                                    ;                   ;
-  ; [:g []]                                                                    ;                   ;
-  ; [:h []]                                                                    ;                   ;
-  ; [:i []]                                                                    ;                   ;
-  ; [:j []]                                                                    ;                   ;
-  ; [:k []]                                                                    ;                   ;
-  ; [:l []]                                                                    ;                   ;
-  [:m [:m :u :t :a :b :l :e]]                                                  ; 'mutable'         ;
-  ; [:n []]                                                                    ;                   ;
-  ; [:o []]                                                                    ;                   ;
-  ; [:p []]                                                                    ;                   ;
-  ; [:q []]                                                                    ;                   ;
-  ; [:r []]                                                                    ;                   ;
-  [:s [:s :t :r :u :c :t]]                                                     ; 'struct'          ;
-  [:t [:t :y :p :e]]                                                           ;                   ;
-  ; [:u []]                                                                    ;                   ;
-  ; [:v []]                                                                    ;                   ;
-  [:w [:w :h :e :r :e :spacebar]]                                              ; 'where '          ;
-  ; [:x []]                                                                    ;                   ;
-  ; [:y []]                                                                    ;                   ;
-  [:z [:w :h :i :c :h :spacebar]]                                              ; 'which '          ;
+  ; [:#Pa []]                                                                  ;                   ;
+  ; [:#Pb []]                                                                  ;                   ;
+  ; [:#Pc []]                                                                  ;                   ;
+  ; [:#Pd []]                                                                  ;                   ;
+  [:#Pe [:e :n :u :m]]                                                         ; 'enum'            ;
+  ; [:#Pf []]                                                                  ;                   ;
+  ; [:#Pg []]                                                                  ;                   ;
+  ; [:#Ph []]                                                                  ;                   ;
+  ; [:#Pi []]                                                                  ;                   ;
+  ; [:#Pj []]                                                                  ;                   ;
+  ; [:#Pk []]                                                                  ;                   ;
+  ; [:#Pl []]                                                                  ;                   ;
+  [:#Pm [:m :u :t :a :b :l :e]]                                                ; 'mutable'         ;
+  ; [:#Pn []]                                                                  ;                   ;
+  ; [:#Po []]                                                                  ;                   ;
+  ; [:#Pp []]                                                                  ;                   ;
+  ; [:#Pq []]                                                                  ;                   ;
+  ; [:#Pr []]                                                                  ;                   ;
+  [:#Ps [:s :t :r :u :c :t]]                                                   ; 'struct'          ;
+  [:#Pt [:t :y :p :e]]                                                         ;                   ;
+  ; [:#Pu []]                                                                  ;                   ;
+  ; [:#Pv []]                                                                  ;                   ;
+  [:#Pw [:w :h :e :r :e :spacebar]]                                            ; 'where '          ;
+  ; [:#Px []]                                                                  ;                   ;
+  ; [:#Py []]                                                                  ;                   ;
+  [:#Pz [:w :h :i :c :h :spacebar]]                                            ; 'which '          ;
+  ; [:#Pkeypad_num_lock []]                                                    ;                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,32 +39,32 @@
 {:des "Zero Mode - symbols"
  :rules
  [:zero-mode
-  [:hyphen [:spacebar :hyphen]]                                                ; ' -'              ;
-  ; [:equal_sign []]                                                                               ;
-  [:open_bracket [:!S3 :open_bracket]]                                         ; '#['              ;
-  ; [:close_bracket []]                                                                            ;
-  [:semicolon [:semicolon :spacebar]]                                          ; '; '              ;
-  ; [:quote []]                                                                                    ;
-  ; [:backslash []]                                                                 COLLISION      ;
-  [:comma [:comma :spacebar]]                                                  ; ', '              ;
-  [:period [:period :period]]                                                  ; '..'              ;
-  [:slash [:slash :slash :slash :spacebar]]                                    ; '/// '            ;
+  [:#Phyphen [:spacebar :hyphen]]                                              ; ' -'              ;
+  ; [:#Pequal_sign []]                                                                             ;
+  [:#Popen_bracket [:!S3 :open_bracket]]                                       ; '#['              ;
+  ; [:#Pclose_bracket []]                                                                          ;
+  [:#Psemicolon [:semicolon :spacebar]]                                        ; '; '              ;
+  ; [:#Pquote []]                                                                                  ;
+  ; [:#Pbackslash []]                                                               COLLISION      ;
+  [:#Pcomma [:comma :spacebar]]                                                ; ', '              ;
+  [:#Pperiod [:period :period]]                                                ; '..'              ;
+  [:#Pslash [:slash :slash :slash :spacebar]]                                  ; '/// '            ;
 
-  ; [:delete_or_backspace []]                                                       NOT AVAILABLE  ;
-  ; [:return_or_enter []]                                                           COLLISION      ;
-  ; [:right_shift []]                                                               NOT AVAILABLE  ;
-  ; [:right_option []]                                                              NOT AVAILABLE  ;
-  ; [:right_command []]                                                             NOT AVAILABLE  ;
-  ; [:spacebar []]                                                                  NOT AVAILABLE  ;
+  ; [:#Pdelete_or_backspace []]                                                     NOT AVAILABLE  ;
+  ; [:#Preturn_or_enter []]                                                         COLLISION      ;
+  ; [:#Pright_shift []]                                                             NOT AVAILABLE  ;
+  ; [:#Pright_option []]                                                            NOT AVAILABLE  ;
+  ; [:#Pright_command []]                                                           NOT AVAILABLE  ;
+  ; [:#Pspacebar []]                                                                NOT AVAILABLE  ;
 
-  ; [:left_command []]                                                              NOT AVAILABLE  ;
-  ; [:left_option []]                                                               NOT AVAILABLE  ;
-  ; [:left_control []]                                                              NOT AVAILABLE  ;
-  ; [:left_shift []]                                                                NOT AVAILABLE  ;
-  ; [:caps_lock []]                                                                 NOT AVAILABLE  ;
-  ; [:tab []]                                                                       NOT AVAILABLE  ;
-  ; [:non_us_backslash []]                                                          NOT AVAILABLE  ;
-  ; [:escape []]                                                                    NOT AVAILABLE  ;
+  ; [:#Pleft_command []]                                                            NOT AVAILABLE  ;
+  ; [:#Pleft_option []]                                                             NOT AVAILABLE  ;
+  ; [:#Pleft_control []]                                                            NOT AVAILABLE  ;
+  ; [:#Pleft_shift []]                                                              NOT AVAILABLE  ;
+  ; [:#Pcaps_lock []]                                                               NOT AVAILABLE  ;
+  ; [:#Ptab []]                                                                     NOT AVAILABLE  ;
+  ; [:#Pnon_us_backslash []]                                                        NOT AVAILABLE  ;
+  ; [:#Pescape []]                                                                  NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

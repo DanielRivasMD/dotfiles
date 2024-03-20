@@ -4,32 +4,32 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!Ea []]                                                                                      ;
-  ; [:!Eb []]                                                                                      ;
-  ; [:!Ec []]                                                                                      ;
-  ; [:!Ed []]                                                                                      ;
-  ; [:!Ee []]                                                                                      ;
-  ; [:!Ef []]                                                                                      ;
-  ; [:!Eg []]                                                                                      ;
-  ; [:!Eh []]                                                                                      ;
-  ; [:!Ei []]                                                                                      ;
-  ; [:!Ej []]                                                                                      ;
-  ; [:!Ek []]                                                                                      ;
-  ; [:!El []]                                                                                      ;
-  ; [:!Em []]                                                                                      ;
-  ; [:!En []]                                                                                      ;
-  ; [:!Eo []]                                                                                      ;
-  ; [:!Ep []]                                                                                      ;
-  ; [:!Eq []]                                                                                      ;
-  ; [:!Er []]                                                                                      ;
-  ; [:!Es []]                                                                                      ;
-  ; [:!Et []]                                                                                      ;
-  ; [:!Eu []]                                                                                      ;
-  ; [:!Ev []]                                                                                      ;
-  ; [:!Ew []]                                                                                      ;
-  ; [:!Ex []]                                                                                      ;
-  ; [:!Ey []]                                                                                      ;
-  ; [:!Ez []]                                                                                      ;
+  ; [:!E#Pa []]                                                                                    ;
+  ; [:!E#Pb []]                                                                                    ;
+  ; [:!E#Pc []]                                                                                    ;
+  ; [:!E#Pd []]                                                                                    ;
+  ; [:!E#Pe []]                                                                                    ;
+  ; [:!E#Pf []]                                                                                    ;
+  ; [:!E#Pg []]                                                                                    ;
+  ; [:!E#Ph []]                                                                                    ;
+  ; [:!E#Pi []]                                                                                    ;
+  ; [:!E#Pj []]                                                                                    ;
+  ; [:!E#Pk []]                                                                                    ;
+  ; [:!E#Pl []]                                                                                    ;
+  ; [:!E#Pm []]                                                                                    ;
+  ; [:!E#Pn []]                                                                                    ;
+  ; [:!E#Po []]                                                                                    ;
+  ; [:!E#Pp []]                                                                                    ;
+  ; [:!E#Pq []]                                                                                    ;
+  ; [:!E#Pr []]                                                                                    ;
+  ; [:!E#Ps []]                                                                                    ;
+  ; [:!E#Pt []]                                                                                    ;
+  ; [:!E#Pu []]                                                                                    ;
+  ; [:!E#Pv []]                                                                                    ;
+  ; [:!E#Pw []]                                                                                    ;
+  ; [:!E#Px []]                                                                                    ;
+  ; [:!E#Py []]                                                                                    ;
+  ; [:!E#Pz []]                                                                                    ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,32 +38,32 @@
 {:des "Option Mode - symbols"
  :rules
  [;
-  ; [:!Ehyphen []]                                                                                 ;
-  ; [:!Eequal_sign []]                                                                             ;
-  ; [:!Eopen_bracket []]                                                                           ;
-  ; [:!Eclose_bracket []]                                                                          ;
-  ; [:!Esemicolon []]                                                                              ;
-  ; [:!Equote []]                                                                                  ;
-  ; [:!Ebackslash []]                                                                              ;
-  ; [:!Ecomma []]                                                                                  ;
-  ; [:!Eperiod []]                                                                                 ;
-  ; [:!Eslash []]                                                                                  ;
+  ; [:!E#Phyphen []]                                                                               ;
+  ; [:!E#Pequal_sign []]                                                                           ;
+  ; [:!E#Popen_bracket []]                                                                         ;
+  ; [:!E#Pclose_bracket []]                                                                        ;
+  ; [:!E#Psemicolon []]                                                                            ;
+  ; [:!E#Pquote []]                                                                                ;
+  ; [:!E#Pbackslash []]                                                                            ;
+  ; [:!E#Pcomma []]                                                                                ;
+  ; [:!E#Pperiod []]                                                                               ;
+  ; [:!E#Pslash []]                                                                                ;
 
-  ; [:!Edelete_or_backspace []]                                                                    ;
-  ; [:!Ereturn_or_enter []]                                                                        ;
-  ; [:!Eright_shift []]                                                                            ;
-  ; [:!Eright_option []]                                                            NOT AVAILABLE  ;
-  ; [:!Eright_command []]       COLLISION (zellij mode)                                            ;
-  ; [:!Espacebar []]            COLLISION (espanso)                                                ;
+  ; [:!E#Pdelete_or_backspace []]                                                                  ;
+  ; [:!E#Preturn_or_enter []]                                                                      ;
+  ; [:!E#Pright_shift []]                                                                          ;
+  ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
+  ; [:!E#Pright_command []]                                                         COLLISION      ;
+  ; [:!E#Pspacebar []]                                                              COLLISION      ;
 
-  ; [:!Eleft_command []]        COLLISION (zellij mode)                                            ;
-  ; [:!Eleft_option []]         COLLISION (zellij mode)                                            ;
-  ; [:!Eleft_control []]        COLLISION (zellij mode)                                            ;
-  ; [:!Eleft_shift []]          COLLISION (zellij mode)                                            ;
-  ; [:!Ecaps_lock []]                                                                              ;
-  ; [:!Etab []]                                                                                    ;
-  ; [:!Enon_us_backslash []]    COLLISION (zellij mode)                                            ;
-  ; [:!Eescape []]                                                                                 ;
+  ; [:!E#Pleft_command []]                                                          COLLISION      ;
+  ; [:!E#Pleft_option []]                                                           COLLISION      ;
+  ; [:!E#Pleft_control []]                                                          COLLISION      ;
+  ; [:!E#Pleft_shift []]                                                            COLLISION      ;
+  ; [:!E#Pcaps_lock []]                                                                            ;
+  ; [:!E#Ptab []]                                                                                  ;
+  ; [:!E#Pnon_us_backslash []]                                                      COLLISION      ;
+  ; [:!E#Pescape []]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

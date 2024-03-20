@@ -4,32 +4,32 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!Qa []]                                                                                      ;
-  ; [:!Qb []]                                                                                      ;
-  ; [:!Qc []]                                                                                      ;
-  ; [:!Qd []]                                                                                      ;
-  ; [:!Qe []]                                                                                      ;
-  ; [:!Qf []]                                                                                      ;
-  ; [:!Qg []]                                                                                      ;
-  ; [:!Qh []]                                                                                      ;
-  ; [:!Qi []]                                                                                      ;
-  ; [:!Qj []]                                                                                      ;
-  ; [:!Qk []]                                                                                      ;
-  ; [:!Ql []]                                                                                      ;
-  ; [:!Qm []]                                                                                      ;
-  ; [:!Qn []]                                                                                      ;
-  ; [:!Qo []]                                                                                      ;
-  ; [:!Qp []]                                                                                      ;
-  ; [:!Qq []]                                                                                      ;
-  ; [:!Qr []]                                                                                      ;
-  ; [:!Qs []]                                                                                      ;
-  ; [:!Qt []]                                                                                      ;
-  ; [:!Qu []]                                                                                      ;
-  ; [:!Qv []]                                                                                      ;
-  ; [:!Qw []]                                                                                      ;
-  ; [:!Qx []]                                                                                      ;
-  ; [:!Qy []]                                                                                      ;
-  ; [:!Qz []]                                                                                      ;
+  ; [:!Q#Pa []]                                                                                    ;
+  ; [:!Q#Pb []]                                                                                    ;
+  ; [:!Q#Pc []]                                                                                    ;
+  ; [:!Q#Pd []]                                                                                    ;
+  ; [:!Q#Pe []]                                                                                    ;
+  ; [:!Q#Pf []]                                                                                    ;
+  ; [:!Q#Pg []]                                                                                    ;
+  ; [:!Q#Ph []]                                                                                    ;
+  ; [:!Q#Pi []]                                                                                    ;
+  ; [:!Q#Pj []]                                                                                    ;
+  ; [:!Q#Pk []]                                                                                    ;
+  ; [:!Q#Pl []]                                                                                    ;
+  ; [:!Q#Pm []]                                                                                    ;
+  ; [:!Q#Pn []]                                                                                    ;
+  ; [:!Q#Po []]                                                                                    ;
+  ; [:!Q#Pp []]                                                                                    ;
+  ; [:!Q#Pq []]                                                                                    ;
+  ; [:!Q#Pr []]                                                                                    ;
+  ; [:!Q#Ps []]                                                                                    ;
+  ; [:!Q#Pt []]                                                                                    ;
+  ; [:!Q#Pu []]                                                                                    ;
+  ; [:!Q#Pv []]                                                                                    ;
+  ; [:!Q#Pw []]                                                                                    ;
+  ; [:!Q#Px []]                                                                                    ;
+  ; [:!Q#Py []]                                                                                    ;
+  ; [:!Q#Pz []]                                                                                    ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,32 +38,32 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  ; [:!Qhyphen []]                                                                                 ;
-  ; [:!Qequal_sign []]                                                                             ;
-  ; [:!Qopen_bracket []]                                                                           ;
-  ; [:!Qclose_bracket []]                                                                          ;
-  ; [:!Qsemicolon []]                                                                              ;
-  ; [:!Qquote []]                                                                                  ;
-  ; [:!Qbackslash []]                                                                              ;
-  ; [:!Qcomma []]                                                                                  ;
-  ; [:!Qperiod []]                                                                                 ;
-  ; [:!Qslash []]                                                                                  ;
+  ; [:!Q#Phyphen []]                                                                               ;
+  ; [:!Q#Pequal_sign []]                                                                           ;
+  ; [:!Q#Popen_bracket []]                                                                         ;
+  ; [:!Q#Pclose_bracket []]                                                                        ;
+  ; [:!Q#Psemicolon []]                                                                            ;
+  ; [:!Q#Pquote []]                                                                                ;
+  ; [:!Q#Pbackslash []]                                                                            ;
+  ; [:!Q#Pcomma []]                                                                                ;
+  ; [:!Q#Pperiod []]                                                                               ;
+  ; [:!Q#Pslash []]                                                                                ;
 
-  ; [:!Qdelete_or_backspace []]                                                                    ;
-  ; [:!Qreturn_or_enter []]                                                                        ;
-  ; [:!Qright_shift []]                                                                            ;
-  ; [:!Qright_option []]                                                                           ;
-  ; [:!Qright_command []]                                                           NOT AVAILABLE  ;
-  ; [:!Qspacebar []]                                                                               ;
+  ; [:!Q#Pdelete_or_backspace []]                                                                  ;
+  ; [:!Q#Preturn_or_enter []]                                                                      ;
+  ; [:!Q#Pright_shift []]                                                                          ;
+  ; [:!Q#Pright_option []]                                                                         ;
+  ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
+  ; [:!Q#Pspacebar []]                                                                             ;
 
-  ; [:!Qleft_command []]                                                                           ;
-  ; [:!Qleft_option []]                                                                            ;
-  ; [:!Qleft_control []]                                                                           ;
-  ; [:!Qleft_shift []]                                                                             ;
-  ; [:!Qcaps_lock []]                                                                              ;
-  ; [:!Qtab []]                                                                                    ;
-  ; [:!Qnon_us_backslash []]                                                                       ;
-  ; [:!Qescape []]                                                                                 ;
+  ; [:!Q#Pleft_command []]                                                                         ;
+  ; [:!Q#Pleft_option []]                                                                          ;
+  ; [:!Q#Pleft_control []]                                                                         ;
+  ; [:!Q#Pleft_shift []]                                                                           ;
+  ; [:!Q#Pcaps_lock []]                                                                            ;
+  ; [:!Q#Ptab []]                                                                                  ;
+  ; [:!Q#Pnon_us_backslash []]                                                                     ;
+  ; [:!Q#Pescape []]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

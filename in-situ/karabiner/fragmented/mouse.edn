@@ -4,12 +4,12 @@
 {:des "Zero Mode - mouse"
  :rules
  [:zero-mode
-  [:down_arrow {:mkey {:y 1000}}]                                                                  ;
-  [:up_arrow {:mkey {:y -1000}}]                                                                   ;
-  [:left_arrow {:mkey {:x -1000}}]                                                                 ;
-  [:right_arrow {:mkey {:x 1000}}]                                                                 ;
-  [:return_or_enter {:pkey :button1}]                                                              ;
-  [:backslash {:pkey :button2}]                                                                    ;
+  [:#Pdown_arrow {:mkey {:y 1000}}]                                                                ;
+  [:#Pup_arrow {:mkey {:y -1000}}]                                                                 ;
+  [:#Pleft_arrow {:mkey {:x -1000}}]                                                               ;
+  [:#Pright_arrow {:mkey {:x 1000}}]                                                               ;
+  [:#Preturn_or_enter {:pkey :button1}]                                                            ;
+  [:#Pbackslash {:pkey :button2}]                                                                  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

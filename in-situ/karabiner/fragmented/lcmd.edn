@@ -4,32 +4,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!Ca []]                                                                                      ;
-  ; [:!Cb []]                                                                                      ;
-  ; [:!Cc []]                                                                                      ;
-  ; [:!Cd []]                                                                                      ;
-  ; [:!Ce []]                                                                                      ;
-  ; [:!Cf []]                                                                                      ;
-  ; [:!Cg []]                                                                                      ;
-  ; [:!Ch []]                                                                                      ;
-  ; [:!Ci []]                                                                                      ;
-  ; [:!Cj []]                                                                                      ;
-  ; [:!Ck []]                                                                                      ;
-  ; [:!Cl []]                                                                                      ;
-  ; [:!Cm []]                                                                                      ;
-  ; [:!Cn []]                                                                                      ;
-  ; [:!Co []]                                                                                      ;
-  ; [:!Cp []]                                                                                      ;
-  ; [:!Cq []]                                                                                      ;
-  ; [:!Cr []]                                                                                      ;
-  ; [:!Cs []]                                                                                      ;
-  ; [:!Ct []]                                                                                      ;
-  ; [:!Cu []]                                                                                      ;
-  ; [:!Cv []]                                                                                      ;
-  ; [:!Cw []]                                                                                      ;
-  ; [:!Cx []]                                                                                      ;
-  ; [:!Cy []]                                                                                      ;
-  ; [:!Cz []]                                                                                      ;
+  ; [:!C#Pa []]                                                                                    ;
+  ; [:!C#Pb []]                                                                                    ;
+  ; [:!C#Pc []]                                                                                    ;
+  ; [:!C#Pd []]                                                                                    ;
+  ; [:!C#Pe []]                                                                                    ;
+  ; [:!C#Pf []]                                                                                    ;
+  ; [:!C#Pg []]                                                                                    ;
+  ; [:!C#Ph []]                                                                                    ;
+  ; [:!C#Pi []]                                                                                    ;
+  ; [:!C#Pj []]                                                                                    ;
+  ; [:!C#Pk []]                                                                                    ;
+  ; [:!C#Pl []]                                                                                    ;
+  ; [:!C#Pm []]                                                                                    ;
+  ; [:!C#Pn []]                                                                                    ;
+  ; [:!C#Po []]                                                                                    ;
+  ; [:!C#Pp []]                                                                                    ;
+  ; [:!C#Pq []]                                                                                    ;
+  ; [:!C#Pr []]                                                                                    ;
+  ; [:!C#Ps []]                                                                                    ;
+  ; [:!C#Pt []]                                                                                    ;
+  ; [:!C#Pu []]                                                                                    ;
+  ; [:!C#Pv []]                                                                                    ;
+  ; [:!C#Pw []]                                                                                    ;
+  ; [:!C#Px []]                                                                                    ;
+  ; [:!C#Py []]                                                                                    ;
+  ; [:!C#Pz []]                                                                                    ;
+  ; [:!C#Pkeypad_num_lock []]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,32 +39,32 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!Chyphen [:spacebar :hyphen :equal_sign :spacebar]]                        ; ' -= '            ;
-  [:!Cequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]              ; ' += '            ;
-  ; [:!Copen_bracket []]                                                       ;                   ;
-  ; [:!Cclose_bracket []]                                                      ;                   ;
-  ; [:!Csemicolon []]                                                          ;                   ;
-  ; [:!Cquote []]                                                              ;                   ;
-  ; [:!Cbackslash []]                                                          ;                   ;
-  ; [:!Ccomma []]                                                              ;                   ;
-  ; [:!Cperiod []]                                                             ;                   ;
-  ; [:!Cslash []]                                                              ;                   ;
+  [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                      ; ' -= '            ;
+  [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]            ; ' += '            ;
+  ; [:!C#Popen_bracket []]                                                     ;                   ;
+  ; [:!C#Pclose_bracket []]                                                    ;                   ;
+  ; [:!C#Psemicolon []]                                                        ;                   ;
+  ; [:!C#Pquote []]                                                            ;                   ;
+  ; [:!C#Pbackslash []]                                                        ;                   ;
+  ; [:!C#Pcomma []]                                                            ;                   ;
+  ; [:!C#Pperiod []]                                                           ;                   ;
+  ; [:!C#Pslash []]                                                            ;                   ;
 
-  ; [:!Cdelete_or_backspace []]                                                ;                   ;
-  [:!Creturn_or_enter :f3 [:term]]                                             ;                   ;
-  ; [:!Cright_shift []]                                                        ;                   ;
-  [:!Cright_option [:spacebar :!S8 :equal_sign :spacebar]]                     ; ' *= '            ;
-  [:!Cright_command [:spacebar :slash :equal_sign :spacebar]]                  ; ' /= '            ;
-  ; [:!Cspacebar []]                                                           ;                   ;
+  ; [:!C#Pdelete_or_backspace []]                                              ;                   ;
+  [:!C#Preturn_or_enter :f3 [:term]]                                           ;                   ;
+  ; [:!C#Pright_shift []]                                                      ;                   ;
+  [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                   ; ' *= '            ;
+  [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
+  ; [:!C#Pspacebar []]                                                         ;                   ;
 
-  ; [:!Cleft_command []]                                                            NOT AVAILABLE  ;
-  ; [:!Cleft_option []]                                                                            ;
-  ; [:!Cleft_control []]                                                                           ;
-  ; [:!Cleft_shift []]                                                                             ;
-  ; [:!Ccaps_lock []]                                                                              ;
-  ; [:!Ctab []]                                                                                    ;
-  ; [:!Cnon_us_backslash []]                                                                       ;
-  ; [:!Cescape []]                                                                                 ;
+  ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
+  ; [:!C#Pleft_option []]                                                                          ;
+  ; [:!C#Pleft_control []]                                                                         ;
+  ; [:!C#Pleft_shift []]                                                                           ;
+  ; [:!C#Pcaps_lock []]                                                                            ;
+  ; [:!C#Ptab []]                                                                                  ;
+  ; [:!C#Pnon_us_backslash []]                                                                     ;
+  ; [:!C#Pescape []]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,32 +73,32 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!CShyphen [:spacebar :period :hyphen :equal_sign :spacebar]]               ; ' .-= '           ;
-  [:!CSequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]     ; ' .+= '           ;
-  ; [:!CSopen_bracket []]                                                      ;                   ;
-  ; [:!CSclose_bracket []]                                                     ;                   ;
-  ; [:!CSsemicolon []]                                                         ;                   ;
-  ; [:!CSquote []]                                                             ;                   ;
-  ; [:!CSbackslash []]                                                         ;                   ;
-  ; [:!CScomma []]                                                             ;                   ;
-  ; [:!CSperiod []]                                                            ;                   ;
-  ; [:!CSslash []]                                                             ;                   ;
+  [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '           ;
+  [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]   ; ' .+= '           ;
+  ; [:!CS#Popen_bracket []]                                                    ;                   ;
+  ; [:!CS#Pclose_bracket []]                                                   ;                   ;
+  ; [:!CS#Psemicolon []]                                                       ;                   ;
+  ; [:!CS#Pquote []]                                                           ;                   ;
+  ; [:!CS#Pbackslash []]                                                       ;                   ;
+  ; [:!CS#Pcomma []]                                                           ;                   ;
+  ; [:!CS#Pperiod []]                                                          ;                   ;
+  ; [:!CS#Pslash []]                                                           ;                   ;
 
-  ; [:!CSdelete_or_backspace []]                                               ;                   ;
-  ; [:!CSreturn_or_enter []]                                                   ;                   ;
-  ; [:!CSright_shift []]                                                       ;                   ;
-  [:!CSright_option [:spacebar :period :!S8 :equal_sign :spacebar]]            ; ' .*= '           ;
-  [:!CSright_command [:spacebar :period :slash :equal_sign :spacebar]]         ; ' ./= '           ;
-  ; [:!CSspacebar []]                                                          ;                   ;
+  ; [:!CS#Pdelete_or_backspace []]                                             ;                   ;
+  ; [:!CS#Preturn_or_enter []]                                                 ;                   ;
+  ; [:!CS#Pright_shift []]                                                     ;                   ;
+  [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]          ; ' .*= '           ;
+  [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '           ;
+  ; [:!CS#Pspacebar []]                                                        ;                   ;
 
-  ; [:!CSleft_command []]                                                           NOT AVAILABLE  ;
-  ; [:!CSleft_option []]                                                                           ;
-  ; [:!CSleft_control []]                                                                          ;
-  ; [:!CSleft_shift []]                                                             NOT AVAILABLE  ;
-  ; [:!CScaps_lock []]                                                                             ;
-  ; [:!CStab []]                                                                                   ;
-  ; [:!CSnon_us_backslash []]                                                                      ;
-  ; [:!CSescape []]                                                                                ;
+  ; [:!CS#Pleft_command []]                                                         NOT AVAILABLE  ;
+  ; [:!CS#Pleft_option []]                                                                         ;
+  ; [:!CS#Pleft_control []]                                                                        ;
+  ; [:!CS#Pleft_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!CS#Pcaps_lock []]                                                                           ;
+  ; [:!CS#Ptab []]                                                                                 ;
+  ; [:!CS#Pnon_us_backslash []]                                                                    ;
+  ; [:!CS#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

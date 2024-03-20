@@ -4,32 +4,32 @@
 {:des "Super Mode - alphabet"
  :rules
  [:zero-mode
-  ; [:!Sa []]                                                                  ;                   ;
-  [:!Sb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                               ; 'BUG:'            ;
-  ; [:!Sc []]                                                                  ;                   ;
-  [:!Sd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                               ; 'DOC:'            ;
-  ; [:!Se []]                                                                  ;                   ;
-  [:!Sf [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                               ; 'FIX:'            ;
-  ; [:!Sg []]                                                                  ;                   ;
-  ; [:!Sh []]                                                                  ;                   ;
-  [:!Si [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                          ; 'IDEA:'           ;
-  ; [:!Sj []]                                                                  ;                   ;
-  [:!Sk [:!Sk :!Se :!Sy :!Ssemicolon :spacebar]]                               ; 'KEY: '           ;
-  ; [:!Sl []]                                                                  ;                   ;
-  ; [:!Sm []]                                                                  ;                   ;
-  ; [:!Sn []]                                                                  ;                   ;
-  ; [:!So []]                                                                  ;                   ;
-  ; [:!Sp []]                                                                  ;                   ;
-  ; [:!Sq []]                                                                  ;                   ;
-  ; [:!Sr []]                                                                  ;                   ;
-  ; [:!Ss []]                                                                  ;                   ;
-  [:!St [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                          ; 'TODO:'           ;
-  ; [:!Su []]                                                                  ;                   ;
-  ; [:!Sv []]                                                                  ;                   ;
-  [:!Sw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                               ; 'WIP: '           ;
-  ; [:!Sx []]                                                                  ;                   ;
-  ; [:!Sy []]                                                                  ;                   ;
-  ; [:!Sz []]                                                                  ;                   ;
+  ; [:!S#Pa []]                                                                ;                   ;
+  [:!S#Pb [:!S#Pb :!Su :!Sg :!Ssemicolon :spacebar]]                           ; 'BUG:'            ;
+  ; [:!S#Pc []]                                                                ;                   ;
+  [:!S#Pd [:!S#Pd :!So :!Sc :!Ssemicolon :spacebar]]                           ; 'DOC:'            ;
+  ; [:!S#Pe []]                                                                ;                   ;
+  [:!S#Pf [:!S#Pf :!Si :!Sx :!Ssemicolon :spacebar]]                           ; 'FIX:'            ;
+  ; [:!S#Pg []]                                                                ;                   ;
+  ; [:!S#Ph []]                                                                ;                   ;
+  [:!S#Pi [:!S#Pi :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                      ; 'IDEA:'           ;
+  ; [:!S#Pj []]                                                                ;                   ;
+  [:!S#Pk [:!S#Pk :!Se :!Sy :!Ssemicolon :spacebar]]                           ; 'KEY: '           ;
+  ; [:!S#Pl []]                                                                ;                   ;
+  ; [:!S#Pm []]                                                                ;                   ;
+  ; [:!S#Pn []]                                                                ;                   ;
+  ; [:!S#Po []]                                                                ;                   ;
+  ; [:!S#Pp []]                                                                ;                   ;
+  ; [:!S#Pq []]                                                                ;                   ;
+  ; [:!S#Pr []]                                                                ;                   ;
+  ; [:!S#Ps []]                                                                ;                   ;
+  [:!S#Pt [:!S#Pt :!So :!Sd :!So :!Ssemicolon :spacebar]]                      ; 'TODO:'           ;
+  ; [:!S#Pu []]                                                                ;                   ;
+  ; [:!S#Pv []]                                                                ;                   ;
+  [:!S#Pw [:!S#Pw :!Si :!Sp :!Ssemicolon :spacebar]]                           ; 'WIP: '           ;
+  ; [:!S#Px []]                                                                ;                   ;
+  ; [:!S#Py []]                                                                ;                   ;
+  ; [:!S#Pz []]                                                                ;                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,32 +38,32 @@
 {:des "Super Mode - symbols"
  :rules
  [:zero-mode
-  [:!Shyphen [:spacebar :hyphen :hyphen]]                                      ; ' --'             ;
-  ; [:!Sequal_sign []]                                                         ;                   ;
-  [:!Sopen_bracket [:!S4 :!Sopen_bracket]]                                     ; '${'              ;
-  ; [:!Sclose_bracket []]                                                      ;                   ;
-  [:!Ssemicolon [:!Ssemicolon :spacebar]]                                      ; ': '              ;
-  ; [:!Squote                                                                  ;                   ;
-  ; [:!Sbackslash []]                                                          ;                   ;
-  [:!Scomma [:period :spacebar]]                                               ; '. '              ;
-  [:!Speriod [:period :period :period]]                                        ; '...'             ;
-  [:!Sslash [:slash :slash :!S1 :spacebar]]                                    ; '//! '            ;
+  [:!S#Phyphen [:spacebar :hyphen :hyphen]]                                    ; ' --'             ;
+  ; [:!S#Pequal_sign []]                                                       ;                   ;
+  [:!S#Popen_bracket [:!S#P4 :!Sopen_bracket]]                                 ; '${'              ;
+  ; [:!S#Pclose_bracket []]                                                    ;                   ;
+  [:!S#Psemicolon [:!S#Psemicolon :spacebar]]                                  ; ': '              ;
+  ; [:!S#Pquote []]                                                            ;                   ;
+  ; [:!S#Pbackslash []]                                                        ;                   ;
+  [:!S#Pcomma [:period :spacebar]]                                             ; '. '              ;
+  [:!S#Pperiod [:period :period :period]]                                      ; '...'             ;
+  [:!S#Pslash [:slash :slash :!S1 :spacebar]]                                  ; '//! '            ;
 
-  ; [:!Sdelete_or_backspace []]                                                     NOT AVAILABLE  ;
-  ; [:!Sreturn_or_enter []]                                                         NOT AVAILABLE  ;
-  ; [:!Sright_shift []]                                                             NOT AVAILABLE  ;
-  ; [:!Sright_option []]                                                            NOT AVAILABLE  ;
-  ; [:!Sright_command []]                                                           NOT AVAILABLE  ;
-  ; [:!Sspacebar []]                                                                NOT AVAILABLE  ;
+  ; [:!S#Pdelete_or_backspace []]                                                   NOT AVAILABLE  ;
+  ; [:!S#Preturn_or_enter []]                                                       NOT AVAILABLE  ;
+  ; [:!S#Pright_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!S#Pright_option []]                                                          NOT AVAILABLE  ;
+  ; [:!S#Pright_command []]                                                         NOT AVAILABLE  ;
+  ; [:!S#Pspacebar []]                                                              NOT AVAILABLE  ;
 
-  ; [:!Sleft_command []]                                                            NOT AVAILABLE  ;
-  ; [:!Sleft_option []]                                                             NOT AVAILABLE  ;
-  ; [:!Sleft_control []]                                                            NOT AVAILABLE  ;
-  ; [:!Sleft_shift []]                                                              NOT AVAILABLE  ;
-  ; [:!Scaps_lock []]                                                               NOT AVAILABLE  ;
-  ; [:!Stab []]                                                                     NOT AVAILABLE  ;
-  ; [:!Snon_us_backslash []]                                                        NOT AVAILABLE  ;
-  ; [:!Sescape []]                                                                  NOT AVAILABLE  ;
+  ; [:!S#Pleft_command []]                                                          NOT AVAILABLE  ;
+  ; [:!S#Pleft_option []]                                                           NOT AVAILABLE  ;
+  ; [:!S#Pleft_control []]                                                          NOT AVAILABLE  ;
+  ; [:!S#Pleft_shift []]                                                            NOT AVAILABLE  ;
+  ; [:!S#Pcaps_lock []]                                                             NOT AVAILABLE  ;
+  ; [:!S#Ptab []]                                                                   NOT AVAILABLE  ;
+  ; [:!S#Pnon_us_backslash []]                                                      NOT AVAILABLE  ;
+  ; [:!S#Pescape []]                                                                NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

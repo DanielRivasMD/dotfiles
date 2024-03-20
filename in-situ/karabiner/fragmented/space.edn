@@ -4,32 +4,32 @@
 {:des "Space Mode - alphabet"
  :rules
  [;
-  ; [:!EWQa [:a]]                                                                                  ;
-  ; [:!EWQb [:b]]                                                                                  ;
-  ; [:!EWQc [:c]]                                                                                  ;
-  ; [:!EWQd [:d]]                                                                                  ;
-  ; [:!EWQe [:e]]                                                                                  ;
-  ; [:!EWQf [:f]]                                                                                  ;
-  ; [:!EWQg [:g]]                                                                                  ;
-  ; [:!EWQh [:h]]                                                                                  ;
-  ; [:!EWQi [:i]]                                                                                  ;
-  ; [:!EWQj [:j]]                                                                                  ;
-  ; [:!EWQk [:k]]                                                                                  ;
-  ; [:!EWQl [:l]]                                                                                  ;
-  ; [:!EWQm [:m]]                                                                                  ;
-  ; [:!EWQn [:n]]                                                                                  ;
-  ; [:!EWQo [:o]]                                                                                  ;
-  ; [:!EWQp [:p]]                                                                                  ;
-  ; [:!EWQq [:q]]                                                                                  ;
-  ; [:!EWQr [:r]]                                                                                  ;
-  ; [:!EWQs [:s]]                                                                                  ;
-  ; [:!EWQt [:t]]                                                                                  ;
-  ; [:!EWQu [:u]]                                                                                  ;
-  ; [:!EWQv [:v]]                                                                                  ;
-  ; [:!EWQw [:w]]                                                                                  ;
-  ; [:!EWQx [:x]]                                                                                  ;
-  ; [:!EWQy [:y]]                                                                                  ;
-  ; [:!EWQz [:z]]                                                                                  ;
+  ; [:!EWQ#Pa [:a]]                                                                                ;
+  ; [:!EWQ#Pb [:b]]                                                                                ;
+  ; [:!EWQ#Pc [:c]]                                                                                ;
+  ; [:!EWQ#Pd [:d]]                                                                                ;
+  ; [:!EWQ#Pe [:e]]                                                                                ;
+  ; [:!EWQ#Pf [:f]]                                                                                ;
+  ; [:!EWQ#Pg [:g]]                                                                                ;
+  ; [:!EWQ#Ph [:h]]                                                                                ;
+  ; [:!EWQ#Pi [:i]]                                                                                ;
+  ; [:!EWQ#Pj [:j]]                                                                                ;
+  ; [:!EWQ#Pk [:k]]                                                                                ;
+  ; [:!EWQ#Pl [:l]]                                                                                ;
+  ; [:!EWQ#Pm [:m]]                                                                                ;
+  ; [:!EWQ#Pn [:n]]                                                                                ;
+  ; [:!EWQ#Po [:o]]                                                                                ;
+  ; [:!EWQ#Pp [:p]]                                                                                ;
+  ; [:!EWQ#Pq [:q]]                                                                                ;
+  ; [:!EWQ#Pr [:r]]                                                                                ;
+  ; [:!EWQ#Ps [:s]]                                                                                ;
+  ; [:!EWQ#Pt [:t]]                                                                                ;
+  ; [:!EWQ#Pu [:u]]                                                                                ;
+  ; [:!EWQ#Pv [:v]]                                                                                ;
+  ; [:!EWQ#Pw [:w]]                                                                                ;
+  ; [:!EWQ#Px [:x]]                                                                                ;
+  ; [:!EWQ#Py [:y]]                                                                                ;
+  ; [:!EWQ#Pz [:z]]                                                                                ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,32 +38,32 @@
 {:des "Space Mode - symbols"
  :rules
  [;
-  ; [:!EWQhyphen []]                                                                               ;
-  ; [:!EWQequal_sign []]                                                                           ;
-  ; [:!EWQopen_bracket []]                                                                         ;
-  ; [:!EWQclose_bracket []]                                                                        ;
-  ; [:!EWQsemicolon []]                                                                            ;
-  ; [:!EWQquote []]                                                                                ;
-  ; [:!EWQbackslash []]                                                                            ;
-  ; [:!EWQcomma []]                                                                                ;
-  ; [:!EWQperiod []]                                                                               ;
-  ; [:!EWQslash []]                                                                                ;
+  ; [:!EWQ#Phyphen []]                                                                             ;
+  ; [:!EWQ#Pequal_sign []]                                                                         ;
+  ; [:!EWQ#Popen_bracket []]                                                                       ;
+  ; [:!EWQ#Pclose_bracket []]                                                                      ;
+  ; [:!EWQ#Psemicolon []]                                                                          ;
+  ; [:!EWQ#Pquote []]                                                                              ;
+  ; [:!EWQ#Pbackslash []]                                                                          ;
+  ; [:!EWQ#Pcomma []]                                                                              ;
+  ; [:!EWQ#Pperiod []]                                                                             ;
+  ; [:!EWQ#Pslash []]                                                                              ;
 
-  ; [:!EWQdelete_or_backspace []]                                                                  ;
-  ; [:!EWQreturn_or_enter []]                                                                      ;
-  ; [:!EWQright_shift []]                                                                          ;
-  ; [:!EWQright_option []]                                                                         ;
-  ; [:!EWQright_command []]                                                                        ;
-  ; [:!EWQspacebar []]                                                              NOT AVAILABLE  ;
+  ; [:!EWQ#Pdelete_or_backspace []]                                                                ;
+  ; [:!EWQ#Preturn_or_enter []]                                                                    ;
+  ; [:!EWQ#Pright_shift []]                                                                        ;
+  ; [:!EWQ#Pright_option []]                                                                       ;
+  ; [:!EWQ#Pright_command []]                                                                      ;
+  ; [:!EWQ#Pspacebar []]                                                            NOT AVAILABLE  ;
 
-  ; [:!EWQleft_command []]                                                                         ;
-  ; [:!EWQleft_option []]                                                                          ;
-  ; [:!EWQleft_control []]                                                                         ;
-  ; [:!EWQleft_shift []]                                                                           ;
-  ; [:!EWQcaps_lock []]                                                                            ;
-  ; [:!EWQtab []]                                                                                  ;
-  ; [:!EWQnon_us_backslash []]                                                                     ;
-  ; [:!EWQescape []]                                                                               ;
+  ; [:!EWQ#Pleft_command []]                                                                       ;
+  ; [:!EWQ#Pleft_option []]                                                                        ;
+  ; [:!EWQ#Pleft_control []]                                                                       ;
+  ; [:!EWQ#Pleft_shift []]                                                                         ;
+  ; [:!EWQ#Pcaps_lock []]                                                                          ;
+  ; [:!EWQ#Ptab []]                                                                                ;
+  ; [:!EWQ#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWQ#Pescape []]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

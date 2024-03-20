@@ -4,32 +4,32 @@
 {:des "Shift Mode - alphabet"
  :rules
  [;
-  ; [:!Ra []]                                                                                      ;
-  ; [:!Rb []]                                                                                      ;
-  ; [:!Rc []]                                                                                      ;
-  ; [:!Rd []]                                                                                      ;
-  ; [:!Re []]                                                                                      ;
-  ; [:!Rf []]                                                                                      ;
-  ; [:!Rg []]                                                                                      ;
-  ; [:!Rh []]                                                                                      ;
-  ; [:!Ri []]                                                                                      ;
-  ; [:!Rj []]                                                                                      ;
-  ; [:!Rk []]                                                                                      ;
-  ; [:!Rl []]                                                                                      ;
-  ; [:!Rm []]                                                                                      ;
-  ; [:!Rn []]                                                                                      ;
-  ; [:!Ro []]                                                                                      ;
-  ; [:!Rp []]                                                                                      ;
-  ; [:!Rq []]                                                                                      ;
-  ; [:!Rr []]                                                                                      ;
-  ; [:!Rs []]                                                                                      ;
-  ; [:!Rt []]                                                                                      ;
-  ; [:!Ru []]                                                                                      ;
-  ; [:!Rv []]                                                                                      ;
-  ; [:!Rw []]                                                                                      ;
-  ; [:!Rx []]                                                                                      ;
-  ; [:!Ry []]                                                                                      ;
-  ; [:!Rz []]                                                                                      ;
+  ; [:!R#Pa []]                                                                                    ;
+  ; [:!R#Pb []]                                                                                    ;
+  ; [:!R#Pc []]                                                                                    ;
+  ; [:!R#Pd []]                                                                                    ;
+  ; [:!R#Pe []]                                                                                    ;
+  ; [:!R#Pf []]                                                                                    ;
+  ; [:!R#Pg []]                                                                                    ;
+  ; [:!R#Ph []]                                                                                    ;
+  ; [:!R#Pi []]                                                                                    ;
+  ; [:!R#Pj []]                                                                                    ;
+  ; [:!R#Pk []]                                                                                    ;
+  ; [:!R#Pl []]                                                                                    ;
+  ; [:!R#Pm []]                                                                                    ;
+  ; [:!R#Pn []]                                                                                    ;
+  ; [:!R#Po []]                                                                                    ;
+  ; [:!R#Pp []]                                                                                    ;
+  ; [:!R#Pq []]                                                                                    ;
+  ; [:!R#Pr []]                                                                                    ;
+  ; [:!R#Ps []]                                                                                    ;
+  ; [:!R#Pt []]                                                                                    ;
+  ; [:!R#Pu []]                                                                                    ;
+  ; [:!R#Pv []]                                                                                    ;
+  ; [:!R#Pw []]                                                                                    ;
+  ; [:!R#Px []]                                                                                    ;
+  ; [:!R#Py []]                                                                                    ;
+  ; [:!R#Pz []]                                                                                    ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,16 +38,16 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  ; [:!Rhyphen []]                                                                  NOT AVAILABLE  ;
-  ; [:!Requal_sign []]                                                              NOT AVAILABLE  ;
-  ; [:!Ropen_bracket []]                                                            NOT AVAILABLE  ;
-  ; [:!Rclose_bracket []]                                                           NOT AVAILABLE  ;
-  ; [:!Rsemicolon []]                                                               NOT AVAILABLE  ;
-  ; [:!Rquote []]                                                                   NOT AVAILABLE  ;
-  ; [:!Rbackslash []]                                                               NOT AVAILABLE  ;
-  ; [:!Rcomma []]                                                                   NOT AVAILABLE  ;
-  ; [:!Rperiod []]                                                                  NOT AVAILABLE  ;
-  ; [:!Rslash []]                                                                   NOT AVAILABLE  ;
+  ; [:!R#Phyphen []]                                                                NOT AVAILABLE  ;
+  ; [:!R#Pequal_sign []]                                                            NOT AVAILABLE  ;
+  ; [:!R#Popen_bracket []]                                                          NOT AVAILABLE  ;
+  ; [:!R#Pclose_bracket []]                                                         NOT AVAILABLE  ;
+  ; [:!R#Psemicolon []]                                                             NOT AVAILABLE  ;
+  ; [:!R#Pquote []]                                                                 NOT AVAILABLE  ;
+  ; [:!R#Pbackslash []]                                                             NOT AVAILABLE  ;
+  ; [:!R#Pcomma []]                                                                 NOT AVAILABLE  ;
+  ; [:!R#Pperiod []]                                                                NOT AVAILABLE  ;
+  ; [:!R#Pslash []]                                                                 NOT AVAILABLE  ;
 
   ; [:!R#Pdelete_or_backspace []]                                                                  ;
   ; [:!R#Preturn_or_enter []]                                                                      ;
