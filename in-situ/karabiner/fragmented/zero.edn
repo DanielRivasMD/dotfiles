@@ -2,66 +2,68 @@
 
 ; zero
 {:des "Zero Mode - alphabet"
- :rules [:zero-mode
-         ; [:a []]                                ;                                                ;
-         ; [:b []]                                ;                                                ;
-         ; [:c []]                                ;                                                ;
-         ; [:d []]                                ;                                                ;
-         [:e [:e :n :u :m]]                       ; 'enum'                                         ;
-         ; [:f []]                                ;                                                ;
-         ; [:g []]                                ;                                                ;
-         ; [:h []]                                ;                                                ;
-         ; [:i []]                                ;                                                ;
-         ; [:j []]                                ;                                                ;
-         ; [:k []]                                ;                                                ;
-         ; [:l []]                                ;                                                ;
-         [:m [:m :u :t :a :b :l :e]]              ; 'mutable'                                      ;
-         ; [:n []]                                ;                                                ;
-         ; [:o []]                                ;                                                ;
-         ; [:p []]                                ;                                                ;
-         ; [:q []]                                ;                                                ;
-         ; [:r []]                                ;                                                ;
-         [:s [:s :t :r :u :c :t]]                 ; 'struct'                                       ;
-         [:t [:t :y :p :e]]                       ;                                                ;
-         ; [:u []]                                ;                                                ;
-         ; [:v []]                                ;                                                ;
-         [:w [:w :h :e :r :e :spacebar]]          ; 'where '                                       ;
-         ; [:x []]                                ;                                                ;
-         ; [:y []]                                ;                                                ;
-         [:z [:w :h :i :c :h :spacebar]]          ; 'which '                                       ;
-         ]}
+ :rules
+ [:zero-mode
+  ; [:a []]                                                                    ;                   ;
+  ; [:b []]                                                                    ;                   ;
+  ; [:c []]                                                                    ;                   ;
+  ; [:d []]                                                                    ;                   ;
+  [:e [:e :n :u :m]]                                                           ; 'enum'            ;
+  ; [:f []]                                                                    ;                   ;
+  ; [:g []]                                                                    ;                   ;
+  ; [:h []]                                                                    ;                   ;
+  ; [:i []]                                                                    ;                   ;
+  ; [:j []]                                                                    ;                   ;
+  ; [:k []]                                                                    ;                   ;
+  ; [:l []]                                                                    ;                   ;
+  [:m [:m :u :t :a :b :l :e]]                                                  ; 'mutable'         ;
+  ; [:n []]                                                                    ;                   ;
+  ; [:o []]                                                                    ;                   ;
+  ; [:p []]                                                                    ;                   ;
+  ; [:q []]                                                                    ;                   ;
+  ; [:r []]                                                                    ;                   ;
+  [:s [:s :t :r :u :c :t]]                                                     ; 'struct'          ;
+  [:t [:t :y :p :e]]                                                           ;                   ;
+  ; [:u []]                                                                    ;                   ;
+  ; [:v []]                                                                    ;                   ;
+  [:w [:w :h :e :r :e :spacebar]]                                              ; 'where '          ;
+  ; [:x []]                                                                    ;                   ;
+  ; [:y []]                                                                    ;                   ;
+  [:z [:w :h :i :c :h :spacebar]]                                              ; 'which '          ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; zero
 {:des "Zero Mode - symbols"
- :rules [:zero-mode
-         [:hyphen [:spacebar :hyphen]]                     ; ' -'                                  ;
-         ; [:equal_sign []]                                                                        ;
-         [:open_bracket [:!S3 :open_bracket]]              ; '#['                                  ;
-         ; [:close_bracket []]                                                                     ;
-         [:semicolon [:semicolon :spacebar]]               ; '; '                                  ;
-         ; [:quote []]                                                                             ;
-         ; [:backslash []]             COLLISION (mouse mode)                                      ;
-         [:comma [:comma :spacebar]]                       ; ', '                                  ;
-         [:period [:period :period]]                       ; '..'                                  ;
-         [:slash [:slash :slash :slash :spacebar]]         ; '/// '                                ;
+ :rules
+ [:zero-mode
+  [:hyphen [:spacebar :hyphen]]                                                ; ' -'              ;
+  ; [:equal_sign []]                                                                               ;
+  [:open_bracket [:!S3 :open_bracket]]                                         ; '#['              ;
+  ; [:close_bracket []]                                                                            ;
+  [:semicolon [:semicolon :spacebar]]                                          ; '; '              ;
+  ; [:quote []]                                                                                    ;
+  ; [:backslash []]                                                                 COLLISION      ;
+  [:comma [:comma :spacebar]]                                                  ; ', '              ;
+  [:period [:period :period]]                                                  ; '..'              ;
+  [:slash [:slash :slash :slash :spacebar]]                                    ; '/// '            ;
 
-         ; [:delete_or_backspace []]   NOT AVAILABLE                                               ;
-         ; [:return_or_enter []]       COLLISION (mouse mode)                                      ;
-         ; [:right_shift []]           NOT AVAILABLE                                               ;
-         ; [:right_option []]          NOT AVAILABLE                                               ;
-         ; [:right_command []]         NOT AVAILABLE                                               ;
-         ; [:spacebar []]              NOT AVAILABLE                                               ;
+  ; [:delete_or_backspace []]                                                       NOT AVAILABLE  ;
+  ; [:return_or_enter []]                                                           COLLISION      ;
+  ; [:right_shift []]                                                               NOT AVAILABLE  ;
+  ; [:right_option []]                                                              NOT AVAILABLE  ;
+  ; [:right_command []]                                                             NOT AVAILABLE  ;
+  ; [:spacebar []]                                                                  NOT AVAILABLE  ;
 
-         ; [:left_command []]          NOT AVAILABLE                                               ;
-         ; [:left_option []]           NOT AVAILABLE                                               ;
-         ; [:left_control []]          NOT AVAILABLE                                               ;
-         ; [:left_shift []]            NOT AVAILABLE                                               ;
-         ; [:caps_lock []]             NOT AVAILABLE                                               ;
-         ; [:tab []]                   NOT AVAILABLE                                               ;
-         ; [:non_us_backslash []]      NOT AVAILABLE                                               ;
-         ; [:escape []]                NOT AVAILABLE                                               ;
-         ]}
+  ; [:left_command []]                                                              NOT AVAILABLE  ;
+  ; [:left_option []]                                                               NOT AVAILABLE  ;
+  ; [:left_control []]                                                              NOT AVAILABLE  ;
+  ; [:left_shift []]                                                                NOT AVAILABLE  ;
+  ; [:caps_lock []]                                                                 NOT AVAILABLE  ;
+  ; [:tab []]                                                                       NOT AVAILABLE  ;
+  ; [:non_us_backslash []]                                                          NOT AVAILABLE  ;
+  ; [:escape []]                                                                    NOT AVAILABLE  ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

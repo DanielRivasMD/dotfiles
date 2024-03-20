@@ -2,99 +2,102 @@
 
 ; function
 {:des "Function Mode - alphabet"
- :rules [;
-         [:!Fa [:comma :comma :a]]     ; 'ɒ'                                                       ;
-         [:!Fb [:comma :comma :b]]     ; 'ß'                                                       ;
-         [:!Fc [:comma :comma :c]]     ; 'ç'                                                       ;
-         [:!Fd [:comma :comma :d]]     ; 'Δ'                                                       ;
-         [:!Fe [:comma :comma :e]]     ; 'ę'                                                       ;
-         [:!Ff [:comma :comma :f]]     ; 'ƒ'                                                       ;
-         [:!Fg [:comma :comma :g]]     ; 'ɣ'                                                       ;
-         [:!Fh [:comma :comma :h]]     ; 'з'                                                       ;
-         [:!Fi [:comma :comma :i]]     ; 'и'                                                       ;
-         [:!Fj [:comma :comma :j]]     ; 'ʌ'                                                       ;
-         [:!Fk [:comma :comma :k]]     ; 'ϙ'                                                       ;
-         [:!Fl [:comma :comma :l]]     ; 'ł'                                                       ;
-         [:!Fm [:comma :comma :m]]     ; 'ɱ'                                                       ;
-         [:!Fn [:comma :comma :n]]     ; 'ŋ'                                                       ;
-         [:!Fo [:comma :comma :o]]     ; 'ø'                                                       ;
-         [:!Fp [:comma :comma :p]]     ; 'п'                                                       ;
-         ; [:!Fq [:comma :comma :q]]   ; ''                                                        ;
-         [:!Fr [:comma :comma :r]]     ; 'Я'                                                       ;
-         [:!Fs [:comma :comma :s]]     ; 'Σ'                                                       ;
-         ; [:!Ft [:comma :comma :t]]   ; ''                                                        ;
-         [:!Fu [:comma :comma :u]]     ; 'Θ'                                                       ;
-         [:!Fv [:comma :comma :v]]     ; 'Ω'                                                       ;
-         [:!Fw [:comma :comma :w]]     ; 'ʍ'                                                       ;
-         [:!Fx [:comma :comma :x]]     ; '∇'                                                       ;
-         [:!Fy [:comma :comma :y]]     ; 'Λ'                                                       ;
-         [:!Fz [:comma :comma :z]]     ; '∫'                                                       ;
-         ]}
+ :rules
+ [;
+  [:!Fa [:comma :comma :a]]                                                    ; 'ɒ'               ;
+  [:!Fb [:comma :comma :b]]                                                    ; 'ß'               ;
+  [:!Fc [:comma :comma :c]]                                                    ; 'ç'               ;
+  [:!Fd [:comma :comma :d]]                                                    ; 'Δ'               ;
+  [:!Fe [:comma :comma :e]]                                                    ; 'ę'               ;
+  [:!Ff [:comma :comma :f]]                                                    ; 'ƒ'               ;
+  [:!Fg [:comma :comma :g]]                                                    ; 'ɣ'               ;
+  [:!Fh [:comma :comma :h]]                                                    ; 'з'               ;
+  [:!Fi [:comma :comma :i]]                                                    ; 'и'               ;
+  [:!Fj [:comma :comma :j]]                                                    ; 'ʌ'               ;
+  [:!Fk [:comma :comma :k]]                                                    ; 'ϙ'               ;
+  [:!Fl [:comma :comma :l]]                                                    ; 'ł'               ;
+  [:!Fm [:comma :comma :m]]                                                    ; 'ɱ'               ;
+  [:!Fn [:comma :comma :n]]                                                    ; 'ŋ'               ;
+  [:!Fo [:comma :comma :o]]                                                    ; 'ø'               ;
+  [:!Fp [:comma :comma :p]]                                                    ; 'п'               ;
+  ; [:!Fq [:comma :comma :q]]                                                  ; ''                ;
+  [:!Fr [:comma :comma :r]]                                                    ; 'Я'               ;
+  [:!Fs [:comma :comma :s]]                                                    ; 'Σ'               ;
+  ; [:!Ft [:comma :comma :t]]                                                  ; ''                ;
+  [:!Fu [:comma :comma :u]]                                                    ; 'Θ'               ;
+  [:!Fv [:comma :comma :v]]                                                    ; 'Ω'               ;
+  [:!Fw [:comma :comma :w]]                                                    ; 'ʍ'               ;
+  [:!Fx [:comma :comma :x]]                                                    ; '∇'               ;
+  [:!Fy [:comma :comma :y]]                                                    ; 'Λ'               ;
+  [:!Fz [:comma :comma :z]]                                                    ; '∫'               ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; function
 {:des "Function Mode - symbols"
- :rules [;
-         [:!Fhyphen [:hyphen :hyphen]]                     ; '--'                                  ;
-         [:!Fequal_sign [:!Sequal_sign :!Sequal_sign]]     ; '++'                                  ;
-         ; [:!Fopen_bracket []]                                                                    ;
-         ; [:!Fclose_bracket []]                                                                   ;
-         [:!Fsemicolon [:!Ssemicolon :!Ssemicolon]]        ; '::'                                  ;
-         ; [:!Fquote []]                                                                           ;
-         ; [:!Fbackslash []]                                                                       ;
-         ; [:!Fcomma []]                                                                           ;
-         ; [:!Fperiod []]                                                                          ;
-         ; [:!Fslash []]                                                                           ;
+ :rules
+ [;
+  [:!Fhyphen [:hyphen :hyphen]]                                                ; '--'              ;
+  [:!Fequal_sign [:!Sequal_sign :!Sequal_sign]]                                ; '++'              ;
+  ; [:!Fopen_bracket []]                                                                           ;
+  ; [:!Fclose_bracket []]                                                                          ;
+  [:!Fsemicolon [:!Ssemicolon :!Ssemicolon]]                                   ; '::'              ;
+  ; [:!Fquote []]                                                                                  ;
+  ; [:!Fbackslash []]                                                                              ;
+  ; [:!Fcomma []]                                                                                  ;
+  ; [:!Fperiod []]                                                                                 ;
+  ; [:!Fslash []]                                                                                  ;
 
-         ; [:!Fdelete_or_backspace []]                                                             ;
-         [:!Freturn_or_enter [:equal_sign :equal_sign]]    ; '=='                                  ;
-         [:!Fright_shift [:!S1 :!S1]]                      ; '!!'                                  ;
-         [:!Fright_option [:!S8 :!S8]]                     ; '**'                                  ;
-         [:!Fright_command [:slash :slash]]                ; '//'                                  ;
-         ; [:!Fspacebar []]                                                                        ;
+  ; [:!Fdelete_or_backspace []]                                                                    ;
+  [:!Freturn_or_enter [:equal_sign :equal_sign]]                               ; '=='              ;
+  [:!Fright_shift [:!S1 :!S1]]                                                 ; '!!'              ;
+  [:!Fright_option [:!S8 :!S8]]                                                ; '**'              ;
+  [:!Fright_command [:slash :slash]]                                           ; '//'              ;
+  ; [:!Fspacebar []]                                                                               ;
 
-         ; [:!Fleft_command []]                                                                    ;
-         ; [:!Fleft_option []]                                                                     ;
-         ; [:!Fleft_control []]                                                                    ;
-         ; [:!Fleft_shift []]                                                                      ;
-         ; [:!Fcaps_lock []]                                                                       ;
-         ; [:!Ftab []]                                                                             ;
-         ; [:!Fnon_us_backslash []]              NOT AVAILABLE                                     ;
-         ; [:!Fescape []]                                                                          ;
-         ]}
+  ; [:!Fleft_command []]                                                                           ;
+  ; [:!Fleft_option []]                                                                            ;
+  ; [:!Fleft_control []]                                                                           ;
+  ; [:!Fleft_shift []]                                                                             ;
+  ; [:!Fcaps_lock []]                                                                              ;
+  ; [:!Ftab []]                                                                                    ;
+  ; [:!Fnon_us_backslash []]                                                        NOT AVAILABLE  ;
+  ; [:!Fescape []]                                                                                 ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; function - shift
 {:des "Function Mode - symbols"
- :rules [;
-         ; [:!FShyphen []]                                                                         ;
-         ; [:!FSequal_sign []]                                                                     ;
-         ; [:!FSopen_bracket []]                                                                   ;
-         ; [:!FSclose_bracket []]                                                                  ;
-         ; [:!FSsemicolon []]                                                                      ;
-         ; [:!FSquote []]                                                                          ;
-         ; [:!FSbackslash []]                                                                      ;
-         ; [:!FScomma []]                                                                          ;
-         ; [:!FSperiod []]                                                                         ;
-         ; [:!FSslash []]                                                                          ;
+ :rules
+ [;
+  ; [:!FShyphen []]                                                                                ;
+  ; [:!FSequal_sign []]                                                                            ;
+  ; [:!FSopen_bracket []]                                                                          ;
+  ; [:!FSclose_bracket []]                                                                         ;
+  ; [:!FSsemicolon []]                                                                             ;
+  ; [:!FSquote []]                                                                                 ;
+  ; [:!FSbackslash []]                                                                             ;
+  ; [:!FScomma []]                                                                                 ;
+  ; [:!FSperiod []]                                                                                ;
+  ; [:!FSslash []]                                                                                 ;
 
-         ; [:!FSdelete_or_backspace []]                                                            ;
-         ; [:!FSreturn_or_enter []]                                                                ;
-         ; [:!FSright_shift []]                                                                    ;
-         ; [:!FSright_option []]                                                                   ;
-         ; [:!FSright_command []]                                                                  ;
-         ; [:!FSspacebar []]                                                                       ;
+  ; [:!FSdelete_or_backspace []]                                                                   ;
+  ; [:!FSreturn_or_enter []]                                                                       ;
+  ; [:!FSright_shift []]                                                                           ;
+  ; [:!FSright_option []]                                                                          ;
+  ; [:!FSright_command []]                                                                         ;
+  ; [:!FSspacebar []]                                                                              ;
 
-         ; [:!FSleft_command []]                                                                   ;
-         ; [:!FSleft_option []]                                                                    ;
-         ; [:!FSleft_control []]                                                                   ;
-         ; [:!FSleft_shift []]                    NOT AVAILABLE                                    ;
-         ; [:!FScaps_lock []]                                                                      ;
-         ; [:!FStab []]                                                                            ;
-         ; [:!FSnon_us_backslash []]              NOT AVAILABLE                                    ;
-         ; [:!FSescape []]                                                                         ;
-         ]}
+  ; [:!FSleft_command []]                                                                          ;
+  ; [:!FSleft_option []]                                                                           ;
+  ; [:!FSleft_control []]                                                                          ;
+  ; [:!FSleft_shift []]                                                             NOT AVAILABLE  ;
+  ; [:!FScaps_lock []]                                                                             ;
+  ; [:!FStab []]                                                                                   ;
+  ; [:!FSnon_us_backslash []]                                                       NOT AVAILABLE  ;
+  ; [:!FSescape []]                                                                                ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

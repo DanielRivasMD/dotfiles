@@ -2,99 +2,102 @@
 
 ; option
 {:des "Option Mode - alphabet"
- :rules [;
-         ; [:!Oa []]                                                                               ;
-         ; [:!Ob []]                                                                               ;
-         ; [:!Oc []]                                                                               ;
-         ; [:!Od []]                                                                               ;
-         ; [:!Oe []]                                                                               ;
-         ; [:!Of []]                                                                               ;
-         ; [:!Og []]                                                                               ;
-         ; [:!Oh []]                                                                               ;
-         ; [:!Oi []]                                                                               ;
-         ; [:!Oj []]                                                                               ;
-         ; [:!Ok []]                                                                               ;
-         ; [:!Ol []]                                                                               ;
-         ; [:!Om []]                                                                               ;
-         ; [:!On []]                                                                               ;
-         ; [:!Oo []]                                                                               ;
-         ; [:!Op []]                                                                               ;
-         ; [:!Oq []]                                                                               ;
-         ; [:!Or []]                                                                               ;
-         ; [:!Os []]                                                                               ;
-         ; [:!Ot []]                                                                               ;
-         ; [:!Ou []]                                                                               ;
-         ; [:!Ov []]                                                                               ;
-         ; [:!Ow []]                                                                               ;
-         ; [:!Ox []]                                                                               ;
-         ; [:!Oy []]                                                                               ;
-         ; [:!Oz []]                                                                               ;
-         ]}
+ :rules
+ [;
+  ; [:!Oa []]                                                                                      ;
+  ; [:!Ob []]                                                                                      ;
+  ; [:!Oc []]                                                                                      ;
+  ; [:!Od []]                                                                                      ;
+  ; [:!Oe []]                                                                                      ;
+  ; [:!Of []]                                                                                      ;
+  ; [:!Og []]                                                                                      ;
+  ; [:!Oh []]                                                                                      ;
+  ; [:!Oi []]                                                                                      ;
+  ; [:!Oj []]                                                                                      ;
+  ; [:!Ok []]                                                                                      ;
+  ; [:!Ol []]                                                                                      ;
+  ; [:!Om []]                                                                                      ;
+  ; [:!On []]                                                                                      ;
+  ; [:!Oo []]                                                                                      ;
+  ; [:!Op []]                                                                                      ;
+  ; [:!Oq []]                                                                                      ;
+  ; [:!Or []]                                                                                      ;
+  ; [:!Os []]                                                                                      ;
+  ; [:!Ot []]                                                                                      ;
+  ; [:!Ou []]                                                                                      ;
+  ; [:!Ov []]                                                                                      ;
+  ; [:!Ow []]                                                                                      ;
+  ; [:!Ox []]                                                                                      ;
+  ; [:!Oy []]                                                                                      ;
+  ; [:!Oz []]                                                                                      ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option
 {:des "Option Mode - symbols"
- :rules [;
-         [:!Ohyphen [:spacebar :hyphen :spacebar]]                             ; ' - '             ;
-         [:!Oequal_sign [:spacebar :!Sequal_sign :spacebar]]                   ; ' + '             ;
-         [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]          ; ' <= '            ;
-         [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]        ; ' >= '            ;
-         [:!Osemicolon [:spacebar :!S7 :spacebar]]                             ; ' & '             ;
-         [:!Oquote [:spacebar :!S6 :spacebar]]                                 ; ' ^ '             ;
-         [:!Obackslash [:spacebar :!Sbackslash :spacebar]]                     ; ' | '             ;
-         [:!Ocomma [:spacebar :!Scomma :spacebar]]                             ; ' < '             ;
-         [:!Operiod [:spacebar :!Speriod :spacebar]]                           ; ' > '             ;
-         [:!Oslash [:spacebar :!S5 :spacebar]]                                 ; ' % '             ;
+ :rules
+ [;
+  [:!Ohyphen [:spacebar :hyphen :spacebar]]                                    ; ' - '             ;
+  [:!Oequal_sign [:spacebar :!Sequal_sign :spacebar]]                          ; ' + '             ;
+  [:!Oopen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                 ; ' <= '            ;
+  [:!Oclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]               ; ' >= '            ;
+  [:!Osemicolon [:spacebar :!S7 :spacebar]]                                    ; ' & '             ;
+  [:!Oquote [:spacebar :!S6 :spacebar]]                                        ; ' ^ '             ;
+  [:!Obackslash [:spacebar :!Sbackslash :spacebar]]                            ; ' | '             ;
+  [:!Ocomma [:spacebar :!Scomma :spacebar]]                                    ; ' < '             ;
+  [:!Operiod [:spacebar :!Speriod :spacebar]]                                  ; ' > '             ;
+  [:!Oslash [:spacebar :!S5 :spacebar]]                                        ; ' % '             ;
 
-         [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]; ' == '            ;
-         [:!Oreturn_or_enter [:spacebar :equal_sign :spacebar]]                ; ' = '             ;
-         [:!Oright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]         ; ' |> '            ;
-         [:!Oright_option [:spacebar :!S8 :spacebar]]                          ; ' * '             ;
-         [:!Oright_command [:spacebar :slash :spacebar]]                       ; ' / '             ;
-         ; [:!Ospacebar []]            COLLISION (espanso)                                         ;
+  [:!Odelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]       ; ' == '            ;
+  [:!Oreturn_or_enter [:spacebar :equal_sign :spacebar]]                       ; ' = '             ;
+  [:!Oright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]                ; ' |> '            ;
+  [:!Oright_option [:spacebar :!S8 :spacebar]]                                 ; ' * '             ;
+  [:!Oright_command [:spacebar :slash :spacebar]]                              ; ' / '             ;
+  ; [:!Ospacebar []]                                                                COLLISION      ;
 
-         ; [:!Oleft_command []]                                                                    ;
-         ; [:!Oleft_option []]                   NOT AVAILABLE                                     ;
-         ; [:!Oleft_control []]                                                                    ;
-         ; [:!Oleft_shift []]                                                                      ;
-         ; [:!Ocaps_lock []]                                                                       ;
-         ; [:!Otab []]                                                                             ;
-         ; [:!Onon_us_backslash []]                                                                ;
-         ; [:!Oescape []]                                                                          ;
-         ]}
+  ; [:!Oleft_command []]                                                                           ;
+  ; [:!Oleft_option []]                                                             NOT AVAILABLE  ;
+  ; [:!Oleft_control []]                                                                           ;
+  ; [:!Oleft_shift []]                                                                             ;
+  ; [:!Ocaps_lock []]                                                                              ;
+  ; [:!Otab []]                                                                                    ;
+  ; [:!Onon_us_backslash []]                                                                       ;
+  ; [:!Oescape []]                                                                                 ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option - shift
 {:des "Option Mode - symbols"
- :rules [;
-         [:!OShyphen [:spacebar :period :hyphen :spacebar]]                              ; ' .- '  ;
-         [:!OSequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                    ; ' .+ '  ;
-         [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]           ; ' .<= ' ;
-         [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]         ; ' .>= ' ;
-         [:!OSsemicolon [:spacebar :period :!S7 :spacebar]]                              ; ' .& '  ;
-         [:!OSquote [:spacebar :period :!S6 :spacebar]]                                  ; ' .^ '  ;
-         [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]                      ; ' .| '  ;
-         [:!OScomma [:spacebar :period :!Scomma :spacebar]]                              ; ' .< '  ;
-         [:!OSperiod [:spacebar :period :!Speriod :spacebar]]                            ; ' .> '  ;
-         [:!OSslash [:spacebar :period :!S5 :spacebar]]                                  ; ' .% '  ;
+ :rules
+ [;
+  [:!OShyphen [:spacebar :period :hyphen :spacebar]]                              ; ' .- '         ;
+  [:!OSequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                    ; ' .+ '         ;
+  [:!OSopen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]           ; ' .<= '        ;
+  [:!OSclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]         ; ' .>= '        ;
+  [:!OSsemicolon [:spacebar :period :!S7 :spacebar]]                              ; ' .& '         ;
+  [:!OSquote [:spacebar :period :!S6 :spacebar]]                                  ; ' .^ '         ;
+  [:!OSbackslash [:spacebar :period :!Sbackslash :spacebar]]                      ; ' .| '         ;
+  [:!OScomma [:spacebar :period :!Scomma :spacebar]]                              ; ' .< '         ;
+  [:!OSperiod [:spacebar :period :!Speriod :spacebar]]                            ; ' .> '         ;
+  [:!OSslash [:spacebar :period :!S5 :spacebar]]                                  ; ' .% '         ;
 
-         [:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]] ; ' .== ' ;
-         [:!OSreturn_or_enter [:spacebar :period :equal_sign :spacebar]]                 ; ' .= '  ;
-         [:!OSright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]          ; ' .|> ' ;
-         [:!OSright_option [:spacebar :period :!S8 :spacebar]]                           ; ' .* '  ;
-         [:!OSright_command [:spacebar :period :slash :spacebar]]                        ; ' ./ '  ;
-         ; [:!OSspacebar []]                                                             ;         ;
+  [:!OSdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]] ; ' .== '        ;
+  [:!OSreturn_or_enter [:spacebar :period :equal_sign :spacebar]]                 ; ' .= '         ;
+  [:!OSright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]          ; ' .|> '        ;
+  [:!OSright_option [:spacebar :period :!S8 :spacebar]]                           ; ' .* '         ;
+  [:!OSright_command [:spacebar :period :slash :spacebar]]                        ; ' ./ '         ;
+  ; [:!OSspacebar []]                                                             ;                ;
 
-         ; [:!OSleft_command []]                                                                   ;
-         ; [:!OSleft_option []]                  NOT AVAILABLE                                     ;
-         ; [:!OSleft_control []]                                                                   ;
-         ; [:!OSleft_shift []]                   NOT AVAILABLE                                     ;
-         ; [:!OScaps_lock []]                                                                      ;
-         ; [:!OStab []]                                                                            ;
-         ; [:!OSnon_us_backslash []]                                                               ;
-         ; [:!OSescape []]                                                                         ;
-         ]}
+  ; [:!OSleft_command []]                                                                          ;
+  ; [:!OSleft_option []]                                                            NOT AVAILABLE  ;
+  ; [:!OSleft_control []]                                                                          ;
+  ; [:!OSleft_shift []]                                                             NOT AVAILABLE  ;
+  ; [:!OScaps_lock []]                                                                             ;
+  ; [:!OStab []]                                                                                   ;
+  ; [:!OSnon_us_backslash []]                                                                      ;
+  ; [:!OSescape []]                                                                                ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

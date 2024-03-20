@@ -2,28 +2,29 @@
 
 ; function
 {:des "Function keypad"
- :rules [;simple
-         [:!W0 :7]                     ; '7'                                                       ;
-         [:!Whyphen :8]                ; '8'                                                       ;
-         [:!Wequal_sign :9]            ; '9'                                                       ;
-         [:!Wp :4]                     ; '4'                                                       ;
-         [:!Wopen_bracket :5]          ; '5'                                                       ;
-         [:!Wclose_bracket :6]         ; '6'                                                       ;
-         [:!Wsemicolon :1]             ; '1'                                                       ;
-         [:!Wquote :2]                 ; '2'                                                       ;
-         [:!Wbackslash :3]             ; '3'                                                       ;
-         [:!Wslash :0]                 ; '0'                                                       ;
+ :rules
+ [;simple
+  [:!W0 :7]                                                                    ; '7'               ;
+  [:!Whyphen :8]                                                               ; '8'               ;
+  [:!Wequal_sign :9]                                                           ; '9'               ;
+  [:!Wp :4]                                                                    ; '4'               ;
+  [:!Wopen_bracket :5]                                                         ; '5'               ;
+  [:!Wclose_bracket :6]                                                        ; '6'               ;
+  [:!Wsemicolon :1]                                                            ; '1'               ;
+  [:!Wquote :2]                                                                ; '2'               ;
+  [:!Wbackslash :3]                                                            ; '3'               ;
+  [:!Wslash :0]                                                                ; '0'               ;
 
-         ; numbers
-         [:!W1 :f1]                    ; 'F1'                                                      ;
-         [:!W2 :f2]                    ; 'F2'                                                      ;
-         [:!W3 :f3]                    ; 'F3'                                                      ;
-         [:!W4 :f4]                    ; 'F4'                                                      ;
-         [:!W5 :f5]                    ; 'F5'                                                      ;
-         [:!W6 :f6]                    ; 'F6'                                                      ;
-         [:!W7 :f7]                    ; 'F7'                                                      ;
-         [:!W8 :f8]                    ; 'F8'                                                      ;
-         [:!W9 :f9]                    ; 'F9'                                                      ;
-         ]}
+  ; numbers
+  [:!W1 :f1]                                                                   ; 'F1'              ;
+  [:!W2 :f2]                                                                   ; 'F2'              ;
+  [:!W3 :f3]                                                                   ; 'F3'              ;
+  [:!W4 :f4]                                                                   ; 'F4'              ;
+  [:!W5 :f5]                                                                   ; 'F5'              ;
+  [:!W6 :f6]                                                                   ; 'F6'              ;
+  [:!W7 :f7]                                                                   ; 'F7'              ;
+  [:!W8 :f8]                                                                   ; 'F8'              ;
+  [:!W9 :f9]                                                                   ; 'F9'              ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

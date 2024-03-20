@@ -2,99 +2,102 @@
 
 ; esc
 {:des "Escape Mode - alphabet"
- :rules [;
-         ; [:!EWRa [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRb [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]               ; '@chain '                        ;
-         [:!EWRd [:!S2 :d :e :b :u :g :spacebar]]               ; '@debug '                        ;
-         [:!EWRe [:!S2 :e :d :i :t :spacebar]]                  ; '@edit '                         ;
-         ; [:!EWRf [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRg [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRh [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRi [:!S2 :i :n :f :o :spacebar]]                  ; '@info '                         ;
-         ; [:!EWRj [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRk [:!S2 :c :l :i :c :k :period]]                 ; '@click.'                        ;
-         [:!EWRl [:!S2 :l :e :s :s :spacebar]]                  ; '@less '                         ;
-         ; [:!EWRm [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRn [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRo [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRp [:!S2 :p :i :p :e :spacebar]]                  ; '@pipe '                         ;
-         ; [:!EWRq [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRr [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRs [:!S2 :s :h :o :w :spacebar]]                  ; '@show '                         ;
-         [:!EWRt [:!S2 :t :i :m :e :spacebar]]                  ; '@time '                         ;
-         ; [:!EWRu [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRv [:!S2 :e :v :a :l :spacebar]]                  ; '@eval '                         ;
-         [:!EWRw [:!S2 :w :a :r :n :spacebar]]                  ; '@warn '                         ;
-         ; [:!EWRx [:!S2 :spacebar]]                            ;                                  ;
-         ; [:!EWRy [:!S2 :spacebar]]                            ;                                  ;
-         [:!EWRz [:!S2 :w :h :i :c :h :spacebar]]               ; '@which '                        ;
-         ]}
+ :rules
+ [;
+  ; [:!EWRa [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRb [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRc [:!S2 :c :h :a :i :n :spacebar]]                                     ; '@chain '         ;
+  [:!EWRd [:!S2 :d :e :b :u :g :spacebar]]                                     ; '@debug '         ;
+  [:!EWRe [:!S2 :e :d :i :t :spacebar]]                                        ; '@edit '          ;
+  ; [:!EWRf [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRg [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRh [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRi [:!S2 :i :n :f :o :spacebar]]                                        ; '@info '          ;
+  ; [:!EWRj [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRk [:!S2 :c :l :i :c :k :period]]                                       ; '@click.'         ;
+  [:!EWRl [:!S2 :l :e :s :s :spacebar]]                                        ; '@less '          ;
+  ; [:!EWRm [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRn [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRo [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRp [:!S2 :p :i :p :e :spacebar]]                                        ; '@pipe '          ;
+  ; [:!EWRq [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRr [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRs [:!S2 :s :h :o :w :spacebar]]                                        ; '@show '          ;
+  [:!EWRt [:!S2 :t :i :m :e :spacebar]]                                        ; '@time '          ;
+  ; [:!EWRu [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRv [:!S2 :e :v :a :l :spacebar]]                                        ; '@eval '          ;
+  [:!EWRw [:!S2 :w :a :r :n :spacebar]]                                        ; '@warn '          ;
+  ; [:!EWRx [:!S2 :spacebar]]                                                  ;                   ;
+  ; [:!EWRy [:!S2 :spacebar]]                                                  ;                   ;
+  [:!EWRz [:!S2 :w :h :i :c :h :spacebar]]                                     ; '@which '         ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc
 {:des "Escape Mode - symbols"
- :rules [;
-         ; [:!EWRhyphen []]                                                                        ;
-         ; [:!EWRequal_sign []]                                                                    ;
-         [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]      ; ' %<+% ';
-         [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]    ; ' %+>% ';
-         [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                           ; ' %$% ' ;
-         [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                     ; ' %T>% ';
-         [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]             ; ' %<>% ';
-         [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                           ; ' %<% ' ;
-         [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                         ; ' %>% ' ;
-         [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                     ; ' %!>% ';
+ :rules
+ [;
+  ; [:!EWRhyphen []]                                                                               ;
+  ; [:!EWRequal_sign []]                                                                           ;
+  [:!EWRopen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]   ; ' %<+% '          ;
+  [:!EWRclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]] ; ' %+>% '          ;
+  [:!EWRsemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                        ; ' %$% '           ;
+  [:!EWRquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                  ; ' %T>% '          ;
+  [:!EWRbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]          ; ' %<>% '          ;
+  [:!EWRcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                        ; ' %<% '           ;
+  [:!EWRperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                      ; ' %>% '           ;
+  [:!EWRslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                  ; ' %!>% '          ;
 
-         ; [:!EWRdelete_or_backspace []]                                                           ;
-         ; [:!EWRreturn_or_enter []]                                                               ;
-         ; [:!EWRright_shift []]                                                                   ;
-         ; [:!EWRright_option []]                                                                  ;
-         ; [:!EWRright_command []]                                                                 ;
-         ; [:!EWRspacebar []]                                                                      ;
+  ; [:!EWRdelete_or_backspace []]                                                                  ;
+  ; [:!EWRreturn_or_enter []]                                                                      ;
+  ; [:!EWRright_shift []]                                                                          ;
+  ; [:!EWRright_option []]                                                                         ;
+  ; [:!EWRright_command []]                                                                        ;
+  ; [:!EWRspacebar []]                                                                             ;
 
-         ; [:!EWRleft_command []]                                                                  ;
-         ; [:!EWRleft_option []]                                                                   ;
-         ; [:!EWRleft_control []]                                                                  ;
-         ; [:!EWRleft_shift []]                                                                    ;
-         ; [:!EWRcaps_lock []]                                                                     ;
-         ; [:!EWRtab []]                                                                           ;
-         ; [:!EWRnon_us_backslash []]                                                              ;
-         ; [:!EWRescape []]                      NOT AVAILABLE                                     ;
-         ]}
+  ; [:!EWRleft_command []]                                                                         ;
+  ; [:!EWRleft_option []]                                                                          ;
+  ; [:!EWRleft_control []]                                                                         ;
+  ; [:!EWRleft_shift []]                                                                           ;
+  ; [:!EWRcaps_lock []]                                                                            ;
+  ; [:!EWRtab []]                                                                                  ;
+  ; [:!EWRnon_us_backslash []]                                                                     ;
+  ; [:!EWRescape []]                                                                NOT AVAILABLE  ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc - shift
 {:des "Escape Mode - symbols"
- :rules [;
-         ; [:!EWRShyphen []]                                                                       ;
-         ; [:!EWRSequal_sign []]                                                                   ;
-         ; [:!EWRSopen_bracket []]                                                                 ;
-         ; [:!EWRSclose_bracket []]                                                                ;
-         ; [:!EWRSsemicolon []]                                                                    ;
-         ; [:!EWRSquote []]                                                                        ;
-         ; [:!EWRSbackslash []]                                                                    ;
-         ; [:!EWRScomma []]                                                                        ;
-         ; [:!EWRSperiod []]                                                                       ;
-         ; [:!EWRSslash []]                                                                        ;
+ :rules
+ [;
+  ; [:!EWRShyphen []]                                                                              ;
+  ; [:!EWRSequal_sign []]                                                                          ;
+  ; [:!EWRSopen_bracket []]                                                                        ;
+  ; [:!EWRSclose_bracket []]                                                                       ;
+  ; [:!EWRSsemicolon []]                                                                           ;
+  ; [:!EWRSquote []]                                                                               ;
+  ; [:!EWRSbackslash []]                                                                           ;
+  ; [:!EWRScomma []]                                                                               ;
+  ; [:!EWRSperiod []]                                                                              ;
+  ; [:!EWRSslash []]                                                                               ;
 
-         ; [:!EWRSdelete_or_backspace []]                                                          ;
-         ; [:!EWRSreturn_or_enter []]                                                              ;
-         ; [:!EWRSright_shift []]                                                                  ;
-         ; [:!EWRSright_option []]                                                                 ;
-         ; [:!EWRSright_command []]                                                                ;
-         ; [:!EWRSspacebar []]                                                                     ;
+  ; [:!EWRSdelete_or_backspace []]                                                                 ;
+  ; [:!EWRSreturn_or_enter []]                                                                     ;
+  ; [:!EWRSright_shift []]                                                                         ;
+  ; [:!EWRSright_option []]                                                                        ;
+  ; [:!EWRSright_command []]                                                                       ;
+  ; [:!EWRSspacebar []]                                                                            ;
 
-         ; [:!EWRSleft_command []]                                                                 ;
-         ; [:!EWRSleft_option []]                                                                  ;
-         ; [:!EWRSleft_control []]                                                                 ;
-         ; [:!EWRSleft_shift []]                  NOT AVAILABLE                                    ;
-         ; [:!EWRScaps_lock []]                                                                    ;
-         ; [:!EWRStab []]                                                                          ;
-         ; [:!EWRSnon_us_backslash []]                                                             ;
-         ; [:!EWRSescape []]                      NOT AVAILABLE                                    ;
-         ]}
+  ; [:!EWRSleft_command []]                                                                        ;
+  ; [:!EWRSleft_option []]                                                                         ;
+  ; [:!EWRSleft_control []]                                                                        ;
+  ; [:!EWRSleft_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!EWRScaps_lock []]                                                                           ;
+  ; [:!EWRStab []]                                                                                 ;
+  ; [:!EWRSnon_us_backslash []]                                                                    ;
+  ; [:!EWRSescape []]                                                               NOT AVAILABLE  ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

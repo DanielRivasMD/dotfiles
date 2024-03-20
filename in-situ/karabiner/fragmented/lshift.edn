@@ -2,66 +2,68 @@
 
 ; shift
 {:des "Shift Mode - alphabet"
- :rules [;
-         ; [:!Sa []]                                                                               ;
-         ; [:!Sb []]                                                                               ;
-         ; [:!Sc []]                                                                               ;
-         ; [:!Sd []]                                                                               ;
-         ; [:!Se []]                                                                               ;
-         ; [:!Sf []]                                                                               ;
-         ; [:!Sg []]                                                                               ;
-         ; [:!Sh []]                                                                               ;
-         ; [:!Si []]                                                                               ;
-         ; [:!Sj []]                                                                               ;
-         ; [:!Sk []]                                                                               ;
-         ; [:!Sl []]                                                                               ;
-         ; [:!Sm []]                                                                               ;
-         ; [:!Sn []]                                                                               ;
-         ; [:!So []]                                                                               ;
-         ; [:!Sp []]                                                                               ;
-         ; [:!Sq []]                                                                               ;
-         ; [:!Sr []]                                                                               ;
-         ; [:!Ss []]                                                                               ;
-         ; [:!St []]                                                                               ;
-         ; [:!Su []]                                                                               ;
-         ; [:!Sv []]                                                                               ;
-         ; [:!Sw []]                                                                               ;
-         ; [:!Sx []]                                                                               ;
-         ; [:!Sy []]                                                                               ;
-         ; [:!Sz []]                                                                               ;
-         ]}
+ :rules
+ [;
+  ; [:!Sa []]                                                                                      ;
+  ; [:!Sb []]                                                                                      ;
+  ; [:!Sc []]                                                                                      ;
+  ; [:!Sd []]                                                                                      ;
+  ; [:!Se []]                                                                                      ;
+  ; [:!Sf []]                                                                                      ;
+  ; [:!Sg []]                                                                                      ;
+  ; [:!Sh []]                                                                                      ;
+  ; [:!Si []]                                                                                      ;
+  ; [:!Sj []]                                                                                      ;
+  ; [:!Sk []]                                                                                      ;
+  ; [:!Sl []]                                                                                      ;
+  ; [:!Sm []]                                                                                      ;
+  ; [:!Sn []]                                                                                      ;
+  ; [:!So []]                                                                                      ;
+  ; [:!Sp []]                                                                                      ;
+  ; [:!Sq []]                                                                                      ;
+  ; [:!Sr []]                                                                                      ;
+  ; [:!Ss []]                                                                                      ;
+  ; [:!St []]                                                                                      ;
+  ; [:!Su []]                                                                                      ;
+  ; [:!Sv []]                                                                                      ;
+  ; [:!Sw []]                                                                                      ;
+  ; [:!Sx []]                                                                                      ;
+  ; [:!Sy []]                                                                                      ;
+  ; [:!Sz []]                                                                                      ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; shift
 {:des "Shift Mode - symbols"
- :rules [;
-         ; [:!Shyphen []]                        NOT AVAILABLE                                     ;
-         ; [:!Sequal_sign []]                    NOT AVAILABLE                                     ;
-         ; [:!Sopen_bracket []]                  NOT AVAILABLE                                     ;
-         ; [:!Sclose_bracket []]                 NOT AVAILABLE                                     ;
-         ; [:!Ssemicolon []]                     NOT AVAILABLE                                     ;
-         ; [:!Squote []]                         NOT AVAILABLE                                     ;
-         ; [:!Sbackslash []]                     NOT AVAILABLE                                     ;
-         ; [:!Scomma []]                         NOT AVAILABLE                                     ;
-         ; [:!Speriod []]                        NOT AVAILABLE                                     ;
-         ; [:!Sslash []]                         NOT AVAILABLE                                     ;
+ :rules
+ [;
+  ; [:!Shyphen []]                                                                  NOT AVAILABLE  ;
+  ; [:!Sequal_sign []]                                                              NOT AVAILABLE  ;
+  ; [:!Sopen_bracket []]                                                            NOT AVAILABLE  ;
+  ; [:!Sclose_bracket []]                                                           NOT AVAILABLE  ;
+  ; [:!Ssemicolon []]                                                               NOT AVAILABLE  ;
+  ; [:!Squote []]                                                                   NOT AVAILABLE  ;
+  ; [:!Sbackslash []]                                                               NOT AVAILABLE  ;
+  ; [:!Scomma []]                                                                   NOT AVAILABLE  ;
+  ; [:!Speriod []]                                                                  NOT AVAILABLE  ;
+  ; [:!Sslash []]                                                                   NOT AVAILABLE  ;
 
-         ; [:!S#Pdelete_or_backspace []]                                                           ;
-         [:!S#Preturn_or_enter :caps_lock]                                                         ;
-         [:!S#Pright_shift :delete_forward]                                                        ;
-         [:!S#Pright_option :!Od [:term]]                                                          ;
-         [:!S#Pright_command :!Tk [:term]]                                                         ;
-         ; [:!S#Pspacebar []]                                                                      ;
+  ; [:!S#Pdelete_or_backspace []]                                                                  ;
+  [:!S#Preturn_or_enter :caps_lock]                                                                ;
+  [:!S#Pright_shift :delete_forward]                                                               ;
+  [:!S#Pright_option :!Od [:term]]                                                                 ;
+  [:!S#Pright_command :!Tk [:term]]                                                                ;
+  ; [:!S#Pspacebar []]                                                                             ;
 
-         ; [:!S#Pleft_command []]                                                                  ;
-         ; [:!S#Pleft_option []]                                                                   ;
-         ; [:!S#Pleft_control []]                                                                  ;
-         ; [:!S#Pleft_shift []]                  NOT AVAILABLE                                     ;
-         ; [:!S#Pcaps_lock []]                                                                     ;
-         ; [:!S#Ptab []]                                                                           ;
-         ; [:!S#Pnon_us_backslash []]                                                              ;
-         ; [:!S#Pescape []]                                                                        ;
-         ]}
+  ; [:!S#Pleft_command []]                                                                         ;
+  ; [:!S#Pleft_option []]                                                                          ;
+  ; [:!S#Pleft_control []]                                                                         ;
+  ; [:!S#Pleft_shift []]                                                            NOT AVAILABLE  ;
+  ; [:!S#Pcaps_lock []]                                                                            ;
+  ; [:!S#Ptab []]                                                                                  ;
+  ; [:!S#Pnon_us_backslash []]                                                                     ;
+  ; [:!S#Pescape []]                                                                               ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

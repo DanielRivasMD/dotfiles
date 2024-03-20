@@ -2,34 +2,39 @@
 
 ; additional
 {:des "Additional key - MacPro"
- :rules [:pro
-         [:non_us_backslash :fn nil {:alone [:0]}]                                       ;         ;
-         [:!Snon_us_backslash :!Sgrave_accent_and_tilde]                                 ; '~'     ;
-         [:0 :grave_accent_and_tilde]                                                    ; '`'     ;
-         [:!T0 [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'   ;
-         [:!Onon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]           ; ' ~ '   ;
-         [:!Tnon_us_backslash [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]; ' =~ ' ;
-         ]}
+ :rules
+ [:pro
+  [:non_us_backslash :fn nil {:alone [:0]}]                                    ;                   ;
+  [:!Snon_us_backslash :!Sgrave_accent_and_tilde]                              ; '~'               ;
+  [:0 :grave_accent_and_tilde]                                                 ; '`'               ;
+  [:!T0
+   [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'             ;
+  [:!Onon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]        ; ' ~ '             ;
+  [:!Tnon_us_backslash
+   [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]                ; ' =~ '            ;
+  ]}
 
 {:des "Additional keys - Master"
- :rules [:master
-         [:non_us_backslash :fn nil {:alone [:0]}]                                       ;         ;
-         [:0 :non_us_backslash]                                                          ; '`'     ;
-         [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]                  ; '```'   ;
-         [:!Onon_us_backslash [:spacebar :!Snon_us_backslash :spacebar]]                 ; ' ~ '   ;
-         [:!Tnon_us_backslash [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]     ; ' =~ '  ;
-         ]}
+ :rules
+ [:master
+  [:non_us_backslash :fn nil {:alone [:0]}]                                    ;                   ;
+  [:0 :non_us_backslash]                                                       ; '`'               ;
+  [:!T0 [:non_us_backslash :non_us_backslash :non_us_backslash]]               ; '```'             ;
+  [:!Onon_us_backslash [:spacebar :!Snon_us_backslash :spacebar]]              ; ' ~ '             ;
+  [:!Tnon_us_backslash [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]  ; ' =~ '            ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; simple
 {:des "Simple modifications"
- :rules [;
-         [:keypad_slash :display_brightness_decrement]                                             ;
-         [:keypad_asterisk :display_brightness_increment]                                          ;
-         [:keypad_hyphen :mute]                                                                    ;
-         [:keypad_plus :volume_increment]                                                          ;
-         [:keypad_enter :volume_decrement]                                                         ;
-         ]}
+ :rules
+ [;
+  [:keypad_slash :display_brightness_decrement]                                                    ;
+  [:keypad_asterisk :display_brightness_increment]                                                 ;
+  [:keypad_hyphen :mute]                                                                           ;
+  [:keypad_plus :volume_increment]                                                                 ;
+  [:keypad_enter :volume_decrement]                                                                ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

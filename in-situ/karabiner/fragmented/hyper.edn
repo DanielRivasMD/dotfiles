@@ -2,66 +2,68 @@
 
 ; hyper
 {:des "Hyper Mode - alphabet"
- :rules [;
-         ; [:!!a []]                                                                               ;
-         ; [:!!b []]                                                                               ;
-         ; [:!!c []]                                                                               ;
-         ; [:!!d []]                                                                               ;
-         ; [:!!e []]                                                                               ;
-         ; [:!!f []]                                                                               ;
-         ; [:!!g []]                                                                               ;
-         ; [:!!h []]                                                                               ;
-         ; [:!!i []]                                                                               ;
-         ; [:!!j []]                                                                               ;
-         ; [:!!k []]                                                                               ;
-         ; [:!!l []]                                                                               ;
-         ; [:!!m []]                                                                               ;
-         ; [:!!n []]                                                                               ;
-         ; [:!!o []]                                                                               ;
-         ; [:!!p []]                                                                               ;
-         ; [:!!q []]                                                                               ;
-         ; [:!!r []]                                                                               ;
-         ; [:!!s []]                                                                               ;
-         ; [:!!t []]                                                                               ;
-         ; [:!!u []]                                                                               ;
-         ; [:!!v []]                                                                               ;
-         ; [:!!w []]                                                                               ;
-         ; [:!!x []]                                                                               ;
-         ; [:!!y []]                                                                               ;
-         ; [:!!z []]                                                                               ;
-         ]}
+ :rules
+ [;
+  ; [:!!a []]                                                                                      ;
+  ; [:!!b []]                                                                                      ;
+  ; [:!!c []]                                                                                      ;
+  ; [:!!d []]                                                                                      ;
+  ; [:!!e []]                                                                                      ;
+  ; [:!!f []]                                                                                      ;
+  ; [:!!g []]                                                                                      ;
+  ; [:!!h []]                                                                                      ;
+  ; [:!!i []]                                                                                      ;
+  ; [:!!j []]                                                                                      ;
+  ; [:!!k []]                                                                                      ;
+  ; [:!!l []]                                                                                      ;
+  ; [:!!m []]                                                                                      ;
+  ; [:!!n []]                                                                                      ;
+  ; [:!!o []]                                                                                      ;
+  ; [:!!p []]                                                                                      ;
+  ; [:!!q []]                                                                                      ;
+  ; [:!!r []]                                                                                      ;
+  ; [:!!s []]                                                                                      ;
+  ; [:!!t []]                                                                                      ;
+  ; [:!!u []]                                                                                      ;
+  ; [:!!v []]                                                                                      ;
+  ; [:!!w []]                                                                                      ;
+  ; [:!!x []]                                                                                      ;
+  ; [:!!y []]                                                                                      ;
+  ; [:!!z []]                                                                                      ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; hyper
 {:des "Hyper Mode - symbols"
- :rules [;
-         ; [:!!#Phyphen []]                                                                        ;
-         ; [:!!#Pequal_sign []]                                                                    ;
-         ; [:!!#Popen_bracket []]                                                                  ;
-         ; [:!!#Pclose_bracket []]                                                                 ;
-         [:!!#Psemicolon [:launch "Microsoft PowerPoint"]]                                         ;
-         [:!!#Pquote [:launch "Microsoft Excel"]]                                                  ;
-         [:!!#Pbackslash [:launch "Microsoft Word"]]                                               ;
-         ; [:!!#Pcomma []]             COLLISION (system)                                          ;
-         ; [:!!#Pperiod []]            COLLISION (system)                                          ;
-         [:!!#Pslash [:launch "Mail"]]                                                             ;
+ :rules
+ [;
+  ; [:!!#Phyphen []]                                                                               ;
+  ; [:!!#Pequal_sign []]                                                                           ;
+  ; [:!!#Popen_bracket []]                                                                         ;
+  ; [:!!#Pclose_bracket []]                                                                        ;
+  [:!!#Psemicolon [:launch "Microsoft PowerPoint"]]                                                ;
+  [:!!#Pquote [:launch "Microsoft Excel"]]                                                         ;
+  [:!!#Pbackslash [:launch "Microsoft Word"]]                                                      ;
+  ; [:!!#Pcomma []]                                                                 COLLISION      ;
+  ; [:!!#Pperiod []]                                                                COLLISION      ;
+  [:!!#Pslash [:launch "Mail"]]                                                                    ;
 
-         [:!!#Pdelete_or_backspace [:launch "Lapce"]]                                              ;
-         [:!!#Preturn_or_enter [:launch "Alacritty"]]                                              ;
-         [:!!#Pright_shift [:launch "Zed"]]                                                        ;
-         [:!!#Pright_option [:launch "Chrome"]]                                                    ;
-         [:!!#Pright_command [:launch "Firefox"]]                                                  ;
-         ; [:!!#Pspacebar []]          COLLISION (speak function)                                  ;
+  [:!!#Pdelete_or_backspace [:launch "Lapce"]]                                                     ;
+  [:!!#Preturn_or_enter [:launch "Alacritty"]]                                                     ;
+  [:!!#Pright_shift [:launch "Zed"]]                                                               ;
+  [:!!#Pright_option [:launch "Chrome"]]                                                           ;
+  [:!!#Pright_command [:launch "Firefox"]]                                                         ;
+  ; [:!!#Pspacebar []]                                                              COLLISION      ;
 
-         ; [:!!#Pleft_command []]                                                                  ;
-         ; [:!!#Pleft_option []]                                                                   ;
-         ; [:!!#Pleft_control []]                                                                  ;
-         ; [:!!#Pleft_shift []]                                                                    ;
-         ; [:!!#Pcaps_lock []]                   NOT AVAILABLE                                     ;
-         ; [:!!#Ptab []]                                                                           ;
-         ; [:!!#Pnon_us_backslash []]                                                              ;
-         ; [:!!#Pescape []]                                                                        ;
-         ]}
+  ; [:!!#Pleft_command []]                                                                         ;
+  ; [:!!#Pleft_option []]                                                                          ;
+  ; [:!!#Pleft_control []]                                                                         ;
+  ; [:!!#Pleft_shift []]                                                                           ;
+  ; [:!!#Pcaps_lock []]                                                             NOT AVAILABLE  ;
+  ; [:!!#Ptab []]                                                                                  ;
+  ; [:!!#Pnon_us_backslash []]                                                                     ;
+  ; [:!!#Pescape []]                                                                               ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

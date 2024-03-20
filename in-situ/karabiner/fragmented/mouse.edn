@@ -1,14 +1,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;
+; mouse
 {:des "Zero Mode - mouse"
- :rules [:zero-mode
-         [:down_arrow {:mkey {:y 1000}}]                                                            ;
-         [:up_arrow {:mkey {:y -1000}}]                                                             ;
-         [:left_arrow {:mkey {:x -1000}}]                                                           ;
-         [:right_arrow {:mkey {:x 1000}}]                                                           ;
-         [:return_or_enter {:pkey :button1}]                                                        ;
-         [:backslash {:pkey :button2}]                                                              ;
-         ]}
+ :rules
+ [:zero-mode
+  [:down_arrow {:mkey {:y 1000}}]                                                                  ;
+  [:up_arrow {:mkey {:y -1000}}]                                                                   ;
+  [:left_arrow {:mkey {:x -1000}}]                                                                 ;
+  [:right_arrow {:mkey {:x 1000}}]                                                                 ;
+  [:return_or_enter {:pkey :button1}]                                                              ;
+  [:backslash {:pkey :button2}]                                                                    ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

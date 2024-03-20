@@ -2,66 +2,69 @@
 
 ; bspace
 {:des "BSpace Mode - alphabet"
- :rules [;
-         ; [:!EQRa [:a]]                                                                           ;
-         ; [:!EQRb [:b]]                                                                           ;
-         ; [:!EQRc [:c]]                                                                           ;
-         ; [:!EQRd [:d]]                                                                           ;
-         ; [:!EQRe [:e]]                                                                           ;
-         ; [:!EQRf [:f]]                                                                           ;
-         ; [:!EQRg [:g]]                                                                           ;
-         ; [:!EQRh [:h]]                                                                           ;
-         ; [:!EQRi [:i]]                                                                           ;
-         ; [:!EQRj [:j]]                                                                           ;
-         ; [:!EQRk [:k]]                                                                           ;
-         ; [:!EQRl [:l]]                                                                           ;
-         ; [:!EQRm [:m]]                                                                           ;
-         ; [:!EQRn [:n]]                                                                           ;
-         ; [:!EQRo [:o]]                                                                           ;
-         ; [:!EQRp [:p]]                                                                           ;
-         ; [:!EQRq [:q]]                                                                           ;
-         ; [:!EQRr [:r]]                                                                           ;
-         ; [:!EQRs [:s]]                                                                           ;
-         ; [:!EQRt [:t]]                                                                           ;
-         ; [:!EQRu [:u]]                                                                           ;
-         ; [:!EQRv [:v]]                                                                           ;
-         ; [:!EQRw [:w]]                                                                           ;
-         ; [:!EQRx [:x]]                                                                           ;
-         ; [:!EQRy [:y]]                                                                           ;
-         ; [:!EQRz [:z]]                                                                           ;
-         ]}
+ :rules
+ [;
+  ; [:!EQRa [:a]]                                                                                  ;
+  ; [:!EQRb [:b]]                                                                                  ;
+  ; [:!EQRc [:c]]                                                                                  ;
+  ; [:!EQRd [:d]]                                                                                  ;
+  ; [:!EQRe [:e]]                                                                                  ;
+  ; [:!EQRf [:f]]                                                                                  ;
+  ; [:!EQRg [:g]]                                                                                  ;
+  ; [:!EQRh [:h]]                                                                                  ;
+  ; [:!EQRi [:i]]                                                                                  ;
+  ; [:!EQRj [:j]]                                                                                  ;
+  ; [:!EQRk [:k]]                                                                                  ;
+  ; [:!EQRl [:l]]                                                                                  ;
+  ; [:!EQRm [:m]]                                                                                  ;
+  ; [:!EQRn [:n]]                                                                                  ;
+  ; [:!EQRo [:o]]                                                                                  ;
+  ; [:!EQRp [:p]]                                                                                  ;
+  ; [:!EQRq [:q]]                                                                                  ;
+  ; [:!EQRr [:r]]                                                                                  ;
+  ; [:!EQRs [:s]]                                                                                  ;
+  ; [:!EQRt [:t]]                                                                                  ;
+  ; [:!EQRu [:u]]                                                                                  ;
+  ; [:!EQRv [:v]]                                                                                  ;
+  ; [:!EQRw [:w]]                                                                                  ;
+  ; [:!EQRx [:x]]                                                                                  ;
+  ; [:!EQRy [:y]]                                                                                  ;
+  ; [:!EQRz [:z]]                                                                                  ;
+  ; [:!EQRkeypad_num_lock [:f20]]                                                                  ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; bspace
 {:des "BSpace Mode - symbols"
- :rules [;
-         ; [:!EQR#Phyphen []]                                                                      ;
-         ; [:!EQR#Pequal_sign []]                                                                  ;
-         ; [:!EQR#Popen_bracket []]                                                                ;
-         ; [:!EQR#Pclose_bracket []]                                                               ;
-         ; [:!EQR#Psemicolon []]                                                                   ;
-         ; [:!EQR#Pquote []]                                                                       ;
-         ; [:!EQR#Pbackslash []]                                                                   ;
-         ; [:!EQR#Pcomma []]                                                                       ;
-         ; [:!EQR#Pperiod []]                                                                      ;
-         ; [:!EQR#Pslash []]                                                                       ;
+ :rules
+ [;
+  ; [:!EQR#Phyphen []]                                                                             ;
+  ; [:!EQR#Pequal_sign []]                                                                         ;
+  ; [:!EQR#Popen_bracket []]                                                                       ;
+  ; [:!EQR#Pclose_bracket []]                                                                      ;
+  ; [:!EQR#Psemicolon []]                                                                          ;
+  ; [:!EQR#Pquote []]                                                                              ;
+  ; [:!EQR#Pbackslash []]                                                                          ;
+  ; [:!EQR#Pcomma []]                                                                              ;
+  ; [:!EQR#Pperiod []]                                                                             ;
+  ; [:!EQR#Pslash []]                                                                              ;
 
-         ; [:!EQR#Pdelete_or_backspace []]       NOT AVAILABLE                                     ;
-         ; [:!EQR#Preturn_or_enter []]                                                             ;
-         ; [:!EQR#Pright_shift []]                                                                 ;
-         ; [:!EQR#Pright_option :!Tn [:term]]                                                      ;
-         ; [:!EQR#Pright_command :!Tj [:term]]                                                     ;
-         ; [:!EQR#Pspacebar :!Ty [:term]]                                                          ;
+  ; [:!EQR#Pdelete_or_backspace []]                                                 NOT AVAILABLE  ;
+  ; [:!EQR#Preturn_or_enter []]                                                                    ;
+  ; [:!EQR#Pright_shift []]                                                                        ;
+  ; [:!EQR#Pright_option :!Tn [:term]]                                                             ;
+  ; [:!EQR#Pright_command :!Tj [:term]]                                                            ;
+  ; [:!EQR#Pspacebar :!Ty [:term]]                                                                 ;
 
-         [:!EQR#Pleft_command :!Tt [:term]]                                                        ;
-         ; [:!EQR#Pleft_option :!Ts [:term]]                                                       ;
-         [:!EQR#Pleft_control :!Tr [:term]]                                                        ;
-         ; [:!EQR#Pleft_shift :!Oc [:term]]                                                        ;
-         ; [:!EQR#Pcaps_lock :!Tg [:term]]                                                         ;
-         ; [:!EQR#Ptab :!Th [:term]]                                                               ;
-         ; [:!EQR#Pnon_us_backslash []]                                                            ;
-         ; [:!EQR#Pescape []]                                                                      ;
-         ]}
+  [:!EQR#Pleft_command :!Tt [:term]]                                                               ;
+  ; [:!EQR#Pleft_option :!Ts [:term]]                                                              ;
+  [:!EQR#Pleft_control :!Tr [:term]]                                                               ;
+  ; [:!EQR#Pleft_shift :!Oc [:term]]                                                               ;
+  ; [:!EQR#Pcaps_lock :!Tg [:term]]                                                                ;
+  ; [:!EQR#Ptab :!Th [:term]]                                                                      ;
+  ; [:!EQR#Pnon_us_backslash []]                                                                   ;
+  ; [:!EQR#Pescape []]                                                                             ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

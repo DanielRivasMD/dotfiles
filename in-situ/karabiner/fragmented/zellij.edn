@@ -2,144 +2,148 @@
 
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
- :rules [;
-         [:right_shift :right_shift [:term] {:alone [:!Oa]}]; shift                                ;
-         [:!Oleft_arrow :!Ob [:term]]                      ; alt-left                              ;
-         ; [: :!Oc [:term]]                      COLLISION (remapped)                              ;
-         ; [: :!Od [:term]]                      COLLISION (delete)                                ;
-         ; [: :!Oe [:term]]                      COLLISION (accent)                                ;
-         [:!Oright_arrow :!Of [:term]]                     ; alt-right                             ;
-         [:!OTright_shift :!Og [:term]]                    ; alt-ctrl-shift                        ;
-         [:!OTright_option :!Oh [:term]]                   ; alt-ctrl-alt                          ;
-         ; [: :!Oi [:term]]                      COLLISION (accent)                                ;
-         [:!OTreturn_or_enter :!Oj [:term]]                ; alt-ctrl-enter                        ;
-         [:!Eleft_option :!Ok [:term]]                     ; alt-tab                               ;
-         [:!OTright_command :!Ol [:term]]                  ; alt-ctrl-cmd                          ;
-         [:!OTspacebar :!Om [:term]]                       ; alt-ctrl-space                        ;
-         ; [: :!On [:term]]                      COLLISION (accent)                                ;
-         [:!OCspacebar :!Oo [:term]]                       ; alt-cmd-space                         ;
-         [:!OCleft_arrow :!Op [:term]]                     ; alt-cmd-left                          ;
-         [:!OCright_arrow :!Oq [:term]]                    ; alt-cmd-right                         ;
-         [:!OCright_command :!Or [:term]]                  ; alt-cmd-shift                         ;
-         [:!Eright_command :!Os [:term]]                   ; alt-cmd                               ;
-         [:!OCdelete_or_backspace :!Ot [:term]]            ; alt-cmd-bspace                        ;
-         ; [: :!Ou [:term]]                      COLLISION (accent)                                ;
-         [:!OTdelete_or_backspace :!Ov [:term]]            ; alt-ctrl-bspace                       ;
-         [:!OTleft_arrow :!Ow [:term]]                     ; alt-ctrl-left                         ;
-         [:!OTright_arrow :!Ox [:term]]                    ; alt-ctrl-right                        ;
-         [:!OTdown_arrow :!Oy [:term]]                     ; alt-ctrl-down                         ;
-         [:!OTup_arrow :!Oz [:term]]                       ; alt-ctrl-up                           ;
-         ]}
+ :rules
+ [;
+  [:right_shift :right_shift [:term] {:alone [:!Oa]}]                          ; shift             ;
+  [:!Oleft_arrow :!Ob [:term]]                                                 ; alt-left          ;
+  ; [: :!Oc [:term]]                                                                COLLISION      ;
+  ; [: :!Od [:term]]                                                                COLLISION      ;
+  ; [: :!Oe [:term]]                                                                COLLISION      ;
+  [:!Oright_arrow :!Of [:term]]                                                ; alt-right         ;
+  [:!OTright_shift :!Og [:term]]                                               ; alt-ctrl-shift    ;
+  [:!OTright_option :!Oh [:term]]                                              ; alt-ctrl-alt      ;
+  ; [: :!Oi [:term]]                                                                COLLISION      ;
+  [:!OTreturn_or_enter :!Oj [:term]]                                           ; alt-ctrl-enter    ;
+  [:!Eleft_option :!Ok [:term]]                                                ; alt-tab           ;
+  [:!OTright_command :!Ol [:term]]                                             ; alt-ctrl-cmd      ;
+  [:!OTspacebar :!Om [:term]]                                                  ; alt-ctrl-space    ;
+  ; [: :!On [:term]]                                                                COLLISION      ;
+  [:!OCspacebar :!Oo [:term]]                                                  ; alt-cmd-space     ;
+  [:!OCleft_arrow :!Op [:term]]                                                ; alt-cmd-left      ;
+  [:!OCright_arrow :!Oq [:term]]                                               ; alt-cmd-right     ;
+  [:!OCright_command :!Or [:term]]                                             ; alt-cmd-shift     ;
+  [:!Eright_command :!Os [:term]]                                              ; alt-cmd           ;
+  [:!OCdelete_or_backspace :!Ot [:term]]                                       ; alt-cmd-bspace    ;
+  ; [: :!Ou [:term]]                                                                COLLISION      ;
+  [:!OTdelete_or_backspace :!Ov [:term]]                                       ; alt-ctrl-bspace   ;
+  [:!OTleft_arrow :!Ow [:term]]                                                ; alt-ctrl-left     ;
+  [:!OTright_arrow :!Ox [:term]]                                               ; alt-ctrl-right    ;
+  [:!OTdown_arrow :!Oy [:term]]                                                ; alt-ctrl-down     ;
+  [:!OTup_arrow :!Oz [:term]]                                                  ; alt-ctrl-up       ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
- :rules [;
-         [:escape :!EWright_shift [:term] {:alone [:!SOa]}]; esc                                   ;
-         [:!Etab :!SOb [:term]]                            ; alt-tab                               ;
-         [:!Eleft_shift :!SOc [:term]]                     ; alt-shift                             ;
-         [:!Ecaps_lock :!SOd [:term]]                      ; alt-caps                              ;
-         [:!Enon_us_backslash :!SOe [:term]]               ; alt-fn                                ;
-         ; [: :!SOf [:term]]                               ;                                       ;
-         ; [: :!SOg [:term]]                               ;                                       ;
-         ; [: :!SOh [:term]]                               ;                                       ;
-         ; [: :!SOi [:term]]                               ;                                       ;
-         ; [: :!SOj [:term]]                               ;                                       ;
-         ; [: :!SOk [:term]]                               ;                                       ;
-         ; [: :!SOl [:term]]                               ;                                       ;
-         ; [: :!SOm [:term]]                               ;                                       ;
-         ; [: :!SOn [:term]]                               ;                                       ;
-         ; [: :!SOo [:term]]                     COLLISION (accent)                                ;
-         [:!Eleft_control :!SOp [:term]]                   ; alt-ctrl                              ;
-         [:!Eleft_command :!SOq [:term]]                   ; alt-cmd                               ;
-         [:!OC1 :!SOr [:term]]                             ; alt-cmd-1                             ;
-         [:!OC2 :!SOs [:term]]                             ; alt-cmd-2                             ;
-         [:!OC3 :!SOt [:term]]                             ; alt-cmd-3                             ;
-         [:!OC4 :!SOu [:term]]                             ; alt-cmd-4                             ;
-         [:!OC5 :!SOv [:term]]                             ; alt-cmd-5                             ;
-         [:!OC6 :!SOw [:term]]                             ; alt-cmd-6                             ;
-         [:!OC7 :!SOx [:term]]                             ; alt-cmd-7                             ;
-         [:!OC8 :!SOy [:term]]                             ; alt-cmd-8                             ;
-         [:!OC9 :!SOz [:term]]                             ; alt-cmd-9                             ;
+ :rules
+ [;
+  [:escape :!EWright_shift [:term] {:alone [:!SOa]}]                           ; esc               ;
+  [:!Etab :!SOb [:term]]                                                       ; alt-tab           ;
+  [:!Eleft_shift :!SOc [:term]]                                                ; alt-shift         ;
+  [:!Ecaps_lock :!SOd [:term]]                                                 ; alt-caps          ;
+  [:!Enon_us_backslash :!SOe [:term]]                                          ; alt-fn            ;
+  ; [: :!SOf [:term]]                                                                              ;
+  ; [: :!SOg [:term]]                                                                              ;
+  ; [: :!SOh [:term]]                                                                              ;
+  ; [: :!SOi [:term]]                                                                              ;
+  ; [: :!SOj [:term]]                                                                              ;
+  ; [: :!SOk [:term]]                                                                              ;
+  ; [: :!SOl [:term]]                                                                              ;
+  ; [: :!SOm [:term]]                                                                              ;
+  ; [: :!SOn [:term]]                                                                              ;
+  ; [: :!SOo [:term]]                                                               COLLISION      ;
+  [:!Eleft_control :!SOp [:term]]                                              ; alt-ctrl          ;
+  [:!Eleft_command :!SOq [:term]]                                              ; alt-cmd           ;
+  [:!OC1 :!SOr [:term]]                                                        ; alt-cmd-1         ;
+  [:!OC2 :!SOs [:term]]                                                        ; alt-cmd-2         ;
+  [:!OC3 :!SOt [:term]]                                                        ; alt-cmd-3         ;
+  [:!OC4 :!SOu [:term]]                                                        ; alt-cmd-4         ;
+  [:!OC5 :!SOv [:term]]                                                        ; alt-cmd-5         ;
+  [:!OC6 :!SOw [:term]]                                                        ; alt-cmd-6         ;
+  [:!OC7 :!SOx [:term]]                                                        ; alt-cmd-7         ;
+  [:!OC8 :!SOy [:term]]                                                        ; alt-cmd-8         ;
+  [:!OC9 :!SOz [:term]]                                                        ; alt-cmd-9         ;
 
-         [:!OCkeypad_1 :!SOr [:term]]                      ; alt-cmd-1                             ;
-         [:!OCkeypad_2 :!SOs [:term]]                      ; alt-cmd-2                             ;
-         [:!OCkeypad_3 :!SOt [:term]]                      ; alt-cmd-3                             ;
-         [:!OCkeypad_4 :!SOu [:term]]                      ; alt-cmd-4                             ;
-         [:!OCkeypad_5 :!SOv [:term]]                      ; alt-cmd-5                             ;
-         [:!OCkeypad_6 :!SOw [:term]]                      ; alt-cmd-6                             ;
-         [:!OCkeypad_7 :!SOx [:term]]                      ; alt-cmd-7                             ;
-         [:!OCkeypad_8 :!SOy [:term]]                      ; alt-cmd-8                             ;
-         [:!OCkeypad_9 :!SOz [:term]]                      ; alt-cmd-9                             ;
-         ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal alt - alphabet"
- :rules [;
-         [:!Oa :!Of1 [:term]]                                                                      ;
-         [:!Ob :!Of2 [:term]]                                                                      ;
-         [:!Oc :!Of4 [:term]]                                                                      ;
-         [:!Od :!Of5 [:term]]                                                                      ;
-         [:!Oe :!Of6 [:term]]                                                                      ;
-         [:!Of :!Of7 [:term]]                                                                      ;
-         [:!Og :!Of8 [:term]]                                                                      ;
-         [:!Oh :!Of9 [:term]]                                                                      ;
-         [:!Oi :!Of10 [:term]]                                                                     ;
-         [:!Oj :!Tf1 [:term]]                                                                      ;
-         [:!Ok :!Tf2 [:term]]                                                                      ;
-         [:!Ol :!Tf4 [:term]]                                                                      ;
-         [:!Om :!Tf5 [:term]]                                                                      ;
-         [:!On :!Tf6 [:term]]                                                                      ;
-         [:!Oo :!Tf7 [:term]]                                                                      ;
-         [:!Op :!Tf8 [:term]]                                                                      ;
-         [:!Oq :!Tf9 [:term]]                                                                      ;
-         [:!Or :!Tf10 [:term]]                                                                     ;
-         [:!Os :!OTf1 [:term]]                                                                     ;
-         [:!Ot :!OTf2 [:term]]                                                                     ;
-         [:!Ou :!OTf4 [:term]]                                                                     ;
-         [:!Ov :!OTf5 [:term]]                                                                     ;
-         [:!Ow :!OTf6 [:term]]                                                                     ;
-         [:!Ox :!OTf7 [:term]]                                                                     ;
-         [:!Oy :!OTf8 [:term]]                                                                     ;
-         [:!Oz :!OTf9 [:term]]                                                                     ;
-         [:!Okeypad_num_lock :!OTf10 [:term]]                                                      ;
-         ]}
+  [:!OCkeypad_1 :!SOr [:term]]                                                 ; alt-cmd-1         ;
+  [:!OCkeypad_2 :!SOs [:term]]                                                 ; alt-cmd-2         ;
+  [:!OCkeypad_3 :!SOt [:term]]                                                 ; alt-cmd-3         ;
+  [:!OCkeypad_4 :!SOu [:term]]                                                 ; alt-cmd-4         ;
+  [:!OCkeypad_5 :!SOv [:term]]                                                 ; alt-cmd-5         ;
+  [:!OCkeypad_6 :!SOw [:term]]                                                 ; alt-cmd-6         ;
+  [:!OCkeypad_7 :!SOx [:term]]                                                 ; alt-cmd-7         ;
+  [:!OCkeypad_8 :!SOy [:term]]                                                 ; alt-cmd-8         ;
+  [:!OCkeypad_9 :!SOz [:term]]                                                 ; alt-cmd-9         ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Alacritty
 {:des "Terminal alt - alphabet"
- :rules [;
-         [:!SOa :!SOf1 [:term]]                                                                    ;
-         [:!SOb :!SOf2 [:term]]                                                                    ;
-         [:!SOc :!SOf4 [:term]]                                                                    ;
-         [:!SOd :!SOf5 [:term]]                                                                    ;
-         [:!SOe :!SOf6 [:term]]                                                                    ;
-         [:!SOf :!SOf7 [:term]]                                                                    ;
-         [:!SOg :!SOf8 [:term]]                                                                    ;
-         [:!SOh :!SOf9 [:term]]                                                                    ;
-         [:!SOi :!SOf10 [:term]]                                                                   ;
-         [:!SOj :!STf1 [:term]]                                                                    ;
-         [:!SOk :!STf2 [:term]]                                                                    ;
-         [:!SOl :!STf4 [:term]]                                                                    ;
-         [:!SOm :!STf5 [:term]]                                                                    ;
-         [:!SOn :!STf6 [:term]]                                                                    ;
-         [:!SOo :!STf7 [:term]]                                                                    ;
-         [:!SOp :!STf8 [:term]]                                                                    ;
-         [:!SOq :!STf9 [:term]]                                                                    ;
-         [:!SOr :!STTf10 [:term]]                                                                  ;
-         [:!SOs :!SOTf1 [:term]]                                                                   ;
-         [:!SOt :!SOTf2 [:term]]                                                                   ;
-         [:!SOu :!SOTf4 [:term]]                                                                   ;
-         [:!SOv :!SOTf5 [:term]]                                                                   ;
-         [:!SOw :!SOTf6 [:term]]                                                                   ;
-         [:!SOx :!SOTf7 [:term]]                                                                   ;
-         [:!SOy :!SOTf8 [:term]]                                                                   ;
-         [:!SOz :!SOTf9 [:term]]                                                                   ;
-         [:!SOkeypad_num_lock :!SOTf10 [:term]]                                                    ;
-         ]}
+ :rules
+ [;
+  [:!Oa :!Of1 [:term]]                                                                             ;
+  [:!Ob :!Of2 [:term]]                                                                             ;
+  [:!Oc :!Of4 [:term]]                                                                             ;
+  [:!Od :!Of5 [:term]]                                                                             ;
+  [:!Oe :!Of6 [:term]]                                                                             ;
+  [:!Of :!Of7 [:term]]                                                                             ;
+  [:!Og :!Of8 [:term]]                                                                             ;
+  [:!Oh :!Of9 [:term]]                                                                             ;
+  [:!Oi :!Of10 [:term]]                                                                            ;
+  [:!Oj :!Tf1 [:term]]                                                                             ;
+  [:!Ok :!Tf2 [:term]]                                                                             ;
+  [:!Ol :!Tf4 [:term]]                                                                             ;
+  [:!Om :!Tf5 [:term]]                                                                             ;
+  [:!On :!Tf6 [:term]]                                                                             ;
+  [:!Oo :!Tf7 [:term]]                                                                             ;
+  [:!Op :!Tf8 [:term]]                                                                             ;
+  [:!Oq :!Tf9 [:term]]                                                                             ;
+  [:!Or :!Tf10 [:term]]                                                                            ;
+  [:!Os :!OTf1 [:term]]                                                                            ;
+  [:!Ot :!OTf2 [:term]]                                                                            ;
+  [:!Ou :!OTf4 [:term]]                                                                            ;
+  [:!Ov :!OTf5 [:term]]                                                                            ;
+  [:!Ow :!OTf6 [:term]]                                                                            ;
+  [:!Ox :!OTf7 [:term]]                                                                            ;
+  [:!Oy :!OTf8 [:term]]                                                                            ;
+  [:!Oz :!OTf9 [:term]]                                                                            ;
+  [:!Okeypad_num_lock :!OTf10 [:term]]                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alt - alphabet"
+ :rules
+ [;
+  [:!SOa :!SOf1 [:term]]                                                                           ;
+  [:!SOb :!SOf2 [:term]]                                                                           ;
+  [:!SOc :!SOf4 [:term]]                                                                           ;
+  [:!SOd :!SOf5 [:term]]                                                                           ;
+  [:!SOe :!SOf6 [:term]]                                                                           ;
+  [:!SOf :!SOf7 [:term]]                                                                           ;
+  [:!SOg :!SOf8 [:term]]                                                                           ;
+  [:!SOh :!SOf9 [:term]]                                                                           ;
+  [:!SOi :!SOf10 [:term]]                                                                          ;
+  [:!SOj :!STf1 [:term]]                                                                           ;
+  [:!SOk :!STf2 [:term]]                                                                           ;
+  [:!SOl :!STf4 [:term]]                                                                           ;
+  [:!SOm :!STf5 [:term]]                                                                           ;
+  [:!SOn :!STf6 [:term]]                                                                           ;
+  [:!SOo :!STf7 [:term]]                                                                           ;
+  [:!SOp :!STf8 [:term]]                                                                           ;
+  [:!SOq :!STf9 [:term]]                                                                           ;
+  [:!SOr :!STTf10 [:term]]                                                                         ;
+  [:!SOs :!SOTf1 [:term]]                                                                          ;
+  [:!SOt :!SOTf2 [:term]]                                                                          ;
+  [:!SOu :!SOTf4 [:term]]                                                                          ;
+  [:!SOv :!SOTf5 [:term]]                                                                          ;
+  [:!SOw :!SOTf6 [:term]]                                                                          ;
+  [:!SOx :!SOTf7 [:term]]                                                                          ;
+  [:!SOy :!SOTf8 [:term]]                                                                          ;
+  [:!SOz :!SOTf9 [:term]]                                                                          ;
+  [:!SOkeypad_num_lock :!SOTf10 [:term]]                                                           ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
