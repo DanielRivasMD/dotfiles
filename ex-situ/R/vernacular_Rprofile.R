@@ -6,6 +6,7 @@ options(stringsAsFactors = FALSE)
 options(max.print = 999)
 options(nwarnings = 99)
 options(editor = 'subl')
+options(scipen = 999)
 
 # dplyr (tibble)
 options(dplyr.width = Inf)      # Show all columns
