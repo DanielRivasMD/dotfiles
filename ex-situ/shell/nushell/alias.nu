@@ -65,8 +65,9 @@ alias jl = julia
 # python
 ####################################################################################################
 
-# enviroment
-alias activate = source venv/bin/activate
+# BUG: source not workking 
+# # enviroment
+# alias activate = source venv/bin/activate
 
 # calendar
 alias cal = khal calendar
