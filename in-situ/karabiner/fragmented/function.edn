@@ -41,14 +41,14 @@
  [;
   [:!F#Phyphen [:hyphen :hyphen]]                                              ; '--'              ;
   [:!F#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                              ; '++'              ;
-  ; [:!F#Popen_bracket []]                                                                         ;
-  ; [:!F#Pclose_bracket []]                                                                        ;
+  [:!F#Popen_bracket [:open_bracket :open_bracket]]                            ; '[['              ;
+  [:!F#Pclose_bracket [:!Sopen_bracket :!Sopen_bracket]]                       ; '{{'              ;
   [:!F#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                 ; '::'              ;
-  ; [:!F#Pquote []]                                                                                ;
-  ; [:!F#Pbackslash []]                                                                            ;
-  ; [:!F#Pcomma []]                                                                                ;
-  ; [:!F#Pperiod []]                                                                               ;
-  ; [:!F#Pslash []]                                                                                ;
+  [:!F#Pquote [:!S9 :!S9]]                                                     ; '(('              ;
+  [:!F#Pbackslash [:!Sbackslash :!Sbackslash]]                                 ; '||'              ;
+  [:!F#Pcomma [:!Scomma :!Scomma]]                                             ; '<<'              ;
+  [:!F#Pperiod [:!Speriod :!Speriod]]                                          ; '>>'              ;
+  [:!F#Pslash [:!Sslash :!Sslash]]                                             ; '??'              ;
 
   ; [:!F#Pdelete_or_backspace []]                                                                  ;
   [:!F#Preturn_or_enter [:equal_sign :equal_sign]]                             ; '=='              ;
