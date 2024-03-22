@@ -46,16 +46,16 @@
   ; [:!S#Psemicolon []]                                                             NOT AVAILABLE  ;
   ; [:!S#Pquote []]                                                                 NOT AVAILABLE  ;
   ; [:!S#Pbackslash []]                                                             NOT AVAILABLE  ;
-  ; [:!S#Pcomma []]                                                                 NOT AVAILABLE  ;
-  ; [:!S#Pperiod []]                                                                NOT AVAILABLE  ;
-  ; [:!S#Pslash []]                                                                 NOT AVAILABLE  ;
+  [:!S#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
+  [:!S#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
+  [:!S#Pslash [:spacebar :!S2 :spacebar]]                                      ; ' @ '             ;
 
   ; [:!S#Pdelete_or_backspace []]                                                                  ;
-  [:!S#Preturn_or_enter :caps_lock]                                                                ;
+  ; [:!S#Preturn_or_enter []]                                                                      ;
   [:!S#Pright_shift :delete_forward]                                                               ;
   [:!S#Pright_option :!Od [:term]]                                                                 ;
   [:!S#Pright_command :!Tk [:term]]                                                                ;
-  ; [:!S#Pspacebar []]                                                                             ;
+  [:!S#Pspacebar :caps_lock]                                                                       ;
 
   ; [:!S#Pleft_command []]                                                                         ;
   ; [:!S#Pleft_option []]                                                                          ;
