@@ -78,19 +78,19 @@ keybinds clear-defaults=true {
         bind "Alt A" { SwitchToMode "Normal"; }
     }
 
-    shared_except "resize" {
+    shared_except "resize" "locked" {
         bind "Alt B" { SwitchToMode "Resize"; }
     }
 
-    shared_except "scroll" {
+    shared_except "scroll" "locked" {
         bind "Alt C" { SwitchToMode "Scroll"; }
     }
 
-    shared_except "entersearch" {
+    shared_except "entersearch" "locked" {
         bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
 
-    shared_except "session" {
+    shared_except "session" "locked" {
         bind "Alt E" { SwitchToMode "Session"; }
     }
 
