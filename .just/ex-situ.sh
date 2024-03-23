@@ -38,6 +38,7 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking config @HOME${NC}"
 echo "${RED}====================================================================================================${NC}"
+ln -sf "${mycli}/mycli.rc" "${home}/.myclirc"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}mycli${NC}"
 ln -sf "${pier}/pier.toml" "${home}/.pier.toml"                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}pier${NC}"
 ln -sf "${screen}/4.08.00.screenrc" "${home}/.screenrc"                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}screen${NC}"
 echo "${RED}====================================================================================================${NC}"

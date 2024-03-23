@@ -80,6 +80,7 @@ export naviConf="${appSupport}/navi/cheats/drivas"
 # @HOME
 export pier="${ex_situ}/pier"
 export screen="${ex_situ}/screen"
+export mycli="${ex_situ}/mycli"
 
 # @config
 export bpython="${ex_situ}/bpython"
