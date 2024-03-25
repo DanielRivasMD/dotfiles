@@ -29,8 +29,11 @@ layout {
         }
     }
 
-    tab name="Notes" {
-        pane name="Joplin" command="joplin"
+    tab name="Calendar" {
+        pane split_direction="vertical" {
+            pane name="Calendar"
+            pane name="Notes" command="joplin"
+        }
     }
 
     tab name="Files" focus=true hide_floating_panes=true {
