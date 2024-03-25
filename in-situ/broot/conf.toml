@@ -191,7 +191,7 @@ description = "`alt-h` -> go to previous match"
 # pager
 [[verbs]]
 invocation = "jless"
-key = "alt-f11"
+key = "ctrl-f1"
 external = "jless {file}"
 leave_broot = true
 description = "`alt-j` -> open file with `jless`"
@@ -199,7 +199,7 @@ description = "`alt-j` -> open file with `jless`"
 # pager
 [[verbs]]
 invocation = "hck"
-key = "alt-f12"
+key = "ctrl-f2"
 external = "hck {file}"
 leave_broot = true
 description = "`alt-k` -> open file with `hck`"
@@ -214,7 +214,7 @@ description = "`alt-l` -> go to next match"
 # pager
 [[verbs]]
 invocation = "mdcat"
-key = "ctrl-f2"
+key = "ctrl-f5"
 external = "mdcat --paginate {file}"
 leave_broot = true
 description = "`alt-m` -> open file with `mdcat`"
