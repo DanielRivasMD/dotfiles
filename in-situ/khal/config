@@ -1,7 +1,7 @@
 ####################################################################################################
 
 [default]
-timedelta = 11d
+timedelta = 5d
 highlight_event_days = True
 show_all_days = True
 print_new = event
@@ -29,6 +29,12 @@ path = ~/.config/khal/khal.db
 [calendars]
 [[Funding]]
 path = /Users/drivas/.config/khal/calendars/Funding
+type = calendar
+color = white
+priority = 7
+
+[[AZ]]
+path = /Users/drivas/.config/khal/calendars/AZ
 type = calendar
 color = dark red
 priority = 6
