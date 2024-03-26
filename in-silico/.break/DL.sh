@@ -2,11 +2,11 @@
 ####################################################################################################
 
 # config
-source "${IN_SILICO}/config.sh"
+source "${IN_SILICO}/.config/config.sh"
 
 for i in {1.."${1}"};
 do
-  printf "${IBLACK}‡${NC}"
+  printf "${GREEN}=${NC}"
 done
 echo ""
 
