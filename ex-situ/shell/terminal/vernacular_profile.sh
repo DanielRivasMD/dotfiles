@@ -74,9 +74,6 @@ export PAGER=bat
 export BAT_PAGER=less
 export RCOLUMNS=$COLUMNS
 
-# pier
-export PIER="${EX_SITU}/pier"
-
 # screen width
 export MANWIDTH=175
 
