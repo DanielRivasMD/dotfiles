@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ####################################################################################################
 # config
 ####################################################################################################
@@ -10,7 +10,6 @@ export archive="${home}/.archive"
 export in_situ="${archive}/in-situ"
 export ex_situ="${archive}/ex-situ"
 export in_silico="${archive}/in-silico"
-export pier="${ex_situ}/pier"
 export forked="${home}/Forked"
 export observatory="${home}/Observatory"
 export appSupport="${home}/Library/Application Support"
@@ -138,6 +137,6 @@ export pueueUG="update"
 ####################################################################################################
 
 # load colors
-source "${in_silico}/colors.sh"
+source "${in_silico}/.config/colors.sh"
 
 ####################################################################################################
