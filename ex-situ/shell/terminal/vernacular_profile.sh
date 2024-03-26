@@ -77,14 +77,23 @@ export RCOLUMNS=$COLUMNS
 # screen width
 export MANWIDTH=175
 
-# shell functions
-source "${EX_SITU}/shell/terminal/shell_func.sh"
-
 # starship
 export STARSHIP_CONFIG="${EX_SITU}/starship/vernacular_starship.toml"
 
 # zellij
 export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
 export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
+
+####################################################################################################
+
+# shell functions
+source "${IN_SILICO}/count.sh"
+source "${IN_SILICO}/diff.sh"
+source "${IN_SILICO}/finder.sh"
+source "${IN_SILICO}/forge.sh"
+source "${IN_SILICO}/knit.sh"
+source "${IN_SILICO}/path.sh"
+source "${IN_SILICO}/status.sh"
+source "${IN_SILICO}/update.sh"
 
 ####################################################################################################
