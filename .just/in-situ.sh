@@ -127,8 +127,9 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Generate completions${NC}"
 echo "${RED}====================================================================================================${NC}"
-zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                 && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
+atuin gen-completions --shell zsh > "${zshcomp}/_atuin"                       && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}atuin${NC}"
 cobra-cli completion zsh > "${zshcomp}/_cobra-cli"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cobra-cli${NC}"
+zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                 && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
 cp "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zj${NC}"
 echo "${RED}====================================================================================================${NC}"
 
