@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# TODO: update keybindings
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
 
