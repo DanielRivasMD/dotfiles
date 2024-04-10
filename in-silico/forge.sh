@@ -34,14 +34,14 @@ forge() {
   ####################################################################################################
 
   # format & watch goku
-  pueue add --group "${pueueFG}" -- watchexec --watch ~/.archive/in-situ/karabiner/fragmented -- 'source ~/.archive/ex-situ/pier/.forge/goku.sh'
+  pueue add --group "${pueueFG}" -- watchexec --watch ~/.archive/in-situ/karabiner/fragmented -- 'source ~/.archive/in-silico/.forge/goku.sh'
 
   ####################################################################################################
   # helix
   ####################################################################################################
 
   # format & watch helix
-  pueue add --group "${pueueFG}" -- watchexec --watch ~/.archive/ex-situ/helix/modes -- 'source ~/.archive/ex-situ/pier/.forge/helix.sh'
+  pueue add --group "${pueueFG}" -- watchexec --watch ~/.archive/ex-situ/helix/modes -- 'source ~/.archive/in-silico/.forge/helix.sh'
 
   ####################################################################################################
 

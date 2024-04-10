@@ -7,7 +7,7 @@
 _forge() {
 
   # config
-  source "${IN_SILICO}/config.sh"
+  source "${IN_SILICO}/.config/config.sh"
 
   # check & remove target
   if test -f "${config}/alacritty/alacritty.toml"

@@ -6,7 +6,7 @@
 _forge() {
 
   # config
-  source "${IN_SILICO}/config.sh"
+  source "${IN_SILICO}/.config/config.sh"
 
   # create temporary files
   awk -v mode="normal_mode" '{gsub("MODE", mode); print $0}' "${moded}/common.toml" > "${helix}/.normal.tmp"
