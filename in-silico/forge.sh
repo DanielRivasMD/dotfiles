@@ -19,7 +19,7 @@ forge() {
     # parallel jobs
     pueue parallel --group "${pueueFG}" 3
   else
-    exit
+    return 0
   fi
 
   ####################################################################################################

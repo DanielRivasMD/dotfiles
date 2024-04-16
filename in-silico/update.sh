@@ -19,7 +19,7 @@ update() {
     # parallel jobs
     pueue parallel --group "${pueueUG}" 3
   else
-    exit
+    return 0
   fi
 
   ####################################################################################################
