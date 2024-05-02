@@ -15,9 +15,9 @@ layout {
         }
     }
 
-    tab name="Source" hide_floating_panes=true focus=true {
+    tab name="Source" hide_floating_panes=true {
         pane {
-            pane name="Canvas" cwd="/Users/drivas/Factorem/Cohesion" focus=true
+            pane name="Canvas" cwd="/Users/drivas/Factorem/Cohesion"
         }
 
         floating_panes {
