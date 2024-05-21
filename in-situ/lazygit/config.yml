@@ -1,16 +1,14 @@
-####################################################################################################
-
-gui:                                    # stuff relating to the UI
-    windowSize: 'normal'                # 'normal' | 'half' | 'full' default 'normal'
-    scrollHeight: 2                     # how many lines to scroll by
-    scrollPastBottom: true              # enable scrolling past the bottom
+gui: # stuff relating to the UI
+    windowSize: 'normal' # 'normal' | 'half' | 'full' default 'normal'
+    scrollHeight: 2 # how many lines to scroll by
+    scrollPastBottom: true # enable scrolling past the bottom
     scrollOffMargin: 2
-    scrollOffBehavior: 'margin'         # 'margin' | 'jump'
-    sidePanelWidth: 0.3                 # 0 - 1
+    scrollOffBehavior: 'margin' # 'margin' | 'jump'
+    sidePanelWidth: 0.3 # 0 - 1
     expandFocusedSidePanel: true
-    mainPanelSplitMode: 'horizontal'    # 'horizontal' | 'flexible' | 'vertical'
-    language: 'en'                      # 'auto' | 'en' | 'zh' | 'pl' | 'nl'
-    timeFormat: '02 Jan 06'             # https://pkg.go.dev/time#Time.Format
+    mainPanelSplitMode: 'horizontal' # 'horizontal' | 'flexible' | 'vertical'
+    language: 'en' # 'auto' | 'en' | 'zh' | 'pl' | 'nl'
+    timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
     shortTimeFormat: '3:04PM'
     commitLength:
         show: true
@@ -24,16 +22,14 @@ gui:                                    # stuff relating to the UI
     showBottomLine: true
     showPanelJumps: true
     showCommandLog: false
-    showIcons: false                    # deprecated: use nerdFontsVersion
-    nerdFontsVersion: "3"               # 2" | "3"
+    showIcons: false # deprecated: use nerdFontsVersion
+    nerdFontsVersion: "3" # 2" | "3"
     commandLogSize: 0
-    splitDiff: 'auto'                   # 'auto' | 'always'
+    splitDiff: 'auto' # 'auto' | 'always'
     skipRewordInEditorWarning: false
-    border: 'rounded'                   # 'single' | 'double' | 'rounded' | 'hidden'
+    border: 'rounded' # 'single' | 'double' | 'rounded' | 'hidden'
     animateExplosion: true
-
     ####################################################################################################
-
     theme:
         lightTheme: false
         activeBorderColor:
@@ -58,36 +54,32 @@ gui:                                    # stuff relating to the UI
             - red
         defaultFgColor:
             - default
-
 ####################################################################################################
-
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging never
-    commit:
-        signOff: false
-    merging:
-        manualCommit: false
-        args: ''
-    log:
-        order: 'topo-order'             # 'date-order' | 'author-date-order' | 'topo-order'
-        showGraph: 'when-maximised'     # 'always' | 'never' | 'when-maximised'
-        showWholeGraph: false
-    skipHookPrefix: WIP
-    mainBranches: [master, main]
-    autoFetch: false
-    autoRefresh: true
-    fetchAll: true
-    branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --'
-    allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
-    overrideGpg: false
-    disableForcePushing: false
-    parseEmoji: false
-    diffContextSize: 5
-
+    paging:
+        colorArg: always
+        pager: delta --dark --paging never
+        commit:
+            signOff: false
+        merging:
+            manualCommit: false
+            args: ''
+        log:
+            order: 'topo-order' # 'date-order' | 'author-date-order' | 'topo-order'
+            showGraph: 'when-maximised' # 'always' | 'never' | 'when-maximised'
+            showWholeGraph: false
+        skipHookPrefix: WIP
+        mainBranches: [master, main]
+        autoFetch: false
+        autoRefresh: true
+        fetchAll: true
+        branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --'
+        allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
+        overrideGpg: false
+        disableForcePushing: false
+        parseEmoji: false
+        diffContextSize: 5
 ####################################################################################################
-
 os:
     copyToClipboardCmd: ''
     editPreset: ''
@@ -96,171 +88,151 @@ os:
     editAtLineAndWait: ''
     open: ''
     openLink: ''
-
 ####################################################################################################
-
 refresher:
     refreshInterval: 10
     fetchInterval: 60
-
 ####################################################################################################
-
 update:
-    method: 'never'                     # 'prompt' | 'background' | 'never'
+    method: 'never' # 'prompt' | 'background' | 'never'
     days: 0
-
 ####################################################################################################
-
-reporting: 'undetermined'               # 'on' | 'off' | 'undetermined'
-
+reporting: 'undetermined' # 'on' | 'off' | 'undetermined'
 ####################################################################################################
-
 confirmOnQuit: false
-
 ####################################################################################################
-
 quitOnTopLevelReturn: false
-
 ####################################################################################################
-
 disableStartupPopups: false
-
 ####################################################################################################
-
-notARepository: 'prompt'                # one of: 'prompt' | 'create' | 'skip'
-
+notARepository: 'prompt' # one of: 'prompt' | 'create' | 'skip'
 ####################################################################################################
-
-promptToReturnFromSubprocess: true      # display confirmation when subprocess terminates
-
+promptToReturnFromSubprocess: true # display confirmation when subprocess terminates
 ####################################################################################################
-
 keybinding:
     universal:
-        quit-alt1:                      '<c-c>'
-        executeCustomCommand:           '<c-g>'
-        return:                         '<esc>'
-        togglePanel:                    '<tab>'
-        prevItem-alt:                   '<up>'
-        nextItem-alt:                   '<down>'
-        nextScreenMode:                 '<f1>'
-        openRecentRepos:                '<f2>'
-        prevPage:                       '<f4>'
-        nextPage:                       '<f5>'
-        gotoTop:                        '<f6>'
-        gotoBottom:                     '<f7>'
-        prevTab:                        '<f8>'
-        nextTab:                        '<f9>'
-        prevBlock-alt:                  '<f10>'
-        nextBlock-alt:                  '<f11>'
-        optionMenu-alt1:                '?'
-        increaseContextInDiffView:      '='
-        decreaseContextInDiffView:      '-'
-        select:                         '<space>'
-        goInto:                         '<enter>'
-        confirm:                        '<enter>'
-        submitEditorText:               '<enter>'
-        jumpToBlock:                    [1, 2, 3, 4, 5]
-        remove:                         'd'
-        edit:                           'e'
-        prevMatch:                      'h'
-        scrollDownMain-alt2:            'j'
-        scrollUpMain-alt2:              'k'
-        nextMatch:                      'l'
-        createRebaseOptionsMenu:        'm'
-        new:                            'n'
-        pullFiles:                      'p'
-        quitWithoutChangingDirectory:   'q'
-        refresh:                        'r'
-        undo:                           'u'
-        copyToClipboard:                'y'
-        scrollLeft:                     'H'
-        scrollRight:                    'L'
-        createPatchOptionsMenu:         'N'
-        pushFiles:                      'P'
-        quit:                           'Q'
-        redo:                           'U'
-        diffingMenu:                    'W'
-        prevItem:                       null
-        nextItem:                       null
-        prevBlock:                      null
-        nextBlock:                      null
-        optionMenu:                     null
-        prevScreenMode:                 null
-        extrasMenu:                     null
-        openFile:                       null
-        scrollUpMain:                   null
-        scrollDownMain:                 null
-        scrollUpMain-alt1:              null
-        scrollDownMain-alt1:            null
-        toggleWhitespaceInDiffView:     null
+        quit-alt1: '<c-c>'
+        executeCustomCommand: '<c-g>'
+        return: '<esc>'
+        togglePanel: '<tab>'
+        prevItem-alt: '<up>'
+        nextItem-alt: '<down>'
+        nextScreenMode: '<f1>'
+        openRecentRepos: '<f2>'
+        prevPage: '<f4>'
+        nextPage: '<f5>'
+        gotoTop: '<f6>'
+        gotoBottom: '<f7>'
+        prevTab: '<f8>'
+        nextTab: '<f9>'
+        prevBlock-alt: '<f10>'
+        nextBlock-alt: '<f11>'
+        optionMenu-alt1: '?'
+        increaseContextInDiffView: '='
+        decreaseContextInDiffView: '-'
+        select: '<space>'
+        goInto: '<enter>'
+        confirm: '<enter>'
+        submitEditorText: '<enter>'
+        jumpToBlock: [1, 2, 3, 4, 5]
+        remove: 'd'
+        edit: 'e'
+        prevMatch: 'h'
+        scrollDownMain-alt2: 'j'
+        scrollUpMain-alt2: 'k'
+        nextMatch: 'l'
+        createRebaseOptionsMenu: 'm'
+        new: 'n'
+        pullFiles: 'p'
+        quitWithoutChangingDirectory: 'q'
+        refresh: 'r'
+        undo: 'u'
+        copyToClipboard: 'y'
+        scrollLeft: 'H'
+        scrollRight: 'L'
+        createPatchOptionsMenu: 'N'
+        pushFiles: 'P'
+        quit: 'Q'
+        redo: 'U'
+        diffingMenu: 'W'
+        prevItem: <disabled>
+        nextItem: <disabled>
+        prevBlock: <disabled>
+        nextBlock: <disabled>
+        optionMenu: <disabled>
+        prevScreenMode: <disabled>
+        extrasMenu: <disabled>
+        openFile: <disabled>
+        scrollUpMain: <disabled>
+        scrollDownMain: <disabled>
+        scrollUpMain-alt1: <disabled>
+        scrollDownMain-alt1: <disabled>
+        toggleWhitespaceInDiffView: <disabled>
     status:
-        recentRepos:                    '<enter>'
-        checkForUpdate:                 'u'
+        recentRepos: '<enter>'
+        checkForUpdate: 'u'
     files:
-        toggleStagedAll:                '<c-y>'
-        toggleTreeView:                 '\'
-        commitChanges:                  'c'
-        fetch:                          'f'
-        ignoreFile:                     'i'
-        refreshFiles:                   'r'
-        stashAllChanges:                's'
-        commitChangesWithoutHook:       'w'
-        confirmDiscard:                 'x'
-        amendLastCommit:                'A'
-        commitChangesWithEditor:        'C'
-        viewResetOptions:               'D'
-        openMergeTool:                  'M'
-        viewStashOptions:               'S'
+        toggleStagedAll: '<c-y>'
+        toggleTreeView: '\'
+        commitChanges: 'c'
+        fetch: 'f'
+        ignoreFile: 'i'
+        refreshFiles: 'r'
+        stashAllChanges: 's'
+        commitChangesWithoutHook: 'w'
+        confirmDiscard: 'x'
+        amendLastCommit: 'A'
+        commitChangesWithEditor: 'C'
+        viewResetOptions: 'D'
+        openMergeTool: 'M'
+        viewStashOptions: 'S'
     branches:
-        checkoutBranchByName:           'c'
-        fetchRemote:                    'f'
-        viewGitFlowOptions:             'i'
-        fastForward:                    'f'
-        rebaseBranch:                   'r'
-        createPullRequest:              'u'
-        setUpstream:                    'u'
-        forceCheckoutBranch:            'F'
-        mergeIntoCurrentBranch:         'M'
-        pushTag:                        'P'
-        renameBranch:                   'R'
-        createTag:                      'T'
-        viewPullRequestOptions:         'U'
+        checkoutBranchByName: 'c'
+        fetchRemote: 'f'
+        viewGitFlowOptions: 'i'
+        fastForward: 'f'
+        rebaseBranch: 'r'
+        createPullRequest: 'u'
+        setUpstream: 'u'
+        forceCheckoutBranch: 'F'
+        mergeIntoCurrentBranch: 'M'
+        pushTag: 'P'
+        renameBranch: 'R'
+        createTag: 'T'
+        viewPullRequestOptions: 'U'
     commits:
-        checkoutCommit:                 '<space>'
-        viewBisectOptions:              'b'
-        cherryPickCopy:                 'c'
-        markCommitAsFixup:              'f'
-        viewResetOptions:               'g'
-        pickCommit:                     'p'
-        renameCommit:                   'r'
-        squashDown:                     's'
-        revertCommit:                   't'
-        pasteCommits:                   'v'
-        copyCommitMessageToClipboard:   'y'
-        amendToCommit:                  'A'
-        cherryPickCopyRange:            'C'
-        createFixupCommit:              'F'
-        moveDownCommit:                 'J'
-        moveUpCommit:                   'K'
-        openLogMenu:                    'L'
-        renameCommitWithEditor:         'R'
-        squashAboveCommits:             'S'
-        tagCommit:                      'T'
-        resetCherryPick:                'Y'
+        checkoutCommit: '<space>'
+        viewBisectOptions: 'b'
+        cherryPickCopy: 'c'
+        markCommitAsFixup: 'f'
+        viewResetOptions: 'g'
+        pickCommit: 'p'
+        renameCommit: 'r'
+        squashDown: 's'
+        revertCommit: 't'
+        pasteCommits: 'v'
+        copyCommitMessageToClipboard: 'y'
+        amendToCommit: 'A'
+        cherryPickCopyRange: 'C'
+        createFixupCommit: 'F'
+        moveDownCommit: 'J'
+        moveUpCommit: 'K'
+        openLogMenu: 'L'
+        renameCommitWithEditor: 'R'
+        squashAboveCommits: 'S'
+        tagCommit: 'T'
+        resetCherryPick: 'Y'
     stash:
-        renameStash:                    'r'
-        popStash:                       's'
+        renameStash: 'r'
+        popStash: 's'
     commitFiles:
-        checkoutCommitFile:             'c'
+        checkoutCommitFile: 'c'
     main:
-        toggleSelectHunk:               'a'
-        pickBothHunks:                  'b'
-        toggleDragSelect-alt:           'v'
-        toggleDragSelect:               null
+        toggleSelectHunk: 'a'
+        pickBothHunks: 'b'
+        toggleDragSelect-alt: 'v'
+        toggleDragSelect: <disabled>
     submodules:
-        bulkMenu:                       'b'
-        init:                           'i'
-        update:                         'u'
-
-####################################################################################################
+        bulkMenu: 'b'
+        init: 'i'
+        update: 'u'
