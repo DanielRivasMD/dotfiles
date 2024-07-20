@@ -20,6 +20,11 @@ brew install kdabir/tap/has
 
 brew tap watermint/toolbox
 brew install toolbox
+# create log directory
+if [ ! -d "${dotDir}/log" ]
+then
+  mkdir "${dotDir}/log"
+fi
 
 brew tap liujianping/tap/ts
 brew install ts
