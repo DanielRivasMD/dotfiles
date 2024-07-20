@@ -27,10 +27,10 @@ ln -svf "${dotDir}" "${archDir}"
 ####################################################################################################
 
 # install formulae
-brew install --formulae $(cat "${setupDir}/brew_formulae.txt")
+brew install --formulae $(cat "${setupDir}/brew_formulae.txt")  1> "${archDir}/log/brew_formulae_out.txt" 2> "${archDir}/log/brew_formulae_err.txt"
 
 # install casks
-brew install --casks $(cat "${setup}/brew_casks.txt")
+brew install --casks $(cat "${setup}/brew_casks.txt") 1> "${archDir}/log/brew_cask_out.txt" 2> "${archDir}/log/brew_cask_err.txt"
 
 ####################################################################################################
 
@@ -42,7 +42,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # install rust binaries
 while read item
 do
-  cargo install ${item}
+  cargo install ${item} 1> "${archDir}/log/cargo_out.txt" 2> "${archDir}/log/cargo_err.txt"
 done < "${setup}/cargo.txt"
 
 ####################################################################################################
