@@ -13,8 +13,6 @@ stty -ixon
 PATH=$PATH:$HOME/.cargo/bin
 
 # go
-export GOROOT="$(brew --prefix)/Cellar/go/1.22.5/libexec"
-export GOPATH="$HOME/.go/"
 export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
 # MySQL
