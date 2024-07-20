@@ -13,33 +13,16 @@ setupDir="${archDir}/.just/.setup"
 
 ####################################################################################################
 
-# patch formulae
-brew install itchyny/tap/fillin
-
-brew install kdabir/tap/has
-
-brew tap watermint/toolbox
-brew install toolbox
 # create log directory
 if [ ! -d "${dotDir}/log" ]
 then
   mkdir "${dotDir}/log"
 fi
 
-brew tap liujianping/tap/ts
-brew install ts
 # link directory
 ln -svf "${dotDir}" "${archDir}"
 
-# patch casks
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font
 
-brew tap gaborcsardi/rim
-brew install --cask rim
-
-brew install --cask julia
-brew install --cask docker
 
 ####################################################################################################
 
