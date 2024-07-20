@@ -47,17 +47,14 @@ done < "${setup}/cargo.txt"
 
 ####################################################################################################
 
-# go version manager
-curl -sSL https://git.io/g-install | sh -s
+# TODO: review installations
+# # go version manager
+# curl -sSL https://git.io/g-install | sh -s
 
-# zsh package manager
-zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+# # zsh package manager
+# zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 
 ####################################################################################################
-
-# link
-mkdir -p ${HOME}/.config/gup
-ln -svf ${HOME}/.archive/setup/golang_binaries.txt ${HOME}/.config/gup/gup.conf
 
 # install golang binaries
 # TODO: finish installation
