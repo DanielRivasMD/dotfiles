@@ -8,11 +8,6 @@ setupDir="${archDir}/.just/.setup"
 
 ####################################################################################################
 
-# install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-####################################################################################################
-
 # create log directory
 if [ ! -d "${dotDir}/log" ]
 then
@@ -22,7 +17,10 @@ fi
 # link directory
 ln -svf "${dotDir}" "${archDir}"
 
+####################################################################################################
 
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ####################################################################################################
 
@@ -61,8 +59,10 @@ done < "${setup}/cargo.txt"
 
 ####################################################################################################
 
-# install R packages
-R CMD INSTALL /Users/drivas/bin/Rpack/colorout_1.2-1.tar.gz
-R CMD INSTALL /Users/drivas/bin/Rpack/SystWrapper_2.0.tar.gz
+# TODO: download R packages
+
+# # install R packages
+# R CMD INSTALL /Users/drivas/bin/Rpack/colorout_1.2-1.tar.gz
+# R CMD INSTALL /Users/drivas/bin/Rpack/SystWrapper_2.0.tar.gz
 
 ####################################################################################################
