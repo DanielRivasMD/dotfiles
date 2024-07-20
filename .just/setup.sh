@@ -28,6 +28,8 @@ fi
 
 brew tap liujianping/tap/ts
 brew install ts
+# link directory
+ln -svf "${dotDir}" "${archDir}"
 
 # patch casks
 brew tap homebrew/cask-fonts
