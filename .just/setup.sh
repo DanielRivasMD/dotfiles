@@ -45,12 +45,8 @@ done < "${setup}/cargo.txt"
 
 ####################################################################################################
 
-# TODO: review installations
-# # go version manager
-# curl -sSL https://git.io/g-install | sh -s
-
-# # zsh package manager
-# zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+# go version manager
+curl -sSL https://git.io/g-install | sh -s
 
 ####################################################################################################
 
