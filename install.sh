@@ -2,6 +2,7 @@
 ####################################################################################################
 
 # setup
+# TODO: perhaps make it from current path
 dotDir="$HOME/Factorem/dotfiles"
 archDir="$HOME/.archive"
 setupDir="${archDir}/.just/.setup"
@@ -25,10 +26,17 @@ ln -svf "${dotDir}" "${archDir}"
 ####################################################################################################
 
 # install formulae
-brew install --formulae $(cat "${setupDir}/brew_formulae.txt")  1> "${archDir}/log/brew_formulae_out.txt" 2> "${archDir}/log/brew_formulae_err.txt"
+while read item
+do
+  brew install --formulae ${item} 1>> "${archDir}/log/brew_formulae_out.txt" 2>> "${archDir}/log/brew_formulae_err.txt"
+done < "${setupDir}/brew_formulae.txt"
+
 
 # install casks
-brew install --casks $(cat "${setup}/brew_casks.txt") 1> "${archDir}/log/brew_cask_out.txt" 2> "${archDir}/log/brew_cask_err.txt"
+while read item
+do
+  brew install --casks "${item}" 1>> "${archDir}/log/brew_cask_out.txt" 2>> "${archDir}/log/brew_cask_err.txt"
+done < "${setupDir}/brew_casks.txt"
 
 ####################################################################################################
 
@@ -40,8 +48,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # install rust binaries
 while read item
 do
-  cargo install ${item} 1> "${archDir}/log/cargo_out.txt" 2> "${archDir}/log/cargo_err.txt"
-done < "${setup}/cargo.txt"
+  cargo install ${item} 1>> "${archDir}/log/cargo_out.txt" 2>> "${archDir}/log/cargo_err.txt"
+done < "${setupDir}/cargo.txt"
 
 ####################################################################################################
 
