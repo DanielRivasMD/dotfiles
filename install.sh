@@ -9,6 +9,7 @@ setupDir="${archDir}/.just/.setup"
 
 ####################################################################################################
 
+# TODO: include logging
 # create log directory
 if [ ! -d "${dotDir}/log" ]
 then
@@ -42,6 +43,7 @@ done < "${setupDir}/brew_casks.txt"
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# TODO: restart shell after installing rust
 
 ####################################################################################################
 
@@ -68,5 +70,12 @@ curl -sSL https://git.io/g-install | sh -s
 # # install R packages
 # R CMD INSTALL /Users/drivas/bin/Rpack/colorout_1.2-1.tar.gz
 # R CMD INSTALL /Users/drivas/bin/Rpack/SystWrapper_2.0.tar.gz
+
+####################################################################################################
+
+# brew install yqrashawn/goku/goku
+# brew install fzf
+
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/weavejester/cljfmt/HEAD/install.sh)"
 
 ####################################################################################################
