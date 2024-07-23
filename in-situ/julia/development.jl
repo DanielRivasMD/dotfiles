@@ -9,6 +9,14 @@ atreplinit() do repl
     ####################################################################################################
 
     try
+      @eval using OhMyREPL
+    catch ε
+      @warn "error while importing OhMyREPL" ε
+    end
+
+    ####################################################################################################
+
+    try
       @eval import Chain: @chain
     catch e
       @warn "error while importing Chain" e
