@@ -35,11 +35,6 @@ utils::assignInNamespace(
 
 ####################################################################################################
 
-# expand to match columns
-SW::wideScreen(Sys.getenv('RCOLUMNS'))
-
-####################################################################################################
-
 # default repo
 local(
   {
@@ -56,5 +51,10 @@ tryCatch(
   startup::startup(),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
+
+####################################################################################################
+
+# expand to match columns
+SW::wideScreen(Sys.getenv('RCOLUMNS'))
 
 ####################################################################################################
