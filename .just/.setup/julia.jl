@@ -1,7 +1,9 @@
-OhMyREPL
-Chain
-Pipe
-Revise
-Debugger
-UnicodePlots
-DelimitedFiles
+packages = [
+  "OhMyREPL",
+  "Chain",
+  "Pipe",
+  "Revise",
+  "Debugger",
+  "UnicodePlots",
+  "DelimitedFiles",
+]
