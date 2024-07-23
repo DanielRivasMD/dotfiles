@@ -43,7 +43,7 @@ done < "${setupDir}/brew_casks.txt"
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# TODO: restart shell after installing rust
+source $HOME/.zshrc
 
 ####################################################################################################
 
@@ -52,6 +52,10 @@ while read item
 do
   cargo install ${item} 1>> "${archDir}/log/cargo_out.txt" 2>> "${archDir}/log/cargo_err.txt"
 done < "${setupDir}/cargo.txt"
+
+####################################################################################################
+
+# cargo install --locked lazycli
 
 ####################################################################################################
 
