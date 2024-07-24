@@ -82,10 +82,12 @@ go install github.com/itchyny/fillin@latest
 
 # # install R packages
 # R CMD INSTALL /Users/drivas/bin/Rpack/colorout_1.2-1.tar.gz
-# R CMD INSTALL /Users/drivas/bin/Rpack/SystWrapper_2.0.tar.gz
+# R CMD INSTALL /Users/drivas/bin/Rpack/SW_3.2.tar.gz
 
 ####################################################################################################
 
+# brew tap r-lib/rig
+# brew install --cask rig
 # brew install yqrashawn/goku/goku
 # brew install fzf
 
