@@ -1,9 +1,14 @@
 ####################################################################################################
 
-archDir = string(homedir(), "/", ".archive")
-setupDir = string(archDir, "/", ".just", "/", ".setup")
-
-include(string(setupDir, "/", "julia.jl"))
+packages = [
+  "OhMyREPL",
+  "Chain",
+  "Pipe",
+  "Revise",
+  "Debugger",
+  "UnicodePlots",
+  "DelimitedFiles",
+]
 
 ####################################################################################################
 
