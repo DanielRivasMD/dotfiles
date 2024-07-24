@@ -74,6 +74,7 @@ go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
 go install github.com/jesseduffield/lazynpm@latest
 go install github.com/itchyny/mmv/cmd/mmv@latest
+go install github.com/itchyny/fillin@latest
 
 ####################################################################################################
 
