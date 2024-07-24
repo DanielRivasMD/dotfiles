@@ -43,6 +43,8 @@ done < "${setupDir}/brew_casks.txt"
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# reload shell
 source $HOME/.zshrc
 
 ####################################################################################################
@@ -70,11 +72,16 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 go install github.com/nametake/golangci-lint-langserver@latest
 
 # binaries
+go install github.com/zyedidia/eget@latest
 go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
 go install github.com/jesseduffield/lazynpm@latest
 go install github.com/itchyny/mmv/cmd/mmv@latest
 go install github.com/itchyny/fillin@latest
+
+####################################################################################################
+
+eget zyedidia/micro
 
 ####################################################################################################
 
