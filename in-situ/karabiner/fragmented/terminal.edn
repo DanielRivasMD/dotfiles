@@ -84,6 +84,22 @@
   [:!CS#Pright_arrow :!Oright_arrow [:term]]                                                       ;
   [:!CS#Pup_arrow :!Sf9 [:term]]                                                                   ;
   [:!CS#Pdown_arrow :!Sf10 [:term]]                                                                ;
+
+  [:!OTC#Pleft_arrow :!STf11 [:term]]                                                              ;
+  [:!OTC#Pright_arrow :!STf12 [:term]]                                                             ;
+  [:!OTC#Pup_arrow :!STf13 [:term]]                                                                ;
+  [:!OTC#Pdown_arrow :!STf14 [:term]]                                                              ;
+
+  [:!OTC#Pdelete_or_backspace :!SOTf11 [:term]]                                                    ;
+  [:!OTC#Preturn_or_enter :!SOTf12 [:term]]                                                        ;
+  [:!OTC#Pright_shift :!SOTf13 [:term]]                                                            ;
+  [:!OTC#Pright_option :!SOTf18 [:term]]                                                           ;
+  [:!OTC#Pright_command :!SOTf19 [:term]]                                                          ;
+  [:!OTC#Pspacebar :!SOTf20 [:term]]                                                               ;
+
+  [:!OTC#Pcomma :!STf18 [:term]]                                                                   ;
+  [:!OTC#Pperiod :!STf19 [:term]]                                                                  ;
+  [:!OTC#Pslash :!STf20 [:term]]                                                                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
