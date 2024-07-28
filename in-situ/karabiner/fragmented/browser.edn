@@ -4,16 +4,16 @@
 {:des "Browser vimium mappings"
  :rules
  [;
-  [:#Pright_shift :right_shift :browser {:alone [:!Of1]}]                      ; focus             ;
+  [:#Pright_shift :right_shift :browser {:alone [:!Cf1]}]                    ; focus             ;
 
-  [:!WQR#Pright_command :!Tf1 [:browser]]                                      ; down link         ;
-  [:!WQR#Pright_option :!Cf1 [:browser]]                                       ; copy link         ;
+  [:!WQR#Pright_command :!Cf2 [:browser]]                                      ; down link         ;
+  [:!WQR#Pright_option :!Cf3 [:browser]]                                       ; copy link         ;
 
-  [:!WQR#Preturn_or_enter :!OTCf1 [:browser]]                                  ; current tab       ;
+  [:!WQR#Preturn_or_enter :!Cf4 [:browser]]                                  ; current tab       ;
 
-  [:!WQR#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
-  [:!WQR#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
-  [:!WQR#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
+  [:!WQR#Pright_shift :!Cf5 [:browser]]                                       ; new tab           ;
+  [:!WQR#Pspacebar :!Cf6 [:browser]]                                          ; new tab & go      ;
+  [:!WQR#Pdelete_or_backspace :!Cf7 [:browser]]                               ; multitab          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
