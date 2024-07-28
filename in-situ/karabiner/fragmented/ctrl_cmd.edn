@@ -39,20 +39,16 @@
 {:des "Alacritty - Control - Command Mode"
  :rules
  [;
-  ; [:!Sf14 [:term]]                                                                NOT AVAILABLE  ;
-  ; [:!Sf15 [:term]]                                                                NOT AVAILABLE  ;
-  ; [:!SOf14 [:term]]                                                               NOT AVAILABLE  ;
-  ; [:!SOf15 [:term]]                                                               NOT AVAILABLE  ;
   [:!TC#Phyphen :!Sf11 [:term]]                                                                    ;
   [:!TC#Pequal_sign :!Sf12 [:term]]                                                                ;
-  [:!TC#Popen_bracket :!SOf11 [:term]]                                                             ;
-  [:!TC#Pclose_bracket :!SOf12 [:term]]                                                            ;
-  [:!TC#Psemicolon :!SOf13 [:term]]                                                                ;
-  [:!TC#Pquote :!SOf16 [:term]]                                                                    ;
-  [:!TC#Pbackslash :!SOf17 [:term]]                                                                ;
-  [:!TC#Pcomma :!SOf18 [:term]]                                                                    ;
-  [:!TC#Pperiod :!SOf19 [:term]]                                                                   ;
-  [:!TC#Pslash :!SOf20 [:term]]                                                                    ;
+  [:!TC#Popen_bracket :!Sf13 [:term]]                                                              ;
+  [:!TC#Pclose_bracket :!Sf14 [:term]]                                                             ;
+  [:!TC#Psemicolon :!Sf18 [:term]]                                                                 ;
+  [:!TC#Pquote :!Sf19 [:term]]                                                                     ;
+  [:!TC#Pbackslash :!Sf20 [:term]]                                                                 ;
+  [:!TC#Pcomma :f18 [:term]]                                                                       ;
+  [:!TC#Pperiod :f19 [:term]]                                                                      ;
+  [:!TC#Pslash :f20 [:term]]                                                                       ;
 
   [:!TC#Pdelete_or_backspace :!Sf1 [:term]]                                                        ;
   [:!TC#Preturn_or_enter :!Sf2 [:term]]                                                            ;
@@ -62,16 +58,16 @@
   [:!TC#Pspacebar :f1 [:term]]                                                                     ;
 
   ; [:!TCleft_command [:term]]                                                      NOT AVAILABLE  ;
-  [:!TC#Pleft_option :!Sf13 [:term]]                                                               ;
+  ; [:!TC#Pleft_option : [:term]]                                                                  ;
   ; [:!TCleft_control [:term]]                                                      NOT AVAILABLE  ;
-  [:!TC#Pleft_shift :!Sf16 [:term]]                                                                ;
-  [:!TC#Pcaps_lock :!Sf17 [:term]]                                                                 ;
-  [:!TC#Ptab :!Sf18 [:term]]                                                                       ;
-  [:!TC#Pnon_us_backslash :!Sf19 [:term]]                                                          ;
-  [:!TC#Pescape :!Sf20 [:term]]                                                                    ;
-  ]}
+  ; [:!TC#Pleft_shift : [:term]]                                                                   ;
+  ; [:!TC#Pcaps_lock : [:term]]                                                                    ;
+  ; [:!TC#Ptab : [:term]]                                                                          ;
+  ; [:!TC#Pnon_us_backslash : [:term]]                                                             ;
+  ; [:!TC#Pescape : [:term]]                                                                       ;
 
-
+  ; [: :f13 [:term]]                                                                               ;
+  ; [: :f14 [:term]]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
