@@ -42,7 +42,7 @@
   [:!S#Phyphen [:spacebar :hyphen :hyphen]]                                    ; ' --'             ;
   ; [:!S#Pequal_sign []]                                                       ;                   ;
   [:!S#Popen_bracket [:!S#P4 :!Sopen_bracket]]                                 ; '${'              ;
-  ; [:!S#Pclose_bracket []]                                                    ;                   ;
+  [:!S#Pclose_bracket [:!Sclose_bracket :spacebar]]                            ; '} '              ;
   [:!S#Psemicolon [:!S#Psemicolon :spacebar]]                                  ; ': '              ;
   ; [:!S#Pquote []]                                                            ;                   ;
   ; [:!S#Pbackslash []]                                                        ;                   ;
