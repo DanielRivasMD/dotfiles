@@ -141,31 +141,31 @@ C-w = ["delete_word_backward"]                             # shift-ctrl        #
 # control - command
 # A-F11 = [""]                                             # ctrl-cmd-a        #
 # A-F12 = [""]                                             # ctrl-cmd-b        #
-# A-F14 = [""]                                             # ctrl-cmd-c        #
-# A-F15 = [""]                                             # ctrl-cmd-d        #
-# A-F16 = [""]                                             # ctrl-cmd-e        #
-# A-F17 = [""]                                             # ctrl-cmd-f        #
-# A-F18 = [""]                                             # ctrl-cmd-g        #
-# A-F19 = [""]                                             # ctrl-cmd-h        #
-# A-F20 = [""]                                             # ctrl-cmd-i        #
-# C-F11 = [""]                                             # ctrl-cmd-j        #
-# C-F12 = [""]                                             # ctrl-cmd-k        #
-# C-F13 = [""]                                             # ctrl-cmd-l        #
-# A-F13 = [""]                                             # ctrl-cmd-m        #
-# C-F16 = [""]                                             # ctrl-cmd-n        #
-# C-F17 = [""]                                             # ctrl-cmd-o        #
-# C-F18 = [""]                                             # ctrl-cmd-p        #
-# C-F19 = [""]                                             # ctrl-cmd-q        #
-# C-F20 = [""]                                             # ctrl-cmd-r        #
-# A-C-F11 = [""]                                           # ctrl-cmd-s        #
-# A-C-F12 = [""]                                           # ctrl-cmd-t        #
-# A-C-F14 = [""]                                           # ctrl-cmd-u        #
-# A-C-F15 = [""]                                           # ctrl-cmd-v        #
-# A-C-F16 = [""]                                           # ctrl-cmd-w        #
-# A-C-F17 = [""]                                           # ctrl-cmd-x        #
-# A-C-F18 = [""]                                           # ctrl-cmd-y        #
-# A-C-F19 = [""]                                           # ctrl-cmd-z        #
-# A-C-F20 = [""]                                           # ctrl-cmd-tilde    #
+# A-F13 = [""]                                             # ctrl-cmd-c        #
+# A-F14 = [""]                                             # ctrl-cmd-d        #
+# A-F18 = [""]                                             # ctrl-cmd-e        #
+# A-F19 = [""]                                             # ctrl-cmd-f        #
+# A-F20 = [""]                                             # ctrl-cmd-g        #
+# C-F11 = [""]                                             # ctrl-cmd-h        #
+# C-F12 = [""]                                             # ctrl-cmd-i        #
+# C-F17 = [""]                                             # ctrl-cmd-j        #
+# C-F18 = [""]                                             # ctrl-cmd-k        #
+# C-F19 = [""]                                             # ctrl-cmd-l        #
+# C-F20 = [""]                                             # ctrl-cmd-m        #
+# A-C-F11 = [""]                                             # ctrl-cmd-n        #
+# A-C-F12 = [""]                                             # ctrl-cmd-o        #
+# A-C-F13 = [""]                                             # ctrl-cmd-p        #
+# A-C-F14 = [""]                                             # ctrl-cmd-q        #
+# A-C-F18 = [""]                                             # ctrl-cmd-r        #
+# A-C-F19 = [""]                                           # ctrl-cmd-s        #
+# A-C-F20 = [""]                                           # ctrl-cmd-t        #
+# S-A-F11 = [""]                                           # ctrl-cmd-u        #
+# S-A-F12 = [""]                                           # ctrl-cmd-v        #
+# S-A-F13 = [""]                                           # ctrl-cmd-w        #
+# S-A-F18 = [""]                                           # ctrl-cmd-x        #
+# S-A-F19 = [""]                                           # ctrl-cmd-y        #
+# S-A-F20 = [""]                                           # ctrl-cmd-z        #
+# F12 = [""]                                           # ctrl-cmd-tilde    #
 
 
 ####################################################################################################
@@ -180,7 +180,15 @@ F8 = ["goto_previous_buffer"]                              # ctrl-cmd-left     #
 F9 = ["goto_next_buffer"]                                  # ctrl-cmd-right    # next tab
 F10 = ["increment"]                                        # ctrl-cmd-up       # increment
 F11 = ["decrement"]                                        # ctrl-cmd-down     # decrement
-# F12 = [""]                                               #                   #
+# F12 = [""]                                               #         #
+# F13 = [""]                                               #         #
+# F14 = [""]                                               #         #
+F15 = ["normal_mode", "till_prev_char", "MODE"]            # ctrl-cmd-,        # prev until
+F16 = ["normal_mode", "find_till_char", "MODE"]            # ctrl-cmd-.        # next until
+F17 = ["normal_mode", "repeat_last_motion", "MODE"]        # ctrl-cmd-/        # repeat motion
+# F18 = [""]                                               #    #
+# F19 = [""]                                               #    #
+# F20 = [""]                                               #    #
 
 
 ####################################################################################################
@@ -194,46 +202,51 @@ S-F7 = ["goto_prev_change"]                                # alt-cmd-up        #
 S-F8 = ["goto_next_change"]                                # alt-cmd-down      # next change
 S-F9 = ["select_mode", "goto_file_start", "MODE"]          # cmd-shift-up      # select start
 S-F10 = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
-                                                           # cmd-shift-down    # select end
+                                                           # cmd-shift-down   # select end
+# S-F11 = [""]                                             # ctrl-cmd--       #
+# S-F12 = [""]                                             # ctrl-cmd-=       #
+# S-F13 = [""]                                             # ctrl-cmd-[       #
+# S-F14 = [""]                                             # ctrl-cmd-]       #
+# S-F15 = [""]                                             # ctrl-cmd-;       #
+# S-F16 = [""]                                             # ctrl-cmd-'       #
+# S-F17 = [""]                                             # ctrl-cmd-\       #
+# S-F18 = [""]                                             #    #
+# S-F19 = [""]                                             #    #
+# S-F20 = [""]                                             #    #
 
 
 ####################################################################################################
 
 # movement
-# S-F11 = [""]                                             # ctrl-cmd--       #
-# S-F12 = [""]                                             # ctrl-cmd-=       #
-S-A-F11 = ["goto_reference"]                               # ctrl-cmd-[       #
-S-A-F12 = ["goto_implementation"]                          # ctrl-cmd-]       #
-S-A-F13 = ["goto_last_modification"]                       # ctrl-cmd-;       #
-S-A-F16 = ["goto_definition"]                              # ctrl-cmd-'       #
-S-A-F17 = ["goto_type_definition"]                         # ctrl-cmd-\       #
-S-A-F18 = ["normal_mode", "till_prev_char", "MODE"]        # ctrl-cmd-,       # prev until
-S-A-F19 = ["normal_mode", "find_till_char", "MODE"]        # ctrl-cmd-.       # next until
-S-A-F20 = ["normal_mode", "repeat_last_motion", "MODE"]    # ctrl-cmd-/       # repeat motion
+A-C-F15 = ["goto_reference"]                               # ctrl-cmd-[       #
+C-F12 = ["goto_implementation"]                          # ctrl-cmd-]       #
+A-F14 = ["goto_definition"]                              # ctrl-cmd-'       #
+S-A-F11 = ["goto_type_definition"]                         # ctrl-cmd-\       #
 
 # diagnostics
-S-C-F17 = ["goto_prev_diag"]                               # ctrl-cmd-7       # prev diag
-S-C-F18 = ["goto_next_diag"]                               # ctrl-cmd-8       # next diag
-S-C-F19 = ["workspace_diagnostics_picker"]                 # ctrl-cmd-9       # diag list
+S-C-F11 = ["goto_prev_diag"]                               # ctrl-cmd-7       # prev diag
+S-C-F12 = ["goto_next_diag"]                               # ctrl-cmd-8       # next diag
+S-A-C-F12 = ["workspace_diagnostics_picker"]                 # ctrl-cmd-9       # diag list
 
 # symbols
-S-C-F14 = ["goto_prev_parameter"]                          # ctrl-cmd-4       # next param
-S-C-F11 = ["goto_next_parameter"]                          # ctrl-cmd-1       # prev param
-S-C-F15 = ["goto_prev_function"]                           # ctrl-cmd-5       # next func
-S-C-F12 = ["goto_next_function"]                           # ctrl-cmd-2       # prev func
-S-C-F16 = ["goto_prev_class"]                              # ctrl-cmd-6       # next class
-S-C-F13 = ["goto_next_class"]                              # ctrl-cmd-3       # prev class
-S-C-F20 = ["workspace_symbol_picker"]                      # ctrl-cmd-0       # symbol list
+A-C-F17 = ["goto_prev_parameter"]                          # ctrl-cmd-4       # next param
+S-A-F16 = ["goto_next_parameter"]                          # ctrl-cmd-1       # prev param
+A-F16 = ["goto_prev_function"]                           # ctrl-cmd-5       # next func
+A-F17 = ["goto_next_function"]                           # ctrl-cmd-2       # prev func
+A-F13 = ["goto_prev_class"]                              # ctrl-cmd-6       # next class
+S-A-F12 = ["goto_next_class"]                              # ctrl-cmd-3       # prev class
+F12 = ["workspace_symbol_picker"]                      # ctrl-cmd-0       # symbol list
 
 # comments
-S-A-C-F16 = ["goto_prev_comment"]                          # ctrl-cmd-=       # prev comment
-S-A-C-F13 = ["goto_next_comment"]                          # ctrl-cmd-+       # next comment
+S-C-F13 = ["goto_prev_comment"]                          # ctrl-cmd-=       # prev comment
+S-C-F14 = ["goto_next_comment"]                          # ctrl-cmd-+       # next comment
 
 # jump
-S-A-C-F17 = ["jump_backward"]                              # ctrl-cmd-lock    # prev jump
-S-A-C-F18 = ["jump_forward"]                               # ctrl-cmd-/       # next jump
-S-A-C-F19 = ["jumplist_picker"]                            # ctrl-cmd-*       # jump list
-S-A-C-F20 = ["save_selection"]                             # ctrl-cmd--       # record jump
+S-C-F15 = ["jump_backward"]                              # ctrl-cmd-lock    # prev jump
+S-C-F16 = ["jump_forward"]                               # ctrl-cmd-/       # next jump
+S-C-F17 = ["jumplist_picker"]                            # ctrl-cmd-*       # jump list
+S-A-C-F13 = ["save_selection"]                             # ctrl-cmd--       # record jump
+S-A-C-F17 = ["goto_last_modification"]                       # ctrl-cmd-;       #
 
 
 ####################################################################################################
