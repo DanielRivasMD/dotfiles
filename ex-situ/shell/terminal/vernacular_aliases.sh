@@ -94,7 +94,7 @@ alias hg='hgrep'
 alias mg='mgit'
 
 # pueue
-alias p='pueue'
+alias pe='pueue'
 alias pd='pueued'
 
 # samesame
