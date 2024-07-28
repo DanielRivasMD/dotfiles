@@ -71,33 +71,7 @@
   [:!TC#Pescape :!Sf20 [:term]]                                                                    ;
   ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Alacritty
-{:des "Alacritty - Keypad"
- :rules
- [;
-  ; [:!SOTf14 [:term]]                                                              NOT AVAILABLE  ;
-  ; [:!SOTf15 [:term]]                                                              NOT AVAILABLE  ;
-  [:!TC#Pkeypad_1 :!STf11 [:term]]                                                                 ;
-  [:!TC#Pkeypad_2 :!STf12 [:term]]                                                                 ;
-  [:!TC#Pkeypad_3 :!STf13 [:term]]                                                                 ;
-  [:!TC#Pkeypad_4 :!STf14 [:term]]                                                                 ;
-  [:!TC#Pkeypad_5 :!STf15 [:term]]                                                                 ;
-  [:!TC#Pkeypad_6 :!STf16 [:term]]                                                                 ;
-  [:!TC#Pkeypad_7 :!STf17 [:term]]                                                                 ;
-  [:!TC#Pkeypad_8 :!STf18 [:term]]                                                                 ;
-  [:!TC#Pkeypad_9 :!STf19 [:term]]                                                                 ;
-  [:!TC#Pkeypad_0 :!STf20 [:term]]                                                                 ;
-
-  ; [:!SOTf11]                                                                                     ;
-  [:!TC#Pkeypad_period :!SOTf12 [:term]]                                                           ;
-  [:!TC#Pkeypad_plus :!SOTf16 [:term]]                                                             ;
-  [:!TC#Pkeypad_enter :!SOTf13 [:term]]                                                            ;
-  [:!TC#Pf20 :!SOTf17]                                                                             ;
-  [:!TC#Pkeypad_slash :!SOTf18 [:term]]                                                            ;
-  [:!TC#Pkeypad_asterisk :!SOTf19 [:term]]                                                         ;
-  [:!TC#Pkeypad_hyphen :!SOTf20 [:term]]                                                           ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
