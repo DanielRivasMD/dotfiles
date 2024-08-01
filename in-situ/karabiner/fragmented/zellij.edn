@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: update documentation
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules
@@ -14,7 +15,7 @@
   [:!OT#Pright_option :!Oh [:term]]                                            ; alt-ctrl-alt      ;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
   [:!OT#Preturn_or_enter :!Oj [:term]]                                         ; alt-ctrl-enter    ;
-  [:!E#Pleft_option :!Ok [:term]]                                              ; alt-tab           ;
+  ; [:!E#Pleft_option :!Ok [:term]]                                              ; alt-tab           ;
   [:!OT#Pright_command :!Ol [:term]]                                           ; alt-ctrl-cmd      ;
   [:!OT#Pspacebar :!Om [:term]]                                                ; alt-ctrl-space    ;
   ; [: :!On [:term]]                                                                COLLISION      ;
