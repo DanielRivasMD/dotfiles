@@ -1,5 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CTL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; WIP: write alternative bindings
 ; control
 {:des "Control Mode - alphabet"
  :rules
@@ -83,7 +86,7 @@
   [:!TS#Pbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]    ; ' .|| '           ;
   [:!TS#Pcomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]               ; ' <<< '           ;
   [:!TS#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]           ; ' >>> '           ;
-  [:!TS#Pslash [:spacebar :period :!S5 :!S5 :spacebar]]                        ; ' .%% '           ;
+  ; TODO: [:!TS#Pslash [:spacebar :period :!S5 :!S5 :spacebar]]                        ; ' .%% '           ;
 
   [:!TS#Pdelete_or_backspace
    [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]          ; ' .=== '          ;

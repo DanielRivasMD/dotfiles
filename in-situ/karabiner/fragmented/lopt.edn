@@ -1,5 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; WIP: write alternative bindings
 ; option
 {:des "Option Mode - alphabet"
  :rules
@@ -82,7 +85,7 @@
   [:!OS#Pbackslash [:spacebar :period :!Sbackslash :spacebar]]                    ; ' .| '         ;
   [:!OS#Pcomma [:spacebar :period :!Scomma :spacebar]]                            ; ' .< '         ;
   [:!OS#Pperiod [:spacebar :period :!Speriod :spacebar]]                          ; ' .> '         ;
-  [:!OS#Pslash [:spacebar :period :!S5 :spacebar]]                                ; ' .% '         ;
+  ; TODO: [:!OS#Pslash [:spacebar :period :!S5 :spacebar]]                                ; ' .% '         ;
 
   [:!OS#Pdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]];' .== '        ;
   [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]               ; ' .= '         ;
