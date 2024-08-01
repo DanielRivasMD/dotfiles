@@ -8,7 +8,7 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; caps & fn
-  [:##caps_lock :!OTleft_command nil {:alone :escape}]                                              ;
+  [:##grave_accent_and_tilde :!OTleft_command nil {:alone :escape}]                                              ;
   [:##fn :right_control nil {:alone :escape}]                                                      ;
 
   ; hypers
