@@ -53,17 +53,17 @@
   ; [:!E#Preturn_or_enter []]                                                                      ;
   ; [:!E#Pright_shift []]                                                                          ;
   ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
-  ; [:!E#Pright_command []]                                                         COLLISION      ;
+  ; [:!E#Pright_command []]                                                                        ;
   ; [:!E#Pspacebar []]                                                              COLLISION      ;
 
   ; [:!E#Pleft_command []]                                                          COLLISION      ;
   ; [:!E#Pleft_option []]                                                           COLLISION      ;
   ; [:!E#Pleft_control []]                                                          COLLISION      ;
   ; [:!E#Pleft_shift []]                                                            COLLISION      ;
-  ; [:!E#Pcaps_lock []]                                                                            ;
-  ; [:!E#Ptab []]                                                                                  ;
+  ; [:!E#Pcaps_lock []]                                                             COLLISION      ;
+  ; [:!E#Ptab []]                                                                   COLLISION      ;
   ; [:!E#Pnon_us_backslash []]                                                      COLLISION      ;
-  ; [:!E#Pescape []]                                                                               ;
+  ; [:!E#Pescape []]                                                                COLLISION      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
