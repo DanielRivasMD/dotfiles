@@ -37,27 +37,46 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ; [: :f13 [:term]]                                                                               ;
+  ; [: :f14 [:term]]                                                                               ;
+
+  ; [:!OTf13 [:term]]                                                                              ;
+  ; [:!OTf14 [:term]]                                                                              ;
+  ; [:!OTf18 [:term]]                                                                              ;
+  ; [:!OTf19 [:term]]                                                                              ;
+  ; [:!OTf20 [:term]]                                                                              ;
+
+  ; [:!SOf11 [:term]]                                                                              ;
+  ; [:!SOf12 [:term]]                                                                              ;
+  ; [:!SOf13 [:term]]                                                                              ;
+  ; [:!SOf18 [:term]]                                                                              ;
+  ; [:!SOf19 [:term]]                                                                              ;
+  ; [:!SOf20 [:term]]                                                                              ;
+  ; [:f12 [:term]]                                                                                 ;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; command
 {:des "Command Mode - symbols"
  :rules
  [;
-  ; [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                      ; ' -= '            ;
-  ; [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]            ; ' += '            ;
-  ; [:!C#Popen_bracket []]                                                     ;                   ;
-  ; [:!C#Pclose_bracket []]                                                    ;                   ;
-  ; [:!C#Psemicolon []]                                                        ;                   ;
-  ; [:!C#Pquote []]                                                            ;                   ;
-  ; [:!C#Pbackslash []]                                                        ;                   ;
-  ; [:!C#Pcomma []]                                                            ;                   ;
-  ; [:!C#Pperiod []]                                                           ;                   ;
-  ; [:!C#Pslash []]                                                            ;                   ;
+  [:!C#Phyphen :!Of11 [:term]]                                                                     ;
+  [:!C#Pequal_sign :!Of12 [:term]]                                                                 ;
+  [:!C#Popen_bracket :!Of13 [:term]]                                                               ;
+  [:!C#Pclose_bracket :!Of14 [:term]]                                                              ;
+  [:!C#Psemicolon :!Of18 [:term]]                                                                  ;
+  [:!C#Pquote :!Of19 [:term]]                                                                      ;
+  [:!C#Pbackslash :!Of20 [:term]]                                                                  ;
+  [:!C#Pcomma :!Tf11 [:term]]                                                                      ;
+  [:!C#Pperiod :!Tf12 [:term]]                                                                     ;
+  [:!C#Pslash :!Tf13 [:term]]                                                                      ;
 
-  ; [:!C#Pdelete_or_backspace []]                                              ;                   ;
-  [:!C#Preturn_or_enter :f3 [:term]]                                           ;                   ;
-  ; [:!C#Pright_shift []]                                                      ;                   ;
-  ; [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                   ; ' *= '            ;
-  ; [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
-  ; [:!C#Pspacebar []]                                                         ;                   ;
+  [:!C#Pdelete_or_backspace :!Tf18 [:term]]                                                        ;
+  [:!C#Preturn_or_enter :f3 [:term]]                                                               ;
+  [:!C#Pright_shift :!Tf19 [:term]]                                                                ;
+  [:!C#Pright_option :!Tf20 [:term]]                                                               ;
+  [:!C#Pright_command :!OTf11 [:term]]                                                             ;
+  [:!C#Pspacebar :!OTf12 [:term]]                                                                  ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
   ; [:!C#Pleft_option []]                                                                          ;
@@ -75,23 +94,23 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  ; [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '           ;
-  ; [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]   ; ' .+= '           ;
-  ; [:!CS#Popen_bracket []]                                                    ;                   ;
-  ; [:!CS#Pclose_bracket []]                                                   ;                   ;
-  ; [:!CS#Psemicolon []]                                                       ;                   ;
-  ; [:!CS#Pquote []]                                                           ;                   ;
-  ; [:!CS#Pbackslash []]                                                       ;                   ;
-  ; [:!CS#Pcomma []]                                                           ;                   ;
-  ; [:!CS#Pperiod []]                                                          ;                   ;
-  ; [:!CS#Pslash []]                                                           ;                   ;
+  ; [:!CS#Phyphen []]                                                                              ;
+  ; [:!CS#Pequal_sign []]                                                                          ;
+  ; [:!CS#Popen_bracket []]                                                                        ;
+  ; [:!CS#Pclose_bracket []]                                                                       ;
+  ; [:!CS#Psemicolon []]                                                                           ;
+  ; [:!CS#Pquote []]                                                                               ;
+  ; [:!CS#Pbackslash []]                                                                           ;
+  ; [:!CS#Pcomma []]                                                                               ;
+  ; [:!CS#Pperiod []]                                                                              ;
+  ; [:!CS#Pslash []]                                                                               ;
 
-  ; [:!CS#Pdelete_or_backspace []]                                             ;                   ;
-  ; [:!CS#Preturn_or_enter []]                                                 ;                   ;
-  ; [:!CS#Pright_shift []]                                                     ;                   ;
-  ; [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]          ; ' .*= '           ;
-  ; [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '           ;
-  ; [:!CS#Pspacebar []]                                                        ;                   ;
+  ; [:!CS#Pdelete_or_backspace []]                                                                 ;
+  ; [:!CS#Preturn_or_enter []]                                                                     ;
+  ; [:!CS#Pright_shift []]                                                                         ;
+  ; [:!CS#Pright_option []]                                                                        ;
+  ; [:!CS#Pright_command []]                                                                       ;
+  ; [:!CS#Pspacebar []]                                                                            ;
 
   ; [:!CS#Pleft_command []]                                                         NOT AVAILABLE  ;
   ; [:!CS#Pleft_option []]                                                                         ;
