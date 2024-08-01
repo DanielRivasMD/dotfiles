@@ -1,8 +1,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; WIP: remap caps lock => ctrl - opt - cmd
-; WIP: remap right cmd => hyper
-; WIP: remap right opt => ?
+; DOC: remap caps lock => ctl-opt-cmd
+; DOC: remap q-layer => hyper
+; WIP: remap hyper app calls => browsers & mail
+; DOC: remap counter up & down => 2 alt-cmd - up & down
+; WIP: remap go to diff =>        2 ctl-alt-cmd - up & down
+
+; WIP: remap movement =>          4
+; DOC: diagnostics =>       3 ctl-alt-cmd - left & right
+; WIP: remap symbols =>           7
+; DOC: remap comment =>           2 ctl-alt-cmd - up & down       ctl-cmd - up & down
+; DOC: remap jump =>              5 ctl-alt-cmd - comma & period  ctl-alt-cmd - cmd, alt, shift & bs
+; DOC: remap char & jump =>       3 ctl-cmd - comma & period      ctl-alt-cmd - left & right
 ; key modifiers
 {:des "Modifier key remappings"
  :rules
@@ -11,12 +20,13 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; caps & fn
-  [:##caps_lock :!OTCleft_shift nil {:alone :escape}]                                              ;
+  [:#Pq :!OTCleft_shift nil {:alone :q}]                                                           ;
+  [:##caps_lock :!OTleft_command nil {:alone :escape}]                                              ;
   [:##fn :right_control nil {:alone :escape}]                                                      ;
 
   ; modifiers
   [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                                               ;
-  [:#Pspacebar :!EWright_command nil {:alone [:spacebar]}]                                         ;
+  ; [:#Pspacebar :!EWright_command nil {:alone [:spacebar]}]                                         ;
   [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]                                  ;
 
   ; lefts
