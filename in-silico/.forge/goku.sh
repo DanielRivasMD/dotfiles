@@ -3,6 +3,7 @@
 # goku
 ####################################################################################################
 
+# TODO: place files on subdirectories 'from' & 'to' mapping
 # forge goku
 _forge() {
 
@@ -45,7 +46,6 @@ _forge() {
     "${fragmented}/esc.edn" \
     "${fragmented}/function.edn" \
     "${fragmented}/tab.edn" \
-    "${fragmented}/hyper.edn" \
     "${fragmented}/space.edn" \
     "${fragmented}/bspace.edn" \
     "${fragmented}/lopt.edn" \
@@ -57,6 +57,8 @@ _forge() {
     "${fragmented}/rcmd.edn" \
     "${fragmented}/rshift.edn" \
     "${fragmented}/ctrl_cmd.edn" \
+    "${fragmented}/q-layer.edn" \
+    "${fragmented}/z-layer.edn" \
     "${fragmented}/patch.edn" \
     "${fragmented}/fn.edn" \
     "${karabiner}/.eof.tmp" \
