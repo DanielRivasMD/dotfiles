@@ -1,0 +1,72 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Q => RETC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper Q
+{:des "Hyper Q - alphabet"
+ :rules
+ [;
+  ; [:!RETC#Pa []]                                                                                 ;
+  ; [:!RETC#Pb []]                                                                                 ;
+  ; [:!RETC#Pc []]                                                                                 ;
+  ; [:!RETC#Pd []]                                                                                 ;
+  ; [:!RETC#Pe []]                                                                                 ;
+  ; [:!RETC#Pf []]                                                                                 ;
+  ; [:!RETC#Pg []]                                                                                 ;
+  ; [:!RETC#Ph []]                                                                                 ;
+  ; [:!RETC#Pi []]                                                                                 ;
+  ; [:!RETC#Pj []]                                                                                 ;
+  ; [:!RETC#Pk []]                                                                                 ;
+  ; [:!RETC#Pl []]                                                                                 ;
+  ; [:!RETC#Pm []]                                                                                 ;
+  ; [:!RETC#Pn []]                                                                                 ;
+  ; [:!RETC#Po []]                                                                                 ;
+  ; [:!RETC#Pp []]                                                                                 ;
+  ; [:!RETC#Pq []]                                                                                 ;
+  ; [:!RETC#Pr []]                                                                                 ;
+  ; [:!RETC#Ps []]                                                                                 ;
+  ; [:!RETC#Pt []]                                                                                 ;
+  ; [:!RETC#Pu []]                                                                                 ;
+  ; [:!RETC#Pv []]                                                                                 ;
+  ; [:!RETC#Pw []]                                                                                 ;
+  ; [:!RETC#Px []]                                                                                 ;
+  ; [:!RETC#Py []]                                                                                 ;
+  ; [:!RETC#Pz []]                                                                                 ;
+  ; [:!RETC#Pkeypad_num_lock []]                                                                   ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper Q
+{:des "Hyper Q - symbols"
+ :rules
+ [;
+  ; [:!RETC#Phyphen []]                                                                            ;
+  ; [:!RETC#Pequal_sign []]                                                                        ;
+  ; [:!RETC#Popen_bracket []]                                                                      ;
+  ; [:!RETC#Pclose_bracket []]                                                                     ;
+  [:!RETC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
+  [:!RETC#Pquote [:launch "Microsoft Excel"]]                                                      ;
+  [:!RETC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
+  ; [:!RETC#Pcomma []]                                                              COLLISION      ;
+  ; [:!RETC#Pperiod []]                                                             COLLISION      ;
+  [:!RETC#Pslash [:launch "Canary Mail"]]                                                          ;
+
+  [:!RETC#Pdelete_or_backspace [:launch "Lapce"]]                                                  ;
+  [:!RETC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
+  [:!RETC#Pright_shift [:launch "Zed"]]                                                            ;
+  [:!RETC#Pright_option [:launch "Chrome"]]                                                        ;
+  [:!RETC#Pright_command [:launch "Firefox"]]                                                      ;
+  ; [:!RETC#Pspacebar []]                                                           COLLISION      ;
+
+  ; [:!RETC#Pleft_command []]                                                                      ;
+  ; [:!RETC#Pleft_option []]                                                                       ;
+  ; [:!RETC#Pleft_control []]                                                                      ;
+  ; [:!RETC#Pleft_shift []]                                                                        ;
+  ; [:!RETC#Pcaps_lock []]                                                           NOT AVAILABLE ;
+  ; [:!RETC#Ptab []]                                                                               ;
+  ; [:!RETC#Pnon_us_backslash []]                                                                  ;
+  ; [:!RETC#Pescape []]                                                                            ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
