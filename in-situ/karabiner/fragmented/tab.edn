@@ -41,8 +41,8 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQR#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                    ; ' -= '            ;
-  [:!WQR#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]          ; ' += '            ;
+  ; [:!WQR#Phyphen []]                                                         ;                   ;
+  ; [:!WQR#Pequal_sign []]                                                     ;                   ;
   [:!WQR#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]] ; ' %<+% '          ;
   [:!WQR#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]];' %+>% '          ;
   [:!WQR#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                      ; ' %$% '           ;
@@ -55,8 +55,8 @@
   ; [:!WQR#Pdelete_or_backspace []]                                            ;                   ;
   ; [:!WQR#Preturn_or_enter []]                                                ;                   ;
   ; [:!WQR#Pright_shift []]                                                    ;                   ;
-  [:!WQR#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                 ; ' *= '            ;
-  [:!WQR#Pright_command [:spacebar :slash :equal_sign :spacebar]]              ; ' /= '            ;
+  ; [:!WQR#Pright_option []]                                                   ;                   ;
+  ; [:!WQR#Pright_command []]                                                  ;                   ;
   ; [:!WQR#Pspacebar []]                                                       ;                   ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
@@ -75,8 +75,8 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQRS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]           ; ' .-= '           ;
-  [:!WQRS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]] ; ' .+= '           ;
+  ; [:!WQRS#Phyphen []]                                                        ;                   ;
+  ; [:!WQRS#Pequal_sign []]                                                    ;                   ;
   ; [:!WQRS#Popen_bracket []]                                                  ;                   ;
   ; [:!WQRS#Pclose_bracket []]                                                 ;                   ;
   ; [:!WQRS#Psemicolon []]                                                     ;                   ;
@@ -89,8 +89,8 @@
   ; [:!WQRS#Pdelete_or_backspace []]                                           ;                   ;
   ; [:!WQRS#Preturn_or_enter []]                                               ;                   ;
   ; [:!WQRS#Pright_shift []]                                                   ;                   ;
-  [:!WQRS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]        ; ' .*= '           ;
-  [:!WQRS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]     ; ' ./= '           ;
+  ; [:!WQRS#Pright_option []]                                                  ;                   ;
+  ; [:!WQRS#Pright_command []]                                                 ;                   ;
   ; [:!WQRS#Pspacebar []]                                                      ;                   ;
 
   ; [:!WQRS#Pleft_command []]                                                                      ;
