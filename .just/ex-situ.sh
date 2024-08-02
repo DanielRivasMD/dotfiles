@@ -112,7 +112,7 @@ echo "${YELLOW}Generate completions${NC}"
 echo "${RED}====================================================================================================${NC}"
 juliaup completions zsh > "${zshcomp}/_juliaup"                                 && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}juliaup${NC}"
 pueue completions zsh "${zshcomp}"                                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}pueue${NC}"
-cp "${zshcomp}/_pueue" "${zshcomp}/_p" && sd pueue p "${zshcomp}/_p"            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}p${NC}"
+cp "${zshcomp}/_pueue" "${zshcomp}/_pe" && sd pueue p "${zshcomp}/_pe"          && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}p${NC}"
 sheldon completions --shell zsh > "${zshcomp}/_sheldon"                         && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}sheldon${NC}"
 echo "${RED}====================================================================================================${NC}"
 
