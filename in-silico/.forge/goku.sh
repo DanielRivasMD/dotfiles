@@ -3,7 +3,6 @@
 # goku
 ####################################################################################################
 
-# TODO: place files on subdirectories 'from' & 'to' mapping
 # forge goku
 _forge() {
 
@@ -11,7 +10,7 @@ _forge() {
   source "${IN_SILICO}/.config/config.sh"
 
   # format
-  cljfmt fix "${fragmented}/"*
+  cljfmt fix "${frag}/"*
 
   # create temporary files
   echo "" >> "${karabiner}/.profile.tmp"
@@ -29,38 +28,41 @@ _forge() {
   # concatenate
   cat \
     "${karabiner}/.profile.tmp" \
-    "${fragmented}/profile.edn" \
+    "${fprof}/profile.edn" \
     "${karabiner}/.main.tmp" \
-    "${fragmented}/mail.edn" \
-    "${fragmented}/browser.edn" \
-    "${fragmented}/editor.edn" \
-    "${fragmented}/lapce.edn" \
-    "${fragmented}/zed.edn" \
-    "${fragmented}/terminal.edn" \
-    "${fragmented}/zellij.edn" \
-    "${fragmented}/keys.edn" \
-    "${fragmented}/espanso.edn" \
-    "${fragmented}/mouse.edn" \
-    "${fragmented}/zero.edn" \
-    "${fragmented}/super.edn" \
-    "${fragmented}/esc.edn" \
-    "${fragmented}/function.edn" \
-    "${fragmented}/tab.edn" \
-    "${fragmented}/space.edn" \
-    "${fragmented}/bspace.edn" \
-    "${fragmented}/lopt.edn" \
-    "${fragmented}/lctrl.edn" \
-    "${fragmented}/lcmd.edn" \
-    "${fragmented}/lshift.edn" \
-    "${fragmented}/ropt.edn" \
-    "${fragmented}/rctrl.edn" \
-    "${fragmented}/rcmd.edn" \
-    "${fragmented}/rshift.edn" \
-    "${fragmented}/ctrl_cmd.edn" \
-    "${fragmented}/q-layer.edn" \
-    "${fragmented}/z-layer.edn" \
-    "${fragmented}/patch.edn" \
-    "${fragmented}/fn.edn" \
+    "${fapps}/browser.edn" \
+    "${fapps}/editor.edn" \
+    "${fapps}/keys.edn" \
+    "${fapps}/lapce.edn" \
+    "${fapps}/mail.edn" \
+    "${fapps}/mouse.edn" \
+    "${fapps}/zed.edn" \
+    "${farrow}/arrow-fn.edn" \
+    "${fbspace}/bs-ctlABC.edn" \
+    "${fcmd}/lcmd-fn.edn" \
+    "${fctlcmd}/cc-fn.edn" \
+    "${fespanso}/esc.edn" \
+    "${fespanso}/espanso.edn" \
+    "${fespanso}/function.edn" \
+    "${fjoker}/joker-fn.edn" \
+    "${fshift}/rshift-ctlABC.edn" \
+    "${fsimple}/fn.edn" \
+    "${fsimple}/lctrl.edn" \
+    "${fsimple}/lopt.edn" \
+    "${fsimple}/lshift.edn" \
+    "${fsimple}/patch.edn" \
+    "${fsimple}/q-layer.edn" \
+    "${fsimple}/rcmd.edn" \
+    "${fsimple}/rctrl.edn" \
+    "${fsimple}/ropt.edn" \
+    "${fsimple}/space.edn" \
+    "${fsimple}/super.edn" \
+    "${fsimple}/tab.edn" \
+    "${fsimple}/z-layer.edn" \
+    "${fsimple}/zero.edn" \
+    "${fterm}/doc.edn" \
+    "${fzellij}/ABC-fn.edn" \
+    "${fzellij}/mod-ABC.edn" \
     "${karabiner}/.eof.tmp" \
     > "${karabiner}/karabiner.edn"
 
