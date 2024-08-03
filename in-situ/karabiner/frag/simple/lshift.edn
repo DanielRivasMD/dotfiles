@@ -1,0 +1,72 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SHIFT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
+{:des "Shift Mode - alphabet"
+ :rules
+ [;
+  ; [:!Sa []]                                                                                      ;
+  ; [:!Sb []]                                                                                      ;
+  ; [:!S#Pc []]                                                                                    ;
+  ; [:!S#Pd []]                                                                                    ;
+  ; [:!S#Pe []]                                                                                    ;
+  ; [:!S#Pf []]                                                                                    ;
+  ; [:!S#Pg []]                                                                                    ;
+  ; [:!S#Ph []]                                                                                    ;
+  ; [:!S#Pi []]                                                                                    ;
+  ; [:!S#Pj []]                                                                                    ;
+  ; [:!S#Pk []]                                                                                    ;
+  ; [:!S#Pl []]                                                                                    ;
+  ; [:!S#Pm []]                                                                                    ;
+  ; [:!S#Pn []]                                                                                    ;
+  ; [:!S#Po []]                                                                                    ;
+  ; [:!S#Pp []]                                                                                    ;
+  ; [:!S#Pq []]                                                                                    ;
+  ; [:!S#Pr []]                                                                                    ;
+  ; [:!S#Ps []]                                                                                    ;
+  ; [:!S#Pt []]                                                                                    ;
+  ; [:!S#Pu []]                                                                                    ;
+  ; [:!S#Pv []]                                                                                    ;
+  ; [:!S#Pw []]                                                                                    ;
+  ; [:!S#Px []]                                                                                    ;
+  ; [:!S#Py []]                                                                                    ;
+  ; [:!S#Pz []]                                                                                    ;
+  ; [:!S#Pkeypad_num_lock []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
+{:des "Shift Mode - symbols"
+ :rules
+ [;
+  ; [:!S#Phyphen []]                                                                NOT AVAILABLE  ;
+  ; [:!S#Pequal_sign []]                                                            NOT AVAILABLE  ;
+  ; [:!S#Popen_bracket []]                                                          NOT AVAILABLE  ;
+  ; [:!S#Pclose_bracket []]                                                         NOT AVAILABLE  ;
+  ; [:!S#Psemicolon []]                                                             NOT AVAILABLE  ;
+  ; [:!S#Pquote []]                                                                 NOT AVAILABLE  ;
+  ; [:!S#Pbackslash []]                                                             NOT AVAILABLE  ;
+  [:!S#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
+  [:!S#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
+  [:!S#Pslash [:spacebar :!S2 :spacebar]]                                      ; ' @ '             ;
+
+  ; [:!S#Pdelete_or_backspace []]                                                                  ;
+  ; [:!S#Preturn_or_enter []]                                                                      ;
+  [:!S#Pright_shift :delete_forward]                                                               ;
+  [:!S#Pright_option :!Od [:term]]                                                                 ;
+  [:!S#Pright_command :!Tk [:term]]                                                                ;
+  [:!S#Pspacebar :caps_lock]                                                                       ;
+
+  ; [:!S#Pleft_command []]                                                                         ;
+  ; [:!S#Pleft_option []]                                                                          ;
+  ; [:!S#Pleft_control []]                                                                         ;
+  ; [:!S#Pleft_shift []]                                                            NOT AVAILABLE  ;
+  ; [:!S#Pcaps_lock []]                                                                            ;
+  ; [:!S#Ptab []]                                                                                  ;
+  ; [:!S#Pnon_us_backslash []]                                                                     ;
+  ; [:!S#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

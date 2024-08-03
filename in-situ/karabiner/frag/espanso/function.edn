@@ -1,0 +1,106 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; function key
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; function
+{:des "Function Mode - alphabet"
+ :rules
+ [;
+  [:!F#Pa [:comma :comma :a]]                                                  ; 'ɒ'               ;
+  [:!F#Pb [:comma :comma :b]]                                                  ; 'ß'               ;
+  [:!F#Pc [:comma :comma :c]]                                                  ; 'ç'               ;
+  [:!F#Pd [:comma :comma :d]]                                                  ; 'Δ'               ;
+  [:!F#Pe [:comma :comma :e]]                                                  ; 'ę'               ;
+  [:!F#Pf [:comma :comma :f]]                                                  ; 'ƒ'               ;
+  [:!F#Pg [:comma :comma :g]]                                                  ; 'ɣ'               ;
+  [:!F#Ph [:comma :comma :h]]                                                  ; 'з'               ;
+  [:!F#Pi [:comma :comma :i]]                                                  ; 'и'               ;
+  [:!F#Pj [:comma :comma :j]]                                                  ; 'ʌ'               ;
+  [:!F#Pk [:comma :comma :k]]                                                  ; 'ϙ'               ;
+  [:!F#Pl [:comma :comma :l]]                                                  ; 'ł'               ;
+  [:!F#Pm [:comma :comma :m]]                                                  ; 'ɱ'               ;
+  [:!F#Pn [:comma :comma :n]]                                                  ; 'ŋ'               ;
+  [:!F#Po [:comma :comma :o]]                                                  ; 'ø'               ;
+  [:!F#Pp [:comma :comma :p]]                                                  ; 'п'               ;
+  ; [:!F#Pq [:comma :comma :q]]                                                ; ''                ;
+  [:!F#Pr [:comma :comma :r]]                                                  ; 'Я'               ;
+  [:!F#Ps [:comma :comma :s]]                                                  ; 'Σ'               ;
+  ; [:!F#Pt [:comma :comma :t]]                                                ; ''                ;
+  [:!F#Pu [:comma :comma :u]]                                                  ; 'Θ'               ;
+  [:!F#Pv [:comma :comma :v]]                                                  ; 'Ω'               ;
+  [:!F#Pw [:comma :comma :w]]                                                  ; 'ʍ'               ;
+  [:!F#Px [:comma :comma :x]]                                                  ; '∇'               ;
+  [:!F#Py [:comma :comma :y]]                                                  ; 'Λ'               ;
+  [:!F#Pz [:comma :comma :z]]                                                  ; '∫'               ;
+  ; [:!F#Pkeypad_num_lock [:comma :comma :f20]]                                ; ''                ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; function
+{:des "Function Mode - symbols"
+ :rules
+ [;
+  [:!F#Phyphen [:hyphen :hyphen]]                                              ; '--'              ;
+  [:!F#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                              ; '++'              ;
+  [:!F#Popen_bracket [:open_bracket :open_bracket]]                            ; '[['              ;
+  [:!F#Pclose_bracket [:!Sopen_bracket :!Sopen_bracket]]                       ; '{{'              ;
+  [:!F#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                 ; '::'              ;
+  [:!F#Pquote [:!S9 :!S9]]                                                     ; '(('              ;
+  [:!F#Pbackslash [:!Sbackslash :!Sbackslash]]                                 ; '||'              ;
+  [:!F#Pcomma [:!Scomma :!Scomma]]                                             ; '<<'              ;
+  [:!F#Pperiod [:!Speriod :!Speriod]]                                          ; '>>'              ;
+  [:!F#Pslash [:!Sslash :!Sslash]]                                             ; '??'              ;
+
+  ; [:!F#Pdelete_or_backspace []]                                                                  ;
+  [:!F#Preturn_or_enter [:equal_sign :equal_sign]]                             ; '=='              ;
+  [:!F#Pright_shift [:!S1 :!S1]]                                               ; '!!'              ;
+  [:!F#Pright_option [:!S8 :!S8]]                                              ; '**'              ;
+  [:!F#Pright_command [:slash :slash]]                                         ; '//'              ;
+  ; [:!F#Pspacebar []]                                                                             ;
+
+  ; [:!F#Pleft_command []]                                                                         ;
+  ; [:!F#Pleft_option []]                                                                          ;
+  ; [:!F#Pleft_control []]                                                                         ;
+  ; [:!F#Pleft_shift []]                                                                           ;
+  ; [:!F#Pcaps_lock []]                                                                            ;
+  ; [:!F#Ptab []]                                                                                  ;
+  ; [:!F#Pnon_us_backslash []]                                                      NOT AVAILABLE  ;
+  ; [:!F#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; function - shift
+{:des "Function Mode - symbols"
+ :rules
+ [;
+  ; [:!F#PShyphen []]                                                                              ;
+  ; [:!F#PSequal_sign []]                                                                          ;
+  ; [:!F#PSopen_bracket []]                                                                        ;
+  ; [:!F#PSclose_bracket []]                                                                       ;
+  ; [:!F#PSsemicolon []]                                                                           ;
+  ; [:!F#PSquote []]                                                                               ;
+  ; [:!F#PSbackslash []]                                                                           ;
+  ; [:!F#PScomma []]                                                                               ;
+  ; [:!F#PSperiod []]                                                                              ;
+  ; [:!F#PSslash []]                                                                               ;
+
+  ; [:!F#PSdelete_or_backspace []]                                                                 ;
+  ; [:!F#PSreturn_or_enter []]                                                                     ;
+  ; [:!F#PSright_shift []]                                                                         ;
+  ; [:!F#PSright_option []]                                                                        ;
+  ; [:!F#PSright_command []]                                                                       ;
+  ; [:!F#PSspacebar []]                                                                            ;
+
+  ; [:!F#PSleft_command []]                                                                        ;
+  ; [:!F#PSleft_option []]                                                                         ;
+  ; [:!F#PSleft_control []]                                                                        ;
+  ; [:!F#PSleft_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!F#PScaps_lock []]                                                                           ;
+  ; [:!F#PStab []]                                                                                 ;
+  ; [:!F#PSnon_us_backslash []]                                                     NOT AVAILABLE  ;
+  ; [:!F#PSescape []]                                                                              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

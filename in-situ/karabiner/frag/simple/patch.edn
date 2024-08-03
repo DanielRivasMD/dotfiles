@@ -1,0 +1,40 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; additional
+{:des "Additional key - MacPro"
+ :rules
+ [:pro
+  [:#Pnon_us_backslash :fn nil {:alone [:0]}]                                  ;                   ;
+  [:!S#Pnon_us_backslash :!Sgrave_accent_and_tilde]                            ; '~'               ;
+  [:#P0 :grave_accent_and_tilde]                                               ; '`'               ;
+  [:!T#P0
+   [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'             ;
+  [:!O#Pnon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]      ; ' ~ '             ;
+  [:!T#Pnon_us_backslash
+   [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]                ; ' =~ '            ;
+  ]}
+
+{:des "Additional keys - Master"
+ :rules
+ [:master
+  [:#Pnon_us_backslash :fn nil {:alone [:0]}]                                  ;                   ;
+  [:#P0 :non_us_backslash]                                                     ; '`'               ;
+  [:!T#P0 [:non_us_backslash :non_us_backslash :non_us_backslash]]             ; '```'             ;
+  [:!O#Pnon_us_backslash [:spacebar :!Snon_us_backslash :spacebar]]            ; ' ~ '             ;
+  [:!T#Pnon_us_backslash [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]; ' =~ '            ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; simple
+{:des "Simple modifications"
+ :rules
+ [;
+  [:#Pkeypad_slash :display_brightness_decrement]                                                  ;
+  [:#Pkeypad_asterisk :display_brightness_increment]                                               ;
+  [:#Pkeypad_hyphen :mute]                                                                         ;
+  [:#Pkeypad_plus :volume_increment]                                                               ;
+  [:#Pkeypad_enter :volume_decrement]                                                              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,38 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; key modifiers
+{:des "Modifier key remappings"
+ :rules
+ [; quit
+  [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                                  ;
+  [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
+
+  ; caps & fn
+  [:##grave_accent_and_tilde :!OTleft_command nil {:alone :escape}]                                ;
+  [:##fn :right_control nil {:alone :escape}]                                                      ;
+
+  ; hypers
+  [:#Pq :!ETCright_shift nil {:alone :q}]                                                          ;
+  [:#Pz :!OTWright_shift nil {:alone :z}]                                                          ;
+
+  ; modifiers
+  [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                                               ;
+  ; [:#Pspacebar :spacebar nil {:alone [:spacebar]}]                                               ;
+  [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]                                  ;
+
+  ; lefts
+  [:#Ptab :!WQright_shift nil {:alone [:tab]}]                                                     ;
+  ; [:#Pleft_shift :left_shift nil {:alone [:]}]                                                   ;
+  [:#Pleft_control :left_control nil {:alone [:!Tf3]}]                                             ;
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ;
+  [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ;
+
+  ; rights
+  [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]                                               ;
+  ; [:#Pright_control :right_control nil {:alone [:]}]                                             ;
+  [:#Pright_option :right_option nil {:alone [:!Of3]}]                                             ;
+  [:#Pright_command :right_command nil {:alone [:!Cf3]}]                                           ;
+  ; [:#Preturn_or_enter :return_or_enter nil {:alone [:]}]                                         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

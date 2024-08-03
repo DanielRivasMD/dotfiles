@@ -1,0 +1,19 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Alacritty - Joker"
+ :rules
+ [;
+  [:!OTC#Pdelete_or_backspace :!SOTf11 [:term]]                                                    ;
+  [:!OTC#Preturn_or_enter :!SOTf12 [:term]]                                                        ;
+  [:!OTC#Pright_shift :!SOTf13 [:term]]                                                            ;
+  [:!OTC#Pright_option :!SOTf18 [:term]]                                                           ;
+  [:!OTC#Pright_command :!SOTf19 [:term]]                                                          ;
+  [:!OTC#Pspacebar :!SOTf20 [:term]]                                                               ;
+
+  [:!OTC#Pcomma :!STf18 [:term]]                                                                   ;
+  [:!OTC#Pperiod :!STf19 [:term]]                                                                  ;
+  [:!OTC#Pslash :!STf20 [:term]]                                                                   ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

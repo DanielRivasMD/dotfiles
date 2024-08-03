@@ -1,0 +1,83 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Editor
+{:des "Editor control - alphabet"
+ :rules
+ [;
+  [:!C#Pleft_arrow :!Ta [:editor]]                                             ; cmd-left          ;
+  ; [: :!Tb [:editor]]                                                                             ;
+  ; [: :!Tc [:editor]]                                                              DEFAULT        ;
+  ; [: :!Td [:editor]]                                                              DEFAULT        ;
+  [:!C#Pright_arrow :!Te [:editor]]                                            ; cmd-right         ;
+  ; [: :!Tf [:editor]]                                                                             ;
+  ; [:!EQR#Pcaps_lock :!Tg [:editor]]                                          ; del-caps          ;
+  ; [:!EQR#Ptab :!Th [:editor]]                                                ; del-tab           ;
+  ; [: :!Ti [:editor]]                                                              DEFAULT        ;
+  ; [:!EQR#Pright_command :!Tj [:editor]]                                      ; del-cmd           ;
+  ; [: :!Tk [:editor]]                                                              COLLISION      ;
+  ; [: :!Tl [:editor]]                                                              COLLISION      ;
+  ; [: :!Tm [:editor]]                                                              DEFAULT        ;
+  ; [:!EQR#Pright_option :!Tn [:editor]]                                       ; del-alt           ;
+  ; [:!C#Pup_arrow :!To [:editor]]                                             ; cmd-up            ;
+  ; [:!C#Pdown_arrow :!Tp [:editor]]                                           ; cmd-down          ;
+  ; [: :!Tq [:editor]]                                                              DEFAULT        ;
+  ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; del-ctrl          ;
+  ; [:!EQR#Pleft_option :!Ts [:editor]]                                        ; del-alt           ;
+  ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; del-cmd           ;
+  ; [: :!Tu [:editor]]                                                              COLLISION      ;
+  ; [: :!Tv [:editor]]                                                                             ;
+  ; [: :!Tw [:editor]]                                                              COLLISION      ;
+  ; [: :!Tx [:editor]]                                                                             ;
+  ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; del-space         ;
+  ; [: :!Tz [:editor]]                                                              DEFAULT        ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; GUI
+{:des "GUI - Sessions"
+ :rules
+ [;
+  ; [:escape :!EWright_shift :gui {:alone [:!CSe]}]                            ; file explorer     ;
+  [:#Pright_shift :right_shift :gui {:alone [:!Cj]}]                           ; terminal          ;
+
+  [:!TC#Pright_shift :!Cbackslash [:gui]]                                      ; split vertical    ;
+  [:!TC#Pright_option :!CSbackslash [:gui]]                                    ; split horizontal  ;
+  ; [:!OT#Pright_command :!TCSbackslash [:gui]]                                                    ;
+
+  ; [:!OC#Pleft_arrow :!TStab [:gui]]                                          ; left tab          ;
+  ; [:!OC#Pright_arrow :!Ttab [:gui]]                                          ; right tab         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; GUI
+{:des "GUI - Control remappings"
+ :rules
+ [;
+  [:!EQR#Ptab :!Th [:editor]]                                                  ; del-tab           ;
+  [:!EQR#Pcaps_lock :!Tg [:editor]]                                            ; del-caps          ;
+  [:!EQR#Pleft_shift :!Oc [:editor]]                                           ; del-shift         ;
+  ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; del-ctrl          ;
+  [:!EQR#Pleft_option :!Ts [:editor]]                                          ; del-alt           ;
+  ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; del-cmd           ;
+  [:!EQR#Pspacebar :!Ty [:editor]]                                             ; del-space         ;
+  [:!EQR#Pright_command :!Tj [:editor]]                                        ; del-cmd           ;
+  [:!EQR#Pright_option :!Tn [:editor]]                                         ; del-alt           ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; GUI
+{:des "GUI - Interactive delete"
+ :rules
+ [;
+  ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; del-shift         ;
+  [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; delete word fa    ;
+  ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; delete line fa    ;
+  [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; delete word bw    ;
+  [:!R#Pleft_command :!Cdelete_or_backspace [:gui]]                            ; delete line bw    ;
+  [:!R#Pleft_option :!Tl [:gui]]                                               ; shift-alt         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

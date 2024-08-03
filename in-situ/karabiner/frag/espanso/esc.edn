@@ -1,0 +1,105 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; ESC => EWR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
+{:des "Escape Mode - alphabet"
+ :rules
+ [;
+  [:!EWR#Pa [:semicolon :semicolon :a]]                                        ; 'α'               ;
+  [:!EWR#Pb [:semicolon :semicolon :b]]                                        ; 'β'               ;
+  ; [:!EWR#Pc [:semicolon :semicolon :c]]                                      ;                   ;
+  [:!EWR#Pd [:semicolon :semicolon :d]]                                        ; 'δ'               ;
+  [:!EWR#Pe [:semicolon :semicolon :e]]                                        ; 'ε'               ;
+  [:!EWR#Pf [:semicolon :semicolon :f]]                                        ; 'φ'               ;
+  [:!EWR#Pg [:semicolon :semicolon :g]]                                        ; 'γ'               ;
+  [:!EWR#Ph [:semicolon :semicolon :h]]                                        ; 'η'               ;
+  [:!EWR#Pi [:semicolon :semicolon :i]]                                        ; 'ι'               ;
+  [:!EWR#Pj [:semicolon :semicolon :j]]                                        ; 'ξ'               ;
+  [:!EWR#Pk [:semicolon :semicolon :k]]                                        ; 'κ'               ;
+  [:!EWR#Pl [:semicolon :semicolon :l]]                                        ; 'λ'               ;
+  [:!EWR#Pm [:semicolon :semicolon :m]]                                        ; 'μ'               ;
+  [:!EWR#Pn [:semicolon :semicolon :n]]                                        ; 'ν'               ;
+  [:!EWR#Po [:semicolon :semicolon :o]]                                        ; 'ο'               ;
+  [:!EWR#Pp [:semicolon :semicolon :p]]                                        ; 'π'               ;
+  ; [:!EWR#Pq [:semicolon :semicolon :q]]                                      ;                   ;
+  [:!EWR#Pr [:semicolon :semicolon :r]]                                        ; 'ρ'               ;
+  [:!EWR#Ps [:semicolon :semicolon :s]]                                        ; 'σ'               ;
+  [:!EWR#Pt [:semicolon :semicolon :t]]                                        ; 'τ'               ;
+  [:!EWR#Pu [:semicolon :semicolon :u]]                                        ; 'θ'               ;
+  [:!EWR#Pv [:semicolon :semicolon :v]]                                        ; 'ω'               ;
+  ; [:!EWR#Pw [:semicolon :semicolon :w]]                                      ;                   ;
+  [:!EWR#Px [:semicolon :semicolon :x]]                                        ; 'χ'               ;
+  [:!EWR#Py [:semicolon :semicolon :y]]                                        ; 'υ'               ;
+  [:!EWR#Pz [:semicolon :semicolon :z]]                                        ; 'ζ'               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
+{:des "Escape Mode - symbols"
+ :rules
+ [;
+  ; [:!EWR#Phyphen []]                                                                             ;
+  ; [:!EWR#Pequal_sign []]                                                                         ;
+  ; [:!EWR#Popen_bracket []]                                                                       ;
+  ; [:!EWR#Pclose_bracket []]                                                                      ;
+  [:!EWR#Psemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                      ; '::<'             ;
+  ; [:!EWR#Pquote []]                                                          ;                   ;
+  ; [:!EWR#Pbackslash []]                                                      ;                   ;
+  [:!EWR#Pcomma [:!Scomma :!Ssemicolon]]                                       ; '<:'              ;
+  [:!EWR#Pperiod [:!Speriod :!Ssemicolon]]                                     ; '>:'              ;
+  [:!EWR#Pslash [:!S3 :!S1 :slash]]                                            ; '#!/'             ;
+
+  ; [:!EWR#Pdelete_or_backspace []]                                                                ;
+  ; [:!EWR#Preturn_or_enter []]                                                                    ;
+  ; [:!EWR#Pright_shift []]                                                                        ;
+  ; [:!EWR#Pright_option []]                                                                       ;
+  ; [:!EWR#Pright_command []]                                                                      ;
+  ; [:!EWR#Pspacebar []]                                                                           ;
+
+  ; [:!EWR#Pleft_command []]                                                                       ;
+  ; [:!EWR#Pleft_option []]                                                                        ;
+  ; [:!EWR#Pleft_control []]                                                                       ;
+  ; [:!EWR#Pleft_shift []]                                                                         ;
+  ; [:!EWR#Pcaps_lock []]                                                                          ;
+  ; [:!EWR#Ptab []]                                                                                ;
+  ; [:!EWR#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWR#Pescape []]                                                              NOT AVAILABLE  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc - shift
+{:des "Escape Mode - symbols"
+ :rules
+ [;
+  ; [:!EWRS#Phyphen []]                                                                            ;
+  ; [:!EWRS#Pequal_sign []]                                                                        ;
+  ; [:!EWRS#Popen_bracket []]                                                                      ;
+  ; [:!EWRS#Pclose_bracket []]                                                                     ;
+  ; [:!EWRS#Psemicolon []]                                                                         ;
+  ; [:!EWRS#Pquote []]                                                                             ;
+  ; [:!EWRS#Pbackslash []]                                                                         ;
+  ; [:!EWRS#Pcomma []]                                                                             ;
+  ; [:!EWRS#Pperiod []]                                                                            ;
+  ; [:!EWRS#Pslash []]                                                                             ;
+
+  ; [:!EWRS#Pdelete_or_backspace []]                                                               ;
+  ; [:!EWRS#Preturn_or_enter []]                                                                   ;
+  ; [:!EWRS#Pright_shift []]                                                                       ;
+  ; [:!EWRS#Pright_option []]                                                                      ;
+  ; [:!EWRS#Pright_command []]                                                                     ;
+  ; [:!EWRS#Pspacebar []]                                                                          ;
+
+  ; [:!EWRS#Pleft_command []]                                                                      ;
+  ; [:!EWRS#Pleft_option []]                                                                       ;
+  ; [:!EWRS#Pleft_control []]                                                                      ;
+  ; [:!EWRS#Pleft_shift []]                                                         NOT AVAILABLE  ;
+  ; [:!EWRS#Pcaps_lock []]                                                                         ;
+  ; [:!EWRS#Ptab []]                                                                               ;
+  ; [:!EWRS#Pnon_us_backslash []]                                                                  ;
+  ; [:!EWRS#Pescape []]                                                             NOT AVAILABLE  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

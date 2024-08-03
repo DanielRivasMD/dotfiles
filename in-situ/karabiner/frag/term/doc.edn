@@ -1,0 +1,59 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Alacritty control - alphabet"
+ :rules
+ [;
+  ; [: :!Ta [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tb [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tc [:term]]                                                                DEFAULT        ;
+  ; [: :!Td [:term]]                                                                DEFAULT        ;
+  ; [: :!Te [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tf [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tg [:term]]                                                                COLLISION      ;
+  ; [: :!Th [:term]]                                                                COLLISION      ;
+  ; [: :!Ti [:term]]                                                                DEFAULT        ;
+  ; [: :!Tj [:term]]                                                                COLLISION      ;
+  ; [: :!Tk [:term]]                                                                COLLISION      ;
+  ; [: :!Tl [:term]]                                                                COLLISION      ;
+  ; [: :!Tm [:term]]                                                                DEFAULT        ;
+  ; [: :!Tn [:term]]                                                                COLLISION      ;
+  ; [: :!To [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tp [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tq [:term]]                                                                DEFAULT        ;
+  ; [: :!Tr [:term]]                                                                COLLISION      ;
+  ; [: :!Ts [:term]]                                                                COLLISION      ;
+  ; [: :!Tt [:term]]                                                                COLLISION      ;
+  ; [: :!Tu [:term]]                                                                COLLISION      ;
+  ; [: :!Tv [:term]]                                                                REDUNDANT      ;
+  ; [: :!Tw [:term]]                                                                COLLISION      ;
+  ; [: :!Tx [:term]]                                                                REDUNDANT      ;
+  ; [: :!Ty [:term]]                                                                COLLISION      ;
+  ; [: :!Tz [:term]]                                                                DEFAULT        ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Alacritty control - alphabet"
+ :rules
+ [;
+  ; [: :f13 [:term]]                                                                               ;
+  ; [: :f14 [:term]]                                                                               ;
+
+  ; [:!OTf13 [:term]]                                                                              ;
+  ; [:!OTf14 [:term]]                                                                              ;
+  ; [:!OTf18 [:term]]                                                                              ;
+  ; [:!OTf19 [:term]]                                                                              ;
+  ; [:!OTf20 [:term]]                                                                              ;
+
+  ; [:!SOf11 [:term]]                                                                              ;
+  ; [:!SOf12 [:term]]                                                                              ;
+  ; [:!SOf13 [:term]]                                                                              ;
+  ; [:!SOf18 [:term]]                                                                              ;
+  ; [:!SOf19 [:term]]                                                                              ;
+  ; [:!SOf20 [:term]]                                                                              ;
+  ; [:f12 [:term]]                                                                                 ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

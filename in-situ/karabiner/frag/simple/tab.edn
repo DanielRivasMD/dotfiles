@@ -1,0 +1,106 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; TAB => WQR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
+{:des "Tab Mode - alphabet"
+ :rules
+ [;
+  ; [:!WQR#Pa [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Pb [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Pc [:!S2 :c :h :a :i :n :spacebar]]                                   ; '@chain '         ;
+  [:!WQR#Pd [:!S2 :d :e :b :u :g :spacebar]]                                   ; '@debug '         ;
+  [:!WQR#Pe [:!S2 :e :d :i :t :spacebar]]                                      ; '@edit '          ;
+  ; [:!WQR#Pf [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Pg [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Ph [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Pi [:!S2 :i :n :f :o :spacebar]]                                      ; '@info '          ;
+  ; [:!WQR#Pj [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Pk [:!S2 :c :l :i :c :k :period]]                                     ; '@click.'         ;
+  [:!WQR#Pl [:!S2 :l :e :s :s :spacebar]]                                      ; '@less '          ;
+  ; [:!WQR#Pm [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Pn [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Po [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Pp [:!S2 :p :i :p :e :spacebar]]                                      ; '@pipe '          ;
+  ; [:!WQR#Pq [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Pr [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Ps [:!S2 :s :h :o :w :spacebar]]                                      ; '@show '          ;
+  [:!WQR#Pt [:!S2 :t :i :m :e :spacebar]]                                      ; '@time '          ;
+  ; [:!WQR#Pu [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Pv [:!S2 :e :v :a :l :spacebar]]                                      ; '@eval '          ;
+  [:!WQR#Pw [:!S2 :w :a :r :n :spacebar]]                                      ; '@warn '          ;
+  ; [:!WQR#Px [:!S2 :spacebar]]                                                ;                   ;
+  ; [:!WQR#Py [:!S2 :spacebar]]                                                ;                   ;
+  [:!WQR#Pz [:!S2 :w :h :i :c :h :spacebar]]                                   ; '@which '         ;
+  ; [:!WQR#Pkeypad_num_lock [:!S2 :spacebar]]                                  ;                   ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
+{:des "Tab Mode - symbols"
+ :rules
+ [;
+  ; [:!WQR#Phyphen []]                                                         ;                   ;
+  ; [:!WQR#Pequal_sign []]                                                     ;                   ;
+  [:!WQR#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]] ; ' %<+% '          ;
+  [:!WQR#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]];' %+>% '          ;
+  [:!WQR#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                      ; ' %$% '           ;
+  [:!WQR#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                ; ' %T>% '          ;
+  [:!WQR#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]        ; ' %<>% '          ;
+  [:!WQR#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                      ; ' %<% '           ;
+  [:!WQR#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                    ; ' %>% '           ;
+  [:!WQR#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                ; ' %!>% '          ;
+
+  ; [:!WQR#Pdelete_or_backspace []]                                            ;                   ;
+  ; [:!WQR#Preturn_or_enter []]                                                ;                   ;
+  ; [:!WQR#Pright_shift []]                                                    ;                   ;
+  ; [:!WQR#Pright_option []]                                                   ;                   ;
+  ; [:!WQR#Pright_command []]                                                  ;                   ;
+  ; [:!WQR#Pspacebar []]                                                       ;                   ;
+
+  ; [:!WQR#Pleft_command []]                                                                       ;
+  ; [:!WQR#Pleft_option []]                                                                        ;
+  ; [:!WQR#Pleft_control []]                                                                       ;
+  ; [:!WQR#Pleft_shift []]                                                                         ;
+  ; [:!WQR#Pcaps_lock []]                                                                          ;
+  ; [:!WQR#Ptab []]                                                                 NOT AVAILABLE  ;
+  ; [:!WQR#Pnon_us_backslash []]                                                                   ;
+  ; [:!WQR#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab - shift
+{:des "Tab Mode - symbols"
+ :rules
+ [;
+  ; [:!WQRS#Phyphen []]                                                        ;                   ;
+  ; [:!WQRS#Pequal_sign []]                                                    ;                   ;
+  ; [:!WQRS#Popen_bracket []]                                                  ;                   ;
+  ; [:!WQRS#Pclose_bracket []]                                                 ;                   ;
+  ; [:!WQRS#Psemicolon []]                                                     ;                   ;
+  ; [:!WQRS#Pquote []]                                                         ;                   ;
+  ; [:!WQRS#Pbackslash []]                                                     ;                   ;
+  ; [:!WQRS#Pcomma []]                                                         ;                   ;
+  ; [:!WQRS#Pperiod []]                                                        ;                   ;
+  ; [:!WQRS#Pslash []]                                                         ;                   ;
+
+  ; [:!WQRS#Pdelete_or_backspace []]                                           ;                   ;
+  ; [:!WQRS#Preturn_or_enter []]                                               ;                   ;
+  ; [:!WQRS#Pright_shift []]                                                   ;                   ;
+  ; [:!WQRS#Pright_option []]                                                  ;                   ;
+  ; [:!WQRS#Pright_command []]                                                 ;                   ;
+  ; [:!WQRS#Pspacebar []]                                                      ;                   ;
+
+  ; [:!WQRS#Pleft_command []]                                                                      ;
+  ; [:!WQRS#Pleft_option []]                                                                       ;
+  ; [:!WQRS#Pleft_control []]                                                                      ;
+  ; [:!WQRS#Pleft_shift []]                                                         NOT AVAILABLE  ;
+  ; [:!WQRS#Pcaps_lock []]                                                                         ;
+  ; [:!WQRS#Ptab []]                                                                NOT AVAILABLE  ;
+  ; [:!WQRS#Pnon_us_backslash []]                                                                  ;
+  ; [:!WQRS#Pescape []]                                                                            ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
