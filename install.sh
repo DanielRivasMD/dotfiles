@@ -40,9 +40,4 @@ source "${installDir}/R.sh"
 source "${installDir}/rust.sh"
 
 
-
-# brew install fzf
-# brew install gh
-# brew install hub
-
 ####################################################################################################
