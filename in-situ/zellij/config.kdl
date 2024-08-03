@@ -18,7 +18,7 @@ keybinds clear-defaults=true {
         bind "Alt h" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }
         // bind "Alt i" {  }                                                                        DOC: accent
         bind "Alt j" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
-        bind "F2" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "Alt k" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "Alt l" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "Alt m" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }
         // bind "Alt n" {  }                                                                        DOC: accent
