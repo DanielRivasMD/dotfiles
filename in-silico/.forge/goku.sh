@@ -56,7 +56,6 @@ _forge() {
     "${fsimple}/space.edn" \
     "${fsimple}/super.edn" \
     "${fsimple}/tab.edn" \
-    "${fsimple}/zero.edn" \
     "${fterm}/doc.edn" \
     "${fzellij}/ABC-fn.edn" \
     "${fzellij}/mod-ABC.edn" \
