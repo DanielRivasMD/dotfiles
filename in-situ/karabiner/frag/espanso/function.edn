@@ -50,7 +50,7 @@
   [:!F#Pbackslash [:!Sbackslash :!Sbackslash]]                                 ; '||'              ;
   [:!F#Pcomma [:!Scomma :!Scomma]]                                             ; '<<'              ;
   [:!F#Pperiod [:!Speriod :!Speriod]]                                          ; '>>'              ;
-  [:!F#Pslash [:!Sslash :!Sslash]]                                             ; '??'              ;
+  [:!F#Pslash [:!S5 :!S5]]                                                     ; '%%'              ;
 
   ; [:!F#Pdelete_or_backspace []]                                                                  ;
   [:!F#Preturn_or_enter [:equal_sign :equal_sign]]                             ; '=='              ;

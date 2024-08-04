@@ -45,19 +45,17 @@
   [:!W#Pclose_bracket [:close_bracket :spacebar]]                              ; '] '              ;
   [:!W#Psemicolon [:semicolon :spacebar]]                                      ; '; '              ;
   ; [:!W#Pquote []]                                                            ;                   ;
-  [:!W#Pbackslash [:spacebar :hyphen]]                                         ; ' -'              ;
+  ; [:!W#Pbackslash []]                                                        ;                   ;
   [:!W#Pcomma [:comma :spacebar]]                                              ; ', '              ;
-  [:!W#Pperiod [:period :period]]                                              ; '..'              ;
+  ; [:!W#Pperiod []]                                                           ;                   ;
   [:!W#Pslash [:slash :slash :slash :spacebar]]                                ; '/// '            ;
 
-  ; [:!W#Pdelete_or_backspace []]                                                                  ;
-  ; [:!W#Preturn_or_enter []]                                                                      ;
-  ; [:!W#Pright_shift []]                                                                          ;
+  ; [:!W#Pdelete_or_backspace []]                                              ;                   ;
+  ; [:!W#Preturn_or_enter []]                                                  ;                   ;
+  [:!W#Pright_shift [:spacebar :hyphen]]                                       ; ' -'              ;
   [:!W#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                   ; ' *= '            ;
   [:!W#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
-  ; [:!W#Pright_option []]                                                                         ;
-  ; [:!W#Pright_command []]                                                                        ;
-  ; [:!W#Pspacebar []]                                                                             ;
+  [:!W#Pspacebar [:period :period]]                                            ; '..'              ;
 
   ; [:!W#Pleft_command []]                                                                         ;
   ; [:!W#Pleft_option []]                                                                          ;
@@ -116,19 +114,17 @@
   [:!SW#Pclose_bracket [:!Sclose_bracket :spacebar]]                           ; '} '              ;
   [:!SW#Psemicolon [:!S#Psemicolon :spacebar]]                                 ; ': '              ;
   ; [:!SW#Pquote []]                                                           ;                   ;
-  [:!SW#Pbackslash [:spacebar :hyphen :hyphen]]                                ; ' --'             ;
+  ; [:!SW#Pbackslash []]                                                       ;                   ;
   [:!SW#Pcomma [:period :spacebar]]                                            ; '. '              ;
-  [:!SW#Pperiod [:period :period :period]]                                     ; '...'             ;
+  ; [:!SW#Pperiod []]                                                          ;                   ;
   [:!SW#Pslash [:slash :slash :!S1 :spacebar]]                                 ; '//! '            ;
 
-  ; [:!SW#Pdelete_or_backspace []]                                                                 ;
-  ; [:!SW#Preturn_or_enter []]                                                                     ;
-  ; [:!SW#Pright_shift []]                                                                         ;
+  ; [:!SW#Pdelete_or_backspace []]                                             ;                   ;
+  ; [:!SW#Preturn_or_enter []]                                                 ;                   ;
+  [:!SW#Pright_shift [:spacebar :hyphen :hyphen]]                              ; ' --'             ;
   [:!SW#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]          ; ' .*= '           ;
   [:!SW#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '           ;
-  ; [:!SW#Pright_option []]                                                                        ;
-  ; [:!SW#Pright_command []]                                                                       ;
-  ; [:!SW#Pspacebar []]                                                                            ;
+  [:!SW#Pspacebar [:period :period :period]]                                   ; '...'             ;
   
   ; [:!SW#Pleft_command []]                                                                        ;
   ; [:!SW#Pleft_option []]                                                                         ;
