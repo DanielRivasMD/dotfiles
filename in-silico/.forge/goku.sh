@@ -45,7 +45,6 @@ _forge() {
     "${fespanso}/function.edn" \
     "${fjoker}/joker-fn.edn" \
     "${fshift}/rshift-ctlABC.edn" \
-    "${fsimple}/fn.edn" \
     "${fsimple}/lctrl.edn" \
     "${fsimple}/lopt.edn" \
     "${fsimple}/lshift.edn" \
@@ -57,7 +56,6 @@ _forge() {
     "${fsimple}/space.edn" \
     "${fsimple}/super.edn" \
     "${fsimple}/tab.edn" \
-    "${fsimple}/z-layer.edn" \
     "${fsimple}/zero.edn" \
     "${fterm}/doc.edn" \
     "${fzellij}/ABC-fn.edn" \
