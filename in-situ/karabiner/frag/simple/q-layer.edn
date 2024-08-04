@@ -1,38 +1,38 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Q => RETC
+; Q => SOTC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; hyper Q
 {:des "Hyper Q - alphabet"
  :rules
  [;
-  ; [:!RETC#Pa []]                                                                                 ;
-  ; [:!RETC#Pb []]                                                                                 ;
-  ; [:!RETC#Pc []]                                                                                 ;
-  ; [:!RETC#Pd []]                                                                                 ;
-  ; [:!RETC#Pe []]                                                                                 ;
-  ; [:!RETC#Pf []]                                                                                 ;
-  ; [:!RETC#Pg []]                                                                                 ;
-  ; [:!RETC#Ph []]                                                                                 ;
-  ; [:!RETC#Pi []]                                                                                 ;
-  ; [:!RETC#Pj []]                                                                                 ;
-  ; [:!RETC#Pk []]                                                                                 ;
-  ; [:!RETC#Pl []]                                                                                 ;
-  ; [:!RETC#Pm []]                                                                                 ;
-  ; [:!RETC#Pn []]                                                                                 ;
-  ; [:!RETC#Po []]                                                                                 ;
-  ; [:!RETC#Pp []]                                                                                 ;
-  ; [:!RETC#Pq []]                                                                                 ;
-  ; [:!RETC#Pr []]                                                                                 ;
-  ; [:!RETC#Ps []]                                                                                 ;
-  ; [:!RETC#Pt []]                                                                                 ;
-  ; [:!RETC#Pu []]                                                                                 ;
-  ; [:!RETC#Pv []]                                                                                 ;
-  ; [:!RETC#Pw []]                                                                                 ;
-  ; [:!RETC#Px []]                                                                                 ;
-  ; [:!RETC#Py []]                                                                                 ;
-  ; [:!RETC#Pz []]                                                                                 ;
-  ; [:!RETC#Pkeypad_num_lock []]                                                                   ;
+  ; [:!SOTC#Pa []]                                                                                 ;
+  ; [:!SOTC#Pb []]                                                                                 ;
+  ; [:!SOTC#Pc []]                                                                                 ;
+  ; [:!SOTC#Pd []]                                                                                 ;
+  ; [:!SOTC#Pe []]                                                                                 ;
+  ; [:!SOTC#Pf []]                                                                                 ;
+  ; [:!SOTC#Pg []]                                                                                 ;
+  ; [:!SOTC#Ph []]                                                                                 ;
+  ; [:!SOTC#Pi []]                                                                                 ;
+  ; [:!SOTC#Pj []]                                                                                 ;
+  ; [:!SOTC#Pk []]                                                                                 ;
+  ; [:!SOTC#Pl []]                                                                                 ;
+  ; [:!SOTC#Pm []]                                                                                 ;
+  ; [:!SOTC#Pn []]                                                                                 ;
+  ; [:!SOTC#Po []]                                                                                 ;
+  ; [:!SOTC#Pp []]                                                                                 ;
+  ; [:!SOTC#Pq []]                                                                  NOT AVAILABLE  ;
+  ; [:!SOTC#Pr []]                                                                                 ;
+  ; [:!SOTC#Ps []]                                                                                 ;
+  ; [:!SOTC#Pt []]                                                                                 ;
+  ; [:!SOTC#Pu []]                                                                                 ;
+  ; [:!SOTC#Pv []]                                                                                 ;
+  ; [:!SOTC#Pw []]                                                                                 ;
+  ; [:!SOTC#Px []]                                                                                 ;
+  ; [:!SOTC#Py []]                                                                                 ;
+  ; [:!SOTC#Pz []]                                                                                 ;
+  ; [:!SOTC#Pright_control []]                                                                     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -41,32 +41,32 @@
 {:des "Hyper Q - symbols"
  :rules
  [;
-  ; [:!RETC#Phyphen []]                                                                            ;
-  ; [:!RETC#Pequal_sign []]                                                                        ;
-  ; [:!RETC#Popen_bracket []]                                                                      ;
-  ; [:!RETC#Pclose_bracket []]                                                                     ;
-  [:!RETC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
-  [:!RETC#Pquote [:launch "Microsoft Excel"]]                                                      ;
-  [:!RETC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
-  ; [:!RETC#Pcomma []]                                                              COLLISION      ;
-  ; [:!RETC#Pperiod []]                                                             COLLISION      ;
-  [:!RETC#Pslash [:launch "Canary Mail"]]                                                          ;
+  ; [:!SOTC#Phyphen []]                                                                            ;
+  ; [:!SOTC#Pequal_sign []]                                                                        ;
+  ; [:!SOTC#Popen_bracket []]                                                                      ;
+  ; [:!SOTC#Pclose_bracket []]                                                                     ;
+  [:!SOTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
+  [:!SOTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
+  [:!SOTC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
+  ; [:!SOTC#Pcomma []]                                                              COLLISION      ;
+  ; [:!SOTC#Pperiod []]                                                             COLLISION      ;
+  [:!SOTC#Pslash [:launch "Canary Mail"]]                                                          ;
 
-  [:!RETC#Pdelete_or_backspace [:launch "Lapce"]]                                                  ;
-  [:!RETC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
-  [:!RETC#Pright_shift [:launch "Zed"]]                                                            ;
-  [:!RETC#Pright_option [:launch "Chrome"]]                                                        ;
-  [:!RETC#Pright_command [:launch "Firefox"]]                                                      ;
-  ; [:!RETC#Pspacebar []]                                                           COLLISION      ;
+  [:!SOTC#Pdelete_or_backspace [:launch "Lapce"]]                                                  ;
+  [:!SOTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
+  [:!SOTC#Pright_shift [:launch "Zed"]]                                                            ;
+  [:!SOTC#Pright_option [:launch "Chrome"]]                                                        ;
+  [:!SOTC#Pright_command [:launch "Firefox"]]                                                      ;
+  ; [:!SOTC#Pspacebar []]                                                           COLLISION      ;
 
-  ; [:!RETC#Pleft_command []]                                                                      ;
-  ; [:!RETC#Pleft_option []]                                                                       ;
-  ; [:!RETC#Pleft_control []]                                                                      ;
-  ; [:!RETC#Pleft_shift []]                                                                        ;
-  ; [:!RETC#Pcaps_lock []]                                                           NOT AVAILABLE ;
-  ; [:!RETC#Ptab []]                                                                               ;
-  ; [:!RETC#Pnon_us_backslash []]                                                                  ;
-  ; [:!RETC#Pescape []]                                                                            ;
+  ; [:!SOTC#Pleft_command []]                                                                      ;
+  ; [:!SOTC#Pleft_option []]                                                                       ;
+  ; [:!SOTC#Pleft_control []]                                                                      ;
+  ; [:!SOTC#Pleft_shift []]                                                                        ;
+  ; [:!SOTC#Pcaps_lock []]                                                                         ;
+  ; [:!SOTC#Ptab []]                                                                               ;
+  ; [:!SOTC#Pnon_us_backslash []]                                                                  ;
+  ; [:!SOTC#Pescape []]                                                                            ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
