@@ -44,8 +44,8 @@
   [:!W#Popen_bracket [:!S3 :open_bracket]]                                     ; '#['              ;
   [:!W#Pclose_bracket [:close_bracket :spacebar]]                              ; '] '              ;
   [:!W#Psemicolon [:semicolon :spacebar]]                                      ; '; '              ;
-  ; [:!W#Pquote []]                                                                                ;
-  ; [:!W#Pbackslash []]                                                                            ;
+  ; [:!W#Pquote []]                                                            ;                   ;
+  [:!W#Pbackslash [:spacebar :hyphen]]                                         ; ' -'              ;
   [:!W#Pcomma [:comma :spacebar]]                                              ; ', '              ;
   [:!W#Pperiod [:period :period]]                                              ; '..'              ;
   [:!W#Pslash [:slash :slash :slash :spacebar]]                                ; '/// '            ;
@@ -116,7 +116,7 @@
   [:!SW#Pclose_bracket [:!Sclose_bracket :spacebar]]                           ; '} '              ;
   [:!SW#Psemicolon [:!S#Psemicolon :spacebar]]                                 ; ': '              ;
   ; [:!SW#Pquote []]                                                           ;                   ;
-  ; [:!SW#Pbackslash []]                                                       ;                   ;
+  [:!SW#Pbackslash [:spacebar :hyphen :hyphen]]                                ; ' --'             ;
   [:!SW#Pcomma [:period :spacebar]]                                            ; '. '              ;
   [:!SW#Pperiod [:period :period :period]]                                     ; '...'             ;
   [:!SW#Pslash [:slash :slash :!S1 :spacebar]]                                 ; '//! '            ;
