@@ -1,9 +1,54 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Alacritty
-{:des "Alacritty - Joker"
+; joker
+{:des "Joker Mode - alphabet"
  :rules
  [;
+  ; [:!OTC#Pa []]                                                                                  ;
+  ; [:!OTC#Pb []]                                                                                  ;
+  ; [:!OTC#Pc []]                                                                                  ;
+  ; [:!OTC#Pd []]                                                                                  ;
+  ; [:!OTC#Pe []]                                                                                  ;
+  ; [:!OTC#Pf []]                                                                                  ;
+  ; [:!OTC#Pg []]                                                                                  ;
+  ; [:!OTC#Ph []]                                                                                  ;
+  ; [:!OTC#Pi []]                                                                                  ;
+  ; [:!OTC#Pj []]                                                                                  ;
+  ; [:!OTC#Pk []]                                                                                  ;
+  ; [:!OTC#Pl []]                                                                                  ;
+  ; [:!OTC#Pm []]                                                                                  ;
+  ; [:!OTC#Pn []]                                                                                  ;
+  ; [:!OTC#Po []]                                                                                  ;
+  ; [:!OTC#Pp []]                                                                                  ;
+  ; [:!OTC#Pq []]                                                                                  ;
+  ; [:!OTC#Pr []]                                                                                  ;
+  ; [:!OTC#Ps []]                                                                                  ;
+  ; [:!OTC#Pt []]                                                                                  ;
+  ; [:!OTC#Pu []]                                                                                  ;
+  ; [:!OTC#Pv []]                                                                                  ;
+  ; [:!OTC#Pw []]                                                                                  ;
+  ; [:!OTC#Px []]                                                                                  ;
+  ; [:!OTC#Py []]                                                                                  ;
+  ; [:!OTC#Pz []]                                                                                  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  ; [:!OTC#Phyphen []]                                                                             ;
+  ; [:!OTC#Pequal_sign []]                                                                         ;
+  ; [:!OTC#Popen_bracket []]                                                                       ;
+  ; [:!OTC#Pclose_bracket []]                                                                      ;
+  ; [:!OTC#Psemicolon []]                                                                          ;
+  ; [:!OTC#Pquote []]                                                                              ;
+  ; [:!OTC#Pbackslash []]                                                                          ;
+  [:!OTC#Pcomma :!STf18 [:term]]                                                                   ;
+  [:!OTC#Pperiod :!STf19 [:term]]                                                                  ;
+  [:!OTC#Pslash :!STf20 [:term]]                                                                   ;
+
   [:!OTC#Pdelete_or_backspace :!SOTf11 [:term]]                                                    ;
   [:!OTC#Preturn_or_enter :!SOTf12 [:term]]                                                        ;
   [:!OTC#Pright_shift :!SOTf13 [:term]]                                                            ;
@@ -11,9 +56,14 @@
   [:!OTC#Pright_command :!SOTf19 [:term]]                                                          ;
   [:!OTC#Pspacebar :!SOTf20 [:term]]                                                               ;
 
-  [:!OTC#Pcomma :!STf18 [:term]]                                                                   ;
-  [:!OTC#Pperiod :!STf19 [:term]]                                                                  ;
-  [:!OTC#Pslash :!STf20 [:term]]                                                                   ;
+  ; [:!OTC#Pleft_command []]                                                                       ;
+  ; [:!OTC#Pleft_option []]                                                                        ;
+  ; [:!OTC#Pleft_control []]                                                                       ;
+  ; [:!OTC#Pleft_shift []]                                                                         ;
+  ; [:!OTC#Pcaps_lock []]                                                           NOT AVAILABLE  ;
+  ; [:!OTC#Ptab []]                                                                                ;
+  ; [:!OTC#Pnon_us_backslash []]                                                                   ;
+  ; [:!OTC#Pescape []]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
