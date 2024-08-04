@@ -10,9 +10,8 @@
   ; caps
   [:##caps_lock :!OTleft_command nil {:alone :escape}]                                             ;
 
-  ; hypers
-  [:#Pq :!ETCright_shift nil {:alone :q}]                                                          ;
-  [:#Pz :!OTWright_shift nil {:alone :z}]                                                          ;
+  ; hyper
+  [:#Pq :!OTCleft_shift nil {:alone :q}]                                                          ;
 
   ; modifiers
   [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                                               ;
