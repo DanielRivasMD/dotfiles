@@ -54,7 +54,6 @@ _forge() {
     "${fsimple}/rctrl.edn" \
     "${fsimple}/ropt.edn" \
     "${fsimple}/space.edn" \
-    "${fsimple}/super.edn" \
     "${fsimple}/tab.edn" \
     "${fterm}/doc.edn" \
     "${fzellij}/ABC-fn.edn" \
