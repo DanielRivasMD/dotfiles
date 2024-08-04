@@ -32,7 +32,6 @@ _forge() {
     "${karabiner}/.main.tmp" \
     "${fapps}/browser.edn" \
     "${fapps}/editor.edn" \
-    "${fapps}/keys.edn" \
     "${fapps}/lapce.edn" \
     "${fapps}/mail.edn" \
     "${fapps}/mouse.edn" \
@@ -63,6 +62,7 @@ _forge() {
     "${fterm}/doc.edn" \
     "${fzellij}/ABC-fn.edn" \
     "${fzellij}/mod-ABC.edn" \
+    "${fkeys}/keys.edn" \
     "${karabiner}/.eof.tmp" \
     > "${karabiner}/karabiner.edn"
 

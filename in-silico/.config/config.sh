@@ -54,6 +54,7 @@ export fshift="${frag}/shift"
 export fsimple="${frag}/simple"
 export fterm="${frag}/term"
 export fzellij="${frag}/zellij"
+export fkeys="${frag}/keys"
 
 # config dirs
 export gitui="${in_situ}/gitui"
