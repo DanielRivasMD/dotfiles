@@ -4,33 +4,33 @@
 {:des "Control Mode - alphabet"
  :rules
  [;
-  ; [:#Pa [:term]]                                                                                 ;
-  ; [:#Pb [:term]]                                                                                 ;
-  ; [:#Pc [:term]]                                                                                 ;
-  ; [:#Pd [:term]]                                                                                 ;
-  ; [:#Pe [:term]]                                                                                 ;
-  ; [:#Pf [:term]]                                                                                 ;
-  ; [:#Pg [:term]]                                                                                 ;
-  ; [:#Ph [:term]]                                                                                 ;
-  ; [:#Pi [:term]]                                                                                 ;
-  ; [:#Pj [:term]]                                                                                 ;
-  ; [:#Pk [:term]]                                                                                 ;
-  ; [:#Pl [:term]]                                                                                 ;
-  ; [:#Pm [:term]]                                                                                 ;
-  ; [:#Pn [:term]]                                                                                 ;
-  ; [:#Po [:term]]                                                                                 ;
-  ; [:#Pp [:term]]                                                                                 ;
-  ; [:#Pq [:term]]                                                                                 ;
-  ; [:#Pr [:term]]                                                                                 ;
-  ; [:#Ps [:term]]                                                                                 ;
-  ; [:#Pt [:term]]                                                                                 ;
-  ; [:#Pu [:term]]                                                                                 ;
-  ; [:#Pv [:term]]                                                                                 ;
-  ; [:#Pw [:term]]                                                                                 ;
-  ; [:#Px [:term]]                                                                                 ;
-  ; [:#Py [:term]]                                                                                 ;
-  ; [:#Pz [:term]]                                                                                 ;
-  ; [:#Pkeypad_num_lock [:term]]                                                                   ;
+  ; [:!W#Pa []]                                                                ;                   ;
+  ; [:!W#Pb []]                                                                ;                   ;
+  ; [:!W#Pc []]                                                                ;                   ;
+  ; [:!W#Pd []]                                                                ;                   ;
+  [:!W#Pe [:e :n :u :m]]                                                       ; 'enum'            ;
+  ; [:!W#Pf []]                                                                ;                   ;
+  ; [:!W#Pg []]                                                                ;                   ;
+  ; [:!W#Ph []]                                                                ;                   ;
+  ; [:!W#Pi []]                                                                ;                   ;
+  ; [:!W#Pj []]                                                                ;                   ;
+  ; [:!W#Pk []]                                                                ;                   ;
+  ; [:!W#Pl []]                                                                ;                   ;
+  [:!W#Pm [:m :u :t :a :b :l :e]]                                              ; 'mutable'         ;
+  ; [:!W#Pn []]                                                                ;                   ;
+  ; [:!W#Po []]                                                                ;                   ;
+  ; [:!W#Pp []]                                                                ;                   ;
+  ; [:!W#Pq []]                                                                ;                   ;
+  ; [:!W#Pr []]                                                                ;                   ;
+  [:!W#Ps [:s :t :r :u :c :t]]                                                 ; 'struct'          ;
+  [:!W#Pt [:t :y :p :e]]                                                       ;                   ;
+  ; [:!W#Pu []]                                                                ;                   ;
+  ; [:!W#Pv []]                                                                ;                   ;
+  [:!W#Pw [:w :h :e :r :e :spacebar]]                                          ; 'where '          ;
+  ; [:!W#Px []]                                                                ;                   ;
+  ; [:!W#Py []]                                                                ;                   ;
+  [:!W#Pz [:w :h :i :c :h :spacebar]]                                          ; 'which '          ;
+  ; [:!W#Pright_control []]                                                         NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,32 +39,105 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:#Phyphen []]                                                                                 ;
-  ; [:#Pequal_sign []]                                                                             ;
-  ; [:#Popen_bracket []]                                                                           ;
-  ; [:#Pclose_bracket []]                                                                          ;
-  ; [:#Psemicolon []]                                                                              ;
-  ; [:#Pquote []]                                                                                  ;
-  ; [:#Pbackslash []]                                                                              ;
-  ; [:#Pcomma []]                                                                                  ;
-  ; [:#Pperiod []]                                                                                 ;
-  ; [:#Pslash []]                                                                                  ;
+  [:!W#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                      ; ' -= '            ;
+  [:!W#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]            ; ' += '            ;
+  [:!W#Popen_bracket [:!S3 :open_bracket]]                                     ; '#['              ;
+  [:!W#Pclose_bracket [:close_bracket :spacebar]]                              ; '] '              ;
+  [:!W#Psemicolon [:semicolon :spacebar]]                                      ; '; '              ;
+  ; [:!W#Pquote []]                                                                                ;
+  ; [:!W#Pbackslash []]                                                                            ;
+  [:!W#Pcomma [:comma :spacebar]]                                              ; ', '              ;
+  [:!W#Pperiod [:period :period]]                                              ; '..'              ;
+  [:!W#Pslash [:slash :slash :slash :spacebar]]                                ; '/// '            ;
 
-  ; [:#Pdelete_or_backspace []]                                                                    ;
-  ; [:#Preturn_or_enter []]                                                                        ;
-  ; [:#Pright_shift []]                                                                            ;
-  ; [:#Pright_option []]                                                                           ;
-  ; [:#Pright_command []]                                                                          ;
-  ; [:#Pspacebar []]                                                                               ;
+  ; [:!W#Pdelete_or_backspace []]                                                                  ;
+  ; [:!W#Preturn_or_enter []]                                                                      ;
+  ; [:!W#Pright_shift []]                                                                          ;
+  [:!W#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                   ; ' *= '            ;
+  [:!W#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
+  ; [:!W#Pright_option []]                                                                         ;
+  ; [:!W#Pright_command []]                                                                        ;
+  ; [:!W#Pspacebar []]                                                                             ;
 
-  ; [:#Pleft_command []]                                                                           ;
-  ; [:#Pleft_option []]                                                                            ;
-  ; [:#Pleft_control []]                                                                           ;
-  ; [:#Pleft_shift []]                                                                             ;
-  ; [:#Pcaps_lock []]                                                                              ;
-  ; [:#Ptab []]                                                                                    ;
-  ; [:#Pnon_us_backslash []]                                                                       ;
-  ; [:#Pescape []]                                                                                 ;
+  ; [:!W#Pleft_command []]                                                                         ;
+  ; [:!W#Pleft_option []]                                                                          ;
+  ; [:!W#Pleft_control []]                                                          NOT AVAILABLE  ;
+  ; [:!W#Pleft_shift []]                                                                           ;
+  ; [:!W#Pcaps_lock []]                                                                            ;
+  ; [:!W#Ptab []]                                                                                  ;
+  ; [:!W#Pnon_us_backslash []]                                                                     ;
+  ; [:!W#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
+{:des "Control Mode - alphabet"
+ :rules
+ [;
+  ; [:!SW#Pa []]                                                               ;                   ;
+  [:!SW#Pb [:!S#Pb :!Su :!Sg :!Ssemicolon :spacebar]]                          ; 'BUG:'            ;
+  ; [:!SW#Pc []]                                                               ;                   ;
+  [:!SW#Pd [:!S#Pd :!So :!Sc :!Ssemicolon :spacebar]]                          ; 'DOC:'            ;
+  ; [:!SW#Pe []]                                                               ;                   ;
+  [:!SW#Pf [:!S#Pf :!Si :!Sx :!Ssemicolon :spacebar]]                          ; 'FIX:'            ;
+  ; [:!SW#Pg []]                                                               ;                   ;
+  ; [:!SW#Ph []]                                                               ;                   ;
+  [:!SW#Pi [:!S#Pi :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                     ; 'IDEA:'           ;
+  ; [:!SW#Pj []]                                                               ;                   ;
+  [:!SW#Pk [:!S#Pk :!Se :!Sy :!Ssemicolon :spacebar]]                          ; 'KEY: '           ;
+  ; [:!SW#Pl []]                                                               ;                   ;
+  ; [:!SW#Pm []]                                                               ;                   ;
+  ; [:!SW#Pn []]                                                               ;                   ;
+  ; [:!SW#Po []]                                                               ;                   ;
+  ; [:!SW#Pp []]                                                               ;                   ;
+  ; [:!SW#Pq []]                                                               ;                   ;
+  ; [:!SW#Pr []]                                                               ;                   ;
+  ; [:!SW#Ps []]                                                               ;                   ;
+  [:!SW#Pt [:!S#Pt :!So :!Sd :!So :!Ssemicolon :spacebar]]                     ; 'TODO:'           ;
+  ; [:!SW#Pu []]                                                               ;                   ;
+  ; [:!SW#Pv []]                                                               ;                   ;
+  [:!SW#Pw [:!S#Pw :!Si :!Sp :!Ssemicolon :spacebar]]                          ; 'WIP: '           ;
+  ; [:!SW#Px []]                                                               ;                   ;
+  ; [:!SW#Py []]                                                               ;                   ;
+  ; [:!SW#Pz []]                                                               ;                   ;
+  ; [:!SW#Pright_control []]                                                        NOT AVAILABLE  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
+{:des "Control Mode - symbols"
+ :rules
+ [;
+  [:!SW#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '           ;
+  [:!SW#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]   ; ' .+= '           ;
+  [:!SW#Popen_bracket [:!S#P4 :!Sopen_bracket]]                                ; '${'              ;
+  [:!SW#Pclose_bracket [:!Sclose_bracket :spacebar]]                           ; '} '              ;
+  [:!SW#Psemicolon [:!S#Psemicolon :spacebar]]                                 ; ': '              ;
+  ; [:!SW#Pquote []]                                                           ;                   ;
+  ; [:!SW#Pbackslash []]                                                       ;                   ;
+  [:!SW#Pcomma [:period :spacebar]]                                            ; '. '              ;
+  [:!SW#Pperiod [:period :period :period]]                                     ; '...'             ;
+  [:!SW#Pslash [:slash :slash :!S1 :spacebar]]                                 ; '//! '            ;
+
+  ; [:!SW#Pdelete_or_backspace []]                                                                 ;
+  ; [:!SW#Preturn_or_enter []]                                                                     ;
+  ; [:!SW#Pright_shift []]                                                                         ;
+  [:!SW#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]          ; ' .*= '           ;
+  [:!SW#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '           ;
+  ; [:!SW#Pright_option []]                                                                        ;
+  ; [:!SW#Pright_command []]                                                                       ;
+  ; [:!SW#Pspacebar []]                                                                            ;
+  
+  ; [:!SW#Pleft_command []]                                                                        ;
+  ; [:!SW#Pleft_option []]                                                                         ;
+  ; [:!SW#Pleft_control []]                                                         NOT AVAILABLE  ;
+  ; [:!SW#Pleft_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!SW#Pcaps_lock []]                                                                           ;
+  ; [:!SW#Ptab []]                                                                                 ;
+  ; [:!SW#Pnon_us_backslash []]                                                                    ;
+  ; [:!SW#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
