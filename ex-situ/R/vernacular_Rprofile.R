@@ -48,13 +48,16 @@ local(
 
 # launch startup
 tryCatch(
-  startup::startup(),
+  suppressMessages(startup::startup()),
   error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
 )
 
 ####################################################################################################
 
 # expand to match columns
-SW::wideScreen(Sys.getenv('RCOLUMNS'))
+tryCatch(
+  suppressMessages(SW::wideScreen(Sys.getenv('RCOLUMNS'))),
+  error = function(ex) message('.Rprofile error: ', conditionMessage(ex))
+)
 
 ####################################################################################################
