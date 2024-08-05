@@ -45,9 +45,9 @@
   ; [:!S#Pequal_sign []]                                                            NOT AVAILABLE  ;
   ; [:!S#Popen_bracket []]                                                          NOT AVAILABLE  ;
   ; [:!S#Pclose_bracket []]                                                         NOT AVAILABLE  ;
-  ; [:!S#Psemicolon []]                                                             NOT AVAILABLE  ;
   ; [:!S#Pquote []]                                                                 NOT AVAILABLE  ;
   ; [:!S#Pbackslash []]                                                             NOT AVAILABLE  ;
+  [:!S#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                          ; ' : '             ;
   [:!S#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
   [:!S#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
   [:!S#Pslash [:spacebar :!Sslash :spacebar]]                                  ; ' ? '             ;
