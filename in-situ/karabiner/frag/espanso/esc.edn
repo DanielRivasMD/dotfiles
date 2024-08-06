@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc
-{:des "Escape Mode - alphabet"
+{:des "Esc Mode - alphabet"
  :rules
  [;
   [:!EWR#Pa [:semicolon :semicolon :a]]                                        ; 'α'               ;
@@ -32,12 +32,13 @@
   [:!EWR#Px [:semicolon :semicolon :x]]                                        ; 'χ'               ;
   [:!EWR#Py [:semicolon :semicolon :y]]                                        ; 'υ'               ;
   [:!EWR#Pz [:semicolon :semicolon :z]]                                        ; 'ζ'               ;
+  ; [:!EWR#Pright_control [:semicolon :semicolon]]                             ; ''                ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc
-{:des "Escape Mode - symbols"
+{:des "Esc Mode - symbols"
  :rules
  [;
   ; [:!EWR#Phyphen []]                                                                             ;
@@ -71,7 +72,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc - shift
-{:des "Escape Mode - symbols"
+{:des "Esc Mode - symbols"
  :rules
  [;
   ; [:!EWRS#Phyphen []]                                                                            ;

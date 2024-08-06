@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; JOKER
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; joker
 {:des "Joker Mode - alphabet"
@@ -30,6 +32,7 @@
   ; [:!OTC#Px []]                                                                                  ;
   ; [:!OTC#Py []]                                                                                  ;
   ; [:!OTC#Pz []]                                                                                  ;
+  ; [:!OTC#Pright_control []]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -64,6 +67,40 @@
   ; [:!OTC#Ptab []]                                                                                ;
   ; [:!OTC#Pnon_us_backslash []]                                                                   ;
   ; [:!OTC#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker - shift
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  ; [:!OTCS#Phyphen []]                                                                            ;
+  ; [:!OTCS#Pequal_sign []]                                                                        ;
+  ; [:!OTCS#Popen_bracket []]                                                                      ;
+  ; [:!OTCS#Pclose_bracket []]                                                                     ;
+  ; [:!OTCS#Psemicolon []]                                                                         ;
+  ; [:!OTCS#Pquote []]                                                                             ;
+  ; [:!OTCS#Pbackslash []]                                                                         ;
+  ; [:!OTCS#Pcomma []]                                                                             ;
+  ; [:!OTCS#Pperiod []]                                                                            ;
+  ; [:!OTCS#Pslash []]                                                                             ;
+
+  ; [:!OTCS#Pdelete_or_backspace []]                                                               ;
+  ; [:!OTCS#Preturn_or_enter []]                                                                   ;
+  ; [:!OTCS#Pright_shift []]                                                                       ;
+  ; [:!OTCS#Pright_option []]                                                                      ;
+  ; [:!OTCS#Pright_command []]                                                                     ;
+  ; [:!OTCS#Pspacebar []]                                                                          ;
+
+  ; [:!OTCS#Pleft_command []]                                                                      ;
+  ; [:!OTCS#Pleft_option []]                                                                       ;
+  ; [:!OTCS#Pleft_control []]                                                                      ;
+  ; [:!OTCS#Pleft_shift []]                                                         NOT AVAILABLE  ;
+  ; [:!OTCS#Pcaps_lock []]                                                          NOT AVAILABLE  ;
+  ; [:!OTCS#Ptab []]                                                                               ;
+  ; [:!OTCS#Pnon_us_backslash []]                                                                  ;
+  ; [:!OTCS#Pescape []]                                                                            ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
