@@ -61,13 +61,16 @@ _default:
 # helix
 ####################################################################################################
 
-# open fragmented karabiner
-@Karabiner-fragmented:
-  hx in-situ/karabiner/fragmented/{esc.edn,function.edn,tab.edn,hyper.edn,lctrl.edn,lopt.edn,lcmd.edn,lshift.edn,space.edn,ropt.edn,rctrl.edn,rcmd.edn,rshift.edn,bspace.edn,ctrl_cmd.edn,zero.edn,super.edn}
+# open frag karabiner
+@Karabiner-frag:
+  hx in-situ/karabiner/frag/{espanso/esc.edn,espanso/function.edn,simple/tab.edn,joker/joker-fn.edn,simple/lshift.edn,simple/lctrl.edn,simple/lopt.edn,cmd/lcmd-fn.edn,simple/rctrl.edn,simple/space.edn,simple/rcmd.edn,simple/ropt.edn,shift/rshift-ctlABC.edn,bspace/bs-ctlABC.edn,ctlcmd/cc-fn.edn,simple/q-layer.edn,simple/patch.edn,arrow/arrow-fn.edn}
 
 # open editors karabiner
 @Karabiner-editors:
-  hx in-situ/karabiner/fragmented/{editor.edn,lapce.edn,zed.edn,terminal.edn}
+  hx in-situ/karabiner/frag/apps/{editor.edn,lapce.edn,zed.edn}
+
+@Karabiner-zellij:
+  hx in-situ/karabiner/frag/zellij/{ABC-fn.edn,mod-ABC.edn}
 
 ####################################################################################################
 # compose protocols
