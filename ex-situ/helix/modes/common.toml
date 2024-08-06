@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# BUG: bugged switch app window
 # TODO: reorder keybindings
 # delete
 del = ["delete_selection_noyank"]                          # shift-shift
@@ -43,7 +44,7 @@ C-down = ["jump_view_down"]                                # ctrl-down         #
 A-F2 = ["command_mode"]                                    # alt-b             # command mode
 A-F4 = ["yank_joined_to_clipboard"]                        # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
-# A-F6 = [""]                                              # alt-e             #
+A-F6 = ["ealier"]                                              # alt-e             #
 A-F7 = ["search"]                                          # alt-f             # search
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
@@ -80,7 +81,7 @@ S-A-F2 = ["shell_pipe"]                                    # alt-shift-b       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
 S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
                                                            # alt-shift-d       # duplicate line
-# S-A-F6 = [""]                                            # alt-shift-e       #
+S-A-F6 = ["later"]                                            # alt-shift-e       #
 S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
 # S-A-F8 = [""]                                            # alt-shift-g       #
 # S-A-F9 = [""]                                            # alt-shift-h       #
@@ -202,8 +203,8 @@ S-F8 = ["goto_next_change"]                                # alt-cmd-down      #
 S-F9 = ["select_mode", "goto_file_start", "MODE"]          # cmd-shift-up      # select start
 S-F10 = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
                                                            # cmd-shift-down    # select end
-S-A-C-F15 = ["increment"]                                  # rctl-up         # increment
-S-A-C-F16 = ["decrement"]                                  # rctl-down         # decrement
+A-C-F15 = ["increment"]                                  # rctl-up         # increment
+A-C-F16 = ["decrement"]                                  # rctl-down         # decrement
 # S-A-C-F15 = ["increment"]                                  # joker-cmd         # increment
 # S-A-C-F16 = ["decrement"]                                  # joker-alt         # decrement
 # S-F17 = [""]                                             #                   #
@@ -220,10 +221,10 @@ F11 = ["goto_next_diag"]                                   # ctrl-cmd-down     #
 S-F2 = ["workspace_diagnostics_picker"]                    # ctrl-cmd-enter    # diag list
 
 # movement
-C-F11 = ["goto_definition"]                                # cmd-cmd             # definition
-C-F12 = ["goto_reference"]                                 # cmd-alt             # reference
-C-F13 = ["goto_implementation"]                            # cmd-shift             # implementation
-A-F15 = ["goto_type_definition"]                           # cmd-/             # type definition
+A-C-F11 = ["goto_definition"]                                # cmd-cmd             # definition
+C-F17 = ["goto_reference"]                                 # cmd-alt             # reference
+C-F16 = ["goto_implementation"]                            # cmd-shift             # implementation
+C-F13 = ["goto_type_definition"]                           # cmd-/             # type definition
 # C-F11 = ["goto_definition"]                                # cmd-,             # definition
 # C-F12 = ["goto_reference"]                                 # cmd-.             # reference
 # C-F13 = ["goto_implementation"]                            # cmd-/             # implementation
@@ -236,9 +237,9 @@ A-F13 = ["goto_prev_function"]                             # cmd-[             #
 A-F14 = ["goto_next_function"]                             # cmd-]             # prev func
 A-F16 = ["goto_prev_parameter"]                            # cmd-'             # next param
 A-F17 = ["goto_next_parameter"]                            # cmd-\             # prev param
-F3 = ["workspace_symbol_picker"]                           # cmd-enter         # symbol list
-#  = ["goto_prev_test"]                                  # cmd-,
-#  = ["goto_next_test"]                                  # cmd-.
+F3 = ["symbol_picker"]                           # cmd-enter         # symbol list
+C-F11 = ["goto_prev_test"]                                  # cmd-,
+C-F12 = ["goto_next_test"]                                  # cmd-.
 
 
 # comments
@@ -250,30 +251,29 @@ S-C-F14 = ["goto_next_comment"]                            # joker-down        #
 # S-C-F12 = ["jump_forward"]                                 # cmd-alt       # next jump
 # S-A-C-F13 = ["save_selection"]                             # cmd-shift       # jump list
 # S-A-C-F12 = ["jumplist_picker"]                            # cmd-bspace       # record jump
-S-A-C-F17 = ["goto_last_modification"]                     # cmd-space       # last edit
+A-C-F12 = ["goto_last_modification"]                     # cmd-space       # last edit
 S-C-F11 = ["jump_backward"]                                # joker-left        # prev jump
 S-C-F12 = ["jump_forward"]                                 # joker-right       # next jump
-S-A-C-F13 = ["save_selection"]                             # joker-space       # jump list
+S-A-C-F17 = ["save_selection"]                             # joker-space       # jump list
 # S-A-C-F13 = ["save_selection"]                             # joker-shift       # jump list
 S-A-C-F12 = ["jumplist_picker"]                            # joker-enter       # record jump
 # S-A-C-F17 = ["goto_last_modification"]                     # joker-space       # last edit
-C-F17 = ["normal_mode", "find_till_char", "MODE"]          # rctl-left           # prev until
-A-C-F11 = ["normal_mode", "till_prev_char", "MODE"]        # rctl-right           # next until
-A-C-F12 = ["normal_mode", "repeat_last_motion", "MODE"]    # rctl-space         # repeat motion
+A-C-F13 = ["normal_mode", "till_prev_char", "MODE"]        # rctl-left           # next until
+A-C-F14 = ["normal_mode", "find_till_char", "MODE"]          # rctl-right           # prev until
+A-C-F17 = ["normal_mode", "repeat_last_motion", "MODE"]    # rctl-space         # repeat motion
 # C-F17 = ["normal_mode", "find_till_char", "MODE"]          # cmd-cmd           # prev until
 # A-C-F11 = ["normal_mode", "till_prev_char", "MODE"]        # cmd-alt           # next until
 # A-C-F12 = ["normal_mode", "repeat_last_motion", "MODE"]    # cmd-space         # repeat motion
 
+S-F1 = [":buffer-close"]
+
 
 ####################################################################################################
 
-# earlier
-# later
 # format_selections
 # change_selection_noyank
 # select_regex
 # goto_word
-# wclose
 # changed_file_picker
 # rename_symbol
 # Alt-Enter	Open selected in the background without closing the picker
