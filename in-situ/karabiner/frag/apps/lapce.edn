@@ -95,7 +95,7 @@
   ; [:!EQR#Ptab :!Th [:lapce]]                                                 ; del-tab           ;
   ; [:!EQR#Pcaps_lock :!Tg [:lapce]]                                           ; del-caps          ;
   ; [:!EQR#Pleft_shift :!Oc [:lapce]]                                          ; del-shift         ;
-  [:!EQR#Pleft_control :!Cp [:lapce]]                                          ; del-ctrl          ;
+  [:!EQR#Pleft_control :!Cp [:lapce]]                                          ; del-ctl          ;
   ; [:!EQR#Pleft_option :!Ts [:lapce]]                                         ; del-alt           ;
   [:!EQR#Pleft_command :f1 [:lapce]]                                           ; del-cmd           ;
   ; [:!EQR#Pspacebar :!Ty [:lapce]]                                            ; del-space         ;
@@ -111,7 +111,7 @@
  [;
   ; [:!S#Pright_option :!Odelete_forward [:lapce]]                             ; shift-alt         ;
   [:!S#Pright_command :!Tk [:lapce]]                                           ; shift-cmd         ;
-  ; [:!R#Pleft_control :!Odelete_or_backspace [:lapce]]                        ; shift-ctrl        ;
+  ; [:!R#Pleft_control :!Odelete_or_backspace [:lapce]]                        ; shift-ctl        ;
   ; [:!R#Pleft_command :!Cdelete_or_backspace [:lapce]]                        ; shift-cmd         ;
   ; [:!R#Pleft_option : [:lapce]]                                              ; shift-alt         ;
   ]}

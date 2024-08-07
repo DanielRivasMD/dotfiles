@@ -10,13 +10,13 @@
   ; [: :!Od [:term]]                                                                COLLISION      ;
   ; [: :!Oe [:term]]                                                                COLLISION      ;
   [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
-  [:!OT#Pright_shift :!Og [:term]]                                             ; alt-ctrl-shift    ;
-  [:!OT#Pright_option :!Oh [:term]]                                            ; alt-ctrl-alt      ;
+  [:!OT#Pright_shift :!Og [:term]]                                             ; alt-ctl-shift    ;
+  [:!OT#Pright_option :!Oh [:term]]                                            ; alt-ctl-alt      ;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
-  [:!OT#Preturn_or_enter :!Oj [:term]]                                         ; alt-ctrl-enter    ;
+  [:!OT#Preturn_or_enter :!Oj [:term]]                                         ; alt-ctl-enter    ;
   [:#Pleft_option :left_option [:term] {:alone [:!Ok]}]                        ; alt               ;
-  [:!OT#Pright_command :!Ol [:term]]                                           ; alt-ctrl-cmd      ;
-  [:!OT#Pspacebar :!Om [:term]]                                                ; alt-ctrl-space    ;
+  [:!OT#Pright_command :!Ol [:term]]                                           ; alt-ctl-cmd      ;
+  [:!OT#Pspacebar :!Om [:term]]                                                ; alt-ctl-space    ;
   ; [: :!On [:term]]                                                                COLLISION      ;
   [:!OC#Pspacebar :!Oo [:term]]                                                ; alt-cmd-space     ;
   [:!OC#Pleft_arrow :!Op [:term]]                                              ; alt-cmd-left      ;
@@ -25,11 +25,11 @@
   [:!E#Pescape :!Os [:term]]                                                   ; alt-cmd           ;
   [:!OC#Pdelete_or_backspace :!Ot [:term]]                                     ; alt-cmd-bspace    ;
   ; [: :!Ou [:term]]                                                                COLLISION      ;
-  [:!OT#Pdelete_or_backspace :!Ov [:term]]                                     ; alt-ctrl-bspace   ;
-  [:!OT#Pleft_arrow :!Ow [:term]]                                              ; alt-ctrl-left     ;
-  [:!OT#Pright_arrow :!Ox [:term]]                                             ; alt-ctrl-right    ;
-  [:!OT#Pdown_arrow :!Oy [:term]]                                              ; alt-ctrl-down     ;
-  [:!OT#Pup_arrow :!Oz [:term]]                                                ; alt-ctrl-up       ;
+  [:!OT#Pdelete_or_backspace :!Ov [:term]]                                     ; alt-ctl-bspace   ;
+  [:!OT#Pleft_arrow :!Ow [:term]]                                              ; alt-ctl-left     ;
+  [:!OT#Pright_arrow :!Ox [:term]]                                             ; alt-ctl-right    ;
+  [:!OT#Pdown_arrow :!Oy [:term]]                                              ; alt-ctl-down     ;
+  [:!OT#Pup_arrow :!Oz [:term]]                                                ; alt-ctl-up       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -53,7 +53,7 @@
   ; [: :!SOm [:term]]                                                                              ;
   ; [: :!SOn [:term]]                                                                              ;
   ; [: :!SOo [:term]]                                                               COLLISION      ;
-  [:!E#Pleft_control :!SOp [:term]]                                            ; alt-ctrl          ;
+  [:!E#Pleft_control :!SOp [:term]]                                            ; alt-ctl          ;
   [:!E#Pleft_command :!SOq [:term]]                                            ; alt-cmd           ;
   [:!OC#P1 :!SOr [:term]]                                                      ; alt-cmd-1         ;
   [:!OC#P2 :!SOs [:term]]                                                      ; alt-cmd-2         ;

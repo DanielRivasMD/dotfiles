@@ -101,7 +101,7 @@
   ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab           ;
   ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps          ;
   ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift         ;
-  [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctrl          ;
+  [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctl          ;
   ; [:!EQR#Pleft_option :!Ts [:zed]]                                           ; del-alt           ;
   [:!EQR#Pleft_command :!CSp [:zed]]                                           ; del-cmd           ;
   ; [:!EQR#Pspacebar :!Ty [:zed]]                                              ; del-space         ;
@@ -117,7 +117,7 @@
  [;
   ; [:!S#Pright_option :!Odelete_forward [:zed]]                               ; shift-alt         ;
   [:!S#Pright_command :!Cdelete_forward [:zed]]                                ; shift-cmd         ;
-  ; [:!R#Pleft_control :!Odelete_or_backspace [:zed]]                          ; shift-ctrl        ;
+  ; [:!R#Pleft_control :!Odelete_or_backspace [:zed]]                          ; shift-ctl        ;
   ; [:!R#Pleft_command :!Cdelete_or_backspace [:zed]]                          ; shift-cmd         ;
   ; [:!R#Pleft_option : [:zed]]                                                ; shift-alt         ;
   ]}

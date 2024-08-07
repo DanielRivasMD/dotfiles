@@ -10,25 +10,25 @@
   ; [: :!Td [:editor]]                                                              DEFAULT        ;
   [:!C#Pright_arrow :!Te [:editor]]                                            ; cmd-right         ;
   ; [: :!Tf [:editor]]                                                                             ;
-  ; [:!EQR#Pcaps_lock :!Tg [:editor]]                                          ; del-caps          ;
-  ; [:!EQR#Ptab :!Th [:editor]]                                                ; del-tab           ;
+  ; [:!EQR#Pcaps_lock :!Tg [:editor]]                                          ; bs-caps           ;
+  ; [:!EQR#Ptab :!Th [:editor]]                                                ; bs-tab            ;
   ; [: :!Ti [:editor]]                                                              DEFAULT        ;
-  ; [:!EQR#Pright_command :!Tj [:editor]]                                      ; del-cmd           ;
+  ; [:!EQR#Pright_command :!Tj [:editor]]                                      ; bs-cmd            ;
   ; [: :!Tk [:editor]]                                                              COLLISION      ;
   ; [: :!Tl [:editor]]                                                              COLLISION      ;
   ; [: :!Tm [:editor]]                                                              DEFAULT        ;
-  ; [:!EQR#Pright_option :!Tn [:editor]]                                       ; del-alt           ;
+  ; [:!EQR#Pright_option :!Tn [:editor]]                                       ; bs-alt            ;
   ; [:!C#Pup_arrow :!To [:editor]]                                             ; cmd-up            ;
   ; [:!C#Pdown_arrow :!Tp [:editor]]                                           ; cmd-down          ;
   ; [: :!Tq [:editor]]                                                              DEFAULT        ;
-  ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; del-ctrl          ;
-  ; [:!EQR#Pleft_option :!Ts [:editor]]                                        ; del-alt           ;
-  ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; del-cmd           ;
+  ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; bs-ctl            ;
+  ; [:!EQR#Pleft_option :!Ts [:editor]]                                        ; bs-alt            ;
+  ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; bs-cmd            ;
   ; [: :!Tu [:editor]]                                                              COLLISION      ;
   ; [: :!Tv [:editor]]                                                                             ;
   ; [: :!Tw [:editor]]                                                              COLLISION      ;
   ; [: :!Tx [:editor]]                                                                             ;
-  ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; del-space         ;
+  ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; bs-space          ;
   ; [: :!Tz [:editor]]                                                              DEFAULT        ;
   ]}
 
@@ -55,15 +55,22 @@
 {:des "GUI - Control remappings"
  :rules
  [;
-  [:!EQR#Ptab :!Th [:editor]]                                                  ; del-tab           ;
-  [:!EQR#Pcaps_lock :!Tg [:editor]]                                            ; del-caps          ;
-  [:!EQR#Pleft_shift :!Oc [:editor]]                                           ; del-shift         ;
-  ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; del-ctrl          ;
-  [:!EQR#Pleft_option :!Ts [:editor]]                                          ; del-alt           ;
-  ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; del-cmd           ;
-  [:!EQR#Pspacebar :!Ty [:editor]]                                             ; del-space         ;
-  [:!EQR#Pright_command :!Tj [:editor]]                                        ; del-cmd           ;
-  [:!EQR#Pright_option :!Tn [:editor]]                                         ; del-alt           ;
+  ; [:!EQR#Pdelete_or_backspace [:editor]]                                                         ;
+  ; [:!EQR#Preturn_or_enter [:editor]]                                                             ;
+  ; [:!EQR#Pright_shift [:editor]]                                                                 ;
+  ; [:!EQR#Pright_option [:editor]]                                                                ;
+  ; [:!EQR#Pright_command [:editor]]                                                               ;
+  [:!EQR#Pspacebar :!Ty [:editor]]                                                                 ;
+
+  [:!EQR#Pright_control :!Tj [:editor]]                                                            ;
+
+  ; [:!EQR#Pleft_command :!Tt [:editor]]                                                           ;
+  [:!EQR#Pleft_option :!Ts [:editor]]                                                              ;
+  ; [:!EQR#Pleft_control :!Tr [:editor]]                                                           ;
+  [:!EQR#Pleft_shift :!Oc [:editor]]                                                               ;
+  [:!EQR#Pcaps_lock :!Tg [:editor]]                                                                ;
+  [:!EQR#Ptab :!Th [:editor]]                                                                      ;
+  [:!EQR#Pnon_us_backslash :!Tn [:editor]]                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,7 +79,7 @@
 {:des "GUI - Interactive delete"
  :rules
  [;
-  ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; del-shift         ;
+  ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; bs-shift          ;
   [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; delete word fa    ;
   ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; delete line fa    ;
   [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; delete word bw    ;
