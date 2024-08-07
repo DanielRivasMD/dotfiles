@@ -45,13 +45,13 @@ _forge() {
     "${fespanso}/function.edn" \
     "${fjoker}/joker-fn.edn" \
     "${fshift}/rshift-ctlABC.edn" \
-    "${fsimple}/lctrl.edn" \
+    "${fsimple}/lctl.edn" \
     "${fsimple}/lopt.edn" \
     "${fsimple}/lshift.edn" \
     "${fsimple}/patch.edn" \
     "${fsimple}/q-layer.edn" \
     "${fsimple}/rcmd.edn" \
-    "${fsimple}/rctrl.edn" \
+    "${fsimple}/rctl.edn" \
     "${fsimple}/ropt.edn" \
     "${fsimple}/space.edn" \
     "${fsimple}/tab.edn" \
