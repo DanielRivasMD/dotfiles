@@ -120,11 +120,11 @@ C-e = ["goto_line_end", "move_char_right"]                 # cmd-right         #
 # C-g = [""]                                               # del-caps          #
 # C-h = [""]                                               # del-tab           #
 # C-i = [""]                                               #                   #
-# C-j = [""]                                               # del-cmd           #
+# C-j = [""]                                               # del-ctl           #
 C-k = ["kill_to_line_end"]                                 # shift-cmd         # delete end line
 # C-l = [""]                                               # shift-alt         #
 # C-m = [""]                                               #                   #
-# C-n = [""]                                               # del-alt           #
+# C-n = [""]                                               # del-fn            #
 # C-o = [""]                                               #                   #
 # C-p = [""]                                               #                   #
 # C-q = [""]                                               #                   #
@@ -137,6 +137,7 @@ C-w = ["delete_word_backward"]                             # shift-ctrl        #
 # C-x = [""]                                               #                   #
 C-y = ["normal_mode", ":new"]                              # alt-shift-q       # quit all
 # C-z = [""]                                               #                   #
+A-c = ["changed_file_picker"]                              # del-shift         # git picker
 
 
 ####################################################################################################
