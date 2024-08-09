@@ -7,11 +7,11 @@
  :rules
  [;
   ; [:!W#Pa []]                                                                ;                   ;
-  ; [:!W#Pb []]                                                                ;                   ;
+  [:!W#Pb [:b :e :g :i :n]]                                                    ;                   ;
   ; [:!W#Pc []]                                                                ;                   ;
   ; [:!W#Pd []]                                                                ;                   ;
   [:!W#Pe [:e :n :u :m]]                                                       ; 'enum'            ;
-  ; [:!W#Pf []]                                                                ;                   ;
+  [:!W#Pf [:f :u :n :c :t :i :o :n]]                                           ;                   ;
   ; [:!W#Pg []]                                                                ;                   ;
   ; [:!W#Ph []]                                                                ;                   ;
   ; [:!W#Pi []]                                                                ;                   ;
@@ -19,9 +19,9 @@
   ; [:!W#Pk []]                                                                ;                   ;
   ; [:!W#Pl []]                                                                ;                   ;
   [:!W#Pm [:m :u :t :a :b :l :e]]                                              ; 'mutable'         ;
-  ; [:!W#Pn []]                                                                ;                   ;
+  [:!W#Pn [:e :n :d]]                                                          ;                   ;
   ; [:!W#Po []]                                                                ;                   ;
-  ; [:!W#Pp []]                                                                ;                   ;
+  [:!W#Pp [:p :l :o :t]]                                                       ;                   ;
   ; [:!W#Pq []]                                                                ;                   ;
   ; [:!W#Pr []]                                                                ;                   ;
   [:!W#Ps [:s :t :r :u :c :t]]                                                 ; 'struct'          ;
@@ -57,7 +57,7 @@
   [:!W#Pright_shift [:period :period]]                                         ; '..'              ;
   [:!W#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                   ; ' *= '            ;
   [:!W#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
-  [:!W#Pspacebar :!OTf20 [:term]]                                                         ;                   ;
+  [:!W#Pspacebar :!OTf20 [:term]]                                              ;                   ;
 
   ; [:!W#Pleft_command []]                                                                         ;
   ; [:!W#Pleft_option []]                                                                          ;
