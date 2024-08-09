@@ -112,21 +112,21 @@ promptToReturnFromSubprocess: true # display confirmation when subprocess termin
 keybinding:
     universal:
         quit-alt1: '<c-c>'
-        executeCustomCommand: '<c-g>'
+        executeCustomCommand: '<c-g>'            # bs-joker
         return: '<esc>'
         togglePanel: '<tab>'
         prevItem-alt: '<up>'
         nextItem-alt: '<down>'
-        nextScreenMode: '<f1>'
-        openRecentRepos: '<f2>'
-        prevPage: '<f4>'
-        nextPage: '<f5>'
-        gotoTop: '<f6>'
-        gotoBottom: '<f7>'
-        prevTab: '<f8>'
-        nextTab: '<f9>'
-        prevBlock-alt: '<f10>'
-        nextBlock-alt: '<f11>'
+        nextScreenMode: '<f1>'                   # ctl-cmd-space
+        openRecentRepos: '<f2>'                  # alt
+        prevPage: '<f4>'                         # alt-up
+        nextPage: '<f5>'                         # alt-down
+        gotoTop: '<f6>'                          # cmd-up
+        gotoBottom: '<f7>'                       # cmd-down
+        prevTab: '<f8>'                          # ctl-cmd-left
+        nextTab: '<f9>'                          # ctl-cmd-right
+        prevBlock-alt: '<f10>'                   # ctl-cmd-up
+        nextBlock-alt: '<f11>'                   # ctl-cmd-down
         optionMenu-alt1: '?'
         increaseContextInDiffView: '='
         decreaseContextInDiffView: '-'
@@ -172,7 +172,7 @@ keybinding:
         recentRepos: '<enter>'
         checkForUpdate: 'u'
     files:
-        toggleStagedAll: '<c-y>'
+        toggleStagedAll: '<c-y>'                 # bs-space
         toggleTreeView: '\'
         commitChanges: 'c'
         fetch: 'f'
