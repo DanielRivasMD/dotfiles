@@ -134,7 +134,12 @@ keybinding:
         goInto: '<enter>'
         confirm: '<enter>'
         submitEditorText: '<enter>'
-        jumpToBlock: [1, 2, 3, 4, 5]
+        jumpToBlock:
+            - '1'
+            - '2'
+            - '3'
+            - '4'
+            - '5'
         remove: 'd'
         edit: 'e'
         prevMatch: 'h'
