@@ -41,13 +41,13 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  ; [:!S#Phyphen []]                                                                NOT AVAILABLE  ;
-  ; [:!S#Pequal_sign []]                                                            NOT AVAILABLE  ;
-  ; [:!S#Popen_bracket []]                                                          NOT AVAILABLE  ;
-  ; [:!S#Pclose_bracket []]                                                         NOT AVAILABLE  ;
-  ; [:!S#Pquote []]                                                                 NOT AVAILABLE  ;
-  ; [:!S#Pbackslash []]                                                             NOT AVAILABLE  ;
+  ; [:!S#Phyphen []]                                                                               ;
+  ; [:!S#Pequal_sign []]                                                                           ;
+  ; [:!S#Popen_bracket []]                                                                         ;
+  ; [:!S#Pclose_bracket []]                                                                        ;
   [:!S#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                          ; ' : '             ;
+  ; [:!S#Pquote []]                                                                                ;
+  ; [:!S#Pbackslash []]                                                                            ;
   [:!S#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
   [:!S#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
   [:!S#Pslash [:spacebar :!Sslash :spacebar]]                                  ; ' ? '             ;
