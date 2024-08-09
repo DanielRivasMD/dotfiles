@@ -58,8 +58,7 @@
   [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]              ; ' |> '            ;
   [:!O#Pright_option [:spacebar :!S8 :spacebar]]                               ; ' * '             ;
   [:!O#Pright_command [:spacebar :slash :spacebar]]                            ; ' / '             ;
-  ; TODO: remap to cool action
-  ; [:!O#Pspacebar []]                                                              COLLISION      ;
+  [:!O#Pspacebar [:keypad_num_lock]]                                                               ;
 
   ; [:!O#Pleft_command []]                                                                         ;
   ; [:!O#Pleft_option []]                                                           NOT AVAILABLE  ;
