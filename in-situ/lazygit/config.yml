@@ -161,10 +161,6 @@ gui:
 
   ####################################################################################################
 
-        # lightTheme: false
-
-  ####################################################################################################
-
   # Config relating to colors and styles.
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
   theme:
@@ -218,10 +214,6 @@ gui:
     # Default text color
     defaultFgColor:
       - default
-
-####################################################################################################
-
-        # diffContextSize: 5
 
 ####################################################################################################
 
@@ -439,14 +431,6 @@ notARepository: prompt
 
 # If true, display a confirmation when subprocess terminates. This allows you to view the output of the subprocess before returning to Lazygit.
 promptToReturnFromSubprocess: true
-
-####################################################################################################
-
-# reporting: 'undetermined' # 'on' | 'off' | 'undetermined'
-
-####################################################################################################
-
-# quitOnTopLevelReturn: false
 
 ####################################################################################################
 
