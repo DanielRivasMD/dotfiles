@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# BUG: bugged switch app window
 # TODO: reorder keybindings
 # TODO: update micro bindings
 # delete
@@ -151,7 +150,7 @@ F6 = ["goto_file_start"]                                   # cmd-up            #
 F7 = ["goto_last_line"]                                    # cmd-down          # cursor end
 F8 = ["goto_previous_buffer"]                              # ctrl-cmd-left     # prev tab
 F9 = ["goto_next_buffer"]                                  # ctrl-cmd-right    # next tab
-# F12 = [""]                                               #                   #
+F12 = ["normal_mode", ":write", "MODE"]                    #                   #
 # F13 = [""]                                               #                   #
 # F14 = [""]                                               #                   #
 
@@ -207,6 +206,8 @@ S-C-F11 = ["jump_backward"]                                # joker-left        #
 S-C-F12 = ["jump_forward"]                                 # joker-right       # next jump
 S-A-C-F17 = ["save_selection"]                             # joker-space       # jump list
 S-A-C-F12 = ["jumplist_picker"]                            # joker-enter       # record jump
+
+# TODO: remap to a more convenient location
 A-C-F13 = ["normal_mode", "till_prev_char", "MODE"]        # rctl-left         # next until
 A-C-F14 = ["normal_mode", "find_till_char", "MODE"]        # rctl-right        # prev until
 A-C-F17 = ["normal_mode", "repeat_last_motion", "MODE"]    # rctl-space        # repeat motion
