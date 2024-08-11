@@ -29,7 +29,7 @@ alias c = clear
 alias cp = cp -v
 alias mv = mv -v
 alias rm = rm -v
-alias mkd = mkdir -v
+alias mk = mkdir -v
 
 ####################################################################################################
 
@@ -44,9 +44,9 @@ alias mp = mplayer
 alias f = fillin
 
 # lazy
-alias lzg = lazygit
-alias lzd = lazydocker
-alias lzn = lazynpm
+alias lg = lazygit
+alias ld = lazydocker
+alias lm = lazynpm
 
 ####################################################################################################
 # julia
@@ -83,7 +83,7 @@ alias python = python3
 ####################################################################################################
 
 # lazycli
-alias lzc = lazycli
+alias lc = lazycli
 
 # bat
 alias man = batman
@@ -105,7 +105,7 @@ alias hg = hgrep
 alias mg = mgit
 
 # pueue
-alias pe = pueue
+alias pu = pueue
 alias pd = pueued
 
 # samesame

@@ -33,9 +33,9 @@ alias mp='mplayer'
 alias f='fillin'
 
 # lazy
-alias lzd='lazydocker'
-alias lzg='lazygit'
-alias lzn='lazynpm'
+alias ld='lazydocker'
+alias lg='lazygit'
+alias lm='lazynpm'
 
 ####################################################################################################
 # julia
@@ -72,7 +72,7 @@ alias python='python3'
 ####################################################################################################
 
 # lazycli
-alias lzc='lazycli'
+alias lc='lazycli'
 
 # bat
 alias man='batman'
@@ -94,7 +94,7 @@ alias hg='hgrep'
 alias mg='mgit'
 
 # pueue
-alias pe='pueue'
+alias pu='pueue'
 alias pd='pueued'
 
 # samesame
