@@ -5,11 +5,11 @@
  :rules
  [;
   [:!C#Pleft_arrow :!Ta [:editor]]                                             ; cmd-left          ;
-  ; [: :!Tb [:editor]]                                                                             ;
+  ; [: :!Tb [:editor]]                                                         ; ctl-cmd-left      ;
   ; [: :!Tc [:editor]]                                                              DEFAULT        ;
   ; [: :!Td [:editor]]                                                              DEFAULT        ;
   [:!C#Pright_arrow :!Te [:editor]]                                            ; cmd-right         ;
-  ; [: :!Tf [:editor]]                                                                             ;
+  ; [: :!Tf [:editor]]                                                         ; ctl-cmd-right     ;
   ; [:!EQR#Pcaps_lock :!Tg [:editor]]                                          ; bs-caps           ;
   ; [:!EQR#Ptab :!Th [:editor]]                                                ; bs-tab            ;
   ; [: :!Ti [:editor]]                                                              DEFAULT        ;
@@ -18,14 +18,14 @@
   ; [: :!Tl [:editor]]                                                              COLLISION      ;
   ; [: :!Tm [:editor]]                                                              DEFAULT        ;
   ; [:!EQR#Pright_option :!Tn [:editor]]                                       ; bs-fn             ;
-  ; [:!C#Pup_arrow :!To [:editor]]                                             ; cmd-up            ;
-  ; [:!C#Pdown_arrow :!Tp [:editor]]                                           ; cmd-down          ;
+  ; [:!C#Pup_arrow :!To [:editor]]                                             ; ctl-cmd-up        ;
+  ; [:!C#Pdown_arrow :!Tp [:editor]]                                           ; ctl-cmd-down      ;
   ; [: :!Tq [:editor]]                                                              DEFAULT        ;
   ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; bs-ctl            ;
   ; [:!EQR#Pleft_option :!Ts [:editor]]                                        ; bs-alt            ;
   ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; bs-cmd            ;
   ; [: :!Tu [:editor]]                                                              COLLISION      ;
-  ; [: :!Tv [:editor]]                                                                             ;
+  [:#Pleft_option :left_option [:editor] {:alone [:!Tv]}]                      ; alt               ;
   ; [: :!Tw [:editor]]                                                              COLLISION      ;
   ; [: :!Tx [:editor]]                                                                             ;
   ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; bs-space          ;
@@ -80,10 +80,10 @@
  :rules
  [;
   ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; bs-shift          ;
-  [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; delete word fa    ;
-  ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; delete line fa    ;
-  [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; delete word bw    ;
-  [:!R#Pleft_command :!Cdelete_or_backspace [:gui]]                            ; delete line bw    ;
+  [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; del word fw       ;
+  ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; del line fw       ;
+  [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; del word bw       ;
+  [:!R#Pleft_command :!Cdelete_or_backspace [:gui]]                            ; del line bw       ;
   [:!R#Pleft_option :!Tl [:gui]]                                               ; shift-alt         ;
   ]}
 

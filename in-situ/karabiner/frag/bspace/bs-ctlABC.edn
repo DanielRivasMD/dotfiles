@@ -55,19 +55,19 @@
   ; [:!EQR#Pdelete_or_backspace []]                                                 NOT AVAILABLE  ;
   ; [:!EQR#Preturn_or_enter []]                                                     UNMAPPED       ;
   ; [:!EQR#Pright_shift []]                                                         UNMAPPED       ;
-  ; [:!EQR#Pright_option :!Tn [:term]]                                                             ;
-  ; [:!EQR#Pright_command :!Tj [:term]]                                                            ;
+  ; [:!EQR#Pright_option []]                                                        UNMAPPED       ;
+  ; [:!EQR#Pright_command []]                                                       UNMAPPED       ;
   ; [:!EQR#Pspacebar :!Ty [:term]]                                                                 ;
 
-  ; [:!EQR#Pright_control []]                                                                      ;
+  ; [:!EQR#Pright_control :!Tj [:term]]                                                            ;
   [:!EQR#Pleft_command :!Tt [:term]]                                                               ;
   ; [:!EQR#Pleft_option :!Ts [:term]]                                                              ;
   [:!EQR#Pleft_control :!Tr [:term]]                                                               ;
   ; [:!EQR#Pleft_shift :!Oc [:term]]                                                               ;
   ; [:!EQR#Pcaps_lock :!Tg [:term]]                                                                ;
   ; [:!EQR#Ptab :!Th [:term]]                                                                      ;
-  ; [:!EQR#Pnon_us_backslash []]                                                                   ;
-  ; [:!EQR#Pescape []]                                                                             ;
+  ; [:!EQR#Pnon_us_backslash :!Tn [:term]]                                                         ;
+  ; [:!EQR#Pescape []]                                                              NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
