@@ -32,7 +32,7 @@ gui:
 
   # Fraction of the total screen width to use for the left side section. You may want to pick a small number (e.g. 0.2) if you're using a narrow screen, so that you can see more of the main section.
   # Number from 0 to 1.0.
-  sidePanelWidth: 0.3
+  sidePanelWidth: 0.25
 
   # If true, increase the height of the focused side window; creating an accordion effect.
   expandFocusedSidePanel: true
@@ -281,7 +281,7 @@ git:
 
   # Command used to display git log of all branches in the main window.
   # Deprecated: User `allBranchesLogCmds` instead.
-  allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
+  allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative --pretty=medium
 
   # If true, do not spawn a separate process when using GPG
   overrideGpg: false
@@ -434,6 +434,7 @@ promptToReturnFromSubprocess: true
 
 ####################################################################################################
 
+# TODO: review binds
 # Keybindings
 keybinding:
   universal:
@@ -446,21 +447,21 @@ keybinding:
     nextItem: <disabled>
     prevItem-alt: <up>
     nextItem-alt: <down>
-    prevPage: '<pgup>'                             # alt-up
-    nextPage: '<pgdown>'                             # alt-down
+    prevPage: '<pgup>'                           # alt-up
+    nextPage: '<pgdown>'                         # alt-down
     scrollLeft: H
     scrollRight: L
-    gotoTop: '<home>'                              # cmd-up
-    gotoBottom: '<end>'                           # cmd-down
-    toggleRangeSelect: v                         # * 
-    rangeSelectDown: <s-down>                    # * 
-    rangeSelectUp: <s-up>                        # * 
+    gotoTop: '<home>'                            # cmd-up
+    gotoBottom: '<end>'                          # cmd-down
+    toggleRangeSelect:  <c-y>                    # bs-space
+    rangeSelectDown: <s-down>
+    rangeSelectUp: <s-up>
     prevBlock: <disabled>
     nextBlock: <disabled>
     nextBlock-alt: <disabled>
     prevBlock-alt: <disabled>
-    prevBlock-alt2: '<f11>'                      # ctl-cmd-up
-    nextBlock-alt2: '<f12>'                      # ctl-cmd-down
+    prevBlock-alt2: '<c-o>'                      # ctl-cmd-up
+    nextBlock-alt2: '<c-p>'                      # ctl-cmd-down
     jumpToBlock:
         - '1'
         - '2'
@@ -486,7 +487,7 @@ keybinding:
     scrollDownMain-alt1: <disabled>
     scrollUpMain-alt2: k
     scrollDownMain-alt2: j
-    executeCustomCommand: ':'                    # * 
+    executeCustomCommand: ':'
     createRebaseOptionsMenu: m
 
     # 'Files' appended for legacy reasons
@@ -496,17 +497,17 @@ keybinding:
     pullFiles: p
     refresh: r
     createPatchOptionsMenu: N
-    nextTab: '<f10>'                             # ctl-cmd-right
-    prevTab: '<f9>'                              # ctl-cmd-left
-    nextScreenMode: '<c-y>'                      # bs-space
+    nextTab: '<c-f>'                             # ctl-cmd-right
+    prevTab: '<c-b>'                             # ctl-cmd-left
+    nextScreenMode: '<c-v>'                      # alt
     prevScreenMode: <disabled>
     undo: u
     redo: U
-    filteringMenu: <c-s>
-    diffingMenu: W
-    diffingMenu-alt: <c-e>
+    filteringMenu: <c-s>                         # bs-alt
+    diffingMenu:  <disabled> 
+    diffingMenu-alt: W
     copyToClipboard: y
-    openRecentRepos: '<c-t>'                      # alt WIP: remap
+    openRecentRepos: '<c-r>'                     # bs-ctl
     submitEditorText: <enter>
     extrasMenu: <disabled>
     toggleWhitespaceInDiffView: <disabled>
@@ -526,7 +527,7 @@ keybinding:
     commitChangesWithoutHook: w
     amendLastCommit: A
     commitChangesWithEditor: C
-    findBaseCommitForFixup: <c-f>
+    findBaseCommitForFixup: <c-t>                # bs-cmd
     confirmDiscard: x
     ignoreFile: i
     refreshFiles: r
@@ -600,6 +601,6 @@ keybinding:
     update: u
     bulkMenu: b
   commitMessage:
-    commitMenu: <c-o>
+    commitMenu: <disabled>
 
 ####################################################################################################
