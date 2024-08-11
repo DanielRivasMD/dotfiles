@@ -9,86 +9,45 @@ default_flags = ""
 # fn
 ####################################################################################################
 
-# panel
-[[verbs]]
-invocation = "toggle_preview"
-key = "f1"
-internal = "toggle_preview"
-description = "`ctrl-cmd-space` -> open / close preview panel"
-
-# stage
-[[verbs]]
-invocation = "toggle_staging_area"
-key = "f2"
-internal = "toggle_staging_area"
-description = "`alt` -> toggle staging area"
-
 # move
+# editor
 [[verbs]]
-key = "f3"
+invocation = "micro"
+key = "f1"
+execution = "micro {file}"
+leave_broot = false
+description = "`cmd-bs` -> open file with `micro` editor"
+
+[[verbs]]
+key = "f2"
 external = "command open {file}"
 leave_broot = false
 description = "`cmd-enter` -> open according to OS"
 
-# move
+# stage
 [[verbs]]
-invocation = "page_up"
+invocation = "toggle_staging_area"
+key = "f3"
+internal = "toggle_staging_area"
+description = "`alt` -> toggle staging area"
+
+# editor
+[[verbs]]
+invocation = "helix"
 key = "f4"
-internal = "page_up"
-description = "`alt-up` -> go to page up"
+execution = "hx {file}"
+leave_broot = false
+description = "`cmd-shift` -> open file with `helix` editor"
 
-# move
+# rename
 [[verbs]]
-invocation = "page_down"
+external = "mv {file} {parent}/{new_filename}"
+invocation = "rename {new_filename:file-name}"
+shortcut = "rn"
 key = "f5"
-internal = "page_down"
-description = "`alt-down` -> go to page down"
-
-# move
-[[verbs]]
-invocation = "select_first"
-key = "f6"
-internal = "select_first"
-description = "`cmd-up` -> go to top of the list"
-
-# move
-[[verbs]]
-invocation = "select_last"
-key = "f7"
-internal = "select_last"
-description = "`cmd-down` -> go to bottom of the list"
-
-# panel
-[[verbs]]
-invocation = "close_preview"
-key = "f8"
-apply_to = "file"
-internal = "close_preview {file}"
 leave_broot = false
-description = "`ctrl-cmd-left` -> close display"
-
-# panel
-[[verbs]]
-invocation = "open_preview"
-key = "f9"
-apply_to = "file"
-internal = "open_preview {file}"
-leave_broot = false
-description = "`ctrl-cmd-right` -> display file on panel"
-
-# move
-[[verbs]]
-invocation = "root_up"
-key = "f10"
-internal = "root_up"
-description = "`ctrl-cmd-up` -> move tree root up"
-
-# move
-[[verbs]]
-invocation = "open_leave"
-key = "f11"
-cmd = ":cd"
-description = "`ctrl-cmd-down` -> go into directory"
+auto_exec = false
+description = "`cmd-alt` -> rename file"
 
 
 ####################################################################################################
@@ -102,7 +61,7 @@ invocation = "rm"
 key = "shift-f1"
 leave_broot = false
 auto_exec = false
-description = "`ctrl-cmd-delete` -> delete file"
+description = "`ctl-cmd-delete` -> delete file"
 
 # create
 [[verbs]]
@@ -112,7 +71,7 @@ key = "shift-f2"
 execution = "touch {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`ctrl-cmd-enter` -> create file"
+description = "`ctl-cmd-enter` -> create file"
 
 # directory
 [[verbs]]
@@ -121,7 +80,7 @@ key = "shift-f4"
 execution = "mkdir {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`ctrl-cmd-shift` -> create directory"
+description = "`ctl-cmd-shift` -> create directory"
 
 # move
 [[verbs]]
@@ -130,7 +89,7 @@ invocation = "move_to_pane"
 key = "shift-f5"
 leave_broot = false
 auto_exec = true
-description = "`ctrl-cmd-alt` -> move file to pane"
+description = "`ctl-cmd-alt` -> move file to pane"
 
 # copy
 [[verbs]]
@@ -139,7 +98,77 @@ invocation = "copy_to_pane"
 key = "shift-f6"
 leave_broot = false
 auto_exec = true
-description = "`ctrl-cmd-cmd` -> copy file to pane"
+description = "`ctl-cmd-cmd` -> copy file to pane"
+
+# panel
+[[verbs]]
+invocation = "toggle_preview"
+key = "shift-f7"
+internal = "toggle_preview"
+description = "`cmd-space` -> open / close preview panel"
+
+
+####################################################################################################
+
+# move
+[[verbs]]
+invocation = "page_up"
+key = "pageup"
+internal = "page_up"
+description = "`alt-up` -> go to page up"
+
+# move
+[[verbs]]
+invocation = "page_down"
+key = "pagedown"
+internal = "page_down"
+description = "`alt-down` -> go to page down"
+
+# move
+[[verbs]]
+invocation = "select_first"
+key = "home"
+internal = "select_first"
+description = "`cmd-up` -> go to top of the list"
+
+# move
+[[verbs]]
+invocation = "select_last"
+key = "end"
+internal = "select_last"
+description = "`cmd-down` -> go to bottom of the list"
+
+# panel
+[[verbs]]
+invocation = "close_preview"
+key = "ctrl-b"
+apply_to = "file"
+internal = "close_preview {file}"
+leave_broot = false
+description = "`ctl-cmd-left` -> close display"
+
+# panel
+[[verbs]]
+invocation = "open_preview"
+key = "ctrl-f"
+apply_to = "file"
+internal = "open_preview {file}"
+leave_broot = false
+description = "`ctl-cmd-right` -> display file on panel"
+
+# move
+[[verbs]]
+invocation = "root_up"
+key = "ctrl-o"
+internal = "root_up"
+description = "`ctl-cmd-up` -> move tree root up"
+
+# move
+[[verbs]]
+invocation = "open_leave"
+key = "ctrl-p"
+cmd = ":cd"
+description = "`ctl-cmd-down` -> go into directory"
 
 
 ####################################################################################################
@@ -339,32 +368,6 @@ description = "`cmd-left` -> close direcotry"
 internal = "open_stay!"
 key = "ctrl-e"
 description = "`cmd-right` -> open directory"
-
-# editor
-[[verbs]]
-invocation = "micro"
-key = "ctrl-j"
-execution = "micro {file}"
-leave_broot = false
-description = "`delete-cmd` -> open file with `micro` editor"
-
-# rename
-[[verbs]]
-external = "mv {file} {parent}/{new_filename}"
-invocation = "rename {new_filename:file-name}"
-shortcut = "rn"
-key = "ctrl-l"
-leave_broot = false
-auto_exec = false
-description = "`shift-alt` -> rename file"
-
-# editor
-[[verbs]]
-invocation = "helix"
-key = "ctrl-n"
-execution = "hx {file}"
-leave_broot = false
-description = "`delete-alt` -> open file with `helix` editor"
 
 
 ####################################################################################################
