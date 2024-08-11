@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# TODO: update keybindings
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
 
@@ -28,8 +27,8 @@ $env.config = {
 
     {
       name: previous_dir
-      modifier: none
-      keycode: "f15"                                         # patch -> `alt-cmd-,`
+      modifier: shift
+      keycode: "f15"                                         # patch -> `clt-cmd-,`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -39,8 +38,8 @@ $env.config = {
 
     {
       name: next_dir
-      modifier: none
-      keycode: "f16"                                         # patched -> `alt-cmd-.`
+      modifier: shift
+      keycode: "f16"                                         # patched -> `clt-cmd-.`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -50,8 +49,8 @@ $env.config = {
 
     {
       name: list_shells
-      modifier: none
-      keycode: "f17"                                         # patched -> `alt-cmd-/`
+      modifier: shift
+      keycode: "f17"                                         # patched -> `clt-cmd-/`
       mode: emacs
       event: {
         send: executehostcommand,
