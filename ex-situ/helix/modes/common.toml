@@ -7,7 +7,7 @@ backspace = ["delete_char_backward"]                       # shift-shift
 A-d = ["delete_word_forward"]                              # shift-alt         # delete next word
 
 # fast reload
-C-F3 = ["normal_mode", ":write", "MODE"]                   # grave             #
+F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
 
 ####################################################################################################
 
