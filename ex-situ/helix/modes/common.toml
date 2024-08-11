@@ -69,7 +69,7 @@ A-end = ["goto_next_change"]                               # alt-cmd-down      #
 ####################################################################################################
 
 # alphabet
-A-F1 = ["normal_mode", ":reload-all", "MODE"]              # alt-a             # reload
+A-F1 = ["format_selections"]                               # alt-a             # format
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_joined_to_clipboard"]                        # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
@@ -83,13 +83,13 @@ C-F1 = ["normal_mode", "copy_selection_on_next_line", "MODE"]
 C-F2 = ["normal_mode", "copy_selection_on_prev_line", "MODE"]
                                                            # alt-k             # spawn multi up
 C-F4 = ["search_next"]                                     # alt-l             # find next
-# C-F5 = [""]                                              # alt-m             #
+C-F5 = ["record_macro"]                                    # alt-m             # toggle macro
 # C-F6 = [""]                                              # alt-n             #
 # C-F7 = [""]                                              # alt-o             #
 C-F8 = ["match_brackets"]                                  # alt-p             # jump matching
 C-F9 = ["normal_mode", ":quit-all"]                        # alt-q             # close buffer
-C-F10 = ["record_macro"]                                   # alt-r             # toggle macro
-A-C-F1 = ["normal_mode", ":write-buffer-close"]            # alt-s             # save & close buf
+C-F10 = ["normal_mode", ":reload-all", "MODE"]             # alt-r             # reload
+A-C-F1 = ["normal_mode", ":write-quit-all"]                # alt-s             # save & quit
 # A-C-F2 = [""]                                            # alt-t             #
 A-C-F4 = ["undo"]                                          # alt-u             # undo
 A-C-F5 = ["replace_with_yanked"]                           # alt-v             # paste
@@ -119,16 +119,16 @@ S-C-F2 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line
                                                            # alt-shift-k       # move up
 S-C-F4 = ["goto_line_end", "select_mode", "goto_line_start", "MODE"]
                                                            # alt-shift-l       # select line
-# S-C-F5 = [""]                                            # alt-shift-m       #
+S-C-F5 = ["replay_macro"]                                  # alt-shift-m       # play macro
 # S-C-F6 = [""]                                            # alt-shift-n       #
 S-C-F7 = ["unindent"]                                      # alt-shift-o       # unindent
 S-C-F8 = ["select_mode", "match_brackets", "MODE"]         # alt-shift-p       #
 # S-C-F9 = [""]                                            # alt-shift-q       #
-S-C-F10 = ["replay_macro"]                                 # alt-shift-r       # play macro
-S-A-C-F1 = [":write-quit-all"]                             # alt-shift-s       # save & quit all
+# S-C-F10 = [""]                                           # alt-shift-r       #
+# S-A-C-F1 = [""]                                          # alt-shift-s       #
 # S-A-C-F2 = [""]                                          # alt-shift-t       #
 S-A-C-F4 = ["redo"]                                        # alt-shift-u       # redo
-S-A-C-F5 = ["format_selections"]                           # alt-shift-v       # format
+# S-A-C-F5 = [""]                                          # alt-shift-v       #
 # S-A-C-F6 = [""]                                          # alt-shift-w       #
 S-A-C-F7 = ["extend_to_line_bounds", "delete_selection"]   # alt-shift-x       # cut line
 S-A-C-F8 = ["extend_to_line_bounds", "yank"]               # alt-shift-y       # copy line
