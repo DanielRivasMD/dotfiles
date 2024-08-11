@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# TODO: update micro bindings
 # del
 del = ["delete_selection_noyank"]                          # shift-shift
 backspace = ["delete_char_backward"]                       # shift-shift
@@ -25,37 +24,44 @@ C-down = ["jump_view_down"]                                # ctl-down          #
 
 ####################################################################################################
 
-# arrow
+# shift
 S-left = ["extend_char_left"]                              # shift-left        # select left
 S-right = ["extend_char_right"]                            # shift-right       # select right
 S-up = ["extend_line_above"]                               # shift-up          # select up
 S-down = ["extend_line_below"]                             # shift-down        # select down
 
+# alt
 pageup = ["goto_prev_paragraph", "collapse_selection"]     # alt-up            # prev block
 pagedown = ["goto_next_paragraph", "collapse_selection"]   # alt-down          # next block
 
+# alt-shift
 A-S-left = ["extend_prev_word_start"]                      # alt-shift-left    # select word left
 A-S-right = [ "extend_next_word_end"]                      # alt-shift-right   # select word right
 A-S-up = ["select_mode", "goto_prev_paragraph", "MODE"]    # alt-shift-up      # select prev block
 A-S-down = ["select_mode", "goto_next_paragraph", "MODE"]  # alt-shift-down    # select next block
 
+# cmd
 home = ["goto_file_start"]                                 # cmd-up            # cursor start
 end = ["goto_last_line"]                                   # cmd-down          # cursor end
 
+# cmd-shift
 A-left = ["select_mode", "goto_line_start", "MODE"]        # cmd-shift-left    # select start line
 A-right = ["select_mode", "goto_line_end", "MODE"]         # cmd-shift-right   # select end line
 S-home = ["select_mode", "goto_file_start", "MODE"]        # cmd-shift-up      # select start
 S-end = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
                                                            # cmd-shift-down    # select end
 
+# joker
 A-C-pageup = ["jump_backward"]                             # joker-left        # prev jump
 A-C-pagedown = ["jump_forward"]                            # joker-right       # next jump
 A-C-home = ["goto_prev_comment"]                           # joker-up          # prev comment
 A-C-end = ["goto_next_comment"]                            # joker-down        # next comment
 
+# q
 A-C-S-home = ["increment"]                                 # q-up              # increment
 A-C-S-end = ["decrement"]                                  # q-down            # decrement
 
+# alt-cmd
 A-home = ["goto_prev_change"]                              # alt-cmd-up        # prev change
 A-end = ["goto_next_change"]                               # alt-cmd-down      # next change
 
@@ -63,8 +69,7 @@ A-end = ["goto_next_change"]                               # alt-cmd-down      #
 ####################################################################################################
 
 # alphabet
-# TODO: remap
-A-F1 = ["goto_word"]                                       # alt-a             # jump
+# A-F1 = [""]                                              # alt-a             #
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_joined_to_clipboard"]                        # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
@@ -155,7 +160,7 @@ C-r = ["file_picker"]                                      # bs-ctl            #
 C-s = ["buffer_picker"]                                    # bs-alt            # buffer picker
 C-t = ["command_palette"]                                  # bs-cmd            # command palette
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
-# C-v = [""]                                               #                   #
+C-v = ["goto_word"]                                        # alt               # jump
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
 # C-x = [""]                                               #                   #
 C-y = ["normal_mode", ":new"]                              # alt-shift-q       # quit all
@@ -177,11 +182,12 @@ F8 = ["goto_prev_class"]                                   # cmd--             #
 F9 = ["goto_next_class"]                                   # cmd-=             # prev class
 F10 = ["goto_prev_function"]                               # cmd-[             # next func
 F11 = ["goto_next_function"]                               # cmd-]             # prev func
-F13 = ["goto_prev_parameter"]                              # cmd-;             # next param
-F14 = ["goto_next_parameter"]                              # cmd-'             # prev param
+F12 = ["goto_prev_parameter"]                              # cmd-;             # next param
+F13 = ["goto_next_parameter"]                              # cmd-'             # prev param
+F14 = ["rename_symbol"]                                    # cmd-\             # rename
 F15 = ["goto_prev_test"]                                   # cmd-,             # prev test
 F16 = ["goto_next_test"]                                   # cmd-.             # next test
-F17 = ["rename_symbol"]                                    # cmd-\             # type definition
+F17 = ["goto_type_definition"]                             # cmd-/             # type definition
 
 
 # ctl-cmd
@@ -196,6 +202,7 @@ S-F7 = ["goto_last_accessed_file"]                         # clt-cmd-space     #
 # S-F9 = []                                                #                   #
 # S-F10 = []                                               #                   #
 # S-F11 = []                                               #                   #
+# S-F12 = []                                               #                   #
 # S-F13 = []                                               #                   #
 # S-F14 = []                                               #                   #
 # S-F15 = []                                               #                   #
