@@ -446,12 +446,12 @@ keybinding:
     nextItem: <disabled>
     prevItem-alt: <up>
     nextItem-alt: <down>
-    prevPage: '<f4>'                             # alt-up
-    nextPage: '<f5>'                             # alt-down
+    prevPage: '<pgup>'                             # alt-up
+    nextPage: '<pgdown>'                             # alt-down
     scrollLeft: H
     scrollRight: L
-    gotoTop: '<f6>'                              # cmd-up
-    gotoBottom: '<f7>'                           # cmd-down
+    gotoTop: '<home>'                              # cmd-up
+    gotoBottom: '<end>'                           # cmd-down
     toggleRangeSelect: v                         # * 
     rangeSelectDown: <s-down>                    # * 
     rangeSelectUp: <s-up>                        # * 
@@ -459,8 +459,8 @@ keybinding:
     nextBlock: <disabled>
     nextBlock-alt: <disabled>
     prevBlock-alt: <disabled>
-    prevBlock-alt2: '<f10>'                      # ctl-cmd-up
-    nextBlock-alt2: '<f11>'                      # ctl-cmd-down
+    prevBlock-alt2: '<f11>'                      # ctl-cmd-up
+    nextBlock-alt2: '<f12>'                      # ctl-cmd-down
     jumpToBlock:
         - '1'
         - '2'
@@ -475,7 +475,7 @@ keybinding:
     select: <space>
     goInto: <enter>
     confirm: <enter>
-    confirmInEditor: <a-enter>
+    confirmInEditor: <disabled>
     remove: d
     new: n
     edit: e
@@ -496,9 +496,9 @@ keybinding:
     pullFiles: p
     refresh: r
     createPatchOptionsMenu: N
-    nextTab: '<f9>'                          # ctl-cmd-right
-    prevTab: '<f8>'                          # ctl-cmd-left
-    nextScreenMode: '<f1>'                   # ctl-cmd-space WIP: remap
+    nextTab: '<f10>'                             # ctl-cmd-right
+    prevTab: '<f9>'                              # ctl-cmd-left
+    nextScreenMode: '<c-y>'                      # bs-space
     prevScreenMode: <disabled>
     undo: u
     redo: U
@@ -506,7 +506,7 @@ keybinding:
     diffingMenu: W
     diffingMenu-alt: <c-e>
     copyToClipboard: y
-    openRecentRepos: '<f2>'                  # alt WIP: remap
+    openRecentRepos: '<c-t>'                      # alt WIP: remap
     submitEditorText: <enter>
     extrasMenu: <disabled>
     toggleWhitespaceInDiffView: <disabled>
@@ -514,7 +514,7 @@ keybinding:
     decreaseContextInDiffView: '-'               # *
     increaseRenameSimilarityThreshold: )
     decreaseRenameSimilarityThreshold: (
-    openDiffTool: <c-t>
+    openDiffTool: <disabled>
 
   status:
     checkForUpdate: u
@@ -532,17 +532,17 @@ keybinding:
     refreshFiles: r
     stashAllChanges: s
     viewStashOptions: S
-    toggleStagedAll: '<c-y>'                 # bs-space
+    toggleStagedAll: a
     viewResetOptions: D
     fetch: f
     toggleTreeView: '\'
     openMergeTool: M
-    openStatusFilter: <c-b>
-    copyFileInfoToClipboard: "y"
+    openStatusFilter: <disabled>
+    copyFileInfoToClipboard: y
   branches:
     createPullRequest: u
     viewPullRequestOptions: U
-    copyPullRequestURL: <c-y>
+    copyPullRequestURL: <disabled>
     checkoutBranchByName: c
     forceCheckoutBranch: F
     rebaseBranch: r
