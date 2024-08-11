@@ -4,7 +4,6 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules
  [;
-  [:#Pleft_option :left_option [:term] {:alone [:f2]}]                         ; alt               ;
   [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]                        ; shift             ;
   [:!O#Pleft_arrow :!Ob [:term]]                                               ; alt-left          ;
   ; [: :!Oc [:term]]                                                                COLLISION      ;
@@ -51,10 +50,10 @@
   ; [: :!SOj [:term]]                                                                              ;
   ; [: :!SOk [:term]]                                                                              ;
   ; [: :!SOl [:term]]                                                                              ;
-  ; [: :!SOm [:term]]                                                                              ;
-  ; [: :!SOn [:term]]                                                                              ;
+  [:#Pleft_option :left_option [:term] {:alone [:!SOm]}]                       ; alt               ;
+  [:!E#Pright_control :!SOn [:term]]                                                               ;
   ; [: :!SOo [:term]]                                                               COLLISION      ;
-  [:!E#Pleft_control :!SOp [:term]]                                            ; alt-ctl          ;
+  [:!E#Pleft_control :!SOp [:term]]                                            ; alt-ctl           ;
   [:!E#Pleft_command :!SOq [:term]]                                            ; alt-cmd           ;
   [:!OC#P1 :!SOr [:term]]                                                      ; alt-cmd-1         ;
   [:!OC#P2 :!SOs [:term]]                                                      ; alt-cmd-2         ;
@@ -75,6 +74,7 @@
   [:!OC#Pkeypad_7 :!SOx [:term]]                                               ; alt-cmd-7         ;
   [:!OC#Pkeypad_8 :!SOy [:term]]                                               ; alt-cmd-8         ;
   [:!OC#Pkeypad_9 :!SOz [:term]]                                               ; alt-cmd-9         ;
+  [:!OC#Pkeypad_0 :!Oo [:term]]                                                ; alt-cmd-space     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

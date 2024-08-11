@@ -4,60 +4,87 @@
 {:des "Alacritty - Arrow"
  :rules
  [;
-  ; [:!S#Pleft_arrow : [:term]]                                                                    ;
-  ; [:!S#Pright_arrow : [:term]]                                                                   ;
-  ; [:!S#Pup_arrow : [:term]]                                                                      ;
-  ; [:!S#Pdown_arrow : [:term]]                                                                    ;
+  ; DOC: arrow - unmapped
+  ; [ :!Spage_up [:term]]                                                                          ;
+  ; [ :!Spage_down [:term]]                                                                        ;
+  ; [ :!Opage_up [:term]]                                                                          ;
+  ; [ :!Opage_down [:term]]                                                                        ;
+  ; [ :!OSpage_up [:term]]                                                                         ;
+  ; [ :!OSpage_down [:term]]                                                                       ;
+  ; [ :!OShome [:term]]                                                                            ;
+  ; [ :!OSend [:term]]                                                                             ;
+  ; [ :!OTSpage_up [:term]]                                                                        ;
+  ; [ :!OTSpage_down [:term]]                                                                      ;
 
-  ; [:!O#Pleft_arrow : [:term]]                                                                    ;
-  ; [:!O#Pright_arrow : [:term]]                                                                   ;
-  [:!O#Pup_arrow :f4 [:term]]                                                                      ;
-  [:!O#Pdown_arrow :f5 [:term]]                                                                    ;
+  ; [:!S#Pleft_arrow [:term]]                                                                      ;
+  ; [:!S#Pright_arrow [:term]]                                                                     ;
+  ; [:!S#Pup_arrow [:term]]                                                                        ;
+  ; [:!S#Pdown_arrow [:term]]                                                                      ;
 
-  ; [:!T#Pleft_arrow : [:term]]                                                                    ;
-  ; [:!T#Pright_arrow : [:term]]                                                                   ;
-  ; [:!T#Pup_arrow : [:term]]                                                                      ;
-  ; [:!T#Pdown_arrow : [:term]]                                                                    ;
+  ; [:!O#Pleft_arrow [:term]]                                                                      ;
+  ; [:!O#Pright_arrow [:term]]                                                                     ;
+  [:!O#Pup_arrow :page_up [:term]]                                                                 ;
+  [:!O#Pdown_arrow :page_down [:term]]                                                             ;
 
-  ; [:!C#Pleft_arrow : [:term]]                                                                    ;
-  ; [:!C#Pright_arrow : [:term]]                                                                   ;
-  [:!C#Pup_arrow :f6 [:term]]                                                                      ;
-  [:!C#Pdown_arrow :f7 [:term]]                                                                    ;
+  ; [:!OS#Pleft_arrow [:term]]                                                                     ;
+  ; [:!OS#Pright_arrow [:term]]                                                                    ;
+  ; [:!OS#Pup_arrow [:term]]                                                                       ;
+  ; [:!OS#Pdown_arrow [:term]]                                                                     ;
 
-  ; [:!OS#Pleft_arrow : [:term]]                                                                   ;
-  ; [:!OS#Pright_arrow : [:term]]                                                                  ;
-  ; [:!OS#Pup_arrow : [:term]]                                                                     ;
-  ; [:!OS#Pdown_arrow : [:term]]                                                                   ;
+  ; [:!T#Pleft_arrow [:term]]                                                                      ;
+  ; [:!T#Pright_arrow [:term]]                                                                     ;
+  ; [:!T#Pup_arrow [:term]]                                                                        ;
+  ; [:!T#Pdown_arrow [:term]]                                                                      ;
 
-  ; [:!TS#Pleft_arrow : [:term]]                                                                   ;
-  ; [:!TS#Pright_arrow : [:term]]                                                                  ;
-  ; [:!TS#Pup_arrow : [:term]]                                                                     ;
-  ; [:!TS#Pdown_arrow : [:term]]                                                                   ;
+  ; [:!TS#Pleft_arrow [:term]]                                                                     ;
+  ; [:!TS#Pright_arrow [:term]]                                                                    ;
+  ; [:!TS#Pup_arrow [:term]]                                                                       ;
+  ; [:!TS#Pdown_arrow [:term]]                                                                     ;
+
+  ; [:!C#Pleft_arrow [:term]]                                                                      ;
+  ; [:!C#Pright_arrow [:term]]                                                                     ;
+  [:!C#Pup_arrow :home [:term]]                                                                    ;
+  [:!C#Pdown_arrow :end [:term]]                                                                   ;
 
   [:!CS#Pleft_arrow :!Oleft_arrow [:term]]                                                         ;
   [:!CS#Pright_arrow :!Oright_arrow [:term]]                                                       ;
-  [:!CS#Pup_arrow :!Sf9 [:term]]                                                                   ;
-  [:!CS#Pdown_arrow :!Sf10 [:term]]                                                                ;
+  [:!CS#Pup_arrow :!Shome [:term]]                                                                 ;
+  [:!CS#Pdown_arrow :!Send [:term]]                                                                ;
 
-  ; [:!OC#Pleft_arrow : [:term]]                                                                   ;
-  ; [:!OC#Pright_arrow : [:term]]                                                                  ;
-  [:!OC#Pup_arrow :!Sf7 [:term]]                                                                   ;
-  [:!OC#Pdown_arrow :!Sf8 [:term]]                                                                 ;
+  [:!W#Pleft_arrow :!Wpage_up [:term]]                                                             ;
+  [:!W#Pright_arrow :!Wpage_down [:term]]                                                          ;
+  [:!W#Pup_arrow :!Whome [:term]]                                                                  ;
+  [:!W#Pdown_arrow :!Wend [:term]]                                                                 ;
 
-  [:!TC#Pleft_arrow :f8 [:term]]                                                                   ;
-  [:!TC#Pright_arrow :f9 [:term]]                                                                  ;
-  [:!TC#Pup_arrow :f10 [:term]]                                                                    ;
-  [:!TC#Pdown_arrow :f11 [:term]]                                                                  ;
+  [:!WS#Pleft_arrow :!WSpage_up [:term]]                                                           ;
+  [:!WS#Pright_arrow :!WSpage_down [:term]]                                                        ;
+  [:!WS#Pup_arrow :!WShome [:term]]                                                                ;
+  [:!WS#Pdown_arrow :!WSend [:term]]                                                               ;
 
-  [:!OTC#Pleft_arrow :!STf11 [:term]]                                                              ;
-  [:!OTC#Pright_arrow :!STf12 [:term]]                                                             ;
-  [:!OTC#Pup_arrow :!STf13 [:term]]                                                                ;
-  [:!OTC#Pdown_arrow :!STf14 [:term]]                                                              ;
+  [:!OTC#Pleft_arrow :!OTpage_up [:term]]                                                          ;
+  [:!OTC#Pright_arrow :!OTpage_down [:term]]                                                       ;
+  [:!OTC#Pup_arrow :!OThome [:term]]                                                               ;
+  [:!OTC#Pdown_arrow :!OTend [:term]]                                                              ;
 
-  [:!W#Pleft_arrow :!OTf13 [:term]]                                                                              ;
-  [:!W#Pright_arrow :!OTf14 [:term]]                                                                              ;
-  [:!W#Pup_arrow :!OTf18 [:term]]                                                                              ;
-  [:!W#Pdown_arrow :!OTf19 [:term]]                                                                              ;
+  ; [:!OTCS#Pleft_arrow [:term]]                                                                   ;
+  ; [:!OTCS#Pright_arrow [:term]]                                                                  ;
+  [:!OTCS#Pup_arrow :!OTShome [:term]]                                                             ;
+  [:!OTCS#Pdown_arrow :!OTSend [:term]]                                                            ;
+
+  ; [:!OT#Pleft_arrow [:term]]                                                                     ;
+  ; [:!OT#Pright_arrow [:term]]                                                                    ;
+  ; [:!OT#Pup_arrow [:term]]                                                                       ;
+  ; [:!OT#Pdown_arrow [:term]]                                                                     ;
+
+  ; [:!OC#Pleft_arrow [:term]]                                                                     ;
+  ; [:!OC#Pright_arrow [:term]]                                                                    ;
+  [:!OC#Pup_arrow :!Ohome [:term]]                                                                 ;
+  [:!OC#Pdown_arrow :!Oend [:term]]                                                                ;
+
+  [:!TC#Pleft_arrow :!Tb [:term]]                                                                   ;
+  [:!TC#Pright_arrow :!Tf [:term]]                                                                 ;
+  [:!TC#Pup_arrow :!To [:term]]                                                                    ;
+  [:!TC#Pdown_arrow :!Tp [:term]]                                                                  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

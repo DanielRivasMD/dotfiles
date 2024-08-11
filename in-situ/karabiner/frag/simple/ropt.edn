@@ -52,14 +52,13 @@
   ; [:!E#Pperiod []]                                                                               ;
   ; [:!E#Pslash []]                                                                                ;
 
-  ; [:!E#Pdelete_or_backspace []]                                                                  ;
-  ; [:!E#Preturn_or_enter []]                                                                      ;
-  ; [:!E#Pright_shift []]                                                                          ;
+  ; [:!E#Pdelete_or_backspace []]                                                   UNMAPPED       ;
+  ; [:!E#Preturn_or_enter []]                                                       UNMAPPED       ;
+  ; [:!E#Pright_shift []]                                                           UNMAPPED       ;
   ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
-  ; [:!E#Pright_command []]                                                                        ;
+  ; [:!E#Pright_command []]                                                         UNMAPPED       ;
   ; [:!E#Pspacebar []]                                                              COLLISION      ;
 
-  ; [:!E#Pright_control []]                                                                        ;
   ; [:!E#Pleft_command []]                                                          COLLISION      ;
   ; [:!E#Pleft_option []]                                                           COLLISION      ;
   ; [:!E#Pleft_control []]                                                          COLLISION      ;

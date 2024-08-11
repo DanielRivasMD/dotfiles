@@ -41,20 +41,20 @@
 {:des "BSpace Mode - symbols"
  :rules
  [;
-  ; [:!EQR#Phyphen []]                                                                             ;
-  ; [:!EQR#Pequal_sign []]                                                                         ;
-  ; [:!EQR#Popen_bracket []]                                                                       ;
-  ; [:!EQR#Pclose_bracket []]                                                                      ;
-  ; [:!EQR#Psemicolon []]                                                                          ;
-  ; [:!EQR#Pquote []]                                                                              ;
-  ; [:!EQR#Pbackslash []]                                                                          ;
-  ; [:!EQR#Pcomma []]                                                                              ;
-  ; [:!EQR#Pperiod []]                                                                             ;
-  ; [:!EQR#Pslash []]                                                                              ;
+  ; [:!EQR#Phyphen []]                                                              UNMAPPED       ;
+  ; [:!EQR#Pequal_sign []]                                                          UNMAPPED       ;
+  ; [:!EQR#Popen_bracket []]                                                        UNMAPPED       ;
+  ; [:!EQR#Pclose_bracket []]                                                       UNMAPPED       ;
+  ; [:!EQR#Psemicolon []]                                                           UNMAPPED       ;
+  ; [:!EQR#Pquote []]                                                               UNMAPPED       ;
+  ; [:!EQR#Pbackslash []]                                                           UNMAPPED       ;
+  ; [:!EQR#Pcomma []]                                                               UNMAPPED       ;
+  ; [:!EQR#Pperiod []]                                                              UNMAPPED       ;
+  ; [:!EQR#Pslash []]                                                               UNMAPPED       ;
 
   ; [:!EQR#Pdelete_or_backspace []]                                                 NOT AVAILABLE  ;
-  ; [:!EQR#Preturn_or_enter []]                                                                    ;
-  ; [:!EQR#Pright_shift []]                                                                        ;
+  ; [:!EQR#Preturn_or_enter []]                                                     UNMAPPED       ;
+  ; [:!EQR#Pright_shift []]                                                         UNMAPPED       ;
   ; [:!EQR#Pright_option :!Tn [:term]]                                                             ;
   ; [:!EQR#Pright_command :!Tj [:term]]                                                            ;
   ; [:!EQR#Pspacebar :!Ty [:term]]                                                                 ;

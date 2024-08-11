@@ -59,14 +59,14 @@
   [:!W#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
   [:!W#Pspacebar :!OTf20 [:term]]                                              ;                   ;
 
-  ; [:!W#Pleft_command []]                                                                         ;
-  ; [:!W#Pleft_option []]                                                                          ;
-  ; [:!W#Pleft_control []]                                                                         ;
-  ; [:!W#Pleft_shift []]                                                                           ;
-  ; [:!W#Pcaps_lock []]                                                                            ;
-  ; [:!W#Ptab []]                                                                                  ;
-  ; [:!W#Pnon_us_backslash []]                                                                     ;
-  ; [:!W#Pescape []]                                                                               ;
+  ; [:!W#Pleft_command []]                                                          UNMAPPED       ;
+  ; [:!W#Pleft_option []]                                                           UNMAPPED       ;
+  ; [:!W#Pleft_control []]                                                          UNMAPPED       ;
+  ; [:!W#Pleft_shift []]                                                            UNMAPPED       ;
+  ; [:!W#Pcaps_lock []]                                                             UNMAPPED       ;
+  ; [:!W#Ptab []]                                                                   UNMAPPED       ;
+  ; [:!W#Pnon_us_backslash []]                                                      UNMAPPED       ;
+  ; [:!W#Pescape []]                                                                UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -128,14 +128,14 @@
   [:!WS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '           ;
   ; [:!WS#Pspacebar []]                                                        ;                   ;
   
-  ; [:!WS#Pleft_command []]                                                                        ;
-  ; [:!WS#Pleft_option []]                                                                         ;
-  ; [:!WS#Pleft_control []]                                                                        ;
+  ; [:!WS#Pleft_command []]                                                         UNMAPPED       ;
+  ; [:!WS#Pleft_option []]                                                          UNMAPPED       ;
+  ; [:!WS#Pleft_control []]                                                         UNMAPPED       ;
   ; [:!WS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!WS#Pcaps_lock []]                                                                           ;
-  ; [:!WS#Ptab []]                                                                                 ;
-  ; [:!WS#Pnon_us_backslash []]                                                                    ;
-  ; [:!WS#Pescape []]                                                                              ;
+  ; [:!WS#Pcaps_lock []]                                                            UNMAPPED       ;
+  ; [:!WS#Ptab []]                                                                  UNMAPPED       ;
+  ; [:!WS#Pnon_us_backslash []]                                                     UNMAPPED       ;
+  ; [:!WS#Pescape []]                                                               UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -32,7 +32,7 @@
   ; [:!OTC#Px []]                                                                                  ;
   ; [:!OTC#Py []]                                                                                  ;
   ; [:!OTC#Pz []]                                                                                  ;
-  ; [:!OTC#Pright_control []]                                                                      ;
+  ; [:!OTC#Pright_control []]                                                       UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -41,32 +41,58 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; [:!OTC#Phyphen []]                                                                             ;
-  ; [:!OTC#Pequal_sign []]                                                                         ;
-  ; [:!OTC#Popen_bracket []]                                                                       ;
-  ; [:!OTC#Pclose_bracket []]                                                                      ;
-  ; [:!OTC#Psemicolon []]                                                                          ;
-  ; [:!OTC#Pquote []]                                                                              ;
-  ; [:!OTC#Pbackslash []]                                                                          ;
-  [:!OTC#Pcomma :!STf18 [:term]]                                                                   ;
-  [:!OTC#Pperiod :!STf19 [:term]]                                                                  ;
-  [:!OTC#Pslash :!STf20 [:term]]                                                                   ;
+  ; DOC: unmapped
+  ; [ :!Of11 [:term]]                                                                              ;
+  ; [ :!OTf11 [:term]]                                                                             ;
+  ; [ :!OTf12 [:term]]                                                                             ;
+  ; [ :!OTf13 [:term]]                                                                             ;
+  ; [ :!OTf14 [:term]]                                                                             ;
+  ; [ :!TSf11 [:term]]                                                                             ;
+  ; [ :!TSf12 [:term]]                                                                             ;
+  ; [ :!TSf13 [:term]]                                                                             ;
+  ; [ :!TSf18 [:term]]                                                                             ;
+  ; [ :!TSf19 [:term]]                                                                             ;
+  ; [ :!TSf20 [:term]]                                                                             ;
+  ; [ :!OSf11 [:term]]                                                                             ;
+  ; [ :!OSf12 [:term]]                                                                             ;
+  ; [ :!OSf13 [:term]]                                                                             ;
+  ; [ :!OSf14 [:term]]                                                                             ;
+  ; [ :!OSf18 [:term]]                                                                             ;
+  ; [ :!OSf19 [:term]]                                                                             ;
+  ; [ :!OSf20 [:term]]                                                                             ;
+  ; [ :!OTSf11 [:term]]                                                                            ;
+  ; [ :!OTSf12 [:term]]                                                                            ;
+  ; [ :!OTSf13 [:term]]                                                                            ;
+  ; [ :!OTSf14 [:term]]                                                                            ;
+  ; [ :!OTSf18 [:term]]                                                                            ;
+  ; [ :!OTSf19 [:term]]                                                                            ;
+  ; [ :!OTSf20 [:term]]                                                                            ;
 
-  [:!OTC#Pdelete_or_backspace :!SOTf11 [:term]]                                                    ;
-  [:!OTC#Preturn_or_enter :!SOTf12 [:term]]                                                        ;
-  [:!OTC#Pright_shift :!SOTf13 [:term]]                                                            ;
-  [:!OTC#Pright_option :!SOTf18 [:term]]                                                           ;
-  [:!OTC#Pright_command :!SOTf19 [:term]]                                                          ;
-  [:!OTC#Pspacebar :!SOTf20 [:term]]                                                               ;
+  [:!OTC#Pequal_sign :!Of12 [:term]]                                                               ;
+  [:!OTC#Popen_bracket :!Of13 [:term]]                                                             ;
+  [:!OTC#Pclose_bracket :!Of14 [:term]]                                                            ;
+  [:!OTC#Psemicolon :!Of18 [:term]]                                                                ;
+  [:!OTC#Pquote :!Of19 [:term]]                                                                    ;
+  [:!OTC#Pbackslash :!Of20 [:term]]                                                                ;
+  [:!OTC#Pcomma :!OTf18 [:term]]                                                                   ;
+  [:!OTC#Pperiod :!OTf19 [:term]]                                                                  ;
+  [:!OTC#Pslash :!OTf20 [:term]]                                                                   ;
 
-  ; [:!OTC#Pleft_command []]                                                                       ;
-  ; [:!OTC#Pleft_option []]                                                                        ;
-  ; [:!OTC#Pleft_control []]                                                                       ;
-  ; [:!OTC#Pleft_shift []]                                                                         ;
+  [:!OTC#Pdelete_or_backspace :!Tf11 [:term]]                                                      ;
+  [:!OTC#Preturn_or_enter :!Tf12 [:term]]                                                          ;
+  [:!OTC#Pright_shift :!Tf13 [:term]]                                                              ;
+  [:!OTC#Pright_option :!Tf18 [:term]]                                                             ;
+  [:!OTC#Pright_command :!Tf19 [:term]]                                                            ;
+  [:!OTC#Pspacebar :!Tf20 [:term]]                                                                 ;
+
+  ; [:!OTC#Pleft_command []]                                                        UNMAPPED       ;
+  ; [:!OTC#Pleft_option []]                                                         UNMAPPED       ;
+  ; [:!OTC#Pleft_control []]                                                        UNMAPPED       ;
+  ; [:!OTC#Pleft_shift []]                                                          UNMAPPED       ;
   ; [:!OTC#Pcaps_lock []]                                                           NOT AVAILABLE  ;
-  ; [:!OTC#Ptab []]                                                                                ;
-  ; [:!OTC#Pnon_us_backslash []]                                                                   ;
-  ; [:!OTC#Pescape []]                                                                             ;
+  ; [:!OTC#Ptab []]                                                                 UNMAPPED       ;
+  ; [:!OTC#Pnon_us_backslash []]                                                    UNMAPPED       ;
+  ; [:!OTC#Pescape []]                                                              UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -93,14 +119,14 @@
   ; [:!OTCS#Pright_command []]                                                                     ;
   ; [:!OTCS#Pspacebar []]                                                                          ;
 
-  ; [:!OTCS#Pleft_command []]                                                                      ;
-  ; [:!OTCS#Pleft_option []]                                                                       ;
-  ; [:!OTCS#Pleft_control []]                                                                      ;
+  ; [:!OTCS#Pleft_command []]                                                       UNMAPPED       ;
+  ; [:!OTCS#Pleft_option []]                                                        UNMAPPED       ;
+  ; [:!OTCS#Pleft_control []]                                                       UNMAPPED       ;
   ; [:!OTCS#Pleft_shift []]                                                         NOT AVAILABLE  ;
   ; [:!OTCS#Pcaps_lock []]                                                          NOT AVAILABLE  ;
-  ; [:!OTCS#Ptab []]                                                                               ;
-  ; [:!OTCS#Pnon_us_backslash []]                                                                  ;
-  ; [:!OTCS#Pescape []]                                                                            ;
+  ; [:!OTCS#Ptab []]                                                                UNMAPPED       ;
+  ; [:!OTCS#Pnon_us_backslash []]                                                   UNMAPPED       ;
+  ; [:!OTCS#Pescape []]                                                             UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

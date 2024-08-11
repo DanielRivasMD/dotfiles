@@ -59,7 +59,7 @@
   [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]               ; ' => '            ;
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                          ; ' ** '            ;
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                     ; ' // '            ;
-  ; [:!T#Pspacebar []]                                                         ;                   ;
+  ; [:!T#Pspacebar []]                                                         ;    DEFAULT        ;
 
   ; [:!T#Pleft_command []]                                                                         ;
   ; [:!T#Pleft_option []]                                                                          ;
@@ -96,14 +96,14 @@
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]            ; ' .// '           ;
   ; [:!TS#Pspacebar []]                                                        ;                   ;
 
-  ; [:!TS#Pleft_command []]                                                                        ;
-  ; [:!TS#Pleft_option []]                                                                         ;
+  ; [:!TS#Pleft_command []]                                                         UNMAPPED       ;
+  ; [:!TS#Pleft_option []]                                                          UNMAPPED       ;
   ; [:!TS#Pleft_control []]                                                         NOT AVAILABLE  ;
   ; [:!TS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!TS#Pcaps_lock []]                                                                           ;
-  ; [:!TS#Ptab []]                                                                                 ;
-  ; [:!TS#Pnon_us_backslash []]                                                                    ;
-  ; [:!TS#Pescape []]                                                                              ;
+  ; [:!TS#Pcaps_lock []]                                                            UNMAPPED       ;
+  ; [:!TS#Ptab []]                                                                  UNMAPPED       ;
+  ; [:!TS#Pnon_us_backslash []]                                                     UNMAPPED       ;
+  ; [:!TS#Pescape []]                                                               UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

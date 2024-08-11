@@ -41,32 +41,32 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!C#Phyphen :!Of11 [:term]]                                                                     ;
-  [:!C#Pequal_sign :!Of12 [:term]]                                                                 ;
-  [:!C#Popen_bracket :!Of13 [:term]]                                                               ;
-  [:!C#Pclose_bracket :!Of14 [:term]]                                                              ;
-  [:!C#Psemicolon :!Of18 [:term]]                                                                  ;
-  [:!C#Pquote :!Of19 [:term]]                                                                      ;
-  [:!C#Pbackslash :!Of20 [:term]]                                                                  ;
-  [:!C#Pcomma :!Tf11 [:term]]                                                                      ;
-  [:!C#Pperiod :!Tf12 [:term]]                                                                     ;
-  [:!C#Pslash :!Tf13 [:term]]                                                                      ;
+  [:!C#Phyphen :f8 [:term]]                                                                     ;
+  [:!C#Pequal_sign :f9 [:term]]                                                                 ;
+  [:!C#Popen_bracket :f10 [:term]]                                                               ;
+  [:!C#Pclose_bracket :f11 [:term]]                                                              ;
+  [:!C#Psemicolon :f12 [:term]]                                                                  ;
+  [:!C#Pquote :f13 [:term]]                                                                      ;
+  [:!C#Pbackslash :f14 [:term]]                                                                  ;
+  [:!C#Pcomma :f18 [:term]]                                                                      ;
+  [:!C#Pperiod :f19 [:term]]                                                                     ;
+  [:!C#Pslash :f20 [:term]]                                                                      ;
 
-  [:!C#Pdelete_or_backspace :!Tf18 [:term]]                                                        ;
-  [:!C#Preturn_or_enter :f3 [:term]]                                                               ;
-  [:!C#Pright_shift :!Tf19 [:term]]                                                                ;
-  [:!C#Pright_option :!Tf20 [:term]]                                                               ;
-  [:!C#Pright_command :!OTf11 [:term]]                                                             ;
-  [:!C#Pspacebar :!OTf12 [:term]]                                                                  ;
+  [:!C#Pdelete_or_backspace :f1 [:term]]                                                        ;
+  [:!C#Preturn_or_enter :f2 [:term]]                                                               ;
+  [:!C#Pright_shift :f4 [:term]]                                                                ;
+  [:!C#Pright_option :f5 [:term]]                                                               ;
+  [:!C#Pright_command :f6 [:term]]                                                             ;
+  [:!C#Pspacebar :f7 [:term]]                                                                  ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
-  ; [:!C#Pleft_option []]                                                                          ;
-  ; [:!C#Pleft_control []]                                                                         ;
-  ; [:!C#Pleft_shift []]                                                                           ;
-  ; [:!C#Pcaps_lock []]                                                                            ;
-  ; [:!C#Ptab []]                                                                                  ;
-  ; [:!C#Pnon_us_backslash []]                                                                     ;
-  ; [:!C#Pescape []]                                                                               ;
+  ; [:!C#Pleft_option []]                                                           UNMAPPED       ;
+  ; [:!C#Pleft_control []]                                                          UNMAPPED       ;
+  ; [:!C#Pleft_shift []]                                                            UNMAPPED       ;
+  ; [:!C#Pcaps_lock []]                                                             UNMAPPED       ;
+  ; [:!C#Ptab []]                                                                   UNMAPPED       ;
+  ; [:!C#Pnon_us_backslash []]                                                      UNMAPPED       ;
+  ; [:!C#Pescape []]                                                                UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -94,13 +94,13 @@
   ; [:!CS#Pspacebar []]                                                                            ;
 
   ; [:!CS#Pleft_command []]                                                         NOT AVAILABLE  ;
-  ; [:!CS#Pleft_option []]                                                                         ;
-  ; [:!CS#Pleft_control []]                                                                        ;
+  ; [:!CS#Pleft_option []]                                                          UNMAPPED       ;
+  ; [:!CS#Pleft_control []]                                                         UNMAPPED       ;
   ; [:!CS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!CS#Pcaps_lock []]                                                                           ;
-  ; [:!CS#Ptab []]                                                                                 ;
-  ; [:!CS#Pnon_us_backslash []]                                                                    ;
-  ; [:!CS#Pescape []]                                                                              ;
+  ; [:!CS#Pcaps_lock []]                                                            UNMAPPED       ;
+  ; [:!CS#Ptab []]                                                                  UNMAPPED       ;
+  ; [:!CS#Pnon_us_backslash []]                                                     UNMAPPED       ;
+  ; [:!CS#Pescape []]                                                               UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

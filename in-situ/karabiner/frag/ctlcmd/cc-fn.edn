@@ -32,7 +32,7 @@
   ; [:!TC#Px [:term]]                                                                              ;
   ; [:!TC#Py [:term]]                                                                              ;
   ; [:!TC#Pz [:term]]                                                                              ;
-  ; [:!TC#Pright_control [:term]]                                                                  ;
+  ; [:!TC#Pright_control [:term]]                                                   UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -41,32 +41,32 @@
 {:des "Alacritty - Control - Command Mode"
  :rules
  [;
-  [:!TC#Phyphen :!Sf11 [:term]]                                                                    ;
-  [:!TC#Pequal_sign :!Sf12 [:term]]                                                                ;
-  [:!TC#Popen_bracket :!Sf13 [:term]]                                                              ;
-  [:!TC#Pclose_bracket :!Sf14 [:term]]                                                             ;
-  [:!TC#Psemicolon :!Sf18 [:term]]                                                                 ;
-  [:!TC#Pquote :!Sf19 [:term]]                                                                     ;
-  [:!TC#Pbackslash :!Sf20 [:term]]                                                                 ;
-  [:!TC#Pcomma :f18 [:term]]                                                                       ;
-  [:!TC#Pperiod :f19 [:term]]                                                                      ;
-  [:!TC#Pslash :f20 [:term]]                                                                       ;
+  [:!TC#Phyphen :!Sf8 [:term]]                                                                    ;
+  [:!TC#Pequal_sign :!Sf9 [:term]]                                                                ;
+  [:!TC#Popen_bracket :!Sf10 [:term]]                                                              ;
+  [:!TC#Pclose_bracket :!Sf11 [:term]]                                                             ;
+  [:!TC#Psemicolon :!Sf12 [:term]]                                                                 ;
+  [:!TC#Pquote :!Sf13 [:term]]                                                                     ;
+  [:!TC#Pbackslash :!Sf14 [:term]]                                                                 ;
+  [:!TC#Pcomma :!Sf18 [:term]]                                                                       ;
+  [:!TC#Pperiod :!Sf19 [:term]]                                                                      ;
+  [:!TC#Pslash :!Sf20 [:term]]                                                                       ;
 
   [:!TC#Pdelete_or_backspace :!Sf1 [:term]]                                                        ;
   [:!TC#Preturn_or_enter :!Sf2 [:term]]                                                            ;
   [:!TC#Pright_shift :!Sf4 [:term]]                                                                ;
   [:!TC#Pright_option :!Sf5 [:term]]                                                               ;
   [:!TC#Pright_command :!Sf6 [:term]]                                                              ;
-  [:!TC#Pspacebar :f1 [:term]]                                                                     ;
+  [:!TC#Pspacebar :!Sf7 [:term]]                                                                     ;
 
   ; [:!TCleft_command [:term]]                                                      NOT AVAILABLE  ;
-  ; [:!TC#Pleft_option : [:term]]                                                                  ;
+  ; [:!TC#Pleft_option : [:term]]                                                   UNMAPPED       ;
   ; [:!TCleft_control [:term]]                                                      NOT AVAILABLE  ;
-  ; [:!TC#Pleft_shift : [:term]]                                                                   ;
-  ; [:!TC#Pcaps_lock : [:term]]                                                                    ;
-  ; [:!TC#Ptab : [:term]]                                                                          ;
-  ; [:!TC#Pnon_us_backslash : [:term]]                                                             ;
-  ; [:!TC#Pescape : [:term]]                                                                       ;
+  ; [:!TC#Pleft_shift : [:term]]                                                    UNMAPPED       ;
+  ; [:!TC#Pcaps_lock : [:term]]                                                     UNMAPPED       ;
+  ; [:!TC#Ptab : [:term]]                                                           UNMAPPED       ;
+  ; [:!TC#Pnon_us_backslash : [:term]]                                              UNMAPPED       ;
+  ; [:!TC#Pescape : [:term]]                                                        UNMAPPED       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

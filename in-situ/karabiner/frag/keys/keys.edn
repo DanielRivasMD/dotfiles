@@ -14,7 +14,7 @@
   [:#Pq :!OTCleft_shift nil {:alone :q}]                                                           ;
 
   ; grave
-  [:#Pright_control :right_control nil {:alone [:f12]}]                                             ;
+  [:#Pright_control :right_control nil {:alone [:!Wf3]}]                                           ;
 
   ; modifiers
   [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                                               ;
@@ -24,7 +24,7 @@
   ; lefts
   [:#Ptab :!WQright_shift nil {:alone [:tab]}]                                                     ;
   ; [:#Pleft_shift :left_shift nil {:alone [:]}]                                                   ;
-  [:#Pleft_control :left_control nil {:alone [:!Tf3]}]                                             ;
+  [:#Pleft_control :left_control nil {:alone [:!TCf3]}]                                            ;
   [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ;
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ;
 
