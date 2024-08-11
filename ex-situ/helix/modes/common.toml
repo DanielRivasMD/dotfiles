@@ -69,7 +69,7 @@ A-end = ["goto_next_change"]                               # alt-cmd-down      #
 ####################################################################################################
 
 # alphabet
-# A-F1 = [""]                                              # alt-a             #
+A-F1 = ["normal_mode", ":reload-all", "MODE"]              # alt-a             # reload
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_joined_to_clipboard"]                        # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
@@ -129,7 +129,7 @@ S-A-C-F1 = [":write-quit-all"]                             # alt-shift-s       #
 # S-A-C-F2 = [""]                                          # alt-shift-t       #
 S-A-C-F4 = ["redo"]                                        # alt-shift-u       # redo
 S-A-C-F5 = ["format_selections"]                           # alt-shift-v       # format
-S-A-C-F6 = ["normal_mode", ":reload-all", "MODE"]          # alt-shift-w       # reload
+# S-A-C-F6 = [""]                                          # alt-shift-w       #
 S-A-C-F7 = ["extend_to_line_bounds", "delete_selection"]   # alt-shift-x       # cut line
 S-A-C-F8 = ["extend_to_line_bounds", "yank"]               # alt-shift-y       # copy line
 S-A-C-F9 = ["select_regex"]                                # alt-shift-z       # select
