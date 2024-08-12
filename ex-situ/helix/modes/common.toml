@@ -1,9 +1,10 @@
 ####################################################################################################
 
 # del
-del = ["delete_selection_noyank"]                          # shift-shift
-backspace = ["delete_char_backward"]                       # shift-shift
+del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
+backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
 A-d = ["delete_word_forward"]                              # shift-alt         # delete next word
+A-S-n = ["change_selection_noyank"]                        # shift-ctl         # delete & insert
 
 # fast reload
 F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
@@ -69,11 +70,11 @@ A-end = ["goto_next_change"]                               # alt-cmd-down      #
 ####################################################################################################
 
 # alphabet
-A-F1 = ["format_selections"]                               # alt-a             # format
+A-F1 = ["select_regex"]                                    # alt-z             # select
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_joined_to_clipboard"]                        # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
-# A-F6 = [""]                                              # alt-e             #
+A-F6 = ["format_selections"]                               # alt-e             # format
 A-F7 = ["search"]                                          # alt-f             # search
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
@@ -108,7 +109,7 @@ S-A-F1 = ["select_all"]                                    # alt-shift-a       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
 S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
                                                            # alt-shift-d       # duplicate line
-# S-A-F6 = [""]                                            # alt-shift-e       #
+S-A-F6 = ["align_selections"]                              # alt-shift-e       # align
 S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
 # S-A-F8 = [""]                                            # alt-shift-g       # change sel
 # S-A-F9 = [""]                                            # alt-shift-h       #
@@ -132,7 +133,7 @@ S-A-C-F4 = ["redo"]                                        # alt-shift-u       #
 # S-A-C-F6 = [""]                                          # alt-shift-w       #
 S-A-C-F7 = ["extend_to_line_bounds", "delete_selection"]   # alt-shift-x       # cut line
 S-A-C-F8 = ["extend_to_line_bounds", "yank"]               # alt-shift-y       # copy line
-S-A-C-F9 = ["select_regex"]                                # alt-shift-z       # select
+# S-A-C-F9 = [""]                                          # alt-shift-z       #
 S-A-C-F10 = ["shell_pipe"]                                 # alt-shift-tilde   # shell command
 
 
