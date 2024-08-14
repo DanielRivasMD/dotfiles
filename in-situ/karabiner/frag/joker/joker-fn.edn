@@ -42,7 +42,6 @@
  :rules
  [;
   ; DOC: unmapped
-  ; [ :!Of11 [:term]]                                                                              ;
   ; [ :!OTf11 [:term]]                                                                             ;
   ; [ :!OTf12 [:term]]                                                                             ;
   ; [ :!OTf13 [:term]]                                                                             ;
@@ -68,6 +67,7 @@
   ; [ :!OTSf19 [:term]]                                                                            ;
   ; [ :!OTSf20 [:term]]                                                                            ;
 
+  [:!OTC#Phyphen :!Of11 [:term]]                                                                   ;
   [:!OTC#Pequal_sign :!Of12 [:term]]                                                               ;
   [:!OTC#Popen_bracket :!Of13 [:term]]                                                             ;
   [:!OTC#Pclose_bracket :!Of14 [:term]]                                                            ;
