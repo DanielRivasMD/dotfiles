@@ -498,7 +498,7 @@ keybinding:
     createPatchOptionsMenu: N
     nextTab: '<c-f>'                             # ctl-cmd-right
     prevTab: '<c-b>'                             # ctl-cmd-left
-    nextScreenMode: '<c-v>'                      # alt
+    nextScreenMode: '<c-g>'                      # bs-joker
     prevScreenMode: <disabled>
     undo: u
     redo: U
@@ -514,7 +514,7 @@ keybinding:
     decreaseContextInDiffView: '-'               # *
     increaseRenameSimilarityThreshold: )
     decreaseRenameSimilarityThreshold: (
-    openDiffTool: <disabled>
+    openDiffTool: <c-t>                          # bs-cmd
 
   status:
     checkForUpdate: u
@@ -526,7 +526,7 @@ keybinding:
     commitChangesWithoutHook: w
     amendLastCommit: A
     commitChangesWithEditor: C
-    findBaseCommitForFixup: <c-t>                # bs-cmd
+    findBaseCommitForFixup: X
     confirmDiscard: x
     ignoreFile: i
     refreshFiles: r
