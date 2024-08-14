@@ -133,10 +133,10 @@ keybinds clear-defaults=true {
         bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Up" { ScrollUp; }
         bind "Down" { ScrollDown; }
-        bind "F6" { PageScrollUp; }
-        bind "F7" { PageScrollDown; }
-        bind "F4" { HalfPageScrollUp; }
-        bind "F5" { HalfPageScrollDown; }
+        bind "PageUp" { PageScrollUp; }
+        bind "PageDown" { PageScrollDown; }
+        bind "Home" { HalfPageScrollUp; }
+        bind "End" { HalfPageScrollDown; }
     }
 
     entersearch {
