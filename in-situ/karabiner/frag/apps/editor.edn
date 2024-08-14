@@ -25,9 +25,9 @@
   ; [:!EQR#Pleft_option :!Ts [:editor]]                                        ; bs-alt            ;
   ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; bs-cmd            ;
   ; [: :!Tu [:editor]]                                                              COLLISION      ;
-  [:#Pleft_option :left_option [:editor] {:alone [:!Tv]}]                      ; alt               ;
+  ; [: :!Tv [:editor]]                                                                             ;
   ; [: :!Tw [:editor]]                                                              COLLISION      ;
-  ; [: :!Tx [:editor]]                                                                             ;
+  [:#Pleft_option :left_option [:editor] {:alone [:!Tx]}]                      ; alt               ;
   ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; bs-space          ;
   ; [: :!Tz [:editor]]                                                              DEFAULT        ;
   ]}
