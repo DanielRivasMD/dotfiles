@@ -10,15 +10,15 @@ layout {
 
     tab name="Files" hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
-            pane name="I" cwd="/Users/drivas"
-            pane name="II" cwd="/Users/drivas"
+            pane name="I" cwd="/Users/drivas/Factorem/PrototypeOromuscles"
+            pane name="II" cwd="/Users/drivas/Factorem/PrototypeOromuscles"
         }
     }
 
     tab name="Source" hide_floating_panes=true focus=true {
-        pane split_direction="vertical" {
+        pane split_direction="horizontal" {
             pane name="Canvas" cwd="/Users/drivas/Factorem/PrototypeOromuscles" focus=true
-            pane name="REPL" cwd="/Users/drivas/Factorem/PrototypeOromuscles"
+            pane name="Editor" cwd="/Users/drivas/Factorem/PrototypeOromuscles"
         }
 
         floating_panes {
@@ -31,9 +31,9 @@ layout {
         }
     }
 
-    tab name="Nushell" {
-        pane name="nu" cwd="/Users/drivas/Factorem/PrototypeOromuscles" command="nu"
-    }
+    // tab name="Nushell" {
+    //     pane name="nu" cwd="/Users/drivas/Factorem/PrototypeOromuscles" command="nu"
+    // }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
