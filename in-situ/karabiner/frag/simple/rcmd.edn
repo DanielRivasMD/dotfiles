@@ -45,19 +45,19 @@
   ; [:!Q#Pequal_sign []]                                                            UNMAPPED       ;
   ; [:!Q#Popen_bracket []]                                                          UNMAPPED       ;
   ; [:!Q#Pclose_bracket []]                                                         UNMAPPED       ;
-  ; [:!Q#Psemicolon []]                                                                            ;
+  [:!Q#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                          ; ' : '             ;
   ; [:!Q#Pquote []]                                                                                ;
   ; [:!Q#Pbackslash []]                                                                            ;
-  ; [:!Q#Pcomma []]                                                                                ;
-  ; [:!Q#Pperiod []]                                                                               ;
-  ; [:!Q#Pslash []]                                                                                ;
+  [:!Q#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
+  [:!Q#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
+  [:!Q#Pslash [:spacebar :!Sslash :spacebar]]                                  ; ' ? '             ;
 
   ; [:!Q#Pdelete_or_backspace []]                                                   UNMAPPED       ;
   ; [:!Q#Preturn_or_enter []]                                                       UNMAPPED       ;
   ; [:!Q#Pright_shift []]                                                                          ;
   ; [:!Q#Pright_option []]                                                                         ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  ; [:!Q#Pspacebar :!OTf11 [:term]]                                                                  ;
+  ; [:!Q#Pspacebar :!OTf11 [:term]]                                                                ;
 
   ; [:!Q#Pleft_command []]                                                                         ;
   ; [:!Q#Pleft_option []]                                                                          ;
