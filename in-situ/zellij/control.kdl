@@ -79,14 +79,14 @@ layout {
     tab name="Update" {
         pane name="Master" cwd="/Users/drivas" focus=true
 
-        floating_panes {
-            pane name="Slave" cwd="/Users/drivas" {
-                x "0%"
-                y "3%"
-                width "100%"
-                height "97%"
-            }
-        }
+        // floating_panes {
+        //     pane name="Slave" cwd="/Users/drivas" {
+        //         x "0%"
+        //         y "3%"
+        //         width "100%"
+        //         height "97%"
+        //     }
+        // }
 
     }
 }
