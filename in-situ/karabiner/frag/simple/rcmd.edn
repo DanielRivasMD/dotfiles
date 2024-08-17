@@ -6,33 +6,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!Q#Pa []]                                                                                    ;
-  ; [:!Q#Pb []]                                                                                    ;
-  ; [:!Q#Pc []]                                                                                    ;
-  ; [:!Q#Pd []]                                                                                    ;
-  ; [:!Q#Pe []]                                                                                    ;
-  ; [:!Q#Pf []]                                                                                    ;
-  ; [:!Q#Pg []]                                                                                    ;
-  ; [:!Q#Ph []]                                                                                    ;
-  ; [:!Q#Pi []]                                                                                    ;
-  ; [:!Q#Pj []]                                                                                    ;
-  ; [:!Q#Pk []]                                                                                    ;
-  ; [:!Q#Pl []]                                                                                    ;
-  ; [:!Q#Pm []]                                                                                    ;
-  ; [:!Q#Pn []]                                                                                    ;
-  ; [:!Q#Po []]                                                                                    ;
-  ; [:!Q#Pp []]                                                                                    ;
-  ; [:!Q#Pq []]                                                                                    ;
-  ; [:!Q#Pr []]                                                                                    ;
-  ; [:!Q#Ps []]                                                                                    ;
-  ; [:!Q#Pt []]                                                                                    ;
-  ; [:!Q#Pu []]                                                                                    ;
-  ; [:!Q#Pv []]                                                                                    ;
-  ; [:!Q#Pw []]                                                                                    ;
-  ; [:!Q#Px []]                                                                                    ;
-  ; [:!Q#Py []]                                                                                    ;
-  ; [:!Q#Pz []]                                                                                    ;
-  ; [:!Q#Pright_control []]                                                                        ;
+  [:!Q#Pa [:semicolon :semicolon :a]]                                          ; 'α'               ;
+  [:!Q#Pb [:semicolon :semicolon :b]]                                          ; 'β'               ;
+  ; [:!Q#Pc [:semicolon :semicolon :c]]                                        ;                   ;
+  [:!Q#Pd [:semicolon :semicolon :d]]                                          ; 'δ'               ;
+  [:!Q#Pe [:semicolon :semicolon :e]]                                          ; 'ε'               ;
+  [:!Q#Pf [:semicolon :semicolon :f]]                                          ; 'φ'               ;
+  [:!Q#Pg [:semicolon :semicolon :g]]                                          ; 'γ'               ;
+  [:!Q#Ph [:semicolon :semicolon :h]]                                          ; 'η'               ;
+  [:!Q#Pi [:semicolon :semicolon :i]]                                          ; 'ι'               ;
+  [:!Q#Pj [:semicolon :semicolon :j]]                                          ; 'ξ'               ;
+  [:!Q#Pk [:semicolon :semicolon :k]]                                          ; 'κ'               ;
+  [:!Q#Pl [:semicolon :semicolon :l]]                                          ; 'λ'               ;
+  [:!Q#Pm [:semicolon :semicolon :m]]                                          ; 'μ'               ;
+  [:!Q#Pn [:semicolon :semicolon :n]]                                          ; 'ν'               ;
+  [:!Q#Po [:semicolon :semicolon :o]]                                          ; 'ο'               ;
+  [:!Q#Pp [:semicolon :semicolon :p]]                                          ; 'π'               ;
+  ; [:!Q#Pq [:semicolon :semicolon :q]]                                        ;                   ;
+  [:!Q#Pr [:semicolon :semicolon :r]]                                          ; 'ρ'               ;
+  [:!Q#Ps [:semicolon :semicolon :s]]                                          ; 'σ'               ;
+  [:!Q#Pt [:semicolon :semicolon :t]]                                          ; 'τ'               ;
+  [:!Q#Pu [:semicolon :semicolon :u]]                                          ; 'θ'               ;
+  [:!Q#Pv [:semicolon :semicolon :v]]                                          ; 'ω'               ;
+  ; [:!Q#Pw [:semicolon :semicolon :w]]                                        ;                   ;
+  [:!Q#Px [:semicolon :semicolon :x]]                                          ; 'χ'               ;
+  [:!Q#Py [:semicolon :semicolon :y]]                                          ; 'υ'               ;
+  [:!Q#Pz [:semicolon :semicolon :z]]                                          ; 'ζ'               ;
+  ; [:!Q#Pright_control [:semicolon :semicolon]]                               ;                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -67,6 +67,41 @@
   ; [:!Q#Ptab []]                                                                                  ;
   ; [:!Q#Pnon_us_backslash []]                                                                     ;
   ; [:!Q#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - alphabet"
+ :rules
+ [;
+  [:!QR#Pa [:comma :comma :a]]                                                ; 'ɒ'               ;
+  [:!QR#Pb [:comma :comma :b]]                                                ; 'ß'               ;
+  [:!QR#Pc [:comma :comma :c]]                                                ; 'ç'               ;
+  [:!QR#Pd [:comma :comma :d]]                                                ; 'Δ'               ;
+  [:!QR#Pe [:comma :comma :e]]                                                ; 'ę'               ;
+  [:!QR#Pf [:comma :comma :f]]                                                ; 'ƒ'               ;
+  [:!QR#Pg [:comma :comma :g]]                                                ; 'ɣ'               ;
+  [:!QR#Ph [:comma :comma :h]]                                                ; 'з'               ;
+  [:!QR#Pi [:comma :comma :i]]                                                ; 'и'               ;
+  [:!QR#Pj [:comma :comma :j]]                                                ; 'ʌ'               ;
+  [:!QR#Pk [:comma :comma :k]]                                                ; 'ϙ'               ;
+  [:!QR#Pl [:comma :comma :l]]                                                ; 'ł'               ;
+  [:!QR#Pm [:comma :comma :m]]                                                ; 'ɱ'               ;
+  [:!QR#Pn [:comma :comma :n]]                                                ; 'ŋ'               ;
+  [:!QR#Po [:comma :comma :o]]                                                ; 'ø'               ;
+  [:!QR#Pp [:comma :comma :p]]                                                ; 'п'               ;
+  ; [:!QR#Pq [:comma :comma :q]]                                              ;                   ;
+  [:!QR#Pr [:comma :comma :r]]                                                ; 'Я'               ;
+  [:!QR#Ps [:comma :comma :s]]                                                ; 'Σ'               ;
+  ; [:!QR#Pt [:comma :comma :t]]                                              ;                   ;
+  [:!QR#Pu [:comma :comma :u]]                                                ; 'Θ'               ;
+  [:!QR#Pv [:comma :comma :v]]                                                ; 'Ω'               ;
+  [:!QR#Pw [:comma :comma :w]]                                                ; 'ʍ'               ;
+  [:!QR#Px [:comma :comma :x]]                                                ; '∇'               ;
+  [:!QR#Py [:comma :comma :y]]                                                ; 'Λ'               ;
+  [:!QR#Pz [:comma :comma :z]]                                                ; '∫'               ;
+  ; [:!QR#Pright_control [:comma :comma]]                                     ; ''                ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
