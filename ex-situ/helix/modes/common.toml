@@ -211,10 +211,10 @@ S-F7 = ["goto_last_accessed_file"]                         # clt-cmd-space     #
 # S-F17 = []                                               #                   #
 
 
-# joker
+# ctl
 # C-F11 = []                                               #                   #
-C-F12 = ["jumplist_picker"]                                # joker-enter       # record jump
-C-F13 = ["save_selection"]                                 # joker-shift       # jump list
+C-F12 = ["jumplist_picker"]                                # ctl-enter         # record jump
+C-F13 = ["save_selection"]                                 # ctl-shift         # jump list
 # C-F15 = []                                               #                   #
 # C-F16 = []                                               #                   #
 C-F17 = ["normal_mode", "repeat_last_motion", "MODE"]      # ctl-space         # repeat motion
