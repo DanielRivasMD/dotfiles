@@ -41,23 +41,23 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!C#Phyphen :f8 [:term]]                                                                     ;
-  [:!C#Pequal_sign :f9 [:term]]                                                                 ;
-  [:!C#Popen_bracket :f10 [:term]]                                                               ;
-  [:!C#Pclose_bracket :f11 [:term]]                                                              ;
-  [:!C#Psemicolon :f12 [:term]]                                                                  ;
-  [:!C#Pquote :f13 [:term]]                                                                      ;
-  [:!C#Pbackslash :f14 [:term]]                                                                  ;
-  [:!C#Pcomma :f18 [:term]]                                                                      ;
-  [:!C#Pperiod :f19 [:term]]                                                                     ;
-  [:!C#Pslash :f20 [:term]]                                                                      ;
+  [:!C#Phyphen :f8 [:term]]                                                                        ;
+  [:!C#Pequal_sign :f9 [:term]]                                                                    ;
+  [:!C#Popen_bracket :f10 [:term]]                                                                 ;
+  [:!C#Pclose_bracket :f11 [:term]]                                                                ;
+  [:!C#Psemicolon :f12 [:term]]                                                                    ;
+  [:!C#Pquote :f13 [:term]]                                                                        ;
+  [:!C#Pbackslash :f14 [:term]]                                                                    ;
+  [:!C#Pcomma :f18 [:term]]                                                                        ;
+  [:!C#Pperiod :f19 [:term]]                                                                       ;
+  [:!C#Pslash :f20 [:term]]                                                                        ;
 
-  [:!C#Pdelete_or_backspace :f1 [:term]]                                                        ;
+  [:!C#Pdelete_or_backspace :f1 [:term]]                                                           ;
   [:!C#Preturn_or_enter :f2 [:term]]                                                               ;
-  [:!C#Pright_shift :f4 [:term]]                                                                ;
-  [:!C#Pright_option :f5 [:term]]                                                               ;
-  [:!C#Pright_command :f6 [:term]]                                                             ;
-  [:!C#Pspacebar :f7 [:term]]                                                                  ;
+  [:!C#Pright_shift :f4 [:term]]                                                                   ;
+  [:!C#Pright_option :f5 [:term]]                                                                  ;
+  [:!C#Pright_command :f6 [:term]]                                                                 ;
+  [:!C#Pspacebar :f7 [:term]]                                                                      ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
   ; [:!C#Pleft_option []]                                                           UNMAPPED       ;
