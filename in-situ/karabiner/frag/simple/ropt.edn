@@ -32,7 +32,7 @@
   [:!E#Px [:e :x :i :t]]                                                       ; 'exit'            ;
   [:!E#Py [:s :t :r :u :c :t]]                                                 ; 'struct'          ;
   [:!E#Pz [:f :o :r]]                                                          ; 'for'             ;
-  ; [:!E#Pright_control []]                                                    ;                   ;
+  [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                       ; ' ∈ '             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

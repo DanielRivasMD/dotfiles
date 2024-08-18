@@ -52,10 +52,10 @@
   [:!OTC#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                    ; ' %>% '           ;
   [:!OTC#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                ; ' %!>% '          ;
 
-  [:!OTC#Pdelete_or_backspace [:!Ssemicolon :i :n :!Ssemicolon]]               ; ' ∈ '             ;
+  [:!OTC#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]  ; ' := '            ;
   [:!OTC#Preturn_or_enter [:spacebar :!Sbackslash :!Speriod :spacebar]]        ; ' |> '            ;
   [:!OTC#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]             ; ' => '            ;
-  [:!OTC#Pright_option [:spacebar :!Ssemicolon :equal_sign :spacebar]]         ; ' := '            ;
+  ; [:!OTC#Pright_option []]                                                                       ;
   ; [:!OTC#Pright_command []]                                                                      ;
   ; [:!OTC#Pspacebar []]                                                                           ;
 
