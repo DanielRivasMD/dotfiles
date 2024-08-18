@@ -43,13 +43,13 @@
  [;
   [:!OTC#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                    ; ' -= '            ;
   [:!OTC#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]          ; ' += '            ;
-  [:!OTC#Popen_bracket [:!S3 :open_bracket]]                                   ; '#['              ;
-  [:!OTC#Pclose_bracket [:close_bracket :spacebar]]                            ; '] '              ;
-  [:!OTC#Psemicolon [:semicolon :spacebar]]                                    ; '; '              ;
-  ; [:!OTC#Pquote []]                                                                              ;
-  ; [:!OTC#Pbackslash []]                                                                          ;
+  ; [:!OTC#Popen_bracket []]                                                                       ;
+  ; [:!OTC#Pclose_bracket []]                                                                      ;
+  [:!OTC#Psemicolon [:!S4 :!S9]]                                               ; '$('              ;
+  [:!OTC#Pquote [:!S3 :open_bracket]]                                          ; '#['              ;
+  [:!OTC#Pbackslash [:!S4 :!Sopen_bracket]]                                    ; '${'              ;
   [:!OTC#Pcomma [:comma :spacebar]]                                            ; ', '              ;
-  ; [:!OTC#Pperiod []]                                                                             ;
+  [:!OTC#Pperiod [:semicolon :spacebar]]                                       ; '; '              ;
   [:!OTC#Pslash [:slash :slash :slash :spacebar]]                              ; '/// '            ;
 
   [:!OTC#Pdelete_or_backspace [:period :period]]                               ; '..'              ;
@@ -77,13 +77,13 @@
  [;
   [:!OTCS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]           ; ' .-= '           ;
   [:!OTCS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]] ; ' .+= '           ;
-  [:!OTCS#Popen_bracket [:!S#P4 :!Sopen_bracket]]                              ; '${'              ;
-  [:!OTCS#Pclose_bracket [:!Sclose_bracket :spacebar]]                         ; '} '              ;
-  [:!OTCS#Psemicolon [:!S#Psemicolon :spacebar]]                               ; ': '              ;
+  ; [:!OTCS#Popen_bracket []]                                                                      ;
+  ; [:!OTCS#Pclose_bracket []]                                                                     ;
+  ; [:!OTCS#Psemicolon []]                                                                         ;
   ; [:!OTCS#Pquote []]                                                                             ;
   ; [:!OTCS#Pbackslash []]                                                                         ;
   [:!OTCS#Pcomma [:period :spacebar]]                                          ; '. '              ;
-  ; [:!OTCS#Pperiod []]                                                                            ;
+  [:!OTCS#Pperiod [:!Ssemicolon :spacebar]]                                    ; ': '              ;
   [:!OTCS#Pslash [:slash :slash :!S1 :spacebar]]                               ; '//! '            ;
 
   [:!OTCS#Pdelete_or_backspace [:period :period :period]]                      ; '...'             ;
