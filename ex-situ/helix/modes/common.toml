@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# TODO: update movements
 # del
 del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
 backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
@@ -161,7 +162,7 @@ C-r = ["file_picker"]                                      # bs-ctl            #
 C-s = ["buffer_picker"]                                    # bs-alt            # buffer picker
 C-t = ["command_palette"]                                  # bs-cmd            # command palette
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
-# C-v = [""]                                               #                   #
+# C-v = [""]                                               # shift-space       #
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
 C-x = ["goto_word"]                                        # alt               # jump
 C-y = ["normal_mode", ":new"]                              # alt-shift-q       # quit all
