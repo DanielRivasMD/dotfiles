@@ -26,7 +26,7 @@
   ; [:!E#Pr []]                                                                ;                   ;
   [:!E#Ps [:s :t :r :i :n :g]]                                                 ; 'string'          ;
   [:!E#Pt [:t :y :p :e]]                                                       ; 'type'            ;
-  ; [:!E#Pu []]                                                                ;                   ;
+  [:!E#Pu [:u :s :i :n :g :spacebar]]                                          ; 'using '          ;
   ; [:!E#Pv []]                                                                ;                   ;
   [:!E#Pw [:w :h :e :r :e :spacebar]]                                          ; 'where '          ;
   [:!E#Px [:e :x :i :t]]                                                       ; 'exit'            ;
@@ -101,7 +101,7 @@
   ; [:!ER#Px []]                                                               ;                   ;
   ; [:!ER#Py []]                                                               ;                   ;
   ; [:!ER#Pz []]                                                               ;                   ;
-  ; [:!ER#Pright_control []]                                                   ;                   ;
+  [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]              ; ' .∈ '            ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
