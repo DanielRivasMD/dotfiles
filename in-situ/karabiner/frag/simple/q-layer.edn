@@ -43,20 +43,20 @@
  [;
   ; [:!ROTC#Phyphen []]                                                                            ;
   ; [:!ROTC#Pequal_sign []]                                                                        ;
-  ; [:!ROTC#Popen_bracket []]                                                                      ;
-  ; [:!ROTC#Pclose_bracket []]                                                                     ;
+  [:!ROTC#Popen_bracket [:launch "Chrome"]]                                                        ;
+  [:!ROTC#Pclose_bracket [:launch "Firefox"]]                                                      ;
   [:!ROTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
   [:!ROTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
   [:!ROTC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
   ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
-  [:!ROTC#Pslash [:launch "Canary Mail"]]                                                          ;
+  [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
 
-  [:!ROTC#Pdelete_or_backspace [:launch "Lapce"]]                                                  ;
+  ; [:!ROTC#Pdelete_or_backspace []]                                                               ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
-  [:!ROTC#Pright_shift [:launch "Zed"]]                                                            ;
-  [:!ROTC#Pright_option [:launch "Chrome"]]                                                        ;
-  [:!ROTC#Pright_command [:launch "Firefox"]]                                                      ;
+  [:!ROTC#Pright_shift [:launch "Canary Mail"]]                                                    ;
+  [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
+  [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
   ; [:!ROTC#Pspacebar []]                                                           COLLISION      ;
 
   ; [:!ROTC#Pleft_command []]                                                                      ;
