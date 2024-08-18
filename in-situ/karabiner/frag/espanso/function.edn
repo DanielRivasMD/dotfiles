@@ -43,11 +43,11 @@
  [;
   [:!F#Phyphen [:hyphen :hyphen]]                                              ; '--'              ;
   [:!F#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                              ; '++'              ;
-  [:!F#Popen_bracket [:open_bracket :open_bracket]]                            ; '[['              ;
-  [:!F#Pclose_bracket [:!Sopen_bracket :!Sopen_bracket]]                       ; '{{'              ;
-  [:!F#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                 ; '::'              ;
-  [:!F#Pquote [:!S9 :!S9]]                                                     ; '(('              ;
-  [:!F#Pbackslash [:!Sbackslash :!Sbackslash]]                                 ; '||'              ;
+  [:!F#Popen_bracket [:!Ssemicolon :!Ssemicolon]]                              ; '::'              ;
+  [:!F#Pclose_bracket [:!Sbackslash :!Sbackslash]]                             ; '||'              ;
+  [:!F#Psemicolon [:!S9 :!S9]]                                                 ; '(('              ;
+  [:!F#Pquote [:open_bracket :open_bracket]]                                   ; '[['              ;
+  [:!F#Pbackslash [:!Sopen_bracket :!Sopen_bracket]]                           ; '{{'              ;
   [:!F#Pcomma [:!Scomma :!Scomma]]                                             ; '<<'              ;
   [:!F#Pperiod [:!Speriod :!Speriod]]                                          ; '>>'              ;
   [:!F#Pslash [:!S5 :!S5]]                                                     ; '%%'              ;
