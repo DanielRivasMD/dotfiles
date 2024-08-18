@@ -43,21 +43,21 @@
  [;
   ; [:!S#Phyphen []]                                                                               ;
   ; [:!S#Pequal_sign []]                                                                           ;
-  ; [:!S#Popen_bracket []]                                                                         ;
-  ; [:!S#Pclose_bracket []]                                                                        ;
-  ; [:!S#Psemicolon []]                                                                            ;
-  ; [:!S#Pquote []]                                                                                ;
-  ; [:!S#Pbackslash []]                                                                            ;
-  ; [:!S#Pcomma []]                                                                                ;
-  ; [:!S#Pperiod []]                                                                               ;
-  ; [:!S#Pslash []]                                                                                ;
+  [:!S#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]   ; ' %<+% '          ;
+  [:!S#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]] ; ' %+>% '          ;
+  [:!S#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                        ; ' %$% '           ;
+  [:!S#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                  ; ' %T>% '          ;
+  [:!S#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]          ; ' %<>% '          ;
+  [:!S#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                        ; ' %<% '           ;
+  [:!S#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                      ; ' %>% '           ;
+  [:!S#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                  ; ' %!>% '          ;
 
-  ; [:!S#Pdelete_or_backspace []]                                                                  ;
-  ; [:!S#Preturn_or_enter []]                                                                      ;
+  [:!S#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]    ; ' := '            ;
+  [:!S#Preturn_or_enter [:spacebar :equal_sign :!Speriod :spacebar]]           ; ' => '            ;
   [:!S#Pright_shift :delete_forward]                                                               ;
   [:!S#Pright_option :!Od [:term]]                                                                 ;
   [:!S#Pright_command :!Tk [:term]]                                                                ;
-  [:!S#Pspacebar :caps_lock]                                                                       ;
+  [:!S#Pspacebar :!Tv [:term]]                                                                     ;
 
   ; [:!S#Pleft_command []]                                                          UNMAPPED       ;
   ; [:!S#Pleft_option []]                                                           UNMAPPED       ;
