@@ -41,13 +41,13 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!C#Phyphen :f8 [:term]]                                                                        ;
-  [:!C#Pequal_sign :f9 [:term]]                                                                    ;
-  [:!C#Popen_bracket :f10 [:term]]                                                                 ;
-  [:!C#Pclose_bracket :f11 [:term]]                                                                ;
-  [:!C#Psemicolon :f12 [:term]]                                                                    ;
-  [:!C#Pquote :f13 [:term]]                                                                        ;
-  [:!C#Pbackslash :f14 [:term]]                                                                    ;
+  [:!C#Phyphen :f13 [:term]]                                                                       ;
+  [:!C#Pequal_sign :f14 [:term]]                                                                   ;
+  [:!C#Popen_bracket :f8 [:term]]                                                                  ;
+  [:!C#Pclose_bracket :f9 [:term]]                                                                 ;
+  [:!C#Psemicolon :f10 [:term]]                                                                    ;
+  [:!C#Pquote :f11 [:term]]                                                                        ;
+  [:!C#Pbackslash :f12 [:term]]                                                                    ;
   [:!C#Pcomma :f18 [:term]]                                                                        ;
   [:!C#Pperiod :f19 [:term]]                                                                       ;
   [:!C#Pslash :f20 [:term]]                                                                        ;

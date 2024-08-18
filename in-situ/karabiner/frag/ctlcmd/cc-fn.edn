@@ -41,23 +41,23 @@
 {:des "Alacritty - Control - Command Mode"
  :rules
  [;
-  [:!TC#Phyphen :!Sf8 [:term]]                                                                    ;
-  [:!TC#Pequal_sign :!Sf9 [:term]]                                                                ;
-  [:!TC#Popen_bracket :!Sf10 [:term]]                                                              ;
-  [:!TC#Pclose_bracket :!Sf11 [:term]]                                                             ;
-  [:!TC#Psemicolon :!Sf12 [:term]]                                                                 ;
-  [:!TC#Pquote :!Sf13 [:term]]                                                                     ;
-  [:!TC#Pbackslash :!Sf14 [:term]]                                                                 ;
-  [:!TC#Pcomma :!Sf18 [:term]]                                                                       ;
-  [:!TC#Pperiod :!Sf19 [:term]]                                                                      ;
-  [:!TC#Pslash :!Sf20 [:term]]                                                                       ;
+  [:!TC#Phyphen :!Sf13 [:term]]                                                                    ;
+  [:!TC#Pequal_sign :!Sf14 [:term]]                                                                ;
+  [:!TC#Popen_bracket :!Sf8 [:term]]                                                               ;
+  [:!TC#Pclose_bracket :!Sf9 [:term]]                                                              ;
+  [:!TC#Psemicolon :!Sf10 [:term]]                                                                 ;
+  [:!TC#Pquote :!Sf11 [:term]]                                                                     ;
+  [:!TC#Pbackslash :!Sf12 [:term]]                                                                 ;
+  [:!TC#Pcomma :!Sf18 [:term]]                                                                     ;
+  [:!TC#Pperiod :!Sf19 [:term]]                                                                    ;
+  [:!TC#Pslash :!Sf20 [:term]]                                                                     ;
 
   [:!TC#Pdelete_or_backspace :!Sf1 [:term]]                                                        ;
   [:!TC#Preturn_or_enter :!Sf2 [:term]]                                                            ;
   [:!TC#Pright_shift :!Sf4 [:term]]                                                                ;
   [:!TC#Pright_option :!Sf5 [:term]]                                                               ;
   [:!TC#Pright_command :!Sf6 [:term]]                                                              ;
-  [:!TC#Pspacebar :!Sf7 [:term]]                                                                     ;
+  [:!TC#Pspacebar :!Sf7 [:term]]                                                                   ;
 
   ; [:!TCleft_command [:term]]                                                      NOT AVAILABLE  ;
   ; [:!TC#Pleft_option : [:term]]                                                   UNMAPPED       ;
