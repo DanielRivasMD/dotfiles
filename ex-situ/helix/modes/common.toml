@@ -179,13 +179,13 @@ F5 = ["goto_reference"]                                    # cmd-alt           #
 F6 = ["goto_definition"]                                   # cmd-cmd           # definition
 F7 = ["goto_last_modification"]                            # cmd-space         # last edit
 
-F8 = ["goto_prev_class"]                                   # cmd--             # next class
-F9 = ["goto_next_class"]                                   # cmd-=             # prev class
-F10 = ["goto_prev_function"]                               # cmd-[             # next func
-F11 = ["goto_next_function"]                               # cmd-]             # prev func
-F12 = ["goto_prev_parameter"]                              # cmd-;             # next param
-F13 = ["goto_next_parameter"]                              # cmd-'             # prev param
-F14 = ["rename_symbol"]                                    # cmd-\             # rename
+F13 = ["goto_prev_class"]                                  # cmd--             # next class
+F14 = ["goto_next_class"]                                  # cmd-=             # prev class
+F8 = ["goto_prev_function"]                                # cmd-[             # next func
+F9 = ["goto_next_function"]                                # cmd-]             # prev func
+F10 = ["goto_prev_parameter"]                              # cmd-;             # next param
+F11 = ["goto_next_parameter"]                              # cmd-'             # prev param
+F12 = ["rename_symbol"]                                    # cmd-\             # rename
 F15 = ["goto_prev_test"]                                   # cmd-,             # prev test
 F16 = ["goto_next_test"]                                   # cmd-.             # next test
 F17 = ["goto_type_definition"]                             # cmd-/             # type definition
@@ -199,13 +199,13 @@ S-F5 = ["hsplit"]                                          # ctl-cmd-alt       #
 S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
 S-F7 = ["goto_last_accessed_file"]                         # clt-cmd-space     # last file
 
+# S-F13 = []                                               #                   #
+# S-F14 = []                                               #                   #
 # S-F8 = []                                                #                   #
 # S-F9 = []                                                #                   #
 # S-F10 = []                                               #                   #
 # S-F11 = []                                               #                   #
 # S-F12 = []                                               #                   #
-# S-F13 = []                                               #                   #
-# S-F14 = []                                               #                   #
 # S-F15 = []                                               #                   #
 # S-F16 = []                                               #                   #
 # S-F17 = []                                               #                   #
