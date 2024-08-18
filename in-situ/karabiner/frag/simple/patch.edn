@@ -30,11 +30,30 @@
 {:des "Simple modifications"
  :rules
  [;
-  [:#Pkeypad_slash :display_brightness_decrement]                                                  ;
-  [:#Pkeypad_asterisk :display_brightness_increment]                                               ;
   [:#Pkeypad_hyphen :mute]                                                                         ;
   [:#Pkeypad_plus :volume_increment]                                                               ;
   [:#Pkeypad_enter :volume_decrement]                                                              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; keypad
+{:des "Keypad modifications"
+ :rules
+ [;
+  ; [:#Pkeypad_num_lock :]                                                                         ;
+  [:#Pkeypad_slash :hyphen]                                                                        ;
+  [:#Pkeypad_asterisk :!Sequal_sign]                                                               ;
+  ; [:#Pkeypad_hyphen :mute]                                                                       ;
+  ; [:#Pkeypad_plus :volume_increment]                                                             ;
+  ; [:#Pkeypad_enter :volume_decrement]                                                            ;
+
+  [:!S#Pkeypad_num_lock :equal_sign]                                                               ;
+  [:!S#Pkeypad_slash :slash]                                                                       ;
+  [:!S#Pkeypad_asterisk :!S8]                                                                      ;
+  ; [:!S#Pkeypad_hyphen :]                                                                         ;
+  ; [:!S#Pkeypad_plus :]                                                                           ;
+  ; [:!S#Pkeypad_enter :]                                                                          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
