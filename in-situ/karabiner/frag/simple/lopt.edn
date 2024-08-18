@@ -54,7 +54,7 @@
 
   [:!O#Pdelete_or_backspace [:spacebar :equal_sign :equal_sign :spacebar]]     ; ' == '            ;
   [:!O#Preturn_or_enter [:spacebar :equal_sign :spacebar]]                     ; ' = '             ;
-  ; [:!O#Pright_shift []]                                                      ;                   ;
+  [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]              ; ' |> '            ;
   [:!O#Pright_option [:spacebar :!S8 :spacebar]]                               ; ' * '             ;
   [:!O#Pright_command [:spacebar :slash :spacebar]]                            ; ' / '             ;
   [:!O#Pspacebar [:keypad_num_lock]]                                                               ;
@@ -88,6 +88,7 @@
 
   [:!OS#Pdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]];' .== '        ;
   [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]               ; ' .= '         ;
+  [:!OS#Pright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]        ; ' .|> '          ;
   ; [:!OS#Pright_shift []]                                                        ;                ;
   [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]                         ; ' .* '         ;
   [:!OS#Pright_command [:spacebar :period :slash :spacebar]]                      ; ' ./ '         ;
