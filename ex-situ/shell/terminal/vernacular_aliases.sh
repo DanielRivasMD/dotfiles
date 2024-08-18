@@ -78,8 +78,7 @@ alias lc='lazycli'
 alias man='batman'
 
 # broot
-alias br='br --dates --permissions --hidden --git-ignored --show-git-info'
-alias bs='br --git-status'
+alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-info --sort-by-type-dirs-first'
 
 # gfold
 alias gf='gfold'
