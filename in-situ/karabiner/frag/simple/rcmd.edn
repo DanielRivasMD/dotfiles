@@ -45,12 +45,12 @@
   ; [:!Q#Pequal_sign []]                                                                           ;
   ; [:!Q#Popen_bracket []]                                                                         ;
   ; [:!Q#Pclose_bracket []]                                                                        ;
-  [:!Q#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                          ; ' : '             ;
+  ; [:!Q#Psemicolon []]                                                                            ;
   ; [:!Q#Pquote []]                                                                                ;
   ; [:!Q#Pbackslash []]                                                                            ;
-  [:!Q#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
-  [:!Q#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
-  [:!Q#Pslash [:spacebar :!Sslash :spacebar]]                                  ; ' ? '             ;
+  ; [:!Q#Pcomma []]                                                                                ;
+  ; [:!Q#Pperiod []]                                                                               ;
+  ; [:!Q#Pslash []]                                                                                ;
 
   ; [:!Q#Pdelete_or_backspace []]                                                                  ;
   ; [:!Q#Preturn_or_enter []]                                                                      ;
