@@ -45,19 +45,19 @@
   ; [:!R#Pequal_sign []]                                                            NOT AVAILABLE  ;
   ; [:!R#Popen_bracket []]                                                          NOT AVAILABLE  ;
   ; [:!R#Pclose_bracket []]                                                         NOT AVAILABLE  ;
-  ; [:!R#Psemicolon []]                                                             NOT AVAILABLE  ;
+  [:!R#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                          ; ' : '             ;
   ; [:!R#Pquote []]                                                                 NOT AVAILABLE  ;
   ; [:!R#Pbackslash []]                                                             NOT AVAILABLE  ;
-  ; [:!R#Pcomma []]                                                                 NOT AVAILABLE  ;
-  ; [:!R#Pperiod []]                                                                NOT AVAILABLE  ;
-  ; [:!R#Pslash []]                                                                 NOT AVAILABLE  ;
+  [:!R#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                          ; ' <- '            ;
+  [:!R#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                        ; ' -> '            ;
+  [:!R#Pslash [:spacebar :!Sslash :spacebar]]                                  ; ' ? '             ;
 
   ; [:!R#Pdelete_or_backspace []]                                                   UNMAPPED       ;
   ; [:!R#Preturn_or_enter []]                                                       UNMAPPED       ;
   ; [:!R#Pright_shift []]                                                           NOT AVAILABLE  ;
   ; [:!R#Pright_option []]                                                          UNMAPPED       ;
   ; [:!R#Pright_command []]                                                         UNMAPPED       ;
-  ; [:!R#Pspacebar []]                                                                             ;
+  [:!R#Pspacebar :!Tc [:term]]                                                                     ;
 
   [:!R#Pleft_command :!Tu [:term]]                                                                 ;
   [:!Rleft_option :!Tl [:term]]                                                                    ;
