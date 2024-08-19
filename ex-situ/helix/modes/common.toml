@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# TODO: patch insert -> select
 # del
 del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
 backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
@@ -40,6 +39,7 @@ A-S-left = ["extend_prev_word_start"]                      # alt-shift-left    #
 A-S-right = [ "extend_next_word_end"]                      # alt-shift-right   # select word right
 A-S-up = ["select_mode", "goto_prev_paragraph", "MODE"]    # alt-shift-up      # select prev block
 A-S-down = ["select_mode", "goto_next_paragraph", "MODE"]  # alt-shift-down    # select next block
+# TODO: patch insert -> select
 
 # cmd
 home = ["goto_file_start"]                                 # cmd-up            # cursor start

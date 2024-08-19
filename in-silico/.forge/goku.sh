@@ -53,7 +53,6 @@ _forge() {
     "${fsimple}/rcmd.edn" \
     "${fsimple}/rctl.edn" \
     "${fsimple}/ropt.edn" \
-    "${fsimple}/space.edn" \
     "${fsimple}/tab.edn" \
     "${fzellij}/ABC-fn.edn" \
     "${fzellij}/mod-ABC.edn" \
