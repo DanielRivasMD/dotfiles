@@ -89,10 +89,9 @@
   [:!OS#Pdelete_or_backspace [:spacebar :period :equal_sign :equal_sign :spacebar]];' .== '        ;
   [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]               ; ' .= '         ;
   [:!OS#Pright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]        ; ' .|> '          ;
-  ; [:!OS#Pright_shift []]                                                        ;                ;
   [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]                         ; ' .* '         ;
   [:!OS#Pright_command [:spacebar :period :slash :spacebar]]                      ; ' ./ '         ;
-  ; [:!OS#Pspacebar []]                                                           ;                ;
+  [:!OS#Pspacebar [:!Skeypad_num_lock]]                                                            ;
 
   ; [:!OS#Pleft_command []]                                                         UNMAPPED       ;
   ; [:!OS#Pleft_option []]                                                          NOT AVAILABLE  ;
