@@ -3,87 +3,26 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc
-{:des "Esc Mode - alphabet"
- :rules
- [;
-  ; [:!EWR#Pa []]                                                                                  ;
-  ; [:!EWR#Pb []]                                                                                  ;
-  ; [:!EWR#Pc []]                                                                                  ;
-  ; [:!EWR#Pd []]                                                                                  ;
-  ; [:!EWR#Pe []]                                                                                  ;
-  ; [:!EWR#Pf []]                                                                                  ;
-  ; [:!EWR#Pg []]                                                                                  ;
-  ; [:!EWR#Ph []]                                                                                  ;
-  ; [:!EWR#Pi []]                                                                                  ;
-  ; [:!EWR#Pj []]                                                                                  ;
-  ; [:!EWR#Pk []]                                                                                  ;
-  ; [:!EWR#Pl []]                                                                                  ;
-  ; [:!EWR#Pm []]                                                                                  ;
-  ; [:!EWR#Pn []]                                                                                  ;
-  ; [:!EWR#Po []]                                                                                  ;
-  ; [:!EWR#Pp []]                                                                                  ;
-  ; [:!EWR#Pq []]                                                                                  ;
-  ; [:!EWR#Pr []]                                                                                  ;
-  ; [:!EWR#Ps []]                                                                                  ;
-  ; [:!EWR#Pt []]                                                                                  ;
-  ; [:!EWR#Pu []]                                                                                  ;
-  ; [:!EWR#Pv []]                                                                                  ;
-  ; [:!EWR#Pw []]                                                                                  ;
-  ; [:!EWR#Px []]                                                                                  ;
-  ; [:!EWR#Py []]                                                                                  ;
-  ; [:!EWR#Pz []]                                                                                  ;
-  ; [:!EWR#Pright_control []]                                                                      ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; esc
 {:des "Esc Mode - symbols"
  :rules
  [;
-  ; DOC: unmapped
-  ; [ :!OTf11 [:term]]                                                                             ;
-  ; [ :!OTf12 [:term]]                                                                             ;
-  ; [ :!OTf13 [:term]]                                                                             ;
-  ; [ :!OTf14 [:term]]                                                                             ;
-  ; [ :!TSf11 [:term]]                                                                             ;
-  ; [ :!TSf12 [:term]]                                                                             ;
-  ; [ :!TSf13 [:term]]                                                                             ;
-  ; [ :!TSf18 [:term]]                                                                             ;
-  ; [ :!TSf19 [:term]]                                                                             ;
-  ; [ :!TSf20 [:term]]                                                                             ;
-  ; [ :!OSf11 [:term]]                                                                             ;
-  ; [ :!OSf12 [:term]]                                                                             ;
-  ; [ :!OSf13 [:term]]                                                                             ;
-  ; [ :!OSf14 [:term]]                                                                             ;
-  ; [ :!OSf18 [:term]]                                                                             ;
-  ; [ :!OSf19 [:term]]                                                                             ;
-  ; [ :!OSf20 [:term]]                                                                             ;
-  ; [ :!OTSf11 [:term]]                                                                            ;
-  ; [ :!OTSf12 [:term]]                                                                            ;
-  ; [ :!OTSf13 [:term]]                                                                            ;
-  ; [ :!OTSf14 [:term]]                                                                            ;
-  ; [ :!OTSf18 [:term]]                                                                            ;
-  ; [ :!OTSf19 [:term]]                                                                            ;
-  ; [ :!OTSf20 [:term]]                                                                            ;
+  [:!EWR#Phyphen :!OSf11 [:term]]                                                                  ;
+  [:!EWR#Pequal_sign :!OSf12 [:term]]                                                              ;
+  [:!EWR#Popen_bracket :!OSf13 [:term]]                                                            ;
+  [:!EWR#Pclose_bracket :!OSf14 [:term]]                                                           ;
+  [:!EWR#Psemicolon :!OSf18 [:term]]                                                               ;
+  [:!EWR#Pquote :!OSf19 [:term]]                                                                   ;
+  [:!EWR#Pbackslash :!OSf20 [:term]]                                                               ;
+  [:!EWR#Pcomma :!OTSf18 [:term]]                                                                  ;
+  [:!EWR#Pperiod :!OTSf19 [:term]]                                                                 ;
+  [:!EWR#Pslash :!OTSf20 [:term]]                                                                  ;
 
-  ; [:!EWR#Phyphen []]                                                                             ;
-  ; [:!EWR#Pequal_sign []]                                                                         ;
-  ; [:!EWR#Popen_bracket []]                                                                       ;
-  ; [:!EWR#Pclose_bracket []]                                                                      ;
-  ; [:!EWR#Psemicolon []]                                                                          ;
-  ; [:!EWR#Pquote []]                                                                              ;
-  ; [:!EWR#Pbackslash []]                                                                          ;
-  ; [:!EWR#Pcomma []]                                                                              ;
-  ; [:!EWR#Pperiod []]                                                                             ;
-  ; [:!EWR#Pslash []]                                                                              ;
-
-  ; [:!EWR#Pdelete_or_backspace []]                                                                ;
-  ; [:!EWR#Preturn_or_enter []]                                                                    ;
-  ; [:!EWR#Pright_shift []]                                                                        ;
-  ; [:!EWR#Pright_option []]                                                                       ;
-  ; [:!EWR#Pright_command []]                                                                      ;
-  ; [:!EWR#Pspacebar []]                                                                           ;
+  [:!EWR#Pdelete_or_backspace :!TSf11 [:term]]                                                     ;
+  [:!EWR#Preturn_or_enter :!TSf12 [:term]]                                                         ;
+  [:!EWR#Pright_shift :!TSf13 [:term]]                                                             ;
+  [:!EWR#Pright_option :!TSf18 [:term]]                                                            ;
+  [:!EWR#Pright_command :!TSf19 [:term]]                                                           ;
+  [:!EWR#Pspacebar :!TSf20 [:term]]                                                                ;
 
   ; [:!EWR#Pleft_command []]                                                                       ;
   ; [:!EWR#Pleft_option []]                                                                        ;
