@@ -6,13 +6,13 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!E#Pa [:p :a :t :c :h]]                                                    ; 'patch'           ;
+  [:!E#Pa [:p :a :t :c :h :spacebar]]                                          ; 'patch '          ;
   [:!E#Pb [:b :e :g :i :n]]                                                    ; 'begin'           ;
   [:!E#Pc [:w :h :i :c :h :spacebar]]                                          ; 'which '          ;
-  [:!E#Pd [:u :p :d :a :t :e]]                                                 ; 'update'          ;
+  [:!E#Pd [:u :p :d :a :t :e :spacebar]]                                       ; 'update '         ;
   [:!E#Pe [:e :n :u :m]]                                                       ; 'enum'            ;
-  [:!E#Pf [:f :u :n :c :t :i :o :n]]                                           ; 'function'        ;
-  [:!E#Pg [:u :p :g :r :a :d :e]]                                              ; 'upgrade'         ;
+  [:!E#Pf [:f :u :n :c :t :i :o :n :spacebar]]                                 ; 'function '       ;
+  [:!E#Pg [:u :p :g :r :a :d :e :spacebar]]                                    ; 'upgrade '        ;
   ; [:!E#Ph []]                                                                ;                   ;
   ; [:!E#Pi []]                                                                ;                   ;
   ; [:!E#Pj []]                                                                ;                   ;
@@ -22,7 +22,7 @@
   [:!E#Pn [:e :n :d]]                                                          ; 'end'             ;
   ; [:!E#Po []]                                                                ;                   ;
   [:!E#Pp [:p :l :o :t]]                                                       ; 'plot'            ;
-  [:!E#Pq [:d :e :p :r :e :c :a :t :e]]                                        ; 'deprecate'       ;
+  [:!E#Pq [:d :e :p :r :e :c :a :t :e :spacebar]]                              ; 'deprecate '      ;
   ; [:!E#Pr []]                                                                ;                   ;
   [:!E#Ps [:s :t :r :i :n :g]]                                                 ; 'string'          ;
   [:!E#Pt [:t :y :p :e]]                                                       ; 'type'            ;
