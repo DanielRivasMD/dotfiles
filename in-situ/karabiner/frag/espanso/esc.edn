@@ -41,16 +41,42 @@
 {:des "Esc Mode - symbols"
  :rules
  [;
+  ; DOC: unmapped
+  ; [ :!OTf11 [:term]]                                                                             ;
+  ; [ :!OTf12 [:term]]                                                                             ;
+  ; [ :!OTf13 [:term]]                                                                             ;
+  ; [ :!OTf14 [:term]]                                                                             ;
+  ; [ :!TSf11 [:term]]                                                                             ;
+  ; [ :!TSf12 [:term]]                                                                             ;
+  ; [ :!TSf13 [:term]]                                                                             ;
+  ; [ :!TSf18 [:term]]                                                                             ;
+  ; [ :!TSf19 [:term]]                                                                             ;
+  ; [ :!TSf20 [:term]]                                                                             ;
+  ; [ :!OSf11 [:term]]                                                                             ;
+  ; [ :!OSf12 [:term]]                                                                             ;
+  ; [ :!OSf13 [:term]]                                                                             ;
+  ; [ :!OSf14 [:term]]                                                                             ;
+  ; [ :!OSf18 [:term]]                                                                             ;
+  ; [ :!OSf19 [:term]]                                                                             ;
+  ; [ :!OSf20 [:term]]                                                                             ;
+  ; [ :!OTSf11 [:term]]                                                                            ;
+  ; [ :!OTSf12 [:term]]                                                                            ;
+  ; [ :!OTSf13 [:term]]                                                                            ;
+  ; [ :!OTSf14 [:term]]                                                                            ;
+  ; [ :!OTSf18 [:term]]                                                                            ;
+  ; [ :!OTSf19 [:term]]                                                                            ;
+  ; [ :!OTSf20 [:term]]                                                                            ;
+
   ; [:!EWR#Phyphen []]                                                                             ;
   ; [:!EWR#Pequal_sign []]                                                                         ;
   ; [:!EWR#Popen_bracket []]                                                                       ;
   ; [:!EWR#Pclose_bracket []]                                                                      ;
-  [:!EWR#Psemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                      ; '::<'             ;
-  ; [:!EWR#Pquote []]                                                          ;                   ;
-  ; [:!EWR#Pbackslash []]                                                      ;                   ;
-  [:!EWR#Pcomma [:!Scomma :!Ssemicolon]]                                       ; '<:'              ;
-  [:!EWR#Pperiod [:!Speriod :!Ssemicolon]]                                     ; '>:'              ;
-  [:!EWR#Pslash [:!S3 :!S1 :slash]]                                            ; '#!/'             ;
+  ; [:!EWR#Psemicolon []]                                                                          ;
+  ; [:!EWR#Pquote []]                                                                              ;
+  ; [:!EWR#Pbackslash []]                                                                          ;
+  ; [:!EWR#Pcomma []]                                                                              ;
+  ; [:!EWR#Pperiod []]                                                                             ;
+  ; [:!EWR#Pslash []]                                                                              ;
 
   ; [:!EWR#Pdelete_or_backspace []]                                                                ;
   ; [:!EWR#Preturn_or_enter []]                                                                    ;
