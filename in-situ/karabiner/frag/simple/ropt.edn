@@ -31,7 +31,7 @@
   [:!E#Pw [:w :h :e :r :e :spacebar]]                                          ; 'where '          ;
   [:!E#Px [:e :x :i :t]]                                                       ; 'exit'            ;
   [:!E#Py [:s :t :r :u :c :t]]                                                 ; 'struct'          ;
-  [:!E#Pz [:f :o :r]]                                                          ; 'for'             ;
+  [:!E#Pz [:f :o :r :spacebar]]                                                ; 'for '            ;
   [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                       ; ' ∈ '             ;
   ]}
 
@@ -41,16 +41,16 @@
 {:des "Option Mode - symbols"
  :rules
  [;
-  ; [:!E#Phyphen []]                                                                               ;
-  ; [:!E#Pequal_sign []]                                                                           ;
-  ; [:!E#Popen_bracket []]                                                                         ;
-  ; [:!E#Pclose_bracket []]                                                                        ;
-  ; [:!E#Psemicolon []]                                                                            ;
-  ; [:!E#Pquote []]                                                                                ;
-  ; [:!E#Pbackslash []]                                                                            ;
-  ; [:!E#Pcomma []]                                                                                ;
-  ; [:!E#Pperiod []]                                                                               ;
-  ; [:!E#Pslash []]                                                                                ;
+  [:!E#Phyphen [:!Shyphen]]                                                                        ;
+  [:!E#Pequal_sign [:!Sequal_sign]]                                                                ;
+  [:!E#Popen_bracket [:!Sopen_bracket]]                                                            ;
+  [:!E#Pclose_bracket [:!Sclose_bracket]]                                                          ;
+  [:!E#Psemicolon [:!Ssemicolon]]                                                                  ;
+  [:!E#Pquote [:!Squote]]                                                                          ;
+  [:!E#Pbackslash [:!Sbackslash]]                                                                  ;
+  [:!E#Pcomma [:!Scomma]]                                                                          ;
+  [:!E#Pperiod [:!Speriod]]                                                                        ;
+  [:!E#Pslash [:!Sslash]]                                                                          ;
 
   ; [:!E#Pdelete_or_backspace []]                                                                  ;
   ; [:!E#Preturn_or_enter []]                                                                      ;
