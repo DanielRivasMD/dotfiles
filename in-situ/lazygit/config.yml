@@ -19,7 +19,7 @@ gui:
   mouseEvents: true
 
   # If true, do not show a warning when discarding changes in the staging view.
-  skipDiscardChangeWarning: true
+  skipDiscardChangeWarning: false
 
   # If true, do not show warning when applying/popping the stash
   skipStashWarning: false
@@ -268,7 +268,7 @@ git:
   skipHookPrefix: WIP
 
   # If true, periodically fetch from remote
-  autoFetch: false
+  autoFetch: true
 
   # If true, periodically refresh files and submodules
   autoRefresh: true
