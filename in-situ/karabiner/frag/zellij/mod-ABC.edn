@@ -21,7 +21,7 @@
   [:!OC#Pspacebar :!Oo [:term]]                                                ; alt-cmd-space     ;
   [:!OC#Pleft_arrow :!Op [:term]]                                              ; alt-cmd-left      ;
   [:!OC#Pright_arrow :!Oq [:term]]                                             ; alt-cmd-right     ;
-  [:!OC#Pright_command :!Or [:term]]                                           ; alt-cmd-cmd       ;
+  [:!OC#Pright_shift :!Or [:term]]                                             ; alt-cmd-shift     ;
   [:!E#Pescape :!Os [:term]]                                                   ; alt-cmd           ;
   [:!OC#Pdelete_or_backspace :!Ot [:term]]                                     ; alt-cmd-bspace    ;
   ; [: :!Ou [:term]]                                                                COLLISION      ;
@@ -51,7 +51,7 @@
   ; [: :!SOk [:term]]                                                                              ;
   ; [: :!SOl [:term]]                                                                              ;
   ; [: :!SOm [:term]]                                                                              ;
-  [:!OTC#Pspacebar :!SOn [:term]]                                              ; joker-space       ;
+  ; [:!OTC#Pspacebar :!SOn [:term]]                                              ; joker-space       ;
   ; [: :!SOo [:term]]                                                               COLLISION      ;
   [:!E#Pleft_control :!SOp [:term]]                                            ; alt-ctl           ;
   [:!E#Pleft_command :!SOq [:term]]                                            ; alt-cmd           ;
