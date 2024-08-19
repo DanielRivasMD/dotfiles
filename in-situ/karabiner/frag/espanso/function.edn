@@ -41,23 +41,23 @@
 {:des "Fn Mode - symbols"
  :rules
  [;
-  [:!F#Phyphen [:hyphen :hyphen]]                                              ; '--'              ;
-  [:!F#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                              ; '++'              ;
-  [:!F#Popen_bracket [:!Ssemicolon :!Ssemicolon]]                              ; '::'              ;
-  [:!F#Pclose_bracket [:!Sbackslash :!Sbackslash]]                             ; '||'              ;
-  [:!F#Psemicolon [:!S9 :!S9]]                                                 ; '(('              ;
-  [:!F#Pquote [:open_bracket :open_bracket]]                                   ; '[['              ;
-  [:!F#Pbackslash [:!Sopen_bracket :!Sopen_bracket]]                           ; '{{'              ;
-  [:!F#Pcomma [:!Scomma :!Scomma]]                                             ; '<<'              ;
-  [:!F#Pperiod [:!Speriod :!Speriod]]                                          ; '>>'              ;
-  [:!F#Pslash [:!S5 :!S5]]                                                     ; '%%'              ;
+  [:!F#Phyphen :!Of11 [:term]]                                                                     ;
+  [:!F#Pequal_sign :!Of12 [:term]]                                                                 ;
+  [:!F#Popen_bracket :!Of13 [:term]]                                                               ;
+  [:!F#Pclose_bracket :!Of14 [:term]]                                                              ;
+  [:!F#Psemicolon :!Of18 [:term]]                                                                  ;
+  [:!F#Pquote :!Of19 [:term]]                                                                      ;
+  [:!F#Pbackslash :!Of20 [:term]]                                                                  ;
+  [:!F#Pcomma :!OTf18 [:term]]                                                                     ;
+  [:!F#Pperiod :!OTf19 [:term]]                                                                    ;
+  [:!F#Pslash :!OTf20 [:term]]                                                                     ;
 
-  ; [:!F#Pdelete_or_backspace []]                                                                  ;
-  [:!F#Preturn_or_enter [:equal_sign :equal_sign]]                             ; '=='              ;
-  [:!F#Pright_shift [:!S1 :!S1]]                                               ; '!!'              ;
-  [:!F#Pright_option [:!S8 :!S8]]                                              ; '**'              ;
-  [:!F#Pright_command [:slash :slash]]                                         ; '//'              ;
-  ; [:!F#Pspacebar []]                                                                             ;
+  [:!F#Pdelete_or_backspace :!Tf11 [:term]]                                                        ;
+  [:!F#Preturn_or_enter :!Tf12 [:term]]                                                            ;
+  [:!F#Pright_shift :!Tf13 [:term]]                                                                ;
+  [:!F#Pright_option :!Tf18 [:term]]                                                               ;
+  [:!F#Pright_command :!Tf19 [:term]]                                                              ;
+  [:!F#Pspacebar :!Tf20 [:term]]                                                                   ;
 
   ; [:!F#Pleft_command []]                                                                         ;
   ; [:!F#Pleft_option []]                                                                          ;
