@@ -43,8 +43,8 @@
  [;
   ; [:!ROTC#Phyphen []]                                                                            ;
   ; [:!ROTC#Pequal_sign []]                                                                        ;
-  [:!ROTC#Popen_bracket [:launch "Chrome"]]                                                        ;
-  [:!ROTC#Pclose_bracket [:launch "Firefox"]]                                                      ;
+  ; [:!ROTC#Popen_bracket []]                                                                      ;
+  ; [:!ROTC#Pclose_bracket []]                                                                     ;
   [:!ROTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
   [:!ROTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
   [:!ROTC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
@@ -52,7 +52,7 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
 
-  ; [:!ROTC#Pdelete_or_backspace []]                                                               ;
+  [:!ROTC#Pdelete_or_backspace [:launch "Firefox"]]                                                ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
   [:!ROTC#Pright_shift [:launch "Canary Mail"]]                                                    ;
   [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
