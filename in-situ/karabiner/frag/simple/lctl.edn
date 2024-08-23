@@ -8,8 +8,8 @@
  [;
   [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]                          ; ' -- '            ;
   [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]          ; ' ++ '            ;
-  ; [:!T#Popen_bracket [:!Scomma :!Ssemicolon]]                                  ; '<:'              ;
-  ; [:!T#Pclose_bracket [:!Speriod :!Ssemicolon]]                                ; '>:'              ;
+  ; [:!T#Popen_bracket []]                                                                         ;
+  ; [:!T#Pclose_bracket []]                                                                        ;
   [:!T#Psemicolon [:spacebar :!S7 :!S7 :spacebar]]                             ; ' && '            ;
   [:!T#Pquote [:quote :quote :quote]]                                          ; '''''             ;
   [:!T#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]             ; ' || '            ;
@@ -20,10 +20,10 @@
   [:!T#Pdelete_or_backspace
    [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                  ; ' === '           ;
   [:!T#Preturn_or_enter [:spacebar :!S1 :equal_sign :spacebar]]                ; ' != '            ;
-  [:!T#Pright_shift [:!Ssemicolon :!Ssemicolon]]                              ; '::'              ;
+  [:!T#Pright_shift [:!Ssemicolon :!Ssemicolon]]                               ; '::'              ;
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                          ; ' ** '            ;
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                     ; ' // '            ;
-  ; [:!T#Pspacebar []]                                                         ;    DEFAULT        ;
+  ; [:!T#Pspacebar []]                                                              DEFAULT        ;
 
   ; [:!T#Pleft_command []]                                                                         ;
   ; [:!T#Pleft_option []]                                                                          ;
@@ -55,19 +55,19 @@
   [:!TS#Pdelete_or_backspace
    [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]          ; ' .=== '          ;
   [:!TS#Preturn_or_enter [:spacebar :period :!S1 :equal_sign :spacebar]]       ; ' .!= '           ;
-  [:!TS#Pright_shift [:!Ssemicolon :!Ssemicolon :!Scomma]]                       ; '::<'             ;
+  [:!TS#Pright_shift [:!Ssemicolon :!Ssemicolon :!Scomma]]                     ; '::<'             ;
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                 ; ' .** '           ;
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]            ; ' .// '           ;
   ; [:!TS#Pspacebar []]                                                        ;                   ;
 
-  ; [:!TS#Pleft_command []]                                                         UNMAPPED       ;
-  ; [:!TS#Pleft_option []]                                                          UNMAPPED       ;
+  ; [:!TS#Pleft_command []]                                                                        ;
+  ; [:!TS#Pleft_option []]                                                                         ;
   ; [:!TS#Pleft_control []]                                                         NOT AVAILABLE  ;
   ; [:!TS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!TS#Pcaps_lock []]                                                            UNMAPPED       ;
-  ; [:!TS#Ptab []]                                                                  UNMAPPED       ;
-  ; [:!TS#Pnon_us_backslash []]                                                     UNMAPPED       ;
-  ; [:!TS#Pescape []]                                                               UNMAPPED       ;
+  ; [:!TS#Pcaps_lock []]                                                                           ;
+  ; [:!TS#Ptab []]                                                                                 ;
+  ; [:!TS#Pnon_us_backslash []]                                                                    ;
+  ; [:!TS#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
