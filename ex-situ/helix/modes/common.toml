@@ -60,6 +60,12 @@ A-C-S-end = ["decrement"]                                  # q-down            #
 A-home = ["goto_prev_change"]                              # alt-cmd-up        # prev change
 A-end = ["goto_next_change"]                               # alt-cmd-down      # next change
 
+# # tab
+# S-A-pageup = []                                          #                   #
+# S-A-pagedown = []                                        #                   #
+# S-A-home = []                                            #                   #
+# S-A-end = []                                             #                   #
+
 
 ####################################################################################################
 
@@ -165,24 +171,24 @@ A-c = ["changed_file_picker"]                              # bs-shift          #
 
 ####################################################################################################
 
-# cmd
+# tab
 # F1 = []                                                  #                   #
-F2 = ["symbol_picker"]                                     # cmd-enter         # symbol list
-F4 = ["goto_implementation"]                               # cmd-shift         # implementation
-F5 = ["goto_reference"]                                    # cmd-alt           # reference
-F6 = ["goto_definition"]                                   # cmd-cmd           # definition
-# F7 = []
+F2 = ["symbol_picker"]                                     # tab-enter         # symbol list
+F4 = ["goto_implementation"]                               # tab-shift         # implementation
+F5 = ["goto_reference"]                                    # tab-alt           # reference
+F6 = ["goto_definition"]                                   # tab-cmd           # definition
+# F7 = []                                                  #                   #
 
-F13 = ["goto_prev_class"]                                  # cmd--             # next class
-F14 = ["goto_next_class"]                                  # cmd-=             # prev class
-F8 = ["goto_prev_function"]                                # cmd-[             # next func
-F9 = ["goto_next_function"]                                # cmd-]             # prev func
-F10 = ["goto_prev_parameter"]                              # cmd-;             # next param
-F11 = ["goto_next_parameter"]                              # cmd-'             # prev param
-F12 = ["rename_symbol"]                                    # cmd-\             # rename
-F15 = ["goto_prev_test"]                                   # cmd-,             # prev test
-F16 = ["goto_next_test"]                                   # cmd-.             # next test
-F17 = ["goto_type_definition"]                             # cmd-/             # type definition
+F13 = ["goto_prev_class"]                                  # tab--             # next class
+F14 = ["goto_next_class"]                                  # tab-=             # prev class
+F8 = ["goto_prev_function"]                                # tab-[             # next func
+F9 = ["goto_next_function"]                                # tab-]             # prev func
+F10 = ["goto_prev_parameter"]                              # tab-;             # next param
+F11 = ["goto_next_parameter"]                              # tab-'             # prev param
+F12 = ["rename_symbol"]                                    # tab-\             # rename
+F15 = ["goto_prev_test"]                                   # tab-,             # prev test
+F16 = ["goto_next_test"]                                   # tab-.             # next test
+F17 = ["goto_type_definition"]                             # tab-/             # type definition
 
 
 # ctl-cmd
@@ -203,13 +209,6 @@ S-F7 = ["goto_last_accessed_file"]                         # clt-cmd-space     #
 # S-F15 = []                                               #                   #
 # S-F16 = []                                               #                   #
 # S-F17 = []                                               #                   #
-
-
-# # tab
-# S-A-pageup = []                                          #                   #
-# S-A-pagedown = []                                        #                   #
-# S-A-home = []                                            #                   #
-# S-A-end = []                                             #                   #
 
 
 # fn
