@@ -6,32 +6,32 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!C#Phyphen :f13 [:term]]                                                                       ;
-  [:!C#Pequal_sign :f14 [:term]]                                                                   ;
-  [:!C#Popen_bracket :f8 [:term]]                                                                  ;
-  [:!C#Pclose_bracket :f9 [:term]]                                                                 ;
-  [:!C#Psemicolon :f10 [:term]]                                                                    ;
-  [:!C#Pquote :f11 [:term]]                                                                        ;
-  [:!C#Pbackslash :f12 [:term]]                                                                    ;
-  [:!C#Pcomma :f18 [:term]]                                                                        ;
-  [:!C#Pperiod :f19 [:term]]                                                                       ;
-  [:!C#Pslash :f20 [:term]]                                                                        ;
+  [:!C#Phyphen [:spacebar :!Sslash :spacebar]]                                 ; ' ? '             ;
+  [:!C#Pequal_sign [:spacebar :!Ssemicolon :spacebar]]                         ; ' : '             ;
+  [:!C#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]   ; ' %<+% '          ;
+  [:!C#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]] ; ' %+>% '          ;
+  [:!C#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                        ; ' %$% '           ;
+  [:!C#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                  ; ' %T>% '          ;
+  [:!C#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]          ; ' %<>% '          ;
+  [:!C#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                        ; ' %<% '           ;
+  [:!C#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                      ; ' %>% '           ;
+  [:!C#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                  ; ' %!>% '          ;
 
-  [:!C#Pdelete_or_backspace :f1 [:term]]                                                           ;
-  [:!C#Preturn_or_enter :f2 [:term]]                                                               ;
-  [:!C#Pright_shift :f4 [:term]]                                                                   ;
-  [:!C#Pright_option :f5 [:term]]                                                                  ;
-  [:!C#Pright_command :f6 [:term]]                                                                 ;
-  [:!C#Pspacebar :f7 [:term]]                                                                      ;
+  [:!C#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]    ; ' := '            ;
+  ; [:!C#Preturn_or_enter []]                                                                      ;
+  [:!C#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]               ; ' => '            ;
+  [:!C#Pright_option [:spacebar :hyphen :!Speriod :spacebar]]                  ; ' -> '            ;
+  [:!C#Pright_command [:spacebar :!Scomma :hyphen :spacebar]]                  ; ' <- '            ;
+  ; [:!C#Pspacebar []                                                                              ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
-  ; [:!C#Pleft_option []]                                                           UNMAPPED       ;
-  ; [:!C#Pleft_control []]                                                          UNMAPPED       ;
-  ; [:!C#Pleft_shift []]                                                            UNMAPPED       ;
-  ; [:!C#Pcaps_lock []]                                                             UNMAPPED       ;
-  ; [:!C#Ptab []]                                                                   UNMAPPED       ;
-  ; [:!C#Pnon_us_backslash []]                                                      UNMAPPED       ;
-  ; [:!C#Pescape []]                                                                UNMAPPED       ;
+  ; [:!C#Pleft_option []]                                                                          ;
+  ; [:!C#Pleft_control []]                                                                         ;
+  ; [:!C#Pleft_shift []]                                                                           ;
+  ; [:!C#Pcaps_lock []]                                                                            ;
+  ; [:!C#Ptab []]                                                                                  ;
+  ; [:!C#Pnon_us_backslash []]                                                                     ;
+  ; [:!C#Pescape []]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
