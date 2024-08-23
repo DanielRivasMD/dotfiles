@@ -6,23 +6,23 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQR#Phyphen [:spacebar :!Sslash :spacebar]]                               ; ' ? '             ;
-  [:!WQR#Pequal_sign [:spacebar :!Ssemicolon :spacebar]]                       ; ' : '             ;
-  [:!WQR#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]] ; ' %<+% '          ;
-  [:!WQR#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]];' %+>% '          ;
-  [:!WQR#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                      ; ' %$% '           ;
-  [:!WQR#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                ; ' %T>% '          ;
-  [:!WQR#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]        ; ' %<>% '          ;
-  [:!WQR#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                      ; ' %<% '           ;
-  [:!WQR#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                    ; ' %>% '           ;
-  [:!WQR#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                ; ' %!>% '          ;
+  [:!WQR#Phyphen :f13 [:term]]                                                                     ;
+  [:!WQR#Pequal_sign :f14 [:term]]                                                                 ;
+  [:!WQR#Popen_bracket :f8 [:term]]                                                                ;
+  [:!WQR#Pclose_bracket :f9 [:term]]                                                               ;
+  [:!WQR#Psemicolon :f10 [:term]]                                                                  ;
+  [:!WQR#Pquote :f11 [:term]]                                                                      ;
+  [:!WQR#Pbackslash :f12 [:term]]                                                                  ;
+  [:!WQR#Pcomma :f18 [:term]]                                                                      ;
+  [:!WQR#Pperiod :f19 [:term]]                                                                     ;
+  [:!WQR#Pslash :f20 [:term]]                                                                      ;
 
-  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
-  [:!WQR#Preturn_or_enter [:spacebar :equal_sign :!Speriod :spacebar]]         ; ' => '            ;
-  [:!WQR#Pright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]          ; ' := '            ;
-  [:!WQR#Pright_option [:spacebar :hyphen :!Speriod :spacebar]]                ; ' -> '            ;
-  [:!WQR#Pright_command [:spacebar :!Scomma :hyphen :spacebar]]                ; ' <- '            ;
-  ; [:!WQR#Pspacebar []                                                                            ;
+  [:!WQR#Pdelete_or_backspace :f1 [:term]]                                                         ;
+  [:!WQR#Preturn_or_enter :f2 [:term]]                                                             ;
+  [:!WQR#Pright_shift :f4 [:term]]                                                                 ;
+  [:!WQR#Pright_option :f5 [:term]]                                                                ;
+  [:!WQR#Pright_command :f6 [:term]]                                                               ;
+  [:!WQR#Pspacebar :f7 [:term]]                                                                    ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;
