@@ -16,32 +16,17 @@ layout {
     }
 
     tab name="Source" hide_floating_panes=true {
-        pane {
-            pane name="Canvas" cwd="/Users/drivas/Factorem/Cohesion"
-        }
-
-        floating_panes {
-            pane name="Git" cwd="/Users/drivas/Factorem/Cohesion" {
-                x "20%"
-                y "3%"
-                width "100%"
-                height "97%"
-            }
-        }
-
-        floating_panes {
-            pane name="Check" cwd="/Users/drivas/Factorem/Cohesion" start_suspended=true command="just" {
-                args "check"
-                x "20%"
-                y "3%"
-                width "80%"
-                height "97%"
-            }
-        }
+    pane split_direction="vertical" size="60%" {
+        pane name="Canvas" cwd="/Users/drivas/Factorem"
+        pane name="Editor" cwd="/Users/drivas/Factorem"
+    }
+    pane split_direction="vertical" size="40%" {
+        pane name="Git" cwd="/Users/drivas/Factorem"
+        pane name="Check" cwd="/Users/drivas/Factorem"
     }
 
     tab name="Nushell" {
-        pane name="nu" cwd="/Users/drivas/Factorem/Cohesion" command="nu"
+        pane name="nu" cwd="/Users/drivas/Factorem" command="nu"
     }
 }
 
