@@ -7,7 +7,7 @@
 default_flags = ""
 
 ####################################################################################################
-# cmd
+# tab
 ####################################################################################################
 
 # remove
@@ -17,42 +17,52 @@ invocation = "rm"
 key = "f1"
 leave_broot = false
 auto_exec = false
-description = "`cmd-delete` -> delete file"
+description = "`tab-delete` -> delete file"
 
 # enter
 [[verbs]]
 key = "f2"
 external = "command open {file}"
 leave_broot = false
-description = "`cmd-enter` -> open according to OS"
+description = "`tab-enter` -> open according to OS"
 
 # mode
 [[verbs]]
 internal = "mode_input"
 key = "f4"
-description = "`cmd-shift` -> enter input mode"
+description = "`tab-shift` -> enter input mode"
 
 # editor
 [[verbs]]
 invocation = "micro"
 key = "f5"
-execution = "micro {file}"
+external = [
+  "sh",
+  "-e",
+  "/Users/drivas/.archive/in-situ/broot/micro.sh",
+  "{file}",
+]
 leave_broot = false
-description = "`cmd-alt` -> open file with `micro` editor"
+description = "`tab-alt` -> open file with `micro` editor"
 
 # editor
 [[verbs]]
 invocation = "helix"
 key = "f6"
-execution = "hx {file}"
+external = [
+  "sh",
+  "-e",
+  "/Users/drivas/.archive/in-situ/broot/helix.sh",
+  "{file}",
+]
 leave_broot = false
-description = "`cmd-cmd` -> open file with `helix` editor"
+description = "`tab-cmd` -> open file with `helix` editor"
 
 # panel
 [[verbs]]
 internal = "start_end_panel"
 key = "f7"
-description = "`cmd-space` -> create panel"
+description = "`tab-space` -> create panel"
 
 # directory
 [[verbs]]
@@ -61,7 +71,7 @@ key = "f8"
 execution = "mkdir {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`cmd-[` -> create directory"
+description = "`tab-[` -> create directory"
 
 # create
 [[verbs]]
@@ -71,7 +81,7 @@ key = "f9"
 execution = "touch {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`cmd-]` -> create file"
+description = "`tab-]` -> create file"
 
 # copy
 [[verbs]]
@@ -80,7 +90,7 @@ invocation = "copy_to_pane"
 key = "f10"
 leave_broot = false
 auto_exec = true
-description = "`cmd-;` -> copy file to pane"
+description = "`tab-;` -> copy file to pane"
 
 # move
 [[verbs]]
@@ -89,7 +99,7 @@ invocation = "move_to_pane"
 key = "f11"
 leave_broot = false
 auto_exec = true
-description = "`cmd-'` -> move file to pane"
+description = "`tab-'` -> move file to pane"
 
 # rename
 [[verbs]]
@@ -99,7 +109,7 @@ shortcut = "rn"
 key = "f12"
 leave_broot = false
 auto_exec = false
-description = "`cmd-\\` -> rename file"
+description = "`tab-\\` -> rename file"
 
 
 ####################################################################################################
@@ -382,14 +392,14 @@ description = "select right panel"
 # open
 [[verbs]]
 internal = "close_panel_ok"
-key = "ctrl-a"
-description = "`cmd-left` -> close direcotry"
+key = "alt-shift-pageup"
+description = "`tab-left` -> close direcotry"
 
 # open
 [[verbs]]
 internal = "open_stay!"
-key = "ctrl-e"
-description = "`cmd-right` -> open directory"
+key = "alt-shift-pagedown"
+description = "`tab-right` -> open directory"
 
 
 ####################################################################################################
