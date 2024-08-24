@@ -67,16 +67,16 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // modes
+    shared_except "normal" {
+        bind "Alt P" { SwitchToMode "Normal"; }
+    }
+
     shared_except "normal" "locked" "entersearch" {
         bind "Enter" { SwitchToMode "Normal"; }
     }
 
     shared_except "normal" "locked" {
         bind "Esc" { SwitchToMode "Normal"; }
-    }
-
-    shared_except "normal" {
-        bind "Alt P" { SwitchToMode "Normal"; }
     }
 
     shared_except "scroll" "locked" {
@@ -109,7 +109,13 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     renametab {
+        bind "Alt A" { UndoRenameTab; SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Normal"; }
+    }
+
+    renamepane {
+        bind "Alt C" { SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Normal"; }
     }
 
     scroll {
