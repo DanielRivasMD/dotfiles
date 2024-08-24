@@ -1,0 +1,31 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        children
+    }
+
+    tab name="Files" hide_floating_panes=true {
+        pane stacked=true split_direction="horizontal" {
+            pane name="I" cwd="/Users/drivas/Factorem"
+            pane name="II" cwd="/Users/drivas/Factorem"
+        }
+    }
+
+    tab name="Source" hide_floating_panes=true focus=true {
+        pane split_direction="horizontal" {
+            pane name="Canvas" cwd="/Users/drivas/Factorem" focus=true
+            pane name="Editor" cwd="/Users/drivas/Factorem"
+            pane name="Git" cwd="/Users/drivas/Factorem"
+        }
+    }
+
+    tab name="Nushell" {
+        pane name="nu" cwd="/Users/drivas/Factorem" command="nu"
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
