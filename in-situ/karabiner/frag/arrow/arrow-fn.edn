@@ -28,6 +28,7 @@
   ; [:!T#Pup_arrow [:term]]                                                                        ;
   ; [:!T#Pdown_arrow [:term]]                                                                      ;
 
+  ; TODO: map to something useful
   ; ctl-shift
   ; [:!TS#Pleft_arrow [:term]]                                                                     ;
   ; [:!TS#Pright_arrow [:term]]                                                                    ;
@@ -43,8 +44,8 @@
   ; cmd-shift
   [:!CS#Pleft_arrow :!Oleft_arrow [:term]]                                                         ;
   [:!CS#Pright_arrow :!Oright_arrow [:term]]                                                       ;
-  [:!CS#Pup_arrow :!Shome [:term]]                                                                 ;
-  [:!CS#Pdown_arrow :!Send [:term]]                                                                ;
+  [:!CS#Pup_arrow :!Oup_arrow [:term]]                                                             ;
+  [:!CS#Pdown_arrow :!Odown_arrow [:term]]                                                         ;
 
   ; grave
   [:!W#Pleft_arrow :!Wpage_up [:term]]                                                             ;
@@ -64,24 +65,6 @@
   [:!OTC#Pup_arrow :!OThome [:term]]                                                               ;
   [:!OTC#Pdown_arrow :!OTend [:term]]                                                              ;
 
-  ; q
-  ; [:!OTCR#Pleft_arrow [:term]]                                                                   ;
-  ; [:!OTCR#Pright_arrow [:term]]                                                                  ;
-  [:!OTCR#Pup_arrow :!OTShome [:term]]                                                             ;
-  [:!OTCR#Pdown_arrow :!OTSend [:term]]                                                            ;
-
-  ; alt-ctl
-  ; [:!OT#Pleft_arrow [:term]]                                                                     ;
-  ; [:!OT#Pright_arrow [:term]]                                                                    ;
-  ; [:!OT#Pup_arrow [:term]]                                                                       ;
-  ; [:!OT#Pdown_arrow [:term]]                                                                     ;
-
-  ; alt-cmd
-  ; [:!OC#Pleft_arrow [:term]]                                                                     ;
-  ; [:!OC#Pright_arrow [:term]]                                                                    ;
-  [:!OC#Pup_arrow :!Ohome [:term]]                                                                 ;
-  [:!OC#Pdown_arrow :!Oend [:term]]                                                                ;
-
   ; ctl-cmd
   [:!TC#Pleft_arrow :!Tb [:term]]                                                                  ;
   [:!TC#Pright_arrow :!Tf [:term]]                                                                 ;
@@ -93,18 +76,6 @@
   [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
   [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
   [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
-
-  ; fn
-  [:!F#Pleft_arrow :!OTf11 [:term]]                                                                ;
-  [:!F#Pright_arrow :!OTf12 [:term]]                                                               ;
-  [:!F#Pup_arrow :!OTf13 [:term]]                                                                  ;
-  [:!F#Pdown_arrow :!OTf14 [:term]]                                                                ;
-
-  ; esc
-  [:!EWR#Pleft_arrow :!OTSf11 [:term]]                                                             ;
-  [:!EWR#Pright_arrow :!OTSf12 [:term]]                                                            ;
-  [:!EWR#Pup_arrow :!OTSpage_up [:term]]                                                               ;
-  [:!EWR#Pdown_arrow :!OTSpage_down [:term]]                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
