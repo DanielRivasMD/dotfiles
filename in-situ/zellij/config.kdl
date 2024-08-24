@@ -8,50 +8,50 @@ keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
-        bind "Alt a" { EditScrollback; SwitchToMode "Normal"; }
+        bind "Alt a" { Clear; }
         // bind "Alt b" {}
         // bind "Alt c" {}
         // bind "Alt d" {}
-        // bind "Alt e" {  }                                                                        DOC: accent
+        // bind "Alt e" {}                                                                          COLLISION
         // bind "Alt f" {}
-        bind "Alt g" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }
-        bind "Alt h" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }
-        // bind "Alt i" {  }                                                                        DOC: accent
-        bind "Alt j" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
-        bind "Alt k" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
-        bind "Alt l" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
-        bind "Alt m" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }
-        // bind "Alt n" {  }                                                                        DOC: accent
-        bind "Alt o" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }
-        bind "Alt p" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }
-        bind "Alt q" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }
-        bind "Alt r" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }
-        bind "Alt s" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }
-        bind "Alt t" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }
-        // bind "Alt u" {  }                                                                        DOC: accent
-        bind "Alt v" { SwitchToMode "Pane"; CloseFocus; SwitchToMode "Normal"; }
-        bind "Alt w" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }
-        bind "Alt x" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }
-        bind "Alt y" { SwitchToMode "Pane"; MoveFocus "Down"; SwitchToMode "Normal"; }
-        bind "Alt z" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "Alt g" { PreviousSwapLayout; }
+        bind "Alt h" { NextSwapLayout; }
+        // bind "Alt i" {  }                                                                        COLLISION
+        bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "Alt l" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "Alt m" { SwitchToMode "Pane"; MoveFocus "Down"; SwitchToMode "Normal"; }
+        // bind "Alt n" {  }                                                                        COLLISION
+        bind "Alt o" { SwitchToMode "Pane"; CloseFocus; SwitchToMode "Normal"; }
+        bind "Alt p" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        bind "Alt q" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }
+        bind "Alt r" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }
+        bind "Alt s" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
+        bind "Alt t" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }
+        // bind "Alt u" {  }                                                                        COLLISION
+        bind "Alt v" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "Alt w" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }
+        // bind "Alt x" {}
+        // bind "Alt y" {}
+        bind "Alt z" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }
 
-        // bind "Alt A" {}
-        // bind "Alt B" {}
-        // bind "Alt C" {}
+        bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }
         // bind "Alt D" {}
         // bind "Alt E" {}
         // bind "Alt F" {}
         // bind "Alt G" {}
-        // bind "Alt H" {}
-        // bind "Alt I" {}
+        bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }
+        bind "Alt I" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }
         // bind "Alt J" {}
-        // bind "Alt K" {}
+        bind "Alt K" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }
         // bind "Alt L" {}
         // bind "Alt M" {}
-        // bind "Alt N" {}
-        // bind "Alt O" {  }                                                                        DOC: accent
-        bind "Alt P" { SwitchToMode "RenamePane"; PaneNameInput 0; }
-        bind "Alt Q" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }
+        // bind "Alt O" {  }                                                                        COLLISION
+        // bind "Alt P" {}
+        bind "Alt Q" { EditScrollback; SwitchToMode "Normal"; }
         bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }
         bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }
         bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }
@@ -61,6 +61,7 @@ keybinds clear-defaults=true {
         bind "Alt X" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }
         bind "Alt Y" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }
         bind "Alt Z" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }
+
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -75,23 +76,23 @@ keybinds clear-defaults=true {
     }
 
     shared_except "normal" {
-        bind "Alt A" { SwitchToMode "Normal"; }
-    }
-
-    shared_except "resize" "locked" {
-        bind "Alt B" { SwitchToMode "Resize"; }
+        bind "Alt P" { SwitchToMode "Normal"; }
     }
 
     shared_except "scroll" "locked" {
-        bind "Alt C" { SwitchToMode "Scroll"; }
+        bind "Alt D" { SwitchToMode "Scroll"; }
     }
 
     shared_except "entersearch" "locked" {
-        bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Alt E" { SwitchToMode "EnterSearch"; SearchInput 0; }
+    }
+
+    shared_except "resize" "locked" {
+        bind "Alt F" { SwitchToMode "Resize"; }
     }
 
     shared_except "session" "locked" {
-        bind "Alt E" { SwitchToMode "Session"; }
+        bind "Alt G" { SwitchToMode "Session"; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -102,13 +103,34 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     normal {
-        bind "Alt A" { SwitchToMode "Locked"; }
+        bind "Alt P" { SwitchToMode "Locked"; }
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    renametab {
+        bind "Esc" { UndoRenameTab; SwitchToMode "Normal"; }
+    }
+
+    scroll {
+        bind "Alt D" { SwitchToMode "Normal"; }
+        bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Up" { ScrollUp; }
+        bind "Down" { ScrollDown; }
+        bind "PageUp" { PageScrollUp; }
+        bind "PageDown" { PageScrollDown; }
+        bind "Home" { HalfPageScrollUp; }
+        bind "End" { HalfPageScrollDown; }
+    }
+
+    entersearch {
+        bind "Alt E" { SwitchToMode "EnterSearch"; SearchInput 0; }
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     resize {
-        bind "Alt B" { SwitchToMode "Normal"; }
+        bind "Alt F" { SwitchToMode "Normal"; }
         bind "z" { SwitchToMode "Pane"; TogglePaneFrames; SwitchToMode "Normal"; }
         bind "=" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
@@ -128,25 +150,8 @@ keybinds clear-defaults=true {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    scroll {
-        bind "Alt C" { SwitchToMode "Normal"; }
-        bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }
-        bind "Up" { ScrollUp; }
-        bind "Down" { ScrollDown; }
-        bind "PageUp" { PageScrollUp; }
-        bind "PageDown" { PageScrollDown; }
-        bind "Home" { HalfPageScrollUp; }
-        bind "End" { HalfPageScrollDown; }
-    }
-
-    entersearch {
-        bind "Alt D" { SwitchToMode "EnterSearch"; SearchInput 0; }
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
     session {
-        bind "Alt E" { SwitchToMode "Normal"; }
+        bind "Alt G" { SwitchToMode "Normal"; }
         bind "d" { Detach; }
     }
 
