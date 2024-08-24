@@ -17,12 +17,12 @@
   [:!W#Pperiod [:semicolon :spacebar]]                                         ; '; '              ;
   [:!W#Pslash [:slash :slash :slash :spacebar]]                                ; '/// '            ;
 
-  ; [:!W#Pdelete_or_backspace []]                                                                  ;
-  [:!W#Preturn_or_enter [:spacebar :hyphen]]                                   ; ' -'              ;
+  [:!W#Pdelete_or_backspace [:spacebar :hyphen]]                               ; ' -'              ;
+  [:!W#Preturn_or_enter [:!OTf11]]                                                                 ;
   [:!W#Pright_shift [:period :period]]                                         ; '..'              ;
   [:!W#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                   ; ' *= '            ;
   [:!W#Pright_command [:spacebar :slash :equal_sign :spacebar]]                ; ' /= '            ;
-  ; [:!W#Pspacebar []]                                                                             ;
+  [:!W#Pspacebar [:!OTf12]]                                                                        ;
 
   ; [:!W#Pleft_command []]                                                                         ;
   ; [:!W#Pleft_option []]                                                                          ;
@@ -45,19 +45,18 @@
   ; [:!WS#Popen_bracket []]                                                                        ;
   ; [:!WS#Pclose_bracket []]                                                                       ;
   [:!WS#Psemicolon [:period :!S9]]                                             ; '.('              ;
-  ; [:!WS#Psemicolon []]                                                                           ;
   ; [:!WS#Pquote []]                                                                               ;
-  ; [:!WS#Pbackslash []]                                                                           ;
+  [:!WS#Pbackslash [:!OTf14]]                                                                      ;
   [:!WS#Pcomma [:period :spacebar]]                                            ; '. '              ;
   [:!WS#Pperiod [:!Ssemicolon :spacebar]]                                      ; ': '              ;
   [:!WS#Pslash [:slash :slash :!S1 :spacebar]]                                 ; '//! '            ;
 
-  ; [:!WS#Pdelete_or_backspace []]                                                                 ;
-  [:!WS#Preturn_or_enter [:spacebar :hyphen :hyphen]]                          ; ' --'             ;
+  [:!WS#Pdelete_or_backspace [:spacebar :hyphen :hyphen]]                      ; ' --'             ;
+  [:!WS#Preturn_or_enter [:!OTSf11]]                                                               ;
   [:!WS#Pright_shift [:period :period :period]]                                ; '...'             ;
   [:!WS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]          ; ' .*= '           ;
   [:!WS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]       ; ' ./= '           ;
-  ; [:!WS#Pspacebar []]                                                                            ;
+  [:!WS#Pspacebar [:!OTSf12]]                                                                      ;
 
   ; [:!WS#Pleft_command []]                                                                        ;
   ; [:!WS#Pleft_option []]                                                                         ;
