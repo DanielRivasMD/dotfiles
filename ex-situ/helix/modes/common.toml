@@ -19,8 +19,8 @@ A-f = ["move_next_word_end", "collapse_selection"]         # alt-right         #
 # shift
 S-left = ["extend_char_left"]                              # shift-left        # select left
 S-right = ["extend_char_right"]                            # shift-right       # select right
-S-up = ["extend_line_up"]                               # shift-up          # select up
-S-down = ["extend_line_down"]                             # shift-down        # select down
+S-up = ["extend_line_up"]                                  # shift-up          # select up
+S-down = ["extend_line_down"]                              # shift-down        # select down
 
 # alt
 pageup = ["goto_prev_paragraph", "collapse_selection"]     # alt-up            # prev block
@@ -53,9 +53,9 @@ A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
 # grave
 C-pageup = ["normal_mode", "till_prev_char", "MODE"]       # grave-left        # prev until
 C-pagedown = ["normal_mode", "find_till_char", "MODE"]     # grave-right       # next until
-C-home = ["goto_prev_diag"]                                   # ctl-cmd-up        # prev diag
-C-end = ["goto_next_diag"]                                   # ctl-cmd-down      # next diag
-A-C-F11 = ["diagnostics_picker"]                              # ctl-cmd-enter     # diag
+C-home = ["goto_prev_diag"]                                # ctl-cmd-up        # prev diag
+C-end = ["goto_next_diag"]                                 # ctl-cmd-down      # next diag
+A-C-F11 = ["diagnostics_picker"]                           # ctl-cmd-enter     # diag
 A-C-F12 = ["normal_mode", "repeat_last_motion", "MODE"]    # grave-space       # repeat motion
 
 # grave-shift
@@ -78,18 +78,6 @@ A-C-S-F12 = ["goto_last_modification"]                       # grave-shift-space
 # S-A-pagedown = []                                        #                   #
 # S-A-home = []                                            #                   #
 # S-A-end = []                                             #                   #
-
-# # # fn
-# # A-pageup = []                                            #                   #
-# # A-pagedown = []                                          #                   #
-# A-home = ["goto_prev_diag"]                                # fn-up             # prev diag
-# A-end = ["goto_next_diag"]                                 # fn-down           # next diag
-
-# # esc
-# S-pageup = ["jump_backward"]                               # esc-left          # prev jump
-# S-pagedown = ["jump_forward"]                              # esc-right         # next jump
-# # S-home = []                                              #                   #
-# # S-end = []                                               #                   #
 
 
 ####################################################################################################
@@ -128,7 +116,7 @@ A-C-F10 = ["command_mode"]                                 # alt-grave         #
 
 ####################################################################################################
 
-# alphabet
+# alphabet-shift
 S-A-F1 = ["select_all"]                                    # alt-shift-a       # select all
 # S-A-F2 = [""]                                            # alt-shift-b       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
@@ -218,7 +206,7 @@ F17 = ["goto_type_definition"]                             # tab-/             #
 
 # ctl-cmd
 S-F1 = [":buffer-close"]                                   # ctl-cmd-bspace    # close tab
-# S-F2 = ["diagnostics_picker"]                              # ctl-cmd-enter     # diag
+# S-F2 = []                                                #                   #
 S-F4 = ["vsplit"]                                          # ctl-cmd-shift     # vertical split
 S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # ho rizontal split
 S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
@@ -234,46 +222,6 @@ S-F7 = ["goto_last_accessed_file"]                         # clt-cmd-space     #
 # S-F15 = []                                               #                   #
 # S-F16 = []                                               #                   #
 # S-F17 = []                                               #                   #
-
-
-# fn
-# C-F11 = []                                               #                   #
-# C-F12 = ["diagnostics_picker"]                             # fn-enter          # diag jump
-# C-F13 = []                                               #                   #
-# C-F15 = []                                               #                   #
-# C-F16 = []                                               #                   #
-# C-F17 = []                                               #                   #
-
-# A-F11 = []                                               #                   #
-# A-F12 = []                                               #                   #
-# A-F14 = []                                               #                   #
-# A-F13 = []                                               #                   #
-# A-F15 = []                                               #                   #
-# A-F16 = []                                               #                   #
-# A-F17 = []                                               #                   #
-# A-C-F15 = []                                             #                   #
-# A-C-F16 = []                                             #                   #
-# A-C-F17 = []                                             #                   #
-
-
-# esc
-# S-C-F11 = []                                             #                   #
-# S-C-F12 = ["jumplist_picker"]                              # esc-enter         # record jump
-# S-C-F13 = ["save_selection"]                               # esc-shift         # jump list
-# S-C-F15 = []                                             #                   #
-# S-C-F16 = []                                             #                   #
-# S-C-F17 = []                                             #                   #
-
-# S-A-F11 = []                                             #                   #
-# S-A-F12 = []                                             #                   #
-# S-A-F14 = []                                             #                   #
-# S-A-F13 = []                                             #                   #
-# S-A-F15 = []                                             #                   #
-# S-A-F16 = []                                             #                   #
-# S-A-F17 = []                                             #                   #
-# S-A-C-F15 = []                                           #                   #
-# S-A-C-F16 = []                                           #                   #
-# S-A-C-F17 = []                                           #                   #
 
 
 ####################################################################################################
