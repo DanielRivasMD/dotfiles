@@ -14,15 +14,22 @@ layout {
 
     tab name="Files" hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
-            pane name="I"
-            pane name="II"
+            pane name="zero"
+            pane name="src" command="broot" {
+                args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
+            }
+            pane name="data" command="broot" {
+                args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
+            }
         }
     }
 
     tab name="Source" hide_floating_panes=true focus=true {
         pane split_direction="horizontal" {
-            pane name="REPL" focus=true
-            pane name="Editor"
+            pane name="REPL" focus=true command="julia" {
+                args "--project"
+            }
+            pane name="Editor" command="hx"
         }
     }
 
