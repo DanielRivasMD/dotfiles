@@ -14,10 +14,10 @@ layout {
 
     tab name="Explore" hide_floating_panes=true focus=true {
         pane split_direction="vertical" {
-            pane name="Tree" command="broot" {
+            pane name="Tree" command="broot" size="40%" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
             }
-            pane name="Explore" focus=true
+            pane name="Explore" size="60%" focus=true
         }
     }
 
