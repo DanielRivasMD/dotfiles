@@ -27,7 +27,7 @@
   [:!E#Ps [:s :t :r :i :n :g]]                                                 ; 'string'          ;
   [:!E#Pt [:t :e :s :t]]                                                       ; 'test'            ;
   [:!E#Pu [:u :s :i :n :g :spacebar]]                                          ; 'using '          ;
-  ; [:!E#Pv []]                                                                ;                   ;
+  [:!E#Pv [:w :h :i :l :e :spacebar]]                                          ; 'while '          ;
   [:!E#Pw [:w :h :e :r :e :spacebar]]                                          ; 'where '          ;
   [:!E#Px [:e :x :i :t]]                                                       ; 'exit'            ;
   [:!E#Py [:t :y :p :e]]                                                       ; 'type'            ;
@@ -46,7 +46,7 @@
   ; [:!ER#Pc []]                                                               ;                   ;
   [:!ER#Pd [:!S#Pd :!So :!Sc :!Ssemicolon :spacebar]]                          ; 'DOC: '           ;
   ; [:!ER#Pe []]                                                               ;                   ;
-  [:!ER#Pf [:!S#Pf :!Si :!Sx :!Ssemicolon :spacebar]]                          ; 'FIX: '           ;
+  ; [:!ER#Pf []]                                                               ;                   ;
   ; [:!ER#Pg []]                                                               ;                   ;
   ; [:!ER#Ph []]                                                               ;                   ;
   [:!ER#Pi [:!S#Pi :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                     ; 'IDEA: '          ;
@@ -64,7 +64,7 @@
   ; [:!ER#Pu []]                                                               ;                   ;
   ; [:!ER#Pv []]                                                               ;                   ;
   [:!ER#Pw [:!S#Pw :!Si :!Sp :!Ssemicolon :spacebar]]                          ; 'WIP: '           ;
-  ; [:!ER#Px []]                                                               ;                   ;
+  [:!ER#Px [:!S#Pf :!Si :!Sx :!Ssemicolon :spacebar]]                          ; 'FIX: '           ;
   ; [:!ER#Py []]                                                               ;                   ;
   ; [:!ER#Pz []]                                                               ;                   ;
   [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]              ; ' .∈ '            ;
