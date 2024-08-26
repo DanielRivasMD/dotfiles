@@ -14,20 +14,20 @@ layout {
 
     tab name="Files" hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
-            pane name="I" cwd="/Users/drivas/Factorem"
-            pane name="II" cwd="/Users/drivas/Factorem"
+            pane name="I"
+            pane name="II"
         }
     }
 
     tab name="Source" hide_floating_panes=true focus=true {
         pane split_direction="horizontal" {
-            pane name="REPL" cwd="/Users/drivas/Factorem" focus=true
-            pane name="Editor" cwd="/Users/drivas/Factorem"
+            pane name="REPL" focus=true
+            pane name="Editor"
         }
     }
 
     tab name="Nushell" {
-        pane name="nu" cwd="/Users/drivas/Factorem" command="nu"
+        pane name="nu" command="nu"
     }
 }
 
