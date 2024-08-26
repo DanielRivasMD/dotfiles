@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="Files" focus=true hide_floating_panes=true {
+    tab name="Files" hide_floating_panes=true focus=true {
         pane stacked=true split_direction="horizontal" {
             pane name="I" cwd="/Users/drivas" focus=true
             pane name="II" cwd="/Users/drivas"
