@@ -21,16 +21,20 @@ layout {
 
     tab name="Source" hide_floating_panes=true {
         pane split_direction="vertical" size="70%" {
-            pane name="Canvas" cwd="/Users/drivas/Factorem" size="30%"
-            pane name="Editor" cwd="/Users/drivas/Factorem" size="70%"
+            pane name="canvas" cwd="/Users/drivas/Factorem" size="30%"
+            pane name="editor" cwd="/Users/drivas/Factorem" size="70%"
         }
         pane split_direction="vertical" size="30%" {
-            pane name="Check" cwd="/Users/drivas/Factorem"
+            pane name="check" cwd="/Users/drivas/Factorem"
         }
     }
 
     tab name="Nushell" {
         pane name="nu" cwd="/Users/drivas/Factorem" command="nu"
+    }
+
+    tab name="Git" {
+        pane name="git" command="lazygit"
     }
 }
 
