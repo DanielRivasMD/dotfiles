@@ -14,8 +14,8 @@ layout {
 
     tab name="Develop" hide_floating_panes=true focus=true {
         pane split_direction="horizontal" {
-            pane name="REPL" focus=true
-            pane name="Editor" command="hx"
+            pane name="repl" focus=true
+            pane name="editor" command="hx"
         }
     }
 
