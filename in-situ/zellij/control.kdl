@@ -14,19 +14,19 @@ layout {
 
     tab name="Monitor" split_direction="horizontal" hide_floating_panes=true {
         pane split_direction="vertical" {
-            pane name="Clock" size="40%" borderless=true command="tock" {
+            pane name="clock" size="40%" borderless=true command="tock" {
                 args "-m" "-s"
             }
-            pane name="Control" focus=true
+            pane name="control" focus=true
         }
         pane split_direction="vertical" size="75%" {
-            pane name="btm" borderless=true command="btm"
+            pane name="performance" borderless=true command="btm"
         }
     }
 
     tab name="Notes" {
         pane split_direction="vertical" {
-            pane name="Joplin" command="joplin"
+            pane name="joplin" command="joplin"
         }
     }
 
@@ -40,15 +40,14 @@ layout {
 
     tab name="Archive" hide_floating_panes=true {
         pane split_direction="horizontal" {
-            pane name="Canvas" cwd="/Users/drivas/.archive" focus=true
-            pane name="Git" cwd="/Users/drivas/.archive" command="lazygit"
+            pane name="canvas" cwd="/Users/drivas/.archive" focus=true
+            pane name="git" cwd="/Users/drivas/.archive" command="lazygit"
         }
     }
 
     tab name="Factorem" hide_floating_panes=true {
         pane split_direction="horizontal" {
-            pane name="Canvas" cwd="/Users/drivas/Factorem" focus=true
-            pane name="Git" cwd="/Users/drivas/Factorem"
+            pane name="canvas" cwd="/Users/drivas/Factorem" focus=true
         }
     }
 
