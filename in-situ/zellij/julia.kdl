@@ -15,10 +15,10 @@ layout {
     tab name="Files" hide_floating_panes=true {
         pane stacked=true split_direction="horizontal" {
             pane name="zero"
-            pane name="src" command="broot" {
+            pane name="src" cwd="src" command="broot" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
             }
-            pane name="data" command="broot" {
+            pane name="data" cwd="data" command="broot" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
             }
         }
@@ -26,15 +26,19 @@ layout {
 
     tab name="Source" hide_floating_panes=true focus=true {
         pane split_direction="horizontal" {
-            pane name="REPL" focus=true command="julia" {
+            pane name="repl" focus=true command="julia" {
                 args "--project"
             }
-            pane name="Editor" command="hx"
+            pane name="editor" command="hx"
         }
     }
 
     tab name="Nushell" {
         pane name="nu" command="nu"
+    }
+
+    tab name="Git" {
+        pane name="git" command="lazygit"
     }
 }
 
