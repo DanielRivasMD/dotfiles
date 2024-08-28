@@ -35,12 +35,6 @@ description = "`tab-shift` -> enter input mode"
 [[verbs]]
 invocation = "micro"
 key = "f5"
-external = [
-  "sh",
-  "-e",
-  "/Users/drivas/.archive/in-situ/broot/micro.sh",
-  "{file}",
-]
 leave_broot = false
 description = "`tab-alt` -> open file with `micro` editor"
 
@@ -48,12 +42,6 @@ description = "`tab-alt` -> open file with `micro` editor"
 [[verbs]]
 invocation = "helix"
 key = "f6"
-external = [
-  "sh",
-  "-e",
-  "/Users/drivas/.archive/in-situ/broot/helix.sh",
-  "{file}",
-]
 leave_broot = false
 description = "`tab-cmd` -> open file with `helix` editor"
 
