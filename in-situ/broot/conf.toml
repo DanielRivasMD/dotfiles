@@ -2,7 +2,6 @@
 # config
 ####################################################################################################
 
-# TODO: develop copy file name script
 # default flags
 default_flags = ""
 
@@ -326,6 +325,19 @@ key = "ctrl-f5"
 external = "mdcat --paginate {file}"
 leave_broot = true
 description = "`alt-m` -> open file with `mdcat`"
+
+# path
+[[verbs]]
+invocation = "file_path_copy"
+key = "ctrl-f8"
+external = [
+  "sh",
+  "-e",
+  "/Users/drivas/.archive/in-situ/broot/path.sh",
+  "{file}",
+]
+leave_broot = false
+description = "`alt-n` -> copy file path"
 
 # quit
 [[verbs]]
