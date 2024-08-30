@@ -169,21 +169,18 @@ keybinds clear-defaults=true {
             }
         }
 
-        // bind F1 to open monocle in a new floating pane and open any results in a new tiled/floating pane
         bind "Alt M" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" {
                 floating true
             };
             SwitchToMode "Normal"
         }
-        // // bind "Alt m" to open monocle on top of the current pane and open any results on top of itself
-        // bind "Alt L" {
-        //     LaunchPlugin "file:~/.config/zellij/plugins/monocle.wasm" {
-        //         in_place true
-        //         kiosk true
-        //     };
-        //     SwitchToMode "Normal"
-        // }
+
+        bind "Alt L" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" {
+                floating true; move_to_focused_tab true;
+            }
+        }
     }
 
 }
