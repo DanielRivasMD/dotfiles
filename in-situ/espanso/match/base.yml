@@ -6,43 +6,49 @@ matches:
   # simple text replacement
   ####################################################################################################
 
-  # name
-  - trigger: ":name:"
-    replace: "Salvador Daniel Rivas Carrillo"
-
-  - trigger: ":fn:"
-    replace: "Salvador Daniel"
-
-  - trigger: ":ln:"
-    replace: "Rivas Carrillo"
-
-  - trigger: ":dr:"
-    replace: "Daniel Rivas"
-
-  - trigger: ":rfc:"
-    replace: "RICS870918RM4"
-
-  - trigger: ":curp:"
-    replace: "RICS870918HJCVRL03"
-
-  # address
+  # mail
   - trigger: ":mail:"
     replace: "danielrivasmd@gmail.com"
 
-  - trigger: ":gad:"
+  - trigger: ":mail:"
+    replace: "danielrivasmd@yahoo.com"
+
+  # name
+  - trigger: ":name:"
+    replace: "Daniel Rivas"
+
+  - trigger: ":name:"
+    replace: "Salvador Daniel Rivas Carrillo"
+
+  - trigger: ":name:"
+    replace: "Salvador Daniel"
+
+  - trigger: ":name:"
+    replace: "Rivas Carrillo"
+
+  # address
+  - trigger: ":gdl:"
     replace: "Manuel Azpiroz 1790"
 
-  - trigger: ":gzc:"
+  - trigger: ":gdl:"
     replace: "44260"
 
   - trigger: ":gdl:"
     replace: "Guadalajara"
 
-  - trigger: ":mxph:"
+  # phone
+  - trigger: ":phone:"
     replace: "3322192477"
 
-  - trigger: ":swph:"
+  - trigger: ":phone:"
     replace: "767799639"
+
+  # id
+  - trigger: ":id:"
+    replace: "RICS870918RM4"
+
+  - trigger: ":id:"
+    replace: "RICS870918HJCVRL03"
 
   # links
   - trigger: ":link:"
@@ -55,77 +61,56 @@ matches:
     replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
 
   # salutation
-  - trigger: ":ch:"
+  - trigger: ":sig:"
     replace: "Cheers,"
 
-  - trigger: ":rg:"
+  - trigger: ":sig:"
     replace: "Regards,"
 
-  # salutation
-  - trigger: ":br:"
+  - trigger: ":sig:"
     replace: "Best regards,"
 
-  # salutation
-  - trigger: ":sl:"
+  - trigger: ":sig:"
     replace: "Sincerely,"
 
   ####################################################################################################
 
   # accents
-  - trigger: "A//"
-    replace: "Á"
-
-  - trigger: "E//"
-    replace: "É"
-
-  - trigger: "I//"
-    replace: "Í"
-
-  - trigger: "O//"
-    replace: "Ó"
-
-  - trigger: "U//"
-    replace: "Ú"
-
-  - trigger: "A::"
-    replace: "Ä"
-
-  - trigger: "O::"
-    replace: "Ö"
-
-  - trigger: "U::"
-    replace: "Ü"
-
-  - trigger: "N--"
-    replace: "Ñ"
-
-  # accents
   - trigger: "a//"
     replace: "á"
+    propagate_case: true
 
   - trigger: "e//"
     replace: "é"
+    propagate_case: true
 
   - trigger: "i//"
     replace: "í"
+    propagate_case: true
 
   - trigger: "o//"
     replace: "ó"
+    propagate_case: true
 
   - trigger: "u//"
     replace: "ú"
+    propagate_case: true
 
   - trigger: "a::"
     replace: "ä"
+    propagate_case: true
 
   - trigger: "o::"
     replace: "ö"
+    propagate_case: true
 
   - trigger: "u::"
     replace: "ü"
+    propagate_case: true
 
   - trigger: "n--"
     replace: "ñ"
+    propagate_case: true
 
   ####################################################################################################
 
@@ -137,7 +122,7 @@ matches:
     replace: "β"
 
   - trigger: ";;c"
-    replace: "ʒ"
+    replace: "ς"
 
   - trigger: ";;d"
     replace: "δ"
@@ -178,8 +163,8 @@ matches:
   - trigger: ";;p"
     replace: "π"
 
-  # - trigger: ";;q"
-  #   replace: ""
+  - trigger: ";;q"
+    replace: "ϙ"
 
   - trigger: ";;r"
     replace: "ρ"
@@ -191,13 +176,13 @@ matches:
     replace: "τ"
 
   - trigger: ";;u"
-    replace: "θ"
+    replace: "Θ"
 
   - trigger: ";;v"
     replace: "ω"
 
-  # - trigger: ";;w"
-  #   replace: ""
+  - trigger: ";;w"
+    replace: "ψ"
 
   - trigger: ";;x"
     replace: "χ"
@@ -212,7 +197,7 @@ matches:
 
   # symbols
   - trigger: ",,a"
-    replace: "ɒ"
+    replace: "ą"
 
   - trigger: ",,b"
     replace: "ß"
@@ -230,22 +215,22 @@ matches:
     replace: "ƒ"
 
   - trigger: ",,g"
-    replace: "ɣ"
+    replace: "ě"
 
   - trigger: ",,h"
-    replace: "з"
+    replace: "и"
 
   - trigger: ",,i"
-    replace: "и"
+    replace: "į"
 
   - trigger: ",,j"
     replace: "ʌ"
 
   - trigger: ",,k"
-    replace: "ϙ"
+    replace: "ɒ"
 
   - trigger: ",,l"
-    replace: "ł"
+    replace: "Λ"
 
   - trigger: ",,m"
     replace: "ɱ"
@@ -254,16 +239,16 @@ matches:
     replace: "ŋ"
 
   - trigger: ",,o"
-    replace: "ø"
+    replace: "ǫ"
 
   - trigger: ",,p"
     replace: "п"
 
-  # - trigger: ",,q"
-  #   replace: ""
+  - trigger: ",,q"
+    replace: "ø"
 
   - trigger: ",,r"
-    replace: "Я"
+    replace: "я"
 
   - trigger: ",,s"
     replace: "Σ"
@@ -272,22 +257,22 @@ matches:
   #   replace: ""
 
   - trigger: ",,u"
-    replace: "Θ"
+    replace: "ų"
 
   - trigger: ",,v"
     replace: "Ω"
 
   - trigger: ",,w"
-    replace: "ʍ"
+    replace: "ł"
 
   - trigger: ",,x"
-    replace: "∇"
+    replace: "ʒ"
 
   - trigger: ",,y"
-    replace: "Λ"
+    replace: "¥"
 
   - trigger: ",,z"
-    replace: "∫"
+    replace: "з"
 
   ####################################################################################################
 
@@ -314,27 +299,5 @@ matches:
   # rust
   - trigger: ":rp:"
     replace: "println{\"{:?}\"}, $|$);"
-
-  ####################################################################################################
-
-  # print the current date
-  - trigger: ":date:"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%m/%d/%Y"
-
-  ####################################################################################################
-
-  # print the output of a shell command
-  - trigger: ":shell:"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo 'Hello from your shell'"
 
 ####################################################################################################
