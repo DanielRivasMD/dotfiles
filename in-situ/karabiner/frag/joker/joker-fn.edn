@@ -6,30 +6,30 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!OTC#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
-  [:!OTC#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
-  ; [:!OTC#Popen_bracket []]                                                                       ;
-  ; [:!OTC#Pclose_bracket []]                                                                      ;
-  [:!OTC#Psemicolon [:!S9 :!S9]]                                               ; '(('              ;
-  [:!OTC#Pquote [:open_bracket :open_bracket]]                                 ; '[['              ;
-  [:!OTC#Pbackslash [:!Sopen_bracket :!Sopen_bracket]]                         ; '{{'              ;
-  [:!OTC#Pcomma [:!Scomma :!Ssemicolon]]                                       ; '<:'              ;
-  [:!OTC#Pperiod [:!Speriod :!Ssemicolon]]                                     ; '>:'              ;
-  [:!OTC#Pslash [:!S3 :!S1 :slash]]                                            ; '#!/'             ;
+  [:!OTC#Phyphen :f13 [:term]]                                                                     ;
+  [:!OTC#Pequal_sign :f14 [:term]]                                                                 ;
+  [:!OTC#Popen_bracket :f8 [:term]]                                                                ;
+  [:!OTC#Pclose_bracket :f9 [:term]]                                                               ;
+  [:!OTC#Psemicolon :f10 [:term]]                                                                  ;
+  [:!OTC#Pquote :f11 [:term]]                                                                      ;
+  [:!OTC#Pbackslash :f12 [:term]]                                                                  ;
+  [:!OTC#Pcomma :f18 [:term]]                                                                      ;
+  [:!OTC#Pperiod :f19 [:term]]                                                                     ;
+  [:!OTC#Pslash :f20 [:term]]                                                                      ;
 
-  [:!OTC#Pdelete_or_backspace [:!S1 :!S1]]                                     ; '!!'              ;
-  [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                           ; '=='              ;
-  [:!OTC#Pright_shift [:!Sbackslash :!Sbackslash]]                             ; '||'              ;
-  [:!OTC#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
-  [:!OTC#Pright_command [:slash :slash]]                                       ; '//'              ;
-  [:!OTC#Pspacebar [:caps_lock]]                                                                   ;
+  [:!OTC#Pdelete_or_backspace :f1 [:term]]                                                         ;
+  [:!OTC#Preturn_or_enter :f2 [:term]]                                                             ;
+  [:!OTC#Pright_shift :f4 [:term]]                                                                 ;
+  [:!OTC#Pright_option :f5 [:term]]                                                                ;
+  [:!OTC#Pright_command :f6 [:term]]                                                               ;
+  [:!OTC#Pspacebar :f7 [:term]]                                                                    ;
 
   ; [:!OTC#Pleft_command []]                                                                       ;
   ; [:!OTC#Pleft_option []]                                                                        ;
   ; [:!OTC#Pleft_control []]                                                                       ;
   ; [:!OTC#Pleft_shift []]                                                                         ;
-  ; [:!OTC#Pcaps_lock []]                                                           NOT AVAILABLE  ;
-  ; [:!OTC#Ptab []]                                                                                ;
+  ; [:!OTC#Pcaps_lock []]                                                                          ;
+  ; [:!OTC#Ptab []]                                                                 NOT AVAILABLE  ;
   ; [:!OTC#Pnon_us_backslash []]                                                                   ;
   ; [:!OTC#Pescape []]                                                                             ;
   ]}
