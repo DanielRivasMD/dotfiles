@@ -65,7 +65,7 @@ _default:
 
 # open frag karabiner
 @Karabiner-frag:
-  hx in-situ/karabiner/frag/{espanso/esc.edn,espanso/function.edn,simple/tab.edn,joker/joker-fn.edn,simple/lshift.edn,simple/lctrl.edn,simple/lopt.edn,cmd/lcmd-fn.edn,simple/rctrl.edn,simple/space.edn,simple/rcmd.edn,simple/ropt.edn,shift/rshift-ctlABC.edn,bspace/bs-ctlABC.edn,ctlcmd/cc-fn.edn,simple/q-layer.edn,simple/patch.edn,arrow/arrow-fn.edn}
+  hx in-situ/karabiner/frag/{espanso/esc.edn,espanso/function.edn,simple/tab.edn,joker/joker-fn.edn,simple/lshift.edn,simple/lctl.edn,simple/lopt.edn,cmd/lcmd-fn.edn,simple/rctl.edn,simple/space.edn,simple/rcmd.edn,simple/ropt.edn,shift/rshift-ctlABC.edn,bspace/bs-ctlABC.edn,ctlcmd/cc-fn.edn,simple/q-layer.edn,simple/patch.edn,arrow/arrow-fn.edn}
 
 # open editors karabiner
 @Karabiner-editors:
