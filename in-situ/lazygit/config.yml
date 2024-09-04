@@ -452,7 +452,7 @@ keybinding:
     scrollRight: L
     gotoTop: '<home>'                            # cmd-up
     gotoBottom: '<end>'                          # cmd-down
-    toggleRangeSelect:  <c-y>                    # bs-space
+    toggleRangeSelect:  <c-v>                    # bs-space
     rangeSelectDown: <s-down>
     rangeSelectUp: <s-up>
     prevBlock: <disabled>
@@ -484,8 +484,8 @@ keybinding:
     scrollDownMain: <disabled>
     scrollUpMain-alt1: <disabled>
     scrollDownMain-alt1: <disabled>
-    scrollUpMain-alt2: k
-    scrollDownMain-alt2: j
+    scrollUpMain-alt2: <c-x>
+    scrollDownMain-alt2: <c-y>
     executeCustomCommand: ':'
     createRebaseOptionsMenu: m
 
