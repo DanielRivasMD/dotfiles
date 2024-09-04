@@ -6,30 +6,30 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQR#Phyphen :f13 [:term]]                                                                     ;
-  [:!WQR#Pequal_sign :f14 [:term]]                                                                 ;
-  [:!WQR#Popen_bracket :f8 [:term]]                                                                ;
-  [:!WQR#Pclose_bracket :f9 [:term]]                                                               ;
-  [:!WQR#Psemicolon :f10 [:term]]                                                                  ;
-  [:!WQR#Pquote :f11 [:term]]                                                                      ;
-  [:!WQR#Pbackslash :f12 [:term]]                                                                  ;
-  [:!WQR#Pcomma :f18 [:term]]                                                                      ;
-  [:!WQR#Pperiod :f19 [:term]]                                                                     ;
-  [:!WQR#Pslash :f20 [:term]]                                                                      ;
+  [:!WQR#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
+  [:!WQR#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
+  ; [:!WQR#Popen_bracket []]                                                                       ;
+  ; [:!WQR#Pclose_bracket []]                                                                      ;
+  [:!WQR#Psemicolon [:!S9 :!S9]]                                               ; '(('              ;
+  [:!WQR#Pquote [:open_bracket :open_bracket]]                                 ; '[['              ;
+  [:!WQR#Pbackslash [:!Sopen_bracket :!Sopen_bracket]]                         ; '{{'              ;
+  [:!WQR#Pcomma [:!Scomma :!Ssemicolon]]                                       ; '<:'              ;
+  [:!WQR#Pperiod [:!Speriod :!Ssemicolon]]                                     ; '>:'              ;
+  [:!WQR#Pslash [:!S3 :!S1 :slash]]                                            ; '#!/'             ;
 
-  [:!WQR#Pdelete_or_backspace :f1 [:term]]                                                         ;
-  [:!WQR#Preturn_or_enter :f2 [:term]]                                                             ;
-  [:!WQR#Pright_shift :f4 [:term]]                                                                 ;
-  [:!WQR#Pright_option :f5 [:term]]                                                                ;
-  [:!WQR#Pright_command :f6 [:term]]                                                               ;
-  [:!WQR#Pspacebar :f7 [:term]]                                                                    ;
+  [:!WQR#Pdelete_or_backspace [:!S1 :!S1]]                                     ; '!!'              ;
+  [:!WQR#Preturn_or_enter [:equal_sign :equal_sign]]                           ; '=='              ;
+  [:!WQR#Pright_shift [:!Sbackslash :!Sbackslash]]                             ; '||'              ;
+  [:!WQR#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
+  [:!WQR#Pright_command [:slash :slash]]                                       ; '//'              ;
+  [:!WQR#Pspacebar [:caps_lock]]                                                                   ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;
   ; [:!WQR#Pleft_control []]                                                                       ;
   ; [:!WQR#Pleft_shift []]                                                                         ;
-  ; [:!WQR#Pcaps_lock []]                                                                          ;
-  ; [:!WQR#Ptab []]                                                                 NOT AVAILABLE  ;
+  ; [:!WQR#Pcaps_lock []]                                                           NOT AVAILABLE  ;
+  ; [:!WQR#Ptab []]                                                                                ;
   ; [:!WQR#Pnon_us_backslash []]                                                                   ;
   ; [:!WQR#Pescape []]                                                                             ;
   ]}
