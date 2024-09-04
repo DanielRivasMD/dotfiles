@@ -167,6 +167,8 @@ C-k = ["kill_to_line_end"]                                 # shift-cmd         #
 # C-l = [""]                                               # shift-alt         #
 # C-m = [""]                                               # DEFAULT           #
 # C-n = [""]                                               # bs-fn             #
+# C-o = ["scroll_up"]                             # grave-up          # prev comment
+# C-p = ["scroll_down"]                              # grave-down        # next comment
 C-o = ["goto_prev_comment"]                             # grave-up          # prev comment
 C-p = ["goto_next_comment"]                              # grave-down        # next comment
 # C-q = [""]                                               # DEFAULT           #
@@ -174,17 +176,20 @@ C-r = ["file_picker"]                                      # bs-ctl            #
 C-s = ["buffer_picker"]                                    # bs-alt            # buffer picker
 C-t = ["command_palette"]                                  # bs-cmd            # command palette
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
-C-v = ["change_selection_noyank"]                          # shift-space       # delete & insert
+C-v = ["normal_mode", ":new"]                          # shift-space       # delete & insert
+# C-v = ["change_selection_noyank"]                          # shift-space       # delete & insert
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
-C-x = ["goto_word"]                                        # alt               # jump
-C-y = ["normal_mode", ":new"]                              # alt-shift-q       # quit all
+C-x = ["scroll_up"]                                        # alt               # jump
+C-y = ["scroll_down"]                              # alt-shift-q       # quit all
+# C-x = ["goto_word"]                                        # alt               # jump
+# C-y = ["normal_mode", ":new"]                              # alt-shift-q       # quit all
 # C-z = [""]                                               # DEFAULT           #
 A-c = ["changed_file_picker"]                              # bs-shift          # git picker
 
 
 ####################################################################################################
 
-# tab
+# joker
 # F1 = []                                                  #                   #
 F2 = ["symbol_picker"]                                     # tab-enter         # symbol list
 F4 = ["goto_implementation"]                               # tab-shift         # implementation
@@ -206,7 +211,7 @@ F17 = ["goto_type_definition"]                             # tab-/             #
 
 # ctl-cmd
 S-F1 = [":buffer-close"]                                   # ctl-cmd-bspace    # close tab
-# S-F2 = []                                                #                   #
+S-F2 = ["buffer_picker"]                                                #                   #
 S-F4 = ["vsplit"]                                          # ctl-cmd-shift     # vertical split
 S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # ho rizontal split
 S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
