@@ -3,11 +3,42 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; shift
+{:des "Shift Mode - numbers"
+ :rules
+ [;
+  ; [:!S#keypad_1 []]                                                                              ;
+  ; [:!S#keypad_2 []]                                                                              ;
+  ; [:!S#keypad_3 []]                                                                              ;
+  ; [:!S#keypad_4 []]                                                                              ;
+  ; [:!S#keypad_5 []]                                                                              ;
+  ; [:!S#keypad_6 []]                                                                              ;
+  ; [:!S#keypad_7 []]                                                                              ;
+  ; [:!S#keypad_8 []]                                                                              ;
+  ; [:!S#keypad_9 []]                                                                              ;
+  ; [:!S#keypad_0 []]                                                                              ;
+  ; [:!S#keypad_slash []]                                                                          ;
+  ; [:!S#keypad_asterisk []]                                                                       ;
+
+  ; [:!S#1 []]                                                                                     ;
+  ; [:!S#2 []]                                                                                     ;
+  ; [:!S#3 []]                                                                                     ;
+  ; [:!S#4 []]                                                                                     ;
+  ; [:!S#5 []]                                                                                     ;
+  ; [:!S#6 []]                                                                                     ;
+  ; [:!S#7 []]                                                                                     ;
+  ; [:!S#8 []]                                                                                     ;
+  ; [:!S#9 []]                                                                                     ;
+  ; [:!S#0 []]                                                                                     ;
+  ; [:!S#Phyphen []]                                                                               ;
+  ; [:!S#Pequal_sign []]                                                                           ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
 {:des "Shift Mode - symbols"
  :rules
  [;
-  ; [:!S#Phyphen []]                                                                               ;
-  ; [:!S#Pequal_sign []]                                                                           ;
   ; [:!S#Popen_bracket []]                                                                         ;
   ; [:!S#Pclose_bracket []]                                                                        ;
   ; [:!S#Psemicolon []]                                                                            ;
@@ -19,10 +50,10 @@
 
   ; [:!S#Pdelete_or_backspace []]                                                                  ;
   ; [:!S#Preturn_or_enter []]                                                                      ;
-  [:!S#Pright_shift :delete_forward]                                                               ;
-  [:!S#Pright_option :!Od [:term]]                                                                 ;
-  [:!S#Pright_command :!Tk [:term]]                                                                ;
-  [:!S#Pspacebar :!Tv [:term]]                                                                     ;
+  [:!S#Pright_shift [:delete_forward]]                                                             ;
+  [:!S#Pright_option [:!Od]]                                                                       ;
+  [:!S#Pright_command [:!Tk]]                                                                      ;
+  ; [:!S#Pspacebar [:!Tv]]                                                                         ;
 
   ; [:!S#Pleft_command []]                                                                         ;
   ; [:!S#Pleft_option []]                                                                          ;
