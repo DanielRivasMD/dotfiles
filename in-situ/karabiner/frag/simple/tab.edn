@@ -3,11 +3,42 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; tab
+{:des "Tab Mode - numbers"
+ :rules
+ [;
+  ; [:!WQR#keypad_1 []]                                                                            ;
+  ; [:!WQR#keypad_2 []]                                                                            ;
+  ; [:!WQR#keypad_3 []]                                                                            ;
+  ; [:!WQR#keypad_4 []]                                                                            ;
+  ; [:!WQR#keypad_5 []]                                                                            ;
+  ; [:!WQR#keypad_6 []]                                                                            ;
+  ; [:!WQR#keypad_7 []]                                                                            ;
+  ; [:!WQR#keypad_8 []]                                                                            ;
+  ; [:!WQR#keypad_9 []]                                                                            ;
+  ; [:!WQR#keypad_0 []]                                                                            ;
+  ; [:!WQR#keypad_slash []]                                                                        ;
+  ; [:!WQR#keypad_asterisk []]                                                                     ;
+
+  ; [:!WQR#1 []]                                                                                   ;
+  ; [:!WQR#2 []]                                                                                   ;
+  ; [:!WQR#3 []]                                                                                   ;
+  ; [:!WQR#4 []]                                                                                   ;
+  ; [:!WQR#5 []]                                                                                   ;
+  ; [:!WQR#6 []]                                                                                   ;
+  ; [:!WQR#7 []]                                                                                   ;
+  ; [:!WQR#8 []]                                                                                   ;
+  ; [:!WQR#9 []]                                                                                   ;
+  ; [:!WQR#0 []]                                                                                   ;
+  [:!WQR#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
+  [:!WQR#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQR#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
-  [:!WQR#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
   ; [:!WQR#Popen_bracket []]                                                                       ;
   ; [:!WQR#Pclose_bracket []]                                                                      ;
   [:!WQR#Psemicolon [:!S9 :!S9]]                                               ; '(('              ;
