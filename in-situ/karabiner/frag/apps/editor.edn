@@ -27,7 +27,8 @@
   ; [: :!Tu [:editor]]                                                              COLLISION      ;
   ; [: :!Tv [:editor]]                                                                             ;
   ; [: :!Tw [:editor]]                                                              COLLISION      ;
-  [:#Pleft_option :left_option [:editor] {:alone [:!Tx]}]                      ; alt               ;
+  [:#Pleft_option :left_option [:editor] {:alone [:!OTf13]}]                      ; alt               ;
+  ; [:#Pleft_option :left_option [:editor] {:alone [:!Tx]}]                      ; alt               ;
   ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; bs-space          ;
   ; [: :!Tz [:editor]]                                                              DEFAULT        ;
   ]}
@@ -60,7 +61,7 @@
   ; [:!EQR#Pright_shift [:editor]]                                                                 ;
   ; [:!EQR#Pright_option [:editor]]                                                                ;
   ; [:!EQR#Pright_command [:editor]]                                                               ;
-  [:!EQR#Pspacebar :!Ty [:editor]]                                                                 ;
+  ; [:!EQR#Pspacebar :!Ty [:editor]]                                                                 ;
 
   [:!EQR#Pright_control :!Tj [:editor]]                                                            ;
 
