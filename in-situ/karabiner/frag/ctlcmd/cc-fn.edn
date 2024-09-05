@@ -2,12 +2,43 @@
 ; CTL-CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; control
+{:des "Control Mode - numbers"
+ :rules
+ [;
+  ; [:!TC#keypad_1 []]                                                                             ;
+  ; [:!TC#keypad_2 []]                                                                             ;
+  ; [:!TC#keypad_3 []]                                                                             ;
+  ; [:!TC#keypad_4 []]                                                                             ;
+  ; [:!TC#keypad_5 []]                                                                             ;
+  ; [:!TC#keypad_6 []]                                                                             ;
+  ; [:!TC#keypad_7 []]                                                                             ;
+  ; [:!TC#keypad_8 []]                                                                             ;
+  ; [:!TC#keypad_9 []]                                                                             ;
+  ; [:!TC#keypad_0 []]                                                                             ;
+  ; [:!TC#keypad_slash []]                                                                         ;
+  ; [:!TC#keypad_asterisk []]                                                                      ;
+
+  ; [:!TC#1 []]                                                                                    ;
+  ; [:!TC#2 []]                                                                                    ;
+  ; [:!TC#3 []]                                                                                    ;
+  ; [:!TC#4 []]                                                                                    ;
+  ; [:!TC#5 []]                                                                                    ;
+  ; [:!TC#6 []]                                                                                    ;
+  ; [:!TC#7 []]                                                                                    ;
+  ; [:!TC#8 []]                                                                                    ;
+  ; [:!TC#9 []]                                                                                    ;
+  ; [:!TC#0 []]                                                                                    ;
+  [:!TC#Phyphen :!Sf13 [:term]]                                                                    ;
+  [:!TC#Pequal_sign :!Sf14 [:term]]                                                                ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; Alacritty
 {:des "Alacritty - Control - Command Mode"
  :rules
  [;
-  [:!TC#Phyphen :!Sf13 [:term]]                                                                    ;
-  [:!TC#Pequal_sign :!Sf14 [:term]]                                                                ;
   [:!TC#Popen_bracket :!Sf8 [:term]]                                                               ;
   [:!TC#Pclose_bracket :!Sf9 [:term]]                                                              ;
   [:!TC#Psemicolon :!Sf10 [:term]]                                                                 ;
