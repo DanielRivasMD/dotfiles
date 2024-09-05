@@ -39,6 +39,7 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
+ ; WIP: helix move
   ; [:!WQR#Popen_bracket []]                                                                       ;
   ; [:!WQR#Pclose_bracket []]                                                                      ;
   ; [:!WQR#Psemicolon []]                                                                          ;
@@ -53,7 +54,7 @@
   ; [:!WQR#Pright_shift []]                                                                        ;
   [:!WQR#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
   [:!WQR#Pright_command [:slash :slash]]                                       ; '//'              ;
-  [:!WQR#Pspacebar [:caps_lock]]                                                                   ;
+  ; [:!WQR#Pspacebar [:caps_lock]]                                                                   ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;

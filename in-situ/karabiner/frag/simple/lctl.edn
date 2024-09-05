@@ -28,7 +28,7 @@
   [:!T#P7 [:spacebar :!S7 :!S7 :spacebar]]                                     ; ' && '            ;
   ; [:!T#P8 []]                                                                                    ;
   [:!T#P9 [:!S9 :!S9]]                                                         ; '(('              ;
-  ; [:!T#P0 []]                                                                                    ;
+  [:!T#P0 [:!S0 :!S0]]                                                         ; '))'              ;
   [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]                          ; ' -- '            ;
   [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]          ; ' ++ '            ;
   ]}
@@ -73,7 +73,7 @@
  :rules
  [;
   [:!T#Popen_bracket [:open_bracket :open_bracket]]                            ; '[['              ;
-  ; [:!T#Pclose_bracket []]                                                                        ;
+  [:!T#Pclose_bracket [:close_bracket :close_bracket]]                         ; ']]'              ;
   [:!T#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                 ; '::'              ;
   [:!T#Pquote [:quote :quote :quote]]                                          ; '''''             ;
   [:!T#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]             ; ' || '            ;
@@ -87,7 +87,7 @@
   ; [:!T#Pright_shift []]                                                                          ;
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                          ; ' ** '            ;
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                     ; ' // '            ;
-  ; [:!T#Pspacebar []]                                                              DEFAULT        ;
+  ; [:!T#Pspacebar []]                                                                             ;
 
   ; [:!T#Pleft_command []]                                                                         ;
   ; [:!T#Pleft_option []]                                                                          ;
@@ -106,7 +106,7 @@
  :rules
  [;
   [:!TS#Popen_bracket [:!Sopen_bracket :!Sopen_bracket]]                       ; '{{'              ;
-  ; [:!TS#Pclose_bracket []]                                                                       ;
+  [:!TS#Pclose_bracket [:!Sclose_bracket :!Sclose_bracket]]                    ; '}}'              ;
   [:!TS#Psemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                       ; '::<'             ;
   [:!TS#Pquote [:!Squote :!Squote :!Squote]]                                   ; '"""'             ;
   [:!TS#Pbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]    ; ' .|| '           ;
