@@ -76,6 +76,12 @@
   [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
   [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
   [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
+
+  ; atl-cmd
+  ; [:!OC#Pleft_arrow [:term]]                                                                     ;
+  ; [:!OC#Pright_arrow [:term]]                                                                    ;
+  [:!OC#Pup_arrow :!Tx [:term]]                                                                    ;
+  [:!OC#Pdown_arrow :!Ty [:term]]                                                                  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
