@@ -6,29 +6,29 @@
 {:des "Tab Mode - numbers"
  :rules
  [;
-  ; [:!WQR#keypad_1 []]                                                                            ;
-  ; [:!WQR#keypad_2 []]                                                                            ;
-  ; [:!WQR#keypad_3 []]                                                                            ;
-  ; [:!WQR#keypad_4 []]                                                                            ;
-  ; [:!WQR#keypad_5 []]                                                                            ;
-  ; [:!WQR#keypad_6 []]                                                                            ;
-  ; [:!WQR#keypad_7 []]                                                                            ;
-  ; [:!WQR#keypad_8 []]                                                                            ;
-  ; [:!WQR#keypad_9 []]                                                                            ;
-  ; [:!WQR#keypad_0 []]                                                                            ;
-  ; [:!WQR#keypad_slash []]                                                                        ;
-  ; [:!WQR#keypad_asterisk []]                                                                     ;
+  ; [:!WQR#Pkeypad_1 []]                                                                           ;
+  ; [:!WQR#Pkeypad_2 []]                                                                           ;
+  ; [:!WQR#Pkeypad_3 []]                                                                           ;
+  ; [:!WQR#Pkeypad_4 []]                                                                           ;
+  ; [:!WQR#Pkeypad_5 []]                                                                           ;
+  ; [:!WQR#Pkeypad_6 []]                                                                           ;
+  ; [:!WQR#Pkeypad_7 []]                                                                           ;
+  ; [:!WQR#Pkeypad_8 []]                                                                           ;
+  ; [:!WQR#Pkeypad_9 []]                                                                           ;
+  ; [:!WQR#Pkeypad_0 []]                                                                           ;
+  ; [:!WQR#Pkeypad_slash []]                                                                       ;
+  ; [:!WQR#Pkeypad_asterisk []]                                                                    ;
 
-  ; [:!WQR#1 []]                                                                                   ;
-  ; [:!WQR#2 []]                                                                                   ;
-  ; [:!WQR#3 []]                                                                                   ;
-  ; [:!WQR#4 []]                                                                                   ;
-  ; [:!WQR#5 []]                                                                                   ;
-  ; [:!WQR#6 []]                                                                                   ;
-  ; [:!WQR#7 []]                                                                                   ;
-  ; [:!WQR#8 []]                                                                                   ;
-  ; [:!WQR#9 []]                                                                                   ;
-  ; [:!WQR#0 []]                                                                                   ;
+  ; [:!WQR#P1 []]                                                                                  ;
+  ; [:!WQR#P2 []]                                                                                  ;
+  ; [:!WQR#P3 []]                                                                                  ;
+  ; [:!WQR#P4 []]                                                                                  ;
+  ; [:!WQR#P5 []]                                                                                  ;
+  ; [:!WQR#P6 []]                                                                                  ;
+  ; [:!WQR#P7 []]                                                                                  ;
+  ; [:!WQR#P8 []]                                                                                  ;
+  ; [:!WQR#P9 []]                                                                                  ;
+  ; [:!WQR#P0 []]                                                                                  ;
   [:!WQR#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
   [:!WQR#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
   ]}
@@ -41,16 +41,16 @@
  [;
   ; [:!WQR#Popen_bracket []]                                                                       ;
   ; [:!WQR#Pclose_bracket []]                                                                      ;
-  [:!WQR#Psemicolon [:!S9 :!S9]]                                               ; '(('              ;
-  [:!WQR#Pquote [:open_bracket :open_bracket]]                                 ; '[['              ;
-  [:!WQR#Pbackslash [:!Sopen_bracket :!Sopen_bracket]]                         ; '{{'              ;
+  ; [:!WQR#Psemicolon []]                                                                          ;
+  ; [:!WQR#Pquote []]                                                                              ;
+  [:!WQR#Pbackslash [:!Sbackslash :!Sbackslash]]                               ; '||'              ;
   [:!WQR#Pcomma [:!Scomma :!Ssemicolon]]                                       ; '<:'              ;
   [:!WQR#Pperiod [:!Speriod :!Ssemicolon]]                                     ; '>:'              ;
-  [:!WQR#Pslash [:!S3 :!S1 :slash]]                                            ; '#!/'             ;
+  ; [:!WQR#Pslash []]                                                                              ;
 
-  [:!WQR#Pdelete_or_backspace [:!S1 :!S1]]                                     ; '!!'              ;
-  [:!WQR#Preturn_or_enter [:equal_sign :equal_sign]]                           ; '=='              ;
-  [:!WQR#Pright_shift [:!Sbackslash :!Sbackslash]]                             ; '||'              ;
+  [:!WQR#Pdelete_or_backspace [:equal_sign :equal_sign]]                       ; '=='              ;
+  [:!WQR#Preturn_or_enter [:!S1 :!S1]]                                         ; '!!'              ;
+  ; [:!WQR#Pright_shift []]                                                                        ;
   [:!WQR#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
   [:!WQR#Pright_command [:slash :slash]]                                       ; '//'              ;
   [:!WQR#Pspacebar [:caps_lock]]                                                                   ;
