@@ -10,8 +10,8 @@
   ; [: :!Od [:term]]                                                                COLLISION      ;
   ; [: :!Oe [:term]]                                                                COLLISION      ;
   [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
-  ; [:!OC#Popen_bracket :!Og [:term]]                                          ; WIP: remap        ;
-  ; [:!OC#Pclose_bracket :!Oh [:term]]                                         ; WIP: remap        ;
+  ; [: :!Og [:term]]                                                                               ;
+  ; [: :!Oh [:term]]                                                                               ;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
   [:!OT#Pleft_arrow :!Oj [:term]]                                                                  ;
   [:!OT#Pright_arrow :!Ok [:term]]                                                                 ;
@@ -27,8 +27,8 @@
   ; [: :!Ou [:term]]                                                                COLLISION      ;
   [:!OC#Pleft_arrow :!Ov [:term]]                                                                  ;
   [:!OC#Pright_arrow :!Ow [:term]]                                                                 ;
-  [:!OC#Pup_arrow :!Ox [:term]]                                                                    ;
-  [:!OC#Pdown_arrow :!Oy [:term]]                                                                  ;
+  ; [: :!Ox [:term]]                                                                               ;
+  ; [: :!Oy [:term]]                                                                               ;
   [:!OT#Pbackslash :!Oz [:term]]                                               ; WIP: remap        ;
   ]}
 
@@ -55,24 +55,6 @@
   ; [: :!SOo [:term]]                                                               COLLISION      ;
   [:#Pescape :!EWright_shift [:term] {:alone [:!SOp]}]                         ; esc               ;
   [:#Pright_shift :right_shift [:term] {:alone [:!SOq]}]                       ; shift             ;
-  [:!OC#Pkeypad_1 :!SOr [:term]]                                               ; alt-cmd-1         ;
-  [:!OC#Pkeypad_2 :!SOs [:term]]                                               ; alt-cmd-2         ;
-  [:!OC#Pkeypad_3 :!SOt [:term]]                                               ; alt-cmd-3         ;
-  [:!OC#Pkeypad_4 :!SOu [:term]]                                               ; alt-cmd-4         ;
-  [:!OC#Pkeypad_5 :!SOv [:term]]                                               ; alt-cmd-5         ;
-  [:!OC#Pkeypad_6 :!SOw [:term]]                                               ; alt-cmd-6         ;
-  [:!OC#Pkeypad_7 :!SOx [:term]]                                               ; alt-cmd-7         ;
-  [:!OC#Pkeypad_8 :!SOy [:term]]                                               ; alt-cmd-8         ;
-  [:!OC#Pkeypad_9 :!SOz [:term]]                                               ; alt-cmd-9         ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal zellij bindings - keypad"
- :rules
- [;
-  [:!OC#Pkeypad_0 :!SOn [:term]]                                               ; alt-cmd-space     ;
   [:!OC#Pkeypad_1 :!SOr [:term]]                                               ; alt-cmd-1         ;
   [:!OC#Pkeypad_2 :!SOs [:term]]                                               ; alt-cmd-2         ;
   [:!OC#Pkeypad_3 :!SOt [:term]]                                               ; alt-cmd-3         ;
