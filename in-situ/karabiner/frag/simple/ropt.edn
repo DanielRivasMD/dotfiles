@@ -2,37 +2,36 @@
 ; OPT
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: update binds
 ; option
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!E#Pa [:p :a :t :c :h :spacebar]]                                          ; 'patch '          ;
+  ; [:!E#Pa []]                                                                ;                   ;
   [:!E#Pb [:b :e :g :i :n]]                                                    ; 'begin'           ;
-  [:!E#Pc [:w :h :i :c :h :spacebar]]                                          ; 'which '          ;
-  [:!E#Pd [:u :p :d :a :t :e :spacebar]]                                       ; 'update '         ;
+  [:!E#Pc [:w :h :i :c :h]]                                                    ; 'which'           ;
+  [:!E#Pd [:u :p :d :a :t :e]]                                                 ; 'update'          ;
   [:!E#Pe [:e :n :u :m]]                                                       ; 'enum'            ;
-  [:!E#Pf [:f :u :n :c :t :i :o :n :spacebar]]                                 ; 'function '       ;
-  [:!E#Pg [:g :l :o :b :a :l :spacebar]]                                       ; 'global '         ;
+  [:!E#Pf [:f :u :n :c :t :i :o :n]]                                           ; 'function'        ;
+  [:!E#Pg [:g :l :o :b :a :l]]                                                 ; 'global'          ;
   ; [:!E#Ph []]                                                                ;                   ;
   ; [:!E#Pi []]                                                                ;                   ;
-  [:!E#Pj [:u :p :g :r :a :d :e :spacebar]]                                    ; 'upgrade '        ;
-  [:!E#Pk [:l :o :c :a :l :spacebar]]                                          ; 'local '          ;
-  [:!E#Pl [:l :e :t :spacebar]]                                                ; 'let '            ;
+  ; [:!E#Pj []]                                                                ;                   ;
+  [:!E#Pk [:l :o :c :a :l]]                                                    ; 'local'           ;
+  [:!E#Pl [:l :e :t]]                                                          ; 'let'             ;
   [:!E#Pm [:m :u :t :a :b :l :e]]                                              ; 'mutable'         ;
   [:!E#Pn [:e :n :d]]                                                          ; 'end'             ;
   ; [:!E#Po []]                                                                ;                   ;
-  [:!E#Pp [:p :l :o :t]]                                                       ; 'plot'            ;
-  [:!E#Pq [:d :e :p :r :e :c :a :t :e :spacebar]]                              ; 'deprecate '      ;
+  ; [:!E#Pp []]                                                                ;                   ;
+  [:!E#Pq [:d :e :p :r :e :c :a :t :e]]                                        ; 'deprecate'       ;
   [:!E#Pr [:s :t :r :u :c :t]]                                                 ; 'struct'          ;
   [:!E#Ps [:s :t :r :i :n :g]]                                                 ; 'string'          ;
   [:!E#Pt [:t :e :s :t]]                                                       ; 'test'            ;
-  [:!E#Pu [:u :s :i :n :g :spacebar]]                                          ; 'using '          ;
-  [:!E#Pv [:w :h :i :l :e :spacebar]]                                          ; 'while '          ;
-  [:!E#Pw [:w :h :e :r :e :spacebar]]                                          ; 'where '          ;
+  [:!E#Pu [:u :s :i :n :g]]                                                    ; 'using'           ;
+  [:!E#Pv [:w :h :i :l :e]]                                                    ; 'while'           ;
+  [:!E#Pw [:w :h :e :r :e]]                                                    ; 'where'           ;
   [:!E#Px [:e :x :i :t]]                                                       ; 'exit'            ;
   [:!E#Py [:t :y :p :e]]                                                       ; 'type'            ;
-  [:!E#Pz [:f :o :r :spacebar]]                                                ; 'for '            ;
+  [:!E#Pz [:f :o :r]]                                                          ; 'for'             ;
   [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                       ; ' ∈ '             ;
   ]}
 
@@ -42,31 +41,31 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!ER#Pa []]                                                               ;                   ;
-  [:!ER#Pb [:!S#Pb :!Su :!Sg :!Ssemicolon :spacebar]]                          ; 'BUG: '           ;
+  [:!ER#Pa [:!Sa :n :y]]                                                       ; 'Any'             ;
+  [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                            ; 'BUG: '           ;
   ; [:!ER#Pc []]                                                               ;                   ;
-  [:!ER#Pd [:!S#Pd :!So :!Sc :!Ssemicolon :spacebar]]                          ; 'DOC: '           ;
+  [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                            ; 'DOC: '           ;
   ; [:!ER#Pe []]                                                               ;                   ;
-  ; [:!ER#Pf []]                                                               ;                   ;
+  [:!ER#Pf [:!Sd :a :t :a :!Sf :r :a :m :e]]                                   ; 'DataFrame'       ;
   ; [:!ER#Pg []]                                                               ;                   ;
   ; [:!ER#Ph []]                                                               ;                   ;
-  [:!ER#Pi [:!S#Pi :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                     ; 'IDEA: '          ;
+  [:!ER#Pi [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                       ; 'IDEA: '          ;
   ; [:!ER#Pj []]                                                               ;                   ;
-  [:!ER#Pk [:!S#Pk :!Se :!Sy :!Ssemicolon :spacebar]]                          ; 'KEY: '           ;
+  [:!ER#Pk [:!Sk :!Se :!Sy :!Ssemicolon :spacebar]]                            ; 'KEY: '           ;
   [:!ER#Pl [:!Sn :!Su :!Sl :!Sl]]                                              ; 'NULL'            ;
-  [:!ER#Pm [:!Sf :l :o :a :t]]                                                 ; 'Float'           ;
-  [:!ER#Pn [:!Si :n :t]]                                                       ; 'Int'             ;
+  [:!ER#Pm [:!Sf :l :o :a :t :6 :4]]                                           ; 'Float64'         ;
+  [:!ER#Pn [:!Si :n :t :6 :4]]                                                 ; 'Int64'           ;
   ; [:!ER#Po []]                                                               ;                   ;
   ; [:!ER#Pp []]                                                               ;                   ;
   ; [:!ER#Pq []]                                                               ;                   ;
   ; [:!ER#Pr []]                                                               ;                   ;
   [:!ER#Ps [:!Ss :t :r :i :n :g]]                                              ; 'String'          ;
-  [:!ER#Pt [:!S#Pt :!So :!Sd :!So :!Ssemicolon :spacebar]]                     ; 'TODO: '          ;
+  [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                       ; 'TODO: '          ;
   ; [:!ER#Pu []]                                                               ;                   ;
-  ; [:!ER#Pv []]                                                               ;                   ;
-  [:!ER#Pw [:!S#Pw :!Si :!Sp :!Ssemicolon :spacebar]]                          ; 'WIP: '           ;
-  [:!ER#Px [:!S#Pf :!Si :!Sx :!Ssemicolon :spacebar]]                          ; 'FIX: '           ;
-  ; [:!ER#Py []]                                                               ;                   ;
+  [:!ER#Pv [:!Sv :e :c :t :o :r]]                                              ; 'Vector'          ;
+  [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                            ; 'WIP: '           ;
+  [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                            ; 'FIX: '           ;
+  [:!ER#Py [:!Ss :y :m :b :o :l]]                                              ; 'Symbol'          ;
   ; [:!ER#Pz []]                                                               ;                   ;
   [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]              ; ' .∈ '            ;
   ]}
