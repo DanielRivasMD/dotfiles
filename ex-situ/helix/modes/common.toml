@@ -166,15 +166,15 @@ C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     #
 C-k = ["kill_to_line_end"]                                 # shift-cmd         # delete end line
 # C-l = [""]                                               # shift-alt         #
 # C-m = [""]                                               # DEFAULT           #
-# C-n = [""]                                               # bs-fn             #
+C-n = ["command_palette"]                                               # bs-fn             #
 # C-o = ["scroll_up"]                             # grave-up          # prev comment
 # C-p = ["scroll_down"]                              # grave-down        # next comment
 C-o = ["goto_prev_comment"]                             # grave-up          # prev comment
 C-p = ["goto_next_comment"]                              # grave-down        # next comment
 # C-q = [""]                                               # DEFAULT           #
-C-r = ["file_picker"]                                      # bs-ctl            # file picker
-C-s = ["buffer_picker"]                                    # bs-alt            # buffer picker
-C-t = ["command_palette"]                                  # bs-cmd            # command palette
+C-r = ["changed_file_picker"]                                      # bs-ctl            # file picker
+C-s = ["file_picker"]                                    # bs-alt            # buffer picker
+C-t = ["buffer_picker"]                                  # bs-cmd            # command palette
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
 C-v = ["normal_mode", ":new"]                          # shift-space       # delete & insert
 # C-v = ["change_selection_noyank"]                          # shift-space       # delete & insert
@@ -184,7 +184,7 @@ C-y = ["scroll_down"]                              # alt-shift-q       # quit al
 # C-x = ["goto_word"]                                        # alt               # jump
 # C-y = ["normal_mode", ":new"]                              # alt-shift-q       # quit all
 # C-z = [""]                                               # DEFAULT           #
-A-c = ["changed_file_picker"]                              # bs-shift          # git picker
+# A-c = ["changed_file_picker"]                              # bs-shift          # git picker
 
 
 ####################################################################################################
