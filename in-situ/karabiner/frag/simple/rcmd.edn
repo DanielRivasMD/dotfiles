@@ -22,7 +22,7 @@
   [:!Q#Pn [:semicolon :semicolon :n]]                      ; νυ                ; 'ν'               ;
   [:!Q#Po [:semicolon :semicolon :o]]                      ; ομικρον           ; 'ο'               ;
   [:!Q#Pp [:semicolon :semicolon :p]]                      ; πι                ; 'π'               ;
-  ; [:!Q#Pq [:semicolon :semicolon :q]]                                             COLLISION      ;
+  ; [:!Q#Pq []]                                                                     DEFAULT        ;
   [:!Q#Pr [:semicolon :semicolon :r]]                      ; ρω                ; 'ρ'               ;
   [:!Q#Ps [:semicolon :semicolon :s]]                      ; σιγμα             ; 'σ'               ;
   [:!Q#Pt [:semicolon :semicolon :t]]                      ; ταυ               ; 'τ'               ;
@@ -43,7 +43,7 @@
  [;
   [:!QR#Pa [:comma :comma :a]]                             ; a ogonek          ; 'ą'               ;
   [:!QR#Pb [:comma :comma :b]]                             ; eszett            ; 'ß'               ;
-  [:!QR#Pc [:comma :comma :c]]                             ; c-cedille         ; 'ç'               ;
+  [:!QR#Pc [:comma :comma :c]]                             ; c cedille         ; 'ç'               ;
   [:!QR#Pd [:comma :comma :d]]                             ; ΔEΛTA             ; 'Δ'               ;
   [:!QR#Pe [:comma :comma :e]]                             ; e ogonek          ; 'ę'               ;
   [:!QR#Pf [:comma :comma :f]]                             ; florin            ; 'ƒ'               ;
@@ -57,7 +57,7 @@
   [:!QR#Pn [:comma :comma :n]]                             ; eng               ; 'ŋ'               ;
   [:!QR#Po [:comma :comma :o]]                             ; o ogonek          ; 'ǫ'               ;
   [:!QR#Pp [:comma :comma :p]]                             ; cyrillic п        ; 'п'               ;
-  ; [:!QR#Pq [:comma :comma :q]]                                                    COLLISION      ;
+  ; [:!QR#Pq []]                                                                    DEFAULT        ;
   [:!QR#Pr [:comma :comma :r]]                             ; cyrillic я        ; 'я'               ;
   [:!QR#Ps [:comma :comma :s]]                             ; ΣIΓMA             ; 'Σ'               ;
   ; [:!QR#Pt [:comma :comma :t]]                           ;                   ;                   ;
