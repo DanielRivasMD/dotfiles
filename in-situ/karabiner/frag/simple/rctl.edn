@@ -6,29 +6,29 @@
 {:des "Control Mode - numbers"
  :rules
  [;
-  ; [:!W#keypad_1 []]                                                                              ;
-  ; [:!W#keypad_2 []]                                                                              ;
-  ; [:!W#keypad_3 []]                                                                              ;
-  ; [:!W#keypad_4 []]                                                                              ;
-  ; [:!W#keypad_5 []]                                                                              ;
-  ; [:!W#keypad_6 []]                                                                              ;
-  ; [:!W#keypad_7 []]                                                                              ;
-  ; [:!W#keypad_8 []]                                                                              ;
-  ; [:!W#keypad_9 []]                                                                              ;
-  ; [:!W#keypad_0 []]                                                                              ;
-  ; [:!W#keypad_slash []]                                                                          ;
-  ; [:!W#keypad_asterisk []]                                                                       ;
+  ; [:!W#Pkeypad_1 []]                                                                             ;
+  ; [:!W#Pkeypad_2 []]                                                                             ;
+  ; [:!W#Pkeypad_3 []]                                                                             ;
+  ; [:!W#Pkeypad_4 []]                                                                             ;
+  ; [:!W#Pkeypad_5 []]                                                                             ;
+  ; [:!W#Pkeypad_6 []]                                                                             ;
+  ; [:!W#Pkeypad_7 []]                                                                             ;
+  ; [:!W#Pkeypad_8 []]                                                                             ;
+  ; [:!W#Pkeypad_9 []]                                                                             ;
+  ; [:!W#Pkeypad_0 []]                                                                             ;
+  ; [:!W#Pkeypad_slash []]                                                                         ;
+  ; [:!W#Pkeypad_asterisk []]                                                                      ;
 
-  ; [:!W#1 []]                                                                                     ;
-  ; [:!W#2 []]                                                                                     ;
-  ; [:!W#3 []]                                                                                     ;
-  ; [:!W#4 []]                                                                                     ;
-  ; [:!W#5 []]                                                                                     ;
-  ; [:!W#6 []]                                                                                     ;
-  ; [:!W#7 []]                                                                                     ;
-  ; [:!W#8 []]                                                                                     ;
-  ; [:!W#9 []]                                                                                     ;
-  ; [:!W#0 []]                                                                                     ;
+  ; [:!W#P1 []]                                                                                    ;
+  ; [:!W#P2 []]                                                                                    ;
+  ; [:!W#P3 []]                                                                                    ;
+  ; [:!W#P4 []]                                                                                    ;
+  ; [:!W#P5 []]                                                                                    ;
+  ; [:!W#P6 []]                                                                                    ;
+  ; [:!W#P7 []]                                                                                    ;
+  ; [:!W#P8 []]                                                                                    ;
+  [:!W#P9 [:!S4 :!S9]]                                                         ; '$('              ;
+  [:!W#P0 [:!S0 :spacebar]]                                                    ; ') '              ;
   [:!W#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                      ; ' -= '            ;
   [:!W#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]            ; ' += '            ;
   ]}
@@ -39,29 +39,29 @@
 {:des "Control Mode - keypad"
  :rules
  [;
-  ; [:!SW#keypad_1 []]                                                                             ;
-  ; [:!SW#keypad_2 []]                                                                             ;
-  ; [:!SW#keypad_3 []]                                                                             ;
-  ; [:!SW#keypad_4 []]                                                                             ;
-  ; [:!SW#keypad_5 []]                                                                             ;
-  ; [:!SW#keypad_6 []]                                                                             ;
-  ; [:!SW#keypad_7 []]                                                                             ;
-  ; [:!SW#keypad_8 []]                                                                             ;
-  ; [:!SW#keypad_9 []]                                                                             ;
-  ; [:!SW#keypad_0 []]                                                                             ;
-  ; [:!SW#keypad_slash []]                                                                         ;
-  ; [:!SW#keypad_asterisk []]                                                                      ;
+  ; [:!SW#Pkeypad_1 []]                                                                            ;
+  ; [:!SW#Pkeypad_2 []]                                                                            ;
+  ; [:!SW#Pkeypad_3 []]                                                                            ;
+  ; [:!SW#Pkeypad_4 []]                                                                            ;
+  ; [:!SW#Pkeypad_5 []]                                                                            ;
+  ; [:!SW#Pkeypad_6 []]                                                                            ;
+  ; [:!SW#Pkeypad_7 []]                                                                            ;
+  ; [:!SW#Pkeypad_8 []]                                                                            ;
+  ; [:!SW#Pkeypad_9 []]                                                                            ;
+  ; [:!SW#Pkeypad_0 []]                                                                            ;
+  ; [:!SW#Pkeypad_slash []]                                                                        ;
+  ; [:!SW#Pkeypad_asterisk []]                                                                     ;
 
-  ; [:!SW#1 []]                                                                                    ;
-  ; [:!SW#2 []]                                                                                    ;
-  ; [:!SW#3 []]                                                                                    ;
-  ; [:!SW#4 []]                                                                                    ;
-  ; [:!SW#5 []]                                                                                    ;
-  ; [:!SW#6 []]                                                                                    ;
-  ; [:!SW#7 []]                                                                                    ;
-  ; [:!SW#8 []]                                                                                    ;
-  ; [:!SW#9 []]                                                                                    ;
-  ; [:!SW#0 []]                                                                                    ;
+  ; [:!SW#P1 []]                                                                                   ;
+  ; [:!SW#P2 []]                                                                                   ;
+  ; [:!SW#P3 []]                                                                                   ;
+  ; [:!SW#P4 []]                                                                                   ;
+  ; [:!SW#P5 []]                                                                                   ;
+  ; [:!SW#P6 []]                                                                                   ;
+  ; [:!SW#P7 []]                                                                                   ;
+  ; [:!SW#P8 []]                                                                                   ;
+  ; [:!SW#P9 []]                                                                                   ;
+  ; [:!SW#P0 []]                                                                                   ;
   [:!WS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '           ;
   [:!WS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]   ; ' .+= '           ;
   ]}
@@ -72,14 +72,14 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:!W#Popen_bracket []]                                                                         ;
-  ; [:!W#Pclose_bracket []]                                                                        ;
-  [:!W#Psemicolon [:!S4 :!S9]]                                                 ; '$('              ;
-  [:!W#Pquote [:!S3 :open_bracket]]                                            ; '#['              ;
-  [:!W#Pbackslash [:!S4 :!Sopen_bracket]]                                      ; '${'              ;
+  [:!W#Popen_bracket [:!S3 :open_bracket]]                                     ; '#['              ;
+  [:!W#Pclose_bracket [:close_bracket :spacebar]]                              ; '] '              ;
+  [:!W#Psemicolon [:semicolon :spacebar]]                                      ; '; '              ;
+  ; [:!W#Pquote []]                                                                                ;
+  ; [:!W#Pbackslash []]                                                                            ;
   [:!W#Pcomma [:comma :spacebar]]                                              ; ', '              ;
-  [:!W#Pperiod [:semicolon :spacebar]]                                         ; '; '              ;
-  [:!W#Pslash [:slash :slash :slash :spacebar]]                                ; '/// '            ;
+  ; [:!W#Pperiod []]                                                                               ;
+  [:!W#Pslash [:slash :slash :!S1 :spacebar]]                                  ; '//! '            ;
 
   [:!W#Pdelete_or_backspace [:spacebar :hyphen]]                               ; ' -'              ;
   [:!W#Preturn_or_enter [:!OTf11]]                                                                 ;
@@ -104,14 +104,14 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:!WS#Popen_bracket []]                                                                        ;
-  ; [:!WS#Pclose_bracket []]                                                                       ;
-  [:!WS#Psemicolon [:period :!S9]]                                             ; '.('              ;
+  [:!WS#Popen_bracket [:!S4 :!Sopen_bracket]]                                  ; '${'              ;
+  [:!WS#Pclose_bracket [:!Sclose_bracket :spacebar]]                           ; '} '              ;
+  [:!WS#Psemicolon [:!Ssemicolon :spacebar]]                                   ; ': '              ;
   ; [:!WS#Pquote []]                                                                               ;
   [:!WS#Pbackslash [:!OTf14]]                                                                      ;
   [:!WS#Pcomma [:period :spacebar]]                                            ; '. '              ;
-  [:!WS#Pperiod [:!Ssemicolon :spacebar]]                                      ; ': '              ;
-  [:!WS#Pslash [:slash :slash :!S1 :spacebar]]                                 ; '//! '            ;
+  ; [:!WS#Pperiod []]                                                                              ;
+  [:!WS#Pslash [:!S3 :!S1 :slash]]                                             ; '#!/'             ;
 
   [:!WS#Pdelete_or_backspace [:spacebar :hyphen :hyphen]]                      ; ' --'             ;
   [:!WS#Preturn_or_enter [:!OTSf11]]                                                               ;
