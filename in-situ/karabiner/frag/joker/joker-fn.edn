@@ -3,26 +3,57 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; joker
+{:des "Joker Mode - numbers"
+ :rules
+ [;
+  ; [:!OTC#keypad_1 []]                                                                            ;
+  ; [:!OTC#keypad_2 []]                                                                            ;
+  ; [:!OTC#keypad_3 []]                                                                            ;
+  ; [:!OTC#keypad_4 []]                                                                            ;
+  ; [:!OTC#keypad_5 []]                                                                            ;
+  ; [:!OTC#keypad_6 []]                                                                            ;
+  ; [:!OTC#keypad_7 []]                                                                            ;
+  ; [:!OTC#keypad_8 []]                                                                            ;
+  ; [:!OTC#keypad_9 []]                                                                            ;
+  ; [:!OTC#keypad_0 []]                                                                            ;
+  ; [:!OTC#keypad_slash []]                                                                        ;
+  ; [:!OTC#keypad_asterisk []]                                                                     ;
+
+  ; [:!OTC#1 []]                                                                                   ;
+  ; [:!OTC#2 []]                                                                                   ;
+  ; [:!OTC#3 []]                                                                                   ;
+  ; [:!OTC#4 []]                                                                                   ;
+  ; [:!OTC#5 []]                                                                                   ;
+  ; [:!OTC#6 []]                                                                                   ;
+  ; [:!OTC#7 []]                                                                                   ;
+  ; [:!OTC#8 []]                                                                                   ;
+  ; [:!OTC#9 []]                                                                                   ;
+  ; [:!OTC#0 []]                                                                                   ;
+  [:!OTC#Phyphen [:f13]]                                                                           ;
+  [:!OTC#Pequal_sign [:f14]]                                                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!OTC#Phyphen :f13 [:term]]                                                                     ;
-  [:!OTC#Pequal_sign :f14 [:term]]                                                                 ;
-  [:!OTC#Popen_bracket :f8 [:term]]                                                                ;
-  [:!OTC#Pclose_bracket :f9 [:term]]                                                               ;
-  [:!OTC#Psemicolon :f10 [:term]]                                                                  ;
-  [:!OTC#Pquote :f11 [:term]]                                                                      ;
-  [:!OTC#Pbackslash :f12 [:term]]                                                                  ;
-  [:!OTC#Pcomma :f18 [:term]]                                                                      ;
-  [:!OTC#Pperiod :f19 [:term]]                                                                     ;
-  [:!OTC#Pslash :f20 [:term]]                                                                      ;
+  [:!OTC#Popen_bracket [:f8]]                                                                      ;
+  [:!OTC#Pclose_bracket [:f9]]                                                                     ;
+  [:!OTC#Psemicolon [:f10]]                                                                        ;
+  [:!OTC#Pquote [:f11]]                                                                            ;
+  [:!OTC#Pbackslash [:f12]]                                                                        ;
+  [:!OTC#Pcomma [:f18]]                                                                            ;
+  [:!OTC#Pperiod [:f19]]                                                                           ;
+  [:!OTC#Pslash [:f20]]                                                                            ;
 
-  [:!OTC#Pdelete_or_backspace :f1 [:term]]                                                         ;
-  [:!OTC#Preturn_or_enter :f2 [:term]]                                                             ;
-  [:!OTC#Pright_shift :f4 [:term]]                                                                 ;
-  [:!OTC#Pright_option :f5 [:term]]                                                                ;
-  [:!OTC#Pright_command :f6 [:term]]                                                               ;
-  [:!OTC#Pspacebar :f7 [:term]]                                                                    ;
+  [:!OTC#Pdelete_or_backspace [:f1]]                                                               ;
+  [:!OTC#Preturn_or_enter [:f2]]                                                                   ;
+  [:!OTC#Pright_shift [:f4]]                                                                       ;
+  [:!OTC#Pright_option [:f5]]                                                                      ;
+  [:!OTC#Pright_command [:f6]]                                                                     ;
+  [:!OTC#Pspacebar [:f7]]                                                                          ;
 
   ; [:!OTC#Pleft_command []]                                                                       ;
   ; [:!OTC#Pleft_option []]                                                                        ;
