@@ -6,8 +6,6 @@
 {:des "BSpace Mode - symbols"
  :rules
  [;
-  ; [:!EQR#Phyphen []]                                                                             ;
-  ; [:!EQR#Pequal_sign []]                                                                         ;
   ; [:!EQR#Popen_bracket []]                                                                       ;
   ; [:!EQR#Pclose_bracket []]                                                                      ;
   ; [:!EQR#Psemicolon []]                                                                          ;
@@ -18,11 +16,11 @@
   ; [:!EQR#Pslash []]                                                                              ;
 
   ; [:!EQR#Pdelete_or_backspace []]                                                 NOT AVAILABLE  ;
-  ; [:!EQR#Preturn_or_enter []]                                                     UNMAPPED       ;
-  ; [:!EQR#Pright_shift []]                                                         UNMAPPED       ;
-  ; [:!EQR#Pright_option []]                                                        UNMAPPED       ;
-  ; [:!EQR#Pright_command []]                                                       UNMAPPED       ;
-  ; [:!EQR#Pspacebar :!Ty [:term]]                                                                 ;
+  ; [:!EQR#Preturn_or_enter []]                                                                    ;
+  ; [:!EQR#Pright_shift []]                                                                        ;
+  ; [:!EQR#Pright_option []]                                                                       ;
+  ; [:!EQR#Pright_command []]                                                                      ;
+  [:!EQR#Pspacebar :!Tv [:term]]                                                                   ;
 
   ; [:!EQR#Pright_control :!Tj [:term]]                                                            ;
   [:!EQR#Pleft_command :!Tt [:term]]                                                               ;
