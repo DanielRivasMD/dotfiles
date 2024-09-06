@@ -39,33 +39,17 @@
 {:des "Alacritty - Control - Command Mode"
  :rules
  [;
-  [:!TC#Popen_bracket :!Th [:term]]                                                               ;
-  [:!TC#Pclose_bracket :!Oc [:term]]                                                              ;
-  [:!TC#Psemicolon :!Tr [:term]]                                                                 ;
-  [:!TC#Pquote :!Ts [:term]]                                                                     ;
-  [:!TC#Pbackslash :!Tt [:term]]                                                                 ;
-  [:!TC#Pcomma :!Tg [:term]]                                                                     ;
-  [:!TC#Pperiod :!Tj [:term]]                                                                    ;
-  [:!TC#Pslash :!Tn [:term]]                                                                     ;
+  [:!TC#Popen_bracket :!Th [:term]]                                                                ;
+  [:!TC#Pclose_bracket :!Oc [:term]]                                                               ;
+  [:!TC#Psemicolon :!Tr [:term]]                                                                   ;
+  [:!TC#Pquote :!Ts [:term]]                                                                       ;
+  [:!TC#Pbackslash :!Tt [:term]]                                                                   ;
+  [:!TC#Pcomma :!Sf1 [:term]]                                                                      ;
+  [:!TC#Pperiod :!Tj [:term]]                                                                      ;
+  [:!TC#Pslash :!Tn [:term]]                                                                       ;
 
-  ; [:!TC#Popen_bracket :!Sf8 [:term]]                                                               ;
-  ; [:!TC#Pclose_bracket :!Sf9 [:term]]                                                              ;
-  ; [:!TC#Psemicolon :!Sf10 [:term]]                                                                 ;
-  ; [:!TC#Pquote :!Sf11 [:term]]                                                                     ;
-  ; [:!TC#Pbackslash :!Sf12 [:term]]                                                                 ;
-  ; [:!TC#Pcomma :!Sf18 [:term]]                                                                     ;
-  ; [:!TC#Pperiod :!Sf19 [:term]]                                                                    ;
-  ; [:!TC#Pslash :!Sf20 [:term]]                                                                     ;
-
-  ; [:!TC#Pdelete_or_backspace :!Oc [:term]]                                                        ;
-  [:!TC#Preturn_or_enter :!Tv [:term]]                                                            ;
-  ; [:!TC#Pright_shift :!Th [:term]]                                                                ;
-  ; [:!TC#Pright_option :!Tt [:term]]                                                               ;
-  ; [:!TC#Pright_command :!Ts [:term]]                                                              ;
-  ; [:!TC#Pspacebar :!Tr [:term]]                                                                   ;
-
-  [:!TC#Pdelete_or_backspace :!Sf1 [:term]]                                                        ;
-  ; [:!TC#Preturn_or_enter :!Sf2 [:term]]                                                            ;
+  [:!TC#Pdelete_or_backspace :!Tl [:term]]                                                         ;
+  [:!TC#Preturn_or_enter :!Tg [:term]]                                                             ;
   [:!TC#Pright_shift :!Sf4 [:term]]                                                                ;
   [:!TC#Pright_option :!Sf5 [:term]]                                                               ;
   [:!TC#Pright_command :!Sf6 [:term]]                                                              ;
