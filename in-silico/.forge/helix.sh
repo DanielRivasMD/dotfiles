@@ -9,9 +9,10 @@ _forge() {
   source "${IN_SILICO}/.config/config.sh"
 
   # create temporary files
-  awk -v mode="normal_mode" '{gsub("MODE", mode); print $0}' "${moded}/common.toml" > "${helix}/.normal.tmp"
-  awk -v mode="insert_mode" '{gsub("MODE", mode); print $0}' "${moded}/common.toml" > "${helix}/.insert.tmp"
-  awk -v mode="select_mode" '{gsub("MODE", mode); print $0}' "${moded}/common.toml" > "${helix}/.select.tmp"
+  for type in normal insert select
+  do
+    awk -v mode="${type}_mode" '{gsub("MODE", mode); print $0}' "${moded}/common.toml" > "${helix}/.${type}.tmp"
+  done
 
   # concatenate
   cat \
