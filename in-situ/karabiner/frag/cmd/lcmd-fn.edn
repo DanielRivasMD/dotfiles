@@ -81,9 +81,9 @@
   [:!C#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                      ; ' %>% '           ;
   [:!C#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                  ; ' %!>% '          ;
 
-  [:!C#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]    ; ' := '            ;
+  ; [:!C#Pdelete_or_backspace []]                                                                  ;
   ; [:!C#Preturn_or_enter []]                                                                      ;
-  [:!C#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]               ; ' => '            ;
+  [:!C#Pright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]            ; ' := '            ;
   [:!C#Pright_option [:spacebar :hyphen :!Speriod :spacebar]]                  ; ' -> '            ;
   [:!C#Pright_command [:spacebar :!Scomma :hyphen :spacebar]]                  ; ' <- '            ;
   ; [:!C#Pspacebar []                                                                              ;
@@ -115,7 +115,7 @@
 
   ; [:!CS#Pdelete_or_backspace []]                                                                 ;
   ; [:!CS#Preturn_or_enter []]                                                                     ;
-  [:!CS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]      ; ' .=> '           ;
+  ; [:!CS#Pright_shift []]                                                                         ;
   [:!CS#Pright_option [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]       ; ' ->> '           ;
   [:!CS#Pright_command [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]        ; ' <<- '           ;
   ; [:!CS#Pspacebar []]                                                                            ;
