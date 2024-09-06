@@ -6,7 +6,7 @@
 default_flags = ""
 
 ####################################################################################################
-# tab
+# joker
 ####################################################################################################
 
 # remove
@@ -16,20 +16,20 @@ invocation = "rm"
 key = "f1"
 leave_broot = false
 auto_exec = false
-description = "`tab-delete` -> delete file"
+description = "`joker-delete` -> delete file"
 
 # enter
 [[verbs]]
 key = "f2"
 external = "command open {file}"
 leave_broot = false
-description = "`tab-enter` -> open according to OS"
+description = "`joker-enter` -> open according to OS"
 
 # mode
 [[verbs]]
 internal = "mode_input"
 key = "f4"
-description = "`tab-shift` -> enter input mode"
+description = "`joker-shift` -> enter input mode"
 
 # editor
 [[verbs]]
@@ -37,7 +37,7 @@ invocation = "micro"
 key = "f5"
 external = "zellij run --floating --close-on-exit --height 100 --width 100 --x 100 --y 0 -- micro {file}"
 leave_broot = false
-description = "`tab-alt` -> open file with `micro` editor"
+description = "`joker-alt` -> open file with `micro` editor"
 
 # editor
 [[verbs]]
@@ -45,13 +45,13 @@ invocation = "helix"
 key = "f6"
 external = "zellij run --floating --close-on-exit --height 100 --width 100 --x 100 --y 0 -- hx {file}"
 leave_broot = false
-description = "`tab-cmd` -> open file with `helix` editor"
+description = "`joker-cmd` -> open file with `helix` editor"
 
 # panel
 [[verbs]]
 internal = "start_end_panel"
 key = "f7"
-description = "`tab-space` -> create panel"
+description = "`joker-space` -> create panel"
 
 # directory
 [[verbs]]
@@ -60,7 +60,7 @@ key = "f8"
 execution = "mkdir {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`tab-[` -> create directory"
+description = "`joker-[` -> create directory"
 
 # create
 [[verbs]]
@@ -70,7 +70,7 @@ key = "f9"
 execution = "touch {directory}/{subpath}"
 leave_broot = false
 auto_exec = false
-description = "`tab-]` -> create file"
+description = "`joker-]` -> create file"
 
 # copy
 [[verbs]]
@@ -79,7 +79,7 @@ invocation = "copy_to_pane"
 key = "f10"
 leave_broot = false
 auto_exec = true
-description = "`tab-;` -> copy file to pane"
+description = "`joker-;` -> copy file to pane"
 
 # move
 [[verbs]]
@@ -88,7 +88,7 @@ invocation = "move_to_pane"
 key = "f11"
 leave_broot = false
 auto_exec = true
-description = "`tab-'` -> move file to pane"
+description = "`joker-'` -> move file to pane"
 
 # rename
 [[verbs]]
@@ -98,7 +98,7 @@ shortcut = "rn"
 key = "f12"
 leave_broot = false
 auto_exec = false
-description = "`tab-\\` -> rename file"
+description = "`joker-\\` -> rename file"
 
 
 ####################################################################################################
@@ -108,21 +108,21 @@ description = "`tab-\\` -> rename file"
 # git focus
 [[verbs]]
 invocation = "toggle_git_status"
-key = "shift-f1"
+key = "ctrl-l"
 internal = "toggle_git_status"
 description = "`ctl-cmd-bs` -> toggle git"
 
 # tree
 [[verbs]]
 invocation = "toggle_tree"
-key = "shift-f2"
+key = "ctrl-g"
 internal = "toggle_tree"
 description = "`ctl-cmd-enter` -> toggle tree"
 
 # view
 [[verbs]]
 invocation = "toggle_files"
-key = "shift-f4"
+key = "ctrl-j"
 internal = "toggle_files"
 description = "`ctl-cmd-shift` -> toggle files"
 
@@ -143,28 +143,28 @@ description = "`ctl-cmd-cmd` -> toggle hidden"
 # panel
 [[verbs]]
 invocation = "toggle_preview"
-key = "shift-f7"
+key = "ctrl-o"
 internal = "toggle_preview"
 description = "`ctl-cmd-space` -> open / close preview panel"
 
 # sort
 [[verbs]]
 invocation = "sort_by_count"
-key = "shift-f10"
+key = "ctrl-r"
 internal = "sort_by_count"
 description = "`ctl-cmd-;` -> sort by count"
 
 # sort
 [[verbs]]
 invocation = "sort_by_date"
-key = "shift-f11"
+key = "ctrl-s"
 internal = "sort_by_date"
 description = "`ctl-cmd-'` -> sort by date"
 
 # sort
 [[verbs]]
 invocation = "sort_by_size"
-key = "shift-f12"
+key = "ctrl-t"
 internal = "sort_by_size"
 description = "`ctl-cmd-\\` -> sort by size"
 
@@ -220,7 +220,7 @@ description = "`ctl-cmd-right` -> display file on panel"
 # move
 [[verbs]]
 invocation = "root_up"
-key = "ctrl-o"
+key = "ctrl-n"
 internal = "root_up"
 description = "`ctl-cmd-up` -> move tree root up"
 
