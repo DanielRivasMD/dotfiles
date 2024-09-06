@@ -452,14 +452,14 @@ keybinding:
     scrollRight: L
     gotoTop: '<home>'                            # cmd-up
     gotoBottom: '<end>'                          # cmd-down
-    toggleRangeSelect:  <c-v>                    # bs-space
+    toggleRangeSelect:  <c-o>                    # ctl-cmd-space
     rangeSelectDown: <s-down>
     rangeSelectUp: <s-up>
     prevBlock: <disabled>
     nextBlock: <disabled>
     nextBlock-alt: <disabled>
     prevBlock-alt: <disabled>
-    prevBlock-alt2: '<c-o>'                      # ctl-cmd-up
+    prevBlock-alt2: '<c-n>'                      # ctl-cmd-up
     nextBlock-alt2: '<c-p>'                      # ctl-cmd-down
     jumpToBlock:
         - '1'
@@ -498,15 +498,15 @@ keybinding:
     createPatchOptionsMenu: N
     nextTab: '<c-f>'                             # ctl-cmd-right
     prevTab: '<c-b>'                             # ctl-cmd-left
-    nextScreenMode: '<c-v>'                      # bs-joker
+    nextScreenMode: '<c-g>'                      # ctl-cmd-enter
     prevScreenMode: <disabled>
     undo: u
     redo: U
-    filteringMenu: <c-s>                         # bs-alt
+    filteringMenu: <c-j>                         # ctl-cmd-shift
     diffingMenu:  <disabled> 
     diffingMenu-alt: W
     copyToClipboard: y
-    openRecentRepos: '<c-r>'                     # bs-ctl
+    openRecentRepos: '<c-t>'                     # ctl-cmd-\
     submitEditorText: <enter>
     extrasMenu: <disabled>
     toggleWhitespaceInDiffView: <disabled>
@@ -514,7 +514,7 @@ keybinding:
     decreaseContextInDiffView: '-'               # *
     increaseRenameSimilarityThreshold: )
     decreaseRenameSimilarityThreshold: (
-    openDiffTool: <c-t>                          # bs-cmd
+    openDiffTool: <c-s>                          # ctl-cmd-'
 
   status:
     checkForUpdate: u
