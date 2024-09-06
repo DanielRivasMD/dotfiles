@@ -6,31 +6,31 @@
 {:des "Shift Mode - alphabet"
  :rules
  [;
-  ; [:!R#Pa [:vk_none]]                                                                            ;
-  ; [:!R#Pb [:vk_none]]                                                                            ;
+  ; [:!R#Pa []]                                                                                    ;
+  ; [:!R#Pb []]                                                                                    ;
   [:!R#Pc [:!S2 :c :h :a :i :n :spacebar]]                                     ; '@chain '         ;
   [:!R#Pd [:!S2 :d :e :b :u :g :spacebar]]                                     ; '@debug '         ;
   [:!R#Pe [:!S2 :e :d :i :t :spacebar]]                                        ; '@edit '          ;
-  ; [:!R#Pf [:vk_none]]                                                                            ;
-  ; [:!R#Pg [:vk_none]]                                                                            ;
-  ; [:!R#Ph [:vk_none]]                                                                            ;
+  ; [:!R#Pf []]                                                                                    ;
+  ; [:!R#Pg []]                                                                                    ;
+  ; [:!R#Ph []]                                                                                    ;
   [:!R#Pi [:!S2 :i :n :f :o :spacebar]]                                        ; '@info '          ;
-  ; [:!R#Pj [:vk_none]]                                                                            ;
+  ; [:!R#Pj []]                                                                                    ;
   [:!R#Pk [:!S2 :w :i :t :h :!Shyphen :k :w :spacebar]]                        ; '@with_kw '       ;
   [:!R#Pl [:!S2 :l :e :s :s :spacebar]]                                        ; '@less '          ;
-  ; [:!R#Pm [:vk_none]]                                                                            ;
-  ; [:!R#Pn [:vk_none]]                                                                            ;
-  ; [:!R#Po [:vk_none]]                                                                            ;
+  ; [:!R#Pm []]                                                                                    ;
+  ; [:!R#Pn []]                                                                                    ;
+  ; [:!R#Po []]                                                                                    ;
   [:!R#Pp [:!S2 :p :i :p :e :spacebar]]                                        ; '@pipe '          ;
   [:!R#Pq [:!S2 :e :n :t :e :r :spacebar]]                                     ; '@enter '         ;
-  ; [:!R#Pr [:vk_none]]                                                                            ;
+  ; [:!R#Pr []]                                                                                    ;
   [:!R#Ps [:!S2 :s :h :o :w :spacebar]]                                        ; '@show '          ;
   [:!R#Pt [:!S2 :t :i :m :e :spacebar]]                                        ; '@time '          ;
-  ; [:!R#Pu [:vk_none]]                                                                            ;
+  ; [:!R#Pu []]                                                                                    ;
   [:!R#Pv [:!S2 :e :v :a :l :spacebar]]                                        ; '@eval '          ;
   [:!R#Pw [:!S2 :w :a :r :n :spacebar]]                                        ; '@warn '          ;
-  ; [:!R#Px [:vk_none]]                                                                            ;
-  ; [:!R#Py [:vk_none]]                                                                            ;
+  ; [:!R#Px []]                                                                                    ;
+  ; [:!R#Py []]                                                                                    ;
   [:!R#Pz [:!S2 :w :h :i :c :h :spacebar]]                                     ; '@which '         ;
   [:!R#Pright_control [:!S2 :period :spacebar]]                                ; '@. '             ;
   ]}
@@ -41,32 +41,32 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  ; [:!R#Phyphen [:vk_none]]                                                                       ;
-  ; [:!R#Pequal_sign [:vk_none]]                                                                   ;
-  ; [:!R#Popen_bracket [:vk_none]]                                                                 ;
-  ; [:!R#Pclose_bracket [:vk_none]]                                                                ;
-  ; [:!R#Psemicolon [:vk_none]]                                                                    ;
-  ; [:!R#Pquote [:vk_none]]                                                                        ;
-  ; [:!R#Pbackslash [:vk_none]]                                                                    ;
-  ; [:!R#Pcomma [:vk_none]]                                                                        ;
-  ; [:!R#Pperiod [:vk_none]]                                                                       ;
-  ; [:!R#Pslash [:vk_none]]                                                                        ;
+  ; [:!R#Phyphen []]                                                                               ;
+  ; [:!R#Pequal_sign []]                                                                           ;
+  ; [:!R#Popen_bracket []]                                                                         ;
+  ; [:!R#Pclose_bracket []]                                                                        ;
+  ; [:!R#Psemicolon []]                                                                            ;
+  ; [:!R#Pquote []]                                                                                ;
+  ; [:!R#Pbackslash []]                                                                            ;
+  ; [:!R#Pcomma []]                                                                                ;
+  ; [:!R#Pperiod []]                                                                               ;
+  ; [:!R#Pslash []]                                                                                ;
 
-  ; [:!R#Pdelete_or_backspace [:vk_none]]                                                          ;
-  ; [:!R#Preturn_or_enter [:vk_none]]                                                              ;
-  ; [:!R#Pright_shift [:vk_none]]                                                ;    NOT AVAILABLE  ;
-  ; [:!R#Pright_option [:vk_none]]                                                                 ;
-  ; [:!R#Pright_command [:vk_none]]                                                                ;
-  ; [:!R#Pspacebar :!Tc [:term]]                                                                     ;
+  ; [:!R#Pdelete_or_backspace []]                                                                  ;
+  ; [:!R#Preturn_or_enter []]                                                                      ;
+  ; [:!R#Pright_shift []]                                                      ;    NOT AVAILABLE  ;
+  ; [:!R#Pright_option []]                                                                         ;
+  ; [:!R#Pright_command []]                                                                        ;
+  ; [:!R#Pspacebar []]                                                                             ;
 
   [:!R#Pleft_command :!Tu [:term]]                                                                 ;
-  [:!Rleft_option :!Tl [:term]]                                                                    ;
+  [:!Rleft_option :!Tv [:term]]                                                                    ;
   [:!R#Pleft_control :!Tw [:term]]                                                                 ;
   [:!R#Pleft_shift :delete_or_backspace]                                                           ;
-  ; [:!R#Pcaps_lock [:vk_none]]                                                                    ;
-  ; [:!R#Ptab [:vk_none]]                                                                          ;
-  ; [:!R#Pnon_us_backslash [:vk_none]]                                                             ;
-  ; [:!R#Pescape [:vk_none]]                                                                       ;
+  ; [:!R#Pcaps_lock []]                                                                            ;
+  ; [:!R#Ptab []]                                                                                  ;
+  ; [:!R#Pnon_us_backslash []]                                                                     ;
+  ; [:!R#Pescape []]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
