@@ -39,22 +39,21 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
- ; WIP: helix move
-  ; [:!WQR#Popen_bracket []]                                                                       ;
-  ; [:!WQR#Pclose_bracket []]                                                                      ;
-  ; [:!WQR#Psemicolon []]                                                                          ;
-  ; [:!WQR#Pquote []]                                                                              ;
-  [:!WQR#Pbackslash [:!Sbackslash :!Sbackslash]]                               ; '||'              ;
-  [:!WQR#Pcomma [:!Scomma :!Ssemicolon]]                                       ; '<:'              ;
-  [:!WQR#Pperiod [:!Speriod :!Ssemicolon]]                                     ; '>:'              ;
-  ; [:!WQR#Pslash []]                                                                              ;
+  [:!WQR#Popen_bracket :!Sf8 [:term]]                                                              ;
+  [:!WQR#Pclose_bracket :!Sf9 [:term]]                                                             ;
+  [:!WQR#Psemicolon :!Sf10 [:term]]                                                                ;
+  [:!WQR#Pquote :!Sf11 [:term]]                                                                    ;
+  [:!WQR#Pbackslash :!Sf12 [:term]]                                                                ;
+  [:!WQR#Pcomma :!Sf18 [:term]]                                                                    ;
+  [:!WQR#Pperiod :!Sf19 [:term]]                                                                   ;
+  [:!WQR#Pslash :!Sf20 [:term]]                                                                    ;
 
   [:!WQR#Pdelete_or_backspace [:equal_sign :equal_sign]]                       ; '=='              ;
-  [:!WQR#Preturn_or_enter [:!S1 :!S1]]                                         ; '!!'              ;
-  ; [:!WQR#Pright_shift []]                                                                        ;
+  [:!WQR#Preturn_or_enter :!Sf2 [:term]]                                                           ;
+  [:!WQR#Pright_shift [:!S1 :!S1]]                                             ; '!!'              ;
   [:!WQR#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
   [:!WQR#Pright_command [:slash :slash]]                                       ; '//'              ;
-  ; [:!WQR#Pspacebar [:caps_lock]]                                                                   ;
+  [:!WQR#Pspacebar [:f7]]                                                                          ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;
