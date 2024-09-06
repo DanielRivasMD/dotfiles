@@ -10,8 +10,8 @@ C-w = ["delete_word_backward"]                             # shift-ctl         #
 
 # fast reload
 F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
-A-C-F13 = ["goto_word"]
-C-v = ["change_selection_noyank"]
+A-C-F13 = ["goto_word"]                                    # TODO: update
+C-v = ["change_selection_noyank"]                          # shift-alt
 
 
 ####################################################################################################
@@ -125,19 +125,19 @@ C-r = ["changed_file_picker"]                              # ctl-cmd-;         #
 C-s = ["buffer_picker"]                                    # ctl-cmd-'         # command palette
 C-t = ["file_picker"]                                      # ctl-cmd-\         # buffer picker
 # S-F1 = [""]                                              # ctl-cmd-,         #
-# C-j = [""]                                               # ctl-cmd-.         #
-C-n = ["command_palette"]                                  # ctl-cmd-/         #
+# S-F4 = [""]                                              # ctl-cmd-.         #
+S-F7 = ["command_palette"]                                 # ctl-cmd-/         #
 
 C-l = [":buffer-close"]                                    # ctl-cmd-bspace    # close tab
 C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
-S-F4 = ["vsplit"]                                          # ctl-cmd-shift     # vertical split
+C-j = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
 S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # ho rizontal split
 S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
-S-F7 = ["goto_last_accessed_file"]                         # clt-cmd-space     # last file
+C-o = ["goto_last_accessed_file"]                          # clt-cmd-space     # last file
 
 C-b = ["goto_previous_buffer"]                             # ctl-cmd-left      # prev tab
 C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     # next tab
-C-o = ["goto_prev_comment"]                                # ctl-cmd-up        # prev comment
+C-n = ["goto_prev_comment"]                                # ctl-cmd-up        # prev comment
 C-p = ["goto_next_comment"]                                # ctl-cmd-down      # next comment
 
 ####################################################################################################
