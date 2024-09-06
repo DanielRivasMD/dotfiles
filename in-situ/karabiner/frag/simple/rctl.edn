@@ -75,10 +75,10 @@
   [:!W#Popen_bracket [:!S3 :open_bracket]]                                     ; '#['              ;
   [:!W#Pclose_bracket [:close_bracket :spacebar]]                              ; '] '              ;
   [:!W#Psemicolon [:semicolon :spacebar]]                                      ; '; '              ;
-  ; [:!W#Pquote []]                                                                                ;
-  ; [:!W#Pbackslash []]                                                                            ;
-  [:!W#Pcomma [:comma :spacebar]]                                              ; ', '              ;
-  ; [:!W#Pperiod []]                                                                               ;
+  [:!W#Pquote [:comma :spacebar]]                                              ; ', '              ;
+  [:!W#Pbackslash [:!Sbackslash :!Sbackslash]]                                 ; '||'              ;
+  [:!W#Pcomma [:!Scomma :!Ssemicolon]]                                         ; '<:'              ;
+  [:!W#Pperiod [:!Speriod :!Ssemicolon]]                                       ; '>:'              ;
   [:!W#Pslash [:slash :slash :!S1 :spacebar]]                                  ; '//! '            ;
 
   [:!W#Pdelete_or_backspace [:spacebar :hyphen]]                               ; ' -'              ;
@@ -107,9 +107,9 @@
   [:!WS#Popen_bracket [:!S4 :!Sopen_bracket]]                                  ; '${'              ;
   [:!WS#Pclose_bracket [:!Sclose_bracket :spacebar]]                           ; '} '              ;
   [:!WS#Psemicolon [:!Ssemicolon :spacebar]]                                   ; ': '              ;
-  ; [:!WS#Pquote []]                                                                               ;
+  [:!WS#Pquote [:period :spacebar]]                                            ; '. '              ;
   [:!WS#Pbackslash [:!OTf14]]                                                                      ;
-  [:!WS#Pcomma [:period :spacebar]]                                            ; '. '              ;
+  ; [:!WS#Pcomma []]                                                                               ;
   ; [:!WS#Pperiod []]                                                                              ;
   [:!WS#Pslash [:!S3 :!S1 :slash]]                                             ; '#!/'             ;
 
