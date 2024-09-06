@@ -84,7 +84,7 @@
   [:!T#Pdelete_or_backspace
    [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                  ; ' === '           ;
   [:!T#Preturn_or_enter [:spacebar :!S1 :equal_sign :spacebar]]                ; ' != '            ;
-  ; [:!T#Pright_shift []]                                                                          ;
+  [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]               ; ' => '            ;
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                          ; ' ** '            ;
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                     ; ' // '            ;
   ; [:!T#Pspacebar []]                                                                             ;
@@ -117,7 +117,7 @@
   [:!TS#Pdelete_or_backspace
    [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]          ; ' .=== '          ;
   [:!TS#Preturn_or_enter [:spacebar :period :!S1 :equal_sign :spacebar]]       ; ' .!= '           ;
-  ; [:!TS#Pright_shift []]                                                                         ;
+  [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]      ; ' .=> '           ;
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                 ; ' .** '           ;
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]            ; ' .// '           ;
   ; [:!TS#Pspacebar []]                                                        ;                   ;
