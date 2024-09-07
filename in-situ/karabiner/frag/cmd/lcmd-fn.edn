@@ -82,7 +82,7 @@
   [:!C#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                  ; ' %!>% '          ;
 
   ; [:!C#Pdelete_or_backspace []]                                                                  ;
-  ; [:!C#Preturn_or_enter []]                                                                      ;
+  ; [:!C#Preturn_or_enter []]                                                       COLLISION      ;
   [:!C#Pright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]            ; ' := '            ;
   [:!C#Pright_option [:spacebar :hyphen :!Speriod :spacebar]]                  ; ' -> '            ;
   [:!C#Pright_command [:spacebar :!Scomma :hyphen :spacebar]]                  ; ' <- '            ;
