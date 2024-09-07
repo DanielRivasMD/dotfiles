@@ -69,10 +69,10 @@ end
 
 # frecuency unicode barplot
 function freqplot(ν)
-  ψ = freqtable(ν)
+  tb = freqtable(ν)
   UnicodePlots.barplot(
-    ψ.dicts[1] |> keys .|> string,
-    ψ.array,
+    tb.dicts[1] |> keys .|> string,
+    tb.array,
   )
 end
 
