@@ -6,6 +6,16 @@
 default_flags = ""
 
 ####################################################################################################
+
+# panel
+[[verbs]]
+invocation = "toggle_preview"
+key = "enter"
+internal = "toggle_preview"
+description = "`enter` -> open / close preview panel"
+
+
+####################################################################################################
 # joker
 ####################################################################################################
 
@@ -25,11 +35,11 @@ external = "command open {file}"
 leave_broot = false
 description = "`joker-enter` -> open according to OS"
 
-# mode
+# panel
 [[verbs]]
-internal = "mode_input"
+internal = "start_end_panel"
 key = "f4"
-description = "`joker-shift` -> enter input mode"
+description = "`joker-space` -> create panel"
 
 # editor
 [[verbs]]
@@ -46,12 +56,6 @@ key = "f6"
 external = "zellij run --floating --close-on-exit --height 100 --width 100 --x 100 --y 0 -- hx {file}"
 leave_broot = false
 description = "`joker-cmd` -> open file with `helix` editor"
-
-# panel
-[[verbs]]
-internal = "start_end_panel"
-key = "f7"
-description = "`joker-space` -> create panel"
 
 # directory
 [[verbs]]
@@ -142,10 +146,10 @@ description = "`ctl-cmd-cmd` -> toggle hidden"
 
 # panel
 [[verbs]]
-invocation = "toggle_preview"
+invocation = "no_sort"
 key = "ctrl-o"
-internal = "toggle_preview"
-description = "`ctl-cmd-space` -> open / close preview panel"
+internal = "no_sort"
+description = "`ctl-cmd-space` -> do not sort"
 
 # sort
 [[verbs]]
@@ -226,10 +230,10 @@ description = "`ctl-cmd-up` -> move tree root up"
 
 # move
 [[verbs]]
-invocation = "open_leave"
+invocation = "root_down"
 key = "ctrl-p"
-cmd = ":cd"
-description = "`ctl-cmd-down` -> go into directory"
+internal = "root_down"
+description = "`ctl-cmd-down` -> move tree root down"
 
 
 ####################################################################################################
@@ -382,26 +386,26 @@ description = "`alt` -> toggle staging area"
 invocation = "panel_left"
 key = "ctrl-left"
 internal = "panel_left"
-description = "select left panel"
+description = "`ctl-left` -> select left panel"
 
 # panel
 [[verbs]]
 invocation = "panel_right"
 key = "ctrl-right"
 internal = "panel_right"
-description = "select right panel"
+description = "`ctl-right` -> select right panel"
 
 # open
 [[verbs]]
 internal = "close_panel_ok"
-key = "alt-shift-pageup"
-description = "`tab-left` -> close direcotry"
+key = "alt-ctrl-pageup"
+description = "`joker-left` -> close direcotry"
 
 # open
 [[verbs]]
 internal = "open_stay!"
-key = "alt-shift-pagedown"
-description = "`tab-right` -> open directory"
+key = "alt-ctrl-pagedown"
+description = "`joker-right` -> open directory"
 
 
 ####################################################################################################
