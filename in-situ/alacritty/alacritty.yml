@@ -69,6 +69,11 @@ key_bindings:
   # system OSX
   ####################################################################################################
 
+  # patch `alt-enter`
+  - { key: Enter,       mods: Command,                    chars: "\x1b\u000D"   }
+
+  ####################################################################################################
+
   - { key: Paste,                                         action: Paste         }
   - { key: Delete,                                        chars: "\x1b[3~"      }
   - { key: Tab,         mods: Shift,                      chars: "\x1b[Z"       }
