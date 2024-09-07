@@ -27,7 +27,7 @@
   ; [: :!Tu [:editor]]                                                              COLLISION      ;
   ; [: :!Tv [:editor]]                                                                             ;
   ; [: :!Tw [:editor]]                                                              COLLISION      ;
-  [:#Pleft_option :left_option [:editor] {:alone [:!OTf13]}]                      ; alt               ;
+  ; [:#Pleft_option :left_option [:editor] {:alone [:!OTf13]}]                      ; alt               ;
   ; [:#Pleft_option :left_option [:editor] {:alone [:!Tx]}]                      ; alt               ;
   ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; bs-space          ;
   ; [: :!Tz [:editor]]                                                              DEFAULT        ;
@@ -35,57 +35,57 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; GUI
-{:des "GUI - Sessions"
- :rules
- [;
-  ; [:escape :!EWright_shift :gui {:alone [:!CSe]}]                            ; file explorer     ;
-  [:#Pright_shift :right_shift :gui {:alone [:!Cj]}]                           ; terminal          ;
+; ; GUI
+; {:des "GUI - Sessions"
+;  :rules
+;  [;
+;   ; [:escape :!EWright_shift :gui {:alone [:!CSe]}]                            ; file explorer     ;
+;   [:#Pright_shift :right_shift :gui {:alone [:!Cj]}]                           ; terminal          ;
 
-  [:!TC#Pright_shift :!Cbackslash [:gui]]                                      ; split vertical    ;
-  [:!TC#Pright_option :!CSbackslash [:gui]]                                    ; split horizontal  ;
-  ; [:!OT#Pright_command :!TCSbackslash [:gui]]                                                    ;
+;   [:!TC#Pright_shift :!Cbackslash [:gui]]                                      ; split vertical    ;
+;   [:!TC#Pright_option :!CSbackslash [:gui]]                                    ; split horizontal  ;
+;   ; [:!OT#Pright_command :!TCSbackslash [:gui]]                                                    ;
 
-  ; [:!OC#Pleft_arrow :!TStab [:gui]]                                          ; left tab          ;
-  ; [:!OC#Pright_arrow :!Ttab [:gui]]                                          ; right tab         ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; GUI
-{:des "GUI - Control remappings"
- :rules
- [;
-  ; [:!EQR#Pdelete_or_backspace [:editor]]                                                         ;
-  ; [:!EQR#Preturn_or_enter [:editor]]                                                             ;
-  ; [:!EQR#Pright_shift [:editor]]                                                                 ;
-  ; [:!EQR#Pright_option [:editor]]                                                                ;
-  ; [:!EQR#Pright_command [:editor]]                                                               ;
-  ; [:!EQR#Pspacebar :!Ty [:editor]]                                                                 ;
-
-  [:!EQR#Pright_control :!Tj [:editor]]                                                            ;
-
-  ; [:!EQR#Pleft_command :!Tt [:editor]]                                                           ;
-  [:!EQR#Pleft_option :!Ts [:editor]]                                                              ;
-  ; [:!EQR#Pleft_control :!Tr [:editor]]                                                           ;
-  [:!EQR#Pleft_shift :!Oc [:editor]]                                                               ;
-  [:!EQR#Pcaps_lock :!Tg [:editor]]                                                                ;
-  [:!EQR#Ptab :!Th [:editor]]                                                                      ;
-  [:!EQR#Pnon_us_backslash :!Tn [:editor]]                                                         ;
-  ]}
+;   ; [:!OC#Pleft_arrow :!TStab [:gui]]                                          ; left tab          ;
+;   ; [:!OC#Pright_arrow :!Ttab [:gui]]                                          ; right tab         ;
+;   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; GUI
-{:des "GUI - Interactive delete"
- :rules
- [;
-  ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; bs-shift          ;
-  [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; del word fw       ;
-  ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; del line fw       ;
-  [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; del word bw       ;
-  [:!R#Pleft_command :!Cdelete_or_backspace [:gui]]                            ; del line bw       ;
-  [:!R#Pleft_option :!Tl [:gui]]                                               ; shift-alt         ;
-  ]}
+; ; GUI
+; {:des "GUI - Control remappings"
+;  :rules
+;  [;
+;   ; [:!EQR#Pdelete_or_backspace [:editor]]                                                         ;
+;   ; [:!EQR#Preturn_or_enter [:editor]]                                                             ;
+;   ; [:!EQR#Pright_shift [:editor]]                                                                 ;
+;   ; [:!EQR#Pright_option [:editor]]                                                                ;
+;   ; [:!EQR#Pright_command [:editor]]                                                               ;
+;   ; [:!EQR#Pspacebar :!Ty [:editor]]                                                                 ;
+
+;   [:!EQR#Pright_control :!Tj [:editor]]                                                            ;
+
+;   ; [:!EQR#Pleft_command :!Tt [:editor]]                                                           ;
+;   [:!EQR#Pleft_option :!Ts [:editor]]                                                              ;
+;   ; [:!EQR#Pleft_control :!Tr [:editor]]                                                           ;
+;   [:!EQR#Pleft_shift :!Oc [:editor]]                                                               ;
+;   [:!EQR#Pcaps_lock :!Tg [:editor]]                                                                ;
+;   [:!EQR#Ptab :!Th [:editor]]                                                                      ;
+;   [:!EQR#Pnon_us_backslash :!Tn [:editor]]                                                         ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; GUI
+; {:des "GUI - Interactive delete"
+;  :rules
+;  [;
+;   ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; bs-shift          ;
+;   [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; del word fw       ;
+;   ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; del line fw       ;
+;   [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; del word bw       ;
+;   [:!R#Pleft_command :!Cdelete_or_backspace [:gui]]                            ; del line bw       ;
+;   [:!R#Pleft_option :!Tl [:gui]]                                               ; shift-alt         ;
+;   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
