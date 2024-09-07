@@ -125,7 +125,7 @@ bindkey '^g' edit-command-line
 bindkey '^j' _call_just
 
 # navi
-bindkey '^n' _call_navi
+bindkey '^o' _call_navi
 
 # zoxide
 bindkey '^h' _call_zi
@@ -133,7 +133,7 @@ bindkey '^h' _call_zi
 # unbind
 bindkey -r "^B"
 bindkey -r "^F"
-bindkey -r "^O"
+bindkey -r "^N"
 bindkey -r "^P"
 bindkey -r "^X"
 
