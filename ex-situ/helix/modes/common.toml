@@ -10,8 +10,8 @@ C-w = ["delete_word_backward"]                             # shift-ctl         #
 
 # fast reload
 F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
-A-C-F13 = ["goto_word"]                                    # TODO: update
-C-v = ["change_selection_noyank"]                          # shift-alt
+C-space = ["goto_word"]                                    # ctl-space         #
+C-v = ["change_selection_noyank"]                          # shift-alt         #
 
 
 ####################################################################################################
