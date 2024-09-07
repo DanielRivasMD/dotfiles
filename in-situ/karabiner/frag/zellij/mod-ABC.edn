@@ -4,7 +4,7 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules
  [;
-  [:!OC#Pbackslash :!Oa [:term]]                                               ; WIP: remap        ;
+  ; [: :!Oa [:term]]                                                                               ;
   [:!O#Pleft_arrow :!Ob [:term]]                                               ; alt-left          ;
   ; [: :!Oc [:term]]                                                                COLLISION      ;
   ; [: :!Od [:term]]                                                                COLLISION      ;
@@ -29,7 +29,7 @@
   [:!OC#Pright_arrow :!Ow [:term]]                                                                 ;
   ; [: :!Ox [:term]]                                                                               ;
   ; [: :!Oy [:term]]                                                                               ;
-  [:!OT#Pbackslash :!Oz [:term]]                                               ; WIP: remap        ;
+  ; [: :!Oz [:term]]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,13 +39,13 @@
  :rules
  [;
   [:!E#Pleft_command :!SOa [:term]]                                            ; alt-cmd           ;
-  [:!E#Pleft_option :!SOb [:term]]                                             ; alt               ;
+  [:!E#Pleft_option :!SOb [:term]]                                             ; alt-alt           ;
   [:!E#Pleft_control :!SOc [:term]]                                            ; alt-ctl           ;
   [:!E#Pleft_shift :!SOd [:term]]                                              ; alt-shift         ;
   [:!E#Pcaps_lock :!SOe [:term]]                                               ; alt-caps          ;
   [:!E#Ptab :!SOf [:term]]                                                     ; alt-tab           ;
   [:!E#Pnon_us_backslash :!SOg [:term]]                                        ; alt-fn            ;
-  [:!E#Pescape :!SOh [:term]]                                                  ; alt-cmd           ;
+  [:!E#Pescape :!SOh [:term]]                                                  ; alt-esc           ;
   [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; alt-cmd-bspace    ;
   [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; alt-cmd-enter     ;
   [:!OC#Pright_shift :!SOk [:term]]                                            ; alt-cmd-shift     ;
@@ -55,6 +55,24 @@
   ; [: :!SOo [:term]]                                                               COLLISION      ;
   [:#Pescape :!EWright_shift [:term] {:alone [:!SOp]}]                         ; esc               ;
   [:#Pright_shift :right_shift [:term] {:alone [:!SOq]}]                       ; shift             ;
+  [:!OC#P1 :!SOr [:term]]                                                      ; alt-cmd-1         ;
+  [:!OC#P2 :!SOs [:term]]                                                      ; alt-cmd-2         ;
+  [:!OC#P3 :!SOt [:term]]                                                      ; alt-cmd-3         ;
+  [:!OC#P4 :!SOu [:term]]                                                      ; alt-cmd-4         ;
+  [:!OC#P5 :!SOv [:term]]                                                      ; alt-cmd-5         ;
+  [:!OC#P6 :!SOw [:term]]                                                      ; alt-cmd-6         ;
+  [:!OC#P7 :!SOx [:term]]                                                      ; alt-cmd-7         ;
+  [:!OC#P8 :!SOy [:term]]                                                      ; alt-cmd-8         ;
+  [:!OC#P9 :!SOz [:term]]                                                      ; alt-cmd-9         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal zellij bindings - keypad"
+ :rules
+ [;
+  [:!OC#Pkeypad_0 :!SOn [:term]]                                               ; alt-cmd-0         ;
   [:!OC#Pkeypad_1 :!SOr [:term]]                                               ; alt-cmd-1         ;
   [:!OC#Pkeypad_2 :!SOs [:term]]                                               ; alt-cmd-2         ;
   [:!OC#Pkeypad_3 :!SOt [:term]]                                               ; alt-cmd-3         ;
