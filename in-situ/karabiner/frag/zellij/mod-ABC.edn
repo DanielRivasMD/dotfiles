@@ -4,14 +4,14 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules
  [;
-  [:!E#Pleft_command :!Oa [:term]]                                             ; alt-cmd           ;
+  [:#Pescape :!EWright_shift [:term] {:alone [:!Oa]}]                          ; esc               ;
   [:!O#Pleft_arrow :!Ob [:term]]                                               ; alt-left          ;
   ; [: :!Oc [:term]]                                                                COLLISION      ;
   ; [: :!Od [:term]]                                                                COLLISION      ;
   ; [: :!Oe [:term]]                                                                COLLISION      ;
   [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
-  ; [: :!Og [:term]]                                                                               ;
-  ; [: :!Oh [:term]]                                                                               ;
+  [:#Pleft_option :left_option [:term] {:alone [:!Og]}]                        ; alt               ;
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; shift             ;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
   [:!OT#Pleft_arrow :!Oj [:term]]                                                                  ;
   [:!OT#Pright_arrow :!Ok [:term]]                                                                 ;
@@ -53,8 +53,8 @@
   [:!OC#Pright_command :!SOm [:term]]                                          ; alt-cmd-cmd       ;
   [:!OC#Pspacebar :!SOn [:term]]                                               ; alt-cmd-space     ;
   ; [: :!SOo [:term]]                                                               COLLISION      ;
-  [:#Pescape :!EWright_shift [:term] {:alone [:!SOp]}]                         ; esc               ;
-  [:#Pright_shift :right_shift [:term] {:alone [:!SOq]}]                       ; shift             ;
+  [:!E#Pright_command :!SOp [:term]]                                           ; alt-cmd           ;
+  [:!E#Pright_control :!SOq [:term]]                                           ; alt-ctl           ;
   [:!OC#P1 :!SOr [:term]]                                                      ; alt-cmd-1         ;
   [:!OC#P2 :!SOs [:term]]                                                      ; alt-cmd-2         ;
   [:!OC#P3 :!SOt [:term]]                                                      ; alt-cmd-3         ;
