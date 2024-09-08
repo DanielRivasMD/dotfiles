@@ -171,9 +171,9 @@ S-A-end = ["decrement"]                                    # tab-down          #
 ####################################################################################################
 
 # alphabet
-A-F1 = ["select_regex"]                                    # alt-z             # select
+A-F1 = ["select_regex"]                                    # alt-a             # select
 # A-F2 = [""]                                              # alt-b             #
-A-F4 = ["yank_joined_to_clipboard"]                        # alt-c             # copy
+A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
 A-F6 = ["format_selections"]                               # alt-e             # format
 A-F7 = ["search"]                                          # alt-f             # search
@@ -194,9 +194,9 @@ C-F10 = ["normal_mode", ":reload-all", "MODE"]             # alt-r             #
 A-C-F1 = ["normal_mode", ":write-quit-all"]                # alt-s             # save & quit
 # A-C-F2 = [""]                                            # alt-t             #
 A-C-F4 = ["undo"]                                          # alt-u             # undo
-A-C-F5 = ["replace_with_yanked"]                           # alt-v             # paste
+A-C-F5 = ["paste_clipboard_after"]                         # alt-v             # paste
 A-C-F6 = ["normal_mode", ":write"]                         # alt-w             # save
-A-C-F7 = ["delete_selection"]                              # alt-x             # cut
+A-C-F7 = ["yank_to_clipboard", "delete_selection_noyank"]  # alt-x             # cut
 A-C-F8 = ["search_selection", "search_next"]               # alt-y             # skip multi
 A-C-F9 = ["search_selection", "search_prev"]               # alt-z             # remove multi
 A-C-F10 = ["command_mode"]                                 # alt-grave         # command mode
@@ -232,8 +232,9 @@ S-C-F8 = ["select_mode", "match_brackets", "MODE"]         # alt-shift-p       #
 S-A-C-F4 = ["redo"]                                        # alt-shift-u       # redo
 # S-A-C-F5 = [""]                                          # alt-shift-v       #
 # S-A-C-F6 = [""]                                          # alt-shift-w       #
-S-A-C-F7 = ["extend_to_line_bounds", "delete_selection"]   # alt-shift-x       # cut line
-S-A-C-F8 = ["extend_to_line_bounds", "yank"]               # alt-shift-y       # copy line
+S-A-C-F7 = ["extend_to_line_bounds", "delete_selection_noyank"]
+                                                           # alt-shift-x       # cut line
+S-A-C-F8 = ["extend_to_line_bounds", "yank_to_clipboard"]  # alt-shift-y       # copy line
 # S-A-C-F9 = [""]                                          # alt-shift-z       #
 S-A-C-F10 = ["shell_pipe"]                                 # alt-shift-grave   # shell command
 
