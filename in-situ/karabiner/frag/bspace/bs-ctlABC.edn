@@ -2,6 +2,41 @@
 ; BS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; shift
+{:des "Shift Mode - alphabet"
+ :rules
+ [;
+  ; [:!EQR#Pa []]                                                                                  ;
+  ; [:!EQR#Pb []]                                                                                  ;
+  [:!EQR#Pc [:!S2 :c :h :a :i :n :spacebar]]                                   ; '@chain '         ;
+  [:!EQR#Pd [:!S2 :d :e :b :u :g :spacebar]]                                   ; '@debug '         ;
+  [:!EQR#Pe [:!S2 :e :d :i :t :spacebar]]                                      ; '@edit '          ;
+  ; [:!EQR#Pf []]                                                                                  ;
+  ; [:!EQR#Pg []]                                                                                  ;
+  ; [:!EQR#Ph []]                                                                                  ;
+  [:!EQR#Pi [:!S2 :i :n :f :o :spacebar]]                                      ; '@info '          ;
+  ; [:!EQR#Pj []]                                                                                  ;
+  [:!EQR#Pk [:!S2 :w :i :t :h :!Shyphen :k :w :spacebar]]                      ; '@with_kw '       ;
+  [:!EQR#Pl [:!S2 :l :e :s :s :spacebar]]                                      ; '@less '          ;
+  ; [:!EQR#Pm []]                                                                                  ;
+  ; [:!EQR#Pn []]                                                                                  ;
+  ; [:!EQR#Po []]                                                                                  ;
+  [:!EQR#Pp [:!S2 :p :i :p :e :spacebar]]                                      ; '@pipe '          ;
+  [:!EQR#Pq [:!S2 :e :n :t :e :r :spacebar]]                                   ; '@enter '         ;
+  ; [:!EQR#Pr []]                                                                                  ;
+  [:!EQR#Ps [:!S2 :s :h :o :w :spacebar]]                                      ; '@show '          ;
+  [:!EQR#Pt [:!S2 :t :i :m :e :spacebar]]                                      ; '@time '          ;
+  ; [:!EQR#Pu []]                                                                                  ;
+  [:!EQR#Pv [:!S2 :e :v :a :l :spacebar]]                                      ; '@eval '          ;
+  [:!EQR#Pw [:!S2 :w :a :r :n :spacebar]]                                      ; '@warn '          ;
+  ; [:!EQR#Px []]                                                                                  ;
+  ; [:!EQR#Py []]                                                                                  ;
+  [:!EQR#Pz [:!S2 :w :h :i :c :h :spacebar]]                                   ; '@which '         ;
+  [:!EQR#Pright_control [:!S2 :period :spacebar]]                              ; '@. '             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; bspace
 {:des "BSpace Mode - symbols"
  :rules
