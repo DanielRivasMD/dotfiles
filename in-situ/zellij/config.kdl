@@ -6,14 +6,14 @@ keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Ctrl q" { Quit; }                                                                    //
-        bind "Alt a" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
+        // bind "Alt a" {}
         // bind "Alt b" {}
         // bind "Alt c" {}
         // bind "Alt d" {}
         // bind "Alt e" {}                                                                         COLLISION
         // bind "Alt f" {}
         // bind "Alt g" {}
-        // bind "Alt h" {}
+        bind "Alt h" { EditScrollback; SwitchToMode "Normal"; }                                    //
         // bind "Alt i" {  }                                                                       COLLISION
         bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             //
         bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }            //
@@ -48,8 +48,8 @@ keybinds clear-defaults=true {
         // bind "Alt M" {}
         bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     //
         // bind "Alt O" {  }                                                                       COLLISION
-        // bind "Alt P" {}
-        bind "Alt Q" { EditScrollback; SwitchToMode "Normal"; }                                    //
+        bind "Alt P" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
+        // bind "Alt Q" {}
         bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }                     //
         bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }                     //
         bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }                     //
@@ -66,7 +66,7 @@ keybinds clear-defaults=true {
 
     // modes
     shared_except "normal" {
-        bind "Alt P" { SwitchToMode "Normal"; }                                                    //
+        bind "Alt a" { SwitchToMode "Normal"; }                                                    //
     }
 
     shared_except "normal" "locked" "entersearch" {
@@ -101,7 +101,7 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     normal {
-        bind "Alt P" { SwitchToMode "Locked"; }                                                    //
+        bind "Alt a" { SwitchToMode "Locked"; }                                                    //
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
