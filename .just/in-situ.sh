@@ -48,6 +48,8 @@ ln -sf "${cheat}" "${config}/"                                                &&
 echo ''
 if [[ ! -d "${config}/gh" ]]; then mkdir "${config}/gh"; fi                   && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}gh${NC}"
 ln -sf "${gh}/config.yml" "${config}/gh/"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}gh${NC}"
+ln -sf "${spotify}/client.yml" "${config}/spotify-tui/"                       && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}spotify${NC}"
+ln -sf "${spotify}/config.yml" "${config}/spotify-tui/"                       && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}spotify${NC}"
 ln -sf "${khal}" "${config}/"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}khal${NC}"
 ln -sf "${karabiner}" "${config}/"                                            && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}karabiner${NC}"
 ln -sf "${karabiner}/karabiner.edn" "${config}/"                              && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}karabiner${NC}"
