@@ -6,16 +6,6 @@
 default_flags = ""
 
 ####################################################################################################
-
-# panel
-[[verbs]]
-invocation = "toggle_preview"
-key = "enter"
-internal = "toggle_preview"
-description = "`enter` -> open / close preview panel"
-
-
-####################################################################################################
 # joker
 ####################################################################################################
 
@@ -35,12 +25,6 @@ external = "command open {file}"
 leave_broot = false
 description = "`joker-enter` -> open according to OS"
 
-# panel
-[[verbs]]
-internal = "start_end_panel"
-key = "f4"
-description = "`joker-space` -> create panel"
-
 # editor
 [[verbs]]
 invocation = "micro"
@@ -56,6 +40,12 @@ key = "f6"
 external = "zellij run --floating --close-on-exit --height 100 --width 100 --x 100 --y 0 -- hx {file}"
 leave_broot = false
 description = "`joker-cmd` -> open file with `helix` editor"
+
+# panel
+[[verbs]]
+internal = "start_end_panel"
+key = "f4"
+description = "`joker-space` -> create panel"
 
 # directory
 [[verbs]]
@@ -171,69 +161,6 @@ invocation = "sort_by_size"
 key = "ctrl-t"
 internal = "sort_by_size"
 description = "`ctl-cmd-\\` -> sort by size"
-
-
-####################################################################################################
-
-# move
-[[verbs]]
-invocation = "page_up"
-key = "pageup"
-internal = "page_up"
-description = "`alt-up` -> go to page up"
-
-# move
-[[verbs]]
-invocation = "page_down"
-key = "pagedown"
-internal = "page_down"
-description = "`alt-down` -> go to page down"
-
-# move
-[[verbs]]
-invocation = "select_first"
-key = "home"
-internal = "select_first"
-description = "`cmd-up` -> go to top of the list"
-
-# move
-[[verbs]]
-invocation = "select_last"
-key = "end"
-internal = "select_last"
-description = "`cmd-down` -> go to bottom of the list"
-
-# panel
-[[verbs]]
-invocation = "close_preview"
-key = "ctrl-b"
-apply_to = "file"
-internal = "close_preview {file}"
-leave_broot = false
-description = "`ctl-cmd-left` -> close display"
-
-# panel
-[[verbs]]
-invocation = "open_preview"
-key = "ctrl-f"
-apply_to = "file"
-internal = "open_preview {file}"
-leave_broot = false
-description = "`ctl-cmd-right` -> display file on panel"
-
-# move
-[[verbs]]
-invocation = "root_up"
-key = "ctrl-n"
-internal = "root_up"
-description = "`ctl-cmd-up` -> move tree root up"
-
-# move
-[[verbs]]
-invocation = "root_down"
-key = "ctrl-p"
-internal = "root_down"
-description = "`ctl-cmd-down` -> move tree root down"
 
 
 ####################################################################################################
@@ -369,17 +296,92 @@ key = "alt-ctrl-f9"
 internal = "clear_stage"
 description = "`alt-z` -> clear stage area"
 
-# # stage
-# [[verbs]]
-# invocation = "toggle_staging_area"
-# key = "ctrl-x"
-# internal = "toggle_staging_area"
-# description = "`alt` -> toggle staging area"
+# stage
+[[verbs]]
+invocation = "toggle_staging_area"
+key = "alt-g"
+internal = "toggle_staging_area"
+description = "`alt` -> toggle staging area"
 
 
 ####################################################################################################
 # arrow
 ####################################################################################################
+
+# open
+[[verbs]]
+internal = "close_panel_ok"
+key = "alt-ctrl-pageup"
+description = "`joker-left` -> close direcotry"
+
+# open
+[[verbs]]
+internal = "open_stay!"
+key = "alt-ctrl-pagedown"
+description = "`joker-right` -> open directory"
+
+# panel
+[[verbs]]
+invocation = "close_preview"
+key = "ctrl-b"
+apply_to = "file"
+internal = "close_preview {file}"
+leave_broot = false
+description = "`ctl-cmd-left` -> close display"
+
+# panel
+[[verbs]]
+invocation = "open_preview"
+key = "ctrl-f"
+apply_to = "file"
+internal = "open_preview {file}"
+leave_broot = false
+description = "`ctl-cmd-right` -> display file on panel"
+
+# move
+[[verbs]]
+invocation = "root_up"
+key = "ctrl-n"
+internal = "root_up"
+description = "`ctl-cmd-up` -> move tree root up"
+
+# move
+[[verbs]]
+invocation = "root_down"
+key = "ctrl-p"
+internal = "root_down"
+description = "`ctl-cmd-down` -> move tree root down"
+
+[[verbs]]
+key = "alt-b"
+internal = ":input_go_word_left"
+description = "`alt-left`"
+
+[[verbs]]
+key = "alt-f"
+internal = ":input_go_word_right"
+description = "`alt-right`"
+
+# move
+[[verbs]]
+invocation = "page_up"
+key = "pageup"
+internal = "page_up"
+description = "`alt-up` -> go to page up"
+
+# move
+[[verbs]]
+invocation = "page_down"
+key = "pagedown"
+internal = "page_down"
+description = "`alt-down` -> go to page down"
+
+# panel
+[[verbs]]
+invocation = "toggle_preview"
+key = "ctrl-space"
+internal = "toggle_preview"
+description = "`ctl-space` -> open / close preview panel"
 
 # panel
 [[verbs]]
@@ -395,32 +397,24 @@ key = "ctrl-right"
 internal = "panel_right"
 description = "`ctl-right` -> select right panel"
 
-# open
+# move
 [[verbs]]
-internal = "close_panel_ok"
-key = "alt-ctrl-pageup"
-description = "`joker-left` -> close direcotry"
+invocation = "select_first"
+key = "home"
+internal = "select_first"
+description = "`cmd-up` -> go to top of the list"
 
-# open
+# move
 [[verbs]]
-internal = "open_stay!"
-key = "alt-ctrl-pagedown"
-description = "`joker-right` -> open directory"
+invocation = "select_last"
+key = "end"
+internal = "select_last"
+description = "`cmd-down` -> go to bottom of the list"
 
 
 ####################################################################################################
 # delete
 ####################################################################################################
-
-[[verbs]]
-key = "alt-b"
-internal = ":input_go_word_left"
-description = "`alt-left`"
-
-[[verbs]]
-key = "alt-f"
-internal = ":input_go_word_right"
-description = "`alt-right`"
 
 [[verbs]]
 key = "ctrl-w"
