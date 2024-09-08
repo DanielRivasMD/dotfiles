@@ -39,17 +39,17 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQR#Popen_bracket :!Sf8 [:term]]                                                              ;
-  [:!WQR#Pclose_bracket :!Sf9 [:term]]                                                             ;
-  [:!WQR#Psemicolon :!Sf10 [:term]]                                                                ;
-  [:!WQR#Pquote :!Sf11 [:term]]                                                                    ;
-  [:!WQR#Pbackslash :!Sf12 [:term]]                                                                ;
-  [:!WQR#Pcomma :!Sf18 [:term]]                                                                    ;
-  [:!WQR#Pperiod :!Sf19 [:term]]                                                                   ;
-  [:!WQR#Pslash :!Sf20 [:term]]                                                                    ;
+  [:!WQR#Popen_bracket [:!Sf8]]                                                                    ;
+  [:!WQR#Pclose_bracket [:!Sf9]]                                                                   ;
+  [:!WQR#Psemicolon [:!Sf10]]                                                                      ;
+  [:!WQR#Pquote [:!Sf11]]                                                                          ;
+  [:!WQR#Pbackslash [:!Sf12]]                                                                      ;
+  [:!WQR#Pcomma [:!Sf18]]                                                                          ;
+  [:!WQR#Pperiod [:!Sf19]]                                                                         ;
+  [:!WQR#Pslash [:!Sf20]]                                                                          ;
 
   [:!WQR#Pdelete_or_backspace [:equal_sign :equal_sign]]                       ; '=='              ;
-  [:!WQR#Preturn_or_enter :!Sf2 [:term]]                                                           ;
+  [:!WQR#Preturn_or_enter [:!Sf2]]                                                                 ;
   [:!WQR#Pright_shift [:!S1 :!S1]]                                             ; '!!'              ;
   [:!WQR#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
   [:!WQR#Pright_command [:slash :slash]]                                       ; '//'              ;
