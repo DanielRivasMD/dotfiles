@@ -6,14 +6,14 @@ keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Ctrl q" { Quit; }                                                                    //
-        bind "Alt a" { Clear; }                                                                    //
+        bind "Alt a" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
         // bind "Alt b" {}
         // bind "Alt c" {}
         // bind "Alt d" {}
         // bind "Alt e" {}                                                                         COLLISION
         // bind "Alt f" {}
-        // bind "Alt g" { PreviousSwapLayout; }                                                    //
-        // bind "Alt h" { NextSwapLayout; }                                                        //
+        // bind "Alt g" {}
+        // bind "Alt h" {}
         // bind "Alt i" {  }                                                                       COLLISION
         bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             //
         bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }            //
@@ -27,11 +27,11 @@ keybinds clear-defaults=true {
         bind "Alt s" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
         bind "Alt t" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }                  //
         // bind "Alt u" {  }                                                                       COLLISION
-        bind "Alt v" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }               //
-        bind "Alt w" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }                   //
-        // bind "Alt x" {}
-        // bind "Alt y" {}
-        bind "Alt z" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
+        // bind "Alt v" {}
+        // bind "Alt w" {}
+        bind "Alt x" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }               //
+        bind "Alt y" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }                   //
+        // bind "Alt z" {}
 
         bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 //
         bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          //
