@@ -4,7 +4,7 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules
  [;
-  ; [: :!Oa [:term]]                                                                               ;
+  [:!E#Pleft_command :!Oa [:term]]                                             ; alt-cmd           ;
   [:!O#Pleft_arrow :!Ob [:term]]                                               ; alt-left          ;
   ; [: :!Oc [:term]]                                                                COLLISION      ;
   ; [: :!Od [:term]]                                                                COLLISION      ;
@@ -25,11 +25,11 @@
   [:!OT#Pright_command :!Os [:term]]                                           ; alt-ctl-cmd       ;
   [:!OT#Pspacebar :!Ot [:term]]                                                ; alt-ctl-space     ;
   ; [: :!Ou [:term]]                                                                COLLISION      ;
-  [:!OC#Pleft_arrow :!Ov [:term]]                                                                  ;
-  [:!OC#Pright_arrow :!Ow [:term]]                                                                 ;
-  ; [: :!Ox [:term]]                                                                               ;
-  ; [: :!Oy [:term]]                                                                               ;
-  ; [: :!Oz [:term]]                                                                               ;
+  [:!OC#Pperiod :!Ov [:term]]                                                                      ;
+  [:!OC#Pcomma :!Ow [:term]]                                                                       ;
+  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; alt-cmd-left      ;
+  [:!OC#Pright_arrow :!Oy [:term]]                                             ; alt-cmd-right     ;
+  [:!OC#Pslash :!Oz [:term]]                                                                       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
