@@ -28,7 +28,7 @@ _forge() {
   # concatenate
   cat \
     "${karabiner}/.profile.tmp" \
-    "${fprof}/profile.edn" \
+    "${fsimple}/profile.edn" \
     "${karabiner}/.main.tmp" \
     "${fapps}/browser.edn" \
     "${fapps}/editor.edn" \
@@ -36,15 +36,14 @@ _forge() {
     "${fapps}/mail.edn" \
     "${fapps}/mouse.edn" \
     "${fapps}/zed.edn" \
-    "${farrow}/arrow-fn.edn" \
-    "${fbspace}/bs-ctlABC.edn" \
-    "${fcmd}/lcmd-fn.edn" \
-    "${fctlcmd}/cc-fn.edn" \
-    "${fespanso}/esc.edn" \
-    "${fespanso}/espanso.edn" \
-    "${fespanso}/function.edn" \
-    "${fjoker}/joker-fn.edn" \
-    "${fshift}/rshift-ctlABC.edn" \
+    "${fsimple}/arrow.edn" \
+    "${fsimple}/bs.edn" \
+    "${fsimple}/lcmd.edn" \
+    "${fsimple}/cc.edn" \
+    "${fsimple}/esc.edn" \
+    "${fsimple}/function.edn" \
+    "${fsimple}/joker.edn" \
+    "${fsimple}/rshift.edn" \
     "${fsimple}/lctl.edn" \
     "${fsimple}/lopt.edn" \
     "${fsimple}/lshift.edn" \
@@ -56,7 +55,7 @@ _forge() {
     "${fsimple}/tab.edn" \
     "${fzellij}/ABC-fn.edn" \
     "${fzellij}/mod-ABC.edn" \
-    "${fkeys}/keys.edn" \
+    "${fsimple}/keys.edn" \
     "${karabiner}/.eof.tmp" \
     > "${karabiner}/karabiner.edn"
 
