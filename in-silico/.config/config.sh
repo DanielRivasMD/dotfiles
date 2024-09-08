@@ -39,6 +39,7 @@ export bottom="${in_situ}/bottom"
 export cheat="${in_situ}/cheat"
 
 export gh="${in_situ}/gh"
+export spotify="${in_situ}/spotify"
 export khal="${in_situ}/khal"
 export karabiner="${in_situ}/karabiner"
 export frag="${karabiner}/frag"
@@ -102,6 +103,7 @@ export lsd="${ex_situ}/lsd"
 export micro="${ex_situ}/micro"
 export sheldon="${ex_situ}/sheldon"
 export starship="${ex_situ}/starship"
+export yazi="${ex_situ}/yazi"
 
 # shell
 export shell="${ex_situ}/shell"
