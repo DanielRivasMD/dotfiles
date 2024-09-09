@@ -86,7 +86,7 @@
   [:!C#Pright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]            ; ' := '            ;
   [:!C#Pright_option [:spacebar :hyphen :!Speriod :spacebar]]                  ; ' -> '            ;
   [:!C#Pright_command [:spacebar :!Scomma :hyphen :spacebar]]                  ; ' <- '            ;
-  ; [:!C#Pspacebar []]                                                                             ;
+  [:!C#Pspacebar [:caps_lock]]                                                                     ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
   ; [:!C#Pleft_option []]                                                                          ;
