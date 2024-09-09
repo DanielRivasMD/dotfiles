@@ -109,8 +109,8 @@ F6 = ["goto_definition"]                                   # joker-cmd         #
 
 # A-C-pagedown = [""]                                      # joker-left        #
 # A-C-pageup = [""]                                        # joker-right       #
-# A-C-home  = [""]                                         # joker-up          #
-# A-C-end = [""]                                           # joker-down        #
+A-C-home  = ["increment"]                                  # joker-up          #
+A-C-end = ["decrement"]                                    # joker-down        #
 
 
 ####################################################################################################
@@ -162,10 +162,10 @@ S-F2 = ["diagnostics_picker"]                              # tab-enter         #
 #                                                          # tab-cmd           #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # tab-space         # repeat motion
 
-S-A-pageup = ["goto_prev_diag"]                            # tab-left          # prev diag
-S-A-pagedown = ["goto_next_diag"]                          # tab-right         # next diag
-S-A-home = ["increment"]                                   # tab-up            # increment
-S-A-end = ["decrement"]                                    # tab-down          # decrement
+# S-A-pageup = [""]                                        # tab-left          # prev diag
+# S-A-pagedown = [""]                                      # tab-right         # next diag
+S-A-home = ["goto_prev_diag"]                              # tab-up            # increment
+S-A-end = ["goto_next_diag"]                               # tab-down          # decrement
 
 
 ####################################################################################################
