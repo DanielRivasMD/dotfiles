@@ -84,7 +84,7 @@ export espansoConf="${appSupport}/espanso"
 
 # navi
 export navi="${in_situ}/navi"
-export naviConf="${appSupport}/navi/cheats/drivas"
+export naviConf="${appSupport}/navi/"
 
 ####################################################################################################
 # ex-situ

@@ -99,7 +99,9 @@ echo ''
 echo "${YELLOW}Linking navi config${NC}"
 echo "${RED}====================================================================================================${NC}"
 if [[ -d "${naviConf}" ]]; then rm -rf "${naviConf}"; fi
-ln -sf "${navi}" "${naviConf}"                                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}navi${NC} directory"
+mkdir "${naviConf}"
+ln -sf "${navi}/config.yml" "${naviConf}"                                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}navi${NC} config"
+ln -sf "${navi}/cheats" "${naviConf}/cheats"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}navi${NC} directory"
 echo "${RED}====================================================================================================${NC}"
 
 # ln -sf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
