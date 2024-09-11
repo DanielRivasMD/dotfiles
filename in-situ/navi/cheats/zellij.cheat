@@ -4,7 +4,7 @@
  zellij --layout <zellij_layout>
 
 # attach zellij session
- zellij attach {{<zellij_session>}}
+ zellij attach <zellij_session>
 
-$ zellij_session: zellij list-sessions --- --column 1
+$ zellij_session: zellij list-sessions | awk '!/EXITED/ {print $1}'
 $ zellij_layout: ls ~/.archive/in-situ/zellij/*kdl
