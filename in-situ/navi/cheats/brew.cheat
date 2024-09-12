@@ -87,7 +87,7 @@ brew link --force <installed>
 # health check
 brew doctor
 
-# fix permissions
+# fixpermissions
 sudo chown -R $(whoami):admin /usr/local
 
 $ package: brew search

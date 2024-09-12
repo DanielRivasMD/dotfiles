@@ -1,4 +1,4 @@
-# TODO: create a command to generate nushell aliases from source
+# TODO: create a command to generate nushell aliases from source => babel
 
 ####################################################################################################
 # nushell
