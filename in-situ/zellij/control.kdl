@@ -25,26 +25,22 @@ layout {
     }
 
     tab name="Notes" {
-        pane split_direction="vertical" {
-            pane name="joplin" command="joplin"
-        }
+        pane name="joplin" command="joplin"
     }
 
     tab name="Files" focus=true {
         pane name="canvas" cwd="/Users/drivas" command="yazi"
     }
 
-    tab name="Archive" hide_floating_panes=true {
-        pane split_direction="horizontal" {
-            pane name="canvas" cwd="/Users/drivas/.archive" focus=true
+    tab name="Archive" {
+        pane stacked=true split_direction="horizontal" {
             pane name="git" cwd="/Users/drivas/.archive" command="lazygit"
+            pane name="canvas" cwd="/Users/drivas/.archive" focus=true
         }
     }
 
-    tab name="Factorem" hide_floating_panes=true {
-        pane split_direction="horizontal" {
-            pane name="canvas" cwd="/Users/drivas/Factorem" focus=true
-        }
+    tab name="Factorem" {
+        pane name="canvas" cwd="/Users/drivas/Factorem" focus=true
     }
 
 }

@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="Files" hide_floating_panes=true {
+    tab name="Files" {
         pane stacked=true split_direction="horizontal" {
             pane name="zero"
             pane name="src" cwd="src" command="broot" {
@@ -24,7 +24,7 @@ layout {
         }
     }
 
-    tab name="Source" hide_floating_panes=true focus=true {
+    tab name="Source" focus=true {
         pane split_direction="horizontal" {
             pane name="repl" focus=true command="julia" {
                 args "--project"

@@ -12,14 +12,14 @@ layout {
         children
     }
 
-    tab name="Files" hide_floating_panes=true {
+    tab name="Files" {
         pane stacked=true split_direction="horizontal" {
             pane name="I" focus=true
             pane name="II"
         }
     }
 
-    tab name="Source" hide_floating_panes=true focus=true {
+    tab name="Source" focus=true {
         pane split_direction="vertical" size="70%" {
             pane name="canvas" size="30%"
             pane name="editor" size="70%" focus=true command="hx"
