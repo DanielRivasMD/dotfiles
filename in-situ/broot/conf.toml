@@ -281,6 +281,14 @@ key = "alt-ctrl-f1"
 internal = "toggle_stage"
 description = "`alt-s` -> toggle stage"
 
+# play
+[[verbs]]
+invocation = "vlc"
+key = "alt-ctrl-f5"
+external = "zellij run --floating --close-on-exit --height 100 --width 100 --x 100 --y 0 -- vlc {file}"
+leave_broot = false
+description = "`alt-v` -> clear stage area"
+
 # pager
 [[verbs]]
 invocation = "xsv"
