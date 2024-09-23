@@ -71,6 +71,8 @@ export lazygit="${in_situ}/lazygit"
 export lazygitConf="${appSupport}/jesseduffield/lazygit"
 export lapce="${in_situ}/lapce"
 export lapceConf="${appSupport}/dev.lapce.Lapce-Stable"
+export halp="${in_situ}/halp"
+export halpConf="${appSupport}/halp"
 
 # broot
 export broot="${in_situ}/broot"

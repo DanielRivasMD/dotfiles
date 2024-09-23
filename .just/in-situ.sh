@@ -70,6 +70,7 @@ echo "${YELLOW}Linking config @distant locations${NC}"
 echo "${RED}====================================================================================================${NC}"
 ln -sf "${julia}/startup.jl" "${home}/.julia/config/"                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}julia${NC} startup"
 ln -sf "${sshConfig}" "${home}/.ssh/"                                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}ssh${NC} config"
+ln -sf "${halp}/halp.toml" "${halpConf}/"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}halp${NC} config"
 ln -sf "${lazycli}/config.yml" "${lazycliConf}/"                              && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lazycli${NC} config"
 ln -sf "${lazygit}/config.yml" "${lazygitConf}/"                              && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lazygit${NC} config"
 ln -sf "${lapce}/keymaps.toml" "${lapceConf}/"                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lapce${NC} keymaps"
@@ -103,8 +104,6 @@ mkdir "${naviConf}"
 ln -sf "${navi}/config.yml" "${naviConf}"                                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}navi${NC} config"
 ln -sf "${navi}/cheats" "${naviConf}/cheats"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}navi${NC} directory"
 echo "${RED}====================================================================================================${NC}"
-
-# ln -sf "${forked}/pier/target/release/pier" "${home}/bin/forkedPatch/"
 
 ####################################################################################################
 # Completions
