@@ -52,7 +52,6 @@ ln -sf "${lsd}" "${config}"                                                     
 ln -sf "${micro}" "${config}"                                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}micro${NC} directory"
 ln -sf "${sheldon}" "${config}"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}sheldon${NC} directory"
 ln -sf "${starship}" "${config}"                                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}starship${NC} directory"
-ln -sf "${yazi}" "${config}"                                                    && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}yazi${NC} directory"
 echo "${RED}====================================================================================================${NC}"
 
 # shell

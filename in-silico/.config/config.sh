@@ -59,6 +59,7 @@ export fkeys="${frag}/keys"
 
 # config dirs
 export gitui="${in_situ}/gitui"
+export yazi="${in_situ}/yazi"
 export zed="${in_situ}/zed"
 export zellij="${in_situ}/zellij"
 
@@ -105,7 +106,6 @@ export lsd="${ex_situ}/lsd"
 export micro="${ex_situ}/micro"
 export sheldon="${ex_situ}/sheldon"
 export starship="${ex_situ}/starship"
-export yazi="${ex_situ}/yazi"
 
 # shell
 export shell="${ex_situ}/shell"
