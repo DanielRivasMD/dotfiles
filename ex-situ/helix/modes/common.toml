@@ -109,8 +109,8 @@ F6 = ["goto_definition"]                                   # joker-cmd         #
 
 # A-C-pagedown = [""]                                      # joker-left        #
 # A-C-pageup = [""]                                        # joker-right       #
-A-C-home  = ["increment"]                                  # joker-up          #
-A-C-end = ["decrement"]                                    # joker-down        #
+A-C-home  = ["increment"]                                  # joker-up          # increment
+A-C-end = ["decrement"]                                    # joker-down        # decrement
 
 
 ####################################################################################################
@@ -121,17 +121,17 @@ A-C-end = ["decrement"]                                    # joker-down        #
 
 # C-h = [""]                                               # ctl-cmd-[         #
 # A-c = [""]                                               # ctl-cmd-]         #
-C-r = ["changed_file_picker"]                              # ctl-cmd-;         # file picker
-C-s = ["buffer_picker"]                                    # ctl-cmd-'         # command palette
-C-t = ["file_picker"]                                      # ctl-cmd-\         # buffer picker
+C-r = ["changed_file_picker"]                              # ctl-cmd-;         # delta picker
+C-s = ["buffer_picker"]                                    # ctl-cmd-'         # buffer picker
+C-t = ["file_picker"]                                      # ctl-cmd-\         # file picker
 # S-F1 = [""]                                              # ctl-cmd-,         #
 # S-F4 = [""]                                              # ctl-cmd-.         #
-S-F7 = ["command_palette"]                                 # ctl-cmd-/         #
+S-F7 = ["command_palette"]                                 # ctl-cmd-/         # command palette
 
 C-l = [":buffer-close"]                                    # ctl-cmd-bspace    # close tab
 C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
 C-j = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
-S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # ho rizontal split
+S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
 S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
 C-o = ["goto_last_accessed_file"]                          # clt-cmd-space     # last file
 
@@ -162,10 +162,10 @@ S-F2 = ["diagnostics_picker"]                              # tab-enter         #
 #                                                          # tab-cmd           #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # tab-space         # repeat motion
 
-# S-A-pageup = [""]                                        # tab-left          # prev diag
-# S-A-pagedown = [""]                                      # tab-right         # next diag
-S-A-home = ["goto_prev_diag"]                              # tab-up            # increment
-S-A-end = ["goto_next_diag"]                               # tab-down          # decrement
+# S-A-pageup = [""]                                        # tab-left          #
+# S-A-pagedown = [""]                                      # tab-right         #
+S-A-home = ["goto_prev_diag"]                              # tab-up            # prev diag
+S-A-end = ["goto_next_diag"]                               # tab-down          # next diag
 
 
 ####################################################################################################
