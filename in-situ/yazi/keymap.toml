@@ -33,8 +33,8 @@ keymap = [
 	# { on = "L", run = "forward", desc = "Go forward to the next directory" },
 
 	# Seeking
-	{ on = "k", run = "seek -5", desc = "Seek up 5 units in the preview" },
-	{ on = "j", run = "seek 5",  desc = "Seek down 5 units in the preview" },
+	{ on = "<C-x>", run = "seek -5", desc = "Seek up 5 units in the preview" },
+	{ on = "<C-y>", run = "seek 5",  desc = "Seek down 5 units in the preview" },
 
 	# Selection
 	{ on = "<Space>", run = [ "select --state=none" ], desc = "Toggle the current selection state" },
