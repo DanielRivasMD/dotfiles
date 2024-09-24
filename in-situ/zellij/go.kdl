@@ -15,7 +15,7 @@ layout {
     tab name="Files" {
         pane stacked=true split_direction="horizontal" {
             pane name="canvas" focus=true
-            pane name="explorer" cwd="src" command="broot" {
+            pane name="explorer" command="broot" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
             }
         }
