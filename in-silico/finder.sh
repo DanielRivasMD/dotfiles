@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# TODO: add to Lou
 # turn finder hidden files on
 finder_on() {
   defaults write com.apple.Finder AppleShowAllFiles true && killall Finder

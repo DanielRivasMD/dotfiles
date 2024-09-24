@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# TODO: add to Lou
 # bat delta
 diff() {
   git diff --name-only --relative --diff-filter=d | xargs bat --diff

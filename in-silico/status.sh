@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# TODO: add to Lou
 status() {
   # git status & git stash & git log
   source "${IN_SILICO}/.config/config.sh"
