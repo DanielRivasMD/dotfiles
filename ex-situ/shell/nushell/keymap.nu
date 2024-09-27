@@ -28,7 +28,7 @@ $env.config = {
     {
       name: previous_dir
       modifier: alt
-      keycode: char_x                                      # patch -> `clt-cmd-,`
+      keycode: char_v                                      # patch -> `alt-cmd-,`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -39,7 +39,7 @@ $env.config = {
     {
       name: next_dir
       modifier: alt
-      keycode: char_y                                      # patched -> `clt-cmd-.`
+      keycode: char_w                                      # patched -> `alt-cmd-.`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -50,7 +50,7 @@ $env.config = {
     {
       name: list_shells
       modifier: alt
-      keycode: char_z                                      # patched -> `clt-cmd-/`
+      keycode: char_z                                      # patched -> `alt-cmd-/`
       mode: emacs
       event: {
         send: executehostcommand,
@@ -79,6 +79,7 @@ $env.config = {
       event: { send: menuprevious }
     }
 
+    # TODO: update
     {
       name: history_menu
       modifier: control
