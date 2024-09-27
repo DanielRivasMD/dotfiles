@@ -1,16 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// TODO: update binds
 // TODO: relocate zellij configs into dirs
-// TODO: add detach bind
 keybinds clear-defaults=true {
 
     shared_except "locked" {
         bind "Ctrl q" { Quit; }                                                                    //
-        // bind "Alt a" {}
+
+        // bind "Alt a" {}                                                                         mode locked
         // bind "Alt b" {}
-        // bind "Alt c" {}
-        // bind "Alt d" {}
+        // bind "Alt c" {}                                                                         COLLISION
+        // bind "Alt d" {}                                                                         COLLISION
         // bind "Alt e" {}                                                                         COLLISION
         // bind "Alt f" {}
         // bind "Alt g" {}
@@ -37,16 +36,16 @@ keybinds clear-defaults=true {
         bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 //
         bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          //
         bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               //
-        // bind "Alt D" {}
-        // bind "Alt E" {}
-        // bind "Alt F" {}
-        // bind "Alt G" {}
+        // bind "Alt D" {}                                                                         mode scroll
+        // bind "Alt E" {}                                                                         mode search
+        // bind "Alt F" {}                                                                         mode resize
+        // bind "Alt G" {}                                                                         mode session
         bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }           //
         bind "Alt I" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }                      //
-        // bind "Alt J" {}
+        // bind "Alt J" {}                                                                         plugin room
         bind "Alt K" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }                        //
-        // bind "Alt L" {}
-        // bind "Alt M" {}
+        // bind "Alt L" {}                                                                         plugin jump-list
+        // bind "Alt M" {}                                                                         plugin monocle
         bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     //
         // bind "Alt O" {  }                                                                       COLLISION
         bind "Alt P" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
@@ -70,7 +69,7 @@ keybinds clear-defaults=true {
         bind "Alt a" { SwitchToMode "Normal"; }                                                    //
     }
 
-    shared_except "normal" "locked" "entersearch" {
+    shared_except "normal" "locked" "scroll" "entersearch" {
         bind "Enter" { SwitchToMode "Normal"; }                                                    //
     }
 
@@ -119,7 +118,8 @@ keybinds clear-defaults=true {
 
     scroll {
         bind "Alt D" { SwitchToMode "Normal"; }                                                    //
-        bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
+        bind "Enter" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
+        // bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
         bind "Up" { ScrollUp; }                                                                    //
         bind "Down" { ScrollDown; }                                                                //
         bind "PageUp" { PageScrollUp; }                                                            //
@@ -170,6 +170,12 @@ keybinds clear-defaults=true {
             }
         }
 
+        bind "Alt L" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" {
+                floating true; move_to_focused_tab true;
+            }
+        }
+
         bind "Alt M" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" {
                 floating true
@@ -177,13 +183,7 @@ keybinds clear-defaults=true {
             SwitchToMode "Normal"
         }
 
-        bind "Alt L" {
-            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" {
-                floating true; move_to_focused_tab true;
-            }
-        }
     }
-
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
