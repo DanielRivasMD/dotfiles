@@ -5,7 +5,7 @@
 # this is set to True, then the end of the statements must have a semi-colon.
 # If this is set to False then sql statements can't be split into multiple
 # lines. End of line (return) is considered as the end of the statement.
-multi_line = False
+multi_line = True
 
 # Destructive warning mode will alert you before executing a sql statement
 # that may cause harm to the database such as "drop table", "drop database"
@@ -67,10 +67,12 @@ autocompletion = True
 # \r - The current time, standard 12-hour time (1-12)
 # \s - Seconds of the current time
 # \x1b[...m - insert ANSI escape sequence
+# TODO: update
 prompt = '\d> '
 prompt_continuation = '-> '
 
 # Show/hide the informational toolbar with function keymap at the footer.
+# TODO: update
 show_bottom_toolbar = True
 
 # Skip intro info on startup and outro info on exit
