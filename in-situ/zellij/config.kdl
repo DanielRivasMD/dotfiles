@@ -24,6 +24,7 @@ keybinds clear-defaults=true {
         bind "Alt p" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }        //
         bind "Alt q" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }              //
         bind "Alt r" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }               //
+        // TODO: update
         bind "Alt s" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
         bind "Alt t" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }                  //
         // bind "Alt u" {  }                                                                       COLLISION
@@ -34,6 +35,7 @@ keybinds clear-defaults=true {
         // bind "Alt z" {}
 
         bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 //
+        // TODO: update
         bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          //
         bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               //
         // bind "Alt D" {}                                                                         mode scroll
