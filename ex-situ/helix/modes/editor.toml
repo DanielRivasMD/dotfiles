@@ -36,11 +36,11 @@ select = "block"
 left = ["mode", "spinner", "diagnostics"]
 center = ["file-modification-indicator", "file-name", "read-only-indicator", "version-control"]
 right = [
-  "selections",
-  "position",
-  "primary-selection-length",
-  "file-encoding",
-  "file-type",
+	"selections",
+	"position",
+	"primary-selection-length",
+	"file-encoding",
+	"file-type",
 ]
 separator = "│"
 mode.normal = "NORMAL"
@@ -63,6 +63,7 @@ skip-levels = 1
 
 ####################################################################################################
 
+# TODO: update invisibles
 [editor.whitespace.render]
 space = "all"
 tab = "all"
