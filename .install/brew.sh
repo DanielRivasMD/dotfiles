@@ -21,8 +21,19 @@ done < "${setupDir}/brew_casks.txt"
 
 ####################################################################################################
 
-# brew install fzf
-# brew install gh
-# brew install hub
+brew install fzf
+brew install gh
+brew install hub
+
+####################################################################################################
+
+brew install sqlite
+brew install litecli
+
+brew install mysql
+brew install mycli
+
+brew install postgresql
+brew install pgcli
 
 ####################################################################################################
