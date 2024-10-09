@@ -1,5 +1,6 @@
 ####################################################################################################
 
+# TODO: add to Lou
 # check daemon status
 check_daemon() {
   if test ! -f "${pueuedTracker}" && test ! -f "${pueueSocket}"

@@ -6,7 +6,7 @@ source "${IN_SILICO}/.config/config.sh"
 
 for i in {1.."${1}"};
 do
-  printf "${UBLUE}—${NC}"
+	printf "${UBLUE}—${NC}"
 done
 echo ""
 

@@ -6,7 +6,7 @@ source "${IN_SILICO}/.config/config.sh"
 
 for i in {1.."${1}"};
 do
-  printf "${IBLACK}‡${NC}"
+	printf "${IBLACK}‡${NC}"
 done
 echo ""
 
