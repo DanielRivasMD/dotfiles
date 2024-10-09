@@ -100,3 +100,12 @@ source "${IN_SILICO}/update.sh"
 . "${HOME}/.deno/env"
 
 ####################################################################################################
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/drivas/.bun/_bun" ] && source "/Users/drivas/.bun/_bun"
+
+####################################################################################################
