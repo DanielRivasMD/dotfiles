@@ -22,13 +22,13 @@ $env.PROMPT_MULTILINE_INDICATOR = "::: "
 # directories to search for scripts when calling source or use
 # by default, <nushell-config-dir>/scripts is added
 $env.NU_LIB_DIRS = [
-  ($nu.config-path | path dirname | path join 'scripts')
+	($nu.config-path | path dirname | path join 'scripts')
 ]
 
 # directories to search for plugin binaries when calling register
 # by default, <nushell-config-dir>/plugins is added
 $env.NU_PLUGIN_DIRS = [
-  ($nu.config-path | path dirname | path join 'plugins')
+	($nu.config-path | path dirname | path join 'plugins')
 ]
 
 ####################################################################################################
