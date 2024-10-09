@@ -3,8 +3,8 @@
 ####################################################################################################
 
 _call_just() {
-  just --choose
-  zle redisplay
+	just --choose
+	zle redisplay
 }
 
 zle -N _call_just
