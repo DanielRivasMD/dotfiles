@@ -3,6 +3,7 @@
 # Mnemosyne
 ####################################################################################################
 
+# TODO: update script
 # config
 source "${IN_SILICO}/.config/config.sh"
 
