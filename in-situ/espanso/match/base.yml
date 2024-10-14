@@ -76,206 +76,207 @@ matches:
   ####################################################################################################
 
   # accents
-  - trigger: "a//"
+  - trigger: ":a/:"
     replace: "á"
     propagate_case: true
 
-  - trigger: "e//"
+  - trigger: ":e/:"
     replace: "é"
     propagate_case: true
 
-  - trigger: "i//"
+  - trigger: ":i/:"
     replace: "í"
     propagate_case: true
 
-  - trigger: "o//"
+  - trigger: ":o/:"
     replace: "ó"
     propagate_case: true
 
-  - trigger: "u//"
+  - trigger: ":u/:"
     replace: "ú"
     propagate_case: true
 
-  - trigger: "a::"
+  - trigger: ":a::"
     replace: "ä"
     propagate_case: true
 
-  - trigger: "o::"
+  - trigger: ":o::"
     replace: "ö"
     propagate_case: true
 
-  - trigger: "u::"
+  - trigger: ":u::"
     replace: "ü"
     propagate_case: true
 
-  - trigger: "n--"
+  - trigger: ":n-:"
     replace: "ñ"
     propagate_case: true
 
   ####################################################################################################
 
   # symbols
-  - trigger: ";;a"
+  - trigger: ":;a:"
     replace: "α"
 
-  - trigger: ";;b"
+  - trigger: ":;b:"
     replace: "β"
 
-  - trigger: ";;c"
+  - trigger: ":;c:"
     replace: "ς"
 
-  - trigger: ";;d"
+  - trigger: ":;d:"
     replace: "δ"
 
-  - trigger: ";;e"
+  - trigger: ":;e:"
     replace: "ε"
 
-  - trigger: ";;f"
+  - trigger: ":;f:"
     replace: "φ"
 
-  - trigger: ";;g"
+  - trigger: ":;g:"
     replace: "γ"
 
-  - trigger: ";;h"
+  - trigger: ":;h:"
     replace: "η"
 
-  - trigger: ";;i"
+  - trigger: ":;i:"
     replace: "ι"
 
-  - trigger: ";;j"
+  - trigger: ":;j:"
     replace: "ξ"
 
-  - trigger: ";;k"
+  - trigger: ":;k:"
     replace: "κ"
 
-  - trigger: ";;l"
+  - trigger: ":;l:"
     replace: "λ"
 
-  - trigger: ";;m"
+  - trigger: ":;m:"
     replace: "μ"
 
-  - trigger: ";;n"
+  - trigger: ":;n:"
     replace: "ν"
 
-  - trigger: ";;o"
+  - trigger: ":;o:"
     replace: "ο"
 
-  - trigger: ";;p"
+  - trigger: ":;p:"
     replace: "π"
 
-  - trigger: ";;q"
+  - trigger: ":;q:"
     replace: "ϙ"
 
-  - trigger: ";;r"
+  - trigger: ":;r:"
     replace: "ρ"
 
-  - trigger: ";;s"
+  - trigger: ":;s:"
     replace: "σ"
 
-  - trigger: ";;t"
+  - trigger: ":;t:"
     replace: "τ"
 
-  - trigger: ";;u"
+  - trigger: ":;u:"
     replace: "Θ"
 
-  - trigger: ";;v"
+  - trigger: ":;v:"
     replace: "ω"
 
-  - trigger: ";;w"
+  - trigger: ":;w:"
     replace: "ψ"
 
-  - trigger: ";;x"
+  - trigger: ":;x:"
     replace: "χ"
 
-  - trigger: ";;y"
+  - trigger: ":;y:"
     replace: "υ"
 
-  - trigger: ";;z"
+  - trigger: ":;z:"
     replace: "ζ"
 
   ####################################################################################################
 
   # symbols
-  - trigger: ",,a"
+  - trigger: ":,a:"
     replace: "ą"
 
-  - trigger: ",,b"
+  - trigger: ":,b:"
     replace: "ß"
 
-  - trigger: ",,c"
+  - trigger: ":,c:"
     replace: "ç"
 
-  - trigger: ",,d"
+  - trigger: ":,d:"
     replace: "Δ"
 
-  - trigger: ",,e"
+  - trigger: ":,e:"
     replace: "ę"
 
-  - trigger: ",,f"
+  - trigger: ":,f:"
     replace: "ƒ"
 
-  - trigger: ",,g"
+  - trigger: ":,g:"
     replace: "ě"
 
-  - trigger: ",,h"
+  - trigger: ":,h:"
     replace: "и"
 
-  - trigger: ",,i"
+  - trigger: ":,i:"
     replace: "į"
 
-  - trigger: ",,j"
+  - trigger: ":,j:"
     replace: "ʌ"
 
-  - trigger: ",,k"
+  - trigger: ":,k:"
     replace: "ɒ"
 
-  - trigger: ",,l"
+  - trigger: ":,l:"
     replace: "Λ"
 
-  - trigger: ",,m"
+  - trigger: ":,m:"
     replace: "ɱ"
 
-  - trigger: ",,n"
+  - trigger: ":,n:"
     replace: "ŋ"
 
-  - trigger: ",,o"
+  - trigger: ":,o:"
     replace: "ǫ"
 
-  - trigger: ",,p"
+  - trigger: ":,p:"
     replace: "п"
 
-  - trigger: ",,q"
+  - trigger: ":,q:"
     replace: "ø"
 
-  - trigger: ",,r"
+  - trigger: ":,r:"
     replace: "я"
 
-  - trigger: ",,s"
+  - trigger: ":,s:"
     replace: "Σ"
 
-  # - trigger: ",,t"
+  # - trigger: ":,t:"
   #   replace: ""
 
-  - trigger: ",,u"
+  - trigger: ":,u:"
     replace: "ų"
 
-  - trigger: ",,v"
+  - trigger: ":,v:"
     replace: "Ω"
 
-  - trigger: ",,w"
+  - trigger: ":,w:"
     replace: "ł"
 
-  - trigger: ",,x"
+  - trigger: ":,x:"
     replace: "ʒ"
 
-  - trigger: ",,y"
+  - trigger: ":,y:"
     replace: "¥"
 
-  - trigger: ",,z"
+  - trigger: ":,z:"
     replace: "з"
 
-  ####################################################################################################
+  ################################################################################################:###:""#
 
+  # TODO: update
   # go
   - trigger: ":gp:"
     replace: "fmt.Println($|$)"
