@@ -201,7 +201,7 @@ file-types = ["go"]
 roots = ["Gopkg.toml", "go.mod"]
 comment-token = "//"
 language-servers = ["go_lsp"]
-indent = { tab-width = 4, unit = "\t" }
+indent = { tab-width = 2, unit = "\t" }
 auto-format = true
 # TODO: gopls needs utf-8 offsets?
 
