@@ -9,7 +9,7 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; joker
-  [:##caps_lock :!OTleft_command nil {:alone :escape}]                                             ;
+  [:##caps_lock :!Eright_command nil {:alone :escape}]                                             ;
 
   ; hyper
   [:#Pq :!OTCright_shift nil {:alone :q}]                                                          ;
