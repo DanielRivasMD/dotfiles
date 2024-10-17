@@ -77,16 +77,16 @@
 {:des "Option Mode - symbols"
  :rules
  [;
-  [:!E#Phyphen [:!Shyphen]]                                                                        ;
-  [:!E#Pequal_sign [:!Sequal_sign]]                                                                ;
-  [:!E#Popen_bracket [:!Sopen_bracket]]                                                            ;
-  [:!E#Pclose_bracket [:!Sclose_bracket]]                                                          ;
-  [:!E#Psemicolon [:!Ssemicolon]]                                                                  ;
-  [:!E#Pquote [:!Squote]]                                                                          ;
-  [:!E#Pbackslash [:!Sbackslash]]                                                                  ;
-  [:!E#Pcomma [:!Scomma]]                                                                          ;
-  [:!E#Pperiod [:!Speriod]]                                                                        ;
-  [:!E#Pslash [:!Sslash]]                                                                          ;
+  [:!E#Phyphen []]                                                                                 ;
+  [:!E#Pequal_sign []]                                                                             ;
+  [:!E#Popen_bracket []]                                                                           ;
+  [:!E#Pclose_bracket []]                                                                          ;
+  [:!E#Psemicolon []]                                                                              ;
+  [:!E#Pquote []]                                                                                  ;
+  [:!E#Pbackslash []]                                                                              ;
+  [:!E#Pcomma []]                                                                                  ;
+  [:!E#Pperiod []]                                                                                 ;
+  [:!E#Pslash []]                                                                                  ;
 
   ; [:!E#Pdelete_or_backspace []]                                                                  ;
   ; [:!E#Preturn_or_enter []]                                                                      ;
