@@ -6,31 +6,31 @@
 {:des "Joker Mode - numbers"
  :rules
  [;
-  ; [:!EQ#keypad_1 []]                                                                            ;
-  ; [:!EQ#keypad_2 []]                                                                            ;
-  ; [:!EQ#keypad_3 []]                                                                            ;
-  ; [:!EQ#keypad_4 []]                                                                            ;
-  ; [:!EQ#keypad_5 []]                                                                            ;
-  ; [:!EQ#keypad_6 []]                                                                            ;
-  ; [:!EQ#keypad_7 []]                                                                            ;
-  ; [:!EQ#keypad_8 []]                                                                            ;
-  ; [:!EQ#keypad_9 []]                                                                            ;
-  ; [:!EQ#keypad_0 []]                                                                            ;
-  ; [:!EQ#keypad_slash []]                                                                        ;
-  ; [:!EQ#keypad_asterisk []]                                                                     ;
+  ; [:!EQ#keypad_1 []]                                                                             ;
+  ; [:!EQ#keypad_2 []]                                                                             ;
+  ; [:!EQ#keypad_3 []]                                                                             ;
+  ; [:!EQ#keypad_4 []]                                                                             ;
+  ; [:!EQ#keypad_5 []]                                                                             ;
+  ; [:!EQ#keypad_6 []]                                                                             ;
+  ; [:!EQ#keypad_7 []]                                                                             ;
+  ; [:!EQ#keypad_8 []]                                                                             ;
+  ; [:!EQ#keypad_9 []]                                                                             ;
+  ; [:!EQ#keypad_0 []]                                                                             ;
+  ; [:!EQ#keypad_slash []]                                                                         ;
+  ; [:!EQ#keypad_asterisk []]                                                                      ;
 
-  ; [:!EQ#1 []]                                                                                   ;
-  ; [:!EQ#2 []]                                                                                   ;
-  ; [:!EQ#3 []]                                                                                   ;
-  ; [:!EQ#4 []]                                                                                   ;
-  ; [:!EQ#5 []]                                                                                   ;
-  ; [:!EQ#6 []]                                                                                   ;
-  ; [:!EQ#7 []]                                                                                   ;
-  ; [:!EQ#8 []]                                                                                   ;
-  ; [:!EQ#9 []]                                                                                   ;
-  ; [:!EQ#0 []]                                                                                   ;
-  [:!EQ#Phyphen [:f13]]                                                                           ;
-  [:!EQ#Pequal_sign [:f14]]                                                                       ;
+  ; [:!EQ#1 []]                                                                                    ;
+  ; [:!EQ#2 []]                                                                                    ;
+  ; [:!EQ#3 []]                                                                                    ;
+  ; [:!EQ#4 []]                                                                                    ;
+  ; [:!EQ#5 []]                                                                                    ;
+  ; [:!EQ#6 []]                                                                                    ;
+  ; [:!EQ#7 []]                                                                                    ;
+  ; [:!EQ#8 []]                                                                                    ;
+  ; [:!EQ#9 []]                                                                                    ;
+  ; [:!EQ#0 []]                                                                                    ;
+  [:!EQ#Phyphen [:f13]]                                                                            ;
+  [:!EQ#Pequal_sign [:f14]]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,30 +39,30 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!EQ#Popen_bracket [:f8]]                                                                      ;
-  [:!EQ#Pclose_bracket [:f9]]                                                                     ;
-  [:!EQ#Psemicolon [:f10]]                                                                        ;
-  [:!EQ#Pquote [:f11]]                                                                            ;
-  [:!EQ#Pbackslash [:f12]]                                                                        ;
-  [:!EQ#Pcomma [:f18]]                                                                            ;
-  [:!EQ#Pperiod [:f19]]                                                                           ;
-  [:!EQ#Pslash [:f20]]                                                                            ;
+  [:!EQ#Popen_bracket [:f8]]                                                                       ;
+  [:!EQ#Pclose_bracket [:f9]]                                                                      ;
+  [:!EQ#Psemicolon [:f10]]                                                                         ;
+  [:!EQ#Pquote [:f11]]                                                                             ;
+  [:!EQ#Pbackslash [:f12]]                                                                         ;
+  [:!EQ#Pcomma [:f18]]                                                                             ;
+  [:!EQ#Pperiod [:f19]]                                                                            ;
+  [:!EQ#Pslash [:f20]]                                                                             ;
 
-  [:!EQ#Pdelete_or_backspace [:f1]]                                                               ;
-  [:!EQ#Preturn_or_enter [:f2]]                                                                   ;
-  [:!EQ#Pright_shift [:f4]]                                                                       ;
-  [:!EQ#Pright_option [:f5]]                                                                      ;
-  [:!EQ#Pright_command [:f6]]                                                                     ;
-  ; [:!EQ#Pspacebar []]                                                                           ;
+  [:!EQ#Pdelete_or_backspace [:f1]]                                                                ;
+  [:!EQ#Preturn_or_enter [:f2]]                                                                    ;
+  [:!EQ#Pright_shift [:f4]]                                                                        ;
+  [:!EQ#Pright_option [:f5]]                                                                       ;
+  [:!EQ#Pright_command [:f6]]                                                                      ;
+  ; [:!EQ#Pspacebar []]                                                                            ;
 
-  ; [:!EQ#Pleft_command []]                                                                       ;
-  ; [:!EQ#Pleft_option []]                                                                        ;
-  ; [:!EQ#Pleft_control []]                                                                       ;
-  ; [:!EQ#Pleft_shift []]                                                                         ;
-  ; [:!EQ#Pcaps_lock []]                                                                          ;
-  ; [:!EQ#Ptab []]                                                                 NOT AVAILABLE  ;
-  ; [:!EQ#Pnon_us_backslash []]                                                                   ;
-  ; [:!EQ#Pescape []]                                                                             ;
+  ; [:!EQ#Pleft_command []]                                                                        ;
+  ; [:!EQ#Pleft_option []]                                                                         ;
+  ; [:!EQ#Pleft_control []]                                                                        ;
+  ; [:!EQ#Pleft_shift []]                                                                          ;
+  ; [:!EQ#Pcaps_lock []]                                                                           ;
+  ; [:!EQ#Ptab []]                                                                  NOT AVAILABLE  ;
+  ; [:!EQ#Pnon_us_backslash []]                                                                    ;
+  ; [:!EQ#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
