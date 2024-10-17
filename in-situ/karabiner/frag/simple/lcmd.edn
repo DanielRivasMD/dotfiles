@@ -27,7 +27,7 @@
   ; [:!C#P6 []]                                                                                    ;
   ; [:!C#P7 []]                                                                                    ;
   ; [:!C#P8 []]                                                                                    ;
-  [:!C#P9 [:period :!S9]]                                                      ; '.('              ;
+  ; [:!C#P9 []]
   ; [:!C#P0 []]                                                                                    ;
   ; [:!C#Phyphen []]                                                                               ;
   ; [:!C#Pequal_sign []]                                                                           ;
@@ -60,7 +60,7 @@
   ; [:!CS#P6 []]                                                                                   ;
   ; [:!CS#P7 []]                                                                                   ;
   ; [:!CS#P8 []]                                                                                   ;
-  [:!CS#P9 [:!Ssemicolon :!S9]]                                                ; ':('              ;
+  ; [:!CS#P9 []]                                                                                   ;
   ; [:!CS#P0 []]                                                                                   ;
   ; [:!CS#Phyphen []]                                                                              ;
   ; [:!CS#Pequal_sign []]                                                                          ;
@@ -72,31 +72,31 @@
 {:des "Control Mode - keypad"
  :rules
  [;
-  ; [:!CEQ#Pkeypad_1 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_2 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_3 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_4 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_5 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_6 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_7 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_8 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_9 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_0 []]                                                                            ;
-  ; [:!CEQ#Pkeypad_slash []]                                                                        ;
-  ; [:!CEQ#Pkeypad_asterisk []]                                                                     ;
+  ; [:!CEQ#Pkeypad_1 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_2 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_3 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_4 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_5 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_6 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_7 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_8 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_9 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_0 []]                                                                           ;
+  ; [:!CEQ#Pkeypad_slash []]                                                                       ;
+  ; [:!CEQ#Pkeypad_asterisk []]                                                                    ;
 
-  ; [:!CEQ#P1 []]                                                                                   ;
-  ; [:!CEQ#P2 []]                                                                                   ;
-  ; [:!CEQ#P3 []]                                                                                   ;
-  ; [:!CEQ#P4 []]                                                                                   ;
-  ; [:!CEQ#P5 []]                                                                                   ;
-  ; [:!CEQ#P6 []]                                                                                   ;
-  ; [:!CEQ#P7 []]                                                                                   ;
-  ; [:!CEQ#P8 []]                                                                                   ;
-  [:!CEQ#P9 [:!Ssemicolon :!S9]]                                                ; ':('              ;
-  ; [:!CEQ#P0 []]                                                                                   ;
-  ; [:!CEQ#Phyphen []]                                                                              ;
-  ; [:!CEQ#Pequal_sign []]                                                                          ;
+  ; [:!CEQ#P1 []]                                                                                  ;
+  ; [:!CEQ#P2 []]                                                                                  ;
+  ; [:!CEQ#P3 []]                                                                                  ;
+  ; [:!CEQ#P4 []]                                                                                  ;
+  ; [:!CEQ#P5 []]                                                                                  ;
+  ; [:!CEQ#P6 []]                                                                                  ;
+  ; [:!CEQ#P7 []]                                                                                  ;
+  ; [:!CEQ#P8 []]                                                                                  ;
+  ; [:!CEQ#P9 []]                                                                                  ;
+  ; [:!CEQ#P0 []]                                                                                  ;
+  ; [:!CEQ#Phyphen []]                                                                             ;
+  ; [:!CEQ#Pequal_sign []]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -105,20 +105,20 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!C#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]   ; ' %<+% '          ;
-  [:!C#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]] ; ' %+>% '          ;
-  [:!C#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                        ; ' %$% '           ;
-  [:!C#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                  ; ' %T>% '          ;
-  [:!C#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]          ; ' %<>% '          ;
-  [:!C#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                        ; ' %<% '           ;
-  [:!C#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                      ; ' %>% '           ;
-  [:!C#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                  ; ' %!>% '          ;
+  ; [:!C#Popen_bracket []]                                                                         ;
+  ; [:!C#Pclose_bracket []]                                                                        ;
+  ; [:!C#Psemicolon []]                                                                            ;
+  ; [:!C#Pquote []]                                                                                ;
+  ; [:!C#Pbackslash []]                                                                            ;
+  ; [:!C#Pcomma []]                                                                                ;
+  ; [:!C#Pperiod []]                                                                               ;
+  ; [:!C#Pslash []]                                                                                ;
 
   ; [:!C#Pdelete_or_backspace []]                                                                  ;
   ; [:!C#Preturn_or_enter []]                                                       COLLISION      ;
-  [:!C#Pright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]            ; ' := '            ;
-  [:!C#Pright_option [:spacebar :hyphen :!Speriod :spacebar]]                  ; ' -> '            ;
-  [:!C#Pright_command [:spacebar :!Scomma :hyphen :spacebar]]                  ; ' <- '            ;
+  ; [:!C#Pright_shift []]                                                                          ;
+  ; [:!C#Pright_option []]                                                                         ;
+  ; [:!C#Pright_command []]                                                                        ;
   [:!C#Pspacebar [:caps_lock]]                                                                     ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
@@ -149,8 +149,8 @@
   ; [:!CS#Pdelete_or_backspace []]                                                                 ;
   ; [:!CS#Preturn_or_enter []]                                                                     ;
   ; [:!CS#Pright_shift []]                                                                         ;
-  [:!CS#Pright_option [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]       ; ' ->> '           ;
-  [:!CS#Pright_command [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]        ; ' <<- '           ;
+  ; [:!CS#Pright_option []]                                                                        ;
+  ; [:!CS#Pright_command []]                                                                       ;
   ; [:!CS#Pspacebar []]                                                                            ;
 
   ; [:!CS#Pleft_command []]                                                         NOT AVAILABLE  ;
@@ -169,30 +169,30 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  ; [:!CEQ#Popen_bracket []]                                                                        ;
-  ; [:!CEQ#Pclose_bracket []]                                                                       ;
-  ; [:!CEQ#Psemicolon []]                                                                           ;
-  ; [:!CEQ#Pquote []]                                                                               ;
-  ; [:!CEQ#Pbackslash []]                                                                           ;
-  ; [:!CEQ#Pcomma []]                                                                               ;
-  ; [:!CEQ#Pperiod []]                                                                              ;
-  ; [:!CEQ#Pslash []]                                                                               ;
+  ; [:!CEQ#Popen_bracket []]                                                                       ;
+  ; [:!CEQ#Pclose_bracket []]                                                                      ;
+  ; [:!CEQ#Psemicolon []]                                                                          ;
+  ; [:!CEQ#Pquote []]                                                                              ;
+  ; [:!CEQ#Pbackslash []]                                                                          ;
+  ; [:!CEQ#Pcomma []]                                                                              ;
+  ; [:!CEQ#Pperiod []]                                                                             ;
+  ; [:!CEQ#Pslash []]                                                                              ;
 
-  ; [:!CEQ#Pdelete_or_backspace []]                                                                 ;
-  ; [:!CEQ#Preturn_or_enter []]                                                                     ;
-  ; [:!CEQ#Pright_shift []]                                                                         ;
-  [:!CEQ#Pright_option [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]       ; ' ->> '           ;
-  [:!CEQ#Pright_command [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]        ; ' <<- '           ;
-  ; [:!CEQ#Pspacebar []]                                                                            ;
+  ; [:!CEQ#Pdelete_or_backspace []]                                                                ;
+  ; [:!CEQ#Preturn_or_enter []]                                                                    ;
+  ; [:!CEQ#Pright_shift []]                                                                        ;
+  ; [:!CEQ#Pright_option []]                                                                       ;
+  ; [:!CEQ#Pright_command []]                                                                      ;
+  ; [:!CEQ#Pspacebar []]                                                                           ;
 
-  ; [:!CEQ#Pleft_command []]                                                         NOT AVAILABLE  ;
-  ; [:!CEQ#Pleft_option []]                                                                         ;
-  ; [:!CEQ#Pleft_control []]                                                                        ;
-  ; [:!CEQ#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!CEQ#Pcaps_lock []]                                                                           ;
-  ; [:!CEQ#Ptab []]                                                                                 ;
-  ; [:!CEQ#Pnon_us_backslash []]                                                                    ;
-  ; [:!CEQ#Pescape []]                                                                              ;
+  ; [:!CEQ#Pleft_command []]                                                        NOT AVAILABLE  ;
+  ; [:!CEQ#Pleft_option []]                                                                        ;
+  ; [:!CEQ#Pleft_control []]                                                                       ;
+  ; [:!CEQ#Pleft_shift []]                                                          NOT AVAILABLE  ;
+  ; [:!CEQ#Pcaps_lock []]                                                                          ;
+  ; [:!CEQ#Ptab []]                                                                                ;
+  ; [:!CEQ#Pnon_us_backslash []]                                                                   ;
+  ; [:!CEQ#Pescape []]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
