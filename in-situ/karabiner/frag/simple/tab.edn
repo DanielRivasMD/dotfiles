@@ -29,8 +29,8 @@
   ; [:!WQR#P8 []]                                                                                  ;
   ; [:!WQR#P9 []]                                                                                  ;
   ; [:!WQR#P0 []]                                                                                  ;
-  [:!WQR#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
-  [:!WQR#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
+  ; [:!WQR#Phyphen []]                                                                             ;
+  ; [:!WQR#Pequal_sign []]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -48,11 +48,11 @@
   [:!WQR#Pperiod [:!Sf19]]                                                                         ;
   [:!WQR#Pslash [:!Sf20]]                                                                          ;
 
-  [:!WQR#Pdelete_or_backspace [:equal_sign :equal_sign]]                       ; '=='              ;
+  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
   [:!WQR#Preturn_or_enter [:!Sf2]]                                                                 ;
-  [:!WQR#Pright_shift [:!S1 :!S1]]                                             ; '!!'              ;
-  [:!WQR#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
-  [:!WQR#Pright_command [:slash :slash]]                                       ; '//'              ;
+  ; [:!WQR#Pright_shift []]                                                                        ;
+  ; [:!WQR#Pright_option []]                                                                       ;
+  ; [:!WQR#Pright_command []]                                                                      ;
   [:!WQR#Pspacebar [:f7]]                                                                          ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
