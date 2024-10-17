@@ -1,6 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: write a fn actived layer for built-in keyboard
 ; key modifiers
 {:des "Modifier key remappings"
  :rules
@@ -19,7 +18,6 @@
 
   ; modifiers
   [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                                               ;
-  ; [:#Pspacebar :spacebar nil {:alone [:spacebar]}]                                               ;
   [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]                                  ;
 
   ; lefts
@@ -34,7 +32,6 @@
   [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]                                               ;
   [:#Pright_option :right_option nil {:alone [:!Of3]}]                                             ;
   [:#Pright_command :right_command nil {:alone [:!Cf3]}]                                           ;
-  ; [:#Preturn_or_enter :return_or_enter nil {:alone [:]}]                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
