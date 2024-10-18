@@ -41,12 +41,12 @@
  [;
   [:!TC#Popen_bracket [:!Th]]                                                                      ;
   [:!TC#Pclose_bracket [:!Oc]]                                                                     ;
-  [:!TC#Psemicolon [:!Tr]]                                                                         ;
-  [:!TC#Pquote [:!Ts]]                                                                             ;
-  [:!TC#Pbackslash [:!Tt]]                                                                         ;
+  ; [:!TC#Psemicolon []]                                                                           ;
+  ; [:!TC#Pquote []]                                                                               ;
+  ; [:!TC#Pbackslash []]                                                                           ;
   [:!TC#Pcomma [:!Sf1]]                                                                            ;
   [:!TC#Pperiod [:!Sf4]]                                                                           ;
-  [:!TC#Pslash [:!Sf7]]                                                                            ;
+  ; [:!TC#Pslash []]                                                                               ;
 
   [:!TC#Pdelete_or_backspace [:!Tl]]                                                               ;
   [:!TC#Preturn_or_enter [:!Tg]]                                                                   ;
