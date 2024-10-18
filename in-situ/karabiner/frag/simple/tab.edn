@@ -39,21 +39,21 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!WQR#Popen_bracket [:!Sf8]]                                                                    ;
-  [:!WQR#Pclose_bracket [:!Sf9]]                                                                   ;
-  [:!WQR#Psemicolon [:!Sf10]]                                                                      ;
-  [:!WQR#Pquote [:!Sf11]]                                                                          ;
-  [:!WQR#Pbackslash [:!Sf12]]                                                                      ;
-  [:!WQR#Pcomma [:!Sf18]]                                                                          ;
-  [:!WQR#Pperiod [:!Sf19]]                                                                         ;
-  [:!WQR#Pslash [:!Sf20]]                                                                          ;
+  ; [:!WQR#Popen_bracket []]                                                                       ;
+  ; [:!WQR#Pclose_bracket []]                                                                      ;
+  ; [:!WQR#Psemicolon []]                                                                          ;
+  ; [:!WQR#Pquote []]                                                                              ;
+  ; [:!WQR#Pbackslash []]                                                                          ;
+  ; [:!WQR#Pcomma []]                                                                              ;
+  ; [:!WQR#Pperiod []]                                                                             ;
+  ; [:!WQR#Pslash []]                                                                              ;
 
   ; [:!WQR#Pdelete_or_backspace []]                                                                ;
-  [:!WQR#Preturn_or_enter [:!Sf2]]                                                                 ;
+  ; [:!WQR#Preturn_or_enter []]                                                                    ;
   ; [:!WQR#Pright_shift []]                                                                        ;
   ; [:!WQR#Pright_option []]                                                                       ;
   ; [:!WQR#Pright_command []]                                                                      ;
-  [:!WQR#Pspacebar [:f7]]                                                                          ;
+  ; [:!WQR#Pspacebar []]                                                                           ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;
