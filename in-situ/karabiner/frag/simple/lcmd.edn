@@ -196,3 +196,73 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - alphabet"
+ :rules
+ [;
+  [:!C#Pa [:!Ssemicolon :a :slash :!Ssemicolon]]                                                   ;
+  ; [:!C#Pb []]                                                                                    ;
+  ; [:!C#Pc []]                                                                                    ;
+  ; [:!C#Pd []]                                                                                    ;
+  [:!C#Pe [:!Ssemicolon :e :slash :!Ssemicolon]]                                                   ;
+  ; [:!C#Pf []]                                                                                    ;
+  ; [:!C#Pg []]                                                                                    ;
+  ; [:!C#Ph []]                                                                                    ;
+  [:!C#Pi [:!Ssemicolon :i :slash :!Ssemicolon]]                                                   ;
+  ; [:!C#Pj []]                                                                                    ;
+  ; [:!C#Pk []]                                                                                    ;
+  ; [:!C#Pl []]                                                                                    ;
+  ; [:!C#Pm []]                                                                                    ;
+  ; [:!C#Pn []]                                                                                    ;
+  [:!C#Po [:!Ssemicolon :o :slash :!Ssemicolon]]                                                   ;
+  ; [:!C#Pp []]                                                                                    ;
+  ; [:!C#Pq []]                                                                                    ;
+  ; [:!C#Pr []]                                                                                    ;
+  ; [:!C#Ps []]                                                                                    ;
+  ; [:!C#Pt []]                                                                                    ;
+  [:!C#Pu [:!Ssemicolon :u :slash :!Ssemicolon]]                                                   ;
+  ; [:!C#Pv []]                                                                                    ;
+  ; [:!C#Pw []]                                                                                    ;
+  ; [:!C#Px []]                                                                                    ;
+  ; [:!C#Py []]                                                                                    ;
+  ; [:!C#Pz []]                                                                                    ;
+  ; [:!C#Pright_control []]                                                                        ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - alphabet"
+ :rules
+ [;
+  [:!CS#Pa [:!Ssemicolon :a :!Ssemicolon :!Ssemicolon]]                                            ;
+  ; [:!CS#Pb []]                                                                                   ;
+  ; [:!CS#Pc []]                                                                                   ;
+  ; [:!CS#Pd []]                                                                                   ;
+  ; [:!CS#Pe []]                                                                                   ;
+  ; [:!CS#Pf []]                                                                                   ;
+  ; [:!CS#Pg []]                                                                                   ;
+  ; [:!CS#Ph []]                                                                                   ;
+  ; [:!CS#Pi []]                                                                                   ;
+  ; [:!CS#Pj []]                                                                                   ;
+  ; [:!CS#Pk []]                                                                                   ;
+  ; [:!CS#Pl []]                                                                                   ;
+  ; [:!CS#Pm []]                                                                                   ;
+  [:!CS#Pn [:!Ssemicolon :n :hyphen :!Ssemicolon]]                                                 ;
+  [:!CS#Po [:!Ssemicolon :o :!Ssemicolon :!Ssemicolon]]                                            ;
+  ; [:!CS#Pp []]                                                                                   ;
+  ; [:!CS#Pq []]                                                                                   ;
+  ; [:!CS#Pr []]                                                                                   ;
+  ; [:!CS#Ps []]                                                                                   ;
+  ; [:!CS#Pt []]                                                                                   ;
+  [:!CS#Pu [:!Ssemicolon :u :!Ssemicolon :!Ssemicolon]]                                            ;
+  ; [:!CS#Pv []]                                                                                   ;
+  ; [:!CS#Pw []]                                                                                   ;
+  ; [:!CS#Px []]                                                                                   ;
+  ; [:!CS#Py []]                                                                                   ;
+  ; [:!CS#Pz []]                                                                                   ;
+  ; [:!CS#Pright_control []]                                                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
