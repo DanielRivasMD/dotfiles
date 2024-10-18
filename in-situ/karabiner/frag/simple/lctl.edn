@@ -72,31 +72,31 @@
 {:des "Control Mode - keypad"
  :rules
  [;
-  ; [:!TEQ#Pkeypad_1 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_2 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_3 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_4 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_5 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_6 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_7 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_8 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_9 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_0 []]                                                                           ;
-  ; [:!TEQ#Pkeypad_slash []]                                                                       ;
-  ; [:!TEQ#Pkeypad_asterisk []]                                                                    ;
+  ; [:!TEWQ#Pkeypad_1 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_2 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_3 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_4 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_5 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_6 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_7 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_8 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_9 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_0 []]                                                                          ;
+  ; [:!TEWQ#Pkeypad_slash []]                                                                      ;
+  ; [:!TEWQ#Pkeypad_asterisk []]                                                                   ;
 
-  ; [:!TEQ#P1 []]                                                                                  ;
-  ; [:!TEQ#P2 []]                                                                                  ;
-  ; [:!TEQ#P3 []]                                                                                  ;
-  ; [:!TEQ#P4 []]                                                                                  ;
-  ; [:!TEQ#P5 []]                                                                                  ;
-  ; [:!TEQ#P6 []]                                                                                  ;
-  ; [:!TEQ#P7 []]                                                                                  ;
-  ; [:!TEQ#P8 []]                                                                                  ;
-  [:!TEQ#P9 [:!S9 :!S9]]                                                       ; '(('              ;
-  [:!TEQ#P0 [:!S0 :!S0]]                                                       ; '))'              ;
-  [:!TEQ#Phyphen [:hyphen :hyphen]]                                            ; '--'              ;
-  [:!TEQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                            ; '++'              ;
+  ; [:!TEWQ#P1 []]                                                                                 ;
+  ; [:!TEWQ#P2 []]                                                                                 ;
+  ; [:!TEWQ#P3 []]                                                                                 ;
+  ; [:!TEWQ#P4 []]                                                                                 ;
+  ; [:!TEWQ#P5 []]                                                                                 ;
+  ; [:!TEWQ#P6 []]                                                                                 ;
+  ; [:!TEWQ#P7 []]                                                                                 ;
+  ; [:!TEWQ#P8 []]                                                                                 ;
+  [:!TEWQ#P9 [:!S9 :!S9]]                                                      ; '(('              ;
+  [:!TEWQ#P0 [:!S0 :!S0]]                                                      ; '))'              ;
+  [:!TEWQ#Phyphen [:hyphen :hyphen]]                                           ; '--'              ;
+  [:!TEWQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                           ; '++'              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -151,7 +151,7 @@
   [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]      ; ' .=> '           ;
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                 ; ' .** '           ;
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]            ; ' .// '           ;
-  ; [:!TS#Pspacebar []]                                                                            ;
+  [:!TS#Pspacebar [:caps_lock]]                                                                    ;
 
   ; [:!TS#Pleft_command []]                                                                        ;
   ; [:!TS#Pleft_option []]                                                                         ;
@@ -169,30 +169,30 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:!TEQ#Popen_bracket []]                                                                       ;
-  ; [:!TEQ#Pclose_bracket []]                                                                      ;
-  ; [:!TEQ#Psemicolon []]                                                                          ;
-  ; [:!TEQ#Pquote []]                                                                              ;
-  [:!TEQ#Pbackslash [:!Sbackslash :!Sbackslash]]                               ; '||'              ;
-  [:!TEQ#Pcomma [:!Scomma :!Scomma]]                                           ; '<<'              ;
-  [:!TEQ#Pperiod [:!Speriod :!Speriod]]                                        ; '>>'              ;
-  ; [:!TEQ#Pslash []]                                                                              ;
+  ; [:!TEWQ#Popen_bracket []]                                                                      ;
+  ; [:!TEWQ#Pclose_bracket []]                                                                     ;
+  ; [:!TEWQ#Psemicolon []]                                                                         ;
+  ; [:!TEWQ#Pquote []]                                                                             ;
+  [:!TEWQ#Pbackslash [:!Sbackslash :!Sbackslash]]                              ; '||'              ;
+  [:!TEWQ#Pcomma [:!Scomma :!Scomma]]                                          ; '<<'              ;
+  [:!TEWQ#Pperiod [:!Speriod :!Speriod]]                                       ; '>>'              ;
+  ; [:!TEWQ#Pslash []]                                                                             ;
 
-  ; [:!TEQ#Pdelete_or_backspace                                                                    ;
-  [:!TEQ#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]];' === '       ;
-  ; [:!TEQ#Pright_shift                                                                            ;
-  [:!TEQ#Pright_option [:!S8 :!S8]]                                            ; '**'              ;
-  [:!TEQ#Pright_command [:slash :slash]]                                       ; '//'              ;
-  ; [:!TEQ#Pspacebar []]                                                                           ;
-
-  ; [:!TEQ#Pleft_command []]                                                                       ;
-  ; [:!TEQ#Pleft_option []]                                                                        ;
-  ; [:!TEQ#Pleft_control []]                                                        NOT AVAILABLE  ;
-  ; [:!TEQ#Pleft_shift []]                                                          NOT AVAILABLE  ;
-  ; [:!TEQ#Pcaps_lock []]                                                                          ;
-  ; [:!TEQ#Ptab []]                                                                                ;
-  ; [:!TEQ#Pnon_us_backslash []]                                                                   ;
-  ; [:!TEQ#Pescape []]                                                                             ;
+  ; [:!TEWQ#Pdelete_or_backspace                                                                   ;
+  [:!TEWQ#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]] ; ' === '    ;
+  ; [:!TEWQ#Pright_shift                                                                           ;
+  [:!TEWQ#Pright_option [:!S8 :!S8]]                                           ; '**'              ;
+  [:!TEWQ#Pright_command [:slash :slash]]                                      ; '//'              ;
+  [:!TEWQ#Pspacebar [:!Tc]]                                                                        ;
+ 
+  ; [:!TEWQ#Pleft_command []]                                                                      ;
+  ; [:!TEWQ#Pleft_option []]                                                                       ;
+  ; [:!TEWQ#Pleft_control []]                                                       NOT AVAILABLE  ;
+  ; [:!TEWQ#Pleft_shift []]                                                                        ;
+  ; [:!TEWQ#Pcaps_lock []]                                                          NOT AVAILABLE  ;
+  ; [:!TEWQ#Ptab []]                                                                               ;
+  ; [:!TEWQ#Pnon_us_backslash []]                                                                  ;
+  ; [:!TEWQ#Pescape []]                                                                            ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
