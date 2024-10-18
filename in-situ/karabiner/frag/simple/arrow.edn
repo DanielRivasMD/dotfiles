@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: relocate
 ; Alacritty
 {:des "Alacritty - Arrow"
  :rules
@@ -53,10 +54,16 @@
   [:!W#Pdown_arrow :!Wend [:term]]                                                                 ;
 
   ; grave-shift
-  [:!WS#Pleft_arrow :!WSpage_up [:term]]                                                           ;
-  [:!WS#Pright_arrow :!WSpage_down [:term]]                                                        ;
-  [:!WS#Pup_arrow :!WShome [:term]]                                                                ;
-  [:!WS#Pdown_arrow :!WSend [:term]]                                                               ;
+  [:!WS#Pleft_arrow :!Tb [:term]]                                                                  ;
+  [:!WS#Pright_arrow :!Tf [:term]]                                                                 ;
+  [:!WS#Pup_arrow :!Tn [:term]]                                                                    ;
+  [:!WS#Pdown_arrow :!Tp [:term]]                                                                  ;
+
+  ; ; grave-shift
+  ; [:!WS#Pleft_arrow :!WSpage_up [:term]]                                                           ;
+  ; [:!WS#Pright_arrow :!WSpage_down [:term]]                                                        ;
+  ; [:!WS#Pup_arrow :!WShome [:term]]                                                                ;
+  ; [:!WS#Pdown_arrow :!WSend [:term]]                                                               ;
 
   ; joker
   [:!OTC#Pleft_arrow :!OTpage_up [:term]]                                                          ;
@@ -64,11 +71,11 @@
   [:!OTC#Pup_arrow :!OThome [:term]]                                                               ;
   [:!OTC#Pdown_arrow :!OTend [:term]]                                                              ;
 
-  ; ctl-cmd
-  [:!TC#Pleft_arrow :!Tb [:term]]                                                                  ;
-  [:!TC#Pright_arrow :!Tf [:term]]                                                                 ;
-  [:!TC#Pup_arrow :!Tn [:term]]                                                                    ;
-  [:!TC#Pdown_arrow :!Tp [:term]]                                                                  ;
+  ; ; ctl-cmd
+  ; [:!TC#Pleft_arrow :!Tb [:term]]                                                                  ;
+  ; [:!TC#Pright_arrow :!Tf [:term]]                                                                 ;
+  ; [:!TC#Pup_arrow :!Tn [:term]]                                                                    ;
+  ; [:!TC#Pdown_arrow :!Tp [:term]]                                                                  ;
 
   ; tab
   [:!WQR#Pleft_arrow :!OSpage_up [:term]]                                                          ;
