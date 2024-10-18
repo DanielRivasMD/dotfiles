@@ -72,21 +72,20 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: update symbols
 ; option
 {:des "Option Mode - symbols"
  :rules
  [;
-  [:!E#Phyphen []]                                                                                 ;
-  [:!E#Pequal_sign []]                                                                             ;
-  [:!E#Popen_bracket []]                                                                           ;
-  [:!E#Pclose_bracket []]                                                                          ;
-  [:!E#Psemicolon []]                                                                              ;
-  [:!E#Pquote []]                                                                                  ;
-  [:!E#Pbackslash []]                                                                              ;
-  [:!E#Pcomma []]                                                                                  ;
-  [:!E#Pperiod []]                                                                                 ;
-  [:!E#Pslash []]                                                                                  ;
+  ; [:!E#Phyphen []]                                                                               ;
+  ; [:!E#Pequal_sign []]                                                                           ;
+  ; [:!E#Popen_bracket []]                                                                         ;
+  ; [:!E#Pclose_bracket []]                                                                        ;
+  ; [:!E#Psemicolon []]                                                                            ;
+  ; [:!E#Pquote []]                                                                                ;
+  ; [:!E#Pbackslash []]                                                                            ;
+  ; [:!E#Pcomma []]                                                                                ;
+  ; [:!E#Pperiod []]                                                                               ;
+  ; [:!E#Pslash []]                                                                                ;
 
   ; [:!E#Pdelete_or_backspace []]                                                                  ;
   ; [:!E#Preturn_or_enter []]                                                                      ;
