@@ -22,11 +22,9 @@
 
   ; lefts
   [:#Ptab :!WQright_shift nil {:alone [:tab]}]                                                     ;
-  ; [:#Pleft_shift :left_shift nil {:alone [:]}]                                                   ;
   [:#Pleft_control :left_control nil {:alone [:!Tf3]}]                                             ;
   [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ;
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ;
-  ; [:#Pleft_option :left_option [:term] {:alone [:!OTf3]}]                                          ;
 
   ; rights
   [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]                                               ;
