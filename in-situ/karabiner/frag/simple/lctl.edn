@@ -197,29 +197,29 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; shift
-{:des "Shift Mode - alphabet"
+; control
+{:des "Control Mode - alphabet"
  :rules
  [;
-  ; [:!T#Pa []]                                                                                    ;
+  [:!T#Pa [:!Ssemicolon :g :d :l :!Ssemicolon]]                      ;
   ; [:!T#Pb []]                                                                                    ;
   ; [:!T#Pc []]                                                                                    ;
-  ; [:!T#Pd []]                                                                                    ;
+  [:!T#Pd [:!Ssemicolon :d :r :!Ssemicolon]]                                                       ;
   ; [:!T#Pe []]                                                                                    ;
   ; [:!T#Pf []]                                                                                    ;
-  ; [:!T#Pg []]                                                                                    ;
+  [:!T#Pg [:!Ssemicolon :g :m :a :i :l :!Ssemicolon]]                                              ;
   ; [:!T#Ph []]                                                                                    ;
-  ; [:!T#Pi []]                                                                                    ;
+  [:!T#Pi [:!Ssemicolon :i :d :!Ssemicolon]]                                                       ;
   ; [:!T#Pj []]                                                                                    ;
   ; [:!T#Pk []]                                                                                    ;
   ; [:!T#Pl []]                                                                                    ;
-  ; [:!T#Pm []]                                                                                    ;
-  ; [:!T#Pn []]                                                                                    ;
+  [:!T#Pm [:!Ssemicolon :m :a :i :l :!Ssemicolon]]                                                 ;
+  [:!T#Pn [:!Ssemicolon :n :a :m :e :!Ssemicolon]]                                                 ;
   ; [:!T#Po []]                                                                                    ;
-  ; [:!T#Pp []]                                                                                    ;
+  [:!T#Pp [:!Ssemicolon :p :h :o :n :e :!Ssemicolon]]                                              ;
   ; [:!T#Pq []]                                                                                    ;
   ; [:!T#Pr []]                                                                                    ;
-  ; [:!T#Ps []]                                                                                    ;
+  [:!T#Ps [:!Ssemicolon :s :i :g :!Ssemicolon]]                                                    ;
   ; [:!T#Pt []]                                                                                    ;
   ; [:!T#Pu []]                                                                                    ;
   ; [:!T#Pv []]                                                                                    ;
