@@ -101,8 +101,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command
-{:des "Command Mode - symbols"
+; control
+{:des "Control Mode - symbols"
  :rules
  [;
   [:!W#Popen_bracket [:!Sf8]]                                                                      ;
@@ -133,8 +133,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command - shift
-{:des "Command Mode - symbols"
+; control - shift
+{:des "Control Mode - symbols"
  :rules
  [;
   ; TODO: relocate
@@ -182,8 +182,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command - shift
-{:des "Command Mode - symbols"
+; control - shift
+{:des "Control Mode - symbols"
  :rules
  [;
   ; [:!WEQ#Popen_bracket []]                                                                       ;
