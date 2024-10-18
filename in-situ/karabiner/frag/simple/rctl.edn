@@ -62,8 +62,8 @@
   ; [:!WS#P8 []]                                                                                   ;
   ; [:!WS#P9 []]                                                                                   ;
   ; [:!WS#P0 []]                                                                                   ;
-  ; [:!WS#Phyphen []]                                                                              ;
-  ; [:!WS#Pequal_sign []]                                                                          ;
+  [:!WS#Phyphen [:!Sf13]]                                                                          ;
+  [:!WS#Pequal_sign [:!Sf14]]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -114,11 +114,11 @@
   [:!W#Pperiod [:!Sf19]]                                                                           ;
   [:!W#Pslash [:!Sf20]]                                                                            ;
 
-  [:!W#Pdelete_or_backspace [:!Sf7]]                                                                  ;
+  [:!W#Pdelete_or_backspace [:!Sf7]]                                                               ;
   [:!W#Preturn_or_enter [:!Sf2]]                                                                   ;
-  [:!W#Pright_shift [:!Ws]]                                                                          ;
-  [:!W#Pright_option [:!Wr]]                                                                         ;
-  [:!W#Pright_command [:!Wt]]                                                                        ;
+  [:!W#Pright_shift [:!Ws]]                                                                        ;
+  [:!W#Pright_option [:!Wr]]                                                                       ;
+  [:!W#Pright_command [:!Wt]]                                                                      ;
   [:!W#Pspacebar [:f7]]                                                                            ;
 
   ; [:!W#Pleft_command []]                                                                         ;
@@ -137,6 +137,23 @@
 {:des "Command Mode - symbols"
  :rules
  [;
+  ; TODO: relocate
+  [:!WS#Popen_bracket [:!Th]]                                                                      ;
+  [:!WS#Pclose_bracket [:!Oc]]                                                                     ;
+  ; [:!WS#Psemicolon []]                                                                           ;
+  ; [:!WS#Pquote []]                                                                               ;
+  ; [:!WS#Pbackslash []]                                                                           ;
+  [:!WS#Pcomma [:!Sf1]]                                                                            ;
+  [:!WS#Pperiod [:!Sf4]]                                                                           ;
+  ; [:!WS#Pslash []]                                                                               ;
+
+  [:!WS#Pdelete_or_backspace [:!Tl]]                                                               ;
+  [:!WS#Preturn_or_enter [:!Tg]]                                                                   ;
+  [:!WS#Pright_shift [:!Tj]]                                                                       ;
+  [:!WS#Pright_option [:!Sf5]]                                                                     ;
+  [:!WS#Pright_command [:!Sf6]]                                                                    ;
+  [:!WS#Pspacebar [:!To]]                                                                          ;
+
   ; [:!WS#Popen_bracket []]                                                                        ;
   ; [:!WS#Pclose_bracket []]                                                                       ;
   ; [:!WS#Psemicolon []]                                                                           ;
