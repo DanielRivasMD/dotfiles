@@ -7,13 +7,22 @@ matches:
   ####################################################################################################
 
   # mail
+  - trigger: ":gmail:"
+    replace: "danielrivasmd@gmail.com"
+
   - trigger: ":mail:"
     replace: "danielrivasmd@gmail.com"
 
   - trigger: ":mail:"
     replace: "danielrivasmd@yahoo.com"
 
+  - trigger: ":mail:"
+    replace: "daniel.rivas@astrazeneca.com"
+
   # name
+  - trigger: ":dr:"
+    replace: "Daniel Rivas"
+
   - trigger: ":name:"
     replace: "Daniel Rivas"
 
@@ -276,12 +285,11 @@ matches:
 
   ################################################################################################:###:""#
 
-  # TODO: update
   # go
-  - trigger: ":gp:"
+  - trigger: ":go_print:"
     replace: "fmt.Println($|$)"
 
-  - trigger: ":ge:"
+  - trigger: ":go_error:"
     replace: |
       if err != nil {
         fmt.Println(err.Error())
@@ -298,7 +306,7 @@ matches:
   ####################################################################################################
 
   # rust
-  - trigger: ":rp:"
+  - trigger: ":rust_print:"
     replace: "println{\"{:?}\"}, $|$);"
 
 ####################################################################################################
