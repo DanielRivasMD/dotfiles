@@ -8,7 +8,7 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; joker
-  [:##caps_lock :!Eright_command nil {:alone :escape}]                                             ;
+  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ;
 
   ; hyper
   [:#Pq :!OTCright_shift nil {:alone :q}]                                                          ;
@@ -37,11 +37,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; DOC: arrow - unmapped
-; [ :!OTSpage_up [:term]]                                                               ;
-; [ :!OTSpage_down [:term]]                                                             ;
-; [ :!OTShome [:term]]                                                             ;
-; [ :!OTSend [:term]]                                                            ;
-; [ :!OTf13 [:term]]                                                                ;
-; [ :!OTSf13 [:term]]                                                                ;
+; [ :!OTSpage_up ]                                                               ;
+; [ :!OTSpage_down ]                                                             ;
+; [ :!OTShome ]                                                             ;
+; [ :!OTSend ]                                                            ;
+; [ :!OTf13 ]                                                                ;
+; [ :!OTSf13 ]                                                                ;
+; [ :!OTf11 ]                                                                 ;
+; [ :!OTf12 ]                                                                        ;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
