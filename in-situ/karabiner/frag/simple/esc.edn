@@ -3,6 +3,38 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc
+{:des "ESC Mode - symbols"
+ :rules
+ [;
+  [:!EWR#Popen_bracket [:!OSf13]]                                                                  ;
+  [:!EWR#Pclose_bracket [:!OSf14]]                                                                 ;
+  [:!EWR#Psemicolon [:!OSf18]]                                                                     ;
+  [:!EWR#Pquote [:!OSf19]]                                                                         ;
+  [:!EWR#Pbackslash [:!OSf20]]                                                                     ;
+  [:!EWR#Pcomma [:!OTSf18]]                                                                        ;
+  [:!EWR#Pperiod [:!OTSf19]]                                                                       ;
+  [:!EWR#Pslash [:!OTSf20]]                                                                        ;
+
+  [:!EWR#Pdelete_or_backspace [:!TSf11]]                                                           ;
+  [:!EWR#Preturn_or_enter [:!TSf12]]                                                               ;
+  [:!EWR#Pright_shift [:!TSf13]]                                                                   ;
+  [:!EWR#Pright_option [:!TSf18]]                                                                  ;
+  [:!EWR#Pright_command [:!TSf19]]                                                                 ;
+  [:!EWR#Pspacebar [:!TSf20]]                                                                      ;
+
+  ; [:!EWR#Pleft_command []]                                                                       ;
+  ; [:!EWR#Pleft_option []]                                                                        ;
+  ; [:!EWR#Pleft_control []]                                                                       ;
+  ; [:!EWR#Pleft_shift []]                                                                         ;
+  ; [:!EWR#Pcaps_lock []]                                                                          ;
+  ; [:!EWR#Ptab []]                                                                                ;
+  ; [:!EWR#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWR#Pescape []]                                                              NOT AVAILABLE  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
 {:des "ESC Mode - numbers"
  :rules
  [;
@@ -36,33 +68,36 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; esc
-{:des "ESC Mode - symbols"
+{:des "ESC Mode - alphabet"
  :rules
  [;
-  [:!EWR#Popen_bracket [:!OSf13]]                                                                  ;
-  [:!EWR#Pclose_bracket [:!OSf14]]                                                                 ;
-  [:!EWR#Psemicolon [:!OSf18]]                                                                     ;
-  [:!EWR#Pquote [:!OSf19]]                                                                         ;
-  [:!EWR#Pbackslash [:!OSf20]]                                                                     ;
-  [:!EWR#Pcomma [:!OTSf18]]                                                                        ;
-  [:!EWR#Pperiod [:!OTSf19]]                                                                       ;
-  [:!EWR#Pslash [:!OTSf20]]                                                                        ;
-
-  [:!EWR#Pdelete_or_backspace [:!TSf11]]                                                           ;
-  [:!EWR#Preturn_or_enter [:!TSf12]]                                                               ;
-  [:!EWR#Pright_shift [:!TSf13]]                                                                   ;
-  [:!EWR#Pright_option [:!TSf18]]                                                                  ;
-  [:!EWR#Pright_command [:!TSf19]]                                                                 ;
-  [:!EWR#Pspacebar [:!TSf20]]                                                                      ;
-
-  ; [:!EWR#Pleft_command []]                                                                       ;
-  ; [:!EWR#Pleft_option []]                                                                        ;
-  ; [:!EWR#Pleft_control []]                                                                       ;
-  ; [:!EWR#Pleft_shift []]                                                                         ;
-  ; [:!EWR#Pcaps_lock []]                                                                          ;
-  ; [:!EWR#Ptab []]                                                                                ;
-  ; [:!EWR#Pnon_us_backslash []]                                                                   ;
-  ; [:!EWR#Pescape []]                                                              NOT AVAILABLE  ;
+  ; [:!EWR#Pa []]                                                                                  ;
+  ; [:!EWR#Pb []]                                                                                  ;
+  ; [:!EWR#Pc []]                                                                                  ;
+  ; [:!EWR#Pd []]                                                                                  ;
+  ; [:!EWR#Pe []]                                                                                  ;
+  ; [:!EWR#Pf []]                                                                                  ;
+  ; [:!EWR#Pg []]                                                                                  ;
+  ; [:!EWR#Ph []]                                                                                  ;
+  ; [:!EWR#Pi []]                                                                                  ;
+  ; [:!EWR#Pj []]                                                                                  ;
+  ; [:!EWR#Pk []]                                                                                  ;
+  ; [:!EWR#Pl []]                                                                                  ;
+  ; [:!EWR#Pm []]                                                                                  ;
+  ; [:!EWR#Pn []]                                                                                  ;
+  ; [:!EWR#Po []]                                                                                  ;
+  ; [:!EWR#Pp []]                                                                                  ;
+  ; [:!EWR#Pq []]                                                                                  ;
+  ; [:!EWR#Pr []]                                                                                  ;
+  ; [:!EWR#Ps []]                                                                                  ;
+  ; [:!EWR#Pt []]                                                                                  ;
+  ; [:!EWR#Pu []]                                                                                  ;
+  ; [:!EWR#Pv []]                                                                                  ;
+  ; [:!EWR#Pw []]                                                                                  ;
+  ; [:!EWR#Px []]                                                                                  ;
+  ; [:!EWR#Py []]                                                                                  ;
+  ; [:!EWR#Pz []]                                                                                  ;
+  ; [:!EWR#Pright_control []]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
