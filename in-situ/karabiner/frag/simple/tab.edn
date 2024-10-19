@@ -3,6 +3,38 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; tab
+{:des "Tab Mode - symbols"
+ :rules
+ [;
+  ; [:!WQR#Popen_bracket []]                                                                       ;
+  ; [:!WQR#Pclose_bracket []]                                                                      ;
+  ; [:!WQR#Psemicolon []]                                                                          ;
+  ; [:!WQR#Pquote []]                                                                              ;
+  ; [:!WQR#Pbackslash []]                                                                          ;
+  ; [:!WQR#Pcomma []]                                                                              ;
+  ; [:!WQR#Pperiod []]                                                                             ;
+  ; [:!WQR#Pslash []]                                                                              ;
+
+  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
+  ; [:!WQR#Preturn_or_enter []]                                                                    ;
+  ; [:!WQR#Pright_shift []]                                                                        ;
+  ; [:!WQR#Pright_option []]                                                                       ;
+  ; [:!WQR#Pright_command []]                                                                      ;
+  ; [:!WQR#Pspacebar []]                                                                           ;
+
+  ; [:!WQR#Pleft_command []]                                                                       ;
+  ; [:!WQR#Pleft_option []]                                                                        ;
+  ; [:!WQR#Pleft_control []]                                                                       ;
+  ; [:!WQR#Pleft_shift []]                                                                         ;
+  ; [:!WQR#Pcaps_lock []]                                                           NOT AVAILABLE  ;
+  ; [:!WQR#Ptab []]                                                                                ;
+  ; [:!WQR#Pnon_us_backslash []]                                                                   ;
+  ; [:!WQR#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
 {:des "Tab Mode - numbers"
  :rules
  [;
@@ -31,38 +63,6 @@
   ; [:!WQR#P0 []]                                                                                  ;
   ; [:!WQR#Phyphen []]                                                                             ;
   ; [:!WQR#Pequal_sign []]                                                                         ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; tab
-{:des "Tab Mode - symbols"
- :rules
- [;
-  ; [:!WQR#Popen_bracket []]                                                                       ;
-  ; [:!WQR#Pclose_bracket []]                                                                      ;
-  ; [:!WQR#Psemicolon []]                                                                          ;
-  ; [:!WQR#Pquote []]                                                                              ;
-  ; [:!WQR#Pbackslash []]                                                                          ;
-  ; [:!WQR#Pcomma []]                                                                              ;
-  ; [:!WQR#Pperiod []]                                                                             ;
-  ; [:!WQR#Pslash []]                                                                              ;
-
-  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
-  ; [:!WQR#Preturn_or_enter []]                                                                    ;
-  ; [:!WQR#Pright_shift []]                                                                        ;
-  ; [:!WQR#Pright_option []]                                                                       ;
-  ; [:!WQR#Pright_command []]                                                                      ;
-  ; [:!WQR#Pspacebar []]                                                                           ;
-
-  ; [:!WQR#Pleft_command []]                                                                       ;
-  ; [:!WQR#Pleft_option []]                                                                        ;
-  ; [:!WQR#Pleft_control []]                                                                       ;
-  ; [:!WQR#Pleft_shift []]                                                                         ;
-  ; [:!WQR#Pcaps_lock []]                                                           NOT AVAILABLE  ;
-  ; [:!WQR#Ptab []]                                                                                ;
-  ; [:!WQR#Pnon_us_backslash []]                                                                   ;
-  ; [:!WQR#Pescape []]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
