@@ -3,6 +3,40 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option
+{:des "Option Mode - symbols"
+ :rules
+ [;
+  ; [:!E#Phyphen []]                                                                               ;
+  ; [:!E#Pequal_sign []]                                                                           ;
+  ; [:!E#Popen_bracket []]                                                                         ;
+  ; [:!E#Pclose_bracket []]                                                                        ;
+  ; [:!E#Psemicolon []]                                                                            ;
+  ; [:!E#Pquote []]                                                                                ;
+  ; [:!E#Pbackslash []]                                                                            ;
+  ; [:!E#Pcomma []]                                                                                ;
+  ; [:!E#Pperiod []]                                                                               ;
+  ; [:!E#Pslash []]                                                                                ;
+
+  ; [:!E#Pdelete_or_backspace []]                                                                  ;
+  ; [:!E#Preturn_or_enter []]                                                                      ;
+  ; [:!E#Pright_shift []]                                                                          ;
+  ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
+  ; [:!E#Pright_command []]                                                         REDUNDANT      ;
+  ; [:!E#Pspacebar []]                                                              REDUNDANT      ;
+
+  ; [:!E#Pleft_command []]                                                          REDUNDANT      ;
+  ; [:!E#Pleft_option []]                                                           REDUNDANT      ;
+  ; [:!E#Pleft_control []]                                                          REDUNDANT      ;
+  ; [:!E#Pleft_shift []]                                                            REDUNDANT      ;
+  ; [:!E#Pcaps_lock []]                                                             REDUNDANT      ;
+  ; [:!E#Ptab []]                                                                   REDUNDANT      ;
+  ; [:!E#Pnon_us_backslash []]                                                      REDUNDANT      ;
+  ; [:!E#Pescape []]                                                                REDUNDANT      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option
 {:des "Option Mode - alphabet"
  :rules
  [;
@@ -68,40 +102,6 @@
   [:!ER#Py [:!Ss :y :m :b :o :l]]                                              ; 'Symbol'          ;
   ; [:!ER#Pz []]                                                               ;                   ;
   [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]              ; ' .∈ '            ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - symbols"
- :rules
- [;
-  ; [:!E#Phyphen []]                                                                               ;
-  ; [:!E#Pequal_sign []]                                                                           ;
-  ; [:!E#Popen_bracket []]                                                                         ;
-  ; [:!E#Pclose_bracket []]                                                                        ;
-  ; [:!E#Psemicolon []]                                                                            ;
-  ; [:!E#Pquote []]                                                                                ;
-  ; [:!E#Pbackslash []]                                                                            ;
-  ; [:!E#Pcomma []]                                                                                ;
-  ; [:!E#Pperiod []]                                                                               ;
-  ; [:!E#Pslash []]                                                                                ;
-
-  ; [:!E#Pdelete_or_backspace []]                                                                  ;
-  ; [:!E#Preturn_or_enter []]                                                                      ;
-  ; [:!E#Pright_shift []]                                                                          ;
-  ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
-  ; [:!E#Pright_command []]                                                         COLLISION      ;
-  ; [:!E#Pspacebar []]                                                              COLLISION      ;
-
-  ; [:!E#Pleft_command []]                                                          COLLISION      ;
-  ; [:!E#Pleft_option []]                                                           COLLISION      ;
-  ; [:!E#Pleft_control []]                                                          COLLISION      ;
-  ; [:!E#Pleft_shift []]                                                            COLLISION      ;
-  ; [:!E#Pcaps_lock []]                                                             COLLISION      ;
-  ; [:!E#Ptab []]                                                                   COLLISION      ;
-  ; [:!E#Pnon_us_backslash []]                                                      COLLISION      ;
-  ; [:!E#Pescape []]                                                                COLLISION      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
