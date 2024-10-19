@@ -3,6 +3,38 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  [:!EWQ#Popen_bracket [:f8]]                                                                      ;
+  [:!EWQ#Pclose_bracket [:f9]]                                                                     ;
+  [:!EWQ#Psemicolon [:f10]]                                                                        ;
+  [:!EWQ#Pquote [:f11]]                                                                            ;
+  [:!EWQ#Pbackslash [:f12]]                                                                        ;
+  [:!EWQ#Pcomma [:f18]]                                                                            ;
+  [:!EWQ#Pperiod [:f19]]                                                                           ;
+  [:!EWQ#Pslash [:f20]]                                                                            ;
+
+  [:!EWQ#Pdelete_or_backspace [:f1]]                                                               ;
+  [:!EWQ#Preturn_or_enter [:f2]]                                                                   ;
+  [:!EWQ#Pright_shift [:f4]]                                                                       ;
+  [:!EWQ#Pright_option [:f5]]                                                                      ;
+  [:!EWQ#Pright_command [:f6]]                                                                     ;
+  ; [:!EWQ#Pspacebar []]                                                                           ;
+
+  ; [:!EWQ#Pleft_command []]                                                                       ;
+  ; [:!EWQ#Pleft_option []]                                                                        ;
+  ; [:!EWQ#Pleft_control []]                                                                       ;
+  ; [:!EWQ#Pleft_shift []]                                                                         ;
+  ; [:!EWQ#Pcaps_lock []]                                                                          ;
+  ; [:!EWQ#Ptab []]                                                                 NOT AVAILABLE  ;
+  ; [:!EWQ#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWQ#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
 {:des "Joker Mode - numbers"
  :rules
  [;
@@ -31,38 +63,6 @@
   ; [:!EWQ#0 []]                                                                                   ;
   [:!EWQ#Phyphen [:f13]]                                                                           ;
   [:!EWQ#Pequal_sign [:f14]]                                                                       ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; joker
-{:des "Joker Mode - symbols"
- :rules
- [;
-  [:!EWQ#Popen_bracket [:f8]]                                                                      ;
-  [:!EWQ#Pclose_bracket [:f9]]                                                                     ;
-  [:!EWQ#Psemicolon [:f10]]                                                                        ;
-  [:!EWQ#Pquote [:f11]]                                                                            ;
-  [:!EWQ#Pbackslash [:f12]]                                                                        ;
-  [:!EWQ#Pcomma [:f18]]                                                                            ;
-  [:!EWQ#Pperiod [:f19]]                                                                           ;
-  [:!EWQ#Pslash [:f20]]                                                                            ;
-
-  [:!EWQ#Pdelete_or_backspace [:f1]]                                                               ;
-  [:!EWQ#Preturn_or_enter [:f2]]                                                                   ;
-  [:!EWQ#Pright_shift [:f4]]                                                                       ;
-  [:!EWQ#Pright_option [:f5]]                                                                      ;
-  [:!EWQ#Pright_command [:f6]]                                                                     ;
-  ; [:!EWQ#Pspacebar []]                                                                           ;
-
-  ; [:!EWQ#Pleft_command []]                                                                       ;
-  ; [:!EWQ#Pleft_option []]                                                                        ;
-  ; [:!EWQ#Pleft_control []]                                                                       ;
-  ; [:!EWQ#Pleft_shift []]                                                                         ;
-  ; [:!EWQ#Pcaps_lock []]                                                                          ;
-  ; [:!EWQ#Ptab []]                                                                  NOT AVAILABLE ;
-  ; [:!EWQ#Pnon_us_backslash []]                                                                   ;
-  ; [:!EWQ#Pescape []]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
