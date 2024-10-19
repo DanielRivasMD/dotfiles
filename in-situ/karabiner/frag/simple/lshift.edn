@@ -3,39 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; shift
-{:des "Shift Mode - numbers"
- :rules
- [;
-  ; [:!S#keypad_1 []]                                                                              ;
-  ; [:!S#keypad_2 []]                                                                              ;
-  ; [:!S#keypad_3 []]                                                                              ;
-  ; [:!S#keypad_4 []]                                                                              ;
-  ; [:!S#keypad_5 []]                                                                              ;
-  ; [:!S#keypad_6 []]                                                                              ;
-  ; [:!S#keypad_7 []]                                                                              ;
-  ; [:!S#keypad_8 []]                                                                              ;
-  ; [:!S#keypad_9 []]                                                                              ;
-  ; [:!S#keypad_0 []]                                                                              ;
-  ; [:!S#keypad_slash []]                                                                          ;
-  ; [:!S#keypad_asterisk []]                                                                       ;
-
-  ; [:!S#1 []]                                                                                     ;
-  ; [:!S#2 []]                                                                                     ;
-  ; [:!S#3 []]                                                                                     ;
-  ; [:!S#4 []]                                                                                     ;
-  ; [:!S#5 []]                                                                                     ;
-  ; [:!S#6 []]                                                                                     ;
-  ; [:!S#7 []]                                                                                     ;
-  ; [:!S#8 []]                                                                                     ;
-  ; [:!S#9 []]                                                                                     ;
-  ; [:!S#0 []]                                                                                     ;
-  ; [:!S#Phyphen []]                                                                               ;
-  ; [:!S#Pequal_sign []]                                                                           ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; shift
 {:des "Shift Mode - symbols"
  :rules
  [;
@@ -58,11 +25,44 @@
   ; [:!S#Pleft_command []]                                                                         ;
   ; [:!S#Pleft_option []]                                                                          ;
   ; [:!S#Pleft_control []]                                                                         ;
-  ; [:!S#Pleft_shift []]                                                       ;    NOT AVAILABLE  ;
+  ; [:!S#Pleft_shift []]                                                            NOT AVAILABLE  ;
   ; [:!S#Pcaps_lock []]                                                                            ;
   ; [:!S#Ptab []]                                                                                  ;
   ; [:!S#Pnon_us_backslash []]                                                                     ;
   ; [:!S#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
+{:des "Shift Mode - numbers"
+ :rules
+ [;
+  ; [:!S#Pkeypad_1 []]                                                                             ;
+  ; [:!S#Pkeypad_2 []]                                                                             ;
+  ; [:!S#Pkeypad_3 []]                                                                             ;
+  ; [:!S#Pkeypad_4 []]                                                                             ;
+  ; [:!S#Pkeypad_5 []]                                                                             ;
+  ; [:!S#Pkeypad_6 []]                                                                             ;
+  ; [:!S#Pkeypad_7 []]                                                                             ;
+  ; [:!S#Pkeypad_8 []]                                                                             ;
+  ; [:!S#Pkeypad_9 []]                                                                             ;
+  ; [:!S#Pkeypad_0 []]                                                                             ;
+  ; [:!S#Pkeypad_slash []]                                                                         ;
+  ; [:!S#Pkeypad_asterisk []]                                                                      ;
+
+  ; [:!S#P1 []]                                                                                    ;
+  ; [:!S#P2 []]                                                                                    ;
+  ; [:!S#P3 []]                                                                                    ;
+  ; [:!S#P4 []]                                                                                    ;
+  ; [:!S#P5 []]                                                                                    ;
+  ; [:!S#P6 []]                                                                                    ;
+  ; [:!S#P7 []]                                                                                    ;
+  ; [:!S#P8 []]                                                                                    ;
+  ; [:!S#P9 []]                                                                                    ;
+  ; [:!S#P0 []]                                                                                    ;
+  ; [:!S#Phyphen []]                                                                               ;
+  ; [:!S#Pequal_sign []]                                                                           ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
