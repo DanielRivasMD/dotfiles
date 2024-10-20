@@ -3,7 +3,6 @@
 
 # setup
 archDir="$HOME/.archive"
-installDir="${archDir}/.install"
 
 ####################################################################################################
 
@@ -22,22 +21,21 @@ ln -svf "$(pwd)" "${archDir}"
 ####################################################################################################
 
 # homebrew
-source "${installDir}/brew.sh"
+source "${archDir}/.just/.install/brew.sh"
 
 # clojure
-source "${installDir}/clojure.sh"
+source "${archDir}/.just/.install/clojure.sh"
 
 # go
-source "${installDir}/go.sh"
+source "${archDir}/.just/.install/go.sh"
 
 # julia
-source "${installDir}/julia.sh"
+source "${archDir}/.just/.install/julia.sh"
 
 # R
-source "${installDir}/R.sh"
+source "${archDir}/.just/.install/R.sh"
 
 # rust & cargo
-source "${installDir}/rust.sh"
-
+source "${archDir}/.just/.install/rust.sh"
 
 ####################################################################################################
