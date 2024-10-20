@@ -65,7 +65,7 @@ A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
 
 ####################################################################################################
 
-# tab
+# tab => diagnostics & list
 #                                                          # tab--             #
 #                                                          # tab-=             #
 
@@ -93,7 +93,7 @@ S-A-end = ["goto_next_diag"]                               # tab-down          #
 
 ####################################################################################################
 
-# joker
+# joker => symbols & counter
 F13 = ["goto_prev_test"]                                   # joker--           # prev test
 F14 = ["goto_next_test"]                                   # joker-=           # next test
 
@@ -121,7 +121,7 @@ A-C-end = ["decrement"]                                    # joker-down        #
 
 ####################################################################################################
 
-# grave
+# grave => buffers, motion & change
 #                                                          # grave--           #
 #                                                          # grave-=           #
 
@@ -149,7 +149,7 @@ C-end = ["goto_next_change"]                               # grave-down        #
 
 ####################################################################################################
 
-# grave-shift
+# grave-shift => split & comment
 # S-F13 = []                                               # grave-shift--     #
 # S-F14 = []                                               # grave-shift-=     #
 
