@@ -15,12 +15,12 @@
   ; [:!WQR#Pperiod []]                                                                             ;
   ; [:!WQR#Pslash []]                                                                              ;
 
-  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
-  ; [:!WQR#Preturn_or_enter []]                                                                    ;
-  ; [:!WQR#Pright_shift []]                                                                        ;
-  ; [:!WQR#Pright_option []]                                                                       ;
-  ; [:!WQR#Pright_command []]                                                                      ;
-  ; [:!WQR#Pspacebar []]                                                                           ;
+  [:!WQR#Pdelete_or_backspace [:!Sf2]]                                                                ;
+  [:!WQR#Preturn_or_enter []]                                                                    ;
+  [:!WQR#Pright_shift []]                                                                        ;
+  [:!WQR#Pright_option []]                                                                       ;
+  [:!WQR#Pright_command []]                                                                      ;
+  [:!WQR#Pspacebar []]                                                                           ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;
@@ -75,7 +75,7 @@
   ; [:!WQR#Pb []]                                                                                  ;
   ; [:!WQR#Pc []]                                                                                  ;
   ; [:!WQR#Pd []]                                                                                  ;
-  ; [:!WQR#Pe []]                                                                                  ;
+  [:!WQR#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon]]                            ;
   ; [:!WQR#Pf []]                                                                                  ;
   ; [:!WQR#Pg []]                                                                                  ;
   ; [:!WQR#Ph []]                                                                                  ;
@@ -86,7 +86,7 @@
   ; [:!WQR#Pm []]                                                                                  ;
   ; [:!WQR#Pn []]                                                                                  ;
   ; [:!WQR#Po []]                                                                                  ;
-  [:!WQR#Pp [:!Ssemicolon :r :u :s :t :!Shyphen :p :r :i :n :t :!Ssemicolon]]                      ;
+  [:!WQR#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon]]                            ;
   ; [:!WQR#Pq []]                                                                                  ;
   ; [:!WQR#Pr []]                                                                                  ;
   ; [:!WQR#Ps []]                                                                                  ;
@@ -101,3 +101,4 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
