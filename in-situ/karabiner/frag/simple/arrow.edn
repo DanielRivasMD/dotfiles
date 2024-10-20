@@ -59,29 +59,23 @@
   [:!WS#Pup_arrow :!Tn [:term]]                                                                    ;
   [:!WS#Pdown_arrow :!Tp [:term]]                                                                  ;
 
-  ; ; grave-shift
-  ; [:!WS#Pleft_arrow :!WSpage_up [:term]]                                                           ;
-  ; [:!WS#Pright_arrow :!WSpage_down [:term]]                                                        ;
-  ; [:!WS#Pup_arrow :!WShome [:term]]                                                                ;
-  ; [:!WS#Pdown_arrow :!WSend [:term]]                                                               ;
+  ; tab
+  [:!WQR#Pleft_arrow :!OSpage_up [:term]]                                                          ;
+  [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
+  [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
+  [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
 
   ; joker
-  [:!OTC#Pleft_arrow :!OTpage_up [:term]]                                                          ;
-  [:!OTC#Pright_arrow :!OTpage_down [:term]]                                                       ;
-  [:!OTC#Pup_arrow :!OThome [:term]]                                                               ;
-  [:!OTC#Pdown_arrow :!OTend [:term]]                                                              ;
+  [:!EWQ#Pleft_arrow :!OTpage_up [:term]]                                                          ;
+  [:!EWQ#Pright_arrow :!OTpage_down [:term]]                                                       ;
+  [:!EWQ#Pup_arrow :!OThome [:term]]                                                               ;
+  [:!EWQ#Pdown_arrow :!OTend [:term]]                                                              ;
 
   ; ; ctl-cmd
   ; [:!TC#Pleft_arrow :!Tb [:term]]                                                                  ;
   ; [:!TC#Pright_arrow :!Tf [:term]]                                                                 ;
   ; [:!TC#Pup_arrow :!Tn [:term]]                                                                    ;
   ; [:!TC#Pdown_arrow :!Tp [:term]]                                                                  ;
-
-  ; tab
-  [:!WQR#Pleft_arrow :!OSpage_up [:term]]                                                          ;
-  [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
-  [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
-  [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
 
   ; atl-cmd
   ; [:!OC#Pleft_arrow [:term]]                                                                     ;
