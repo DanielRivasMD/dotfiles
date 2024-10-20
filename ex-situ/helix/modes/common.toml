@@ -1,5 +1,9 @@
 ####################################################################################################
 
+# Alt-Enter	Open selected in the background without closing the picker
+
+####################################################################################################
+
 # del
 del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
 backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
@@ -62,38 +66,30 @@ A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
 ####################################################################################################
 
 # tab
+#                                                          # tab--             #
+#                                                          # tab-=             #
+
+#                                                          # tab-[             #
+#                                                          # tab-]             #
+#                                                          # tab-;             #
+#                                                          # tab-'             #
+#                                                          # tab-\             #
+#                                                          # tab-,             #
+#                                                          # tab-.             #
+#                                                          # tab-/             #
+
+S-F2 = ["diagnostics_picker"]                              # tab-bspace        # diag picker
+# A-C-S-F11 = ["jumplist_picker"]                            # tab-enter         # record jump
+# A-C-F14 = ["save_selection"]                               # tab-shift         # jump list
+# C-S-pagedown = ["jump_forward"]                            # tab-alt           # next jump
+# C-S-pageup = ["jump_backward"]                             # tab-cmd           # prev jump
+# A-C-S-F12 = ["goto_last_modification"]                     # tab-space         # last edit
+
 # S-A-pageup = [""]                                        # tab-left          #
 # S-A-pagedown = [""]                                      # tab-right         #
-# S-A-home = [""]                                          # tab-up            #
-# S-A-end = [""]                                           # tab-down          #
+S-A-home = ["goto_prev_diag"]                              # tab-up            # prev diag
+S-A-end = ["goto_next_diag"]                               # tab-down          # next diag
 
-
-####################################################################################################
-
-# ctl-cmd
-# S-F13 = []                                               # ctl-cmd--         #
-# S-F14 = []                                               # ctl-cmd-=         #
-
-# C-h = [""]                                               # ctl-cmd-[         #
-# A-c = [""]                                               # ctl-cmd-]         #
-#                                                          # ctl-cmd-;         #
-#                                                          # ctl-cmd-'         #
-#                                                          # ctl-cmd-\         #
-# S-F1 = [""]                                              # ctl-cmd-,         #
-# S-F4 = [""]                                              # ctl-cmd-.         #
-#                                                          # ctl-cmd-/         #
-
-C-l = [":buffer-close"]                                    # ctl-cmd-bspace    # close tab
-C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
-C-j = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
-S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
-S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
-C-o = ["goto_last_accessed_file"]                          # clt-cmd-space     # last file
-
-C-b = ["goto_previous_buffer"]                             # ctl-cmd-left      # prev tab
-C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     # next tab
-C-n = ["goto_prev_comment"]                                # ctl-cmd-up        # prev comment
-C-p = ["goto_next_comment"]                                # ctl-cmd-down      # next comment
 
 ####################################################################################################
 
@@ -113,8 +109,8 @@ F17 = ["goto_implementation"]                              # joker-/           #
 # F1 = [""]                                                # joker-bs          #
 F2 = ["symbol_picker"]                                     # joker-enter       # symbol list
 F4 = ["goto_type_definition"]                              # joker-shift       # type definition
-F6 = ["goto_prev_function"]                                # joker-cmd         # next func
 F5 = ["goto_next_function"]                                # joker-alt         # prev func
+F6 = ["goto_prev_function"]                                # joker-cmd         # next func
 #                                                          # joker-space       #
 
 # A-C-pagedown = [""]                                      # joker-left        #
@@ -139,30 +135,72 @@ A-C-end = ["decrement"]                                    # joker-down        #
 # S-F17 = [""]                                             # grave-/           #
 
 S-F7 = ["command_palette"]                                 # grave-bs          # command palette
-S-F2 = ["diagnostics_picker"]                              # grave-enter       # diag picker
+C-t = ["file_picker"]                                      # grave-enter       # file picker
 C-s = ["buffer_picker"]                                    # grave-shift       # buffer picker
 C-r = ["changed_file_picker"]                              # grave-alt         # delta picker
-C-t = ["file_picker"]                                      # grave-cmd         # file picker
+# S-F2 = [""]                                              # grave-cmd         #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # grave-space       # repeat motion
 
 C-pageup = ["normal_mode", "till_prev_char", "MODE"]       # grave-left        # prev until
 C-pagedown = ["normal_mode", "find_till_char", "MODE"]     # grave-right       # next until
-C-home = ["goto_prev_diag"]                                # grave-up          # prev diag
-C-end = ["goto_next_diag"]                                 # grave-down        # next diag
+C-home = ["goto_prev_change"]                              # grave-up          # prev change
+C-end = ["goto_next_change"]                               # grave-down        # next change
 
 
 ####################################################################################################
 
 # grave-shift
-A-C-F14 = ["save_selection"]                                 # grave-shift-\     # jump list
+# S-F13 = []                                               # grave-shift--     #
+# S-F14 = []                                               # grave-shift-=     #
 
-A-C-S-F11 = ["jumplist_picker"]                              # grave-shift-enter # record jump
-A-C-S-F12 = ["goto_last_modification"]                       # grave-shift-space # last edit
+# C-h = [""]                                               # grave-shift-[     #
+# A-c = [""]                                               # grave-shift-]     #
+#                                                          # grave-shift-;     #
+#                                                          # grave-shift-'     #
+#                                                          # grave-shift-\     #
+# S-F1 = [""]                                              # grave-shift-,     #
+# S-F4 = [""]                                              # grave-shift-.     #
+#                                                          # grave-shift-/     #
 
-C-S-pageup = ["jump_backward"]                               # grave-shift-left  # prev jump
-C-S-pagedown = ["jump_forward"]                              # grave-shift-right # next jump
-C-S-home = ["goto_prev_change"]                              # grave-shift-up    # prev change
-C-S-end = ["goto_next_change"]                               # grave-shift-down  # next change
+C-l = [":buffer-close"]                                    # grave-shift-bspace# close tab
+C-g = ["normal_mode", ":new"]                              # grave-shift-enter # new
+C-j = ["vsplit"]                                           # grave-shift-shift # vertical split
+S-F5 = ["hsplit"]                                          # grave-shift-alt   # horizontal split
+S-F6 = ["wonly"]                                           # grave-shift-cmd   # unsplit
+C-o = ["goto_last_accessed_file"]                          # grave-shift-space # last file
+
+C-b = ["goto_previous_buffer"]                             # grave-shift-left  # prev tab
+C-f = ["goto_next_buffer"]                                 # grave-shift-right # next tab
+C-n = ["goto_prev_comment"]                                # grave-shift-up    # prev comment
+C-p = ["goto_next_comment"]                                # grave-shift-down  # next comment
+
+
+####################################################################################################
+
+# ctl-cmd
+#                                                            # ctl-cmd--         #
+#                                                            # ctl-cmd-=         #
+
+#                                                            # ctl-cmd-[         #
+#                                                            # ctl-cmd-]         #
+#                                                            # ctl-cmd-;         #
+#                                                            # ctl-cmd-'         #
+#                                                            # ctl-cmd-\         #
+#                                                            # ctl-cmd-,         #
+#                                                            # ctl-cmd-.         #
+#                                                            # ctl-cmd-/         #
+
+#                                                            # ctl-cmd-bspace    #
+#                                                            # ctl-cmd-enter     #
+#                                                            # ctl-cmd-shift     #
+#                                                            # ctl-cmd-alt       #
+#                                                            # ctl-cmd-cmd       #
+#                                                            # clt-cmd-space     #
+
+#                                                            # ctl-cmd-left      #
+#                                                            # ctl-cmd-right     #
+#                                                            # ctl-cmd-up        #
+#                                                            # ctl-cmd-down      #
 
 
 ####################################################################################################
@@ -235,9 +273,5 @@ S-A-C-F8 = ["extend_to_line_bounds", "yank_to_clipboard"]  # alt-shift-y       #
 # S-A-C-F9 = [""]                                          # alt-shift-z       #
 S-A-C-F10 = ["shell_pipe"]                                 # alt-shift-grave   # shell command
 
-
-####################################################################################################
-
-# Alt-Enter	Open selected in the background without closing the picker
 
 ####################################################################################################
