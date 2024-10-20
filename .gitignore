@@ -1,7 +1,36 @@
 ####################################################################################################
 
+# temporary files
+.lsp/.cache
+.clj-kondo/.cache/v1
+
+# zellij dump session
+.zellij.txt
+
+####################################################################################################
+
 # setup log
 log
+
+####################################################################################################
+
+# deprecated
+deprecated/
+
+####################################################################################################
+# ex-situ
+####################################################################################################
+
+# sqlite history
+ex-situ/litecli/history
+
+# micro
+ex-situ/micro/backups
+ex-situ/micro/buffers
+ex-situ/micro/plug
+
+# automatically generated
+ex-situ/helix/config.toml
 
 ####################################################################################################
 # in-situ
@@ -14,58 +43,20 @@ in-situ/karabiner/automatic_backups
 in-situ/khal/calendars
 in-situ/khal/ics
 
-####################################################################################################
-# ex-situ
-####################################################################################################
+# khal database
+in-situ/khal/khal.db
 
-# micro
-ex-situ/micro/backups
-ex-situ/micro/buffers
-ex-situ/micro/plug
-
-####################################################################################################
-
-# deprecated
-deprecated/
-
-####################################################################################################
-
-# ignore automatically generated
-in-situ/alacritty/alacritty.toml
-in-situ/karabiner/karabiner.edn
-in-situ/karabiner/karabiner.json
-ex-situ/helix/config.toml
-
-####################################################################################################
-
-# ignore zed files
+# zed files
 in-situ/zed/embeddings/stable
 in-situ/zed/embeddings/semantic-index-db.0.mdb
 in-situ/zed/.tmp*
 
-####################################################################################################
-
-# temporary files
-.lsp/.cache
-.clj-kondo/.cache/v1
-
-####################################################################################################
-
-# calendar database
-in-situ/khal/khal.db
-
-####################################################################################################
-
-# sqlite history
-ex-situ/litecli/history
-
-####################################################################################################
-# zellij dump session
-.zellij.txt
-
-####################################################################################################
-
 # zellij plugins
 in-situ/zellij/plugins
+
+# automatically generated
+in-situ/alacritty/alacritty.toml
+in-situ/karabiner/karabiner.edn
+in-situ/karabiner/karabiner.json
 
 ####################################################################################################
