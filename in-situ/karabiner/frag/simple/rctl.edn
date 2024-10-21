@@ -3,6 +3,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control
+{:des "Control Mode - arrow"
+ :rules
+ [;
+  [:!W#Pleft_arrow :!Wpage_up [:term]]                                                             ;
+  [:!W#Pright_arrow :!Wpage_down [:term]]                                                          ;
+  [:!W#Pup_arrow :!Whome [:term]]                                                                  ;
+  [:!W#Pdown_arrow :!Wend [:term]]                                                                 ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
+{:des "Control Mode - arrow"
+ :rules
+ [;
+  [:!WS#Pleft_arrow :!Tb [:term]]                                                                  ;
+  [:!WS#Pright_arrow :!Tf [:term]]                                                                 ;
+  [:!WS#Pup_arrow :!Tn [:term]]                                                                    ;
+  [:!WS#Pdown_arrow :!Tp [:term]]                                                                  ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
 {:des "Control Mode - symbols"
  :rules
  [;
@@ -227,7 +251,7 @@
   ; [:!W#Px []]                                                                                    ;
   ; [:!W#Py []]                                                                                    ;
   ; [:!W#Pz []]                                                                                    ;
-  ; [:!W#Pright_control []]                                                                        ;
+  ; [:!W#Pright_control []]                                                         NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -262,7 +286,7 @@
   ; [:!WS#Px []]                                                                                   ;
   ; [:!WS#Py []]                                                                                   ;
   ; [:!WS#Pz []]                                                                                   ;
-  ; [:!WS#Pright_control []]                                                                       ;
+  ; [:!WS#Pright_control []]                                                        NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -297,7 +321,7 @@
   ; [:!WEWQ#Px []]                                                                                 ;
   ; [:!WEWQ#Py []]                                                                                 ;
   ; [:!WEWQ#Pz []]                                                                                 ;
-  ; [:!WEWQ#Pright_control []]                                                                     ;
+  ; [:!WEWQ#Pright_control []]                                                      NOT AVAILABLE  ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
