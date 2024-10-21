@@ -26,6 +26,9 @@
   [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ;
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ;
 
+  ; TODO: update
+  [:#Pleft_option :left_option [:term] {:alone [:f3]}]                                             ;
+
   ; rights
   [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]                                               ;
   [:#Pright_option :right_option nil {:alone [:!Of3]}]                                             ;
