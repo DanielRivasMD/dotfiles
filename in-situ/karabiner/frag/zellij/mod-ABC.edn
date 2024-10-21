@@ -20,7 +20,8 @@
   ; cursor movement
   [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
 
-  ; [:#Pleft_option :left_option [:term] {:alone [:!Og]}]                        ; alt               ;
+  ; [ :!Og [:term]]                                                                                ;
+  ; [ [:term] {:alone [:!Og]}]                                                                     ;
 
    ; history editor
    [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; shift             ;
