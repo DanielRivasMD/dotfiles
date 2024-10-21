@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="Files" {
+    tab name="I Files" {
         pane stacked=true split_direction="horizontal" {
             pane name="canvas" focus=true
             pane name="explorer" command="broot" {
@@ -21,7 +21,7 @@ layout {
         }
     }
 
-    tab name="Source" focus=true {
+    tab name="II Source" focus=true {
         pane split_direction="vertical" size="70%" {
             pane name="canvas" size="30%"
             pane name="editor" size="70%" focus=true command="hx"
@@ -33,11 +33,11 @@ layout {
         }
     }
 
-    tab name="Nushell" {
+    tab name="III Nushell" {
         pane name="nu" command="nu"
     }
 
-    tab name="Git" {
+    tab name="IV Git" {
         pane name="git" command="lazygit"
     }
 

@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="Monitor" split_direction="horizontal" hide_floating_panes=true {
+    tab name="I Monitor" split_direction="horizontal" hide_floating_panes=true {
         pane split_direction="vertical" {
             pane name="clock" size="40%" borderless=true command="tock" {
                 args "-m" "-s"
@@ -24,25 +24,25 @@ layout {
         }
     }
 
-    tab name="Notes" {
+    tab name="II Notes" {
         pane name="joplin" command="joplin"
     }
 
-    tab name="Files" focus=true {
+    tab name="III Files" focus=true {
         pane stacked=true split_direction="horizontal" {
             pane name="canvas" cwd="/Users/drivas"
             pane name="yazi" cwd="/Users/drivas" command="yazi" focus=true
         }
     }
 
-    tab name="Archive" {
+    tab name="IV Archive" {
         pane stacked=true split_direction="horizontal" {
             pane name="git" cwd="/Users/drivas/.archive" command="lazygit"
             pane name="editor" cwd="/Users/drivas/.archive" command="hx" focus=true
         }
     }
 
-    tab name="Factorem" {
+    tab name="V Factorem" {
         pane name="canvas" cwd="/Users/drivas/Factorem" focus=true
     }
 
