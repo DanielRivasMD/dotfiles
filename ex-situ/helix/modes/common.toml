@@ -15,52 +15,8 @@ C-w = ["delete_word_backward"]                             # shift-ctl         #
 # fast reload
 F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
 C-space = ["goto_word"]                                    # ctl-space         #
+# TODO: remap
 # C-v = ["change_selection_noyank"]                          # shift-alt         #
-
-
-####################################################################################################
-
-# scroll
-C-x = ["scroll_up"]                                        # alt-cmd-up        #
-C-y = ["scroll_down"]                                      # alt-cmd-down      #
-
-# shift
-S-left = ["extend_char_left"]                              # shift-left        # select left
-S-right = ["extend_char_right"]                            # shift-right       # select right
-S-up = ["extend_line_up"]                                  # shift-up          # select up
-S-down = ["extend_line_down"]                              # shift-down        # select down
-
-# alt
-A-b = ["move_prev_word_start", "collapse_selection"]       # alt-left          # word left
-A-f = ["move_next_word_end", "collapse_selection"]         # alt-right         # word right
-pageup = ["goto_prev_paragraph", "collapse_selection"]     # alt-up            # prev block
-pagedown = ["goto_next_paragraph", "collapse_selection"]   # alt-down          # next block
-
-# alt-shift
-A-S-left = ["extend_prev_word_start"]                      # alt-shift-left    # select word left
-A-S-right = [ "extend_next_word_end"]                      # alt-shift-right   # select word right
-A-S-up = ["select_mode", "goto_prev_paragraph", "MODE"]    # alt-shift-up      # select prev block
-A-S-down = ["select_mode", "goto_next_paragraph", "MODE"]  # alt-shift-down    # select next block
-# TODO: patch insert -> select
-
-# ctl
-C-left = ["jump_view_left"]                                # ctl-left          # prev split
-C-right = ["jump_view_right"]                              # ctl-right         # next split
-C-up = ["jump_view_up"]                                    # ctl-up            # upper split
-C-down = ["jump_view_down"]                                # ctl-down          # lower split
-
-# cmd
-C-a = ["goto_line_start"]                                  # cmd-left          # start line
-C-e = ["goto_line_end", "move_char_right"]                 # cmd-right         # end line
-home = ["goto_file_start"]                                 # cmd-up            # cursor start
-end = ["goto_last_line"]                                   # cmd-down          # cursor end
-
-# cmd-shift
-A-left = ["select_mode", "goto_line_start", "MODE"]        # cmd-shift-left    # select start line
-A-right = ["select_mode", "goto_line_end", "MODE"]         # cmd-shift-right   # select end line
-A-up = ["select_mode", "goto_file_start", "MODE"]          # cmd-shift-up      # select start
-A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
-                                                           # cmd-shift-down    # select end
 
 
 ####################################################################################################
@@ -178,29 +134,74 @@ C-p = ["goto_next_comment"]                                # grave-shift-down  #
 ####################################################################################################
 
 # ctl-cmd
-#                                                            # ctl-cmd--         #
-#                                                            # ctl-cmd-=         #
+#                                                          # ctl-cmd--         #
+#                                                          # ctl-cmd-=         #
 
-#                                                            # ctl-cmd-[         #
-#                                                            # ctl-cmd-]         #
-#                                                            # ctl-cmd-;         #
-#                                                            # ctl-cmd-'         #
-#                                                            # ctl-cmd-\         #
-#                                                            # ctl-cmd-,         #
-#                                                            # ctl-cmd-.         #
-#                                                            # ctl-cmd-/         #
+#                                                          # ctl-cmd-[         #
+#                                                          # ctl-cmd-]         #
+#                                                          # ctl-cmd-;         #
+#                                                          # ctl-cmd-'         #
+#                                                          # ctl-cmd-\         #
+#                                                          # ctl-cmd-,         #
+#                                                          # ctl-cmd-.         #
+#                                                          # ctl-cmd-/         #
 
-#                                                            # ctl-cmd-bspace    #
-#                                                            # ctl-cmd-enter     #
-#                                                            # ctl-cmd-shift     #
-#                                                            # ctl-cmd-alt       #
-#                                                            # ctl-cmd-cmd       #
-#                                                            # clt-cmd-space     #
+#                                                          # ctl-cmd-bspace    #
+#                                                          # ctl-cmd-enter     #
+#                                                          # ctl-cmd-shift     #
+#                                                          # ctl-cmd-alt       #
+#                                                          # ctl-cmd-cmd       #
+#                                                          # clt-cmd-space     #
 
-#                                                            # ctl-cmd-left      #
-#                                                            # ctl-cmd-right     #
-#                                                            # ctl-cmd-up        #
-#                                                            # ctl-cmd-down      #
+#                                                          # ctl-cmd-left      #
+#                                                          # ctl-cmd-right     #
+#                                                          # ctl-cmd-up        #
+#                                                          # ctl-cmd-down      #
+
+
+####################################################################################################
+
+# scroll
+C-x = ["scroll_up"]                                        # alt-cmd-up        #
+C-y = ["scroll_down"]                                      # alt-cmd-down      #
+
+# shift
+S-left = ["extend_char_left"]                              # shift-left        # select left
+S-right = ["extend_char_right"]                            # shift-right       # select right
+S-up = ["extend_line_up"]                                  # shift-up          # select up
+S-down = ["extend_line_down"]                              # shift-down        # select down
+
+# alt
+A-b = ["move_prev_word_start", "collapse_selection"]       # alt-left          # word left
+A-f = ["move_next_word_end", "collapse_selection"]         # alt-right         # word right
+pageup = ["goto_prev_paragraph", "collapse_selection"]     # alt-up            # prev block
+pagedown = ["goto_next_paragraph", "collapse_selection"]   # alt-down          # next block
+
+# alt-shift
+A-S-left = ["extend_prev_word_start"]                      # alt-shift-left    # select word left
+A-S-right = [ "extend_next_word_end"]                      # alt-shift-right   # select word right
+A-S-up = ["select_mode", "goto_prev_paragraph", "MODE"]    # alt-shift-up      # select prev block
+# TODO: patch insert -> select
+A-S-down = ["select_mode", "goto_next_paragraph", "MODE"]  # alt-shift-down    # select next block
+
+# ctl
+C-left = ["jump_view_left"]                                # ctl-left          # prev split
+C-right = ["jump_view_right"]                              # ctl-right         # next split
+C-up = ["jump_view_up"]                                    # ctl-up            # upper split
+C-down = ["jump_view_down"]                                # ctl-down          # lower split
+
+# cmd
+C-a = ["goto_line_start"]                                  # cmd-left          # start line
+C-e = ["goto_line_end", "move_char_right"]                 # cmd-right         # end line
+home = ["goto_file_start"]                                 # cmd-up            # cursor start
+end = ["goto_last_line"]                                   # cmd-down          # cursor end
+
+# cmd-shift
+A-left = ["select_mode", "goto_line_start", "MODE"]        # cmd-shift-left    # select start line
+A-right = ["select_mode", "goto_line_end", "MODE"]         # cmd-shift-right   # select end line
+A-up = ["select_mode", "goto_file_start", "MODE"]          # cmd-shift-up      # select start
+A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
+                                                           # cmd-shift-down    # select end
 
 
 ####################################################################################################
