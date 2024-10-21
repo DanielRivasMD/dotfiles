@@ -3,6 +3,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control
+{:des "Control Mode - arrow"
+ :rules
+ [;
+  ; [:!T#Pleft_arrow [:term]]                                                                      ;
+  ; [:!T#Pright_arrow [:term]]                                                                     ;
+  ; [:!T#Pup_arrow [:term]]                                                                        ;
+  ; [:!T#Pdown_arrow [:term]]                                                                      ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
+{:des "Control Mode - arrow"
+ :rules
+ [;
+  ; [:!TS#Pleft_arrow [:term]]                                                                     ;
+  ; [:!TS#Pright_arrow [:term]]                                                                    ;
+  ; [:!TS#Pup_arrow [:term]]                                                                       ;
+  ; [:!TS#Pdown_arrow [:term]]                                                                     ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
 {:des "Control Mode - symbols"
  :rules
  [;
