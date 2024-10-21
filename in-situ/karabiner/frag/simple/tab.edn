@@ -3,6 +3,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; tab
+{:des "Tab Mode - arrow"
+ :rules
+ [;
+  [:!WQR#Pleft_arrow :!OSpage_up [:term]]                                                          ;
+  [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
+  [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
+  [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
 {:des "Tab Mode - symbols"
  :rules
  [;
@@ -15,12 +27,12 @@
   ; [:!WQR#Pperiod []]                                                                             ;
   ; [:!WQR#Pslash []]                                                                              ;
 
-  [:!WQR#Pdelete_or_backspace [:!Sf2]]                                                                ;
-  [:!WQR#Preturn_or_enter []]                                                                    ;
-  [:!WQR#Pright_shift []]                                                                        ;
-  [:!WQR#Pright_option []]                                                                       ;
-  [:!WQR#Pright_command []]                                                                      ;
-  [:!WQR#Pspacebar []]                                                                           ;
+  [:!WQR#Pdelete_or_backspace [:!Sf2]]                                                             ;
+  ; [:!WQR#Preturn_or_enter []]                                                                    ;
+  ; [:!WQR#Pright_shift []]                                                                        ;
+  ; [:!WQR#Pright_option []]                                                                       ;
+  ; [:!WQR#Pright_command []]                                                                      ;
+  ; [:!WQR#Pspacebar []]                                                                           ;
 
   ; [:!WQR#Pleft_command []]                                                                       ;
   ; [:!WQR#Pleft_option []]                                                                        ;
