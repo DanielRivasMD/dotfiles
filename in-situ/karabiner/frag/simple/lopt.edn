@@ -3,6 +3,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option
+{:des "Option Mode - arrow"
+ :rules
+ [;
+  ; [:!O#Pleft_arrow [:term]]                                                                      ;
+  ; [:!O#Pright_arrow [:term]]                                                                     ;
+  [:!O#Pup_arrow :page_up [:term]]                                                                 ;
+  [:!O#Pdown_arrow :page_down [:term]]                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option
+{:des "Option Mode - arrow"
+ :rules
+ [;
+  ; [:!OS#Pleft_arrow [:term]]                                                                     ;
+  ; [:!OS#Pright_arrow [:term]]                                                                    ;
+  ; [:!OS#Pup_arrow [:term]]                                                                       ;
+  ; [:!OS#Pdown_arrow [:term]]                                                                     ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option
 {:des "Option Mode - symbols"
  :rules
  [;
@@ -201,33 +225,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!O#Pa []]                                                                                    ;
-  ; [:!O#Pb []]                                                                                    ;
-  ; [:!O#Pc []]                                                                                    ;
-  ; [:!O#Pd []]                                                                                    ;
-  ; [:!O#Pe []]                                                                                    ;
-  ; [:!O#Pf []]                                                                                    ;
-  ; [:!O#Pg []]                                                                                    ;
-  ; [:!O#Ph []]                                                                                    ;
-  ; [:!O#Pi []]                                                                                    ;
-  ; [:!O#Pj []]                                                                                    ;
-  ; [:!O#Pk []]                                                                                    ;
-  ; [:!O#Pl []]                                                                                    ;
-  ; [:!O#Pm []]                                                                                    ;
-  ; [:!O#Pn []]                                                                                    ;
-  ; [:!O#Po []]                                                                                    ;
-  ; [:!O#Pp []]                                                                                    ;
-  ; [:!O#Pq []]                                                                                    ;
-  ; [:!O#Pr []]                                                                                    ;
-  ; [:!O#Ps []]                                                                                    ;
-  ; [:!O#Pt []]                                                                                    ;
-  ; [:!O#Pu []]                                                                                    ;
-  ; [:!O#Pv []]                                                                                    ;
-  ; [:!O#Pw []]                                                                                    ;
-  ; [:!O#Px []]                                                                                    ;
-  ; [:!O#Py []]                                                                                    ;
-  ; [:!O#Pz []]                                                                                    ;
-  ; [:!O#Pright_control []]                                                                        ;
+  ; [:!O#Pa []]                                                                     REDUNDANT      ;
+  ; [:!O#Pb []]                                                                     REDUNDANT      ;
+  ; [:!O#Pc []]                                                                     REDUNDANT      ;
+  ; [:!O#Pd []]                                                                     REDUNDANT      ;
+  ; [:!O#Pe []]                                                                     REDUNDANT      ;
+  ; [:!O#Pf []]                                                                     REDUNDANT      ;
+  ; [:!O#Pg []]                                                                     REDUNDANT      ;
+  ; [:!O#Ph []]                                                                     REDUNDANT      ;
+  ; [:!O#Pi []]                                                                     REDUNDANT      ;
+  ; [:!O#Pj []]                                                                     REDUNDANT      ;
+  ; [:!O#Pk []]                                                                     REDUNDANT      ;
+  ; [:!O#Pl []]                                                                     REDUNDANT      ;
+  ; [:!O#Pm []]                                                                     REDUNDANT      ;
+  ; [:!O#Pn []]                                                                     REDUNDANT      ;
+  ; [:!O#Po []]                                                                     REDUNDANT      ;
+  ; [:!O#Pp []]                                                                     REDUNDANT      ;
+  ; [:!O#Pq []]                                                                     REDUNDANT      ;
+  ; [:!O#Pr []]                                                                     REDUNDANT      ;
+  ; [:!O#Ps []]                                                                     REDUNDANT      ;
+  ; [:!O#Pt []]                                                                     REDUNDANT      ;
+  ; [:!O#Pu []]                                                                     REDUNDANT      ;
+  ; [:!O#Pv []]                                                                     REDUNDANT      ;
+  ; [:!O#Pw []]                                                                     REDUNDANT      ;
+  ; [:!O#Px []]                                                                     REDUNDANT      ;
+  ; [:!O#Py []]                                                                     REDUNDANT      ;
+  ; [:!O#Pz []]                                                                     REDUNDANT      ;
+  ; [:!O#Pright_control []]                                                         REDUNDANT      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -236,33 +260,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!OS#Pa []]                                                                                   ;
-  ; [:!OS#Pb []]                                                                                   ;
-  ; [:!OS#Pc []]                                                                                   ;
-  ; [:!OS#Pd []]                                                                                   ;
-  ; [:!OS#Pe []]                                                                                   ;
-  ; [:!OS#Pf []]                                                                                   ;
-  ; [:!OS#Pg []]                                                                                   ;
-  ; [:!OS#Ph []]                                                                                   ;
-  ; [:!OS#Pi []]                                                                                   ;
-  ; [:!OS#Pj []]                                                                                   ;
-  ; [:!OS#Pk []]                                                                                   ;
-  ; [:!OS#Pl []]                                                                                   ;
-  ; [:!OS#Pm []]                                                                                   ;
-  ; [:!OS#Pn []]                                                                                   ;
-  ; [:!OS#Po []]                                                                                   ;
-  ; [:!OS#Pp []]                                                                                   ;
-  ; [:!OS#Pq []]                                                                                   ;
-  ; [:!OS#Pr []]                                                                                   ;
-  ; [:!OS#Ps []]                                                                                   ;
-  ; [:!OS#Pt []]                                                                                   ;
-  ; [:!OS#Pu []]                                                                                   ;
-  ; [:!OS#Pv []]                                                                                   ;
-  ; [:!OS#Pw []]                                                                                   ;
-  ; [:!OS#Px []]                                                                                   ;
-  ; [:!OS#Py []]                                                                                   ;
-  ; [:!OS#Pz []]                                                                                   ;
-  ; [:!OS#Pright_control []]                                                                       ;
+  ; [:!OS#Pa []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pb []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pc []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pd []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pe []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pf []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pg []]                                                                    REDUNDANT      ;
+  ; [:!OS#Ph []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pi []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pj []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pk []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pl []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pm []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pn []]                                                                    REDUNDANT      ;
+  ; [:!OS#Po []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pp []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pq []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pr []]                                                                    REDUNDANT      ;
+  ; [:!OS#Ps []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pt []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pu []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pv []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pw []]                                                                    REDUNDANT      ;
+  ; [:!OS#Px []]                                                                    REDUNDANT      ;
+  ; [:!OS#Py []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pz []]                                                                    REDUNDANT      ;
+  ; [:!OS#Pright_control []]                                                        REDUNDANT      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
