@@ -6,6 +6,18 @@
 {:des "Control - Command Mode - symbols"
  :rules
  [;
+  ; [:!TC#Pleft_arrow :!Tb [:term]]                                                                ;
+  ; [:!TC#Pright_arrow :!Tf [:term]]                                                               ;
+  ; [:!TC#Pup_arrow :!Tn [:term]]                                                                  ;
+  ; [:!TC#Pdown_arrow :!Tp [:term]]                                                                ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control - command
+{:des "Control - Command Mode - symbols"
+ :rules
+ [;
   ; [:!TC#Popen_bracket []]                                                                        ;
   ; [:!TC#Pclose_bracket []]                                                                       ;
   ; [:!TC#Psemicolon []]                                                                           ;
