@@ -11,7 +11,11 @@ keybinds clear-defaults=true {
         // bind "Alt d" {}                                                                         COLLISION
         // bind "Alt e" {}                                                                         COLLISION
         // bind "Alt f" {}
-        // bind "Alt g" {}
+        bind "Alt g" {
+            Run "zellij" "run" "--floating" "--close-on-exit" "--height" "100" "--width" "100" "--x" "100" "--y" "0" "--" "hx" {
+                cwd "/Users/drivas/.archive"
+            }
+        }
         bind "Alt h" { EditScrollback; SwitchToMode "Normal"; }                                    //
         // bind "Alt i" {  }                                                                       COLLISION
         bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             //
