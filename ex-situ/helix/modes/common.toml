@@ -91,8 +91,8 @@ A-C-end = ["decrement"]                                    # joker-down        #
 # S-F17 = [""]                                             # grave-/           #
 
 S-F7 = ["command_palette"]                                 # grave-bs          # command palette
-C-t = ["file_picker"]                                      # grave-enter       # file picker
-C-s = ["buffer_picker"]                                    # grave-shift       # buffer picker
+C-s = ["file_picker"]                                      # grave-enter       # file picker
+C-t = ["buffer_picker"]                                    # grave-shift       # buffer picker
 C-r = ["changed_file_picker"]                              # grave-alt         # delta picker
 # S-F2 = [""]                                              # grave-cmd         #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # grave-space       # repeat motion
