@@ -5,8 +5,11 @@
 {:des "Terminal zellij bindings - alphabet"
  :rules
  [;
+  ; on demand window
+  [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Tv]}]                                ;
+
   ; session lock
-  [:#Pescape :!EWright_shift [:term] {:alone [:!Oa]}]                          ; esc               ;
+  [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]                        ; alt               ;
 
   ; cursor movement
   [:!O#Pleft_arrow :!Ob [:term]]                                               ; alt-left          ;
@@ -20,8 +23,8 @@
   ; cursor movement
   [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
 
-  ; [ :!Og [:term]]                                                                                ;
-  [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Og]}]                                ;
+  ; pop-up doc
+  [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]                          ; esc               ;
 
    ; history editor
    [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; shift             ;
