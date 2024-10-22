@@ -20,10 +20,12 @@
  :rules
  [:master
   [:#Pnon_us_backslash :fn nil {:alone [:0]}]                                  ;                   ;
-  [:#P0 :non_us_backslash]                                                     ; '`'               ;
-  [:!T#P0 [:non_us_backslash :non_us_backslash :non_us_backslash]]             ; '```'             ;
-  [:!O#Pnon_us_backslash [:spacebar :!Snon_us_backslash :spacebar]]            ; ' ~ '             ;
-  [:!T#Pnon_us_backslash [:spacebar :equal_sign :!Snon_us_backslash :spacebar]]; ' =~ '            ;
+  [:#P0 :grave_accent_and_tilde]                                               ; '`'               ;
+  [:!T#P0
+   [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'             ;
+  [:!O#Pnon_us_backslash [:spacebar :!Sgrave_accent_and_tilde :spacebar]]      ; ' ~ '             ;
+  [:!T#Pnon_us_backslash
+   [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]                ;' =~ '             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
