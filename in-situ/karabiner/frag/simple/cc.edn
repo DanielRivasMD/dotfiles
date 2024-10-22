@@ -6,10 +6,10 @@
 {:des "Control - Command Mode - symbols"
  :rules
  [;
-  ; [:!TC#Pleft_arrow :!Tb [:term]]                                                                ;
-  ; [:!TC#Pright_arrow :!Tf [:term]]                                                               ;
-  ; [:!TC#Pup_arrow :!Tn [:term]]                                                                  ;
-  ; [:!TC#Pdown_arrow :!Tp [:term]]                                                                ;
+  [:!TC#Pleft_arrow :!Tb [:term]]                                                                ;
+  [:!TC#Pright_arrow :!Tf [:term]]                                                               ;
+  [:!TC#Pup_arrow :!Tn [:term]]                                                                  ;
+  [:!TC#Pdown_arrow :!Tp [:term]]                                                                ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -18,21 +18,21 @@
 {:des "Control - Command Mode - symbols"
  :rules
  [;
-  ; [:!TC#Popen_bracket []]                                                                        ;
-  ; [:!TC#Pclose_bracket []]                                                                       ;
+  [:!TC#Popen_bracket [:!Th]]                                                                      ;
+  [:!TC#Pclose_bracket [:!Oc]]                                                                     ;
   ; [:!TC#Psemicolon []]                                                                           ;
   ; [:!TC#Pquote []]                                                                               ;
   ; [:!TC#Pbackslash []]                                                                           ;
-  ; [:!TC#Pcomma []]                                                                               ;
-  ; [:!TC#Pperiod []]                                                                              ;
+  [:!TC#Pcomma [:!Sf1]]                                                                            ;
+  [:!TC#Pperiod [:!Sf4]]                                                                           ;
   ; [:!TC#Pslash []]                                                                               ;
 
-  ; [:!TC#Pdelete_or_backspace []]                                                                 ;
-  ; [:!TC#Preturn_or_enter []]                                                                     ;
-  ; [:!TC#Pright_shift []]                                                                         ;
-  ; [:!TC#Pright_option []]                                                                        ;
-  ; [:!TC#Pright_command []]                                                                       ;
-  ; [:!TC#Pspacebar []]                                                                            ;
+  [:!TC#Pdelete_or_backspace [:!Tl]]                                                               ;
+  [:!TC#Preturn_or_enter [:!Tg]]                                                                   ;
+  [:!TC#Pright_shift [:!Tj]]                                                                       ;
+  [:!TC#Pright_option [:!Sf5]]                                                                     ;
+  [:!TC#Pright_command [:!Sf6]]                                                                    ;
+  [:!TC#Pspacebar [:!To]]                                                                          ;
 
   ; [:!TCleft_command [:term]]                                                      NOT AVAILABLE  ;
   ; [:!TC#Pleft_option [:term]]                                                                    ;
@@ -50,31 +50,31 @@
 {:des "Control - Command Mode - numbers"
  :rules
  [;
-  ; [:!TC#keypad_1 []]                                                                             ;
-  ; [:!TC#keypad_2 []]                                                                             ;
-  ; [:!TC#keypad_3 []]                                                                             ;
-  ; [:!TC#keypad_4 []]                                                                             ;
-  ; [:!TC#keypad_5 []]                                                                             ;
-  ; [:!TC#keypad_6 []]                                                                             ;
-  ; [:!TC#keypad_7 []]                                                                             ;
-  ; [:!TC#keypad_8 []]                                                                             ;
-  ; [:!TC#keypad_9 []]                                                                             ;
-  ; [:!TC#keypad_0 []]                                                                             ;
-  ; [:!TC#keypad_slash []]                                                                         ;
-  ; [:!TC#keypad_asterisk []]                                                                      ;
+  ; [:!TC#Pkeypad_1 []]                                                                            ;
+  ; [:!TC#Pkeypad_2 []]                                                                            ;
+  ; [:!TC#Pkeypad_3 []]                                                                            ;
+  ; [:!TC#Pkeypad_4 []]                                                                            ;
+  ; [:!TC#Pkeypad_5 []]                                                                            ;
+  ; [:!TC#Pkeypad_6 []]                                                                            ;
+  ; [:!TC#Pkeypad_7 []]                                                                            ;
+  ; [:!TC#Pkeypad_8 []]                                                                            ;
+  ; [:!TC#Pkeypad_9 []]                                                                            ;
+  ; [:!TC#Pkeypad_0 []]                                                                            ;
+  ; [:!TC#Pkeypad_slash []]                                                                        ;
+  ; [:!TC#Pkeypad_asterisk []]                                                                     ;
 
-  ; [:!TC#1 []]                                                                                    ;
-  ; [:!TC#2 []]                                                                                    ;
-  ; [:!TC#3 []]                                                                                    ;
-  ; [:!TC#4 []]                                                                                    ;
-  ; [:!TC#5 []]                                                                                    ;
-  ; [:!TC#6 []]                                                                                    ;
-  ; [:!TC#7 []]                                                                                    ;
-  ; [:!TC#8 []]                                                                                    ;
-  ; [:!TC#9 []]                                                                                    ;
-  ; [:!TC#0 []]                                                                                    ;
-  ; [:!TC#Phyphen []]                                                                              ;
-  ; [:!TC#Pequal_sign []]                                                                          ;
+  ; [:!TC#P1 []]                                                                                   ;
+  ; [:!TC#P2 []]                                                                                   ;
+  ; [:!TC#P3 []]                                                                                   ;
+  ; [:!TC#P4 []]                                                                                   ;
+  ; [:!TC#P5 []]                                                                                   ;
+  ; [:!TC#P6 []]                                                                                   ;
+  ; [:!TC#P7 []]                                                                                   ;
+  ; [:!TC#P8 []]                                                                                   ;
+  ; [:!TC#P9 []]                                                                                   ;
+  ; [:!TC#P0 []]                                                                                   ;
+  [:!TC#Phyphen [:!Sf13]]                                                                          ;
+  [:!TC#Pequal_sign [:!Sf14]]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
