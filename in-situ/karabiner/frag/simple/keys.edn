@@ -22,7 +22,7 @@
 
   ; lefts
   ; TODO: update
-  [:#Pleft_option :left_option [:term] {:alone [:escape]}]                                         ;
+  ; [:#Pleft_option :left_option nil {:alone []}]                                                  ;
 
   [:#Ptab :!WQright_shift nil {:alone [:tab]}]                                                     ;
   [:#Pleft_control :left_control nil {:alone [:!Tf3]}]                                             ;
