@@ -105,58 +105,58 @@ C-end = ["goto_next_change"]                               # grave-down        #
 
 ####################################################################################################
 
-# grave-shift => split & comment
-# S-F13 = []                                               # grave-shift--     #
-# S-F14 = []                                               # grave-shift-=     #
+# grave-shift
+#                                                          # grave-shift--     #
+#                                                          # grave-shift-=     #
 
-# C-h = [""]                                               # grave-shift-[     #
-# A-c = [""]                                               # grave-shift-]     #
+#                                                          # grave-shift-[     #
+#                                                          # grave-shift-]     #
 #                                                          # grave-shift-;     #
 #                                                          # grave-shift-'     #
 #                                                          # grave-shift-\     #
-# S-F1 = [""]                                              # grave-shift-,     #
-# S-F4 = [""]                                              # grave-shift-.     #
+#                                                          # grave-shift-,     #
+#                                                          # grave-shift-.     #
 #                                                          # grave-shift-/     #
 
-C-l = [":buffer-close"]                                    # grave-shift-bspace# close tab
-C-g = ["normal_mode", ":new"]                              # grave-shift-enter # new
-C-j = ["vsplit"]                                           # grave-shift-shift # vertical split
-S-F5 = ["hsplit"]                                          # grave-shift-alt   # horizontal split
-S-F6 = ["wonly"]                                           # grave-shift-cmd   # unsplit
-C-o = ["goto_last_accessed_file"]                          # grave-shift-space # last file
+#                                                          # grave-shift-bspace#
+#                                                          # grave-shift-enter #
+#                                                          # grave-shift-shift #
+#                                                          # grave-shift-alt   #
+#                                                          # grave-shift-cmd   #
+#                                                          # grave-shift-space #
 
-C-b = ["goto_previous_buffer"]                             # grave-shift-left  # prev tab
-C-f = ["goto_next_buffer"]                                 # grave-shift-right # next tab
-C-n = ["goto_prev_comment"]                                # grave-shift-up    # prev comment
-C-p = ["goto_next_comment"]                                # grave-shift-down  # next comment
+#                                                          # grave-shift-left  #
+#                                                          # grave-shift-right #
+#                                                          # grave-shift-up    #
+#                                                          # grave-shift-down  #
 
 
 ####################################################################################################
 
-# ctl-cmd
-#                                                          # ctl-cmd--         #
-#                                                          # ctl-cmd-=         #
+# ctl-cmd => split & comment
+# S-F13 = []                                               # ctl-cmd--         #
+# S-F14 = []                                               # ctl-cmd-=         #
 
-#                                                          # ctl-cmd-[         #
-#                                                          # ctl-cmd-]         #
+# C-h = [""]                                               # ctl-cmd-[         #
+# A-c = [""]                                               # ctl-cmd-]         #
 #                                                          # ctl-cmd-;         #
 #                                                          # ctl-cmd-'         #
 #                                                          # ctl-cmd-\         #
-#                                                          # ctl-cmd-,         #
-#                                                          # ctl-cmd-.         #
+# S-F1 = [""]                                              # ctl-cmd-,         #
+# S-F4 = [""]                                              # ctl-cmd-.         #
 #                                                          # ctl-cmd-/         #
 
-#                                                          # ctl-cmd-bspace    #
-#                                                          # ctl-cmd-enter     #
-#                                                          # ctl-cmd-shift     #
-#                                                          # ctl-cmd-alt       #
-#                                                          # ctl-cmd-cmd       #
-#                                                          # clt-cmd-space     #
+C-l = [":buffer-close"]                                    # ctl-cmd-bspace    # close tab
+C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
+C-j = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
+S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
+S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
+C-o = ["goto_last_accessed_file"]                          # ctl-cmd-space     # last file
 
-#                                                          # ctl-cmd-left      #
-#                                                          # ctl-cmd-right     #
-#                                                          # ctl-cmd-up        #
-#                                                          # ctl-cmd-down      #
+C-b = ["goto_previous_buffer"]                             # ctl-cmd-left      # prev tab
+C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     # next tab
+C-n = ["goto_prev_comment"]                                # ctl-cmd-up        # prev comment
+C-p = ["goto_next_comment"]                                # ctl-cmd-down      # next comment
 
 
 ####################################################################################################
