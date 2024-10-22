@@ -21,7 +21,7 @@
   [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
 
   ; [ :!Og [:term]]                                                                                ;
-  ; [ [:term] {:alone [:!Og]}]                                                                     ;
+  [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Og]}]                                ;
 
    ; history editor
    [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; shift             ;
