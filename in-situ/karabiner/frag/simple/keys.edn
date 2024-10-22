@@ -21,13 +21,13 @@
   [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]                                  ;
 
   ; lefts
+  ; TODO: update
+  [:#Pleft_option :left_option [:term] {:alone [:escape]}]                                         ;
+
   [:#Ptab :!WQright_shift nil {:alone [:tab]}]                                                     ;
   [:#Pleft_control :left_control nil {:alone [:!Tf3]}]                                             ;
   [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ;
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ;
-
-  ; TODO: update
-  [:#Pleft_option :left_option [:term] {:alone [:f3]}]                                             ;
 
   ; rights
   [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]                                               ;
