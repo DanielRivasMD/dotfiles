@@ -147,8 +147,8 @@
   ; [:!C#P6 []]                                                                                    ;
   ; [:!C#P7 []]                                                                                    ;
   ; [:!C#P8 []]                                                                                    ;
-  [:!C#P9 [:!S4 :!S9]]                                                         ; '$('              ;
-  [:!C#P0 [:!S0 :spacebar]]                                                    ; ') '              ;
+  [:!C#P9 [:period :!S9]]                                                      ; '.('              ;
+  ; [:!C#P0 []]                                                                                    ;
   [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                      ; ' -= '            ;
   [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]            ; ' += '            ;
   ]}
@@ -180,8 +180,8 @@
   ; [:!CS#P6 []]                                                                                   ;
   ; [:!CS#P7 []]                                                                                   ;
   ; [:!CS#P8 []]                                                                                   ;
-  [:!CS#P9 [:period :!S9]]                                                      ; '.('             ;
-  ; [:!CS#P0 []]                                                                                   ;
+  [:!CS#P9 [:!S4 :!S9]]                                                        ; '$('              ;
+  [:!CS#P0 [:!S0 :spacebar]]                                                   ; ') '              ;
   [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]             ; ' .-= '           ;
   [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]   ; ' .+= '           ;
   ]}
