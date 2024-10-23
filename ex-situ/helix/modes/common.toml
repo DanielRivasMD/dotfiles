@@ -16,6 +16,7 @@ C-w = ["delete_word_backward"]                             # shift-ctl         #
 F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
 C-space = ["goto_word"]                                    # ctl-space         #
 # TODO: remap
+C-v = [":sh zellij action new-pane --name shell --floating --height 100 --width 100 --x 100 --y 0"]                                              # grave-cmd         #
 # C-v = ["change_selection_noyank"]                          # shift-alt         #
 
 
@@ -94,7 +95,7 @@ S-F7 = ["command_palette"]                                 # grave-bs          #
 C-s = ["file_picker"]                                      # grave-enter       # file picker
 C-t = ["buffer_picker"]                                    # grave-shift       # buffer picker
 C-r = ["changed_file_picker"]                              # grave-alt         # delta picker
-# S-F2 = [""]                                              # grave-cmd         #
+# S-F2 = [":sh zellij action new-pane --name shell --floating --height 100 --width 100 --x 100 --y 0"]                                              # grave-cmd         #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # grave-space       # repeat motion
 
 C-pageup = ["normal_mode", "till_prev_char", "MODE"]       # grave-left        # prev until
