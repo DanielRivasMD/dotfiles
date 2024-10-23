@@ -53,6 +53,8 @@ coreutils
 
 ddh
 
+diesel
+cargo install diesel_cli
 
 du-dust
 
