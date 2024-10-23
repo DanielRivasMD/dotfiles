@@ -15,9 +15,9 @@ C-w = ["delete_word_backward"]                             # shift-ctl         #
 # fast reload
 F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
 C-space = ["goto_word"]                                    # ctl-space         #
-# TODO: remap
-C-v = [":sh zellij action new-pane --name shell --floating --height 100 --width 100 --x 100 --y 0"]                                              # grave-cmd         #
-# C-v = ["change_selection_noyank"]                          # shift-alt         #
+C-v = ["change_selection_noyank"]                          # bspace            #
+A-g = [":sh zellij action new-pane --name SHELL --floating --height 100 --width 100 --x 100 --y 0"]
+#                                                          # esc               #
 
 
 ####################################################################################################
