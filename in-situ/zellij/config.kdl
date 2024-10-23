@@ -11,11 +11,11 @@ keybinds clear-defaults=true {
         // bind "Alt d" {}                                                                         COLLISION
         // bind "Alt e" {}                                                                         COLLISION
         // bind "Alt f" {}
-        bind "Alt g" {
-            Run "zellij" "run" "--floating" "--close-on-exit" "--height" "100" "--width" "100" "--x" "100" "--y" "0" "--" "hx" {
-                cwd "/Users/drivas/.archive"
-            }
-        }
+        // bind "Alt g" {
+        //     Run "zellij" "action" "new-pane" "--name" "arch" "--floating" "--height" "100" "--width" "100" "--x" "100" "--y" "0" {
+        //         cwd "/Users/drivas/.archive"
+        //     }
+        // }
         bind "Alt h" { EditScrollback; SwitchToMode "Normal"; }                                    //
         // bind "Alt i" {  }                                                                       COLLISION
         bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             //
@@ -124,13 +124,12 @@ keybinds clear-defaults=true {
     scroll {
         bind "Alt D" { SwitchToMode "Normal"; }                                                    //
         bind "Enter" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
-        // bind "Space" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
         bind "Up" { ScrollUp; }                                                                    //
         bind "Down" { ScrollDown; }                                                                //
-        bind "PageUp" { PageScrollUp; }                                                            //
-        bind "PageDown" { PageScrollDown; }                                                        //
-        bind "Home" { HalfPageScrollUp; }                                                          //
-        bind "End" { HalfPageScrollDown; }                                                         //
+        bind "PageUp" { HalfPageScrollUp; }                                                        //
+        bind "PageDown" { HalfPageScrollDown; }                                                    //
+        bind "Home" { PageScrollUp; }                                                              //
+        bind "End" { PageScrollDown; }                                                             //
     }
 
     entersearch {
