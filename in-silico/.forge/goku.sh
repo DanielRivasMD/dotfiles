@@ -53,8 +53,7 @@ _forge() {
     "${fsimple}/rctl.edn" \
     "${fsimple}/ropt.edn" \
     "${fsimple}/tab.edn" \
-    "${fzellij}/ABC-fn.edn" \
-    "${fzellij}/mod-ABC.edn" \
+    "${fapps}/zellij.edn" \
     "${fsimple}/keys.edn" \
     "${karabiner}/.eof.tmp" \
     > "${karabiner}/karabiner.edn"
