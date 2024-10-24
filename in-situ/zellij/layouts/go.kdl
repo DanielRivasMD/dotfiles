@@ -13,19 +13,16 @@ layout {
     }
 
     tab name="I Files" {
-        pane stacked=true split_direction="horizontal" {
-            pane name="canvas" focus=true
-            pane name="explorer" command="broot" {
+        pane split_direction="vertical" {
+            pane name="tree" size="40%" command="broot" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
             }
+            pane name="explore" size="60%" focus=true
         }
     }
 
     tab name="II Source" focus=true {
-        pane split_direction="vertical" size="70%" {
-            pane name="canvas" size="30%"
-            pane name="editor" size="70%" focus=true command="hx"
-        }
+        pane name="editor" size="70%" focus=true command="hx"
         pane split_direction="vertical" size="30%" {
             pane name="watch" command="just" {
                 args "watch"
