@@ -35,7 +35,7 @@ forge() {
   ####################################################################################################
 
   # format & watch goku
-  pueue add --group "${pueueFG}" -- watchexec --watch ~/.archive/in-situ/karabiner/frag -- 'source ~/.archive/in-silico/.forge/goku.sh'
+  pueue add --group "${pueueFG}" -- watchexec --watch ~/.saiyajin/frag -- 'source ~/.archive/in-silico/.forge/goku.sh'
 
   ####################################################################################################
   # helix
