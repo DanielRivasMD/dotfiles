@@ -12,12 +12,12 @@ C-k = ["kill_to_line_end"]                                 # shift-cmd         #
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
 
-# fast reload
-F3 = ["normal_mode", ":write", "MODE"]                     # grave             #
-C-space = ["goto_word"]                                    # ctl-space         #
+F3 = ["normal_mode", ":write", "MODE"]                     # grave             # fast reload
 C-v = ["change_selection_noyank"]                          # bspace            #
 A-g = [":sh zellij action new-pane --name SHELL --floating --height 100 --width 100 --x 100 --y 0"]
 #                                                          # esc               #
+
+C-space = ["goto_word"]                                    # ctl-space         # 
 
 
 ####################################################################################################
