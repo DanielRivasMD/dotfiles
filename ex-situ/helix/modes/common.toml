@@ -12,40 +12,40 @@ C-k = ["kill_to_line_end"]                                 # shift-cmd         #
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
 
-F3 = ["normal_mode", ":write", "MODE"]                     # grave             # fast reload
-C-v = ["change_selection_noyank"]                          # bspace            #
+F3 = ["normal_mode", ":write", "MODE"]                     # grave             # fast save
+C-v = ["change_selection_noyank"]                          # bspace            # change
 A-g = [":sh zellij action new-pane --name SHELL --floating --height 100 --width 100 --x 100 --y 0"]
-#                                                          # esc               #
+#                                                          # esc               # spawn pane
 
-C-space = ["goto_word"]                                    # ctl-space         # 
-
+C-space = ["goto_word"]                                    # ctl-space         # jumper
+A-ret = ["insert_newline", "insert_mode"]                  # cmd-enter         # insert line
 
 ####################################################################################################
 
-# # tab => diagnostics & list
-# #                                                          # tab--             #
-# #                                                          # tab-=             #
+# tab => diagnostics & list
+#                                                          # tab--             #
+#                                                          # tab-=             #
 
-# #                                                          # tab-[             #
-# #                                                          # tab-]             #
-# #                                                          # tab-;             #
-# #                                                          # tab-'             #
-# #                                                          # tab-\             #
-# #                                                          # tab-,             #
-# #                                                          # tab-.             #
-# #                                                          # tab-/             #
+#                                                          # tab-[             #
+#                                                          # tab-]             #
+#                                                          # tab-;             #
+#                                                          # tab-'             #
+#                                                          # tab-\             #
+#                                                          # tab-,             #
+#                                                          # tab-.             #
+#                                                          # tab-/             #
 
-# S-F2 = ["diagnostics_picker"]                              # tab-bspace        # diag picker
-# # A-C-S-F11 = ["jumplist_picker"]                            # tab-enter         # record jump
-# # A-C-F14 = ["save_selection"]                               # tab-shift         # jump list
-# # C-S-pagedown = ["jump_forward"]                            # tab-alt           # next jump
-# # C-S-pageup = ["jump_backward"]                             # tab-cmd           # prev jump
-# # A-C-S-F12 = ["goto_last_modification"]                     # tab-space         # last edit
+#                                                          # tab-bspace        #
+# A-C-S-F11 = ["jumplist_picker"]                            # tab-enter         # record jump
+# A-C-F14 = ["save_selection"]                               # tab-shift         # jump list
+# C-S-pagedown = ["jump_forward"]                            # tab-alt           # next jump
+# C-S-pageup = ["jump_backward"]                             # tab-cmd           # prev jump
+# A-C-S-F12 = ["goto_last_modification"]                     # tab-space         # last edit
 
-# # S-A-pageup = [""]                                        # tab-left          #
-# # S-A-pagedown = [""]                                      # tab-right         #
-# S-A-home = ["goto_prev_diag"]                              # tab-up            # prev diag
-# S-A-end = ["goto_next_diag"]                               # tab-down          # next diag
+# S-A-pageup = [""]                                        # tab-left          #
+# S-A-pagedown = [""]                                      # tab-right         #
+# S-A-home = [""]                                          # tab-up            #
+# S-A-end = [""]                                           # tab-down          #
 
 
 ####################################################################################################
@@ -63,7 +63,7 @@ F15 = ["goto_definition"]                                  # joker-,           #
 F16 = ["goto_reference"]                                   # joker-.           # reference
 F17 = ["goto_implementation"]                              # joker-/           # implementation
 
-# F1 = [""]                                                # joker-bs          #
+F1 = ["hover"]                                             # joker-bs          #
 F2 = ["symbol_picker"]                                     # joker-enter       # symbol list
 F4 = ["goto_type_definition"]                              # joker-shift       # type definition
 F5 = ["goto_next_function"]                                # joker-alt         # prev func
@@ -91,10 +91,10 @@ A-C-end = ["decrement"]                                    # joker-down        #
 # S-F16 = [""]                                             # grave-.           #
 # S-F17 = [""]                                             # grave-/           #
 
-S-F7 = ["command_palette"]                                 # grave-bs          # command palette
+C-r = ["changed_file_picker"]                              # grave-bs          # delta picker
 C-s = ["file_picker"]                                      # grave-enter       # file picker
 C-t = ["buffer_picker"]                                    # grave-shift       # buffer picker
-C-r = ["changed_file_picker"]                              # grave-alt         # delta picker
+#                                                          # grave-alt         #
 #                                                          # grave-cmd         #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # grave-space       # repeat motion
 
@@ -107,29 +107,29 @@ C-end = ["goto_next_change"]                               # grave-down        #
 ####################################################################################################
 
 # grave-shift => diagnostics & list
-#                                                          # grave-shift--      #
-#                                                          # grave-shift-=      #
+#                                                          # grave-shift--     #
+#                                                          # grave-shift-=     #
 
-#                                                          # grave-shift-[      #
-#                                                          # grave-shift-]      #
-#                                                          # grave-shift-;      #
-#                                                          # grave-shift-'      #
-#                                                          # grave-shift-\      #
-#                                                          # grave-shift-,      #
-#                                                          # grave-shift-.      #
-#                                                          # grave-shift-/      #
+#                                                          # grave-shift-[     #
+#                                                          # grave-shift-]     #
+#                                                          # grave-shift-;     #
+#                                                          # grave-shift-'     #
+#                                                          # grave-shift-\     #
+#                                                          # grave-shift-,     #
+#                                                          # grave-shift-.     #
+#                                                          # grave-shift-/     #
 
-# A-C-S-F11 = ["jumplist_picker"]                           # grave-shift-bspace # record jump
+#                                                          # grave-shift-bspace#
 S-F2 = ["diagnostics_picker"]                              # grave-shift-enter # diag picker
-# A-C-F14 = ["save_selection"]                              # grave-shift-shift  # jump list
-# C-S-pagedown = ["jump_forward"]                           # grave-shift-alt    # next jump
-# C-S-pageup = ["jump_backward"]                            # grave-shift-cmd    # prev jump
-# A-C-S-F12 = ["goto_last_modification"]                    # grave-shift-space  # last edit
+#                                                          # grave-shift-shift #
+#                                                          # grave-shift-alt   #
+#                                                          # grave-shift-cmd   #
+#                                                          # grave-shift-space #
 
-# S-C-pageup = [""]                                        # grave-shift-left   #
-# S-C-pagedown = [""]                                      # grave-shift-right  #
-S-C-home = ["goto_prev_diag"]                              # grave-shift-up     # prev diag
-S-C-end = ["goto_next_diag"]                               # grave-shift-down   # next diag
+# S-C-pageup = [""]                                        # grave-shift-left  #
+# S-C-pagedown = [""]                                      # grave-shift-right #
+S-C-home = ["goto_prev_diag"]                              # grave-shift-up    # prev diag
+S-C-end = ["goto_next_diag"]                               # grave-shift-down  # next diag
 
 
 ####################################################################################################
@@ -181,9 +181,8 @@ pagedown = ["goto_next_paragraph", "collapse_selection"]   # alt-down          #
 # alt-shift
 A-S-left = ["extend_prev_word_start"]                      # alt-shift-left    # select word left
 A-S-right = [ "extend_next_word_end"]                      # alt-shift-right   # select word right
-A-S-up = ["select_mode", "goto_prev_paragraph", "MODE"]    # alt-shift-up      # select prev block
-# TODO: patch insert -> select
-A-S-down = ["select_mode", "goto_next_paragraph", "MODE"]  # alt-shift-down    # select next block
+# A-S-up = ["select_mode", "goto_prev_paragraph", "MODE"]    # alt-shift-up      # select prev block
+# A-S-down = ["select_mode", "goto_next_paragraph", "MODE"]  # alt-shift-down    # select next block
 
 # ctl
 C-left = ["jump_view_left"]                                # ctl-left          # prev split
@@ -208,11 +207,11 @@ A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
 ####################################################################################################
 
 # alphabet
-A-F1 = ["select_regex"]                                    # alt-a             # select
+# A-F1 = [""]                                              # alt-a             #
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
-A-F6 = ["format_selections"]                               # alt-e             # format
+A-F6 = ["align_selections"]                                # alt-e             # align
 A-F7 = ["search"]                                          # alt-f             # search
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
@@ -229,7 +228,7 @@ C-F8 = ["match_brackets"]                                  # alt-p             #
 C-F9 = ["normal_mode", ":quit-all"]                        # alt-q             # close buffer
 C-F10 = ["normal_mode", ":reload-all", "MODE"]             # alt-r             # reload
 A-C-F1 = ["normal_mode", ":write-quit-all"]                # alt-s             # save & quit
-# A-C-F2 = [""]                                            # alt-t             #
+A-C-F2 = ["search_selection"]                              # alt-t             # selection
 A-C-F4 = ["undo"]                                          # alt-u             # undo
 A-C-F5 = ["paste_clipboard_after"]                         # alt-v             # paste
 A-C-F6 = ["normal_mode", ":write"]                         # alt-w             # save
@@ -247,7 +246,7 @@ S-A-F1 = ["select_all"]                                    # alt-shift-a       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
 S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
                                                            # alt-shift-d       # duplicate line
-S-A-F6 = ["align_selections"]                              # alt-shift-e       # align
+S-A-F6 = [":format"]                                       # alt-shift-e       # format
 S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
 # S-A-F8 = [""]                                            # alt-shift-g       # change sel
 # S-A-F9 = [""]                                            # alt-shift-h       #
@@ -265,14 +264,15 @@ S-C-F8 = ["select_mode", "match_brackets", "MODE"]         # alt-shift-p       #
 # S-C-F9 = [""]                                            # alt-shift-q       #
 # S-C-F10 = [""]                                           # alt-shift-r       #
 # S-A-C-F1 = [""]                                          # alt-shift-s       #
-# S-A-C-F2 = [""]                                          # alt-shift-t       #
+S-A-C-F2 = ["select_regex"]                                # alt-shift-t       # select
 S-A-C-F4 = ["redo"]                                        # alt-shift-u       # redo
-# S-A-C-F5 = [""]                                          # alt-shift-v       #
+S-A-C-F5 = ["select_register"]                             # alt-shift-v       # register
 # S-A-C-F6 = [""]                                          # alt-shift-w       #
 S-A-C-F7 = ["extend_to_line_bounds", "delete_selection_noyank"]
                                                            # alt-shift-x       # cut line
 S-A-C-F8 = ["extend_to_line_bounds", "yank_to_clipboard"]  # alt-shift-y       # copy line
-# S-A-C-F9 = [""]                                          # alt-shift-z       #
+S-A-C-F9 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start", "toggle_comments", "move_visual_line_up"]
+                                                           # alt-shift-z       # duplicate & comment
 S-A-C-F10 = ["shell_pipe"]                                 # alt-shift-grave   # shell command
 
 
