@@ -10,3 +10,9 @@ esc = ["collapse_selection", "keep_primary_selection"]
 ret = ["insert_mode"]
 
 ####################################################################################################
+
+# alt-shift
+A-S-up = ["select_mode", "goto_prev_paragraph", "normal_mode"]    # alt-shift-up      # select prev block
+A-S-down = ["select_mode", "goto_next_paragraph", "normal_mode"]  # alt-shift-down    # select next block
+
+####################################################################################################
