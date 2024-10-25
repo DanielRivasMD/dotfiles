@@ -22,30 +22,30 @@ C-space = ["goto_word"]                                    # ctl-space         #
 
 ####################################################################################################
 
-# tab => diagnostics & list
-#                                                          # tab--             #
-#                                                          # tab-=             #
+# # tab => diagnostics & list
+# #                                                          # tab--             #
+# #                                                          # tab-=             #
 
-#                                                          # tab-[             #
-#                                                          # tab-]             #
-#                                                          # tab-;             #
-#                                                          # tab-'             #
-#                                                          # tab-\             #
-#                                                          # tab-,             #
-#                                                          # tab-.             #
-#                                                          # tab-/             #
+# #                                                          # tab-[             #
+# #                                                          # tab-]             #
+# #                                                          # tab-;             #
+# #                                                          # tab-'             #
+# #                                                          # tab-\             #
+# #                                                          # tab-,             #
+# #                                                          # tab-.             #
+# #                                                          # tab-/             #
 
-S-F2 = ["diagnostics_picker"]                              # tab-bspace        # diag picker
-# A-C-S-F11 = ["jumplist_picker"]                            # tab-enter         # record jump
-# A-C-F14 = ["save_selection"]                               # tab-shift         # jump list
-# C-S-pagedown = ["jump_forward"]                            # tab-alt           # next jump
-# C-S-pageup = ["jump_backward"]                             # tab-cmd           # prev jump
-# A-C-S-F12 = ["goto_last_modification"]                     # tab-space         # last edit
+# S-F2 = ["diagnostics_picker"]                              # tab-bspace        # diag picker
+# # A-C-S-F11 = ["jumplist_picker"]                            # tab-enter         # record jump
+# # A-C-F14 = ["save_selection"]                               # tab-shift         # jump list
+# # C-S-pagedown = ["jump_forward"]                            # tab-alt           # next jump
+# # C-S-pageup = ["jump_backward"]                             # tab-cmd           # prev jump
+# # A-C-S-F12 = ["goto_last_modification"]                     # tab-space         # last edit
 
-# S-A-pageup = [""]                                        # tab-left          #
-# S-A-pagedown = [""]                                      # tab-right         #
-S-A-home = ["goto_prev_diag"]                              # tab-up            # prev diag
-S-A-end = ["goto_next_diag"]                               # tab-down          # next diag
+# # S-A-pageup = [""]                                        # tab-left          #
+# # S-A-pagedown = [""]                                      # tab-right         #
+# S-A-home = ["goto_prev_diag"]                              # tab-up            # prev diag
+# S-A-end = ["goto_next_diag"]                               # tab-down          # next diag
 
 
 ####################################################################################################
@@ -95,7 +95,7 @@ S-F7 = ["command_palette"]                                 # grave-bs          #
 C-s = ["file_picker"]                                      # grave-enter       # file picker
 C-t = ["buffer_picker"]                                    # grave-shift       # buffer picker
 C-r = ["changed_file_picker"]                              # grave-alt         # delta picker
-# S-F2 = [":sh zellij action new-pane --name shell --floating --height 100 --width 100 --x 100 --y 0"]                                              # grave-cmd         #
+#                                                          # grave-cmd         #
 F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # grave-space       # repeat motion
 
 C-pageup = ["normal_mode", "till_prev_char", "MODE"]       # grave-left        # prev until
@@ -106,30 +106,30 @@ C-end = ["goto_next_change"]                               # grave-down        #
 
 ####################################################################################################
 
-# grave-shift
-#                                                          # grave-shift--     #
-#                                                          # grave-shift-=     #
+# grave-shift => diagnostics & list
+#                                                          # grave-shift--      #
+#                                                          # grave-shift-=      #
 
-#                                                          # grave-shift-[     #
-#                                                          # grave-shift-]     #
-#                                                          # grave-shift-;     #
-#                                                          # grave-shift-'     #
-#                                                          # grave-shift-\     #
-#                                                          # grave-shift-,     #
-#                                                          # grave-shift-.     #
-#                                                          # grave-shift-/     #
+#                                                          # grave-shift-[      #
+#                                                          # grave-shift-]      #
+#                                                          # grave-shift-;      #
+#                                                          # grave-shift-'      #
+#                                                          # grave-shift-\      #
+#                                                          # grave-shift-,      #
+#                                                          # grave-shift-.      #
+#                                                          # grave-shift-/      #
 
-#                                                          # grave-shift-bspace#
-#                                                          # grave-shift-enter #
-#                                                          # grave-shift-shift #
-#                                                          # grave-shift-alt   #
-#                                                          # grave-shift-cmd   #
-#                                                          # grave-shift-space #
+# A-C-S-F11 = ["jumplist_picker"]                           # grave-shift-bspace # record jump
+S-F2 = ["diagnostics_picker"]                              # grave-shift-enter # diag picker
+# A-C-F14 = ["save_selection"]                              # grave-shift-shift  # jump list
+# C-S-pagedown = ["jump_forward"]                           # grave-shift-alt    # next jump
+# C-S-pageup = ["jump_backward"]                            # grave-shift-cmd    # prev jump
+# A-C-S-F12 = ["goto_last_modification"]                    # grave-shift-space  # last edit
 
-#                                                          # grave-shift-left  #
-#                                                          # grave-shift-right #
-#                                                          # grave-shift-up    #
-#                                                          # grave-shift-down  #
+# S-C-pageup = [""]                                        # grave-shift-left   #
+# S-C-pagedown = [""]                                      # grave-shift-right  #
+S-C-home = ["goto_prev_diag"]                              # grave-shift-up     # prev diag
+S-C-end = ["goto_next_diag"]                               # grave-shift-down   # next diag
 
 
 ####################################################################################################
