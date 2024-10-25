@@ -10,3 +10,9 @@ esc = ["normal_mode"]
 ret = ["insert_mode"]
 
 ####################################################################################################
+
+# alt-shift
+A-S-up = ["select_mode", "goto_prev_paragraph", "select_mode"]    # alt-shift-up      # select prev block
+A-S-down = ["select_mode", "goto_next_paragraph", "select_mode"]  # alt-shift-down    # select next block
+
+####################################################################################################
