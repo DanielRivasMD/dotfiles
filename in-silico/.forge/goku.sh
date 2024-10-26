@@ -13,61 +13,60 @@ _forge() {
   cljfmt fix "${frag}/"*
 
   # create temporary files
-  cat << HEAD >> "${karabiner}/.profile.tmp"
+  cat << HEAD >> "${saiyajin}/.profile.tmp"
 
 {:profiles
 
 HEAD
 
-  cat << HEAD >> "${karabiner}/.main.tmp"
+  cat << HEAD >> "${saiyajin}/.main.tmp"
 
   :main [
 
 HEAD
 
-  cat << HEAD >> "${karabiner}/.eof.tmp"
+  cat << HEAD >> "${saiyajin}/.eof.tmp"
 
     ]}]}
 
 HEAD
 
   # concatenate
-  cat \
-    "${karabiner}/.profile.tmp" \
-    "${fprofile}/profile.edn" \
-    "${karabiner}/.main.tmp" \
-    "${fapps}/browser.edn" \
-    "${fapps}/editor.edn" \
-    "${fapps}/lapce.edn" \
-    "${fapps}/mail.edn" \
-    "${fapps}/mouse.edn" \
-    "${fapps}/zed.edn" \
-    "${fapps}/alacritty.edn" \
-    "${fsimple}/bs.edn" \
-    "${fsimple}/lcmd.edn" \
-    "${fsimple}/cc.edn" \
-    "${fsimple}/esc.edn" \
-    "${fsimple}/function.edn" \
-    "${fsimple}/joker.edn" \
-    "${fsimple}/rshift.edn" \
-    "${fsimple}/lctl.edn" \
-    "${fsimple}/lopt.edn" \
-    "${fsimple}/lshift.edn" \
-    "${fsimple}/patch.edn" \
-    "${fsimple}/q-layer.edn" \
-    "${fsimple}/rcmd.edn" \
-    "${fsimple}/rctl.edn" \
-    "${fsimple}/ropt.edn" \
-    "${fsimple}/tab.edn" \
-    "${fapps}/zellij.edn" \
-    "${fprofile}/keys.edn" \
-    "${karabiner}/.eof.tmp" \
-    > "${karabiner}/karabiner.edn"
+  mbombo forge --path "${frag}" --out "${karabiner}/karabiner.edn" \
+    --files "../.profile.tmp" \
+    --files "profile/profile.edn" \
+    --files "../.main.tmp" \
+    --files "apps/browser.edn" \
+    --files "apps/editor.edn" \
+    --files "apps/lapce.edn" \
+    --files "apps/mail.edn" \
+    --files "apps/mouse.edn" \
+    --files "apps/zed.edn" \
+    --files "apps/alacritty.edn" \
+    --files "simple/bs.edn" \
+    --files "simple/lcmd.edn" \
+    --files "simple/cc.edn" \
+    --files "simple/esc.edn" \
+    --files "simple/function.edn" \
+    --files "simple/joker.edn" \
+    --files "simple/rshift.edn" \
+    --files "simple/lctl.edn" \
+    --files "simple/lopt.edn" \
+    --files "simple/lshift.edn" \
+    --files "simple/patch.edn" \
+    --files "simple/q-layer.edn" \
+    --files "simple/rcmd.edn" \
+    --files "simple/rctl.edn" \
+    --files "simple/ropt.edn" \
+    --files "simple/tab.edn" \
+    --files "apps/zellij.edn" \
+    --files "profile/keys.edn" \
+    --files "../.eof.tmp"
 
   # purge temporary files
-  rm "${karabiner}/.profile.tmp"
-  rm "${karabiner}/.main.tmp"
-  rm "${karabiner}/.eof.tmp"
+  rm "${saiyajin}/.profile.tmp"
+  rm "${saiyajin}/.main.tmp"
+  rm "${saiyajin}/.eof.tmp"
 
   # render config
   goku
