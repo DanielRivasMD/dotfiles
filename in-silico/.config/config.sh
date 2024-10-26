@@ -45,6 +45,7 @@ export saiyajin="${home}/.saiyajin"
 export karabiner="${saiyajin}/karabiner"
 export frag="${saiyajin}/frag"
 export fapps="${frag}/apps"
+export fprofile="${frag}/profile"
 export fsimple="${frag}/simple"
 
 # config dirs
