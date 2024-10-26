@@ -13,22 +13,28 @@ _forge() {
   cljfmt fix "${frag}/"*
 
   # create temporary files
-  echo "" >> "${karabiner}/.profile.tmp"
-  echo "{:profiles" >> "${karabiner}/.profile.tmp"
-  echo "" >> "${karabiner}/.profile.tmp"
+  cat << HEAD >> "${karabiner}/.profile.tmp"
 
-  echo "" >> "${karabiner}/.main.tmp"
-  echo ":main [" >> "${karabiner}/.main.tmp"
-  echo "" >> "${karabiner}/.main.tmp"
+{:profiles
 
-  echo "" >> "${karabiner}/.eof.tmp"
-  echo "]}]}" >> "${karabiner}/.eof.tmp"
-  echo "" >> "${karabiner}/.eof.tmp"
+HEAD
+
+  cat << HEAD >> "${karabiner}/.main.tmp"
+
+  :main [
+
+HEAD
+
+  cat << HEAD >> "${karabiner}/.eof.tmp"
+
+    ]}]}
+
+HEAD
 
   # concatenate
   cat \
     "${karabiner}/.profile.tmp" \
-    "${fsimple}/profile.edn" \
+    "${fprofile}/profile.edn" \
     "${karabiner}/.main.tmp" \
     "${fapps}/browser.edn" \
     "${fapps}/editor.edn" \
@@ -36,7 +42,7 @@ _forge() {
     "${fapps}/mail.edn" \
     "${fapps}/mouse.edn" \
     "${fapps}/zed.edn" \
-    "${fsimple}/arrow.edn" \
+    "${fapps}/alacritty.edn" \
     "${fsimple}/bs.edn" \
     "${fsimple}/lcmd.edn" \
     "${fsimple}/cc.edn" \
@@ -54,7 +60,7 @@ _forge() {
     "${fsimple}/ropt.edn" \
     "${fsimple}/tab.edn" \
     "${fapps}/zellij.edn" \
-    "${fsimple}/keys.edn" \
+    "${fprofile}/keys.edn" \
     "${karabiner}/.eof.tmp" \
     > "${karabiner}/karabiner.edn"
 
