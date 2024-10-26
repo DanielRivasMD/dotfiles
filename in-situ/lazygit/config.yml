@@ -381,8 +381,8 @@ keybinding:
         scrollDownMain: <disabled>
         scrollUpMain-alt1: <disabled>
         scrollDownMain-alt1: <disabled>
-        scrollUpMain-alt2: <c-x>
-        scrollDownMain-alt2: <c-y>
+        scrollUpMain-alt2: <c-x>   # alt-ctl-up
+        scrollDownMain-alt2: <c-y> # alt-ctl-down
         executeShellCommand: ':'
         createRebaseOptionsMenu: m
         # 'Files' appended for legacy reasons
@@ -401,7 +401,7 @@ keybinding:
         diffingMenu: <disabled>
         diffingMenu-alt: W
         copyToClipboard: y
-        openRecentRepos: '<c-t>' # ctl-cmd-\
+        openRecentRepos: '<c-s>' # ctl-enter
         submitEditorText: <enter>
         extrasMenu: <disabled>
         toggleWhitespaceInDiffView: <disabled>
@@ -409,7 +409,7 @@ keybinding:
         decreaseContextInDiffView: '-' # *
         increaseRenameSimilarityThreshold: )
         decreaseRenameSimilarityThreshold: (
-        openDiffTool: <c-s> # ctl-cmd-'
+        openDiffTool: <c-t> # ctl-shift
     status:
         checkForUpdate: u
         recentRepos: <enter>
