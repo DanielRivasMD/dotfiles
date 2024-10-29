@@ -2,6 +2,7 @@
 # Alt-Enter	Open selected in the background without closing the picker
 ####################################################################################################
 
+# TODO: write a script to open cheat documentation
 # del
 del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
 backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
@@ -20,6 +21,7 @@ A-ret = ["insert_newline", "insert_mode"]                  # cmd-enter         #
 
 ####################################################################################################
 
+# TODO: update map documentation
 # tab => diagnostics & list
 #                                                          # tab--             #
 #                                                          # tab-=             #
@@ -61,7 +63,8 @@ F15 = ["goto_definition"]                                  # joker-,           #
 F16 = ["goto_reference"]                                   # joker-.           # reference
 F17 = ["goto_implementation"]                              # joker-/           # implementation
 
-F1 = ["hover"]                                             # joker-bs          #
+# TODO: remap hover
+# F1 = ["hover"]                                             # joker-bs          #
 F2 = ["symbol_picker"]                                     # joker-enter       # symbol list
 F4 = ["goto_type_definition"]                              # joker-shift       # type definition
 F5 = ["goto_next_function"]                                # joker-alt         # prev func
