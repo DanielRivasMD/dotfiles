@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="I Files" {
+    tab name="1 Files" {
         pane split_direction="vertical" {
             pane name="tree" size="40%" command="broot" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
@@ -21,7 +21,7 @@ layout {
         }
     }
 
-    tab name="II Source" focus=true {
+    tab name="2 Source" focus=true {
         pane name="editor" size="70%" focus=true command="hx"
         pane split_direction="vertical" size="30%" {
             pane name="watch" command="just" {
@@ -30,7 +30,7 @@ layout {
         }
     }
 
-    tab name="III Git" {
+    tab name="3 Git" {
         pane name="git" command="lazygit"
     }
 

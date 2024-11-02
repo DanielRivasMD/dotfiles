@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="I Files" {
+    tab name="1 Files" {
         pane stacked=true split_direction="horizontal" {
             pane name="zero"
             pane name="src" cwd="src" command="broot" {
@@ -24,7 +24,7 @@ layout {
         }
     }
 
-    tab name="II Source" focus=true {
+    tab name="2 Source" focus=true {
         pane stacked=true split_direction="horizontal" {
             pane name="repl" focus=true command="julia" {
                 args "--project"
@@ -33,7 +33,7 @@ layout {
         }
     }
 
-    tab name="III Git" {
+    tab name="3 Git" {
         pane name="git" command="lazygit"
     }
 
