@@ -38,8 +38,8 @@ layout {
     tab name="IV Archive" {
         pane stacked=true split_direction="horizontal" {
             pane name="git" cwd="/Users/drivas/.archive" command="lazygit"
-            pane name="editor" cwd="/Users/drivas/.archive" command="hx" focus=true
-            pane name="goku" cwd="/Users/drivas/.saiyajin" command="hx"
+            pane name="archive" cwd="/Users/drivas/.archive" command="hx" focus=true
+            pane name="saiyajin" cwd="/Users/drivas/.saiyajin" command="hx"
         }
     }
 }
