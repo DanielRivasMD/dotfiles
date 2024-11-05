@@ -51,6 +51,7 @@ HEAD
     --files "simple/cc.edn" \
     --files "simple/esc.edn" \
     --files "simple/function.edn" \
+    --files "simple/hyper.edn" \
     --files "simple/joker.edn" \
     --files "simple/lcmd.edn" \
     --files "simple/lctl.edn" \
