@@ -46,12 +46,13 @@ HEAD
     --files "apps/zellij.edn" \
     --files "apps/zoom.edn" \
     --files "mode/mouse.edn" \
+    --files "mode/obracket.edn" \
+    --files "mode/cbracket.edn" \
     --files "mode/semicolon.edn" \
     --files "mode/quote.edn" \
     --files "mode/backslash.edn" \
     --files "mode/slash.edn" \
     --files "simple/bs.edn" \
-    --files "simple/cbracket.edn" \
     --files "simple/cc.edn" \
     --files "simple/esc.edn" \
     --files "simple/function.edn" \
@@ -61,7 +62,6 @@ HEAD
     --files "simple/lctl.edn" \
     --files "simple/lopt.edn" \
     --files "simple/lshift.edn" \
-    --files "simple/obracket.edn" \
     --files "simple/patch.edn" \
     --files "simple/rcmd.edn" \
     --files "simple/rctl.edn" \
