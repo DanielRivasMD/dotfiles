@@ -46,6 +46,7 @@ export karabiner="${saiyajin}/karabiner"
 export frag="${saiyajin}/frag"
 export fapps="${frag}/apps"
 export fprofile="${frag}/profile"
+export fmode="${frag}/mode"
 export fsimple="${frag}/simple"
 
 # config dirs

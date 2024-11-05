@@ -41,11 +41,11 @@ HEAD
     --files "apps/editor.edn" \
     --files "apps/lapce.edn" \
     --files "apps/mail.edn" \
-    --files "apps/mouse.edn" \
     --files "apps/skype.edn" \
     --files "apps/zed.edn" \
     --files "apps/zellij.edn" \
     --files "apps/zoom.edn" \
+    --files "mode/mouse.edn" \
     --files "simple/bs.edn" \
     --files "simple/cbracket.edn" \
     --files "simple/cc.edn" \
