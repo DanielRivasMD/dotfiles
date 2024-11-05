@@ -120,8 +120,15 @@ autoload edit-command-line; zle -N edit-command-line
 
 ####################################################################################################
 
+# completions on demmand
+source <(bender completion zsh)
+source <(cerberus completion zsh)
+source <(gorgon completion zsh)
+source <(lou completion zsh)
+source <(mbombo completion zsh)
+source <(minerva completion zsh)
+source <(tabularasa completion zsh)
 source <(fzf --zsh)
-# TODO: add other completions on demmand
 
 ####################################################################################################
 # bindings
