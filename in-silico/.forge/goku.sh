@@ -46,6 +46,10 @@ HEAD
     --files "apps/zellij.edn" \
     --files "apps/zoom.edn" \
     --files "mode/mouse.edn" \
+    --files "mode/semicolon.edn" \
+    --files "mode/quote.edn" \
+    --files "mode/backslash.edn" \
+    --files "mode/slash.edn" \
     --files "simple/bs.edn" \
     --files "simple/cbracket.edn" \
     --files "simple/cc.edn" \
