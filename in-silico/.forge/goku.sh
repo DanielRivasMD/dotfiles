@@ -57,15 +57,15 @@ HEAD
     --files "simple/function.edn" \
     --files "simple/hyper.edn" \
     --files "simple/joker.edn" \
-    --files "simple/laltcmd.edn" \
-    --files "simple/laltctl.edn" \
+    --files "simple/loptcmd.edn" \
+    --files "simple/loptctl.edn" \
     --files "simple/lctlcmd.edn" \
     --files "simple/lcmd.edn" \
     --files "simple/lctl.edn" \
     --files "simple/lopt.edn" \
     --files "simple/lshift.edn" \
     --files "simple/patch.edn" \
-    --files "simple/raltcmd.edn" \
+    --files "simple/roptcmd.edn" \
     --files "simple/rcmd.edn" \
     --files "simple/rctl.edn" \
     --files "simple/rshift.edn" \
