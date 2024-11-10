@@ -12,7 +12,7 @@ layout {
         children
     }
 
-    tab name="1 Explore" focus=true {
+    tab name="Explore" focus=true {
         pane split_direction="vertical" {
             pane name="tree" size="40%" command="broot" {
                 args "--dates" "--sizes" "--permissions" "--hidden" "--git-ignored" "--show-git-info" "--sort-by-type-dirs-first"
@@ -21,14 +21,14 @@ layout {
         }
     }
 
-    tab name="2 Canvas" {
+    tab name="Canvas" {
         pane stacked=true split_direction="horizontal" {
             pane name="git" command="lazygit"
             pane name="editor" command="hx" focus=true
         }
     }
 
-    tab name="3 Nushell" {
+    tab name="Nushell" {
         pane name="nu" command="nu"
     }
 
