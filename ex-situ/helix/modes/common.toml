@@ -51,25 +51,28 @@ A-ret = ["insert_newline", "insert_mode"]                  # cmd-enter         #
 ####################################################################################################
 
 # joker => symbols & counter
-F13 = ["goto_prev_test"]                                   # joker--           # prev test
-F14 = ["goto_next_test"]                                   # joker-=           # next test
+F13 = ["goto_prev_test"]                                   # joker-shift-up           # prev test
+F14 = ["goto_next_test"]                                   # joker-shift-down           # next test
 
-F8 = ["goto_prev_class"]                                   # joker-[           # next class
-F9 = ["goto_next_class"]                                   # joker-]           # prev class
-F10 = ["goto_prev_parameter"]                              # joker-;           # next param
-F11 = ["goto_next_parameter"]                              # joker-'           # prev param
-F12 = ["rename_symbol"]                                    # joker-\           # rename
+F8 = ["goto_prev_class"]                                   # joker-ctl-up           # next class
+F9 = ["goto_next_class"]                                   # joker-ctl-down           # prev class
+
+F10 = ["goto_prev_parameter"]                              # joker-alt-up           # next param
+F11 = ["goto_next_parameter"]                              # joker-alt-down           # prev param
+
+F5 = ["goto_next_function"]                                # joker-cmd-up         # prev func
+F6 = ["goto_prev_function"]                                # joker-cmd-down         # next func
+
+# F12 = ["rename_symbol"]                                    # joker-\           # rename
 F15 = ["goto_definition"]                                  # joker-,           # definition
 F16 = ["goto_reference"]                                   # joker-.           # reference
 F17 = ["goto_implementation"]                              # joker-/           # implementation
 
 # TODO: remap hover
 # F1 = ["hover"]                                             # joker-bs          #
+F1 = ["rename_symbol"]                                             # joker-bs          #
 F2 = ["symbol_picker"]                                     # joker-enter       # symbol list
 F4 = ["goto_type_definition"]                              # joker-shift       # type definition
-F5 = ["goto_next_function"]                                # joker-alt         # prev func
-F6 = ["goto_prev_function"]                                # joker-cmd         # next func
-#                                                          # joker-space       #
 
 # A-C-pagedown = [""]                                      # joker-left        #
 # A-C-pageup = [""]                                        # joker-right       #
