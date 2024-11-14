@@ -45,11 +45,10 @@ map <a-f1> focusInput
 map <c-f1> LinkHints.activateModeToDownloadLink
 map <m-f1> LinkHints.activateModeToCopyLinkUrl
  
-map <a-c-m-f1> LinkHints.activateMode
+map <c-m-f1> LinkHints.activateMode
  
 map <a-c-f1> LinkHints.activateModeToOpenInNewTab
 map <a-m-f1> LinkHints.activateModeToOpenInNewForegroundTab
-map <c-m-f1> LinkHints.activateModeWithQueue
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
