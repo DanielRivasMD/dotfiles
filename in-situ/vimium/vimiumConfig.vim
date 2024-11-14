@@ -24,7 +24,7 @@ map r reload
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " URL
-map y copyCurrentUrl
+" map y copyCurrentUrl
 map p openCopiedUrlInCurrentTab
 map P openCopiedUrlInNewTab
 map q goUp
@@ -77,8 +77,8 @@ map h performBackwardsFind
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " history
-map u goBack
-map U goForward
+" map u goBack
+" map U goForward
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
