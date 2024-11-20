@@ -44,6 +44,7 @@ rm -rf "${config}/atuin" && ln -s "${atuin}" "${config}/"                      &
 ln -sf "${alacritty}" "${config}/"                                             && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}alacritty${NC}"
 ln -sf "${bottom}" "${config}/"                                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bottom${NC}"
 ln -sf "${cheat}" "${config}/"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}cheat${NC}"
+ln -sf "${joplin}/joplin.json" "${config}/joplin/settings.json"                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}joplin${NC}"
 
 echo ''
 if [[ ! -d "${config}/gh" ]]; then mkdir "${config}/gh"; fi                    && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}gh${NC}"

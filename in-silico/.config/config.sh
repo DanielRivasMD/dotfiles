@@ -37,6 +37,7 @@ export atuin="${in_situ}/atuin"
 export alacritty="${in_situ}/alacritty"
 export bottom="${in_situ}/bottom"
 export cheat="${in_situ}/cheat"
+export joplin="${in_situ}/joplin"
 
 export gh="${in_situ}/gh"
 export spotify="${in_situ}/spotify"
