@@ -53,6 +53,7 @@ HEAD
     --files "mode/backslash.edn" \
     --files "mode/slash.edn" \
     --files "simple/bs.edn" \
+    --files "simple/claw.edn" \
     --files "simple/esc.edn" \
     --files "simple/function.edn" \
     --files "simple/hyper.edn" \
@@ -65,7 +66,6 @@ HEAD
     --files "simple/lopt.edn" \
     --files "simple/lshift.edn" \
     --files "simple/patch.edn" \
-    --files "simple/roptcmd.edn" \
     --files "simple/rcmd.edn" \
     --files "simple/rctl.edn" \
     --files "simple/rshift.edn" \
