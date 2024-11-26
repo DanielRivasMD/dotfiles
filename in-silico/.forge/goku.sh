@@ -55,7 +55,6 @@ HEAD
     --files "simple/bs.edn" \
     --files "simple/claw.edn" \
     --files "simple/esc.edn" \
-    --files "simple/function.edn" \
     --files "simple/hyper.edn" \
     --files "simple/joker.edn" \
     --files "simple/loptcmd.edn" \
@@ -71,6 +70,7 @@ HEAD
     --files "simple/rshift.edn" \
     --files "simple/ropt.edn" \
     --files "simple/tab.edn" \
+    --files "simple/zero.edn" \
     --files "profile/keys.edn" \
     --files "../.eof.tmp"
 
