@@ -21,21 +21,21 @@ ln -svf "$(pwd)" "${archDir}"
 ####################################################################################################
 
 # homebrew
-source "${archDir}/.just/.install/brew.sh"
+source "${archDir}/.install/brew.sh"
 
 # clojure
-source "${archDir}/.just/.install/clojure.sh"
+source "${archDir}/.install/clojure.sh"
 
 # go
-source "${archDir}/.just/.install/go.sh"
+source "${archDir}/.install/go.sh"
 
 # julia
-source "${archDir}/.just/.install/julia.sh"
+source "${archDir}/.install/julia.sh"
 
 # R
-source "${archDir}/.just/.install/R.sh"
+source "${archDir}/.install/R.sh"
 
 # rust & cargo
-source "${archDir}/.just/.install/rust.sh"
+source "${archDir}/.install/rust.sh"
 
 ####################################################################################################
