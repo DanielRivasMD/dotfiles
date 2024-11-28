@@ -13,43 +13,43 @@ archDir="$HOME/.archive"
 # formulae
 ####################################################################################################
 
-# # google calendar
-# brew install gcalcli
+# google calendar
+brew install gcalcli
 
-# # joplin notes
-# brew install joplin-cli
+# joplin notes
+brew install joplin-cli
 
-# # python repl
-# brew install bpython
+# python repl
+brew install bpython
 
-# # editor
-# brew install helix
-# brew install micro
+# editor
+brew install helix
+brew install micro
 
-# # fuzzy finder
-# brew install fzf
+# fuzzy finder
+brew install fzf
 
-# # git
-# brew install gh
-# brew install hub
+# git
+brew install gh
+brew install hub
 
-# # julia
-# brew install juliaup
+# julia
+brew install juliaup
 
-# # json
-# brew install jq
+# json
+brew install jq
 
-# # sqlite
-# brew install sqlite
-# brew install litecli
+# sqlite
+brew install sqlite
+brew install litecli
 
-# # mysql
-# brew install mysql
-# brew install mycli
+# mysql
+brew install mysql
+brew install mycli
 
-# # postgresql
-# brew install postgresql
-# brew install pgcli
+# postgresql
+brew install postgresql
+brew install pgcli
 
 ####################################################################################################
 # casks
