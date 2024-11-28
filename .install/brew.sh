@@ -33,9 +33,6 @@ brew install fzf
 brew install gh
 brew install hub
 
-# julia
-brew install juliaup
-
 # json
 brew install jq
 

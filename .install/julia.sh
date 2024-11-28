@@ -1,7 +1,13 @@
 #!/bin/bash
 ####################################################################################################
 
-# TODO: re write into shell
+# install julia package manager
+brew install juliaup
+
+####################################################################################################
+
+# install packages
+julia -e << TESTA
 packages = [
   "OhMyREPL",
   "Chain",
@@ -12,13 +18,11 @@ packages = [
   "DelimitedFiles",
 ]
 
-####################################################################################################
-
-import Pkg
-
-for p in packages
-  @info p
-  Pkg.add(p)
+using Pkg
+for pk in packages
+  @info pk
+  Pkg.add(pk)
 end
+TESTA
 
 ####################################################################################################
