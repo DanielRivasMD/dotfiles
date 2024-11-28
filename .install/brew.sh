@@ -1,13 +1,8 @@
 #!/bin/bash
 ####################################################################################################
 
-# archive
-archDir="$HOME/.archive"
-
-####################################################################################################
-
 # install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 1>> "${archDir}/log/brew.out" 2>> "${archDir}/log/brew.err"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ####################################################################################################
 # formulae

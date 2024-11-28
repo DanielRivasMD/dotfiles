@@ -12,7 +12,6 @@ R -e "install.pacages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
 
 ####################################################################################################
 
-# TODO: download R packages
 # # install R packages
 # R CMD INSTALL /Users/drivas/bin/Rpack/colorout_1.2-1.tar.gz
 # R CMD INSTALL /Users/drivas/bin/Rpack/SW_3.2.tar.gz

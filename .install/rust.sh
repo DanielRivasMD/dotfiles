@@ -1,27 +1,22 @@
 #!/bin/bash
 ####################################################################################################
 
-# archive
-archDir="$HOME/.archive"
-
-####################################################################################################
-
 # install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 1>> "${archDir}/log/rust.out" 2>> "${archDir}/log/rust.err"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # reload shell
-source "${archDir}/ex-situ/shell/zsh/vernacular_zshrc.sh"
+source "$HOME/.archive/ex-situ/shell/zsh/vernacular_zshrc.sh"
 
 ####################################################################################################
 
 # install deno
-curl -fsSL https://deno.land/install.sh | sh -s -- -y 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
+curl -fsSL https://deno.land/install.sh | sh -s -- -y
 
 # install deployctl
-deno install -A jsr:@deno/deployctl --global 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
+deno install -A jsr:@deno/deployctl --global
 
 # install atuin
-curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y
 
 # cargo add ratatui
 
@@ -29,101 +24,99 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y 1>> "
 # install rust binaries
 ####################################################################################################
 
-cargo install {\
-  bacon --locked;                                                              # bacon
-  bartib;                                                                      # bartib
-  bat --locked;                                                                # bat
-  bottom --locked;                                                             # bottom
-  broot --locked --features clipboard;                                         # broot
-  cargo-benchcmp;                                                              #
-  cargo-binstall;                                                              #
-  cargo-cache;                                                                 #
-  cargo-check;                                                                 #
-  cargo-do;                                                                    #
-  cargo-edit;                                                                  #
-  cargo-expand;                                                                #
-  cargo-geiger;                                                                #
-  cargo-license;                                                               #
-  cargo-make;                                                                  #
-  cargo-modules;                                                               #
-  cargo-nextest;                                                               #
-  cargo-outdated;                                                              #
-  cargo-rdme;                                                                  #
-  cargo-release;                                                               #
-  cargo-tarpaulin;                                                             #
-  cargo-update;                                                                #
-  cargo-watch;                                                                 #
+cargo install bacon --locked;                                                  # bacon
+cargo install bartib;                                                          # bartib
+cargo install bat --locked;                                                    # bat
+cargo install bottom --locked;                                                 # bottom
+cargo install broot --locked --features clipboard;                             # broot
+cargo install cargo-benchcmp;                                                  #
+cargo install cargo-binstall;                                                  #
+cargo install cargo-cache;                                                     #
+cargo install cargo-check;                                                     #
+cargo install cargo-do;                                                        #
+cargo install cargo-edit;                                                      #
+cargo install cargo-expand;                                                    #
+cargo install cargo-geiger;                                                    #
+cargo install cargo-license;                                                   #
+cargo install cargo-make;                                                      #
+cargo install cargo-modules;                                                   #
+cargo install cargo-nextest;                                                   #
+cargo install cargo-outdated;                                                  #
+cargo install cargo-rdme;                                                      #
+cargo install cargo-release;                                                   #
+cargo install cargo-tarpaulin;                                                 #
+cargo install cargo-update;                                                    #
+cargo install cargo-watch;                                                     #
 
 # cbs
 
-  chess-tui;                                                                   #
+cargo install chess-tui;                                                       #
 
 # colortty
 
-  copo;                                                                        #
+cargo install copo;                                                            #
 
 # coreutils
 
-  ddh --git https://github.com/darakian/ddh;                                   # ddh
-  diease_cli;                                                                  # diesel
-  du-dust;                                                                     # du-dust
+cargo install ddh --git https://github.com/darakian/ddh;                       # ddh
+cargo install diease_cli;                                                      # diesel
+cargo install du-dust;                                                         # du-dust
 
 # dua-cli
 
-  eva;                                                                         # eva
-  eza;                                                                         # eza
-  fd-find;                                                                     # fd-find
-  flamegraph;                                                                  # flamegraph
-  gfold;                                                                       # gfold
-  gifski;                                                                      # gifski
-  git-delta;                                                                   # git-delta
-  git-journal;                                                                 # git-journal
-  gitoxide;                                                                    # gitoxide
-  gitui;                                                                       # gitui
-  halp;                                                                        # halp
-  hck;                                                                         # hck
-  hexyl;                                                                       # hexyl
-  hgrep;                                                                       # hgrep
-  htmlq;                                                                       # htmlq
-  hyperfine;                                                                   # hyperfine
-  jless;                                                                       # jless
-  just;                                                                        # just
-  kondo;                                                                       # kondo
-  lazycli --locked;                                                            # lazycli
-  lsd;                                                                         # lsd
-  mdcat;                                                                       # mdcat
-  melody_cli;                                                                  # melody_cli
-  mgit;                                                                        # mgit
-  monolith;                                                                    # monolith
-  navi;                                                                        # navi
-  nomino;                                                                      # nomino
-  nu;                                                                          # nu
-  onefetch;                                                                    # onefetch
-  onehistory;                                                                  # onehistory
-  pastel;                                                                      # pastel
-  print_key;                                                                   # print_key
-  procs;                                                                       # procs
-  pueue --locked;                                                              # pueue
-  ripgrep;                                                                     # ripgrep
-  ripgrep_all --locked;                                                        # ripgrep_all
-  samesame;                                                                    # samesame
-  sccache --locked;                                                            # sccache
-  sd;                                                                          # sd
-  sheldon --locked;                                                            # sheldon
-  spotify-tui;                                                                 # spotify-tui
-  starship --locked;                                                           # starship
-  tauri-cli;                                                                   # tauri
-  tealdeer;                                                                    # tealdeer
-  tock;                                                                        # tock
-  tokei --git https://github.com/XAMPPRocky/tokei.git;                         # tokei
-  viu;                                                                         # viu
-  watchexec-cli --locked;                                                      # watchexec-cli
-  wordcrab;                                                                    # wordcrab
-  xcp;                                                                         # xcp
-  xsv;                                                                         # xsv
-  yazi-cli --locked yazi-fm;                                                   # yazi
-  zellij --locked;                                                             # zellij
-  zoxide --locked;                                                             # zoxide
-} 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
+cargo install eva;                                                             # eva
+cargo install eza;                                                             # eza
+cargo install fd-find;                                                         # fd-find
+cargo install flamegraph;                                                      # flamegraph
+cargo install gfold;                                                           # gfold
+cargo install gifski;                                                          # gifski
+cargo install git-delta;                                                       # git-delta
+cargo install git-journal;                                                     # git-journal
+cargo install gitoxide;                                                        # gitoxide
+cargo install gitui;                                                           # gitui
+cargo install halp;                                                            # halp
+cargo install hck;                                                             # hck
+cargo install hexyl;                                                           # hexyl
+cargo install hgrep;                                                           # hgrep
+cargo install htmlq;                                                           # htmlq
+cargo install hyperfine;                                                       # hyperfine
+cargo install jless;                                                           # jless
+cargo install just;                                                            # just
+cargo install kondo;                                                           # kondo
+cargo install lazycli --locked;                                                # lazycli
+cargo install lsd;                                                             # lsd
+cargo install mdcat;                                                           # mdcat
+cargo install melody_cli;                                                      # melody_cli
+cargo install mgit;                                                            # mgit
+cargo install monolith;                                                        # monolith
+cargo install navi;                                                            # navi
+cargo install nomino;                                                          # nomino
+cargo install nu;                                                              # nu
+cargo install onefetch;                                                        # onefetch
+cargo install onehistory;                                                      # onehistory
+cargo install pastel;                                                          # pastel
+cargo install print_key;                                                       # print_key
+cargo install procs;                                                           # procs
+cargo install pueue --locked;                                                  # pueue
+cargo install ripgrep;                                                         # ripgrep
+cargo install ripgrep_all --locked;                                            # ripgrep_all
+cargo install samesame;                                                        # samesame
+cargo install sccache --locked;                                                # sccache
+cargo install sd;                                                              # sd
+cargo install sheldon --locked;                                                # sheldon
+cargo install spotify-tui;                                                     # spotify-tui
+cargo install starship --locked;                                               # starship
+cargo install tauri-cli;                                                       # tauri
+cargo install tealdeer;                                                        # tealdeer
+cargo install tock;                                                            # tock
+cargo install tokei --git https://github.com/XAMPPRocky/tokei.git;             # tokei
+cargo install viu;                                                             # viu
+cargo install watchexec-cli --locked;                                          # watchexec-cli
+cargo install wordcrab;                                                        # wordcrab
+cargo install xcp;                                                             # xcp
+cargo install xsv;                                                             # xsv
+cargo install yazi-cli --locked yazi-fm;                                       # yazi
+cargo install zellij --locked;                                                 # zellij
+cargo install zoxide --locked;                                                 # zoxide
 
 ####################################################################################################\ 
