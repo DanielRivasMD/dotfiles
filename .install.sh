@@ -1,7 +1,7 @@
 #!/bin/bash
 ####################################################################################################
 
-# setup
+# archive
 archDir="$HOME/.archive"
 
 ####################################################################################################
@@ -29,11 +29,11 @@ source "${archDir}/.install/clojure.sh"
 # go
 source "${archDir}/.install/go.sh"
 
-# julia
-source "${archDir}/.install/julia.sh"
+# # julia
+# source "${archDir}/.install/julia.sh"
 
-# R
-source "${archDir}/.install/R.sh"
+# # R
+# source "${archDir}/.install/R.sh"
 
 # rust & cargo
 source "${archDir}/.install/rust.sh"
