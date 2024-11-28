@@ -1,174 +1,181 @@
 #!/bin/bash
 ####################################################################################################
 
+# archive
+archDir="$HOME/.archive"
+
+####################################################################################################
+
 # install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 1>> "${archDir}/log/rust.out" 2>> "${archDir}/log/rust.err"
 
 # reload shell
-source $HOME/.zshrc
+source "${archDir}/ex-situ/shell/zsh/vernacular_zshrc.sh"
 
-####################################################################################################
+# ####################################################################################################
 
-# install deno
-curl -fsSL https://deno.land/install.sh | sh
+# # install deno
+# curl -fsSL https://deno.land/install.sh | sh 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
 
-# install deployctl
-deno install -A jsr:@deno/deployctl --global
+# # install deployctl
+# deno install -A jsr:@deno/deployctl --global 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
 
 
-####################################################################################################
-# install rust binaries
-####################################################################################################
+# ####################################################################################################
+# # install rust binaries
+# ####################################################################################################
 
-# cargo add ratatui
-# atuin
-# curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
-{ \
-  cargo install atuin;                                                         # atuin
-  cargo install --locked bacon;                                                # bacon
-  cargo install bartib;                                                        # bartib
-  cargo install --locked bat;                                                  # bat
-  cargo install bottom --locked;                                               # bottom
-  cargo install --locked --features clipboard broot;                           # broot
-# cargo-benchcmp
-# cargo-binstall
-# cargo-cache
-# cargo-check
-# cargo-do
-# cargo-edit
-# cargo-expand
-# cargo-geiger
-# cargo-license
-# cargo-make
-# cargo-modules
-# cargo-nextest
-# cargo-outdated
-# cargo-rdme
-# cargo-release
-# cargo-tarpaulin
-# cargo-update
-# cargo-watch
+# # cargo add ratatui
+# # atuin
+# # curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
-# cbs
+# cargo install {\
+#   atuin;                                                                       # atuin
+#   bacon --locked;                                                              # bacon
+#   bartib;                                                                      # bartib
+#   bat --locked;                                                                # bat
+#   bottom --locked;                                                             # bottom
+#   broot --locked --features clipboard;                                         # broot
+# # cargo-benchcmp
+# # cargo-binstall
+# # cargo-cache
+# # cargo-check
+# # cargo-do
+# # cargo-edit
+# # cargo-expand
+# # cargo-geiger
+# # cargo-license
+# # cargo-make
+# # cargo-modules
+# # cargo-nextest
+# # cargo-outdated
+# # cargo-rdme
+# # cargo-release
+# # cargo-tarpaulin
+# # cargo-update
+# # cargo-watch
 
+# # cbs
 
-# chess-tui
 
+# # chess-tui
 
-# colortty
 
+# # colortty
 
-# copo
 
+# # copo
 
-# coreutils
 
+# # coreutils
 
-# ddh
 
+# # ddh
 
-# du-dust
+#   diease_cli;                                                                  # diesel
 
+# # du-dust
 
-# dua-cli
 
+# # dua-cli
 
-# eva
 
+# # eva
 
-# eza
 
+# # eza
 
-# fd-find
 
+# # fd-find
 
-# flamegraph
 
+# # flamegraph
 
-# gfold
 
+# # gfold
 
-# gifski
 
+# # gifski
 
-# git-delta
 
+# # git-delta
 
-# git-journal
 
+# # git-journal
 
-# gitoxide
 
+# # gitoxide
 
-# gitui
 
+# # gitui
 
-# halp
 
+# # halp
 
-# hck
 
+# # hck
 
-# hexyl
 
+# # hexyl
 
-# hgrep
 
+# # hgrep
 
-# htmlq
 
+# # htmlq
 
-# hyperfine
 
+# # hyperfine
 
-# jless
 
+# # jless
 
-# just
 
+# # just
 
-# kondo
 
+# # kondo
 
-  cargo install --locked lazycli;                                              # lazycli
-# lsd
 
+#   lazycli --locked;                                                            # lazycli
+# # lsd
 
-# mdcat
 
+# # mdcat
 
-  cargo install melody_cli;                                                    # melody_cli
-  cargo install mgit;                                                          # mgit
-  cargo install monolith;                                                      # monolith
-  brew install navi;                                                           # navi
-  cargo install nomino;                                                        # nomino
-  cargo install nu;                                                            # nu
-  cargo install onefetch;                                                      # onefetch
-  cargo install onehistory;                                                    # onehistory
-  cargo install pastel;                                                        # pastel
-  cargo install print_key;                                                     # print_key
-  cargo install procs;                                                         # procs
-  cargo install pueue --locked;                                                # pueue
-  cargo install ripgrep;                                                       # ripgrep
-  cargo install ripgrep_all --locked;                                          # ripgrep_all
-  cargo install samesame;                                                      # samesame
-  cargo install sccache --locked;                                              # sccache
-  cargo install sd;                                                            # sd
-  cargo install sheldon --locked;                                              # sheldon
-  cargo install spotify-tui;                                                   # spotify-tui
-  cargo install starship --locked;                                             # starship
-  cargo install tauri-cli;                                                     # tauri
-  cargo install tealdeer;                                                      # tealdeer
-  cargo install tock;                                                          # tock
-  cargo install --git https://github.com/XAMPPRocky/tokei.git tokei;           # tokei
-  cargo install viu;                                                           # viu
-  cargo install watchexec-cli --locked;                                        # watchexec-cli
-  cargo install wordcrab;                                                      # wordcrab
-  cargo install xcp;                                                           # xcp
-  cargo install xsv;                                                           # xsv
-  cargo install --locked yazi-fm yazi-cli;                                     # yazi
-  cargo install zellij --locked;                                               # zellij
-  cargo install zoxide --locked;                                               # zoxide
-} 1>> "${archDir}/log/cargo_out.tt" 2>> "${archDir}/log/cargo_err.txt          "
 
-####################################################################################################\ 
+#   melody_cli;                                                                  # melody_cli
+#   mgit;                                                                        # mgit
+#   monolith;                                                                    # monolith
+#   navi;                                                                        # navi
+#   nomino;                                                                      # nomino
+#   nu;                                                                          # nu
+#   onefetch;                                                                    # onefetch
+#   onehistory;                                                                  # onehistory
+#   pastel;                                                                      # pastel
+#   print_key;                                                                   # print_key
+#   procs;                                                                       # procs
+#   pueue --locked;                                                              # pueue
+#   ripgrep;                                                                     # ripgrep
+#   ripgrep_all --locked;                                                        # ripgrep_all
+#   samesame;                                                                    # samesame
+#   sccache --locked;                                                            # sccache
+#   sd;                                                                          # sd
+#   sheldon --locked;                                                            # sheldon
+#   spotify-tui;                                                                 # spotify-tui
+#   starship --locked;                                                           # starship
+#   tauri-cli;                                                                   # tauri
+#   tealdeer;                                                                    # tealdeer
+#   tock;                                                                        # tock
+#   tokei --git https://github.com/XAMPPRocky/tokei.git;                         # tokei
+#   viu;                                                                         # viu
+#   watchexec-cli --locked;                                                      # watchexec-cli
+#   wordcrab;                                                                    # wordcrab
+#   xcp;                                                                         # xcp
+#   xsv;                                                                         # xsv
+#   yazi-cli --locked yazi-fm;                                                   # yazi
+#   zellij --locked;                                                             # zellij
+#   zoxide --locked;                                                             # zoxide
+# } 1>> "${archDir}/log/cargo.out" 2>> "${archDir}/log/cargo.err"
+
+# ####################################################################################################\ 
