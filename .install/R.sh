@@ -7,8 +7,13 @@ brew install --cask rig
 
 ####################################################################################################
 
+# add latest R version
+rig add release
+
+####################################################################################################
+
 # install packages
-R -e "install.pacages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
+R -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
 
 ####################################################################################################
 
