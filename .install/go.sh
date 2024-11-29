@@ -6,6 +6,11 @@ curl -sSL https://git.io/g-install | sh -s
 
 ####################################################################################################
 
+# add latest go version
+g install latest
+
+####################################################################################################
+
 # language server
 go install golang.org/x/tools/gopls@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
