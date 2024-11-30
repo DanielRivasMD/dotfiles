@@ -9,21 +9,13 @@ source "$HOME/.archive/ex-situ/shell/zsh/vernacular_zshrc.sh"
 
 ####################################################################################################
 
-# install deno
-curl -fsSL https://deno.land/install.sh | sh -s -- -y
-
-# install deployctl
-deno install -A jsr:@deno/deployctl --global
-
-# install atuin
-curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y
-
 # cargo add ratatui
 
 ####################################################################################################
 # install rust binaries
 ####################################################################################################
 
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y     # atuin
 cargo install bacon --locked;                                                  # bacon
 cargo install bartib;                                                          # bartib
 cargo install bat --locked;                                                    # bat
@@ -59,6 +51,8 @@ cargo install copo;                                                            #
 # coreutils
 
 cargo install ddh --git https://github.com/darakian/ddh;                       # ddh
+curl -fsSL https://deno.land/install.sh | sh -s -- -y                          # deno
+deno install -A jsr:@deno/deployctl --global                                   # deployctl
 cargo install diease_cli;                                                      # diesel
 cargo install du-dust;                                                         # du-dust
 
@@ -91,7 +85,7 @@ cargo install mgit;                                                            #
 cargo install monolith;                                                        # monolith
 cargo install navi;                                                            # navi
 cargo install nomino;                                                          # nomino
-cargo install nu;                                                              # nu
+# nu
 cargo install onefetch;                                                        # onefetch
 cargo install onehistory;                                                      # onehistory
 cargo install pastel;                                                          # pastel
@@ -105,7 +99,7 @@ cargo install sccache --locked;                                                #
 cargo install sd;                                                              # sd
 cargo install sheldon --locked;                                                # sheldon
 cargo install spotify-tui;                                                     # spotify-tui
-cargo install starship --locked;                                               # starship
+# starship
 cargo install tauri-cli;                                                       # tauri
 cargo install tealdeer;                                                        # tealdeer
 cargo install tock;                                                            # tock
