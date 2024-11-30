@@ -43,6 +43,12 @@ brew install mycli
 brew install postgresql
 brew install pgcli
 
+# nushell
+brew install nu
+
+# starship
+brew install starship
+
 ####################################################################################################
 # casks
 ####################################################################################################
