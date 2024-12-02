@@ -138,10 +138,10 @@ source <(fzf --zsh)
 bindkey '^s' _atuin_search_widget
 
 # command edit
-bindkey '^g' edit-command-line
+bindkey '^j' edit-command-line
 
 # just
-bindkey '^j' _call_just
+bindkey '^g' _call_just
 
 # navi
 bindkey '^o' _call_navi
