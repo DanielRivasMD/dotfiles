@@ -7,7 +7,7 @@ keybinds clear-defaults=true {
     shared_except "locked" {
         bind "Ctrl q" { Quit; }                                                                    //
 
-        // bind "Alt a" {}                                                                         mode locked
+        bind "Alt a" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          // floating panes
         // bind "Alt b" {}
         // bind "Alt c" {}                                                                         COLLISION
         // bind "Alt d" {}                                                                         COLLISION
@@ -40,8 +40,7 @@ keybinds clear-defaults=true {
         // bind "Alt z" {}
 
         bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 //
-        // TODO: update
-        bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          //
+        // bind "Alt B" {}                                                                         //
         bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               //
         // bind "Alt D" {}                                                                         mode scroll
         // bind "Alt E" {}                                                                         mode search
@@ -73,7 +72,7 @@ keybinds clear-defaults=true {
 
     // modes
     shared_except "normal" {
-        bind "Alt a" { SwitchToMode "Normal"; }                                                    //
+        bind "Alt B" { SwitchToMode "Normal"; }                                                    //
     }
 
     shared_except "normal" "locked" "scroll" "entersearch" {
@@ -108,7 +107,7 @@ keybinds clear-defaults=true {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     normal {
-        bind "Alt a" { SwitchToMode "Locked"; }                                                    //
+        bind "Alt B" { SwitchToMode "Locked"; }                                                    //
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
