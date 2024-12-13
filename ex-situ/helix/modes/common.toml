@@ -21,7 +21,7 @@ A-ret = ["insert_newline", "insert_mode"]                  # cmd-enter         #
 
 ####################################################################################################
 
-# TODO: update map documentation
+# TODO: deprecate tab
 # tab => diagnostics & list
 #                                                          # tab--             #
 #                                                          # tab-=             #
@@ -50,6 +50,7 @@ A-ret = ["insert_newline", "insert_mode"]                  # cmd-enter         #
 
 ####################################################################################################
 
+# TODO: update map documentation
 # joker => symbols & counter
 F13 = ["goto_prev_test"]                                   # joker-shift-up           # prev test
 F14 = ["goto_next_test"]                                   # joker-shift-down           # next test
