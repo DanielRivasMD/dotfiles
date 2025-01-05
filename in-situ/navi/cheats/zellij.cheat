@@ -6,5 +6,8 @@
 # attach zellij session
  zellij attach <zellij_session>
 
+# launch updater
+sh ~/.archive/in-situ/navi/cheats/update.sh
+
 $ zellij_session: zellij list-sessions | awk '!/EXITED/ {print $1}'
 $ zellij_layout: ls $HOME/.archive/in-situ/zellij/layouts/*kdl
