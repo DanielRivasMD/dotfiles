@@ -1,3 +1,5 @@
+# review config
+
 # Config relating to the Lazygit UI
 gui:
     # The number of lines you scroll by when scrolling the main window
@@ -90,7 +92,7 @@ gui:
     splitDiff: auto
     # Default size for focused window. Window size can be changed from within Lazygit with '+' and '_' (but this won't change the default).
     # One of: 'normal' (default) | 'half' | 'full'
-    windowSize: normal
+    screenMode: normal
     # Window border style.
     # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
     border: rounded
@@ -382,7 +384,7 @@ keybinding:
         scrollDownMain: <disabled>
         scrollUpMain-alt1: <disabled>
         scrollDownMain-alt1: <disabled>
-        scrollUpMain-alt2: <c-x>   # alt-ctl-up
+        scrollUpMain-alt2: <c-x> # alt-ctl-up
         scrollDownMain-alt2: <c-y> # alt-ctl-down
         executeShellCommand: ':'
         createRebaseOptionsMenu: m
