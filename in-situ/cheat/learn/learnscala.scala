@@ -1,5 +1,3 @@
-
-
 /////////////////////////////////////////////////
 // 0. Basics
 /////////////////////////////////////////////////
@@ -729,5 +727,3 @@ val writer = new PrintWriter("myfile.txt")
 writer.write("Writing line for line" + util.Properties.lineSeparator)
 writer.write("Another line here" + util.Properties.lineSeparator)
 writer.close()
-
-

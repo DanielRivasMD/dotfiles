@@ -1,4 +1,3 @@
-
 // This is a comment. Line comments look like this...
 // and extend multiple lines like this.
 
@@ -289,4 +288,3 @@ fn main() {
     // var2 = 2; // this would not compile because `var2` is borrowed.
     ref_var2; // no-op, but counts as a use and keeps the borrow active until here
 }
-

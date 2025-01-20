@@ -1,5 +1,3 @@
-
-
 # Comments start with number symbols.
 
 # You can't make multi-line comments,
@@ -783,7 +781,3 @@ ll <- as.data.table(list1)
 pp <- ggplot(ll, aes(x=time,price))
 pp + geom_point()
 # ggplot2 has excellent documentation (available http://docs.ggplot2.org/current/)
-
-
-
-

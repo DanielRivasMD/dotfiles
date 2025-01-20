@@ -1,4 +1,3 @@
-
 <!--This means we can use HTML elements in Markdown, such as the comment 
 element, and they won't be affected by a markdown parser. However, if you 
 create an HTML element in your markdown file, you cannot use markdown syntax 
@@ -128,4 +127,3 @@ Your computer crashed? Try sending a
 Col 1 | Col2 | Col3
 :-- | :-: | --:
 Ugh this is so ugly | make it | stop
-

@@ -1,4 +1,3 @@
-
 // Single line comment
 /* Multi-
  line comment */
@@ -422,4 +421,3 @@ func requestServer() {
 	body, err := ioutil.ReadAll(resp.Body)
 	fmt.Printf("\nWebserver said: `%s`", string(body))
 }
-

@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 # First line of the script is the shebang which tells the system how to execute
 # the script: http://en.wikipedia.org/wiki/Shebang_(Unix)
@@ -447,4 +446,3 @@ info bash
 info bash 'Bash Features'
 info bash 6
 info --apropos bash
-

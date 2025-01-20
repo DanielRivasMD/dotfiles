@@ -1,4 +1,3 @@
-
 #!/usr/bin/awk -f
 
 # Comments are like this
@@ -352,5 +351,3 @@ END {
     if (nlines)
         print "The average age for " name " is " sum / nlines;
 }
-
-

@@ -1,4 +1,3 @@
-
 -- Single line comments start with two dashes.
 {- Multiline comments can be enclosed
 in a block like this.
@@ -576,4 +575,3 @@ qsort [] = []
 qsort (p:xs) = qsort lesser ++ [p] ++ qsort greater
     where lesser  = filter (< p) xs
           greater = filter (>= p) xs
-

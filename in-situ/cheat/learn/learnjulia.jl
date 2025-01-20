@@ -1,4 +1,3 @@
-
 # Single line comments start with a hash (pound) symbol.
 #= Multiline comments can be written
    by putting '#=' before the text  and '=#'
@@ -850,4 +849,3 @@ code_native(circle_area, (Float64,), syntax = :intel)
     #         ret
     #         nop     dword ptr [rax + rax]
     # ;}
-
