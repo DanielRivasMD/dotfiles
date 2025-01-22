@@ -66,7 +66,7 @@ disabled = false
 ####################################################################################################
 
 [git_branch]
-truncation_length                            = 7
+truncation_length                            = 13
 truncation_symbol                            = ''
 format                                       = ' [[](bold #778899) $branch](#4EA24E) '
 
@@ -97,9 +97,6 @@ format                                       = '([\[$ahead_behind$all_status \]]
 [docker_context]
 format                                       = ' [ $context](bold #1874CD)'
 
-[nodejs]
-format                                       = ' [](#1874CD) [$version](bold #ACACAC)'
-
 [kubernetes]
 format                                       = ' [☸](#00CED1) [$version](bold #ACACAC)'
 disabled                                     = false
@@ -122,6 +119,9 @@ format                                       = ' [ஃ](#9C4C9C) [$version](bold 
 
 [lua]
 format                                       = ' [](#708090) [$version](bold #ACACAC)'
+
+[nodejs]
+format                                       = ' [](#1874CD) [$version](bold #ACACAC)'
 
 [perl]
 format                                       = ' [♘](#708090) [$version](bold #ACACAC)'
