@@ -43,6 +43,10 @@ brew install mycli
 brew install postgresql
 brew install pgcli
 
+# mongodb
+brew tap mongodb/brew
+brew install mongodb-community
+
 # nushell
 brew install nu
 
