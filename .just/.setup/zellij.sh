@@ -1,3 +1,5 @@
+#!/bin/bash
+####################################################################################################
 
 while read plugin
 do
@@ -12,3 +14,5 @@ https://github.com/imsnif/monocle/releases/latest/download/monocle.wasm
 https://github.com/Nacho114/harpoon/releases/latest/download/harpoon.wasm
 https://github.com/blank2121/zellij-jump-list/releases/latest/download/zellij-jump-list.wasm
 HEAD
+
+####################################################################################################
