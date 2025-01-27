@@ -77,9 +77,11 @@ brew install skype
 brew install slack
 brew install spectacle
 brew install steam
+brew install telegram
 brew install the-unarchiver
 brew install transmission
 brew install vlc
+brew install whatsapp
 brew install xquartz
 brew install zed
 
