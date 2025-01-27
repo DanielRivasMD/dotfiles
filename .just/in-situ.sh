@@ -106,7 +106,7 @@ ln -sf "${navi}/cheats" "${naviConf}/cheats"                                   &
 echo "${RED}====================================================================================================${NC}"
 
 ####################################################################################################
-# Completions
+# ergo
 ####################################################################################################
 
 echo ''
@@ -118,12 +118,11 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${observatory}/cheat/scripts/cheat.zsh" "${zshcomp}/_cheat"            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cheat${NC}"
-ln -sf "${observatory}/chezmoi/completions/chezmoi.zsh" "${zshcomp}/_chezmoi"  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chezmoi${NC}"
-ln -sf "${observatory}/fd/contrib/completion/_fd" "${zshcomp}/_fd"             && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}fd${NC}"
-ln -sf "${observatory}/eza/completions/zsh/_eza" "${zshcomp}/_eza"             && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}eza${NC}"
-ln -sf "${observatory}/just/completions/just.zsh" "${zshcomp}/_just"           && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}just${NC}"
-ln -sf "${observatory}/watchexec/completions/zsh" "${zshcomp}/_watchexec"      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}watchexec${NC}"
+ln -sf "${completion}/bartib/misc/bartibCompletion.sh" "${zshcomp}/_bartib"    && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}bartib${NC}"
+ln -sf "${completion}/chezmoi/completions/chezmoi.zsh" "${zshcomp}/_chezmoi"   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chezmoi${NC}"
+ln -sf "${completion}/fd/contrib/completion/_fd" "${zshcomp}/_fd"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}fd${NC}"
+ln -sf "${completion}/eza/completions/zsh/_eza" "${zshcomp}/_eza"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}eza${NC}"
+ln -sf "${completion}/watchexec/completions/zsh" "${zshcomp}/_watchexec"       && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}watchexec${NC}"
 cp "${zshcomp}/_eza" "${zshcomp}/_e" && sd eza e "${zshcomp}/_e"               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}e${NC}"
 echo "${RED}====================================================================================================${NC}"
 
@@ -132,6 +131,8 @@ echo "${YELLOW}Generate completions${NC}"
 echo "${RED}====================================================================================================${NC}"
 atuin gen-completions --shell zsh > "${zshcomp}/_atuin"                        && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}atuin${NC}"
 cobra-cli completion zsh > "${zshcomp}/_cobra-cli"                             && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cobra-cli${NC}"
+deno completions zsh > "${zshcomp}/_deno"                                      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}deno${NC}"
+just --completions zsh > "${zshcomp}/_just"                                    && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}just${NC}"
 zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
 cp "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zj${NC}"
 echo "${RED}====================================================================================================${NC}"
@@ -139,17 +140,16 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${completionsDir}/_khal" "${zshcomp}/_khal"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}khal${NC}"
-ln -sf "${completionsDir}/_lsd" "${zshcomp}/_lsd"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lsd${NC}"
-ln -sf "${completionsDir}/_tldr" "${zshcomp}/_tldr"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
+ln -sf "${completionArch}/_lsd" "${zshcomp}/_lsd"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lsd${NC}"
+ln -sf "${completionArch}/_tldr" "${zshcomp}/_tldr"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
 cp "${zshcomp}/_lsd" "${zshcomp}/_l" && sd lsd l "${zshcomp}/_l"               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}l${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 echo ''
 echo "${YELLOW}Linking executables${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${observatory}/yq/yq" "${home}/.go/bin"                                && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}yq${NC}"
-ln -sf "${observatory}/todo_r/target/release/todor" "${home}/.cargo/bin"       && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}todor${NC}"
+ln -sf "${linked}/todo_r/target/release/todor" "${home}/.cargo/bin"            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}todor${NC}"
+ln -sf "${linked}/yq/yq" "${home}/.go/bin"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}yq${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 ####################################################################################################

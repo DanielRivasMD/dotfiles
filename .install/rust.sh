@@ -114,8 +114,3 @@ cargo install zellij --locked;                                                 #
 cargo install zoxide --locked;                                                 # zoxide
 
 ####################################################################################################
-
-# completions
-deno completions zsh > ~/.config/zsh_completion/_deno
-
-####################################################################################################

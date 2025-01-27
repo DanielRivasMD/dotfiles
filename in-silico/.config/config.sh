@@ -12,10 +12,12 @@ export ex_situ="${archive}/ex-situ"
 export in_silico="${archive}/in-silico"
 export forked="${home}/Forked"
 export observatory="${home}/Observatory"
+export completion="${home}/Completion"
+export linked="${home}/Linked"
 export appSupport="${home}/Library/Application Support"
 export localShare="${home}/.local/share"
 export setupDir="${archive}/.just/.setup"
-export completionsDir="${archive}/completions"
+export completionArch="${archive}/completions"
 
 ####################################################################################################
 # in-situ
