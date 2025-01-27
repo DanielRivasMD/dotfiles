@@ -40,5 +40,30 @@ source "${archDir}/.install/R.sh" 1>> "${archDir}/log/R.out" 2>> "${archDir}/log
 
 # rust & cargo
 source "${archDir}/.install/rust.sh" 1>> "${archDir}/log/rust.out" 2>> "${archDir}/log/rust.err"
+####################################################################################################
+# ergo
+####################################################################################################
+
+(
+  if [[ ! -d "${HOME}/Completion" ]]; then mkdir "${HOME}/Completion"; fi
+  cd "${HOME}/Completion" || exit
+  git clone https://github.com/nikolassv/bartib
+  git clone https://github.com/twpayne/chezmoi
+  git clone https://github.com/eza-community/eza
+  git clone https://github.com/sharkdp/fd
+  git clone https://github.com/casey/just
+  git clone https://github.com/watchexec/watchexec
+) &
+
+(
+  if [[ ! -d "${HOME}/Linked" ]]; then mkdir "${HOME}/Linked"; fi
+  cd "${HOME}/Linked" || exit
+  git clone https://github.com/lavifb/todo_r
+  git clone https://github.com/mikefarah/yq
+) &
+
+####################################################################################################
+
+wait
 
 ####################################################################################################
