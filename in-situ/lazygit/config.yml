@@ -333,7 +333,6 @@ notARepository: prompt
 promptToReturnFromSubprocess: true
 ####################################################################################################
 
-# TODO: update bind 'commit'
 # Keybindings
 keybinding:
     universal:
@@ -418,6 +417,7 @@ keybinding:
         recentRepos: <enter>
         allBranchesLogGraph: a
     files:
+        # TODO: update bind 'commit'
         commitChanges: c
         commitChangesWithoutHook: w
         amendLastCommit: A
