@@ -337,7 +337,7 @@ promptToReturnFromSubprocess: true
 keybinding:
     universal:
         quit: Q
-        quit-alt1: <c-c>
+        # quit-alt1: <c-c>
         return: <esc>
         quitWithoutChangingDirectory: q
         togglePanel: <tab>
@@ -418,7 +418,7 @@ keybinding:
         allBranchesLogGraph: a
     files:
         # TODO: update bind 'commit'
-        commitChanges: c
+        commitChanges: <c-c>
         commitChangesWithoutHook: w
         amendLastCommit: A
         commitChangesWithEditor: C
