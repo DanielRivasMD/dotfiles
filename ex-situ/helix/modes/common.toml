@@ -70,10 +70,10 @@ F16 = ["goto_reference"]                                   # joker-.           #
 F17 = ["goto_implementation"]                              # joker-/           # implementation
 
 # TODO: remap hover
-# F1 = ["hover"]                                             # joker-bs          #
-F1 = ["rename_symbol"]                                             # joker-bs          #
-F2 = ["symbol_picker"]                                     # joker-enter       # symbol list
-F4 = ["goto_type_definition"]                              # joker-shift       # type definition
+S-F1 = ["hover"]                                             # joker-bs          #
+S-F2 = ["rename_symbol"]                                     # joker-bs          #
+S-F3 = ["symbol_picker"]                                     # joker-enter       # symbol list
+S-F4 = ["goto_type_definition"]                              # joker-shift       # type definition
 
 A-C-pageup = ["undo"]                                      # joker-left        # undo
 A-C-pagedown = ["redo"]                                    # joker-right       # redo
@@ -125,7 +125,7 @@ C-end = ["goto_next_change"]                               # grave-down        #
 #                                                          # grave-shift-/     #
 
 #                                                          # grave-shift-bspace#
-S-F2 = ["diagnostics_picker"]                              # grave-shift-enter # diag picker
+# S-F2 = ["diagnostics_picker"]                              # grave-shift-enter # diag picker
 #                                                          # grave-shift-shift #
 #                                                          # grave-shift-alt   #
 #                                                          # grave-shift-cmd   #
@@ -155,8 +155,8 @@ S-C-end = ["goto_next_diag"]                               # grave-shift-down  #
 C-l = [":buffer-close"]                                    # ctl-cmd-bspace    # close tab
 C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
 C-j = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
-S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
-S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
+# S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
+# S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
 C-o = ["goto_last_accessed_file"]                          # ctl-cmd-space     # last file
 
 C-b = ["goto_previous_buffer"]                             # ctl-cmd-left      # prev tab
