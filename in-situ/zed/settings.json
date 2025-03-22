@@ -1,9 +1,9 @@
 // Zed settings
 {
-  "theme": "Andromeda",
+  "theme": "One Dark",
   "buffer_font_family": "Hack Nerd Font",
   "buffer_font_size": 18,
-  "ui_font_family": "Zed Mono",
+  "ui_font_family": "Monaco",
   "ui_font_size": 18,
   "preferred_line_length": 100,
   "tab_size": 2,
@@ -18,7 +18,7 @@
     "git_status": true
   },
   "languages": {
-    "Rust": { "format_on_save": "off" },
+    "Rust": { "format_on_save": "on" },
     "SQL": { "format_on_save": "off" },
     "TOML": { "format_on_save": "off" }
   }
