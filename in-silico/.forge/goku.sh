@@ -45,6 +45,9 @@ HEAD
     --files "apps/zed.edn" \
     --files "apps/zellij.edn" \
     --files "apps/zoom.edn" \
+    --files "double/keypad.edn" \
+    --files "double/lcmd.edn" \
+    --files "double/lctl.edn" \
     --files "mode/mouse.edn" \
     --files "mode/obracket.edn" \
     --files "mode/cbracket.edn" \
