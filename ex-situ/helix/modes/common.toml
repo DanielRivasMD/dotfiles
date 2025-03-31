@@ -2,7 +2,6 @@
 # Alt-Enter	Open selected in the background without closing the picker
 ####################################################################################################
 
-# TODO: write a script to open cheat documentation
 # del
 del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
 backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
@@ -11,107 +10,115 @@ C-k = ["kill_to_line_end"]                                 # shift-cmd         #
 C-u = ["kill_to_line_start"]                               # shift-cmd         # delete start line
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
 
-F3 = ["normal_mode", ":write", "MODE"]                     # grave             # fast save
-C-v = ["change_selection_noyank"]                          # bspace            # change
-A-g = [":sh zellij action new-pane --name SHELL --floating --height 100 --width 100 --x 100 --y 0"]
-#                                                          # esc               # spawn pane
+# F3 = ["normal_mode", ":write", "MODE"]                     # grave             # fast save
+# C-v = ["change_selection_noyank"]                          # bs            # change
 
 C-space = ["goto_word"]                                    # ctl-space         # jumper
-A-ret = ["insert_newline", "insert_mode"]                  # cmd-enter         # insert line
+# A-ret = []                                               # cmd-enter         #
+
+# A-g = [":sh zellij action new-pane --name SHELL --floating --height 100 --width 100 --x 100 --y 0"]
+#                                                          # esc               # spawn pane
 
 ####################################################################################################
 
-# TODO: deprecate tab
-# tab => diagnostics & list
-#                                                          # tab--             #
-#                                                          # tab-=             #
+S-A-home  = ["increment"]                                  # hyper-up          # increment
+S-A-end = ["decrement"]                                    # hyper-down        # decrement
 
-#                                                          # tab-[             #
-#                                                          # tab-]             #
-#                                                          # tab-;             #
-#                                                          # tab-'             #
-#                                                          # tab-\             #
-#                                                          # tab-,             #
-#                                                          # tab-.             #
-#                                                          # tab-/             #
+# C-n = ["goto_prev_comment"]                                # joker-[           # prev comment
+# C-p = ["goto_next_comment"]                                # joker-]           # next comment
 
-#                                                          # tab-bspace        #
-# A-C-S-F11 = ["jumplist_picker"]                            # tab-enter         # record jump
-# A-C-F14 = ["save_selection"]                               # tab-shift         # jump list
-# C-S-pagedown = ["jump_forward"]                            # tab-alt           # next jump
-# C-S-pageup = ["jump_backward"]                             # tab-cmd           # prev jump
-# A-C-S-F12 = ["goto_last_modification"]                     # tab-space         # last edit
+# joker
+# A-F19 = []                                             # joker--           #
+# A-F20 = []                                             # joker-=           #
+A-F11 = ["goto_prev_comment"]                            # joker-[           # prev comment
+A-F12 = ["goto_next_comment"]                            # joker-]           # next comment
+# A-F13 = []                                             # joker-;           #
+# A-F14 = []                                             # joker-'           #
+# A-F15 = []                                             # joker-\           #
+A-F18 = ["goto_definition"]                              # joker-,           # definition
+A-F19 = ["goto_reference"]                               # joker-.           # reference
+A-F20 = ["goto_implementation"]                          # joker-/           # implementation
 
-# S-A-pageup = [""]                                        # tab-left          #
-# S-A-pagedown = [""]                                      # tab-right         #
-# S-A-home = [""]                                          # tab-up            #
-# S-A-end = [""]                                           # tab-down          #
+C-F11 = ["rename_symbol"]                                # joker-bs          # rename symbol
+C-F12 = ["symbol_picker"]                                # joker-enter       # symbol list
+C-F13 = ["goto_type_definition"]                         # joker-shift       # type definition
+# C-F14 = []                                             # joker-alt         #
+# C-F15 = []                                             # joker-cmd         #
+C-F18 = ["normal_mode", "repeat_last_motion", "MODE"]    # joker-space       # repeat motion
 
-
-####################################################################################################
-
-# TODO: update map documentation
-# joker => symbols & counter
-F13 = ["goto_prev_test"]                                   # joker-shift-up           # prev test
-F14 = ["goto_next_test"]                                   # joker-shift-down           # next test
-
-F8 = ["goto_prev_class"]                                   # joker-ctl-up           # next class
-F9 = ["goto_next_class"]                                   # joker-ctl-down           # prev class
-
-F10 = ["goto_prev_parameter"]                              # joker-alt-up           # next param
-F11 = ["goto_next_parameter"]                              # joker-alt-down           # prev param
-
-F5 = ["goto_next_function"]                                # joker-cmd-up         # prev func
-F6 = ["goto_prev_function"]                                # joker-cmd-down         # next func
-
-# F12 = ["rename_symbol"]                                    # joker-\           # rename
-F15 = ["goto_definition"]                                  # joker-,           # definition
-F16 = ["goto_reference"]                                   # joker-.           # reference
-F17 = ["goto_implementation"]                              # joker-/           # implementation
-
-# TODO: remap hover
-S-F1 = ["hover"]                                             # joker-bs          #
-S-F2 = ["rename_symbol"]                                     # joker-bs          #
-S-F3 = ["symbol_picker"]                                     # joker-enter       # symbol list
-S-F4 = ["goto_type_definition"]                              # joker-shift       # type definition
-
-A-C-pageup = ["undo"]                                      # joker-left        # undo
-A-C-pagedown = ["redo"]                                    # joker-right       # redo
-A-C-home  = ["increment"]                                  # joker-up          # increment
-A-C-end = ["decrement"]                                    # joker-down        # decrement
+C-pageup = ["normal_mode", "till_prev_char", "MODE"]       # joker-left        # prev until
+C-pagedown = ["normal_mode", "find_till_char", "MODE"]     # joker-right       # next until
+C-home = ["goto_prev_change"]                              # joker-up          # prev change
+C-end = ["goto_next_change"]                               # joker-down        # next change
 
 
 ####################################################################################################
 
-# grave => buffers, motion & change
+# C-S-F11 = []                                             # joker-shift-bs      #
+C-S-F12 = ["jumplist_picker"]                            # joker-shift-enter   # record jump
+# C-S-F13 = []                                             # joker-shift-shift   #
+# C-S-F14 = []                                             # joker-shift-alt     #
+# C-S-F15 = []                                             # joker-shift-cmd     #
+C-S-F18 = ["save_selection"]                               # joker-shift-space # jump list
+
+C-S-pageup = ["jump_backward"]                             # joker-shift-left  # prev jump
+C-S-pagedown = ["jump_forward"]                            # joker-shift-right # next jump
+
+# F13 = ["goto_prev_test"]                                   # joker-shift-up    # prev test
+# F14 = ["goto_next_test"]                                   # joker-shift-down  # next test
+
+F8 = ["goto_prev_class"]                                   # joker-ctl-up      # next class
+F9 = ["goto_next_class"]                                   # joker-ctl-down    # prev class
+
+F5 = ["goto_prev_function"]                                # joker-alt-up      # prev func
+F6 = ["goto_next_function"]                                # joker-alt-down    # next func
+
+F10 = ["goto_prev_parameter"]                              # joker-cmd-up      # next param
+F11 = ["goto_next_parameter"]                              # joker-cmd-down    # prev param
+
+
+####################################################################################################
+
+F15 = ["undo"]                                      # alt-ctl           # undo
+F14 = ["goto_last_modification"]                     # alt-alt           # last edit
+F13 = ["redo"]                                    # alt-cmd           # redo
+
+F18 = ["goto_prev_diag"]                              # alt-tab           # prev diag
+F17 = ["diagnostics_picker"]                              # alt-joker         # diag picker
+F16 = ["goto_next_diag"]                               # alt-shift         # next diag
+
+
+####################################################################################################
+
+# grave
 #                                                          # grave--           #
 #                                                          # grave-=           #
 
-# S-F8 = [""]                                              # grave-[           # prev until
-# S-F9 = [""]                                              # grave-]           # next until
-# S-F10 = [""]                                             # grave-;           #
-# S-F11 = [""]                                             # grave-'           #
-# S-F12 = [""]                                             # grave-\           #
-# S-F15 = [""]                                             # grave-,           #
-# S-F16 = [""]                                             # grave-.           #
-# S-F17 = [""]                                             # grave-/           #
+#                                                          # grave-[           #
+#                                                          # grave-]           #
+#                                                          # grave-;           #
+#                                                          # grave-'           #
+#                                                          # grave-\           #
+#                                                          # grave-,           #
+#                                                          # grave-.           #
+#                                                          # grave-/           #
 
 C-r = ["changed_file_picker"]                              # grave-bs          # delta picker
 C-s = ["file_picker"]                                      # grave-enter       # file picker
 C-t = ["buffer_picker"]                                    # grave-shift       # buffer picker
 #                                                          # grave-alt         #
 #                                                          # grave-cmd         #
-F7 = ["normal_mode", "repeat_last_motion", "MODE"]         # grave-space       # repeat motion
+F7 = ["hover"]                                             # grave-space       # hover
 
-C-pageup = ["normal_mode", "till_prev_char", "MODE"]       # grave-left        # prev until
-C-pagedown = ["normal_mode", "find_till_char", "MODE"]     # grave-right       # next until
-C-home = ["goto_prev_change"]                              # grave-up          # prev change
-C-end = ["goto_next_change"]                               # grave-down        # next change
+#                                                          # grave-left
+#                                                          # grave-right
+#                                                          # grave-up
+#                                                          # grave-down
 
 
 ####################################################################################################
 
-# grave-shift => diagnostics & list
+# grave-shift
 #                                                          # grave-shift--     #
 #                                                          # grave-shift-=     #
 
@@ -124,45 +131,31 @@ C-end = ["goto_next_change"]                               # grave-down        #
 #                                                          # grave-shift-.     #
 #                                                          # grave-shift-/     #
 
-#                                                          # grave-shift-bspace#
-# S-F2 = ["diagnostics_picker"]                              # grave-shift-enter # diag picker
+#                                                          # grave-shift-bs    #
+#                                                          # grave-shift-enter #
 #                                                          # grave-shift-shift #
 #                                                          # grave-shift-alt   #
 #                                                          # grave-shift-cmd   #
 #                                                          # grave-shift-space #
 
-# S-C-pageup = [""]                                        # grave-shift-left  #
-# S-C-pagedown = [""]                                      # grave-shift-right #
-S-C-home = ["goto_prev_diag"]                              # grave-shift-up    # prev diag
-S-C-end = ["goto_next_diag"]                               # grave-shift-down  # next diag
+#                                                          # grave-shift-left  #
+#                                                          # grave-shift-right #
+#                                                          # grave-shift-up    #
+#                                                          # grave-shift-down  #
 
 
 ####################################################################################################
 
-# ctl-cmd => split & comment
-# S-F13 = []                                               # ctl-cmd--         #
-# S-F14 = []                                               # ctl-cmd-=         #
-
-# C-h = [""]                                               # ctl-cmd-[         #
-# A-c = [""]                                               # ctl-cmd-]         #
-#                                                          # ctl-cmd-;         #
-#                                                          # ctl-cmd-'         #
-#                                                          # ctl-cmd-\         #
-# S-F1 = [""]                                              # ctl-cmd-,         #
-# S-F4 = [""]                                              # ctl-cmd-.         #
-#                                                          # ctl-cmd-/         #
-
-C-l = [":buffer-close"]                                    # ctl-cmd-bspace    # close tab
+# ctl-cmd
+C-l = [":buffer-close"]                                    # ctl-cmd-bs        # close tab
 C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
 C-j = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
-# S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
-# S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
+S-F5 = ["hsplit"]                                          # ctl-cmd-alt       # horizontal split
+S-F6 = ["wonly"]                                           # ctl-cmd-cmd       # unsplit
 C-o = ["goto_last_accessed_file"]                          # ctl-cmd-space     # last file
 
 C-b = ["goto_previous_buffer"]                             # ctl-cmd-left      # prev tab
 C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     # next tab
-C-n = ["goto_prev_comment"]                                # ctl-cmd-up        # prev comment
-C-p = ["goto_next_comment"]                                # ctl-cmd-down      # next comment
 
 
 ####################################################################################################
@@ -262,7 +255,7 @@ S-C-F2 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line
                                                            # alt-shift-k       # move up
 S-C-F4 = ["goto_line_end", "select_mode", "goto_line_start", "MODE"]
                                                            # alt-shift-l       # select line
-S-C-F5 = ["replay_macro"]                                  # alt-shift-m       # play macro
+# S-C-F5 = ["replay_macro"]                                  # alt-shift-m       # play macro
 # S-C-F6 = [""]                                            # alt-shift-n       #
 S-C-F7 = ["unindent"]                                      # alt-shift-o       # unindent
 S-C-F8 = ["select_mode", "match_brackets", "MODE"]         # alt-shift-p       #
