@@ -35,11 +35,14 @@ layout {
         }
     }
 
-    tab name="Archive" {
+    tab name="Archive" split_direction="vertical" {
+        pane stacked=true split_direction="horizontal" {
+            pane name="git" cwd="/Users/drivas/.saiyajin" command="lazygit"
+            pane name="saiyajin" cwd="/Users/drivas/.saiyajin" command="hx"
+        }
         pane stacked=true split_direction="horizontal" {
             pane name="git" cwd="/Users/drivas/.archive" command="lazygit"
             pane name="archive" cwd="/Users/drivas/.archive" command="hx" focus=true
-            pane name="saiyajin" cwd="/Users/drivas/.saiyajin" command="hx"
         }
     }
 }
