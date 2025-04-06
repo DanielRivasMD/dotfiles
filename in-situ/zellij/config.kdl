@@ -9,9 +9,9 @@ keybinds clear-defaults=true {
 
         bind "Alt a" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          // floating panes
         // bind "Alt b" {}
-        // bind "Alt c" {}                                                                         COLLISION
-        // bind "Alt d" {}                                                                         COLLISION
-        // bind "Alt e" {}                                                                         COLLISION
+        // bind "Alt c" {}                                                          COLLISION
+        // bind "Alt d" {}                                                          COLLISION
+        // bind "Alt e" {}                                                          COLLISION
         // bind "Alt f" {}
         // bind "Alt g" {
         //     Run "zellij" "action" "new-pane" "--name" "arch" "--floating" "--height" "100" "--width" "100" "--x" "100" "--y" "0" {
@@ -19,41 +19,41 @@ keybinds clear-defaults=true {
         //     }
         // }
         bind "Alt h" { EditScrollback; SwitchToMode "Normal"; }                                    //
-        // bind "Alt i" {  }                                                                       COLLISION
-        bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             //
-        bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }            //
-        bind "Alt l" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }               //
-        bind "Alt m" { SwitchToMode "Pane"; MoveFocus "Down"; SwitchToMode "Normal"; }             //
-        // bind "Alt n" {  }                                                                       COLLISION
+        // bind "Alt i" {  }                                                        COLLISION
+        bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             // pane left
+        bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }            // pane right
+        bind "Alt l" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }               // pane up
+        bind "Alt m" { SwitchToMode "Pane"; MoveFocus "Down"; SwitchToMode "Normal"; }             // pane down
+        // bind "Alt n" {  }                                                        COLLISION
         bind "Alt o" { SwitchToMode "Pane"; CloseFocus; SwitchToMode "Normal"; }                   //
-        bind "Alt p" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }        //
-        bind "Alt q" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }              //
-        bind "Alt r" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }               //
+        bind "Alt p" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }        // pane focus
+        bind "Alt q" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }              // new pane right
+        bind "Alt r" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }               // new pane down
         // TODO: update
         bind "Alt s" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
         bind "Alt t" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }                  //
-        // bind "Alt u" {  }                                                                       COLLISION
+        // bind "Alt u" {  }                                                        COLLISION
         // bind "Alt v" {}
         // bind "Alt w" {}
-        bind "Alt x" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }               //
-        bind "Alt y" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }                   //
+        bind "Alt x" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }               // prev tab
+        bind "Alt y" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }                   // next tab
         // bind "Alt z" {}
 
-        bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 //
-        // bind "Alt B" {}                                                                         //
-        bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               //
-        // bind "Alt D" {}                                                                         mode scroll
-        // bind "Alt E" {}                                                                         mode search
-        // bind "Alt F" {}                                                                         mode resize
-        // bind "Alt G" {}                                                                         mode session
-        bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }           //
-        bind "Alt I" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }                      //
-        // bind "Alt J" {}                                                                         plugin room
-        bind "Alt K" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }                        //
-        // bind "Alt L" {}                                                                         plugin jump-list
-        // bind "Alt M" {}                                                                         plugin monocle
-        bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     //
-        // bind "Alt O" {  }                                                                       COLLISION
+        bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 // rename tab
+        // bind "Alt B" {}                                                                         // mode lock
+        bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               // rename pane
+        // bind "Alt D" {}                                                                         // mode scroll
+        // bind "Alt E" {}                                                                         // mode search
+        // bind "Alt F" {}                                                                         // mode resize
+        // bind "Alt G" {}                                                                         // mode session
+        bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }           // sync tab
+        bind "Alt I" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }                      // close tab
+        // bind "Alt J" {}                                                                         // plugin room
+        bind "Alt K" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }                        // new tab
+        // bind "Alt L" {}                                                                         // plugin jump-list
+        // bind "Alt M" {}                                                                         // plugin monocle
+        bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     // toggle tab
+        // bind "Alt O" {  }                                                        COLLISION
         bind "Alt P" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
         // bind "Alt Q" {}
         bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }                     //
