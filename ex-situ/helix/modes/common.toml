@@ -11,10 +11,7 @@ C-u = ["kill_to_line_start"]                               # shift-cmd         #
 C-w = ["delete_word_backward"]                             # shift-ctl         # delete word left
 
 C-space = ["goto_word"]                                    # ctl-space         # jumper
-# A-ret = []                                               # cmd-enter         #
 
-# A-g = [":sh zellij action new-pane --name SHELL --floating --height 100 --width 100 --x 100 --y 0"]
-#                                                          # esc               # spawn pane
 
 ####################################################################################################
 
@@ -45,7 +42,7 @@ C-s = ["file_picker"]                                      # joker-enter       #
 C-t = ["buffer_picker"]                                    # joker-shift       # buffer picker
 #                                                          # joker-alt         #
 #                                                          # joker-cmd         #
-A-C-F11 = ["hover"]                                        # joker-space       # hover
+#                                                          # joker-space       #
 
 #                                                          # joker-left
 #                                                          # joker-right
@@ -96,15 +93,15 @@ C-end = ["goto_next_change"]                               # grave-down        #
 # A-F13 = []                                               # grave-;           #
 # A-F14 = []                                               # grave-'           #
 # A-F15 = []                                               # grave-\           #
-A-F18 = ["goto_definition"]                                # grave-,           # definition
-A-F19 = ["goto_reference"]                                 # grave-.           # reference
-A-F20 = ["goto_implementation"]                            # grave-/           # implementation
+A-F18 = ["goto_next_test"]                                 # grave-,           # next test
+A-F19 = ["goto_next_class"]                                # grave-.           # next class
+A-F20 = ["goto_next_function"]                             # grave-/           # next function
 
 C-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
 C-F12 = ["symbol_picker"]                                  # grave-enter       # symbol list
-C-F13 = ["goto_type_definition"]                           # grave-shift       # type definition
-# C-F14 = []                                               # grave-alt         #
-# C-F15 = []                                               # grave-cmd         #
+C-F13 = ["goto_next_parameter"]                            # grave-shift       # next parameter
+C-F16 = ["goto_reference"]                                 # grave-alt         # reference
+C-F17 = ["goto_definition"]                                # grave-cmd         # definition
 C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 
 
@@ -123,32 +120,16 @@ C-S-end = ["goto_next_comment"]                            # grave-shift-down   
 # A-S-F13 = []                                             # grave-shift-;       #
 # A-S-F14 = []                                             # grave-shift-'       #
 # A-S-F15 = []                                             # grave-shift-\       #
-# A-S-F18 = []                                             # grave-shift-,       #
-# A-S-F19 = []                                             # grave-shift-.       #
-# A-S-F20 = []                                             # grave-shift-/       #
+A-S-F18 = ["goto_prev_test"]                               # grave-shift-,       # prev test
+A-S-F19 = ["goto_prev_class"]                              # grave-shift-.       # prev class
+A-S-F20 = ["goto_prev_function"]                           # grave-shift-/       # prev function
 
 # C-S-F11 = []                                             # grave-shift-bs      #
 C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter   # jump list
-# C-S-F13 = []                                             # grave-shift-shift   #
-# C-S-F14 = []                                             # grave-shift-alt     #
-# C-S-F15 = []                                             # grave-shift-cmd     #
+C-S-F13 = ["goto_prev_parameter"]                          # grave-shift-shift   # prev parameter
+C-S-F16 = ["goto_implementation"]                          # grave-shift-alt     # implementation
+C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd     # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space   # jump save
-
-
-####################################################################################################
-
-# # TODO: remap
-# # F13 = ["goto_prev_test"]                                   # joker-shift-up    # prev test
-# # F14 = ["goto_next_test"]                                   # joker-shift-down  # next test
-
-# F8 = ["goto_prev_class"]                                   # joker-ctl-up      # next class
-# F9 = ["goto_next_class"]                                   # joker-ctl-down    # prev class
-
-# F5 = ["goto_prev_function"]                                # joker-alt-up      # prev fn
-# F6 = ["goto_next_function"]                                # joker-alt-down    # next fn
-
-# F10 = ["goto_prev_parameter"]                              # joker-cmd-up      # next param
-# F11 = ["goto_next_parameter"]                              # joker-cmd-down    # prev param
 
 
 ####################################################################################################
@@ -182,8 +163,8 @@ C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     #
 ####################################################################################################
 
 # scroll
-# []                                                       # alt-cmd-left      # zellij
-# []                                                       # alt-cmd-right     # zellij
+#                                                          # alt-cmd-left      # zellij
+#                                                          # alt-cmd-right     # zellij
 C-x = ["scroll_up"]                                        # alt-cmd-up        # scroll up
 C-y = ["scroll_down"]                                      # alt-cmd-down      # scroll down
 
@@ -201,7 +182,7 @@ pagedown = ["goto_next_paragraph", "collapse_selection"]   # alt-down          #
 
 # alt-shift
 A-S-left = ["extend_prev_word_start"]                      # alt-shift-left    # select word left
-A-S-right = [ "extend_next_word_end"]                      # alt-shift-right   # select word right
+A-S-right = ["extend_next_word_end"]                       # alt-shift-right   # select word right
 # A-S-up = []                                              # alt-shift-up      # select prev block
 # A-S-down = []                                            # alt-shift-down    # select next block
 
