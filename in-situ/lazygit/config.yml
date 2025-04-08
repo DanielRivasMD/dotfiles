@@ -351,7 +351,7 @@ keybinding:
         scrollRight: L
         gotoTop: '<home>' # cmd-up
         gotoBottom: '<end>' # cmd-down
-        toggleRangeSelect: <c-o> # ctl-cmd-space
+        toggleRangeSelect: <disabled>
         rangeSelectDown: <s-down>
         rangeSelectUp: <s-up>
         prevBlock: <disabled>
@@ -383,8 +383,8 @@ keybinding:
         scrollDownMain: <disabled>
         scrollUpMain-alt1: <disabled>
         scrollDownMain-alt1: <disabled>
-        scrollUpMain-alt2: <c-x> # alt-ctl-up
-        scrollDownMain-alt2: <c-y> # alt-ctl-down
+        scrollUpMain-alt2: <c-x> # alt-cmd-up
+        scrollDownMain-alt2: <c-y> # alt-cmd-down
         executeShellCommand: ':'
         createRebaseOptionsMenu: m
         # 'Files' appended for legacy reasons
@@ -395,30 +395,29 @@ keybinding:
         createPatchOptionsMenu: N
         nextTab: '<c-f>' # ctl-cmd-right
         prevTab: '<c-b>' # ctl-cmd-left
-        nextScreenMode: '<c-g>' # ctl-cmd-enter
+        nextScreenMode: '<c-o>' # ctl-cmd-space
         prevScreenMode: <disabled>
         undo: u
         redo: U
-        filteringMenu: <c-j> # ctl-cmd-shift
+        filteringMenu: <c-r> # joker-bs
         diffingMenu: <disabled>
         diffingMenu-alt: W
         copyToClipboard: y
-        openRecentRepos: '<c-s>' # ctl-enter
+        openRecentRepos: '<c-s>' # joker-enter
         submitEditorText: <enter>
         extrasMenu: <disabled>
         toggleWhitespaceInDiffView: <disabled>
-        increaseContextInDiffView: '=' # *
-        decreaseContextInDiffView: '-' # *
+        increaseContextInDiffView: '<c-l>' # *
+        decreaseContextInDiffView: '<c-v>' # *
         increaseRenameSimilarityThreshold: )
         decreaseRenameSimilarityThreshold: (
-        openDiffTool: <c-t> # ctl-shift
+        openDiffTool: <c-t> # joker-shift
     status:
-        checkForUpdate: u
-        recentRepos: <enter>
-        allBranchesLogGraph: a
+        checkForUpdate: <disabled>
+        recentRepos: <disabled>
+        allBranchesLogGraph: <enter>
     files:
-        # TODO: update bind 'commit'
-        commitChanges: <c-c>
+        commitChanges: <c-g> # ctl-cmd-enter
         commitChangesWithoutHook: w
         amendLastCommit: A
         commitChangesWithEditor: C
