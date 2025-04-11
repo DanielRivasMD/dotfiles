@@ -415,8 +415,8 @@
       "cmd-{": "pane::ActivatePreviousItem",
       "alt-cmd-right": "pane::ActivateNextItem",
       "cmd-}": "pane::ActivateNextItem",
-      "ctrl-shift-pageup": "pane::SwapItemLeft",
-      "ctrl-shift-pagedown": "pane::SwapItemRight",
+      "f10": "pane::SwapItemLeft", // TODO: update
+      "f11": "pane::SwapItemRight",// TODO: update
       "cmd-w": ["pane::CloseActiveItem", { "close_pinned": false }],
       "alt-cmd-t": ["pane::CloseInactiveItems", { "close_pinned": false }],
       "ctrl-alt-cmd-w": "workspace::CloseInactiveTabsAndPanes",
@@ -425,8 +425,8 @@
       "cmd-k u": ["pane::CloseCleanItems", { "close_pinned": false }],
       "cmd-k cmd-w": ["pane::CloseAllItems", { "close_pinned": false }],
       "cmd-f": "project_search::ToggleFocus",
-      "cmd-g": "search::SelectNextMatch",
-      "cmd-shift-g": "search::SelectPreviousMatch",
+      "ctrl-f4": "search::SelectNextMatch",
+      "alt-f9": "search::SelectPreviousMatch",
       "cmd-shift-h": "search::ToggleReplace",
       "cmd-alt-l": "search::ToggleSelection",
       "alt-enter": "search::SelectAllMatches",
@@ -442,17 +442,17 @@
     "context": "Editor",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-[": "editor::Outdent",
-      "cmd-]": "editor::Indent",
+      "ctrl-shift-f7": "editor::Outdent",
+      "alt-shift-f10": "editor::Indent",
       "cmd-ctrl-p": "editor::AddSelectionAbove", // Insert cursor above
       "cmd-alt-up": "editor::AddSelectionAbove",
       "cmd-ctrl-n": "editor::AddSelectionBelow", // Insert cursor below
       "cmd-alt-down": "editor::AddSelectionBelow",
       "cmd-shift-k": "editor::DeleteLine",
-      "alt-up": "editor::MoveLineUp",
-      "alt-down": "editor::MoveLineDown",
+      "ctrl-shift-f2": "editor::MoveLineUp",
+      "ctrl-shift-f1": "editor::MoveLineDown",
       "alt-shift-up": "editor::DuplicateLineUp",
-      "alt-shift-down": "editor::DuplicateLineDown",
+      "alt-shift-f5": "editor::DuplicateLineDown",
       "ctrl-shift-right": "editor::SelectLargerSyntaxNode", // Expand Selection
       "ctrl-shift-left": "editor::SelectSmallerSyntaxNode", // Shrink Selection
       "cmd-d": ["editor::SelectNext", { "replace_newest": false }], // Add selection to Next Find Match
@@ -468,12 +468,12 @@
       "f8": "editor::GoToDiagnostic",
       "shift-f8": "editor::GoToPreviousDiagnostic",
       "f2": "editor::Rename",
-      "f12": "editor::GoToDefinition",
+      "ctrl-f17": "editor::GoToDefinition",
       "alt-f12": "editor::GoToDefinitionSplit",
-      "cmd-f12": "editor::GoToTypeDefinition",
-      "shift-f12": "editor::GoToImplementation",
+      "ctrl-shift-f17": "editor::GoToTypeDefinition",
+      "ctrl-shift-f16": "editor::GoToImplementation",
       "alt-cmd-f12": "editor::GoToTypeDefinitionSplit",
-      "alt-shift-f12": "editor::FindAllReferences",
+      "ctrl-f16": "editor::FindAllReferences",
       "cmd-|": "editor::MoveToEnclosingBracket",
       "ctrl-m": "editor::MoveToEnclosingBracket",
       "alt-cmd-[": "editor::Fold",
@@ -499,7 +499,7 @@
       "cmd-.": "editor::ToggleCodeActions",
       "cmd-k r": "editor::RevealInFileManager",
       "cmd-k p": "editor::CopyPath",
-      "cmd-\\": "pane::SplitRight",
+      "alt-q": "pane::SplitRight",
       "cmd-k v": "markdown::OpenPreviewToTheSide",
       "cmd-shift-v": "markdown::OpenPreview",
       "ctrl-cmd-c": "editor::DisplayCursorNames"
@@ -628,9 +628,9 @@
     "use_key_equivalents": true,
     "bindings": {
       "cmd-k up": "pane::SplitUp",
-      "cmd-k down": "pane::SplitDown",
+      "alt-r": "pane::SplitDown",
       "cmd-k left": "pane::SplitLeft",
-      "cmd-k right": "pane::SplitRight"
+      "alt-q": "pane::SplitRight"
     }
   },
   // Bindings that should be unified with bindings for more general actions
@@ -963,7 +963,7 @@
       "escape": ["terminal::SendKeystroke", "escape"],
       "enter": ["terminal::SendKeystroke", "enter"],
       "ctrl-c": ["terminal::SendKeystroke", "ctrl-c"],
-      "shift-pageup": "terminal::ScrollPageUp",
+      "": "terminal::ScrollPageUp",
       "cmd-up": "terminal::ScrollPageUp",
       "shift-pagedown": "terminal::ScrollPageDown",
       "cmd-down": "terminal::ScrollPageDown",
@@ -975,9 +975,9 @@
       "cmd-end": "terminal::ScrollToBottom",
       "ctrl-shift-space": "terminal::ToggleViMode",
       "ctrl-k up": "pane::SplitUp",
-      "ctrl-k down": "pane::SplitDown",
+      "alt-r": "pane::SplitDown",
       "ctrl-k left": "pane::SplitLeft",
-      "ctrl-k right": "pane::SplitRight"
+      "alt-q": "pane::SplitRight"
     }
   },
   {
