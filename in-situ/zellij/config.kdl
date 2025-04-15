@@ -92,91 +92,6 @@ keybinds clear-defaults=true {
         bind "Shift PageUp" { MoveTab "Left"; }                                                    // tab swap left
         bind "Shift PageDown" { MoveTab "Right"; }                                                 // tab swap right
 
-    shared_except "scroll" "locked" {
-        bind "Alt D" { SwitchToMode "Scroll"; }                                                    //
-    }
-
-    shared_except "entersearch" "locked" {
-        bind "Alt E" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
-    }
-
-    shared_except "resize" "locked" {
-        bind "Alt F" { SwitchToMode "Resize"; }                                                    //
-    }
-
-    shared_except "session" "locked" {
-        bind "Alt G" { SwitchToMode "Session"; }                                                   //
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    locked {
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    normal {
-        bind "Alt B" { SwitchToMode "Locked"; }                                                    //
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    renametab {
-        bind "Alt A" { UndoRenameTab; SwitchToMode "Normal"; }                                     //
-        bind "Esc" { UndoRenameTab; SwitchToMode "Normal"; }                                       //
-    }
-
-    renamepane {
-        bind "Alt C" { SwitchToMode "Normal"; }                                                    //
-        bind "Esc" { SwitchToMode "Normal"; }                                                      //
-    }
-
-    scroll {
-        bind "Alt D" { SwitchToMode "Normal"; }                                                    //
-        bind "Enter" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
-        bind "Up" { ScrollUp; }                                                                    //
-        bind "Down" { ScrollDown; }                                                                //
-        bind "PageUp" { HalfPageScrollUp; }                                                        //
-        bind "PageDown" { HalfPageScrollDown; }                                                    //
-        bind "Home" { PageScrollUp; }                                                              //
-        bind "End" { PageScrollDown; }                                                             //
-    }
-
-    entersearch {
-        bind "Alt E" { SwitchToMode "EnterSearch"; SearchInput 0; }                                //
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    resize {
-        bind "Alt F" { SwitchToMode "Normal"; }                                                    //
-        bind "z" { SwitchToMode "Pane"; TogglePaneFrames; SwitchToMode "Normal"; }                 //
-        bind "=" { Resize "Increase"; }                                                            //
-        bind "-" { Resize "Decrease"; }                                                            //
-        bind "h" { Resize "Increase Left"; }                                                       //
-        bind "j" { Resize "Increase Down"; }                                                       //
-        bind "k" { Resize "Increase Up"; }                                                         //
-        bind "l" { Resize "Increase Right"; }                                                      //
-        bind "H" { Resize "Decrease Left"; }                                                       //
-        bind "J" { Resize "Decrease Down"; }                                                       //
-        bind "K" { Resize "Decrease Up"; }                                                         //
-        bind "L" { Resize "Decrease Right"; }                                                      //
-        bind "Left" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "Resize"; }               //
-        bind "Right" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "Resize"; }             //
-        bind "Up" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "Resize"; }                   //
-        bind "Down" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "Resize"; }               //
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    session {
-        bind "Alt G" { SwitchToMode "Normal"; }                                                    //
-        bind "d" { Detach; }                                                                       //
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    shared_except "locked" {
         bind "Alt J" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
@@ -198,6 +113,63 @@ keybinds clear-defaults=true {
         }
 
     }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    locked {
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    normal {
+        bind "Alt a" { SwitchToMode "Locked"; }                                                    // mode lock
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    renametab {
+        bind "Alt A" { UndoRenameTab; SwitchToMode "Normal"; }                                     // mode normal
+        bind "Esc" { UndoRenameTab; SwitchToMode "Normal"; }                                       // mode normal
+    }
+
+    renamepane {
+        bind "Alt s" { SwitchToMode "Normal"; }                                                    // mode normal
+        bind "Esc" { SwitchToMode "Normal"; }                                                      // mode normal
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    entersearch {
+        bind "Alt g" { SwitchToMode "EnterSearch"; SearchInput 0; }                                  // mode search
+        bind "Tab" { SwitchToMode "Pane"; TogglePaneFrames; SwitchToMode "Normal"; }                 // frame
+        // bind "Space" { SwitchToMode "Session"; Detach; }                                             // detach
+
+        bind "Up" { SwitchToMode "Scroll"; ScrollUp; SwitchToMode "EnterSearch"; }                   // scroll up
+        bind "Down" { SwitchToMode "Scroll"; ScrollDown; SwitchToMode "EnterSearch"; }               // scroll down
+        bind "PageUp" { SwitchToMode "Scroll"; HalfPageScrollUp; SwitchToMode "EnterSearch"; }       // scroll half up
+        bind "PageDown" { SwitchToMode "Scroll"; HalfPageScrollDown; SwitchToMode "EnterSearch"; }   // scroll half down
+        bind "Home" { SwitchToMode "Scroll"; PageScrollUp; SwitchToMode "EnterSearch"; }             // scroll full up
+        bind "End" { SwitchToMode "Scroll"; PageScrollDown; SwitchToMode "EnterSearch"; }            // scroll full down
+
+        bind "Shift Home" { SwitchToMode "Resize"; Resize "Increase"; SwitchToMode "EnterSearch"; }  //
+        bind "Shift End" { SwitchToMode "Resize"; Resize "Decrease"; SwitchToMode "EnterSearch"; }   //
+
+        bind "Ctrl b" { SwitchToMode "Move"; MovePane "Left"; SwitchToMode "EnterSearch"; }          //
+        bind "Ctrl f" { SwitchToMode "Move"; MovePane "Right"; SwitchToMode "EnterSearch"; }         //
+        bind "Ctrl n" { SwitchToMode "Move"; MovePane "Up"; SwitchToMode "EnterSearch"; }            //
+        bind "Ctrl p" { SwitchToMode "Move"; MovePane "Down"; SwitchToMode "EnterSearch"; }          //
+
+        bind "Alt j" { SwitchToMode "Resize"; Resize "Increase Left"; SwitchToMode "EnterSearch"; }  //
+        bind "Alt k" { SwitchToMode "Resize"; Resize "Increase Right"; SwitchToMode "EnterSearch"; } //
+        bind "Alt l" { SwitchToMode "Resize"; Resize "Increase Up"; SwitchToMode "EnterSearch"; }    //
+        bind "Alt m" { SwitchToMode "Resize"; Resize "Increase Down"; SwitchToMode "EnterSearch"; }  //
+
+        bind "Alt x" { SwitchToMode "Resize"; Resize "Decrease Right"; SwitchToMode "EnterSearch"; } //
+        bind "Alt y" { SwitchToMode "Resize"; Resize "Decrease Left"; SwitchToMode "EnterSearch"; }  //
+        bind "Ctrl x" { SwitchToMode "Resize"; Resize "Decrease Down"; SwitchToMode "EnterSearch"; } //
+        bind "Ctrl y" { SwitchToMode "Resize"; Resize "Decrease Up"; SwitchToMode "EnterSearch"; }   //
+    }
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
