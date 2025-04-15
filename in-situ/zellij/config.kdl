@@ -35,81 +35,62 @@ keybinds clear-defaults=true {
     shared_except "locked" {
         bind "Ctrl q" { Quit; }                                                                    //
 
-        bind "Alt a" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          // floating panes
-        // bind "Alt b" {}
+        // bind "Alt a" {}                                                                         // mode lock
+        // bind "Alt b" {}                                                                         // alacritty motion
         // bind "Alt c" {}                                                          COLLISION
         // bind "Alt d" {}                                                          COLLISION
         // bind "Alt e" {}                                                          COLLISION
-        // bind "Alt f" {}
-        // bind "Alt g" {
-        //     Run "zellij" "action" "new-pane" "--name" "arch" "--floating" "--height" "100" "--width" "100" "--x" "100" "--y" "0" {
-        //         cwd "/Users/drivas/.archive"
-        //     }
-        // }
-        bind "Alt h" { EditScrollback; SwitchToMode "Normal"; }                                    //
+        // bind "Alt f" {}                                                                         // alacritty motion
+        bind "Alt g" { SwitchToMode "EnterSearch"; }                                               // mode search
+        bind "Alt h" { EditScrollback; SwitchToMode "Normal"; }                                    // history editor
         // bind "Alt i" {  }                                                        COLLISION
         bind "Alt j" { SwitchToMode "Pane"; MoveFocus "Left"; SwitchToMode "Normal"; }             // pane left
         bind "Alt k" { SwitchToMode "Pane"; MoveFocus "Right"; SwitchToMode "Normal"; }            // pane right
         bind "Alt l" { SwitchToMode "Pane"; MoveFocus "Up"; SwitchToMode "Normal"; }               // pane up
         bind "Alt m" { SwitchToMode "Pane"; MoveFocus "Down"; SwitchToMode "Normal"; }             // pane down
         // bind "Alt n" {  }                                                        COLLISION
-        bind "Alt o" { SwitchToMode "Pane"; CloseFocus; SwitchToMode "Normal"; }                   //
+        bind "Alt o" { SwitchToMode "Pane"; CloseFocus; SwitchToMode "Normal"; }                   // pane close
         bind "Alt p" { SwitchToMode "Pane"; ToggleFocusFullscreen; SwitchToMode "Normal"; }        // pane focus
-        bind "Alt q" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }              // new pane right
-        bind "Alt r" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }               // new pane down
-        // TODO: update
-        bind "Alt s" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
-        bind "Alt t" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }                  //
+        bind "Alt q" { SwitchToMode "Pane"; NewPane "Right"; SwitchToMode "Normal"; }              // pane split right
+        bind "Alt r" { SwitchToMode "Pane"; NewPane "Down"; SwitchToMode "Normal"; }               // pane split down
+        bind "Alt s" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               // pane rename
+        bind "Alt t" { SwitchToMode "Pane"; SwitchFocus; SwitchToMode "Normal"; }                  // pane jump back
         // bind "Alt u" {  }                                                        COLLISION
-        // bind "Alt v" {}
-        // bind "Alt w" {}
-        bind "Alt x" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }               // prev tab
-        bind "Alt y" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }                   // next tab
-        // bind "Alt z" {}
+        // bind "Alt v" {}                                                                         // nushell motion
+        // bind "Alt w" {}                                                                         // nushell motion
+        bind "Alt x" { SwitchToMode "Tab"; GoToPreviousTab; SwitchToMode "Normal"; }               // tab prev
+        bind "Alt y" { SwitchToMode "Tab"; GoToNextTab; SwitchToMode "Normal"; }                   // tab next
+        // bind "Alt z" {}                                                                         // nushell motion
 
-        bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 // rename tab
-        // bind "Alt B" {}                                                                         // mode lock
-        bind "Alt C" { SwitchToMode "RenamePane"; PaneNameInput 0; }                               // rename pane
-        // bind "Alt D" {}                                                                         // mode scroll
-        // bind "Alt E" {}                                                                         // mode search
-        // bind "Alt F" {}                                                                         // mode resize
-        // bind "Alt G" {}                                                                         // mode session
-        bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }           // sync tab
-        bind "Alt I" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }                      // close tab
+        bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 // tab rename
+        // bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          // pane floating
+        // bind "Alt C" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
+        // bind "Alt D" {}                                                                         //
+        // bind "Alt E" {}                                                                         //
+        // bind "Alt F" {}                                                                         //
+        // bind "Alt G" {}                                                                         //
+        bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }           // tab sync
+        bind "Alt I" { SwitchToMode "Tab"; CloseTab; SwitchToMode "Normal"; }                      // tab close
         // bind "Alt J" {}                                                                         // plugin room
-        bind "Alt K" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }                        // new tab
+        bind "Alt K" { SwitchToMode "Tab"; NewTab; SwitchToMode "Normal"; }                        // tab new
         // bind "Alt L" {}                                                                         // plugin jump-list
         // bind "Alt M" {}                                                                         // plugin monocle
-        bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     // toggle tab
+        bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     // tab toggle
         // bind "Alt O" {  }                                                        COLLISION
-        bind "Alt P" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          //
-        // bind "Alt Q" {}
-        bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }                     //
-        bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }                     //
-        bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }                     //
-        bind "Alt U" { SwitchToMode "Tab"; GoToTab 4; SwitchToMode "Normal"; }                     //
-        bind "Alt V" { SwitchToMode "Tab"; GoToTab 5; SwitchToMode "Normal"; }                     //
-        bind "Alt W" { SwitchToMode "Tab"; GoToTab 6; SwitchToMode "Normal"; }                     //
-        bind "Alt X" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }                     //
-        bind "Alt Y" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }                     //
-        bind "Alt Z" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }                     //
+        // bind "Alt P" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          // dump screen
+        // bind "Alt Q" {}                                                                         //
+        bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }                     // tab 1
+        bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }                     // tab 2
+        bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }                     // tab 3
+        bind "Alt U" { SwitchToMode "Tab"; GoToTab 4; SwitchToMode "Normal"; }                     // tab 4
+        bind "Alt V" { SwitchToMode "Tab"; GoToTab 5; SwitchToMode "Normal"; }                     // tab 5
+        bind "Alt W" { SwitchToMode "Tab"; GoToTab 6; SwitchToMode "Normal"; }                     // tab 6
+        bind "Alt X" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }                     // tab 7
+        bind "Alt Y" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }                     // tab 8
+        bind "Alt Z" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }                     // tab 9
 
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    // modes
-    shared_except "normal" {
-        bind "Alt B" { SwitchToMode "Normal"; }                                                    //
-    }
-
-    shared_except "normal" "locked" "scroll" "entersearch" {
-        bind "Enter" { SwitchToMode "Normal"; }                                                    //
-    }
-
-    shared_except "normal" "locked" {
-        bind "Esc" { SwitchToMode "Normal"; }                                                      //
-    }
+        bind "Shift PageUp" { MoveTab "Left"; }                                                    // tab swap left
+        bind "Shift PageDown" { MoveTab "Right"; }                                                 // tab swap right
 
     shared_except "scroll" "locked" {
         bind "Alt D" { SwitchToMode "Scroll"; }                                                    //
