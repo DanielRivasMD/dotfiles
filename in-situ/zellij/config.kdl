@@ -17,6 +17,21 @@ ui {
 // TODO: write a plugin
 keybinds clear-defaults=true {
 
+    // modes
+    shared_except "normal" {
+        bind "Alt a" { SwitchToMode "Normal"; }                                                    // mode normal
+    }
+
+    shared_except "normal" "locked" {
+        bind "Esc" { SwitchToMode "Normal"; }                                                      // mode normal
+    }
+
+    shared_except "entersearch" "locked" {
+        bind "Alt g" { SwitchToMode "EnterSearch"; SearchInput 0; }                                // mode search
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
     shared_except "locked" {
         bind "Ctrl q" { Quit; }                                                                    //
 
