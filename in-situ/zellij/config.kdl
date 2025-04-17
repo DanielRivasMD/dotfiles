@@ -63,10 +63,10 @@ keybinds clear-defaults=true {
         // bind "Alt z" {}                                                                         // nushell motion
 
         bind "Alt A" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 // tab rename
-        // bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          // pane floating
-        // bind "Alt C" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
+        bind "Alt B" { SwitchToMode "Pane"; ToggleFloatingPanes; SwitchToMode "Normal"; }          // pane floating
+        bind "Alt C" { SwitchToMode "Pane"; TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }    //
         // bind "Alt D" {}                                                                         //
-        // bind "Alt E" {}                                                                         //
+        bind "Alt E" { SwitchToMode "Tab"; BreakPane; SwitchToMode "Normal"; }                     // tab break pane
         // bind "Alt F" {}                                                                         //
         // bind "Alt G" {}                                                                         //
         bind "Alt H" { SwitchToMode "Tab"; ToggleActiveSyncTab; SwitchToMode "Normal"; }           // tab sync
@@ -78,7 +78,7 @@ keybinds clear-defaults=true {
         bind "Alt N" { SwitchToMode "Tab"; ToggleTab; SwitchToMode "Normal"; }                     // tab toggle
         // bind "Alt O" {  }                                                        COLLISION
         // bind "Alt P" { DumpScreen "/Users/drivas/.archive/.zellij.txt"; }                          // dump screen
-        // bind "Alt Q" {}                                                                         //
+        bind "Alt Q" { TogglePanePinned; }                                 //
         bind "Alt R" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }                     // tab 1
         bind "Alt S" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }                     // tab 2
         bind "Alt T" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }                     // tab 3
@@ -142,7 +142,6 @@ keybinds clear-defaults=true {
     entersearch {
         bind "Alt g" { SwitchToMode "EnterSearch"; SearchInput 0; }                                  // mode search
         bind "Tab" { SwitchToMode "Pane"; TogglePaneFrames; SwitchToMode "Normal"; }                 // frame
-        // bind "Space" { SwitchToMode "Session"; Detach; }                                             // detach
 
         bind "Up" { SwitchToMode "Scroll"; ScrollUp; SwitchToMode "EnterSearch"; }                   // scroll up
         bind "Down" { SwitchToMode "Scroll"; ScrollDown; SwitchToMode "EnterSearch"; }               // scroll down
@@ -168,6 +167,40 @@ keybinds clear-defaults=true {
         bind "Alt y" { SwitchToMode "Resize"; Resize "Decrease Left"; SwitchToMode "EnterSearch"; }  //
         bind "Ctrl x" { SwitchToMode "Resize"; Resize "Decrease Down"; SwitchToMode "EnterSearch"; } //
         bind "Ctrl y" { SwitchToMode "Resize"; Resize "Decrease Up"; SwitchToMode "EnterSearch"; }   //
+
+        bind "Space" { SwitchToMode "Session"; Detach; }                                             // detach
+        bind "w" {
+            SwitchToMode "Session";
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
+        bind "c" {
+            SwitchToMode "Session";
+            LaunchOrFocusPlugin "configuration" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
+        bind "p" {
+            SwitchToMode "Session";
+            LaunchOrFocusPlugin "plugin-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
+        bind "a" {
+            SwitchToMode "Session";
+            LaunchOrFocusPlugin "zellij:about" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
     }
 
 }
