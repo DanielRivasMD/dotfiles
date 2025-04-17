@@ -25,17 +25,7 @@ layout {
     }
 
     tab name="Notes" {
-        pane stacked=true split_direction="horizontal" {
-            pane name="canvas"
-            pane name="joplin" command="joplin" focus=true
-        }
-    }
-
-    tab name="Factorem" focus=true {
-        pane stacked=true split_direction="horizontal" {
-            pane name="canvas" cwd="/Users/drivas/Factorem"
-            pane name="yazi" cwd="/Users/drivas" command="yazi" focus=true
-        }
+        pane name="joplin" command="joplin" focus=true
     }
 
     tab name="Archive" split_direction="vertical" {
@@ -49,6 +39,10 @@ layout {
             pane name="saiya - helix" cwd="/Users/drivas/.saiyajin" command="hx"
             pane name="saiya - shell" cwd="/Users/drivas/.saiyajin"
         }
+    }
+
+    tab name="Factorem" focus=true {
+        pane name="canvas" cwd="/Users/drivas/Factorem" focus=true
     }
 }
 
