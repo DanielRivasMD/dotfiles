@@ -161,8 +161,8 @@ keybinds clear-defaults=true {
         bind "Alt l" { Resize "Increase Up"; }                                                     // increase up
         bind "Alt m" { Resize "Increase Down"; }                                                   // increase down
 
-        bind "Alt x" { Resize "Decrease Right"; }                                                  // decrease left
-        bind "Alt y" { Resize "Decrease Left"; }                                                   // decrease right
+        bind "Alt K" { Resize "Decrease Right"; }                                                  // decrease left
+        bind "Alt J" { Resize "Decrease Left"; }                                                   // decrease right
         bind "Ctrl x" { Resize "Decrease Down"; }                                                  // decrease up
         bind "Ctrl y" { Resize "Decrease Up"; }                                                    // decrease down
 
