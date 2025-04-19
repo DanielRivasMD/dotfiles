@@ -6,6 +6,7 @@ do
   echo "${plugin}"
   curl -L "${plugin}" -o ~/.config/zellij/plugins/"${plugin##*/}"
 done << HEAD
+https://github.com/dam4rus/zj-git-branch/releases/download/v0.4.1/zj-git-branch.wasm
 https://github.com/rvcas/room/releases/latest/download/room.wasm
 https://github.com/nim65s/jbz/releases/latest/download/jbz.wasm
 https://github.com/imsnif/multitask/releases/latest/download/multitask.wasm
