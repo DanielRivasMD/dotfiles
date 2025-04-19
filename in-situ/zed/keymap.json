@@ -284,28 +284,28 @@
     "context": "AssistantPanel2",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-n": "assistant2::NewThread",
-      "cmd-alt-p": "assistant2::NewPromptEditor",
-      "cmd-shift-h": "assistant2::OpenHistory",
-      "cmd-alt-/": "assistant::ToggleModelSelector",
-      "cmd-shift-a": "assistant2::ToggleContextPicker",
-      "cmd-e": "assistant2::ChatMode",
-      "cmd-alt-e": "assistant2::RemoveAllContext"
+      // "cmd-n": "assistant2::NewThread",
+      // "cmd-alt-p": "assistant2::NewPromptEditor",
+      // "cmd-shift-h": "assistant2::OpenHistory",
+      "cmd-alt-/": "assistant::ToggleModelSelector"
+      // "cmd-shift-a": "assistant2::ToggleContextPicker"
+      // "cmd-e": "assistant2::ChatMode"
+      // "cmd-alt-e": "assistant2::RemoveAllContext"
     }
   },
   {
     "context": "AssistantPanel2 && prompt_editor",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-n": "assistant2::NewPromptEditor",
-      "cmd-alt-t": "assistant2::NewThread"
+      // "cmd-n": "assistant2::NewPromptEditor",
+      // "cmd-alt-t": "assistant2::NewThread"
     }
   },
   {
     "context": "MessageEditor > Editor",
     "use_key_equivalents": true,
     "bindings": {
-      "enter": "assistant2::Chat",
+      // "enter": "assistant2::Chat",
       "cmd-g d": "git::Diff",
       "shift-escape": "git::ExpandCommitEditor"
     }
@@ -323,18 +323,18 @@
     "context": "ContextStrip",
     "use_key_equivalents": true,
     "bindings": {
-      "up": "assistant2::FocusUp",
-      "right": "assistant2::FocusRight",
-      "left": "assistant2::FocusLeft",
-      "down": "assistant2::FocusDown",
-      "backspace": "assistant2::RemoveFocusedContext",
-      "enter": "assistant2::AcceptSuggestedContext"
+      // "up": "assistant2::FocusUp",
+      // "right": "assistant2::FocusRight",
+      // "left": "assistant2::FocusLeft",
+      // "down": "assistant2::FocusDown",
+      // "backspace": "assistant2::RemoveFocusedContext",
+      // "enter": "assistant2::AcceptSuggestedContext"
     }
   },
   {
     "context": "ThreadHistory",
     "bindings": {
-      "backspace": "assistant2::RemoveSelectedThread"
+      // "backspace": "assistant2::RemoveSelectedThread"
     }
   },
   {
@@ -416,7 +416,7 @@
       "alt-cmd-right": "pane::ActivateNextItem",
       "cmd-}": "pane::ActivateNextItem",
       "f10": "pane::SwapItemLeft", // TODO: update
-      "f11": "pane::SwapItemRight",// TODO: update
+      "f11": "pane::SwapItemRight", // TODO: update
       "cmd-w": ["pane::CloseActiveItem", { "close_pinned": false }],
       "alt-cmd-t": ["pane::CloseInactiveItems", { "close_pinned": false }],
       "ctrl-alt-cmd-w": "workspace::CloseInactiveTabsAndPanes",
@@ -718,9 +718,9 @@
     "context": "PromptEditor",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-shift-a": "assistant2::ToggleContextPicker",
+      // "cmd-shift-a": "assistant2::ToggleContextPicker",
       "cmd-alt-/": "assistant::ToggleModelSelector",
-      "cmd-alt-e": "assistant2::RemoveAllContext",
+      // "cmd-alt-e": "assistant2::RemoveAllContext",
       "ctrl-[": "assistant::CyclePreviousInlineAssist",
       "ctrl-]": "assistant::CycleNextInlineAssist"
     }
