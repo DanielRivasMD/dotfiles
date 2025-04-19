@@ -24,8 +24,9 @@ layout {
         }
     }
 
-    tab name="Notes" {
+    tab name="Notes" split_direction="vertical" {
         pane name="joplin" command="joplin" focus=true
+        pane name="joplin" command="joplin"
     }
 
     tab name="Archive" split_direction="vertical" {
