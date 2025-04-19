@@ -142,6 +142,7 @@ echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
 ln -sf "${completionArch}/_lsd" "${zshcomp}/_lsd"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lsd${NC}"
 ln -sf "${completionArch}/_tldr" "${zshcomp}/_tldr"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
+ln -sf "${completionArch}/_tr" "${zshcomp}/_tr"                                && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
 cp "${zshcomp}/_lsd" "${zshcomp}/_l" && sd lsd l "${zshcomp}/_l"               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}l${NC}"
 echo "${RED}====================================================================================================${NC}"
 
