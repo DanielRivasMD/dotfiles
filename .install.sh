@@ -46,8 +46,8 @@ ln -svf "$(pwd)" "${archDir}"
 ####################################################################################################
 
 (
-  if [[ ! -d "${HOME}/Completion" ]]; then mkdir "${HOME}/Completion"; fi
-  cd "${HOME}/Completion" || exit
+  if [[ ! -d "${HOME}/.completion" ]]; then mkdir "${HOME}/.completion"; fi
+  cd "${HOME}/.completion" || exit
   git clone https://github.com/nikolassv/bartib
   git clone https://github.com/twpayne/chezmoi
   git clone https://github.com/eza-community/eza
