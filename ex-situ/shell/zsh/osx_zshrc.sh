@@ -54,6 +54,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # fuzzy finder (fzf)
 [ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
 
+# completion
+source <(fzf --zsh)
+
 ####################################################################################################
 # history
 ####################################################################################################
@@ -125,15 +128,6 @@ autoload edit-command-line; zle -N edit-command-line
 
 ####################################################################################################
 
-# completions on demmand
-source <(bender completion zsh)
-source <(cerberus completion zsh)
-source <(gorgon completion zsh)
-source <(lou completion zsh)
-source <(mbombo completion zsh)
-source <(minerva completion zsh)
-source <(tabularasa completion zsh)
-source <(fzf --zsh)
 # functions
 FNDIR="${ZDOTDIR}/fn"
 echo $FNDIR
