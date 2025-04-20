@@ -19,6 +19,28 @@ echo 'Linking archive...'
 ln -svf "$(pwd)" "${archDir}"
 
 ####################################################################################################
+# ergo
+####################################################################################################
+
+(
+  if [[ ! -d "${HOME}/.completion" ]]; then mkdir "${HOME}/.completion"; fi
+  cd "${HOME}/.completion" || exit
+  git clone https://github.com/nikolassv/bartib
+  git clone https://github.com/twpayne/chezmoi
+  git clone https://github.com/eza-community/eza
+  git clone https://github.com/sharkdp/fd
+  git clone https://github.com/casey/just
+  git clone https://github.com/watchexec/watchexec
+) &
+
+(
+  if [[ ! -d "${HOME}/Linked" ]]; then mkdir "${HOME}/Linked"; fi
+  cd "${HOME}/Linked" || exit
+  git clone https://github.com/lavifb/todo_r
+  git clone https://github.com/mikefarah/yq
+) &
+
+####################################################################################################
 
 # homebrew
 ( source "${archDir}/.install/brew.sh"  1>> "${archDir}/log/brew.out" 2>> "${archDir}/log/brew.err" ) &
@@ -40,28 +62,6 @@ ln -svf "$(pwd)" "${archDir}"
 
 # rust & cargo
 ( source "${archDir}/.install/rust.sh" 1>> "${archDir}/log/rust.out" 2>> "${archDir}/log/rust.err" ) &
-
-####################################################################################################
-# ergo
-####################################################################################################
-
-(
-  if [[ ! -d "${HOME}/.completion" ]]; then mkdir "${HOME}/.completion"; fi
-  cd "${HOME}/.completion" || exit
-  git clone https://github.com/nikolassv/bartib
-  git clone https://github.com/twpayne/chezmoi
-  git clone https://github.com/eza-community/eza
-  git clone https://github.com/sharkdp/fd
-  git clone https://github.com/casey/just
-  git clone https://github.com/watchexec/watchexec
-) &
-
-(
-  if [[ ! -d "${HOME}/Linked" ]]; then mkdir "${HOME}/Linked"; fi
-  cd "${HOME}/Linked" || exit
-  git clone https://github.com/lavifb/todo_r
-  git clone https://github.com/mikefarah/yq
-) &
 
 ####################################################################################################
 
