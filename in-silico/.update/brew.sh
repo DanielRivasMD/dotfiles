@@ -3,24 +3,16 @@
 # hombebrew
 ####################################################################################################
 
-_update() {
+# check updates
+brew update
 
-  # check updates
-  brew update
+# list outdated
+brew outdated
 
-  # list outdated
-  brew outdated
+# upgrade packages
+brew upgrade
 
-  # upgrade packages
-  brew upgrade
-
-  # clean
-  brew cleanup
-}
-
-####################################################################################################
-
-# execute
-_update
+# clean
+brew cleanup
 
 ####################################################################################################
