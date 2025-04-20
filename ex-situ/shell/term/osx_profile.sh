@@ -53,6 +53,7 @@ export ARCHIVE="${HOME}/.archive"
 export IN_SILICO="${ARCHIVE}/in-silico"
 export EX_SITU="${ARCHIVE}/ex-situ"
 export IN_SITU="${ARCHIVE}/in-situ"
+export FN_SHELL="${EX_SITU}/shell/fn"
 
 # bartib
 export BARTIB_FILE="${HOME}/.config/bartib/db.bartib"
@@ -85,14 +86,13 @@ export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
 ####################################################################################################
 
 # shell functions
-source "${IN_SILICO}/count.sh"
-source "${IN_SILICO}/diff.sh"
-source "${IN_SILICO}/finder.sh"
-source "${IN_SILICO}/forge.sh"
-source "${IN_SILICO}/knit.sh"
-source "${IN_SILICO}/path.sh"
-source "${IN_SILICO}/status.sh"
-source "${IN_SILICO}/update.sh"
+source "${FN_SHELL}/count.sh"
+source "${FN_SHELL}/diff.sh"
+source "${FN_SHELL}/finder.sh"
+source "${FN_SHELL}/forge.sh"
+source "${FN_SHELL}/knit.sh"
+source "${FN_SHELL}/path.sh"
+source "${FN_SHELL}/status.sh"
 
 ####################################################################################################
 

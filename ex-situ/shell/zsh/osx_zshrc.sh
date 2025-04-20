@@ -129,9 +129,8 @@ autoload edit-command-line; zle -N edit-command-line
 ####################################################################################################
 
 # functions
-FNDIR="${ZDOTDIR}/fn"
-[ -f ${FNDIR}/update.sh ] && source ${FNDIR}/update.sh
-[ -f ${FNDIR}/zellij.sh ] && source ${FNDIR}/zellij.sh
+[ -f ${FN_SHELL}/update.sh ] && source ${FN_SHELL}/update.sh
+[ -f ${FN_SHELL}/zellij.sh ] && source ${FN_SHELL}/zellij.sh
 
 ####################################################################################################
 # bindings
