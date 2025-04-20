@@ -31,7 +31,7 @@ echo "${YELLOW}Linking R config${NC}"
 echo "${RED}====================================================================================================${NC}"
 if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi       && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}Rprofile${NC}"
 ln -sf "${ex_situ}/R/Rprofile.d" "${home}/.Rprofile.d"                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}Rprofile${NC} directory"
-ln -sf "${ex_situ}/R/vernacular_Rprofile.R" "${home}/.Rprofile"                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}Rprofile${NC}"
+ln -sf "${ex_situ}/R/osx_Rprofile.R" "${home}/.Rprofile"                       && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}Rprofile${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 # @HOME
@@ -57,9 +57,9 @@ echo "${RED}====================================================================
 
 # shell
 echo ''
-echo "${YELLOW}Linking terminal profile${NC}"
+echo "${YELLOW}Linking term profile${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${terminal}/vernacular_profile.sh" "${home}/.profile"                  && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}terminal${NC} profile"
+ln -sf "${term}/osx_profile.sh" "${home}/.profile"                             && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}term${NC} profile"
 echo "${RED}====================================================================================================${NC}"
 
 # bash
@@ -67,8 +67,8 @@ echo ''
 echo "${YELLOW}Linking bash profile${NC}"
 echo "${RED}====================================================================================================${NC}"
 if [[ ! -d "${home}/.bash" ]]; then mkdir "${home}/.bash"; fi                  && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}bash${NC}"
-ln -sf "${bash}/vernacular_bashrc.sh" "${home}/.bashrc"                        && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bashrc${NC}"
-ln -sf "${bash}/vernacular_bash_aliases.sh" "${home}/.bash/bash_aliases.sh"    && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bash aliases${NC}"
+ln -sf "${bash}/osx_bashrc.sh" "${home}/.bashrc"                               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bashrc${NC}"
+ln -sf "${bash}/osx_bash_aliases.sh" "${home}/.bash/bash_aliases.sh"           && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bash aliases${NC}"
 ln -sf "${bash}/fzf.bash" "${home}/.bash"                                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}fzf bash${NC}"
 ln -sf "${bash}/bash_navi_patch.sh" "${home}/.bash"                            && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bash navi${NC}"
 echo "${RED}====================================================================================================${NC}"
@@ -78,10 +78,10 @@ echo ''
 echo "${YELLOW}Linking zsh profile${NC}"
 echo "${RED}====================================================================================================${NC}"
 if [[ ! -d "${home}/.zsh" ]]; then mkdir "${home}/.zsh"; fi                    && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}zsh${NC}"
-ln -sf "${zsh}/vernacular_zshrc.sh" "${home}/.zshrc"                           && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshrc${NC}"
-ln -sf "${zsh}/vernacular_zprofile" "${home}/.zprofile"                        && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zprofile${NC}"
-ln -sf "${zsh}/vernacular_zshenv" "${home}/.zshenv"                            && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshenv${NC}"
-ln -sf "${zsh}/vernacular_zsh_aliases.sh" "${home}/.zsh/zsh_aliases.sh"        && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh aliases${NC}"
+ln -sf "${zsh}/osx_zshrc.sh" "${home}/.zshrc"                                  && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshrc${NC}"
+ln -sf "${zsh}/osx_zprofile" "${home}/.zprofile"                               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zprofile${NC}"
+ln -sf "${zsh}/osx_zshenv" "${home}/.zshenv"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshenv${NC}"
+ln -sf "${zsh}/osx_zsh_aliases.sh" "${home}/.zsh/zsh_aliases.sh"               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh aliases${NC}"
 ln -sf "${zsh}/fzf.zsh" "${home}/.zsh"                                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}fzf zsh${NC}"
 ln -sf "${zsh}/zsh_just.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh just${NC}"
 ln -sf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh navi${NC}"

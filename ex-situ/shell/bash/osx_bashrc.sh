@@ -4,9 +4,9 @@
 
 if [[ $- == *i* ]]
 then
-  if [[ -f "$HOME/.archive/ex-situ/shell/bash/vernacular_bash_profile.sh" ]]
+  if [[ -f "$HOME/.archive/ex-situ/shell/bash/osx_bash_profile.sh" ]]
   then
-    source "$HOME/.archive/ex-situ/shell/bash/vernacular_bash_profile.sh"
+    source "$HOME/.archive/ex-situ/shell/bash/osx_bash_profile.sh"
   fi
 fi
 

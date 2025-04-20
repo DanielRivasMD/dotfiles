@@ -5,7 +5,7 @@
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # reload shell
-source "$HOME/.archive/ex-situ/shell/zsh/vernacular_zshrc.sh"
+source "$HOME/.archive/ex-situ/shell/zsh/osx_zshrc.sh"
 
 ####################################################################################################
 

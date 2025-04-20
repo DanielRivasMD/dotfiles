@@ -105,7 +105,7 @@ export starship="${ex_situ}/starship"
 
 # shell
 export shell="${ex_situ}/shell"
-export terminal="${shell}/terminal"
+export term="${shell}/term"
 
 # bash
 export bash="${shell}/bash"
@@ -114,8 +114,8 @@ export bash="${shell}/bash"
 export zsh="${shell}/zsh"
 
 # nushell
-export nushell="${shell}/nushell"
-export nushellConf="${appSupport}/nushell"
+export nushell="${shell}/nu"
+export nushellConf="${appSupport}/nu"
 
 ####################################################################################################
 # ergo
@@ -131,7 +131,7 @@ export remoteBin="${home}/RemoteBin"
 export homeRemote="/home/drivas"
 export ex_situRemote="${homeRemote}/.archive/ex-situ"
 export shellRemote="${ex_situRemote}/shell"
-export terminalRemote="${shellRemote}/terminal"
+export termRemote="${shellRemote}/term"
 export bashRemote="${shellRemote}/bash"
 export zshRemote="${shellRemote}/zsh"
 

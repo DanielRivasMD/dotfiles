@@ -1,5 +1,5 @@
 ####################################################################################################
-# vernacular default
+# osx default
 ####################################################################################################
 
 # patch for screen C-q
@@ -76,7 +76,7 @@ export RCOLUMNS=$COLUMNS
 export MANWIDTH=175
 
 # starship
-export STARSHIP_CONFIG="${EX_SITU}/starship/vernacular_starship.toml"
+export STARSHIP_CONFIG="${EX_SITU}/starship/osx_starship.toml"
 
 # zellij
 export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"

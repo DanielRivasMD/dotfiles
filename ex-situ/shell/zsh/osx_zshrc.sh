@@ -11,7 +11,7 @@ ZDOTDIR=${HOME}/.zsh
 ####################################################################################################
 
 # load aliases
-VALIAS="${EX_SITU}/shell/terminal/vernacular_aliases.sh"
+VALIAS="${EX_SITU}/shell/term/osx_aliases.sh"
 [ -f "${VALIAS}" ] && . "${VALIAS}"
 
 ZALIAS="${ZDOTDIR}/zsh_aliases.sh"

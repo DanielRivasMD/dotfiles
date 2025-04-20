@@ -8,8 +8,8 @@ BDOTDIR=${HOME}/.bash
 # aliases
 ####################################################################################################
 
-if [ -f ${EX_SITU}/shell/terminal/vernacular_aliases.sh ]; then
-  . ${EX_SITU}/shell/terminal/vernacular_aliases.sh
+if [ -f ${EX_SITU}/shell/term/osx_aliases.sh ]; then
+  . ${EX_SITU}/shell/term/osx_aliases.sh
 fi
 
 if [ -f ${BDOTDIR}/bash_aliases.sh ]; then
