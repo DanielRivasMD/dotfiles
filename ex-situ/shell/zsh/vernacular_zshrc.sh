@@ -33,13 +33,21 @@ fpath=($HOME/.config/zsh_completion $fpath)
 
 # autocompletion with arrow interphase
 autoload -Uz compinit
+
 # dump zcompdump
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-_comp_options+=(globdots)   # include hidden files
+
+# include hidden files
+_comp_options+=(globdots)
+
+# menu select
 zstyle ':completion:*' menu select
 
+# work on aliases
 setopt COMPLETE_ALIASES
-zstyle ':completion::complete:*' gain-privileges 1
+
+
+# zstyle ':completion::complete:*' gain-privileges 1
 
 # case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
