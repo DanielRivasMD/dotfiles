@@ -1,49 +1,49 @@
 % bartib
 
-# Start
+# start
 fillin bartib start --description {{description}} --project {{project}}
 
-# Stop
+# stop
 fillin bartib stop
 
-# Continue
+# continue
 fillin bartib continue
 
-# Current
+# current
 fillin bartib current
 
-# Edit
+# edit
 fillin bartib edit
 
-# Projects
+# projects
 fillin bartib projects
 
-# List today
+# list today
 fillin bartib list --today
 
-# List yesterday
+# list yesterday
 fillin bartib list --yesterday
 
-# List current week
+# list current week
 fillin bartib list --current_week
 
-# List last week
+# list last week
 fillin bartib list --last_week
 
-# List project
+# list project
 fillin bartib list --project {{project}}
 
-# Report today
+# report today
 fillin bartib report --today
 
-# Report yesterday
+# report yesterday
 fillin bartib report --yesterday
 
-# Report current week
+# report current week
 fillin bartib report --current_week
 
-# Report last week
+# report last week
 fillin bartib report --last_week
 
-# Report project
+# report project
 fillin bartib report --project {{project}}
