@@ -137,6 +137,11 @@ source <(mbombo completion zsh)
 source <(minerva completion zsh)
 source <(tabularasa completion zsh)
 source <(fzf --zsh)
+# functions
+FNDIR="${ZDOTDIR}/fn"
+echo $FNDIR
+ls $FNDIR
+[ -f ${FNDIR}/zellij.sh ] && source ${FNDIR}/zellij.sh
 
 ####################################################################################################
 # bindings

@@ -88,6 +88,7 @@ ln -sf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                     &
 ln -sf "${zsh}/zsh_yazi.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh yazi${NC}"
 ln -sf "${zsh}/zsh_zellij.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zellij${NC}"
 ln -sf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zoxide${NC}"
+ln -sf "${zsh}/fn" "${home}/.zsh/fn"                                           && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh fn${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 # nushell
