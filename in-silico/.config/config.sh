@@ -43,7 +43,6 @@ export joplin="${in_situ}/joplin"
 
 export gh="${in_situ}/gh"
 export spotify="${in_situ}/spotify"
-export khal="${in_situ}/khal"
 export saiyajin="${home}/.saiyajin"
 export karabiner="${saiyajin}/karabiner"
 export frag="${saiyajin}/frag"
