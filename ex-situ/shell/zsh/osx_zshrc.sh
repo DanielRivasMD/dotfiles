@@ -130,8 +130,6 @@ autoload edit-command-line; zle -N edit-command-line
 
 # functions
 FNDIR="${ZDOTDIR}/fn"
-echo $FNDIR
-ls $FNDIR
 [ -f ${FNDIR}/zellij.sh ] && source ${FNDIR}/zellij.sh
 
 ####################################################################################################
