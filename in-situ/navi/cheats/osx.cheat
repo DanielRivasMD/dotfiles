@@ -1,41 +1,32 @@
-% osx, mac os
+% osx
 
-# Copy <file_or_dir> to <target_path>, and remove all target files and directories `@` attribute
-cp -RX <file_or_dir> <target_path>
-
-# Remove <file_or_dir>'s `@` attribute
-xattr -rc <file_or_dir>
-
-# Lock system
+# lock system
 pmset displaysleepnow
 
-# Eject volume
+# eject volume
 diskutil eject '<eject_vol>'
 
-# Show disk info
+# show disk info
 diskutil list
 
-# Show partition info
+# show partition info
 diskutil info '<disk_dev>'
 
-# Show hidden files in Finder
+# show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool true; \
    killall Finder
 
-# Hide hidden files in Finder
+# hide hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool false; \
    killall Finder
 
-# Show items in desktop
+# show items in desktop
 defaults write com.apple.finder CreateDesktop -bool true; \
    killall Finder
 
-# Hide items in desktop
+# hide items in desktop
 defaults write com.apple.finder CreateDesktop -bool false; \
    killall Finder
-
-# Set wallpaper
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "<image_path>"'
 
 $ file_or_dir: ls
 $ image_path: find $HOME -maxdepth 3 -name "*.jpg" -o -name "*.jpeg" -o -name "*.png"
