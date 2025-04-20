@@ -2,17 +2,17 @@
 
 ####################################################################################################
 
-if [[ -z "$ZELLIJ" ]]; then
-	if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-		zellij attach
-	else
-		zellij --layout "${ZELLIJ_CONFIG_DIR}/layouts/control.kdl"
-	fi
+# if [[ -z "$ZELLIJ" ]]; then
+# 	if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+# 		zellij attach
+# 	else
+# 		zellij --layout "${ZELLIJ_CONFIG_DIR}/layouts/control.kdl"
+# 	fi
 
-	if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-		exit
-	fi
-fi
+# 	if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+# 		exit
+# 	fi
+# fi
 
 ####################################################################################################
 
@@ -56,41 +56,107 @@ fi
 
 ####################################################################################################
 
-# function: run_zellij_bat
-# description: run zellij with bat
-# arguments:
-#   $1: command
-#   $2: filename
+# # function: zf (zellij function)
+# # description: run zellij with bat
+# # arguments:
+# #   $1: command
+# #   $2: filename
 
-zf() {
-  if [ -z "$1" ]; then
-    echo "Error: Command argument is missing."
-    return 1
-  fi
-  cmd=$(printf "%s" "$1") # store command
+# zf() {
+#   if [ -z "$1" ]; then
+#     echo "Error: Command argument is missing."
+#     return 1
+#   fi
+#   cmd=$(printf "%s" "$1") # store command
 
-  if [ $# -eq 1 ]; then #check if only one argument is passed
-    echo "Error: At least one filename argument is required."
-    return 1
-  fi
+#   if [ $# -eq 1 ]; then #check if only one argument is passed
+#     echo "Error: At least one filename argument is required."
+#     return 1
+#   fi
 
-  # iterate through arguments
-  shift # remove first argument
+#   # iterate through arguments
+#   shift # remove first argument
 
-  file=$(printf "%s" "$1") # sanitize
-  if [ ! -f "$file" ]; then
-    echo "Error: File '$file' not found."
-    return 1
-  fi
+#   file=$(printf "%s" "$1") # sanitize
+#   if [ ! -f "$file" ]; then
+#     echo "Error: File '$file' not found."
+#     return 1
+#   fi
 
-  zellij run \
-    --name float \
-    --floating \
-    --height 100 \
-    --width 100 \
-    --x 100 \
-    --y 0 \
-    -- "$cmd" "$file"
-}
+#   zellij run \
+#     --name float \
+#     --floating \
+#     --height 100 \
+#     --width 100 \
+#     --x 100 \
+#     --y 0 \
+#     -- "$cmd" "$file"
+# }
 
 ####################################################################################################
+
+# kz() {
+#   zellij kill-session "$(zellij list-sessions | grep '(current)' | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}')"
+# }
+
+####################################################################################################
+
+# Define the default directory where your Zellij layout files are stored.
+default_layout_dir="$HOME/.config/zellij/layouts"
+
+# Function to launch a Zellij session with a specified layout.
+# It takes the layout file name (without the full path) as an argument.
+launch_zellij_session() {
+  local layout_file="$1"
+
+  if [ -z "$layout_file" ]; then
+    echo "Usage: launch_zellij_session <layout_file>"
+    echo "Available layouts (located in $default_layout_dir):"
+    # List the layout files.
+    if [ -d "$default_layout_dir" ]; then
+      ls "$default_layout_dir"
+    else
+      echo "  (Layout directory does not exist or is not a directory)"
+    fi
+    return 1
+  fi
+
+  layout_path="$default_layout_dir/$layout_file"
+
+  # Check if the layout file exists.
+  if [ ! -f "$layout_path" ]; then
+    echo "Error: Layout file '$layout_path' not found in '$default_layout_dir'."
+    return 1
+  fi
+
+  # Launch Zellij with the specified layout.
+  zellij --new-session -c "$layout_path"
+}
+
+# Enable tab completion for the layout files (Zsh version).
+_complete_zellij_layouts() {
+  local layout_dir="$HOME/.config/zellij/layouts" #remove default_layout_dir
+  local files
+  files=("$layout_dir"/*.kdl) #find kdl files
+  local completions=() # Initialize completions as an empty array
+  for f in "$files[@]"; do
+    completions+=("$(basename "$f")")  #extract the filename
+  done
+  reply=("${completions[@]}")
+}
+
+# Register the tab completion function.
+compdef _complete_zellij_layouts launch_zellij_session
+
+# Example usage:
+# To launch a session with the "go.kdl" layout, you would type:
+#
+#   launch_zellij_session go.kdl
+#
+# and press Enter.
+#
+# To see available layouts in the default directory:
+#   launch_zellij_session
+#
+# and press Tab.
+
