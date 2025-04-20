@@ -1,10 +1,10 @@
 % xsv
 
-# Print CSV as table
+# print CSV as table
 fillin xsv table {{csv}}
 
-# Select CSV column
+# select CSV column
 fillin xsv select {{col}} {{csv}}
 
-# Print SV headers
+# print SV headers
 fillin xsv headers {{csv}}
