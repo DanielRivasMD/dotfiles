@@ -56,33 +56,36 @@ fi
 
 ####################################################################################################
 
-# function: zf (zellij function)
+# function: zef (zellij function)
 # description: run zellij with bat
 # arguments:
 #   $1: command
 #   $2: filename
-
-zf() {
+zef() {
   if [ -z "$1" ]; then
     echo "Error: Command argument is missing."
     return 1
   fi
-  cmd=$(printf "%s" "$1") # store command
 
-  if [ $# -eq 1 ]; then #check if only one argument is passed
+  # store command
+  cmd=$(printf "%s" "$1")
+
+  if [ $# -eq 1 ]; then
     echo "Error: At least one filename argument is required."
     return 1
   fi
 
-  # iterate through arguments
-  shift # remove first argument
+  # remove first argument
+  shift
 
-  file=$(printf "%s" "$1") # sanitize
+  # sanitize
+  file=$(printf "%s" "$1")
   if [ ! -f "$file" ]; then
     echo "Error: File '$file' not found."
     return 1
   fi
 
+  # run
   zellij run \
     --name float \
     --floating \
@@ -95,24 +98,28 @@ zf() {
 
 ####################################################################################################
 
-kz() {
+# function: zek (zellij kill)
+# description: kill curent zellij session
+zek() {
   zellij kill-session "$(zellij list-sessions | grep '(current)' | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}')"
 }
 
 ####################################################################################################
 
-# Define the default directory where your Zellij layout files are stored.
-default_layout_dir="$HOME/.config/zellij/layouts"
 
-# Function to launch a Zellij session with a specified layout.
-# It takes the layout file name (without the full path) as an argument.
-launch_zellij_session() {
+# function: zel (zellij launch)
+# description: launch zellij session
+# arguments:
+#   $1: session
+zel() {
   local layout_file="$1"
 
+  # define default directory zellij layout
+  default_layout_dir="$HOME/.config/zellij/layouts"
   if [ -z "$layout_file" ]; then
-    echo "Usage: launch_zellij_session <layout_file>"
+    echo "Usage: zel <layout_file>"
     echo "Available layouts (located in $default_layout_dir):"
-    # List the layout files.
+    # list layouts
     if [ -d "$default_layout_dir" ]; then
       ls "$default_layout_dir"
     else
@@ -123,17 +130,19 @@ launch_zellij_session() {
 
   layout_path="$default_layout_dir/$layout_file"
 
-  # Check if the layout file exists.
+  # check if layout exists
   if [ ! -f "$layout_path" ]; then
     echo "Error: Layout file '$layout_path' not found in '$default_layout_dir'."
     return 1
   fi
 
-  # Launch Zellij with the specified layout.
-  zellij --new-session -c "$layout_path"
+  # launch zellij with specified layout
+  zellij --new-session-with-layout "$layout_path"
 }
 
-# Enable tab completion for the layout files (Zsh version).
+####################################################################################################
+
+# enable tab completion
 _complete_zellij_layouts() {
   local layout_dir="$HOME/.config/zellij/layouts"
   local files
@@ -146,20 +155,7 @@ _complete_zellij_layouts() {
   compadd "${completions[@]}"
 }
 
-# Register the tab completion function.
-compdef _complete_zellij_layouts launch_zellij_session
+# register tab completion
+compdef _complete_zellij_layouts zel
 
-# compadd "${completions[@]}"
-
-# Example usage:
-# To launch a session with the "go.kdl" layout, you would type:
-#
-#   launch_zellij_session go.kdl
-#
-# and press Enter.
-#
-# To see available layouts in the default directory:
-#   launch_zellij_session
-#
-# and press Tab.
-
+####################################################################################################
