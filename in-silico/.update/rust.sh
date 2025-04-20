@@ -3,21 +3,13 @@
 # rust
 ####################################################################################################
 
-_update() {
+# check updates
+rustup check
 
-  # check updates
-  rustup check
+# update compiler
+rustup update
 
-  # update compiler
-  rustup update
-
-  # upgrade binaries
-  cargo-install-update install-update --all
-}
-
-####################################################################################################
-
-# execute
-_update
+# upgrade binaries
+cargo-install-update install-update --all
 
 ####################################################################################################
