@@ -1,10 +1,10 @@
 % ffmpeg
 
-# Transform to other format
+# transform to other format
 fillin ffmpeg -i {{file}}.{{input}} {{file}}.{{output}}
 
-# Copy cut duration
+# copy cut duration
 fillin ffmpeg -i {{input}} -vcodec copy -ss {{stime}} -t {{duration}} {{output}}
 
-# Copy cut timestamp
+# copy cut timestamp
 fillin ffmpeg -i {{input}} -vcodec copy -ss {{stime}} -to {{etime}} {{output}}
