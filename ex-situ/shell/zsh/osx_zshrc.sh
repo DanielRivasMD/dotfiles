@@ -46,9 +46,6 @@ zstyle ':completion:*' menu select
 # work on aliases
 setopt COMPLETE_ALIASES
 
-
-# zstyle ':completion::complete:*' gain-privileges 1
-
 # case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
