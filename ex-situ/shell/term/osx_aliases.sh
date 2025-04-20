@@ -99,7 +99,7 @@ alias ss='samesame'
 alias wc='wordcrab'
 
 # zellij
-alias zj='zellij'
+alias zes='zellij list-sessions'
 
 # zoxide
 alias zz='z -'
