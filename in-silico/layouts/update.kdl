@@ -1,0 +1,34 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+theme "kanagawa"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        children
+    }
+
+    tab name="Brew" focus=true {
+        pane command="sh" {
+            args "$HOME/.archive/in-silico/.update/brew.sh"
+        }
+    }
+
+    tab name="Rust" {
+        pane command="sh" {
+            args "$HOME/.archive/in-silico/.update/rust.sh"
+        }
+    }
+
+    tab name="Go" {
+        pane command="sh" {
+            args "$HOME/.archive/in-silico/.update/go.sh"
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
