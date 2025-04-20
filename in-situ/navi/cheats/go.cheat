@@ -1,9 +1,7 @@
-% go mod
+% go
 
 # create go mod at github
 fillin go mod init github.com/{{repository}}
-
-% go get
 
 # download dependency
 fillin go get github.com/{{golib}}
