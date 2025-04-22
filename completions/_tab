@@ -1,7 +1,7 @@
-#compdef tr
-compdef _tabularasa tr
+#compdef tab
+compdef _tabularasa tab
 
-# zsh completion for the 'tr' alias of 'tabularasa'      -*- shell-script -*-
+# zsh completion for the 'tab' alias of 'tabularasa'      -*- shell-script -*-
 
 __tabularasa_debug()
 {
@@ -23,7 +23,7 @@ _tabularasa()
     local lastParam lastChar flagPrefix requestComp out directive comp lastComp noSpace keepOrder
     local -a completions
 
-    __tabularasa_debug "\n========= starting completion logic for alias 'tr' =========="
+    __tabularasa_debug "\n========= starting completion logic for alias 'tab' =========="
     __tabularasa_debug "CURRENT: ${CURRENT}, words[*]: ${words[*]}"
 
     # The user could have moved the cursor backwards on the command-line.
@@ -37,7 +37,7 @@ _tabularasa()
     lastChar=${lastParam[-1]}
     __tabularasa_debug "lastParam: ${lastParam}, lastChar: ${lastChar}"
 
-    # For zsh, when completing a flag with an = (e.g., tr -n=<TAB>)
+    # For zsh, when completing a flag with an = (e.g., tab -n=<TAB>)
     # completions must be prefixed with the flag
     setopt local_options BASH_REMATCH
     if [[ "${lastParam}" =~ '-.*=' ]]; then
