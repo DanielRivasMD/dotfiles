@@ -42,9 +42,7 @@
 
 # function: zef (zellij function)
 # description: run zellij with bat
-# arguments:
-#   $1: command
-#   $2: filename
+# arguments: $1 command $2 filename
 zef() {
   if [ -z "$1" ]; then
     echo "Error: Command argument is missing."
@@ -93,8 +91,7 @@ zek() {
 
 # function: zel (zellij launch)
 # description: launch zellij session
-# arguments:
-#   $1: session
+# arguments: $1 session
 zel() {
   local layout_file="$1"
 
