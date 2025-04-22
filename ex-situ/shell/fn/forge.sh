@@ -11,7 +11,7 @@ forge() {
   ####################################################################################################
 
   # control daemon
-  source "${IN_SILICO}/.daemon.sh"
+  source "${FN_SHELL}/.daemon.sh"
   if check_daemon
   then
     # create group
