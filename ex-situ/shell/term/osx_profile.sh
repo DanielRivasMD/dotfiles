@@ -54,6 +54,7 @@ export IN_SILICO="${ARCHIVE}/in-silico"
 export EX_SITU="${ARCHIVE}/ex-situ"
 export IN_SITU="${ARCHIVE}/in-situ"
 export FN_SHELL="${EX_SITU}/shell/fn"
+export ZSH_COMPLETION="${HOME}/.config/zsh_completion"
 
 # bartib
 export BARTIB_FILE="${HOME}/.config/bartib/db.bartib"

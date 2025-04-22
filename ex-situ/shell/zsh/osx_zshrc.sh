@@ -18,6 +18,13 @@ ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
 [ -f "${ZALIAS}" ] && . "${ZALIAS}"
 
 ####################################################################################################
+# functions
+####################################################################################################
+
+[ -f ${FN_SHELL}/update.sh ] && source ${FN_SHELL}/update.sh
+[ -f ${FN_SHELL}/zellij.sh ] && source ${FN_SHELL}/zellij.sh
+
+####################################################################################################
 # plugins
 ####################################################################################################
 
@@ -29,7 +36,7 @@ eval "$(sheldon source)"
 ####################################################################################################
 
 # add custom zsh completion path
-fpath=($HOME/.config/zsh_completion $fpath)
+fpath=($ZSH_COMPLETION $fpath)
 
 # autocompletion with arrow interphase
 autoload -Uz compinit
@@ -48,6 +55,9 @@ setopt COMPLETE_ALIASES
 
 # case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# load completion explicitly
+source $ZSH_COMPLETION/_zel
 
 ####################################################################################################
 
@@ -125,12 +135,6 @@ ZFUN="${ZDOTDIR}/zsh_zoxide.sh"
 
 # edit line
 autoload edit-command-line; zle -N edit-command-line
-
-####################################################################################################
-
-# functions
-[ -f ${FN_SHELL}/update.sh ] && source ${FN_SHELL}/update.sh
-[ -f ${FN_SHELL}/zellij.sh ] && source ${FN_SHELL}/zellij.sh
 
 ####################################################################################################
 # bindings
