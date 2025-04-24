@@ -40,46 +40,6 @@
 
 ####################################################################################################
 
-# function: zef (zellij function)
-# description: run zellij with bat
-# arguments: $1 command $2 filename
-zef() {
-  if [ -z "$1" ]; then
-    echo "Error: Command argument is missing."
-    return 1
-  fi
-
-  # store command
-  cmd=$(printf "%s" "$1")
-
-  if [ $# -eq 1 ]; then
-    echo "Error: At least one filename argument is required."
-    return 1
-  fi
-
-  # remove first argument
-  shift
-
-  # sanitize
-  file=$(printf "%s" "$1")
-  if [ ! -f "$file" ]; then
-    echo "Error: File '$file' not found."
-    return 1
-  fi
-
-  # run
-  zellij run \
-    --name float \
-    --floating \
-    --height 100 \
-    --width 100 \
-    --x 100 \
-    --y 0 \
-    -- "$cmd" "$file"
-}
-
-####################################################################################################
-
 # function: zek (zellij kill)
 # description: kill curent zellij session
 zek() {
