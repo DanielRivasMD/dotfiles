@@ -40,15 +40,6 @@
 
 ####################################################################################################
 
-# function: zek (zellij kill)
-# description: kill curent zellij session
-zek() {
-  zellij kill-session "$(zellij list-sessions | grep '(current)' | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}')"
-}
-
-####################################################################################################
-
-
 # function: zel (zellij launch)
 # description: launch zellij session
 # arguments: $1 session
