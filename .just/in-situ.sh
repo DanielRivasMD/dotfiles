@@ -67,7 +67,9 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking config @distant locations${NC}"
 echo "${RED}====================================================================================================${NC}"
+if [[ ! -d "${home}/.julia/config" ]]; then mkdir "${home}/.julia/config"; fi  && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}julia${NC}"
 ln -sf "${julia}/startup.jl" "${home}/.julia/config/"                          && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}julia${NC} startup"
+if [[ ! -d "${home}/.ssh" ]]; then mkdir "${home}/.ssh"; fi                    && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}ssh${NC}"
 ln -sf "${sshConfig}" "${home}/.ssh/"                                          && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}ssh${NC} config"
 ln -sf "${halp}/halp.toml" "${halpConf}/"                                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}halp${NC} config"
 ln -sf "${lazycli}/config.yml" "${lazycliConf}/"                               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lazycli${NC} config"
