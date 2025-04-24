@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# TODO: add to Lou
 # display fpath
 fpath() {
   source "${IN_SILICO}/.config/config.sh"
