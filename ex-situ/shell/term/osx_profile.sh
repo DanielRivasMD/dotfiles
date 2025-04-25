@@ -87,13 +87,8 @@ export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
 ####################################################################################################
 
 # shell functions
-source "${FN_SHELL}/count.sh"
-source "${FN_SHELL}/diff.sh"
-source "${FN_SHELL}/finder.sh"
 source "${FN_SHELL}/forge.sh"
-source "${FN_SHELL}/knit.sh"
 source "${FN_SHELL}/path.sh"
-source "${FN_SHELL}/status.sh"
 
 ####################################################################################################
 
