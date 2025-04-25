@@ -57,7 +57,7 @@ setopt COMPLETE_ALIASES
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # load completion explicitly
-source $ZSH_COMPLETION/_zel
+source $ZSH_COMPLETION/_tab
 
 ####################################################################################################
 
