@@ -57,6 +57,7 @@ setopt COMPLETE_ALIASES
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # load completion explicitly
+source $ZSH_COMPLETION/_launch
 source $ZSH_COMPLETION/_tab
 
 ####################################################################################################
@@ -164,9 +165,9 @@ bindkey -r "^X"
 
 ####################################################################################################
 
-reload() {
-  source $HOME/.zshrc
-}
+# reload() {
+#   source $HOME/.zshrc
+# }
 
 ####################################################################################################
 
