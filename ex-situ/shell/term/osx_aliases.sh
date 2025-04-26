@@ -95,9 +95,6 @@ alias ss='samesame'
 # wordcrab
 alias wc='wordcrab'
 
-# zellij
-alias zes='zellij list-sessions'
-
 # zoxide
 alias zz='z -'
 
