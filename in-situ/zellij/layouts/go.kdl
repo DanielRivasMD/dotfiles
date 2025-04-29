@@ -22,8 +22,8 @@ layout {
     }
 
     tab name="Source" focus=true {
-        pane name="editor" size="70%" focus=true command="hx"
-        pane split_direction="vertical" size="30%" {
+        pane name="editor" size="75%" focus=true command="hx"
+        pane split_direction="vertical" size="25%" {
             pane name="watch" command="just" {
                 args "watch"
             }
