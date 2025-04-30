@@ -209,7 +209,7 @@ A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
 ####################################################################################################
 
 # alphabet
-# A-F1 = [""]                                              # alt-a             #
+A-F1 = [":new", ":insert-output serpl", ":buffer-close!", ":redraw"]           # alt-a             #
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
