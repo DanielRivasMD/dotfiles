@@ -1,11 +1,13 @@
 {
 	"$schema": "https://joplinapp.org/schema/settings.json",
+	"altInstanceId": "",
 	"sync.target": 7,
 	"sync.8.url": "https://s3.amazonaws.com/",
 	"sync.maxConcurrentConnections": 5,
 	"locale": "en_US",
 	"dateFormat": "DD/MM/YYYY",
 	"timeFormat": "HH:mm",
+	"ocr.enabled": false,
 	"themeAutoDetect": false,
 	"uncompletedTodosOnTop": true,
 	"showCompletedTodos": true,
