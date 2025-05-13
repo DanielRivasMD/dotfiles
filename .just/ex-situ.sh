@@ -120,13 +120,13 @@ echo "${RED}====================================================================
 
 echo ''
 echo "${RED}====================================================================================================${NC}"
+babel completion zsh > "${zshcomp}/_babel"                          && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}babel${NC}"
 bender completion zsh > "${zshcomp}/_bender"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}bender${NC}"
 cerberus completion zsh > "${zshcomp}/_cerberus"                               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cerberus${NC}"
 gorgon completion zsh > "${zshcomp}/_gorgon"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}gorgon${NC}"
 lou completion zsh > "${zshcomp}/_lou"                                         && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lou${NC}"
 mbombo completion zsh > "${zshcomp}/_mbombo"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}mbombo${NC}"
 minerva completion zsh > "${zshcomp}/_minerva"                                 && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}minerva${NC}"
-tabularasa completion zsh > "${zshcomp}/_tabularasa"                           && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tabularasa${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 ####################################################################################################
