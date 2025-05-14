@@ -25,15 +25,6 @@ source "${HOME}/.archive/in-silico/.config/config.sh"
 # in effigie
 ####################################################################################################
 
-# R
-echo ''
-echo "${YELLOW}Linking R config${NC}"
-echo "${RED}====================================================================================================${NC}"
-if [[ -d "${home}/.Rprofile.d" ]]; then rm -rf "${home}/.Rprofile.d"; fi       && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}Rprofile${NC}"
-ln -sf "${ex_situ}/R/Rprofile.d" "${home}/.Rprofile.d"                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}Rprofile${NC} directory"
-ln -sf "${ex_situ}/R/osx_Rprofile.R" "${home}/.Rprofile"                       && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}Rprofile${NC}"
-echo "${RED}====================================================================================================${NC}"
-
 # @HOME
 echo ''
 echo "${YELLOW}Linking config @HOME${NC}"
