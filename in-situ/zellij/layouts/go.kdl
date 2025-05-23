@@ -12,6 +12,10 @@ layout {
         children
     }
 
+    tab name="Git" {
+        pane name="git" command="lazygit"
+    }
+
     tab name="Files" {
         pane split_direction="vertical" {
             pane name="tree" size="40%" command="broot" {
@@ -28,10 +32,6 @@ layout {
                 args "watch"
             }
         }
-    }
-
-    tab name="Git" {
-        pane name="git" command="lazygit"
     }
 
 }
