@@ -113,6 +113,7 @@ echo ''
 echo "${RED}====================================================================================================${NC}"
 babel completion zsh > "${zshcomp}/_babel"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}babel${NC}"
 bender completion zsh > "${zshcomp}/_bender"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}bender${NC}"
+chess completion zsh > "${zshcomp}/_chess"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chess${NC}"
 cerberus completion zsh > "${zshcomp}/_cerberus"                               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cerberus${NC}"
 gorgon completion zsh > "${zshcomp}/_gorgon"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}gorgon${NC}"
 lou completion zsh > "${zshcomp}/_lou"                                         && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lou${NC}"
