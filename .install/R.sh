@@ -21,9 +21,15 @@ R -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
 DEST="${HOME}/Rpackages"
 mkdir -p "$DEST"
 
+# make gettext (libintl) available
+brew install gettext
+export CPPFLAGS="-I$(brew --prefix gettext)/include"
+export LDFLAGS="-L$(brew --prefix gettext)/lib"
+export PKG_CONFIG_PATH="$(brew --prefix gettext)/lib/pkgconfig"
+
 # URL + filename pairs (space‐separated)
 PACKAGES=(
-  "https://github.com/jalvesaq/colorout/releases/download/v1.3-2/colorout_1.3-2.tar.gz colorout_1.3-2.tar.gz"
+  "https://github.com/jalvesaq/colorout/releases/download/v1.3-3/colorout_1.3-3.tar.gz colorout_1.3-3.tar.gz"
   "https://github.com/DanielRivasMD/SW/archive/refs/tags/v3.2.tar.gz SW_3.2.tar.gz"
 )
 
