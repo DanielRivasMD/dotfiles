@@ -18,15 +18,26 @@ R -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
 ####################################################################################################
 
 # install R packages
-(
-  if [[ ! -d "${HOME}/Rpackage" ]]; then mkdir "${HOME}/Rpackage"; fi
-  cd "${HOME}/Rpackage" || exit
+# Destination directory for tarballs
+DEST="${HOME}/Rpackages"
+mkdir -p "$DEST"
 
-  curl -O https://github.com/jalvesaq/colorout/releases/download/v1.3-2/colorout_1.3-2.tar.gz
-  R CMD INSTALL "${HOME}/RPackage/colorout_1.2-1.tar.gz"
-
-  curl -O https://github.com/DanielRivasMD/SW/archive/refs/tags/v3.2.tar.gz
-  R CMD INSTALL "${HOME}/RPackage/SW_3.2.tar.gz"
+# URL => filename mappings
+declare -A packages=(
+  ["https://github.com/jalvesaq/colorout/releases/download/v1.3-2/colorout_1.3-2.tar.gz"]="colorout_1.3-2.tar.gz"
+  ["https://github.com/DanielRivasMD/SW/archive/refs/tags/v3.2.tar.gz"]="SW_3.2.tar.gz"
 )
+
+# Download and install each package
+for url in "${!packages[@]}"; do
+  fname="${packages[$url]}"
+  target="$DEST/$fname"
+
+  echo "Downloading $fname…"
+  curl -L -o "$target" "$url"
+
+  echo "Installing $fname…"
+  R CMD INSTALL "$target"
+done
 
 ####################################################################################################
