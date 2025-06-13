@@ -9,6 +9,9 @@ curl -sSL https://git.io/g-install | sh -s
 # add latest go version
 g install latest
 
+# global updater
+go install github.com/Gelio/go-global-update@latest
+
 ####################################################################################################
 
 # language server
