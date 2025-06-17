@@ -14,7 +14,7 @@ layout {
 
     tab name="Monitor" split_direction="horizontal" hide_floating_panes=true {
         pane split_direction="vertical" {
-            pane name="clock" size="40%" borderless=true command="tock" {
+            pane name="clock" size="50%" borderless=true command="tock" {
                 args "-m" "-s"
             }
             pane name="control" focus=true
