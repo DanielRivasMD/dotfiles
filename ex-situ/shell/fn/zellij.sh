@@ -1,36 +1,36 @@
 ####################################################################################################
 
-# function: launch (zellij launch)
-# description: launch zellij session
-# arguments: $1 session
-launch() {
-  local layout_file="$1"
+# # function: launch (zellij launch)
+# # description: launch zellij session
+# # arguments: $1 session
+# launch() {
+#   local layout_file="$1"
 
-  # define default directory zellij layout
-  default_layout_dir="$HOME/.config/zellij/layouts"
-  if [ -z "$layout_file" ]; then
-    echo "Usage: launch <layout_file>"
-    echo "Available layouts (located in $default_layout_dir):"
-    # list layouts
-    if [ -d "$default_layout_dir" ]; then
-      ls "$default_layout_dir"
-    else
-      echo "  (Layout directory does not exist or is not a directory)"
-    fi
-    return 1
-  fi
+#   # define default directory zellij layout
+#   default_layout_dir="$HOME/.config/zellij/layouts"
+#   if [ -z "$layout_file" ]; then
+#     echo "Usage: launch <layout_file>"
+#     echo "Available layouts (located in $default_layout_dir):"
+#     # list layouts
+#     if [ -d "$default_layout_dir" ]; then
+#       ls "$default_layout_dir"
+#     else
+#       echo "  (Layout directory does not exist or is not a directory)"
+#     fi
+#     return 1
+#   fi
 
-  layout_path="$default_layout_dir/$layout_file"
+#   layout_path="$default_layout_dir/$layout_file"
 
-  # check if layout exists
-  if [ ! -f "$layout_path" ]; then
-    echo "Error: Layout file '$layout_path' not found in '$default_layout_dir'."
-    return 1
-  fi
+#   # check if layout exists
+#   if [ ! -f "$layout_path" ]; then
+#     echo "Error: Layout file '$layout_path' not found in '$default_layout_dir'."
+#     return 1
+#   fi
 
-  # launch zellij with specified layout
-  zellij --new-session-with-layout "$layout_path"
-}
+#   # launch zellij with specified layout
+#   zellij --new-session-with-layout "$layout_path"
+# }
 
 ####################################################################################################
 
