@@ -5,24 +5,17 @@
 # toml
 [language-server.toml_lsp]
 command = "taplo"
-args = [
-  "lsp",
-  "stdio"
-]
+args = ["lsp", "stdio"]
 
 # yaml
 [language-server.yaml_lsp]
 command = "yaml-language-server"
-args = [
-  "--stdio"
-]
+args = ["--stdio"]
 
 # json
 [language-server.json_lsp]
 command = "vscode-json-language-server"
-args = [
-  "--stdio"
-]
+args = ["--stdio"]
 
 # rust
 [language-server.rust_lsp]
@@ -55,18 +48,12 @@ command = "metals"
 # R
 [language-server.R_lsp]
 command = "R"
-args = [
-  "--slave", 
-  "-e", 
-  "languageserver::run()"
-]
+args = ["--slave", "-e", "languageserver::run()"]
 
 # bash
 [language-server.bash_lsp]
 command = "bash-language-server"
-args = [
-  "start"
-]
+args = ["start"]
 
 # awk
 [language-server.awk_lsp]
@@ -75,9 +62,7 @@ command = "awk-language-server"
 # docker
 [language-server.docker_lsp]
 command = "docker-langserver"
-args = [
-  "--stdio"
-]
+args = ["--stdio"]
 
 ####################################################################################################
 # toml
@@ -87,10 +72,9 @@ args = [
 name = "toml"
 scope = "source.toml"
 injection-regex = "toml"
-file-types = ["toml"]
-roots = []
+file-types = ["toml", { glob = "pdm.lock" }, { glob = "poetry.lock" }, { glob = "Cargo.lock" }, { glob = "uv.lock" }]
 comment-token = "#"
-language-servers = ["toml_lsp"]
+language-servers = [ "taplo", "tombi" ]
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
