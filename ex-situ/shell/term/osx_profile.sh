@@ -28,6 +28,9 @@ PATH=$PATH:$HOME/bin/links/
 PATH=$PATH:/usr/local/bin/
 PATH=$PATH:/usr/local/sbin/
 
+# lsp
+PATH=$PATH:$(brew --prefix)/opt/llvm/bin
+
 export PATH
 
 ####################################################################################################
