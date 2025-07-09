@@ -99,6 +99,7 @@ cargo install sd;                                                              #
 cargo install sheldon --locked;                                                # sheldon
 cargo install spotify-tui;                                                     # spotify-tui
 # starship
+cargo install taplo-cli --locked                                               # taplo
 cargo install tauri-cli;                                                       # tauri
 cargo install tealdeer;                                                        # tealdeer
 cargo install tock;                                                            # tock
