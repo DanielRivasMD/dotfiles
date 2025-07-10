@@ -1,44 +1,47 @@
 ####################################################################################################
+# Install R Package Manager
+####################################################################################################
 
-# install R package manager
 brew tap r-lib/rig
 brew install --cask rig
 
 ####################################################################################################
+# Add Latest R Version
+####################################################################################################
 
-# add latest R version
 rig add release
 
 ####################################################################################################
-
-# install packages
-R -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
-R -e "install.packages('colorout', repos = 'https://community.r-multiverse.org')"
-
+# Install Core R Packages
 ####################################################################################################
 
-# install R packages
+Rscript -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
+Rscript -e "install.packages('colorout', repos = 'https://community.r-multiverse.org')"
+
+####################################################################################################
+# Install R Tarball Packages
+####################################################################################################
+
 # Destination directory for tarballs
 DEST="${HOME}/Rpackages"
-mkdir -p "$DEST"
+mkdir -p "${DEST}"
 
-# URL + filename pairs (space‐separated)
+# Array of URL + filename pairs (space-separated)
 PACKAGES=(
   "https://github.com/DanielRivasMD/SW/archive/refs/tags/v3.2.tar.gz SW_3.2.tar.gz"
 )
 
 # Download and install each package
 for pair in "${PACKAGES[@]}"; do
-  # split into URL and filename
   url="${pair%% *}"
   fname="${pair##* }"
-  target="$DEST/$fname"
+  target="${DEST}/${fname}"
 
-  echo "Downloading $fname…"
-  curl -fsSL -o "$target" "$url"
+  echo "Downloading ${fname}..."
+  curl -fsSL -o "${target}" "${url}"
 
-  echo "Installing $fname…"
-  R CMD INSTALL "$target"
+  echo "Installing ${fname}..."
+  R CMD INSTALL "${target}"
 done
 
 ####################################################################################################
