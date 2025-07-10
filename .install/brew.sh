@@ -1,93 +1,83 @@
 ####################################################################################################
+# Install Homebrew
+####################################################################################################
 
-# install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ####################################################################################################
-# formulae
+# Helper function for installing packages
 ####################################################################################################
 
-# google calendar
-brew install gcalcli
+install_formulae() {
+  echo "Installing formulae..."
+  brew install "$@"
+}
 
-# joplin notes
-brew install joplin-cli
+install_casks() {
+  echo "Installing casks..."
+  brew install --cask "$@"
+}
 
-# python repl
-brew install bpython
+####################################################################################################
+# Formulae
+####################################################################################################
 
-# editor
-brew install helix
-brew install micro
+install_formulae \
+  gcalcli \
+  joplin-cli \
+  bpython \
+  helix \
+  micro \
+  fzf \
+  gh \
+  hub \
+  jq \
+  sqlite \
+  litecli \
+  mysql \
+  mycli \
+  postgresql \
+  pgcli \
+  nu \
+  starship \
+  ollama \
+  llvm
 
-# fuzzy finder
-brew install fzf
-
-# git
-brew install gh
-brew install hub
-
-# json
-brew install jq
-
-# sqlite
-brew install sqlite
-brew install litecli
-
-# mysql
-brew install mysql
-brew install mycli
-
-# postgresql
-brew install postgresql
-brew install pgcli
-
-# mongodb
+# MongoDB requires tapping before install
 brew tap mongodb/brew
 brew install mongodb-community
 
-# nushell
-brew install nu
-
-# starship
-brew install starship
-
-# ollama - deepseek
-brew install ollama
-
-# llvm
-brew install llvm
-
 ####################################################################################################
-# casks
+# Casks
 ####################################################################################################
 
-brew install alacritty
-brew install alfred
-brew install appcleaner
-brew install arc
-brew install discord
-brew install docker
-brew install dropbox
-brew install espanso
-brew install font-hack-nerd-font
-brew install inkscape
-brew install karabiner-elements
-brew install logi-options-plus
-brew install mactex
-brew install miniconda
-brew install nordvpn
-brew install rectangle
-brew install rig
-brew install skim
-brew install slack
-brew install steam
-brew install telegram
-brew install texts
-brew install the-unarchiver
-brew install transmission
-brew install vlc
-brew install whatsapp
-brew install xquartz
+install_casks \
+  alacritty \
+  alfred \
+  appcleaner \
+  arc \
+  discord \
+  docker \
+  dropbox \
+  espanso \
+  font-hack-nerd-font \
+  inkscape \
+  karabiner-elements \
+  logi-options-plus \
+  mactex \
+  miniconda \
+  nordvpn \
+  rectangle \
+  rig \
+  skim \
+  slack \
+  steam \
+  telegram \
+  texts \
+  the-unarchiver \
+  transmission \
+  vlc \
+  whatsapp \
+  xquartz
 
 ####################################################################################################
