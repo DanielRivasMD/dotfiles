@@ -74,7 +74,6 @@ brew install figtree
 brew install font-hack-nerd-font
 brew install inkscape
 brew install karabiner-elements
-brew install lapce
 brew install logi-options-plus
 brew install mactex
 brew install miniconda
@@ -92,6 +91,5 @@ brew install transmission
 brew install vlc
 brew install whatsapp
 brew install xquartz
-brew install zed
 
 ####################################################################################################
