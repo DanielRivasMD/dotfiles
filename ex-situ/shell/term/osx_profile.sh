@@ -29,7 +29,7 @@ PATH=$PATH:/usr/local/bin/
 PATH=$PATH:/usr/local/sbin/
 
 # lsp
-PATH=$PATH:$(brew --prefix)/opt/llvm/bin
+PATH=$PATH:/opt/homebrew/opt/llvm/bin
 
 export PATH
 
