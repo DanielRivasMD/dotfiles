@@ -250,7 +250,7 @@ S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
                                                            # alt-shift-d       # duplicate line
 S-A-F6 = [":format"]                                       # alt-shift-e       # format
 S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
-# S-A-F8 = [""]                                            # alt-shift-g       #
+S-A-F8 = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]       # alt-shift-g       #
 # S-A-F9 = [""]                                            # alt-shift-h       #
 S-A-F10 = ["indent"]                                       # alt-shift-i       # indent
 S-C-F1 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"]
