@@ -1,30 +1,48 @@
 ####################################################################################################
+# Install Go Version Manager
+####################################################################################################
 
-# go version manager
 curl -sSL https://git.io/g-install | sh -s
 
 ####################################################################################################
+# Install Latest Go Version and Global Updater
+####################################################################################################
 
-# add latest go version
 g install latest
-
-# global updater
 go install github.com/Gelio/go-global-update@latest
 
 ####################################################################################################
+# Install Go Language Tools
+####################################################################################################
 
-# language server
-go install golang.org/x/tools/gopls@latest
-go install github.com/go-delve/delve/cmd/dlv@latest
-go install github.com/nametake/golangci-lint-langserver@latest
+go_tools=(
+  golang.org/x/tools/gopls
+  github.com/go-delve/delve/cmd/dlv
+  github.com/nametake/golangci-lint-langserver
+)
 
-# binaries
-go install github.com/zyedidia/eget@latest
-go install github.com/jesseduffield/lazygit@latest
-go install github.com/jesseduffield/lazydocker@latest
-go install github.com/jesseduffield/lazynpm@latest
-go install github.com/itchyny/mmv/cmd/mmv@latest
-go install github.com/itchyny/fillin@latest
-go install github.com/spf13/cobra-cli@latest
+for tool in "${go_tools[@]}"; do
+  echo "Installing ${tool}..."
+  go install "${tool}@latest"
+done
+
+####################################################################################################
+# Install Go Binaries
+####################################################################################################
+
+go_binaries=(
+  github.com/zyedidia/eget
+  github.com/jesseduffield/lazygit
+  github.com/jesseduffield/lazydocker
+  github.com/jesseduffield/lazynpm
+  github.com/itchyny/mmv/cmd/mmv
+  github.com/itchyny/fillin
+  github.com/spf13/cobra-cli
+)
+
+for binary in "${go_binaries[@]}"; do
+  echo "Installing ${binary}..."
+  go install "${binary}@latest"
+done
 
 ####################################################################################################
