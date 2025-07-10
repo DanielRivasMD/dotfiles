@@ -1,69 +1,89 @@
 ####################################################################################################
-
-# archive
-archDir="$HOME/.archive"
-
+# Set archive directory
 ####################################################################################################
 
-# create log directory
-echo 'Checking log directory...'
-if [ ! -d "$(pwd)/log" ]
-then
-  echo 'Creating log directory...'
-  mkdir "$(pwd)/log"
-fi
+archDir="$HOME/.archive"
+mkdir -p "${archDir}"
 
-# link directory
-echo 'Linking archive...'
+####################################################################################################
+# Create log directory
+####################################################################################################
+
+echo "Ensuring log directory exists..."
+mkdir -p "$(pwd)/log"
+
+####################################################################################################
+# Link archive to current working directory
+####################################################################################################
+
+echo "Linking archive directory..."
 ln -svf "$(pwd)" "${archDir}"
 
 ####################################################################################################
-# ergo
+# Git clone helper
 ####################################################################################################
 
+clone_if_missing () {
+  local repo_url=$1
+  local target_dir=$2
+  if [ ! -d "${target_dir}" ]; then
+    git clone "${repo_url}" "${target_dir}"
+  else
+    echo "Repo ${target_dir} already exists. Skipping clone."
+  fi
+}
+
+####################################################################################################
+# Ergo (background setup)
+####################################################################################################
+
+mkdir -p "${HOME}/.completion"
 (
-  if [[ ! -d "${HOME}/.completion" ]]; then mkdir "${HOME}/.completion"; fi
-  cd "${HOME}/.completion" || exit
-  git clone https://github.com/nikolassv/bartib
-  git clone https://github.com/twpayne/chezmoi
-  git clone https://github.com/eza-community/eza
-  git clone https://github.com/sharkdp/fd
-  git clone https://github.com/casey/just
-  git clone https://github.com/watchexec/watchexec
+  cd "${HOME}/.completion" && {
+    clone_if_missing https://github.com/nikolassv/bartib        bartib
+    clone_if_missing https://github.com/twpayne/chezmoi         chezmoi
+    clone_if_missing https://github.com/eza-community/eza        eza
+    clone_if_missing https://github.com/sharkdp/fd              fd
+    clone_if_missing https://github.com/casey/just              just
+    clone_if_missing https://github.com/watchexec/watchexec     watchexec
+  }
 ) &
 
+mkdir -p "${HOME}/Linked"
 (
-  if [[ ! -d "${HOME}/Linked" ]]; then mkdir "${HOME}/Linked"; fi
-  cd "${HOME}/Linked" || exit
-  git clone https://github.com/lavifb/todo_r
-  git clone https://github.com/mikefarah/yq
+  cd "${HOME}/Linked" && {
+    clone_if_missing https://github.com/lavifb/todo_r           todo_r
+    clone_if_missing https://github.com/mikefarah/yq            yq
+  }
 ) &
 
 ####################################################################################################
+# Logging helper
+####################################################################################################
 
-# homebrew
-( bash "${archDir}/.install/brew.sh"  1>> "${archDir}/log/brew.out" 2>> "${archDir}/log/brew.err" ) &
+run_install () {
+  local script_name=$(basename "$1" .sh)
+  echo "Running $script_name..."
+  bash "$1" >> "${archDir}/log/${script_name}.out" 2>> "${archDir}/log/${script_name}.err" &
+}
 
-# c++
-( bash "${archDir}/.install/c++.sh"  1>> "${archDir}/log/c++.out" 2>> "${archDir}/log/c++.err" ) &
+####################################################################################################
+# Run install scripts
+####################################################################################################
 
-# clojure
-( bash "${archDir}/.install/clojure.sh" 1>> "${archDir}/log/clojure.out" 2>> "${archDir}/log/clojure.err" ) &
+run_install "${archDir}/.install/brew.sh"
+run_install "${archDir}/.install/c++.sh"
+run_install "${archDir}/.install/clojure.sh"
+run_install "${archDir}/.install/go.sh"
+run_install "${archDir}/.install/julia.sh"
+run_install "${archDir}/.install/R.sh"
+run_install "${archDir}/.install/rust.sh"
 
-# go
-( bash "${archDir}/.install/go.sh" 1>> "${archDir}/log/go.out" 2>> "${archDir}/log/go.err" ) &
-
-# julia
-( bash "${archDir}/.install/julia.sh" 1>> "${archDir}/log/julia.out" 2>> "${archDir}/log/julia.err" ) &
-
-# R
-( bash "${archDir}/.install/R.sh" 1>> "${archDir}/log/R.out" 2>> "${archDir}/log/R.err" ) &
-
-# rust & cargo
-( bash "${archDir}/.install/rust.sh" 1>> "${archDir}/log/rust.out" 2>> "${archDir}/log/rust.err" ) &
-
+####################################################################################################
+# Wait for background jobs
 ####################################################################################################
 
 wait
+echo "All installation tasks completed."
 
 ####################################################################################################
