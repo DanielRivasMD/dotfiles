@@ -77,12 +77,13 @@ brew install logi-options-plus
 brew install mactex
 brew install miniconda
 brew install nordvpn
+brew install rectangle
 brew install rig
-brew install texts
 brew install skim
 brew install slack
 brew install steam
 brew install telegram
+brew install texts
 brew install the-unarchiver
 brew install transmission
 brew install vlc
