@@ -70,7 +70,6 @@ brew install discord
 brew install docker
 brew install dropbox
 brew install espanso
-brew install figtree
 brew install font-hack-nerd-font
 brew install inkscape
 brew install karabiner-elements
@@ -82,7 +81,6 @@ brew install rig
 brew install texts
 brew install skim
 brew install slack
-brew install spectacle
 brew install steam
 brew install telegram
 brew install the-unarchiver
