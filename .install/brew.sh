@@ -81,7 +81,6 @@ brew install nordvpn
 brew install rig
 brew install texts
 brew install skim
-brew install skype
 brew install slack
 brew install spectacle
 brew install steam
