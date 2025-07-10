@@ -1,11 +1,24 @@
 ####################################################################################################
+# Install Julia Package Manager
+####################################################################################################
 
-# install julia package manager
 brew install juliaup
 
 ####################################################################################################
+# Install Julia Packages
+####################################################################################################
 
-# install packages
-julia --eval 'using Pkg; for pk in ["OhMyREPL", "Chain", "Pipe", "Revise", "Debugger", "UnicodePlots", "DelimitedFiles"] Pkg.add(pk) end'
+julia --eval '
+using Pkg
+Pkg.add([
+  "OhMyREPL",
+  "Chain",
+  "Pipe",
+  "Revise",
+  "Debugger",
+  "UnicodePlots",
+  "DelimitedFiles"
+])
+'
 
 ####################################################################################################
