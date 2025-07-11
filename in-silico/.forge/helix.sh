@@ -17,6 +17,7 @@ _forge() {
   mbombo forge --path "${moded}" --out "${helix}/config.toml" \
     --files "theme.toml" \
     --files "editor.toml" \
+    --files "mini-mode.toml" \
     --files "normal.toml" \
     --files "../.normal.tmp" \
     --files "insert.toml" \
