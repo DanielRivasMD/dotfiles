@@ -43,7 +43,6 @@ echo "${RED}====================================================================
 rm -rf "${config}/atuin" && ln -s "${atuin}" "${config}/"                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}atuin${NC}"
 ln -sf "${alacritty}" "${config}/"                                             && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}alacritty${NC}"
 ln -sf "${bottom}" "${config}/"                                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bottom${NC}"
-ln -sf "${cheat}" "${config}/"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}cheat${NC}"
 ln -sf "${joplin}/joplin.json" "${config}/joplin/settings.json"                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}joplin${NC}"
 
 echo ''
@@ -132,13 +131,13 @@ diesel completions zsh > "${zshcomp}/_diesel"                                  &
 deno completions zsh > "${zshcomp}/_deno"                                      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}deno${NC}"
 just --completions zsh > "${zshcomp}/_just"                                    && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}just${NC}"
 zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
+yq completion zsh > "${zshcomp}/_yq"                                           && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}yq${NC}"
 cp "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zj${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 echo ''
 echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${completionArch}/_launch" "${zshcomp}/_launch"                        && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}launch${NC}"
 ln -sf "${completionArch}/_lsd" "${zshcomp}/_lsd"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lsd${NC}"
 ln -sf "${completionArch}/_tldr" "${zshcomp}/_tldr"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
 ln -sf "${completionArch}/_tab" "${zshcomp}/_tab"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tab${NC}"
@@ -149,7 +148,6 @@ echo ''
 echo "${YELLOW}Linking executables${NC}"
 echo "${RED}====================================================================================================${NC}"
 ln -sf "${linked}/todo_r/target/release/todor" "${home}/.cargo/bin"            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}todor${NC}"
-ln -sf "${linked}/yq/yq" "${home}/.go/bin"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}yq${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 ####################################################################################################
