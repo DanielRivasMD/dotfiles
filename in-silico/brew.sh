@@ -48,6 +48,10 @@ install_formulae \
 brew tap mongodb/brew
 brew install mongodb-community
 
+# Microsoft credential manager
+brew tap microsoft/git
+brew install --cask git-credential-manager-core
+
 ####################################################################################################
 # Casks
 ####################################################################################################
