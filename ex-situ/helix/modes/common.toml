@@ -86,7 +86,7 @@ C-pagedown = ["redo"]                                      # grave-right       #
 C-home = ["goto_prev_change"]                              # grave-up          # prev change
 C-end = ["goto_next_change"]                               # grave-down        # next change
 
-C-F19 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]                                               # grave--           #
+# C-F19 = []                                               # grave--           #
 # C-F20 = []                                               # grave-=           #
 # A-F11 = []                                               # grave-[           #
 # A-F12 = []                                               # grave-]           #
@@ -148,7 +148,8 @@ F16 = ["goto_next_diag"]                                   # alt-shift         #
 
 # ctl-cmd
 C-l = [":buffer-close"]                                    # ctl-cmd-bs        # close tab
-C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
+C-g = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]                              # ctl-cmd-enter     # new
+# C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
 C-v = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
 C-h = ["hsplit"]                                           # ctl-cmd-alt       # horizontal split
 C-j = ["wonly"]                                            # ctl-cmd-cmd       # unsplit
