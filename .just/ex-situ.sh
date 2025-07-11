@@ -76,7 +76,6 @@ ln -sf "${zsh}/osx_zsh_aliases.sh" "${home}/.zsh/zsh_aliases.sh"               &
 ln -sf "${zsh}/fzf.zsh" "${home}/.zsh"                                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}fzf zsh${NC}"
 ln -sf "${zsh}/zsh_just.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh just${NC}"
 ln -sf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh navi${NC}"
-ln -sf "${zsh}/zsh_yazi.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh yazi${NC}"
 ln -sf "${zsh}/zsh_zellij.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zellij${NC}"
 ln -sf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zoxide${NC}"
 ln -sf "${zsh}/fn" "${home}/.zsh/fn"                                           && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh fn${NC}"

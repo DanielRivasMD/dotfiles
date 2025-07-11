@@ -58,8 +58,6 @@ echo ''
 echo "${YELLOW}Linking config dirs @config${NC}"
 echo "${RED}====================================================================================================${NC}"
 ln -sf "${gitui}" "${config}"                                                  && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}gitui${NC} directory"
-ln -sf "${yazi}" "${config}"                                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}yazi${NC} directory"
-ln -sf "${zed}" "${config}"                                                    && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zed${NC} directory"
 ln -sf "${zellij}" "${config}"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zellij${NC} directory"
 echo "${RED}====================================================================================================${NC}"
 
@@ -74,8 +72,6 @@ ln -sf "${sshConfig}" "${home}/.ssh/"                                          &
 ln -sf "${halp}/halp.toml" "${halpConf}/"                                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}halp${NC} config"
 ln -sf "${lazycli}/config.yml" "${lazycliConf}/"                               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lazycli${NC} config"
 ln -sf "${lazygit}/config.yml" "${lazygitConf}/"                               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lazygit${NC} config"
-ln -sf "${lapce}/keymaps.toml" "${lapceConf}/"                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lapce${NC} keymaps"
-ln -sf "${lapce}/settings.toml" "${lapceConf}/"                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}lapce${NC} settings"
 echo "${RED}====================================================================================================${NC}"
 
 # broot
