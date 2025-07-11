@@ -1,13 +1,13 @@
 ####################################################################################################
 
 [editor]
+scrolloff = 7
 mouse = true
 rulers = [100]
 bufferline = "always"
 shell = ["sh", "-c"]
-lsp.display-inlay-hints = false
 
-completion-replace = true
+completion-replace = false
 cursorline = true
 cursorcolumn = true
 
@@ -16,6 +16,17 @@ auto-info = true
 auto-format = false
 
 color-modes = true
+
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.smart-tab]
+enable = false
 
 ####################################################################################################
 
