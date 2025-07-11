@@ -23,6 +23,7 @@ install_casks() {
 ####################################################################################################
 
 install_formulae \
+  cljfmt \                   # Clojure formatter
   gcalcli \                  # Google Calendar CLI
   joplin-cli \               # Joplin notes in terminal
   bpython \                  # Fancy Python REPL
