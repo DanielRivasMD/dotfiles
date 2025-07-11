@@ -86,7 +86,7 @@ C-pagedown = ["redo"]                                      # grave-right       #
 C-home = ["goto_prev_change"]                              # grave-up          # prev change
 C-end = ["goto_next_change"]                               # grave-down        # next change
 
-# C-F19 = []                                               # grave--           #
+C-F19 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]                                               # grave--           #
 # C-F20 = []                                               # grave-=           #
 # A-F11 = []                                               # grave-[           #
 # A-F12 = []                                               # grave-]           #
@@ -250,7 +250,7 @@ S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
                                                            # alt-shift-d       # duplicate line
 S-A-F6 = [":format"]                                       # alt-shift-e       # format
 S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
-S-A-F8 = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]       # alt-shift-g       #
+# S-A-F8 = [""]                                            # alt-shift-g       #
 # S-A-F9 = [""]                                            # alt-shift-h       #
 S-A-F10 = ["indent"]                                       # alt-shift-i       # indent
 S-C-F1 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"]
