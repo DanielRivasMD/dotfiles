@@ -15,7 +15,6 @@ export completion="${home}/.completion"
 export linked="${home}/Linked"
 export appSupport="${home}/Library/Application Support"
 export localShare="${home}/.local/share"
-export setupDir="${archive}/.just/.setup"
 export completionArch="${archive}/completions"
 
 ####################################################################################################
@@ -37,7 +36,6 @@ export procs="${in_situ}/procs/procs.toml"
 export atuin="${in_situ}/atuin"
 export alacritty="${in_situ}/alacritty"
 export bottom="${in_situ}/bottom"
-export cheat="${in_situ}/cheat"
 export joplin="${in_situ}/joplin"
 
 export gh="${in_situ}/gh"
@@ -83,7 +81,6 @@ export naviConf="${appSupport}/navi/"
 ####################################################################################################
 
 # @HOME
-export pier="${ex_situ}/pier"
 export screen="${ex_situ}/screen"
 export mycli="${ex_situ}/mycli"
 
