@@ -1,13 +1,9 @@
 ####################################################################################################
-# General settings
+# Interactive Shell Loader
 ####################################################################################################
 
-if [[ $- == *i* ]]
-then
-  if [[ -f "$HOME/.archive/ex-situ/shell/bash/osx_bash_profile.sh" ]]
-  then
-    source "$HOME/.archive/ex-situ/shell/bash/osx_bash_profile.sh"
-  fi
+if [[ $- == *i* ]]; then
+  source "$HOME/.archive/ex-situ/shell/bash/osx_bash_profile.sh"
 fi
 
 ####################################################################################################
