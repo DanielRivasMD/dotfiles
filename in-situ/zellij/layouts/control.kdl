@@ -31,14 +31,12 @@ layout {
 
     tab name="Archive" split_direction="vertical" {
         pane stacked=true split_direction="horizontal" {
-            pane name="arch - git" cwd="/Users/drivas/.archive" command="lazygit"
             pane name="arch - helix" cwd="/Users/drivas/.archive" command="hx"
-            pane name="arch - shell" cwd="/Users/drivas/.archive" focus=true
+            pane name="arch - canvas" cwd="/Users/drivas/.archive" focus=true
         }
         pane stacked=true split_direction="horizontal" {
-            pane name="saiya - git" cwd="/Users/drivas/.saiyajin" command="lazygit"
             pane name="saiya - helix" cwd="/Users/drivas/.saiyajin" command="hx"
-            pane name="saiya - shell" cwd="/Users/drivas/.saiyajin"
+            pane name="saiya - canvas" cwd="/Users/drivas/.saiyajin"
         }
     }
 
