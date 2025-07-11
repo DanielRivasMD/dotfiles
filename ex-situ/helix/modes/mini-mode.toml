@@ -1,0 +1,35 @@
+####################################################################################################
+
+# create a new minor mode bound to `+`
+[keys.normal.","]
+"-" = "swap_view_left"
+"=" = "swap_view_right"
+";" = "goto_file"
+"'" = "wclose"
+"\\" = "wonly"
+"/" = "rotate_view"
+
+
+
+
+[keys.normal."/"]
+"[" = "rsearch"
+"]" = "search"
+";" = "search_prev"
+"'" = "search_next"
+"\\" = "search_selection"
+"|" = "search_selection_detect_word_boundaries"
+
+[keys.normal."\\"]
+"[" = "shell_pipe"
+"]" = "shell_pipe_to"
+";" = "shell_insert_output"
+"'" = "shell_append_output"
+"\\" = "shell_keep_pipe"
+
+[keys.normal."+"]
+m = ":run-shell-command make"
+c = ":run-shell-command cargo build"
+t = ":run-shell-command cargo test"
+
+####################################################################################################
