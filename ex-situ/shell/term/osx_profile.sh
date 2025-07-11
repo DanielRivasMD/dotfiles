@@ -1,110 +1,107 @@
 ####################################################################################################
-# osx default
+# OSX Defaults
 ####################################################################################################
 
-# patch for screen C-q
+# Patch for screen Ctrl+Q issue
 stty -ixon
 
 ####################################################################################################
-# path
+# Language and Locale Settings
 ####################################################################################################
 
-# cargo
-PATH=$PATH:$HOME/.cargo/bin
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANGUAGE="en_US"
 
-# go
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+# Optional: override individual LC_* if needed
+# export LC_CTYPE="en_US.UTF-8"
+# export LC_NUMERIC="en_US.UTF-8"
+# export LC_TIME="en_US.UTF-8"
+# export LC_COLLATE="en_US.UTF-8"
+# export LC_MONETARY="en_US.UTF-8"
+# export LC_MESSAGES="en_US.UTF-8"
 
-# MySQL
-PATH=$PATH:/usr/local/mysql/bin/
+####################################################################################################
+# Environment Anchors
+####################################################################################################
 
-# python
-PATH=$PATH:$HOME/.python/bin/
+export ARCHIVE="$HOME/.archive"
+export EX_SITU="$ARCHIVE/ex-situ"
+export IN_SILICO="$ARCHIVE/in-silico"
+export IN_SITU="$ARCHIVE/in-situ"
+export FN_SHELL="$EX_SITU/shell/fn"
+export ZSH_COMPLETION="$HOME/.config/zsh_completion"
 
-# links
-PATH=$PATH:$HOME/bin/links/
+####################################################################################################
+# Application Settings
+####################################################################################################
 
-# settings
-PATH=$PATH:/usr/local/bin/
-PATH=$PATH:/usr/local/sbin/
+# Bartib
+export BARTIB_FILE="$HOME/.config/bartib/db.bartib"
 
-# lsp
-PATH=$PATH:/opt/homebrew/opt/llvm/bin
+# Starship
+export STARSHIP_CONFIG="$EX_SITU/starship/osx_starship.toml"
+
+# Zellij
+export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
+export ZELLIJ_CONFIG_FILE="$ZELLIJ_CONFIG_DIR/config.kdl"
+
+# Editor
+export VISUAL="micro"
+export EDITOR="$VISUAL"
+
+# Pager
+export PAGER="bat"
+export BAT_PAGER="less"
+export RCOLUMNS="${COLUMNS:-80}"
+
+# Terminal Width
+export MANWIDTH="175"
+
+# Less
+export LESSHISTFILE="-"
+
+####################################################################################################
+# PATH Setup
+####################################################################################################
+
+export GOPATH="$HOME/go"
+export GOROOT="$HOME/.go"
+export BUN_INSTALL="$HOME/.bun"
+
+path_additions=(
+  "$HOME/.cargo/bin"
+  "$GOPATH/bin"
+  "/usr/local/mysql/bin"
+  "$HOME/.python/bin"
+  "$HOME/bin/links"
+  "/usr/local/bin"
+  "/usr/local/sbin"
+  "/opt/homebrew/opt/llvm/bin"
+  "$BUN_INSTALL/bin"
+)
+
+for dir in "${path_additions[@]}"; do
+  [[ -d "$dir" ]] && PATH="$dir:$PATH"
+done
 
 export PATH
 
 ####################################################################################################
-# language settings
+# Runtime Sources
 ####################################################################################################
 
-LANG="en_US.UTF-8"
-LC_CTYPE="en_US.UTF-8"
-LC_NUMERIC="en_US.UTF-8"
-LC_TIME="en_US.UTF-8"
-LC_COLLATE="en_US.UTF-8"
-LC_MONETARY="en_US.UTF-8"
-LC_MESSAGES="en_US.UTF-8"
-export LANGUAGE="en_US"
-export LC_ALL="en_US.UTF-8"
+# Broot launcher
+[[ -f "$HOME/.config/broot/launcher/bash/br" ]] && source "$HOME/.config/broot/launcher/bash/br"
 
-####################################################################################################
-# enviroment
-####################################################################################################
+# Shell functions
+[[ -f "$FN_SHELL/forge.sh" ]] && source "$FN_SHELL/forge.sh"
+[[ -f "$FN_SHELL/path.sh"  ]] && source "$FN_SHELL/path.sh"
 
-# archives
-export ARCHIVE="${HOME}/.archive"
-export IN_SILICO="${ARCHIVE}/in-silico"
-export EX_SITU="${ARCHIVE}/ex-situ"
-export IN_SITU="${ARCHIVE}/in-situ"
-export FN_SHELL="${EX_SITU}/shell/fn"
-export ZSH_COMPLETION="${HOME}/.config/zsh_completion"
+# Deno
+[[ -f "$HOME/.deno/env" ]] && source "$HOME/.deno/env"
 
-# bartib
-export BARTIB_FILE="${HOME}/.config/bartib/db.bartib"
-
-# broot
-source "${HOME}/.config/broot/launcher/bash/br"
-
-# editor
-export VISUAL=micro
-export EDITOR="$VISUAL"
-
-# less
-export LESSHISTFILE="-"
-
-# pager
-export PAGER=bat
-export BAT_PAGER=less
-export RCOLUMNS=$COLUMNS
-
-# screen width
-export MANWIDTH=175
-
-# starship
-export STARSHIP_CONFIG="${EX_SITU}/starship/osx_starship.toml"
-
-# zellij
-export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
-export ZELLIJ_CONFIG_FILE="${ZELLIJ_CONFIG_DIR}/config.kdl"
-
-####################################################################################################
-
-# shell functions
-source "${FN_SHELL}/forge.sh"
-source "${FN_SHELL}/path.sh"
-
-####################################################################################################
-
-# deno
-. "${HOME}/.deno/env"
-
-####################################################################################################
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# bun completions
-[ -s "/Users/drivas/.bun/_bun" ] && source "/Users/drivas/.bun/_bun"
+# Bun completions
+[[ -f "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
 
 ####################################################################################################
