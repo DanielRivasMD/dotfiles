@@ -52,8 +52,6 @@ export fsimple="${frag}/simple"
 
 # config dirs
 export gitui="${in_situ}/gitui"
-export yazi="${in_situ}/yazi"
-export zed="${in_situ}/zed"
 export zellij="${in_situ}/zellij"
 
 # distant
@@ -63,8 +61,6 @@ export lazycli="${in_situ}/lazycli"
 export lazycliConf="${appSupport}/lazycli"
 export lazygit="${in_situ}/lazygit"
 export lazygitConf="${appSupport}/jesseduffield/lazygit"
-export lapce="${in_situ}/lapce"
-export lapceConf="${appSupport}/dev.lapce.Lapce-Stable"
 export halp="${in_situ}/halp"
 export halpConf="${appSupport}/halp"
 
