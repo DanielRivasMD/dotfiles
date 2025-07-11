@@ -19,29 +19,32 @@ deprecated/
 # ex-situ
 ####################################################################################################
 
-# sqlite history
-ex-situ/litecli/history
+# automatically generated
+ex-situ/helix/config.toml
+
+# helix
+ex-situ/helix/runtime/grammars
 
 # micro
 ex-situ/micro/backups
 ex-situ/micro/buffers
 ex-situ/micro/plug
 
-# helix
-ex-situ/helix/runtime/grammars
-
-# automatically generated
-ex-situ/helix/config.toml
+# sqlite history
+ex-situ/litecli/history
 
 ####################################################################################################
 # in-situ
 ####################################################################################################
 
+# automatically generated
+in-situ/alacritty/alacritty.toml
+
+# atuin
+in-situ/atuin/history*
+in-situ/atuin/key
 
 # zellij plugins
 in-situ/zellij/plugins
-
-# automatically generated
-in-situ/alacritty/alacritty.toml
 
 ####################################################################################################
