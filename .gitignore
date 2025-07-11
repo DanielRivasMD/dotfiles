@@ -1,8 +1,6 @@
 ####################################################################################################
 
 # temporary files
-.lsp/.cache
-.clj-kondo/.cache/v1
 
 # zellij dump session
 .zellij.txt
@@ -39,10 +37,6 @@ ex-situ/helix/config.toml
 # in-situ
 ####################################################################################################
 
-# zed files
-in-situ/zed/embeddings/stable
-in-situ/zed/embeddings/semantic-index-db.0.mdb
-in-situ/zed/.tmp*
 
 # zellij plugins
 in-situ/zellij/plugins
@@ -51,4 +45,3 @@ in-situ/zellij/plugins
 in-situ/alacritty/alacritty.toml
 
 ####################################################################################################
-.twilio
