@@ -1,77 +1,70 @@
 ####################################################################################################
-# General settings
+# Bash Profile: Interactive Environment Setup
 ####################################################################################################
 
-BDOTDIR=${HOME}/.bash
+[[ -f "$HOME/.profile" ]] && source "$HOME/.profile"
+export BDOTDIR="$HOME/.bash"
 
 ####################################################################################################
-# aliases
+# Aliases
 ####################################################################################################
 
-if [ -f ${EX_SITU}/shell/term/osx_aliases.sh ]; then
-  . ${EX_SITU}/shell/term/osx_aliases.sh
-fi
-
-if [ -f ${BDOTDIR}/bash_aliases.sh ]; then
-  . ${BDOTDIR}/bash_aliases.sh
-fi
+[[ -f "$EX_SITU/shell/term/osx_aliases.sh" ]] && source "$EX_SITU/shell/term/osx_aliases.sh"
+[[ -f "$BDOTDIR/bash_aliases.sh" ]] && source "$BDOTDIR/bash_aliases.sh"
 
 ####################################################################################################
 # Prompt
 ####################################################################################################
 
-eval "$(starship init bash)"
+command -v starship >/dev/null && eval "$(starship init bash)"
 
 ####################################################################################################
 # Completion
 ####################################################################################################
 
-# Git-autocompletion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[[ -f "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 
-# Pandoc autocompletion
-eval "$(pandoc --bash-completion)"
-
-# Fuzzy finder (fzf)
-[ -f ${EX_SITU}/shell/bash/fzf.bash ] && source ${EX_SITU}/shell/bash/fzf.bash
+command -v pandoc >/dev/null && eval "$(pandoc --bash-completion)"
+[[ -f "$EX_SITU/shell/bash/fzf.bash" ]] && source "$EX_SITU/shell/bash/fzf.bash"
 
 ####################################################################################################
 # History
 ####################################################################################################
 
-HISTFILE=${BDOTDIR}/bash_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+export HISTFILE="$BDOTDIR/bash_history"
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 ####################################################################################################
-# Silence warning
+# Silence Deprecation Warnings
 ####################################################################################################
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 ####################################################################################################
-# navi
+# Tools & Plugins
 ####################################################################################################
 
-if [ -f ${BDOTDIR}/bash_navi_patch.sh ]; then
-  . ${BDOTDIR}/bash_navi_patch.sh
-fi
+# Atuin (History Manager)
+command -v atuin >/dev/null && {
+  export ATUIN_NOBIND="true"
+  eval "$(atuin init bash)"
+}
+
+# Broot (File Navigator)
+[[ -f "$HOME/.config/broot/launcher/bash/br" ]] && source "$HOME/.config/broot/launcher/bash/br"
+
+# Just (Task Runner)
+[[ -f "$BDOTDIR/bash_just.sh" ]] && source "$BDOTDIR/bash_just.sh"
+
+# Navi (Cheat Sheet Navigator)
+[[ -f "$BDOTDIR/bash_navi.sh" ]] && source "$BDOTDIR/bash_navi.sh"
+
+# Zoxide (Smart Directory Jumper)
+command -v zoxide >/dev/null && eval "$(zoxide init bash)"
 
 ####################################################################################################
-# zoxide
-####################################################################################################
-
-eval "$(zoxide init bash)"
-
-####################################################################################################
-# McFly
-####################################################################################################
-
-if [[ -r "${HOME}/Factorem/Observatory/mcfly/mcfly.bash" ]]
-then
-  source "${HOME}/Factorem/Observatory/mcfly/mcfly.bash"
-fi
-
+# Welcome Banner
 ####################################################################################################
 
 echo -n -e "\t"; echo ''
