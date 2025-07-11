@@ -24,18 +24,24 @@ ln -svf "$(realpath .)" "${archDir}"
 # Git clone helper
 ####################################################################################################
 
-clone_if_missing () {
-  local repo_url=$1
-  local target_dir=$2
-  if [ ! -d "${target_dir}" ]; then
-    if git clone "${repo_url}" "${target_dir}"; then
-      echo "Cloned ${repo_url} to ${target_dir}"
+clone_from_manifest () {
+  local repo_list="$HOME/.archive/.install/clone_repos.txt"
+
+  while IFS= read -r line; do
+    [[ -z "$line" || "$line" =~ ^# ]] && continue  # Skip empty or commented lines
+    local repo_url target_dir
+    repo_url=$(echo "$line" | awk '{print $1}')
+    target_dir=$(echo "$line" | awk '{print $2}' | sed "s|~|$HOME|")
+
+    if [ -d "$target_dir" ]; then
+      echo "Repo exists: $target_dir, skipping."
     else
-      echo "Failed to clone ${repo_url} into ${target_dir}" >&2
+      echo "Cloning: $repo_url → $target_dir"
+      if ! git clone "$repo_url" "$target_dir"; then
+        echo "Failed to clone $repo_url" >&2
+      fi
     fi
-  else
-    echo "Repo ${target_dir} already exists. Skipping clone."
-  fi
+  done < "$repo_list"
 }
 
 ####################################################################################################
@@ -43,24 +49,8 @@ clone_if_missing () {
 ####################################################################################################
 
 mkdir -p "${HOME}/.completion"
-(
-  cd "${HOME}/.completion" && {
-    clone_if_missing https://github.com/nikolassv/bartib        bartib
-    clone_if_missing https://github.com/twpayne/chezmoi         chezmoi
-    clone_if_missing https://github.com/eza-community/eza       eza
-    clone_if_missing https://github.com/sharkdp/fd              fd
-    clone_if_missing https://github.com/casey/just              just
-    clone_if_missing https://github.com/watchexec/watchexec     watchexec
-  }
-) &
-
 mkdir -p "${HOME}/Linked"
-(
-  cd "${HOME}/Linked" && {
-    clone_if_missing https://github.com/lavifb/todo_r           todo_r
-    clone_if_missing https://github.com/mikefarah/yq            yq
-  }
-) &
+clone_from_manifest >> "${archDir}/log/repos.out" 2>> "${archDir}/log/repos.err" &
 
 ####################################################################################################
 # Logging helper
@@ -81,7 +71,6 @@ run_install () {
 ####################################################################################################
 
 installDir="${archDir}/.install"
-
 run_install "${installDir}/brew.sh"
 run_install "${installDir}/c++.sh"
 run_install "${installDir}/clojure.sh"
@@ -91,37 +80,35 @@ run_install "${installDir}/R.sh"
 run_install "${installDir}/rust.sh"
 
 ####################################################################################################
+# Zellij Plugins
+####################################################################################################
 
 setup_zellij_plugins () {
   local plugin_dir="$HOME/.config/zellij/plugins"
+  local plugin_list="$HOME/.archive/.install/zellij_plugins.txt"
+
   mkdir -p "$plugin_dir"
 
-  local plugins=(
-    "https://github.com/dam4rus/zj-git-branch/releases/download/v0.4.1/zj-git-branch.wasm"
-    "https://github.com/rvcas/room/releases/latest/download/room.wasm"
-    "https://github.com/nim65s/jbz/releases/latest/download/jbz.wasm"
-    "https://github.com/imsnif/multitask/releases/latest/download/multitask.wasm"
-    "https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm"
-    "https://github.com/imsnif/monocle/releases/latest/download/monocle.wasm"
-    "https://github.com/Nacho114/harpoon/releases/latest/download/harpoon.wasm"
-    "https://github.com/blank2121/zellij-jump-list/releases/latest/download/zellij-jump-list.wasm"
-  )
-
-  for plugin in "${plugins[@]}"; do
-    local filename="${plugin##*/}"
+  while IFS= read -r plugin_url; do
+    [[ -z "$plugin_url" ]] && continue  # Skip empty lines
+    local filename="${plugin_url##*/}"
     local target="$plugin_dir/$filename"
 
+    echo "Checking Zellij plugin: $filename"
+
     if [[ -f "$target" ]]; then
-      echo "Zellij plugin already exists: $filename"
+      echo "Already exists: $filename"
     else
-      echo "Downloading Zellij plugin: $filename"
-      if ! curl -LsSf "$plugin" -o "$target"; then
-        echo "Failed to download: $plugin" >&2
+      echo "Downloading: $plugin_url"
+      if ! curl -LsSf "$plugin_url" -o "$target"; then
+        echo "Failed to download: $plugin_url" >&2
       fi
     fi
-  done
+  done < "$plugin_list"
 }
 
+####################################################################################################
+# Download & Install
 ####################################################################################################
 
 setup_zellij_plugins >> "${archDir}/log/zellij_plugins.out" 2>> "${archDir}/log/zellij_plugins.err" &
