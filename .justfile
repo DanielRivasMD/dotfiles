@@ -32,32 +32,7 @@ _default:
   source .just/ex-situ.sh
 
 ####################################################################################################
-
-# deliver archives to Pawsey
-[group('remote')]
-@deliver-pawsey:
-  source .just/deliver-pawsey.sh
-
-####################################################################################################
-
-# link archives Pawsey
-[group('remote')]
-@link-pawsey:
-  source .just/link-pawsey.sh
-
-####################################################################################################
-
-# download cluster executables
-[group('remote')]
-@prebuild:
-  source .just/prebuild.sh
-
-####################################################################################################
 # compose protocols
 ####################################################################################################
-
-# deliver & link configuration Pawsey
-[group('remote')]
-deploy-pawsey: deliver-pawsey && link-pawsey
 
 ####################################################################################################
