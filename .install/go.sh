@@ -8,17 +8,16 @@ curl -sSL https://git.io/g-install | sh -s
 # Install Latest Go Version and Global Updater
 ####################################################################################################
 
-g install latest
-go install github.com/Gelio/go-global-update@latest
+g install latest   # Install latest stable Go version
 
 ####################################################################################################
 # Install Go Language Tools
 ####################################################################################################
 
 go_tools=(
-  golang.org/x/tools/gopls
-  github.com/go-delve/delve/cmd/dlv
-  github.com/nametake/golangci-lint-langserver
+  golang.org/x/tools/gopls                       # Go language server
+  github.com/go-delve/delve/cmd/dlv              # Go debugger
+  github.com/nametake/golangci-lint-langserver   # Lint language server
 )
 
 for tool in "${go_tools[@]}"; do
@@ -31,13 +30,14 @@ done
 ####################################################################################################
 
 go_binaries=(
-  github.com/zyedidia/eget
-  github.com/jesseduffield/lazygit
-  github.com/jesseduffield/lazydocker
-  github.com/jesseduffield/lazynpm
-  github.com/itchyny/mmv/cmd/mmv
-  github.com/itchyny/fillin
-  github.com/spf13/cobra-cli
+  github.com/Gelio/go-global-update    # Go updater for global binaries
+  github.com/zyedidia/eget             # Binary installer
+  github.com/jesseduffield/lazygit     # Git UI
+  github.com/jesseduffield/lazydocker  # Docker UI
+  github.com/jesseduffield/lazynpm     # npm UI
+  github.com/itchyny/mmv/cmd/mmv       # Mass file renamer
+  github.com/itchyny/fillin            # Form-based CLI filler
+  github.com/spf13/cobra-cli           # CLI generator
 )
 
 for binary in "${go_binaries[@]}"; do
