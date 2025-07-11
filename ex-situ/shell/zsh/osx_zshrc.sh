@@ -1,161 +1,106 @@
 ####################################################################################################
-# settings
+# Shell Settings
 ####################################################################################################
 
-# load zsh settings
-[ -f ${HOME}/.profile ] && . ${HOME}/.profile
-ZDOTDIR=${HOME}/.zsh
+[[ -f "$HOME/.profile" ]] && source "$HOME/.profile"
+export ZDOTDIR="$HOME/.zsh"
 
 ####################################################################################################
-# aliases
+# Aliases
 ####################################################################################################
 
-# load aliases
-VALIAS="${EX_SITU}/shell/term/osx_aliases.sh"
-[ -f "${VALIAS}" ] && . "${VALIAS}"
+VALIAS="$EX_SITU/shell/term/osx_aliases.sh"
+ZALIAS="$ZDOTDIR/zsh_aliases.sh"
 
-ZALIAS="${ZDOTDIR}/zsh_aliases.sh"
-[ -f "${ZALIAS}" ] && . "${ZALIAS}"
-
-####################################################################################################
-# functions
-####################################################################################################
-
-[ -f ${FN_SHELL}/update.sh ] && source ${FN_SHELL}/update.sh
-[ -f ${FN_SHELL}/zellij.sh ] && source ${FN_SHELL}/zellij.sh
+[[ -f "$VALIAS" ]] && source "$VALIAS"
+[[ -f "$ZALIAS" ]] && source "$ZALIAS"
 
 ####################################################################################################
-# plugins
+# Plugin Manager (Sheldon)
 ####################################################################################################
 
-# plugin manager
-eval "$(sheldon source)"
+command -v sheldon >/dev/null && eval "$(sheldon source)"
 
 ####################################################################################################
-# autocompletion
+# Completion System
 ####################################################################################################
 
-# add custom zsh completion path
-fpath=($ZSH_COMPLETION $fpath)
+fpath=("$ZSH_COMPLETION" $fpath)
 
-# autocompletion with arrow interphase
 autoload -Uz compinit
+compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
 
-# dump zcompdump
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-
-# include hidden files
 _comp_options+=(globdots)
-
-# menu select
 zstyle ':completion:*' menu select
-
-# work on aliases
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 setopt COMPLETE_ALIASES
 
-# case-insensitive
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# load completion explicitly
-source $ZSH_COMPLETION/_tab
+[[ -f "$ZSH_COMPLETION/_tab" ]] && source "$ZSH_COMPLETION/_tab"
 
 ####################################################################################################
+# Fuzzy Finder (fzf)
+####################################################################################################
 
-# fuzzy finder (fzf)
-[ -f ${ZDOTDIR}/fzf.zsh ] && source ${ZDOTDIR}/fzf.zsh
-
-# completion
+[[ -f "$ZDOTDIR/fzf.zsh" ]] && source "$ZDOTDIR/fzf.zsh"
 source <(fzf --zsh)
 
 ####################################################################################################
-# history
+# History
 ####################################################################################################
 
-HISTFILE=${ZDOTDIR}/zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+export HISTFILE="$ZDOTDIR/zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
 setopt appendhistory
 
 ####################################################################################################
-# atuin
+# CLI Tools Initialization
 ####################################################################################################
 
-# do not bind any keys
+# Atuin
 export ATUIN_NOBIND="true"
-eval "$(atuin init zsh)"
+command -v atuin >/dev/null && eval "$(atuin init zsh)"
 
-####################################################################################################
-# just
-####################################################################################################
+# Just
+JFUN="$ZDOTDIR/zsh_just.sh"
+[[ -f "$JFUN" ]] && source "$JFUN"
 
-JFUN="${ZDOTDIR}/zsh_just.sh"
-[ -f ${JFUN} ] && source ${JFUN}
+# Navi
+NFUN="$ZDOTDIR/zsh_navi.sh"
+[[ -f "$NFUN" ]] && source "$NFUN"
 
-####################################################################################################
-# navi
-####################################################################################################
+# Starship
+command -v starship >/dev/null && eval "$(starship init zsh)"
 
-NFUN="${ZDOTDIR}/zsh_navi.sh"
-[ -f ${NFUN} ] && source ${NFUN}
-
-####################################################################################################
-# starship
-####################################################################################################
-
-eval "$(starship init zsh)"
-
-####################################################################################################
-# yazi
-####################################################################################################
-
-YFUN="${ZDOTDIR}/zsh_yazi.sh"
-[ -f ${YFUN} ] && source ${YFUN}
-
-####################################################################################################
-# zellij
-####################################################################################################
-
+# Zellij (only inside Alacritty)
 if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
-  ZJFUN="${ZDOTDIR}/zsh_zellij.sh"
-  [ -f ${ZJFUN} ] && source ${ZJFUN}
+  ZJFUN="$ZDOTDIR/zsh_zellij.sh"
+  [[ -f "$ZJFUN" ]] && source "$ZJFUN"
 fi
 
-####################################################################################################
-# zoxide
-####################################################################################################
-
-eval "$(zoxide init zsh)"
-
-ZFUN="${ZDOTDIR}/zsh_zoxide.sh"
-[ -f ${ZFUN} ] && source ${ZFUN}
+# Zoxide
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+ZFUN="$ZDOTDIR/zsh_zoxide.sh"
+[[ -f "$ZFUN" ]] && source "$ZFUN"
 
 ####################################################################################################
-# editor
+# Editor Line Editing
 ####################################################################################################
 
-# edit line
-autoload edit-command-line; zle -N edit-command-line
+autoload edit-command-line
+zle -N edit-command-line
 
 ####################################################################################################
-# bindings
+# Key Bindings
 ####################################################################################################
 
-# atuin
 bindkey '^s' _atuin_search_widget
-
-# command edit
 bindkey '^j' edit-command-line
-
-# just
 bindkey '^g' _call_just
-
-# navi
 bindkey '^o' _call_navi
-
-# zoxide
 bindkey '^h' _call_zi
 
-# unbind
+# Unbind unused defaults
 bindkey -r "^B"
 bindkey -r "^F"
 bindkey -r "^N"
@@ -163,11 +108,15 @@ bindkey -r "^P"
 bindkey -r "^X"
 
 ####################################################################################################
+# Utility Functions
+####################################################################################################
 
 reload() {
-  source $HOME/.zshrc
+  source "$HOME/.zshrc"
 }
 
+####################################################################################################
+# Welcome Banner
 ####################################################################################################
 
 echo -n -e "\t"; echo '                 '
