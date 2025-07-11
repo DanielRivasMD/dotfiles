@@ -17,7 +17,7 @@ mkdir -p "$(pwd)/log"
 ####################################################################################################
 
 echo "Linking archive directory..."
-ln -svf "$(pwd)" "${archDir}"
+ln -svf "$(realpath .)" "${archDir}"
 
 ####################################################################################################
 # Git clone helper
@@ -28,6 +28,9 @@ clone_if_missing () {
   local target_dir=$2
   if [ ! -d "${target_dir}" ]; then
     git clone "${repo_url}" "${target_dir}"
+    if ! git clone "${repo_url}" "${target_dir}"; then
+      echo "Failed to clone ${repo_url} into ${target_dir}" >&2
+    fi
   else
     echo "Repo ${target_dir} already exists. Skipping clone."
   fi
@@ -42,7 +45,7 @@ mkdir -p "${HOME}/.completion"
   cd "${HOME}/.completion" && {
     clone_if_missing https://github.com/nikolassv/bartib        bartib
     clone_if_missing https://github.com/twpayne/chezmoi         chezmoi
-    clone_if_missing https://github.com/eza-community/eza        eza
+    clone_if_missing https://github.com/eza-community/eza       eza
     clone_if_missing https://github.com/sharkdp/fd              fd
     clone_if_missing https://github.com/casey/just              just
     clone_if_missing https://github.com/watchexec/watchexec     watchexec
@@ -63,21 +66,27 @@ mkdir -p "${HOME}/Linked"
 
 run_install () {
   local script_name=$(basename "$1" .sh)
-  echo "Running $script_name..."
-  bash "$1" >> "${archDir}/log/${script_name}.out" 2>> "${archDir}/log/${script_name}.err" &
+  echo "$(date) Running $script_name..." >> "${archDir}/log/${script_name}.out"
+  if [ -f "$1" ]; then
+    bash "$1" >> "${archDir}/log/${script_name}.out" 2>> "${archDir}/log/${script_name}.err" &
+  else
+    echo "Install script $1 not found" >&2
+  fi
 }
 
 ####################################################################################################
 # Run install scripts
 ####################################################################################################
 
-run_install "${archDir}/.install/brew.sh"
-run_install "${archDir}/.install/c++.sh"
-run_install "${archDir}/.install/clojure.sh"
-run_install "${archDir}/.install/go.sh"
-run_install "${archDir}/.install/julia.sh"
-run_install "${archDir}/.install/R.sh"
-run_install "${archDir}/.install/rust.sh"
+installDir="${archDir}/.install"
+
+run_install "${installDir}/brew.sh"
+run_install "${installDir}/c++.sh"
+run_install "${installDir}/clojure.sh"
+run_install "${installDir}/go.sh"
+run_install "${installDir}/julia.sh"
+run_install "${installDir}/R.sh"
+run_install "${installDir}/rust.sh"
 
 ####################################################################################################
 # Wait for background jobs
