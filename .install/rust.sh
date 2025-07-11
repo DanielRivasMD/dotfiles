@@ -101,7 +101,6 @@ install_crates=(
   wordcrab                                                 # Terminal dictionary
   xcp                                                      # Parallel copy utility
   xsv                                                      # CSV toolkit
-  yazi-cli --locked yazi-fm                                # Blazingly fast file manager
   zellij --locked                                          # Terminal workspace and tiling
   zoxide --locked                                          # Smarter `cd` alternative
 )
