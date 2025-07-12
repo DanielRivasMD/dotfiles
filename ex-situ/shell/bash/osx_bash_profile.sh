@@ -9,8 +9,8 @@ export BDOTDIR="$HOME/.bash"
 # Aliases
 ####################################################################################################
 
-[[ -f "$EX_SITU/shell/term/osx_aliases.sh" ]] && source "$EX_SITU/shell/term/osx_aliases.sh"
-[[ -f "$BDOTDIR/bash_aliases.sh" ]] && source "$BDOTDIR/bash_aliases.sh"
+ALIAS="$EX_SITU/shell/term/osx_aliases.sh"
+[[ -f "$ALIAS" ]] && source "$ALIAS"
 
 ####################################################################################################
 # Prompt
@@ -25,7 +25,7 @@ command -v starship >/dev/null && eval "$(starship init bash)"
 [[ -f "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 
 command -v pandoc >/dev/null && eval "$(pandoc --bash-completion)"
-[[ -f "$EX_SITU/shell/bash/fzf.bash" ]] && source "$EX_SITU/shell/bash/fzf.bash"
+[[ -f "$BDOTDIR/fzf.bash" ]] && source "$BDOTDIR/fzf.bash"
 
 ####################################################################################################
 # History
