@@ -87,7 +87,6 @@ alias mg='mgit'
 
 # pueue
 alias pu='pueue'
-alias pd='pueued'
 
 # samesame
 alias ss='samesame'
