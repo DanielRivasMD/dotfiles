@@ -37,7 +37,7 @@ install_formulae \
   starship \                 # Shell prompt
   ollama \                   # Local LLM runner
   llvm                       # Compiler toolchain
-
+  joplin-cli \               # Joplin notes in terminal
 
 # MongoDB requires tapping before install
 brew tap mongodb/brew
