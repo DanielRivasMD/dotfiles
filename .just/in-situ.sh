@@ -130,9 +130,9 @@ cobra-cli completion zsh > "${zshcomp}/_cobra-cli"                             &
 diesel completions zsh > "${zshcomp}/_diesel"                                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}diesel${NC}"
 deno completions zsh > "${zshcomp}/_deno"                                      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}deno${NC}"
 just --completions zsh > "${zshcomp}/_just"                                    && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}just${NC}"
-zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
+uv generate-shell-completion zsh > "${zshcomp}/_uv"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}uv${NC}"
 yq completion zsh > "${zshcomp}/_yq"                                           && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}yq${NC}"
-cp "${zshcomp}/_zellij" "${zshcomp}/_zj" && sd zellij zj "${zshcomp}/_zj"      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zj${NC}"
+zellij setup --generate-completion zsh > "${zshcomp}/_zellij"                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}zellij${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 echo ''
