@@ -24,25 +24,20 @@ install_casks() {
 
 install_formulae \
   cljfmt \                   # Clojure formatter
-  gcalcli \                  # Google Calendar CLI
-  joplin-cli \               # Joplin notes in terminal
-  bpython \                  # Fancy Python REPL
-  helix \                    # Modern modal code editor
-  micro \                    # Simple terminal editor
-  fzf \                      # Fuzzy search utility
-  gh \                       # GitHub CLI tool
-  hub \                      # Git-enhancing CLI for GitHub
+  helix \                    # Modal code editor
+  micro \                    # Terminal editor
+  fzf \                      # Fuzzy finder
+  gh \                       # GitHub CLI
+  hub \                      # GitHub-enhanced Git CLI
   jq \                       # JSON processor
-  sqlite \                   # Lightweight database engine
-  litecli \                  # SQLite client with UX improvements
-  mysql \                    # SQL database system
-  mycli \                    # MySQL CLI with autocompletion
-  postgresql \               # Advanced relational DB
-  pgcli \                    # PostgreSQL CLI with features
-  nu \                       # Structured-shell scripting
-  starship \                 # Custom prompt for any shell
-  ollama \                   # Run local LLMs
-  llvm \                     # Compiler toolchain infrastructure
+  sqlite \                   # SQLite engine
+  mysql \                    # MySQL database
+  postgresql \               # PostgreSQL database
+  nu \                       # Nu shell
+  starship \                 # Shell prompt
+  ollama \                   # Local LLM runner
+  llvm                       # Compiler toolchain
+
 
 # MongoDB requires tapping before install
 brew tap mongodb/brew
