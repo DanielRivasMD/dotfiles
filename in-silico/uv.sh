@@ -8,10 +8,10 @@ brew install uv
 # Install Binaries
 ####################################################################################################
 
-uv tool install bpython
-uv tool install gcalcli
-uv tool install litecli
-uv tool install mycli
-uv tool install pgcli
+uv tool install gcalcli                # Google Calendar CLI
+uv tool install bpython                # Fancy Python REPL
+uv tool install litecli                # SQLite client with UX improvements
+uv tool install mycli                  # MySQL CLI with autocompletion
+uv tool install pgcli                  # PostgreSQL CLI with features
 
 ####################################################################################################
