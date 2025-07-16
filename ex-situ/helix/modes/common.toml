@@ -148,8 +148,7 @@ F16 = ["goto_next_diag"]                                   # alt-shift         #
 
 # ctl-cmd
 C-l = [":buffer-close"]                                    # ctl-cmd-bs        # close tab
-C-g = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]                              # ctl-cmd-enter     # new
-# C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
+C-g = ["normal_mode", ":new"]                              # ctl-cmd-enter     # new
 C-v = ["vsplit"]                                           # ctl-cmd-shift     # vertical split
 C-h = ["hsplit"]                                           # ctl-cmd-alt       # horizontal split
 C-j = ["wonly"]                                            # ctl-cmd-cmd       # unsplit
@@ -210,7 +209,7 @@ A-down = ["select_mode", "goto_last_line", "goto_line_end", "MODE"]
 ####################################################################################################
 
 # alphabet
-A-F1 = [":new", ":insert-output serpl", ":buffer-close!", ":redraw"]           # alt-a             #
+A-F1 = ["select_all"]                                      # alt-a             #
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
@@ -244,7 +243,7 @@ A-C-F10 = ["command_mode"]                                 # alt-grave         #
 ####################################################################################################
 
 # alphabet-shift
-S-A-F1 = ["select_all"]                                    # alt-shift-a       # select all
+S-A-F1 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"]                                    # alt-shift-a       # select all
 # S-A-F2 = [""]                                            # alt-shift-b       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
 S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
@@ -264,13 +263,13 @@ S-C-F5 = ["replay_macro"]                                  # alt-shift-m       #
 # S-C-F6 = [""]                                            # alt-shift-n       #
 S-C-F7 = ["unindent"]                                      # alt-shift-o       # unindent
 # S-C-F8 = [""]                                            # alt-shift-p       #
-# S-C-F9 = [""]                                            # alt-shift-q       #
+S-C-F9 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]                                            # alt-shift-q       #
 # S-C-F10 = [""]                                           # alt-shift-r       #
 # S-A-C-F1 = [""]                                          # alt-shift-s       #
 S-A-C-F2 = ["select_regex"]                                # alt-shift-t       # select
 # S-A-C-F4 = [""]                                          # alt-shift-u       #
 S-A-C-F5 = ["select_register"]                             # alt-shift-v       # register
-# S-A-C-F6 = [""]                                          # alt-shift-w       #
+S-A-C-F6 = [":sh zellij run --name canvas --floating --height 100 --width 130 --x 25 --y 0 -- zsh"]                                          # alt-shift-w       #
 S-A-C-F7 = ["extend_to_line_bounds", "delete_selection_noyank"]
                                                            # alt-shift-x       # cut line
 S-A-C-F8 = ["extend_to_line_bounds", "yank_to_clipboard"]  # alt-shift-y       # copy line
