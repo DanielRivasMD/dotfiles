@@ -85,9 +85,6 @@ alias hg='hgrep'
 # mgit
 alias mg='mgit'
 
-# pueue
-alias pu='pueue'
-
 # samesame
 alias ss='samesame'
 
