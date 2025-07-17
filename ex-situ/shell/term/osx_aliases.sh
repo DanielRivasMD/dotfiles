@@ -82,6 +82,9 @@ alias gt='gitui'
 # hgrep
 alias hg='hgrep'
 
+# just
+alias ji='just install'
+
 # mgit
 alias mg='mgit'
 
