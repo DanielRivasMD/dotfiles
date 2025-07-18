@@ -1,0 +1,28 @@
+####################################################################################################
+# julia
+####################################################################################################
+
+[language-server.julia_lsp]
+command = "julia"
+args = [
+  "--startup-file=no",
+  "--history-file=no",
+  "--quiet",
+  "-e",
+  "using LanguageServer; runserver()",
+]
+
+[[language]]
+name = "julia"
+scope = "source.julia"
+injection-regex = "julia"
+file-types = ["jl"]
+roots = []
+comment-token = "#"
+language-servers = ["julia_lsp"]
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "julia"
+source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "fc60b7cce87da7a1b7f8cb0f9371c3dc8b684500" }
+

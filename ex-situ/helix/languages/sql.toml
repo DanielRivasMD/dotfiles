@@ -1,0 +1,17 @@
+####################################################################################################
+# sql
+####################################################################################################
+
+[[language]]
+name = "sql"
+scope = "source.sql"
+file-types = ["sql"]
+roots = []
+comment-token = "--"
+indent = { tab-width = 2, unit = "  " }
+injection-regex = "sql"
+
+[[grammar]]
+name = "sql"
+source = { git = "https://github.com/DerekStride/tree-sitter-sql", rev = "0caa7fa2ee00e0b770493a79d4efacc1fc376cc5" }
+

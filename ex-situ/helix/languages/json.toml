@@ -1,0 +1,23 @@
+####################################################################################################
+# json
+####################################################################################################
+
+[language-server.json_lsp]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "json"
+scope = "source.json"
+injection-regex = "json"
+file-types = ["json"]
+roots = []
+language-servers = ["json_lsp"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+# config = { "provideFormatter" = true }
+
+[[grammar]]
+name = "json"
+source = { git = "https://github.com/tree-sitter/tree-sitter-json", rev = "65bceef69c3b0f24c0b19ce67d79f57c96e90fcb" }
+

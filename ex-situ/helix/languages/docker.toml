@@ -1,0 +1,22 @@
+####################################################################################################
+# docker
+####################################################################################################
+
+[language-server.docker_lsp]
+command = "docker-langserver"
+args = ["--stdio"]
+
+[[language]]
+name = "dockerfile"
+scope = "source.dockerfile"
+injection-regex = "docker|dockerfile"
+file-types = ["Dockerfile", "dockerfile"]
+roots = ["Dockerfile"]
+language-servers = ["docker_lsp"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "dockerfile"
+source = { git = "https://github.com/camdencheek/tree-sitter-dockerfile", rev = "7af32bc04a66ab196f5b9f92ac471f29372ae2ce" }
+

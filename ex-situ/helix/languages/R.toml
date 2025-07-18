@@ -1,0 +1,33 @@
+####################################################################################################
+# R
+####################################################################################################
+
+[language-server.R_lsp]
+command = "R"
+args = ["--slave", "-e", "languageserver::run()"]
+
+[[language]]
+name = "r"
+scope = "source.r"
+injection-regex = "(r|R)"
+file-types = ["r", "R"]
+shebangs = ["r", "R"]
+roots = []
+# comment-token = "#"
+language-servers = ["R_lsp"]
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "r"
+source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "cc04302e1bff76fa02e129f332f44636813b0c3c" }
+
+[[language]]
+name = "rmarkdown"
+scope = "source.rmd"
+injection-regex = "(r|R)md"
+file-types = ["rmd", "Rmd"]
+roots = []
+language-servers = ["R_lsp"]
+indent = { tab-width = 2, unit = "  " }
+grammar = "markdown"
+
