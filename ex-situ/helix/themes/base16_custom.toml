@@ -81,10 +81,11 @@
 
 ####################################################################################################
 
-"diagnostic.info" = { underline = { color = "light-blue", style = "dotted" } }
-"diagnostic.hint" = { underline = { color = "light-gray", style = "double_line" } }
-"diagnostic.debug" = { underline ={ color ="light-gray", style = "dashed" } }
-"diagnostic.warning" = { underline = { color = "light-yellow", style = "curl" } }
-"diagnostic.error" = { underline = { color ="light-red", style = "curl" } }
+"diagnostic.error" = { bg = "red", fg = "white", modifiers = [] }
+"diagnostic.warning" = { bg = "yellow", fg = "black", modifiers = [] }
+"diagnostic.info" = { bg = "blue", fg = "white", modifiers = ["bold"] }
+"diagnostic.hint" = { bg = "gray", fg = "white", modifiers = ["bold"] }
+"diagnostic.debug" = { bg = "gray", fg = "white", modifiers = ["italic"] }
+"diagnostic.unnecessary" = { bg = "gray", fg = "white", modifiers = ["dim"] }
 
 ####################################################################################################
