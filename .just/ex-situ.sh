@@ -111,6 +111,7 @@ bender completion zsh > "${zshcomp}/_bender"                                   &
 chess completion zsh > "${zshcomp}/_chess"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chess${NC}"
 cerberus completion zsh > "${zshcomp}/_cerberus"                               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cerberus${NC}"
 gorgon completion zsh > "${zshcomp}/_gorgon"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}gorgon${NC}"
+lilith completion zsh > "${zshcomp}/_lilith"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lilith${NC}"
 lou completion zsh > "${zshcomp}/_lou"                                         && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lou${NC}"
 mbombo completion zsh > "${zshcomp}/_mbombo"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}mbombo${NC}"
 minerva completion zsh > "${zshcomp}/_minerva"                                 && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}minerva${NC}"
