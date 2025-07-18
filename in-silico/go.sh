@@ -30,6 +30,7 @@ done
 ####################################################################################################
 
 go_binaries=(
+  github.com/golangci/golangci-lint/cmd/golangci-lint
   github.com/Gelio/go-global-update    # Go updater for global binaries
   github.com/mikefarah/yq/v4           # Portable command-line processor
   github.com/zyedidia/eget             # Binary installer
