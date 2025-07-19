@@ -15,7 +15,7 @@ ALIAS="$EX_SITU/shell/term/osx_aliases.sh"
 # Plugin Manager (Sheldon)
 ####################################################################################################
 
-command -v sheldon >/dev/null && eval "$(sheldon source)"
+command -v sheldon &>/dev/null && eval "$(sheldon source)"
 
 ####################################################################################################
 # Completion System
@@ -34,9 +34,10 @@ setopt COMPLETE_ALIASES
 [[ -f "$ZSH_COMPLETION/_tab" ]] && source "$ZSH_COMPLETION/_tab"
 
 ####################################################################################################
-# Fuzzy Finder (fzf)
+# Fuzzy Finder (fzf native)
 ####################################################################################################
 
+# Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
 [[ -f "$ZDOTDIR/fzf.zsh" ]] && source "$ZDOTDIR/fzf.zsh"
 source <(fzf --zsh)
 
@@ -53,9 +54,9 @@ setopt appendhistory
 # CLI Tools Initialization
 ####################################################################################################
 
-# Atuin
+# Atuin (history manager, but we’ll disable its bind)
 export ATUIN_NOBIND="true"
-command -v atuin >/dev/null && eval "$(atuin init zsh)"
+command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
 # Just
 JFUN="$ZDOTDIR/zsh_just.sh"
@@ -65,17 +66,17 @@ JFUN="$ZDOTDIR/zsh_just.sh"
 NFUN="$ZDOTDIR/zsh_navi.sh"
 [[ -f "$NFUN" ]] && source "$NFUN"
 
-# Starship
-command -v starship >/dev/null && eval "$(starship init zsh)"
+# Starship prompt
+command -v starship &>/dev/null && eval "$(starship init zsh)"
 
-# Zellij (only inside Alacritty)
+# Zellij Helpers (only in Alacritty)
 if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
   ZJFUN="$ZDOTDIR/zsh_zellij.sh"
   [[ -f "$ZJFUN" ]] && source "$ZJFUN"
 fi
 
-# Zoxide
-command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+# Zoxide (frecency-based cd)
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
 ZFUN="$ZDOTDIR/zsh_zoxide.sh"
 [[ -f "$ZFUN" ]] && source "$ZFUN"
 
@@ -87,21 +88,79 @@ autoload edit-command-line
 zle -N edit-command-line
 
 ####################################################################################################
-# Key Bindings
+# fzf-tab Configuration (v0.4+)
 ####################################################################################################
 
-bindkey '^s' _atuin_search_widget
-bindkey '^j' edit-command-line
-bindkey '^g' _call_just
-bindkey '^o' _call_navi
-bindkey '^h' _call_zi
+# 1) Git checkout: disable default sorting so your history order prevails
+zstyle ':completion:*:git-checkout:*' sort false
 
-# Unbind unused defaults
-bindkey -r "^B"
-bindkey -r "^F"
-bindkey -r "^N"
-bindkey -r "^P"
-bindkey -r "^X"
+# 2) Group support in descriptions (e.g. commands vs files)
+zstyle ':completion:*:descriptions' format '[%d]'
+
+# 3) Colorize file lists using your LS_COLORS
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# 4) Turn off zsh’s own menu-style completion (so fzf-tab gets prefix)
+zstyle ':completion:*' menu no
+
+# 5) Preview `cd` targets with `eza` (you can swap to `ls ` or `exa`)
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+
+# 6) Core fzf-tab flags: colors + tab-to-accept
+zstyle ':fzf-tab:*' fzf-flags \
+  --color=fg:1,fg+:2 \
+  --bind=tab:accept
+
+# 7) (Optional) inherit your $FZF_DEFAULT_OPTS flags
+#    set this to "yes" if you want fzf-tab to pick up your global fzf options
+#    note: some flags may conflict with fzf-tab’s behavior
+# zstyle ':fzf-tab:*' use-fzf-default-opts yes
+
+# 8) Switch “groups” (from one completion domain to another) with < and >
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+# 9) UI settings: preview window, sizing, reverse
+zstyle ':fzf-tab:complete:*' fzf-opts \
+  '--preview "bat --style=plain --color=always {}"' \
+  '--preview-window=right:60%' \
+  '--height=40%' \
+  '--reverse'
+
+# 10) Disable <TAB> so native completion stays on TAB
+zstyle ':fzf-tab:keymap' '\t' off
+
+# 11) Rebind:
+#    <TAB> → native completion
+#    ^R    → fzf-tab
+bindkey '^I' complete-word
+
+####################################################################################################
+# Key Bindings & Widgets
+####################################################################################################
+
+# Disable fzf history (Ctrl-R)
+bindkey -r '^R'
+
+# fzf-tab (Ctrl-R)
+bindkey '^R' fzf-tab-complete
+
+# Atuin search (Ctrl-S)
+bindkey '^S' _atuin_search_widget
+
+# fzf file picker (Ctrl-T)
+bindkey '^T' fzf-file-widget
+
+# Edit command line (Ctrl-G)
+bindkey '^G' edit-command-line
+
+# zoxide widget (Ctrl-H)
+bindkey '^H' zoxide_widget
+
+# fzf-cd (Ctrl-J)
+bindkey '^J' fzf-cd-widget
+
+# Navi widget (Ctrl-O)
+bindkey '^O' navi_widget
 
 ####################################################################################################
 # Utility Functions
