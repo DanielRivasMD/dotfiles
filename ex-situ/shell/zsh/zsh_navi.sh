@@ -2,7 +2,7 @@
 
 ####################################################################################################
 
-_call_navi() {
+navi_widget() {
 	local selected
 	if [ -n "$LBUFFER" ]; then
 		if selected="$(printf "%s" "$(navi --print --fzf-overrides '--no-select-1' --query "${LBUFFER}" </dev/tty)")"; then
@@ -16,6 +16,6 @@ _call_navi() {
 	zle redisplay
 }
 
-zle -N _call_navi
+zle -N navi_widget
 
 ####################################################################################################
