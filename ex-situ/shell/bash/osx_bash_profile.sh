@@ -25,6 +25,7 @@ command -v starship >/dev/null && eval "$(starship init bash)"
 [[ -f "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 
 command -v pandoc >/dev/null && eval "$(pandoc --bash-completion)"
+eval "$(fzf --bash)"
 [[ -f "$BDOTDIR/fzf.bash" ]] && source "$BDOTDIR/fzf.bash"
 
 ####################################################################################################
