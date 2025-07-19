@@ -88,61 +88,11 @@ autoload edit-command-line
 zle -N edit-command-line
 
 ####################################################################################################
-# fzf-tab Configuration (v0.4+)
-####################################################################################################
-
-# 1) Git checkout: disable default sorting so your history order prevails
-zstyle ':completion:*:git-checkout:*' sort false
-
-# 2) Group support in descriptions (e.g. commands vs files)
-zstyle ':completion:*:descriptions' format '[%d]'
-
-# 3) Colorize file lists using your LS_COLORS
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-# 4) Turn off zsh’s own menu-style completion (so fzf-tab gets prefix)
-zstyle ':completion:*' menu no
-
-# 5) Preview `cd` targets with `eza` (you can swap to `ls ` or `exa`)
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-
-# 6) Core fzf-tab flags: colors + tab-to-accept
-zstyle ':fzf-tab:*' fzf-flags \
-  --color=fg:1,fg+:2 \
-  --bind=tab:accept
-
-# 7) (Optional) inherit your $FZF_DEFAULT_OPTS flags
-#    set this to "yes" if you want fzf-tab to pick up your global fzf options
-#    note: some flags may conflict with fzf-tab’s behavior
-# zstyle ':fzf-tab:*' use-fzf-default-opts yes
-
-# 8) Switch “groups” (from one completion domain to another) with < and >
-zstyle ':fzf-tab:*' switch-group '<' '>'
-
-# 9) UI settings: preview window, sizing, reverse
-zstyle ':fzf-tab:complete:*' fzf-opts \
-  '--preview "bat --style=plain --color=always {}"' \
-  '--preview-window=right:60%' \
-  '--height=40%' \
-  '--reverse'
-
-# 10) Disable <TAB> so native completion stays on TAB
-zstyle ':fzf-tab:keymap' '\t' off
-
-# 11) Rebind:
-#    <TAB> → native completion
-#    ^R    → fzf-tab
-bindkey '^I' complete-word
-
-####################################################################################################
 # Key Bindings & Widgets
 ####################################################################################################
 
-# Disable fzf history (Ctrl-R)
-bindkey -r '^R'
-
-# fzf-tab (Ctrl-R)
-bindkey '^R' fzf-tab-complete
+# fzf history (Ctrl-R)
+bindkey '^R' fzf-history-widget
 
 # Atuin search (Ctrl-S)
 bindkey '^S' _atuin_search_widget
