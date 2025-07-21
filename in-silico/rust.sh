@@ -96,6 +96,7 @@ install_crates=(
   tealdeer                                                 # tldr client
   tock                                                     # Clock-style timer
   tokei --git https://github.com/XAMPPRocky/tokei.git      # Code stats generator
+  tre-command                                              # Tree command, improved
   viu                                                      # Image viewer in terminal
   watchexec-cli --locked                                   # Trigger commands on file changes
   wordcrab                                                 # Terminal dictionary
