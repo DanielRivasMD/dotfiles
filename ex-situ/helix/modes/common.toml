@@ -44,10 +44,10 @@ C-t = ["buffer_picker"]                                    # joker-shift       #
 #                                                          # joker-cmd         #
 #                                                          # joker-space       #
 
-#                                                          # joker-left
-#                                                          # joker-right
-#                                                          # joker-up
-#                                                          # joker-down
+A-pageup = ["undo"]                                        # joker-left        # undo
+A-pagedown = ["redo"]                                      # joker-right       # redo
+A-home = ["goto_prev_change"]                              # joker-up          # prev change
+A-end = ["goto_next_change"]                               # joker-down        # next change
 
 
 ####################################################################################################
@@ -81,10 +81,10 @@ C-t = ["buffer_picker"]                                    # joker-shift       #
 ####################################################################################################
 
 # grave
-C-pageup = ["undo"]                                        # grave-left        # undo
-C-pagedown = ["redo"]                                      # grave-right       # redo
-C-home = ["goto_prev_change"]                              # grave-up          # prev change
-C-end = ["goto_next_change"]                               # grave-down        # next change
+C-pageup = ["jump_backward"]                               # grave-left        # prev jump
+C-pagedown = ["jump_forward"]                              # grave-right       # next jump
+C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
+C-end = ["goto_next_comment"]                              # grave-down        # next comment
 
 # C-F19 = []                                               # grave--           #
 # C-F20 = []                                               # grave-=           #
@@ -93,13 +93,13 @@ C-end = ["goto_next_change"]                               # grave-down        #
 # A-F13 = []                                               # grave-;           #
 # A-F14 = []                                               # grave-'           #
 # A-F15 = []                                               # grave-\           #
-A-F18 = ["goto_next_test"]                                 # grave-,           # next test
-A-F19 = ["goto_next_class"]                                # grave-.           # next class
-A-F20 = ["goto_next_function"]                             # grave-/           # next function
+# A-F18 = []                                               # grave-,           #
+# A-F19 = []                                               # grave-.           #
+# A-F20 = []                                               # grave-/           #
 
 C-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
 C-F12 = ["symbol_picker"]                                  # grave-enter       # symbol list
-C-F13 = ["goto_next_parameter"]                            # grave-shift       # next parameter
+# C-F13 = []                            # grave-shift       # next parameter
 C-F16 = ["goto_reference"]                                 # grave-alt         # reference
 C-F17 = ["goto_definition"]                                # grave-cmd         # definition
 C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
@@ -108,28 +108,28 @@ C-F18 = ["goto_last_modification"]                         # grave-space       #
 ####################################################################################################
 
 # grave-shift
-C-S-pageup = ["jump_backward"]                             # grave-shift-left    # prev jump
-C-S-pagedown = ["jump_forward"]                            # grave-shift-right   # next jump
-C-S-home = ["goto_prev_comment"]                           # grave-shift-up      # prev comment
-C-S-end = ["goto_next_comment"]                            # grave-shift-down    # next comment
+# C-S-pageup = []                                          # grave-shift-left  #
+# C-S-pagedown = []                                        # grave-shift-right #
+# C-S-home = []                                            # grave-shift-up    #
+# C-S-end = []                                             # grave-shift-down  #
 
-# C-S-F19 = []                                             # grave-shift--       #
-# C-S-F20 = []                                             # grave-shift-=       #
-# A-S-F11 = []                                             # grave-shift-[       #
-# A-S-F12 = []                                             # grave-shift-]       #
-# A-S-F13 = []                                             # grave-shift-;       #
-# A-S-F14 = []                                             # grave-shift-'       #
-# A-S-F15 = []                                             # grave-shift-\       #
-A-S-F18 = ["goto_prev_test"]                               # grave-shift-,       # prev test
-A-S-F19 = ["goto_prev_class"]                              # grave-shift-.       # prev class
-A-S-F20 = ["goto_prev_function"]                           # grave-shift-/       # prev function
+# C-S-F19 = []                                             # grave-shift--     #
+# C-S-F20 = []                                             # grave-shift-=     #
+# A-S-F11 = []                                             # grave-shift-[     #
+# A-S-F12 = []                                             # grave-shift-]     #
+# A-S-F13 = []                                             # grave-shift-;     #
+# A-S-F14 = []                                             # grave-shift-'     #
+# A-S-F15 = []                                             # grave-shift-\     #
+# A-S-F18 = []                                             # grave-shift-,     #
+# A-S-F19 = []                                             # grave-shift-.     #
+# A-S-F20 = []                                             # grave-shift-/     #
 
-# C-S-F11 = []                                             # grave-shift-bs      #
-C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter   # jump list
-C-S-F13 = ["goto_prev_parameter"]                          # grave-shift-shift   # prev parameter
-C-S-F16 = ["goto_implementation"]                          # grave-shift-alt     # implementation
-C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd     # definition
-C-S-F18 = ["save_selection"]                               # grave-shift-space   # jump save
+# C-S-F11 = []                                             # grave-shift-bs    #
+C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter # jump list
+# C-S-F13 = []                          # grave-shift-shift #
+C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   # implementation
+C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
+C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
 
 
 ####################################################################################################
