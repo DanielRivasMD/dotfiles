@@ -116,9 +116,9 @@ bindkey '^O' navi_widget
 # Utility Functions
 ####################################################################################################
 
-reload() {
-  source "$ZDOTDIR/osx_zshrc.sh"
-}
+reload() { source "$ZDOTDIR/osx_zshrc.sh"; }
+
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 ####################################################################################################
 # Welcome Banner
