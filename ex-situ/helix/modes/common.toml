@@ -99,7 +99,7 @@ C-end = ["goto_next_comment"]                              # grave-down        #
 
 C-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
 C-F12 = ["symbol_picker"]                                  # grave-enter       # symbol list
-# C-F13 = []                            # grave-shift       # next parameter
+C-F13 = ["search"]                                         # grave-shift       # search
 C-F16 = ["goto_reference"]                                 # grave-alt         # reference
 C-F17 = ["goto_definition"]                                # grave-cmd         # definition
 C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
@@ -126,7 +126,7 @@ C-F18 = ["goto_last_modification"]                         # grave-space       #
 
 # C-S-F11 = []                                             # grave-shift-bs    #
 C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter # jump list
-# C-S-F13 = []                          # grave-shift-shift #
+C-S-F13 = ["global_search"]                                # grave-shift-shift # global search
 C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   # implementation
 C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
@@ -208,28 +208,26 @@ A-down = ["extend_to_file_end"]                            # cmd-shift-down    #
 ####################################################################################################
 
 # alphabet
-A-F1 = ["select_all"]                                      # alt-a             #
+# A-F1 = [""]                                              # alt-a             #
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
-A-F6 = ["align_selections"]                                # alt-e             # align
-A-F7 = ["search"]                                          # alt-f             # search
+# A-F6 = [""]                                              # alt-e             #
+A-F7 = [":format"]                                         # alt-f             # format
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
 # A-F10 = [""]                                             # alt-i             #
-C-F1 = ["normal_mode", "copy_selection_on_next_line", "MODE"]
-                                                           # alt-j             # spawn multi down
-C-F2 = ["normal_mode", "copy_selection_on_prev_line", "MODE"]
-                                                           # alt-k             # spawn multi up
+C-F1 = ["normal_mode", "copy_selection_on_next_line", "MODE"] # alt-j             # spawn multi down
+C-F2 = ["normal_mode", "copy_selection_on_prev_line", "MODE"] # alt-k             # spawn multi up
 C-F4 = ["search_next"]                                     # alt-l             # find next
 C-F5 = ["record_macro"]                                    # alt-m             # toggle macro
 # C-F6 = [""]                                              # alt-n             #
 # C-F7 = [""]                                              # alt-o             #
-C-F8 = ["match_brackets"]                                  # alt-p             # jump matching
+# C-F8 = [""]                                              # alt-p             # jump matching
 C-F9 = ["normal_mode", ":quit-all"]                        # alt-q             # close buffer
 C-F10 = ["normal_mode", ":reload-all", "MODE"]             # alt-r             # reload
 A-C-F1 = ["normal_mode", ":write-quit-all"]                # alt-s             # save & quit
-A-C-F2 = ["search_selection"]                              # alt-t             # selection
+# A-C-F2 = [""]                                            # alt-t             #
 # A-C-F4 = [""]                                            # alt-u             #
 A-C-F5 = ["paste_clipboard_after"]                         # alt-v             # paste
 A-C-F6 = ["normal_mode", ":write"]                         # alt-w             # save
@@ -242,38 +240,32 @@ A-C-F10 = ["command_mode"]                                 # alt-grave         #
 ####################################################################################################
 
 # alphabet-shift
-S-A-F1 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"]                                    # alt-shift-a       # select all
+S-A-F1 = ["select_all"]                                    # alt-shift-a       # select all
 # S-A-F2 = [""]                                            # alt-shift-b       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
-S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]
-                                                           # alt-shift-d       # duplicate line
-S-A-F6 = [":format"]                                       # alt-shift-e       # format
-S-A-F7 = ["global_search"]                                 # alt-shift-f       # global search
+S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"] # alt-shift-d       # duplicate line
+# S-A-F6 = [""]                                            # alt-shift-e       # 
+# S-A-F7 = [""]                                            # alt-shift-f       #
 # S-A-F8 = [""]                                            # alt-shift-g       #
 # S-A-F9 = [""]                                            # alt-shift-h       #
 S-A-F10 = ["indent"]                                       # alt-shift-i       # indent
-S-C-F1 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"]
-                                                           # alt-shift-j       # move down
-S-C-F2 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"]
-                                                           # alt-shift-k       # move up
-S-C-F4 = ["goto_line_end", "select_mode", "goto_line_start", "MODE"]
-                                                           # alt-shift-l       # select line
+S-C-F1 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"] # alt-shift-j       # move down
+S-C-F2 = ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"] # alt-shift-k       # move up
+S-C-F4 = ["goto_line_end", "select_mode", "goto_line_start", "MODE"] # alt-shift-l       # select line
 S-C-F5 = ["replay_macro"]                                  # alt-shift-m       # play macro
 # S-C-F6 = [""]                                            # alt-shift-n       #
 S-C-F7 = ["unindent"]                                      # alt-shift-o       # unindent
 # S-C-F8 = [""]                                            # alt-shift-p       #
-S-C-F9 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]                                            # alt-shift-q       #
-# S-C-F10 = [""]                                           # alt-shift-r       #
-# S-A-C-F1 = [""]                                          # alt-shift-s       #
-S-A-C-F2 = ["select_regex"]                                # alt-shift-t       # select
+S-C-F9 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"] # alt-shift-q       # launch lazygit
+S-C-F10 = [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"] # alt-shift-r       # launch serpl
+S-A-C-F1 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start", "toggle_comments", "move_visual_line_up"] # alt-shift-s       # duplicate & comment
+# S-A-C-F2 = [""]                                          # alt-shift-t       #
 # S-A-C-F4 = [""]                                          # alt-shift-u       #
-S-A-C-F5 = ["select_register"]                             # alt-shift-v       # register
-S-A-C-F6 = [":sh zellij run --name canvas --floating --height 100 --width 130 --x 25 --y 0 -- zsh"]                                          # alt-shift-w       #
-S-A-C-F7 = ["extend_to_line_bounds", "delete_selection_noyank"]
-                                                           # alt-shift-x       # cut line
+# S-A-C-F5 = [""]                                          # alt-shift-v       #
+S-A-C-F6 = [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"] # alt-shift-w       # launch window
+S-A-C-F7 = ["extend_to_line_bounds", "delete_selection_noyank"] # alt-shift-x       # cut line
 S-A-C-F8 = ["extend_to_line_bounds", "yank_to_clipboard"]  # alt-shift-y       # copy line
-S-A-C-F9 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start", "toggle_comments", "move_visual_line_up"]
-                                                           # alt-shift-z       # duplicate & comment
+S-A-C-F9 = [":sh zellij run --name broot --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- broot --dates --sizes --permissions --hidden --git-ignored --show-git-info --sort-by-type-dirs-first"] # alt-shift-z       # launch broot
 S-A-C-F10 = ["shell_pipe"]                                 # alt-shift-grave   # shell command
 
 
