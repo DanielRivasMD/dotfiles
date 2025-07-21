@@ -18,8 +18,8 @@ C-space = ["goto_word"]                                    # ctl-space         #
 # hyper
 # S-pageup = []                                            # hyper-left        #
 # S-pagedown = []                                          # hyper-right       #
-S-home  = ["increment"]                                    # hyper-up          # increment
-S-end = ["decrement"]                                      # hyper-down        # decrement
+# S-home  = []                                             # hyper-up          #
+# S-end = []                                               # hyper-down        #
 
 
 ####################################################################################################
@@ -37,12 +37,18 @@ S-end = ["decrement"]                                      # hyper-down        #
 #                                                          # joker-.           #
 #                                                          # joker-/           #
 
-C-r = ["changed_file_picker"]                              # joker-bs          # delta picker
-C-s = ["file_picker"]                                      # joker-enter       # file picker
-C-t = ["buffer_picker"]                                    # joker-shift       # buffer picker
+F13 = ["goto_prev_diag"]                                   # alt-tab           # prev diag
+F14 = ["diagnostics_picker"]                               # alt-joker         # diag picker
+F15 = ["goto_next_diag"]                                   # alt-shift         # next diag
+#                                                          # joker-bs          #
+#                                                          # joker-enter       #
+#                                                          # joker-shift       #
 #                                                          # joker-alt         #
 #                                                          # joker-cmd         #
 #                                                          # joker-space       #
+F17 = ["normal_mode", "till_prev_char", "MODE"]            # alt-ctl           # move backward
+F18 = ["normal_mode", "repeat_last_motion", "MODE"]        # alt-alt           # repeat motion
+F16 = ["normal_mode", "find_till_char", "MODE"]            # alt-cmd           # move forward
 
 A-pageup = ["undo"]                                        # joker-left        # undo
 A-pagedown = ["redo"]                                      # joker-right       # redo
@@ -81,13 +87,9 @@ A-end = ["goto_next_change"]                               # joker-down        #
 ####################################################################################################
 
 # grave
-C-pageup = ["jump_backward"]                               # grave-left        # prev jump
-C-pagedown = ["jump_forward"]                              # grave-right       # next jump
-C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
-C-end = ["goto_next_comment"]                              # grave-down        # next comment
-
 # C-F19 = []                                               # grave--           #
 # C-F20 = []                                               # grave-=           #
+
 # A-F11 = []                                               # grave-[           #
 # A-F12 = []                                               # grave-]           #
 # A-F13 = []                                               # grave-;           #
@@ -104,15 +106,15 @@ C-F16 = ["goto_reference"]                                 # grave-alt         #
 C-F17 = ["goto_definition"]                                # grave-cmd         # definition
 C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 
+C-pageup = ["jump_backward"]                               # grave-left        # prev jump
+C-pagedown = ["jump_forward"]                              # grave-right       # next jump
+C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
+C-end = ["goto_next_comment"]                              # grave-down        # next comment
+
 
 ####################################################################################################
 
 # grave-shift
-# C-S-pageup = []                                          # grave-shift-left  #
-# C-S-pagedown = []                                        # grave-shift-right #
-# C-S-home = []                                            # grave-shift-up    #
-# C-S-end = []                                             # grave-shift-down  #
-
 # C-S-F19 = []                                             # grave-shift--     #
 # C-S-F20 = []                                             # grave-shift-=     #
 # A-S-F11 = []                                             # grave-shift-[     #
@@ -131,17 +133,10 @@ C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   #
 C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
 
-
-####################################################################################################
-
-# alt
-F15 = ["normal_mode", "till_prev_char", "MODE"]            # alt-ctl           # move backward
-F14 = ["normal_mode", "repeat_last_motion", "MODE"]        # alt-alt           # repeat motion
-F13 = ["normal_mode", "find_till_char", "MODE"]            # alt-cmd           # move forward
-
-F18 = ["goto_prev_diag"]                                   # alt-tab           # prev diag
-F17 = ["diagnostics_picker"]                               # alt-joker         # diag picker
-F16 = ["goto_next_diag"]                                   # alt-shift         # next diag
+# C-S-pageup = []                                          # grave-shift-left  #
+# C-S-pagedown = []                                        # grave-shift-right #
+# C-S-home = []                                            # grave-shift-up    #
+# C-S-end = []                                             # grave-shift-down  #
 
 
 ####################################################################################################
@@ -156,8 +151,16 @@ C-o = ["goto_last_accessed_file"]                          # ctl-cmd-space     #
 
 C-b = ["goto_previous_buffer"]                             # ctl-cmd-left      # prev tab
 C-f = ["goto_next_buffer"]                                 # ctl-cmd-right     # next tab
-# C-n = []                                                 # ctl-cmd-up        #
-# C-p = []                                                 # ctl-cmd-down      #
+C-n = ["increment"]                                        # ctl-cmd-up        # increment
+C-p = ["decrement"]                                        # ctl-cmd-down      # decrement
+
+
+####################################################################################################
+
+# shift
+C-r = ["changed_file_picker"]                              # shift-bs          # delta picker
+C-s = ["file_picker"]                                      # shift-enter       # file picker
+C-t = ["buffer_picker"]                                    # shift-space       # buffer picker
 
 
 ####################################################################################################
