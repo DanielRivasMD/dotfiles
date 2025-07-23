@@ -22,88 +22,81 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y
 ####################################################################################################
 
 install_crates=(
-  bacon --locked                                           # File watcher for Rust builds
-  bartib                                                   # Simple time tracker
-  bat --locked                                             # Cat clone with syntax highlighting
-  bottom --locked                                          # Terminal system monitor
-  broot --locked --features clipboard                      # File manager with fuzzy navigation
-  cargo-benchcmp                                           # Compare benchmark results
-  cargo-binstall                                           # Binary installer for crates
-  cargo-cache                                              # Manage and inspect cargo cache
-  cargo-check                                              # Faster check for compilation errors
-  cargo-do                                                 # Task runner using cargo features
-  cargo-edit                                               # Add/remove/update dependencies
-  cargo-expand                                             # Macro expansion viewer
-  cargo-geiger                                             # Detect unsafe code usage
-  cargo-license                                            # Inspect crate licenses
-  cargo-make                                               # Automation/task runner
-  cargo-modules                                            # Analyze Rust module structure
-  cargo-nextest                                            # Fast test runner
-  cargo-outdated                                           # Check for outdated deps
-  cargo-rdme                                               # Generate README from doc comments
-  cargo-release                                            # Release automation
-  cargo-tarpaulin                                          # Code coverage tool
-  cargo-update                                             # Update installed binaries
-  cargo-watch                                              # Watch source and run commands
-  chess-tui                                                # Chess in terminal
-  copo                                                     # TTY color manager
-  ddh --git https://github.com/darakian/ddh                # Disk usage with deduplication
-  diease_cli                                               # Diesel CLI (ORM tool)
-  du-dust                                                  # Disk usage viewer
-  eva                                                      # Calculator/repl with syntax
-  eza                                                      # Better `ls` replacement
-  fd-find                                                  # Simple, fast find utility
-  flamegraph                                               # Visualize program profiling
-  gfold                                                    # Git repo lister with metadata
-  gifski                                                   # High-quality GIF encoder
-  git-delta                                                # Colorized diff viewer
-  git-journal                                              # Git commit visualizer
-  gitoxide                                                 # Pure Rust Git implementation
-  gitui                                                    # Git TUI client
-  halp                                                     # Help command builder
-  hck                                                      # Fast CSV processor
-  hexyl                                                    # Hex viewer in terminal
-  hgrep                                                    # Grep with syntax
-  htmlq                                                    # HTML selector CLI (jq for HTML)
-  hyperfine                                                # Benchmark tool
-  jless                                                    # JSON viewer
-  just                                                     # Command runner like Make
-  kondo                                                    # Project junk cleanup
-  lazycli --locked                                         # Lazy command UI
-  lsd                                                      # Another `ls` with icons
-  mdcat                                                    # Markdown viewer in terminal
-  melody_cli                                               # TUI sequencer for melodies
-  mgit                                                     # Multi-repo git CLI
-  monolith                                                 # Save full webpage to single file
-  navi                                                     # Shell cheatsheet navigator
-  nomino                                                   # Batch file renamer
-  onefetch                                                 # Git repo summary
-  onehistory                                               # Shell history navigator
-  pastel                                                   # Terminal colorizer
-  print_key                                                # Display keypress codes
-  procs                                                    # Process viewer
-  pueue --locked                                           # Task queue manager
-  ripgrep                                                  # Fast search (grep alternative)
-  ripgrep_all --locked                                     # Search inside PDFs, archives, etc.
-  samesame                                                 # Approximate string matcher
-  sccache --locked                                         # Compiler cache
-  serpl                                                    # Interactive search and replace
-  sd                                                       # Find and replace tool
-  sheldon --locked                                         # Shell plugin manager
-  spotify-tui                                              # Spotify interface in terminal
-  taplo-cli --locked                                       # TOML formatter and linter
-  tauri-cli                                                # Tauri app CLI tools
-  tealdeer                                                 # tldr client
-  tock                                                     # Clock-style timer
-  tokei --git https://github.com/XAMPPRocky/tokei.git      # Code stats generator
-  tre-command                                              # Tree command, improved
-  viu                                                      # Image viewer in terminal
-  watchexec-cli --locked                                   # Trigger commands on file changes
-  wordcrab                                                 # Terminal dictionary
-  xcp                                                      # Parallel copy utility
-  xsv                                                      # CSV toolkit
-  zellij --locked                                          # Terminal workspace and tiling
-  zoxide --locked                                          # Smarter `cd` alternative
+  asciinema --locked --git https://github.com/asciinema/asciinema    # terminal recorder
+  bacon --locked                                                     # watch Rust builds
+  bartib                                                             # simple time tracker
+  bat --locked                                                       # syntax-highlighted cat
+  bottom --locked                                                    # system monitor
+  broot --locked --features clipboard                                # fuzzy file manager
+  cargo-benchcmp                                                     # compare benchmarks
+  cargo-binstall                                                     # install Cargo binaries
+  cargo-cache                                                        # inspect Cargo cache
+  cargo-check                                                        # fast compilation check
+  cargo-do                                                           # Cargo task runner
+  cargo-edit                                                         # manage dependencies
+  cargo-expand                                                       # view macro expansions
+  cargo-geiger                                                       # detect unsafe code
+  cargo-license                                                      # check licenses
+  cargo-make                                                         # task automation
+  cargo-modules                                                      # analyze module graph
+  cargo-nextest                                                      # faster test runner
+  cargo-outdated                                                     # outdated dependency checker
+  cargo-rdme                                                         # generate README from docs
+  cargo-release                                                      # release automation
+  cargo-tarpaulin                                                    # code coverage
+  cargo-update                                                       # update installed crates
+  cargo-watch                                                        # rerun on source changes
+  copo                                                               # terminal color manager
+  ddh --git https://github.com/darakian/ddh                          # dedup disk usage
+  diease_cli                                                         # Diesel ORM CLI
+  du-dust                                                            # disk usage analyzer
+  eza                                                                # modern ls replacement
+  eva                                                                # REPL calculator
+  fd-find                                                            # fast file finder
+  flamegraph                                                         # profiling visualizer
+  gfold                                                              # list Git repos
+  gifski                                                             # GIF encoder
+  git-delta                                                          # improved diff viewer
+  halp                                                               # interactive help
+  hck                                                                # fast CSV processor
+  hexyl                                                              # hex viewer
+  hgrep                                                              # syntax-aware grep
+  htmlq                                                              # HTML query tool
+  hyperfine                                                          # command benchmarker
+  jnv                                                                # JSON converter
+  jiggy                                                              # interactive CLI helper
+  just                                                               # task runner
+  kalker                                                             # terminal calculator
+  lazycli --locked                                                   # lazy command UI
+  mdcat                                                              # Markdown viewer
+  monolith                                                           # save full webpages
+  navi                                                               # cheatsheet navigator
+  nomino                                                             # batch file renamer
+  onefetch                                                           # repo summary tool
+  pastel                                                             # terminal colorizer
+  print_key                                                          # show key codes
+  procs                                                              # process viewer
+  qsv                                                                # CSV toolkit
+  ripgrep                                                            # fast grep alternative
+  ripgrep_all --locked                                               # search archives & PDFs
+  scls --git https://github.com/estin/simple-completion-language-server.git    # completion LSP
+  samesame                                                           # fuzzy string matcher
+  serpl                                                              # interactive replace
+  sd                                                                 # find & replace
+  sheldon --locked                                                   # Zsh plugin manager
+  spotify-tui                                                        # Spotify TUI client
+  taplo-cli --locked                                                 # TOML linter
+  tauri-cli                                                          # Tauri CLI
+  tealdeer                                                           # tldr client
+  tock                                                               # timer utility
+  tokei --git https://github.com/XAMPPRocky/tokei.git                # code statistics
+  trippy --locked                                                    # interactive demos
+  viu                                                                # terminal image viewer
+  watchexec-cli --locked                                             # watch & run commands
+  wordcrab                                                           # dictionary CLI
+  xcp                                                                # parallel copy
+  zellij --locked                                                    # terminal workspace manager
+  zoxide --locked                                                    # frecency-based cd
 )
 
 for ((i = 0; i < ${#install_crates[@]}; i++)); do
