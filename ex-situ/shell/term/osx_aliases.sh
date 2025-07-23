@@ -76,17 +76,11 @@ alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-inf
 # gfold
 alias gf='gfold'
 
-# gitui
-alias gt='gitui'
-
 # hgrep
 alias hg='hgrep'
 
 # just
 alias ji='just install'
-
-# mgit
-alias mg='mgit'
 
 # samesame
 alias ss='samesame'
@@ -98,17 +92,10 @@ alias wc='wordcrab'
 alias zz='z -'
 
 # eza
-alias e='eza --header --long --icons --classify --git --group'
-alias ea='e --all'
-alias er='e --sort=newest'
-alias ear='ea --sort=newest'
-alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
-
-# lsd
-alias l='lsd --header --long --classify --git'
-alias la='l --almost-all'
-alias lr='l --timesort --reverse'
-alias lar='la --timesort --reverse'
-alias lt='la --tree --ignore-glob ".git" --group-directories-first'
+alias l='eza --header --long --icons --classify --git --group'
+alias la='l --all'
+alias lr='l --sort=newest'
+alias lar='la --sort=newest'
+alias lt='la --tree --level 2 --ignore-glob ".git" --group-directories-first'
 
 ####################################################################################################
