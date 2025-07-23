@@ -30,16 +30,16 @@ done
 ####################################################################################################
 
 go_binaries=(
-  github.com/golangci/golangci-lint/cmd/golangci-lint
-  github.com/Gelio/go-global-update    # Go updater for global binaries
-  github.com/mikefarah/yq/v4           # Portable command-line processor
-  github.com/zyedidia/eget             # Binary installer
-  github.com/jesseduffield/lazygit     # Git UI
-  github.com/jesseduffield/lazydocker  # Docker UI
-  github.com/jesseduffield/lazynpm     # npm UI
-  github.com/itchyny/mmv/cmd/mmv       # Mass file renamer
-  github.com/itchyny/fillin            # Form-based CLI filler
-  github.com/spf13/cobra-cli           # CLI generator
+  github.com/Gelio/go-global-update                        # global Go updater
+  github.com/golangci/golangci-lint/cmd/golangci-lint      # lint tool
+  github.com/itchyny/fillin                                # form filler
+  github.com/itchyny/mmv/cmd/mmv                           # mass renamer
+  github.com/jesseduffield/lazydocker                      # Docker UI
+  github.com/jesseduffield/lazygit                         # Git UI
+  github.com/jesseduffield/lazynpm                         # npm UI
+  github.com/mikefarah/yq/v4                               # YAML processor
+  github.com/spf13/cobra-cli                               # CLI generator
+  github.com/zyedidia/eget                                 # binary installer
 )
 
 for binary in "${go_binaries[@]}"; do
