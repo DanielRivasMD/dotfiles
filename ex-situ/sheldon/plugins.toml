@@ -9,6 +9,9 @@ shell = "zsh"
 [plugins.completions]
 github = "zap-zsh/completions"
 
+[plugins.directory]
+github = "supercrabtree/k"
+
 [plugins.sudo]
 github = "zap-zsh/sudo"
 
