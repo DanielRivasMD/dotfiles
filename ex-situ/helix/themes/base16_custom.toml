@@ -1,6 +1,6 @@
 ####################################################################################################
 
-"ui.background" = { fg = "white"}
+"ui.background" = { fg = "white" }
 "ui.background.separator" = { fg = "gray" }
 "ui.text" = { fg = "light-gray" }
 "ui.text.focus" = { fg = "white" }
@@ -8,7 +8,7 @@
 "ui.menu.selected" = { modifiers = ["reversed"] }
 "ui.menu.scroll" = { fg = "light-gray" }
 "ui.linenr" = { fg = "light-gray" }
-"ui.linenr.selected" = { fg = "light-cyan",  modifiers = ["bold"] }
+"ui.linenr.selected" = { fg = "light-cyan", modifiers = ["bold"] }
 "ui.popup" = { fg = "white" }
 "ui.window" = { fg = "gray" }
 "ui.selection" = { bg = "gray" }
@@ -27,9 +27,10 @@
 "ui.virtual.whitespace" = "gray"
 "ui.virtual.indent-guide" = "gray"
 "ui.virtual.inlay-hint" = { fg = "white", bg = "gray" }
-"ui.virtual.inlay-hint.parameter" = { fg = "white", bg = "gray"}
-"ui.virtual.inlay-hint.type" = { fg = "white", bg = "gray"}
+"ui.virtual.inlay-hint.parameter" = { fg = "white", modifiers = ["italic"] }
+"ui.virtual.inlay-hint.type" = { fg = "white", bg = "", modifiers = ["italic"] }
 "ui.virtual.wrap" = "gray"
+"ui.virtual.jump-label" = { fg = "orange", modifiers = ["bold"] }
 
 ####################################################################################################
 
@@ -38,7 +39,7 @@
 "constant" = "yellow"
 "attribute" = "yellow"
 "type" = "light-yellow"
-"string"  = "light-green"
+"string" = "light-green"
 "variable.other.member" = "green"
 "constant.character.escape" = "light-cyan"
 "function" = "light-blue"
@@ -55,7 +56,7 @@
 "markup.bold" = { fg = "light-yellow", modifiers = ["bold"] }
 "markup.italic" = { fg = "light-magenta", modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.link.url" = { fg = "yellow", underline = { color = "yellow", style = "line"} }
+"markup.link.url" = { fg = "yellow", underline = { color = "yellow", style = "line" } }
 "markup.link.text" = "light-red"
 "markup.quote" = "light-cyan"
 "markup.raw" = "green"
@@ -87,5 +88,27 @@
 "diagnostic.hint" = { bg = "gray", fg = "white", modifiers = ["bold"] }
 "diagnostic.debug" = { bg = "gray", fg = "white", modifiers = ["italic"] }
 "diagnostic.unnecessary" = { bg = "gray", fg = "white", modifiers = ["dim"] }
+
+####################################################################################################
+
+[palette]
+# background = "#282A36"
+# black = "#191A21"
+# comment = "#6272A4"
+# current_line = "#44475a"
+# cursorline = "#2d303e"
+# cyan = "#8be9fd"
+# darker = "#222430"
+# foreground = "#f8f8f2"
+# green = "#50fa7b"
+# grey = "#666771"
+# indent = "#56596a"
+orange = "#ffb86c"
+# pink = "#ff79c6"
+# purple = "#BD93F9"
+# red = "#ff5555"
+# selection = "#363848"
+# whitespace = "#586693"
+# yellow = "#f1fa8c"
 
 ####################################################################################################
