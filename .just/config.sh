@@ -10,7 +10,6 @@ export in_situ="${archive}/in-situ"
 export ex_situ="${archive}/ex-situ"
 export in_silico="${archive}/in-silico"
 export forked="${home}/Forked"
-export observatory="${home}/Observatory"
 export completion="${home}/.completion"
 export linked="${home}/Linked"
 export appSupport="${home}/Library/Application Support"
@@ -49,7 +48,6 @@ export fmode="${frag}/mode"
 export fsimple="${frag}/simple"
 
 # config dirs
-export gitui="${in_situ}/gitui"
 export zellij="${in_situ}/zellij"
 
 # distant
@@ -106,7 +104,7 @@ export zsh="${shell}/zsh"
 
 # nushell
 export nushell="${shell}/nu"
-export nushellConf="${appSupport}/nu"
+export nushellConf="${appSupport}/nushell"
 
 ####################################################################################################
 # ergo
@@ -129,14 +127,6 @@ export zshRemote="${shellRemote}/zsh"
 # pawsey
 export pawseyID="drivas@topaz.pawsey.org.au"
 export softwarePawsey="/scratch/pawsey0263/drivas/software"
-
-####################################################################################################
-
-# pueue
-export pueuedTracker="${appSupport}/pueue/pueue.pid"
-export pueuedSocket="${appSupport}/pueue/pueue_drivas.socket="
-export pueueFG="forge"
-export pueueUG="update"
 
 ####################################################################################################
 
