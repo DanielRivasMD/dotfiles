@@ -115,7 +115,6 @@ echo ''
 echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
 ln -sf "${completion}/bartib/misc/bartibCompletion.sh" "${zshcomp}/_bartib"    && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}bartib${NC}"
-ln -sf "${completion}/chezmoi/completions/chezmoi.zsh" "${zshcomp}/_chezmoi"   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chezmoi${NC}"
 ln -sf "${completion}/fd/contrib/completion/_fd" "${zshcomp}/_fd"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}fd${NC}"
 ln -sf "${completion}/eza/completions/zsh/_eza" "${zshcomp}/_eza"              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}eza${NC}"
 ln -sf "${completion}/watchexec/completions/zsh" "${zshcomp}/_watchexec"       && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}watchexec${NC}"
@@ -129,6 +128,7 @@ atuin gen-completions --shell zsh > "${zshcomp}/_atuin"                        &
 cobra-cli completion zsh > "${zshcomp}/_cobra-cli"                             && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cobra-cli${NC}"
 diesel completions zsh > "${zshcomp}/_diesel"                                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}diesel${NC}"
 deno completions zsh > "${zshcomp}/_deno"                                      && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}deno${NC}"
+flamegraph --completions zsh > "${zshcomp}/_flamegraph"                        && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}flamegraph${NC}"
 just --completions zsh > "${zshcomp}/_just"                                    && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}just${NC}"
 mdcat --completions zsh > "${zshcomp}/_mdcat"                                  && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}mdcat${NC}"
 uv generate-shell-completion zsh > "${zshcomp}/_uv"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}uv${NC}"
@@ -139,10 +139,8 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking completions${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${completionArch}/_lsd" "${zshcomp}/_lsd"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lsd${NC}"
 ln -sf "${completionArch}/_tldr" "${zshcomp}/_tldr"                            && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tldr${NC}"
 ln -sf "${completionArch}/_tab" "${zshcomp}/_tab"                              && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}tab${NC}"
-cp "${zshcomp}/_lsd" "${zshcomp}/_l" && sd lsd l "${zshcomp}/_l"               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}l${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 echo ''
