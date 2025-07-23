@@ -100,7 +100,6 @@ echo ''
 echo "${YELLOW}Generate completions${NC}"
 echo "${RED}====================================================================================================${NC}"
 juliaup completions zsh > "${zshcomp}/_juliaup"                                && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}juliaup${NC}"
-pueue completions zsh "${zshcomp}"                                             && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}pueue${NC}"
 sheldon completions --shell zsh > "${zshcomp}/_sheldon"                        && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}sheldon${NC}"
 echo "${RED}====================================================================================================${NC}"
 
@@ -110,7 +109,10 @@ babel completion zsh > "${zshcomp}/_babel"                                     &
 bender completion zsh > "${zshcomp}/_bender"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}bender${NC}"
 chess completion zsh > "${zshcomp}/_chess"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}chess${NC}"
 cerberus completion zsh > "${zshcomp}/_cerberus"                               && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}cerberus${NC}"
+ditto completion zsh > "${zshcomp}/_ditto"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}ditto${NC}"
 gorgon completion zsh > "${zshcomp}/_gorgon"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}gorgon${NC}"
+hypnos completion zsh > "${zshcomp}/_hypnos"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}hypnos${NC}"
+mimir completion zsh > "${zshcomp}/_mimir"                                     && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}mimir${NC}"
 lilith completion zsh > "${zshcomp}/_lilith"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lilith${NC}"
 lou completion zsh > "${zshcomp}/_lou"                                         && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}lou${NC}"
 mbombo completion zsh > "${zshcomp}/_mbombo"                                   && echo "Installed completions ${BIYELLOW}=>${NC} ${BCYAN}mbombo${NC}"
