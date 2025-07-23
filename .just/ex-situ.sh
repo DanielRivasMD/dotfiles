@@ -71,7 +71,6 @@ echo "${RED}====================================================================
 if [[ ! -d "${home}/.zsh" ]]; then mkdir "${home}/.zsh"; fi                    && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}zsh${NC}"
 ln -sf "${zsh}/osx_zshenv.sh" "${home}/.zshenv"                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshenv${NC}"
 ln -sf "${zsh}/osx_zshrc.sh" "${home}/.zsh"                                    && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshrc${NC}"
-ln -sf "${zsh}/zsh_just.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh just${NC}"
 ln -sf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh navi${NC}"
 ln -sf "${zsh}/zsh_zellij.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zellij${NC}"
 ln -sf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zoxide${NC}"
