@@ -1,5 +1,3 @@
-# TODO: create a command to generate nushell aliases from source => babel
-
 ####################################################################################################
 # nushell
 ####################################################################################################
@@ -48,20 +46,21 @@ alias lg = lazygit
 alias ld = lazydocker
 alias lm = lazynpm
 
+# micro
+alias mc = micro
+
 ####################################################################################################
 # julia
 ####################################################################################################
 
 # repl
-alias jl = julia
+alias jl = julia --project
 
 ####################################################################################################
 # python
 ####################################################################################################
 
-# BUG: source not workking 
-# # enviroment
-# alias activate = source venv/bin/activate
+# calendar
 
 # package manager & replalias pip = pip3
 alias python = python3
@@ -82,18 +81,8 @@ alias br = br --dates --sizes --permissions --hidden --git-ignored --show-git-in
 # gfold
 alias gf = gfold
 
-# gitui
-alias gt = gitui
-
 # hgrep
 alias hg = hgrep
-
-# mgit
-alias mg = mgit
-
-# pueue
-alias pu = pueue
-alias pd = pueued
 
 # samesame
 alias ss = samesame
@@ -101,24 +90,14 @@ alias ss = samesame
 # wordcrab
 alias wc = wordcrab
 
-# zellij
-alias zj = zellij
-
 # zoxide
 alias zz = z -
 
-# exa
+# eza
 alias e = eza --header --long --icons --classify --git --group
 alias ea = e --all
 alias er = e --sort=newest
 alias ear = ea --sort=newest
 alias et = ea --tree --level 2 --ignore-glob ".git" --group-directories-first
-
-# lsd
-alias l = lsd --long --classify
-alias la = l --almost-all
-alias lr = l --reverse --timesort
-alias lar = la --reverse --timesort
-alias lt = la --tree --ignore-glob ".git" --group-directories-first
 
 ####################################################################################################
