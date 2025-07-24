@@ -92,10 +92,10 @@ alias wc='wordcrab'
 alias zz='z -'
 
 # eza
-alias l='eza --header --long --icons --classify --git --group'
-alias la='l --all'
-alias lr='l --sort=newest'
-alias lar='la --sort=newest'
-alias lt='la --tree --level 2 --ignore-glob ".git" --group-directories-first'
+alias e='eza --header --long --icons --classify --git --group'
+alias ea='e --all'
+alias er='e --sort=newest'
+alias ear='ea --sort=newest'
+alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
 
 ####################################################################################################
