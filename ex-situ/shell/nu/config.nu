@@ -3,10 +3,10 @@
 ####################################################################################################
 
 # source
-source ~/.archive/ex-situ/shell/nushell/alias.nu
-source ~/.archive/ex-situ/shell/nushell/theme.nu
-source ~/.archive/ex-situ/shell/nushell/keymap.nu
-source ~/.archive/ex-situ/shell/nushell/atuin.nu
-source ~/.archive/ex-situ/shell/nushell/zoxide.nu
+source ~/.archive/ex-situ/shell/nu/alias.nu
+source ~/.archive/ex-situ/shell/nu/theme.nu
+source ~/.archive/ex-situ/shell/nu/keymap.nu
+source ~/.archive/ex-situ/shell/nu/atuin.nu
+source ~/.archive/ex-situ/shell/nu/zoxide.nu
 
 ####################################################################################################
