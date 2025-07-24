@@ -18,28 +18,37 @@ ALIAS="$EX_SITU/shell/term/osx_aliases.sh"
 command -v sheldon &>/dev/null && eval "$(sheldon source)"
 
 ####################################################################################################
-# Completion System
-####################################################################################################
-
-fpath=("$ZSH_COMPLETION" $fpath)
-
-autoload -Uz compinit
-compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
-
-_comp_options+=(globdots)
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-setopt COMPLETE_ALIASES
-
-[[ -f "$ZSH_COMPLETION/_tab" ]] && source "$ZSH_COMPLETION/_tab"
-
-####################################################################################################
 # Fuzzy Finder (fzf native)
 ####################################################################################################
 
 # Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
-[[ -f "$ZDOTDIR/fzf.zsh" ]] && source "$ZDOTDIR/fzf.zsh"
+# [[ -f "$ZDOTDIR/fzf.zsh" ]] && source "$ZDOTDIR/fzf.zsh"
 source <(fzf --zsh)
+
+####################################################################################################
+# Completion System
+####################################################################################################
+
+# ensure we load your custom completions directory first
+fpath=("$ZSH_COMPLETION" $fpath)
+
+# initialize completions (fresh dump each zsh version)
+autoload -Uz compinit
+compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
+
+# disable menu-style fallback showing partial matches
+zstyle ':completion:*' menu select
+
+# control which completers run (complete → match → expand)
+zstyle ':completion:*' completer _complete _match _expand
+
+# case-insensitive matching
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# allow aliases to be completed
+setopt COMPLETE_ALIASES
+
+[[ -f "$ZSH_COMPLETION/_tab" ]] && source "$ZSH_COMPLETION/_tab"
 
 ####################################################################################################
 # History
