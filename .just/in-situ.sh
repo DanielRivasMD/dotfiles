@@ -56,7 +56,6 @@ echo "${RED}====================================================================
 echo ''
 echo "${YELLOW}Linking config dirs @config${NC}"
 echo "${RED}====================================================================================================${NC}"
-ln -sf "${gitui}" "${config}"                                                  && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}gitui${NC} directory"
 ln -sf "${zellij}" "${config}"                                                 && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zellij${NC} directory"
 echo "${RED}====================================================================================================${NC}"
 
