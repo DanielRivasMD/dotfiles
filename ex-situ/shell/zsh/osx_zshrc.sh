@@ -22,7 +22,6 @@ command -v sheldon &>/dev/null && eval "$(sheldon source)"
 ####################################################################################################
 
 # Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
-# [[ -f "$ZDOTDIR/fzf.zsh" ]] && source "$ZDOTDIR/fzf.zsh"
 source <(fzf --zsh)
 
 ####################################################################################################
@@ -125,9 +124,14 @@ bindkey '^O' navi_widget
 # Utility Functions
 ####################################################################################################
 
+# reload with ease
 reload() { source "$ZDOTDIR/osx_zshrc.sh"; }
 
+# tre function wrapper
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+# initialize aliases
+aliases rehash
 
 ####################################################################################################
 # Welcome Banner
