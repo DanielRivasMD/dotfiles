@@ -76,7 +76,7 @@ path_additions=(
   "/usr/local/bin"
   "/usr/local/sbin"
   "/opt/homebrew/opt/llvm/bin"
-  "$BUN_INSTALL/bin"
+  "${HOME}/.aliases.d/shims"
 )
 
 for dir in "${path_additions[@]}"; do
