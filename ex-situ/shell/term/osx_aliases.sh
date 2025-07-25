@@ -79,9 +79,6 @@ alias gf='gfold'
 # hgrep
 alias hg='hgrep'
 
-# just
-alias ji='just install'
-
 # samesame
 alias ss='samesame'
 
