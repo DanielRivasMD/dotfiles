@@ -62,7 +62,8 @@ alias jl = julia --project
 
 # calendar
 
-# package manager & replalias pip = pip3
+# package manager & repl
+alias pip = pip3
 alias python = python3
 
 ####################################################################################################
