@@ -29,17 +29,6 @@ layout {
         pane name="joplin" command="joplin"
     }
 
-    tab name="Archive" split_direction="vertical" {
-        pane stacked=true split_direction="horizontal" {
-            pane name="arch - helix" cwd="/Users/drivas/.archive" command="hx"
-            pane name="arch - canvas" cwd="/Users/drivas/.archive" focus=true
-        }
-        pane stacked=true split_direction="horizontal" {
-            pane name="saiya - helix" cwd="/Users/drivas/.saiyajin" command="hx"
-            pane name="saiya - canvas" cwd="/Users/drivas/.saiyajin"
-        }
-    }
-
     tab name="Factorem" focus=true {
         pane name="canvas" cwd="/Users/drivas/Factorem" focus=true
     }
