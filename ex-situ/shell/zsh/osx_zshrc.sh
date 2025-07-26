@@ -18,13 +18,6 @@ ALIAS="$EX_SITU/shell/term/osx_aliases.sh"
 command -v sheldon &>/dev/null && eval "$(sheldon source)"
 
 ####################################################################################################
-# Fuzzy Finder (fzf native)
-####################################################################################################
-
-# Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
-source <(fzf --zsh)
-
-####################################################################################################
 # Completion System
 ####################################################################################################
 
@@ -38,6 +31,9 @@ compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
 # disable menu-style fallback showing partial matches
 zstyle ':completion:*' menu select
 
+# insert the only match immediately
+zstyle ':completion:*' insert-unambiguous true
+
 # control which completers run (complete → match → expand)
 zstyle ':completion:*' completer _complete _match _expand
 
@@ -48,6 +44,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 setopt COMPLETE_ALIASES
 
 [[ -f "$ZSH_COMPLETION/_tab" ]] && source "$ZSH_COMPLETION/_tab"
+
+####################################################################################################
+# Fuzzy Finder (fzf native)
+####################################################################################################
+
+# Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
+source <(fzf --zsh)
 
 ####################################################################################################
 # History
@@ -65,6 +68,9 @@ setopt appendhistory
 # Atuin (history manager, but we’ll disable its bind)
 export ATUIN_NOBIND="true"
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
+
+# disable autosuggest
+typeset -g ZSH_AUTOSUGGEST_STRATEGY=()
 
 # Just
 JFUN="$ZDOTDIR/zsh_just.sh"
