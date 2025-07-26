@@ -61,7 +61,6 @@ if [[ ! -d "${home}/.bash" ]]; then mkdir "${home}/.bash"; fi                  &
 ln -sf "${bash}/osx_bashrc.sh" "${home}/.bashrc"                               && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bashrc${NC}"
 ln -sf "${bash}/bash_just.sh" "${home}/.bash"                                  && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bash just${NC}"
 ln -sf "${bash}/bash_navi.sh" "${home}/.bash"                                  && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}bash navi${NC}"
-ln -sf "${bash}/fzf.bash" "${home}/.bash"                                      && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}fzf bash${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 # zsh
@@ -70,11 +69,10 @@ echo "${YELLOW}Linking zsh profile${NC}"
 echo "${RED}====================================================================================================${NC}"
 if [[ ! -d "${home}/.zsh" ]]; then mkdir "${home}/.zsh"; fi                    && echo "Directory created ${BIYELLOW}=>${NC} ${BGREEN}zsh${NC}"
 ln -sf "${zsh}/osx_zshenv.sh" "${home}/.zshenv"                                && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshenv${NC}"
-ln -sf "${zsh}/osx_zshrc.sh" "${home}/.zsh"                                    && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshrc${NC}"
+ln -sf "${zsh}/osx_zshrc.sh" "${home}/.zsh/.zshrc"                             && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zshrc${NC}"
 ln -sf "${zsh}/zsh_navi.sh" "${home}/.zsh"                                     && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh navi${NC}"
 ln -sf "${zsh}/zsh_zellij.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zellij${NC}"
 ln -sf "${zsh}/zsh_zoxide.sh" "${home}/.zsh"                                   && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}zsh zoxide${NC}"
-ln -sf "${zsh}/fzf.zsh" "${home}/.zsh"                                         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}fzf zsh${NC}"
 echo "${RED}====================================================================================================${NC}"
 
 # nushell
