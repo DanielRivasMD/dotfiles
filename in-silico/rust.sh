@@ -4,8 +4,12 @@
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-# Reload shell config
-source "$HOME/.archive/ex-situ/shell/zsh/osx_zshrc.sh"
+# Make the newly-installed Cargo/tools available in this session
+if [[ -f "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+else
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 ####################################################################################################
 # Cargo Setup
