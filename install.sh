@@ -1,117 +1,134 @@
 ####################################################################################################
-# Set archive directory
-####################################################################################################
-
-archDir="$HOME/.archive"
-mkdir -p "${archDir}"
-
-####################################################################################################
 # Create log directory
 ####################################################################################################
 
 echo "Ensuring log directory exists..."
-logDir="${archDir}/log"
+logDir="${PWD}/log"
 mkdir -p "$logDir"
+in_silico="./in-silico"
 
 ####################################################################################################
-# Link archive to current working directory
+# Install homebrew
 ####################################################################################################
 
-echo "Linking archive directory..."
-ln -svf "$(realpath .)" "${archDir}"
+echo "Installing Homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# inject Homebrew’s bin into $PATH without re‐execing zsh
+echo "Configuring Homebrew environment in this shell..."
+eval "$($(brew --prefix)/bin/brew shellenv)"
 
 ####################################################################################################
-# Git clone helper
+# Install helper
 ####################################################################################################
 
-clone_from_manifest () {
-  local repo_list="$HOME/.archive/.install/clone_repos.txt"
+run_install() {
+  local installer="$1"
+  local name
+  name="$(basename "$installer" .sh)"
+  local logfile="$logDir/${name}.log"
 
-  while IFS= read -r line; do
-    [[ -z "$line" || "$line" =~ ^# ]] && continue  # Skip empty or commented lines
-    local repo_url target_dir
-    repo_url=$(echo "$line" | awk '{print $1}')
-    target_dir=$(echo "$line" | awk '{print $2}' | sed "s|~|$HOME|")
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] START $name" >>"$logfile"
 
-    if [ -d "$target_dir" ]; then
-      echo "Repo exists: $target_dir, skipping."
+  if [[ -f "$installer" ]]; then
+    (
+      source "$installer"
+    ) >>"$logfile" 2>&1
+
+    local status=$?
+    if (( status != 0 )); then
+      echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] FAIL  $name (exit $status)" >>"$logfile"
     else
-      echo "Cloning: $repo_url → $target_dir"
-      if ! git clone "$repo_url" "$target_dir"; then
-        echo "Failed to clone $repo_url" >&2
-      fi
+      echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] DONE  $name" >>"$logfile"
     fi
-  done < "$repo_list"
-}
-
-####################################################################################################
-# Ergo (background setup)
-####################################################################################################
-
-mkdir -p "${HOME}/.completion"
-mkdir -p "${HOME}/Linked"
-clone_from_manifest >> "${archDir}/log/repos.out" 2>> "${archDir}/log/repos.err" &
-
-####################################################################################################
-# Logging helper
-####################################################################################################
-
-run_install () {
-  local script_name=$(basename "$1" .sh)
-  echo "$(date) Running $script_name..." >> "${archDir}/log/${script_name}.out"
-  if [ -f "$1" ]; then
-    bash "$1" >> "${archDir}/log/${script_name}.out" 2>> "${archDir}/log/${script_name}.err" &
   else
-    echo "Install script $1 not found" >&2
+    echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] MISSING $installer" >>"$logfile"
   fi
 }
 
 ####################################################################################################
-# Run install scripts
+# Install in parallel
 ####################################################################################################
 
-in_silico="${archDir}/in-silico"
-run_install "${in_silico}/brew.sh"
-run_install "${in_silico}/c++.sh"
-run_install "${in_silico}/clojure.sh"
-run_install "${in_silico}/go.sh"
-run_install "${in_silico}/julia.sh"
-run_install "${in_silico}/R.sh"
-run_install "${in_silico}/rust.sh"
+# Enumerate all your installers
+installers=(
+  "${in_silico}/brew.sh"
+  "${in_silico}/clojure.sh"
+  "${in_silico}/go.sh"
+  "${in_silico}/julia.sh"
+  "${in_silico}/R.sh"
+  "${in_silico}/rust.sh"
+)
+
+# Launch each installer in the background
+for script in "${installers[@]}"; do
+  run_install "$script" &
+done
+
+# Wait for all of them (plus any other background jobs) to complete
+wait
 
 ####################################################################################################
-# Zellij Plugins
+# Git‐clone helper
 ####################################################################################################
 
-setup_zellij_plugins () {
-  local plugin_dir="$HOME/.config/zellij/plugins"
-  local plugin_list="$HOME/.archive/.install/zellij_plugins.txt"
+clone_from_manifest() {
+  local manifest="${in_silico}/clone_repos.txt"
+  [[ -f "$manifest" ]] || {
+    echo "Clone manifest not found at $manifest" >&2
+    return 1
+  }
 
-  mkdir -p "$plugin_dir"
+  while IFS= read -r line; do
+    [[ -z "$line" || "$line" = \#* ]] && continue
 
-  while IFS= read -r plugin_url; do
-    [[ -z "$plugin_url" ]] && continue  # Skip empty lines
-    local filename="${plugin_url##*/}"
-    local target="$plugin_dir/$filename"
+    local repo_url="${line%%[[:space:]]*}"
+    local target_dir="${line#*[[:space:]]}"
+    target_dir="${target_dir/#\~/$HOME}"
 
-    echo "Checking Zellij plugin: $filename"
-
-    if [[ -f "$target" ]]; then
-      echo "Already exists: $filename"
+    if [[ -d "$target_dir" ]]; then
+      echo "Repo exists: $target_dir – skipping."
     else
-      echo "Downloading: $plugin_url"
-      if ! curl -LsSf "$plugin_url" -o "$target"; then
-        echo "Failed to download: $plugin_url" >&2
-      fi
+      echo "Cloning: $repo_url → $target_dir"
+      git clone "$repo_url" "$target_dir" \
+        || echo "Failed to clone $repo_url" >&2
     fi
-  done < "$plugin_list"
+  done < "$manifest"
 }
 
+# run cloning in background
+clone_from_manifest >>"$logDir/repos.out" 2>>"$logDir/repos.err" &
+
 ####################################################################################################
-# Download & Install
+# Zellij plugins
 ####################################################################################################
 
-setup_zellij_plugins >> "${archDir}/log/zellij_plugins.out" 2>> "${archDir}/log/zellij_plugins.err" &
+setup_zellij_plugins() {
+  local plugin_dir="$HOME/.config/zellij/plugins"
+  local list="${in_silico}/zellij_plugins.txt"
+  mkdir -p "$plugin_dir"
+
+  [[ -f "$list" ]] || {
+    echo "Zellij plugin list not found at $list" >&2
+    return 1
+  }
+
+  while IFS= read -r url; do
+    [[ -z "$url" || "$url" = \#* ]] && continue
+    local name="${url##*/}"
+    local dest="$plugin_dir/$name"
+
+    if [[ -f "$dest" ]]; then
+      echo "Plugin exists: $name – skipping."
+    else
+      echo "Downloading: $url"
+      curl -LsSf "$url" -o "$dest" || echo "Failed: $url" >&2
+    fi
+  done < "$list"
+}
+
+# run in background
+setup_zellij_plugins >>"$logDir/zellij_plugins.out" 2>>"$logDir/zellij_plugins.err" &
 
 ####################################################################################################
 # Wait for background jobs
