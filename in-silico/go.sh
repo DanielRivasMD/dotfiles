@@ -30,6 +30,7 @@ done
 ####################################################################################################
 
 go_binaries=(
+  github.com/air-verse/air                                 # live reload Go apps
   github.com/Gelio/go-global-update                        # global Go updater
   github.com/golangci/golangci-lint/cmd/golangci-lint      # lint tool
   github.com/itchyny/fillin                                # form filler
