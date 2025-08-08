@@ -26,14 +26,14 @@ _default:
 
 ####################################################################################################
 
-# link in-situ archive
+# link in-situ
 [group('link')]
 @in-situ:
   source .just/in-situ.sh
 
 ####################################################################################################
 
-# link ex-situ archive
+# link ex-situ
 [group('link')]
 @ex-situ:
   source .just/ex-situ.sh
