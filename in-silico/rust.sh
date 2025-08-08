@@ -80,7 +80,6 @@ install_crates=(
   pastel                                                             # terminal colorizer
   print_key                                                          # show key codes
   procs                                                              # process viewer
-  qsv                                                                # CSV toolkit
   ripgrep                                                            # fast grep alternative
   ripgrep_all --locked                                               # search archives & PDFs
   scls --git https://github.com/estin/simple-completion-language-server.git    # completion LSP
@@ -98,6 +97,7 @@ install_crates=(
   viu                                                                # terminal image viewer
   watchexec-cli --locked                                             # watch & run commands
   wordcrab                                                           # dictionary CLI
+  xan --locked                                                       # csv parser magician
   xcp                                                                # parallel copy
   zellij --locked                                                    # terminal workspace manager
   zoxide --locked                                                    # frecency-based cd
@@ -119,6 +119,10 @@ for ((i = 0; i < ${#install_crates[@]}; i++)); do
     cargo install ${crate}
   fi
 done
+
+cargo install dprint
+dprint install-plugin html
+
 
 ####################################################################################################
 # Install Deno and Deployctl
