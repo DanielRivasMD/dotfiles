@@ -84,22 +84,28 @@ sep
 
 echo_header "completions"
 mkdir -p "${zshcomp}" && echo "Created ~/.config/zsh_completion/"
+generate_completion "bat --completion zsh" "_bat"
+generate_completion "delta --generate-completion zsh" "_delta"
 generate_completion "juliaup completions zsh" "_juliaup"
+generate_completion "rg --generate=complete-zsh" "_rg"
 generate_completion "sheldon completions --shell zsh" "_sheldon"
+generate_completion "xan completions zsh" "_xan"
 
 echo ''
 generate_completion "babel completion zsh" "_babel"
 generate_completion "bender completion zsh" "_bender"
-generate_completion "chess completion zsh" "_chess"
 generate_completion "cerberus completion zsh" "_cerberus"
 generate_completion "gorgon completion zsh" "_gorgon"
 generate_completion "hypnos completion zsh" "_hypnos"
+generate_completion "joeblack completion zsh" "_joeblack"
 generate_completion "mimir completion zsh" "_mimir"
 generate_completion "lilith completion zsh" "_lilith"
 generate_completion "lou completion zsh" "_lou"
 generate_completion "mbombo completion zsh" "_mbombo"
 generate_completion "minerva completion zsh" "_minerva"
+generate_completion "richelieu completion zsh" "_richelieu"
 generate_completion "sisu completion zsh" "_sisu"
+generate_completion "zenith completion zsh" "_zenith"
 sep
 
 
