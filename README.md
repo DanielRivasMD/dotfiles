@@ -1,8 +1,7 @@
 # dotfiles
 
-Welcome to this Library. Please proceed to the desired Archive...
-
 ## Overview
+Welcome to this Library, please proceed to the desired Archive...
 
 Archive automates the setup of a rich, multi-language development environment using modular install scripts, external manifests, Zellij plugin management, and parallel execution
 It is designed to be clean, reproducible, and easy to maintain
