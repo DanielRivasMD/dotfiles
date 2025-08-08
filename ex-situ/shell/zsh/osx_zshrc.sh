@@ -26,6 +26,7 @@ fpath=("$ZSH_COMPLETION" $fpath)
 
 # initialize completions (fresh dump each zsh version)
 autoload -Uz compinit
+autoload -Uz bashcompinit && bashcompinit
 compinit -d "$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
 
 # disable menu-style fallback showing partial matches
