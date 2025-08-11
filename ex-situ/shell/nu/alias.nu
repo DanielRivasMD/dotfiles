@@ -7,6 +7,8 @@
 # alias open = ^open
 
 # ls
+alias l = ls
+alias la = ls --all
 alias ll = ls --long
 alias lla = ls --long --all
 alias lld = ls --long --all --du
