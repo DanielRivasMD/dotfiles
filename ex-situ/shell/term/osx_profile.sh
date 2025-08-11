@@ -25,9 +25,6 @@ export LANGUAGE="en_US"
 # Environment Anchors
 ####################################################################################################
 
-export ARCHIVE="$HOME/.archive"
-export EX_SITU="$ARCHIVE/ex-situ"
-export IN_SITU="$ARCHIVE/in-situ"
 export ZSH_COMPLETION="$HOME/.config/zsh_completion"
 
 ####################################################################################################
