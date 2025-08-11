@@ -39,6 +39,7 @@ tools=(
   helix
   litecli
   micro
+  serpl
   sheldon
   starship
 )
