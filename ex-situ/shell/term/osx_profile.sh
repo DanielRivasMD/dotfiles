@@ -35,7 +35,7 @@ export ZSH_COMPLETION="$HOME/.config/zsh_completion"
 export BARTIB_FILE="$HOME/.config/bartib/db.bartib"
 
 # Starship
-export STARSHIP_CONFIG="$EX_SITU/starship/osx_starship.toml"
+export STARSHIP_CONFIG="$HOME/.config/starship/osx_starship.toml"
 
 # Zellij
 export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"

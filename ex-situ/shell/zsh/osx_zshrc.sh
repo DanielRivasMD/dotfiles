@@ -132,7 +132,7 @@ bindkey '^O' navi_widget
 ####################################################################################################
 
 # reload with ease
-reload() { source "$ZDOTDIR/osx_zshrc.sh"; }
+reload() { source "$ZDOTDIR/.zshrc"; }
 
 # tre function wrapper
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
