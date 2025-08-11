@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# Source this in your ~/.config/nushell/config.nu
 $env.ATUIN_SESSION = (atuin uuid)
 
 # Magic token to make sure we don't record commands run by keybindings
@@ -43,9 +42,9 @@ $env.config = (
 	$env.config | upsert hooks (
 		$env.config.hooks
 		| upsert pre_execution (
-			$env.config.hooks | get -i pre_execution | default [] | append $_atuin_pre_execution)
+			$env.config.hooks | get --optional pre_execution | default [] | append $_atuin_pre_execution)
 		| upsert pre_prompt (
-			$env.config.hooks | get -i pre_prompt | default [] | append $_atuin_pre_prompt)
+			$env.config.hooks | get --optional pre_prompt | default [] | append $_atuin_pre_prompt)
 	)
 )
 
