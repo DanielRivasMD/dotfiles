@@ -17,9 +17,10 @@ done
 
 # @HOME
 echo_header "@HOME"
-link_config   "${git}/gitconfig" "${home}/.gitconfig" "gitconfig"
-link_config   "${git}/gitignore_global" "${home}/.gitignore_global" "gitignore_global"
-link_config   "${procs}/procs.toml" "${home}/.procs.toml" "procs"
+link_config "${aliases}/aliases_cfg" "${home}/.aliases_cfg"
+link_config "${git}/gitconfig" "${home}/.gitconfig" "gitconfig"
+link_config "${git}/gitignore_global" "${home}/.gitignore_global" "gitignore_global"
+link_config "${procs}/procs.toml" "${home}/.procs.toml" "procs"
 sep
 
 
@@ -49,8 +50,8 @@ echo_header "@config"
 # Define all your link tasks as “src|dest|label”
 read -r -d '' LINKS <<EOF
 ${broot}/conf.toml|${home}/.config/broot/conf.toml|broot config
-${espanso}/config/default.yml|${espansoAppS}/config|espanso default
-${espanso}/match/base.yml|${espansoAppS}/match|espanso match
+${espanso}/config/default.yml|${espansoAppS}/config/default.yml|espanso default
+${espanso}/match/base.yml|${espansoAppS}/match/base.yml|espanso match
 ${gh}/config.yml|${config}/gh/config.yml|gh config
 ${joplin}/joplin.json|${config}/joplin/settings.json|joplin settings
 ${julia}/startup.jl|${home}/.julia/config/startup.jl|julia startup
