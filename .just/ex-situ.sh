@@ -56,6 +56,7 @@ sep
 
 echo_header "term & shell"
 link_config "${term}/osx_profile.sh" "${home}/.profile" "term profile"
+link_config "${term}/osx_aliases.sh" "${home}/.aliases" "term aliases"
 
 # Bash
 echo '' && mkdir -p "${home}/.bash" && echo "Created ~/.bash/"
