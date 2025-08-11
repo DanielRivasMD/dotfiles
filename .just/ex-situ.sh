@@ -59,6 +59,7 @@ link_config "${term}/osx_profile.sh" "${home}/.profile" "term profile"
 
 # Bash
 echo '' && mkdir -p "${home}/.bash" && echo "Created ~/.bash/"
+link_config "${bash}/osx_bash_profile.sh" "${home}/.bash_profile" "bash_profile"
 link_config "${bash}/osx_bashrc.sh" "${home}/.bashrc" "bashrc"
 link_config "${bash}/bash_just.sh" "${home}/.bash" "bash just"
 link_config "${bash}/bash_navi.sh" "${home}/.bash" "bash navi"
