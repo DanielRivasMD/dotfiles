@@ -3,10 +3,11 @@
 ####################################################################################################
 
 # source
-source ~/.archive/ex-situ/shell/nu/alias.nu
-source ~/.archive/ex-situ/shell/nu/theme.nu
-source ~/.archive/ex-situ/shell/nu/keymap.nu
-source ~/.archive/ex-situ/shell/nu/atuin.nu
-source ~/.archive/ex-situ/shell/nu/zoxide.nu
+
+source ($nu.config-path | path dirname | path join 'alias.nu')
+source ($nu.config-path | path dirname | path join 'atuin.nu')
+source ($nu.config-path | path dirname | path join 'keymap.nu')
+source ($nu.config-path | path dirname | path join 'theme.nu')
+source ($nu.config-path | path dirname | path join 'zoxide.nu')
 
 ####################################################################################################
