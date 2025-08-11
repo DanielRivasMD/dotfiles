@@ -25,38 +25,39 @@ $env.config = {
 			}
 		}
 
-		{
-			name: previous_dir
-			modifier: alt
-			keycode: char_x                                      # patch -> `alt-cmd-,`
-			mode: emacs
-			event: {
-				send: executehostcommand,
-				cmd: "p"
-			}
-		}
+		# BUG: `shells` & `dirs` commands not present. plugins?
+		# {
+		# 	name: previous_dir
+		# 	modifier: alt
+		# 	keycode: char_x                                      # patch -> `alt-cmd-,`
+		# 	mode: emacs
+		# 	event: {
+		# 		send: executehostcommand,
+		# 		cmd: "p"
+		# 	}
+		# }
 
-		{
-			name: next_dir
-			modifier: alt
-			keycode: char_y                                      # patched -> `alt-cmd-.`
-			mode: emacs
-			event: {
-				send: executehostcommand,
-				cmd: "n"
-			}
-		}
+		# {
+		# 	name: next_dir
+		# 	modifier: alt
+		# 	keycode: char_y                                      # patched -> `alt-cmd-.`
+		# 	mode: emacs
+		# 	event: {
+		# 		send: executehostcommand,
+		# 		cmd: "n"
+		# 	}
+		# }
 
-		{
-			name: list_shells
-			modifier: alt
-			keycode: char_z                                      # patched -> `alt-cmd-/`
-			mode: emacs
-			event: {
-				send: executehostcommand,
-				cmd: "shells"
-			}
-		}
+		# {
+		# 	name: list_shells
+		# 	modifier: alt
+		# 	keycode: char_z                                      # patched -> `alt-cmd-/`
+		# 	mode: emacs
+		# 	event: {
+		# 		send: executehostcommand,
+		# 		cmd: "shells"
+		# 	}
+		# }
 
 		{
 			name: completion_menu
@@ -79,32 +80,32 @@ $env.config = {
 			event: { send: menuprevious }
 		}
 
-    # TODO: update
-		{
-			name: history_menu
-			modifier: control
-			keycode: char_x
-			mode: emacs
-			event: {
-				until: [
-					{ send: menu name: history_menu }
-					{ send: menupagenext }
-			]
-			}
-		}
+	  # BUG: are they useful commands?
+		# {
+		# 	name: history_menu
+		# 	modifier: control
+		# 	keycode: char_x
+		# 	mode: emacs
+		# 	event: {
+		# 		until: [
+		# 			{ send: menu name: history_menu }
+		# 			{ send: menupagenext }
+		# 	]
+		# 	}
+		# }
 
-		{
-			name: history_previous
-			modifier: control
-			keycode: char_z
-			mode: emacs
-			event: {
-				until: [
-					{ send: menupageprevious }
-					{ edit: undo }
-				]
-			}
-		}
+		# {
+		# 	name: history_previous
+		# 	modifier: control
+		# 	keycode: char_z
+		# 	mode: emacs
+		# 	event: {
+		# 		until: [
+		# 			{ send: menupageprevious }
+		# 			{ edit: undo }
+		# 		]
+		# 	}
+		# }
 
 	]
 }
