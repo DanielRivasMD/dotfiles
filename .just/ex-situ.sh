@@ -77,6 +77,12 @@ link_config "${zsh}/zsh_zoxide.sh" "${home}/.zsh" "zsh zoxide"
 echo ''
 link_config "${nu}/env.nu" "${nuAppS}/env.nu" "nushell env"
 link_config "${nu}/config.nu" "${nuAppS}/config.nu" "nushell config"
+
+link_config "${nu}/alias.nu" "${nuAppS}/alias.nu" "nushell alias"
+link_config "${nu}/atuin.nu" "${nuAppS}/atuin.nu" "nushell atuin"
+link_config "${nu}/keymap.nu" "${nuAppS}/keymap.nu" "nushell keymap"
+link_config "${nu}/theme.nu" "${nuAppS}/theme.nu" "nushell theme"
+link_config "${nu}/zoxide.nu" "${nuAppS}/zoxide.nu" "nushell zoxide"
 sep
 
 
