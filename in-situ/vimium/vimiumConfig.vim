@@ -1,105 +1,61 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" TODO: update f1 bindings
 " reset mappings
 unmapAll
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" navigation
-map j scrollDown
-map k scrollUp
-map J scrollFullPageDown
-map K scrollFullPageUp
-map <a-down> scrollFullPageDown
-map <a-up> scrollFullPageUp
-" map H scrollLeft
-" map L scrollRight
-map G scrollToBottom
-map g scrollToTop
-map <m-down> scrollToBottom
-map <m-up> scrollToTop
-map r reload
+" links
+map <a-f1> focusInput
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <a-f2> LinkHints.activateModeToDownloadLink
+map <a-f3> LinkHints.activateModeToCopyLinkUrl
 
-" URL
-map y copyCurrentUrl
-" map p openCopiedUrlInCurrentTab
-" map P openCopiedUrlInNewTab
-map q goUp
-map Q goToRoot
+map <a-f4> LinkHints.activateMode
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" modes
-" map <c-space> enterInsertMode "TODO: update
-" map v enterVisualMode
-" map V enterVisualLineMode
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" links "TODO: update
-" map <a-f1> focusInput
- 
-" map <c-f1> LinkHints.activateModeToDownloadLink
-" map <m-f1> LinkHints.activateModeToCopyLinkUrl
- 
-" map <c-m-f1> LinkHints.activateMode
- 
-" map <a-c-f1> LinkHints.activateModeToOpenInNewTab
-" map <a-m-f1> LinkHints.activateModeToOpenInNewForegroundTab
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" marks
-" map | Marks.activateCreateMode
-" map " Marks.activateGotoMode
+map <a-f5> LinkHints.activateModeToOpenInNewTab
+map <a-f6> LinkHints.activateModeToOpenInNewForegroundTab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vomnibar
-map t Vomnibar.activate
-map T Vomnibar.activateInNewTab
-" map b Vomnibar.activateBookmarks
-" map B Vomnibar.activateBookmarksInNewTab
-map e Vomnibar.activateEditUrl
-map E Vomnibar.activateEditUrlInNewTab
-" map <m-space> Vomnibar.activateTabSelection
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" find
-" map / enterFindMode "TODO: update
-" map l performFind
-" map h performBackwardsFind
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" history
-" map u goBack
-" map U goForward
+map <a-f7> Vomnibar.activateTabSelection
+map <a-t> Vomnibar.activate
+map <a-T> Vomnibar.activateInNewTab
+map <a-b> Vomnibar.activateBookmarks
+map <a-B> Vomnibar.activateBookmarksInNewTab
+map <a-e> Vomnibar.activateEditUrl
+map <a-E> Vomnibar.activateEditUrlInNewTab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tab manipulation
-" map ; createTab
-" map , previousTab
-" map . nextTab
-map ' visitPreviousTab
-map d duplicateTab
-" map \ togglePinTab
-map m toggleMuteTab
-map x removeTab
-map z restoreTab
-map \ moveTabToNewWindow
-" map [ moveTabLeft
-" map ] moveTabRight
+map <a-f8> visitPreviousTab
+map <a-m> toggleMuteTab
+map <a-x> removeTab
+map <a-z> restoreTab
+map <a-w> moveTabToNewWindow
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" navigation
+map <a-f9> scrollUp
+map <a-f10> scrollDown
+map <a-down> scrollFullPageDown
+map <a-up> scrollFullPageUp
+map <m-down> scrollToBottom
+map <m-up> scrollToTop
+map <a-r> reload
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" URL
+" map <a-u> goUp
+" map <a-U> goToRoot
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " help
-" map ? showHelp
-" map s toggleViewSource
+map ? showHelp
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
