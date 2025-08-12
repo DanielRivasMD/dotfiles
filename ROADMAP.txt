@@ -1,13 +1,10 @@
-- vimium to complex bindings
+- edit `just roadmap`: add a tag on top of todos, delete below & update news
 - update broot
-- homogenize readmes
 - update language configs helix: awk, bash, clojure, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - remap helix config
 - update invisible characters helix
 - update prompts in litecli
-- look into nu instalation & config
 - update minimalistic micro config
-- look into serpl config
 - todor completions?
 
 ==================================================
@@ -19,17 +16,16 @@ ex-situ/helix/languages/go.toml
   line 33     TODO   gopls needs utf-8 offsets?
 ex-situ/helix/languages/python.toml
   line 20     TODO   pyls needs utf-8 offsets
+ex-situ/helix/modes/common.toml
+  line 225    BUG    C-F10 = ["normal_mode", "replace", "insert_mode"]          # alt-r             # replace
 ex-situ/helix/modes/editor.toml
   line 77     TODO   update invisibles
 ex-situ/litecli/config
   line 70     TODO   update
   line 75     TODO   update
-ex-situ/shell/fn/forge.sh
-  line 4      TODO   add to Lou
-ex-situ/shell/nu/alias.nu
-  line 1      TODO   create a command to generate nushell aliases from source => babel
 ex-situ/shell/nu/keymap.nu
-  line 82     TODO   update
+  line 28     BUG    `shells` & `dirs` commands not present. plugins?
+  line 83     BUG    are they useful commands?
 in-situ/espanso/match/base.yml
   line 253    TODO   import development keywords
 ==================================================
