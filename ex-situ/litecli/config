@@ -68,7 +68,7 @@ autocompletion = True
 # \s - Seconds of the current time
 # \x1b[...m - insert ANSI escape sequence
 # TODO: update
-prompt = '\d > '
+prompt = '(\d)> '
 prompt_continuation = '::: '
 
 # Show/hide the informational toolbar with function keymap at the footer.
