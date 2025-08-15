@@ -40,6 +40,7 @@ go_binaries=(
   github.com/jesseduffield/lazynpm                         # npm UI
   github.com/mikefarah/yq/v4                               # YAML processor
   github.com/spf13/cobra-cli                               # CLI generator
+  github.com/sqls-server/sqls                              # SQL language server
   github.com/zyedidia/eget                                 # binary installer
 )
 
