@@ -13,7 +13,8 @@ install_formulae=(
   micro                      # terminal editor  
   mysql                      # MySQL DB  
   nushell                    # structured shell  
-  ollama                     # local LLM runner  
+  ollama                     # local LLM runner
+  pgformatter                # SQL formatter
   postgresql                 # PostgreSQL DB  
   sqlite                     # SQLite engine  
   starship                   # shell prompt  
