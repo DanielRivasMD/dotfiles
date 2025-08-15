@@ -29,8 +29,7 @@ roots = ["go.work", "go.mod"]
 auto-format = true
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "gopls", "golangci-lint-lsp" ]
-# TODO: gopls needs utf-8 offsets?
+language-servers = ["gopls", "golangci-lint-lsp"]
 indent = { tab-width = 2, unit = "\t" }
 
 [language.debugger]
@@ -43,31 +42,34 @@ port-arg = "-l 127.0.0.1:{}"
 [[language.debugger.templates]]
 name = "source"
 request = "launch"
-completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+completion = [{ name = "entrypoint", completion = "filename", default = "." }]
 args = { mode = "debug", program = "{0}" }
 
 [[language.debugger.templates]]
 name = "binary"
 request = "launch"
-completion = [ { name = "binary", completion = "filename" } ]
+completion = [{ name = "binary", completion = "filename" }]
 args = { mode = "exec", program = "{0}" }
 
 [[language.debugger.templates]]
 name = "test"
 request = "launch"
-completion = [ { name = "tests", completion = "directory", default = "." } ]
+completion = [{ name = "tests", completion = "directory", default = "." }]
 args = { mode = "test", program = "{0}" }
 
 [[language.debugger.templates]]
 name = "attach"
 request = "attach"
-completion = [ "pid" ]
+completion = ["pid"]
 args = { mode = "local", processId = "{0}" }
 
 [[language.debugger.templates]]
 name = "core"
 request = "launch"
-completion = [ { name = "binary", completion = "filename" }, { name = "core", completion = "filename" } ]
+completion = [
+  { name = "binary", completion = "filename" },
+  { name = "core", completion = "filename" },
+]
 args = { mode = "core", program = "{0}", coreFilePath = "{1}" }
 
 [[grammar]]
@@ -81,8 +83,8 @@ injection-regex = "gomod"
 file-types = [{ glob = "go.mod" }]
 auto-format = true
 comment-token = "//"
-language-servers = [ "gopls" ]
-indent = { tab-width = 4, unit = "\t" }
+language-servers = ["gopls"]
+indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "gomod"
@@ -95,7 +97,7 @@ injection-regex = "gotmpl"
 file-types = ["gotmpl"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "gopls" ]
+language-servers = ["gopls"]
 indent = { tab-width = 2, unit = " " }
 
 [[grammar]]
@@ -109,10 +111,9 @@ injection-regex = "gowork"
 file-types = [{ glob = "go.work" }]
 auto-format = true
 comment-token = "//"
-language-servers = [ "gopls" ]
-indent = { tab-width = 4, unit = "\t" }
+language-servers = ["gopls"]
+indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "gowork"
 source = { git = "https://github.com/omertuc/tree-sitter-go-work", rev = "6dd9dd79fb51e9f2abc829d5e97b15015b6a8ae2" }
-
