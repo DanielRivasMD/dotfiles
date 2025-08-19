@@ -42,6 +42,8 @@ go_binaries=(
   github.com/spf13/cobra-cli                               # CLI generator
   github.com/sqls-server/sqls                              # SQL language server
   github.com/zyedidia/eget                                 # binary installer
+  github.com/aarondl/sqlboiler/v4
+  github.com/aarondl/sqlboiler-sqlite3@latest
 )
 
 for binary in "${go_binaries[@]}"; do
