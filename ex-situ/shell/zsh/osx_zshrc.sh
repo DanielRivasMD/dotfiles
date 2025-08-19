@@ -67,7 +67,6 @@ setopt appendhistory
 ####################################################################################################
 
 # Atuin (history manager, but we’ll disable its bind)
-export ATUIN_NOBIND="true"
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
 # disable autosuggest
