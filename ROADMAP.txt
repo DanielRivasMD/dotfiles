@@ -8,15 +8,14 @@
 - todor completions?
 
 helix:
-  - diagnositcs (workspace picker, picker, next / prev)
-  - movement (prev, next, repeat)
-  - undo / redo
-  - git mod (prev / next)
-  - lsp (picker, rename, ref, def, type, impl)
-  - comment (prev / next)
-  - jumplist (picker, prev next)
-  - file picker (general, buffer, modified)
-
+  - lsp (picker, rename, ref, def, type, impl) => zero-mode
+  - undo / redo => z-mode
+  - git mod (prev / next) => z-mode
+  - movement (prev, next, repeat) => x-mode
+  - comment (prev / next) => x-mode
+  - jumplist (save, picker, prev, next) => w-mode
+  - file picker (general, buffer, modified) => rcmd
+  - diagnositcs (workspace picker, picker, next / prev) => rctl
 
 
 ==================================================
