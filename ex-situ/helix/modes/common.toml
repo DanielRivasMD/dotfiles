@@ -37,9 +37,9 @@ C-space = ["goto_word"]                                    # ctl-space         #
 #                                                          # joker-.           #
 #                                                          # joker-/           #
 
-F13 = ["goto_prev_diag"]                                   # joker-bs          # prev diag
-F14 = ["diagnostics_picker"]                               # joker-enter       # diag picker
-F15 = ["goto_next_diag"]                                   # joker-shift       # next diag
+# F13 = ["goto_prev_diag"]                                   # joker-bs          # prev diag
+# F14 = ["diagnostics_picker"]                               # joker-enter       # diag picker
+# F15 = ["goto_next_diag"]                                   # joker-shift       # next diag
 F16 = ["normal_mode", "find_till_char", "MODE"]            # joker-alt         # move forward
 F17 = ["normal_mode", "till_prev_char", "MODE"]            # joker-cmd         # move backward
 F18 = ["normal_mode", "repeat_last_motion", "MODE"]        # joker-space       # repeat motion
@@ -93,17 +93,23 @@ S-F14 = ["workspace_diagnostics_picker"]                   # joker-shift-enter #
 # A-F19 = []                                               # grave-.           #
 # A-F20 = []                                               # grave-/           #
 
-C-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
-C-F12 = ["symbol_picker"]                                  # grave-enter       # symbol list
-C-F13 = ["search"]                                         # grave-shift       # search
-C-F16 = ["goto_reference"]                                 # grave-alt         # reference
-C-F17 = ["goto_definition"]                                # grave-cmd         # definition
-C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
+# C-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
+# C-F12 = ["symbol_picker"]                                  # grave-enter       # symbol list
+# C-F13 = ["search"]                                         # grave-shift       # search
+# C-F16 = ["goto_reference"]                                 # grave-alt         # reference
+# C-F17 = ["goto_definition"]                                # grave-cmd         # definition
+# C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 
 # C-pageup = []                                            # grave-left        #
 # C-pagedown = []                                          # grave-right       #
-C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
-C-end = ["goto_next_comment"]                              # grave-down        # next comment
+# C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
+# C-end = ["goto_next_comment"]                              # grave-down        # next comment
+
+
+C-F12 = ["diagnostics_picker"]
+# S-C-F12 = ["workspace_diagnostics_picker"]
+C-home = ["goto_prev_diag"]                             # grave-up          # prev comment
+C-end = ["goto_next_diag"]                              # grave-down        # next comment
 
 
 ####################################################################################################
@@ -122,7 +128,7 @@ C-end = ["goto_next_comment"]                              # grave-down        #
 
 # C-S-F11 = []                                             # grave-shift-bs    #
 C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter # jump list
-C-S-F13 = ["global_search"]                                # grave-shift-shift # global search
+# C-S-F13 = ["global_search"]                                # grave-shift-shift # global search
 C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   # implementation
 C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
@@ -205,12 +211,12 @@ A-down = ["extend_to_file_end"]                            # cmd-shift-down    #
 ####################################################################################################
 
 # alphabet
-# A-F1 = [""]                                              # alt-a             #
+A-F1 = [":format"]                                         # alt-a             # format
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
 # A-F6 = [""]                                              # alt-e             #
-A-F7 = [":format"]                                         # alt-f             # format
+A-F7 = ["search"]                                          # alt-f             #
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
 # A-F10 = [""]                                             # alt-i             #
@@ -218,11 +224,11 @@ C-F1 = ["normal_mode", "copy_selection_on_next_line", "MODE"] # alt-j           
 C-F2 = ["normal_mode", "copy_selection_on_prev_line", "MODE"] # alt-k             # spawn multi up
 C-F4 = ["search_next"]                                     # alt-l             # find next
 C-F5 = ["record_macro"]                                    # alt-m             # toggle macro
-# C-F6 = [""]                                              # alt-n             #
+C-F6 = [":new"]                                            # alt-n             #
 # C-F7 = [""]                                              # alt-o             #
 # C-F8 = [""]                                              # alt-p             # jump matching
 C-F9 = ["normal_mode", ":quit-all"]                        # alt-q             # close buffer
-# BUG: C-F10 = ["normal_mode", "replace", "insert_mode"]          # alt-r             # replace
+C-F10 = ["normal_mode", ":reload-all", "MODE"]             # alt-r             # reload
 A-C-F1 = ["normal_mode", ":write-quit-all"]                # alt-s             # save & quit
 # A-C-F2 = [""]                                            # alt-t             #
 # A-C-F4 = [""]                                            # alt-u             #
@@ -242,7 +248,7 @@ S-A-F1 = ["select_all"]                                    # alt-shift-a       #
 S-A-F4 = ["toggle_comments"]                               # alt-shift-c       # toggle comment
 S-A-F5 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"] # alt-shift-d       # duplicate line
 S-A-F6 = [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"] # alt-shift-e       # launch window
-S-A-F7 = [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"] # alt-shift-f       # launch serpl
+S-A-F7 = ["global_search"] # alt-shift-f       #
 # S-A-F8 = [""]                                            # alt-shift-g       #
 # S-A-F9 = [""]                                            # alt-shift-h       #
 S-A-F10 = ["indent"]                                       # alt-shift-i       # indent
@@ -254,7 +260,7 @@ S-C-F5 = ["replay_macro"]                                  # alt-shift-m       #
 S-C-F7 = ["unindent"]                                      # alt-shift-o       # unindent
 # S-C-F8 = [""]                                            # alt-shift-p       #
 S-C-F9 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"] # alt-shift-q       # launch lazygit
-S-C-F10 = ["normal_mode", ":reload-all", "MODE"]           # alt-shift-r             # reload
+S-C-F10 = [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"] # alt-shift-f       # launch serpl
 S-A-C-F1 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start", "toggle_comments", "move_visual_line_up"] # alt-shift-s       # duplicate & comment
 # S-A-C-F2 = [""]                                          # alt-shift-t       #
 # S-A-C-F4 = [""]                                          # alt-shift-u       #
