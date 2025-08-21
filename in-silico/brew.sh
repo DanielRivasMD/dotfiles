@@ -3,21 +3,22 @@
 ####################################################################################################
 
 install_formulae=(
-  bat-extras                 # bat utilities  
-  cljfmt                     # Clojure formatter  
-  fzf                        # fuzzy finder  
-  gh                         # GitHub CLI  
-  helix                      # code editor  
-  joplin-cli                 # Joplin CLI  
-  llvm                       # compiler toolchain  
-  micro                      # terminal editor  
-  mysql                      # MySQL DB  
-  nushell                    # structured shell  
+  bat-extras                 # bat utilities
+  cljfmt                     # Clojure formatter
+  fzf                        # fuzzy finder
+  gh                         # GitHub CLI
+  helix                      # code editor
+  joplin-cli                 # Joplin CLI
+  llvm                       # compiler toolchain
+  micro                      # terminal editor
+  mysql                      # MySQL DB
+  nushell                    # structured shell
   ollama                     # local LLM runner
   pgformatter                # SQL formatter
-  postgresql                 # PostgreSQL DB  
-  sqlite                     # SQLite engine  
-  starship                   # shell prompt  
+  postgresql                 # PostgreSQL DB
+  sqlite                     # SQLite engine
+  starship                   # shell prompt
+  zprint                     #
 )
 
 for ((i = 0; i < ${#install_formulae[@]}; i++)); do
@@ -33,6 +34,9 @@ brew install mongodb-community
 # Microsoft credential manager
 brew tap microsoft/git
 brew install --cask git-credential-manager-core
+
+# clojure language server
+brew install clojure-lsp/brew/clojure-lsp-native
 
 ####################################################################################################
 # Casks
