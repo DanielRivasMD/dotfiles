@@ -40,9 +40,6 @@ C-space = ["goto_word"]                                    # ctl-space         #
 # F13 = ["goto_prev_diag"]                                   # joker-bs          # prev diag
 # F14 = ["diagnostics_picker"]                               # joker-enter       # diag picker
 # F15 = ["goto_next_diag"]                                   # joker-shift       # next diag
-F16 = ["normal_mode", "find_till_char", "MODE"]            # joker-alt         # move forward
-F17 = ["normal_mode", "till_prev_char", "MODE"]            # joker-cmd         # move backward
-F18 = ["normal_mode", "repeat_last_motion", "MODE"]        # joker-space       # repeat motion
 
 A-pageup = ["undo"]                                        # joker-left        # undo
 A-pagedown = ["redo"]                                      # joker-right       # redo
@@ -66,7 +63,7 @@ A-end = ["goto_next_change"]                               # joker-down        #
 #                                                          # joker-shift-/     #
 
 #                                                          # joker-shift-bs    #
-S-F14 = ["workspace_diagnostics_picker"]                   # joker-shift-enter # diag picker
+# S-F14 = ["workspace_diagnostics_picker"]                   # joker-shift-enter # diag picker
 #                                                          # joker-shift-shift #
 #                                                          # joker-shift-alt   #
 #                                                          # joker-shift-cmd   #
@@ -100,16 +97,17 @@ S-F14 = ["workspace_diagnostics_picker"]                   # joker-shift-enter #
 # C-F17 = ["goto_definition"]                                # grave-cmd         # definition
 # C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 
-# C-pageup = []                                            # grave-left        #
-# C-pagedown = []                                          # grave-right       #
-# C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
-# C-end = ["goto_next_comment"]                              # grave-down        # next comment
+C-pageup = ["normal_mode", "till_prev_char", "MODE"]            # joker-cmd         # move backward
+C-pagedown = ["normal_mode", "find_till_char", "MODE"]            # joker-alt         # move forward
+C-home = ["goto_prev_comment"]                             # grave-up          # prev comment
+C-end = ["goto_next_comment"]                              # grave-down        # next comment
 
+F18 = ["normal_mode", "repeat_last_motion", "MODE"]        # joker-space       # repeat motion
 
-C-F12 = ["diagnostics_picker"]
-# S-C-F12 = ["workspace_diagnostics_picker"]
-C-home = ["goto_prev_diag"]                             # grave-up          # prev comment
-C-end = ["goto_next_diag"]                              # grave-down        # next comment
+C-F13 = ["diagnostics_picker"]
+C-F14 = ["workspace_diagnostics_picker"]
+C-F11 = ["goto_prev_diag"]                             # grave-up          # prev comment
+C-F12 = ["goto_next_diag"]                              # grave-down        # next comment
 
 
 ####################################################################################################
