@@ -2,6 +2,8 @@
 # Alt-Enter	Open selected in the background without closing the picker
 ####################################################################################################
 
+# TODO: use fast save
+
 # del
 del = ["delete_selection_noyank"]                          # shift-shift       # delete foward
 backspace = ["delete_char_backward"]                       # shift-shift       # delete backward
@@ -23,23 +25,6 @@ C-space = ["goto_word"]                                    # ctl-space         #
 
 
 ####################################################################################################
-
-# joker
-#                                                          # joker--           #
-#                                                          # joker-=           #
-
-#                                                          # joker-[           #
-#                                                          # joker-]           #
-#                                                          # joker-;           #
-#                                                          # joker-'           #
-#                                                          # joker-\           #
-#                                                          # joker-,           #
-#                                                          # joker-.           #
-#                                                          # joker-/           #
-
-# F13 = ["goto_prev_diag"]                                   # joker-bs          # prev diag
-# F14 = ["diagnostics_picker"]                               # joker-enter       # diag picker
-# F15 = ["goto_next_diag"]                                   # joker-shift       # next diag
 
 A-pageup = ["undo"]                                        # joker-left        # undo
 A-pagedown = ["redo"]                                      # joker-right       # redo
@@ -90,12 +75,6 @@ A-end = ["goto_next_change"]                               # joker-down        #
 # A-F19 = []                                               # grave-.           #
 # A-F20 = []                                               # grave-/           #
 
-# C-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
-# C-F12 = ["symbol_picker"]                                  # grave-enter       # symbol list
-# C-F13 = ["search"]                                         # grave-shift       # search
-# C-F16 = ["goto_reference"]                                 # grave-alt         # reference
-# C-F17 = ["goto_definition"]                                # grave-cmd         # definition
-# C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 
 C-pageup = ["normal_mode", "till_prev_char", "MODE"]            # joker-cmd         # move backward
 C-pagedown = ["normal_mode", "find_till_char", "MODE"]            # joker-alt         # move forward
@@ -124,9 +103,12 @@ C-F12 = ["goto_next_diag"]                              # grave-down        # ne
 # A-S-F19 = []                                             # grave-shift-.     #
 # A-S-F20 = []                                             # grave-shift-/     #
 
-# C-S-F11 = []                                             # grave-shift-bs    #
+C-S-F11 = ["rename_symbol"]                                  # grave-bs          # rename symbol
+C-S-F13 = ["symbol_picker"]                                  # grave-enter       # symbol list
+C-F16 = ["goto_reference"]                                 # grave-alt         # reference
+C-F17 = ["goto_definition"]                                # grave-cmd         # definition
+C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter # jump list
-# C-S-F13 = ["global_search"]                                # grave-shift-shift # global search
 C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   # implementation
 C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
