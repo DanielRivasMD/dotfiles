@@ -1,34 +1,18 @@
-- edit `just roadmap`: add a tag on top of todos, delete below & update news
 - update broot
-- update language configs helix: awk, bash, clojure, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
-- remap helix config
+- update language configs helix: awk, bash, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - update invisible characters helix
-- update prompts in litecli
 - update minimalistic micro config
 - todor completions?
-
-helix:
-  - lsp (picker, rename, ref, def, type, impl) => zero-mode
-  - undo / redo => z-mode
-  - git mod (prev / next) => z-mode
-  - movement (prev, next, repeat) => x-mode
-  - comment (prev / next) => x-mode
-  - jumplist (save, picker, prev, next) => w-mode
-  - file picker (general, buffer, modified) => rcmd
-  - diagnositcs (workspace picker, picker, next / prev) => rctl
-
 
 ==================================================
 ex-situ/bpython/alacritty.theme
   line 13     TODO   update suggestion color
 ex-situ/helix/languages/git.toml
   line 47     TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
-ex-situ/helix/languages/go.toml
-  line 33     TODO   gopls needs utf-8 offsets?
 ex-situ/helix/languages/python.toml
   line 20     TODO   pyls needs utf-8 offsets
 ex-situ/helix/modes/common.toml
-  line 225    BUG    C-F10 = ["normal_mode", "replace", "insert_mode"]          # alt-r             # replace
+  line 5      TODO   use fast save
 ex-situ/helix/modes/editor.toml
   line 77     TODO   update invisibles
 ex-situ/litecli/config
