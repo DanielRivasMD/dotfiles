@@ -195,7 +195,7 @@ A-F1 = [":format"]                                         # alt-a             #
 # A-F2 = [""]                                              # alt-b             #
 A-F4 = ["yank_to_clipboard"]                               # alt-c             # copy
 A-F5 = ["search_selection", "extend_search_next"]          # alt-d             # spawn multi
-# A-F6 = [""]                                              # alt-e             #
+A-F6 = ["toggle_comments"]                                              # alt-e             #
 A-F7 = ["search"]                                          # alt-f             #
 # A-F8 = [""]                                              # alt-g             #
 A-F9 = ["search_prev"]                                     # alt-h             # find prev
@@ -241,14 +241,14 @@ S-C-F7 = ["unindent"]                                      # alt-shift-o       #
 # S-C-F8 = [""]                                            # alt-shift-p       #
 S-C-F9 = [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"] # alt-shift-q       # launch lazygit
 S-C-F10 = [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"] # alt-shift-r       # launch serpl
-S-A-C-F1 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start", "toggle_comments", "move_visual_line_up"] # alt-shift-s       # duplicate & comment
+# S-A-C-F1 = ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start", "toggle_comments", "move_visual_line_up"] # alt-shift-s       # duplicate & comment
 # S-A-C-F2 = [""]                                          # alt-shift-t       #
 # S-A-C-F4 = [""]                                          # alt-shift-u       #
 # S-A-C-F5 = [""]                                          # alt-shift-v       #
 S-A-C-F6 = [":sh zellij run --name canvas --close-on-exit --floating --pinned true --height 20 --width 40 --x 100 --y 0 -- just watch"] # alt-shift-w       # just watch
 S-A-C-F7 = ["extend_to_line_bounds", "delete_selection_noyank"] # alt-shift-x       # cut line
-S-A-C-F8 = [":yank-diagnostic"]  # alt-shift-y       # yank diagnostic
-S-A-C-F9 = ["toggle_comments"] # alt-shift-z       # toggle comments
+# S-A-C-F8 = ["toggle_comments"] # alt-shift-z       # toggle comments
+S-A-C-F9 = [":yank-diagnostic"]  # alt-shift-y       # yank diagnostic
 S-A-C-F10 = [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"]                                 # alt-shift-grave   # launch shell
 
 
