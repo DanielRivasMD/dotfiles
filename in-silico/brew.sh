@@ -51,6 +51,7 @@ install_casks=(
   dropbox                    # Cloud file sync
   espanso                    # Text expander
   font-hack-nerd-font        # Font with icons
+  ghostty                    # Terminal emulator
   inkscape                   # Vector graphics editor
   karabiner-elements         # Keyboard remapper
   logi-options-plus          # Logitech device config
