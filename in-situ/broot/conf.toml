@@ -4,6 +4,7 @@
 
 # default flags
 default_flags = ""
+# TODO: rebind over template automatically
 
 ####################################################################################################
 # joker
@@ -182,18 +183,18 @@ external = "zellij run --floating --close-on-exit --height 100 --width 100 --x 1
 leave_broot = false
 description = "`alt-b` -> open file with `bat`"
 
-# copy
-[[verbs]]
-invocation = "print_to_copy"
-key = "alt-f4"
-external = [
-  "sh",
-  "-e",
-  "/Users/drivas/.archive/in-situ/broot/copy.sh",
-  "{file}",
-]
-leave_broot = false
-description = "`alt-c` -> copy file contents"
+# # copy
+# [[verbs]]
+# invocation = "print_to_copy"
+# key = "alt-f4"
+# external = [
+#   "sh",
+#   "-e",
+#   "/Users/drivas/.archive/in-situ/broot/copy.sh",
+#   "{file}",
+# ]
+# leave_broot = false
+# description = "`alt-c` -> copy file contents"
 
 # stage
 [[verbs]]
@@ -247,18 +248,18 @@ external = "zellij run --floating --height 100 --width 100 --x 100 --y 0 -- mdca
 leave_broot = false
 description = "`alt-m` -> open file with `mdcat`"
 
-# path
-[[verbs]]
-invocation = "file_path_copy"
-key = "ctrl-f8"
-external = [
-  "sh",
-  "-e",
-  "/Users/drivas/.archive/in-situ/broot/path.sh",
-  "{file}",
-]
-leave_broot = false
-description = "`alt-n` -> copy file path"
+# # path
+# [[verbs]]
+# invocation = "file_path_copy"
+# key = "ctrl-f8"
+# external = [
+#   "sh",
+#   "-e",
+#   "/Users/drivas/.archive/in-situ/broot/path.sh",
+#   "{file}",
+# ]
+# leave_broot = false
+# description = "`alt-n` -> copy file path"
 
 # quit
 [[verbs]]

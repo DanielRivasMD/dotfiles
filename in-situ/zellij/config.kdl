@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 pane_frames false
-layout_dir "~/.archive/in-situ/zellij/layouts/"
+layout_dir "~/.config/zellij/layouts/"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -13,6 +13,7 @@ ui {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// TODO: rebind over template automatically
 // TODO: write a script that launches cheat
 // TODO: write a plugin
 keybinds clear-defaults=true {
@@ -80,7 +81,7 @@ keybinds clear-defaults=true {
         bind "Alt M" { TogglePanePinned; }                                                         // pane float pin
         bind "Alt N" { ToggleFloatingPanes; }                                                      // pane float toggle
         // bind "Alt O" {  }                                                        COLLISION
-        bind "Alt P" { ToggleActiveSyncTab; }                                                      // tab sync
+        bind "Alt V" { ToggleActiveSyncTab; }                                                      // tab sync
         bind "Alt Q" { NewTab; }                                                                   // tab new
         bind "Alt R" { BreakPane; }                                                                // tab break pane
         bind "Alt S" { SwitchToMode "RenameTab"; TabNameInput 0; }                                 // tab rename
@@ -88,7 +89,7 @@ keybinds clear-defaults=true {
         bind "Alt U" { CloseTab; }                                                                 // tab close
 
         // plugins
-        bind "Alt V" {
+        bind "Alt P" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
                 ignore_case true

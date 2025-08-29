@@ -1,7 +1,5 @@
-- update broot
 - update language configs helix: awk, bash, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - update invisible characters helix
-- update minimalistic micro config
 - todor completions?
 
 ==================================================
@@ -13,6 +11,7 @@ ex-situ/helix/languages/python.toml
   line 20     TODO   pyls needs utf-8 offsets
 ex-situ/helix/modes/common.toml
   line 5      TODO   use fast save
+  line 6      TODO   automatic deployment
 ex-situ/helix/modes/editor.toml
   line 77     TODO   update invisibles
 ex-situ/litecli/config
@@ -21,6 +20,8 @@ ex-situ/litecli/config
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
-in-situ/espanso/match/base.yml
-  line 253    TODO   import development keywords
+in-situ/broot/conf.toml
+  line 7      TODO   rebind over template automatically
+in-situ/lazygit/config.yml
+  line 335    TODO   rebind over template automatically
 ==================================================
