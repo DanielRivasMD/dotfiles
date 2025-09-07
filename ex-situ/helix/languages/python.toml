@@ -17,7 +17,6 @@ language-servers = ["python_lsp"]
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "black", args = ["-q", "-"] }
 auto-format = true
-# TODO: pyls needs utf-8 offsets
 
 [[grammar]]
 name = "python"
@@ -26,4 +25,3 @@ source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "de2
 [[language]]
 name = "python"
 language-servers = [{ name = "pylsp", except-features = ["diagnostics"] }]
-
