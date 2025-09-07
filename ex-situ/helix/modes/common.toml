@@ -108,11 +108,14 @@ C-S-F11 = ["rename_symbol"]                                  # grave-bs         
 C-S-F13 = ["symbol_picker"]                                  # grave-enter       # symbol list
 C-F16 = ["goto_reference"]                                 # grave-alt         # reference
 C-F17 = ["goto_definition"]                                # grave-cmd         # definition
-C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
+# C-F18 = ["goto_last_modification"]                         # grave-space       # last edit
 C-S-F12 = ["jumplist_picker"]                              # grave-shift-enter # jump list
 C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   # implementation
 C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
+
+C-F18 = ["hsplit", "goto_definition"]                                # grave-cmd         # definition
+C-F19 = ["hsplit", "goto_type_definition"]                                # grave-cmd         # definition
 
 # C-S-pageup = []                                          # grave-shift-left  #
 # C-S-pagedown = []                                        # grave-shift-right #
