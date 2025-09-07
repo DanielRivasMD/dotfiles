@@ -114,8 +114,8 @@ C-S-F16 = ["goto_implementation"]                          # grave-shift-alt   #
 C-S-F17 = ["goto_type_definition"]                         # grave-shift-cmd   # definition
 C-S-F18 = ["save_selection"]                               # grave-shift-space # jump save
 
-C-F18 = ["hsplit", "goto_definition"]                                # grave-cmd         # definition
-C-F19 = ["hsplit", "goto_type_definition"]                                # grave-cmd         # definition
+C-F18 = ["wonly", "hsplit", "goto_definition"]                                # grave-cmd         # definition
+C-F19 = ["wonly", "hsplit", "goto_type_definition"]                                # grave-cmd         # definition
 
 # C-S-pageup = []                                          # grave-shift-left  #
 # C-S-pagedown = []                                        # grave-shift-right #
