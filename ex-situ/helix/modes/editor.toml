@@ -45,7 +45,12 @@ select = "block"
 
 [editor.statusline]
 left = ["mode", "spinner", "diagnostics"]
-center = ["file-modification-indicator", "file-name", "read-only-indicator", "version-control"]
+center = [
+	"file-modification-indicator",
+	"file-name",
+	"read-only-indicator",
+	"version-control",
+]
 right = [
 	"selections",
 	"position",
@@ -74,17 +79,16 @@ skip-levels = 1
 
 ####################################################################################################
 
-# TODO: update invisibles
 [editor.whitespace.render]
 space = "all"
 tab = "all"
-newline = "none"
+newline = "all"
 
 [editor.whitespace.characters]
 space = "·"
-nbsp = "⍽"
+nbsp = "␣"
 tab = "→"
 tabpad = "·"
-# newline = ""
+newline = "↵"
 
 ####################################################################################################
