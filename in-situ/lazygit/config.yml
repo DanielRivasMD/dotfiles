@@ -332,7 +332,8 @@ notARepository: prompt
 promptToReturnFromSubprocess: true
 ####################################################################################################
 
-# TODO: rebind over template automatically
+# TODO: consider binding single letters?
+# TODO: create a separate template?
 # Keybindings
 keybinding:
   universal:
@@ -345,12 +346,12 @@ keybinding:
     nextItem: <disabled>
     prevItem-alt: <up>
     nextItem-alt: <down>
-    prevPage: '<pgup>' # alt-up
-    nextPage: '<pgdown>' # alt-down
+    prevPage: '<pgup>'
+    nextPage: '<pgdown>'
     scrollLeft: H
     scrollRight: L
-    gotoTop: '<home>' # cmd-up
-    gotoBottom: '<end>' # cmd-down
+    gotoTop: '<home>'
+    gotoBottom: '<end>'
     toggleRangeSelect: <disabled>
     rangeSelectDown: <s-down>
     rangeSelectUp: <s-up>
@@ -358,8 +359,8 @@ keybinding:
     nextBlock: <disabled>
     nextBlock-alt: <disabled>
     prevBlock-alt: <disabled>
-    prevBlock-alt2: '<c-n>' # ctl-cmd-up
-    nextBlock-alt2: '<c-p>' # ctl-cmd-down
+    prevBlock-alt2: '<c-n>'
+    nextBlock-alt2: '<c-p>'
     jumpToBlock:
       - '1'
       - '2'
@@ -383,8 +384,8 @@ keybinding:
     scrollDownMain: <disabled>
     scrollUpMain-alt1: <disabled>
     scrollDownMain-alt1: <disabled>
-    scrollUpMain-alt2: <c-x> # alt-cmd-up
-    scrollDownMain-alt2: <c-y> # alt-cmd-down
+    scrollUpMain-alt2: '<c-x>'
+    scrollDownMain-alt2: '<c-y>'
     executeShellCommand: ':'
     createRebaseOptionsMenu: m
     # 'Files' appended for legacy reasons
@@ -393,8 +394,8 @@ keybinding:
     pullFiles: p
     refresh: r
     createPatchOptionsMenu: N
-    nextTab: '<c-f>' # ctl-cmd-right
-    prevTab: '<c-b>' # ctl-cmd-left
+    nextTab: '<c-f>'
+    prevTab: '<c-b>'
     nextScreenMode: '<c-o>' # ctl-cmd-space
     prevScreenMode: <disabled>
     undo: u
