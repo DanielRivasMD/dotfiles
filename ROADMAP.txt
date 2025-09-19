@@ -1,5 +1,6 @@
 - update language configs helix: awk, bash, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - todor completions?
+- binding `todor --delete` to helix key => alt-t -> just todor; shift-alt-t -> todor interactive on zellij floating pane
 
 ==================================================
 ex-situ/bpython/alacritty.theme
@@ -13,6 +14,8 @@ ex-situ/shell/nu/keymap.nu
   line 83     BUG    are they useful commands?
 in-situ/broot/conf.toml
   line 7      TODO   rebind over template automatically
+  line 13     TODO   review documentation for config
 in-situ/lazygit/config.yml
-  line 335    TODO   rebind over template automatically
+  line 335    TODO   consider binding single letters?
+  line 336    TODO   create a separate template?
 ==================================================

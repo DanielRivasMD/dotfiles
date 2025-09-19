@@ -38,6 +38,7 @@ generate_completion() {
 # config
 ####################################################################################################
 
+# TODO: review paths
 # home
 export home="${HOME}"
 export config="${home}/.config"
