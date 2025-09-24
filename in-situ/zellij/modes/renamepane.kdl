@@ -1,0 +1,4 @@
+    renamepane {
+        bind "Alt s" { UndoRenamePane; SwitchToMode "Normal"; }
+        bind "Esc" { UndoRenamePane; SwitchToMode "Normal"; }
+    }
