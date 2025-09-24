@@ -5,6 +5,7 @@
 install_formulae=(
   bat-extras                 # bat utilities
   cljfmt                     # Clojure formatter
+  clojure                    # Clojure
   fzf                        # fuzzy finder
   gh                         # GitHub CLI
   helix                      # code editor
