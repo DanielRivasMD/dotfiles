@@ -1,0 +1,15 @@
+    search {
+        bind "Alt h" { SwitchToMode "Normal"; }
+        bind "Up" { ScrollUp; }
+        bind "Down" { ScrollDown; }
+        bind "PageUp" { HalfPageScrollUp; }
+        bind "PageDown" { HalfPageScrollDown; }
+        bind "Home" { PageScrollUp; }
+        bind "End" { PageScrollDown; }
+
+        bind "l" { Search "down"; }
+        bind "h" { Search "up"; }
+        bind "c" { SearchToggleOption "CaseSensitivity"; }
+        bind "x" { SearchToggleOption "Wrap"; }
+        bind "z" { SearchToggleOption "WholeWord"; }
+    }
