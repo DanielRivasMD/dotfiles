@@ -1,0 +1,4 @@
+    renametab {
+        bind "Alt A" { UndoRenameTab; SwitchToMode "Normal"; }
+        bind "Esc" { UndoRenameTab; SwitchToMode "Normal"; }
+    }
