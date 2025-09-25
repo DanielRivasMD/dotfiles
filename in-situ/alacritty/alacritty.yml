@@ -5,7 +5,7 @@ window:
     columns:                          0
     lines:                            0
   padding:
-    x:                                5
+    x:                                0
     y:                                0
   dynamic_padding:                    false
   decorations:                        buttonless
@@ -22,13 +22,13 @@ font:
     family:                           "Hack Nerd Font"
   italic:
     family:                           "Hack Nerd Font"
-  size:                               18.0
+  size:                               14.0
   offset:
-    x:                              0
-    y:                              0
+    x:                                0
+    y:                                0
   glyph_offset:
-    x:                              0
-    y:                              0
+    x:                                0
+    y:                                0
 
 # Ayu-Dark theme
 colors:
@@ -69,7 +69,7 @@ key_bindings:
   # system OSX
   ####################################################################################################
 
-  # patch `alt-enter`
+  # DOC: patch `alt-enter`
   - { key: Enter,       mods: Command,                    chars: "\x1b\u000D"   }
 
   ####################################################################################################
