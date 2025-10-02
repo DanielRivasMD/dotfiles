@@ -100,12 +100,13 @@ installers=(
   "${in_silico}/rust.sh"
 )
 
-# Launch each installer in the background
-for script in "${installers[@]}"; do
+# Run package manager bootstrap first, in foreground
+run_install "$pkg_script"
+
+# Then run the rest in parallel
+for script in "${installers[@]:1}"; do
   run_install "$script" &
 done
-
-# Wait for all of them (plus any other background jobs) to complete
 wait
 
 ####################################################################################################
