@@ -2,6 +2,8 @@
 # Create log directory
 ####################################################################################################
 
+# TODO: rework installation scripts to make some part manual
+
 echo "Ensuring log directory exists..."
 logDir="${PWD}/log"
 mkdir -p "$logDir"
@@ -11,103 +13,103 @@ in_silico="./in-silico"
 # Package manager bootstrap
 ####################################################################################################
 
-os="$(uname -s)"
-case "$os" in
-  Darwin)
-    echo "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# os="$(uname -s)"
+# case "$os" in
+#   Darwin)
+#     echo "Installing Homebrew..."
+#     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    # inject Homebrew’s bin into $PATH without re‐execing zsh
-    echo "Configuring Homebrew environment in this shell..."
-    eval "$($(brew --prefix)/bin/brew shellenv)"
-    ;;
-  Linux)
-    if grep -qi ubuntu /etc/os-release; then
-      echo "Detected Ubuntu – ensuring curl is installed..."
-      sudo apt update
-      sudo apt install -y curl
-    fi
-    ;;
-  *)
-    echo "Unsupported OS: $os" >&2
-    ;;
-esac
+#     # inject Homebrew’s bin into $PATH without re‐execing zsh
+#     echo "Configuring Homebrew environment in this shell..."
+#     eval "$($(brew --prefix)/bin/brew shellenv)"
+#     ;;
+#   Linux)
+#     if grep -qi ubuntu /etc/os-release; then
+#       echo "Detected Ubuntu – ensuring curl is installed..."
+#       sudo apt update
+#       sudo apt install -y curl
+#     fi
+#     ;;
+#   *)
+#     echo "Unsupported OS: $os" >&2
+#     ;;
+# esac
 
 ####################################################################################################
 # Install helper
 ####################################################################################################
 
-run_install() {
-  local installer="$1"
-  local name
-  name="$(basename "$installer" .sh)"
-  local logfile="$logDir/${name}.log"
+# run_install() {
+#   local installer="$1"
+#   local name
+#   name="$(basename "$installer" .sh)"
+#   local logfile="$logDir/${name}.log"
 
-  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] START $name" >>"$logfile"
+#   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] START $name" >>"$logfile"
 
-  if [[ -f "$installer" ]]; then
-    (
-      source "$installer"
-    ) >>"$logfile" 2>&1
+#   if [[ -f "$installer" ]]; then
+#     (
+#       source "$installer"
+#     ) >>"$logfile" 2>&1
 
-    local status=$?
-    if (( status != 0 )); then
-      echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] FAIL  $name (exit $status)" >>"$logfile"
-    else
-      echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] DONE  $name" >>"$logfile"
-    fi
-  else
-    echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] MISSING $installer" >>"$logfile"
-  fi
-}
+#     local status=$?
+#     if (( status != 0 )); then
+#       echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] FAIL  $name (exit $status)" >>"$logfile"
+#     else
+#       echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] DONE  $name" >>"$logfile"
+#     fi
+#   else
+#     echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] MISSING $installer" >>"$logfile"
+#   fi
+# }
 
 ####################################################################################################
 # Detect OS and choose package manager script
 ####################################################################################################
 
-os="$(uname -s)"
-case "$os" in
-  Darwin)
-    echo "Detected macOS – will use brew.sh"
-    pkg_script="${in_silico}/brew.sh"
-    ;;
-  Linux)
-    if grep -qi ubuntu /etc/os-release; then
-      echo "Detected Ubuntu – will use apt.sh"
-      pkg_script="${in_silico}/apt.sh"
-    else
-      echo "Linux detected but not Ubuntu – defaulting to apt.sh"
-      pkg_script="${in_silico}/apt.sh"
-    fi
-    ;;
-  *)
-    echo "Unsupported OS: $os" >&2
-    exit 1
-    ;;
-esac
+# os="$(uname -s)"
+# case "$os" in
+#   Darwin)
+#     echo "Detected macOS – will use brew.sh"
+#     pkg_script="${in_silico}/brew.sh"
+#     ;;
+#   Linux)
+#     if grep -qi ubuntu /etc/os-release; then
+#       echo "Detected Ubuntu – will use apt.sh"
+#       pkg_script="${in_silico}/apt.sh"
+#     else
+#       echo "Linux detected but not Ubuntu – defaulting to apt.sh"
+#       pkg_script="${in_silico}/apt.sh"
+#     fi
+#     ;;
+#   *)
+#     echo "Unsupported OS: $os" >&2
+#     exit 1
+#     ;;
+# esac
 
 ####################################################################################################
 # Install in parallel
 ####################################################################################################
 
-# Enumerate all your installers, with OS‑specific package manager script first
-installers=(
-  "$pkg_script"
-  "${in_silico}/clojure.sh"
-  "${in_silico}/go.sh"
-  "${in_silico}/julia.sh"
-  "${in_silico}/R.sh"
-  "${in_silico}/rust.sh"
-)
+# # Enumerate all your installers, with OS‑specific package manager script first
+# installers=(
+#   "$pkg_script"
+#   "${in_silico}/clojure.sh"
+#   "${in_silico}/go.sh"
+#   "${in_silico}/julia.sh"
+#   "${in_silico}/R.sh"
+#   "${in_silico}/rust.sh"
+# )
 
-# Run package manager bootstrap first, in foreground
-run_install "$pkg_script"
+# # Run package manager bootstrap first, in foreground
+# run_install "$pkg_script"
 
-# Then run the rest in parallel
-for script in "${installers[@]:1}"; do
-  run_install "$script" &
-done
-wait
+# # Then run the rest in parallel
+# for script in "${installers[@]:1}"; do
+#   run_install "$script" &
+# done
+# wait
 
 ####################################################################################################
 # Git‐clone helper

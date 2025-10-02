@@ -2,6 +2,7 @@
 # Install Rust
 ####################################################################################################
 
+# TODO: for ubuntu, install gcc prior
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Make the newly-installed Cargo/tools available in this session

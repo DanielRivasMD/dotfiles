@@ -11,6 +11,8 @@ ex-situ/helix/languages/git.toml
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
+in-silico/rust.sh
+  line 5      TODO   for ubuntu, install gcc prior
 in-situ/alacritty/alacritty.yml
   line 72     DOC    patch `alt-enter`
 in-situ/broot/conf.toml
@@ -19,4 +21,6 @@ in-situ/broot/conf.toml
 in-situ/lazygit/config.yml
   line 335    TODO   consider binding single letters?
   line 336    TODO   create a separate template?
+install.sh
+  line 5      TODO   rework installation scripts to make some part manual
 ==================================================
