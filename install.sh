@@ -8,17 +8,30 @@ mkdir -p "$logDir"
 in_silico="./in-silico"
 
 ####################################################################################################
-# Install homebrew (macOS only)
+# Package manager bootstrap
 ####################################################################################################
 
-if [[ "$(uname -s)" == "Darwin" ]]; then
-  echo "Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+os="$(uname -s)"
+case "$os" in
+  Darwin)
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-  # inject Homebrew’s bin into $PATH without re‐execing zsh
-  echo "Configuring Homebrew environment in this shell..."
-  eval "$($(brew --prefix)/bin/brew shellenv)"
-fi
+    # inject Homebrew’s bin into $PATH without re‐execing zsh
+    echo "Configuring Homebrew environment in this shell..."
+    eval "$($(brew --prefix)/bin/brew shellenv)"
+    ;;
+  Linux)
+    if grep -qi ubuntu /etc/os-release; then
+      echo "Detected Ubuntu – ensuring curl is installed..."
+      sudo apt update
+      sudo apt install -y curl
+    fi
+    ;;
+  *)
+    echo "Unsupported OS: $os" >&2
+    ;;
+esac
 
 ####################################################################################################
 # Install helper
