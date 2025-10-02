@@ -8,15 +8,17 @@ mkdir -p "$logDir"
 in_silico="./in-silico"
 
 ####################################################################################################
-# Install homebrew
+# Install homebrew (macOS only)
 ####################################################################################################
 
-echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# inject Homebrew’s bin into $PATH without re‐execing zsh
-echo "Configuring Homebrew environment in this shell..."
-eval "$($(brew --prefix)/bin/brew shellenv)"
+  # inject Homebrew’s bin into $PATH without re‐execing zsh
+  echo "Configuring Homebrew environment in this shell..."
+  eval "$($(brew --prefix)/bin/brew shellenv)"
+fi
 
 ####################################################################################################
 # Install helper
@@ -47,12 +49,37 @@ run_install() {
 }
 
 ####################################################################################################
+# Detect OS and choose package manager script
+####################################################################################################
+
+os="$(uname -s)"
+case "$os" in
+  Darwin)
+    echo "Detected macOS – will use brew.sh"
+    pkg_script="${in_silico}/brew.sh"
+    ;;
+  Linux)
+    if grep -qi ubuntu /etc/os-release; then
+      echo "Detected Ubuntu – will use apt.sh"
+      pkg_script="${in_silico}/apt.sh"
+    else
+      echo "Linux detected but not Ubuntu – defaulting to apt.sh"
+      pkg_script="${in_silico}/apt.sh"
+    fi
+    ;;
+  *)
+    echo "Unsupported OS: $os" >&2
+    exit 1
+    ;;
+esac
+
+####################################################################################################
 # Install in parallel
 ####################################################################################################
 
-# Enumerate all your installers
+# Enumerate all your installers, with OS‑specific package manager script first
 installers=(
-  "${in_silico}/brew.sh"
+  "$pkg_script"
   "${in_silico}/clojure.sh"
   "${in_silico}/go.sh"
   "${in_silico}/julia.sh"
