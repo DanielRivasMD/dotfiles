@@ -2,6 +2,7 @@
 # Install Rust
 ####################################################################################################
 
+# TODO: segment install packages individually to manage dependencies & operating systems
 # TODO: for ubuntu, install gcc prior
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 

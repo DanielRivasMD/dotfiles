@@ -11,8 +11,11 @@ ex-situ/helix/languages/git.toml
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
+in-silico/R.sh
+  line 5      TODO   patch for rig ubuntu from officaly documentation
 in-silico/rust.sh
-  line 5      TODO   for ubuntu, install gcc prior
+  line 5      TODO   segment install packages individually to manage dependencies & operating systems
+  line 6      TODO   for ubuntu, install gcc prior
 in-situ/alacritty/alacritty.yml
   line 72     DOC    patch `alt-enter`
 in-situ/broot/conf.toml

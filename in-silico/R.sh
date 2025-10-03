@@ -2,6 +2,7 @@
 # Install R Package Manager
 ####################################################################################################
 
+# TODO: patch for rig ubuntu from officaly documentation
 brew tap r-lib/rig
 brew install --cask rig
 
