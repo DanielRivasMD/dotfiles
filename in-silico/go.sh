@@ -1,26 +1,14 @@
 ####################################################################################################
-# Install Go Version Manager
-####################################################################################################
-
-curl -sSL https://git.io/g-install | sh -s -- -y
-
-####################################################################################################
-# Install Latest Go Version and Global Updater
-####################################################################################################
-
-g install latest -y          # Install latest stable Go version
-
-####################################################################################################
 # Install Go Language Tools
 ####################################################################################################
 
-go_tools=(
-  golang.org/x/tools/gopls                       # Go language server
-  github.com/go-delve/delve/cmd/dlv              # Go debugger
-  github.com/nametake/golangci-lint-langserver   # Lint language server
+TOOLS=(
+  golang.org/x/tools/gopls                                 # Go language server
+  github.com/go-delve/delve/cmd/dlv                        # Go debugger
+  github.com/nametake/golangci-lint-langserver             # Lint language server
 )
 
-for tool in "${go_tools[@]}"; do
+for tool in "${TOOLS[@]}"; do
   echo "Installing ${tool}..."
   go install "${tool}@latest"
 done
@@ -29,7 +17,7 @@ done
 # Install Go Binaries
 ####################################################################################################
 
-go_binaries=(
+BINARIES=(
   github.com/air-verse/air                                 # live reload Go apps
   github.com/Gelio/go-global-update                        # global Go updater
   github.com/golangci/golangci-lint/cmd/golangci-lint      # lint tool
@@ -46,7 +34,7 @@ go_binaries=(
   github.com/aarondl/sqlboiler-sqlite3@latest
 )
 
-for binary in "${go_binaries[@]}"; do
+for binary in "${BINARIES[@]}"; do
   echo "Installing ${binary}..."
   go install "${binary}@latest"
 done
