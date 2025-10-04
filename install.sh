@@ -2,182 +2,186 @@
 # Create log directory
 ####################################################################################################
 
-# TODO: rework installation scripts to make some part manual
-
 echo "Ensuring log directory exists..."
 logDir="${PWD}/log"
 mkdir -p "$logDir"
-in_silico="./in-silico"
-
-####################################################################################################
-# Package manager bootstrap
-####################################################################################################
-
-# os="$(uname -s)"
-# case "$os" in
-#   Darwin)
-#     echo "Installing Homebrew..."
-#     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-#     # inject Homebrew’s bin into $PATH without re‐execing zsh
-#     echo "Configuring Homebrew environment in this shell..."
-#     eval "$($(brew --prefix)/bin/brew shellenv)"
-#     ;;
-#   Linux)
-#     if grep -qi ubuntu /etc/os-release; then
-#       echo "Detected Ubuntu – ensuring curl is installed..."
-#       sudo apt update
-#       sudo apt install -y curl
-#     fi
-#     ;;
-#   *)
-#     echo "Unsupported OS: $os" >&2
-#     ;;
-# esac
-
-####################################################################################################
-# Install helper
-####################################################################################################
-
-# run_install() {
-#   local installer="$1"
-#   local name
-#   name="$(basename "$installer" .sh)"
-#   local logfile="$logDir/${name}.log"
-
-#   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] START $name" >>"$logfile"
-
-#   if [[ -f "$installer" ]]; then
-#     (
-#       source "$installer"
-#     ) >>"$logfile" 2>&1
-
-#     local status=$?
-#     if (( status != 0 )); then
-#       echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] FAIL  $name (exit $status)" >>"$logfile"
-#     else
-#       echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] DONE  $name" >>"$logfile"
-#     fi
-#   else
-#     echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] MISSING $installer" >>"$logfile"
-#   fi
-# }
-
-####################################################################################################
-# Detect OS and choose package manager script
-####################################################################################################
-
-# os="$(uname -s)"
-# case "$os" in
-#   Darwin)
-#     echo "Detected macOS – will use brew.sh"
-#     pkg_script="${in_silico}/brew.sh"
-#     ;;
-#   Linux)
-#     if grep -qi ubuntu /etc/os-release; then
-#       echo "Detected Ubuntu – will use apt.sh"
-#       pkg_script="${in_silico}/apt.sh"
-#     else
-#       echo "Linux detected but not Ubuntu – defaulting to apt.sh"
-#       pkg_script="${in_silico}/apt.sh"
-#     fi
-#     ;;
-#   *)
-#     echo "Unsupported OS: $os" >&2
-#     exit 1
-#     ;;
-# esac
-
-####################################################################################################
-# Install in parallel
-####################################################################################################
-
-# # Enumerate all your installers, with OS‑specific package manager script first
-# installers=(
-#   "$pkg_script"
-#   "${in_silico}/clojure.sh"
-#   "${in_silico}/go.sh"
-#   "${in_silico}/julia.sh"
-#   "${in_silico}/R.sh"
-#   "${in_silico}/rust.sh"
-# )
-
-# # Run package manager bootstrap first, in foreground
-# run_install "$pkg_script"
-
-# # Then run the rest in parallel
-# for script in "${installers[@]:1}"; do
-#   run_install "$script" &
-# done
-# wait
 
 ####################################################################################################
 # Git‐clone helper
 ####################################################################################################
 
-clone_from_manifest() {
-  local manifest="${in_silico}/clone_repos.txt"
-  [[ -f "$manifest" ]] || {
-    echo "Clone manifest not found at $manifest" >&2
-    return 1
-  }
-
+# TODO: check directories first
+manifest="./in-silico/clone_repos.txt"
+if [[ -f "$manifest" ]]; then
   while IFS= read -r line; do
     [[ -z "$line" || "$line" = \#* ]] && continue
-
-    local repo_url="${line%%[[:space:]]*}"
-    local target_dir="${line#*[[:space:]]}"
+    repo_url="${line%%[[:space:]]*}"
+    target_dir="${line#*[[:space:]]}"
     target_dir="${target_dir/#\~/$HOME}"
-
     if [[ -d "$target_dir" ]]; then
       echo "Repo exists: $target_dir – skipping."
     else
       echo "Cloning: $repo_url → $target_dir"
-      git clone "$repo_url" "$target_dir" \
-        || echo "Failed to clone $repo_url" >&2
+      git clone "$repo_url" "$target_dir" || echo "Failed to clone $repo_url" >&2
     fi
-  done < "$manifest"
-}
-
-# run cloning in background
-clone_from_manifest >>"$logDir/repos.out" 2>>"$logDir/repos.err" &
+  done < "$manifest" >>"$logDir/repos.out" 2>>"$logDir/repos.err" &
+else
+  echo "Clone manifest not found at $manifest" >&2
+fi
 
 ####################################################################################################
-# Zellij plugins
+# Package manager bootstrap
 ####################################################################################################
 
-setup_zellij_plugins() {
-  local plugin_dir="$HOME/.config/zellij/plugins"
-  local list="${in_silico}/zellij_plugins.txt"
-  mkdir -p "$plugin_dir"
+os="$(uname -s)"
+case "$os" in
+  Darwin)
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Configuring Homebrew environment in this shell..."
+    eval "$($(brew --prefix)/bin/brew shellenv)"
+    ;;
+  Linux)
+    if grep -qi ubuntu /etc/os-release; then
+      echo "Detected Ubuntu – ensuring curl is installed..."
+      sudo apt update
+      sudo apt install -y curl
+    fi
+    ;;
+  *)
+    echo "Unsupported OS: $os" >&2
+    ;;
+esac
+echo "installation of curl & apt complete, run '' to install programs managed by package manager"
 
-  [[ -f "$list" ]] || {
-    echo "Zellij plugin list not found at $list" >&2
-    return 1
-  }
+####################################################################################################
+# Install Go
+####################################################################################################
 
+echo "Installing Go via g-install..."
+curl -sSL https://git.io/g-install | sh -s -- -y
+export PATH="$HOME/.g/bin:$PATH"
+g install latest -y
+echo "installation of go & g complete, run '' to install programs managed by g"
+
+####################################################################################################
+# Install Julia
+####################################################################################################
+
+case "$os" in
+  Darwin)
+    echo "Detected macOS – installing Julia via Homebrew juliaup..."
+    brew install juliaup
+    eval "$($(brew --prefix)/bin/brew shellenv)"
+    ;;
+  Linux)
+    if grep -qi ubuntu /etc/os-release; then
+      echo "Detected Ubuntu – installing Julia via juliaup installer..."
+      curl -fsSL https://install.julialang.org | sh
+    fi
+    ;;
+esac
+echo "installation of Julia and juliaup complete, run 'julia' to install packages via Pkg.add([...])"
+
+####################################################################################################
+# Install R via rig
+####################################################################################################
+
+case "$os" in
+  Darwin)
+    brew tap r-lib/rig
+    brew install --cask rig
+    eval "$($(brew --prefix)/bin/brew shellenv)"
+    ;;
+  Linux)
+    if grep -qi ubuntu /etc/os-release; then
+      echo "TODO: patch for rig on Ubuntu from official documentation"
+    fi
+    ;;
+esac
+
+rig add release
+export PATH="$HOME/.rig/bin:$PATH"
+echo "installation of R and rig complete, run 'rig add <version>' to install programs managed by rig"
+
+####################################################################################################
+# Install Python & uv
+####################################################################################################
+
+case "$os" in
+  Darwin)
+    echo "Detected macOS – installing uv via Homebrew..."
+    brew install uv
+    eval "$($(brew --prefix)/bin/brew shellenv)"
+    ;;
+  Linux)
+    if grep -qi ubuntu /etc/os-release; then
+      echo "Detected Ubuntu – installing uv..."
+      sudo apt update
+      curl -LsSf https://astral.sh/uv/install.sh | sh
+      export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+    fi
+    ;;
+esac
+echo "installation of uv and uv complete, run 'uv tool install <pkg>' to install programs managed by uv"
+
+####################################################################################################
+# Install Rust
+####################################################################################################
+
+if grep -qi ubuntu /etc/os-release; then
+  echo "Installing gcc for Rust build support..."
+  sudo apt install -y build-essential
+fi
+
+echo "Installing Rust via rustup..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+if [[ -f "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+else
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+echo "installation of Rust and cargo complete, run 'cargo install <crate>' to install programs managed by cargo"
+
+####################################################################################################
+# Zellij & plugins
+####################################################################################################
+
+echo "Installing Zellij..."
+cargo install --locked zellij
+
+plugin_dir="$HOME/.config/zellij/plugins"
+list="./in-silico/zellij_plugins.txt"
+mkdir -p "$plugin_dir"
+
+if [[ -f "$list" ]]; then
   while IFS= read -r url; do
     [[ -z "$url" || "$url" = \#* ]] && continue
-    local name="${url##*/}"
-    local dest="$plugin_dir/$name"
-
+    name="${url##*/}"
+    dest="$plugin_dir/$name"
     if [[ -f "$dest" ]]; then
       echo "Plugin exists: $name – skipping."
     else
       echo "Downloading: $url"
       curl -LsSf "$url" -o "$dest" || echo "Failed: $url" >&2
     fi
-  done < "$list"
-}
-
-# run in background
-setup_zellij_plugins >>"$logDir/zellij_plugins.out" 2>>"$logDir/zellij_plugins.err" &
+  done < "$list" >>"$logDir/zellij_plugins.out" 2>>"$logDir/zellij_plugins.err"
+else
+  echo "Zellij plugin list not found at $list" >&2
+fi
+echo "installation of Zellij and cargo complete, run 'cargo install <crate>' to install programs managed by cargo"
 
 ####################################################################################################
-# Wait for background jobs
+# Summary Table
 ####################################################################################################
 
-wait
-echo "All installation tasks completed."
-
+printf "%-15s %-20s %-40s %-10s\n" "Program" "Package Manager" "Install Script" "Status"
+printf "%-15s %-20s %-40s %-10s\n" "pkg manager" "brew" "" "OK"
+printf "%-15s %-20s %-40s %-10s\n" "go" "g" "" "OK"
+printf "%-15s %-20s %-40s %-10s\n" "julia" "juliaup" "" "OK"
+printf "%-15s %-20s %-40s %-10s\n" "R" "rig" "" "OK"
+printf "%-15s %-20s %-40s %-10s\n" "pyton" "uv" "" "OK"
+printf "%-15s %-20s %-40s %-10s\n" "rust" "cargo" "" "OK"
+ 
 ####################################################################################################
