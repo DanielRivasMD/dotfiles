@@ -14,13 +14,14 @@ deno install -A jsr:@deno/deployctl --global               # Deno Deploy CLI
 
 # Extra tools
 cargo install dprint                                       # code formatter
-dprint install-plugin html                                 # HTML plugin for dprint
+# BUG: unrecognized subcommand
+# dprint install-plugin html                                 # HTML plugin for dprint
 
 ####################################################################################################
 # Install Rust Binaries
 ####################################################################################################
 
-install_crates=(
+CRATES=(
   "asciinema --locked --git https://github.com/asciinema/asciinema"                                # terminal session recorder
   "bacon --locked"                                                                                 # watch Rust builds & rerun
   "bartib"                                                                                         # simple time tracker
@@ -97,9 +98,9 @@ install_crates=(
   "zoxide --locked"                                                                                # smarter `cd` with frequency
 )
 
-for crate in "${install_crates[@]}"; do
-  echo "Installing: cargo install $crate"
-  cargo install $crate
+for crate in "${CRATES[@]}"; do
+  echo "Installing: cargo install ${crate}"
+  cargo install "${crate}"
 done
 
 ####################################################################################################
