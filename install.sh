@@ -16,13 +16,15 @@ mkdir -p "$logDir"
 mkdir -p "$HOME/.completion"
 mkdir -p "$HOME/Linked"
 
+echo ''
+printf '==================================================\n'
+echo "Reading repo manifests..."
 manifest="./in-silico/repo_manifest.txt"
 if [[ -f "$manifest" ]]; then
-  while IFS= read -r line; do
-    [[ -z "$line" || "$line" = \#* ]] && continue
-    repo_url="${line%%[[:space:]]*}"
-    target_dir="${line#*[[:space:]]}"
+  while read -r repo_url target_dir; do
+    [[ -z "$repo_url" || "$repo_url" = \#* ]] && continue
     target_dir="${target_dir/#\~/$HOME}"
+    mkdir -p "$(dirname "$target_dir")"
     if [[ -d "$target_dir" ]]; then
       echo "Repo exists: $target_dir – skipping."
     else
@@ -33,11 +35,15 @@ if [[ -f "$manifest" ]]; then
 else
   echo "Clone manifest not found at $manifest" >&2
 fi
+printf '==================================================\n'
 
 ####################################################################################################
 # Package manager bootstrap
 ####################################################################################################
 
+echo ''
+printf '==================================================\n'
+echo "Installing Package manager..."
 os="$(uname -s)"
 case "$os" in
   Darwin)
@@ -58,21 +64,28 @@ case "$os" in
     ;;
 esac
 echo "installation of curl & apt complete, run '' to install programs managed by package manager"
+printf '==================================================\n'
 
 ####################################################################################################
 # Install Go
 ####################################################################################################
 
-echo "Installing Go via g-install..."
+echo ''
+printf '==================================================\n'
+echo "Installing Go..."
 curl -sSL https://git.io/g-install | sh -s -- -y
 export PATH="$HOME/.g/bin:$PATH"
 g install latest -y
 echo "installation of go & g complete, run '' to install programs managed by g"
+printf '==================================================\n'
 
 ####################################################################################################
 # Install Julia
 ####################################################################################################
 
+echo ''
+printf '==================================================\n'
+echo "Installing Julia..."
 case "$os" in
   Darwin)
     echo "Detected macOS – installing Julia via Homebrew juliaup..."
@@ -87,11 +100,15 @@ case "$os" in
     ;;
 esac
 echo "installation of Julia and juliaup complete, run 'julia' to install packages via Pkg.add([...])"
+printf '==================================================\n'
 
 ####################################################################################################
 # Install R via rig
 ####################################################################################################
 
+echo ''
+printf '==================================================\n'
+echo "Installing R..."
 case "$os" in
   Darwin)
     brew tap r-lib/rig
@@ -108,11 +125,15 @@ esac
 rig add release
 export PATH="$HOME/.rig/bin:$PATH"
 echo "installation of R and rig complete, run 'rig add <version>' to install programs managed by rig"
+printf '==================================================\n'
 
 ####################################################################################################
 # Install Python & uv
 ####################################################################################################
 
+echo ''
+printf '==================================================\n'
+echo "Installing Python..."
 case "$os" in
   Darwin)
     echo "Detected macOS – installing uv via Homebrew..."
@@ -129,11 +150,15 @@ case "$os" in
     ;;
 esac
 echo "installation of uv and uv complete, run 'uv tool install <pkg>' to install programs managed by uv"
+printf '==================================================\n'
 
 ####################################################################################################
 # Install Rust
 ####################################################################################################
 
+echo ''
+printf '==================================================\n'
+echo "Installing Rust..."
 if grep -qi ubuntu /etc/os-release; then
   echo "Installing gcc for Rust build support..."
   sudo apt install -y build-essential
@@ -148,11 +173,14 @@ else
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 echo "installation of Rust and cargo complete, run 'cargo install <crate>' to install programs managed by cargo"
+printf '==================================================\n'
 
 ####################################################################################################
 # Zellij & plugins
 ####################################################################################################
 
+echo ''
+printf '==================================================\n'
 echo "Installing Zellij..."
 cargo install --locked zellij
 
@@ -176,11 +204,13 @@ else
   echo "Zellij plugin list not found at $list" >&2
 fi
 echo "installation of Zellij and cargo complete, run 'cargo install <crate>' to install programs managed by cargo"
+printf '==================================================\n'
 
 ####################################################################################################
 # Summary Table
 ####################################################################################################
 
+echo ''
 printf "%-15s %-20s %-40s %-10s\n" "Program" "Package Manager" "Install Script" "Status"
 printf "%-15s %-20s %-40s %-10s\n" "pkg manager" "brew" "" "OK"
 printf "%-15s %-20s %-40s %-10s\n" "go" "g" "" "OK"
