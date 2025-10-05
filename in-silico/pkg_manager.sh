@@ -42,7 +42,6 @@ case "$os" in
     brew install mongodb-community
 
     brew tap microsoft/git
-    # TODO: git credential manager?
     brew install --cask git-credential-manager-core
 
     brew install clojure-lsp/brew/clojure-lsp-native
@@ -123,7 +122,6 @@ case "$os" in
         https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" \
         | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
-      sudo apt update
       sudo apt install -y mongodb-org
 
       # Git Credential Manager
@@ -135,7 +133,6 @@ case "$os" in
       git config --global credential.credentialStore secretservice
 
       # Install Clojure CLI
-      sudo apt update
       sudo apt install -y bash curl rlwrap openjdk-17-jdk unzip
 
       curl -L -o /tmp/linux-install.sh https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
@@ -163,8 +160,6 @@ case "$os" in
       sudo apt install -y alacritty
 
       # Core editor
-      flatpak install flathub com.helix_editor.Helix
-      flatpak run com.helix_editor.Helix
 
       # Productivity
       flatpak install -y flathub com.dropbox.Client
