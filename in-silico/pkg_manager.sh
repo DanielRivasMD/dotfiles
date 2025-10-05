@@ -128,7 +128,10 @@ case "$os" in
       sudo apt install -y mongodb-org
 
       # Git Credential Manager (manual .deb install required)
-      echo "Note: install Git Credential Manager manually from https://github.com/git-ecosystem/git-credential-manager/releases"
+      wget https://github.com/git-ecosystem/git-credential-manager/releases/latest/download/gcm-linux_amd64.deb -O /tmp/gcm.deb
+      sudo dpkg -i /tmp/gcm.deb
+      git-credential-manager configure
+      rm /tmp/gcm.deb
 
       # Install Clojure CLI
       sudo apt update
