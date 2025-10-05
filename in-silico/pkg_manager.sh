@@ -133,7 +133,7 @@ case "$os" in
       git-credential-manager configure
       rm /tmp/gcm.deb
 
-      sudo apt install -y libsecret-1-0 libsecret-1-dev
+      sudo apt install -y libsecret-1-0 libsecret-1-dev gnome-keyring
       git config --global credential.credentialStore secretservice
       git config --global credential.credentialStore gpg
 
