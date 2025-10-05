@@ -127,8 +127,8 @@ case "$os" in
       sudo apt update
       sudo apt install -y mongodb-org
 
-      # Git Credential Manager (manual .deb install required)
-      wget https://github.com/git-ecosystem/git-credential-manager/releases/latest/download/gcm-linux_amd64.deb -O /tmp/gcm.deb
+      # Git Credential Manager
+      wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.1/gcm-linux_amd64.2.6.1.deb -O /tmp/gcm.deb
       sudo dpkg -i /tmp/gcm.deb
       git-credential-manager configure
       rm /tmp/gcm.deb
