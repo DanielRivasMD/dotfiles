@@ -29,7 +29,7 @@ if [[ -f "$manifest" ]]; then
       echo "Cloning: $repo_url → $target_dir"
       git clone "$repo_url" "$target_dir" || echo "Failed to clone $repo_url" >&2
     fi
-  done < "$manifest" >>"$logDir/repos.out" 2>>"$logDir/repos.err" &
+  done < "$manifest" >>"$logDir/repos.out" 2>>"$logDir/repos.err"
 else
   echo "Clone manifest not found at $manifest" >&2
 fi
