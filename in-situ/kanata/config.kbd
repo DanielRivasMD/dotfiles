@@ -2,71 +2,18 @@
   process-unmapped-keys yes
 )
 
+;; Only three keys in defsrc for testing
 (defsrc
-  lalt a c d e f h j k l m n q r s t v w x y z
-  f1 f2 f4 f5 f6 f7 f9 f10
+  lalt a c
 )
 
 (deflayer base
-  ;; Helix-common bindings
-
-  ;; format
+  ;; O-a → Alt+F1
   (combo lalt a) (alt f1)
 
-  ;; copy
+  ;; O-c → Alt+F4
   (combo lalt c) (alt f4)
 
-  ;; spawn multi
-  (combo lalt d) (alt f5)
-
-  ;; toggle comments
-  (combo lalt e) (alt f6)
-
-  ;; search
-  (combo lalt f) (alt f7)
-
-  ;; find prev
-  (combo lalt h) (alt f9)
-
-  ;; spawn multi down
-  (combo lalt j) (ctrl f1)
-
-  ;; spawn multi up
-  (combo lalt k) (ctrl f2)
-
-  ;; find next
-  (combo lalt l) (ctrl f4)
-
-  ;; toggle macro
-  (combo lalt m) (ctrl f5)
-
-  ;; new buffer
-  (combo lalt n) (ctrl f6)
-
-  ;; quit
-  (combo lalt q) (ctrl f9)
-
-  ;; reload buffers
-  (combo lalt r) (ctrl f10)
-
-  ;; save & quit
-  (combo lalt s) (alt ctrl f1)
-
-  ;; compile todo
-  (combo lalt t) (alt ctrl f2)
-
-  ;; paste
-  (combo lalt v) (alt ctrl f5)
-
-  ;; save
-  (combo lalt w) (alt ctrl f6)
-
-  ;; cut
-  (combo lalt x) (alt ctrl f7)
-
-  ;; skip multi
-  (combo lalt y) (alt ctrl f8)
-
-  ;; remove multi
-  (combo lalt z) (alt ctrl f9)
+  ;; filler so deflayer has same length as defsrc
+  ___
 )
