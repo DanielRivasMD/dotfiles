@@ -2,8 +2,10 @@
 # OSX Defaults
 ####################################################################################################
 
-# Patch for screen Ctrl+Q issue
-stty -ixon
+# Patch for screen Ctrl+Q issue (only if interactive terminal)
+if [ -t 0 ]; then
+  stty -ixon
+fi
 
 ####################################################################################################
 # Language and Locale Settings
