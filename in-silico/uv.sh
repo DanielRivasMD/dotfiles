@@ -13,7 +13,7 @@ BINARIES=(
 
 for binary in "${BINARIES[@]}"; do
   echo "Installing ${binary}..."
-  uv binary install "${binary}"
+  uv tool install "${binary}"
 done
 
 ####################################################################################################
