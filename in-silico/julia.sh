@@ -5,13 +5,13 @@
 julia --eval '
 using Pkg
 Pkg.add([
-  "OhMyREPL",
   "Chain",
+  "Debugger",
+  "DelimitedFiles",
+  "OhMyREPL",
   "Pipe",
   "Revise",
-  "Debugger",
   "UnicodePlots",
-  "DelimitedFiles"
 ])'
 
 ####################################################################################################
