@@ -8,6 +8,7 @@ brew install yqrashawn/goku/goku
 # Install cljfmt (Clojure Formatter)
 ####################################################################################################
 
+# TODO: is this redundant?
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/weavejester/cljfmt/HEAD/install.sh)"
 
 ####################################################################################################
