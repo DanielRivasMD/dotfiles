@@ -133,7 +133,6 @@ case "$os" in
 
       sudo apt install -y libsecret-1-0 libsecret-1-dev gnome-keyring pass gnupg2
       git config --global credential.credentialStore secretservice
-      git config --global credential.credentialStore gpg
 
       # Install Clojure CLI
       sudo apt update
