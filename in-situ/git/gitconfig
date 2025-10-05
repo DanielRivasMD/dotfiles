@@ -43,6 +43,7 @@
 
 [credential]
 	helper = /usr/local/share/gcm-core/git-credential-manager
+	credentialStore = secretservice
 
 [credential "https://dev.azure.com"]
 	useHttpPath = true
