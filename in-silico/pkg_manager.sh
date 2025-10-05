@@ -94,6 +94,8 @@ case "$os" in
       # Formulae equivalents
       ####################################################################################################
 
+      # TODO: decide & document: starship, nushell & nerd-fonts
+
       install_packages=(
         bat                                                # available as 'bat'
         fzf                                                # fuzzy finder
@@ -101,7 +103,6 @@ case "$os" in
         llvm                                               # compiler toolchain
         micro                                              # terminal editor
         mysql-server                                       # MySQL DB
-        nushell                                            # structured shell
         postgresql                                         # PostgreSQL DB
         sqlite3                                            # SQLite engine
       )
