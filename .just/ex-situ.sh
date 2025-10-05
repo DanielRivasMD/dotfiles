@@ -98,6 +98,7 @@ generate_completion "delta --generate-completion zsh" "_delta"
 generate_completion "juliaup completions zsh" "_juliaup"
 generate_completion "rg --generate=complete-zsh" "_rg"
 generate_completion "sheldon completions --shell zsh" "_sheldon"
+generate_completion "uv generate-shell-completion zsh" "_uv"
 generate_completion "xan completions zsh" "_xan"
 
 echo ''
