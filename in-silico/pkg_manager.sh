@@ -119,9 +119,11 @@ case "$os" in
       # MongoDB
       wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc \
         | sudo gpg --dearmor -o /usr/share/keyrings/mongodb.gpg
+
       echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] \
-        https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/7.0 multiverse" \
+        https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" \
         | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
       sudo apt update
       sudo apt install -y mongodb-org
 
