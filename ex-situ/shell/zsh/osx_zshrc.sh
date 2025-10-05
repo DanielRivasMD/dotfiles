@@ -51,7 +51,14 @@ setopt COMPLETE_ALIASES
 ####################################################################################################
 
 # Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
-source <(fzf --zsh)
+if command -v fzf &>/dev/null; then
+  FZF_VERSION="$(fzf --version | cut -d' ' -f1)"
+  # Only source integration if version >= 0.48
+  if [[ "$(printf '%s\n' 0.48 "$FZF_VERSION" | sort -V | head -n1)" = "0.48" ]]; then
+    source <(fzf --zsh)
+  fi
+fi
+
 
 ####################################################################################################
 # History
