@@ -41,6 +41,7 @@ printf '==================================================\n'
 # Package manager bootstrap
 ####################################################################################################
 
+# BUG: ubuntu errors out on mongodb for some reason
 echo ''
 printf '==================================================\n'
 echo "Installing Package manager..."
@@ -117,7 +118,10 @@ case "$os" in
     ;;
   Linux)
     if grep -qi ubuntu /etc/os-release; then
-      echo "TODO: patch for rig on Ubuntu from official documentation"
+      sudo curl -L https://rig.r-pkg.org/deb/rig.gpg -o /etc/apt/trusted.gpg.d/rig.gpg
+      sudo sh -c 'echo "deb http://rig.r-pkg.org/deb rig main" > /etc/apt/sources.list.d/rig.list'
+      sudo apt update
+      sudo apt install r-rig
     fi
     ;;
 esac
