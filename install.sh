@@ -10,8 +10,13 @@ mkdir -p "$logDir"
 # Git‐clone helper
 ####################################################################################################
 
-# TODO: check directories first
-manifest="./in-silico/clone_repos.txt"
+# TODO: document nerd font installation; present on shell history for ubuntu
+
+# Ensure supporting directories exist
+mkdir -p "$HOME/.completion"
+mkdir -p "$HOME/Linked"
+
+manifest="./in-silico/repo_manifest.txt"
 if [[ -f "$manifest" ]]; then
   while IFS= read -r line; do
     [[ -z "$line" || "$line" = \#* ]] && continue
@@ -152,7 +157,7 @@ echo "Installing Zellij..."
 cargo install --locked zellij
 
 plugin_dir="$HOME/.config/zellij/plugins"
-list="./in-silico/zellij_plugins.txt"
+list="./in-silico/zellij_manifest.txt"
 mkdir -p "$plugin_dir"
 
 if [[ -f "$list" ]]; then
