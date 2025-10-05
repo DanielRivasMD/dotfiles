@@ -128,7 +128,6 @@ case "$os" in
       # Git Credential Manager
       wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.1/gcm-linux_amd64.2.6.1.deb -O /tmp/gcm.deb
       sudo dpkg -i /tmp/gcm.deb
-      git-credential-manager configure
       rm /tmp/gcm.deb
 
       sudo apt install -y libsecret-1-0 libsecret-1-dev gnome-keyring pass gnupg2
