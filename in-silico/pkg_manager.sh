@@ -130,8 +130,23 @@ case "$os" in
       # Git Credential Manager (manual .deb install required)
       echo "Note: install Git Credential Manager manually from https://github.com/git-ecosystem/git-credential-manager/releases"
 
-      # Clojure LSP (manual download)
-      echo "Note: install Clojure LSP manually from https://github.com/clojure-lsp/clojure-lsp/releases"
+      # Install Clojure CLI
+      sudo apt update
+      sudo apt install -y bash curl rlwrap openjdk-17-jdk unzip
+
+      curl -L -o /tmp/linux-install.sh https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
+      chmod +x /tmp/linux-install.sh
+      sudo /tmp/linux-install.sh
+      rm /tmp/linux-install.sh
+
+      # Install Clojure LSP (latest release)
+      localBin="${HOME}/.local/bin"
+      mkdir -p "$localBin"
+      wget -O /tmp/clojure-lsp.zip \
+        https://github.com/clojure-lsp/clojure-lsp/releases/latest/download/clojure-lsp-native-linux-amd64.zip
+      unzip -o /tmp/clojure-lsp.zip -d "$localBin"
+      chmod +x "$localBin/clojure-lsp"
+      rm /tmp/clojure-lsp.zip
 
       ####################################################################################################
       # Flatpak apps
@@ -155,7 +170,7 @@ case "$os" in
       # VPN
       flatpak install -y flathub com.nordvpn.NordVPN
 
-      echo "Note: some macOS-only apps (Alfred, Karabiner, Rig, Skim, etc.) have Linux alternatives."
+      echo "Note: some macOS-only apps (Alfred, Karabiner, Skim, etc.) have Linux alternatives."
     fi
     ;;
   *)
