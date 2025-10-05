@@ -98,14 +98,12 @@ case "$os" in
         bat                                                # available as 'bat'
         fzf                                                # fuzzy finder
         gh                                                 # GitHub CLI
-        helix                                              # code editor
         llvm                                               # compiler toolchain
         micro                                              # terminal editor
         mysql-server                                       # MySQL DB
         nushell                                            # structured shell
         postgresql                                         # PostgreSQL DB
         sqlite3                                            # SQLite engine
-        starship                                           # shell prompt
       )
 
       echo "Updating package lists..."
@@ -165,6 +163,10 @@ case "$os" in
       # Terminal emulator
       sudo apt install -y alacritty
 
+      # Core editor
+      flatpak install flathub com.helix_editor.Helix
+      flatpak run com.helix_editor.Helix
+
       # Productivity
       flatpak install -y flathub com.dropbox.Client
       flatpak install -y flathub org.inkscape.Inkscape
@@ -173,9 +175,6 @@ case "$os" in
 
       # Fonts
       sudo apt install -y fonts-hack-ttf
-
-      # VPN
-      flatpak install -y flathub com.nordvpn.NordVPN
 
       echo "Note: some macOS-only apps (Alfred, Karabiner, Skim, etc.) have Linux alternatives."
     fi
