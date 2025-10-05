@@ -1,6 +1,5 @@
 - update language configs helix: awk, bash, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - todor completions?
-- binding `todor --delete` to helix key => alt-t -> just todor; shift-alt-t -> todor interactive on zellij floating pane
 - test `babel embed` => segregated zellij
 
 ==================================================
@@ -11,11 +10,8 @@ ex-situ/helix/languages/git.toml
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
-in-silico/R.sh
-  line 5      TODO   patch for rig ubuntu from officaly documentation
-in-silico/rust.sh
-  line 5      TODO   segment install packages individually to manage dependencies & operating systems
-  line 6      TODO   for ubuntu, install gcc prior
+in-silico/pkg_manager.sh
+  line 45     TODO   git credential manager?
 in-situ/alacritty/alacritty.yml
   line 72     DOC    patch `alt-enter`
 in-situ/broot/conf.toml
@@ -25,5 +21,5 @@ in-situ/lazygit/config.yml
   line 335    TODO   consider binding single letters?
   line 336    TODO   create a separate template?
 install.sh
-  line 5      TODO   rework installation scripts to make some part manual
+  line 13     TODO   check directories first
 ==================================================
