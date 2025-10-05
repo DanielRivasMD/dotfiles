@@ -12,6 +12,8 @@ ex-situ/shell/nu/keymap.nu
   line 83     BUG    are they useful commands?
 in-silico/pkg_manager.sh
   line 45     TODO   git credential manager?
+in-silico/rust.sh
+  line 17     BUG    unrecognized subcommand
 in-situ/alacritty/alacritty.yml
   line 72     DOC    patch `alt-enter`
 in-situ/broot/conf.toml
@@ -21,5 +23,6 @@ in-situ/lazygit/config.yml
   line 335    TODO   consider binding single letters?
   line 336    TODO   create a separate template?
 install.sh
-  line 13     TODO   check directories first
+  line 13     TODO   document nerd font installation; present on shell history for ubuntu
+  line 44     BUG    ubuntu errors out on mongodb for some reason
 ==================================================

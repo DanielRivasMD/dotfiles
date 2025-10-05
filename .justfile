@@ -27,6 +27,7 @@ _default:
 
 ####################################################################################################
 
+# TODO: change to bash for compatibility, however this does not produce colored logging
 # link in-situ
 [group('link')]
 @in-situ:
