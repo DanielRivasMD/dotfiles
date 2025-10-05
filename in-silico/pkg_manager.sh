@@ -133,6 +133,10 @@ case "$os" in
       git-credential-manager configure
       rm /tmp/gcm.deb
 
+      sudo apt install -y libsecret-1-0 libsecret-1-dev
+      git config --global credential.credentialStore secretservice
+      git config --global credential.credentialStore gpg
+
       # Install Clojure CLI
       sudo apt update
       sudo apt install -y bash curl rlwrap openjdk-17-jdk unzip
