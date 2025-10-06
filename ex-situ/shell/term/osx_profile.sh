@@ -15,6 +15,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LANGUAGE="en_US"
 
+# TODO: deprecate?
 # Optional: override individual LC_* if needed
 # export LC_CTYPE="en_US.UTF-8"
 # export LC_NUMERIC="en_US.UTF-8"
