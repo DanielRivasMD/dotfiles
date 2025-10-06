@@ -18,7 +18,13 @@
   copy  (tap-dance 200 ((multi lctl c) (multi lctl x)))
   paste (tap-dance 200 ((multi lctl v) (multi lmet v)))
   lmet  (multi lmet (layer-toggle lmetLayer))
+  lsftLayer  (multi lsft (layer-toggle shiftLayer))
 )	
+
+(deflayermap (main)
+  lsft @lsftLayer
+  lmet @lmet
+)
 
 (deflayermap (lmetLayer)
   ;; O-<letter>
@@ -42,23 +48,26 @@
   x   A-C-f7
   y   A-C-f8
   z   A-C-f9
+  rctl  A-C-f10
+)
 
+(deflayermap (shiftLayer)
   ;; O-S-<letter> (shifted)
-  W   A-C-f10
-  A   A-S-f1
-  C   A-S-f4
-  D   A-S-f5
-  F   A-S-f7
-  I   A-S-f10
-  J   C-S-f1
-  K   C-S-f2
-  L   C-S-f4
-  M   C-S-f5
-  O   C-S-f7
-  Q   C-S-f9
-  R   C-S-f10
-  T   A-C-S-f2
-  W   A-C-S-f6
-  X   A-C-S-f7
-  Z   A-C-S-f9
+  a   A-S-f1
+  c   A-S-f4
+  d   A-S-f5
+  f   A-S-f7
+  i   A-S-f10
+  j   C-S-f1
+  k   C-S-f2
+  l   C-S-f4
+  m   C-S-f5
+  o   C-S-f7
+  q   C-S-f9
+  r   C-S-f10
+  t   A-C-S-f2
+  w   A-C-S-f6
+  x   A-C-S-f7
+  z   A-C-S-f9
+  rctl A-C-S-f10
 )
