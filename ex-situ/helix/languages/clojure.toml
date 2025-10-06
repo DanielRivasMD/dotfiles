@@ -2,7 +2,7 @@
 # clojure
 ####################################################################################################
 
-[language-server]
+[language-server.clojure-lsp]
 command = "clojure-lsp"
 
 [[language]]
@@ -12,9 +12,10 @@ file-types = ["clj", "cljs", "cljc", "edn"]
 roots = ["deps.edn", "project.clj", "build.boot", "shadow-cljs.edn"]
 auto-format = true
 indent = { tab-width = 2, unit = "\t" }
+language-servers = ["clojure-lsp"]
 
 formatter = { command = "zprint", args = ["-"] }
 
 [[grammar]]
-source = { git = "https://github.com/oracle/tree-sitter-clojure", rev = "master" }
 name = "clojure"
+source = { git = "https://github.com/oracle/tree-sitter-clojure", rev = "master" }
