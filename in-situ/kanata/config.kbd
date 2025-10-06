@@ -1,17 +1,247 @@
 (defcfg
   process-unmapped-keys yes
+  concurrent-tap-hold yes
+  ;; icon-match-layer-name yes
+  ;; rapid-event-delay 5
+  ;; override-release-on-activation yes
+  log-layer-changes no
 )
 
-;; Only three keys in defsrc for testing
-(defsrc)
 
-(deflayer base
-  ;; O-a → Alt+F1
-  (combo lalt a) (alt f1)
+(defsrc
+  ;; esc
+  ;; grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  ;; tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  ;; caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  ;; lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  ;; lctl lmet lalt           spc            ralt rmet rctl
+)
 
-  ;; O-c → Alt+F4
-  (combo lalt c) (alt f4)
 
-  ;; filler so deflayer has same length as defsrc
-  ___
+(defalias
+  ;; motS  (layer-toggle motionsft)
+  save  (multi (release-key lsft) (release-key rsft) lctl s)
+  copy  (tap-dance 200 ((multi lctl c) (multi lctl x)))
+  paste (tap-dance 200 ((multi lctl v) (multi lmet v)))
+  selWF (macro right 10 C-left 10 C-S-right)
+  selWB (macro left 10 C-right 10 C-S-left)
+  selL  (macro (unmod end) (unmod home) (unmod home) 20 S-end)
+  delL1 (macro (unmod end) (unmod home) (unmod home) 10 S-end S-right del end)
+  delLR (macro-repeat (unmod end) (unmod home) (unmod home) 5 S-end S-right del 20)
+  delL  (multi @delL1 (tap-hold 300 300 XX @delLR))
+  dupL  (macro home 20 S-end C-c left right 20 end 20 ret end C-v)
+  newl  (macro left right 20 end 20 ret)
+  ;; rmet  (multi rmet (layer-toggle quickMotion))
+  lmet  (multi lmet (layer-toggle lmetLayer))
+  up5   (macro-repeat up up up up up 100)
+  down5 (macro-repeat down down down down down 100)
+  left5 (macro-repeat left left left left left 100)
+  right5 (macro-repeat right right right right right 100)
+  rsftLayer  (multi rsft (layer-toggle shiftLayer))
+  lsftLayer  (multi lsft (layer-toggle shiftLayer))
+  quoteMacro (macro ' ' (unmod left))
+  doubleQuoteMacro (macro ' ' (unmod left))
+  accentQuote (tap-hold 200 200 (multi ' (one-shot 200 (layer-toggle accentLayerAgd))) @quoteMacro)
+  accentSemiCol (multi ; (one-shot 200 (layer-toggle accentLayertil))) 
+  accentDoubleQ (tap-hold 200 200 (multi ' (one-shot 200 (layer-toggle accentLayerCirc))) @doubleQuoteMacro)
+)	
+
+
+(deflayermap (main)
+  ;; caps lctl
+  ;;' @apos
+  ;; lctl (tap-hold 200 200 (caps-word 1000) lctl )
+  spc (tap-hold 200 200 spc (layer-toggle motionRight))
+  ;; rsft (fork rsft caps (lsft))
+  ;; lsft (fork lsft caps (rsft))
+  rsft @rsftLayer
+  lsft @lsftLayer
+  [ (tap-hold 200 200 [ (macro [ ] (unmod left)))
+  ] (tap-hold 200 200 ] (macro [ ] (unmod left)))
+  ` (tap-hold 200 200 ` (macro ` ` (unmod left)))
+  ' @accentQuote
+  ; @accentSemiCol
+  ;;rmet @rmet
+  lmet @lmet
+  ;; Homerow Mods
+  ;; a (tap-hold 200 200 a lsft)
+  ;; s (tap-hold 200 200 s lctl)
+  ;; d (tap-hold 200 200 d lalt)
+  ;; ; (tap-hold 200 200 ; rsft)
+  ;; k (tap-hold 200 200 k rctl)
+  ;; l (tap-hold 200 200 l ralt)
+)
+
+(deflayermap (disabled)
+  ;; caps lctl
+  end (layer-switch main)
+  ;; rsft (fork rsft caps (lsft))
+  ;; lsft (fork lsft caps (rsft))
+  ;;rmet @rmet
+  lmet @lmet
+)
+
+(deflayermap (shiftLayer)
+  ;; lsft caps
+  ;; rsft caps
+  9 (tap-hold 200 200 (unicode "(") (macro (unicode "(") (unicode ")") (unmod left)))
+  0 (tap-hold 200 200 (unicode ")") (macro (unicode "(") (unicode ")") (unmod left)))
+  [ (tap-hold 200 200 { (macro { } (unmod left)))
+  ] (tap-hold 200 200 } (macro { } (unmod left)))
+  , (tap-hold 200 200 , (macro (unicode "<") (unicode ">") (unmod left)))
+  . (tap-hold 200 200 . (macro (unicode "<") (unicode ">") (unmod left)))
+  ' @accentDoubleQ
+)
+
+
+(deflayermap (lmetLayer)
+  q   A-f4
+  ;;f   (multi lalt (unmod kp*))
+  ;;f1  C-S-kp-
+  ;;f2  C-S-kp+
+  a   (fork a M-S-left (lsft))
+  ;;___ g
+)
+
+(deflayermap (motionRight)
+  lctrl (tap-hold 200 200 (caps-word 1000) f20)
+  ` (tap-hold 200 200 (multi lmet `) A-spc)
+  tab C-f13
+  h (fork left @left5 (f20))
+  ' @down5
+  j (fork down @down5 (f20))
+  k (fork up @up5 (f20))
+  [ @up5
+  l (fork right @right5 (f20))
+  u home
+  i end
+  , pgup
+  m pgdn
+  ; (multi rctl ;)
+  c @copy
+  v spc
+  o (fork @newl @selL (lsft))
+  p @paste
+  x (one-shot 1000 (layer-toggle visualdel))
+  z (one-shot 1000 (layer-toggle undoLayer))
+  ;;w (fork (multi @selWF (layer-toggle selWord1)) (multi @selWB (layer-toggle selWord1)) (lsft))
+  w (multi @selWF (layer-toggle selWord1))
+  ;; b (multi @skpb (layer-toggle selWord1))
+  b lmet
+  e ret
+  r (tap-hold 200 200 comp (layer-toggle sysLayer))
+  q esc 
+  a sft
+  s ctl
+  d alt
+  f bspc
+  g del
+  t tab
+  y ins
+  ins lrld
+  n f3
+  / C-f
+  ;; lsft (multi lsft @motS)
+  ;;rsft (multi rsft @motS)
+  home (layer-switch disabled)
+  . A-spc
+  1 f1
+  2 f2
+  3 f3
+  4 f4
+  5 f5
+  6 f6
+  7 f7
+  8 (fork f8 (multi sft caps) (f20))
+  9 (fork f9 (multi alt caps) (f20))
+  0 (fork f10 (multi ctl caps) (f20))
+  - f11
+  = f12
+)
+
+(deflayermap (sysLayer)
+  k volu
+  j vold
+  h prev
+  l next
+  i pp
+  r comp
+  ;;e (setmouse 0 65535)
+  e (setmouse 65535 55535)
+  t (setmouse 32767 3000)
+  y (multi rsft left)
+  o (multi rsft right)
+  u (multi rsft up)
+)
+
+
+;;(deflayermap (motionsft)
+;;  a (fork lrld S-left (lmet))
+;;  z @save
+;;  q (multi alt (unmod (lsft rsft) f4))
+;;  ;;t (multi rctl (unmod (lsft rsft) f4))
+;;)
+
+(deflayermap (visualdel)
+  w (macro right C-left C-del)
+  b (macro left C-right C-bspc)
+  ;; l C-del
+  ;; h C-bspc
+  l (macro S-C-right del)
+  h (macro S-C-left del)
+  u (macro S-home bspc)
+  i (macro S-end del)
+  o S-del
+  ;;o @delL
+  t C-f4
+  q A-f4
+  ___ XX
+)
+
+
+(deflayermap (selWord1)
+  y @selWB		
+  l S-C-right
+  h S-C-left
+  k S-up
+  j S-down
+  i S-end
+  u S-home
+)
+
+(deflayermap (selWordLeft)
+  h C-S-left
+)
+
+(deflayermap (undoLayer)
+  h C-z
+  j C-z
+  k (multi C-S-z C-y)
+  l (multi C-S-z C-y)
+  t C-S-t
+  o @dupL
+  ___ XX  
+)
+
+(deflayermap (accentLayerAgd)
+  a (macro (unicode "á") left bspc right)
+  e (macro (unicode "é") left bspc right)
+  i (macro (unicode "í") left bspc right)
+  o (macro (unicode "ó") left bspc right)
+  u (macro (unicode "ú") left bspc right)
+  c (macro (unicode "ç") left bspc right)
+  ___ _
+)
+
+(deflayermap (accentLayertil)
+  a (macro (unicode "ã") left bspc right)
+  o (macro (unicode "õ") left bspc right)
+  ___ _
+)
+
+(deflayermap (accentLayerCirc)
+  a (macro (unicode "â") left bspc right)
+  o (macro (unicode "ô") left bspc right)
+  e (macro (unicode "ê") left bspc right)
+  ___ _
 )
