@@ -12,6 +12,7 @@ args = [
   "using LanguageServer; runserver()",
 ]
 
+# TODO: consider using .JuliaFormatter.toml
 [[language]]
 name = "julia"
 scope = "source.julia"
@@ -21,8 +22,16 @@ roots = []
 comment-token = "#"
 language-servers = ["julia_lsp"]
 indent = { tab-width = 2, unit = "  " }
+auto-format = true
+formatter = { command = "julia", timeout = 60, args = [
+  "--startup-file=no",
+  "--history-file=no",
+  "--quiet",
+  "--project",
+  "-e",
+  "using JuliaFormatter; print(format_text(read(stdin, String); indent=2))",
+] }
 
 [[grammar]]
 name = "julia"
 source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "fc60b7cce87da7a1b7f8cb0f9371c3dc8b684500" }
-
