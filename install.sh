@@ -51,7 +51,13 @@ case "$os" in
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo "Configuring Homebrew environment in this shell..."
-    eval "$($(brew --prefix)/bin/brew shellenv)"
+    if [ "$(uname -m)" = "arm64" ]; then
+        # Apple Silicon (M1/M2/M3…)
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    else
+        # Intel Macs
+        eval "$(/usr/local/bin/brew shellenv)"
+    fi
     ;;
   Linux)
     if grep -qi ubuntu /etc/os-release; then
@@ -91,7 +97,6 @@ case "$os" in
   Darwin)
     echo "Detected macOS – installing Julia via Homebrew juliaup..."
     brew install juliaup
-    eval "$($(brew --prefix)/bin/brew shellenv)"
     ;;
   Linux)
     if grep -qi ubuntu /etc/os-release; then
@@ -114,7 +119,6 @@ case "$os" in
   Darwin)
     brew tap r-lib/rig
     brew install --cask rig
-    eval "$($(brew --prefix)/bin/brew shellenv)"
     ;;
   Linux)
     if grep -qi ubuntu /etc/os-release; then
@@ -142,7 +146,6 @@ case "$os" in
   Darwin)
     echo "Detected macOS – installing uv via Homebrew..."
     brew install uv
-    eval "$($(brew --prefix)/bin/brew shellenv)"
     ;;
   Linux)
     if grep -qi ubuntu /etc/os-release; then
