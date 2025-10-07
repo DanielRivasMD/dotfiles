@@ -69,6 +69,7 @@ export BUN_INSTALL="$HOME/.bun"
 
 path_additions=(
   "$HOME/.cargo/bin"
+  "$HOME/.atuin/bin"
   "$GOPATH/bin"
   "/usr/local/mysql/bin"
   "$HOME/.python/bin"
