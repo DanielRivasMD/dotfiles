@@ -93,18 +93,7 @@ printf '==================================================\n'
 echo ''
 printf '==================================================\n'
 echo "Installing Julia..."
-case "$os" in
-  Darwin)
-    echo "Detected macOS – installing Julia via Homebrew juliaup..."
-    brew install juliaup
-    ;;
-  Linux)
-    if grep -qi ubuntu /etc/os-release; then
-      echo "Detected Ubuntu – installing Julia via juliaup installer..."
-      curl -fsSL https://install.julialang.org | sh
-    fi
-    ;;
-esac
+curl -fsSL https://install.julialang.org | sh
 echo "installation of Julia and juliaup complete, run 'julia' to install packages via Pkg.add([...])"
 printf '==================================================\n'
 
