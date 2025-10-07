@@ -100,7 +100,7 @@ CRATES=(
 
 for crate in "${CRATES[@]}"; do
   echo "Installing: cargo install ${crate}"
-  cargo install "${crate}"
+  eval cargo install "${crate}"
 done
 
 ####################################################################################################
