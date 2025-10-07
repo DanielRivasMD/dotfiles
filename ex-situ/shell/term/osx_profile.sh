@@ -71,6 +71,7 @@ path_additions=(
   "$HOME/.cargo/bin"
   "$HOME/.atuin/bin"
   "$GOPATH/bin"
+  "$HOME/.juliaup/bin"
   "/usr/local/mysql/bin"
   "$HOME/.python/bin"
   "$HOME/bin/links"
