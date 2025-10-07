@@ -68,17 +68,17 @@ export GOROOT="$HOME/.go"
 export BUN_INSTALL="$HOME/.bun"
 
 path_additions=(
+  "$HOME/bin"
   "$HOME/.cargo/bin"
-  "$HOME/.atuin/bin"
   "$GOPATH/bin"
+  "${HOME}/.aliases.d/shims"
+  "$HOME/.atuin/bin"
   "$HOME/.juliaup/bin"
-  "/usr/local/mysql/bin"
   "$HOME/.python/bin"
-  "$HOME/bin/links"
   "/usr/local/bin"
   "/usr/local/sbin"
+  "/usr/local/mysql/bin"
   "/opt/homebrew/opt/llvm/bin"
-  "${HOME}/.aliases.d/shims"
 )
 
 for dir in "${path_additions[@]}"; do
