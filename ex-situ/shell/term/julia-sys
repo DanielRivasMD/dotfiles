@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# TODO: where to place?
-SYSIMG="$HOME/.julia/sysimages/juliaformatter.so"
-if [ -f "$SYSIMG" ]; then
-  exec julia -J"$SYSIMG" "$@"
-else
-  exec julia "$@"
-fi

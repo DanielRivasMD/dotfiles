@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+#
+# julia-sys: wrapper for Julia 1.8 with a precompiled sysimage
+#
+# Usage:
+#   julia-sys lsp         # start LanguageServer.jl
+#   julia-sys formatter   # run JuliaFormatter.jl on stdin
+#   julia-sys rebuild     # force rebuild of the sysimage
+
+# Julia 1.8 via juliaup
+JULIA_BIN=(julia +1.8)
+
+# Sysimage path, version‑specific
+SYSIMG="$HOME/.julia/sysimages/julia-1.8-formatter.so"
+
+build_sysimage() {
+    echo "Building sysimage at $SYSIMG..."
+    "${JULIA_BIN[@]}" --startup-file=no -e '
+        using PackageCompiler
+        create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
+            sysimage_path=joinpath(ENV["HOME"], ".julia", "sysimages", "julia-1.8-formatter.so"))'
+}
+
+case "$1" in
+  rebuild)
+    rm -f "$SYSIMG"
+    build_sysimage
+    ;;
+  lsp)
+    [ -f "$SYSIMG" ] || build_sysimage
+    exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
+      --startup-file=no --history-file=no --quiet -e '
+        using LanguageServer, SymbolServer
+        depot = get(ENV, "JULIA_DEPOT_PATH", "")
+        project = Base.current_project()
+        server = LanguageServer.LanguageServerInstance(stdin, stdout, project, depot)
+        run(server)
+      '
+    ;;
+  formatter)
+    [ -f "$SYSIMG" ] || build_sysimage
+    exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
+      --startup-file=no --history-file=no --quiet --project -e \
+      'using JuliaFormatter; print(format_text(read(stdin, String); indent=2))'
+    ;;
+  *)
+    echo "Usage:"
+    echo "  julia-sys lsp         # start LanguageServer.jl"
+    echo "  julia-sys formatter   # run JuliaFormatter.jl on stdin"
+    echo "  julia-sys rebuild     # force rebuild of the sysimage"
+    exit 1
+    ;;
+esac
