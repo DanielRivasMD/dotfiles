@@ -51,7 +51,6 @@
   rctl  A-C-f10
 
   ;; O-S-<letter> (shifted)
-  a @.a
   ;; S-a   A-S-f1
   ;; S-c   A-S-f4
   ;; S-d   A-S-f5
@@ -70,3 +69,8 @@
   ;; S-z   A-C-S-f9
   ;; S-rctl A-C-S-f10
 )
+
+(deflayermap (base)
+  a @.a
+)
+
