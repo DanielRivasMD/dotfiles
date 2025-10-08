@@ -3,11 +3,30 @@
 # julia-sys: wrapper for Julia with a precompiled sysimage (global environment)
 #
 # Usage:
-#   julia-sys lsp         # start LanguageServer.jl
-#   julia-sys formatter   # run JuliaFormatter.jl on stdin
-#   julia-sys rebuild     # force rebuild of the sysimage
+#   julia-sys [--verbose] lsp
+#   julia-sys [--verbose] formatter
+#   julia-sys [--verbose] rebuild
 
-# Detect Julia version: try Manifest/Project compat if present, else default
+####################################################################################################
+# Option parsing
+####################################################################################################
+
+VERBOSE=0
+if [[ "$1" == "--verbose" || "$1" == "-v" ]]; then
+    VERBOSE=1
+    shift
+fi
+
+log() {
+    if [ "$VERBOSE" -eq 1 ]; then
+        echo "$@"
+    fi
+}
+
+####################################################################################################
+# Detect Julia version
+####################################################################################################
+
 find_project_root() {
     local dir="$PWD"
     while [ "$dir" != "/" ]; do
@@ -52,14 +71,18 @@ fi
 JULIA_BIN=(julia +$JULIA_VERSION)
 SYSIMG="$HOME/.julia/sysimages/julia-$JULIA_VERSION-formatter.so"
 
+####################################################################################################
+# Build sysimage
+####################################################################################################
+
 build_sysimage() {
-    echo "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
+    log "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
     "${JULIA_BIN[@]}" --startup-file=no -e "
         using PackageCompiler
         create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
             sysimage_path=\"$SYSIMG\")"
 
-    echo "Ensuring and precompiling LSP packages in global env..."
+    log "Ensuring and precompiling LSP packages in global env..."
     "${JULIA_BIN[@]}" --project="@v$JULIA_VERSION" --startup-file=no -e '
         using Pkg
         Pkg.add(["LanguageServer", "SymbolServer", "StaticLint", "JuliaFormatter"])
@@ -68,15 +91,19 @@ build_sysimage() {
     '
 }
 
+####################################################################################################
+# Dispatch
+####################################################################################################
+
 case "$1" in
   rebuild)
-    echo "Rebuilding sysimage: $SYSIMG"
+    log "Rebuilding sysimage: $SYSIMG"
     rm -f "$SYSIMG"
     build_sysimage
     ;;
   lsp)
     [ -f "$SYSIMG" ] || build_sysimage
-    echo "Starting LSP with sysimage: $SYSIMG"
+    log "Starting LSP with sysimage: $SYSIMG"
     exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
       --startup-file=no --history-file=no --quiet -e "
         using LanguageServer, SymbolServer
@@ -88,16 +115,18 @@ case "$1" in
     ;;
   formatter)
     [ -f "$SYSIMG" ] || build_sysimage
-    echo "Running formatter with sysimage: $SYSIMG"
+    log "Running formatter with sysimage: $SYSIMG"
     exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
       --startup-file=no --history-file=no --quiet --project -e \
       'using JuliaFormatter; print(format_text(read(stdin, String); indent=2))'
     ;;
   *)
     echo "Usage:"
-    echo "  julia-sys lsp         # start LanguageServer.jl"
-    echo "  julia-sys formatter   # run JuliaFormatter.jl on stdin"
-    echo "  julia-sys rebuild     # force rebuild of the sysimage"
+    echo "  julia-sys [--verbose] lsp"
+    echo "  julia-sys [--verbose] formatter"
+    echo "  julia-sys [--verbose] rebuild"
     exit 1
     ;;
 esac
+
+####################################################################################################
