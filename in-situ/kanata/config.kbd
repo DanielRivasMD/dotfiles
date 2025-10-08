@@ -19,7 +19,7 @@
   paste (tap-dance 200 ((multi lctl v) (multi lmet v)))
   lmet  (multi lmet (layer-toggle lmetLayer))
   
-  .a (switch ((and lalt lsft)) (unmod alt f1) break () a break)
+  .a (switch ((and lmet lsft)) (unmod alt f1) break () a break)
 )
 
 (deflayermap (main)
