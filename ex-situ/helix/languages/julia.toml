@@ -4,32 +4,16 @@
 
 [language-server.julia_lsp]
 command = "julia-sys"
-args = ["--startup-file=no", "--history-file=no", "--quiet", "-e", """
-  using LanguageServer, SymbolServer
-  depot = get(ENV, "JULIA_DEPOT_PATH", "")
-  project = Base.current_project()
-  server = LanguageServer.LanguageServerInstance(stdin, stdout, project, depot)
-  run(server)
-  """]
+args = ["lsp"]
 
 [[language]]
 name = "julia"
 scope = "source.julia"
-injection-regex = "julia"
 file-types = ["jl"]
 roots = ["Project.toml", "Manifest.toml"]
-comment-token = "#"
 language-servers = ["julia_lsp"]
-indent = { tab-width = 2, unit = "  " }
 auto-format = true
-formatter = { command = "julia-sys", timeout = 60, args = [
-  "--startup-file=no",
-  "--history-file=no",
-  "--quiet",
-  "--project",
-  "-e",
-  "using JuliaFormatter; print(format_text(read(stdin, String); indent=2))",
-] }
+formatter = { command = "julia-sys", timeout = 60, args = ["formatter"] }
 
 [[grammar]]
 name = "julia"
