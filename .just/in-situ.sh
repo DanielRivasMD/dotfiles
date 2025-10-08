@@ -87,6 +87,7 @@ link_config "${completionHome}/watchexec/completions/zsh" "${zshcomp}/_watchexec
 link_config "${completionDot}/_tldr" "${zshcomp}/_tldr" "tldr"
 link_config "${completionDot}/_tab" "${zshcomp}/_tab" "tabularasa"
 link_config "${linkedHome}/todo_r/target/release/todor" "${home}/.cargo/bin" "todor"
+link_config "${in_situ}/julia/julia-sys" "${home}/bin" "julia-sys"
 
 echo ''
 generate_completion "atuin gen-completions --shell zsh" "_atuin"
