@@ -72,20 +72,27 @@ alias aa='aliases add'
 alias al='aliases list'
 alias ar='aliases remove'
 
-# lazycli
-alias lc='lazycli'
-
 # bat
 alias man='batman'
 
 # broot
 alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-info --sort-by-type-dirs-first'
 
+# eza
+alias e='eza --header --long --icons --classify --git --group'
+alias ea='e --all'
+alias er='e --sort=newest'
+alias ear='ea --sort=newest'
+alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
+
 # gfold
 alias gf='gfold'
 
 # hgrep
 alias hg='hgrep'
+
+# lazycli
+alias lc='lazycli'
 
 # samesame
 alias ss='samesame'
@@ -95,12 +102,5 @@ alias wc='wordcrab'
 
 # zoxide
 alias zz='z -'
-
-# eza
-alias e='eza --header --long --icons --classify --git --group'
-alias ea='e --all'
-alias er='e --sort=newest'
-alias ear='ea --sort=newest'
-alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
 
 ####################################################################################################
