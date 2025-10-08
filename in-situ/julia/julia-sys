@@ -1,24 +1,81 @@
 #!/usr/bin/env bash
 #
-# julia-sys: wrapper for Julia 1.8 with a precompiled sysimage
+# julia-sys: wrapper for Julia with a precompiled sysimage
 #
 # Usage:
 #   julia-sys lsp         # start LanguageServer.jl
 #   julia-sys formatter   # run JuliaFormatter.jl on stdin
 #   julia-sys rebuild     # force rebuild of the sysimage
 
-# Julia 1.8 via juliaup
-JULIA_BIN=(julia +1.8)
+# Detect project root (look for Project.toml in cwd or parents)
+find_project_root() {
+    local dir="$PWD"
+    while [ "$dir" != "/" ]; do
+        if [ -f "$dir/Project.toml" ]; then
+            echo "$dir"
+            return 0
+        fi
+        dir=$(dirname "$dir")
+    done
+    return 1
+}
 
-# Sysimage path, version‑specific
-SYSIMG="$HOME/.julia/sysimages/julia-1.8-formatter.so"
+PROJECT_ROOT=$(find_project_root)
+
+# Determine Julia version: prefer Manifest.toml, else Project.toml compat, else default
+if [ -n "$PROJECT_ROOT" ]; then
+    JULIA_VERSION=$(cd "$PROJECT_ROOT" && julia --startup-file=no --history-file=no -e '
+        using TOML
+        try
+            # Try Manifest.toml
+            if isfile("Manifest.toml")
+                manifest = TOML.parsefile("Manifest.toml")
+                ver = get(manifest, "julia_version", nothing)
+                if ver !== nothing
+                    println(ver); exit()
+                end
+            end
+            # Fallback: Project.toml compat
+            if isfile("Project.toml")
+                proj = TOML.parsefile("Project.toml")
+                ver = get(get(proj, "compat", Dict()), "julia", nothing)
+                if ver !== nothing
+                    println(ver); exit()
+                end
+            end
+            # Default
+            println("1.8")
+        catch
+            println("1.8")
+        end
+    ')
+else
+    JULIA_VERSION="1.8"
+fi
+
+JULIA_BIN=(julia +$JULIA_VERSION)
+
+# Sysimage path: local if project, else global
+if [ -n "$PROJECT_ROOT" ]; then
+    SYSIMG="$PROJECT_ROOT/julia-formatter.so"
+else
+    SYSIMG="$HOME/.julia/sysimages/julia-$JULIA_VERSION-formatter.so"
+fi
 
 build_sysimage() {
-    echo "Building sysimage at $SYSIMG..."
-    "${JULIA_BIN[@]}" --startup-file=no -e '
-        using PackageCompiler
-        create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
-            sysimage_path=joinpath(ENV["HOME"], ".julia", "sysimages", "julia-1.8-formatter.so"))'
+    echo "Building sysimage at $SYSIMG for Julia $JULIA_VERSION..."
+    if [ -n "$PROJECT_ROOT" ]; then
+        "${JULIA_BIN[@]}" --project="$PROJECT_ROOT" --startup-file=no -e "
+            using PackageCompiler
+            create_sysimage(nothing;
+                sysimage_path=\"$SYSIMG\",
+                project=\"$PROJECT_ROOT\")"
+    else
+        "${JULIA_BIN[@]}" --startup-file=no -e "
+            using PackageCompiler
+            create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
+                sysimage_path=\"$SYSIMG\")"
+    fi
 }
 
 case "$1" in
@@ -29,13 +86,13 @@ case "$1" in
   lsp)
     [ -f "$SYSIMG" ] || build_sysimage
     exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
-      --startup-file=no --history-file=no --quiet -e '
+      --startup-file=no --history-file=no --quiet -e "
         using LanguageServer, SymbolServer
-        depot = get(ENV, "JULIA_DEPOT_PATH", "")
+        depot = get(ENV, \"JULIA_DEPOT_PATH\", \"\")
         project = Base.current_project()
         server = LanguageServer.LanguageServerInstance(stdin, stdout, project, depot)
         run(server)
-      '
+      "
     ;;
   formatter)
     [ -f "$SYSIMG" ] || build_sysimage
