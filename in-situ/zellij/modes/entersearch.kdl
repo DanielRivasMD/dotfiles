@@ -1,5 +1,6 @@
     entersearch {
         bind "Alt h" { SwitchToMode "Normal"; }
+        // TODO: document arrows
         bind "Up" { ScrollUp; }
         bind "Down" { ScrollDown; }
         bind "PageUp" { HalfPageScrollUp; }
@@ -7,6 +8,7 @@
         bind "Home" { PageScrollUp; }
         bind "End" { PageScrollDown; }
 
+        // TODO: document enter
         bind "Enter" { SwitchToMode "Search"; }
         bind "Shift Home" { Resize "Increase"; }
         bind "Shift End" { Resize "Decrease"; }
@@ -16,16 +18,18 @@
         bind "Ctrl n" { MovePane "Up"; }
         bind "Ctrl p" { MovePane "Down"; }
 
-        bind "Alt j" { Resize "Increase Left"; }
-        bind "Alt k" { Resize "Increase Right"; }
-        bind "Alt l" { Resize "Increase Up"; }
-        bind "Alt m" { Resize "Increase Down"; }
+        // TODO: relocate?
+        // bind "Alt j" { Resize "Increase Left"; }
+        // bind "Alt k" { Resize "Increase Right"; }
+        // bind "Alt l" { Resize "Increase Up"; }
+        // bind "Alt m" { Resize "Increase Down"; }
 
-        bind "Alt K" { Resize "Decrease Right"; }
-        bind "Alt J" { Resize "Decrease Left"; }
-        bind "Ctrl x" { Resize "Decrease Down"; }
-        bind "Ctrl y" { Resize "Decrease Up"; }
+        // bind "Alt K" { Resize "Decrease Right"; }
+        // bind "Alt J" { Resize "Decrease Left"; }
+        // bind "Ctrl x" { Resize "Decrease Down"; }
+        // bind "Ctrl y" { Resize "Decrease Up"; }
 
-        bind "Space" { Detach; }
+        // TODO: needed
+        // bind "Space" { Detach; }
         // bind "Tab" { LaunchOrFocusPlugin "session-manager" { floating true; move_to_focused_tab true; }; SwitchToMode "Normal"; }
 	}
