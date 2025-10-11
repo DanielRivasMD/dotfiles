@@ -1,5 +1,5 @@
     entersearch {
-        bind "Alt h" { SwitchToMode "Normal"; }
+        bind "Shift F8" { SwitchToMode "Normal"; }
         // TODO: document arrows
         bind "Up" { ScrollUp; }
         bind "Down" { ScrollDown; }
@@ -10,8 +10,8 @@
 
         // TODO: document enter
         bind "Enter" { SwitchToMode "Search"; }
-        bind "Shift Home" { Resize "Increase"; }
-        bind "Shift End" { Resize "Decrease"; }
+        bind "Shift F4" { Resize "Increase"; }
+        bind "Shift F5" { Resize "Decrease"; }
 
         bind "Ctrl b" { MovePane "Left"; }
         bind "Ctrl f" { MovePane "Right"; }
@@ -31,5 +31,16 @@
 
         // TODO: needed
         // bind "Space" { Detach; }
-        // bind "Tab" { LaunchOrFocusPlugin "session-manager" { floating true; move_to_focused_tab true; }; SwitchToMode "Normal"; }
+        bind "Shift F8" { SwitchToMode "Normal"; }
 	}
+
+
+
+
+
+
+
+
+
+
+
