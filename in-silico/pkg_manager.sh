@@ -13,6 +13,8 @@ case "$os" in
     ####################################################################################################
 
     install_formulae=(
+      aerc
+      pass
       bat-extras                                           # bat utilities
       cljfmt                                               # Clojure formatter
       clojure                                              # Clojure
