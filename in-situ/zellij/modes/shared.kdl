@@ -1,60 +1,65 @@
-    shared_except "locked" {
-        bind "Ctrl q" { Quit; }
-
-        bind "Shift PageUp" { MoveTab "Left"; }
-        bind "Shift PageDown" { MoveTab "Right"; }
-
-        bind "Alt a" { EditScrollback; SwitchToMode "Normal"; }
         // bind "Alt b" {}
         // bind "Alt c" {}                                                          COLLISION
         // bind "Alt d" {}                                                          COLLISION
         // bind "Alt e" {}                                                          COLLISION
         // bind "Alt f" {}
-        bind "Alt g" { SwitchToMode "Locked"; }
-        bind "Alt h" { SwitchToMode "EnterSearch"; SearchInput 0; }
         // bind "Alt i" {  }                                                        COLLISION
-        bind "Alt j" { MoveFocus "Left"; }
-        bind "Alt k" { MoveFocus "Right"; }
-        bind "Alt l" { MoveFocus "Up"; }
-        bind "Alt m" { MoveFocus "Down"; }
         // bind "Alt n" {  }                                                        COLLISION
-        bind "Alt o" { CloseFocus; }
-        bind "Alt p" { ToggleFocusFullscreen; }
-        bind "Alt q" { NewPane "Right"; }
-        bind "Alt r" { NewPane "Down"; }
-        bind "Alt s" { SwitchToMode "RenamePane"; PaneNameInput 0; }
-        bind "Alt t" { SwitchFocus; }
         // bind "Alt u" {  }                                                        COLLISION
-        bind "Alt v" {}
-        bind "Alt w" {}
-        bind "Alt x" {}
-        bind "Alt y" {}
-        bind "Alt z" {}
-
-        bind "Shift Alt a" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }
-        bind "Shift Alt b" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }
-        bind "Shift Alt c" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }
-        bind "Shift Alt d" { SwitchToMode "Tab"; GoToTab 4; SwitchToMode "Normal"; }
-        bind "Shift Alt e" { SwitchToMode "Tab"; GoToTab 5; SwitchToMode "Normal"; }
-        bind "Shift Alt f" { SwitchToMode "Tab"; GoToTab 6; SwitchToMode "Normal"; }
-        bind "Shift Alt g" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }
-        bind "Shift Alt h" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }
-        bind "Shift Alt i" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }
-        bind "Shift Alt j" { GoToPreviousTab; }
-        bind "Shift Alt k" { GoToNextTab; }
-        bind "Shift Alt l" { TogglePaneEmbedOrFloating; }
-        bind "Shift Alt m" { TogglePanePinned; }
-        bind "Shift Alt n" { ToggleFloatingPanes; }
         // bind "Alt O" {  }                                                        COLLISION
-        bind "Shift Alt p" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
-        bind "Shift Alt q" { NewTab; }
-        bind "Shift Alt r" { BreakPane; }
-        bind "Shift Alt s" { SwitchToMode "RenameTab"; TabNameInput 0; }
-        bind "Shift Alt t" { ToggleTab; }
-        bind "Shift Alt u" { CloseTab; }
-        bind "Shift Alt v" { ToggleActiveSyncTab; }
-        bind "Shift Alt w" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
-        bind "Shift Alt x" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
-        bind "Shift Alt y" {}
-        bind "Shift Alt z" {}
+
+    shared_except "locked" {
+        bind "Ctrl q" { Quit; }
+
+        bind "Shift F1" { MoveTab "Left"; }
+        bind "Shift F2" { MoveTab "Right"; }
+
+        bind "Shift F12" { EditScrollback; SwitchToMode "Normal"; }
+        bind "Shift F11" { SwitchToMode "Locked"; }
+        bind "Shift F8" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Ctrl F1" { MoveFocus "Left"; }
+        bind "Ctrl F2" { MoveFocus "Right"; }
+        bind "Ctrl F4" { MoveFocus "Up"; }
+        bind "Ctrl F5" { MoveFocus "Down"; }
+        bind "Ctrl F6" { CloseFocus; }
+        bind "Ctrl F7" { ToggleFocusFullscreen; }
+        bind "Ctrl F8" { NewPane "Right"; }
+        bind "Ctrl F9" { NewPane "Down"; }
+        bind "Ctrl F10" { SwitchToMode "RenamePane"; PaneNameInput 0; }
+        bind "Ctrl F11" { SwitchFocus; }
+
+        bind "Alt Shift F1" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }
+        bind "Alt Shift F2" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }
+        bind "Alt Shift F4" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }
+        bind "Alt Shift F5" { SwitchToMode "Tab"; GoToTab 4; SwitchToMode "Normal"; }
+        bind "Alt Shift F6" { SwitchToMode "Tab"; GoToTab 5; SwitchToMode "Normal"; }
+        bind "Alt Shift F7" { SwitchToMode "Tab"; GoToTab 6; SwitchToMode "Normal"; }
+        bind "Alt Shift F8" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }
+        bind "Alt Shift F9" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }
+        bind "Alt Shift F11" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }
+        bind "Alt F1" { GoToPreviousTab; }
+        bind "Alt F2" { GoToNextTab; }
+        bind "Shift F9" { TogglePaneEmbedOrFloating; }
+        bind "Shift F6" { TogglePanePinned; }
+        bind "Shift F7" { ToggleFloatingPanes; }
+        bind "Alt F8" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
+        bind "Alt F9" { NewTab; }
+        bind "Alt F10" { BreakPane; }
+        bind "Alt F11" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "Alt F12" { ToggleTab; }
+        bind "Alt F7" { CloseTab; }
+        bind "Alt F4" { ToggleActiveSyncTab; }
+        bind "Alt F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
+        bind "Alt F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
     }
+
+
+
+
+
+
+
+
+
+
+
