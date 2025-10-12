@@ -1,5 +1,5 @@
     entersearch {
-        bind "Shift F8" { SwitchToMode "Normal"; }
+        bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
         // TODO: document arrows
         bind "Up" { ScrollUp; }
         bind "Down" { ScrollDown; }
@@ -10,8 +10,8 @@
 
         // TODO: document enter
         bind "Enter" { SwitchToMode "Search"; }
-        bind "Shift F4" { Resize "Increase"; }
-        bind "Shift F5" { Resize "Decrease"; }
+        bind "Ctrl Shift F4" { Resize "Increase"; }
+        bind "Ctrl Shift F5" { Resize "Decrease"; }
 
         bind "Ctrl b" { MovePane "Left"; }
         bind "Ctrl f" { MovePane "Right"; }
@@ -31,16 +31,5 @@
 
         // TODO: needed
         // bind "Space" { Detach; }
-        bind "Shift F8" { SwitchToMode "Normal"; }
+        bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
 	}
-
-
-
-
-
-
-
-
-
-
-

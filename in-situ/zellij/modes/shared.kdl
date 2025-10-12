@@ -1,22 +1,12 @@
-        // bind "Alt b" {}
-        // bind "Alt c" {}                                                          COLLISION
-        // bind "Alt d" {}                                                          COLLISION
-        // bind "Alt e" {}                                                          COLLISION
-        // bind "Alt f" {}
-        // bind "Alt i" {  }                                                        COLLISION
-        // bind "Alt n" {  }                                                        COLLISION
-        // bind "Alt u" {  }                                                        COLLISION
-        // bind "Alt O" {  }                                                        COLLISION
-
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
 
-        bind "Shift F1" { MoveTab "Left"; }
-        bind "Shift F2" { MoveTab "Right"; }
+        bind "Ctrl Shift F1" { MoveTab "Left"; }
+        bind "Ctrl Shift F2" { MoveTab "Right"; }
 
-        bind "Shift F12" { EditScrollback; SwitchToMode "Normal"; }
-        bind "Shift F11" { SwitchToMode "Locked"; }
-        bind "Shift F8" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Ctrl Shift F12" { EditScrollback; SwitchToMode "Normal"; }
+        bind "Ctrl Shift F11" { SwitchToMode "Locked"; }
+        bind "Ctrl Shift F8" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl F1" { MoveFocus "Left"; }
         bind "Ctrl F2" { MoveFocus "Right"; }
         bind "Ctrl F4" { MoveFocus "Up"; }
@@ -39,9 +29,9 @@
         bind "Alt Shift F11" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }
         bind "Alt F1" { GoToPreviousTab; }
         bind "Alt F2" { GoToNextTab; }
-        bind "Shift F9" { TogglePaneEmbedOrFloating; }
-        bind "Shift F6" { TogglePanePinned; }
-        bind "Shift F7" { ToggleFloatingPanes; }
+        bind "Ctrl Shift F9" { TogglePaneEmbedOrFloating; }
+        bind "Ctrl Shift F6" { TogglePanePinned; }
+        bind "Ctrl Shift F7" { ToggleFloatingPanes; }
         bind "Alt F8" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
         bind "Alt F9" { NewTab; }
         bind "Alt F10" { BreakPane; }
@@ -52,14 +42,3 @@
         bind "Alt F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
         bind "Alt F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
     }
-
-
-
-
-
-
-
-
-
-
-
