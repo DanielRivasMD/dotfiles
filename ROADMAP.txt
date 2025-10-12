@@ -1,13 +1,9 @@
 - update language configs helix: awk, bash, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - todor completions?
-- test `babel embed` => segregated zellij
 - check R profile installation & config
 - ubuntu LIOS install:
   - samtools
   - seqtk
-- BUG: micro config
-- BUG: some helix keys create collisions
-- TODO: ignore zellij config
 
 
 ==================================================
@@ -15,6 +11,8 @@ ex-situ/bpython/alacritty.theme
   line 13     TODO   update all colors
 ex-situ/helix/languages/git.toml
   line 47     TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
+ex-situ/helix/languages.toml
+  line 157    TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
@@ -31,8 +29,6 @@ in-situ/alacritty/alacritty.yml
 in-situ/broot/conf.toml
   line 7      TODO   rebind over template automatically
   line 13     TODO   review documentation for config
-in-situ/julia/startup.jl
-  line 3      TODO   update variable names
 in-situ/lazygit/config.yml
   line 335    TODO   consider binding single letters?
   line 336    TODO   create a separate template?
