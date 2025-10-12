@@ -1,6 +1,5 @@
 ####################################################################################################
 
-# TODO: update variable names
 # init call
 atreplinit() do repl
 
@@ -10,48 +9,50 @@ atreplinit() do repl
     ####################################################################################################
 
     try
-      @eval using OhMyREPL
-    catch ε
-      @warn "error while importing OhMyREPL" ε
+      @eval import Chain: @chain
+    catch err
+      @warn "Error while importing Chain" err
     end
 
     ####################################################################################################
 
     try
-      @eval import Chain: @chain
-    catch ε
-      @warn "error while importing Chain" ε
-    end
-
-     ####################################################################################################
-
-    try
       @eval import Pipe: @pipe
-    catch ε
-      @warn "error while importing Pipe" ε
+    catch err
+      @warn "Error while importing Pipe" err
     end
 
     ####################################################################################################
 
     try
       @eval using Revise
-    catch ε
-      @warn "Error initializing Revise" exception = (ε, catch_backtrace())
+    catch err
+      @warn "Error initializing Revise" exception = (err, catch_backtrace())
     end
 
     ####################################################################################################
 
     try
       @eval using Debugger
-    catch ε
-      @warn "Error initializing Debugger" exception = (ε, catch_backtrace())
+    catch err
+      @warn "Error initializing Debugger" exception = (err, catch_backtrace())
+    end
+
+    ####################################################################################################
+
+    Timer(0) do _
+        try
+            @eval using OhMyREPL
+        catch err
+            @warn "Error while importing OhMyREPL" err
+        end
     end
 
     ####################################################################################################
 
     # julia specific environmental variables
-    ENV["PAGER"] = "less";
-    ENV["VISUAL"] = "hx";
+    ENV["PAGER"] = "less"
+    ENV["VISUAL"] = "hx"
 
     ####################################################################################################
 
@@ -62,18 +63,21 @@ end
 ####################################################################################################
 
 # loaded modules
-function loadedModules()
-  return filter((χ) -> typeof(eval(χ)) <: Module && χ != :Main, names(Main, imported = true))
+function loaded_modules()
+  return filter(
+    (name) -> typeof(eval(name)) <: Module && name != :Main,
+    names(Main, imported = true),
+  )
 end
 
 ####################################################################################################
 
-# frecuency unicode barplot
-function freqplot(ν)
-  tb = freqtable(ν)
+# frequency unicode barplot
+function freqplot(values)
+  table = freqtable(values)
   UnicodePlots.barplot(
-    tb.dicts[1] |> keys .|> string,
-    tb.array,
+    table.dicts[1] |> keys .|> string,
+    table.array,
   )
 end
 
