@@ -1,5 +1,8 @@
 ####################################################################################################
 
+[keys.insert.j]
+j = { j = "normal_mode" }
+
 # create a new minor mode bound to `+`
 [keys.normal.","]
 "-" = "swap_view_left"
@@ -9,8 +12,12 @@
 "\\" = "wonly"
 "/" = "rotate_view"
 
-
-
+[keys.normal."space"]
+r = ":config-reload"
+q = "switch_case"
+left = "goto_previous_buffer"
+right = "goto_next_buffer"
+space = "goto_last_accessed_file"
 
 [keys.normal."/"]
 "[" = "rsearch"
