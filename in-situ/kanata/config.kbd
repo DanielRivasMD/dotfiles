@@ -1,76 +1,147 @@
+;; OS key code mappings
+;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
+
 (defcfg
   process-unmapped-keys yes
-  concurrent-tap-hold yes
   log-layer-changes no
+  danger-enable-cmd yes
+  concurrent-tap-hold yes
+
+  ;; When any non-chord activation happens, this timeout begins. Until this timeout expires
+  ;; all inputs will immediately skip chords processing and be processed by the active layer.
+  ;; chords-v2-min-idle 250
 )
 
+;; Variables
+(defvar
+ tap-time 300
+ hold-time 300
+ chord-time 60
+)
+
+;; Only one defsrc is allowed.
+;;
+;; defsrc defines the keys that will be intercepted by kanata. The order of the
+;; keys matches with deflayer declarations and all deflayer declarations must
+;; have the same number of keys as defsrc. Any keys not listed in defsrc will
+;; be passed straight to the operating system.
 (defsrc
-  ;; esc
-  ;; grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  ;; tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  ;; caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  ;; lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  ;; lctl lmet lalt           spc            ralt rmet rctl
+  esc    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps   a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft   z    x    c    v    b    n    m    ,    .    /    ▲   rsft
+  fn   lctl  lalt lmet          spc         rmet ralt ◀    ▼    ▶
+)
+
+;; scams
+(defalias
+  scam6 S-C-A-M-6 ;; homerow
+  scam0 S-C-A-M-0 ;; cleanshot capture area
+  scam9 S-C-A-M-9 ;; cleanshot capture previous area
+  scamt S-C-A-M-tab ;; cleanshot capture history
+  scam= S-C-A-M-= ;; cleanshot capture history
+  scamw S-C-A-M-w ;; paste app
+  scamz S-C-A-M-z ;; mouseless app
+  scamd S-C-A-M-d ;; presentify app
+)
+
+;; applications aliases
+(defalias
 )
 
 (defalias
-  save  (multi (release-key lsft) (release-key rsft) lctl s)
-  copy  (tap-dance 200 ((multi lctl c) (multi lctl x)))
-  paste (tap-dance 200 ((multi lctl v) (multi lmet v)))
-  lmet  (multi lmet (layer-toggle lmetLayer))
-  
-  .a (switch ((and lmet lsft)) (unmod alt f1) break () a break)
+  ;; Modifier keys
+  mlmet (tap-hold $tap-time $hold-time d lmet)
+  mrmet (tap-hold $tap-time $hold-time k rmet)
+  mlalt (tap-hold $tap-time $hold-time f lalt)
+  mralt (tap-hold $tap-time $hold-time j ralt)
+  mral2 (tap-hold $tap-time $hold-time ' ralt)
+  mlctl (tap-hold $tap-time $hold-time a lctl)
+  mrctl (tap-hold $tap-time $hold-time ; rctl)
+
+  ;; Double actions,.
+  mtrik (tap-hold $tap-time $hold-time g C-z) ;; trickster
+  mcopy (tap-hold $tap-time $hold-time c M-c)
+  mpast (tap-hold $tap-time $hold-time v M-v)
+  mmtab (tap-hold $tap-time $hold-time z M-tab)
+  mescc (tap-hold $tap-time $hold-time esc caps)
+
+  ;; Other layers tap-hold-press
+  mappr (tap-hold-press $tap-time $hold-time ret (layer-toggle apps))
+  msymb (tap-hold $tap-time $hold-time bspc (layer-toggle symb))
+  mnavi (tap-hold-press $tap-time $hold-time esc (layer-toggle navi))
+  mretu (tap-hold $tap-time $hold-time tab ret)
+
+  ;; Other layers tap-hold
+  msyst (tap-hold $tap-time $hold-time s (layer-toggle syst))
+
+  ;; Multi
+  mhypr (tap-hold $tap-time $hold-time spc (multi lsft lctl lalt lmet)) ;; Hyper key
 )
 
-(deflayermap (main)
-  lmet @lmet
+(defalias
+  1 1
+  8 8
+  7 7
 )
 
-(deflayermap (lmetLayer)
-  ;; O-<letter>
-  a   A-f1
-  c   A-f4
-  d   A-f5
-  e   A-f6
-  f   A-f7
-  h   A-f9
-  j   C-f1
-  k   C-f2
-  l   C-f4
-  m   C-f5
-  n   C-f6
-  q   C-f9
-  r   C-f10
-  s   A-C-f1
-  t   A-C-f2
-  v   A-C-f5
-  w   A-C-f6
-  x   A-C-f7
-  y   A-C-f8
-  z   A-C-f9
-  rctl  A-C-f10
-
-  ;; O-S-<letter> (shifted)
-  ;; S-a   A-S-f1
-  ;; S-c   A-S-f4
-  ;; S-d   A-S-f5
-  ;; S-f   A-S-f7
-  ;; S-i   A-S-f10
-  ;; S-j   C-S-f1
-  ;; S-k   C-S-f2
-  ;; S-l   C-S-f4
-  ;; S-m   C-S-f5
-  ;; S-o   C-S-f7
-  ;; S-q   C-S-f9
-  ;; S-r   C-S-f10
-  ;; S-t   A-C-S-f2
-  ;; S-w   A-C-S-f6
-  ;; S-x   A-C-S-f7
-  ;; S-z   A-C-S-f9
-  ;; S-rctl A-C-S-f10
+;; Main layer
+;; Set cmd on "d" due to cmd+r, cmd+f
+(deflayer main
+  ;;     a      s      d      f      g      h      j      k      l      ;      '
+  XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+  XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     @msymb
+  @mretu q      w      e      r      t      y      u      i      o      p      \      XX     \ 
+  @mnavi XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+  lsft   XX     XX     @mcopy @mpast XX     n      XX     ,      XX     /      XX     rsft
+  XX    XX   XX   @msymb            @mhypr             @mappr      XX         XX     XX     XX
 )
 
-(deflayermap (base)
-  a @.a
+(deflayer apps
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+  fn    lctl lalt lmet                 spc                     rmet    ralt    ◀       ▼       ▶
 )
 
+;; To live reload / hot reload the config:
+;; If kanata can’t parse the file, the previous configuration will continue to be used.
+(deflayer syst
+  ;;   a      s       d       f       g       h       j       k       l       ;       '
+  esc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX    XX
+  tab  XX     XX      M-w     XX      XX      prev    brdn    brup    next    ▶⏸      XX      XX    XX
+  XX   XX     XX      XX      XX      XX      M-S-[   XX      XX      M-S-]   XX      XX      ret
+  lsft XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+  fn    lctl lalt lmet                 lrld                 rmet  ralt        ◀       ▼       ▶
+)
+
+(deflayer symb
+  esc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX    XX
+  tab  S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     XX      XX    XX
+  XX   1      2       3       4       5       6       7       8       9       0       XX      ret
+  lsft XX     XX      XX      [       S-[     S-]     ]       _       .       /       ▲       rsft
+  fn    lctl lalt lmet                  bspc                      rmet    ralt    ◀      ▼       ▶
+)
+
+(deflayer navi
+  ;;   a      s       d       f       g       h       j       k       l       ;       '
+  esc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX    del
+@scamt @scam0 @scamw  @scamd  XX      XX      S-A-◀   S-A-▼   S-A-▲   S-A-▶      XX      XX      XX    XX
+  XX   @scam= @scam9     M-[     M-]     XX      ◀       ▼       ▲       ▶       XX      XX      XX
+  lsft XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+  fn    lctl lalt lmet                  _                      rmet    ralt    ◀      ▼       ▶
+)
+
+(defchordsv2
+  ;; (participating-keys1) action1 timeout1 release-behaviour1 (disabled-layers1)
+  (w e r) M-= $chord-time first-release () ;; zoom in
+  (s d f) M-- $chord-time first-release () ;; zoom out
+  (q w e) volu $chord-time first-release ()
+  (a s d) vold $chord-time first-release ()
+)
