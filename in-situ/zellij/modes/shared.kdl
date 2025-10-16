@@ -18,27 +18,18 @@
         bind "Ctrl F10" { SwitchToMode "RenamePane"; PaneNameInput 0; }
         bind "Ctrl F11" { SwitchFocus; }
 
-        bind "Alt Shift F1" { SwitchToMode "Tab"; GoToTab 1; SwitchToMode "Normal"; }
-        bind "Alt Shift F2" { SwitchToMode "Tab"; GoToTab 2; SwitchToMode "Normal"; }
-        bind "Alt Shift F4" { SwitchToMode "Tab"; GoToTab 3; SwitchToMode "Normal"; }
-        bind "Alt Shift F5" { SwitchToMode "Tab"; GoToTab 4; SwitchToMode "Normal"; }
-        bind "Alt Shift F6" { SwitchToMode "Tab"; GoToTab 5; SwitchToMode "Normal"; }
-        bind "Alt Shift F7" { SwitchToMode "Tab"; GoToTab 6; SwitchToMode "Normal"; }
-        bind "Alt Shift F8" { SwitchToMode "Tab"; GoToTab 7; SwitchToMode "Normal"; }
-        bind "Alt Shift F9" { SwitchToMode "Tab"; GoToTab 8; SwitchToMode "Normal"; }
-        bind "Alt Shift F11" { SwitchToMode "Tab"; GoToTab 9; SwitchToMode "Normal"; }
-        bind "Alt F1" { GoToPreviousTab; }
-        bind "Alt F2" { GoToNextTab; }
+        bind "Shift F1" { GoToPreviousTab; }
+        bind "Shift F2" { GoToNextTab; }
         bind "Ctrl Shift F9" { TogglePaneEmbedOrFloating; }
         bind "Ctrl Shift F6" { TogglePanePinned; }
         bind "Ctrl Shift F7" { ToggleFloatingPanes; }
-        bind "Alt F8" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
-        bind "Alt F9" { NewTab; }
-        bind "Alt F10" { BreakPane; }
-        bind "Alt F11" { SwitchToMode "RenameTab"; TabNameInput 0; }
-        bind "Alt F12" { ToggleTab; }
-        bind "Alt F7" { CloseTab; }
-        bind "Alt F4" { ToggleActiveSyncTab; }
-        bind "Alt F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
-        bind "Alt F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
+        bind "Shift F8" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
+        bind "Shift F9" { NewTab; }
+        bind "Shift F10" { BreakPane; }
+        bind "Shift F11" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "Shift F12" { ToggleTab; }
+        bind "Shift F7" { CloseTab; }
+        bind "Shift F4" { ToggleActiveSyncTab; }
+        bind "Shift F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
+        bind "Shift F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
     }
