@@ -59,6 +59,7 @@ case "$os" in
       alfred                                               # App launcher and automation
       appcleaner                                           # Removes leftover app files
       arc                                                  # Modern browser
+      brave-browser
       docker                                               # Containers and dev environments
       dropbox                                              # Cloud file sync
       espanso                                              # Text expander
