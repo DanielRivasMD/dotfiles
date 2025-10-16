@@ -9,10 +9,14 @@
 ==================================================
 ex-situ/bpython/alacritty.theme
   line 13     TODO   update all colors
+ex-situ/helix/config.toml
+  line 131    TODO   possible to overwrite mini-modes now
 ex-situ/helix/languages/git.toml
   line 47     TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
 ex-situ/helix/languages.toml
   line 157    TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
+ex-situ/helix/modes/mini-mode.toml
+  line 16     TODO   possible to overwrite mini-modes now
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
@@ -21,7 +25,7 @@ ex-situ/shell/term/osx_profile.sh
 in-silico/clojure.sh
   line 11     TODO   is this redundant?
 in-silico/pkg_manager.sh
-  line 98     TODO   decide & document: starship, nushell & nerd-fonts
+  line 99     TODO   decide & document: starship, nushell & nerd-fonts
 in-silico/rust.sh
   line 17     BUG    unrecognized subcommand
 in-situ/alacritty/alacritty.yml

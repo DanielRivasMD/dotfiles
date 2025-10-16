@@ -13,6 +13,8 @@ j = { j = "normal_mode" }
 "/" = "rotate_view"
 
 [keys.normal."space"]
+# TODO: possible to overwrite mini-modes now
+f = "no_op"
 r = ":config-reload"
 q = "switch_case"
 left = "goto_previous_buffer"
