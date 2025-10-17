@@ -10,13 +10,17 @@
 ex-situ/bpython/alacritty.theme
   line 13     TODO   update all colors
 ex-situ/helix/config.toml
-  line 131    TODO   possible to overwrite mini-modes now
+  line 122    TODO   possible to overwrite mini-modes now
+  line 130    TODO   config diagnostics & lsp
+  line 131    TODO   from saiyajin => go to change due to micro config
 ex-situ/helix/languages/git.toml
   line 47     TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
 ex-situ/helix/languages.toml
   line 157    TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
 ex-situ/helix/modes/mini-mode.toml
-  line 16     TODO   possible to overwrite mini-modes now
+  line 7      TODO   possible to overwrite mini-modes now
+  line 15     TODO   config diagnostics & lsp
+  line 16     TODO   from saiyajin => go to change due to micro config
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
