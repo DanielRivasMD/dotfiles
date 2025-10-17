@@ -36,14 +36,7 @@
 
 ;; scams
 (defalias
-  scam6 S-C-A-M-6 ;; homerow
-  scam0 S-C-A-M-0 ;; cleanshot capture area
-  scam9 S-C-A-M-9 ;; cleanshot capture previous area
-  scamt S-C-A-M-tab ;; cleanshot capture history
-  scam= S-C-A-M-= ;; cleanshot capture history
   scamw S-C-A-M-w ;; paste app
-  scamz S-C-A-M-z ;; mouseless app
-  scamd S-C-A-M-d ;; presentify app
 )
 
 ;; applications aliases
@@ -52,45 +45,46 @@
 
 (defalias
   ;; Modifier keys
-
-  ;; Double actions,.
   mcopy (tap-hold $tap-time $hold-time c M-c)
   mpast (tap-hold $tap-time $hold-time v M-v)
-  mmtab (tap-hold $tap-time $hold-time z M-tab)
-  mescc (tap-hold $tap-time $hold-time esc caps)
 
-  ;; Other layers tap-hold-press
+  mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
+  mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
   mq    (tap-hold $tap-time $hold-time q    (layer-toggle lq))
   mz    (tap-hold $tap-time $hold-time z    (layer-toggle lz))
   mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
-  mappr (tap-hold-press $tap-time $hold-time ret (layer-toggle apps))
-  msymb (tap-hold $tap-time $hold-time bspc (layer-toggle symb))
-  mnavi (tap-hold-press $tap-time $hold-time esc (layer-toggle navi))
-  mretu (tap-hold $tap-time $hold-time tab ret)
 
-  ;; Other layers tap-hold
-  msyst (tap-hold $tap-time $hold-time s (layer-toggle syst))
-
-  ;; Multi
-  mhypr (tap-hold $tap-time $hold-time spc (multi lsft lctl lalt lmet)) ;; Hyper key
-)
-
-(defalias
-  1 1
-  8 8
-  7 7
+  mjok  (tap-hold $tap-time $hold-time esc (multi lsft lctl lalt lmet)) ;; Hyper key
 )
 
 ;; Main layer
 (deflayer main
   ;;     a     s       d       f       g      h        j       k       l       ;       '
-  XX     XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
-  XX     XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX     @msymb
-  @mretu @mq   w       e       r       t      y        u       i       o       p       \       XX     \ 
-  @mnavi a     s       d       f       g      h        j       k       l       ;       '       ret
+  esc    XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
+  @mgrv  XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX     XX
+  @mtab  @mq   w       e       r       t      y        u       i       o       p       [       ]      \ 
+  @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
   lsft   @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       rsft
-         lctl  @mlalt  @mlmet                 @mhypr           @mappr  XX      ◀       ▼       ▶
+         lctl  @mlalt  @mlmet                 spc              XX      XX      ◀       ▼       ▶
+)
+
+(deflayer lgrv
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-f6
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f7
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f4    C-f8
+        lctl   lalt    lmet                    C-f11           C-f10   C-f9    C-f1    C-f5    C-f2
+)
+
+(deflayer ltab
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-f7
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      S-f8
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       S-f9
+        lctl   lalt    lmet                    S-f12           S-f11   S-f10   S-f1    ▼       S-f2
 )
 
 (deflayer llalt
@@ -99,7 +93,7 @@
   tab   A-q    A-w     S-f5    A-r     A-t     A-y     A-u     A-i     A-o     A-p     XX      XX   XX
   XX    A-a    A-s     S-f4    S-f6    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
   lsft  A-z    A-x     A-f2    A-v     S-f1    S-f8    A-m     XX      XX      XX      ▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+        lctl   lalt    lmet                    spc             rmet    ralt    A-b     ▼       A-f
 )
 
 (deflayer llmet
@@ -107,8 +101,8 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    C-a     ▼       C-e
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      home    rsft
+        lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
 )
 
 (deflayer lz
@@ -136,35 +130,6 @@
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
   lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
-)
-
-(deflayer syst
-  ;;   a      s       d       f       g       h       j       k       l       ;       '
-  esc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX    XX
-  tab  XX     XX      M-w     XX      XX      prev    brdn    brup    next    ▶⏸      XX      XX    XX
-  XX   XX     XX      XX      XX      XX      M-S-[   XX      XX      M-S-]   XX      XX      ret
-  lsft XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-       lctl lalt lmet                         lrld            rmet    ralt    ◀       ▼       ▶
-)
-
-(deflayer symb
-  esc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX    XX
-  tab  S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     XX      XX    XX
-  XX   1      2       3       4       5       6       7       8       9       0       XX      ret
-  lsft XX     XX      XX      [       S-[     S-]     ]       _       .       /       ▲       rsft
-       lctl   lalt    lmet                    bspc            rmet    ralt    ◀       ▼       ▶
-)
-
-(deflayer navi
-  ;;   a      s       d       f       g       h       j       k       l       ;       '
-  esc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX    del
-@scamt @scam0 @scamw  @scamd  XX      XX      S-A-◀   S-A-▼   S-A-▲   S-A-▶   XX      XX      XX    XX
-  XX   @scam= @scam9  M-[     M-]     XX      ◀       ▼       ▲       ▶       XX      XX      XX
-  lsft XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-       lctl   lalt    lmet                    _               rmet    ralt    ◀       ▼       ▶
 )
 
 (defchordsv2
