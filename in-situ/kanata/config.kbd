@@ -54,6 +54,8 @@
   mz    (tap-hold $tap-time $hold-time z    (layer-toggle lz))
   mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
+  mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
+  mrsft (tap-hold $tap-time $hold-time rsft (layer-toggle lrsft))
 
   mjok  (tap-hold $tap-time $hold-time esc (multi lsft lctl lalt lmet)) ;; Hyper key
 )
@@ -62,10 +64,10 @@
 (deflayer main
   ;;     a     s       d       f       g      h        j       k       l       ;       '
   esc    XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
-  @mgrv  XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX     XX
+  @mgrv  1     2       3       4       5      6        7       8       9       0       -       =      XX
   @mtab  @mq   w       e       r       t      y        u       i       o       p       [       ]      \ 
   @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
-  lsft   @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       rsft
+  @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
          lctl  @mlalt  @mlmet                 spc              XX      XX      ◀       ▼       ▶
 )
 
@@ -90,9 +92,9 @@
 (deflayer llalt
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   A-q    A-w     S-f5    A-r     A-t     A-y     A-u     A-i     A-o     A-p     XX      XX   XX
-  XX    A-a    A-s     S-f4    S-f6    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
-  lsft  A-z    A-x     A-f2    A-v     S-f1    S-f8    A-m     XX      XX      XX      ▲       rsft
+  tab   A-q    A-w     A-f5    A-r     A-t     A-y     A-u     A-i     A-o     A-p     XX      XX   XX
+  XX    A-a    A-s     A-f4    A-f6    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
+  lsft  A-z    A-x     A-f2    A-v     A-f1    A-f8    A-m     XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    A-b     ▼       A-f
 )
 
@@ -121,6 +123,24 @@
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
   lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+)
+
+(deflayer llsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       del
+        lctl   lalt    lmet                    spc             A-d     C-k     ◀       ▼       ▶
+)
+
+(deflayer lrsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  bspc  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+        C-w    lalt    C-u                     spc             rmet    ralt    ◀       ▼       ▶
 )
 
 (deflayer apps
