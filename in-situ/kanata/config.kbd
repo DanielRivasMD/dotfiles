@@ -126,11 +126,11 @@
 )
 
 (deflayer llsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  esc   S-1     S-2       S-3       S-4       S-5      S-6        S-7       S-8       S-9       S-0      S--       S-=
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       del
+  tab   S-q   S-w       S-e       S-r       S-t      S-y        S-u       S-i       S-o       S-p       S-[       S-]      S-\ 
+  XX  S-a     S-s       S-d       S-f       S-g      S-h        S-j       S-k       S-l       S-;       S-'       ret
+  lsft S-z   S-x       S-c  S-v  S-b      S-n        S-m       S-,       S-.       S-/       ▲       @mrsft
         lctl   lalt    lmet                    spc             A-d     C-k     ◀       ▼       ▶
 )
 
