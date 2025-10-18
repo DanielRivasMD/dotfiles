@@ -1,6 +1,7 @@
 ;; OS key code mappings
 ;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
 
+;; TODO: create aliases header to embed hotkeys automatically
 (defcfg
   process-unmapped-keys yes
   log-layer-changes no
