@@ -1,46 +1,151 @@
 ####################################################################################################
 
-[keys.insert.j]
-j = "normal_mode"
+# [keys.insert.j]
+# j = "normal_mode"
+
 
 [keys.normal."space"]
-# TODO: possible to overwrite mini-modes now
-f = "no_op"
 r = ":config-reload"
+ret = "command_palette"
+a = "code_action"
+d = "diagnostics_picker"
+D = "workspace_diagnostics_picker"
+s = "symbol_picker"
+S = "workspace_symbol_picker"
+
+g = "changed_file_picker"
+j = "jumplist_picker"
+b = "buffer_picker"
+f = "file_picker"
+F = "file_picker_in_current_directory"
+
+"-" = "switch_to_lowercase"
+"=" = "switch_to_uppercase"
 q = "switch_case"
-left = "goto_previous_buffer"
-right = "goto_next_buffer"
-space = "goto_last_accessed_file"
 
-# TODO: config diagnostics & lsp
-# TODO: from saiyajin => go to change due to micro config
-# # create a new minor mode bound to `+`
-# [keys.normal.","]
-# "-" = "swap_view_left"
-# "=" = "swap_view_right"
-# ";" = "goto_file"
-# "'" = "wclose"
-# "\\" = "wonly"
-# "/" = "rotate_view"
+# e = "no_op"
+# f = "no_op"
+# E = "no_op"
+# F = "no_op"
+# b = "no_op"
+# j = "no_op"
+# g = "no_op"
+G = "no_op"
+k = "no_op"
+# s = "no_op"
+# S = "no_op"
+# d = "no_op"
+# D = "no_op"
+# r = "no_op"
+# a = "no_op"
+h = "no_op"
+"'" = "no_op"
+w = "no_op"
+c = "no_op"
+C = "no_op"
+A-c = "no_op"
+p = "no_op"
+P = "no_op"
+y = "no_op"
+Y = "no_op"
+R = "no_op"
+"/" = "no_op"
+"?" = "no_op"
 
-# [keys.normal."/"]
-# "[" = "rsearch"
-# "]" = "search"
-# ";" = "search_prev"
-# "'" = "search_next"
-# "\\" = "search_selection"
-# "|" = "search_selection_detect_word_boundaries"
 
-# [keys.normal."\\"]
-# "[" = "shell_pipe"
-# "]" = "shell_pipe_to"
-# ";" = "shell_insert_output"
-# "'" = "shell_append_output"
-# "\\" = "shell_keep_pipe"
+[keys.normal.g]
+"." = "no_op"
+"|" = "no_op"
+g = "no_op"
+e = "no_op"
+f = "no_op"
+h = "no_op"
+l = "no_op"
+s = "no_op"
+t = "no_op"
+c = "no_op"
+b = "no_op"
+d = "no_op"
+y = "no_op"
+i = "no_op"
+a = "no_op"
+m = "no_op"
+n = "no_op"
+p = "no_op"
+j = "no_op"
+k = "no_op"
+w = "no_op"
+r = "no_op"
+D = "no_op"
 
-# [keys.normal."+"]
-# m = ":run-shell-command make"
-# c = ":run-shell-command cargo build"
-# t = ":run-shell-command cargo test"
+####################################################################################################
+
+# diagnostics mini mode
+[keys.normal."?"]
+up =  "goto_prev_diag"
+down =  "goto_next_diag"
+ret =  "diagnostics_picker"
+# =  ["workspace_diagnostics_picker"]
+
+####################################################################################################
+
+# language server protocol mini mode
+[keys.normal.z]
+ret = "symbol_picker"
+n = "rename_symbol"
+r = "goto_reference"
+d = "goto_definition"
+i = "goto_implementation"
+t = "goto_type_definition"
+
+z = "no_op"
+c = "no_op"
+b = "no_op"
+m = "no_op"
+j = "no_op"
+up = "no_op"
+down = "no_op"
+k = "no_op"
+p = "no_op"
+C-f = "no_op"
+pagedown = "no_op"
+C-b = "no_op"
+pageup = "no_op"
+C-u = "no_op"
+C-d = "no_op"
+"/" = "no_op"
+"?" = "no_op"
+N = "no_op"
+space = "no_op"
+backspace = "no_op"
+
+
+[keys.normal.Z]
+ret = "workspace_symbol_picker"
+d = ["vsplit", "goto_definition"]
+t = ["vsplit", "goto_type_definition"]
+
+n = "no_op"
+z = "no_op"
+c = "no_op"
+b = "no_op"
+m = "no_op"
+j = "no_op"
+up = "no_op"
+down = "no_op"
+k = "no_op"
+p = "no_op"
+C-f = "no_op"
+pagedown = "no_op"
+C-b = "no_op"
+pageup = "no_op"
+C-u = "no_op"
+C-d = "no_op"
+"/" = "no_op"
+"?" = "no_op"
+N = "no_op"
+space = "no_op"
+backspace = "no_op"
+
 
 ####################################################################################################
