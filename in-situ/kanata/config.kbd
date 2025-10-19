@@ -74,18 +74,18 @@
 
 (deflayer lgrv
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-S-f6
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f7
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f4  C-S-f8
+        lctl   lalt    lmet                    C-S-f11         XX      C-S-f9  ◀       C-S-f5  ▶
 )
 
 (deflayer ltab
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-f7
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      S-f8
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f1  C-S-f2   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      S-f6    S-f5    S-f8
   lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       S-f9
         lctl   lalt    lmet                    S-f12           S-f11   S-f10   S-f1    ▼       S-f2
 )
@@ -101,11 +101,11 @@
 
 (deflayer lz
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-l
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-f1    ▼       A-f2
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-g
+  lsft  XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
+        lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
 )
 
 (deflayer llalt
@@ -127,8 +127,8 @@
 )
 
 (deflayer llsft
-  esc   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
   tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
   XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
   lsft  S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲       del
@@ -136,8 +136,8 @@
 )
 
 (deflayer lrsft
-  esc   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
   tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
   XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
   bspc  S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲     rsft
