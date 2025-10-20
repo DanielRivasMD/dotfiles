@@ -104,7 +104,7 @@
 (deflayer lz
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-l
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-g
   lsft  XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
         lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
@@ -134,7 +134,7 @@
   tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
   XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
   lsft  S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲       del
-        lctl   lalt    lmet                    spc             A-d     C-k     S-◀     S-▼       S-▶
+        lctl   lalt    lmet                    spc             C-k     A-d     S-◀     S-▼       S-▶
 )
 
 (deflayer lrsft
@@ -161,7 +161,7 @@
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
   lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        C-t    C-s     C-r                     spc             rmet    ralt    ◀       ▼       ▶
+        C-r    C-s     C-t                     spc             rmet    ralt    ◀       ▼       ▶
 )
 
 (deflayer apps
