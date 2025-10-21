@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
-# julia-sys: wrapper for Julia with a precompiled sysimage (global environment)
+# julia-sys: systemwide wrapper for Julia 1.8.5 with a precompiled sysimage
 #
 # Usage:
 #   julia-sys [--verbose] lsp
@@ -24,50 +24,10 @@ log() {
 }
 
 ####################################################################################################
-# Detect Julia version
+# Fixed Julia version and sysimage path (systemwide)
 ####################################################################################################
 
-find_project_root() {
-    local dir="$PWD"
-    while [ "$dir" != "/" ]; do
-        if [ -f "$dir/Project.toml" ]; then
-            echo "$dir"
-            return 0
-        fi
-        dir=$(dirname "$dir")
-    done
-    return 1
-}
-
-PROJECT_ROOT=$(find_project_root)
-
-if [ -n "$PROJECT_ROOT" ]; then
-    JULIA_VERSION=$(cd "$PROJECT_ROOT" && julia --startup-file=no --history-file=no -e '
-        using TOML
-        try
-            if isfile("Manifest.toml")
-                manifest = TOML.parsefile("Manifest.toml")
-                ver = get(manifest, "julia_version", nothing)
-                if ver !== nothing
-                    println(ver); exit()
-                end
-            end
-            if isfile("Project.toml")
-                proj = TOML.parsefile("Project.toml")
-                ver = get(get(proj, "compat", Dict()), "julia", nothing)
-                if ver !== nothing
-                    println(ver); exit()
-                end
-            end
-            println("1.8.5")
-        catch
-            println("1.8.5")
-        end
-    ')
-else
-    JULIA_VERSION="1.8.5"
-fi
-
+JULIA_VERSION="1.8.5"
 JULIA_BIN=(julia +$JULIA_VERSION)
 SYSIMG="$HOME/.julia/sysimages/julia-$JULIA_VERSION-formatter.so"
 
@@ -81,14 +41,6 @@ build_sysimage() {
         using PackageCompiler
         create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
             sysimage_path=\"$SYSIMG\")"
-
-    log "Ensuring and precompiling LSP packages in global env..."
-    "${JULIA_BIN[@]}" --project="@v$JULIA_VERSION" --startup-file=no -e '
-        using Pkg
-        Pkg.add(["LanguageServer", "SymbolServer", "StaticLint", "JuliaFormatter"])
-        Pkg.update(["LanguageServer", "SymbolServer", "StaticLint", "JuliaFormatter"])
-        using LanguageServer, SymbolServer, StaticLint, JuliaFormatter
-    '
 }
 
 ####################################################################################################
@@ -125,7 +77,7 @@ case "$1" in
     echo "  julia-sys [--verbose] lsp"
     echo "  julia-sys [--verbose] formatter"
     echo "  julia-sys [--verbose] rebuild"
-    exit 1
+    exit 0
     ;;
 esac
 
