@@ -3,7 +3,7 @@
 ####################################################################################################
 
 [language-server.julia_lsp]
-command = "julia-sys"
+command = "jlang"
 args = ["lsp"]
 
 [[language]]
@@ -11,9 +11,11 @@ name = "julia"
 scope = "source.julia"
 file-types = ["jl"]
 roots = ["Project.toml", "Manifest.toml"]
-language-servers = ["julia_lsp"]
 auto-format = true
-formatter = { command = "julia-sys", timeout = 30, args = ["formatter"] }
+comment-token = "#"
+language-servers = ["julia_lsp"]
+indent = { tab-width = 2, unit = " " }
+formatter = { command = "jlang", timeout = 30, args = ["format"] }
 
 [[grammar]]
 name = "julia"
