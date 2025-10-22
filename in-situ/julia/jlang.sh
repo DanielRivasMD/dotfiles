@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# julia-sys: systemwide wrapper for Julia 1.8.5 with a precompiled sysimage
+# jlang: systemwide wrapper for Julia 1.8.5 with a precompiled sysimage
 #
 # Usage:
-#   julia-sys [--verbose] lsp
-#   julia-sys [--verbose] formatter
-#   julia-sys [--verbose] rebuild
+#   jlang [--verbose] lsp
+#   jlang [--verbose] formatter
+#   jlang [--verbose] rebuild
 
 ####################################################################################################
 # Option parsing
@@ -57,15 +57,16 @@ case "$1" in
     [ -f "$SYSIMG" ] || build_sysimage
     log "Starting LSP with sysimage: $SYSIMG"
     exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
+      --project=@. \
       --startup-file=no --history-file=no --quiet -e "
         using LanguageServer, SymbolServer
         depot = get(ENV, \"JULIA_DEPOT_PATH\", \"\")
-        project = Base.current_project()
+        project = dirname(something(Base.current_project(), pwd()))
         server = LanguageServer.LanguageServerInstance(stdin, stdout, project, depot)
         run(server)
       "
     ;;
-  formatter)
+  format)
     [ -f "$SYSIMG" ] || build_sysimage
     log "Running formatter with sysimage: $SYSIMG"
     exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
@@ -74,9 +75,9 @@ case "$1" in
     ;;
   *)
     echo "Usage:"
-    echo "  julia-sys [--verbose] lsp"
-    echo "  julia-sys [--verbose] formatter"
-    echo "  julia-sys [--verbose] rebuild"
+    echo "  jlang [--verbose] lsp"
+    echo "  jlang [--verbose] format"
+    echo "  jlang [--verbose] rebuild"
     exit 0
     ;;
 esac
