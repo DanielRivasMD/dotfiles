@@ -81,13 +81,13 @@ ret =  "workspace_diagnostics_picker"
 
 # language server protocol mini mode
 [keys.normal.z]
-ret = "symbol_picker"
+z = "symbol_picker"
 n = "rename_symbol"
 r = "goto_reference"
 d = "goto_definition"
 i = "goto_implementation"
 t = "goto_type_definition"
-space = "code_action"
+ret = "code_action"
 
 b = "no_op"
 c = "no_op"
@@ -98,8 +98,8 @@ m = "no_op"
 N = "no_op"
 p = "no_op"
 # t = "no_op"
-z = "no_op"
-# space = "no_op"
+# z = "no_op"
+space = "no_op"
 
 up = "no_op"
 down = "no_op"
