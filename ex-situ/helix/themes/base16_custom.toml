@@ -76,17 +76,17 @@
 "info" = "light-blue"
 "hint" = "light-gray"
 "debug" = "light-gray"
-"warning" = "light-yellow"
-"error" = "light-red"
+"warning" = "yellow-inline-diag"
+"error" = "red"
 
 ####################################################################################################
 
-"diagnostic.error" = { bg = "red", fg = "white", modifiers = [] }
-"diagnostic.warning" = { bg = "yellow", fg = "black", modifiers = [] }
-"diagnostic.info" = { bg = "blue", fg = "white", modifiers = ["bold"] }
-"diagnostic.hint" = { bg = "gray", fg = "white", modifiers = ["bold"] }
-"diagnostic.debug" = { bg = "gray", fg = "white", modifiers = ["italic"] }
-"diagnostic.unnecessary" = { bg = "gray", fg = "white", modifiers = ["dim"] }
+"diagnostic.error" = { fg = "light-red", modifiers = ["bold"] }
+"diagnostic.warning" = { fg = "yellow", modifiers = ["dim"] }
+"diagnostic.info" = { fg = "light-blue", modifiers = ["italic"] }
+"diagnostic.hint" = { fg = "light-gray", modifiers = ["italic"] }
+"diagnostic.debug" = { fg = "gray", modifiers = ["dim"] }
+"diagnostic.unnecessary" = { fg = "gray", modifiers = ["dim"] }
 
 ####################################################################################################
 
@@ -96,7 +96,7 @@
 # comment = "#6272A4"
 # current_line = "#44475a"
 # cursorline = "#2d303e"
-# cyan = "#8be9fd"
+cyan = "#8be9fd"
 # darker = "#222430"
 # foreground = "#f8f8f2"
 # green = "#50fa7b"
@@ -108,6 +108,6 @@ orange = "#ffb86c"
 # red = "#ff5555"
 # selection = "#363848"
 # whitespace = "#586693"
-# yellow = "#f1fa8c"
+yellow-inline-diag = "#f1fa8c"
 
 ####################################################################################################
