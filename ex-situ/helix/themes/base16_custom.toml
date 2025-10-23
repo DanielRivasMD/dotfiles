@@ -26,7 +26,7 @@
 "ui.virtual.ruler" = { bg = "gray" }
 "ui.virtual.whitespace" = "gray"
 "ui.virtual.indent-guide" = "gray"
-"ui.virtual.inlay-hint" = { fg = "white", bg = "gray" }
+"ui.virtual.inlay-hint" = { fg = "slategray" }
 "ui.virtual.inlay-hint.parameter" = { fg = "white", modifiers = ["italic"] }
 "ui.virtual.wrap" = "gray"
 "ui.virtual.jump-label" = { fg = "orange", modifiers = ["bold"] }
@@ -76,7 +76,7 @@
 "info" = "light-blue"
 "hint" = "light-gray"
 "debug" = "light-gray"
-"warning" = "yellow-inline-diag"
+"warning" = "khaki"
 "error" = "red"
 
 ####################################################################################################
@@ -108,6 +108,7 @@ orange = "#ffb86c"
 # red = "#ff5555"
 # selection = "#363848"
 # whitespace = "#586693"
-yellow-inline-diag = "#f1fa8c"
+khaki = "#f0e68c"
+slategray = "#708090"
 
 ####################################################################################################
