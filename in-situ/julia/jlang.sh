@@ -68,10 +68,17 @@ case "$1" in
     ;;
   format)
     [ -f "$SYSIMG" ] || build_sysimage
-    log "Running formatter with sysimage: $SYSIMG"
-    exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
-      --startup-file=no --history-file=no --quiet --project -e \
-      'using JuliaFormatter; print(format_text(read(stdin, String); indent=2))'
+    shift
+    if [ $# -eq 0 ]; then
+      exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
+        --startup-file=no --history-file=no --quiet --project -e \
+        'using JuliaFormatter; print(format_text(read(stdin, String); indent=2))'
+    else
+      exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
+        --startup-file=no --history-file=no --quiet --project -e \
+        'using JuliaFormatter; for f in ARGS; format_file(f; indent=2) end' \
+        -- "$@"
+    fi
     ;;
   *)
     echo "Usage:"
