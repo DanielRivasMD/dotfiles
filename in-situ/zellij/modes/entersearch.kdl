@@ -10,26 +10,6 @@
 
         // TODO: document enter
         bind "Enter" { SwitchToMode "Search"; }
-        bind "Ctrl Shift F4" { Resize "Increase"; }
-        bind "Ctrl Shift F5" { Resize "Decrease"; }
 
-        bind "Ctrl b" { MovePane "Left"; }
-        bind "Ctrl f" { MovePane "Right"; }
-        bind "Ctrl n" { MovePane "Up"; }
-        bind "Ctrl p" { MovePane "Down"; }
-
-        // TODO: relocate?
-        // bind "Alt j" { Resize "Increase Left"; }
-        // bind "Alt k" { Resize "Increase Right"; }
-        // bind "Alt l" { Resize "Increase Up"; }
-        // bind "Alt m" { Resize "Increase Down"; }
-
-        // bind "Alt K" { Resize "Decrease Right"; }
-        // bind "Alt J" { Resize "Decrease Left"; }
-        // bind "Ctrl x" { Resize "Decrease Down"; }
-        // bind "Ctrl y" { Resize "Decrease Up"; }
-
-        // TODO: needed
-        // bind "Space" { Detach; }
         bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
 	}
