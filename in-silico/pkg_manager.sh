@@ -15,23 +15,23 @@ case "$os" in
     install_formulae=(
       aerc
       pass
-      bat-extras                                           # bat utilities
-      cljfmt                                               # Clojure formatter
-      clojure                                              # Clojure
-      fzf                                                  # fuzzy finder
-      gh                                                   # GitHub CLI
-      helix                                                # code editor
-      joplin-cli                                           # Joplin CLI
-      llvm                                                 # compiler toolchain
-      micro                                                # terminal editor
-      mysql                                                # MySQL DB
-      nushell                                              # structured shell
-      ollama                                               # local LLM runner
-      pgformatter                                          # SQL formatter
-      postgresql                                           # PostgreSQL DB
-      sqlite                                               # SQLite engine
-      starship                                             # shell prompt
-      zprint                                               # Clojure pretty printer
+      bat-extras  # bat utilities
+      cljfmt      # Clojure formatter
+      clojure     # Clojure
+      fzf         # fuzzy finder
+      gh          # GitHub CLI
+      helix       # code editor
+      joplin-cli  # Joplin CLI
+      llvm        # compiler toolchain
+      micro       # terminal editor
+      mysql       # MySQL DB
+      nushell     # structured shell
+      ollama      # local LLM runner
+      pgformatter # SQL formatter
+      postgresql  # PostgreSQL DB
+      sqlite      # SQLite engine
+      starship    # shell prompt
+      zprint      # Clojure pretty printer
     )
 
     for formula in "${install_formulae[@]}"; do
@@ -50,36 +50,41 @@ case "$os" in
 
     brew install yqrashawn/goku/goku
 
+    brew install node
+    npm install -g bash-language-server
+
+    brew install shfmt
+
     ####################################################################################################
     # Casks
     ####################################################################################################
 
     install_casks=(
-      alacritty                                            # Fast GPU-based terminal
-      alfred                                               # App launcher and automation
-      appcleaner                                           # Removes leftover app files
-      arc                                                  # Modern browser
+      alacritty  # Fast GPU-based terminal
+      alfred     # App launcher and automation
+      appcleaner # Removes leftover app files
+      arc        # Modern browser
       brave-browser
-      docker                                               # Containers and dev environments
-      dropbox                                              # Cloud file sync
-      espanso                                              # Text expander
-      font-hack-nerd-font                                  # Font with icons
-      ghostty                                              # Terminal emulator
-      inkscape                                             # Vector graphics editor
-      karabiner-elements                                   # Keyboard remapper
-      logi-options-plus                                    # Logitech device config
-      nordvpn                                              # VPN client
-      rectangle                                            # Window tiling
-      rig                                                  # R version manager
-      skim                                                 # PDF reader with highlights
-      slack                                                # Team messaging
-      steam                                                # Game platform
-      telegram                                             # Secure messaging
-      the-unarchiver                                       # Archive extractor
-      transmission                                         # Torrent client
-      vlc                                                  # Media player
-      whatsapp                                             # Messaging app
-      xquartz                                              # X11 server for macOS
+      docker              # Containers and dev environments
+      dropbox             # Cloud file sync
+      espanso             # Text expander
+      font-hack-nerd-font # Font with icons
+      ghostty             # Terminal emulator
+      inkscape            # Vector graphics editor
+      karabiner-elements  # Keyboard remapper
+      logi-options-plus   # Logitech device config
+      nordvpn             # VPN client
+      rectangle           # Window tiling
+      rig                 # R version manager
+      skim                # PDF reader with highlights
+      slack               # Team messaging
+      steam               # Game platform
+      telegram            # Secure messaging
+      the-unarchiver      # Archive extractor
+      transmission        # Torrent client
+      vlc                 # Media player
+      whatsapp            # Messaging app
+      xquartz             # X11 server for macOS
     )
 
     for cask in "${install_casks[@]}"; do
@@ -99,14 +104,14 @@ case "$os" in
       # TODO: decide & document: starship, nushell & nerd-fonts
 
       install_packages=(
-        bat                                                # available as 'bat'
-        fzf                                                # fuzzy finder
-        gh                                                 # GitHub CLI
-        llvm                                               # compiler toolchain
-        micro                                              # terminal editor
-        mysql-server                                       # MySQL DB
-        postgresql                                         # PostgreSQL DB
-        sqlite3                                            # SQLite engine
+        bat          # available as 'bat'
+        fzf          # fuzzy finder
+        gh           # GitHub CLI
+        llvm         # compiler toolchain
+        micro        # terminal editor
+        mysql-server # MySQL DB
+        postgresql   # PostgreSQL DB
+        sqlite3      # SQLite engine
       )
 
       echo "Updating package lists..."
@@ -118,12 +123,12 @@ case "$os" in
       done
 
       # MongoDB
-      wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc \
-        | sudo gpg --dearmor -o /usr/share/keyrings/mongodb.gpg
+      wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc |
+        sudo gpg --dearmor -o /usr/share/keyrings/mongodb.gpg
 
       echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] \
-        https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" \
-        | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+        https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" |
+        sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
       sudo apt install -y mongodb-org
 
@@ -151,6 +156,12 @@ case "$os" in
       unzip -o /tmp/clojure-lsp.zip -d "$localBin"
       chmod +x "$localBin/clojure-lsp"
       rm /tmp/clojure-lsp.zip
+
+      sudo apt install nodejs npm
+
+      sudo npm install -g bash-language-server
+
+      sudo apt install shfmt
 
       ####################################################################################################
       # Flatpak apps
