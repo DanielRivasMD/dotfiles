@@ -400,28 +400,25 @@ keybinding:
     prevScreenMode: <disabled>
     undo: u
     redo: U
-    filteringMenu: <c-r> # joker-bs
+    filteringMenu: '<c-j>'
     diffingMenu: <disabled>
     diffingMenu-alt: W
     copyToClipboard: y
-    openRecentRepos: '<c-s>' # joker-enter
+    openRecentRepos: '<c-o>'
     submitEditorText: <enter>
     extrasMenu: <disabled>
     toggleWhitespaceInDiffView: <disabled>
-    increaseContextInDiffView: '<c-l>' # *
-    decreaseContextInDiffView: '<c-v>' # *
+    increaseContextInDiffView: '<c-g>'
+    decreaseContextInDiffView: '<c-v>'
     increaseRenameSimilarityThreshold: )
     decreaseRenameSimilarityThreshold: (
-    openDiffTool: <c-t> # joker-shift
   status:
     checkForUpdate: <disabled>
     recentRepos: <disabled>
     allBranchesLogGraph: <enter>
   files:
-    commitChanges: <c-g> # ctl-cmd-enter
-    commitChangesWithoutHook: w
+    commitChanges: '<c-l>'
     amendLastCommit: A
-    commitChangesWithEditor: C
     findBaseCommitForFixup: X
     confirmDiscard: x
     ignoreFile: i
