@@ -13,14 +13,14 @@
 
 VERBOSE=0
 if [[ "$1" == "--verbose" || "$1" == "-v" ]]; then
-    VERBOSE=1
-    shift
+  VERBOSE=1
+  shift
 fi
 
 log() {
-    if [ "$VERBOSE" -eq 1 ]; then
-        echo "$@"
-    fi
+  if [ "$VERBOSE" -eq 1 ]; then
+    echo "$@"
+  fi
 }
 
 ####################################################################################################
@@ -36,8 +36,8 @@ SYSIMG="$HOME/.julia/sysimages/julia-$JULIA_VERSION-formatter.so"
 ####################################################################################################
 
 build_sysimage() {
-    log "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
-    "${JULIA_BIN[@]}" --startup-file=no -e "
+  log "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
+  "${JULIA_BIN[@]}" --startup-file=no -e "
         using PackageCompiler
         create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
             sysimage_path=\"$SYSIMG\")"
