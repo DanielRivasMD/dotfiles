@@ -21,7 +21,6 @@ BINARIES=(
   github.com/air-verse/air                                 # live reload Go apps
   github.com/Gelio/go-global-update                        # global Go updater
   github.com/golangci/golangci-lint/cmd/golangci-lint      # lint tool
-  github.com/itchyny/fillin                                # form filler
   github.com/itchyny/mmv/cmd/mmv                           # mass renamer
   github.com/jesseduffield/lazydocker                      # Docker UI
   github.com/jesseduffield/lazygit                         # Git UI
