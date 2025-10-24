@@ -34,6 +34,8 @@ keybinds clear-defaults=true {
         bind "Ctrl Shift F11" { SwitchToMode "Normal"; }
     }
 
+
+
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
 
@@ -68,15 +70,29 @@ keybinds clear-defaults=true {
         bind "Shift F4" { ToggleActiveSyncTab; }
         bind "Shift F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
         bind "Shift F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
+
+        bind "Ctrl Shift F5" { Resize "Increase"; }
+        bind "Ctrl Shift F4" { Resize "Decrease"; }
+
+        bind "Alt F8" { MovePane "Left"; }
+        bind "Alt F9" { MovePane "Right"; }
+        bind "Alt F11" { MovePane "Up"; }
+        bind "Alt F12" { MovePane "Down"; }
     }
+
+
 
     renamepane {
         bind "Ctrl F10" { UndoRenamePane; SwitchToMode "Normal"; }
     }
 
+
+
     renametab {
         bind "Shift F11" { UndoRenameTab; SwitchToMode "Normal"; }
     }
+
+
 
     entersearch {
         bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
@@ -90,29 +106,11 @@ keybinds clear-defaults=true {
 
         // TODO: document enter
         bind "Enter" { SwitchToMode "Search"; }
-        bind "Ctrl Shift F4" { Resize "Increase"; }
-        bind "Ctrl Shift F5" { Resize "Decrease"; }
 
-        bind "Ctrl b" { MovePane "Left"; }
-        bind "Ctrl f" { MovePane "Right"; }
-        bind "Ctrl n" { MovePane "Up"; }
-        bind "Ctrl p" { MovePane "Down"; }
-
-        // TODO: relocate?
-        // bind "Alt j" { Resize "Increase Left"; }
-        // bind "Alt k" { Resize "Increase Right"; }
-        // bind "Alt l" { Resize "Increase Up"; }
-        // bind "Alt m" { Resize "Increase Down"; }
-
-        // bind "Alt K" { Resize "Decrease Right"; }
-        // bind "Alt J" { Resize "Decrease Left"; }
-        // bind "Ctrl x" { Resize "Decrease Down"; }
-        // bind "Ctrl y" { Resize "Decrease Up"; }
-
-        // TODO: needed
-        // bind "Space" { Detach; }
         bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
 	}
+
+
 
     search {
         bind "Alt h" { SwitchToMode "Normal"; }
@@ -129,6 +127,8 @@ keybinds clear-defaults=true {
         bind "x" { SearchToggleOption "Wrap"; }
         bind "z" { SearchToggleOption "WholeWord"; }
     }
+
+
 
 
 }
