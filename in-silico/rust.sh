@@ -27,7 +27,6 @@ CRATES=(
   "bartib"                                                                                         # simple time tracker
   "bat --locked"                                                                                   # syntax-highlighted `cat`
   "bottom --locked"                                                                                # system monitor (like htop)
-  "broot --locked --features clipboard"                                                            # fuzzy file manager
   "cargo-benchcmp"                                                                                 # compare benchmark results
   "cargo-binstall"                                                                                 # fast binary installer for crates
   "cargo-cache"                                                                                    # inspect/manage cargo cache
@@ -95,6 +94,7 @@ CRATES=(
   "wordcrab"                                                                                       # dictionary CLI
   "xan --locked"                                                                                   # CSV parser magician
   "xcp"                                                                                            # parallel copy
+  "yazi-build --force"
   "zoxide --locked"                                                                                # smarter `cd` with frequency
 )
 
