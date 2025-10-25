@@ -35,7 +35,7 @@ roots = []
 comment-token = "#"
 language-servers = ["bash_lsp"]
 formatter = { command = "shfmt", args = ["-i", "2", "-ci"] }
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "bash"
