@@ -57,7 +57,7 @@ roots = []
 comment-token = "#"
 language-servers = ["bash_lsp"]
 formatter = { command = "shfmt", args = ["-i", "2", "-ci"] }
-indent = { tab-width = 2, unit = "  " }
+indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "bash"
@@ -361,8 +361,9 @@ roots = ["Project.toml", "Manifest.toml"]
 auto-format = true
 comment-token = "#"
 language-servers = ["julia_lsp"]
-indent = { tab-width = 2, unit = " " }
+indent = { tab-width = 2, unit = "\t" }
 formatter = { command = "jlang", timeout = 30, args = ["format"] }
+diagnostic-severity = "hint"
 
 [[grammar]]
 name = "julia"
