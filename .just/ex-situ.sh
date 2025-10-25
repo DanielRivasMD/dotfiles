@@ -27,14 +27,13 @@ link_config "${mycli}/mycli.rc" "${home}/.myclirc" "mycli"
 link_config "${screen}/4.08.00.screenrc" "${home}/.screenrc" "screen"
 sep
 
-
 ####################################################################################################
 # config
 ####################################################################################################
 
 # @config
 echo_header "@config"
-tools=( 
+tools=(
   bpython
   helix
   litecli
@@ -49,7 +48,6 @@ for tool in "${tools[@]}"; do
   link_config "${!tool}" "${config}/" "${tool}"
 done
 sep
-
 
 ####################################################################################################
 # term / shell profiles
@@ -73,6 +71,7 @@ echo '' && mkdir -p "${home}/.zsh" && echo "Created ~/.zsh/"
 link_config "${zsh}/osx_zshenv.sh" "${home}/.zshenv" "zshenv"
 link_config "${zsh}/osx_zshrc.sh" "${home}/.zsh/.zshrc" "zshrc"
 link_config "${zsh}/zsh_navi.sh" "${home}/.zsh" "zsh navi"
+link_config "${zsh}/zsh_yazi.sh" "${home}/.zsh" "zsh yazi"
 link_config "${zsh}/zsh_zellij.sh" "${home}/.zsh" "zsh zellij"
 link_config "${zsh}/zsh_zoxide.sh" "${home}/.zsh" "zsh zoxide"
 
@@ -87,7 +86,6 @@ link_config "${nu}/keymap.nu" "${nuAppS}/keymap.nu" "nushell keymap"
 link_config "${nu}/theme.nu" "${nuAppS}/theme.nu" "nushell theme"
 link_config "${nu}/zoxide.nu" "${nuAppS}/zoxide.nu" "nushell zoxide"
 sep
-
 
 ####################################################################################################
 # ergo
@@ -120,6 +118,5 @@ generate_completion "richelieu completion zsh" "_richelieu"
 generate_completion "sisu completion zsh" "_sisu"
 generate_completion "zenith completion zsh" "_zenith"
 sep
-
 
 ####################################################################################################
