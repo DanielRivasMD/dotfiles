@@ -7,6 +7,8 @@ rulers = [100]
 bufferline = "always"
 shell = ["sh", "-c"]
 
+path-completion = true
+continue-comments = false
 completion-replace = false
 cursorline = true
 cursorcolumn = true
@@ -17,7 +19,7 @@ auto-format = false
 
 color-modes = true
 
-end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = "error"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
@@ -66,7 +68,6 @@ mode.select = "SELECT"
 
 ####################################################################################################
 
-# file picker
 [editor.file-picker]
 hidden = false
 
