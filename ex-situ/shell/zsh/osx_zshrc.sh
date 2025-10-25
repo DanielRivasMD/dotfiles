@@ -73,31 +73,35 @@ setopt appendhistory
 # CLI Tools Initialization
 ####################################################################################################
 
-# Atuin (history manager, but we’ll disable its bind)
+# atuin (history manager, but we’ll disable its bind)
 export ATUIN_NOBIND="true"
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
 # disable autosuggest
 typeset -g ZSH_AUTOSUGGEST_STRATEGY=()
 
-# Just
+# just
 JFUN="$ZDOTDIR/zsh_just.sh"
 [[ -f "$JFUN" ]] && source "$JFUN"
 
-# Navi
+# navi
 NFUN="$ZDOTDIR/zsh_navi.sh"
 [[ -f "$NFUN" ]] && source "$NFUN"
 
-# Starship prompt
+# starship prompt
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 
-# Zellij Helpers (only in Alacritty)
+# yazi
+YFUN="$ZDOTDIR/zsh_yazi.sh"
+[[ -f "$YFUN" ]] && source "$YFUN"
+
+# zellij helpers (only in Alacritty)
 if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
   ZJFUN="$ZDOTDIR/zsh_zellij.sh"
   [[ -f "$ZJFUN" ]] && source "$ZJFUN"
 fi
 
-# Zoxide (frecency-based cd)
+# zoxide (frecency-based cd)
 command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
 ZFUN="$ZDOTDIR/zsh_zoxide.sh"
 [[ -f "$ZFUN" ]] && source "$ZFUN"
