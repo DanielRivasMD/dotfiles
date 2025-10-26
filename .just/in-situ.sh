@@ -60,6 +60,7 @@ ${lazygit}/config.yml|${lazygitAppS}/config.yml|lazygit config
 ${navi}/config.yml|${naviAppS}/config.yml|navi config
 ${navi}/cheats|${naviAppS}/cheats|navi cheats
 ${ssh}/config|${home}/.ssh/config|ssh config
+${yazi}/theme.toml|${config}/yazi/theme.toml|yazi theme
 EOF
 
 # Loop through each entry, ensure parent dir exists, clean old target, then symlink
