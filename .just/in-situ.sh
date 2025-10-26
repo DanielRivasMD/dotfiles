@@ -24,7 +24,6 @@ link_config "${mplayer}/mplayer" "${home}/.mplayer" "mplayer"
 link_config "${procs}/procs.toml" "${home}/.procs.toml" "procs"
 sep
 
-
 ####################################################################################################
 
 # @config
@@ -43,17 +42,16 @@ for tool in "${tools[@]}"; do
 done
 sep
 
-
 ####################################################################################################
 
 # @config
 echo_header "@config"
-# Define all your link tasks as “src|dest|label”
+# Define all link tasks as “src|dest|label”
 read -r -d '' LINKS <<EOF
-${broot}/conf.toml|${home}/.config/broot/conf.toml|broot config
 ${espanso}/config/default.yml|${espansoAppS}/config/default.yml|espanso default
 ${espanso}/match/base.yml|${espansoAppS}/match/base.yml|espanso match
 ${gh}/config.yml|${config}/gh/config.yml|gh config
+${ghostly}/config|${appSupport}/com.mitchellh.ghostty/config|ghostly config
 ${joplin}/joplin.json|${config}/joplin/settings.json|joplin settings
 ${julia}/startup.jl|${home}/.julia/config/startup.jl|julia startup
 ${halp}/halp.toml|${halpAppS}/halp.toml|halp config
@@ -72,7 +70,6 @@ while IFS='|' read -r src dest label; do
   link_config "$src" "$dest" "$label"
 done <<<"$LINKS"
 sep
-
 
 ####################################################################################################
 # ergo
@@ -103,6 +100,5 @@ generate_completion "zellij setup --generate-completion zsh" "_zellij"
 
 cp "${zshcomp}/_eza" "${zshcomp}/_e" && sd eza e "${zshcomp}/_e"
 sep
-
 
 ####################################################################################################
