@@ -14,6 +14,7 @@ case "$os" in
 
     install_formulae=(
       aerc
+      btop
       pass
       bat-extras  # bat utilities
       cljfmt      # Clojure formatter
