@@ -51,7 +51,7 @@ read -r -d '' LINKS <<EOF
 ${espanso}/config/default.yml|${espansoAppS}/config/default.yml|espanso default
 ${espanso}/match/base.yml|${espansoAppS}/match/base.yml|espanso match
 ${gh}/config.yml|${config}/gh/config.yml|gh config
-${ghostly}/config|${appSupport}/com.mitchellh.ghostty/config|ghostly config
+${ghostty}/config|${appSupport}/com.mitchellh.ghostty/config|ghostty config
 ${joplin}/joplin.json|${config}/joplin/settings.json|joplin settings
 ${julia}/startup.jl|${home}/.julia/config/startup.jl|julia startup
 ${halp}/halp.toml|${halpAppS}/halp.toml|halp config
