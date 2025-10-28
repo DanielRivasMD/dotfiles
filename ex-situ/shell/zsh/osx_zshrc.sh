@@ -59,7 +59,6 @@ if command -v fzf &>/dev/null; then
   fi
 fi
 
-
 ####################################################################################################
 # History
 ####################################################################################################
@@ -94,12 +93,6 @@ command -v starship &>/dev/null && eval "$(starship init zsh)"
 # yazi
 YFUN="$ZDOTDIR/zsh_yazi.sh"
 [[ -f "$YFUN" ]] && source "$YFUN"
-
-# zellij helpers (only in Alacritty)
-if [[ "$__CFBundleIdentifier" == "org.alacritty" ]]; then
-  ZJFUN="$ZDOTDIR/zsh_zellij.sh"
-  [[ -f "$ZJFUN" ]] && source "$ZJFUN"
-fi
 
 # zoxide (frecency-based cd)
 command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
@@ -160,5 +153,33 @@ tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # initialize aliases
 aliases rehash
+
+####################################################################################################
+
+if [[ -z "$ZELLIJ" ]]; then
+  case "$__CFBundleIdentifier" in
+    org.alacritty)
+      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach
+      else
+        zellij --layout "${ZELLIJ_CONFIG_DIR}/layouts/alacritty.kdl"
+      fi
+      ;;
+    com.mitchellh.ghostty)
+      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach
+      else
+        zellij --layout "${ZELLIJ_CONFIG_DIR}/layouts/ghostty.kdl"
+      fi
+      ;;
+    *)
+      # Not Alacritty or Ghostty → do nothing
+      ;;
+  esac
+
+  if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+    exit
+  fi
+fi
 
 ####################################################################################################
