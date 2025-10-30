@@ -19,3 +19,5 @@ formatter = { command = "zprint", args = ['{:width 150}'] }
 [[grammar]]
 name = "clojure"
 source = { git = "https://github.com/oracle/tree-sitter-clojure", rev = "master" }
+
+####################################################################################################
