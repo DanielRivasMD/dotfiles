@@ -1,6 +1,7 @@
 - update language configs helix: awk, bash, cmake, docker-compose, javascript, json, julia, latex, markdown, nu, python, r, rust, scala,
 - todor completions?
 - check R profile installation & config
+- deprecate unused layouts zellij
 - ubuntu LIOS install:
   - samtools
   - seqtk
@@ -23,7 +24,7 @@ ex-situ/shell/term/osx_profile.sh
 in-silico/clojure.sh
   line 11     TODO   is this redundant?
 in-silico/pkg_manager.sh
-  line 104    TODO   decide & document: starship, nushell & nerd-fonts
+  line 105    TODO   decide & document: starship, nushell & nerd-fonts
 in-silico/rust.sh
   line 17     BUG    unrecognized subcommand
 in-situ/alacritty/alacritty.yml
