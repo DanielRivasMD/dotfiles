@@ -103,9 +103,9 @@
 
 (deflayer lz
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-l
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-g
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-g
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-l
   lsft  XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
         lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
 )
