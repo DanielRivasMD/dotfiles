@@ -52,6 +52,7 @@
   mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
   mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
   mq    (tap-hold $tap-time $hold-time q    (layer-toggle lq))
+  mw    (tap-hold $tap-time $hold-time w    (layer-toggle lw))
   mz    (tap-hold $tap-time $hold-time z    (layer-toggle lz))
   mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
@@ -68,7 +69,7 @@
   ;;     a     s       d       f       g      h        j       k       l       ;       '
   esc    XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
   @mgrv  1     2       3       4       5      6        7       8       9       0       -       =      XX
-  @mtab  @mq   w       e       r       t      y        u       i       o       p       [       ]      \ 
+  @mtab  @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
   @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
   @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
          lctl  @mlalt  @mlmet                 spc              @mrmet  @mralt  ◀       ▼       ▶
@@ -99,6 +100,15 @@
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f7
   lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f4    C-f8
         lctl   lalt    lmet                    C-f11           C-f10   C-f9    C-f1    C-f5    C-f2
+)
+
+(deflayer lw
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-C-f11
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      S-C-f4  S-C-f5 XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      S-C-f7
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-f11   S-C-f8
+        lctl   lalt    lmet                    S-C-f6          S-C-f10 S-C-f9  A-f8    A-f12   A-f9
 )
 
 (deflayer lz
