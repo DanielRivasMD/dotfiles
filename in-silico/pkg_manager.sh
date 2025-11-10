@@ -124,6 +124,9 @@ case "$os" in
         sudo apt install -y "$pkg"
       done
 
+      sudo snap install btop
+      sudo snap install ghostty --classic
+
       # MongoDB
       wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc |
         sudo gpg --dearmor -o /usr/share/keyrings/mongodb.gpg
