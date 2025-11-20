@@ -23,7 +23,6 @@ case "$os" in
       fzf         # fuzzy finder
       gh          # GitHub CLI
       helix       # code editor
-      joplin-cli  # Joplin CLI
       llvm        # compiler toolchain
       micro       # terminal editor
       mysql       # MySQL DB
