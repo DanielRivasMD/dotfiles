@@ -56,6 +56,8 @@ if command -v fzf &>/dev/null; then
   # Only source integration if version >= 0.48
   if [[ "$(printf '%s\n' 0.48 "$FZF_VERSION" | sort -V | head -n1)" = "0.48" ]]; then
     source <(fzf --zsh)
+  else
+    source "$HOME/Linked/fzf/shell/key-bindings.zsh"
   fi
 fi
 
