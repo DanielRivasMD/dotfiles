@@ -77,6 +77,7 @@ case "$os" in
       inkscape            # Vector graphics editor
       karabiner-elements  # Keyboard remapper
       logi-options-plus   # Logitech device config
+      mermaid-cli
       nordvpn             # VPN client
       rectangle           # Window tiling
       rig                 # R version manager
@@ -114,6 +115,8 @@ case "$os" in
         llvm         # compiler toolchain
         micro        # terminal editor
         mysql-server # MySQL DB
+        nodejs
+        npm
         postgresql   # PostgreSQL DB
         sqlite3      # SQLite engine
       )
@@ -125,6 +128,8 @@ case "$os" in
         echo "Installing package: ${pkg}"
         sudo apt install -y "$pkg"
       done
+
+      npm install -g @mermaid-js/mermaid-cli
 
       sudo snap install btop
       sudo snap install ghostty --classic
