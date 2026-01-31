@@ -91,6 +91,9 @@ alias gf='gfold'
 # hgrep
 alias hg='hgrep'
 
+# just
+alias j="just"
+
 # lazycli
 alias lc='lazycli'
 
