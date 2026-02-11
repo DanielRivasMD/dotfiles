@@ -24,7 +24,6 @@ cargo install dprint                                       # code formatter
 CRATES=(
   "asciinema --locked --git https://github.com/asciinema/asciinema"                                # terminal session recorder
   "bacon --locked"                                                                                 # watch Rust builds & rerun
-  "bartib"                                                                                         # simple time tracker
   "bat --locked"                                                                                   # syntax-highlighted `cat`
   "bottom --locked"                                                                                # system monitor (like htop)
   "cargo-benchcmp"                                                                                 # compare benchmark results
@@ -82,7 +81,6 @@ CRATES=(
   "serpl"                                                                                          # interactive replace
   "sd"                                                                                             # find & replace
   "sheldon --locked"                                                                               # Zsh plugin manager
-  "spotify-tui"                                                                                    # Spotify TUI client
   "taplo-cli --locked"                                                                             # TOML linter
   "tauri-cli"                                                                                      # Tauri CLI
   "tealdeer"                                                                                       # tldr client
