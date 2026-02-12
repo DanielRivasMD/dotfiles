@@ -55,7 +55,6 @@ CRATES=(
   "gfold"                                                                                          # list Git repos
   "gifski"                                                                                         # GIF encoder
   "git-delta"                                                                                      # improved diff viewer
-  "halp"                                                                                           # interactive help
   "hck"                                                                                            # fast CSV processor
   "hexyl"                                                                                          # hex viewer
   "hgrep"                                                                                          # syntax-aware grep
