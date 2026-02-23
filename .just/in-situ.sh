@@ -31,8 +31,6 @@ echo_header "@config"
 tools=(
   atuin
   alacritty
-  bottom
-  spotify
   zellij
 )
 
@@ -52,9 +50,7 @@ ${espanso}/config/default.yml|${espansoAppS}/config/default.yml|espanso default
 ${espanso}/match/base.yml|${espansoAppS}/match/base.yml|espanso match
 ${gh}/config.yml|${config}/gh/config.yml|gh config
 ${ghostty}/config|${appSupport}/com.mitchellh.ghostty/config|ghostty config
-${joplin}/joplin.json|${config}/joplin/settings.json|joplin settings
 ${julia}/startup.jl|${home}/.julia/config/startup.jl|julia startup
-${halp}/halp.toml|${halpAppS}/halp.toml|halp config
 ${lazycli}/config.yml|${lazycliAppS}/config.yml|lazycli config
 ${lazygit}/config.yml|${lazygitAppS}/config.yml|lazygit config
 ${navi}/config.yml|${naviAppS}/config.yml|navi config
