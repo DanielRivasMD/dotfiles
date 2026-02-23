@@ -7,6 +7,9 @@
 #   jlang [--verbose] formatter
 #   jlang [--verbose] rebuild
 
+# TODO: install dependencies on demand for julia 1.8.5
+# TODO: add personalized dr help
+
 ####################################################################################################
 # Option parsing
 ####################################################################################################
