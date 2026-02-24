@@ -31,6 +31,7 @@ echo_header "@config"
 tools=(
   atuin
   alacritty
+  bottom
   zellij
 )
 
