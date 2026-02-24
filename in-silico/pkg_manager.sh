@@ -19,7 +19,7 @@ case "$os" in
       bat-extras  # bat utilities
       cljfmt      # Clojure formatter
       clojure     # Clojure
-      fastfetch
+      fastfetch   # fastfetch
       fzf         # fuzzy finder
       gh          # GitHub CLI
       helix       # code editor
@@ -54,8 +54,6 @@ case "$os" in
     brew install node
     npm install -g bash-language-server
 
-    brew install shfmt
-
     brew tap xwmx/taps
     brew install notes-app
 
@@ -64,11 +62,11 @@ case "$os" in
     ####################################################################################################
 
     install_casks=(
-      alacritty  # Fast GPU-based terminal
-      alfred     # App launcher and automation
-      appcleaner # Removes leftover app files
-      arc        # Modern browser
-      brave-browser
+      alacritty           # Fast GPU-based terminal
+      alfred              # App launcher and automation
+      appcleaner          # Removes leftover app files
+      arc                 # Modern browser
+      brave-browser       # Brave browser
       docker              # Containers and dev environments
       dropbox             # Cloud file sync
       espanso             # Text expander
@@ -77,7 +75,7 @@ case "$os" in
       inkscape            # Vector graphics editor
       karabiner-elements  # Keyboard remapper
       logi-options-plus   # Logitech device config
-      mermaid-cli
+      mermaid-cli         # ASCII maps
       nordvpn             # VPN client
       rectangle           # Window tiling
       rig                 # R version manager
@@ -115,8 +113,8 @@ case "$os" in
         llvm         # compiler toolchain
         micro        # terminal editor
         mysql-server # MySQL DB
-        nodejs
-        npm
+        nodejs       # javascript
+        npm          # javascrip
         postgresql   # PostgreSQL DB
         sqlite3      # SQLite engine
       )
