@@ -1,30 +1,13 @@
 #!/bin/bash
 #
-# jlang: systemwide wrapper for Julia 1.8.5 with a precompiled sysimage
+# Daniel Rivas <<danielrivasmd@gmail.com>>
+#
+# jlang: systemwide wrapper for Julia Language Server Protocol
 #
 # Usage:
-#   jlang [--verbose] lsp
-#   jlang [--verbose] formatter
-#   jlang [--verbose] rebuild
-
-# TODO: install dependencies on demand for julia 1.8.5
-# TODO: add personalized dr help
-
-####################################################################################################
-# Option parsing
-####################################################################################################
-
-VERBOSE=0
-if [[ "$1" == "--verbose" || "$1" == "-v" ]]; then
-  VERBOSE=1
-  shift
-fi
-
-log() {
-  if [ "$VERBOSE" -eq 1 ]; then
-    echo "$@"
-  fi
-}
+#   jlang lsp
+#   jlang formatter
+#   jlang rebuild
 
 ####################################################################################################
 # Fixed Julia version and sysimage path (systemwide)
@@ -41,9 +24,19 @@ SYSIMG="$HOME/.julia/sysimages/julia-$JULIA_VERSION-formatter.so"
 build_sysimage() {
   log "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
   "${JULIA_BIN[@]}" --startup-file=no -e "
-        using PackageCompiler
-        create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
-            sysimage_path=\"$SYSIMG\")"
+    using Pkg
+    pkgs = [
+      \"PackageCompiler\",
+      \"JuliaFormatter\",
+      \"LanguageServer\",
+      \"SymbolServer\",
+      \"StaticLint\",
+    ]
+    foreach(Pkg.add, pkgs)
+
+    using PackageCompiler
+    create_sysimage([:JuliaFormatter, :LanguageServer, :SymbolServer, :StaticLint];
+      sysimage_path=\"$SYSIMG\")"
 }
 
 ####################################################################################################
@@ -84,10 +77,14 @@ case "$1" in
     fi
     ;;
   *)
+    echo "Daniel Rivas <<danielrivasmd@gmail.com>>"
+    echo
+    echo "jlang: systemwide wrapper for Julia Language Server Protocol"
+    echo
     echo "Usage:"
-    echo "  jlang [--verbose] lsp"
-    echo "  jlang [--verbose] format"
-    echo "  jlang [--verbose] rebuild"
+    echo "  jlang lsp"
+    echo "  jlang format"
+    echo "  jlang rebuild"
     exit 0
     ;;
 esac
