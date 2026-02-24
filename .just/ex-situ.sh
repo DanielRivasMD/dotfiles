@@ -114,6 +114,7 @@ generate_completion "mbombo completion zsh" "_mbombo"
 generate_completion "minerva completion zsh" "_minerva"
 generate_completion "moneypenny completion zsh" "_moneypenny"
 generate_completion "richelieu completion zsh" "_richelieu"
+generate_completion "tab completion zsh" "_tab"
 generate_completion "sisu completion zsh" "_sisu"
 generate_completion "zenith completion zsh" "_zenith"
 sep
