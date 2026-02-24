@@ -79,8 +79,8 @@ link_config "${completionHome}/bartib/misc/bartibCompletion.sh" "${zshcomp}/_bar
 link_config "${completionHome}/fd/contrib/completion/_fd" "${zshcomp}/_fd" "fd"
 link_config "${completionHome}/eza/completions/zsh/_eza" "${zshcomp}/_eza" "eza"
 link_config "${completionHome}/watchexec/completions/zsh" "${zshcomp}/_watchexec" "watchexec"
+link_config "${completionDot}/_jlang" "${zshcomp}/_jlang" "jlang"
 link_config "${completionDot}/_tldr" "${zshcomp}/_tldr" "tldr"
-link_config "${completionDot}/_tab" "${zshcomp}/_tab" "tabularasa"
 link_config "${linkedHome}/todo_r/target/release/todor" "${home}/.cargo/bin" "todor"
 link_config "${in_situ}/julia/jlang.sh" "${home}/bin/jlang" "jlang"
 
