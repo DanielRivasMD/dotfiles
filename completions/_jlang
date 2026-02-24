@@ -1,0 +1,34 @@
+#compdef jlang
+
+_jlang() {
+  local -a subcommands
+  subcommands=(
+    'lsp:Start the Julia language server'
+    'format:Format files or stdin using JuliaFormatter'
+    'rebuild:Rebuild the custom Julia sysimage'
+  )
+
+  _arguments -C \
+    '(-v --verbose)'{-v,--verbose}'[Enable verbose output]' \
+    '1:subcommand:->subcmd' \
+    '*::args:->args'
+
+  case $state in
+    subcmd)
+      _describe 'command' subcommands
+      return
+      ;;
+    args)
+      case $words[2] in
+        format)
+          _files
+          ;;
+        lsp|rebuild)
+          # no extra args
+          ;;
+      esac
+      ;;
+  esac
+}
+
+_jlang "$@"
