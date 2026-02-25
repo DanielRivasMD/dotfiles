@@ -50,6 +50,7 @@ export appSupport="${home}/Library/Application Support"
 
 # dotfiles
 dotfiles=$(git rev-parse --show-toplevel)
+export bin="${dotfiles}/bin"
 export in_situ="${dotfiles}/in-situ"
 export ex_situ="${dotfiles}/ex-situ"
 export in_silico="${dotfiles}/in-silico"
