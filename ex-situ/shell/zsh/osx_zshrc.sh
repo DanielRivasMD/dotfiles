@@ -153,9 +153,6 @@ reload() { source "$ZDOTDIR/.zshrc"; }
 # tre function wrapper
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
-# initialize aliases
-aliases rehash
-
 ####################################################################################################
 
 if [[ -z "$ZELLIJ" ]]; then
