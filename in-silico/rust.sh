@@ -62,6 +62,7 @@ CRATES=(
   "hyperfine"                                                                                      # command benchmarker
   "jnv"                                                                                            # JSON converter
   "jiggy"                                                                                          # interactive CLI helper
+  "jless"
   "just"                                                                                           # task runner
   "kalker"                                                                                         # terminal calculator
   "lazycli --locked"                                                                               # lazy command UI
