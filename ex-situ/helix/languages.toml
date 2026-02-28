@@ -339,10 +339,11 @@ scope = "source.json"
 injection-regex = "json"
 file-types = ["json"]
 roots = []
+auto-format = true
 language-servers = ["json_lsp"]
 indent = { tab-width = 2, unit = "  " }
-auto-format = true
-# config = { "provideFormatter" = true }
+
+formatter = { command = "jq", args = ["."] }
 
 [[grammar]]
 name = "json"
