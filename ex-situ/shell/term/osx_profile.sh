@@ -71,7 +71,6 @@ path_additions=(
   "$HOME/bin"
   "$HOME/.cargo/bin"
   "$GOPATH/bin"
-  "${HOME}/.aliases.d/shims"
   "$HOME/.atuin/bin"
   "$HOME/.juliaup/bin"
   "$HOME/.python/bin"

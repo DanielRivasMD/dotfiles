@@ -67,11 +67,6 @@ alias python='python3'
 # rust tool links
 ####################################################################################################
 
-# aliases
-alias aa='aliases add'
-alias al='aliases list'
-alias ar='aliases remove'
-
 # bat
 alias man='batman'
 

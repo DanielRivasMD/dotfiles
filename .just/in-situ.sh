@@ -17,7 +17,6 @@ done
 
 # @HOME
 echo_header "@HOME"
-link_config "${aliases}/aliases_cfg" "${home}/.aliases_cfg"
 link_config "${git}/gitconfig" "${home}/.gitconfig" "gitconfig"
 link_config "${git}/gitignore_global" "${home}/.gitignore_global" "gitignore_global"
 link_config "${mplayer}/mplayer" "${home}/.mplayer" "mplayer"
