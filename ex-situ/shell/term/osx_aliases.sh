@@ -70,9 +70,6 @@ alias python='python3'
 # bat
 alias man='batman'
 
-# broot
-alias br='br --dates --sizes --permissions --hidden --git-ignored --show-git-info --sort-by-type-dirs-first'
-
 # eza
 alias e='eza --header --long --icons --classify --git --group'
 alias ea='e --all'

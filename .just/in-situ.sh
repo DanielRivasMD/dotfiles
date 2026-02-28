@@ -12,6 +12,15 @@ for entry in "$in_situ"/*; do
 done
 
 ####################################################################################################
+# bin
+####################################################################################################
+
+echo_header "@bin"
+link_config "${bin}/jlang.sh" "${home}/bin/jlang" "jlang"
+
+####################################################################################################
+
+####################################################################################################
 # in effigie
 ####################################################################################################
 
@@ -24,8 +33,9 @@ link_config "${procs}/procs.toml" "${home}/.procs.toml" "procs"
 sep
 
 ####################################################################################################
-
 # @config
+####################################################################################################
+
 echo_header "@config"
 tools=(
   atuin
@@ -40,10 +50,6 @@ for tool in "${tools[@]}"; do
 done
 sep
 
-####################################################################################################
-
-# @config
-echo_header "@config"
 # Define all link tasks as “src|dest|label”
 read -r -d '' LINKS <<EOF
 ${espanso}/config/default.yml|${espansoAppS}/config/default.yml|espanso default
@@ -81,7 +87,6 @@ link_config "${completionHome}/watchexec/completions/zsh" "${zshcomp}/_watchexec
 link_config "${completionDot}/_jlang" "${zshcomp}/_jlang" "jlang"
 link_config "${completionDot}/_tldr" "${zshcomp}/_tldr" "tldr"
 link_config "${linkedHome}/todo_r/target/release/todor" "${home}/.cargo/bin" "todor"
-link_config "${bin}/jlang.sh" "${home}/bin/jlang" "jlang"
 
 echo ''
 generate_completion "atuin gen-completions --shell zsh" "_atuin"

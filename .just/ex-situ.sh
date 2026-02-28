@@ -56,8 +56,6 @@ sep
 echo_header "term & shell"
 link_config "${term}/osx_profile.sh" "${home}/.profile" "term profile"
 link_config "${term}/osx_aliases.sh" "${home}/.aliases" "term aliases"
-# TODO: where to place
-link_config "${term}/julia-sys" "${home}/.local/bin" "julia sys image"
 
 # Bash
 echo '' && mkdir -p "${home}/.bash" && echo "Created ~/.bash/"
