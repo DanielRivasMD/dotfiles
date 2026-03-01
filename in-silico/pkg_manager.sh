@@ -198,8 +198,6 @@ case "$os" in
       sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
       sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
       sudo apt install brave-browser
-
-      echo "Note: some macOS-only apps (Alfred, Karabiner, Skim, etc.) have Linux alternatives."
     fi
     ;;
   *)
