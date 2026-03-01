@@ -70,7 +70,7 @@ case "$os" in
     echo "Unsupported OS: $os" >&2
     ;;
 esac
-echo "installation of curl & apt complete, run '' to install programs managed by package manager"
+echo "installation of curl & apt complete, run 'source in-silico/pkg_manager.sh' to install programs managed by package manager"
 printf '==================================================\n'
 
 ####################################################################################################
@@ -83,7 +83,7 @@ echo "Installing Go..."
 curl -sSL https://git.io/g-install | sh -s -- -y
 export PATH="$HOME/.g/bin:$PATH"
 g install latest -y
-echo "installation of go & g complete, run '' to install programs managed by g"
+echo "installation of go & g complete, run 'source in-silico/go.sh' to install programs managed by g"
 printf '==================================================\n'
 
 ####################################################################################################
@@ -94,7 +94,7 @@ echo ''
 printf '==================================================\n'
 echo "Installing Julia..."
 curl -fsSL https://install.julialang.org | sh
-echo "installation of Julia and juliaup complete, run 'julia' to install packages via Pkg.add([...])"
+echo "installation of Julia and juliaup complete, run 'source in-silico/julia.sh' to install julia packages"
 printf '==================================================\n'
 
 ####################################################################################################
@@ -121,7 +121,7 @@ esac
 
 rig add release
 export PATH="$HOME/.rig/bin:$PATH"
-echo "installation of R and rig complete, run 'rig add <version>' to install programs managed by rig"
+echo "installation of R and rig complete, run 'source in-silico/R.sh' to install R packages"
 printf '==================================================\n'
 
 ####################################################################################################
@@ -145,7 +145,7 @@ case "$os" in
     fi
     ;;
 esac
-echo "installation of uv and uv complete, run 'uv tool install <pkg>' to install programs managed by uv"
+echo "installation of uv and uv complete, run 'source in-silico/uv.sh' to install programs managed by uv"
 printf '==================================================\n'
 
 ####################################################################################################
@@ -168,7 +168,7 @@ if [[ -f "$HOME/.cargo/env" ]]; then
 else
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
-echo "installation of Rust and cargo complete, run 'cargo install <crate>' to install programs managed by cargo"
+echo "installation of Rust and cargo complete, run 'source in-silico/rust.sh' to install programs managed by cargo"
 printf '==================================================\n'
 
 ####################################################################################################
@@ -199,7 +199,6 @@ if [[ -f "$list" ]]; then
 else
   echo "Zellij plugin list not found at $list" >&2
 fi
-echo "installation of Zellij and cargo complete, run 'cargo install <crate>' to install programs managed by cargo"
 printf '==================================================\n'
 
 ####################################################################################################
