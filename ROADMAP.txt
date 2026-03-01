@@ -1,4 +1,4 @@
-- update language configs helix: awk, cmake, docker-compose, javascript, json, latex, markdown, nu, python, r, rust, scala,
+- update language configs helix: awk, cmake, docker-compose, javascript, latex, markdown, nu, python, r, rust, scala,
 - todor completions?
 - check R profile installation & config
 
@@ -14,15 +14,21 @@ ex-situ/helix/languages/git.toml
   line 47     TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
 ex-situ/helix/languages.toml
   line 159    TODO   allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
+ex-situ/shell/nu/keymap.nu
+  line 28     BUG    `shells` & `dirs` commands not present. plugins?
+  line 83     BUG    are they useful commands?
 ex-situ/shell/term/osx_profile.sh
   line 18     TODO   deprecate?
 in-silico/clojure.sh
   line 11     TODO   is this redundant?
 in-silico/pkg_manager.sh
   line 107    TODO   decide & document: starship, nushell & nerd-fonts
+in-situ/alacritty/alacritty.yml
+  line 72     DOC    patch `alt-enter`
 in-situ/lazygit/config.yml
   line 337    TODO   consider binding single letters?
   line 338    TODO   create a separate template?
 install.sh
   line 13     TODO   document nerd font installation; present on shell history for ubuntu
+  line 44     BUG    ubuntu errors out on mongodb for some reason
 ==================================================
