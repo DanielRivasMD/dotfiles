@@ -5,12 +5,18 @@
 [language-server.awk_lsp]
 command = "awk-language-server"
 
+[language-server.awk_lsp.config]
+diagnostics = true
+completion = true
+hover = true
+
 [[language]]
 name = "awk"
 scope = "source.awk"
 injection-regex = "awk"
-file-types = ["awk", "gawk", "nawk", "mawk"]
-roots = []
+file-types = ["awk", "*.awk"]
+shebangs = ["awk"]
+roots = [".git"]
 comment-token = "#"
 language-servers = ["awk_lsp"]
 indent = { tab-width = 2, unit = "  " }
