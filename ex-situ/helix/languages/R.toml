@@ -6,14 +6,24 @@
 command = "R"
 args = ["--slave", "-e", "languageserver::run()"]
 
+[language-server.R_lsp.config]
+diagnostics = true
+completion = true
+signatureHelp = true
+hover = true
+documentSymbols = true
+workspaceSymbols = true
+formatting = true
+
 [[language]]
 name = "r"
 scope = "source.r"
 injection-regex = "(r|R)"
 file-types = ["r", "R"]
 shebangs = ["r", "R"]
-roots = []
-# comment-token = "#"
+roots = ["DESCRIPTION", ".git"]
+comment-tokens = ["#"]
+block-comment-tokens = [{ start = "#'", end = "" }]
 language-servers = ["R_lsp"]
 indent = { tab-width = 2, unit = "  " }
 
@@ -25,10 +35,15 @@ source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "cc04302e1bff76
 name = "rmarkdown"
 scope = "source.rmd"
 injection-regex = "(r|R)md"
-file-types = ["rmd", "Rmd"]
+file-types = ["rmd", "Rmd", "Rmarkdown"]
 roots = []
+comment-tokens = ["#"]
 language-servers = ["R_lsp"]
 indent = { tab-width = 2, unit = "  " }
 grammar = "markdown"
+
+[[grammar]]
+name = "markdown"
+source = { git = "https://github.com/tree-sitter/tree-sitter-markdown", rev = "0.1.0" }
 
 ####################################################################################################
