@@ -15,15 +15,6 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LANGUAGE="en_US"
 
-# TODO: deprecate?
-# Optional: override individual LC_* if needed
-# export LC_CTYPE="en_US.UTF-8"
-# export LC_NUMERIC="en_US.UTF-8"
-# export LC_TIME="en_US.UTF-8"
-# export LC_COLLATE="en_US.UTF-8"
-# export LC_MONETARY="en_US.UTF-8"
-# export LC_MESSAGES="en_US.UTF-8"
-
 ####################################################################################################
 # Environment Anchors
 ####################################################################################################
@@ -89,9 +80,6 @@ export PATH
 ####################################################################################################
 # Runtime Sources
 ####################################################################################################
-
-# Broot launcher
-[[ -f "$HOME/.config/broot/launcher/bash/br" ]] && source "$HOME/.config/broot/launcher/bash/br"
 
 # Deno
 [[ -f "$HOME/.deno/env" ]] && source "$HOME/.deno/env"
