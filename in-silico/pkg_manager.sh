@@ -4,6 +4,12 @@ os="$(uname -s)"
 
 ####################################################################################################
 
+npm install -g awk-language-server
+npm install -g prettier
+npm install -g yaml-language-server
+
+####################################################################################################
+
 case "$os" in
   Darwin)
     echo "Detected macOS – using Homebrew"
