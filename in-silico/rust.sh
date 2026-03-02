@@ -12,7 +12,6 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y
 curl -fsSL https://deno.land/install.sh | sh -s -- -y
 deno install -A jsr:@deno/deployctl --global
 
-
 ####################################################################################################
 # Install Rust Binaries
 ####################################################################################################
@@ -83,6 +82,7 @@ CRATES=(
   "tock"                                                                      # timer utility
   "tokei --git https://github.com/XAMPPRocky/tokei.git"                       # code statistics
   "trippy --locked"                                                           # network traceroute tool
+  "typos-cli"                                                                 # terminal spelling
   "viu"                                                                       # terminal image viewer
   "watchexec-cli --locked"                                                    # watch & run commands
   "wordcrab"                                                                  # dictionary CLI
