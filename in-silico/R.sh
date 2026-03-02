@@ -7,7 +7,7 @@ sudo rig add release
 
 ####################################################################################################
 
-Rscript -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse'))"
+Rscript -e "install.packages(c('magrittr', 'pacman', 'startup', 'tidyverse', 'languageserver'))"
 Rscript -e "install.packages('colorout', repos = 'https://community.r-multiverse.org')"
 
 ####################################################################################################
