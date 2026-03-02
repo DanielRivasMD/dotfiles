@@ -5,12 +5,18 @@
 [language-server.awk_lsp]
 command = "awk-language-server"
 
+[language-server.awk_lsp.config]
+diagnostics = true
+completion = true
+hover = true
+
 [[language]]
 name = "awk"
 scope = "source.awk"
 injection-regex = "awk"
-file-types = ["awk", "gawk", "nawk", "mawk"]
-roots = []
+file-types = ["awk", "*.awk"]
+shebangs = ["awk"]
+roots = [".git"]
 comment-token = "#"
 language-servers = ["awk_lsp"]
 indent = { tab-width = 2, unit = "  " }
@@ -28,6 +34,12 @@ source = { git = "https://github.com/Beaglefoot/tree-sitter-awk", rev = "a799bc5
 command = "bash-language-server"
 args = ["start"]
 
+[language-server.bash_lsp.config]
+backgroundAnalysisMaxFiles = 500
+enableSourceErrorDiagnostics = true
+globPattern = "**/*.{sh}"
+includeAllWorkspaceSymbols = false
+
 [[language]]
 name = "bash"
 scope = "source.bash"
@@ -36,6 +48,7 @@ file-types = [
   "sh",
   "bash",
   "zsh",
+  ".aliases",
   ".bash_login",
   ".bash_logout",
   ".bash_profile",
@@ -117,7 +130,7 @@ source = { git = "https://github.com/oracle/tree-sitter-clojure", rev = "master"
 [[language]]
 name = "git-commit"
 scope = "git.commitmsg"
-roots = []
+roots = [".git"]
 file-types = ["COMMIT_EDITMSG"]
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
@@ -129,8 +142,8 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-commit", rev 
 [[language]]
 name = "git-diff"
 scope = "source.diff"
-roots = []
-file-types = ["diff"]
+roots = [".git"]
+file-types = ["diff", "*.diff", "*.patch"]
 injection-regex = "diff"
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
@@ -142,8 +155,8 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-diff", rev = 
 [[language]]
 name = "git-rebase"
 scope = "source.gitrebase"
-roots = []
-file-types = ["git-rebase-todo"]
+roots = [".git"]
+file-types = ["git-rebase-todo", "rebase-merge/git-rebase-todo"]
 injection-regex = "git-rebase"
 comment-token = "#"
 indent = { tab-width = 2, unit = " " }
@@ -155,12 +168,11 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-rebase", rev 
 [[language]]
 name = "git-config"
 scope = "source.gitconfig"
-roots = []
-# TODO: allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
-file-types = [".gitmodules", ".gitconfig"]
+roots = [".git"]
+file-types = [".gitmodules", ".gitconfig", ".git/config"]
 injection-regex = "git-config"
-comment-token = "#"
-indent = { tab-width = 4, unit = "\t" }
+comment-token = "[#;]"
+indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "git-config"
@@ -169,7 +181,7 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-config", rev 
 [[language]]
 name = "git-attributes"
 scope = "source.gitattributes"
-roots = []
+roots = [".git"]
 file-types = [".gitattributes"]
 injection-regex = "git-attributes"
 comment-token = "#"
@@ -182,8 +194,8 @@ source = { git = "https://github.com/mtoohey31/tree-sitter-gitattributes", rev =
 [[language]]
 name = "git-ignore"
 scope = "source.gitignore"
-roots = []
-file-types = [".gitignore", ".gitignore_global"]
+roots = [".git"]
+file-types = [".gitignore", ".gitignore_global", ".git-blame-ignore-revs"]
 injection-regex = "git-ignore"
 comment-token = "#"
 grammar = "gitignore"
@@ -191,6 +203,14 @@ grammar = "gitignore"
 [[grammar]]
 name = "gitignore"
 source = { git = "https://github.com/shunsambongi/tree-sitter-gitignore", rev = "f4685bf11ac466dd278449bcfe5fd014e94aa504" }
+
+[language-server.typos-lsp]
+command = "typos-lsp"
+args = ["--stdio"]
+
+[[language]]
+name = "git-commit"
+language-servers = ["typos-lsp"]
 
 ####################################################################################################
 ####################################################################################################
@@ -318,11 +338,10 @@ source = { git = "https://github.com/omertuc/tree-sitter-go-work", rev = "6dd9dd
 # html
 ####################################################################################################
 
-# [[language]]
-# name = "html"
-# auto-format = true
-# formatter = { command = "prettier", args = ["--parser", "html"] }
-# indent = { tab-width = 2, unit = "  " }
+[[language]]
+name = "html"
+formatter = { command = "prettier", args = ["--parser", "html"] }
+indent = { tab-width = 2, unit = "  " }
 
 ####################################################################################################
 ####################################################################################################
@@ -387,6 +406,13 @@ file-types = ["md"]
 roots = []
 indent = { tab-width = 2, unit = "  " }
 
+formatter = { command = "prettier", args = [
+  "--parser",
+  "markdown",
+  "--prose-wrap",
+  "always",
+] }
+
 [[grammar]]
 name = "markdown"
 source = { git = "https://github.com/MDeiml/tree-sitter-markdown", rev = "142a5b4a1b092b64c9f5db8f11558f9dd4009a1b", subpath = "tree-sitter-markdown" }
@@ -441,14 +467,24 @@ language-servers = [{ name = "pylsp", except-features = ["diagnostics"] }]
 command = "R"
 args = ["--slave", "-e", "languageserver::run()"]
 
+[language-server.R_lsp.config]
+diagnostics = true
+completion = true
+signatureHelp = true
+hover = true
+documentSymbols = true
+workspaceSymbols = true
+formatting = true
+
 [[language]]
 name = "r"
 scope = "source.r"
 injection-regex = "(r|R)"
 file-types = ["r", "R"]
 shebangs = ["r", "R"]
-roots = []
-# comment-token = "#"
+roots = ["DESCRIPTION", ".git"]
+comment-tokens = ["#"]
+block-comment-tokens = [{ start = "#'", end = "" }]
 language-servers = ["R_lsp"]
 indent = { tab-width = 2, unit = "  " }
 
@@ -460,34 +496,48 @@ source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "cc04302e1bff76
 name = "rmarkdown"
 scope = "source.rmd"
 injection-regex = "(r|R)md"
-file-types = ["rmd", "Rmd"]
+file-types = ["rmd", "Rmd", "Rmarkdown"]
 roots = []
+comment-tokens = ["#"]
 language-servers = ["R_lsp"]
 indent = { tab-width = 2, unit = "  " }
 grammar = "markdown"
+
+[[grammar]]
+name = "markdown"
+source = { git = "https://github.com/tree-sitter/tree-sitter-markdown", rev = "0.1.0" }
 
 ####################################################################################################
 ####################################################################################################
 # rust
 ####################################################################################################
 
-# introduce new language server
 [language-server.scls]
 command = "simple-completion-language-server"
 
 [language-server.scls.config]
-max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
-feature_words = false                # enable completion by word
-feature_snippets = true              # enable snippets
-snippets_first = true                # completions will return before snippets by default
-snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
-feature_unicode_input = false        # enable "unicode input"
-feature_paths = false                # enable path completion
-feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+max_completion_items = 100
+feature_words = false
+feature_snippets = true
+snippets_first = true
+snippets_inline_by_word_tail = false
+feature_unicode_input = false
+feature_paths = true
+feature_citations = false
 
-
-[language-server.rust_lsp]
+[language-server.rust-analyzer]
 command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[language-server.rust-analyzer.config.files]
+watcher = "server"
 
 [[language]]
 name = "rust"
@@ -503,17 +553,12 @@ block-comment-tokens = [
   { start = "/**", end = "*/" },
   { start = "/*!", end = "*/" },
 ]
-language-servers = [ "scls", "rust-analyzer" ]
+language-servers = ["scls", "rust-analyzer"]
 indent = { tab-width = 2, unit = "\t" }
 persistent-diagnostic-sources = ["rustc", "clippy"]
 
 [language.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
 '<' = '>'
-'`' = '`'
 
 [language.debugger]
 name = "lldb-dap"
@@ -556,20 +601,6 @@ args = { attachCommands = [
 [[grammar]]
 name = "rust"
 source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "1f63b33efee17e833e0ea29266dd3d713e27e321" }
-
-[language-server.rust-analyzer]
-command = "rust-analyzer"
-
-[language-server.rust-analyzer.config]
-inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
-inlayHints.closureReturnTypeHints.enable = "with_block"
-inlayHints.discriminantHints.enable = "fieldless"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-inlayHints.typeHints.hideClosureInitialization = false
-
-[language-server.rust-analyzer.config.files]
-watcher = "server"
 
 ####################################################################################################
 ####################################################################################################
