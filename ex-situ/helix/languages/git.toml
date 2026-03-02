@@ -5,7 +5,7 @@
 [[language]]
 name = "git-commit"
 scope = "git.commitmsg"
-roots = []
+roots = [".git"]
 file-types = ["COMMIT_EDITMSG"]
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
@@ -17,8 +17,8 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-commit", rev 
 [[language]]
 name = "git-diff"
 scope = "source.diff"
-roots = []
-file-types = ["diff"]
+roots = [".git"]
+file-types = ["diff", "*.diff", "*.patch"]
 injection-regex = "diff"
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
@@ -30,8 +30,8 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-diff", rev = 
 [[language]]
 name = "git-rebase"
 scope = "source.gitrebase"
-roots = []
-file-types = ["git-rebase-todo"]
+roots = [".git"]
+file-types = ["git-rebase-todo", "rebase-merge/git-rebase-todo"]
 injection-regex = "git-rebase"
 comment-token = "#"
 indent = { tab-width = 2, unit = " " }
@@ -43,12 +43,11 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-rebase", rev 
 [[language]]
 name = "git-config"
 scope = "source.gitconfig"
-roots = []
-# TODO: allow specifying file-types as a regex so we can read directory names (e.g. `.git/config`)
-file-types = [".gitmodules", ".gitconfig"]
+roots = [".git"]
+file-types = [".gitmodules", ".gitconfig", ".git/config"]
 injection-regex = "git-config"
-comment-token = "#"
-indent = { tab-width = 4, unit = "\t" }
+comment-token = "[#;]"
+indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "git-config"
@@ -57,7 +56,7 @@ source = { git = "https://github.com/the-mikedavis/tree-sitter-git-config", rev 
 [[language]]
 name = "git-attributes"
 scope = "source.gitattributes"
-roots = []
+roots = [".git"]
 file-types = [".gitattributes"]
 injection-regex = "git-attributes"
 comment-token = "#"
@@ -70,8 +69,8 @@ source = { git = "https://github.com/mtoohey31/tree-sitter-gitattributes", rev =
 [[language]]
 name = "git-ignore"
 scope = "source.gitignore"
-roots = []
-file-types = [".gitignore", ".gitignore_global"]
+roots = [".git"]
+file-types = [".gitignore", ".gitignore_global", ".git-blame-ignore-revs"]
 injection-regex = "git-ignore"
 comment-token = "#"
 grammar = "gitignore"
@@ -79,5 +78,13 @@ grammar = "gitignore"
 [[grammar]]
 name = "gitignore"
 source = { git = "https://github.com/shunsambongi/tree-sitter-gitignore", rev = "f4685bf11ac466dd278449bcfe5fd014e94aa504" }
+
+[language-server.typos-lsp]
+command = "typos-lsp"
+args = ["--stdio"]
+
+[[language]]
+name = "git-commit"
+language-servers = ["typos-lsp"]
 
 ####################################################################################################
