@@ -6,6 +6,12 @@
 command = "bash-language-server"
 args = ["start"]
 
+[language-server.bash_lsp.config]
+backgroundAnalysisMaxFiles = 500
+enableSourceErrorDiagnostics = true
+globPattern = "**/*.{sh}"
+includeAllWorkspaceSymbols = false
+
 [[language]]
 name = "bash"
 scope = "source.bash"
@@ -14,6 +20,7 @@ file-types = [
   "sh",
   "bash",
   "zsh",
+  ".aliases",
   ".bash_login",
   ".bash_logout",
   ".bash_profile",
