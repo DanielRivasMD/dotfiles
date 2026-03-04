@@ -1,3 +1,4 @@
+- add jnv config & link
 - update language configs helix: cmake, docker-compose, javascript, latex, nu, python, scala
 - todor completions?
 
@@ -5,6 +6,20 @@ add niri installation script on ubuntu
 
 kanata:
 ;; TODO: create aliases header to embed hotkeys automatically
+
+.justfile
+34:# TODO: change to bash for compatibility, however this does not produce colored logging
+
+.just/config.sh
+67:  # TODO: double check linux config
+
+in-situ/zellij/config.kdl
+99:        // TODO: document arrows
+107:        // TODO: document enter
+
+in-situ/zellij/modes/entersearch.kdl
+3:        // TODO: document arrows
+11:        // TODO: document enter
 
 ==================================================
 ex-situ/bpython/alacritty.theme
