@@ -81,6 +81,7 @@ CRATES=(
   "tealdeer"                                                                  # tldr client
   "tock"                                                                      # timer utility
   "tokei --git https://github.com/XAMPPRocky/tokei.git"                       # code statistics
+  "tre-command"                                                               # tree command, improved
   "trippy --locked"                                                           # network traceroute tool
   "typos-cli"                                                                 # terminal spelling
   "viu"                                                                       # terminal image viewer
