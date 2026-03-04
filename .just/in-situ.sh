@@ -23,10 +23,10 @@ link_config "${binDir}/jlang.sh" "${homeDir}/bin/jlang" "jlang"
 ####################################################################################################
 
 echo_header "@HOME"
-link_config "${gitDir}/gitconfig" "${homeDir}/.gitconfig" "gitconfig"
-link_config "${gitDir}/gitignore_global" "${homeDir}/.gitignore_global" "gitignore_global"
-link_config "${mplayerDir}/mplayer" "${homeDir}/.mplayer" "mplayer"
-link_config "${procsDir}/procs.toml" "${homeDir}/.procs.toml" "procs"
+link_config "${git}/gitconfig" "${homeDir}/.gitconfig" "gitconfig"
+link_config "${git}/gitignore_global" "${homeDir}/.gitignore_global" "gitignore_global"
+link_config "${mplayer}/mplayer" "${homeDir}/.mplayer" "mplayer"
+link_config "${procs}/procs.toml" "${homeDir}/.procs.toml" "procs"
 sep
 
 ####################################################################################################
@@ -49,17 +49,17 @@ sep
 
 # Define all link tasks as “src|dest|label”
 read -r -d '' LINKS <<EOF
-${espansoDir}/config/default.yml|${espansoAppDir}/config/default.yml|espanso default
-${espansoDir}/match/base.yml|${espansoAppDir}/match/base.yml|espanso match
-${ghDir}/config.yml|${configDir}/gh/config.yml|gh config
-${ghosttyDir}/config|${appSupportDir}/com.mitchellh.ghostty/config|ghostty config
-${juliaDir}/startup.jl|${homeDir}/.julia/config/startup.jl|julia startup
-${lazycliDir}/config.yml|${lazycliAppDir}/config.yml|lazycli config
-${lazygitDir}/config.yml|${lazygitAppDir}/config.yml|lazygit config
-${naviDir}/config.yml|${naviAppDir}/config.yml|navi config
-${naviDir}/cheats|${naviAppDir}/cheats|navi cheats
-${sshDir}/config|${homeDir}/.ssh/config|ssh config
-${yaziDir}/theme.toml|${configDir}/yazi/theme.toml|yazi theme
+${espanso}/config/default.yml|${espansoAppDir}/config/default.yml|espanso default
+${espanso}/match/base.yml|${espansoAppDir}/match/base.yml|espanso match
+${gh}/config.yml|${configDir}/gh/config.yml|gh config
+${ghostty}/config|${appSupportDir}/com.mitchellh.ghostty/config|ghostty config
+${julia}/startup.jl|${homeDir}/.julia/config/startup.jl|julia startup
+${lazycli}/config.yml|${lazycliAppDir}/config.yml|lazycli config
+${lazygit}/config.yml|${lazygitAppDir}/config.yml|lazygit config
+${navi}/config.yml|${naviAppDir}/config.yml|navi config
+${navi}/cheats|${naviAppDir}/cheats|navi cheats
+${ssh}/config|${homeDir}/.ssh/config|ssh config
+${yazi}/theme.toml|${configDir}/yazi/theme.toml|yazi theme
 EOF
 
 while IFS='|' read -r src dest label; do

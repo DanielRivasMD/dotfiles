@@ -31,7 +31,7 @@ generate_completion() {
   local bcyan='\033[1;36m'
   local nc='\033[0m'
   local cmd=$1 out=$2
-  eval "$cmd" >"${zshcomp}/${out}" && echo "Installed completion ${byellow}=>${nc} ${bcyan}${out}${nc}"
+  eval "$cmd" >"${zshCompDir}/${out}" && echo "Installed completion ${byellow}=>${nc} ${bcyan}${out}${nc}"
 }
 
 ####################################################################################################
@@ -54,6 +54,7 @@ export homeDir="$HOME"
 
 # Base directories
 export configDir="${homeDir}/.config"
+export zshCompDir="${configDir}/zsh_completion"
 export localShareDir="${homeDir}/.local/share"
 export completionHomeDir="${homeDir}/.completion"
 export forkedDir="${homeDir}/Forked"
