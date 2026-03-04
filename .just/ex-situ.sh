@@ -5,7 +5,7 @@ source "${PWD}/.just/config.sh"
 
 ####################################################################################################
 
-for entry in "$ex_situ"/*; do
+for entry in "$exSituDir"/*; do
   [[ -d "$entry" ]] || continue
   name=${entry##*/}
   eval "export $name=\"$entry\""
@@ -21,17 +21,15 @@ done
 # in effigie
 ####################################################################################################
 
-# @HOME
 echo_header "@HOME"
-link_config "${mycli}/mycli.rc" "${home}/.myclirc" "mycli"
-link_config "${screen}/4.08.00.screenrc" "${home}/.screenrc" "screen"
+link_config "${mycliDir}/mycli.rc" "${homeDir}/.myclirc" "mycli"
+link_config "${screenDir}/4.08.00.screenrc" "${homeDir}/.screenrc" "screen"
 sep
 
 ####################################################################################################
 # config
 ####################################################################################################
 
-# @config
 echo_header "@config"
 tools=(
   bpython
@@ -44,8 +42,8 @@ tools=(
 )
 
 for tool in "${tools[@]}"; do
-  if [[ -e "${config}/${tool}" ]]; then rm -rf "${config}/${tool}"; fi
-  link_config "${!tool}" "${config}/" "${tool}"
+  if [[ -e "${configDir}/${tool}" ]]; then rm -rf "${configDir}/${tool}"; fi
+  link_config "${!tool}" "${configDir}/" "${tool}"
 done
 sep
 
@@ -54,35 +52,34 @@ sep
 ####################################################################################################
 
 echo_header "term & shell"
-link_config "${term}/osx_profile.sh" "${home}/.profile" "term profile"
-link_config "${term}/osx_aliases.sh" "${home}/.aliases" "term aliases"
+link_config "${termDir}/osx_profile.sh" "${homeDir}/.profile" "term profile"
+link_config "${termDir}/osx_aliases.sh" "${homeDir}/.aliases" "term aliases"
 
 # Bash
-echo '' && mkdir -p "${home}/.bash" && echo "Created ~/.bash/"
-link_config "${bash}/osx_bash_profile.sh" "${home}/.bash_profile" "bash_profile"
-link_config "${bash}/osx_bashrc.sh" "${home}/.bashrc" "bashrc"
-link_config "${bash}/bash_just.sh" "${home}/.bash" "bash just"
-link_config "${bash}/bash_navi.sh" "${home}/.bash" "bash navi"
+echo '' && mkdir -p "${homeDir}/.bash" && echo "Created ~/.bash/"
+link_config "${bashDir}/osx_bash_profile.sh" "${homeDir}/.bash_profile" "bash_profile"
+link_config "${bashDir}/osx_bashrc.sh" "${homeDir}/.bashrc" "bashrc"
+link_config "${bashDir}/bash_just.sh" "${homeDir}/.bash" "bash just"
+link_config "${bashDir}/bash_navi.sh" "${homeDir}/.bash" "bash navi"
 
 # Zsh
-echo '' && mkdir -p "${home}/.zsh" && echo "Created ~/.zsh/"
-link_config "${zsh}/osx_zshenv.sh" "${home}/.zshenv" "zshenv"
-link_config "${zsh}/osx_zshrc.sh" "${home}/.zsh/.zshrc" "zshrc"
-link_config "${zsh}/zsh_navi.sh" "${home}/.zsh" "zsh navi"
-link_config "${zsh}/zsh_yazi.sh" "${home}/.zsh" "zsh yazi"
-link_config "${zsh}/zsh_zellij.sh" "${home}/.zsh" "zsh zellij"
-link_config "${zsh}/zsh_zoxide.sh" "${home}/.zsh" "zsh zoxide"
+echo '' && mkdir -p "${homeDir}/.zsh" && echo "Created ~/.zsh/"
+link_config "${zshDir}/osx_zshenv.sh" "${homeDir}/.zshenv" "zshenv"
+link_config "${zshDir}/osx_zshrc.sh" "${homeDir}/.zsh/.zshrc" "zshrc"
+link_config "${zshDir}/zsh_navi.sh" "${homeDir}/.zsh" "zsh navi"
+link_config "${zshDir}/zsh_yazi.sh" "${homeDir}/.zsh" "zsh yazi"
+link_config "${zshDir}/zsh_zellij.sh" "${homeDir}/.zsh" "zsh zellij"
+link_config "${zshDir}/zsh_zoxide.sh" "${homeDir}/.zsh" "zsh zoxide"
 
 # Nushell
 echo ''
-link_config "${nu}/env.nu" "${nuAppS}/env.nu" "nushell env"
-link_config "${nu}/config.nu" "${nuAppS}/config.nu" "nushell config"
-
-link_config "${nu}/alias.nu" "${nuAppS}/alias.nu" "nushell alias"
-link_config "${nu}/atuin.nu" "${nuAppS}/atuin.nu" "nushell atuin"
-link_config "${nu}/keymap.nu" "${nuAppS}/keymap.nu" "nushell keymap"
-link_config "${nu}/theme.nu" "${nuAppS}/theme.nu" "nushell theme"
-link_config "${nu}/zoxide.nu" "${nuAppS}/zoxide.nu" "nushell zoxide"
+link_config "${nuDir}/env.nu" "${nuAppDir}/env.nu" "nushell env"
+link_config "${nuDir}/config.nu" "${nuAppDir}/config.nu" "nushell config"
+link_config "${nuDir}/alias.nu" "${nuAppDir}/alias.nu" "nushell alias"
+link_config "${nuDir}/atuin.nu" "${nuAppDir}/atuin.nu" "nushell atuin"
+link_config "${nuDir}/keymap.nu" "${nuAppDir}/keymap.nu" "nushell keymap"
+link_config "${nuDir}/theme.nu" "${nuAppDir}/theme.nu" "nushell theme"
+link_config "${nuDir}/zoxide.nu" "${nuAppDir}/zoxide.nu" "nushell zoxide"
 sep
 
 ####################################################################################################
@@ -90,7 +87,7 @@ sep
 ####################################################################################################
 
 echo_header "completions"
-mkdir -p "${zshcomp}" && echo "Created ~/.config/zsh_completion/"
+mkdir -p "${zshCompDir}" && echo "Created ${zshCompDir}/"
 generate_completion "bat --completion zsh" "_bat"
 generate_completion "delta --generate-completion zsh" "_delta"
 generate_completion "juliaup completions zsh" "_juliaup"

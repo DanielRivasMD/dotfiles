@@ -31,56 +31,74 @@ generate_completion() {
   local bcyan='\033[1;36m'
   local nc='\033[0m'
   local cmd=$1 out=$2
-  eval "$cmd" > "${zshcomp}/${out}" && echo "Installed completion ${byellow}=>${nc} ${bcyan}${out}${nc}"
+  eval "$cmd" >"${zshcomp}/${out}" && echo "Installed completion ${byellow}=>${nc} ${bcyan}${out}${nc}"
 }
 
 ####################################################################################################
 # config
 ####################################################################################################
 
-# TODO: review paths
-# home
-export home="${HOME}"
-export config="${home}/.config"
-export localShare="${home}/.local/share"
-export completionHome="${home}/.completion"
-export forkedHome="${home}/Forked"
-export linkedHome="${home}/Linked"
-export appSupport="${home}/Library/Application Support"
+# Detect operating system
+OS="$(uname -s)"
+case "$OS" in
+  Darwin) export IS_MACOS=1 ;;
+  Linux) export IS_LINUX=1 ;;
+  *)
+    echo "Unsupported OS: $OS"
+    exit 1
+    ;;
+esac
 
-# dotfiles
-dotfiles=$(git rev-parse --show-toplevel)
-export bin="${dotfiles}/bin"
-export in_situ="${dotfiles}/in-situ"
-export ex_situ="${dotfiles}/ex-situ"
-export in_silico="${dotfiles}/in-silico"
-export completionDot="${dotfiles}/completions"
+# Home directory
+export homeDir="$HOME"
 
-# in-situ
-export naviAppS="${appSupport}/navi/"
-export espansoAppS="${appSupport}/espanso"
-export halpAppS="${appSupport}/halp"
-export lazygitAppS="${appSupport}/jesseduffield/lazygit"
-export lazynpmAppS="${appSupport}/jesseduffield/lazynpm"
-export lazycliAppS="${appSupport}/lazycli"
-export lazydockerAppS="${appSupport}/lazydocker"
+# Base directories
+export configDir="${homeDir}/.config"
+export localShareDir="${homeDir}/.local/share"
+export completionHomeDir="${homeDir}/.completion"
+export forkedDir="${homeDir}/Forked"
+export linkedDir="${homeDir}/Linked"
 
-# ex-situ
-export nuAppS="${appSupport}/nushell"
+# Application support directory (OS‑specific)
+if [[ -n "$IS_MACOS" ]]; then
+  export appSupportDir="${homeDir}/Library/Application Support"
+else
+  # TODO: double check linux config
+  # On Linux, many apps use ~/.local/share or ~/.config; adjust as needed.
+  # You can refine this per application later.
+  export appSupportDir="${localShareDir}"
+fi
 
-####################################################################################################
-# ergo
-####################################################################################################
+# Dotfiles root (assumes this script is run from within the dotfiles repo)
+export dotfilesDir="$(git rev-parse --show-toplevel 2>/dev/null)"
+if [[ -z "$dotfilesDir" ]]; then
+  echo "Error: not inside a git repository (dotfiles)" >&2
+  exit 1
+fi
 
-# completions
-export zshcomp="${config}/zsh_completion"
+# Dotfiles subdirectories
+export binDir="${dotfilesDir}/bin"
+export inSituDir="${dotfilesDir}/in-situ"
+export exSituDir="${dotfilesDir}/ex-situ"
+export inSilicoDir="${dotfilesDir}/in-silico"
+export completionDotDir="${dotfilesDir}/completions"
 
-####################################################################################################
-# remote
-####################################################################################################
+# Application‑specific data paths (in‑situ)
+export naviAppDir="${appSupportDir}/navi"
+export espansoAppDir="${appSupportDir}/espanso"
+export lazygitAppDir="${appSupportDir}/jesseduffield/lazygit"
+export lazynpmAppDir="${appSupportDir}/jesseduffield/lazynpm"
+export lazycliAppDir="${appSupportDir}/lazycli"
+export lazydockerAppDir="${appSupportDir}/lazydocker"
 
-# pawsey
-export pawseyID="drivas@topaz.pawsey.org.au"
+# Ex‑situ applications
+export nuAppDir="${appSupportDir}/nushell"
+
+# Zsh completions destination
+export zshCompDir="${configDir}/zsh_completion"
+
+# Remote (Pawsey) – keep as is, only relevant on that machine
+export pawseyId="drivas@topaz.pawsey.org.au"
 export softwarePawsey="/scratch/pawsey0263/drivas/software"
 
 ####################################################################################################

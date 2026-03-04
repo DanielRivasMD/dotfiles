@@ -5,7 +5,7 @@ source "${PWD}/.just/config.sh"
 
 ####################################################################################################
 
-for entry in "$in_situ"/*; do
+for entry in "$inSituDir"/*; do
   [[ -d "$entry" ]] || continue
   name=${entry##*/}
   eval "export $name=\"$entry\""
@@ -16,20 +16,17 @@ done
 ####################################################################################################
 
 echo_header "@bin"
-link_config "${bin}/jlang.sh" "${home}/bin/jlang" "jlang"
-
-####################################################################################################
+link_config "${binDir}/jlang.sh" "${homeDir}/bin/jlang" "jlang"
 
 ####################################################################################################
 # in effigie
 ####################################################################################################
 
-# @HOME
 echo_header "@HOME"
-link_config "${git}/gitconfig" "${home}/.gitconfig" "gitconfig"
-link_config "${git}/gitignore_global" "${home}/.gitignore_global" "gitignore_global"
-link_config "${mplayer}/mplayer" "${home}/.mplayer" "mplayer"
-link_config "${procs}/procs.toml" "${home}/.procs.toml" "procs"
+link_config "${gitDir}/gitconfig" "${homeDir}/.gitconfig" "gitconfig"
+link_config "${gitDir}/gitignore_global" "${homeDir}/.gitignore_global" "gitignore_global"
+link_config "${mplayerDir}/mplayer" "${homeDir}/.mplayer" "mplayer"
+link_config "${procsDir}/procs.toml" "${homeDir}/.procs.toml" "procs"
 sep
 
 ####################################################################################################
@@ -45,27 +42,26 @@ tools=(
 )
 
 for tool in "${tools[@]}"; do
-  if [[ -e "${config}/${tool}" ]]; then rm -rf "${config}/${tool}"; fi
-  link_config "${!tool}" "${config}/" "${tool}"
+  if [[ -e "${configDir}/${tool}" ]]; then rm -rf "${configDir}/${tool}"; fi
+  link_config "${!tool}" "${configDir}/" "${tool}"
 done
 sep
 
 # Define all link tasks as “src|dest|label”
 read -r -d '' LINKS <<EOF
-${espanso}/config/default.yml|${espansoAppS}/config/default.yml|espanso default
-${espanso}/match/base.yml|${espansoAppS}/match/base.yml|espanso match
-${gh}/config.yml|${config}/gh/config.yml|gh config
-${ghostty}/config|${appSupport}/com.mitchellh.ghostty/config|ghostty config
-${julia}/startup.jl|${home}/.julia/config/startup.jl|julia startup
-${lazycli}/config.yml|${lazycliAppS}/config.yml|lazycli config
-${lazygit}/config.yml|${lazygitAppS}/config.yml|lazygit config
-${navi}/config.yml|${naviAppS}/config.yml|navi config
-${navi}/cheats|${naviAppS}/cheats|navi cheats
-${ssh}/config|${home}/.ssh/config|ssh config
-${yazi}/theme.toml|${config}/yazi/theme.toml|yazi theme
+${espansoDir}/config/default.yml|${espansoAppDir}/config/default.yml|espanso default
+${espansoDir}/match/base.yml|${espansoAppDir}/match/base.yml|espanso match
+${ghDir}/config.yml|${configDir}/gh/config.yml|gh config
+${ghosttyDir}/config|${appSupportDir}/com.mitchellh.ghostty/config|ghostty config
+${juliaDir}/startup.jl|${homeDir}/.julia/config/startup.jl|julia startup
+${lazycliDir}/config.yml|${lazycliAppDir}/config.yml|lazycli config
+${lazygitDir}/config.yml|${lazygitAppDir}/config.yml|lazygit config
+${naviDir}/config.yml|${naviAppDir}/config.yml|navi config
+${naviDir}/cheats|${naviAppDir}/cheats|navi cheats
+${sshDir}/config|${homeDir}/.ssh/config|ssh config
+${yaziDir}/theme.toml|${configDir}/yazi/theme.toml|yazi theme
 EOF
 
-# Loop through each entry, ensure parent dir exists, clean old target, then symlink
 while IFS='|' read -r src dest label; do
   parent="$(dirname "$dest")"
   mkdir -p "$parent"
@@ -79,14 +75,14 @@ sep
 ####################################################################################################
 
 echo_header "completions"
-mkdir -p "${zshcomp}" && echo "Created ~/.config/zsh_completion/"
-link_config "${completionHome}/bartib/misc/bartibCompletion.sh" "${zshcomp}/_bartib" "bartib"
-link_config "${completionHome}/fd/contrib/completion/_fd" "${zshcomp}/_fd" "fd"
-link_config "${completionHome}/eza/completions/zsh/_eza" "${zshcomp}/_eza" "eza"
-link_config "${completionHome}/watchexec/completions/zsh" "${zshcomp}/_watchexec" "watchexec"
-link_config "${completionDot}/_jlang" "${zshcomp}/_jlang" "jlang"
-link_config "${completionDot}/_tldr" "${zshcomp}/_tldr" "tldr"
-link_config "${linkedHome}/todo_r/target/release/todor" "${home}/.cargo/bin" "todor"
+mkdir -p "${zshCompDir}" && echo "Created ${zshCompDir}/"
+link_config "${completionHomeDir}/bartib/misc/bartibCompletion.sh" "${zshCompDir}/_bartib" "bartib"
+link_config "${completionHomeDir}/fd/contrib/completion/_fd" "${zshCompDir}/_fd" "fd"
+link_config "${completionHomeDir}/eza/completions/zsh/_eza" "${zshCompDir}/_eza" "eza"
+link_config "${completionHomeDir}/watchexec/completions/zsh" "${zshCompDir}/_watchexec" "watchexec"
+link_config "${completionDotDir}/_jlang" "${zshCompDir}/_jlang" "jlang"
+link_config "${completionDotDir}/_tldr" "${zshCompDir}/_tldr" "tldr"
+link_config "${linkedDir}/todo_r/target/release/todor" "${homeDir}/.cargo/bin" "todor"
 
 echo ''
 generate_completion "atuin gen-completions --shell zsh" "_atuin"
@@ -100,7 +96,7 @@ generate_completion "uv generate-shell-completion zsh" "_uv"
 generate_completion "yq completion zsh" "_yq"
 generate_completion "zellij setup --generate-completion zsh" "_zellij"
 
-cp "${zshcomp}/_eza" "${zshcomp}/_e" && sd eza e "${zshcomp}/_e"
+cp "${zshCompDir}/_eza" "${zshCompDir}/_e" && sd eza e "${zshCompDir}/_e"
 sep
 
 ####################################################################################################
