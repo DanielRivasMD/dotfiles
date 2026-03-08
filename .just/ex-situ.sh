@@ -35,6 +35,7 @@ tools=(
   bpython
   helix
   litecli
+  jnv
   micro
   serpl
   sheldon
