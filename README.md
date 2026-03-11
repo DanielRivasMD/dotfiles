@@ -1,27 +1,30 @@
 # dotfiles
 
 ## Overview
+
 Welcome to this Library, please proceed to the desired Archive...
 
-Archive automates the setup of a rich, multi-language development environment using modular install scripts, external manifests, Zellij plugin management, and parallel execution
-It is designed to be clean, reproducible, and easy to maintain
+Archive automates the setup of a rich, multi-language development environment
+using modular install scripts, external manifests, Zellij plugin management, and
+parallel execution It is designed to be clean, reproducible, and easy to
+maintain
 
 ## Directory Structure
 
-.
-├── install.sh              # Main script to run all setup steps
-├── LICENSE                 # Licensing terms
-├── README.md               # Project documentation
-├── ROADMAP.txt             # Future plans
-├── .gitignore              # Git exclusions
-├── .justfile               # Declarative task runner
-│
-├── .just/                  # Justfile auxiliary scripts
-├── completions/            # Shell completion definitions
-├── deprecated/             # Archived configs or plugins
-├── ex-situ/                # External configs
-├── in-situ/                # Internal configs
-├── in-silico/              # Installation instructions
+    .
+    ├── install.sh              # Main script to run all setup steps
+    ├── LICENSE                 # Licensing terms
+    ├── README.md               # Project documentation
+    ├── ROADMAP.txt             # Future plans
+    ├── .gitignore              # Git exclusions
+    ├── .justfile               # Declarative task runner
+    │
+    ├── .just/                  # Justfile auxiliary scripts
+    ├── completions/            # Shell completion definitions
+    ├── deprecated/             # Archived configs or plugins
+    ├── ex-situ/                # External configs
+    ├── in-situ/                # Internal configs
+    ├── in-silico/              # Installation instructions
 
 ## Setup Instructions
 
@@ -39,6 +42,7 @@ bash install.sh
 ```
 
 3. All scripts and cloning tasks will run in parallel. Logs are stored in:
+
 ```bash
 ~/.archive/log/
 ```
@@ -58,7 +62,7 @@ bash install.sh
 - Add a new install script in `in-silico` and register it in `install.sh` like:
 
 ```bash
-run_install "${installDir}/python.sh"
+run_install "${installDir}/rust.sh"
 ```
 
 - Add Git repos in `in-silico/clone_repos.txt`:
@@ -75,9 +79,8 @@ https://github.com/example/plugin/releases/latest/download/plugin.wasm
 
 ## License
 
-This project is licensed under the terms provided in LICENSE.
+This project is licensed under the terms provided in [LICENSE](LICENSE)
 
 ## Credits
 
 Crafted by Daniel — built for clarity, modularity, and speed.
-
