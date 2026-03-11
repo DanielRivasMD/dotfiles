@@ -80,6 +80,7 @@ case "$os" in
       ghostty             # Terminal emulator
       inkscape            # Vector graphics editor
       karabiner-elements  # Keyboard remapper
+      libreoffice         # Libre Office
       logi-options-plus   # Logitech device config
       mermaid-cli         # ASCII maps
       nordvpn             # VPN client
