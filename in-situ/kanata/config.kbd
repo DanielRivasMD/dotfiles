@@ -43,6 +43,9 @@
 
 ;; applications aliases
 (defalias
+  brave (cmd "brave-browser")
+  alacritty (cmd "alacritty")
+  ghostty (cmd "ghostty")
 )
 
 (defalias
@@ -63,7 +66,8 @@
   mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
   mralt (tap-hold $tap-time $hold-time ralt (layer-toggle lralt))
 
-  mjok  (tap-hold $tap-time $hold-time esc (multi lsft lctl lalt lmet)) ;; Hyper key
+  mjok  (tap-hold $tap-time $hold-time esc (layer-toggle ljok)) ;; Hyper key
+  ;; mjok  (tap-hold $tap-time $hold-time esc (multi lsft lctl lalt lmet)) ;; Hyper key
 
   spc-eq-gt-spc (macro spc = S-. spc)   ;; types: space = > space
 )
@@ -75,7 +79,7 @@
   @mgrv  1     2       3       4       5      6        7       8       9       0       -       =      XX
   @mtab  @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
   @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
-  @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
+  @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /         ▲       @mrsft
          @mlctl  @mlalt  @mlmet                 spc              @mrmet  @mralt  ◀       ▼       ▶
 )
 
@@ -129,8 +133,8 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      ▲       @spc-eq-gt-spc
-        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+  lsft  XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
+        lctl   lalt    lmet                    spc             rmet    ralt    C-◀     C-▼     C-▶
 )
 
 (deflayer llalt
@@ -187,13 +191,13 @@
         C-r    C-s     C-t                     spc             rmet    ralt    ◀       ▼       ▶
 )
 
-(deflayer apps
+(deflayer ljok
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       @brave
+        lctl   lalt    lmet                    spc             @alacritty @ghostty    ◀       ▼       ▶
 )
 
 (defchordsv2
