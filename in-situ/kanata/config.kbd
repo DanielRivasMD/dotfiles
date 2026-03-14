@@ -18,6 +18,7 @@
  tap-time 300
  hold-time 300
  chord-time 60
+ switch-time 500
 )
 
 ;; Only one defsrc is allowed.
@@ -46,14 +47,15 @@
 
 (defalias
   ;; Modifier keys
-  mcopy (tap-hold $tap-time $hold-time c M-c)
-  mpast (tap-hold $tap-time $hold-time v M-v)
+  mcopy (tap-hold $tap-time $hold-time c C-c)
+  mpast (tap-hold $tap-time $hold-time v C-S-v)
 
   mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
   mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
   mq    (tap-hold $tap-time $hold-time q    (layer-toggle lq))
   mw    (tap-hold $tap-time $hold-time w    (layer-toggle lw))
   mz    (tap-hold $tap-time $hold-time z    (layer-toggle lz))
+  mlctl (tap-hold $tap-time $hold-time lctl (layer-toggle llctl))
   mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
@@ -62,6 +64,8 @@
   mralt (tap-hold $tap-time $hold-time ralt (layer-toggle lralt))
 
   mjok  (tap-hold $tap-time $hold-time esc (multi lsft lctl lalt lmet)) ;; Hyper key
+
+  spc-eq-gt-spc (macro spc = S-. spc)   ;; types: space = > space
 )
 
 ;; Main layer
@@ -72,7 +76,7 @@
   @mtab  @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
   @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
   @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
-         lctl  @mlalt  @mlmet                 spc              @mrmet  @mralt  ◀       ▼       ▶
+         @mlctl  @mlalt  @mlmet                 spc              @mrmet  @mralt  ◀       ▼       ▶
 )
 
 (deflayer lgrv
@@ -120,6 +124,15 @@
         lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
 )
 
+(deflayer llctl
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      ▲       @spc-eq-gt-spc
+        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+)
+
 (deflayer llalt
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
@@ -134,7 +147,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      (multi lmet ret)
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      home    rsft
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      home    @spc-eq-gt-spc
         lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
 )
 
@@ -185,8 +198,6 @@
 
 (defchordsv2
   ;; (participating-keys1) action1 timeout1 release-behaviour1 (disabled-layers1)
-  (w e r) M-= $chord-time first-release () ;; zoom in
-  (s d f) M-- $chord-time first-release () ;; zoom out
-  (q w e) volu $chord-time first-release ()
-  (a s d) vold $chord-time first-release ()
+  (lalt tab) A-tab $switch-time first-release ()
+  (ralt tab) A-tab $switch-time first-release ()
 )
