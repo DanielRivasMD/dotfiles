@@ -70,7 +70,8 @@ key_bindings:
   ####################################################################################################
 
   # DOC: patch `alt-enter`
-  - { key: Enter,       mods: Command,                    chars: "\x1b\u000D"   }
+  - { key: Enter,       mods: Command,                    chars: "\x1b\u000D"   }   # macOS
+  - { key: Enter,       mods: Super,                      chars: "\x1b\u000D"   }   # Linux
 
   ####################################################################################################
 
