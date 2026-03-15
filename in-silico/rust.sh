@@ -60,6 +60,7 @@ CRATES=(
   "jless --locked"                                                            # JSON pager
   "just"                                                                      # task runner
   "kalker"                                                                    # terminal calculator
+  "kanata --locked"                                                           # keyboard comfort
   "lazycli --locked"                                                          # lazy command UI
   "mdcat"                                                                     # Markdown viewer
   "monolith"                                                                  # save full webpages
