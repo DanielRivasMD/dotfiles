@@ -2,6 +2,7 @@
 ;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
 
 ;; TODO: create aliases header to embed hotkeys automatically
+;; TOOD: pass terminal sequences as aliases & leave the topographic bindings in place
 (defcfg
   process-unmapped-keys yes
   log-layer-changes no
@@ -63,7 +64,7 @@
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
   mrsft (tap-hold $tap-time $hold-time rsft (layer-toggle lrsft))
-  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
+;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
   mralt (tap-hold $tap-time $hold-time ralt (layer-toggle lralt))
 
   mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))   ;; Hyper key
@@ -78,8 +79,8 @@
   @mgrv  1     2       3       4       5      6        7       8       9       0       -       =      XX
   @mtab  @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
   @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
-  @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /         ▲       @mrsft
-         @mlctl  @mlalt  lalt                 spc              @mrmet  @mralt  ◀       ▼       ▶
+  @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
+         @mlctl  @mlalt  @mlmet                 spc            ralt    @mralt  ◀       ▼       ▶
 )
 
 (deflayer lgrv
@@ -172,14 +173,14 @@
         C-w    lalt    C-u                     spc             rmet    ralt    S-◀     S-▼     S-▶
 )
 
-(deflayer lrmet
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        S-f17  S-f16   S-f15                   S-f14           rmet    ralt    ◀       ▼       ▶
-)
+;;(deflayer lrmet
+;;  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+;;  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+;;  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+;;  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+;;  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+;;        S-f17  S-f16   S-f15                   S-f14           rmet    ralt    ◀       ▼       ▶
+;;)
 
 (deflayer lralt
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
