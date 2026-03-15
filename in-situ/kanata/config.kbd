@@ -3,6 +3,8 @@
 
 ;; TODO: create aliases header to embed hotkeys automatically
 ;; TOOD: pass terminal sequences as aliases & leave the topographic bindings in place
+;; TODO: possible to use grave key as layer
+;; TODO: bind pasting to key directly
 (defcfg
   process-unmapped-keys yes
   log-layer-changes no
@@ -29,12 +31,12 @@
 ;; have the same number of keys as defsrc. Any keys not listed in defsrc will
 ;; be passed straight to the operating system.
 (defsrc
-  esc    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv    1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab    q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps   a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft   z    x    c    v    b    n    m    ,    .    /    ▲    rsft
-         lctl lmet lalt           spc       ralt rctl ◀    ▼    ▶
+  esc              f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv              1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab              q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps             a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft RT z    x    c    v    b    n    m    ,    .    /    ▲    rsft
+  lctl lmet lalt                       spc            ralt rctl ◀    ▼    ▶
 )
 
 ;; scams
@@ -47,6 +49,10 @@
   ;; brave (cmd "brave-browser")
   ;; alacritty (cmd "alacritty")
   ;; ghostty (cmd "ghostty")
+)
+
+(deflocalkeys-linux
+  RT 86
 )
 
 (defalias
@@ -74,13 +80,13 @@
 
 ;; Main layer
 (deflayer main
-  ;;     a     s       d       f       g      h        j       k       l       ;       '
-  esc    XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
-  @mgrv  1     2       3       4       5      6        7       8       9       0       -       =      XX
-  @mtab  @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
-  @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
-  @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
-         @mlctl  @mlalt  @mlmet                 spc            ralt    @mralt  ◀       ▼       ▶
+  ;;         a     s       d       f       g      h        j       k       l       ;       '
+  esc        XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
+  @mgrv      1     2       3       4       5      6        7       8       9       0       -       =      XX
+  @mtab      @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
+  @mjok      a     s       d       f       g      h        j       k       l       ;       '       ret
+  @mlsft C-f12 @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
+  @mlctl  @mlalt  @mlmet                 spc                       ralt    @mralt  ◀       ▼       ▶
 )
 
 (deflayer lgrv
@@ -88,7 +94,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-S-f6
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f7
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f4  C-S-f8
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f4  C-S-f8
         lctl   lalt    lmet                    C-S-f11         XX      C-S-f9  ◀       C-S-f5  ▶
 )
 
@@ -97,7 +103,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-f7
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f1  C-S-f2   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      S-f6    S-f5    S-f8
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       S-f9
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       S-f9
         lctl   lalt    lmet                    S-f12           S-f11   S-f10   S-f1    ▼       S-f2
 )
 
@@ -106,7 +112,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-f6
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f7
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f4    C-f8
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f4    C-f8
         lctl   lalt    lmet                    C-f11           C-f10   C-f9    C-f1    C-f5    C-f2
 )
 
@@ -115,7 +121,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-C-f11
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      S-C-f4  S-C-f5 XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      S-C-f7
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-f11   S-C-f8
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-f11   S-C-f8
         lctl   lalt    lmet                    S-C-f6          S-C-f10 S-C-f9  A-f8    A-f12   A-f9
 )
 
@@ -124,7 +130,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-g
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-l
-  lsft  XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
         lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
 )
 
@@ -133,7 +139,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
+  lsft  XX XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
         lctl   lalt    lmet                    spc             rmet    ralt    C-◀     C-▼     C-▶
 )
 
@@ -142,7 +148,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   XX
   XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
-  lsft  A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      ▲       rsft
+  lsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    A-b     ▼       A-f
 )
 
@@ -151,7 +157,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      (multi lmet ret)
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      home    @spc-eq-gt-spc
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      home    @spc-eq-gt-spc
         lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
 )
 
@@ -160,7 +166,7 @@
   grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
   tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
   XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
-  lsft  S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲       del
+  lsft  XX S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲       del
         lctl   lalt    lmet                    spc             C-k     A-d     S-◀     S-▼       S-▶
 )
 
@@ -169,7 +175,7 @@
   grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
   tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
   XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
-  bspc  S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲     rsft
+  bspc  XX S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲     rsft
         C-w    lalt    C-u                     spc             rmet    ralt    S-◀     S-▼     S-▶
 )
 
@@ -178,7 +184,7 @@
 ;;  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
 ;;  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
 ;;  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-;;  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+;;  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
 ;;        S-f17  S-f16   S-f15                   S-f14           rmet    ralt    ◀       ▼       ▶
 ;;)
 
@@ -187,7 +193,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
         C-r    C-s     C-t                     spc             rmet    ralt    ◀       ▼       ▶
 )
 
@@ -196,7 +202,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
 )
 
