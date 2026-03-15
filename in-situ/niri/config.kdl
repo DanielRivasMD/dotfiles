@@ -364,8 +364,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    // Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-    // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Ctrl+Alt+Super+Equal hotkey-overlay-title="Open Terminal: alacritty" { spawn "alacritty"; }
+    Ctrl+Alt+Super+Minus hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -398,9 +398,9 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    Ctrl+Alt+Super+S repeat=false { toggle-overview; }
 
-    Mod+Q repeat=false { close-window; }
+    // Mod+Q repeat=false { close-window; }
 
     // Mod+Left  { focus-column-left; }
     // Mod+Down  { focus-window-down; }
@@ -411,14 +411,14 @@ binds {
     Ctrl+Alt+Super+K     { focus-window-up; }
     Ctrl+Alt+Super+L     { focus-column-right; }
 
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    // Mod+Ctrl+Left  { move-column-left; }
+    // Mod+Ctrl+Down  { move-window-down; }
+    // Mod+Ctrl+Up    { move-window-up; }
+    // Mod+Ctrl+Right { move-column-right; }
+    Shift+Ctrl+Alt+Super+H     { move-column-left; }
+    Shift+Ctrl+Alt+Super+J     { move-window-down; }
+    Shift+Ctrl+Alt+Super+K     { move-window-up; }
+    Shift+Ctrl+Alt+Super+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -441,10 +441,10 @@ binds {
     // Ctrl+Alt+Super+K     { focus-monitor-up; }
     // Ctrl+Alt+Super+L     { focus-monitor-right; }
 
-    Shift+Ctrl+Alt+Super+Left  { move-workspace-to-monitor-left; }
+    Shift+Ctrl+Alt+Super+Left  { move-window-to-monitor-left; }
     // Shift+Ctrl+Alt+Super+Down  { move-window-to-monitor-down; }
     // Shift+Ctrl+Alt+Super+Up    { move-window-to-monitor-up; }
-    Shift+Ctrl+Alt+Super+Right { move-workspace-to-monitor-right; }
+    Shift+Ctrl+Alt+Super+Right { move-window-to-monitor-right; }
     // Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
     // Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
@@ -471,8 +471,8 @@ binds {
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
 
-    Shift+Ctrl+Alt+Super+Down { move-workspace-down; }
-    Shift+Ctrl+Alt+Super+Up   { move-workspace-up; }
+    Shift+Ctrl+Alt+Super+Down { move-window-to-workspace-down; }
+    Shift+Ctrl+Alt+Super+Up   { move-window-to-workspace-up; }
     // Mod+Shift+U         { move-workspace-down; }
     // Mod+Shift+I         { move-workspace-up; }
 
@@ -525,15 +525,15 @@ binds {
     Ctrl+Alt+Super+7 { focus-workspace 7; }
     Ctrl+Alt+Super+8 { focus-workspace 8; }
     Ctrl+Alt+Super+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    // Shift+Ctrl+Alt+Super+1 { move-window-to-workspace 1; }
+    // Shift+Ctrl+Alt+Super+2 { move-window-to-workspace 2; }
+    // Shift+Ctrl+Alt+Super+3 { move-window-to-workspace 3; }
+    // Shift+Ctrl+Alt+Super+4 { move-window-to-workspace 4; }
+    // Shift+Ctrl+Alt+Super+5 { move-window-to-workspace 5; }
+    // Shift+Ctrl+Alt+Super+6 { move-window-to-workspace 6; }
+    // Shift+Ctrl+Alt+Super+7 { move-window-to-workspace 7; }
+    // Shift+Ctrl+Alt+Super+8 { move-window-to-workspace 8; }
+    // Shift+Ctrl+Alt+Super+9 { move-window-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -544,13 +544,13 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    // Ctrl+Alt+Super+BracketLeft  { consume-or-expel-window-left; }
+    // Ctrl+Alt+Super+BracketRight { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
+    // Ctrl+Alt+Super+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
+    // Ctrl+Alt+Super+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
@@ -602,8 +602,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Ctrl+Alt+Super+W { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    // Ctrl+Print { screenshot-screen; }
+    // Alt+Print { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
