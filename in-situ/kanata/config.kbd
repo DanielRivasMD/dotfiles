@@ -18,7 +18,7 @@
  tap-time 300
  hold-time 300
  chord-time 60
- switch-time 500
+ ;; switch-time 500
 )
 
 ;; Only one defsrc is allowed.
@@ -43,9 +43,9 @@
 
 ;; applications aliases
 (defalias
-  brave (cmd "brave-browser")
-  alacritty (cmd "alacritty")
-  ghostty (cmd "ghostty")
+  ;; brave (cmd "brave-browser")
+  ;; alacritty (cmd "alacritty")
+  ;; ghostty (cmd "ghostty")
 )
 
 (defalias
@@ -66,10 +66,9 @@
   mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
   mralt (tap-hold $tap-time $hold-time ralt (layer-toggle lralt))
 
-  mjok  (tap-hold $tap-time $hold-time esc (layer-toggle ljok)) ;; Hyper key
-  ;; mjok  (tap-hold $tap-time $hold-time esc (multi lsft lctl lalt lmet)) ;; Hyper key
+  mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))   ;; Hyper key
 
-  spc-eq-gt-spc (macro spc = S-. spc)   ;; types: space = > space
+  spc-eq-gt-spc (macro spc = S-. spc)                                ;; space = > space
 )
 
 ;; Main layer
@@ -80,7 +79,7 @@
   @mtab  @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
   @mjok  a     s       d       f       g      h        j       k       l       ;       '       ret
   @mlsft @mz   x       @mcopy  @mpast  b      n        m       ,       .       /         ▲       @mrsft
-         @mlctl  @mlalt  @mlmet                 spc              @mrmet  @mralt  ◀       ▼       ▶
+         @mlctl  @mlalt  lalt                 spc              @mrmet  @mralt  ◀       ▼       ▶
 )
 
 (deflayer lgrv
@@ -140,7 +139,7 @@
 (deflayer llalt
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   XX
+  XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   XX
   XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
   lsft  A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    A-b     ▼       A-f
@@ -196,12 +195,12 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       @brave
-        lctl   lalt    lmet                    spc             @alacritty @ghostty    ◀       ▼       ▶
+  lsft  XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
+        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
 )
 
 (defchordsv2
   ;; (participating-keys1) action1 timeout1 release-behaviour1 (disabled-layers1)
-  (lalt tab) A-tab $switch-time first-release ()
-  (ralt tab) A-tab $switch-time first-release ()
+  ;; (lalt tab) A-tab $switch-time first-release ()
+  ;; (ralt tab) A-tab $switch-time first-release ()
 )
