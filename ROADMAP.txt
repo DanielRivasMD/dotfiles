@@ -1,11 +1,16 @@
 - update language configs helix: cmake, docker-compose, javascript, latex, nu, python, scala
 - todor completions?
 
+search or create tool to capture errors in previous command automatically
+
 document niri installation => ubuntu
 
 kanata:
 ;; TODO: create aliases header to embed hotkeys automatically
 ;; TOOD: pass terminal sequences as aliases & leave the topographic bindings in place
+;; TODO: possible to use grave key as layer
+;; TODO: bind pasting to key directly
+;; TODO: clean up comments & outdated
 
 .justfile
 34:# TODO: change to bash for compatibility, however this does not produce colored logging
