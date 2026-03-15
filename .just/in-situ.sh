@@ -38,6 +38,7 @@ tools=(
   atuin
   alacritty
   bottom
+  niri
   zellij
 )
 
