@@ -406,10 +406,10 @@ binds {
     // Mod+Down  { focus-window-down; }
     // Mod+Up    { focus-window-up; }
     // Mod+Right { focus-column-right; }
-    Ctrl+Alt+Super+H     { focus-column-left; }
-    Ctrl+Alt+Super+J     { focus-window-down; }
-    Ctrl+Alt+Super+K     { focus-window-up; }
-    Ctrl+Alt+Super+L     { focus-column-right; }
+    Ctrl+Alt+Super+BracketLeft  { focus-column-left; }
+    // Ctrl+Alt+Super+J     { focus-window-down; }
+    // Ctrl+Alt+Super+K     { focus-window-up; }
+    Ctrl+Alt+Super+BracketRight { focus-column-right; }
 
     // Mod+Ctrl+Left  { move-column-left; }
     // Mod+Ctrl+Down  { move-window-down; }
