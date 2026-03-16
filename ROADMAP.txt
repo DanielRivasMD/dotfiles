@@ -2,6 +2,11 @@
 - todor completions?
 
 search or create tool to capture errors in previous command automatically
+it seems that a good alternative would be to use a wrapper around the command
+leveraging tee to print to terminal while at the same time redirecting,
+potentially to both a file & the clipboard
+
+update alacritty launch on shell / zsh
 
 document niri installation => ubuntu
 
