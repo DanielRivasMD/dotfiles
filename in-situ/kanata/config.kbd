@@ -58,7 +58,6 @@
 
 (defalias
   ;; Modifier keys
-  mcopy (tap-hold $tap-time $hold-time return C-c)
 
   mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
   mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
@@ -70,11 +69,14 @@
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
   mrsft (tap-hold $tap-time $hold-time rsft (layer-toggle lrsft))
-;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
+
   mralt (tap-hold $tap-time $hold-time C-S-v (layer-toggle lralt))
+  mcopy (tap-hold $tap-time $hold-time return C-c)
 
   mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))   ;; Hyper key
 
+;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
+ 
   spc-eq-gt-spc (macro spc = S-. spc)                                ;; space = > space
 )
 
@@ -208,6 +210,4 @@
 
 (defchordsv2
   ;; (participating-keys1) action1 timeout1 release-behaviour1 (disabled-layers1)
-  ;; (lalt tab) A-tab $switch-time first-release ()
-  ;; (ralt tab) A-tab $switch-time first-release ()
 )
