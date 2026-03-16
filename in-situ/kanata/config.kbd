@@ -32,12 +32,12 @@
 ;; have the same number of keys as defsrc. Any keys not listed in defsrc will
 ;; be passed straight to the operating system.
 (defsrc
-  esc              f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv              1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab              q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps             a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft RT z    x    c    v    b    n    m    ,    .    /    ▲    rsft
-  lctl lmet lalt                       spc            ralt rctl ◀    ▼    ▶
+  esc         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv         1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab         q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps        a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  rt    z    x    c    v    b    n    m    ,    .    /    ▲    rsft
+  lctl  lmet  lalt                spc            ralt rctl ◀    ▼    ▶
 )
 
 ;; scams
@@ -53,13 +53,12 @@
 )
 
 (deflocalkeys-linux
-  RT 86
+  rt 86
 )
 
 (defalias
   ;; Modifier keys
-  mcopy (tap-hold $tap-time $hold-time c C-c)
-  mpast (tap-hold $tap-time $hold-time v C-S-v)
+  mcopy (tap-hold $tap-time $hold-time return C-c)
 
   mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
   mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
@@ -72,7 +71,7 @@
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
   mrsft (tap-hold $tap-time $hold-time rsft (layer-toggle lrsft))
 ;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
-  mralt (tap-hold $tap-time $hold-time ralt (layer-toggle lralt))
+  mralt (tap-hold $tap-time $hold-time C-S-v (layer-toggle lralt))
 
   mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))   ;; Hyper key
 
@@ -85,8 +84,8 @@
   esc        XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
   @mgrv      1     2       3       4       5      6        7       8       9       0       -       =      XX
   @mtab      @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
-  @mjok      a     s       d       f       g      h        j       k       l       ;       '       ret
-  @mlsft C-f12 @mz   x       @mcopy  @mpast  b      n        m       ,       .       /       ▲       @mrsft
+  @mjok      a     s       d       f       g      h        j       k       l       ;       '       @mcopy
+  @mlsft C-f12 @mz   x     c       v       b      n        m       ,       .       /       ▲       @mrsft
   @mlctl  @mlalt  @mlmet                 spc                       ralt    @mralt  ◀       ▼       ▶
 )
 
