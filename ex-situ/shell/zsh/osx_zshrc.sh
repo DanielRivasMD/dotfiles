@@ -156,28 +156,47 @@ tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 ####################################################################################################
 
 if [[ -z "$ZELLIJ" ]]; then
-  case "$__CFBundleIdentifier" in
-    org.alacritty)
-      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach
-      else
-        zellij --layout "${ZELLIJ_CONFIG_DIR}/layouts/alacritty.kdl"
-      fi
-      ;;
-    com.mitchellh.ghostty)
-      if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach
-      else
-        zellij --layout "${ZELLIJ_CONFIG_DIR}/layouts/ghostty.kdl"
-      fi
-      ;;
-    *)
-      # Not Alacritty or Ghostty → do nothing
-      ;;
-  esac
+  # Determine the terminal emulator running
+  terminal=""
+  if [[ "$(uname)" == "Darwin" ]]; then
+    # macOS: use the bundle identifier
+    case "$__CFBundleIdentifier" in
+      org.alacritty) terminal="alacritty" ;;
+      com.mitchellh.ghostty) terminal="ghostty" ;;
+    esac
+  else
+    # Linux: try parent process name first
+    parent_process=$(ps -o comm= $PPID 2>/dev/null | sed 's/.*\///')
+    case "$parent_process" in
+      alacritty | Alacritty) terminal="alacritty" ;;
+      ghostty | Ghostty) terminal="ghostty" ;;
+    esac
+    # If parent process not match, check environment variables
+    if [[ -z "$terminal" ]]; then
+      [[ -n "$ALACRITTY_SOCKET" ]] && terminal="alacritty"
+      [[ -n "$GHOSTTY_RESOURCES_DIR" ]] && terminal="ghostty"
+    fi
+  fi
 
-  if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-    exit
+  # If we identified a supported terminal, start/attach Zellij
+  if [[ -n "$terminal" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+      zellij attach
+    else
+      # Use layout file if one exists for this terminal
+      layout_dir="${ZELLIJ_CONFIG_DIR:-$HOME/.config/zellij}/layouts"
+      layout_file="${layout_dir}/${terminal}.kdl"
+      if [[ -f "$layout_file" ]]; then
+        zellij --layout "$layout_file"
+      else
+        zellij
+      fi
+    fi
+
+    # If configured, exit the parent shell
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+      exit
+    fi
   fi
 fi
 
