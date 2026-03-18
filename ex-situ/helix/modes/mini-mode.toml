@@ -1,11 +1,15 @@
 ####################################################################################################
 
+# goto_line
+# goto_column
+
 # [keys.insert.j]
 # j = "normal_mode"
 
 
 [keys.normal."space"]
 r = ":config-reload"
+l = ":lsp-restart"
 ret = "command_palette"
 
 a = "no_op"
@@ -81,13 +85,19 @@ ret =  "workspace_diagnostics_picker"
 
 # language server protocol mini mode
 [keys.normal.z]
+# _ = "goto_declaration"
 z = "symbol_picker"
 n = "rename_symbol"
 r = "goto_reference"
 d = "goto_definition"
 i = "goto_implementation"
 t = "goto_type_definition"
-ret = "code_action"
+A-ret = "code_action"
+ret = "workspace_symbol_picker"
+D = ["vsplit", "goto_definition"]
+I = ["vsplit", "goto_implementation"]
+R = ["vsplit", "goto_reference"]
+T = ["vsplit", "goto_type_definition"]
 
 b = "no_op"
 c = "no_op"
@@ -115,36 +125,5 @@ C-u = "no_op"
 "/" = "no_op"
 "?" = "no_op"
 
-
-[keys.normal.Z]
-ret = "workspace_symbol_picker"
-d = ["vsplit", "goto_definition"]
-t = ["vsplit", "goto_type_definition"]
-
-b = "no_op"
-c = "no_op"
-j = "no_op"
-k = "no_op"
-m = "no_op"
-n = "no_op"
-N = "no_op"
-p = "no_op"
-# t = "no_op"
-z = "no_op"
-
-space = "no_op"
-up = "no_op"
-down = "no_op"
-backspace = "no_op"
-pageup = "no_op"
-pagedown = "no_op"
-
-C-b = "no_op"
-C-d = "no_op"
-C-f = "no_op"
-C-u = "no_op"
-
-"/" = "no_op"
-"?" = "no_op"
 
 ####################################################################################################
