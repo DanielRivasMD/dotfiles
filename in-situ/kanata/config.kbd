@@ -68,7 +68,7 @@
   mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
-  mrsft (tap-hold $tap-time $hold-time rsft (layer-toggle lrsft))
+  mrsft (tap-hold $tap-time $hold-time C-S-f12 (layer-toggle lrsft))
 
   mzlsft (tap-hold $tap-time $hold-time lsft (layer-toggle lzlsft))
 
