@@ -6,7 +6,7 @@
 cargo add ratatui
 
 # Install Atuin (shell history replacement with sync & search)
-curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- --non-interactive
 
 # Install Deno & Deployctl
 curl -fsSL https://deno.land/install.sh | sh -s -- -y
