@@ -144,6 +144,25 @@ hx() {
 }
 
 ####################################################################################################
+
+# Wrapper for kage – repeats last shell command when called without arguments
+kage() {
+  if [[ $# -eq 0 ]]; then
+    # Get the last command from history (ignoring leading spaces and the 'kage' itself if present)
+    local last_cmd=$(fc -ln -1 | sed -e 's/^[[:space:]]*//' -e 's/^kage[[:space:]]*//')
+    if [[ -z "$last_cmd" ]]; then
+      echo "Error: no previous command found" >&2
+      return 1
+    fi
+    # Run the real kage with sh -c and the fetched command
+    command kage sh -c "$last_cmd"
+  else
+    # Normal invocation: pass all arguments to the real kage
+    command kage "$@"
+  fi
+}
+
+####################################################################################################
 # Utility Functions
 ####################################################################################################
 
