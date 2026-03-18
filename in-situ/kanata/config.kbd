@@ -70,6 +70,8 @@
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
   mrsft (tap-hold $tap-time $hold-time rsft (layer-toggle lrsft))
 
+  mzlsft (tap-hold $tap-time $hold-time lsft (layer-toggle lzlsft))
+
   mralt (tap-hold $tap-time $hold-time C-S-v (layer-toggle lralt))
   mcopy (tap-hold $tap-time $hold-time return C-c)
 
@@ -129,10 +131,10 @@
 
 (deflayer lz
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-g
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-l
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-f14   A-f15   C-g
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  A-f6
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      A-f13      XX      C-l
+  @mzlsft  XX XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
         lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
 )
 
@@ -206,6 +208,15 @@
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
   lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+)
+
+(deflayer lzlsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-home       rsft
+        lctl   lalt    lmet                    spc             rmet    ralt    A-pgup       A-end       A-pgdn
 )
 
 (defchordsv2
