@@ -112,6 +112,7 @@ zle -N edit-command-line
 # Key Bindings & Widgets
 ####################################################################################################
 
+# TODO: sync widget bindingsi comply with helix non-remapables => relocate C-v -> rshift, C-s -> ralt, C-t -> rcmd
 # fzf history (Ctrl-R)
 bindkey '^R' fzf-history-widget
 
