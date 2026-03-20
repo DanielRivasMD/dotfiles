@@ -6,6 +6,8 @@ likewise, it could evolve into a zellij plugin properly if it is possible to cho
 
 - use process substitution to log installation & failures => install > >(less) 2> >(tee errors.txt)
 
+- add easy history scroll bindings for zellij session
+
 - update language configs helix: cmake, docker-compose, javascript, latex, nu, python, scala
 - todor completions?
 
