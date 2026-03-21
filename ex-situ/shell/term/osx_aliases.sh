@@ -1,8 +1,4 @@
 ####################################################################################################
-# forked patches
-####################################################################################################
-
-####################################################################################################
 # general aliases
 ####################################################################################################
 
@@ -19,11 +15,6 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
 alias mk='mkdir -pv'
-
-####################################################################################################
-
-# mplayer
-alias mp='mplayer'
 
 ####################################################################################################
 # go tool links
@@ -43,6 +34,9 @@ alias mc='micro'
 # mmv
 alias mmv='mmv *'
 
+# moneypenny
+alias mp='moneypenny'
+
 ####################################################################################################
 # julia
 ####################################################################################################
@@ -56,8 +50,6 @@ alias jl='julia --project'
 
 # enviroment
 alias activate='source venv/bin/activate'
-
-# calendar
 
 # package manager & repl
 alias pip='pip3'
@@ -75,7 +67,7 @@ alias e='eza --header --long --icons --classify --git --group'
 alias ea='e --all'
 alias er='e --sort=newest'
 alias ear='ea --sort=newest'
-alias et='ea --tree --level 2 --ignore-glob ".git" --group-directories-first'
+alias et='ea --tree --level 3 --ignore-glob ".git" --group-directories-first'
 
 # gfold
 alias gf='gfold'
