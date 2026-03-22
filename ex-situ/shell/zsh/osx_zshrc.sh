@@ -138,6 +138,7 @@ bindkey '^O' navi_widget
 # Helix Logging
 ####################################################################################################
 
+# TODO: segregate to its own file
 hx() {
   : "${HELIX_LOG:=$HOME/.cache/helix/logs/helix-$(date +%Y%m%d-%H%M%S)-$$.log}"
   mkdir -p "$(dirname "$HELIX_LOG")"
@@ -146,6 +147,7 @@ hx() {
 
 ####################################################################################################
 
+# TODO: segregate to its own file
 # Wrapper for kage – repeats last shell command when called without arguments
 kage() {
   if [[ $# -eq 0 ]]; then

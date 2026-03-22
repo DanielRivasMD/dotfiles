@@ -16,7 +16,7 @@ update ghostty layout => move monitor tab to lou & kanata to hypnos infinite
 document niri installation => ubuntu
 
 kanata:
-;; TODO: create aliases header to embed hotkeys automatically
+;; TODO: create aliases header to embed hotkeys automatically => source a file with the bind definitions that will be forged by embedding
 ;; TOOD: pass terminal sequences as aliases & leave the topographic bindings in place
 ;; TODO: possible to use grave key as layer
 ;; TODO: bind pasting to key directly
@@ -42,8 +42,13 @@ ex-situ/bpython/alacritty.theme
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
+ex-situ/shell/term/osx_aliases.sh
+  line 65     TODO   update eza aliases
+  line 73     TODO   replace functionality with cerberus
 ex-situ/shell/zsh/osx_zshrc.sh
   line 115    TODO   sync widget bindingsi comply with helix non-remapables => relocate C-v -> rshift, C-s -> ralt, C-t -> rcmd
+  line 141    TODO   segregate to its own file
+  line 150    TODO   segregate to its own file
 in-silico/pkg_manager.sh
   line 114    TODO   decide & document: starship, nushell & nerd-fonts
 in-situ/alacritty/alacritty.yml
