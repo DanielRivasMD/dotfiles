@@ -1,15 +1,14 @@
     search {
-        bind "Alt h" { SwitchToMode "Normal"; }
-        bind "Up" { ScrollUp; }
-        bind "Down" { ScrollDown; }
-        bind "PageUp" { HalfPageScrollUp; }
-        bind "PageDown" { HalfPageScrollDown; }
-        bind "Home" { PageScrollUp; }
-        bind "End" { PageScrollDown; }
+        bind "Up" { ScrollUp; }                            // undocumented
+        bind "Down" { ScrollDown; }                        // undocumented
+        bind "PageUp" { HalfPageScrollUp; }                // undocumented
+        bind "PageDown" { HalfPageScrollDown; }            // undocumented
+        bind "Home" { PageScrollUp; }                      // undocumented
+        bind "End" { PageScrollDown; }                     // undocumented
 
-        bind "l" { Search "down"; }
-        bind "h" { Search "up"; }
-        bind "c" { SearchToggleOption "CaseSensitivity"; }
-        bind "x" { SearchToggleOption "Wrap"; }
-        bind "z" { SearchToggleOption "WholeWord"; }
+        bind "l" { Search "down"; }                        // undocumented
+        bind "h" { Search "up"; }                          // undocumented
+        bind "c" { SearchToggleOption "CaseSensitivity"; } // undocumented
+        bind "x" { SearchToggleOption "Wrap"; }            // undocumented
+        bind "w" { SearchToggleOption "WholeWord"; }       // undocumented
     }
