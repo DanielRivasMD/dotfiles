@@ -1,15 +1,11 @@
     entersearch {
-        bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
-        // TODO: document arrows
-        bind "Up" { ScrollUp; }
-        bind "Down" { ScrollDown; }
+        bind "Shift F10" { SwitchToMode "Normal"; }
+        bind "Up" { ScrollUp; }                  // undocumented
+        bind "Down" { ScrollDown; }              // undocumented
         bind "PageUp" { HalfPageScrollUp; }
         bind "PageDown" { HalfPageScrollDown; }
         bind "Home" { PageScrollUp; }
         bind "End" { PageScrollDown; }
-
-        // TODO: document enter
-        bind "Enter" { SwitchToMode "Search"; }
-
-        bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Search"; }  // undocumented
+        bind "Shift F10" { SwitchToMode "Normal"; }
 	}
