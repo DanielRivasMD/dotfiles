@@ -89,6 +89,9 @@ alias ss='samesame'
 # wordcrab
 alias wc='wordcrab'
 
+# yazi
+alias y=yazi
+
 # zoxide
 alias zz='z -'
 
