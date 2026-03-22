@@ -27,7 +27,7 @@ keybinds clear-defaults=true {
         bind "Esc" { SwitchToMode "Normal"; }
     }
     locked {
-        bind "Ctrl Shift F11" { SwitchToMode "Normal"; }
+        bind "Ctrl Shift F6" { SwitchToMode "Normal"; }
     }
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
@@ -36,8 +36,8 @@ keybinds clear-defaults=true {
         bind "Ctrl Shift F2" { MoveTab "Right"; }
 
         bind "Ctrl Shift F12" { EditScrollback; SwitchToMode "Normal"; }
-        bind "Ctrl Shift F11" { SwitchToMode "Locked"; }
-        bind "Ctrl Shift F8" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Ctrl Shift F6" { SwitchToMode "Locked"; }
+        bind "Shift F10" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl F1" { MoveFocus "Left"; }
         bind "Ctrl F2" { MoveFocus "Right"; }
         bind "Ctrl F4" { MoveFocus "Up"; }
@@ -52,20 +52,23 @@ keybinds clear-defaults=true {
         bind "Shift F1" { GoToPreviousTab; }
         bind "Shift F2" { GoToNextTab; }
         bind "Ctrl Shift F9" { TogglePaneEmbedOrFloating; }
-        bind "Ctrl Shift F6" { TogglePanePinned; }
+        bind "Ctrl Shift F11" { TogglePanePinned; }
         bind "Ctrl Shift F7" { ToggleFloatingPanes; }
         bind "Shift F8" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
         bind "Shift F9" { NewTab; }
-        bind "Shift F10" { BreakPane; }
+        bind "Ctrl Shift F8" { BreakPane; }
         bind "Shift F11" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "Shift F12" { ToggleTab; }
         bind "Shift F7" { CloseTab; }
-        bind "Shift F4" { ToggleActiveSyncTab; }
+        bind "Ctrl Shift F10" { ToggleActiveSyncTab; }
         bind "Shift F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
         bind "Shift F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
 
         bind "Ctrl Shift F5" { Resize "Increase"; }
         bind "Ctrl Shift F4" { Resize "Decrease"; }
+
+        bind "Alt Shift F11" { ScrollUp; }
+        bind "Alt Shift F12" { ScrollDown; }
 
         bind "Alt F8" { MovePane "Left"; }
         bind "Alt F9" { MovePane "Right"; }
@@ -74,39 +77,36 @@ keybinds clear-defaults=true {
     }
     renamepane {
         bind "Ctrl F10" { UndoRenamePane; SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Normal"; } // undocumented
     }
     renametab {
         bind "Shift F11" { UndoRenameTab; SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Normal"; } // undocumented
     }
     entersearch {
-        bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
-        // TODO: document arrows
-        bind "Up" { ScrollUp; }
-        bind "Down" { ScrollDown; }
+        bind "Shift F10" { SwitchToMode "Normal"; }
+        bind "Up" { ScrollUp; }                  // undocumented
+        bind "Down" { ScrollDown; }              // undocumented
         bind "PageUp" { HalfPageScrollUp; }
         bind "PageDown" { HalfPageScrollDown; }
         bind "Home" { PageScrollUp; }
         bind "End" { PageScrollDown; }
-
-        // TODO: document enter
-        bind "Enter" { SwitchToMode "Search"; }
-
-        bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Search"; }  // undocumented
+        bind "Shift F10" { SwitchToMode "Normal"; }
 	}
     search {
-        bind "Alt h" { SwitchToMode "Normal"; }
-        bind "Up" { ScrollUp; }
-        bind "Down" { ScrollDown; }
-        bind "PageUp" { HalfPageScrollUp; }
-        bind "PageDown" { HalfPageScrollDown; }
-        bind "Home" { PageScrollUp; }
-        bind "End" { PageScrollDown; }
+        bind "Up" { ScrollUp; }                            // undocumented
+        bind "Down" { ScrollDown; }                        // undocumented
+        bind "PageUp" { HalfPageScrollUp; }                // undocumented
+        bind "PageDown" { HalfPageScrollDown; }            // undocumented
+        bind "Home" { PageScrollUp; }                      // undocumented
+        bind "End" { PageScrollDown; }                     // undocumented
 
-        bind "l" { Search "down"; }
-        bind "h" { Search "up"; }
-        bind "c" { SearchToggleOption "CaseSensitivity"; }
-        bind "x" { SearchToggleOption "Wrap"; }
-        bind "z" { SearchToggleOption "WholeWord"; }
+        bind "l" { Search "down"; }                        // undocumented
+        bind "h" { Search "up"; }                          // undocumented
+        bind "c" { SearchToggleOption "CaseSensitivity"; } // undocumented
+        bind "x" { SearchToggleOption "Wrap"; }            // undocumented
+        bind "w" { SearchToggleOption "WholeWord"; }       // undocumented
     }
 
 }
