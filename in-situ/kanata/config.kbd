@@ -70,6 +70,7 @@
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
   mrsft (tap-hold $tap-time $hold-time C-S-f12 (layer-toggle lrsft))
 
+  mlctllsft (tap-hold $tap-time $hold-time lsft (layer-toggle llctllsft))
   mlaltlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llaltlsft))
   mlmetlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llmetlsft))
   mzlsft (tap-hold $tap-time $hold-time lsft (layer-toggle lzlsft))
@@ -109,8 +110,8 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-f7
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f1  C-S-f2   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      S-f6    S-f5    S-f8
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-x       S-f9
-        lctl   lalt    lmet                    S-f12           S-f11   S-f10   S-f1    C-y       S-f2
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-S-f11       S-f9
+        lctl   lalt    lmet                    S-f12           S-f11   S-f10   S-f1    A-S-f12       S-f2
 )
 
 (deflayer lq
@@ -137,7 +138,7 @@
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  A-f6
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      A-f13      XX      C-l
   @mzlsft  XX XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
-        lctl   lalt    lmet                    C-o             C-j     C-h     C-b     C-p     C-f
+        lctl   lalt    lmet                    C-t             C-r     C-s     C-b     C-p     C-f
 )
 
 (deflayer llctl
@@ -145,7 +146,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
+  @mlctllsft  XX XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
         lctl   lalt    lmet                  C-spc             rmet    ralt    C-◀     C-▼     C-▶
 )
 
@@ -200,7 +201,7 @@
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
   lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        C-r    C-s     C-t                     spc             rmet    ralt    ◀       ▼       ▶
+        C-o    C-j     C-h                     spc             rmet    ralt    ◀       ▼       ▶
 )
 
 (deflayer ljok
@@ -210,6 +211,15 @@
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
   lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
         lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
+)
+
+(deflayer llctllsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-x       rsft
+        lctl   lalt    lmet                    spc             rmet    ralt    A-◀       C-y       A-▶
 )
 
 (deflayer llaltlsft
