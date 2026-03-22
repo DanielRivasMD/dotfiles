@@ -1,3 +1,4 @@
     renamepane {
         bind "Ctrl F10" { UndoRenamePane; SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Normal"; } // undocumented
     }
