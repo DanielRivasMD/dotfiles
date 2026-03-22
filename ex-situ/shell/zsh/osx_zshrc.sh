@@ -53,7 +53,6 @@ setopt COMPLETE_ALIASES
 # Load fzf’s default key bindings (Ctrl-T, Alt-C) and completion
 if command -v fzf &>/dev/null; then
   FZF_VERSION="$(fzf --version | cut -d' ' -f1)"
-  # Only source integration if version >= 0.48
   if [[ "$(printf '%s\n' 0.48 "$FZF_VERSION" | sort -V | head -n1)" = "0.48" ]]; then
     source <(fzf --zsh)
   else
@@ -74,32 +73,19 @@ setopt appendhistory
 # CLI Tools Initialization
 ####################################################################################################
 
-# atuin (history manager, but we’ll disable its bind)
 export ATUIN_NOBIND="true"
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 
-# disable autosuggest
 typeset -g ZSH_AUTOSUGGEST_STRATEGY=()
 
-# just
-JFUN="$ZDOTDIR/zsh_just.sh"
-[[ -f "$JFUN" ]] && source "$JFUN"
+[[ -f "$ZDOTDIR/zsh_just.sh" ]] && source "$ZDOTDIR/zsh_just.sh"
 
-# navi
-NFUN="$ZDOTDIR/zsh_navi.sh"
-[[ -f "$NFUN" ]] && source "$NFUN"
+[[ -f "$ZDOTDIR/zsh_navi.sh" ]] && source "$ZDOTDIR/zsh_navi.sh"
 
-# starship prompt
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 
-# yazi
-YFUN="$ZDOTDIR/zsh_yazi.sh"
-[[ -f "$YFUN" ]] && source "$YFUN"
-
-# zoxide (frecency-based cd)
 command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
-ZFUN="$ZDOTDIR/zsh_zoxide.sh"
-[[ -f "$ZFUN" ]] && source "$ZFUN"
+[[ -f "$ZDOTDIR/zsh_zoxide.sh" ]] && source "$ZDOTDIR/zsh_zoxide.sh"
 
 ####################################################################################################
 # Editor Line Editing
@@ -112,7 +98,6 @@ zle -N edit-command-line
 # Key Bindings & Widgets
 ####################################################################################################
 
-# TODO: sync widget bindingsi comply with helix non-remapables => relocate C-v -> rshift, C-s -> ralt, C-t -> rcmd
 # fzf history (Ctrl-R)
 bindkey '^O' fzf-history-widget
 
@@ -135,77 +120,46 @@ bindkey '^R' fzf-cd-widget
 bindkey '^T' navi_widget
 
 ####################################################################################################
-# Helix Logging
+# Utility Wrappers
 ####################################################################################################
 
-# TODO: segregate to its own file
-hx() {
-  : "${HELIX_LOG:=$HOME/.cache/helix/logs/helix-$(date +%Y%m%d-%H%M%S)-$$.log}"
-  mkdir -p "$(dirname "$HELIX_LOG")"
-  command hx --log "$HELIX_LOG" "$@"
-}
+[[ -f "$ZDOTDIR/zsh_helix.sh" ]] && source "$ZDOTDIR/zsh_helix.sh"
 
-####################################################################################################
-
-# TODO: segregate to its own file
-# Wrapper for kage – repeats last shell command when called without arguments
-kage() {
-  if [[ $# -eq 0 ]]; then
-    # Get the last command from history (ignoring leading spaces and the 'kage' itself if present)
-    local last_cmd=$(fc -ln -1 | sed -e 's/^[[:space:]]*//' -e 's/^kage[[:space:]]*//')
-    if [[ -z "$last_cmd" ]]; then
-      echo "Error: no previous command found" >&2
-      return 1
-    fi
-    # Run the real kage with sh -c and the fetched command
-    command kage sh -c "$last_cmd"
-  else
-    # Normal invocation: pass all arguments to the real kage
-    command kage "$@"
-  fi
-}
+[[ -f "$ZDOTDIR/zsh_kage.sh" ]] && source "$ZDOTDIR/zsh_kage.sh"
 
 ####################################################################################################
 # Utility Functions
 ####################################################################################################
 
-# reload with ease
 reload() { source "$ZDOTDIR/.zshrc"; }
 
-# tre function wrapper
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 ####################################################################################################
 
 if [[ -z "$ZELLIJ" ]]; then
-  # Determine the terminal emulator running
   terminal=""
   if [[ "$(uname)" == "Darwin" ]]; then
-    # macOS: use the bundle identifier
     case "$__CFBundleIdentifier" in
       org.alacritty) terminal="alacritty" ;;
       com.mitchellh.ghostty) terminal="ghostty" ;;
     esac
   else
-    # Linux: try parent process name first
     parent_process=$(ps -o comm= $PPID 2>/dev/null | sed 's/.*\///')
     case "$parent_process" in
       alacritty | Alacritty) terminal="alacritty" ;;
       ghostty | Ghostty) terminal="ghostty" ;;
     esac
-    # If parent process not match, check environment variables
     if [[ -z "$terminal" ]]; then
       [[ -n "$ALACRITTY_SOCKET" ]] && terminal="alacritty"
       [[ -n "$GHOSTTY_RESOURCES_DIR" ]] && terminal="ghostty"
     fi
   fi
 
-  # If we identified a supported terminal, start/attach Zellij
   if [[ -n "$terminal" ]]; then
     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
       zellij attach
     else
-      # Use layout file if one exists for this terminal
       layout_dir="${ZELLIJ_CONFIG_DIR:-$HOME/.config/zellij}/layouts"
       layout_file="${layout_dir}/${terminal}.kdl"
       if [[ -f "$layout_file" ]]; then
@@ -215,7 +169,6 @@ if [[ -z "$ZELLIJ" ]]; then
       fi
     fi
 
-    # If configured, exit the parent shell
     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
       exit
     fi
