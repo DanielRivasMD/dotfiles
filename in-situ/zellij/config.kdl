@@ -22,20 +22,13 @@ plugins {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 keybinds clear-defaults=true {
-
-
     shared_except "normal" "locked" {
         bind "Esc" { SwitchToMode "Normal"; }
     }
-
     locked {
         bind "Ctrl Shift F11" { SwitchToMode "Normal"; }
     }
-
-
-
     shared_except "locked" {
         bind "Ctrl q" { Quit; }
 
@@ -79,21 +72,12 @@ keybinds clear-defaults=true {
         bind "Alt F11" { MovePane "Up"; }
         bind "Alt F12" { MovePane "Down"; }
     }
-
-
-
     renamepane {
         bind "Ctrl F10" { UndoRenamePane; SwitchToMode "Normal"; }
     }
-
-
-
     renametab {
         bind "Shift F11" { UndoRenameTab; SwitchToMode "Normal"; }
     }
-
-
-
     entersearch {
         bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
         // TODO: document arrows
@@ -109,9 +93,6 @@ keybinds clear-defaults=true {
 
         bind "Ctrl Shift F8" { SwitchToMode "Normal"; }
 	}
-
-
-
     search {
         bind "Alt h" { SwitchToMode "Normal"; }
         bind "Up" { ScrollUp; }
@@ -128,9 +109,4 @@ keybinds clear-defaults=true {
         bind "z" { SearchToggleOption "WholeWord"; }
     }
 
-
-
-
 }
-
-
