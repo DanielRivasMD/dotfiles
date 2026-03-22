@@ -114,25 +114,25 @@ zle -N edit-command-line
 
 # TODO: sync widget bindingsi comply with helix non-remapables => relocate C-v -> rshift, C-s -> ralt, C-t -> rcmd
 # fzf history (Ctrl-R)
-bindkey '^R' fzf-history-widget
+bindkey '^O' fzf-history-widget
 
 # Atuin search (Ctrl-S)
-bindkey '^S' _atuin_search_widget
+bindkey '^J' _atuin_search_widget
 
 # fzf file picker (Ctrl-T)
-bindkey '^T' fzf-file-widget
+bindkey '^V' fzf-file-widget
 
 # Edit command line (Ctrl-G)
 bindkey '^G' edit-command-line
 
 # zoxide widget (Ctrl-H)
-bindkey '^H' zoxide_widget
+bindkey '^S' zoxide_widget
 
 # fzf-cd (Ctrl-J)
-bindkey '^J' fzf-cd-widget
+bindkey '^R' fzf-cd-widget
 
 # Navi widget (Ctrl-O)
-bindkey '^O' navi_widget
+bindkey '^T' navi_widget
 
 ####################################################################################################
 # Helix Logging
