@@ -26,6 +26,17 @@ maintain
     ├── in-situ/                # Internal configs
     ├── in-silico/              # Installation instructions
 
+# Profiles
+
+Default local shell is `zsh`. Therefore, configuration reads `zshrc` at startup
+(when `zprofile` an error occurs, probably sourced somewhere at system
+configuration) where `profile` config is read. `bash` shell is always run as a
+subprocess. Therefore, no `bash_profile` only `bashrc`.
+
+Default remotes are `bash`. Therefore, configuration should read `bash_profile`
+and launch `zsh` as subprocess. `bashrc` should read on slurm jobs, therefore
+minimalistic configuration.
+
 ## Setup Instructions
 
 1. Clone this repository into your workspace:
@@ -83,4 +94,4 @@ This project is licensed under the terms provided in [LICENSE](LICENSE)
 
 ## Credits
 
-Crafted by Daniel — built for clarity, modularity, and speed.
+Crafted by Daniel — built for clarity, modularity, and speed
