@@ -67,9 +67,9 @@ link_config "${bash}/bash_navi.sh" "${homeDir}/.bash" "bash navi"
 echo '' && mkdir -p "${homeDir}/.zsh" && echo "Created ~/.zsh/"
 link_config "${zsh}/osx_zshenv.sh" "${homeDir}/.zshenv" "zshenv"
 link_config "${zsh}/osx_zshrc.sh" "${homeDir}/.zsh/.zshrc" "zshrc"
+link_config "${zsh}/zsh_helix.sh" "${homeDir}/.zsh" "zsh helix"
+link_config "${zsh}/zsh_kage.sh" "${homeDir}/.zsh" "zsh kage"
 link_config "${zsh}/zsh_navi.sh" "${homeDir}/.zsh" "zsh navi"
-link_config "${zsh}/zsh_yazi.sh" "${homeDir}/.zsh" "zsh yazi"
-link_config "${zsh}/zsh_zellij.sh" "${homeDir}/.zsh" "zsh zellij"
 link_config "${zsh}/zsh_zoxide.sh" "${homeDir}/.zsh" "zsh zoxide"
 
 # Nushell
