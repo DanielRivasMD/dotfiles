@@ -3,10 +3,15 @@ selected text to the active pane, presumably a repl
 we could keep a server running with the same architecture of twins that we used for hypnos
 likewise, it could evolve into a zellij plugin properly if it is possible to choose the pane explicitly
 
+zellij upgrade brought new features, but also integrated automatic tab & pane log => figure out how to deal with it
+
 - use process substitution to log installation & failures => install > >(less) 2> >(tee errors.txt)
 
 - update language configs helix: cmake, docker-compose, javascript, latex, nu, python, scala
+- add language support for kdl
 - todor completions?
+
+rendering bindings through babel can be implemented also to other programs => yazi?
 
 document niri installation => ubuntu
 
@@ -19,17 +24,10 @@ kanata:
 
 .justfile
 34:# TODO: change to bash for compatibility, however this does not produce colored logging
+explicitly run just scripts in bash; for this, update color output to be compatible
 
 .just/config.sh
 67:  # TODO: double check linux config
-
-in-situ/zellij/config.kdl
-99:        // TODO: document arrows
-107:        // TODO: document enter
-
-in-situ/zellij/modes/entersearch.kdl
-3:        // TODO: document arrows
-11:        // TODO: document enter
 
 ==================================================
 ex-situ/bpython/alacritty.theme
