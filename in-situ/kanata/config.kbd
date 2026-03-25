@@ -82,7 +82,9 @@
 
 ;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
  
-  spc-eq-gt-spc (macro spc = S-. spc)                                ;; space = > space
+  spc-eq-gt-spc (macro spc = S-. spc)                ;; space = > space
+  spc-pipe-spc (macro spc S-\ spc)                   ;; space | space
+  spc-pipe-gt-spc (macro spc S-\ S-. spc)            ;; space |> space
 )
 
 ;; Main layer
@@ -153,9 +155,9 @@
 (deflayer llalt
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   XX
+  XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   @spc-pipe-spc
   XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
-  @mlaltlsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      pgup       rsft
+  @mlaltlsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      pgup       @spc-pipe-gt-spc
         lctl   lalt    lmet                    spc             rmet    ralt    A-b     pgdn       A-f
 )
 
