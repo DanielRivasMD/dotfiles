@@ -498,3 +498,12 @@ keybinding:
     commitMenu: <disabled>
 
 ####################################################################################################
+
+customCommands:
+  - name: "push tags"
+    command: "git push --tags"
+    context: "global"
+    key: "T"                     # optional, bind to a key (e.g., Shift+T)
+    description: "Push all tags"
+
+####################################################################################################
