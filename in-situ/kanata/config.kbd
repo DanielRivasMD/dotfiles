@@ -85,6 +85,15 @@
   spc-eq-gt-spc (macro spc = S-. spc)                ;; space = > space
   spc-pipe-spc (macro spc S-\ spc)                   ;; space | space
   spc-pipe-gt-spc (macro spc S-\ S-. spc)            ;; space |> space
+
+  spc-amp-spc   (macro spc S-7 spc)          ;; space & space
+  spc-eq-spc    (macro spc = spc)            ;; space = space
+  spc-lt-hyphen (macro spc S-, - spc)        ;; space <- space
+  spc-hyphen-gt (macro spc - S-. spc)        ;; space -> space
+  spc-hyphen-spc (macro spc - spc)           ;; space - space
+  spc-plus-spc  (macro spc S-= spc)          ;; space + space
+  spc-star-spc  (macro spc S-8 spc)          ;; space * space
+  spc-slash-spc (macro spc / spc)            ;; space / space
 )
 
 ;; Main layer
@@ -154,11 +163,11 @@
 
 (deflayer llalt
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  grv   XX     XX      XX      XX      XX      XX      @spc-amp-spc      XX      XX      XX      @spc-hyphen-spc  @spc-plus-spc  XX
   XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   @spc-pipe-spc
-  XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      ret
+  XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      @spc-eq-spc
   @mlaltlsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      pgup       @spc-pipe-gt-spc
-        lctl   lalt    lmet                    spc             rmet    ralt    A-b     pgdn       A-f
+        lctl   lalt    lmet                    spc             @spc-star-spc  @spc-slash-spc  A-b     pgdn       A-f
 )
 
 (deflayer llmet
@@ -166,7 +175,7 @@
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
   XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      (multi lmet ret)
-  @mlmetlsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      home    @spc-eq-gt-spc
+  @mlmetlsft  XX XX     XX      XX      XX      XX      XX      XX      @spc-lt-hyphen  @spc-hyphen-gt  XX      home    @spc-eq-gt-spc
         lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
 )
 
