@@ -30,8 +30,8 @@
         bind "Shift F12" { ToggleTab; }
         bind "Shift F7" { CloseTab; }
         bind "Ctrl Shift F10" { ToggleActiveSyncTab; }
-        bind "Shift F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
-        bind "Shift F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
+        // bind "Shift F5" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-jump-list.wasm" { floating true; move_to_focused_tab true; }; }
+        // bind "Shift F6" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle.wasm" { floating true; }; SwitchToMode "Normal"; }
 
         bind "Ctrl Shift F5" { Resize "Increase"; }
         bind "Ctrl Shift F4" { Resize "Decrease"; }
