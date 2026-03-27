@@ -7,17 +7,11 @@ matches:
   ####################################################################################################
 
   # mail
-  - trigger: ":gmail:"
-    replace: "danielrivasmd@gmail.com"
-
   - trigger: ":mail:"
     replace: "danielrivasmd@gmail.com"
 
   - trigger: ":mail:"
     replace: "danielrivasmd@yahoo.com"
-
-  - trigger: ":mail:"
-    replace: "daniel.rivas@astrazeneca.com"
 
   # name
   - trigger: ":dr:"
@@ -51,6 +45,9 @@ matches:
 
   - trigger: ":phone:"
     replace: "767799639"
+
+  - trigger: ":phone:"
+    replace: "3973231690"
 
   # id
   - trigger: ":id:"
