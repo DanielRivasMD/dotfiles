@@ -1,7 +1,0 @@
-% docker
-
-# run docker container
-fillin docker run -it --rm {{container}}
-
-# run docker container with present directory
-fillin docker run -it -v $(pwd):{{directory}} {{container}}
