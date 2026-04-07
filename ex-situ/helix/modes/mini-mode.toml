@@ -1,12 +1,12 @@
 ####################################################################################################
 
-# [keys.insert.j]
-# j = "normal_mode"
-
 [keys.normal."space"]
 r = ":config-reload"
 l = ":lsp-restart"
 ret = "command_palette"
+
+# "|" = "goto_column"
+# space = "goto_line"
 
 a = "no_op"
 b = "no_op"
