@@ -1,13 +1,10 @@
 ####################################################################################################
 
-# TODO: bind to auto embedding
 [keybindings]
 "<Alt-q>" = "Quit"
-"<Ctrl-f>" = "LoopOverTabs"
-"<Ctrl-b>" = "BackLoopOverTabs"
-"<Ctrl-p>" = "LoopOverTabs"
 "<Ctrl-n>" = "BackLoopOverTabs"
-"<Ctrl-o>" = "ProcessReplace"
+"<Ctrl-p>" = "LoopOverTabs"
+"<Ctrl-t>" = "ProcessReplace"
 "<Ctrl-l>" = "ShowHelp"
 
 ####################################################################################################
