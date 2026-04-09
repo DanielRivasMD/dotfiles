@@ -1,7 +1,3 @@
-add delta call for helix
-
-update espanso config
-
 what about a cli that connects helix & zellij through clipboard, then sending
 selected text to the active pane, presumably a repl
 we could keep a server running with the same architecture of twins that we used for hypnos
@@ -36,8 +32,6 @@ explicitly run just scripts in bash; for this, update color output to be compati
 ==================================================
 ex-situ/bpython/alacritty.theme
   line 13     TODO   update all colors
-ex-situ/serpl/config.toml
-  line 3      TODO   bind to auto embedding
 ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
@@ -49,8 +43,7 @@ in-silico/pkg_manager.sh
 in-situ/alacritty/alacritty.yml
   line 72     DOC    patch `alt-enter`
 in-situ/lazygit/config.yml
-  line 337    TODO   consider binding single letters. instead of binding manually, have babel extracting the data & render output
-  line 338    TODO   create a separate template?
+  line 337    TODO   create a separate template?
 install.sh
   line 13     TODO   document nerd font installation; present on shell history for ubuntu
   line 44     BUG    ubuntu errors out on mongodb for some reason
