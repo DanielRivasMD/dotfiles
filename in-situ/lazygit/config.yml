@@ -119,6 +119,7 @@ gui:
   # Status panel view.
   # One of 'dashboard' (default) | 'allBranchesLog'
   statusPanelView: dashboard
+
   ####################################################################################################
 
   # Config relating to colors and styles.
@@ -163,6 +164,7 @@ gui:
     # Default text color
     defaultFgColor:
       - default
+
 ####################################################################################################
 
 # Config relating to git
@@ -248,6 +250,7 @@ git:
   truncateCopiedCommitHashesTo: 12
   allBranchesLogCmds:
     - git log --graph --all --color=always --abbrev-commit --decorate --date=relative --pretty=medium
+
 ####################################################################################################
 
 # Periodic update checks
@@ -256,6 +259,7 @@ update:
   method: never
   # Period in days between update checks
   days: 0
+
 ####################################################################################################
 
 # Background refreshes
@@ -266,14 +270,17 @@ refresher:
   # Re-fetch interval in seconds.
   # Auto-fetch can be disabled via option 'git.autoFetch'.
   fetchInterval: 60
+
 ####################################################################################################
 
 # If true, show a confirmation popup before quitting Lazygit
 confirmOnQuit: false
+
 ####################################################################################################
 
 # If true, exit Lazygit when the user presses escape in a context where there is nothing to cancel/close
 quitOnTopLevelReturn: false
+
 ####################################################################################################
 
 # Config relating to things outside of Lazygit like how files are opened, copying to clipboard, etc
@@ -316,10 +323,12 @@ os:
   # ReadFromClipboardCmd is the command for reading the clipboard.
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-command-for-copying-to-and-pasting-from-clipboard
   readFromClipboardCmd: ""
+
 ####################################################################################################
 
 # If true, don't display introductory popups upon opening Lazygit.
 disableStartupPopups: false
+
 ####################################################################################################
 
 # What to do when opening Lazygit outside of a git repo.
@@ -328,13 +337,14 @@ disableStartupPopups: false
 # - 'skip': open most recent repo
 # - 'quit': exit Lazygit
 notARepository: prompt
+
 ####################################################################################################
 
 # If true, display a confirmation when subprocess terminates. This allows you to view the output of the subprocess before returning to Lazygit.
 promptToReturnFromSubprocess: true
+
 ####################################################################################################
 
-# TODO: create a separate template?
 # Keybindings
 keybinding:
   universal:
@@ -502,7 +512,7 @@ customCommands:
   - name: "push tags"
     command: "git push --tags"
     context: "global"
-    key: "T"                     # optional, bind to a key (e.g., Shift+T)
+    key: "T"
     description: "Push all tags"
 
 ####################################################################################################
