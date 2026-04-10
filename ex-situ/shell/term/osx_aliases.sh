@@ -20,9 +20,6 @@ alias mk='mkdir -pv'
 # go tool links
 ####################################################################################################
 
-# history
-alias f='fillin'
-
 # lazy
 alias ld='lazydocker'
 alias lg='lazygit'
@@ -62,17 +59,12 @@ alias python='python3'
 # bat
 alias man='batman'
 
-# TODO: update eza aliases
 # eza
 alias e='eza --header --long --icons --classify --git --group'
 alias ea='e --all'
 alias er='e --sort=newest'
 alias ear='ea --sort=newest'
 alias et='ea --tree --level 3 --ignore-glob ".git" --group-directories-first'
-
-# TODO: replace functionality with cerberus
-# gfold
-alias gf='gfold'
 
 # hgrep
 alias hg='hgrep'
