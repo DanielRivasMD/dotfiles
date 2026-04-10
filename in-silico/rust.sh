@@ -47,7 +47,6 @@ CRATES=(
   "eva"                                                                       # REPL calculator
   "fd-find"                                                                   # fast file finder
   "flamegraph"                                                                # profiling visualizer
-  "gfold"                                                                     # list Git repos
   "gifski"                                                                    # GIF encoder
   "git-delta"                                                                 # improved diff viewer
   "hck"                                                                       # fast CSV processor
