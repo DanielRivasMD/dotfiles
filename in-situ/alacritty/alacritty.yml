@@ -69,7 +69,6 @@ key_bindings:
   # system OSX
   ####################################################################################################
 
-  # DOC: patch `alt-enter`
   - { key: Enter,       mods: Command,                    chars: "\x1b\u000D"   }   # OSX
   - { key: Enter,       mods: Super,                      chars: "\x1b\u000D"   }   # Ubuntu
 
