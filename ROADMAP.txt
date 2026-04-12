@@ -3,15 +3,11 @@ selected text to the active pane, presumably a repl
 we could keep a server running with the same architecture of twins that we used for hypnos
 likewise, it could evolve into a zellij plugin properly if it is possible to choose the pane explicitly
 
-zellij upgrade brought new features, but also integrated automatic tab & pane log => figure out how to deal with it
-
 - use process substitution to log installation & failures => install > >(less) 2> >(tee errors.txt)
 
 - update language configs helix: cmake, docker-compose, javascript, latex, nu, python, scala
-- add language support for kdl
+- add language support for kdl & edn
 - todor completions?
-
-rendering bindings through babel can be implemented also to other programs => yazi?
 
 document niri installation => ubuntu
 
