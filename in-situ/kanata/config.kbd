@@ -1,5 +1,4 @@
-;; OS key code mappings
-;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; TODO: create aliases header to embed hotkeys automatically => source a file with the bind definitions that will be forged by embedding
 ;; TOOD: pass terminal sequences as aliases & leave the topographic bindings in place
@@ -11,26 +10,18 @@
   log-layer-changes no
   danger-enable-cmd yes
   concurrent-tap-hold yes
-
-  ;; When any non-chord activation happens, this timeout begins. Until this timeout expires
-  ;; all inputs will immediately skip chords processing and be processed by the active layer.
-  ;; chords-v2-min-idle 250
 )
 
-;; Variables
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defvar
  tap-time 300
  hold-time 300
  chord-time 60
- ;; switch-time 500
 )
 
-;; Only one defsrc is allowed.
-;;
-;; defsrc defines the keys that will be intercepted by kanata. The order of the
-;; keys matches with deflayer declarations and all deflayer declarations must
-;; have the same number of keys as defsrc. Any keys not listed in defsrc will
-;; be passed straight to the operating system.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defsrc
   esc         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv         1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -40,12 +31,12 @@
   lctl  lmet  lalt                spc            ralt rctl ◀    ▼    ▶
 )
 
-;; scams
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defalias
   scamw S-C-A-M-w ;; paste app
 )
 
-;; applications aliases
 (defalias
   ;; brave (cmd "brave-browser")
   ;; alacritty (cmd "alacritty")
@@ -56,9 +47,9 @@
   rt 86
 )
 
-(defalias
-  ;; Modifier keys
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defalias
   mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
   mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
   mq    (tap-hold $tap-time $hold-time q    (layer-toggle lq))
@@ -81,22 +72,27 @@
   mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))   ;; Hyper key
 
 ;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
- 
-  spc-eq-gt-spc (macro spc = S-. spc)                ;; space = > space
-  spc-pipe-spc (macro spc S-\ spc)                   ;; space | space
-  spc-pipe-gt-spc (macro spc S-\ S-. spc)            ;; space |> space
-
-  spc-amp-spc   (macro spc S-7 spc)          ;; space & space
-  spc-eq-spc    (macro spc = spc)            ;; space = space
-  spc-lt-hyphen (macro spc S-, - spc)        ;; space <- space
-  spc-hyphen-gt (macro spc - S-. spc)        ;; space -> space
-  spc-hyphen-spc (macro spc - spc)           ;; space - space
-  spc-plus-spc  (macro spc S-= spc)          ;; space + space
-  spc-star-spc  (macro spc S-8 spc)          ;; space * space
-  spc-slash-spc (macro spc / spc)            ;; space / space
 )
 
-;; Main layer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defalias
+  spc-eq-gt-spc (macro spc = S-. spc)            ;; space = > space
+  spc-pipe-spc (macro spc S-\ spc)               ;; space | space
+  spc-pipe-gt-spc (macro spc S-\ S-. spc)        ;; space |> space
+
+  spc-amp-spc   (macro spc S-7 spc)              ;; space & space
+  spc-eq-spc    (macro spc = spc)                ;; space = space
+  spc-lt-hyphen (macro spc S-, - spc)            ;; space <- space
+  spc-hyphen-gt (macro spc - S-. spc)            ;; space -> space
+  spc-hyphen-spc (macro spc - spc)               ;; space - space
+  spc-plus-spc  (macro spc S-= spc)              ;; space + space
+  spc-star-spc  (macro spc S-8 spc)              ;; space * space
+  spc-slash-spc (macro spc / spc)                ;; space / space
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (deflayer main
   ;;         a     s       d       f       g      h        j       k       l       ;       '
   esc        XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
@@ -105,6 +101,60 @@
   @mjok      a     s       d       f       g      h        j       k       l       ;       '       @mcopy
   @mlsft C-f12 @mz   x     c       v       b      n        m       ,       .       /       ▲       @mrsft
   @mlctl  @mlalt  @mlmet                 spc                       ralt    @mralt  ◀       ▼       ▶
+)
+
+(deflayer llctl
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  @mlctllsft  XX XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
+  lctl   lalt    lmet                  C-spc             rmet    ralt    C-◀     C-▼     C-▶
+)
+
+(deflayer llctllsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-x       rsft
+  lctl   lalt    lmet                    spc             rmet    ralt    A-◀       C-y       A-▶
+)
+
+(deflayer llalt
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      @spc-amp-spc      XX      XX      XX      @spc-hyphen-spc  @spc-plus-spc  XX
+  XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   @spc-pipe-spc
+  XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      @spc-eq-spc
+  @mlaltlsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      pgup       @spc-pipe-gt-spc
+  lctl   lalt    lmet                    spc             @spc-star-spc  @spc-slash-spc  A-b     pgdn       A-f
+)
+
+(deflayer llaltlsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   A-S-q   A-S-w   A-S-e    A-S-r    A-S-t   A-S-y   A-S-u   A-S-i   A-S-f6   A-S-p      XX      XX   XX
+  XX    A-S-a   A-S-s   A-S-f4   A-S-f5   A-S-g   A-S-h   A-S-j   A-S-k   A-S-l         XX      XX      ret
+  lsft  A-S-f10 A-S-z   A-S-x  A-S-f2  A-S-v   A-S-f1   A-S-n  A-S-m      XX      XX      XX      A-S-▲       rsft
+        lctl   lalt    lmet                    spc             rmet    ralt    A-S-◀       A-S-▼       A-S-▶
+)
+
+(deflayer llmet
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      (multi lmet ret)
+  @mlmetlsft  XX XX     XX      XX      XX      XX      XX      XX      @spc-lt-hyphen  @spc-hyphen-gt  XX      home    @spc-eq-gt-spc
+        lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
+)
+
+(deflayer llmetlsft
+  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
+  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
+  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-▲       rsft
+        lctl   lalt    lmet                    spc             rmet    ralt    A-◀       A-▼       A-▶
 )
 
 (deflayer lgrv
@@ -152,33 +202,6 @@
         lctl   lalt    lmet                    C-t             C-r     C-s     C-b     C-p     C-f
 )
 
-(deflayer llctl
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  @mlctllsft  XX XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
-        lctl   lalt    lmet                  C-spc             rmet    ralt    C-◀     C-▼     C-▶
-)
-
-(deflayer llalt
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      @spc-amp-spc      XX      XX      XX      @spc-hyphen-spc  @spc-plus-spc  XX
-  XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   @spc-pipe-spc
-  XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      @spc-eq-spc
-  @mlaltlsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      pgup       @spc-pipe-gt-spc
-        lctl   lalt    lmet                    spc             @spc-star-spc  @spc-slash-spc  A-b     pgdn       A-f
-)
-
-(deflayer llmet
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      (multi lmet ret)
-  @mlmetlsft  XX XX     XX      XX      XX      XX      XX      XX      @spc-lt-hyphen  @spc-hyphen-gt  XX      home    @spc-eq-gt-spc
-        lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
-)
-
 (deflayer llsft
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
@@ -224,33 +247,6 @@
         lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
 )
 
-(deflayer llctllsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-x       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-◀       C-y       A-▶
-)
-
-(deflayer llaltlsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   A-S-q   A-S-w   A-S-e    A-S-r    A-S-t   A-S-y   A-S-u   A-S-i   A-S-f6   A-S-p      XX      XX   XX
-  XX    A-S-a   A-S-s   A-S-f4   A-S-f5   A-S-g   A-S-h   A-S-j   A-S-k   A-S-l         XX      XX      ret
-  lsft  A-S-f10 A-S-z   A-S-x  A-S-f2  A-S-v   A-S-f1   A-S-n  A-S-m      XX      XX      XX      A-S-▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-S-◀       A-S-▼       A-S-▶
-)
-
-(deflayer llmetlsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-◀       A-▼       A-▶
-)
-
 (deflayer lzlsft
   esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
   grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
@@ -260,6 +256,10 @@
         lctl   lalt    lmet                    spc             rmet    ralt    A-pgup       A-end       A-pgdn
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defchordsv2
   ;; (participating-keys1) action1 timeout1 release-behaviour1 (disabled-layers1)
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
