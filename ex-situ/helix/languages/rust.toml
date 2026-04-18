@@ -2,32 +2,38 @@
 # rust
 ####################################################################################################
 
-[language-server.scls]
-command = "simple-completion-language-server"
-
-[language-server.scls.config]
-max_completion_items = 100
-feature_words = false
-feature_snippets = true
-snippets_first = true
-snippets_inline_by_word_tail = false
-feature_unicode_input = false
-feature_paths = true
-feature_citations = false
-
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
 [language-server.rust-analyzer.config]
-inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
-inlayHints.closureReturnTypeHints.enable = "with_block"
-inlayHints.discriminantHints.enable = "fieldless"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-inlayHints.typeHints.hideClosureInitialization = false
+check.command = "clippy"
+check.features = "all"
+cargo.features = "all"
+cargo.autoreload = true
+procMacro.enable = true
 
-[language-server.rust-analyzer.config.files]
-watcher = "server"
+inlayHints.bindingModeHints.enable = true
+inlayHints.closingBraceHints.enable = true
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.enable = true
+inlayHints.chainingHints.enable = true
+inlayHints.parameterHints.enable = true
+
+diagnostics.disabled = []
+diagnostics.enableExperimental = true
+
+lens.enable = true
+lens.run = true
+
+imports.granularity.enforce = true
+imports.granularity.group = "module"
+
+completion.autoimport.enable = true
+completion.fullFunctionSignatures.enable = true
+
+workspace.symbol.search.scope = "workspace"
+files.watcher = "server"
 
 [[language]]
 name = "rust"
@@ -43,8 +49,8 @@ block-comment-tokens = [
   { start = "/**", end = "*/" },
   { start = "/*!", end = "*/" },
 ]
-language-servers = ["scls", "rust-analyzer"]
-indent = { tab-width = 2, unit = "\t" }
+language-servers = ["rust-analyzer"]
+indent = { tab-width = 4, unit = "\t" }
 persistent-diagnostic-sources = ["rustc", "clippy"]
 
 [language.auto-pairs]
