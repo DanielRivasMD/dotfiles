@@ -1,0 +1,22 @@
+####################################################################################################
+# nu
+####################################################################################################
+
+[language-server.nu-lsp]
+command = "nu"
+args = ["-lsp"]
+
+[[language]]
+name = "nu"
+scope = "source.nu"
+injection-regex = "nu"
+file-types = ["nu", "nushell"]
+comment-token = "#"
+language-servers = ["nu-lsp"]
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "nu"
+source = { git = "https://github.com/nushell/tree-sitter-nu", rev = "main" }
+
+####################################################################################################
