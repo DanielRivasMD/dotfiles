@@ -20,7 +20,7 @@ indent = { tab-width = 2, unit = "\t" }
 formatter = { command = "pg_format", args = ["--tabs", "--spaces", "2", "-"] }
 
 [[grammar]]
-source = { git = "https://github.com/DerekStride/tree-sitter-sql", rev = "0caa7fa2ee00e0b770493a79d4efacc1fc376cc5" }
+source = { git = "https://github.com/DerekStride/tree-sitter-sql", rev = "main" }
 name = "sql"
 
 ####################################################################################################
