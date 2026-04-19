@@ -49,7 +49,6 @@ CRATES=(
   "flamegraph"                                                                # profiling visualizer
   "gifski"                                                                    # GIF encoder
   "git-delta"                                                                 # improved diff viewer
-  "hck"                                                                       # fast CSV processor
   "hexyl"                                                                     # hex viewer
   "hgrep"                                                                     # syntax-aware grep
   "htmlq"                                                                     # HTML query tool
