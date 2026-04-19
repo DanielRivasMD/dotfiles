@@ -7,4 +7,8 @@ name = "html"
 formatter = { command = "prettier", args = ["--parser", "html"] }
 indent = { tab-width = 2, unit = "  " }
 
+[[grammar]]
+name = "html"
+source = { git = "https://github.com/tree-sitter/tree-sitter-html", rev = "master" }
+
 ####################################################################################################
