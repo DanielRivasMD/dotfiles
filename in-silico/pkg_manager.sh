@@ -30,6 +30,7 @@ case "$os" in
       gh          # GitHub CLI
       helix       # code editor
       llvm        # compiler toolchain
+      marksman    # markdown assistant
       micro       # terminal editor
       mysql       # MySQL DB
       nushell     # structured shell
@@ -138,6 +139,7 @@ case "$os" in
 
       sudo snap install btop
       sudo snap install ghostty --classic
+      sudo snap install marksman
 
       # MongoDB
       wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc |
@@ -168,22 +170,16 @@ case "$os" in
       # Install Clojure LSP (latest release)
       localBin="${HOME}/.local/bin"
       mkdir -p "$localBin"
-      wget -O /tmp/clojure-lsp.zip \
-        https://github.com/clojure-lsp/clojure-lsp/releases/latest/download/clojure-lsp-native-linux-amd64.zip
+      wget -O /tmp/clojure-lsp.zip https://github.com/clojure-lsp/clojure-lsp/releases/latest/download/clojure-lsp-native-linux-amd64.zip
       unzip -o /tmp/clojure-lsp.zip -d "$localBin"
       chmod +x "$localBin/clojure-lsp"
       rm /tmp/clojure-lsp.zip
 
       sudo apt install nodejs npm
-
       sudo npm install -g bash-language-server
-
       sudo apt install shfmt
-
       sudo apt install solaar
-
       sudo apt install texlive-xetex
-
       sudo apt install copyq
 
       ####################################################################################################
