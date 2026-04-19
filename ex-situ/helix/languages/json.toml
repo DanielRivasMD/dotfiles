@@ -2,17 +2,12 @@
 # json
 ####################################################################################################
 
-[language-server.json_lsp]
-command = "vscode-json-language-server"
-args = ["--stdio"]
-
 [[language]]
 name = "json"
 scope = "source.json"
 injection-regex = "json"
 file-types = ["json"]
 auto-format = true
-language-servers = ["json_lsp"]
 indent = { tab-width = 2, unit = "  " }
 
 formatter = { command = "jq", args = ["."] }
