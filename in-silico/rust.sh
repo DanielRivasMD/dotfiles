@@ -60,6 +60,7 @@ CRATES=(
   "just"                                                                      # task runner
   "kalker"                                                                    # terminal calculator
   "kanata --locked"                                                           # keyboard comfort
+  "kdl-lsp"                                                                   # kdl parser
   "kdlfmt"                                                                    # kdl formatter
   "lazycli --locked"                                                          # lazy command UI
   "mdcat"                                                                     # Markdown viewer
