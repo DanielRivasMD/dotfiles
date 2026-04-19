@@ -5,8 +5,6 @@ likewise, it could evolve into a zellij plugin properly if it is possible to cho
 
 - use process substitution to log installation & failures => install > >(less) 2> >(tee errors.txt)
 
-- update language configs helix: cmake, docker-compose, javascript, latex, nu, python, scala
-- add language support for kdl & edn
 - todor completions?
 
 document niri installation => ubuntu
