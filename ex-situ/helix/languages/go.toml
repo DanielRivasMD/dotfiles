@@ -4,7 +4,11 @@
 
 [language-server.gopls]
 command = "gopls"
-indent = { tab-width = 2, unit = "\t" }
+
+[language-server.gopls.config]
+analyses = { all = true, shadow = true, unusedparams = true }
+staticcheck = true
+gofumpt = true
 
 [language-server.gopls.config.hints]
 assignVariableTypes = true
@@ -31,13 +35,13 @@ comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = ["gopls", "golangci-lint-lsp"]
 indent = { tab-width = 2, unit = "\t" }
+formatter = { command = "gofmt" }
 
 [language.debugger]
 name = "go"
 transport = "tcp"
 command = "dlv"
 args = ["dap"]
-port-arg = "-l 127.0.0.1:{}"
 
 [[language.debugger.templates]]
 name = "source"
@@ -74,7 +78,7 @@ args = { mode = "core", program = "{0}", coreFilePath = "{1}" }
 
 [[grammar]]
 name = "go"
-source = { git = "https://github.com/tree-sitter/tree-sitter-go", rev = "64457ea6b73ef5422ed1687178d4545c3e91334a" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-go", rev = "master" }
 
 [[language]]
 name = "gomod"
@@ -88,21 +92,7 @@ indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "gomod"
-source = { git = "https://github.com/camdencheek/tree-sitter-go-mod", rev = "6efb59652d30e0e9cd5f3b3a669afd6f1a926d3c" }
-
-[[language]]
-name = "gotmpl"
-scope = "source.gotmpl"
-injection-regex = "gotmpl"
-file-types = ["gotmpl"]
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = ["gopls"]
-indent = { tab-width = 2, unit = " " }
-
-[[grammar]]
-name = "gotmpl"
-source = { git = "https://github.com/dannylongeuay/tree-sitter-go-template", rev = "395a33e08e69f4155156f0b90138a6c86764c979" }
+source = { git = "https://github.com/camdencheek/tree-sitter-go-mod", rev = "main" }
 
 [[language]]
 name = "gowork"
@@ -116,6 +106,20 @@ indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "gowork"
-source = { git = "https://github.com/omertuc/tree-sitter-go-work", rev = "6dd9dd79fb51e9f2abc829d5e97b15015b6a8ae2" }
+source = { git = "https://github.com/omertuc/tree-sitter-go-work", rev = "main" }
+
+[[language]]
+name = "gotmpl"
+scope = "source.gotmpl"
+injection-regex = "gotmpl"
+file-types = ["gotmpl"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["gopls"]
+indent = { tab-width = 2, unit = " " }
+
+[[grammar]]
+name = "gotmpl"
+source = { git = "https://github.com/ngalaiko/tree-sitter-go-template", rev = "master" }
 
 ####################################################################################################
