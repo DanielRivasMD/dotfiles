@@ -27,8 +27,8 @@
   grv         1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab         q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps        a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft  rt    z    x    c    v    b    n    m    ,    .    /    ▲    rsft
-  lctl  lmet  lalt                spc            ralt rctl ◀    ▼    ▶
+  lsft  rctl  z    x    c    v    b    n    m    ,    .    /    ▲    rsft
+  lctl  lmet  lalt                spc            ralt rmet ◀    ▼    ▶
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -58,20 +58,18 @@
   mlctl (tap-hold $tap-time $hold-time lctl (layer-toggle llctl))
   mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
   mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
+  mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))
   mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
   mrsft (tap-hold $tap-time $hold-time C-S-f12 (layer-toggle lrsft))
+  mralt (tap-hold $tap-time $hold-time C-S-v (layer-toggle lralt))
+;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
 
+  mzlsft (tap-hold $tap-time $hold-time lsft (layer-toggle lzlsft))
   mlctllsft (tap-hold $tap-time $hold-time lsft (layer-toggle llctllsft))
   mlaltlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llaltlsft))
   mlmetlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llmetlsft))
-  mzlsft (tap-hold $tap-time $hold-time lsft (layer-toggle lzlsft))
 
-  mralt (tap-hold $tap-time $hold-time C-S-v (layer-toggle lralt))
   mcopy (tap-hold $tap-time $hold-time return C-c)
-
-  mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))   ;; Hyper key
-
-;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -94,22 +92,23 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deflayer main
-  ;;         a     s       d       f       g      h        j       k       l       ;       '
-  esc        XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
-  @mgrv      1     2       3       4       5      6        7       8       9       0       -       =      XX
-  @mtab      @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
-  @mjok      a     s       d       f       g      h        j       k       l       ;       '       @mcopy
-  @mlsft C-f12 @mz   x     c       v       b      n        m       ,       .       /       ▲       @mrsft
+  ;;      a     s       d       f       g      h        j       k       l       ;       '
+  esc     XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
+  @mgrv   1     2       3       4       5      6        7       8       9       0       -       =      XX
+  @mtab   @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
+  @mjok   a     s       d       f       g      h        j       k       l       ;       '       @mcopy
+  @mlsft  rctl    @mz   x       c       v       b      n        m       ,       .       /       ▲       @mrsft
   @mlctl  @mlalt  @mlmet                 spc                       ralt    @mralt  ◀       ▼       ▶
 )
 
 (deflayer llctl
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  @mlctllsft  XX XX     XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
-  lctl   lalt    lmet                  C-spc             rmet    ralt    C-◀     C-▼     C-▶
+  ;;              a     s       d       f       g      h        j       k       l       ;       '
+  esc             XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
+  grv             XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX   XX
+  tab             XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX   XX
+  XX              XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      ret
+  @mlctllsft  XX  @Tz    XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
+  lctl        lalt    lmet                  C-spc             rmet    ralt    C-◀     C-▼     C-▶
 )
 
 (deflayer llctllsft
