@@ -10,7 +10,6 @@ args = ["--stdio"]
 name = "yaml"
 scope = "source.yaml"
 file-types = ["yml", "yaml"]
-roots = []
 comment-token = "#"
 language-servers = ["yaml_lsp"]
 indent = { tab-width = 2, unit = "  " }
@@ -18,6 +17,6 @@ injection-regex = "yml|yaml"
 
 [[grammar]]
 name = "yaml"
-source = { git = "https://github.com/ikatyang/tree-sitter-yaml", rev = "0e36bed171768908f331ff7dff9d956bae016efb" }
+source = { git = "https://github.com/ikatyang/tree-sitter-yaml", rev = "master" }
 
 ####################################################################################################
