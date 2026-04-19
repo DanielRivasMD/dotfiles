@@ -371,17 +371,12 @@ source = { git = "https://github.com/tree-sitter/tree-sitter-html", rev = "maste
 # json
 ####################################################################################################
 
-[language-server.json_lsp]
-command = "vscode-json-language-server"
-args = ["--stdio"]
-
 [[language]]
 name = "json"
 scope = "source.json"
 injection-regex = "json"
 file-types = ["json"]
 auto-format = true
-language-servers = ["json_lsp"]
 indent = { tab-width = 2, unit = "  " }
 
 formatter = { command = "jq", args = ["."] }
@@ -457,9 +452,6 @@ source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-kdl", rev 
 # lua
 ####################################################################################################
 
-[language-server.lua-language-server]
-command = "lua-language-server"
-
 [language-server.lua-language-server.config]
 runtime.version = "Lua 5.4"
 runtime.path = ["?.lua", "?/init.lua"]
@@ -476,10 +468,8 @@ shebangs = ["lua"]
 roots = [".git", ".luarc.json", ".luarc.jsonc"]
 comment-token = "--"
 block-comment-tokens = { start = "--[[", end = "--]]" }
-language-servers = ["lua-language-server"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
-formatter = { command = "stylua", args = ["-"] }
 
 [[grammar]]
 name = "lua"
@@ -527,7 +517,7 @@ source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
 
 [language-server.nu-lsp]
 command = "nu"
-args = ["-lsp"]
+args = ["--lsp"]
 
 [[language]]
 name = "nu"
@@ -548,7 +538,7 @@ source = { git = "https://github.com/nushell/tree-sitter-nu", rev = "main" }
 ####################################################################################################
 
 [language-server.ruff-lsp]
-command = "ruff-lsp"
+command = "ruff"
 args = ["server"]
 
 [[language]]
