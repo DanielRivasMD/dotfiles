@@ -29,7 +29,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "r"
-source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "cc04302e1bff76fa02e129f332f44636813b0c3c" }
+source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "main" }
 
 [[language]]
 name = "rmarkdown"
@@ -41,9 +41,5 @@ comment-tokens = ["#"]
 language-servers = ["R_lsp"]
 indent = { tab-width = 2, unit = "  " }
 grammar = "markdown"
-
-[[grammar]]
-name = "markdown"
-source = { git = "https://github.com/tree-sitter/tree-sitter-markdown", rev = "0.1.0" }
 
 ####################################################################################################
