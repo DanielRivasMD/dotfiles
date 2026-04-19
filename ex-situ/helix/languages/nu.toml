@@ -4,7 +4,7 @@
 
 [language-server.nu-lsp]
 command = "nu"
-args = ["-lsp"]
+args = ["--lsp"]
 
 [[language]]
 name = "nu"
