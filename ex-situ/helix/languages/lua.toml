@@ -2,9 +2,6 @@
 # lua
 ####################################################################################################
 
-[language-server.lua-language-server]
-command = "lua-language-server"
-
 [language-server.lua-language-server.config]
 runtime.version = "Lua 5.4"
 runtime.path = ["?.lua", "?/init.lua"]
@@ -21,10 +18,8 @@ shebangs = ["lua"]
 roots = [".git", ".luarc.json", ".luarc.jsonc"]
 comment-token = "--"
 block-comment-tokens = { start = "--[[", end = "--]]" }
-language-servers = ["lua-language-server"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
-formatter = { command = "stylua", args = ["-"] }
 
 [[grammar]]
 name = "lua"
