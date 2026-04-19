@@ -16,6 +16,7 @@ done
 ####################################################################################################
 
 echo_header "@bin"
+link_config "${binDir}/copy2clipboard.sh" "${homeDir}/bin/copy2clipboard" "copy2clipboard"
 link_config "${binDir}/jlang.sh" "${homeDir}/bin/jlang" "jlang"
 
 ####################################################################################################
