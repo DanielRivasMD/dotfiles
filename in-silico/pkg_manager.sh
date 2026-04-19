@@ -5,6 +5,8 @@ os="$(uname -s)"
 ####################################################################################################
 
 npm install -g awk-language-server
+npm install -g bash-language-server
+npm install -g @mermaid-js/mermaid-cli
 npm install -g prettier
 npm install -g yaml-language-server
 
@@ -59,7 +61,6 @@ case "$os" in
     brew install yqrashawn/goku/goku
 
     brew install node
-    npm install -g bash-language-server
 
     brew tap xwmx/taps
     brew install notes-app
@@ -134,8 +135,6 @@ case "$os" in
         echo "Installing package: ${pkg}"
         sudo apt install -y "$pkg"
       done
-
-      npm install -g @mermaid-js/mermaid-cli
 
       sudo snap install btop
       sudo snap install ghostty --classic
