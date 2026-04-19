@@ -2,8 +2,9 @@
 # python
 ####################################################################################################
 
-[language-server.python_lsp]
-command = "pylsp"
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+args = ["server"]
 
 [[language]]
 name = "python"
@@ -11,19 +12,15 @@ scope = "source.python"
 injection-regex = "python"
 file-types = ["py"]
 shebangs = ["python"]
-roots = []
+roots = [".git"]
 comment-token = "#"
-language-servers = ["python_lsp"]
+language-servers = ["ruff-lsp"]
 indent = { tab-width = 2, unit = "  " }
-formatter = { command = "black", args = ["-q", "-"] }
 auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }
 
 [[grammar]]
 name = "python"
-source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "de221eccf9a221f5b85474a553474a69b4b5784d" }
-
-[[language]]
-name = "python"
-language-servers = [{ name = "pylsp", except-features = ["diagnostics"] }]
+source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "master" }
 
 ####################################################################################################
