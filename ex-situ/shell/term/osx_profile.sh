@@ -69,6 +69,7 @@ path_additions=(
   "/usr/local/sbin"
   "/usr/local/mysql/bin"
   "/opt/homebrew/opt/llvm/bin"
+  "/opt/homebrew/opt/openjdk/bin"
 )
 
 for dir in "${path_additions[@]}"; do
