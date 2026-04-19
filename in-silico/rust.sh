@@ -58,6 +58,7 @@ CRATES=(
   "jiggy"                                                                     # interactive CLI helper
   "jless --locked"                                                            # JSON pager
   "just"                                                                      # task runner
+  "just-lsp"                                                                  # just language server
   "kalker"                                                                    # terminal calculator
   "kanata --locked"                                                           # keyboard comfort
   "kdl-lsp"                                                                   # kdl parser
