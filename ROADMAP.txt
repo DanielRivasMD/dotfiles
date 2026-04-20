@@ -16,10 +16,6 @@ kanata:
 ;; TODO: bind pasting to key directly
 ;; TODO: clean up comments & outdated
 
-.justfile
-34:# TODO: change to bash for compatibility, however this does not produce colored logging
-explicitly run just scripts in bash; for this, update color output to be compatible
-
 .just/config.sh
 67:  # TODO: double check linux config
 
@@ -30,7 +26,7 @@ ex-situ/shell/nu/keymap.nu
   line 28     BUG    `shells` & `dirs` commands not present. plugins?
   line 83     BUG    are they useful commands?
 in-silico/pkg_manager.sh
-  line 114    TODO   decide & document: starship, nushell & nerd-fonts
+  line 116    TODO   decide & document: starship, nushell & nerd-fonts
 install.sh
   line 13     TODO   document nerd font installation; present on shell history for ubuntu
   line 44     BUG    ubuntu errors out on mongodb for some reason
