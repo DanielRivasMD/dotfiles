@@ -3,6 +3,8 @@ selected text to the active pane, presumably a repl
 we could keep a server running with the same architecture of twins that we used for hypnos
 likewise, it could evolve into a zellij plugin properly if it is possible to choose the pane explicitly
 
+transform bin scripts into pure executables
+
 - use process substitution to log installation & failures => install > >(less) 2> >(tee errors.txt)
 
 - todor completions?
