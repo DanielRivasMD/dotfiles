@@ -93,8 +93,6 @@ link_config "${term}/osx_aliases.sh" "${homeDir}/.aliases" "term aliases"
 echo '' && mkdir -p "${homeDir}/.bash" && echo "Created ~/.bash/"
 link_config "${bash}/osx_bash_profile.sh" "${homeDir}/.bash_profile" "bash_profile"
 link_config "${bash}/osx_bashrc.sh" "${homeDir}/.bashrc" "bashrc"
-link_config "${bash}/bash_just.sh" "${homeDir}/.bash" "bash just"
-link_config "${bash}/bash_navi.sh" "${homeDir}/.bash" "bash navi"
 
 # Zsh
 echo '' && mkdir -p "${homeDir}/.zsh" && echo "Created ~/.zsh/"
