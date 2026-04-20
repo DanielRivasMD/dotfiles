@@ -1,7 +1,39 @@
 ####################################################################################################
+#!/bin/bash
+####################################################################################################
 
 # config
-source "${PWD}/.just/config.sh"
+. "${PWD}/.just/config.sh"
+
+# Override helper functions to be safe and coloured
+echo_header() { printf '\033[1;32m%s\033[0m\n' "$1"; }
+sep() { printf '\033[0;31m%s\033[0m\n' '===================================================================================================='; }
+
+safe_link_config() {
+  local src="$1" dst="$2" label="$3"
+  if [[ -z "$src" || ! -e "$src" ]]; then
+    printf "Warning: source \033[1;31m%s\033[0m not found, skipping link for \033[1;34m%s\033[0m\n" "$src" "$label"
+    return 0
+  fi
+  mkdir -p "$(dirname "$dst")"
+  ln -sf "$src" "$dst"
+  printf "Linked \033[1;33m=>\033[0m \033[1;34m%s\033[0m\n" "$label"
+}
+
+safe_generate_completion() {
+  local cmd="$1" output="$2"
+  local base_cmd="${cmd%% *}"
+  if command -v "$base_cmd" &>/dev/null; then
+    eval "$cmd" >"$output" 2>/dev/null
+    printf "Installed completion \033[1;33m=>\033[0m \033[1;36m%s\033[0m\n" "$output"
+  else
+    printf "Warning: command \033[1;31m%s\033[0m not found, skipping completion for \033[1;36m%s\033[0m\n" "$base_cmd" "$output"
+  fi
+}
+
+# Override link_config and generate_completion to use safe versions
+link_config() { safe_link_config "$@"; }
+generate_completion() { safe_generate_completion "$@"; }
 
 ####################################################################################################
 
@@ -98,7 +130,12 @@ generate_completion "uv generate-shell-completion zsh" "_uv"
 generate_completion "yq completion zsh" "_yq"
 generate_completion "zellij setup --generate-completion zsh" "_zellij"
 
-cp "${zshCompDir}/_eza" "${zshCompDir}/_e" && sd eza e "${zshCompDir}/_e"
+# Copy eza completion to _e (if sd is available)
+if command -v sd &>/dev/null; then
+  cp "${zshCompDir}/_eza" "${zshCompDir}/_e" && sd eza e "${zshCompDir}/_e"
+else
+  printf "Warning: \033[1;31msd\033[0m not found, skipping creation of \033[1;36m_e\033[0m from eza completion\n"
+fi
 sep
 
 ####################################################################################################
