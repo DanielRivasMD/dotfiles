@@ -24,7 +24,8 @@ safe_generate_completion() {
   local cmd="$1" output="$2"
   local base_cmd="${cmd%% *}"
   if command -v "$base_cmd" &>/dev/null; then
-    eval "$cmd" >"$output" 2>/dev/null
+    mkdir -p "$zshCompDir"
+    eval "$cmd" > "${zshCompDir}/$output" 2>/dev/null
     printf "Installed completion \033[1;33m=>\033[0m \033[1;36m%s\033[0m\n" "$output"
   else
     printf "Warning: command \033[1;31m%s\033[0m not found, skipping completion for \033[1;36m%s\033[0m\n" "$base_cmd" "$output"
