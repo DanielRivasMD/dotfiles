@@ -35,17 +35,16 @@ _default:
 
 ####################################################################################################
 
-# TODO: change to bash for compatibility, however this does not produce colored logging
 # link in-situ
 [group('link')]
 @in-situ:
-  source .just/in-situ.sh
+  bash .just/in-situ.sh
 
 ####################################################################################################
 
 # link ex-situ
 [group('link')]
 @ex-situ:
-  source .just/ex-situ.sh
+  bash .just/ex-situ.sh
 
 ####################################################################################################
