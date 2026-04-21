@@ -22,7 +22,7 @@ SYSIMG="$HOME/.julia/sysimages/julia-$JULIA_VERSION-formatter.so"
 ####################################################################################################
 
 build_sysimage() {
-  log "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
+  echo "Building global sysimage at $SYSIMG for Julia $JULIA_VERSION..."
   "${JULIA_BIN[@]}" --startup-file=no -e "
     using Pkg
     pkgs = [
@@ -45,13 +45,13 @@ build_sysimage() {
 
 case "$1" in
   rebuild)
-    log "Rebuilding sysimage: $SYSIMG"
+    echo "Rebuilding sysimage: $SYSIMG"
     rm -f "$SYSIMG"
     build_sysimage
     ;;
   lsp)
     [ -f "$SYSIMG" ] || build_sysimage
-    log "Starting LSP with sysimage: $SYSIMG"
+    echo "Starting LSP with sysimage: $SYSIMG"
     exec "${JULIA_BIN[@]}" -J"$SYSIMG" \
       --project=@. \
       --startup-file=no --history-file=no --quiet -e "
