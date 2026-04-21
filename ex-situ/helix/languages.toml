@@ -452,12 +452,15 @@ source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-kdl", rev 
 # lua
 ####################################################################################################
 
-[language-server.lua-language-server.config]
-runtime.version = "Lua 5.4"
-runtime.path = ["?.lua", "?/init.lua"]
-diagnostics.globals = ["vim", "describe", "it", "before_each", "after_each"]
-workspace.checkThirdParty = false
-telemetry.enable = false
+# [language-server.lua-language-server]
+# command = "lua-language-server"
+
+# [language-server.lua-language-server.config]
+# runtime.version = "Lua 5.4"
+# runtime.path = ["?.lua", "?/init.lua"]
+# diagnostics.globals = ["vim", "describe", "it", "before_each", "after_each"]
+# workspace.checkThirdParty = false
+# telemetry.enable = false
 
 [[language]]
 name = "lua"
