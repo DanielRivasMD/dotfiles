@@ -70,6 +70,7 @@ path_additions=(
   "/usr/local/mysql/bin"
   "/opt/homebrew/opt/llvm/bin"
   "/opt/homebrew/opt/openjdk/bin"
+  "$HOME/Factorem/dotfiles/bin"
   "$HOME/Factorem/Avicenna/bin"
 )
 
