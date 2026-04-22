@@ -18,6 +18,7 @@ deno install -A jsr:@deno/deployctl --global
 
 CRATES=(
   "asciinema --locked --git https://github.com/asciinema/asciinema"           # terminal session recorder
+  "agg --git https://github.com/asciinema/agg"                                # gif generator
   "bacon --locked"                                                            # watch Rust builds & rerun
   "bat --locked"                                                              # syntax-highlighted `cat`
   "bottom --locked"                                                           # system monitor (like htop)
