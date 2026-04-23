@@ -142,17 +142,14 @@ if [[ -z "$ZELLIJ" ]]; then
   if [[ "$(uname)" == "Darwin" ]]; then
     case "$__CFBundleIdentifier" in
       org.alacritty) terminal="alacritty" ;;
-      com.mitchellh.ghostty) terminal="ghostty" ;;
     esac
   else
     parent_process=$(ps -o comm= $PPID 2>/dev/null | sed 's/.*\///')
     case "$parent_process" in
       alacritty | Alacritty) terminal="alacritty" ;;
-      ghostty | Ghostty) terminal="ghostty" ;;
     esac
     if [[ -z "$terminal" ]]; then
       [[ -n "$ALACRITTY_SOCKET" ]] && terminal="alacritty"
-      [[ -n "$GHOSTTY_RESOURCES_DIR" ]] && terminal="ghostty"
     fi
   fi
 
