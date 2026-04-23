@@ -49,6 +49,14 @@ font-size = 16
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+# keybind = ctrl+s>l=new_split:right
+keybind = shift+F1=previous_tab
+keybind = shift+F2=next_tab
+keybind = shift+F9=new_tab
+keybind = shift+F7=close_tab:this
+keybind = shift+alt+F11=scroll_page_up
+keybind = shift+alt+F12=scroll_page_down
+
 palette = 0=#3a3a3a
 palette = 1=#C40233
 palette = 2=#009F6B
