@@ -2,15 +2,15 @@
 # csv
 ####################################################################################################
 
-[[language]]
-name = "csv"
-scope = "source.csv"
-injection-regex = "csv"
-file-types = ["csv", "tsv"]
-indent = { tab-width = 2, unit = "  " }
+# [[language]]
+# name = "csv"
+# scope = "source.csv"
+# injection-regex = "csv"
+# file-types = ["csv", "tsv"]
+# indent = { tab-width = 2, unit = "  " }
 
-[[grammar]]
-name = "csv"
-source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-csv", rev = "master" }
+# [[grammar]]
+# name = "csv"
+# source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-csv", rev = "master" }
 
 ####################################################################################################
