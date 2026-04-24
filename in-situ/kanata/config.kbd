@@ -28,8 +28,8 @@
   grv       1         2         3         4         5         6         7         8         9         0         -         =         bspc
   tab       q         w         e         r         t         y         u         i         o         p         [         ]         \
   caps      a         s         d         f         g         h         j         k         l         ;         '         ret
-  lsft      rctl      z         x         c         v         b         n         m         ,         .         /         ▲         rsft
-  lctl      lmet      lalt                                    spc                           ralt      rmet      ◀         ▼         ▶
+  lsft      rcontrol  z         x         c         v         b         n         m         ,         .         /         ▲         rsft
+  lctl      lmet      lalt                                    spc                           ralt      rctl      ◀         ▼         ▶
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,18 +39,17 @@
 )
 
 (defalias
-  ;;  brave     (cmd "brave-browser")
-  ;;  alacritty (cmd "alacritty")
-  ;;  ghostty   (cmd "ghostty")
+  brave     (cmd "brave-browser")
+  alacritty (cmd "alacritty")
+  ghostty   (cmd "ghostty")
 )
 
 (deflocalkeys-linux
-  rctl 86
+  rcontrol 86
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defalias
   spc-eq-gt-spc (macro spc = S-. spc)            ;; space = > space
   spc-pipe-spc (macro spc S-\ spc)               ;; space | space
   spc-pipe-gt-spc (macro spc S-\ S-. spc)        ;; space |> space
@@ -76,7 +75,7 @@
   mkC       (tap-hold $tap-time $hold-time          lmet      (layer-toggle lkC))
   mkCS      (tap-hold $tap-time $hold-time          lsft      (layer-toggle lkCS))
   mkE       (tap-hold $tap-time $hold-time          C-S-v     (layer-toggle lkE))
-  mkQ       (tap-hold $tap-time $hold-time          rmet      (layer-toggle lkQ))
+  mkQ       (tap-hold $tap-time $hold-time          ralt      (layer-toggle lkQ))
   mkW       (tap-hold $tap-time $hold-time          rctl      (layer-toggle lkW))
   mkS       (tap-hold $tap-time $hold-time          ralt      (layer-toggle lkS))
   mkR       (tap-hold $tap-time $hold-time          C-S-f12   (layer-toggle lkR))
@@ -87,7 +86,7 @@
   mz        (tap-hold $tap-time $hold-time          z         (layer-toggle lz))
   mzS       (tap-hold $tap-time $hold-time          lsft      (layer-toggle lzS))
 
-  mcopy (tap-hold $tap-time $hold-time return C-c)
+  mcopy     (tap-hold $tap-time $hold-time          return    C-c)
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -108,8 +107,8 @@
   grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
-  @mkTS     @prob     XX        XX        C-c       XX        XX        XX        XX        XX        XX        XX        C-▲       rsft
-  lctl      lalt      lmet                                    C-spc                         rmet      ralt      C-◀       C-▼       C-▶
+  @mkTS     rctl      XX        XX        C-c       XX        XX        XX        XX        XX        XX        XX        C-▲       rsft
+  lctl      lalt      lmet                                    C-spc                         ralt      rmet      C-◀       C-▼       C-▶
 )
 
 (deflayer lkTS
@@ -119,16 +118,16 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-x       rsft
-  lctl      lalt      lmet                                    spc                           rmet      ralt      A-◀       C-y       A-▶
+  lctl      lalt      lmet                                    spc                           ralt      rmet      A-◀       C-y       A-▶
 )
 
 (deflayer lkO
   ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
   esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
-  grv       XX        XX        XX        XX        XX        XX        @spc-amp-spc  XX    XX        XX        @spc-hyphen-spc  @spc-plus-spc  XX
-  XX        A-q       A-w       A-e       A-r       A-t       A-y       A-u       A-i       A-f6      A-p       XX        XX        @spc-pipe-spc
-  XX        A-a       A-s       A-f4      A-f5      A-g       A-h       A-j       A-k       A-l       XX        XX        @spc-eq-spc
-  @mkOS     XX        A-z       A-x       A-f2      A-v       A-f1      A-n       A-m       XX        XX        XX        pgup      @spc-pipe-gt-spc
+  grv       @O1       @O2       @O3       @O4       @O5       @O6       @O7       @O8       @O9       @O0       @Ohy      @Oeq      @Odb
+  XX        @Oq       @Ow       @Oe       @Or       @Ot       @Oy       @Ou       @Oi       @Oo       @Op       @Oob      @Ocb      @Obl
+  XX        @Oa       @Os       @Od       @Of       @Og       @Oh       @Oj       @Ok       @Ol       @Osc      @Oqu      @spc-eq-spc
+  @mkOS     XX        @Oz       @Ox       @Oc       @Ov       @Ob       @On       @Om       @Ocm      @Ope      @Osl      pgup      @spc-pipe-gt-spc
   lctl      lalt      lmet                                    spc                 @spc-star-spc  @spc-slash-spc A-b       pgdn      A-f
 )
 
@@ -139,7 +138,7 @@
   tab       A-S-q     A-S-w     A-S-e     A-S-r     A-S-t     A-S-y     A-S-u     A-S-i     A-S-f6    A-S-p     XX        XX        XX
   XX        A-S-a     A-S-s     A-S-f4    A-S-f5    A-S-g     A-S-h     A-S-j     A-S-k     A-S-l     XX        XX        ret
   lsft      A-S-f10   A-S-z     A-S-x     A-S-f2    A-S-v     A-S-f1    A-S-n     A-S-m     XX        XX        XX        A-S-▲     rsft
-  lctl      lalt      lmet                                    spc                           rmet      ralt      A-S-◀     A-S-▼     A-S-▶
+  lctl      lalt      lmet                                    spc                           ralt      rmet      A-S-◀     A-S-▼     A-S-▶
 )
 
 (deflayer lkC
@@ -149,7 +148,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        (multi lmet ret)
   @mkCS     XX        XX        XX        XX        XX        XX        XX        XX        @spc-lt-hyphen  @spc-hyphen-gt  XX      home    @spc-eq-gt-spc
-  lctl      lalt      lmet                                    C-spc                         rmet      ralt      C-a     end     C-e
+  lctl      lalt      lmet                                    C-spc                         ralt      rmet      C-a     end     C-e
 )
 
 (deflayer lkCS
@@ -159,7 +158,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-▲       rsft
-  lctl      lalt      lmet                                    C-spc                         rmet      ralt      A-◀       A-▼       A-▶
+  lctl      lalt      lmet                                    C-spc                         ralt      rmet      A-◀       A-▼       A-▶
 )
 
 (deflayer lkJ
@@ -168,8 +167,8 @@
   grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
-  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
-  lctl      lalt      lmet                                    C-spc                         rmet      ralt      ◀         ▼         ▶
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         @brave
+  lctl      lalt      lmet                                    C-spc                         @ghostty  @alacritty  ◀       ▼         ▶
 )
 
 (deflayer lkQ
@@ -179,7 +178,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
-  S-f17     S-f16     S-f15                                   S-f14                         rmet      ralt      ◀         ▼         ▶
+  S-f17     S-f16     S-f15                                   S-f14                         ralt      rmet      ◀         ▼         ▶
 )
 
 (deflayer lkE
@@ -189,7 +188,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
-  C-o       C-j       C-h                                     spc                           rmet      ralt      ◀         ▼         ▶
+  C-o       C-j       C-h                                     spc                           ralt      rmet      ◀         ▼         ▶
 )
 
 (deflayer lkW
@@ -199,7 +198,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
-  C-o       C-j       C-h                                     spc                           rmet      ralt      ◀         ▼         ▶
+  C-o       C-j       C-h                                     spc                           ralt      rmet      ◀         ▼         ▶
 )
 
 (deflayer lkS
@@ -219,7 +218,7 @@
   tab       S-q       S-w       S-e       S-r       S-t       S-y       S-u       S-i       S-o       S-p       S-[       S-]       S-\ 
   XX        S-a       S-s       S-d       S-f       S-g       S-h       S-j       S-k       S-l       S-;       S-'       ret
   bspc      XX        S-z       S-x       S-c       S-v       S-b       S-n       S-m       S-,       S-.       S-/       S-▲       rsft
-  C-w       lalt      C-u                                     spc                           rmet      ralt      S-◀       S-▼       S-▶
+  C-w       lalt      C-u                                     spc                           ralt      rmet      S-◀       S-▼       S-▶
 )
 
 (deflayer lgrv
@@ -229,7 +228,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-S-f7
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-S-f4    C-S-f8
-  lctl      lalt      lmet                                    C-S-f11                       rmet      ralt      ◀         C-S-f5    ▶
+  lctl      lalt      lmet                                    C-S-f11                       ralt      rmet      ◀         C-S-f5    ▶
 )
 
 (deflayer ltab
@@ -279,7 +278,7 @@
   tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
   XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
   lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-home    rsft
-  lctl      lalt      lmet                                    C-spc                         rmet      ralt      A-pgup    A-end     A-pgdn
+  lctl      lalt      lmet                                    C-spc                         ralt      rmet      A-pgup    A-end     A-pgdn
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
