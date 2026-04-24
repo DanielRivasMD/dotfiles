@@ -2,34 +2,34 @@
 # markdown
 ####################################################################################################
 
-# [[language]]
-# name = "markdown"
-# scope = "source.md"
-# injection-regex = "md|markdown"
-# file-types = ["md"]
-# indent = { tab-width = 2, unit = "  " }
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md"]
+indent = { tab-width = 2, unit = "  " }
 
-# formatter = { command = "prettier", args = [
-#   "--parser",
-#   "markdown",
-#   "--prose-wrap",
-#   "always",
-# ] }
+formatter = { command = "prettier", args = [
+  "--parser",
+  "markdown",
+  "--prose-wrap",
+  "always",
+] }
 
-# [[grammar]]
-# name = "markdown"
-# source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown", rev = "main", subpath = "tree-sitter-markdown" }
+[[grammar]]
+name = "markdown"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown", rev = "cee71b8288f2ec09c29415219ac15a654bd571b9", subpath = "tree-sitter-markdown" }
 
-# [[language]]
-# name = "markdown.inline"
-# scope = "source.markdown.inline"
-# injection-regex = "markdown\\.inline"
-# file-types = []
-# roots = []
-# grammar = "markdown_inline"
+[[language]]
+name = "markdown.inline"
+scope = "source.markdown.inline"
+injection-regex = "markdown\\.inline"
+file-types = []
+roots = []
+grammar = "markdown_inline"
 
-# [[grammar]]
-# name = "markdown_inline"
-# source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown", rev = "main", subpath = "tree-sitter-markdown-inline" }
+[[grammar]]
+name = "markdown_inline"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown", rev = "cee71b8288f2ec09c29415219ac15a654bd571b9", subpath = "tree-sitter-markdown-inline" }
 
 ####################################################################################################
