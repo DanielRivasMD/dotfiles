@@ -23,12 +23,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defsrc
-  esc         f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv         1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab         q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps        a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft  rctl  z    x    c    v    b    n    m    ,    .    /    ▲    rsft
-  lctl  lmet  lalt                spc            ralt rmet ◀    ▼    ▶
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       f1        f2        f3        f4        f5        f6        f7        f8        f9        f10       f11       f12
+  grv       1         2         3         4         5         6         7         8         9         0         -         =         bspc
+  tab       q         w         e         r         t         y         u         i         o         p         [         ]         \
+  caps      a         s         d         f         g         h         j         k         l         ;         '         ret
+  lsft      rctl      z         x         c         v         b         n         m         ,         .         /         ▲         rsft
+  lctl      lmet      lalt                                    spc                           ralt      rmet      ◀         ▼         ▶
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,38 +39,13 @@
 )
 
 (defalias
-  ;; brave (cmd "brave-browser")
-  ;; alacritty (cmd "alacritty")
-  ;; ghostty (cmd "ghostty")
+  ;;  brave     (cmd "brave-browser")
+  ;;  alacritty (cmd "alacritty")
+  ;;  ghostty   (cmd "ghostty")
 )
 
 (deflocalkeys-linux
-  rt 86
-)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(defalias
-  mgrv  (tap-hold $tap-time $hold-time grv  (layer-toggle lgrv))
-  mtab  (tap-hold $tap-time $hold-time tab  (layer-toggle ltab))
-  mq    (tap-hold $tap-time $hold-time q    (layer-toggle lq))
-  mw    (tap-hold $tap-time $hold-time w    (layer-toggle lw))
-  mz    (tap-hold $tap-time $hold-time z    (layer-toggle lz))
-  mlctl (tap-hold $tap-time $hold-time lctl (layer-toggle llctl))
-  mlalt (tap-hold $tap-time $hold-time lalt (layer-toggle llalt))
-  mlmet (tap-hold $tap-time $hold-time lmet (layer-toggle llmet))
-  mjok  (tap-hold $tap-time $hold-time esc (multi lctl lalt lmet))
-  mlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llsft))
-  mrsft (tap-hold $tap-time $hold-time C-S-f12 (layer-toggle lrsft))
-  mralt (tap-hold $tap-time $hold-time C-S-v (layer-toggle lralt))
-;;  mrmet (tap-hold $tap-time $hold-time rmet (layer-toggle lrmet))
-
-  mzlsft (tap-hold $tap-time $hold-time lsft (layer-toggle lzlsft))
-  mlctllsft (tap-hold $tap-time $hold-time lsft (layer-toggle llctllsft))
-  mlaltlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llaltlsft))
-  mlmetlsft (tap-hold $tap-time $hold-time lsft (layer-toggle llmetlsft))
-
-  mcopy (tap-hold $tap-time $hold-time return C-c)
+  rctl 86
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -91,168 +67,219 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defalias
+  mkJ       (tap-hold $tap-time $hold-time          esc       (multi lctl lalt lmet))
+  mkTS      (tap-hold $tap-time $hold-time          lsft      (layer-toggle lkTS))
+  mkT       (tap-hold $tap-time $hold-time          lctl      (layer-toggle lkT))
+  mkO       (tap-hold $tap-time $hold-time          lalt      (layer-toggle lkO))
+  mkOS      (tap-hold $tap-time $hold-time          lsft      (layer-toggle lkOS))
+  mkC       (tap-hold $tap-time $hold-time          lmet      (layer-toggle lkC))
+  mkCS      (tap-hold $tap-time $hold-time          lsft      (layer-toggle lkCS))
+  mkE       (tap-hold $tap-time $hold-time          C-S-v     (layer-toggle lkE))
+  mkQ       (tap-hold $tap-time $hold-time          rmet      (layer-toggle lkQ))
+  mkW       (tap-hold $tap-time $hold-time          rctl      (layer-toggle lkW))
+  mkS       (tap-hold $tap-time $hold-time          ralt      (layer-toggle lkS))
+  mkR       (tap-hold $tap-time $hold-time          C-S-f12   (layer-toggle lkR))
+  mgrv      (tap-hold $tap-time $hold-time          grv       (layer-toggle lgrv))
+  mtab      (tap-hold $tap-time $hold-time          tab       (layer-toggle ltab))
+  mq        (tap-hold $tap-time $hold-time          q         (layer-toggle lq))
+  mw        (tap-hold $tap-time $hold-time          w         (layer-toggle lw))
+  mz        (tap-hold $tap-time $hold-time          z         (layer-toggle lz))
+  mzS       (tap-hold $tap-time $hold-time          lsft      (layer-toggle lzS))
+
+  mcopy (tap-hold $tap-time $hold-time return C-c)
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (deflayer main
-  ;;      a     s       d       f       g      h        j       k       l       ;       '
-  esc     XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
-  @mgrv   1     2       3       4       5      6        7       8       9       0       -       =      XX
-  @mtab   @mq   @mw     e       r       t      y        u       i       o       p       [       ]      \ 
-  @mjok   a     s       d       f       g      h        j       k       l       ;       '       @mcopy
-  @mlsft  rctl    @mz   x       c       v       b      n        m       ,       .       /       ▲       @mrsft
-  @mlctl  @mlalt  @mlmet                 spc                       ralt    @mralt  ◀       ▼       ▶
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  @mgrv     1         2         3         4         5         6         7         8         9         0         -         =         XX
+  @mtab     @mq       @mw       e         r         t         y         u         i         o         p         [         ]         \
+  @mkJ      a         s         d         f         g         h         j         k         l         ;         '         @mcopy
+  @mkS      @mkW      @mz       x         c         v         b         n         m         ,         .         /         ▲         @mkR
+  @mkT      @mkO      @mkC                                    spc                           @mkQ      @mkE      ◀         ▼         ▶
 )
 
-(deflayer llctl
-  ;;              a     s       d       f       g      h        j       k       l       ;       '
-  esc             XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX
-  grv             XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX   XX
-  tab             XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      XX   XX
-  XX              XX    XX      XX      XX      XX     XX       XX      XX      XX      XX      XX      ret
-  @mlctllsft  XX  @mz    XX      C-c     XX      XX      XX      XX      XX      XX      XX      C-▲     @spc-eq-gt-spc
-  lctl        lalt    lmet                  C-spc             rmet    ralt    C-◀     C-▼     C-▶
+(deflayer lkT
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  @mkTS     @prob     XX        XX        C-c       XX        XX        XX        XX        XX        XX        XX        C-▲       rsft
+  lctl      lalt      lmet                                    C-spc                         rmet      ralt      C-◀       C-▼       C-▶
 )
 
-(deflayer llctllsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-x       rsft
-  lctl   lalt    lmet                    spc             rmet    ralt    A-◀       C-y       A-▶
+(deflayer lkTS
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-x       rsft
+  lctl      lalt      lmet                                    spc                           rmet      ralt      A-◀       C-y       A-▶
 )
 
-(deflayer llalt
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      @spc-amp-spc      XX      XX      XX      @spc-hyphen-spc  @spc-plus-spc  XX
-  XX    A-q    A-w     A-e     A-r     A-t     A-y     A-u     A-i     A-f6    A-p     XX      XX   @spc-pipe-spc
-  XX    A-a    A-s     A-f4    A-f5    A-g     A-h     A-j     A-k     A-l     XX      XX      @spc-eq-spc
-  @mlaltlsft  XX A-z    A-x     A-f2    A-v     A-f1    A-n     A-m     XX      XX      XX      pgup       @spc-pipe-gt-spc
-  lctl   lalt    lmet                    spc             @spc-star-spc  @spc-slash-spc  A-b     pgdn       A-f
+(deflayer lkO
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        @spc-amp-spc  XX    XX        XX        @spc-hyphen-spc  @spc-plus-spc  XX
+  XX        A-q       A-w       A-e       A-r       A-t       A-y       A-u       A-i       A-f6      A-p       XX        XX        @spc-pipe-spc
+  XX        A-a       A-s       A-f4      A-f5      A-g       A-h       A-j       A-k       A-l       XX        XX        @spc-eq-spc
+  @mkOS     XX        A-z       A-x       A-f2      A-v       A-f1      A-n       A-m       XX        XX        XX        pgup      @spc-pipe-gt-spc
+  lctl      lalt      lmet                                    spc                 @spc-star-spc  @spc-slash-spc A-b       pgdn      A-f
 )
 
-(deflayer llaltlsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   A-S-q   A-S-w   A-S-e    A-S-r    A-S-t   A-S-y   A-S-u   A-S-i   A-S-f6   A-S-p      XX      XX   XX
-  XX    A-S-a   A-S-s   A-S-f4   A-S-f5   A-S-g   A-S-h   A-S-j   A-S-k   A-S-l         XX      XX      ret
-  lsft  A-S-f10 A-S-z   A-S-x  A-S-f2  A-S-v   A-S-f1   A-S-n  A-S-m      XX      XX      XX      A-S-▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-S-◀       A-S-▼       A-S-▶
+(deflayer lkOS
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       A-S-q     A-S-w     A-S-e     A-S-r     A-S-t     A-S-y     A-S-u     A-S-i     A-S-f6    A-S-p     XX        XX        XX
+  XX        A-S-a     A-S-s     A-S-f4    A-S-f5    A-S-g     A-S-h     A-S-j     A-S-k     A-S-l     XX        XX        ret
+  lsft      A-S-f10   A-S-z     A-S-x     A-S-f2    A-S-v     A-S-f1    A-S-n     A-S-m     XX        XX        XX        A-S-▲     rsft
+  lctl      lalt      lmet                                    spc                           rmet      ralt      A-S-◀     A-S-▼     A-S-▶
 )
 
-(deflayer llmet
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      (multi lmet ret)
-  @mlmetlsft  XX XX     XX      XX      XX      XX      XX      XX      @spc-lt-hyphen  @spc-hyphen-gt  XX      home    @spc-eq-gt-spc
-        lctl   lalt    lmet                    spc             rmet    ralt    C-a     end     C-e
+(deflayer lkC
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        (multi lmet ret)
+  @mkCS     XX        XX        XX        XX        XX        XX        XX        XX        @spc-lt-hyphen  @spc-hyphen-gt  XX      home    @spc-eq-gt-spc
+  lctl      lalt      lmet                                    C-spc                         rmet      ralt      C-a     end     C-e
 )
 
-(deflayer llmetlsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-◀       A-▼       A-▶
+(deflayer lkCS
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-▲       rsft
+  lctl      lalt      lmet                                    C-spc                         rmet      ralt      A-◀       A-▼       A-▶
+)
+
+(deflayer lkJ
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
+  lctl      lalt      lmet                                    C-spc                         rmet      ralt      ◀         ▼         ▶
+)
+
+(deflayer lkQ
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
+  S-f17     S-f16     S-f15                                   S-f14                         rmet      ralt      ◀         ▼         ▶
+)
+
+(deflayer lkE
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
+  C-o       C-j       C-h                                     spc                           rmet      ralt      ◀         ▼         ▶
+)
+
+(deflayer lkW
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ▲         rsft
+  C-o       C-j       C-h                                     spc                           rmet      ralt      ◀         ▼         ▶
+)
+
+(deflayer lkS
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       S-1       S-2       S-3       S-4       S-5       S-6       S-7       S-8       S-9       S-0       S--       S-=       XX
+  tab       S-q       S-w       S-e       S-r       S-t       S-y       S-u       S-i       S-o       S-p       S-[       S-]       S-\ 
+  XX        S-a       S-s       S-d       S-f       S-g       S-h       S-j       S-k       S-l       S-;       S-'       ret
+  lsft      XX        S-z       S-x       S-c       S-v       S-b       S-n       S-m       S-,       S-.       S-/       S-▲       del
+  lctl      lalt      lmet                                    C-spc                         C-k       A-d       S-◀       S-▼       S-▶
+)
+
+(deflayer lkR
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       S-1       S-2       S-3       S-4       S-5       S-6       S-7       S-8       S-9       S-0       S--       S-=       XX
+  tab       S-q       S-w       S-e       S-r       S-t       S-y       S-u       S-i       S-o       S-p       S-[       S-]       S-\ 
+  XX        S-a       S-s       S-d       S-f       S-g       S-h       S-j       S-k       S-l       S-;       S-'       ret
+  bspc      XX        S-z       S-x       S-c       S-v       S-b       S-n       S-m       S-,       S-.       S-/       S-▲       rsft
+  C-w       lalt      C-u                                     spc                           rmet      ralt      S-◀       S-▼       S-▶
 )
 
 (deflayer lgrv
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-S-f6
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f7
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f4  C-S-f8
-        lctl   lalt    lmet                    C-S-f11         XX      C-S-f9  ◀       C-S-f5  ▶
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-S-f6
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-S-f7
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-S-f4    C-S-f8
+  lctl      lalt      lmet                                    C-S-f11                       rmet      ralt      ◀         C-S-f5    ▶
 )
 
 (deflayer ltab
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-f7
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-S-f1  C-S-f2   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      S-f6    S-f5    S-f8
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-S-f11       S-f9
-        lctl   lalt    lmet                    S-f12           S-f11   S-f10   S-f1    A-S-f12       S-f2
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        S-f7
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-S-f1    C-S-f2    XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        S-f6      S-f5      S-f8
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-S-f11   S-f9
+  lctl      lalt      lmet                                    S-f12                         S-f11     S-f10     S-f1      A-S-f12   S-f2
 )
 
 (deflayer lq
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   C-f6
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f7
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-f4    C-f8
-        lctl   lalt    lmet                    C-f11           C-f10   C-f9    C-f1    C-f5    C-f2
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-f6
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-f7
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-f4      C-f8
+  lctl      lalt      lmet                                    C-f11                         C-f10     C-f9      C-f1      C-f5      C-f2
 )
 
 (deflayer lw
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   S-C-f11
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      S-C-f4  S-C-f5 XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      S-C-f7
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-f11   S-C-f8
-        lctl   lalt    lmet                    S-C-f6          S-C-f10 S-C-f9  A-f8    A-f12   A-f9
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        S-C-f11
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        S-C-f4    S-C-f5    XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        S-C-f7
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-f11     S-C-f8
+  lctl      lalt      lmet                                    S-C-f6                        S-C-f10   S-C-f9    A-f8      A-f12     A-f9
 )
 
 (deflayer lz
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-f14   A-f15   C-g
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      C-home  C-end  A-f6
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      A-f13      XX      C-l
-  @mzlsft  XX XX     XX      XX      XX      XX      XX      XX      C-pgup  C-pgdn  XX      C-n     C-v
-        lctl   lalt    lmet                    C-t             C-r     C-s     C-b     C-p     C-f
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-f14     A-f15     C-g
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        C-home    C-end     A-f6
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-f13     XX        C-l
+  @mzS      XX        XX        XX        XX        XX        XX        XX        XX        C-pgup    C-pgdn    XX        C-n       C-v
+  lctl      lalt      lmet                                    C-t                           C-r       C-s       C-b       C-p       C-f
 )
 
-(deflayer llsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
-  tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
-  XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
-  lsft  XX S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲       del
-        lctl   lalt    lmet                    spc             C-k     A-d     S-◀     S-▼       S-▶
-)
-
-(deflayer lrsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   S-1    S-2     S-3     S-4     S-5     S-6     S-7     S-8     S-9     S-0     S--     S-=  XX
-  tab   S-q    S-w     S-e     S-r     S-t     S-y     S-u     S-i     S-o     S-p     S-[     S-]  S-\ 
-  XX    S-a    S-s     S-d     S-f     S-g     S-h     S-j     S-k     S-l     S-;     S-'     ret
-  bspc  XX S-z    S-x     S-c     S-v     S-b     S-n     S-m     S-,     S-.     S-/     S-▲     rsft
-        C-w    lalt    C-u                     spc             rmet    ralt    S-◀     S-▼     S-▶
-)
-
-;;(deflayer lrmet
-;;  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-;;  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-;;  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-;;  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-;;  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-;;        S-f17  S-f16   S-f15                   S-f14           rmet    ralt    ◀       ▼       ▶
-;;)
-
-(deflayer lralt
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        C-o    C-j     C-h                     spc             rmet    ralt    ◀       ▼       ▶
-)
-
-(deflayer ljok
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      ▲       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    ◀       ▼       ▶
-)
-
-(deflayer lzlsft
-  esc   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
-  grv   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  tab   XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX   XX
-  XX    XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      ret
-  lsft  XX XX     XX      XX      XX      XX      XX      XX      XX      XX      XX      A-home       rsft
-        lctl   lalt    lmet                    spc             rmet    ralt    A-pgup       A-end       A-pgdn
+(deflayer lzS
+  ;;        a         s         d         f         g         h         j         k         l         ;         '         ret
+  esc       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  grv       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  tab       XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX
+  XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        ret
+  lsft      XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        XX        A-home    rsft
+  lctl      lalt      lmet                                    C-spc                         rmet      ralt      A-pgup    A-end     A-pgdn
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
