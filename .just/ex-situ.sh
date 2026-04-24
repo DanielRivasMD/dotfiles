@@ -71,14 +71,14 @@ link_config "${zsh}/zsh_navi.sh" "${homeDir}/.zsh" "zsh navi"
 link_config "${zsh}/zsh_zoxide.sh" "${homeDir}/.zsh" "zsh zoxide"
 
 # Nushell
-echo ''
-link_config "${nu}/env.nu" "${nuAppDir}/env.nu" "nushell env"
-link_config "${nu}/config.nu" "${nuAppDir}/config.nu" "nushell config"
-link_config "${nu}/alias.nu" "${nuAppDir}/alias.nu" "nushell alias"
-link_config "${nu}/atuin.nu" "${nuAppDir}/atuin.nu" "nushell atuin"
-link_config "${nu}/keymap.nu" "${nuAppDir}/keymap.nu" "nushell keymap"
-link_config "${nu}/theme.nu" "${nuAppDir}/theme.nu" "nushell theme"
-link_config "${nu}/zoxide.nu" "${nuAppDir}/zoxide.nu" "nushell zoxide"
+echo '' && mkdir -p "${nuDir}" && echo "Created /.config/nushell/"
+link_config "${nu}/env.nu" "${nuDir}/env.nu" "nushell env"
+link_config "${nu}/config.nu" "${nuDir}/config.nu" "nushell config"
+link_config "${nu}/alias.nu" "${nuDir}/alias.nu" "nushell alias"
+link_config "${nu}/atuin.nu" "${nuDir}/atuin.nu" "nushell atuin"
+link_config "${nu}/keymap.nu" "${nuDir}/keymap.nu" "nushell keymap"
+link_config "${nu}/theme.nu" "${nuDir}/theme.nu" "nushell theme"
+link_config "${nu}/zoxide.nu" "${nuDir}/zoxide.nu" "nushell zoxide"
 sep
 
 ####################################################################################################
