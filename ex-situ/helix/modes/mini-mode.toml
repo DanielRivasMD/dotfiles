@@ -5,9 +5,6 @@ r = ":config-reload"
 l = ":lsp-restart"
 ret = "command_palette"
 
-# "|" = "goto_column"
-# space = "goto_line"
-
 a = "no_op"
 b = "no_op"
 c = "no_op"
@@ -89,8 +86,6 @@ e = "no_op"
 e = "no_op"
 
 ####################################################################################################
-"." = "no_op"
-"|" = "no_op"
 
 [keys.normal.";"]
 p = "shell_pipe"
@@ -101,7 +96,6 @@ k = "shell_keep_pipe"
 
 ####################################################################################################
 
-# diagnostics mini mode
 [keys.normal."\\"]
 up =  "goto_prev_diag"
 down =  "goto_next_diag"
@@ -110,7 +104,6 @@ ret =  "workspace_diagnostics_picker"
 
 ####################################################################################################
 
-# language server protocol mini mode
 [keys.normal.z]
 # _ = "goto_declaration"
 z = "symbol_picker"
