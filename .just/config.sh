@@ -1,44 +1,36 @@
-####################################################################################################
 #!/bin/bash
 ####################################################################################################
 
-sep() {
-  local red='\033[0;31m'
-  local nc='\033[0m'
-  echo "${red}====================================================================================================${nc}"
-}
+echo_header() { printf '\033[1;32m%s\033[0m\n' "$1"; }
+sep() { printf '\033[0;31m%s\033[0m\n' '===================================================================================================='; }
 
-echo_header() {
-  local green='\033[1;32m'
-  local nc='\033[0m'
-  local header=$1
-  echo ''
-  echo "${green}${header}${nc}"
-}
-
-# link_config <source> <destination> <label>
 link_config() {
-  local byellow='\033[1;33m'
-  local bblue='\033[1;34m'
-  local nc='\033[0m'
-  local src=$1 dst=$2 out=${3:-}
-  ln -sf "$src" "$dst" && echo "Linked ${byellow}=>${nc} ${bblue}${out}${nc}"
+  local src="$1" dst="$2" label="$3"
+  if [[ -z "$src" || ! -e "$src" ]]; then
+    printf "Warning: source \033[1;31m%s\033[0m not found, skipping link for \033[1;34m%s\033[0m\n" "$src" "$label"
+    return 0
+  fi
+  mkdir -p "$(dirname "$dst")"
+  ln -sf "$src" "$dst"
+  printf "Linked \033[1;33m=>\033[0m \033[1;34m%s\033[0m\n" "$label"
 }
 
-# generate_completion <command> <output-filename>
 generate_completion() {
-  local byellow='\033[1;33m'
-  local bcyan='\033[1;36m'
-  local nc='\033[0m'
-  local cmd=$1 out=$2
-  eval "$cmd" >"${zshCompDir}/${out}" && echo "Installed completion ${byellow}=>${nc} ${bcyan}${out}${nc}"
+  local cmd="$1" output="$2"
+  local base_cmd="${cmd%% *}"
+  if command -v "$base_cmd" &>/dev/null; then
+    mkdir -p "$zshCompDir"
+    eval "$cmd" > "${zshCompDir}/$output" 2>/dev/null
+    printf "Installed completion \033[1;33m=>\033[0m \033[1;36m%s\033[0m\n" "$output"
+  else
+    printf "Warning: command \033[1;31m%s\033[0m not found, skipping completion for \033[1;36m%s\033[0m\n" "$base_cmd" "$output"
+  fi
 }
 
 ####################################################################################################
 # config
 ####################################################################################################
 
-# Detect operating system
 OS="$(uname -s)"
 case "$OS" in
   Darwin) export IS_MACOS=1 ;;
@@ -49,10 +41,8 @@ case "$OS" in
     ;;
 esac
 
-# Home directory
 export homeDir="$HOME"
 
-# Base directories
 export configDir="${homeDir}/.config"
 export zshCompDir="${configDir}/zsh_completion"
 export localShareDir="${homeDir}/.local/share"
@@ -60,7 +50,6 @@ export completionHomeDir="${homeDir}/.completion"
 export forkedDir="${homeDir}/Forked"
 export linkedDir="${homeDir}/Linked"
 
-# Application support directory (OS‑specific)
 if [[ -n "$IS_MACOS" ]]; then
   export appSupportDir="${homeDir}/Library/Application Support"
 else
@@ -69,22 +58,15 @@ else
   # You can refine this per application later.
   export appSupportDir="${localShareDir}"
 fi
+export nuAppDir="${appSupportDir}/nushell"
 
-# Dotfiles root (assumes this script is run from within the dotfiles repo)
 export dotfilesDir="$(git rev-parse --show-toplevel 2>/dev/null)"
-if [[ -z "$dotfilesDir" ]]; then
-  echo "Error: not inside a git repository (dotfiles)" >&2
-  exit 1
-fi
-
-# Dotfiles subdirectories
 export binDir="${dotfilesDir}/bin"
 export inSituDir="${dotfilesDir}/in-situ"
 export exSituDir="${dotfilesDir}/ex-situ"
 export inSilicoDir="${dotfilesDir}/in-silico"
 export completionDotDir="${dotfilesDir}/completions"
 
-# Application‑specific data paths (in‑situ)
 export naviAppDir="${appSupportDir}/navi"
 export espansoAppDir="${appSupportDir}/espanso"
 export lazygitAppDir="${appSupportDir}/jesseduffield/lazygit"
@@ -92,13 +74,8 @@ export lazynpmAppDir="${appSupportDir}/jesseduffield/lazynpm"
 export lazycliAppDir="${appSupportDir}/lazycli"
 export lazydockerAppDir="${appSupportDir}/lazydocker"
 
-# Ex‑situ applications
-export nuAppDir="${appSupportDir}/nushell"
-
-# Zsh completions destination
 export zshCompDir="${configDir}/zsh_completion"
 
-# Remote (Pawsey) – keep as is, only relevant on that machine
 export pawseyId="drivas@topaz.pawsey.org.au"
 export softwarePawsey="/scratch/pawsey0263/drivas/software"
 
