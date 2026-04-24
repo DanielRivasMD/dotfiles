@@ -43,6 +43,16 @@ A-c = "no_op"
 
 ####################################################################################################
 
+[keys.normal."/"]
+"/" = "match_brackets"
+z = "surround_add"
+c = "surround_replace"
+x = "surround_delete"
+a = "select_textobject_around"
+s = "select_textobject_inner"
+
+####################################################################################################
+
 [keys.normal."'"]
 s = "select_regex"
 ret = "split_selection_on_newline"
