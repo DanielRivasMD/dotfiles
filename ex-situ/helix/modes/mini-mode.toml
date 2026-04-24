@@ -41,6 +41,29 @@ A-c = "no_op"
 "?" = "no_op"
 
 
+####################################################################################################
+
+[keys.normal."'"]
+s = "select_regex"
+ret = "split_selection_on_newline"
+"/" = "merge_selections"
+"?" = "merge_consecutive_selections"
+"a" = "align_selections"
+"x" = "trim_selections"
+"'" = "collapse_selection"
+"space" = "flip_selections"
+"\\" = "keep_primary_selection"
+d = "remove_primary_selection"
+j = "copy_selection_on_next_line"
+k = "copy_selection_on_prev_line"
+z = "shrink_to_line_bounds"
+f = "keep_selections"
+c = "remove_selections"
+"[" = "select_all_siblings"
+"]" = "select_all_children"
+
+####################################################################################################
+
 [keys.normal.g]
 a = "no_op"
 b = "no_op"
