@@ -20,7 +20,7 @@ generate_completion() {
   local base_cmd="${cmd%% *}"
   if command -v "$base_cmd" &>/dev/null; then
     mkdir -p "$zshCompDir"
-    eval "$cmd" > "${zshCompDir}/$output" 2>/dev/null
+    eval "$cmd" >"${zshCompDir}/$output" 2>/dev/null
     printf "Installed completion \033[1;33m=>\033[0m \033[1;36m%s\033[0m\n" "$output"
   else
     printf "Warning: command \033[1;31m%s\033[0m not found, skipping completion for \033[1;36m%s\033[0m\n" "$base_cmd" "$output"
@@ -49,16 +49,25 @@ export localShareDir="${homeDir}/.local/share"
 export completionHomeDir="${homeDir}/.completion"
 export forkedDir="${homeDir}/Forked"
 export linkedDir="${homeDir}/Linked"
+export appSupportDir="${homeDir}/Library/Application Support"
 
 if [[ -n "$IS_MACOS" ]]; then
-  export appSupportDir="${homeDir}/Library/Application Support"
+  export espansoDir="${appSupportDir}/espanso"
+  export lazygitDir="${appSupportDir}/jesseduffield/lazygit"
+  export lazynpmDir="${appSupportDir}/jesseduffield/lazynpm"
+  export lazycliDir="${appSupportDir}/lazycli"
+  export lazydockerDir="${appSupportDir}/lazydocker"
+  export ghosttyDir"${appSupportDir}/com.mitchellh.ghostty"
+  export nuDir="${appSupportDir}/nushell"
 else
-  # TODO: double check linux config
-  # On Linux, many apps use ~/.local/share or ~/.config; adjust as needed.
-  # You can refine this per application later.
-  export appSupportDir="${localShareDir}"
+  export espansoDir="${localShareDir}/espanso"
+  export lazygitDir="${localShareDir}/jesseduffield/lazygit"
+  export lazynpmDir="${localShareDir}/jesseduffield/lazynpm"
+  export lazycliDir="${localShareDir}/lazycli"
+  export lazydockerDir="${localShareDir}/lazydocker"
+  export ghosttyDir="${configDir}/ghostty"
+  export nuDir="${configDir}/nushell"
 fi
-export nuAppDir="${appSupportDir}/nushell"
 
 export dotfilesDir="$(git rev-parse --show-toplevel 2>/dev/null)"
 export binDir="${dotfilesDir}/bin"
@@ -67,12 +76,7 @@ export exSituDir="${dotfilesDir}/ex-situ"
 export inSilicoDir="${dotfilesDir}/in-silico"
 export completionDotDir="${dotfilesDir}/completions"
 
-export naviAppDir="${appSupportDir}/navi"
-export espansoAppDir="${appSupportDir}/espanso"
-export lazygitAppDir="${appSupportDir}/jesseduffield/lazygit"
-export lazynpmAppDir="${appSupportDir}/jesseduffield/lazynpm"
-export lazycliAppDir="${appSupportDir}/lazycli"
-export lazydockerAppDir="${appSupportDir}/lazydocker"
+# export naviDir="${appSupportDir}/navi"
 
 export zshCompDir="${configDir}/zsh_completion"
 
