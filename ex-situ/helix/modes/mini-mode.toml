@@ -67,6 +67,12 @@ D = "no_op"
 "." = "no_op"
 "|" = "no_op"
 
+[keys.normal.";"]
+p = "shell_pipe"
+P = "shell_pipe_to"
+i = "shell_insert_output"
+a = "shell_append_output"
+k = "shell_keep_pipe"
 
 ####################################################################################################
 
