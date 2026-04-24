@@ -1,0 +1,17 @@
+####################################################################################################
+# just
+####################################################################################################
+
+# [[language]]
+# name = "just"
+# scope = "source.just"
+# file-types = ["justfile", ".justfile", "JUSTFILE"]
+# comment-token = "#"
+# indent = { tab-width = 2, unit = "  " }
+# formatter = { command = "just", args = ["--fmt", "--justfile"] }
+
+# [[grammar]]
+# name = "just"
+# source = { git = "https://github.com/IndianBoy42/tree-sitter-just", rev = "main" }
+
+####################################################################################################
