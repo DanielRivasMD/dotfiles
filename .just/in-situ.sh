@@ -13,15 +13,6 @@ for entry in "$inSituDir"/*; do
 done
 
 ####################################################################################################
-# bin
-####################################################################################################
-
-echo_header "@bin"
-link_config "${binDir}/copy2clipboard.sh" "${homeDir}/bin/copy2clipboard" "copy2clipboard"
-link_config "${binDir}/jlang.sh" "${homeDir}/bin/jlang" "jlang"
-link_config "${binDir}/roadmap.sh" "${homeDir}/bin/roadmap" "roadmap"
-
-####################################################################################################
 # in effigie
 ####################################################################################################
 
@@ -53,15 +44,15 @@ sep
 
 # Define all link tasks as “src|dest|label”
 read -r -d '' LINKS <<EOF
-${espanso}/config/default.yml|${espansoAppDir}/config/default.yml|espanso default
-${espanso}/match/base.yml|${espansoAppDir}/match/base.yml|espanso match
+${espanso}/config/default.yml|${espansoDir}/config/default.yml|espanso default
+${espanso}/match/base.yml|${espansoDir}/match/base.yml|espanso match
 ${gh}/config.yml|${configDir}/gh/config.yml|gh config
-${ghostty}/config|${appSupportDir}/com.mitchellh.ghostty/config|ghostty config
+${ghostty}/config|${ghosttyDir}/config|ghostty config
 ${julia}/startup.jl|${homeDir}/.julia/config/startup.jl|julia startup
-${lazycli}/config.yml|${lazycliAppDir}/config.yml|lazycli config
-${lazygit}/config.yml|${lazygitAppDir}/config.yml|lazygit config
-${navi}/config.yml|${naviAppDir}/config.yml|navi config
-${navi}/cheats|${naviAppDir}/cheats|navi cheats
+${lazycli}/config.yml|${lazycliDir}/config.yml|lazycli config
+${lazygit}/config.yml|${lazygitDir}/config.yml|lazygit config
+${navi}/config.yml|${naviDir}/config.yml|navi config
+${navi}/cheats|${naviDir}/cheats|navi cheats
 ${ssh}/config|${homeDir}/.ssh/config|ssh config
 ${yazi}/theme.toml|${configDir}/yazi/theme.toml|yazi theme
 EOF
@@ -108,3 +99,5 @@ fi
 sep
 
 ####################################################################################################
+echo $ghosttyDir
+echo $nuDir
