@@ -46,6 +46,11 @@ a = "no_op"
 b = "no_op"
 c = "no_op"
 d = "no_op"
+[keys.normal."["]
+"[" = "goto_prev_entry"
+"ret" = "open_above"
+"n" = "move_parent_node_end"
+"space" = "select_prev_sibling"
 e = "no_op"
 f = "no_op"
 g = "no_op"
@@ -64,6 +69,14 @@ w = "no_op"
 y = "no_op"
 D = "no_op"
 
+[keys.normal."]"]
+"]" = "goto_next_entry"
+"ret" = "open_below"
+"n" = "move_parent_node_start"
+"space" = "select_next_sibling"
+e = "no_op"
+
+####################################################################################################
 "." = "no_op"
 "|" = "no_op"
 
