@@ -1,9 +1,16 @@
 ####################################################################################################
 
+[keys.insert.j]
+j = "normal_mode"
+
+####################################################################################################
+
 [keys.normal."space"]
 r = ":config-reload"
-l = ":lsp-restart"
+";" = ":lsp-restart"
 ret = "command_palette"
+"`" = ":buffer-close!"
+l = ":log-open"
 
 a = "no_op"
 b = "no_op"
@@ -74,22 +81,22 @@ c = "remove_selections"
 [keys.normal."["]
 "[" = "goto_prev_entry"
 "ret" = "open_above"
-"n" = "move_parent_node_end"
+"n" = "move_parent_node_start"
 "space" = "select_prev_sibling"
 e = "no_op"
 
 [keys.normal."]"]
 "]" = "goto_next_entry"
 "ret" = "open_below"
-"n" = "move_parent_node_start"
+"n" = "move_parent_node_end"
 "space" = "select_next_sibling"
 e = "no_op"
 
 ####################################################################################################
 
 [keys.normal.";"]
-p = "shell_pipe"
-P = "shell_pipe_to"
+ret = "shell_pipe"
+"\\" = "shell_pipe_to"
 i = "shell_insert_output"
 a = "shell_append_output"
 k = "shell_keep_pipe"
