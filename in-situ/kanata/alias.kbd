@@ -1,169 +1,1161 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (defalias
+  T1      XX
+  T2      XX
+  T3      XX
+  T4      XX
+  T5      XX
+  T6      XX
+  T7      XX
+  T8      XX
+  T9      XX
+  T0      XX
+  Ta      XX
+  Tb      XX
+  Tc      XX
+  Td      XX
+  Te      XX
+  Tf      XX
+  Tg      XX
+  Th      XX
+  Ti      XX
+  Tj      XX
+  Tk      XX
+  Tl      XX
+  Tm      XX
+  Tn      XX
+  To      XX
+  Tp      XX
+  Tq      XX
+  Tr      XX
+  Ts      XX
+  Tt      XX
+  Tu      XX
+  Tv      XX
+  Tw      XX
+  Tx      XX
+  Ty      XX
+  Tz      XX
+  Thy     XX
+  Teq     XX
+  Tdb     XX
+  Tob     XX
+  Tcb     XX
+  Tsc     XX
+  Tqu     XX
+  Tbl     XX
+  Tcm     XX
+  Tpe     XX
+  Tsl     XX
+  Tret    XX
+  Tspc    XX
+  TkR     XX
+  TkE     XX
+  TkQ     XX
+  TkC     XX
+  TkO     XX
+  TkT     XX
+  TkS     XX
+  TkW     XX
 
-  Oa
-  Ob
-  Oc
-  Od
-  Oe
-  Of
-  Og
-  Oh
-  Oi
-  Oj
-  Ok
-  Ol
-  Om
-  On
-  Oo
-  Op
-  Oq
-  Or
-  Os
-  Ot
-  Ou
-  Ov
-  Ow
-  Ox
-  Oy
-  Oz
+  TS1     XX
+  TS2     XX
+  TS3     XX
+  TS4     XX
+  TS5     XX
+  TS6     XX
+  TS7     XX
+  TS8     XX
+  TS9     XX
+  TS0     XX
+  TSa     XX
+  TSb     XX
+  TSc     XX
+  TSd     XX
+  TSe     XX
+  TSf     XX
+  TSg     XX
+  TSh     XX
+  TSi     XX
+  TSj     XX
+  TSk     XX
+  TSl     XX
+  TSm     XX
+  TSn     XX
+  TSo     XX
+  TSp     XX
+  TSq     XX
+  TSr     XX
+  TSs     XX
+  TSt     XX
+  TSu     XX
+  TSv     XX
+  TSw     XX
+  TSx     XX
+  TSy     XX
+  TSz     XX
+  TShy    XX
+  TSeq    XX
+  TSdb    XX
+  TSob    XX
+  TScb    XX
+  TSsc    XX
+  TSqu    XX
+  TSbl    XX
+  TScm    XX
+  TSpe    XX
+  TSsl    XX
+  TSret   XX
+  TSspc   XX
+  TSkR    XX
+  TSkE    XX
+  TSkQ    XX
+  TSkC    XX
+  TSkO    XX
+  TSkT    XX
+  TSkS    XX
+  TSkW    XX
 
-  OSa
-  OSb
-  OSc
-  OSd
-  OSe
-  OSf
-  OSg
-  OSh
-  OSi
-  OSj
-  OSk
-  OSl
-  OSm
-  OSn
-  OSo
-  OSp
-  OSq
-  OSr
-  OSs
-  OSt
-  OSu
-  OSv
-  OSw
-  OSx
-  OSy
-  OSz
+  O1      XX
+  O2      XX
+  O3      XX
+  O4      XX
+  O5      XX
+  O6      XX
+  O7      XX
+  O8      XX
+  O9      XX
+  O0      XX
+  Oa      XX
+  Ob      XX
+  Oc      XX
+  Od      XX
+  Oe      XX
+  Of      XX
+  Og      XX
+  Oh      XX
+  Oi      XX
+  Oj      XX
+  Ok      XX
+  Ol      XX
+  Om      XX
+  On      XX
+  Oo      XX
+  Op      XX
+  Oq      XX
+  Or      XX
+  Os      XX
+  Ot      XX
+  Ou      XX
+  Ov      XX
+  Ow      XX
+  Ox      XX
+  Oy      XX
+  Oz      XX
+  Ohy     XX
+  Oeq     XX
+  Odb     XX
+  Oob     XX
+  Ocb     XX
+  Osc     XX
+  Oqu     XX
+  Obl     XX
+  Ocm     XX
+  Ope     XX
+  Osl     XX
+  Oret    XX
+  Ospc    XX
+  OkR     XX
+  OkE     XX
+  OkQ     XX
+  OkC     XX
+  OkO     XX
+  OkT     XX
+  OkS     XX
+  OkW     XX
 
-  Ta
-  Tb
-  Tc
-  Td
-  Te
-  Tf
-  Tg
-  Th
-  Ti
-  Tj
-  Tk
-  Tl
-  Tm
-  Tn
-  To
-  Tp
-  Tq
-  Tr
-  Ts
-  Tt
-  Tu
-  Tv
-  Tw
-  Tx
-  Ty
-  Tz
+  OS1     XX
+  OS2     XX
+  OS3     XX
+  OS4     XX
+  OS5     XX
+  OS6     XX
+  OS7     XX
+  OS8     XX
+  OS9     XX
+  OS0     XX
+  OSa     XX
+  OSb     XX
+  OSc     XX
+  OSd     XX
+  OSe     XX
+  OSf     XX
+  OSg     XX
+  OSh     XX
+  OSi     XX
+  OSj     XX
+  OSk     XX
+  OSl     XX
+  OSm     XX
+  OSn     XX
+  OSo     XX
+  OSp     XX
+  OSq     XX
+  OSr     XX
+  OSs     XX
+  OSt     XX
+  OSu     XX
+  OSv     XX
+  OSw     XX
+  OSx     XX
+  OSy     XX
+  OSz     XX
+  OShy    XX
+  OSeq    XX
+  OSdb    XX
+  OSob    XX
+  OScb    XX
+  OSsc    XX
+  OSqu    XX
+  OSbl    XX
+  OScm    XX
+  OSpe    XX
+  OSsl    XX
+  OSret   XX
+  OSspc   XX
+  OSkR    XX
+  OSkE    XX
+  OSkQ    XX
+  OSkC    XX
+  OSkO    XX
+  OSkT    XX
+  OSkS    XX
+  OSkW    XX
 
-  TSa
-  TSb
-  TSc
-  TSd
-  TSe
-  TSf
-  TSg
-  TSh
-  TSi
-  TSj
-  TSk
-  TSl
-  TSm
-  TSn
-  TSo
-  TSp
-  TSq
-  TSr
-  TSs
-  TSt
-  TSu
-  TSv
-  TSw
-  TSx
-  TSy
-  TSz
+  C1      XX
+  C2      XX
+  C3      XX
+  C4      XX
+  C5      XX
+  C6      XX
+  C7      XX
+  C8      XX
+  C9      XX
+  C0      XX
+  Ca      XX
+  Cb      XX
+  Cc      XX
+  Cd      XX
+  Ce      XX
+  Cf      XX
+  Cg      XX
+  Ch      XX
+  Ci      XX
+  Cj      XX
+  Ck      XX
+  Cl      XX
+  Cm      XX
+  Cn      XX
+  Co      XX
+  Cp      XX
+  Cq      XX
+  Cr      XX
+  Cs      XX
+  Ct      XX
+  Cu      XX
+  Cv      XX
+  Cw      XX
+  Cx      XX
+  Cy      XX
+  Cz      XX
+  Chy     XX
+  Ceq     XX
+  Cdb     XX
+  Cob     XX
+  Ccb     XX
+  Csc     XX
+  Cqu     XX
+  Cbl     XX
+  Ccm     XX
+  Cpe     XX
+  Csl     XX
+  Cret    XX
+  Cspc    XX
+  CkR     XX
+  CkE     XX
+  CkQ     XX
+  CkC     XX
+  CkO     XX
+  CkT     XX
+  CkS     XX
+  CkW     XX
 
-  Ca
-  Cb
-  Cc
-  Cd
-  Ce
-  Cf
-  Cg
-  Ch
-  Ci
-  Cj
-  Ck
-  Cl
-  Cm
-  Cn
-  Co
-  Cp
-  Cq
-  Cr
-  Cs
-  Ct
-  Cu
-  Cv
-  Cw
-  Cx
-  Cy
-  Cz
+  CS1     XX
+  CS2     XX
+  CS3     XX
+  CS4     XX
+  CS5     XX
+  CS6     XX
+  CS7     XX
+  CS8     XX
+  CS9     XX
+  CS0     XX
+  CSa     XX
+  CSb     XX
+  CSc     XX
+  CSd     XX
+  CSe     XX
+  CSf     XX
+  CSg     XX
+  CSh     XX
+  CSi     XX
+  CSj     XX
+  CSk     XX
+  CSl     XX
+  CSm     XX
+  CSn     XX
+  CSo     XX
+  CSp     XX
+  CSq     XX
+  CSr     XX
+  CSs     XX
+  CSt     XX
+  CSu     XX
+  CSv     XX
+  CSw     XX
+  CSx     XX
+  CSy     XX
+  CSz     XX
+  CShy    XX
+  CSeq    XX
+  CSdb    XX
+  CSob    XX
+  CScb    XX
+  CSsc    XX
+  CSqu    XX
+  CSbl    XX
+  CScm    XX
+  CSpe    XX
+  CSsl    XX
+  CSret   XX
+  CSspc   XX
+  CSkR    XX
+  CSkE    XX
+  CSkQ    XX
+  CSkC    XX
+  CSkO    XX
+  CSkT    XX
+  CSkS    XX
+  CSkW    XX
 
-  CSa
-  CSb
-  CSc
-  CSd
-  CSe
-  CSf
-  CSg
-  CSh
-  CSi
-  CSj
-  CSk
-  CSl
-  CSm
-  CSn
-  CSo
-  CSp
-  CSq
-  CSr
-  CSs
-  CSt
-  CSu
-  CSv
-  CSw
-  CSx
-  CSy
-  CSz
+  J1      XX
+  J2      XX
+  J3      XX
+  J4      XX
+  J5      XX
+  J6      XX
+  J7      XX
+  J8      XX
+  J9      XX
+  J0      XX
+  Ja      XX
+  Jb      XX
+  Jc      XX
+  Jd      XX
+  Je      XX
+  Jf      XX
+  Jg      XX
+  Jh      XX
+  Ji      XX
+  Jj      XX
+  Jk      XX
+  Jl      XX
+  Jm      XX
+  Jn      XX
+  Jo      XX
+  Jp      XX
+  Jq      XX
+  Jr      XX
+  Js      XX
+  Jt      XX
+  Ju      XX
+  Jv      XX
+  Jw      XX
+  Jx      XX
+  Jy      XX
+  Jz      XX
+  Jhy     XX
+  Jeq     XX
+  Jdb     XX
+  Job     XX
+  Jcb     XX
+  Jsc     XX
+  Jqu     XX
+  Jbl     XX
+  Jcm     XX
+  Jpe     XX
+  Jsl     XX
+  Jret    XX
+  Jspc    XX
+  JkR     XX
+  JkE     XX
+  JkQ     XX
+  JkC     XX
+  JkO     XX
+  JkT     XX
+  JkS     XX
+  JkW     XX
 
+  S1      XX
+  S2      XX
+  S3      XX
+  S4      XX
+  S5      XX
+  S6      XX
+  S7      XX
+  S8      XX
+  S9      XX
+  S0      XX
+  Sa      XX
+  Sb      XX
+  Sc      XX
+  Sd      XX
+  Se      XX
+  Sf      XX
+  Sg      XX
+  Sh      XX
+  Si      XX
+  Sj      XX
+  Sk      XX
+  Sl      XX
+  Sm      XX
+  Sn      XX
+  So      XX
+  Sp      XX
+  Sq      XX
+  Sr      XX
+  Ss      XX
+  St      XX
+  Su      XX
+  Sv      XX
+  Sw      XX
+  Sx      XX
+  Sy      XX
+  Sz      XX
+  Shy     XX
+  Seq     XX
+  Sdb     XX
+  Sob     XX
+  Scb     XX
+  Ssc     XX
+  Squ     XX
+  Sbl     XX
+  Scm     XX
+  Spe     XX
+  Ssl     XX
+  Sret    XX
+  Sspc    XX
+  SkR     XX
+  SkE     XX
+  SkQ     XX
+  SkC     XX
+  SkO     XX
+  SkT     XX
+  SkS     XX
+  SkW     XX
+
+  R1      XX
+  R2      XX
+  R3      XX
+  R4      XX
+  R5      XX
+  R6      XX
+  R7      XX
+  R8      XX
+  R9      XX
+  R0      XX
+  Ra      XX
+  Rb      XX
+  Rc      XX
+  Rd      XX
+  Re      XX
+  Rf      XX
+  Rg      XX
+  Rh      XX
+  Ri      XX
+  Rj      XX
+  Rk      XX
+  Rl      XX
+  Rm      XX
+  Rn      XX
+  Ro      XX
+  Rp      XX
+  Rq      XX
+  Rr      XX
+  Rs      XX
+  Rt      XX
+  Ru      XX
+  Rv      XX
+  Rw      XX
+  Rx      XX
+  Ry      XX
+  Rz      XX
+  Rhy     XX
+  Req     XX
+  Rdb     XX
+  Rob     XX
+  Rcb     XX
+  Rsc     XX
+  Rqu     XX
+  Rbl     XX
+  Rcm     XX
+  Rpe     XX
+  Rsl     XX
+  Rret    XX
+  Rspc    XX
+  RkR     XX
+  RkE     XX
+  RkQ     XX
+  RkC     XX
+  RkO     XX
+  RkT     XX
+  RkS     XX
+  RkW     XX
+
+  Q1      XX
+  Q2      XX
+  Q3      XX
+  Q4      XX
+  Q5      XX
+  Q6      XX
+  Q7      XX
+  Q8      XX
+  Q9      XX
+  Q0      XX
+  Qa      XX
+  Qb      XX
+  Qc      XX
+  Qd      XX
+  Qe      XX
+  Qf      XX
+  Qg      XX
+  Qh      XX
+  Qi      XX
+  Qj      XX
+  Qk      XX
+  Ql      XX
+  Qm      XX
+  Qn      XX
+  Qo      XX
+  Qp      XX
+  Qq      XX
+  Qr      XX
+  Qs      XX
+  Qt      XX
+  Qu      XX
+  Qv      XX
+  Qw      XX
+  Qx      XX
+  Qy      XX
+  Qz      XX
+  Qhy     XX
+  Qeq     XX
+  Qdb     XX
+  Qob     XX
+  Qcb     XX
+  Qsc     XX
+  Qqu     XX
+  Qbl     XX
+  Qcm     XX
+  Qpe     XX
+  Qsl     XX
+  Qret    XX
+  Qspc    XX
+  QkR     XX
+  QkE     XX
+  QkQ     XX
+  QkC     XX
+  QkO     XX
+  QkT     XX
+  QkS     XX
+  QkW     XX
+
+  QR1     XX
+  QR2     XX
+  QR3     XX
+  QR4     XX
+  QR5     XX
+  QR6     XX
+  QR7     XX
+  QR8     XX
+  QR9     XX
+  QR0     XX
+  QRa     XX
+  QRb     XX
+  QRc     XX
+  QRd     XX
+  QRe     XX
+  QRf     XX
+  QRg     XX
+  QRh     XX
+  QRi     XX
+  QRj     XX
+  QRk     XX
+  QRl     XX
+  QRm     XX
+  QRn     XX
+  QRo     XX
+  QRp     XX
+  QRq     XX
+  QRr     XX
+  QRs     XX
+  QRt     XX
+  QRu     XX
+  QRv     XX
+  QRw     XX
+  QRx     XX
+  QRy     XX
+  QRz     XX
+  QRhy    XX
+  QReq    XX
+  QRdb    XX
+  QRob    XX
+  QRcb    XX
+  QRsc    XX
+  QRqu    XX
+  QRbl    XX
+  QRcm    XX
+  QRpe    XX
+  QRsl    XX
+  QRret   XX
+  QRspc   XX
+  QRkR    XX
+  QRkE    XX
+  QRkQ    XX
+  QRkC    XX
+  QRkO    XX
+  QRkT    XX
+  QRkS    XX
+  QRkW    XX
+
+  E1      XX
+  E2      XX
+  E3      XX
+  E4      XX
+  E5      XX
+  E6      XX
+  E7      XX
+  E8      XX
+  E9      XX
+  E0      XX
+  Ea      XX
+  Eb      XX
+  Ec      XX
+  Ed      XX
+  Ee      XX
+  Ef      XX
+  Eg      XX
+  Eh      XX
+  Ei      XX
+  Ej      XX
+  Ek      XX
+  El      XX
+  Em      XX
+  En      XX
+  Eo      XX
+  Ep      XX
+  Eq      XX
+  Er      XX
+  Es      XX
+  Et      XX
+  Eu      XX
+  Ev      XX
+  Ew      XX
+  Ex      XX
+  Ey      XX
+  Ez      XX
+  Ehy     XX
+  Eeq     XX
+  Edb     XX
+  Eob     XX
+  Ecb     XX
+  Esc     XX
+  Equ     XX
+  Ebl     XX
+  Ecm     XX
+  Epe     XX
+  Esl     XX
+  Eret    XX
+  Espc    XX
+  EkR     XX
+  EkE     XX
+  EkQ     XX
+  EkC     XX
+  EkO     XX
+  EkT     XX
+  EkS     XX
+  EkW     XX
+
+  ER1     XX
+  ER2     XX
+  ER3     XX
+  ER4     XX
+  ER5     XX
+  ER6     XX
+  ER7     XX
+  ER8     XX
+  ER9     XX
+  ER0     XX
+  ERa     XX
+  ERb     XX
+  ERc     XX
+  ERd     XX
+  ERe     XX
+  ERf     XX
+  ERg     XX
+  ERh     XX
+  ERi     XX
+  ERj     XX
+  ERk     XX
+  ERl     XX
+  ERm     XX
+  ERn     XX
+  ERo     XX
+  ERp     XX
+  ERq     XX
+  ERr     XX
+  ERs     XX
+  ERt     XX
+  ERu     XX
+  ERv     XX
+  ERw     XX
+  ERx     XX
+  ERy     XX
+  ERz     XX
+  ERhy    XX
+  EReq    XX
+  ERdb    XX
+  ERob    XX
+  ERcb    XX
+  ERsc    XX
+  ERqu    XX
+  ERbl    XX
+  ERcm    XX
+  ERpe    XX
+  ERsl    XX
+  ERret   XX
+  ERspc   XX
+  ERkR    XX
+  ERkE    XX
+  ERkQ    XX
+  ERkC    XX
+  ERkO    XX
+  ERkT    XX
+  ERkS    XX
+  ERkW    XX
+
+  W1      XX
+  W2      XX
+  W3      XX
+  W4      XX
+  W5      XX
+  W6      XX
+  W7      XX
+  W8      XX
+  W9      XX
+  W0      XX
+  Wa      XX
+  Wb      XX
+  Wc      XX
+  Wd      XX
+  We      XX
+  Wf      XX
+  Wg      XX
+  Wh      XX
+  Wi      XX
+  Wj      XX
+  Wk      XX
+  Wl      XX
+  Wm      XX
+  Wn      XX
+  Wo      XX
+  Wp      XX
+  Wq      XX
+  Wr      XX
+  Ws      XX
+  Wt      XX
+  Wu      XX
+  Wv      XX
+  Ww      XX
+  Wx      XX
+  Wy      XX
+  Wz      XX
+  Why     XX
+  Weq     XX
+  Wdb     XX
+  Wob     XX
+  Wcb     XX
+  Wsc     XX
+  Wqu     XX
+  Wbl     XX
+  Wcm     XX
+  Wpe     XX
+  Wsl     XX
+  Wret    XX
+  Wspc    XX
+  WkR     XX
+  WkE     XX
+  WkQ     XX
+  WkC     XX
+  WkO     XX
+  WkT     XX
+  WkS     XX
+  WkW     XX
+
+  WS1     XX
+  WS2     XX
+  WS3     XX
+  WS4     XX
+  WS5     XX
+  WS6     XX
+  WS7     XX
+  WS8     XX
+  WS9     XX
+  WS0     XX
+  WSa     XX
+  WSb     XX
+  WSc     XX
+  WSd     XX
+  WSe     XX
+  WSf     XX
+  WSg     XX
+  WSh     XX
+  WSi     XX
+  WSj     XX
+  WSk     XX
+  WSl     XX
+  WSm     XX
+  WSn     XX
+  WSo     XX
+  WSp     XX
+  WSq     XX
+  WSr     XX
+  WSs     XX
+  WSt     XX
+  WSu     XX
+  WSv     XX
+  WSw     XX
+  WSx     XX
+  WSy     XX
+  WSz     XX
+  WShy    XX
+  WSeq    XX
+  WSdb    XX
+  WSob    XX
+  WScb    XX
+  WSsc    XX
+  WSqu    XX
+  WSbl    XX
+  WScm    XX
+  WSpe    XX
+  WSsl    XX
+  WSret   XX
+  WSspc   XX
+  WSkR    XX
+  WSkE    XX
+  WSkQ    XX
+  WSkC    XX
+  WSkO    XX
+  WSkT    XX
+  WSkS    XX
+  WSkW    XX
+
+  tab1    XX
+  tab2    XX
+  tab3    XX
+  tab4    XX
+  tab5    XX
+  tab6    XX
+  tab7    XX
+  tab8    XX
+  tab9    XX
+  tab0    XX
+  taba    XX
+  tabb    XX
+  tabc    XX
+  tabd    XX
+  tabe    XX
+  tabf    XX
+  tabg    XX
+  tabh    XX
+  tabi    XX
+  tabj    XX
+  tabk    XX
+  tabl    XX
+  tabm    XX
+  tabn    XX
+  tabo    XX
+  tabp    XX
+  tabq    XX
+  tabr    XX
+  tabs    XX
+  tabt    XX
+  tabu    XX
+  tabv    XX
+  tabw    XX
+  tabx    XX
+  taby    XX
+  tabz    XX
+  tabhy   XX
+  tabeq   XX
+  tabdb   XX
+  tabob   XX
+  tabcb   XX
+  tabsc   XX
+  tabqu   XX
+  tabbl   XX
+  tabcm   XX
+  tabpe   XX
+  tabsl   XX
+  tabret  XX
+  tabspc  XX
+  tabkR   XX
+  tabkE   XX
+  tabkQ   XX
+  tabkC   XX
+  tabkO   XX
+  tabkT   XX
+  tabkS   XX
+  tabkW   XX
+
+  q1      XX
+  q2      XX
+  q3      XX
+  q4      XX
+  q5      XX
+  q6      XX
+  q7      XX
+  q8      XX
+  q9      XX
+  q0      XX
+  qa      XX
+  qb      XX
+  qc      XX
+  qd      XX
+  qe      XX
+  qf      XX
+  qg      XX
+  qh      XX
+  qi      XX
+  qj      XX
+  qk      XX
+  ql      XX
+  qm      XX
+  qn      XX
+  qo      XX
+  qp      XX
+  qq      XX
+  qr      XX
+  qs      XX
+  qt      XX
+  qu      XX
+  qv      XX
+  qw      XX
+  qx      XX
+  qy      XX
+  qz      XX
+  qhy     XX
+  qeq     XX
+  qdb     XX
+  qob     XX
+  qcb     XX
+  qsc     XX
+  qqu     XX
+  qbl     XX
+  qcm     XX
+  qpe     XX
+  qsl     XX
+  qret    XX
+  qspc    XX
+  qkR     XX
+  qkE     XX
+  qkQ     XX
+  qkC     XX
+  qkO     XX
+  qkT     XX
+  qkS     XX
+  qkW     XX
+
+  w1      XX
+  w2      XX
+  w3      XX
+  w4      XX
+  w5      XX
+  w6      XX
+  w7      XX
+  w8      XX
+  w9      XX
+  w0      XX
+  wa      XX
+  wb      XX
+  wc      XX
+  wd      XX
+  we      XX
+  wf      XX
+  wg      XX
+  wh      XX
+  wi      XX
+  wj      XX
+  wk      XX
+  wl      XX
+  wm      XX
+  wn      XX
+  wo      XX
+  wp      XX
+  wq      XX
+  wr      XX
+  ws      XX
+  wt      XX
+  wu      XX
+  wv      XX
+  ww      XX
+  wx      XX
+  wy      XX
+  wz      XX
+  why     XX
+  weq     XX
+  wdb     XX
+  wob     XX
+  wcb     XX
+  wsc     XX
+  wqu     XX
+  wbl     XX
+  wcm     XX
+  wpe     XX
+  wsl     XX
+  wret    XX
+  wspc    XX
+  wkR     XX
+  wkE     XX
+  wkQ     XX
+  wkC     XX
+  wkO     XX
+  wkT     XX
+  wkS     XX
+  wkW     XX
+
+  z1      XX
+  z2      XX
+  z3      XX
+  z4      XX
+  z5      XX
+  z6      XX
+  z7      XX
+  z8      XX
+  z9      XX
+  z0      XX
+  za      XX
+  zb      XX
+  zc      XX
+  zd      XX
+  ze      XX
+  zf      XX
+  zg      XX
+  zh      XX
+  zi      XX
+  zj      XX
+  zk      XX
+  zl      XX
+  zm      XX
+  zn      XX
+  zo      XX
+  zp      XX
+  zq      XX
+  zr      XX
+  zs      XX
+  zt      XX
+  zu      XX
+  zv      XX
+  zw      XX
+  zx      XX
+  zy      XX
+  zz      XX
+  zhy     XX
+  zeq     XX
+  zdb     XX
+  zob     XX
+  zcb     XX
+  zsc     XX
+  zqu     XX
+  zbl     XX
+  zcm     XX
+  zpe     XX
+  zsl     XX
+  zret    XX
+  zspc    XX
+  zkR     XX
+  zkE     XX
+  zkQ     XX
+  zkC     XX
+  zkO     XX
+  zkT     XX
+  zkS     XX
+  zkW     XX
+
+  zS1     XX
+  zS2     XX
+  zS3     XX
+  zS4     XX
+  zS5     XX
+  zS6     XX
+  zS7     XX
+  zS8     XX
+  zS9     XX
+  zS0     XX
+  zSa     XX
+  zSb     XX
+  zSc     XX
+  zSd     XX
+  zSe     XX
+  zSf     XX
+  zSg     XX
+  zSh     XX
+  zSi     XX
+  zSj     XX
+  zSk     XX
+  zSl     XX
+  zSm     XX
+  zSn     XX
+  zSo     XX
+  zSp     XX
+  zSq     XX
+  zSr     XX
+  zSs     XX
+  zSt     XX
+  zSu     XX
+  zSv     XX
+  zSw     XX
+  zSx     XX
+  zSy     XX
+  zSz     XX
+  zShy    XX
+  zSeq    XX
+  zSdb    XX
+  zSob    XX
+  zScb    XX
+  zSsc    XX
+  zSqu    XX
+  zSbl    XX
+  zScm    XX
+  zSpe    XX
+  zSsl    XX
+  zSret   XX
+  zSspc   XX
+  zSkR    XX
+  zSkE    XX
+  zSkQ    XX
+  zSkC    XX
+  zSkO    XX
+  zSkT    XX
+  zSkS    XX
+  zSkW    XX
 )
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
