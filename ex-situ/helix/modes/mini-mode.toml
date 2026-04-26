@@ -1,15 +1,92 @@
 ####################################################################################################
 
-[keys.insert.j]
-j = "normal_mode"
+[keys.insert.","]
+"," = "normal_mode"
 
 ####################################################################################################
 
-[keys.normal."space"]
-r = ":config-reload"
+[keys.normal."["]
+"[" = "goto_prev_entry"
+ret = "open_above"
+n = "move_parent_node_start"
+space = "select_prev_sibling"
+e = "no_op"
+
+[keys.normal."]"]
+"]" = "goto_next_entry"
+ret = "open_below"
+n = "move_parent_node_end"
+space = "select_next_sibling"
+e = "no_op"
+
+
+####################################################################################################
+
+[keys.normal.";"]
+ret = "shell_pipe"
+"\\" = "shell_pipe_to"
+i = "shell_insert_output"
+a = "shell_append_output"
+k = "shell_keep_pipe"
+
+
+####################################################################################################
+
+[keys.normal."'"]
+"'" = "match_brackets"
+a = "select_textobject_around"
+s = "select_textobject_inner"
+z = "surround_add"
+c = "surround_replace"
+x = "surround_delete"
+
+
+####################################################################################################
+
+[keys.normal."\\"]
+"`" = "goto_prev_diag"
+C-S-F12 = "goto_next_diag"
+ret = "workspace_diagnostics_picker"
+"\\" = "diagnostics_picker"
+
+
+####################################################################################################
+
+[keys.normal."/"]
+"/" = "collapse_selection"
+"[" = "select_all_siblings"
+"]" = "select_all_children"
+"'" = "merge_selections"
+"\"" = "merge_consecutive_selections"
+"\\" = "keep_primary_selection"
+ret = "split_selection_on_newline"
+space = "flip_selections"
+a = "align_selections"
+s = "select_regex"
+d = "remove_primary_selection"
+f = "keep_selections"
+z = "shrink_to_line_bounds"
+x = "trim_selections"
+c = "remove_selections"
+j = "copy_selection_on_next_line"
+k = "copy_selection_on_prev_line"
+
+
+####################################################################################################
+
+[keys.normal.ret]
+C-S-F12 = "jump_forward"
+"`" = "jump_backward"
+space = "save_selection"
+ret = "jumplist_picker"
+
+####################################################################################################
+
+[keys.normal.space]
+"`" = ":buffer-close!"
 ";" = ":lsp-restart"
 ret = "command_palette"
-"`" = ":buffer-close!"
+r = ":config-reload"
 l = ":log-open"
 
 a = "no_op"
@@ -47,80 +124,16 @@ A-c = "no_op"
 
 ####################################################################################################
 
-[keys.normal."/"]
-"/" = "match_brackets"
-z = "surround_add"
-c = "surround_replace"
-x = "surround_delete"
-a = "select_textobject_around"
-s = "select_textobject_inner"
-
-####################################################################################################
-
-[keys.normal."'"]
-s = "select_regex"
-ret = "split_selection_on_newline"
-"/" = "merge_selections"
-"?" = "merge_consecutive_selections"
-"a" = "align_selections"
-"x" = "trim_selections"
-"'" = "collapse_selection"
-"space" = "flip_selections"
-"\\" = "keep_primary_selection"
-d = "remove_primary_selection"
-j = "copy_selection_on_next_line"
-k = "copy_selection_on_prev_line"
-z = "shrink_to_line_bounds"
-f = "keep_selections"
-c = "remove_selections"
-"[" = "select_all_siblings"
-"]" = "select_all_children"
-
-####################################################################################################
-
-[keys.normal."["]
-"[" = "goto_prev_entry"
-"ret" = "open_above"
-"n" = "move_parent_node_start"
-"space" = "select_prev_sibling"
-e = "no_op"
-
-[keys.normal."]"]
-"]" = "goto_next_entry"
-"ret" = "open_below"
-"n" = "move_parent_node_end"
-"space" = "select_next_sibling"
-e = "no_op"
-
-####################################################################################################
-
-[keys.normal.";"]
-ret = "shell_pipe"
-"\\" = "shell_pipe_to"
-i = "shell_insert_output"
-a = "shell_append_output"
-k = "shell_keep_pipe"
-
-####################################################################################################
-
-[keys.normal."\\"]
-up =  "goto_prev_diag"
-down =  "goto_next_diag"
-ret =  "workspace_diagnostics_picker"
-"\\" =  "diagnostics_picker"
-
-####################################################################################################
-
 [keys.normal.z]
 # _ = "goto_declaration"
 z = "symbol_picker"
-n = "rename_symbol"
-r = "goto_reference"
-d = "goto_definition"
-i = "goto_implementation"
-t = "goto_type_definition"
 A-ret = "code_action"
 ret = "workspace_symbol_picker"
+n = "rename_symbol"
+d = "goto_definition"
+i = "goto_implementation"
+r = "goto_reference"
+t = "goto_type_definition"
 D = ["vsplit", "goto_definition"]
 I = ["vsplit", "goto_implementation"]
 R = ["vsplit", "goto_reference"]
