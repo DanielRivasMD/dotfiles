@@ -4,7 +4,7 @@
         bind "Ctrl Shift F1" { MoveTab "Left"; }
         bind "Ctrl Shift F2" { MoveTab "Right"; }
 
-        bind "Ctrl Shift F12" { EditScrollback; SwitchToMode "Normal"; }
+        bind "Shift F4" { EditScrollback; SwitchToMode "Normal"; }
         bind "Ctrl Shift F6" { SwitchToMode "Locked"; }
         bind "Shift F10" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl F1" { MoveFocus "Left"; }
