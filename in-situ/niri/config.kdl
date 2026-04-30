@@ -406,10 +406,10 @@ binds {
     // Mod+Down  { focus-window-down; }
     // Mod+Up    { focus-window-up; }
     // Mod+Right { focus-column-right; }
-    Ctrl+Alt+Super+BracketLeft  { focus-column-left; }
+    Ctrl+Alt+Super+Left  { focus-column-left; }
     // Ctrl+Alt+Super+J     { focus-window-down; }
     // Ctrl+Alt+Super+K     { focus-window-up; }
-    Ctrl+Alt+Super+BracketRight { focus-column-right; }
+    Ctrl+Alt+Super+Right { focus-column-right; }
 
     // Mod+Ctrl+Left  { move-column-left; }
     // Mod+Ctrl+Down  { move-window-down; }
@@ -432,19 +432,19 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Ctrl+Alt+Super+Left  { focus-monitor-left; }
+    Ctrl+Alt+Super+BracketLeft  { focus-monitor-left; }
     // Ctrl+Alt+Super+Down  { focus-monitor-down; }
     // Ctrl+Alt+Super+Up    { focus-monitor-up; }
-    Ctrl+Alt+Super+Right { focus-monitor-right; }
+    Ctrl+Alt+Super+BracketRight { focus-monitor-right; }
     // Ctrl+Alt+Super+H     { focus-monitor-left; }
     // Ctrl+Alt+Super+J     { focus-monitor-down; }
     // Ctrl+Alt+Super+K     { focus-monitor-up; }
     // Ctrl+Alt+Super+L     { focus-monitor-right; }
 
-    Shift+Ctrl+Alt+Super+Left  { move-window-to-monitor-left; }
+    Shift+Ctrl+Alt+Super+BracketLeft  { move-window-to-monitor-left; }
     // Shift+Ctrl+Alt+Super+Down  { move-window-to-monitor-down; }
     // Shift+Ctrl+Alt+Super+Up    { move-window-to-monitor-up; }
-    Shift+Ctrl+Alt+Super+Right { move-window-to-monitor-right; }
+    Shift+Ctrl+Alt+Super+BracketRight { move-window-to-monitor-right; }
     // Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
     // Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
@@ -557,12 +557,12 @@ binds {
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Ctrl+Alt+Super+F { maximize-column; }
+    // Ctrl+Alt+Super+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Ctrl+Alt+Super+F { expand-column-to-available-width; }
+    Ctrl+Alt+Super+D { expand-column-to-available-width; }
 
     Ctrl+Alt+Super+G { center-column; }
 
