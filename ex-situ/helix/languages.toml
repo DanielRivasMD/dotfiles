@@ -22,7 +22,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "awk"
-source = { git = "https://github.com/Beaglefoot/tree-sitter-awk", rev = "master" }
+source = { git = "https://github.com/Beaglefoot/tree-sitter-awk", rev = "a799bc5da7c2a84bc9a06ba5f3540cf1191e4ee3" }
 
 ####################################################################################################
 ####################################################################################################
@@ -73,7 +73,7 @@ indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "bash"
-source = { git = "https://github.com/tree-sitter/tree-sitter-bash", rev = "master" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-bash", rev = "275effdfc0edce774acf7d481f9ea195c6c403cd" }
 
 ####################################################################################################
 ####################################################################################################
@@ -112,7 +112,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "dockerfile"
-source = { git = "https://github.com/camdencheek/tree-sitter-dockerfile", rev = "main" }
+source = { git = "https://github.com/camdencheek/tree-sitter-dockerfile", rev = "7af32bc04a66ab196f5b9f92ac471f29372ae2ce" }
 
 ####################################################################################################
 ####################################################################################################
@@ -152,7 +152,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "git-commit"
-source = { git = "https://github.com/the-mikedavis/tree-sitter-git-commit", rev = "main" }
+source = { git = "https://github.com/the-mikedavis/tree-sitter-git-commit", rev = "318dd72abfaa7b8044c1d1fbeabcd06deaaf038f" }
 
 [[language]]
 name = "git-diff"
@@ -165,7 +165,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "git-diff"
-source = { git = "https://github.com/the-mikedavis/tree-sitter-git-diff", rev = "main" }
+source = { git = "https://github.com/the-mikedavis/tree-sitter-git-diff", rev = "c12e6ecb54485f764250556ffd7ccb18f8e2942b" }
 
 [[language]]
 name = "git-rebase"
@@ -178,7 +178,7 @@ indent = { tab-width = 2, unit = " " }
 
 [[grammar]]
 name = "git-rebase"
-source = { git = "https://github.com/the-mikedavis/tree-sitter-git-rebase", rev = "main" }
+source = { git = "https://github.com/the-mikedavis/tree-sitter-git-rebase", rev = "332dc528f27044bc4427024dbb33e6941fc131f2" }
 
 [[language]]
 name = "git-config"
@@ -191,7 +191,7 @@ indent = { tab-width = 2, unit = "\t" }
 
 [[grammar]]
 name = "git-config"
-source = { git = "https://github.com/the-mikedavis/tree-sitter-git-config", rev = "main" }
+source = { git = "https://github.com/the-mikedavis/tree-sitter-git-config", rev = "0e4f0baf90b57e5aeb62dcdbf03062c6315d43ea" }
 
 [[language]]
 name = "git-attributes"
@@ -204,7 +204,7 @@ grammar = "gitattributes"
 
 [[grammar]]
 name = "gitattributes"
-source = { git = "https://github.com/mtoohey31/tree-sitter-gitattributes", rev = "main" }
+source = { git = "https://github.com/mtoohey31/tree-sitter-gitattributes", rev = "3dd50808e3096f93dccd5e9dc7dc3dba2eb12dc4" }
 
 [[language]]
 name = "git-ignore"
@@ -217,7 +217,7 @@ grammar = "gitignore"
 
 [[grammar]]
 name = "gitignore"
-source = { git = "https://github.com/shunsambongi/tree-sitter-gitignore", rev = "main" }
+source = { git = "https://github.com/shunsambongi/tree-sitter-gitignore", rev = "f4685bf11ac466dd278449bcfe5fd014e94aa504" }
 
 [language-server.typos-lsp]
 command = "typos-lsp"
@@ -383,7 +383,7 @@ formatter = { command = "jq", args = ["."] }
 
 [[grammar]]
 name = "json"
-source = { git = "https://github.com/tree-sitter/tree-sitter-json", rev = "master" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-json", rev = "65bceef69c3b0f24c0b19ce67d79f57c96e90fcb" }
 
 ####################################################################################################
 ####################################################################################################
@@ -408,7 +408,7 @@ diagnostic-severity = "hint"
 
 [[grammar]]
 name = "julia"
-source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "fc60b7cce87da7a1b7f8cb0f9371c3dc8b684500" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "e0f9dcd180fdcfcfa8d79a3531e11d99e79321d3" }
 
 ####################################################################################################
 ####################################################################################################
@@ -576,7 +576,7 @@ formatter = { command = "ruff", args = ["format", "-"] }
 
 [[grammar]]
 name = "python"
-source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "master" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "de221eccf9a221f5b85474a553474a69b4b5784d" }
 
 ####################################################################################################
 ####################################################################################################
@@ -610,7 +610,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "r"
-source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "main" }
+source = { git = "https://github.com/r-lib/tree-sitter-r", rev = "cc04302e1bff76fa02e129f332f44636813b0c3c" }
 
 [[language]]
 name = "rmarkdown"
@@ -722,7 +722,7 @@ args = { attachCommands = [
 
 [[grammar]]
 name = "rust"
-source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "master" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "1f63b33efee17e833e0ea29266dd3d713e27e321" }
 
 ####################################################################################################
 ####################################################################################################
@@ -743,7 +743,7 @@ language-servers = ["scala_lsp"]
 
 [[grammar]]
 name = "scala"
-source = { git = "https://github.com/tree-sitter/tree-sitter-scala", rev = "master" }
+source = { git = "https://github.com/tree-sitter/tree-sitter-scala", rev = "0a3dd53a7fc4b352a538397d054380aaa28be54c" }
 
 ####################################################################################################
 ####################################################################################################
@@ -808,7 +808,7 @@ indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
 name = "toml"
-source = { git = "https://github.com/ikatyang/tree-sitter-toml", rev = "master" }
+source = { git = "https://github.com/ikatyang/tree-sitter-toml", rev = "7cff70bbcbbc62001b465603ca1ea88edd668704" }
 
 ####################################################################################################
 ####################################################################################################
@@ -830,6 +830,6 @@ injection-regex = "yml|yaml"
 
 [[grammar]]
 name = "yaml"
-source = { git = "https://github.com/ikatyang/tree-sitter-yaml", rev = "master" }
+source = { git = "https://github.com/ikatyang/tree-sitter-yaml", rev = "0e36bed171768908f331ff7dff9d956bae016efb" }
 
 ####################################################################################################
