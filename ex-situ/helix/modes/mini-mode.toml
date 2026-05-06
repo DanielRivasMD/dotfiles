@@ -7,15 +7,15 @@
 
 [keys.normal."["]
 "[" = "goto_prev_entry"
+"\\" = "move_parent_node_start"
 ret = "open_above"
-n = "move_parent_node_start"
 space = "select_prev_sibling"
 e = "no_op"
 
 [keys.normal."]"]
 "]" = "goto_next_entry"
+"\\" = "move_parent_node_end"
 ret = "open_below"
-n = "move_parent_node_end"
 space = "select_next_sibling"
 e = "no_op"
 
@@ -23,11 +23,11 @@ e = "no_op"
 ####################################################################################################
 
 [keys.normal.";"]
-ret = "shell_pipe"
+"[" = "shell_insert_output"
+"]" = "shell_append_output"
+";" = "shell_keep_pipe"
 "\\" = "shell_pipe_to"
-i = "shell_insert_output"
-a = "shell_append_output"
-k = "shell_keep_pipe"
+ret = "shell_pipe"
 
 
 ####################################################################################################
@@ -54,11 +54,13 @@ ret = "workspace_diagnostics_picker"
 
 [keys.normal."/"]
 "/" = "collapse_selection"
-"[" = "select_all_siblings"
-"]" = "select_all_children"
 "'" = "merge_selections"
 "\"" = "merge_consecutive_selections"
 "\\" = "keep_primary_selection"
+"," = "select_all_siblings"
+"." = "select_all_children"
+";" = "goto_column"
+C-S-F12 = "goto_line"
 ret = "split_selection_on_newline"
 space = "flip_selections"
 a = "align_selections"
