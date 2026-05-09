@@ -12,8 +12,12 @@ layout {
         children
     }
 
-    tab name="Factorem" focus=true {
-        pane name="canvas" focus=true
+    tab name="Hub" focus=true {
+        pane stacked=true split_direction="horizontal" {
+            pane name="lab" focus=true
+            pane name="grid"
+            pane name="canvas"
+        }
     }
 }
 
