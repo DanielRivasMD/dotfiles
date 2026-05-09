@@ -1,35 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-pane_frames false
-layout_dir "~/.config/zellij/layouts/"
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-ui {
-    pane_frames {
-        hide_session_name true
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-load_plugins {
-    zellij-pane-picker
-}
-
-plugins {
-    tab-bar { path "tab-bar"; }
-    status-bar { path "status-bar"; }
-    strider { path "strider"; }
-    compact-bar { path "compact-bar"; }
-    zellij-pane-picker location="https://github.com/shihanng/zellij-pane-picker/releases/download/v0.6.0/zellij-pane-picker.wasm" {
-        list_panes ""
-        plugin_select_down "Down"
-        plugin_select_up "Up"
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 keybinds clear-defaults=true {
     shared_except "normal" "locked" {
@@ -118,3 +86,38 @@ keybinds clear-defaults=true {
     }
 
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+pane_frames false
+layout_dir "~/.config/zellij/layouts/"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ui {
+    pane_frames {
+        hide_session_name true
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+load_plugins {
+    zellij-pane-picker
+}
+
+plugins {
+    tab-bar { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    strider { path "strider"; }
+    compact-bar { path "compact-bar"; }
+    zellij-pane-picker location="https://github.com/shihanng/zellij-pane-picker/releases/download/v0.6.0/zellij-pane-picker.wasm" {
+        list_panes ""
+        previous_star "Alt Shift F7"
+        next_star "Alt Shift F8"
+        navigate_back ""
+        plugin_select_down "Down"
+        plugin_select_up "Up"
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
