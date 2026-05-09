@@ -24,6 +24,9 @@ plugins {
     compact-bar { path "compact-bar"; }
     zellij-pane-picker location="https://github.com/shihanng/zellij-pane-picker/releases/download/v0.6.0/zellij-pane-picker.wasm" {
         list_panes ""
+        previous_star "Alt Shift F7"
+        next_star "Alt Shift F8"
+        navigate_back ""
         plugin_select_down "Down"
         plugin_select_up "Up"
     }
