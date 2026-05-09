@@ -47,8 +47,8 @@ export configDir="${homeDir}/.config"
 export zshCompDir="${configDir}/zsh_completion"
 export localShareDir="${homeDir}/.local/share"
 export completionHomeDir="${homeDir}/.completion"
-export forkedDir="${homeDir}/Forked"
-export linkedDir="${homeDir}/Linked"
+export prismDir="${homeDir}/prism"
+export dockDir="${homeDir}/dock"
 export appSupportDir="${homeDir}/Library/Application Support"
 
 if [[ -n "$IS_MACOS" ]]; then

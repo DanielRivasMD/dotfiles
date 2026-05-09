@@ -77,7 +77,7 @@ link_config "${completionHomeDir}/eza/completions/zsh/_eza" "${zshCompDir}/_eza"
 link_config "${completionHomeDir}/watchexec/completions/zsh" "${zshCompDir}/_watchexec" "watchexec"
 link_config "${completionDotDir}/_jlang" "${zshCompDir}/_jlang" "jlang"
 link_config "${completionDotDir}/_tldr" "${zshCompDir}/_tldr" "tldr"
-link_config "${linkedDir}/todo_r/target/release/todor" "${homeDir}/.cargo/bin" "todor"
+link_config "${dockDir}/todo_r/target/release/todor" "${homeDir}/.cargo/bin" "todor"
 
 echo ''
 generate_completion "atuin gen-completions --shell zsh" "_atuin"
