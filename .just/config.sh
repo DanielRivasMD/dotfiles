@@ -57,7 +57,7 @@ if [[ -n "$IS_MACOS" ]]; then
   export lazynpmDir="${appSupportDir}/jesseduffield/lazynpm"
   export lazycliDir="${appSupportDir}/lazycli"
   export lazydockerDir="${appSupportDir}/lazydocker"
-  export ghosttyDir"${appSupportDir}/com.mitchellh.ghostty"
+  export ghosttyDir="${appSupportDir}/com.mitchellh.ghostty"
   export nuDir="${appSupportDir}/nushell"
 else
   export espansoDir="${localShareDir}/espanso"
@@ -76,7 +76,7 @@ export exSituDir="${dotfilesDir}/ex-situ"
 export inSilicoDir="${dotfilesDir}/in-silico"
 export completionDotDir="${dotfilesDir}/completions"
 
-# export naviDir="${appSupportDir}/navi"
+export naviDir="${appSupportDir}/navi"
 
 export zshCompDir="${configDir}/zsh_completion"
 
