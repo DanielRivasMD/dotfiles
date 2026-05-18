@@ -125,8 +125,6 @@ bindkey '^T' navi_widget
 
 [[ -f "$ZDOTDIR/zsh_helix.sh" ]] && source "$ZDOTDIR/zsh_helix.sh"
 
-[[ -f "$ZDOTDIR/zsh_kage.sh" ]] && source "$ZDOTDIR/zsh_kage.sh"
-
 ####################################################################################################
 # Utility Functions
 ####################################################################################################
