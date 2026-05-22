@@ -39,7 +39,7 @@ alias mp='moneypenny'
 ####################################################################################################
 
 # repl
-alias jl='julia --project'
+alias j='julia --project'
 
 ####################################################################################################
 # python
@@ -70,7 +70,11 @@ alias et='ea --tree --level 3 --ignore-glob ".git" --group-directories-first'
 alias hg='hgrep'
 
 # just
-alias j="just"
+alias js="just"
+alias je="just edit"
+alias ji="just install"
+alias jl="just list"
+alias js="just show"
 
 # lazycli
 alias lc='lazycli'
