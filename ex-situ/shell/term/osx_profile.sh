@@ -36,7 +36,7 @@ export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
 export ZELLIJ_CONFIG_FILE="$ZELLIJ_CONFIG_DIR/config.kdl"
 
 # Editor
-export VISUAL="micro"
+export VISUAL="hx"
 export EDITOR="$VISUAL"
 
 # Pager
