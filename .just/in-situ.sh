@@ -6,7 +6,7 @@
 
 ####################################################################################################
 
-for entry in "$inSituDir"/*; do
+for entry in "$localDir"/*; do
   [[ -d "$entry" ]] || continue
   name=${entry##*/}
   eval "export $name=\"$entry\""

@@ -71,9 +71,9 @@ fi
 
 export dotfilesDir="$(git rev-parse --show-toplevel 2>/dev/null)"
 export binDir="${dotfilesDir}/bin"
-export inSituDir="${dotfilesDir}/in-situ"
-export exSituDir="${dotfilesDir}/ex-situ"
-export inSilicoDir="${dotfilesDir}/in-silico"
+export localDir="${dotfilesDir}/local"
+export remoteDir="${dotfilesDir}/remote"
+export installDir="${dotfilesDir}/install"
 export completionDotDir="${dotfilesDir}/completions"
 
 export naviDir="${appSupportDir}/navi"
