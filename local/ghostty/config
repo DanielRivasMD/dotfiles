@@ -1,0 +1,85 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/drivas/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+#
+# Ghostty can reload the configuration while running by using the menu
+# options or the bound key (default: Command + Shift + comma on macOS and
+# Control + Shift + comma on other platforms). Not all config options can be
+# reloaded while running; some only apply to new windows and others may require
+# a full restart to take effect.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+font-family = Menlo
+font-size = 16
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+# keybind = ctrl+s>l=new_split:right
+keybind = shift+F1=previous_tab
+keybind = shift+F2=next_tab
+keybind = shift+F9=new_tab
+keybind = shift+F7=close_tab:this
+keybind = shift+alt+F11=scroll_page_up
+keybind = shift+alt+F12=scroll_page_down
+
+palette = 0=#3a3a3a
+palette = 1=#C40233
+palette = 2=#009F6B
+palette = 3=#FFD700
+palette = 4=#0087BD
+palette = 5=#9A4EAE
+palette = 6=#20B2AA
+palette = 7=#C6C6C4
+
+palette = 8=#696969
+palette = 9=#FF2400
+palette = 10=#03C03C
+palette = 11=#FDFF00
+palette = 12=#007FFF
+palette = 13=#FF1493
+palette = 14=#00CCCC
+palette = 15=#FFFAFA
+
+background = #10100E
+foreground = #C6C6C4
+
+cursor-color = #C6C6C4
+cursor-text = #10100E
+
+selection-background = #696969
+selection-foreground = #FFFAFA

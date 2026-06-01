@@ -1,0 +1,45 @@
+    shared_except "locked" {
+        bind "Ctrl q" { Quit; }
+
+        bind "Ctrl Shift F1" { MoveTab "Left"; }
+        bind "Ctrl Shift F2" { MoveTab "Right"; }
+
+        bind "Shift F4" { EditScrollback; SwitchToMode "Normal"; }
+        bind "Ctrl Shift F6" { SwitchToMode "Locked"; }
+        bind "Shift F10" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Ctrl F1" { MoveFocus "Left"; }
+        bind "Ctrl F2" { MoveFocus "Right"; }
+        bind "Ctrl F4" { MoveFocus "Up"; }
+        bind "Ctrl F5" { MoveFocus "Down"; }
+        bind "Ctrl F6" { CloseFocus; }
+        bind "Ctrl F7" { ToggleFocusFullscreen; }
+        bind "Ctrl F8" { NewPane "Right"; }
+        bind "Ctrl F9" { NewPane "Down"; }
+        bind "Ctrl F10" { SwitchToMode "RenamePane"; PaneNameInput 0; }
+        bind "Ctrl F11" { SwitchFocus; }
+
+        bind "Shift F1" { GoToPreviousTab; }
+        bind "Shift F2" { GoToNextTab; }
+        bind "Ctrl Shift F9" { TogglePaneEmbedOrFloating; }
+        bind "Ctrl Shift F11" { TogglePanePinned; }
+        bind "Ctrl Shift F7" { ToggleFloatingPanes; }
+        bind "Shift F8" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" { floating true; ignore_case true; }; }
+        bind "Shift F9" { NewTab; }
+        bind "Ctrl Shift F8" { BreakPane; }
+        bind "Shift F11" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "Shift F12" { ToggleTab; }
+        bind "Shift F7" { CloseTab; }
+        bind "Ctrl Shift F10" { ToggleActiveSyncTab; }
+        bind "Shift F5" { LaunchOrFocusPlugin "zellij-pane-picker" { floating true; move_to_focused_tab true; }; }
+
+        bind "Ctrl Shift F5" { Resize "Increase"; }
+        bind "Ctrl Shift F4" { Resize "Decrease"; }
+
+        bind "Alt Shift F11" { ScrollUp; }
+        bind "Alt Shift F12" { ScrollDown; }
+
+        bind "Alt F8" { MovePane "Left"; }
+        bind "Alt F9" { MovePane "Right"; }
+        bind "Alt F11" { MovePane "Up"; }
+        bind "Alt F12" { MovePane "Down"; }
+    }

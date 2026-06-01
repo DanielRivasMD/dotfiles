@@ -1,0 +1,91 @@
+####################################################################################################
+
+matches:
+
+  ####################################################################################################
+  # simple text replacement
+  ####################################################################################################
+
+  # mail
+  - trigger: ":mail:"
+    replace: "danielrivasmd@gmail.com"
+
+  - trigger: ":mail:"
+    replace: "danielrivasmd@yahoo.com"
+
+  # name
+  - trigger: ":dr:"
+    replace: "Daniel Rivas"
+
+  - trigger: ":name:"
+    replace: "Daniel Rivas"
+
+  - trigger: ":name:"
+    replace: "Salvador Daniel Rivas Carrillo"
+
+  - trigger: ":name:"
+    replace: "Salvador Daniel"
+
+  - trigger: ":name:"
+    replace: "Rivas Carrillo"
+
+  # address
+  - trigger: ":gdl:"
+    replace: "Manuel Azpiroz 1790"
+
+  - trigger: ":gdl:"
+    replace: "44260"
+
+  - trigger: ":gdl:"
+    replace: "Guadalajara"
+
+  # phone
+  - trigger: ":phone:"
+    replace: "3322192477"
+
+  - trigger: ":phone:"
+    replace: "767799639"
+
+  - trigger: ":phone:"
+    replace: "3793231690"
+
+  # id
+  - trigger: ":id:"
+    replace: "RICS870918RM4"
+
+  - trigger: ":id:"
+    replace: "RICS870918HJCVRL03"
+
+  - trigger: ":id:"
+    replace: "G27022251"
+
+  # links
+  - trigger: ":link:"
+    replace: "https://www.linkedin.com/in/daniel-rivas-b6306917b/"
+
+  - trigger: ":github:"
+    replace: "https://github.com/DanielRivasMD"
+
+  - trigger: ":schoolar:"
+    replace: "https://scholar.google.com/citations?user=zhiXeAsAAAAJ&hl=en"
+
+  # salutation
+  - trigger: ":sig:"
+    replace: "Cheers,"
+
+  - trigger: ":sig:"
+    replace: "Regards,"
+
+  - trigger: ":sig:"
+    replace: "Best regards,"
+
+  - trigger: ":sig:"
+    replace: "Sincerely,"
+
+  ####################################################################################################
+
+  # julia
+  - trigger: ":in:"
+    replace: " ∈ "
+
+####################################################################################################
