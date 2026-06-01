@@ -1,0 +1,36 @@
+####################################################################################################
+# k = black
+# r = red
+# g = green
+# y = yellow
+# b = blue
+# m = magenta
+# c = cyan
+# w = white
+# d = default, this will make the switch default to the bpython default theme
+####################################################################################################
+
+# TODO: update all colors
+[syntax]
+keyword = y
+name = c
+comment = b
+string = m
+error = r
+number = G
+operator = Y
+punctuation = y
+token = C
+paren = R
+
+####################################################################################################
+
+[interface]
+background = k
+output = w
+main = c
+prompt = G
+prompt_more = B
+right_arrow_suggestion = w
+
+####################################################################################################

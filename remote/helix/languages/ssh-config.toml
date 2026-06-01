@@ -1,0 +1,17 @@
+####################################################################################################
+# ssh-config
+####################################################################################################
+
+[[language]]
+name = "ssh-config"
+scope = "source.ssh-config"
+injection-regex = "ssh-config"
+file-types = ["ssh/config", "ssh_config"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "ssh-config"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config", rev = "master" }
+
+####################################################################################################

@@ -1,0 +1,24 @@
+####################################################################################################
+# kdl
+####################################################################################################
+
+[language-server.kdl-language-server]
+command = "kdl-lsp"
+
+[[language]]
+name = "kdl"
+scope = "source.kdl"
+injection-regex = "kdl"
+file-types = ["kdl"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["kdl-language-server"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+formatter = { command = "kdlfmt", args = ["format", "--stdin"] }
+
+[[grammar]]
+name = "kdl"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-kdl", rev = "master" }
+
+####################################################################################################

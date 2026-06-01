@@ -1,0 +1,94 @@
+####################################################################################################
+
+[editor]
+scrolloff = 3
+mouse = true
+rulers = [100]
+bufferline = "always"
+shell = ["sh", "-c"]
+
+path-completion = true
+continue-comments = false
+completion-replace = false
+cursorline = true
+cursorcolumn = true
+
+auto-completion = false
+auto-info = true
+auto-format = false
+
+color-modes = true
+
+end-of-line-diagnostics = "error"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.smart-tab]
+enable = false
+
+####################################################################################################
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+####################################################################################################
+
+[editor.cursor-shape]
+normal = "bar"
+insert = "underline"
+select = "block"
+
+####################################################################################################
+
+[editor.statusline]
+left = ["mode", "spinner", "diagnostics"]
+center = [
+	"file-modification-indicator",
+	"file-name",
+	"read-only-indicator",
+	"version-control",
+]
+right = [
+	"selections",
+	"position",
+	"primary-selection-length",
+	"file-encoding",
+	"file-type",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+
+####################################################################################################
+
+[editor.file-picker]
+hidden = false
+
+####################################################################################################
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
+
+####################################################################################################
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "␣"
+tab = "→"
+tabpad = "·"
+newline = "↵"
+
+####################################################################################################

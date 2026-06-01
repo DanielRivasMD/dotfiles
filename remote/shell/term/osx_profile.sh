@@ -1,0 +1,93 @@
+####################################################################################################
+# OSX Defaults
+####################################################################################################
+
+# Patch for screen Ctrl+Q issue (only if interactive terminal)
+if [ -t 0 ]; then
+  stty -ixon
+fi
+
+####################################################################################################
+# Language and Locale Settings
+####################################################################################################
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANGUAGE="en_US"
+
+####################################################################################################
+# Environment Anchors
+####################################################################################################
+
+export ZSH_COMPLETION="$HOME/.config/zsh_completion"
+
+####################################################################################################
+# Application Settings
+####################################################################################################
+
+# Bartib
+export BARTIB_FILE="$HOME/.config/bartib/db.bartib"
+
+# Starship
+export STARSHIP_CONFIG="$HOME/.config/starship/osx_starship.toml"
+
+# Zellij
+export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
+export ZELLIJ_CONFIG_FILE="$ZELLIJ_CONFIG_DIR/config.kdl"
+
+# Editor
+export VISUAL="micro"
+export EDITOR="$VISUAL"
+
+# Pager
+export PAGER="bat"
+export BAT_PAGER="less"
+export RCOLUMNS="${COLUMNS:-80}"
+
+# Terminal Width
+export MANWIDTH="175"
+
+# Less
+export LESSHISTFILE="-"
+
+####################################################################################################
+# PATH Setup
+####################################################################################################
+
+export GOPATH="$HOME/go"
+export GOROOT="$HOME/.go"
+export BUN_INSTALL="$HOME/.bun"
+
+path_additions=(
+  "$HOME/bin"
+  "$HOME/.cargo/bin"
+  "$GOPATH/bin"
+  "$HOME/.atuin/bin"
+  "$HOME/.juliaup/bin"
+  "$HOME/.python/bin"
+  "/usr/local/bin"
+  "/usr/local/sbin"
+  "/usr/local/mysql/bin"
+  "/opt/homebrew/opt/llvm/bin"
+  "/opt/homebrew/opt/openjdk/bin"
+  "$HOME/lab/dotfiles/bin"
+  "$HOME/lab/Avicenna/bin"
+)
+
+for dir in "${path_additions[@]}"; do
+  [[ -d "$dir" ]] && PATH="$dir:$PATH"
+done
+
+export PATH
+
+####################################################################################################
+# Runtime Sources
+####################################################################################################
+
+# Deno
+[[ -f "$HOME/.deno/env" ]] && source "$HOME/.deno/env"
+
+# Bun completions
+[[ -f "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
+
+####################################################################################################

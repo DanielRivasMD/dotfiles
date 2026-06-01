@@ -1,0 +1,19 @@
+####################################################################################################
+# json
+####################################################################################################
+
+[[language]]
+name = "json"
+scope = "source.json"
+injection-regex = "json"
+file-types = ["json"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+formatter = { command = "jq", args = ["."] }
+
+[[grammar]]
+name = "json"
+source = { git = "https://github.com/tree-sitter/tree-sitter-json", rev = "65bceef69c3b0f24c0b19ce67d79f57c96e90fcb" }
+
+####################################################################################################

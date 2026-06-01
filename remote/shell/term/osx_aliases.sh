@@ -1,0 +1,94 @@
+####################################################################################################
+# general aliases
+####################################################################################################
+
+# general aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias c='clear'
+
+####################################################################################################
+
+# increase verbosity
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+alias mk='mkdir -pv'
+
+####################################################################################################
+# go tool links
+####################################################################################################
+
+# lazy
+alias ld='lazydocker'
+alias lg='lazygit'
+alias lm='lazynpm'
+
+# micro
+alias mc='micro'
+
+# mmv
+alias mmv='mmv *'
+
+# moneypenny
+alias mp='moneypenny'
+
+####################################################################################################
+# julia
+####################################################################################################
+
+# repl
+alias j='julia --project'
+
+####################################################################################################
+# python
+####################################################################################################
+
+# enviroment
+alias activate='source venv/bin/activate'
+
+# package manager & repl
+alias pip='pip3'
+alias python='python3'
+
+####################################################################################################
+# rust tool links
+####################################################################################################
+
+# bat
+alias man='batman'
+
+# eza
+alias e='eza --header --long --icons --classify --git --group'
+alias ea='e --all'
+alias er='e --sort=newest'
+alias ear='ea --sort=newest'
+alias et='ea --tree --level 3 --ignore-glob ".git" --group-directories-first'
+
+# hgrep
+alias hg='hgrep'
+
+# just
+alias js="just"
+alias je="just edit"
+alias ji="just install"
+alias jl="just list"
+alias js="just show"
+
+# lazycli
+alias lc='lazycli'
+
+# samesame
+alias ss='samesame'
+
+# wordcrab
+alias wc='wordcrab'
+
+# yazi
+alias y=yazi
+
+# zoxide
+alias zz='z -'
+
+####################################################################################################

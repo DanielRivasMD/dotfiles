@@ -1,0 +1,144 @@
+####################################################################################################
+
+format                                       = '$all'
+
+add_newline                                  = false
+
+command_timeout                              = 3000
+
+[battery]
+disabled                                     = true
+
+[character]
+success_symbol                               = ' [∑](bold #1874CD)'
+error_symbol                                 = ' [χ](bold #8B0000)'
+vicmd_symbol                                 = ' [❮](bold #C2D94C)'
+
+[cmd_duration]
+min_time                                     = 50
+format                                       = ' [$duration](bold #FFC125)'
+
+[directory]
+truncation_length                            = 2
+truncate_to_repo                             = true
+format                                       = '[$path](#00CED1)'
+
+[env_var]
+variable                                     = 'STARSHIP_SHELL'
+default                                      = 'unknown shell'
+format                                       = ' [$env_value](bold #778899)'
+disabled                                     = true
+
+[hostname]
+ssh_only                                     = true
+format                                       = '⟪[$hostname](#B452CD)⟫ '
+disabled                                     = false
+
+[jobs]
+symbol                                       = ' ⁂'
+number_threshold                             = 2
+symbol_threshold                             = 1
+format                                       = "[$symbol $number]($style)"
+style                                        = '#00CED1'
+
+[line_break]
+disabled                                     = true
+
+[package]
+format                                       = ' [](#95E6CB)  [$version](#ACACAC)'
+
+[status]
+format                                       = ' [$status](#8B0000)'
+disabled                                     = false
+
+[username]
+disabled                                     = true
+
+####################################################################################################
+
+[shell]
+bash_indicator = ' β'
+unknown_indicator = ' ん'
+zsh_indicator = ''
+format = '[$indicator](#4EA24E)'
+disabled = false
+
+####################################################################################################
+
+[git_branch]
+truncation_length                            = 13
+truncation_symbol                            = ''
+format                                       = ' [[](bold #778899) $branch](#4EA24E) '
+
+[git_commit]
+commit_hash_length                           = 4
+format                                       = ' [($hash)()](bold #4EA24E) '
+
+[git_state]
+# progress_divider                             = '|'
+# style                                        = 'bold #FFC125'
+
+[git_status]
+ahead                                        = ' [⇡](#1874CD)[${count}](#bebebe)'
+behind                                       = ' [⇣](#8B0000)[${count}](#bebebe)'
+diverged                                     = ' [](#FFC125)[⇡](#1874CD)[${ahead_count}](#bebebe)[⇣](#8B0000)[${behind_count}](#bebebe)'
+conflicted                                   = ' [](#8B0000)[${count}](#bebebe)'
+untracked                                    = ' [☋](#8B0000)[${count}](#bebebe)'
+stashed                                      = ' [♅](#1874CD)[${count}](#bebebe)'
+modified                                     = ' [⨕](#FFC125)[${count}](#bebebe)'
+staged                                       = ' [☊](#95E6CB)[${count}](#bebebe)'
+renamed                                      = ' [⇌](#FFC125)[${count}](#bebebe)'
+deleted                                      = ' [⌀](#8B0000)[${count}](#bebebe)'
+
+format                                       = '([\[$ahead_behind$all_status \]](bold #bebebe))'
+
+####################################################################################################
+
+[docker_context]
+format                                       = ' [ $context](bold #1874CD)'
+
+[kubernetes]
+format                                       = ' [☸](#00CED1) [$version](bold #ACACAC)'
+disabled                                     = false
+[kubernetes.context_aliases]
+'dev.local.cluster.k8s'                      = 'dev'
+
+####################################################################################################
+
+[deno]
+format                                       = ' [🦕](#00CED1) [$version](bold #ACACAC)'
+
+[golang]
+format                                       = ' [🐾](#00CED1) [$version](bold #ACACAC)'
+
+[java]
+format                                       = ' [☕](#8B0000)[$version](bold #ACACAC)'
+
+[julia]
+format                                       = ' [ஃ](#9C4C9C) [$version](bold #ACACAC)'
+
+[lua]
+format                                       = ' [](#708090) [$version](bold #ACACAC)'
+
+[nodejs]
+format                                       = ' [](#1874CD) [$version](bold #ACACAC)'
+
+[perl]
+format                                       = ' [♘](#708090) [$version](bold #ACACAC)'
+
+[python]
+format                                       = ' [⚕](#228B22) [$version](bold #ACACAC) [$virtualenv](#FFC125)'
+
+[rlang]
+format                                       = ' [♜](#708090) [$version](bold #ACACAC)'
+
+[ruby]
+format                                       = ' [♦](#8B0000) [$version](bold #ACACAC)'
+
+[rust]
+format                                       = ' [⚙️](#CD6600) [$version](bold #ACACAC)'
+
+[vagrant]
+format                                       = ' [⍱](#00FFFF) [$version](bold #ACACAC)'
+
+####################################################################################################

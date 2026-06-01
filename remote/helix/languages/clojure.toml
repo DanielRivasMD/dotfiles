@@ -1,0 +1,23 @@
+####################################################################################################
+# clojure
+####################################################################################################
+
+[language-server.clojure-lsp]
+command = "clojure-lsp"
+
+[[language]]
+name = "clojure"
+scope = "source.clojure"
+file-types = ["clj", "cljs", "cljc", "edn"]
+roots = ["deps.edn", "project.clj", "build.boot", "shadow-cljs.edn"]
+auto-format = true
+indent = { tab-width = 2, unit = "\t" }
+language-servers = ["clojure-lsp"]
+
+formatter = { command = "zprint", args = ['{:width 150}'] }
+
+[[grammar]]
+name = "clojure"
+source = { git = "https://github.com/sogaiu/tree-sitter-clojure", rev = "master" }
+
+####################################################################################################
