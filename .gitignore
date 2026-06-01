@@ -16,44 +16,44 @@ log
 deprecated/
 
 ####################################################################################################
-# ex-situ
+# remote
 ####################################################################################################
 
 # helix
-ex-situ/helix/runtime/grammars
+remote/helix/runtime/grammars
 
 # automatically generated
-ex-situ/helix/modes/common.toml
-ex-situ/helix/modes/insert.toml
-ex-situ/helix/modes/normal.toml
-ex-situ/helix/modes/select.toml
+remote/helix/modes/common.toml
+remote/helix/modes/insert.toml
+remote/helix/modes/normal.toml
+remote/helix/modes/select.toml
 
 # micro
-ex-situ/micro/backups
-ex-situ/micro/buffers
-ex-situ/micro/plug
+remote/micro/backups
+remote/micro/buffers
+remote/micro/plug
 
 # nu history
-ex-situ/shell/nu/history.txt
+remote/shell/nu/history.txt
 
 # sqlite history
-ex-situ/litecli/history
+remote/litecli/history
 
 ####################################################################################################
-# in-situ
+# local
 ####################################################################################################
 
 # automatically generated
-in-situ/alacritty/alacritty.toml
+local/alacritty/alacritty.toml
 
 # atuin
-in-situ/atuin/history*
-in-situ/atuin/key
+local/atuin/history*
+local/atuin/key
 
 # niri
-in-situ/niri/dms
+local/niri/dms
 
 # zellij plugins
-in-situ/zellij/plugins
+local/zellij/plugins
 
 ####################################################################################################
