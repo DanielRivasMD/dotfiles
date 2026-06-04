@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-theme "nightfox"
+theme "kanagawa"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -12,10 +12,8 @@ layout {
         children
     }
 
-    tab name="Hub" focus=true {
+    tab name="Canvas" focus=true {
         pane stacked=true split_direction="horizontal" {
-            pane name="lab" focus=true
-            pane name="grid"
             pane name="canvas"
         }
     }
