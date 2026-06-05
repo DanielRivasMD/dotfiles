@@ -22,9 +22,9 @@ maintain
     ├── .just/                  # Justfile auxiliary scripts
     ├── completions/            # Shell completion definitions
     ├── deprecated/             # Archived configs or plugins
-    ├── ex-situ/                # External configs
-    ├── in-situ/                # Internal configs
-    ├── in-silico/              # Installation instructions
+    ├── remote/                 # Remote configs
+    ├── local/                  # Local configs
+    ├── install/                # Installation instructions
 
 # Profiles
 
