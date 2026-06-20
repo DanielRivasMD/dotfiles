@@ -110,8 +110,8 @@ generate_completion "moneypenny completion zsh" "_moneypenny"
 generate_completion "richelieu completion zsh" "_richelieu"
 generate_completion "tab completion zsh" "_tab"
 generate_completion "sisu completion zsh" "_sisu"
+generate_completion "x completion zsh" "_x"
 generate_completion "zenith completion zsh" "_zenith"
-generate_completion "zero completion zsh" "_zero"
 sep
 
 ####################################################################################################
