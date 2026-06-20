@@ -40,14 +40,14 @@ map <a-c> copyCurrentUrl
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" " navigation
-" map <a-f9> scrollUp
-" map <a-f10> scrollDown
-" map <a-down> scrollFullPageDown
-" map <a-up> scrollFullPageUp
-" map <m-down> scrollToBottom
-" map <m-up> scrollToTop
-" map <a-r> reload
+" navigation
+map <a-f8> scrollUp
+map <a-f9> scrollDown
+map <a-down> scrollFullPageDown
+map <a-up> scrollFullPageUp
+map <m-down> scrollToBottom
+map <m-up> scrollToTop
+map <a-r> reload
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
