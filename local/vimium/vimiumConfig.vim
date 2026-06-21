@@ -6,9 +6,9 @@ unmapAll
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " links
-map <a-f1> LinkHints.activateModeToOpenInNewTab
+map <a-f1> LinkHints.activateModeToOpenInNewForegroundTab
 map <a-f2> LinkHints.activateMode
-map <a-f3> LinkHints.activateModeToOpenInNewForegroundTab
+map <a-f3> LinkHints.activateModeToOpenInNewTab
 map <a-f4> LinkHints.activateModeToDownloadLink
 map <a-f5> LinkHints.activateModeToCopyLinkUrl
 map <a-f6> LinkHints.activateModeWithQueue
