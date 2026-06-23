@@ -680,6 +680,9 @@ indent = { tab-width = 4, unit = "\t" }
 persistent-diagnostic-sources = ["rustc", "clippy"]
 
 [language.auto-pairs]
+'(' = ')'
+'[' = ']'
+'{' = '}'
 '<' = '>'
 
 [language.debugger]
