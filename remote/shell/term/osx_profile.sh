@@ -72,6 +72,7 @@ path_additions=(
   "/opt/homebrew/opt/openjdk/bin"
   "$HOME/lab/dotfiles/bin"
   "$HOME/lab/Avicenna/bin"
+  "$HOME/lab/Mera/bin"
 )
 
 for dir in "${path_additions[@]}"; do
