@@ -41,6 +41,7 @@ case "$os" in
       postgresql  # PostgreSQL DB
       sqlite      # SQLite engine
       starship    # shell prompt
+      wget        # get tool
       zprint      # Clojure pretty printer
     )
 
