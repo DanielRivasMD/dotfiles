@@ -71,6 +71,7 @@ alias hg='hgrep'
 
 # just
 alias js="just"
+alias jb="just build"
 alias je="just edit"
 alias ji="just install"
 alias jl="just list"
