@@ -89,6 +89,7 @@ CRATES=(
   "typos-cli"                                                                 # terminal spelling
   "viu"                                                                       # terminal image viewer
   "watchexec-cli --locked"                                                    # watch & run commands
+  "wasm-pack"                                                                 # wasm builder
   "wordcrab"                                                                  # dictionary CLI
   "xan --locked"                                                              # CSV magician
   "xcp"                                                                       # parallel copy
