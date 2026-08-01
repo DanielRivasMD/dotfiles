@@ -24,19 +24,19 @@ atreplinit() do repl
 
     ####################################################################################################
 
-    try
-      @eval using Revise
-    catch err
-      @warn "Error initializing Revise" exception = (err, catch_backtrace())
-    end
+    # try
+    #   @eval using Revise
+    # catch err
+    #   @warn "Error initializing Revise" exception = (err, catch_backtrace())
+    # end
 
     ####################################################################################################
 
-    try
-      @eval using Debugger
-    catch err
-      @warn "Error initializing Debugger" exception = (err, catch_backtrace())
-    end
+    # try
+    #   @eval using Debugger
+    # catch err
+    #   @warn "Error initializing Debugger" exception = (err, catch_backtrace())
+    # end
 
     ####################################################################################################
 
