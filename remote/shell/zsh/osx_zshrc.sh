@@ -171,3 +171,23 @@ if [[ -z "$ZELLIJ" ]]; then
 fi
 
 ####################################################################################################
+
+# Auto‑rename Zellij pane to the current command/function name
+if [[ -n $ZELLIJ ]]; then
+  autoload -Uz add-zsh-hook
+
+  _zellij_preexec() {
+    # rename pane to just the command name (function or binary)
+    zellij action rename-pane "${1%% *}"
+  }
+
+  _zellij_precmd() {
+    # reset pane name when the prompt appears
+    zellij action rename-pane "zsh"
+  }
+
+  add-zsh-hook preexec _zellij_preexec
+  add-zsh-hook precmd _zellij_precmd
+fi
+
+####################################################################################################
