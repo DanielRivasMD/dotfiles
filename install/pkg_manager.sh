@@ -83,7 +83,6 @@ case "$os" in
       ghostty             # Terminal emulator
       inkscape            # Vector graphics editor
       karabiner-elements  # Keyboard remapper
-      libreoffice         # Libre Office
       logi-options-plus   # Logitech device config
       mermaid-cli         # ASCII maps
       nordvpn             # VPN client
@@ -91,7 +90,6 @@ case "$os" in
       rig                 # R version manager
       skim                # PDF reader with highlights
       slack               # Team messaging
-      steam               # Game platform
       telegram            # Secure messaging
       the-unarchiver      # Archive extractor
       transmission        # Torrent client
