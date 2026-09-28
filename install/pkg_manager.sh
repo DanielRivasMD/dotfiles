@@ -21,7 +21,6 @@ case "$os" in
     ####################################################################################################
 
     install_formulae=(
-      aerc
       btop
       pass
       bat-extras  # bat utilities
@@ -43,6 +42,8 @@ case "$os" in
       starship    # shell prompt
       wget        # get tool
       zprint      # Clojure pretty printer
+      wezterm
+      gcloud-cli
     )
 
     for formula in "${install_formulae[@]}"; do
@@ -64,7 +65,6 @@ case "$os" in
     brew install node
 
     brew tap xwmx/taps
-    brew install notes-app
 
     ####################################################################################################
     # Casks
@@ -80,7 +80,6 @@ case "$os" in
       dropbox             # Cloud file sync
       espanso             # Text expander
       font-hack-nerd-font # Font with icons
-      ghostty             # Terminal emulator
       inkscape            # Vector graphics editor
       karabiner-elements  # Keyboard remapper
       logi-options-plus   # Logitech device config
