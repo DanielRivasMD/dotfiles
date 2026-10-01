@@ -25,21 +25,16 @@ alias ld='lazydocker'
 alias lg='lazygit'
 alias lm='lazynpm'
 
-# micro
-alias mc='micro'
-
 # mmv
 alias mmv='mmv *'
-
-# moneypenny
-alias mp='moneypenny'
 
 ####################################################################################################
 # julia
 ####################################################################################################
 
 # repl
-alias j='julia --project'
+alias jl='julia'
+alias jp='julia --project'
 
 ####################################################################################################
 # python
@@ -70,12 +65,11 @@ alias et='ea --tree --level 3 --ignore-glob ".git" --group-directories-first'
 alias hg='hgrep'
 
 # just
-alias js="just"
+alias j="just"
 alias jb="just build"
 alias je="just edit"
 alias ji="just install"
-alias jl="just list"
-alias js="just show"
+alias jw="just watch"
 
 # lazycli
 alias lc='lazycli'
