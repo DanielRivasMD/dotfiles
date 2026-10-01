@@ -4,6 +4,7 @@ os="$(uname -s)"
 
 ####################################################################################################
 
+# TODO: review installations
 npm install -g awk-language-server
 npm install -g bash-language-server
 npm install -g @mermaid-js/mermaid-cli

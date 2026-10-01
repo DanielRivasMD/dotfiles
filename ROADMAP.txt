@@ -13,13 +13,10 @@ auto generate vimium config & implement for brave
 
 ==================================================
 install/pkg_manager.sh
-  line 116    TODO   decide & document: starship, nushell & nerd-fonts
+  line 7      TODO   review installations
+  line 115    TODO   decide & document: starship, nushell & nerd-fonts
 install.sh
   line 13     TODO   document nerd font installation; present on shell history for ubuntu
-  line 44     BUG    ubuntu errors out on mongodb for some reason
 remote/bpython/alacritty.theme
   line 13     TODO   update all colors
-remote/shell/nu/keymap.nu
-  line 28     BUG    `shells` & `dirs` commands not present. plugins?
-  line 83     BUG    are they useful commands?
 ==================================================
